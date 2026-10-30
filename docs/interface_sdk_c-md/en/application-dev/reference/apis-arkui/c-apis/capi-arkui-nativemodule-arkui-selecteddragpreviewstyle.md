@@ -12,7 +12,7 @@ Defines the text drag preview style in the selected state. It is applicable to s
 
 **Since**: 23
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-others-arkui-nativemodule.md)
 
 **Header file**: [native_type.h](capi-native-type-h.md)
 

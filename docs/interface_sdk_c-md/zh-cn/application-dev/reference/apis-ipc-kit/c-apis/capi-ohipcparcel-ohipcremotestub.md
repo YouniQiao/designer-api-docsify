@@ -12,7 +12,7 @@ IPC远端服务对象。该结构体用于在服务端表示一个远端服务�
 
 **起始版本：** 12
 
-**相关模块：** [OHIPCParcel](capi-ohipcparcel.md)
+**相关模块：** [OHIPCParcel](capi-others-ohipcparcel.md)
 
 **所在头文件：** [ipc_cparcel.h](capi-ipc-cparcel-h.md)
 

@@ -12,7 +12,7 @@ Defines a struct for the printer information.
 
 **Since**: 12
 
-**Related module**: [Print](capi-print.md)
+**Related module**: [Print](capi-others-print.md)
 
 **Header file**: [ohprint.h](capi-ohprint-h.md)
 

@@ -31,7 +31,7 @@ import { camera } from '@kit.CameraKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [EffectSuggestionStatus](arkts-camera-camera-effectsuggestionstatus-c-sys.md) | 效果建议状态 |
+| [EffectSuggestionStatus](arkts-camera-camera-effectsuggestionstatus-c-sys.md) | 效果建议状态。 |
 <!--DelEnd-->
 
 ### 接口
@@ -91,8 +91,8 @@ import { camera } from '@kit.CameraKit';
 | [MetadataObject](arkts-camera-camera-metadataobject-i.md) | 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。 |
 | [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
 | [MetadataSalientDetectionObject](arkts-camera-camera-metadatasalientdetectionobject-i.md) | 相机检测到的显著性物体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable)接口获取。 |
-| [OIS](arkts-camera-camera-ois-i.md) | OIS (Optical Image Stabilization) interface. |
-| [OISQuery](arkts-camera-camera-oisquery-i.md) | OIS (Optical Image Stabilization) query interface. |
+| [OIS](arkts-camera-camera-ois-i.md) | 提供了与光学防抖（OIS）相关的操作能力。 |
+| [OISQuery](arkts-camera-camera-oisquery-i.md) | 提供了与光学防抖（OIS）相关的查询能力。 |
 | [Photo](arkts-camera-camera-photo-i.md) | 全质量图对象。 |
 | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | 拍摄照片的设置。 |
 | [PhotoOutput](arkts-camera-camera-photooutput-i.md) | 拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
@@ -136,7 +136,7 @@ import { camera } from '@kit.CameraKit';
 | [CameraManager](arkts-camera-camera-cameramanager-i-sys.md) | 相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md)接口获取相机管理实例。 |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i-sys.md) | 相机输出能力项。 |
 | [CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md) | 相机共享状态信息。 |
-| [ColorControls](arkts-camera-camera-colorcontrols-i-sys.md) | 实现色彩控制功能。它继承自[ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md). |
+| [ColorControls](arkts-camera-camera-colorcontrols-i-sys.md) | 实现色彩控制功能。它继承自[ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md)。 |
 | [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md) | 设备色彩控制查询对象。 |
 | [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md) | ColorEffect 继承 [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)提供获取和设置镜头色彩效果的接口。 |
 | [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) | 提供获取支持的色彩效果的接口。 |
@@ -169,29 +169,29 @@ import { camera } from '@kit.CameraKit';
 | [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i-sys.md) | 提供了获取支持的手动曝光范围的方法。 |
 | [ManualIsoQuery](arkts-camera-camera-manualisoquery-i-sys.md) | 提供了查询相机设备是否支持手动ISO设置以及获取设备支持的ISO范围的方法。 |
 | [MetadataObject](arkts-camera-camera-metadataobject-i-sys.md) | 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。 |
-| [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) | NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md), [CameraOutput](arkts-camera-camera-cameraoutput-i.md), and [PhotoOutput](arkts-camera-camera-photooutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-camera-photooutput-i.md#oncaptureend) event to mark the end of the photo capture session. |
-| [PanoramaPhotoSession](arkts-camera-camera-panoramaphotosession-i-sys.md) | PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
+| [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) | 夜间拍照会话类，继承自 Session、Flash、AutoExposure、Focus、Zoom、ColorEffect、ColorManagement、ManualExposure 接口。用于设置夜间拍照模式的参数，并保存运行相机所需的 [CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md) 和[PhotoOutput](arkts-camera-camera-photooutput-i.md) 实例。继承自[Session](arkts-camera-camera-session-i.md)。夜间拍照场景下，必须监听[onCaptureEnd](arkts-camera-camera-photooutput-i.md#oncaptureend)事件，以标记拍照会话结束。 |
+| [PanoramaPhotoSession](arkts-camera-camera-panoramaphotosession-i-sys.md) | 全景拍照会话类，继承自 Session、Focus、AutoExposure、WhiteBalance、ColorEffect 接口。用于设置全景拍照模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。 |
 | [Photo](arkts-camera-camera-photo-i-sys.md) | 全质量图对象。 |
-| [PhotoConflictFunctions](arkts-camera-camera-photoconflictfunctions-i-sys.md) | Photo Conflict Functions object. |
-| [PhotoFunctions](arkts-camera-camera-photofunctions-i-sys.md) | Photo Functions object. |
+| [PhotoConflictFunctions](arkts-camera-camera-photoconflictfunctions-i-sys.md) | 拍照冲突功能对象。 |
+| [PhotoFunctions](arkts-camera-camera-photofunctions-i-sys.md) | 拍照功能对象。 |
 | [PhotoOutput](arkts-camera-camera-photooutput-i-sys.md) | 拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
 | [PhotoSession](arkts-camera-camera-photosession-i-sys.md) | 普通拍照模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、色彩空间、微距、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。 |
-| [PhotoSessionForSys](arkts-camera-camera-photosessionforsys-i-sys.md) | Implements a photo session for system applications, which sets the parameters of the normal photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [Portrait](arkts-camera-camera-portrait-i-sys.md) | Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md). Provides the APIs for portrait photo settings. |
-| [PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i-sys.md) | Portrait Photo Conflict Functions object. |
-| [PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i-sys.md) | Portrait Photo Functions object. |
-| [PortraitPhotoSession](arkts-camera-camera-portraitphotosession-i-sys.md) | PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md) | Queries portrait parameters. |
-| [PrelaunchConfig](arkts-camera-camera-prelaunchconfig-i-sys.md) | Defines the camera prelaunch configuration. Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a later version. |
+| [PhotoSessionForSys](arkts-camera-camera-photosessionforsys-i-sys.md) | 系统应用的拍照会话类，用于设置普通拍照模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md) 实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
+| [Portrait](arkts-camera-camera-portrait-i-sys.md) | Portrait 继承自[PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)。提供人像拍照设置相关接口。 |
+| [PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i-sys.md) | 人像拍照冲突功能对象。 |
+| [PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i-sys.md) | 人像拍照功能对象。 |
+| [PortraitPhotoSession](arkts-camera-camera-portraitphotosession-i-sys.md) | 人像拍照会话类，继承自 Session、Flash、AutoExposure、Focus、Zoom、Beauty、ColorEffect、ColorManagement、Portrait、Aperture 接口。用于设置人像拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。 |
+| [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md) | 查询人像参数。 |
+| [PrelaunchConfig](arkts-camera-camera-prelaunchconfig-i-sys.md) | 相机预启动配置信息。目前该配置用于传感器级预启动，后续版本将用于流级预启动。 |
 | [PreviewOutput](arkts-camera-camera-previewoutput-i-sys.md) | 预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
-| [ProfessionalPhotoSession](arkts-camera-camera-professionalphotosession-i-sys.md) | ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture Implements a professional photo session, which sets the parameters of the professional photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [ProfessionalVideoSession](arkts-camera-camera-professionalvideosession-i-sys.md) | ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture Implements a professional video session, which sets the parameters of the professional video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [QuickShotPhotoSession](arkts-camera-camera-quickshotphotosession-i-sys.md) | Quick shot photo session object. |
+| [ProfessionalPhotoSession](arkts-camera-camera-professionalphotosession-i-sys.md) | 专业拍照会话类，继承自 Session、AutoExposure、ManualExposure、Focus、ManualFocus、WhiteBalance、ManualIso、Flash、Zoom、ColorEffect、Aperture 接口。用于设置专业拍照模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。 |
+| [ProfessionalVideoSession](arkts-camera-camera-professionalvideosession-i-sys.md) | 专业录像会话类，继承自 Session、AutoExposure、ManualExposure、Focus、ManualFocus、WhiteBalance、ManualIso、Flash、Zoom、ColorEffect、Aperture 接口。用于设置专业录像模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。 |
+| [QuickShotPhotoSession](arkts-camera-camera-quickshotphotosession-i-sys.md) | 快拍拍照会话对象。 |
 | [QuickThumbnail](arkts-camera-camera-quickthumbnail-i-sys.md) | 快速缩略图对象。 |
 | [RGBBias](arkts-camera-camera-rgbbias-i-sys.md) | RGB 偏置值。 |
-| [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md) | Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md). |
-| [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md) | Provides the scene detection and query capabilities. |
-| [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | Describes the scene feature detection result. |
+| [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md) | 提供场景检测能力，继承自[SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)。 |
+| [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md) | 提供场景检测与查询能力。 |
+| [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | 场景特性检测结果。 |
 | [Session](arkts-camera-camera-session-i-sys.md) | 会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能（录像，拍照）。 |
 | [SettingParam](arkts-camera-camera-settingparam-i-sys.md) | 定义用于预热图像的效果参数。 |
 | [SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md) | 定义画中画状态数据。 |
@@ -267,31 +267,31 @@ import { camera } from '@kit.CameraKit';
 | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 枚举美颜类型。 |
 | [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e-sys.md) | 相机错误码。 |
 | [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md) | 枚举，输出格式。 |
-| [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | Enumerates the camera imaging modes. |
+| [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | 枚举，相机成像模式。 |
 | [CameraSharedStatus](arkts-camera-camera-camerasharedstatus-e-sys.md) | 相机共享状态枚举。 |
 | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | 枚举色彩效果类型。 |
 | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | 枚举色彩保留类型。 |
-| [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | Enumerates the deferred delivery image types. In deferred delivery, photo and video capture are divided into two phases. In the first phase, an image or video is output to users at a relatively fast speed. In the second phase, a higher-resolution image or video is output again after optimization processing. |
+| [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 枚举，分段式投递图像类型。在分段式投递中，拍照和录像分为两个阶段。第一阶段以较快的速度向用户输出图像或视频。第二阶段在优化处理之后，再次输出更高分辨率的图像或视频。 |
 | [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md) | 描述深度数据的精度。 |
 | [DepthDataQualityLevel](arkts-camera-camera-depthdataqualitylevel-e-sys.md) | 枚举深度数据的质量等级。 |
 | [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md) | 效果建议枚举。 |
 | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e-sys.md) | 枚举，曝光测光模式。 |
-| [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) | Enumerates the focus drive types. |
-| [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) | Enumerates the focus range types. |
-| [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md) | Enumerates the focus tracking modes. |
-| [LightPaintingType](arkts-camera-camera-lightpaintingtype-e-sys.md) | Enumerates the types of light painting shutter modes. |
-| [LightStatus](arkts-camera-camera-lightstatus-e-sys.md) | Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i-sys.md#onlightstatuschange). |
+| [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) | 枚举，对焦驱动类型。 |
+| [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) | 枚举，对焦范围类型。 |
+| [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md) | 枚举，对焦跟踪模式。 |
+| [LightPaintingType](arkts-camera-camera-lightpaintingtype-e-sys.md) | 枚举，流光快门模式类型。 |
+| [LightStatus](arkts-camera-camera-lightstatus-e-sys.md) | 枚举，相机光照状态，通过调用 VideoSessionForSys 的[on('lightStatusChange')](arkts-camera-camera-videosession-i-sys.md#onlightstatuschange)接口获取。 |
 | [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e-sys.md) | 枚举，metadata元数据检测类型。 |
-| [PolicyType](arkts-camera-camera-policytype-e-sys.md) | Enumerates the policy types. |
-| [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | Enumerates the portrait effects. |
+| [PolicyType](arkts-camera-camera-policytype-e-sys.md) | 枚举，策略类型。 |
+| [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | 枚举，人像效果。 |
 | [PortraitThemeType](arkts-camera-camera-portraitthemetype-e-sys.md) | 枚举相机人像主题类型。 |
-| [RestoreParamType](arkts-camera-camera-restoreparamtype-e-sys.md) | Enumerates the types of the parameters used for prelaunch. |
-| [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Enumerates the scene features. |
+| [RestoreParamType](arkts-camera-camera-restoreparamtype-e-sys.md) | 枚举，预启动使用的参数类型。 |
+| [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 枚举，场景特性。 |
 | [SceneMode](arkts-camera-camera-scenemode-e-sys.md) | 枚举，相机模式。 |
-| [SlowMotionStatus](arkts-camera-camera-slowmotionstatus-e-sys.md) | Enumerates the slow-motion states. |
+| [SlowMotionStatus](arkts-camera-camera-slowmotionstatus-e-sys.md) | 枚举，慢动作状态。 |
 | [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md) | 枚举延时摄影预览类型，影响拍摄算法。 |
 | [TimeLapseRecordState](arkts-camera-camera-timelapserecordstate-e-sys.md) | 枚举延时摄影录制状态。 |
-| [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md) | Enumerates the tripod statuses. |
-| [UsageType](arkts-camera-camera-usagetype-e-sys.md) | Enum for usage type used in capture session. |
-| [VideoMetaType](arkts-camera-camera-videometatype-e-sys.md) | Video meta type. |
+| [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md) | 枚举，三脚架状态。 |
+| [UsageType](arkts-camera-camera-usagetype-e-sys.md) | 枚举，捕获会话使用的类型。 |
+| [VideoMetaType](arkts-camera-camera-videometatype-e-sys.md) | 视频元数据类型。 |
 <!--DelEnd-->

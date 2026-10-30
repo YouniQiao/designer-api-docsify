@@ -12,7 +12,7 @@
 
 **起始版本：** 20
 
-**相关模块：** [AVSinkBase](capi-avsinkbase.md)
+**相关模块：** [AVSinkBase](capi-media-kit-avsinkbase.md)
 
 ## 汇总
 

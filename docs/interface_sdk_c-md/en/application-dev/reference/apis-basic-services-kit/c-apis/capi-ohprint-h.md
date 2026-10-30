@@ -10,7 +10,7 @@ Declares APIs for discovering and connecting to printers, printing files, and qu
 
 **Since**: 12
 
-**Related module**: [Print](capi-print.md)
+**Related module**: [Print](capi-basic-services-kit-print.md)
 
 ## Summary
 
@@ -77,17 +77,6 @@ Declares APIs for discovering and connecting to printers, printing files, and qu
 | [Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_PrintDocCallback printDocCallback, void *context)](#oh_print_startprintbynative) | - | Starts the printing dialog box. |
 | [typedef void(\*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state)](#oh_print_onjobstatechanged) | OH_Print_OnJobStateChanged | Defines a callback to be invoked when the print job state changes. |
 | [Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *printJob, OH_Print_OnJobStateChanged jobStateChangedCb)](#oh_print_startprintwithjobstatecallback) | - | Starts a print job with the callback to be invoked when the print job state changes. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void(*Print_WriteResultCallback)(const char *jobId, uint32_t code) | Defines a callback used to return the file write-back result.<br>**Since**: 13<br>**System capability**: SystemCapability.Print.PrintFramework |
-| void(*Print_OnStartLayoutWrite)(const char *jobId, uint32_t fd, const Print_PrintAttributes *oldAttrs, const Print_PrintAttributes *newAttrs, Print_WriteResultCallback writeCallback) | Defines a callback to be invoked when the file write-back starts.<br>**Since**: 13<br>**System capability**: SystemCapability.Print.PrintFramework |
-| void(*Print_OnJobStateChanged)(const char *jobId, uint32_t state) | Defines a callback to be invoked when the print job state changes.<br>**Since**: 13<br>**System capability**: SystemCapability.Print.PrintFramework |
-| void (*Print_PrinterDiscoveryCallback)(Print_DiscoveryEvent event, const Print_PrinterInfo *printerInfo) | Defines a callback used to return the discovered printers.<br>**Since**: 12<br>**System capability**: SystemCapability.Print.PrintFramework |
-| void (*Print_PrinterChangeCallback)(Print_PrinterEvent event, const Print_PrinterInfo *printerInfo) | Defines a callback to be invoked when a printer is changed.<br>**Since**: 12<br>**System capability**: SystemCapability.Print.PrintFramework |
-| void(*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state) | Defines a callback to be invoked when the print job state changes.<br>**Since**: 24<br>**System capability**: SystemCapability.Print.PrintFramework |
 
 ## Enum type description
 

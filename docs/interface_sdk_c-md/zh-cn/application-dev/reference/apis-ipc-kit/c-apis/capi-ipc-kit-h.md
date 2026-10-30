@@ -12,5 +12,5 @@ IPC（Inter-Process Communication，进程间通信）头文件，提供IPC Kit�
 
 **起始版本：** 12
 
-**相关模块：** [IPCKit](capi-ipckit.md)
+**相关模块：** [IPCKit](capi-ipc-kit-ipckit.md)
 

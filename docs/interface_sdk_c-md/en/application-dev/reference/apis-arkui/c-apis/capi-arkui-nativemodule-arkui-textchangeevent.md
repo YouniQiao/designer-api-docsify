@@ -12,7 +12,7 @@ Defines a text change event, which is used to listen to and handle text change e
 
 **Since**: 15
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-others-arkui-nativemodule.md)
 
 **Header file**: [native_node.h](capi-native-node-h.md)
 

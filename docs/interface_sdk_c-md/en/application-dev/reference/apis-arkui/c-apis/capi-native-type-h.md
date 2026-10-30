@@ -10,7 +10,7 @@ Defines the common types for the native module.
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -20,7 +20,7 @@ Defines the common types for the native module.
 | -- | -- | -- |
 | [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md) | ArkUI_ColorStop | Defines the gradient color stop structure. |
 | [ArkUI_NativeDialog](capi-arkui-nativemodule-arkui-nativedialog.md) | - | Defines a custom dialog controller object for ArkUI on the native side, which is used to create and manage custom dialog boxes at the native layer, supporting features such as display, dismissal, and attribute configuration of dialog boxes. It is applicable to scenarios where the lifecycle of ArkUI dialog boxes needs to be controlled through C/C++ code. For specific control APIs, see [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md), [ArkUI_NativeDialogAPI_2](capi-arkui-nativemodule-arkui-nativedialogapi-2.md), and [ArkUI_NativeDialogAPI_3](capi-arkui-nativemodule-arkui-nativedialogapi-3.md). |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller object of ArkUI on the native side, which is used to identify and operate a custom dialog box instance. |
+| [ArkUI_NativeDialog*](capi-arkui-nativemodule-arkui-nativedialog8h.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller object of ArkUI on the native side, which is used to identify and operate a custom dialog box instance. |
 | [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | Defines gesture collection interception information. During gesture collection in the touch test, this struct is used to provide the gesture and touch recognizers in the response chain to the interception callback, and carries the gesture collection intervention result set by the callback. For details about the related APIs for gesture collection interception, see [native_gesture.h](capi-native-gesture-h.md). |
 | [ArkUI_AccessibilityState](capi-arkui-nativemodule-arkui-accessibilitystate.md) | ArkUI_AccessibilityState | Defines a component accessibility state, describing the selected, checked, disabled, and other states of the component. It is applicable to scenarios where the accessibility service reads data and interacts with the component, helping users obtain the current state of the component. |
 | [ArkUI_AccessibilityValue](capi-arkui-nativemodule-arkui-accessibilityvalue.md) | ArkUI_AccessibilityValue | Defines a component accessibility value, describing the accessibility state of the component, such as the minimum, maximum, and current values of a range-type component, as well as text descriptions. It is applicable to scenarios where the current state information of a component needs to be provided to the accessibility service. |
@@ -367,9 +367,9 @@ Enumerates crown sensitivity levels.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_CROWN_SENSITIVITY_LOW = 0 |  |
-| ARKUI_CROWN_SENSITIVITY_MEDIUM = 1 |  |
-| ARKUI_CROWN_SENSITIVITY_HIGH = 2 |  |
+| ARKUI_CROWN_SENSITIVITY_LOW = 0 | Low sensitivity.<br>**Since**: 26.0.0 |
+| ARKUI_CROWN_SENSITIVITY_MEDIUM = 1 | Medium sensitivity.<br>**Since**: 26.0.0 |
+| ARKUI_CROWN_SENSITIVITY_HIGH = 2 | High sensitivity.<br>**Since**: 26.0.0 |
 
 ### ArkUI_BorderStyle
 
@@ -709,9 +709,9 @@ Enumerates the node tree operation states of cross-language configuration option
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_TREE_OPERATING_STATUS_UNDEFINED = 0 |  |
-| OH_ARKUI_TREE_OPERATING_STATUS_ENABLE = 1 |  |
-| OH_ARKUI_TREE_OPERATING_STATUS_DISABLE = 2 |  |
+| OH_ARKUI_TREE_OPERATING_STATUS_UNDEFINED = 0 | Undefined, which is the initial value of the node tree operation state. Nodes in this state do not support cross-language node tree operations.<br>**Since**: 26.0.0 |
+| OH_ARKUI_TREE_OPERATING_STATUS_ENABLE = 1 | Enabled, which indicates that when the configuration option is applied to a node, the node tree operation state of the node will be enabled.<br>**Since**: 26.0.0 |
+| OH_ARKUI_TREE_OPERATING_STATUS_DISABLE = 2 | Disabled, which indicates that when the configuration option is applied to a node, the node tree operation state of the node will be disabled.<br>**Since**: 26.0.0 |
 
 ### OH_ArkUI_NodeMountPolicy
 
@@ -729,8 +729,8 @@ Enumerates the child node mounting policy types.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE = 0 |  |
-| OH_ARKUI_NODE_MOUNT_POLICY_MIXED = 1 |  |
+| OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE = 0 | If a RenderNode needs to be mounted as a child node, this RenderNode must be the only child node.<br>**Since**: 26.0.0 |
+| OH_ARKUI_NODE_MOUNT_POLICY_MIXED = 1 | Multiple typeNodes and RenderNodes can be mounted at the same time.<br>**Since**: 26.0.0 |
 
 ### OH_ArkUI_ArcDirection
 
@@ -748,9 +748,9 @@ Enumerates arc directions.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_ARCDIRECTION_THREE_CLOCK_DIRECTION = 0 |  |
-| OH_ARKUI_ARCDIRECTION_SIX_CLOCK_DIRECTION = 1 |  |
-| OH_ARKUI_ARCDIRECTION_NINE_CLOCK_DIRECTION = 2 |  |
+| OH_ARKUI_ARCDIRECTION_THREE_CLOCK_DIRECTION = 0 | 3 o'clock direction.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ARCDIRECTION_SIX_CLOCK_DIRECTION = 1 | 6 o'clock direction.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ARCDIRECTION_NINE_CLOCK_DIRECTION = 2 | 9 o'clock direction.<br>**Since**: 26.0.1 |
 
 
 ## Function description
@@ -1962,7 +1962,7 @@ Obtains the child node whose subscript is index in the [ArkUI_ActiveChildrenInfo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) | Handle to the child node at the specified index, or **nullptr** if an error occurs. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Handle to the child node at the specified index, or **nullptr** if an error occurs. |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -2592,7 +2592,7 @@ Sets the content node of a custom text selection menu.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the **ArkUI_TextSelectionMenuOptions** object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | Content node of the custom text selection menu. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Content node of the custom text selection menu. |
 
 **Returns**:
 
@@ -2619,7 +2619,7 @@ Obtains the content node of a custom text selection menu.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the **ArkUI_TextSelectionMenuOptions** object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)* node | Pointer to the content node of the custom text selection menu. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Pointer to the content node of the custom text selection menu. |
 
 **Returns**:
 
@@ -5303,7 +5303,7 @@ Sets the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | Content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Content node. |
 
 **Returns**:
 
@@ -5330,7 +5330,7 @@ Obtains the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)* node | Pointer to the content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Pointer to the content node. |
 
 **Returns**:
 

@@ -12,7 +12,7 @@ IPC（进程间通信）远端代理对象，用于在客户端代理远端服�
 
 **起始版本：** 12
 
-**相关模块：** [OHIPCParcel](capi-ohipcparcel.md)
+**相关模块：** [OHIPCParcel](capi-others-ohipcparcel.md)
 
 **所在头文件：** [ipc_cparcel.h](capi-ipc-cparcel-h.md)
 

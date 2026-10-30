@@ -4,7 +4,7 @@
 
 This file provides C APIs for IPC framework features such as the token ID, credentials, PID/UID, and thread pool configuration. It is mainly used for context management and thread management in inter-process communication.
 
-**Include**: <IPCKit/ipc_cskeleton.h>
+**File to Include**: <IPCKit/ipc_cskeleton.h>
 
 **Library**: libipc_capi.so
 
@@ -12,7 +12,7 @@ This file provides C APIs for IPC framework features such as the token ID, crede
 
 **Since**: 12
 
-**Related module**: [OHIPCSkeleton](capi-ohipcskeleton.md)
+**Related module**: [OHIPCSkeleton](capi-ipc-kit-ohipcskeleton.md)
 
 ## Summary
 
@@ -43,7 +43,10 @@ void OH_IPCSkeleton_JoinWorkThread(void)
 
 **Description**
 
-Joins the current thread to the IPC worker thread pool so that it can participate in processing IPC requests. This function is applicable to scenarios where custom IPC request processing threads are needed, for example, manually adding worker threads when the IPC concurrent processing capability needs to be expanded, or using dedicated threads to process IPC requests in specific service scenarios to improve response speed. - Call this function only in scenarios where IPC request processing is required. - After this function is called, the thread blocks and waits to process IPC requests. - It is recommended to use this function together with [OH_IPCSkeleton_StopWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_stopworkthread()) to properly exit the thread pool.
+Joins the current thread to the IPC worker thread pool so that it can participate in processing IPC requests. This function is applicable to scenarios where custom IPC request processing threads are needed, for example, manually adding worker threads when the IPC concurrent processing capability needs to be expanded, or using dedicated threads to process IPC requests in specific service scenarios to improve response speed.
+- Call this function only in scenarios where IPC request processing is required.
+- After this function is called, the thread blocks and waits to process IPC requests.
+- It is recommended to use this function together with [OH_IPCSkeleton_StopWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_stopworkthread()) to properly exit the thread pool.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -57,7 +60,10 @@ void OH_IPCSkeleton_StopWorkThread(void)
 
 **Description**
 
-Exits the current thread from the IPC worker thread pool so that it no longer participates in processing IPC requests. - Call this function when IPC request processing is no longer needed. - Before calling this function, ensure that the current thread has joined the thread pool through [OH_IPCSkeleton_JoinWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_joinworkthread()). - Ensure that all IPC transactions are completed before the thread exits.
+Exits the current thread from the IPC worker thread pool so that it no longer participates in processing IPC requests.
+- Call this function when IPC request processing is no longer needed.
+- Before calling this function, ensure that the current thread has joined the thread pool through [OH_IPCSkeleton_JoinWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_joinworkthread()).
+- Ensure that all IPC transactions are completed before the thread exits.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -91,7 +97,9 @@ uint64_t OH_IPCSkeleton_GetFirstTokenId(void)
 
 **Description**
 
-Obtains the token ID of the first caller in the IPC call chain. This API must be called in the IPC context. Otherwise, the local token ID is returned. This API is applicable to permission tracing and security audit scenarios in multi-level service calls. For example, it can be used in permission audits where you need to trace the identity of the original caller rather than the intermediate proxy service, or in cross‑process permission inheritance verification to confirm the source of the original permissions. - This API is meaningful only in multi-level IPC call scenarios. - In single-level call scenarios, the return value is the same as that of [OH_IPCSkeleton_GetCallingTokenId()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_getcallingtokenid()).
+Obtains the token ID of the first caller in the IPC call chain. This API must be called in the IPC context. Otherwise, the local token ID is returned. This API is applicable to permission tracing and security audit scenarios in multi-level service calls. For example, it can be used in permission audits where you need to trace the identity of the original caller rather than the intermediate proxy service, or in cross‑process permission inheritance verification to confirm the source of the original permissions.
+- This API is meaningful only in multi-level IPC call scenarios.
+- In single-level call scenarios, the return value is the same as that of [OH_IPCSkeleton_GetCallingTokenId()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_getcallingtokenid()).
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -111,7 +119,8 @@ uint64_t OH_IPCSkeleton_GetSelfTokenId(void)
 
 **Description**
 
-Obtains the token ID of the current process. This is applicable to scenarios such as process self‑authentication and permission status verification. For example, it can be used to verify the permission status of the process itself during service startup, to confirm whether the process has the required permissions to access specific resources during permission checks, and to identify the current process identity in security audits. - This function can be called in any context and does not depend on the IPC context.
+Obtains the token ID of the current process. This is applicable to scenarios such as process self‑authentication and permission status verification. For example, it can be used to verify the permission status of the process itself during service startup, to confirm whether the process has the required permissions to access specific resources during permission checks, and to identify the current process identity in security audits.
+- This function can be called in any context and does not depend on the IPC context.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -171,7 +180,9 @@ int OH_IPCSkeleton_IsLocalCalling(void)
 
 **Description**
 
-Checks whether the current IPC call is a local call. - This function must be called in the IPC context. - This function is commonly used to adopt different processing strategies based on the call type.
+Checks whether the current IPC call is a local call.
+- This function must be called in the IPC context.
+- This function is commonly used to adopt different processing strategies based on the call type.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -191,7 +202,13 @@ int OH_IPCSkeleton_SetMaxWorkThreadNum(const int maxThreadNum)
 
 **Description**
 
-Sets the maximum number of threads in the IPC worker thread pool to control the concurrent processing capability of IPC requests. - It is recommended to call this function at app startup to avoid frequent modifications at runtime. - This configuration should be completed before calling [OH_IPCSkeleton_JoinWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_joinworkthread()) to join the worker thread pool, to ensure that the thread pool works at the configured size. - This configuration affects the capacity control of threads that subsequently join the thread pool. - Unless there are special requirements, it is not recommended to change the maximum number of threads. - Too many threads increase system resource consumption, while too few may affect IPC concurrent processing performance. - Set this value appropriately based on actual service scenarios and device capabilities.
+Sets the maximum number of threads in the IPC worker thread pool to control the concurrent processing capability of IPC requests.
+- It is recommended to call this function at app startup to avoid frequent modifications at runtime.
+- This configuration should be completed before calling [OH_IPCSkeleton_JoinWorkThread()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_joinworkthread()) to join the worker thread pool, to ensure that the thread pool works at the configured size.
+- This configuration affects the capacity control of threads that subsequently join the thread pool.
+- Unless there are special requirements, it is not recommended to change the maximum number of threads.
+- Too many threads increase system resource consumption, while too few may affect IPC concurrent processing performance.
+- Set this value appropriately based on actual service scenarios and device capabilities.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -217,7 +234,11 @@ int OH_IPCSkeleton_ResetCallingIdentity(char **identity, int32_t *len, OH_IPC_Me
 
 **Description**
 
-Resets the caller identity credential to the identity credential of the local process (including TokenId, UID, and PID information), and returns the caller credential information. This is applicable to scenarios where you need to temporarily elevate permissions or perform operations with the identity of a service process. For example, it can be used to temporarily switch to a service identity when accessing protected resources in system services, or to perform privileged operations on behalf of a service process in permission proxy scenarios. - This function must be called in the IPC request processing context. - The returned credential information must be properly managed by the caller and released after use. - This function must be used in pair with [OH_IPCSkeleton_SetCallingIdentity()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_setcallingidentity()) to restore the original credential after the operation is completed. - Avoid maintaining the reset state for a long time, as it may affect permission verification.
+Resets the caller identity credential to the identity credential of the local process (including TokenId, UID, and PID information), and returns the caller credential information. This is applicable to scenarios where you need to temporarily elevate permissions or perform operations with the identity of a service process. For example, it can be used to temporarily switch to a service identity when accessing protected resources in system services, or to perform privileged operations on behalf of a service process in permission proxy scenarios.
+- This function must be called in the IPC request processing context.
+- The returned credential information must be properly managed by the caller and released after use.
+- This function must be used in pair with [OH_IPCSkeleton_SetCallingIdentity()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_setcallingidentity()) to restore the original credential after the operation is completed.
+- Avoid maintaining the reset state for a long time, as it may affect permission verification.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -245,7 +266,10 @@ int OH_IPCSkeleton_SetCallingIdentity(const char *identity)
 
 **Description**
 
-Restores the caller credential information to the IPC context. This function restores the identity credential in the IPC context to the original caller credential. It must be called in the IPC request processing context. This is applicable to scenarios where normal permissions are restored after temporary privilege escalation operations, for example, restoring the caller identity after accessing protected resources on the server side, and restoring the caller permission state after permission proxy operations are completed. - After this method is called, the identity credential in the IPC context is restored to the caller credential previously saved through [OH_IPCSkeleton_ResetCallingIdentity()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_resetcallingidentity()). - Call this function immediately after completing operations that require the server identity. - Identity credentials should be properly managed to prevent credential leakage.
+Restores the caller credential information to the IPC context. This function restores the identity credential in the IPC context to the original caller credential. It must be called in the IPC request processing context. This is applicable to scenarios where normal permissions are restored after temporary privilege escalation operations, for example, restoring the caller identity after accessing protected resources on the server side, and restoring the caller permission state after permission proxy operations are completed.
+- After this method is called, the identity credential in the IPC context is restored to the caller credential previously saved through [OH_IPCSkeleton_ResetCallingIdentity()](capi-ipc-cskeleton-h.md#oh_ipcskeleton_resetcallingidentity()).
+- Call this function immediately after completing operations that require the server identity.
+- Identity credentials should be properly managed to prevent credential leakage.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 

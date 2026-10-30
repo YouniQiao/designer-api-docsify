@@ -4,7 +4,7 @@
 
 Provides IPC error code definitions for identifying and handling various errors that may occur during IPC communication. Based on the returned error codes, you can quickly locate the cause of issues, such as parameter errors, serialization failures, memory allocation failures, and remote object death, and take appropriate error handling measures.
 
-**Include**: <IPCKit/ipc_error_code.h>
+**File to Include**: <IPCKit/ipc_error_code.h>
 
 **Library**: libipc_capi.so
 
@@ -12,7 +12,7 @@ Provides IPC error code definitions for identifying and handling various errors 
 
 **Since**: 12
 
-**Related module**: [OHIPCErrorCode](capi-ohipcerrorcode.md)
+**Related module**: [OHIPCErrorCode](capi-ipc-kit-ohipcerrorcode.md)
 
 ## Summary
 

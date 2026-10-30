@@ -10,7 +10,7 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 
 **Since**: 12
 
-**Related module**: [OH_Scan](capi-oh-scan.md)
+**Related module**: [OH_Scan](capi-basic-services-kit-oh-scan.md)
 
 ## Summary
 
@@ -43,12 +43,6 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 | [int32_t OH_Scan_CancelScan(const char* scannerId)](#oh_scan_cancelscan) | - | Cancels scanning. |
 | [int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanProgress* prog)](#oh_scan_getpicturescanprogress) | - | Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progress will be written into the struct pointed to by the pointer. |
 | [int32_t OH_Scan_Exit()](#oh_scan_exit) | - | Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discovery callback. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int32_t deviceCount) | Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery) will be released when the callback function ends.<br>**Since**: 12<br>**System capability**: SystemCapability.Print.PrintFramework |
 
 ## Enum type description
 

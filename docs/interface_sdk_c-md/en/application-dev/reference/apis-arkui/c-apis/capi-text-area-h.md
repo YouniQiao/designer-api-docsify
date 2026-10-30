@@ -10,7 +10,7 @@ Defines enumerations related to **TextArea**. The **TextArea** component is used
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -42,6 +42,6 @@ Enumerates the input types of multi-line text. Different enumerated values speci
 | ARKUI_TEXTAREA_TYPE_NUMBER = 2 | Number input mode. |
 | ARKUI_TEXTAREA_TYPE_PHONE_NUMBER = 3 | Phone number input mode. |
 | ARKUI_TEXTAREA_TYPE_EMAIL = 5 | Email address input mode. |
-| ARKUI_TEXTAREA_TYPE_ONE_TIME_CODE = 14 |  |
+| ARKUI_TEXTAREA_TYPE_ONE_TIME_CODE = 14 | One time code input mode.<br>**Since**: 20 |
 
 

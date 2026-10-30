@@ -10,7 +10,7 @@ Defines the text style and layout manager for the component whose [type](capi-oh
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -310,21 +310,21 @@ Enumerates the styles of a styled string.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_STYLEDSTRINGKEY_UNSPECIFIED = -1 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_FONT = 0 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_DECORATION = 1 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_BASELINE_OFFSET = 2 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_LETTER_SPACING = 3 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_TEXT_SHADOW = 4 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_LINE_HEIGHT = 5 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_BACKGROUND_COLOR = 6 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_URL = 7 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_LINE_SPACING = 8 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_GESTURE = 100 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_PARAGRAPH_STYLE = 200 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_IMAGE = 300 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_CUSTOM_SPAN = 400 |  |
-| OH_ARKUI_STYLEDSTRINGKEY_USER_DATA = 500 |  |
+| OH_ARKUI_STYLEDSTRINGKEY_UNSPECIFIED = -1 | No style is specified.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_FONT = 0 | Text font style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_DECORATION = 1 | Text decorative line style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_BASELINE_OFFSET = 2 | Text baseline offset style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_LETTER_SPACING = 3 | Text letter spacing style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_TEXT_SHADOW = 4 | Text shadow style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_LINE_HEIGHT = 5 | Text line height style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_BACKGROUND_COLOR = 6 | Text background color style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_URL = 7 | URL style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_LINE_SPACING = 8 | Text line spacing style.<br>**Since**: 26.0.0 |
+| OH_ARKUI_STYLEDSTRINGKEY_GESTURE = 100 | Gesture style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_PARAGRAPH_STYLE = 200 | Text paragraph style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_IMAGE = 300 | Image style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_CUSTOM_SPAN = 400 | Custom span style.<br>**Since**: 24 |
+| OH_ARKUI_STYLEDSTRINGKEY_USER_DATA = 500 | User data span style.<br>**Since**: 24 |
 
 ### OH_ArkUI_SuperscriptStyle
 
@@ -342,9 +342,9 @@ Enumerates the text superscript and subscript styles.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_SUPERSCRIPTSTYLE_NORMAL = 0 |  |
-| OH_ARKUI_SUPERSCRIPTSTYLE_SUPERSCRIPT |  |
-| OH_ARKUI_SUPERSCRIPTSTYLE_SUBSCRIPT |  |
+| OH_ARKUI_SUPERSCRIPTSTYLE_NORMAL = 0 | Normal text style.<br>**Since**: 24 |
+| OH_ARKUI_SUPERSCRIPTSTYLE_SUPERSCRIPT | Superscript text style.<br>**Since**: 24 |
+| OH_ARKUI_SUPERSCRIPTSTYLE_SUBSCRIPT | Subscript text style.<br>**Since**: 24 |
 
 ### OH_ArkUI_TextEncoding
 
@@ -362,8 +362,8 @@ Enumerates the text encoding types supported by ArkUI text layout query APIs.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_TEXT_ENCODING_UTF8 = 0 |  |
-| OH_ARKUI_TEXT_ENCODING_UTF16 = 1 |  |
+| OH_ARKUI_TEXT_ENCODING_UTF8 = 0 | UTF-8 encoding. Character positions and character ranges are calculated by UTF-8 byte offsets.<br>**Since**: 26.0.0 |
+| OH_ARKUI_TEXT_ENCODING_UTF16 = 1 | UTF-16 encoding. Character positions and character ranges are calculated by UTF-16 code unit offsets.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -386,7 +386,7 @@ Creates a pointer to the ArkUI_StyledString object.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
+| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
 | [OH_Drawing_FontCollection](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by [OH_Drawing_CreateFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createfontcollection). |
 
 **Returns**:
@@ -6814,7 +6814,7 @@ Sets the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
+| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
@@ -6845,7 +6845,7 @@ Obtains the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
+| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 

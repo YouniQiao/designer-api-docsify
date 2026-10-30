@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **所在头文件：** [native_node.h](capi-native-node-h.md)
 
@@ -354,7 +354,10 @@ NODE_TEXT_CONTENT_WITH_STYLED_STRING
 
 **描述：**
 
-Text组件使用格式化字符串对象设置文本内容属性，支持属性设置、属性重置和属性获取接口。 配置自定义[OH_Drawing_Typography](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typography.md)对象到Text组件，会跳过文本控件的布局测算阶段。注意事项： 1. 需要保证OH_ArkUI_StyledString对象、OH_Drawing_Typography对象的生命周期跟随Text组件生命周期， Text组件析构时重置OH_ArkUI_StyledString对象，否则会导致应用出现空指针崩溃。 2. 保证OH_Drawing_TypographyLayout方法调用时序在Text组件的布局测算之前。 3. 释放OH_ArkUI_StyledString对象、OH_Drawing_Typography对象时，需要同步调用Text组件的reset方法，否则会导致应用出现空指针崩溃。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul>
+Text组件使用格式化字符串对象设置文本内容属性，支持属性设置、属性重置和属性获取接口。 配置自定义[OH_Drawing_Typography](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typography.md)对象到Text组件，会跳过文本控件的布局测算阶段。注意事项：<br>
+1. 需要保证OH_ArkUI_StyledString对象、OH_Drawing_Typography对象的生命周期跟随Text组件生命周期， Text组件析构时重置OH_ArkUI_StyledString对象，否则会导致应用出现空指针崩溃。<br>
+2. 保证OH_Drawing_TypographyLayout方法调用时序在Text组件的布局测算之前。<br>
+3. 释放OH_ArkUI_StyledString对象、OH_Drawing_Typography对象时，需要同步调用Text组件的reset方法，否则会导致应用出现空指针崩溃。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul>
 
 **起始版本：** 12
 

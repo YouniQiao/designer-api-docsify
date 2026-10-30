@@ -12,7 +12,7 @@ typedef struct Print_PageSize {...} Print_PageSize
 
 **起始版本：** 12
 
-**相关模块：** [Print](capi-print.md)
+**相关模块：** [Print](capi-others-print.md)
 
 **所在头文件：** [ohprint.h](capi-ohprint-h.md)
 

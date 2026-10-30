@@ -4,7 +4,7 @@
 
 Declares the APIs used by in-app intelligent agents and UI automation to inject control commands into specified UI nodes.
 
-**Include**: <arkui/ui_event_injection.h>
+**File to Include**: <arkui/ui_event_injection.h>
 
 **Library**: libace_ndk.z.so
 
@@ -12,7 +12,7 @@ Declares the APIs used by in-app intelligent agents and UI automation to inject 
 
 **Since**: 26.1.0
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -28,12 +28,6 @@ Declares the APIs used by in-app intelligent agents and UI automation to inject 
 | -- | -- | -- |
 | [typedef void (\*OH_ArkUI_NativeModule_UIEventInjectionCallback)(OH_ArkUI_NativeModule_UIEventInjection_ResultCode result, void *userData)](#oh_arkui_nativemodule_uieventinjectioncallback) | OH_ArkUI_NativeModule_UIEventInjectionCallback | Callback for injection completion.<br> Reports the results of command dispatch and immediate component handling, without waiting for deferred effects or rendering. Each accepted request receives exactly one callback on the originating UI thread after the injection function returns. Callbacks on different UI threads are not globally serialized. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_UIEventInjectCompositeCommand(ArkUI_ContextHandle uiContext, uint32_t uniqueId, const OH_ArkUI_NativeModule_UIJsonWrapper *command, OH_ArkUI_NativeModule_UIEventInjectionCallback callback, void *userData)](#oh_arkui_nativemodule_uieventinjectcompositecommand) | - | Injects a control command into a target UI node asynchronously.<br> This API provides no cancellation operation or fixed completion timeout. Completion depends on UI-thread task processing. A caller-side wait timeout does not cancel an accepted request. Instance destruction does not cancel completion callbacks for accepted requests. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_ArkUI_NativeModule_UIEventInjectionCallback)( OH_ArkUI_NativeModule_UIEventInjection_ResultCode result, void *userData) | Callback for injection completion.<br> Reports the results of command dispatch and immediate component handling, without waiting for deferred effects or rendering. Each accepted request receives exactly one callback on the originating UI thread after the injection function returns. Callbacks on different UI threads are not globally serialized.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
 
 ## Enum type description
 
@@ -100,7 +94,7 @@ Injects a control command into a target UI node asynchronously.<br> This API pro
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-contexthandle.md) uiContext | [in] Pointer to a UI instance. Must not be NULL. The caller must be on the UI thread of this instance; a detected thread violation triggers a fatal abort. The uniqueId must resolve to a node within this instance. The pointer must remain valid throughout this function call. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | [in] Pointer to a UI instance. Must not be NULL. The caller must be on the UI thread of this instance; a detected thread violation triggers a fatal abort. The uniqueId must resolve to a node within this instance. The pointer must remain valid throughout this function call. |
 | uint32_t uniqueId | [in] Unique ID of the target node. The framework resolves this ID to the corresponding node within the uiContext instance. |
 | [const OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md) *command | [in] Command data. Must not be NULL. The data is carried by an [OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md) object created with [OH_ArkUI_NativeModule_UIJsonWrapperCreate](capi-ui-json-wrapper-h.md#oh_arkui_nativemodule_uijsonwrappercreate). The payload's top-level structure is: {"schemaVersion": 1, "cmd": {"type": "<command type>", "action_info": { ... }}} For supported command types, action_info field constraints, and examples, see the API development guide. The JSON data is internally copied before the function returns; if the caller owns command, it may release it with [OH_ArkUI_NativeModule_UIJsonWrapperDestroy](capi-ui-json-wrapper-h.md#oh_arkui_nativemodule_uijsonwrapperdestroy) after this function returns. |
 | [OH_ArkUI_NativeModule_UIEventInjectionCallback](capi-ui-event-injection-h.md#oh_arkui_nativemodule_uieventinjectioncallback) callback | [in] Completion callback. Must not be NULL. After the request is accepted, it must remain callable until it returns, even if the caller's wait times out. |

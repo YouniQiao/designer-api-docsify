@@ -10,7 +10,7 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 
 **起始版本：** 12
 
-**相关模块：** [OH_Scan](capi-oh-scan.md)
+**相关模块：** [OH_Scan](capi-basic-services-kit-oh-scan.md)
 
 ## 汇总
 
@@ -43,12 +43,6 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 | [int32_t OH_Scan_CancelScan(const char* scannerId)](#oh_scan_cancelscan) | - | 此API允许扫描仪取消扫描 |
 | [int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanProgress* prog)](#oh_scan_getpicturescanprogress) | - | 此API可获取扫描仪扫描图片的进度。必须传入非空值，扫描进度将写入指针指向的结构体 |
 | [int32_t OH_Scan_Exit()](#oh_scan_exit) | - | 此API可用于退出扫描服务，释放扫描框架内存，并注销扫描仪发现回调 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int32_t deviceCount) | 扫描仪设备发现回调，通过[OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery)注册指针指向的内存将在回调函数结束时释放<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Print.PrintFramework |
 
 ## 枚举类型说明
 

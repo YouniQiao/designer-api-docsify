@@ -12,7 +12,7 @@
 
 **起始版本：** 26.0.0
 
-**相关模块：** [CodecBase](capi-codecbase.md)
+**相关模块：** [CodecBase](capi-avcodec-kit-codecbase.md)
 
 ## 汇总
 
@@ -144,7 +144,7 @@ OH_AVErrCode OH_VideoMetadata_ParseRoiString(const char *roiStr, OH_AVFormat **o
 
 **起始版本：** 26.0.0
 
-**资源释放：** media_foundation/OH_AVFormat_Destroy {outOwnedFormats}
+**资源释放：** [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy)
 
 **参数：**
 

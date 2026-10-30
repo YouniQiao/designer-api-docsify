@@ -12,7 +12,7 @@ Defines the IPC message options, which are used to configure request parameters 
 
 **Since**: 12
 
-**Related module**: [OHIPCRemoteObject](capi-ohipcremoteobject.md)
+**Related module**: [OHIPCRemoteObject](capi-others-ohipcremoteobject.md)
 
 **Header file**: [ipc_cremote_object.h](capi-ipc-cremote-object-h.md)
 

@@ -12,7 +12,7 @@ LowPowerAVSink输入数据的结构体。应用在收到DataNeeded回调后需�
 
 **起始版本：** 20
 
-**相关模块：** [AVSinkBase](capi-avsinkbase.md)
+**相关模块：** [AVSinkBase](capi-others-avsinkbase.md)
 
 **所在头文件：** [lowpower_avsink_base.h](capi-lowpower-avsink-base-h.md)
 

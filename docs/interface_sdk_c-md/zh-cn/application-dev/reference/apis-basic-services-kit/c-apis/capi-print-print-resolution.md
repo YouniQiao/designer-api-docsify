@@ -12,7 +12,17 @@ typedef struct Print_Resolution {...} Print_Resolution
 
 **起始版本：** 12
 
-**相关模块：** [Print](capi-print.md)
+**相关模块：** [Print](capi-others-print.md)
 
 **所在头文件：** [ohprint.h](capi-ohprint-h.md)
+
+## 汇总
+
+### 成员变量
+
+| 名称 | 描述 |
+| -- | -- |
+| uint32_t horizontalDpi |  |
+| uint32_t verticalDpi |  |
+
 

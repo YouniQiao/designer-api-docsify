@@ -10,7 +10,7 @@
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image.md)
+**相关模块：** [Image](capi-image-kit-image.md)
 
 ## 汇总
 
@@ -21,7 +21,6 @@
 | [OhosPixelMapInfos](capi-image-ohospixelmapinfos.md) | - | 用于描述PixelMap的基本属性信息，包括图片宽高、内存行字节数和像素格式。<br> 开发者在调用PixelMap属性查询相关接口时，可通过该结构体获取PixelMap的宽、高、行字节数及像素格式等信息， 便于统一读取和管理图片属性。适用于需要查询并使用PixelMap属性信息的场景。 |
 | [OhosPixelMapCreateOps](capi-image-ohospixelmapcreateops.md) | - | 用于定义创建PixelMap的设置选项，包含图片宽高、像素格式、是否可编辑、透明度类型及缩放类型信息， 适用于在Native层创建PixelMap时指定初始化属性的场景。 |
 | [NativePixelMap_](capi-image-nativepixelmap-.md) | - | 定义Native层PixelMap数据类型名称。作为Native层操作PixelMap的句柄类型， 适用于在C/C++层对PixelMap进行像素读写、属性查询、图像变换等操作的场景。 |
-| [NativePixelMap](capi-image-nativepixelmap.md) | NativePixelMap | 定义native层PixelMap数据类型名称。 |
 
 ### 枚举
 
@@ -236,7 +235,7 @@ NativePixelMap* OH_PixelMap_InitNativePixelMap(napi_env env, napi_value source)
 
 | 类型 | 说明 |
 | -- | -- |
-| [NativePixelMap*](capi-image-nativepixelmap.md) | 操作成功则返回NativePixelMap的指针；如果操作失败，则返回错误码。 |
+| [NativePixelMap*](capi-image-nativepixelmap-.md) | 操作成功则返回NativePixelMap的指针；如果操作失败，则返回错误码。 |
 
 ### OH_PixelMap_GetBytesNumberPerRow()
 
@@ -256,7 +255,7 @@ int32_t OH_PixelMap_GetBytesNumberPerRow(const NativePixelMap* native, int32_t* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t* num | PixelMap对象的每行字节数指针。 |
 
 **返回值：**
@@ -283,7 +282,7 @@ int32_t OH_PixelMap_GetIsEditable(const NativePixelMap* native, int32_t* editabl
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t* editable | PixelMap对象是否可编辑的指针。 |
 
 **返回值：**
@@ -310,7 +309,7 @@ int32_t OH_PixelMap_IsSupportAlpha(const NativePixelMap* native, int32_t* alpha)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t* alpha | 是否支持Alpha的指针。 |
 
 **返回值：**
@@ -337,7 +336,7 @@ int32_t OH_PixelMap_SetAlphaAble(const NativePixelMap* native, int32_t alpha)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t alpha | Alpha通道。 |
 
 **返回值：**
@@ -364,7 +363,7 @@ int32_t OH_PixelMap_GetDensity(const NativePixelMap* native, int32_t* density)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t* density | 像素密度指针。 |
 
 **返回值：**
@@ -391,7 +390,7 @@ int32_t OH_PixelMap_SetDensity(const NativePixelMap* native, int32_t density)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t density | 像素密度。 |
 
 **返回值：**
@@ -418,7 +417,7 @@ int32_t OH_PixelMap_SetOpacity(const NativePixelMap* native, float opacity)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | float opacity | 透明度。 |
 
 **返回值：**
@@ -445,7 +444,7 @@ int32_t OH_PixelMap_Scale(const NativePixelMap* native, float x, float y)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | float x | 宽度的缩放比例。 |
 | float y | 高度的缩放比例。 |
 
@@ -473,7 +472,7 @@ int32_t OH_PixelMap_ScaleWithAntiAliasing(const NativePixelMap* native, float x,
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | float x | 宽度的缩放比例。 |
 | float y | 高度的缩放比例。 |
 | [OH_PixelMap_AntiAliasingLevel](capi-image-pixel-map-mdk-h.md#oh_pixelmap_antialiasinglevel) level | 缩放算法。 |
@@ -502,7 +501,7 @@ int32_t OH_PixelMap_Translate(const NativePixelMap* native, float x, float y)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | float x | 水平偏移量。 |
 | float y | 垂直偏移量。 |
 
@@ -530,7 +529,7 @@ int32_t OH_PixelMap_Rotate(const NativePixelMap* native, float angle)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | float angle | 旋转角度。 |
 
 **返回值：**
@@ -557,7 +556,7 @@ int32_t OH_PixelMap_Flip(const NativePixelMap* native, int32_t x, int32_t y)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t x | 根据水平方向x轴进行图片翻转。 |
 | int32_t y | 根据垂直方向y轴进行图片翻转。 |
 
@@ -585,7 +584,7 @@ int32_t OH_PixelMap_Crop(const NativePixelMap* native, int32_t x, int32_t y, int
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | int32_t x | 目标图片左上角的x坐标。 |
 | int32_t y | 目标图片左上角的y坐标。 |
 | int32_t width | 裁剪区域的宽度。 |
@@ -615,7 +614,7 @@ int32_t OH_PixelMap_GetImageInfo(const NativePixelMap* native, OhosPixelMapInfos
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | [OhosPixelMapInfos](capi-image-ohospixelmapinfos.md) *info | 图像信息指针。 |
 
 **返回值：**
@@ -642,7 +641,7 @@ int32_t OH_PixelMap_AccessPixels(const NativePixelMap* native, void** addr)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 | void** addr | 用于指向的内存地址的双指针对象。 |
 
 **返回值：**
@@ -669,7 +668,7 @@ int32_t OH_PixelMap_UnAccessPixels(const NativePixelMap* native)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const NativePixelMap](capi-image-nativepixelmap.md)* native | NativePixelMap的指针。 |
+| [const NativePixelMap](capi-image-nativepixelmap-.md)* native | NativePixelMap的指针。 |
 
 **返回值：**
 

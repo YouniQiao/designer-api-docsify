@@ -10,7 +10,7 @@
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -23,7 +23,7 @@
 | [ArkUI_ScaleOptions](capi-arkui-nativemodule-arkui-scaleoptions.md) | ArkUI_ScaleOptions | Defines the scaling options for component transition. |
 | [ArkUI_RotationOptions](capi-arkui-nativemodule-arkui-rotationoptions.md) | ArkUI_RotationOptions | Defines the rotation options for component transition. |
 | [ArkUI_NativeDialog](capi-arkui-nativemodule-arkui-nativedialog.md) | - | Defines the custom dialog box controller of ArkUI on the native side. |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller of ArkUI on the native side. |
+| [ArkUI_NativeDialog*](capi-arkui-nativemodule-arkui-nativedialog8h.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller of ArkUI on the native side. |
 | [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | 定义手势收集拦截信息。在触摸测试收集手势的过程中，该类型用于向拦截回调提供响应链中的手势识别器和触摸识别器，并承载回调设置的手势收集干预结果。 相关接口请参见[native_gesture.h](capi-native-gesture-h.md)中的手势收集拦截接口说明。 |
 | [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | Defines the navigation indicator style for the swiper. |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | Defines the digital indicator style for the swiper. |
@@ -1202,8 +1202,8 @@ enum ArkUI_NavDestinationState
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_HIDE = 5 | NavDestination组件隐藏之前。 |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_APPEAR = 6 | NavDestination挂载到组件树之前。 |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_DISAPPEAR = 7 | NavDestination从组件树上卸载之前。 |
-| ARKUI_NAV_DESTINATION_STATE_ON_ACTIVE = 8 |  |
-| ARKUI_NAV_DESTINATION_STATE_ON_INACTIVE = 9 |  |
+| ARKUI_NAV_DESTINATION_STATE_ON_ACTIVE = 8 | NavDestination组件处于激活态。<br>**起始版本：** 26.1.0 |
+| ARKUI_NAV_DESTINATION_STATE_ON_INACTIVE = 9 | NavDestination组件处于非激活态。<br>**起始版本：** 26.1.0 |
 | ARKUI_NAV_DESTINATION_STATE_ON_BACK_PRESS = 100 | NavDestination组件接收到返回操作时触发，例如用户点击返回键或调用返回导航接口。 |
 
 ### ArkUI_RouterPageState
@@ -1405,9 +1405,9 @@ Enumerates the tree operating status for the cross-language option.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_TREE_OPERATING_STATUS_UNDEFINED = 0 |  |
-| OH_ARKUI_TREE_OPERATING_STATUS_ENABLE = 1 |  |
-| OH_ARKUI_TREE_OPERATING_STATUS_DISABLE = 2 |  |
+| OH_ARKUI_TREE_OPERATING_STATUS_UNDEFINED = 0 | Undefined, the initial value of the node tree operating status. Nodes in this status do not support cross-language node tree operations.<br>**起始版本：** 26.0.0 |
+| OH_ARKUI_TREE_OPERATING_STATUS_ENABLE = 1 | Enable, which means that when the option is applied to the node, the node's tree operating status will be enabled.<br>**起始版本：** 26.0.0 |
+| OH_ARKUI_TREE_OPERATING_STATUS_DISABLE = 2 | Disable, which means that when the option is applied to the node, the node's tree operating status will be disabled.<br>**起始版本：** 26.0.0 |
 
 ### OH_ArkUI_NodeMountPolicy
 
@@ -1425,8 +1425,8 @@ Enumeration of the policy for mounting child node to the target node.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE = 0 |  |
-| OH_ARKUI_NODE_MOUNT_POLICY_MIXED = 1 |  |
+| OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE = 0 | If you want to mount a RenderNode as a child node, that RenderNode must be the only child.<br>**起始版本：** 26.0.0 |
+| OH_ARKUI_NODE_MOUNT_POLICY_MIXED = 1 | Multiple child nodes of type Node or RenderNode allowed.<br>**起始版本：** 26.0.0 |
 
 
 ## 函数说明
@@ -2413,7 +2413,7 @@ Sets the number of maxDisplayCount for the dot navigation indicator.
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | ARKUI_ERROR_CODE_NO_ERROR Success. ARKUI_ERROR_CODE_PARAM_INVALID indicator is null or maxDisplayCount less then 6 or maxDisplayCount more then 9 |
+| int32_t | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success. [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) indicator is null or maxDisplayCount less then 6 or maxDisplayCount more then 9 |
 
 ### OH_ArkUI_SwiperIndicator_GetMaxDisplayCount()
 
@@ -4127,7 +4127,7 @@ ArkUI_NodeHandle OH_ArkUI_ActiveChildrenInfo_GetNodeByIndex(ArkUI_ActiveChildren
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) | 下标对应的子节点指针，异常时返回nullptr。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 下标对应的子节点指针，异常时返回nullptr。 |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -4267,7 +4267,7 @@ Set text menu item title.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetContent()
 
@@ -4290,13 +4290,13 @@ Get text menu item title.
 | [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object. |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The name of the text menu item, which defaults to an empty string; |
-| int32_t* writeLength | Indicates the string length actually written to the buffer when returning ARKUI_ERROR_CODE_NO_ERROR. Indicates the minimum buffer size that can accommodate the target when ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode). Indicates the minimum buffer size that can accommodate the target when [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. ARKUI_ERROR_CODE_PARAM_INVALID if the node, buffer or writeLength is null. ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null. [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetIcon()
 
@@ -4323,7 +4323,7 @@ Set text menu item icon.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetIcon()
 
@@ -4346,13 +4346,13 @@ Get text menu item icon.
 | [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The icon of the text menu item, which defaults to an empty string; |
-| int32_t* writeLength | Indicates the string length actually written to the buffer when returning ARKUI_ERROR_CODE_NO_ERROR. Indicates the minimum buffer size that can accommodate the target when ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode). Indicates the minimum buffer size that can accommodate the target when [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. ARKUI_ERROR_CODE_PARAM_INVALID if the node, buffer or writeLength is null. ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null. [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetLabelInfo()
 
@@ -4379,7 +4379,7 @@ Set text menu item label info for keyboard shortcut.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetLabelInfo()
 
@@ -4402,13 +4402,13 @@ Get text menu item label info for keyboard shortcut..
 | [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The shortcuts of the text menu item, which defaults to an empty string; |
-| int32_t* writeLength | Indicates the string length actually written to the buffer when returning ARKUI_ERROR_CODE_NO_ERROR. Indicates the minimum buffer size that can accommodate the target when ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode). Indicates the minimum buffer size that can accommodate the target when [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. ARKUI_ERROR_CODE_PARAM_INVALID if the node, buffer or writeLength is null. ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code. [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null. [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetId()
 
@@ -4435,7 +4435,7 @@ Set text menu item id.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetId()
 
@@ -4462,7 +4462,7 @@ Get text menu item id.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_GetSize()
 
@@ -4489,7 +4489,7 @@ Get the size of text menu items.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_GetItem()
 
@@ -4517,7 +4517,7 @@ Get text menu item at index.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Insert()
 
@@ -4545,7 +4545,7 @@ Insert text menu item at index.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Erase()
 
@@ -4572,7 +4572,7 @@ Erase text menu item at index.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Clear()
 
@@ -4598,7 +4598,7 @@ Clear all the items.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnCreateMenuCallback()
 
@@ -4626,7 +4626,7 @@ Set the event to be called when text menu create.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnPrepareMenuCallback()
 
@@ -4654,7 +4654,7 @@ Set the event to be called when menu prepare.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnMenuItemClickCallback()
 
@@ -4682,7 +4682,7 @@ Set the event to be called when menu item click.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetSpanType()
 
@@ -4709,7 +4709,7 @@ Sets the recognition types of a configuration object for selected text recogniti
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetSpanType()
 
@@ -4736,7 +4736,7 @@ Gets the span type select menu options.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetContentNode()
 
@@ -4757,13 +4757,13 @@ Set custom text menu node of text.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetContentNode()
 
@@ -4784,13 +4784,13 @@ Get custom text menu node of text.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)* node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetResponseType()
 
@@ -4817,7 +4817,7 @@ Sets the recognition types of a configuration object for selected text recogniti
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetResponseType()
 
@@ -4844,7 +4844,7 @@ Gets the response type select menu options.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuShowCallback()
 
@@ -4872,7 +4872,7 @@ Set the event to be called when selection menu show.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuHideCallback()
 
@@ -4900,7 +4900,7 @@ Set the event to be called when selection menu hide.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SelectionOptions_Create()
 
@@ -5101,7 +5101,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetTextDecorationType(OH_ArkUI_D
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_GetTextDecorationType()
 
@@ -5128,7 +5128,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetTextDecorationType(OH_ArkUI_D
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_SetColor()
 
@@ -5155,7 +5155,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetColor(OH_ArkUI_DecorationStyl
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_GetColor()
 
@@ -5182,7 +5182,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetColor(OH_ArkUI_DecorationStyl
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_SetTextDecorationStyle()
 
@@ -5209,7 +5209,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetTextDecorationStyle(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_GetTextDecorationStyle()
 
@@ -5236,7 +5236,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetTextDecorationStyle(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_SetThicknessScale()
 
@@ -5263,7 +5263,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetThicknessScale(OH_ArkUI_Decor
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_DecorationStyleOptions_GetThicknessScale()
 
@@ -5290,7 +5290,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetThicknessScale(OH_ArkUI_Decor
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetTypes()
 
@@ -5318,7 +5318,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetTypes(OH_ArkUI_TextDataDetect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetTypes()
 
@@ -5347,7 +5347,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetTypes(OH_ArkUI_TextDataDetect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。<br>若bufferSize小于writeLength，返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。<br>若bufferSize小于writeLength，返回[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_RegisterOnDetectResultUpdateCallback()
 
@@ -5375,7 +5375,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_RegisterOnDetectResultUpdateCall
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetColor()
 
@@ -5402,7 +5402,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetColor(OH_ArkUI_TextDataDetect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetColor()
 
@@ -5429,7 +5429,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetColor(OH_ArkUI_TextDataDetect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetDecorationStyleOptions()
 
@@ -5456,7 +5456,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetDecorationStyleOptions(OH_Ark
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetDecorationStyleOptions()
 
@@ -5483,7 +5483,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetDecorationStyleOptions(OH_Ark
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu()
 
@@ -5510,7 +5510,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu(OH_ArkUI_Te
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu()
 
@@ -5537,7 +5537,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu(OH_ArkUI_Te
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextController_SetStyledString()
 
@@ -5564,7 +5564,7 @@ Set the StyledString of the text.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetValue()
 
@@ -5591,7 +5591,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetValue(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetValue()
 
@@ -5620,7 +5620,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetValue(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若节点、缓冲区或writeLength为空，返回ARKUI_ERROR_CODE_PARAM_INVALID。<br>若bufferSize小于writeLength，返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若节点、缓冲区或writeLength为空，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。<br>若bufferSize小于writeLength，返回[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontSize()
 
@@ -5647,7 +5647,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontSize(OH_ArkUI_TextE
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontSize()
 
@@ -5674,7 +5674,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontSize(OH_ArkUI_TextE
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontWeight()
 
@@ -5701,7 +5701,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontWeight(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontWeight()
 
@@ -5728,7 +5728,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontWeight(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontFamily()
 
@@ -5755,7 +5755,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontFamily(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontFamily()
 
@@ -5784,7 +5784,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontFamily(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若节点、缓冲区或writeLength为空，返回ARKUI_ERROR_CODE_PARAM_INVALID。<br>若bufferSize小于writeLength，返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若节点、缓冲区或writeLength为空，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。<br>若bufferSize小于writeLength，返回[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontStyle()
 
@@ -5811,7 +5811,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontStyle(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle()
 
@@ -5838,7 +5838,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontColor()
 
@@ -5865,7 +5865,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontColor(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor()
 
@@ -5892,7 +5892,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetCaretOffset()
 
@@ -5919,7 +5919,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetCaretOffset(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetCaretOffset()
 
@@ -5946,7 +5946,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretOffset(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetSelection()
 
@@ -5975,7 +5975,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetSelection(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_IsEditing()
 
@@ -6002,7 +6002,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_IsEditing(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_StopEditing()
 
@@ -6028,7 +6028,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_StopEditing(OH_ArkUI_T
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetPreviewText()
 
@@ -6058,7 +6058,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetPreviewText(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetCaretRect()
 
@@ -6085,7 +6085,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretRect(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_DeleteBackward()
 
@@ -6111,7 +6111,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_DeleteBackward(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextAlign()
 
@@ -6138,7 +6138,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextAlign(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextAlign()
 
@@ -6165,7 +6165,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextAlign(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap()
 
@@ -6192,7 +6192,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap(OH_Ar
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginPixelMap()
 
@@ -6219,7 +6219,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginPixelMap(OH_Ar
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginWidth()
 
@@ -6246,7 +6246,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginWidth(OH_ArkUI
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginWidth()
 
@@ -6273,7 +6273,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginWidth(OH_ArkUI
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginHeight()
 
@@ -6300,7 +6300,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginHeight(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginHeight()
 
@@ -6327,7 +6327,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginHeight(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetWordBreak()
 
@@ -6354,7 +6354,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetWordBreak(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetWordBreak()
 
@@ -6381,7 +6381,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetWordBreak(OH_ArkUI_TextEdit
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLineBreakStrategy()
 
@@ -6408,7 +6408,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLineBreakStrategy(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLineBreakStrategy()
 
@@ -6435,7 +6435,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLineBreakStrategy(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetParagraphSpacing()
 
@@ -6462,7 +6462,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetParagraphSpacing(OH_ArkUI_T
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetParagraphSpacing()
 
@@ -6489,7 +6489,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetParagraphSpacing(OH_ArkUI_T
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextVerticalAlign()
 
@@ -6516,7 +6516,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextVerticalAlign(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextVerticalAlign()
 
@@ -6543,7 +6543,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextVerticalAlign(OH_ArkUI_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextDirection()
 
@@ -6570,7 +6570,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextDirection(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextDirection()
 
@@ -6597,7 +6597,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextDirection(OH_ArkUI_Text
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetTypingParagraphStyle()
 
@@ -6624,7 +6624,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingParagraphStyl
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontColor()
 
@@ -6651,7 +6651,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontColor(OH_ArkUI_TextEditorTex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontColor()
 
@@ -6678,7 +6678,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontColor(OH_ArkUI_TextEditorTex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontSize()
 
@@ -6705,7 +6705,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontSize(OH_ArkUI_TextEditorText
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontSize()
 
@@ -6732,7 +6732,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontSize(OH_ArkUI_TextEditorText
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontStyle()
 
@@ -6759,7 +6759,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontStyle(OH_ArkUI_TextEditorTex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontStyle()
 
@@ -6786,7 +6786,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontStyle(OH_ArkUI_TextEditorTex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontWeight()
 
@@ -6813,7 +6813,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontWeight(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontWeight()
 
@@ -6840,7 +6840,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontWeight(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontFamily()
 
@@ -6867,7 +6867,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontFamily(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontFamily()
 
@@ -6896,7 +6896,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontFamily(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetDecoration()
 
@@ -6923,7 +6923,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetDecoration(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetDecoration()
 
@@ -6950,7 +6950,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetDecoration(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextShadows()
 
@@ -6978,7 +6978,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextShadows(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextShadows()
 
@@ -7007,7 +7007,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextShadows(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetLineHeight()
 
@@ -7034,7 +7034,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetLineHeight(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetLineHeight()
 
@@ -7061,7 +7061,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetLineHeight(OH_ArkUI_TextEditorTe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetLetterSpacing()
 
@@ -7088,7 +7088,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetLetterSpacing(OH_ArkUI_TextEdito
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetLetterSpacing()
 
@@ -7115,7 +7115,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetLetterSpacing(OH_ArkUI_TextEdito
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontFeature()
 
@@ -7142,7 +7142,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontFeature(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontFeature()
 
@@ -7171,7 +7171,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontFeature(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetHalfLeading()
 
@@ -7198,7 +7198,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetHalfLeading(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetHalfLeading()
 
@@ -7225,7 +7225,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetHalfLeading(OH_ArkUI_TextEditorT
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundColor()
 
@@ -7252,7 +7252,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundColor(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundColor()
 
@@ -7279,7 +7279,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundColor(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundRadius()
 
@@ -7309,7 +7309,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundRadius(OH_ArkUI_Te
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius()
 
@@ -7339,7 +7339,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius(OH_ArkUI_Te
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetTypingStyle()
 
@@ -7366,7 +7366,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingStyle(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetTypingStyle()
 
@@ -7393,7 +7393,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetTypingStyle(OH_ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType()
 
@@ -7420,7 +7420,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType()
 
@@ -7447,7 +7447,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode()
 
@@ -7468,13 +7468,13 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode(OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 内容节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 内容节点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetContentNode()
 
@@ -7495,13 +7495,13 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetContentNode(OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)* node | 内容节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | 内容节点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetResponseType()
 
@@ -7528,7 +7528,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetResponseType(OH_ArkUI
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetResponseType()
 
@@ -7555,7 +7555,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetResponseType(OH_ArkUI
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetMenuType()
 
@@ -7582,7 +7582,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetMenuType(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetMenuType()
 
@@ -7609,7 +7609,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetMenuType(OH_ArkUI_Tex
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuShowCallback()
 
@@ -7637,7 +7637,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuShowCallba
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuHideCallback()
 
@@ -7665,7 +7665,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuHideCallba
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuAppearCallback()
 
@@ -7693,7 +7693,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuAppearCall
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuDisappearCallback()
 
@@ -7721,7 +7721,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuDisappearC
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetHapticFeedbackMode()
 
@@ -7748,7 +7748,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetHapticFeedbackMode(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetHapticFeedbackMode()
 
@@ -7775,7 +7775,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetHapticFeedbackMode(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_CloseSelectionMenu()
 
@@ -7801,7 +7801,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_CloseSelectionMenu(OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetSelection()
 
@@ -7833,7 +7833,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetSelection(const OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetStyledString()
 
@@ -7864,7 +7864,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledString(const 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetStyledString()
 
@@ -7895,7 +7895,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetStyledString(const 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder()
 
@@ -7926,7 +7926,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder(c
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_ScrollToVisible()
 
@@ -7954,7 +7954,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_ScrollToVisible(const 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureBackground()
 
@@ -7981,7 +7981,7 @@ Set the parameters of background style.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns ARKUI_ERROR_CODE_NO_ERROR if success. Returns ARKUI_ERROR_CODE_PARAM_INVALID The parameters set need to be consistent with the type of the created instance. If they are not consistent, this error code will be returned. This interface only takes effect when the type is "background". |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with the type of the created instance. If they are not consistent, this error code will be returned. This interface only takes effect when the type is "background". |
 
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureDivider()
 
@@ -8008,7 +8008,7 @@ Set the parameters of divider style.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns ARKUI_ERROR_CODE_NO_ERROR if success. Returns ARKUI_ERROR_CODE_PARAM_INVALID The parameters set need to be consistent with the type of the created instance. If they are not consistent, this error code will be returned. This interface only takes effect when the type is "divider". |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with the type of the created instance. If they are not consistent, this error code will be returned. This interface only takes effect when the type is "divider". |
 
 ### OH_ArkUI_CrossLanguageOption_SetTreeOperatingStatus()
 
@@ -8316,7 +8316,7 @@ Gets color stops of linear gradient options.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_RadialGradientOptions_Create()
 
@@ -8631,6 +8631,6 @@ Gets color stops of radial gradient options.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 

@@ -10,7 +10,7 @@ Defines common text enumerations and APIs, covering text alignment, decoration l
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -54,9 +54,9 @@ Defines common text enumerations and APIs, covering text alignment, decoration l
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback |  |
-| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback |  |
-| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback |  |
+| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback | Callback for the text menu creation event. This callback is triggered when a text menu is created, allowing you to set menu data in it. |
+| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback | Callback for the text menu preparation event. This callback is called when the text selection area changes and before the menu is displayed, allowing you to set menu data in it. |
+| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback | The text menu item click callback function. |
 | [ArkUI_ShowCounterConfig* OH_ArkUI_ShowCounterConfig_Create()](#oh_arkui_showcounterconfig_create) | - | Creates a text input counter configuration object. When this object is no longer used, call [OH_ArkUI_ShowCounterConfig_Dispose](capi-text-common-h.md#oh_arkui_showcounterconfig_dispose) to dispose of it. |
 | [void OH_ArkUI_ShowCounterConfig_Dispose(ArkUI_ShowCounterConfig* config)](#oh_arkui_showcounterconfig_dispose) | - | Disposes of the text input counter configuration object created by [OH_ArkUI_ShowCounterConfig_Create](capi-text-common-h.md#oh_arkui_showcounterconfig_create). |
 | [void OH_ArkUI_ShowCounterConfig_SetCounterTextColor(ArkUI_ShowCounterConfig* config, uint32_t color)](#oh_arkui_showcounterconfig_setcountertextcolor) | - | Sets the text color of the counter when the text input has not reached the maximum character limit. If this API is not called, the default color is **0x66182431**, displayed as gray. |
@@ -98,8 +98,8 @@ Enumerates text horizontal alignment styles.
 | ARKUI_TEXT_ALIGNMENT_CENTER | Horizontally centered. |
 | ARKUI_TEXT_ALIGNMENT_END | Aligned with the end. |
 | ARKUI_TEXT_ALIGNMENT_JUSTIFY | Aligned with both margins. |
-| ARKUI_TEXT_ALIGNMENT_LEFT_TO_RIGHT = 4 |  |
-| ARKUI_TEXT_ALIGNMENT_RIGHT_TO_LEFT = 5 |  |
+| ARKUI_TEXT_ALIGNMENT_LEFT_TO_RIGHT = 4 | Aligned with left to right.<br>**Since**: 23 |
+| ARKUI_TEXT_ALIGNMENT_RIGHT_TO_LEFT = 5 | Aligned with right to left.<br>**Since**: 23 |
 
 ### ArkUI_TextVerticalAlignment
 
@@ -351,10 +351,10 @@ Enumerates the appearance of the keyboard when the text box is focused.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_KEYBOARD_APPEARANCE_NONE_IMMERSIVE = 0 |  |
-| ARKUI_KEYBOARD_APPEARANCE_IMMERSIVE = 1 |  |
-| ARKUI_KEYBOARD_APPEARANCE_LIGHT_IMMERSIVE = 2 |  |
-| ARKUI_KEYBOARD_APPEARANCE_DARK_IMMERSIVE = 3 |  |
+| ARKUI_KEYBOARD_APPEARANCE_NONE_IMMERSIVE = 0 | Default appearance mode, won't adopt immersive styles.<br>**Since**: 15 |
+| ARKUI_KEYBOARD_APPEARANCE_IMMERSIVE = 1 | Immersive mode.<br>**Since**: 15 |
+| ARKUI_KEYBOARD_APPEARANCE_LIGHT_IMMERSIVE = 2 | Light immersive style.<br>**Since**: 15 |
+| ARKUI_KEYBOARD_APPEARANCE_DARK_IMMERSIVE = 3 | Dark immersive style.<br>**Since**: 15 |
 
 ### ArkUI_TextMenuItemId
 
@@ -388,8 +388,8 @@ Enumerates the IDs of text menu items.
 | ARKUI_TEXT_MENU_ITEM_ID_ADDRESS = 13 | Indicates the TextMenuItemId to open map. |
 | ARKUI_TEXT_MENU_ITEM_ID_DATA_TIME = 14 | Indicates the TextMenuItemId to open calendar. |
 | ARKUI_TEXT_MENU_ITEM_ID_ASK_AI = 15 | Indicates the TextMenuItemId for asking AI. |
-| ARKUI_TEXT_MENU_ITEM_ID_AUTO_FILL = 16 |  |
-| ARKUI_TEXT_MENU_ITEM_ID_PASSWORD_VAULT = 17 |  |
+| ARKUI_TEXT_MENU_ITEM_ID_AUTO_FILL = 16 | Autofill. For example, the account and password can be automatically filled.<br>**Since**: 24 |
+| ARKUI_TEXT_MENU_ITEM_ID_PASSWORD_VAULT = 17 | Password vault.<br>**Since**: 24 |
 | ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_BEGIN = 10000 | Inclusive begin of app-reserved ID range. |
 | ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_END = 20000 | Inclusive end of app-reserved ID range. |
 
@@ -409,9 +409,9 @@ Enumerates line break policies.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_LINE_BREAK_STRATEGY_GREEDY = 0 |  |
-| OH_ARKUI_LINE_BREAK_STRATEGY_HIGH_QUALITY = 1 |  |
-| OH_ARKUI_LINE_BREAK_STRATEGY_BALANCE = 2 |  |
+| OH_ARKUI_LINE_BREAK_STRATEGY_GREEDY = 0 | Greedy mode.<br>Places as many words on a line as possible and moves to the next line only if no more words can fit into the same line.<br>**Since**: 24 |
+| OH_ARKUI_LINE_BREAK_STRATEGY_HIGH_QUALITY = 1 | High-quality mode.<br>Fills in lines as much as possible on the basis of **BALANCED**, which may results in a large blank area on the last line.<br>**Since**: 24 |
+| OH_ARKUI_LINE_BREAK_STRATEGY_BALANCE = 2 | Balance mode.<br>Without splitting words, the width of each line in a paragraph is the same as much as possible.<br>**Since**: 24 |
 
 ### OH_ArkUI_StrokeJoinStyle
 
@@ -429,9 +429,9 @@ Enumerates the join styles of a text stroke.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN = 0 |  |
-| OH_ARKUI_STROKE_JOIN_STYLE_ROUND_JOIN = 1 |  |
-| OH_ARKUI_STROKE_JOIN_STYLE_BEVEL_JOIN = 2 |  |
+| OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN = 0 | Miter join. The text stroke joins with a sharp corner.<br>**Since**: 26.1.0 |
+| OH_ARKUI_STROKE_JOIN_STYLE_ROUND_JOIN = 1 | Round join. The text stroke joins with a rounded corner.<br>**Since**: 26.1.0 |
+| OH_ARKUI_STROKE_JOIN_STYLE_BEVEL_JOIN = 2 | Bevel join. The text stroke joins with a beveled corner.<br>**Since**: 26.1.0 |
 
 ### ArkUI_TextSpanType
 
@@ -486,6 +486,8 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, voi
 
 **Description**
 
+Callback for the text menu creation event. This callback is triggered when a text menu is created, allowing you toset menu data in it.
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 22
@@ -494,7 +496,7 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, voi
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | Pointer to the **ArkUI_TextMenuItemArray** object, which is created and released by the system. You can call OH_ArkUI_TextMenuItemArray_Insert and OH_ArkUI_TextMenuItemArray_Erase to modify the array in the callback. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | Pointer to the **ArkUI_TextMenuItemArray** object, which is created and released by the system. You can call [OH_ArkUI_TextMenuItemArray_Insert](capi-native-type-h.md#oh_arkui_textmenuitemarray_insert) and [OH_ArkUI_TextMenuItemArray_Erase](capi-native-type-h.md#oh_arkui_textmenuitemarray_erase) to modify the array in the callback. |
 | void* userData | Pointer to the user-defined data, which is passed by you when registering the callback and returned as-is when the callback is triggered. It is used to obtain context data in the callback. The value **null**<br>indicates that no custom data is passed. |
 
 ### ArkUI_TextPrepareMenuCallback()
@@ -505,6 +507,8 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, vo
 
 **Description**
 
+Callback for the text menu preparation event. This callback is called when the text selection area changes andbefore the menu is displayed, allowing you to set menu data in it.
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 22
@@ -513,7 +517,7 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, vo
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | Pointer to the **ArkUI_TextMenuItemArray** object, which is created and released by the system. You can call OH_ArkUI_TextMenuItemArray_Insert and OH_ArkUI_TextMenuItemArray_Erase to modify the array in the callback. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | Pointer to the **ArkUI_TextMenuItemArray** object, which is created and released by the system. You can call [OH_ArkUI_TextMenuItemArray_Insert](capi-native-type-h.md#oh_arkui_textmenuitemarray_insert) and [OH_ArkUI_TextMenuItemArray_Erase](capi-native-type-h.md#oh_arkui_textmenuitemarray_erase) to modify the array in the callback. |
 | void* userData | Pointer to the user-defined data, which is passed by you when registering the callback and returned as-is when the callback is triggered. It is used to obtain context data in the callback. The value **null**<br>means no custom data is passed. |
 
 ### ArkUI_TextMenuItemClickCallback()
@@ -523,6 +527,8 @@ typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, 
 ```
 
 **Description**
+
+The text menu item click callback function.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

@@ -10,7 +10,7 @@ Defines enumerations related to **ImageSpan**, which are used to embed images in
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -42,6 +42,6 @@ Enumerates image alignment modes based on text.
 | ARKUI_IMAGE_SPAN_ALIGNMENT_BOTTOM | The image is bottom aligned with the text. |
 | ARKUI_IMAGE_SPAN_ALIGNMENT_CENTER | The image is centered aligned with the text. |
 | ARKUI_IMAGE_SPAN_ALIGNMENT_TOP | The image is top aligned with the text. |
-| ARKUI_IMAGE_SPAN_ALIGNMENT_FOLLOW_PARAGRAPH |  |
+| ARKUI_IMAGE_SPAN_ALIGNMENT_FOLLOW_PARAGRAPH | The image alignment mode follows the text component's alignment mode.<br>**Since**: 20 |
 
 

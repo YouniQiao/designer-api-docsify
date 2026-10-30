@@ -12,7 +12,7 @@ typedef struct Print_Range {...} Print_Range
 
 **起始版本：** 13
 
-**相关模块：** [Print](capi-print.md)
+**相关模块：** [Print](capi-others-print.md)
 
 **所在头文件：** [ohprint.h](capi-ohprint-h.md)
 

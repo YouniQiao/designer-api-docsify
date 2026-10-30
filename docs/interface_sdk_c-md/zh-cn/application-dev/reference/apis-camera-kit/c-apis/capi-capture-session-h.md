@@ -10,7 +10,7 @@
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## 汇总
 
@@ -157,22 +157,6 @@
 | [bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession* session)](#oh_capturesession_islockfocustrackingsupported) | - | 查询是否支持锁定焦点跟踪。 |
 | [Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)](#oh_capturesession_lockfocustracking) | - | 锁定焦点跟踪，可通过[OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking)解锁。 |
 | [Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)](#oh_capturesession_unlockfocustracking) | - | 解锁焦点跟踪。 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState) | 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话焦点状态回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode) | 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话错误回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo) | 拍照会话平滑变焦信息回调，触发平滑变焦后该回调会返回。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo) | 捕获会话设备切换状态回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel) | 捕获系统压力状态变化回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState) | 捕获会话闪光灯状态变更回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState) | 定义曝光状态变更时的回调函数。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue) | 用于在相机会话中监听感光度（ISO）变化的回调函数。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration) | 捕获会话曝光时间变更回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected) | 相机会话微距状态改变回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo) | 相机控制器效果激活状态变化回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
 
 ## 函数说明
 

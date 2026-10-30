@@ -12,7 +12,7 @@ IPC死亡通知对象，用于监听IPC远程对象的死亡事件。创建OHIPC
 
 **起始版本：** 12
 
-**相关模块：** [OHIPCRemoteObject](capi-ohipcremoteobject.md)
+**相关模块：** [OHIPCRemoteObject](capi-others-ohipcremoteobject.md)
 
 **所在头文件：** [ipc_cremote_object.h](capi-ipc-cremote-object-h.md)
 

@@ -845,9 +845,13 @@
   <!--Del-->
   - [destroyTimer(system api)](arkts-basicservices-systemtimer-destroytimer-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [setPowerOnTimerEnabled(system api)](arkts-basicservices-systemtimer-setpowerontimerenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [startTimer(system api)](arkts-basicservices-systemtimer-starttimer-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [stopTimer(system api)](arkts-basicservices-systemtimer-stoptimer-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PowerOnTimerEnabledOptions(system api)](arkts-basicservices-systemtimer-powerontimerenabledoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TimerOptions(system api)](arkts-basicservices-systemtimer-timeroptions-i-sys.md)<!--DelEnd-->
   <!--Del-->

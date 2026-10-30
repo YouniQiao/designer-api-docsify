@@ -10,7 +10,7 @@ Defines a set of custom dialog box APIs of ArkUI on the native side.
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -81,13 +81,6 @@ Defines a set of custom dialog box APIs of ArkUI on the native side.
 | [int32_t OH_ArkUI_CustomDialog_SetBackgroundEffect(ArkUI_CustomDialogOptions* options, const ArkUI_AttributeItem* backgroundEffect)](#oh_arkui_customdialog_setbackgroundeffect) | - | Sets the background effect parameters for a dialog box. |
 | [int32_t OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterialInOptions(ArkUI_CustomDialogOptions* options, ArkUI_ImmersiveMaterialHandle material)](#oh_arkui_nativemodule_customdialog_setsystemmaterialinoptions) | - | Sets the system material of the dialog box. |
 | [int32_t OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterial(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMaterialHandle material)](#oh_arkui_nativemodule_customdialog_setsystemmaterial) | - | Sets the system material of the dialog box. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| bool (*ArkUI_OnWillDismissEvent)(int32_t reason) | Invoked when the dialog box is closed.<br>**Since**: 12<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
-| void (*ArkUI_OpenDialogCallback)(int32_t errorCode, int32_t dialogId, void* userData) | Callback function when the dialog is displayed.<br>**Since**: 26.0.1<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
 
 ## Enum type description
 
@@ -189,8 +182,8 @@ Enumerates the dialog display mode in subwindow.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_DIALOG_DISPLAY_MODE_SCREEN_BASED = 0 |  |
-| OH_ARKUI_DIALOG_DISPLAY_MODE_WINDOW_BASED |  |
+| OH_ARKUI_DIALOG_DISPLAY_MODE_SCREEN_BASED = 0 | The dialog box is displayed based on the screen.<br>**Since**: 26.0.0 |
+| OH_ARKUI_DIALOG_DISPLAY_MODE_WINDOW_BASED | The dialog box is displayed based on the window.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -424,7 +417,7 @@ Creates custom dialog box options.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) content | Content of the custom dialog box. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) content | Content of the custom dialog box. |
 
 **Returns**:
 
@@ -1234,7 +1227,7 @@ Get state of dialog.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
 | [ArkUI_DialogState](capi-native-dialog-h.md#arkui_dialogstate)* state | Dialog state object. |
 
 **Returns**:
@@ -1316,7 +1309,7 @@ Sets the system material of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md). |
+| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 
@@ -1342,8 +1335,8 @@ Sets the system material of the dialog box.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md). |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 

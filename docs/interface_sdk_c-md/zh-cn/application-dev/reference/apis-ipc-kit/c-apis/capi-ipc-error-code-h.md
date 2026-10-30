@@ -12,7 +12,7 @@
 
 **起始版本：** 12
 
-**相关模块：** [OHIPCErrorCode](capi-ohipcerrorcode.md)
+**相关模块：** [OHIPCErrorCode](capi-ipc-kit-ohipcerrorcode.md)
 
 ## 汇总
 

@@ -10,7 +10,7 @@ Defines the struct and enum of **AVMediaSource**.
 
 **Since**: 23
 
-**Related module**: [AVMediaSource](capi-avmediasource.md)
+**Related module**: [AVMediaSource](capi-media-kit-avmediasource.md)
 
 ## Summary
 
@@ -57,14 +57,6 @@ Defines the struct and enum of **AVMediaSource**.
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceOpenCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceOpenedCallback callback, void *userData)](#oh_avmediasourceloader_setsourceopencallback) | - | Sets the open callback function for **OH_AVMediaSourceLoader**. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceReadCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceReadCallback callback, void *userData)](#oh_avmediasourceloader_setsourcereadcallback) | - | Sets the read callback function for **OH_AVMediaSourceLoader**. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceCloseCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceClosedCallback callback, void *userData)](#oh_avmediasourceloader_setsourceclosecallback) | - | Sets the close callback function for **OH_AVMediaSourceLoader**. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| int64_t (*OH_AVMediaSourceLoaderOnSourceOpenedCallback)(OH_AVMediaSourceLoadingRequest *request, void *userData) | Defines the SourceOpenCallback function which is called by the service. client should process the incoming request and return the unique handle to the open resource. The client must return the handle immediately after processing the request.<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.Media.Core |
-| void (*OH_AVMediaSourceLoaderOnSourceReadCallback)(int64_t uuid, int64_t requestedOffset, int64_t requestedLength, void *userData) | Defines the **SourceReadCallback** function called by the server. The client should record the read request and push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader) methods of the request object when there is sufficient data. The client must return immediately after the request is processed.<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.Media.Core |
-| void (*OH_AVMediaSourceLoaderOnSourceClosedCallback)(int64_t uuid, void *userData) | Defines the **SourceCloseCallback** function called by the server. The client should release related resources and return immediately after the request is processed.<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.Media.Core |
 
 ## Enum type description
 

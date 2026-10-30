@@ -12,7 +12,7 @@ Defines the progress of scanning a picture by the scanner.
 
 **Since**: 12
 
-**Related module**: [OH_Scan](capi-oh-scan.md)
+**Related module**: [OH_Scan](capi-others-oh-scan.md)
 
 **Header file**: [ohscan.h](capi-ohscan-h.md)
 

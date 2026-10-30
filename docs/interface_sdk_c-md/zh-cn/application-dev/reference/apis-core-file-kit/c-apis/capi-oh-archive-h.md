@@ -12,7 +12,7 @@
 
 **起始版本：** 26.0.0
 
-**相关模块：** [Archive](capi-archive.md)
+**相关模块：** [Archive](capi-core-file-kit-archive.md)
 
 ## 汇总
 
@@ -22,10 +22,10 @@
 | -- | -- | -- |
 | [OH_Archive_StreamInfo](capi-archive-oh-archive-streaminfo.md) | OH_Archive_StreamInfo | 流式压缩/解压缩信息结构体。 |
 | [OH_Archive_Stream_Config](capi-archive-oh-archive-stream-config.md) | OH_Archive_Stream_Config | 流式压缩配置结构体。 |
-| [*OH_Archive_Writer_Ctx](capi-archive-8hoh-archive-writer-ctx.md) | *OH_Archive_Writer_Ctx | 文件压缩器的上下文结构体指针。 |
-| [*OH_Archive_Reader_Ctx](capi-archive-8hoh-archive-reader-ctx.md) | *OH_Archive_Reader_Ctx | 文件解压缩器的上下文结构体指针。 |
-| [*OH_Archive_StreamWrite_Ctx](capi-archive-8hoh-archive-streamwrite-ctx.md) | *OH_Archive_StreamWrite_Ctx | 流式压缩器的上下文结构体指针。 |
-| [*OH_Archive_StreamRead_Ctx](capi-archive-8hoh-archive-streamread-ctx.md) | *OH_Archive_StreamRead_Ctx | 流式解压缩器的上下文结构体指针。 |
+| [ArchiveWriteCtx](capi-archive-archivewritectx.md) | *OH_Archive_Writer_Ctx | 文件压缩器的上下文结构体指针。 |
+| [ArchiveReadCtx](capi-archive-archivereadctx.md) | *OH_Archive_Reader_Ctx | 文件解压缩器的上下文结构体指针。 |
+| [ArchiveStreamWriteCtx](capi-archive-archivestreamwritectx.md) | *OH_Archive_StreamWrite_Ctx | 流式压缩器的上下文结构体指针。 |
+| [ArchiveStreamReadCtx](capi-archive-archivestreamreadctx.md) | *OH_Archive_StreamRead_Ctx | 流式解压缩器的上下文结构体指针。 |
 
 ### 枚举
 
@@ -74,13 +74,6 @@
 | [OH_Archive_ErrCode OH_Archive_StreamRead_Update(OH_Archive_StreamRead_Ctx ctx, const uint8_t* data, uint64_t size)](#oh_archive_streamread_update) | - | 提交解压缩数据。 |
 | [OH_Archive_ErrCode OH_Archive_StreamRead_End(OH_Archive_StreamRead_Ctx ctx, OH_Archive_StreamInfo *streamInfo)](#oh_archive_streamread_end) | - | 结束解压缩，刷新所有剩余数据并清理内存。 |
 | [void OH_Archive_StreamRead_Destroy(OH_Archive_StreamRead_Ctx ctx)](#oh_archive_streamread_destroy) | - | 销毁解压缩实例并释放相关资源。 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| OH_Archive_ProgressType (*OH_Archive_ProgressHandlerWithData)(int32_t progress, void *userData) | 定义进度处理回调函数的类型。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.FileManagement.File.FileIO |
-| uint64_t (*OH_Archive_Stream_OutputHandler)(const void* data, uint64_t size, void* userData) | 用户自定义回调函数指针类型，用于处理压缩后的数据。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.FileManagement.File.FileIO |
 
 ## 枚举类型说明
 
@@ -249,7 +242,7 @@ OH_Archive_Reader_Ctx OH_Archive_Reader_OpenFile(const char *infile)
 
 **起始版本：** 26.0.0
 
-**资源释放：** archive/OH_Archive_Reader_Close {return}
+**资源释放：** [OH_Archive_Reader_Close](#oh_archive_reader_close)
 
 **参数：**
 
@@ -358,7 +351,7 @@ OH_Archive_Writer_Ctx OH_Archive_Writer_OpenFile(const char *outfile, OH_Archive
 
 **起始版本：** 26.0.0
 
-**资源释放：** archive/OH_Archive_Writer_Close {return}
+**资源释放：** [OH_Archive_Writer_Close](#oh_archive_writer_close)
 
 **参数：**
 
@@ -586,7 +579,7 @@ OH_Archive_StreamWrite_Ctx OH_Archive_StreamWrite_Create(OH_Archive_Stream_Confi
 
 **起始版本：** 26.0.0
 
-**资源释放：** archive/OH_Archive_StreamWrite_Destroy {return}
+**资源释放：** [OH_Archive_StreamWrite_Destroy](#oh_archive_streamwrite_destroy)
 
 **参数：**
 
@@ -770,7 +763,7 @@ OH_Archive_StreamRead_Ctx OH_Archive_StreamRead_Create(OH_Archive_Stream_Config 
 
 **起始版本：** 26.0.0
 
-**资源释放：** archive/OH_Archive_StreamRead_Destroy {return}
+**资源释放：** [OH_Archive_StreamRead_Destroy](#oh_archive_streamread_destroy)
 
 **参数：**
 

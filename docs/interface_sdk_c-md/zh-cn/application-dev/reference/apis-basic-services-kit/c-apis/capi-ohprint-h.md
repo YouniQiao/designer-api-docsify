@@ -10,7 +10,7 @@ Declares APIs for discovering and connecting to printers, printing files, and qu
 
 **起始版本：** 12
 
-**相关模块：** [Print](capi-print.md)
+**相关模块：** [Print](capi-basic-services-kit-print.md)
 
 ## 汇总
 
@@ -77,17 +77,6 @@ Declares APIs for discovering and connecting to printers, printing files, and qu
 | [Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_PrintDocCallback printDocCallback, void *context)](#oh_print_startprintbynative) | - | 此 API 提供启动打印对话框的能力。 |
 | [typedef void(\*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state)](#oh_print_onjobstatechanged) | OH_Print_OnJobStateChanged | 打印任务状态回调。 |
 | [Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *printJob, OH_Print_OnJobStateChanged jobStateChangedCb)](#oh_print_startprintwithjobstatecallback) | - | 此API下发打印任务，并附带任务状态变更回调功能。 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void(*Print_WriteResultCallback)(const char *jobId, uint32_t code) | 写文件结果回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Print.PrintFramework |
-| void(*Print_OnStartLayoutWrite)(const char *jobId, uint32_t fd, const Print_PrintAttributes *oldAttrs, const Print_PrintAttributes *newAttrs, Print_WriteResultCallback writeCallback) | 打印开始布局回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Print.PrintFramework |
-| void(*Print_OnJobStateChanged)(const char *jobId, uint32_t state) | 打印任务状态回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Print.PrintFramework |
-| void (*Print_PrinterDiscoveryCallback)(Print_DiscoveryEvent event, const Print_PrinterInfo *printerInfo) | 打印机发现回调。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Print.PrintFramework |
-| void (*Print_PrinterChangeCallback)(Print_PrinterEvent event, const Print_PrinterInfo *printerInfo) | 打印机变更回调。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Print.PrintFramework |
-| void(*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state) | 打印任务状态回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Print.PrintFramework |
 
 ## 枚举类型说明
 

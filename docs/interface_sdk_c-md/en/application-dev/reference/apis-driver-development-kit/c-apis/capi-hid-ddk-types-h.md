@@ -10,7 +10,7 @@ Defines the enum variables and structs used in the HID DDK.
 
 **Since**: 11
 
-**Related module**: [HidDdk](capi-hidddk.md)
+**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
 
 ## Summary
 
@@ -364,11 +364,11 @@ Enumerates the HID DDK error codes.
 | HID_DDK_NULL_PTR = 27300002 | Null pointer. The value is changed from **-4** to **27300002** since API version 16. |
 | HID_DDK_INVALID_OPERATION = 27300003 | Invalid operation. The value is changed from **-3** to **27300003** since API version 16. |
 | HID_DDK_TIMEOUT = 27300004 | Timeout. The value is changed from **-5** to **27300004** since API version 16. |
-| HID_DDK_INIT_ERROR = 27300005 |  |
-| HID_DDK_SERVICE_ERROR = 27300006 |  |
-| HID_DDK_MEMORY_ERROR  = 27300007 |  |
-| HID_DDK_IO_ERROR = 27300008 |  |
-| HID_DDK_DEVICE_NOT_FOUND = 27300009 |  |
+| HID_DDK_INIT_ERROR = 27300005 | DDK initialization error.<br>**Since**: 18 |
+| HID_DDK_SERVICE_ERROR = 27300006 | Service communication error.<br>**Since**: 18 |
+| HID_DDK_MEMORY_ERROR  = 27300007 | Memory errors, such as memory data copy failure and memory allocation failure.<br>**Since**: 18 |
+| HID_DDK_IO_ERROR = 27300008 | I/O operation error.<br>**Since**: 18 |
+| HID_DDK_DEVICE_NOT_FOUND = 27300009 | Device not found.<br>**Since**: 18 |
 
 ### Hid_ReportType
 

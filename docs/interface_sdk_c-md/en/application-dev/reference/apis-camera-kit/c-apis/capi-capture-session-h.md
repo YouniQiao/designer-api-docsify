@@ -10,7 +10,7 @@ The file declares the capture session concepts.
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## Summary
 
@@ -157,22 +157,6 @@ The file declares the capture session concepts.
 | [bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession* session)](#oh_capturesession_islockfocustrackingsupported) | - | Checks whether the lock focus tracking is supported. |
 | [Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)](#oh_capturesession_lockfocustracking) | - | Lock focus tracking, can be unlocked by [OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking). |
 | [Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)](#oh_capturesession_unlockfocustracking) | - | Unlock focus tracking. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState) | Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report focus status changes of a capture session.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode) | Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report capture session errors.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo) | Defines the callback invoked when smooth zoom is triggered for a capture session.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo) | Capture session device switch status callback.<br>**Since**: 13<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel) | Defines the callback used to listen for capture system pressure level changes.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState) | Capture session flash state change callback.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState) | Defines a callback function that is invoked when the exposure state changes.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue) | Defines the callback used to listen for ISO changes in a camera session.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration) | Capture session exposure duration change callback.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected) | Defines the callback used to listen for macro status changes of a camera session.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo) | Defines the callback used to listen for effect status changes of a camera controller.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
 
 ## Function description
 

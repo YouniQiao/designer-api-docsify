@@ -12,7 +12,7 @@ Defines an IPC death notification object used to listen for the death event of a
 
 **Since**: 12
 
-**Related module**: [OHIPCRemoteObject](capi-ohipcremoteobject.md)
+**Related module**: [OHIPCRemoteObject](capi-others-ohipcremoteobject.md)
 
 **Header file**: [ipc_cremote_object.h](capi-ipc-cremote-object-h.md)
 

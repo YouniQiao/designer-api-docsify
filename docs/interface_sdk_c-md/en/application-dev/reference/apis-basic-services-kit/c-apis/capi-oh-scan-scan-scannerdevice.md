@@ -12,7 +12,7 @@ Defines scanner information.
 
 **Since**: 12
 
-**Related module**: [OH_Scan](capi-oh-scan.md)
+**Related module**: [OH_Scan](capi-others-oh-scan.md)
 
 **Header file**: [ohscan.h](capi-ohscan-h.md)
 
