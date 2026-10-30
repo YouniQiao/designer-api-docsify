@@ -56,6 +56,7 @@ The file declares the common structs, character constants, and enums used for ru
 | [OH_ScreenCaptureHighlightMode](#oh_screencapturehighlightmode) | OH_ScreenCaptureHighlightMode | Enumerates the display modes of the highlight border shown during screen capture. |
 | [OH_AVScreenCapture_FillMode](#oh_avscreencapture_fillmode) | OH_AVScreenCapture_FillMode | Enumerates the image fill modes. |
 | [OH_CapturePickerMode](#oh_capturepickermode) | OH_CapturePickerMode | Enumerates the display modes of the picker. |
+| [typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum](#typedef  oh_avscreencapture_autopausecapturesceneenum) | - | Scene Enumeration for Auto Pause Screen Capture. |
 
 ### Function
 
@@ -77,6 +78,8 @@ The file declares the common structs, character constants, and enums used for ru
 | Name | Description |
 | -- | -- |
 | const char *OH_SCREEN_CAPTURE_CONTENT_RECT | Key for obtaining the valid content area information in the screen recording image frame. The returned value is an int32_t array. The array length is 4. The array elements are defined as [top,left,width,height]. The value can be obtained from [OH_AVFormat_GetIntBuffer](capi-native-avformat-h.md#oh_avformat_getintbuffer).<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| uint32_t OH_AVScreenCapture_AutoPauseSceneSet | Conditional set declaration for auto pause screen capture.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| typedef uint32_t OH_AVScreenCapture_AutoPauseSceneSet | Conditional set declaration for auto pause screen capture.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
 
 ## Enum type description
 
@@ -379,6 +382,25 @@ Enumerates the display modes of the picker.
 | OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4 | Show both window and application options.<br>**Since**: 26.0.0 |
 | OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5 | Show both screen and application options.<br>**Since**: 26.0.0 |
 | OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6 | Show screen, window, and application options.<br>**Since**: 26.0.0 |
+
+### typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
+
+```c
+enum typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
+```
+
+**Description**
+
+Scene Enumeration for Auto Pause Screen Capture.
+
+**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_CAPTURE_AUTO_PAUSE_SCENE_NONE = 0 | Default value, indicating that auto-pause is not performed in any scenario.<br>**Since**: 26.1.0 |
+| OH_CAPTURE_AUTO_PAUSE_SCENE_SCREEN_FOLD_STATE_CHANGE = 1 << 0 | Scene for the folding status of the screen changes.<br>**Since**: 26.1.0 |
 
 
 ## Function description

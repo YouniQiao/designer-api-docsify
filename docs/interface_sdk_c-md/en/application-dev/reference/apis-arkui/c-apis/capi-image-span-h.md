@@ -4,6 +4,8 @@
 
 Defines enumerations related to **ImageSpan**, which are used to embed images in rich text and control the alignment between images and text. Multiple alignment modes are supported for mixed image-text layout scenarios, enabling precise alignment of images with text and improving the display of rich text.
 
+**File to Include**: <arkui/image_span.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full

@@ -4,6 +4,8 @@
 
 Defines enumerations and APIs related to **Progress**, supporting multiple progress indicator types such as linear, ring, eclipse, and capsule, and providing customization capabilities for linear progress indicator style options (smooth animation, scan effect, width, and corner radius). It is suitable for scenarios such as displaying task progress and loading states, helping you quickly implement diverse progress displays and interactive feedback.
 
+**File to Include**: <arkui/progress.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full

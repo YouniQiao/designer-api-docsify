@@ -139,6 +139,7 @@ Declare the Native API used for audio and video muxer, demuxer and basic encodin
 | const char *OH_AVCODEC_MIMETYPE_VIDEO_MPEG1 | MIME type of the MPEG1 video codec.<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
 | const char *OH_AVCODEC_MIMETYPE_VIDEO_CINEPAK | MIME type of the Cinepak video codec.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
 | const char *OH_AVCODEC_MIMETYPE_VIDEO_MSVIDEO1 | Pointer to the key that describes the MIME type of the Microsoft Video 1 (MSVIDEO1) video codec.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
+| const char *OH_AVCODEC_MIMETYPE_VIDEO_WMV1 | MIME type of the WMV1 video codec.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
 | const char *OH_AVCODEC_MIMETYPE_VIDEO_WMV3 | Pointer to the key that describes the MIME type of the WMV3 video codec.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
 | const char *OH_AVCODEC_MIMETYPE_VIDEO_MJPEG | Pointer to the key that describes the MIME type of the Motion JPEG (MJPEG) video codec.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |
 | const char *OH_ED_KEY_TIME_STAMP | Pointer to the key that describes the surface buffer timestamp. The value is of the int64_t type.<br>**Since**: 9<br>**Deprecated**: 14<br>**System capability**: SystemCapability.Multimedia.Media.CodecBase |

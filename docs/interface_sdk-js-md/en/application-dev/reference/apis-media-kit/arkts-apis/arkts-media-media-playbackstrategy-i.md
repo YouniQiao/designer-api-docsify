@@ -94,7 +94,7 @@ Audio language.
 preferredBufferDuration?: number
 ```
 
-Chooses a preferred buffer duration.
+Chooses a preferred buffer duration. The unit is second.
 
 <p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
 
@@ -150,7 +150,7 @@ If true, the player should choose HDR stream if exist.
 preferredHeight?: number
 ```
 
-Choose a stream with height close to it.
+Choose a stream with height close to it. Unit: px.
 
 **Type:** number
 
@@ -186,7 +186,7 @@ Subtitle language.
 preferredWidth?: number
 ```
 
-Choose a stream with width close to it.
+Choose a stream with width close to it. Unit: px.
 
 **Type:** number
 
@@ -222,7 +222,9 @@ Show first frame on prepare.
 thresholdForAutoQuickPlay?: number
 ```
 
-set max buffering threshold for liveStreaming or avplayer while change the speed. It is recommended that the value be 2 seconds greater than the starting waterline.
+set max buffering threshold for liveStreaming or avplayer while change the speed. The unit is second.
+
+It is recommended that the value be 2 seconds greater than the starting waterline.
 
 **Type:** number
 

@@ -50,4 +50,4 @@
 - [Telephony Kit (456)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-telephony-call.md)
 - [Test Kit (55)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-test-app-ability-abilitydelegatorregistry.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-security-cryptoextensionability.md)
-- [User Authentication Kit (93)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-userauthentication-app-ability-userauthextensionability.md)
+- [User Authentication Kit (101)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-userauthentication-app-ability-userauthextensionability.md)

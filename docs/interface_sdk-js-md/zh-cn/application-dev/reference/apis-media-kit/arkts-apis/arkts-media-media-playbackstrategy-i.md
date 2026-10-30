@@ -94,7 +94,7 @@ preferredAudioLanguage?: string
 preferredBufferDuration?: number
 ```
 
-选择缓冲时长。
+选择缓冲时长，单位为秒（s）。
 
 <p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
 
@@ -114,7 +114,7 @@ preferredBufferDuration?: number
 preferredBufferDurationForPlaying?: number
 ```
 
-自定义开始或重新播放的缓冲阈值，单位为秒。
+自定义开始或重新播放的缓冲阈值，单位为秒（s）。
 
 **类型：** number
 
@@ -150,7 +150,7 @@ preferredHdr?: boolean
 preferredHeight?: number
 ```
 
-选择高度接近的流。
+选择高度接近的流，单位为像素（px）。
 
 **类型：** number
 
@@ -186,7 +186,7 @@ preferredSubtitleLanguage?: string
 preferredWidth?: number
 ```
 
-选择宽度接近的流。
+选择宽度接近的流，单位为像素（px）。
 
 **类型：** number
 
@@ -222,7 +222,7 @@ prepare时显示首帧。
 thresholdForAutoQuickPlay?: number
 ```
 
-在更改速度时，为直播或 AVPlayer 设置最大缓冲阈值。建议比起始水位高出2秒。
+在更改速度时，为直播或 AVPlayer 设置最大缓冲阈值，单位为秒（s）。建议比起始水位高出2秒。
 
 **类型：** number
 

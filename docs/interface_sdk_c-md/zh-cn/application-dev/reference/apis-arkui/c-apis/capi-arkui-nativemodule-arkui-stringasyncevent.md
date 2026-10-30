@@ -6,7 +6,7 @@ typedef struct ArkUI_StringAsyncEvent {...} ArkUI_StringAsyncEvent
 
 ## 概述
 
-Defines the string type parameter used by the component callback event.
+定义组件回调事件使用字符串参数的类型，用于在组件异步事件回调中传递字符串数据，适用于组件回调事件需要携带文本信息的场景。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +22,6 @@ Defines the string type parameter used by the component callback event.
 
 | 名称 | 描述 |
 | -- | -- |
-| const char* pStr | String. |
+| const char* pStr | 组件回调事件中传递的字符串数据。 |
 
 

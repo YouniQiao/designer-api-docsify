@@ -568,7 +568,7 @@ Text selection area, which will be highlighted, for the component that obtains f
 ### NODE_TEXT_ORPHAN_CHAR_OPTIMIZATION
 
 ```c
-	  NODE_TEXT_ORPHAN_CHAR_OPTIMIZATION = 1047
+NODE_TEXT_ORPHAN_CHAR_OPTIMIZATION = 1047
 ```
 
 **Description**

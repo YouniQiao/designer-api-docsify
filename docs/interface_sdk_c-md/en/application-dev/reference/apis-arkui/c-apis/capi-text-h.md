@@ -4,6 +4,8 @@
 
 Defines enumerations and APIs related to **Text** for configuring text styles, controlling marquee effects, implementing text entity recognition, and managing text controllers. It is applicable to scenarios such as customizing text display effects, implementing dynamic text interaction, recognizing special entities in text (such as addresses and phone numbers), and precisely controlling text font weight. With these configuration APIs, you can flexibly control the display effects and interaction behaviors of text components to improve user experience.
 
+**File to Include**: <arkui/text.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
@@ -148,9 +150,9 @@ Enumerates how the adaptive height is determined for the text.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_MAX_LINES_FIRST = 0 | Prioritize the <b>maxLines</b> settings. |
-| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_MIN_FONT_SIZE_FIRST | Prioritize the <b>minFontSize</b> settings. |
-| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_LAYOUT_CONSTRAINT_FIRST | Prioritize the layout constraint settings in terms of height. |
+| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_MAX_LINES_FIRST = 0 | Prioritize the <b>maxLines</b> settings.When the text content exceeds the display area, the <b>maxLines</b> settings are met first, and the excess may be truncated or handled in other ways. |
+| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_MIN_FONT_SIZE_FIRST | Prioritize the <b>minFontSize</b> settings.When the text content exceeds the display area, the font size is reduced first to fit the height limit, ensuring the text is fully displayed. The font size is automatically adjusted within the allowed range. |
+| ARKUI_TEXT_HEIGHT_ADAPTIVE_POLICY_LAYOUT_CONSTRAINT_FIRST | Prioritize the layout constraint settings in terms of height for strictly following the height setting of the layout constraint. The text height or font size is not automatically adjusted, and the excess may be truncated or handled in other ways. |
 
 ### ArkUI_TextDataDetectorType
 
@@ -169,8 +171,8 @@ Enumerates the entity types of text recognition.
 | Enum item | Description |
 | -- | -- |
 | ARKUI_TEXT_DATA_DETECTOR_TYPE_PHONE_NUMBER = 0 | Phone Number. |
-| ARKUI_TEXT_DATA_DETECTOR_TYPE_URL | Link. |
-| ARKUI_TEXT_DATA_DETECTOR_TYPE_EMAIL | Mailbox. |
+| ARKUI_TEXT_DATA_DETECTOR_TYPE_URL | URL. |
+| ARKUI_TEXT_DATA_DETECTOR_TYPE_EMAIL | Email address. |
 | ARKUI_TEXT_DATA_DETECTOR_TYPE_ADDRESS | Address. |
 
 ### ArkUI_MarqueeStartPolicy
@@ -189,8 +191,8 @@ Enumerates marquee startup policies.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_MARQUEESTARTPOLICY_DEFAULT = 0 | Start marquee in any case. This is the default policy. |
-| ARKUI_MARQUEESTARTPOLICY_ONFOCUS = 1 | Start marquee only when get focus. |
+| ARKUI_MARQUEESTARTPOLICY_DEFAULT = 0 | The marquee scrolls continuously by default. |
+| ARKUI_MARQUEESTARTPOLICY_ONFOCUS = 1 | The marquee starts scrolling when it has focus or when the mouse hovers over it. |
 
 ### ArkUI_MarqueeUpdatePolicy
 
@@ -208,8 +210,8 @@ Enumerates marquee update policies.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_MARQUEEUPDATEPOLICY_DEFAULT = 0 | Reset scroll position and restart scroll. |
-| ARKUI_MARQUEEUPDATEPOLICY_PRESERVEPOSITION = 1 | Preserve scroll position, just change to new text. |
+| ARKUI_MARQUEEUPDATEPOLICY_DEFAULT = 0 | Restarts the marquee from the start position after the attributes of the marquee component are updated. |
+| ARKUI_MARQUEEUPDATEPOLICY_PRESERVEPOSITION = 1 | Resumes the marquee from the current position after the attributes of the marquee component are updated. |
 
 
 ## Function description

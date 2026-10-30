@@ -6,7 +6,7 @@ typedef struct Print_Resolution {...} Print_Resolution
 
 ## Overview
 
-Defines a struct for the printing resolution in dpi.
+Represents the printing resolution, in dpi. This API can be used to control the fineness and quality of the print output.
 
 **System capability**: SystemCapability.Print.PrintFramework
 

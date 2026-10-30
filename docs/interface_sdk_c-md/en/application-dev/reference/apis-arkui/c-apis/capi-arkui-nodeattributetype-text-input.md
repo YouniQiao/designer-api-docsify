@@ -517,7 +517,7 @@ Text ellipsis mode of the single-line text box.<br> This attribute can be set, r
 ### NODE_TEXT_INPUT_ORPHAN_CHAR_OPTIMIZATION
 
 ```c
-	  NODE_TEXT_INPUT_ORPHAN_CHAR_OPTIMIZATION = 7043
+NODE_TEXT_INPUT_ORPHAN_CHAR_OPTIMIZATION = 7043
 ```
 
 **Description**

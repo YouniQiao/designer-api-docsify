@@ -353,7 +353,6 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by ErrorCallback. |
 

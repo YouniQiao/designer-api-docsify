@@ -73,6 +73,7 @@ The file declares the APIs used to create an OH_AVScreenCapture instance.
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ResumeScreenCapture(struct OH_AVScreenCapture *capture)](#oh_avscreencapture_resumescreencapture) | Resume screen capture |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForMicAEC(OH_AVScreenCapture_CaptureStrategy *strategy, bool enable)](#oh_avscreencapture_strategyformicaec) | Specifies whether to enable the echo cancellation function when the microphone is enabled. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForHDRCapture(OH_AVScreenCapture_CaptureStrategy *strategy, bool enable)](#oh_avscreencapture_strategyforhdrcapture) | Specifies whether to output images in HDR vivid format. |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForContentAutoPauseScenes(OH_AVScreenCapture_CaptureStrategy *strategy, OH_AVScreenCapture_AutoPauseSceneSet scenes)](#oh_avscreencapture_strategyforcontentautopausescenes) | Sets the set of scenarios in which the screen content capture is automatically paused. If the specified scenario is met, the system automatically pauses the screen content capture. You can call the OH_AVScreenCapture_ResumeScreenCapture() function to resume the screen content capture. |
 
 ## Function description
 
@@ -282,7 +283,7 @@ Obtains a video buffer. The application can call this function to obtain informa
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBuffer*](../../apis-arkgraphics2d/c-apis/capi-nativewindow-oh-nativebuffer.md) | OH_NativeBuffer object if the operation is successful. The application can call the APIs provided by the OH_NativeBuffer object to obtain information such as the video buffer and resolution. |
+| [OH_NativeBuffer*](capi-avscreencapture-oh-nativebuffer.md) | OH_NativeBuffer object if the operation is successful. The application can call the APIs provided by the OH_NativeBuffer object to obtain information such as the video buffer and resolution. |
 
 ### OH_AVScreenCapture_ReleaseAudioBuffer()
 
@@ -1524,5 +1525,32 @@ Specifies whether to output images in HDR vivid format.
 | Type | Description |
 | -- | -- |
 | [OH_AVSCREEN_CAPTURE_ErrCode](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) | <ul><li>[AV_SCREEN_CAPTURE_ERR_OK](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) : indicates that the operation is successful.</li> <li>[AV_SCREEN_CAPTURE_ERR_INVALID_VAL](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode): The input parameter **strategy** is nullptr or the value of **enable** is invalid.</li></ul> |
+
+### OH_AVScreenCapture_StrategyForContentAutoPauseScenes()
+
+```c
+OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForContentAutoPauseScenes(OH_AVScreenCapture_CaptureStrategy *strategy, OH_AVScreenCapture_AutoPauseSceneSet scenes)
+```
+
+**Description**
+
+Sets the set of scenarios in which the screen content capture is automatically paused. If the specified scenario is met, the system automatically pauses the screen content capture. You can call the OH_AVScreenCapture_ResumeScreenCapture() function to resume the screen content capture.
+
+**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AVScreenCapture_CaptureStrategy](capi-avscreencapture-oh-avscreencapture-capturestrategy.md) *strategy | [in] Pointer to an OH_AVScreenCapture_CaptureStrategy instance |
+| OH_AVScreenCapture_AutoPauseSceneSet scenes | [in] Set of scenes, which are bitwise or combined using OH_CaptureAutoPauseScene. If OH_CAPTURE_AUTO_PAUSE_SCENE_NONE is input, the system does not pause automatically. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AVSCREEN_CAPTURE_ErrCode](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) | <ul><li>[AV_SCREEN_CAPTURE_ERR_OK](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) : indicates that the operation is successful.</li> <li>[AV_SCREEN_CAPTURE_ERR_INVALID_VAL](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode): The input parameter **strategy** is nullptr or the value of **scenes** is invalid.</li></ul> |
 
 

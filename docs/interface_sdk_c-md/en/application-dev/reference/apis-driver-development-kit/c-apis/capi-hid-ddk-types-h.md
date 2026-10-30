@@ -70,7 +70,7 @@ Enumerates the properties of input devices.
 | HID_PROP_POINTER = 0x00 | Pointer device. |
 | HID_PROP_DIRECT = 0x01 | Direct input device. |
 | HID_PROP_BUTTON_PAD = 0x02 | Touch device with bottom keys. |
-| HID_PROP_SEMI_MT = 0x03 | Full multi-touch device. |
+| HID_PROP_SEMI_MT = 0x03 | Semi-multitouch device. |
 | HID_PROP_TOP_BUTTON_PAD = 0x04 | Touch device with top soft keys. |
 | HID_PROP_POINTING_STICK = 0x05 | Pointing stick. |
 | HID_PROP_ACCELEROMETER = 0x06 | Accelerometer. |

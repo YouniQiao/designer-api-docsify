@@ -58,6 +58,7 @@
 | [OH_ScreenCaptureHighlightMode](#oh_screencapturehighlightmode) | OH_ScreenCaptureHighlightMode | 枚举，表示屏幕录制高亮边框的模式。 |
 | [OH_AVScreenCapture_FillMode](#oh_avscreencapture_fillmode) | OH_AVScreenCapture_FillMode | 枚举，图像填充模式。<br> OH_SCREENCAPTURE_FILLMODE_ASPECT_SCALE_FIT适用于需要保持图像原始宽高比、避免变形的场景；<br> OH_SCREENCAPTURE_FILLMODE_SCALE_TO_FILL适用于需要完全填充目标区域、可接受图像变形的场景。 |
 | [OH_CapturePickerMode](#oh_capturepickermode) | OH_CapturePickerMode | 枚举，表示Picker显示模式。<br> 根据应用需求选择合适的Picker模式：仅显示窗口模式适用于只允许用户选择窗口进行录制的场景； 仅显示屏幕模式适用于只允许用户选择整个屏幕的场景； 同时显示屏幕和窗口模式为默认模式，适用于需要灵活选择录制目标的场景； 仅显示应用模式适用于只允许录制单个应用的场景。 |
+| [typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum](#typedef  oh_avscreencapture_autopausecapturesceneenum) | - | 屏幕录制自动暂停场景枚举。 |
 
 ### 函数
 
@@ -79,6 +80,8 @@
 | 名称 | 描述 |
 | -- | -- |
 | const char *OH_SCREEN_CAPTURE_CONTENT_RECT | 获取录屏图像帧中有效内容区域信息的key。<br> 通过此key获取到的返回值是一个int32_t数组，单位为像素（px）。 数组长度为4。数组元素定义为[top, left, width, height]，其中top表示矩形窗口左上角纵坐标，left表示矩形窗口左上角横坐标， width表示矩形窗口的宽度，height表示矩形窗口的高度。数组元素可以从[OH_AVFormat_GetIntBuffer](capi-native-avformat-h.md#oh_avformat_getintbuffer)中获取。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture |
+| uint32_t OH_AVScreenCapture_AutoPauseSceneSet | 屏幕录制自动暂停场景条件集声明。<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture |
+| typedef uint32_t OH_AVScreenCapture_AutoPauseSceneSet | 屏幕录制自动暂停场景条件集声明。<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture |
 
 ## 枚举类型说明
 
@@ -383,6 +386,25 @@ enum OH_CapturePickerMode
 | OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4 | 同时显示窗口和应用模式。<br>**起始版本：** 26.0.0 |
 | OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5 | 同时显示屏幕和应用模式。<br>**起始版本：** 26.0.0 |
 | OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6 | 同时显示屏幕、窗口和应用模式。<br>**起始版本：** 26.0.0 |
+
+### typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
+
+```c
+enum typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
+```
+
+**描述：**
+
+屏幕录制自动暂停场景枚举。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**起始版本：** 26.1.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_CAPTURE_AUTO_PAUSE_SCENE_NONE = 0 | 默认值，表示在任何场景下都不进行自动暂停。<br>**起始版本：** 26.1.0 |
+| OH_CAPTURE_AUTO_PAUSE_SCENE_SCREEN_FOLD_STATE_CHANGE = 1 << 0 | 屏幕折叠状态发生变化的场景。<br>**起始版本：** 26.1.0 |
 
 
 ## 函数说明

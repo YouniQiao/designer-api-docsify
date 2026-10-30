@@ -4,6 +4,8 @@
 
 Defines common text enumerations and APIs, covering text alignment, decoration line styles, copy and paste, overflow handling, line break policies, and menu customization. It is applicable to scenarios such as text boxes and text display, helping you flexibly control text styles and interaction behavior while reducing development complexity.
 
+**File to Include**: <arkui/text_common.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
@@ -47,7 +49,7 @@ Defines common text enumerations and APIs, covering text alignment, decoration l
 | [ArkUI_TextMenuItemId](#arkui_textmenuitemid) | ArkUI_TextMenuItemId | Enumerates the IDs of text menu items. |
 | [OH_ArkUI_LineBreakStrategy](#oh_arkui_linebreakstrategy) | OH_ArkUI_LineBreakStrategy | Enumerates line break policies. |
 | [OH_ArkUI_StrokeJoinStyle](#oh_arkui_strokejoinstyle) | OH_ArkUI_StrokeJoinStyle | Enumerates the join styles of a text stroke. |
-| [ArkUI_TextSpanType](#arkui_textspantype) | ArkUI_TextSpanType | Enumerates the text span type. |
+| [ArkUI_TextSpanType](#arkui_textspantype) | ArkUI_TextSpanType | Enumerates the recognition types of a custom text selection menu. |
 | [ArkUI_TextResponseType](#arkui_textresponsetype) | ArkUI_TextResponseType | Enumerates the response types of a custom text selection menu. |
 
 ### Function
@@ -372,26 +374,26 @@ Enumerates the IDs of text menu items.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_TEXT_MENU_ITEM_ID_CUT = 0 | Indicates the TextMenuItemId to copy and delete the currently selected text. |
-| ARKUI_TEXT_MENU_ITEM_ID_COPY = 1 | Indicates the TextMenuItemId to copy the currently selected text to the clipboard. |
-| ARKUI_TEXT_MENU_ITEM_ID_PASTE = 2 | Indicates the TextMenuItemId to copy the current contents of the clipboard into the text view. |
-| ARKUI_TEXT_MENU_ITEM_ID_SELECT_ALL = 3 | Indicates the TextMenuItemId to select all text in a text view. |
-| ARKUI_TEXT_MENU_ITEM_ID_COLLABORATION_SERVICE = 4 | Indicates the TextMenuItemId for collaboration service menu items. |
-| ARKUI_TEXT_MENU_ITEM_ID_CAMERA_INPUT = 5 | Indicates the TextMenuItemId to recognize the text in the picture and input it into the text view. |
-| ARKUI_TEXT_MENU_ITEM_ID_AI_WRITER = 6 | Indicates the TextMenuItemId to help with text creation by invoking large models. |
-| ARKUI_TEXT_MENU_ITEM_ID_TRANSLATE = 7 | Indicates the TextMenuItemId to translate the selected content. |
-| ARKUI_TEXT_MENU_ITEM_ID_SEARCH = 8 | Indicates the TextMenuItemId to search the selected content. |
-| ARKUI_TEXT_MENU_ITEM_ID_SHARE = 9 | Indicates the TextMenuItemId to share the selected content. |
-| ARKUI_TEXT_MENU_ITEM_ID_URL = 10 | Indicates the TextMenuItemId to open url. |
-| ARKUI_TEXT_MENU_ITEM_ID_EMAIL = 11 | Indicates the TextMenuItemId to open email. |
-| ARKUI_TEXT_MENU_ITEM_ID_PHONE_NUMBER = 12 | Indicates the TextMenuItemId to call the phone number. |
-| ARKUI_TEXT_MENU_ITEM_ID_ADDRESS = 13 | Indicates the TextMenuItemId to open map. |
-| ARKUI_TEXT_MENU_ITEM_ID_DATA_TIME = 14 | Indicates the TextMenuItemId to open calendar. |
-| ARKUI_TEXT_MENU_ITEM_ID_ASK_AI = 15 | Indicates the TextMenuItemId for asking AI. |
+| ARKUI_TEXT_MENU_ITEM_ID_CUT = 0 | Cut. |
+| ARKUI_TEXT_MENU_ITEM_ID_COPY = 1 | Copy. |
+| ARKUI_TEXT_MENU_ITEM_ID_PASTE = 2 | Paste. |
+| ARKUI_TEXT_MENU_ITEM_ID_SELECT_ALL = 3 | Select all. |
+| ARKUI_TEXT_MENU_ITEM_ID_COLLABORATION_SERVICE = 4 | Collaboration service that provides cross-device interaction capabilities, such as cross-device camera access. |
+| ARKUI_TEXT_MENU_ITEM_ID_CAMERA_INPUT = 5 | Camera input. |
+| ARKUI_TEXT_MENU_ITEM_ID_AI_WRITER = 6 | AI-assisted writing. This menu item depends on a large language model to take effect. |
+| ARKUI_TEXT_MENU_ITEM_ID_TRANSLATE = 7 | ID for the translate menu item. The translation service is provided for the selected text. |
+| ARKUI_TEXT_MENU_ITEM_ID_SEARCH = 8 | Search. This menu item launches a browser to search for the selected text. |
+| ARKUI_TEXT_MENU_ITEM_ID_SHARE = 9 | ID for the share menu item. This menu item launches a window for sharing the selected text. |
+| ARKUI_TEXT_MENU_ITEM_ID_URL = 10 | ID for the URL menu item. This menu item provides the redirection service for the selected URL, launching a browser search or application page. |
+| ARKUI_TEXT_MENU_ITEM_ID_EMAIL = 11 | ID for the email menu item. This menu item provides the redirection service for the selected email address, launching the email application. |
+| ARKUI_TEXT_MENU_ITEM_ID_PHONE_NUMBER = 12 | ID for the phone call menu item. This menu item provides the redirection service for the selected phone number, launching the phone dialer page. |
+| ARKUI_TEXT_MENU_ITEM_ID_ADDRESS = 13 | ID for the navigation menu item. This menu item provides the redirection service for the selected address, launching the map application. |
+| ARKUI_TEXT_MENU_ITEM_ID_DATA_TIME = 14 | ID for the event creation menu item. This menu item provides the redirection service for the selected date and time, launching the page for creating a calendar event. |
+| ARKUI_TEXT_MENU_ITEM_ID_ASK_AI = 15 | Ask AI. This menu item provides the AI query capability for the selected text. This menu item depends on a large language model to take effect. |
 | ARKUI_TEXT_MENU_ITEM_ID_AUTO_FILL = 16 | Autofill. For example, the account and password can be automatically filled.<br>**Since**: 24 |
 | ARKUI_TEXT_MENU_ITEM_ID_PASSWORD_VAULT = 17 | Password vault.<br>**Since**: 24 |
-| ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_BEGIN = 10000 | Inclusive begin of app-reserved ID range. |
-| ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_END = 20000 | Inclusive end of app-reserved ID range. |
+| ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_BEGIN = 10000 | Start ID of a custom menu item. In addition to the built-in menu item IDs, you can also customize menu item IDs. |
+| ARKUI_TEXT_MENU_ITEM_ID_APP_RESERVED_END = 20000 | End ID of a custom menu item. In addition to the built-in menu item IDs, you can also customize menu item IDs. |
 
 ### OH_ArkUI_LineBreakStrategy
 
@@ -441,7 +443,7 @@ enum ArkUI_TextSpanType
 
 **Description**
 
-Enumerates the text span type.
+Enumerates the recognition types of a custom text selection menu.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -452,7 +454,7 @@ Enumerates the text span type.
 | ARKUI_TEXT_SPAN_TYPE_TEXT = 0 | The span type only contains text. |
 | ARKUI_TEXT_SPAN_TYPE_IMAGE = 1 | The span type only contains image. |
 | ARKUI_TEXT_SPAN_TYPE_MIXED = 2 | The span type contains both text and image. |
-| ARKUI_TEXT_SPAN_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched. When this type is registered but TEXT, IMAGE, or MIXED types are not registered, this type will be triggered and displayed for those registered types. |
+| ARKUI_TEXT_SPAN_TYPE_DEFAULT = 3 | If this type and other types are set, the menu corresponding to the type of the selected text is displayed after the text is selected. If this type is set but other types are not set, the menu corresponding to this type is displayed after the text is selected. For example, if there are two menus whose recognition types are **ARKUI_TEXT_SPAN_TYPE_TEXT** and **ARKUI_TEXT_SPAN_TYPE_DEFAULT** respectively, the menu corresponding to **ARKUI_TEXT_SPAN_TYPE_TEXT** is displayed when the text is selected, and the menu corresponding to **ARKUI_TEXT_SPAN_TYPE_DEFAULT** is displayed when the image is selected. |
 
 ### ArkUI_TextResponseType
 
@@ -470,10 +472,10 @@ Enumerates the response types of a custom text selection menu.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_TEXT_RESPONSE_TYPE_RIGHT_CLICK = 0 | The response type of right click. |
-| ARKUI_TEXT_RESPONSE_TYPE_LONG_PRESS = 1 | The response type of long press. |
-| ARKUI_TEXT_RESPONSE_TYPE_SELECT = 2 | The response type of select by mouse. |
-| ARKUI_TEXT_RESPONSE_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched. When this type is registered but RIGHT_CLICK, LONG_PRESS, or SELECT types are not registered, this type will be triggered and displayed for right-click, long press, and mouse selection actions. |
+| ARKUI_TEXT_RESPONSE_TYPE_RIGHT_CLICK = 0 | The menu is displayed when the component is right-clicked. |
+| ARKUI_TEXT_RESPONSE_TYPE_LONG_PRESS = 1 | The menu is displayed when the component is long-pressed. |
+| ARKUI_TEXT_RESPONSE_TYPE_SELECT = 2 | The menu is displayed when the component is selected. |
+| ARKUI_TEXT_RESPONSE_TYPE_DEFAULT = 3 | If this type and other types are set, the menu corresponding to the type is displayed when the operation of another type is triggered. If this type is set but other types are not set, the menu corresponding to this type is displayed when the operation of another type is triggered. For example, if there are two menus whose response types are **ARKUI_TEXT_RESPONSE_TYPE_RIGHT_CLICK** and **ARKUI_TEXT_RESPONSE_TYPE_DEFAULT** respectively, the menu corresponding to **ARKUI_TEXT_RESPONSE_TYPE_RIGHT_CLICK** is displayed when you right-click the menu, and the menu corresponding to **ARKUI_TEXT_RESPONSE_TYPE_DEFAULT** is displayed when you hold down the right mouse button. |
 
 
 ## Function description

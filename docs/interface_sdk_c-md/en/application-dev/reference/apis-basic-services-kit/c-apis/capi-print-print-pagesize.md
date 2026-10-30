@@ -6,7 +6,7 @@ typedef struct Print_PageSize {...} Print_PageSize
 
 ## Overview
 
-Defines a struct for the page size.
+Represents the paper size information in a print task, including key attributes such as the paper ID, name, width, and height. This API can be used to specify or query paper specifications during printing configuration.
 
 **System capability**: SystemCapability.Print.PrintFramework
 
@@ -22,9 +22,9 @@ Defines a struct for the page size.
 
 | Name | Description |
 | -- | -- |
-| char *id | Page ID. |
-| char *name | Page name. |
-| uint32_t width | Page width, in millimeters. |
-| uint32_t height | Page height, in millimeters. |
+| char *id | Unique ID of the paper size, which is used to distinguish different paper specifications. |
+| char *name | Name of the paper size, for example, **A4** or **Letter**. |
+| uint32_t width | Paper width, in mils (1 mil = 1/1000 inch). The value must be greater than **0**. |
+| uint32_t height | Paper height, in mils (1 mil = 1/1000 inch). The value must be greater than **0**. |
 
 

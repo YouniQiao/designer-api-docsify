@@ -12,4 +12,4 @@ Provides the definition of the C interface for the scan module.<br> *
 
 | Name | Description |
 | -- | -- |
-| [ohscan.h](capi-ohscan-h.md) | Declares APIs for discovering and connecting to scanners, scanning pictures, querying the scan progress, and setting parameters for scanning. |
+| [ohscan.h](capi-ohscan-h.md) | Declares APIs for discovering and connecting to scanners, scanning images, obtaining the image scanning progress, and setting scanner parameters. This module can be used to integrate scanner-related operations into an app. |

@@ -6,7 +6,7 @@ typedef struct Print_Resolution {...} Print_Resolution
 
 ## 概述
 
-表示以 dpi 为单位的打印分辨率。
+Print_Resolution用于表示以dpi为单位的打印分辨率，可控制打印输出的精细度与质量。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
