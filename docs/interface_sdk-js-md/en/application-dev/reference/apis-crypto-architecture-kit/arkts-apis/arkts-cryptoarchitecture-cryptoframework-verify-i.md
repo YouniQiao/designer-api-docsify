@@ -891,7 +891,7 @@ Verifies the signature. This API returns the verification result synchronously.
 
 **Examples**
 
-For more examples of signing and signature verification, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -963,7 +963,7 @@ function verifyByCallback() {
 }
 ```
 
-For more examples, see Signing and Signature Verification with an RSA Key Pair.
+For more examples, see [Signing and Signature Verification with an RSA Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -1037,7 +1037,7 @@ async function verifyByPromise() {
 }
 ```
 
-For more examples of signing and signature verification, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
+For more examples of signing and signature verification, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
