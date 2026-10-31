@@ -61,6 +61,9 @@ The file declares the capture session concepts.
 | [typedef void (\*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState)](#oh_capturesession_onexposurestatechange) | OH_CaptureSession_OnExposureStateChange | Defines a callback function that is invoked when the exposure state changes. |
 | [Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)](#oh_capturesession_registerexposurestatechangecallback) | - | Registers a callback for exposure state changes.<br> After this callback is registered, the callback is invoked when the exposure state changes in the capture session. |
 | [Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)](#oh_capturesession_unregisterexposurestatechangecallback) | - | Unregisters the callback for exposure state changes. |
+| [typedef void (\*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)](#oh_capturesession_oncameradeviceswitchrequest) | OH_CaptureSession_OnCameraDeviceSwitchRequest | Defines a callback function that is invoked when the camera device switch request happens. |
+| [Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_registercameradeviceswitchrequestcallback) | - | Registers a callback for camera device switch request.<br> After this callback is registered, the callback is invoked when the camera device switch request happens in the capture session. |
+| [Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_unregistercameradeviceswitchrequestcallback) | - | Unregisters the callback for camera device switch request. |
 | [Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession* session, Camera_ExposureMode exposureMode, bool* isSupported)](#oh_capturesession_isexposuremodesupported) | - | Checks whether an exposure mode is supported. |
 | [Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode* exposureMode)](#oh_capturesession_getexposuremode) | - | Obtains the exposure mode in use. This API directly returns an invalid value if you have not set the exposure mode using [OH_CaptureSession_SetExposureMode](capi-capture-session-h.md#oh_capturesession_setexposuremode). |
 | [Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode, bool* isSupported)](#oh_capturesession_iswhitebalancemodesupported) | - | Checks whether the specified white balance mode is supported. |
@@ -1092,6 +1095,96 @@ Unregisters the callback for exposure state changes.
 | Type | Description |
 | -- | -- |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+
+### OH_CaptureSession_OnCameraDeviceSwitchRequest()
+
+```c
+typedef void (*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)
+```
+
+**Description**
+
+Defines a callback function that is invoked when the camera device switch request happens.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Resource release**: OH_CameraManager_DeleteCameraDevices {userDevice}
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void *userContext | [out] Output parameter indicating the pointer to the user-defined context. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *userSession | [out] Output parameter indicating the pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
+| [Camera_Device](capi-oh-camera-camera-device.md) *userDevice | [out] Output parameter indicating the pointer to the [Camera_Device](capi-oh-camera-camera-device.md) instance. |
+
+### OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback()
+
+```c
+Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
+```
+
+**Description**
+
+Registers a callback for camera device switch request.<br> After this callback is registered, the callback is invoked when the camera device switch request happens in the capture session.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [in] the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
+| void *context | [in] Indicates the pointer to the user-defined context. |
+| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [in] [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) Indicates the callback to register. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+
+**Reference**:
+
+OH_CaptureSession_OnCameraDeviceSwitchRequest for further information
+
+
+### OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback()
+
+```c
+Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
+```
+
+**Description**
+
+Unregisters the callback for camera device switch request.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [in] the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
+| void *context | [in] Indicates the pointer to the user-defined context specified when the callback was registered. |
+| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [in] [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) Indicates the callback to unregister. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+
+**Reference**:
+
+OH_CaptureSession_OnCameraDeviceSwitchRequest for further information
+
 
 ### OH_CaptureSession_IsExposureModeSupported()
 

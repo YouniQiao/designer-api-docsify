@@ -6,7 +6,7 @@ The IPC header file provides C API declarations of IPC Kit, facilitating develop
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
-**Since**: 12
+
 
 ## Files
 

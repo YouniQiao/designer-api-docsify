@@ -227,6 +227,10 @@ Defines text styles and text layout managers for the component whose [ArkUI_Node
 | [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetColor(const OH_ArkUI_BackgroundColorStyle* style, uint32_t* color)](#oh_arkui_backgroundcolorstyle_getcolor) | Obtains the background color of the background color style. |
 | [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_SetRadius(OH_ArkUI_BackgroundColorStyle* style, float topLeft, float topRight, float bottomLeft, float bottomRight)](#oh_arkui_backgroundcolorstyle_setradius) | Sets the background radii for the background color style. |
 | [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetRadius(const OH_ArkUI_BackgroundColorStyle* style, float* topLeft, float* topRight, float* bottomLeft, float* bottomRight)](#oh_arkui_backgroundcolorstyle_getradius) | Obtains the background radii of the background color style. |
+| [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_SetBorderWidth(OH_ArkUI_BackgroundColorStyle* style, float borderWidth)](#oh_arkui_backgroundcolorstyle_setborderwidth) | Sets the border width for the background color style. |
+| [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetBorderWidth(const OH_ArkUI_BackgroundColorStyle* style, float* borderWidth)](#oh_arkui_backgroundcolorstyle_getborderwidth) | Obtains the border width of the background color style. |
+| [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_SetBorderColor(OH_ArkUI_BackgroundColorStyle* style, uint32_t borderColor)](#oh_arkui_backgroundcolorstyle_setbordercolor) | Sets the border color for the background color style. |
+| [ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetBorderColor(const OH_ArkUI_BackgroundColorStyle* style, uint32_t* borderColor)](#oh_arkui_backgroundcolorstyle_getbordercolor) | Obtains the border color of the background color style. |
 | [OH_ArkUI_UrlStyle* OH_ArkUI_UrlStyle_Create()](#oh_arkui_urlstyle_create) | Creates an [OH_ArkUI_UrlStyle](capi-arkui-nativemodule-oh-arkui-urlstyle.md) object. |
 | [void OH_ArkUI_UrlStyle_Destroy(OH_ArkUI_UrlStyle* style)](#oh_arkui_urlstyle_destroy) | Releases the memory occupied by the [OH_ArkUI_UrlStyle](capi-arkui-nativemodule-oh-arkui-urlstyle.md) object. |
 | [ArkUI_ErrorCode OH_ArkUI_UrlStyle_SetUrl(OH_ArkUI_UrlStyle* style, const char* url)](#oh_arkui_urlstyle_seturl) | Sets the URL content for the URL style. |
@@ -5544,6 +5548,130 @@ Obtains the background radii of the background color style.
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
 
+### OH_ArkUI_BackgroundColorStyle_SetBorderWidth()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_SetBorderWidth(OH_ArkUI_BackgroundColorStyle* style, float borderWidth)
+```
+
+**Description**
+
+Sets the border width for the background color style.
+
+> **Note**:
+>
+> All input pointer parameters must be allocated, managed, and released by the caller.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md)* style | [in] Pointer to the [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md) object. |
+| float borderWidth | [in] Border width of the text background, in vp. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+
+### OH_ArkUI_BackgroundColorStyle_GetBorderWidth()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetBorderWidth(const OH_ArkUI_BackgroundColorStyle* style, float* borderWidth)
+```
+
+**Description**
+
+Obtains the border width of the background color style.
+
+> **Note**:
+>
+> All input pointer parameters must be allocated, managed, and released by the caller.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md)* style | [in] Pointer to the [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md) object. |
+| float* borderWidth | [out] Pointer to the border width of the text background, in vp. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+
+### OH_ArkUI_BackgroundColorStyle_SetBorderColor()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_SetBorderColor(OH_ArkUI_BackgroundColorStyle* style, uint32_t borderColor)
+```
+
+**Description**
+
+Sets the border color for the background color style.
+
+> **Note**:
+>
+> All input pointer parameters must be allocated, managed, and released by the caller.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md)* style | [in] Pointer to the [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md) object. |
+| uint32_t borderColor | [in] Border color of the text background, in 0xARGB format. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+
+### OH_ArkUI_BackgroundColorStyle_GetBorderColor()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_BackgroundColorStyle_GetBorderColor(const OH_ArkUI_BackgroundColorStyle* style, uint32_t* borderColor)
+```
+
+**Description**
+
+Obtains the border color of the background color style.
+
+> **Note**:
+>
+> All input pointer parameters must be allocated, managed, and released by the caller.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md)* style | [in] Pointer to the [OH_ArkUI_BackgroundColorStyle](capi-arkui-nativemodule-oh-arkui-backgroundcolorstyle.md) object. |
+| uint32_t* borderColor | [out] Pointer to the border color of the text background, in 0xARGB format. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs. |
+
 ### OH_ArkUI_UrlStyle_Create()
 
 ```c
@@ -6816,7 +6944,7 @@ Sets the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
+| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
@@ -6847,7 +6975,7 @@ Obtains the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
+| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 

@@ -239,6 +239,10 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t* color)](#oh_arkui_texteditortextstyle_gettextbackgroundcolor) | Obtains the text background color of the text style. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundRadius(OH_ArkUI_TextEditorTextStyle* style, float topLeft, float topRight, float bottomLeft, float bottomRight)](#oh_arkui_texteditortextstyle_settextbackgroundradius) | Sets the radius of the rounded corner of the text background of the text style. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius(OH_ArkUI_TextEditorTextStyle* style, float* topLeft, float* topRight, float* bottomLeft, float* bottomRight)](#oh_arkui_texteditortextstyle_gettextbackgroundradius) | Obtains the radius of the rounded corner of the text background of the text style. |
+| [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderWidth(OH_ArkUI_TextEditorTextStyle* style, float borderWidth)](#oh_arkui_texteditortextstyle_settextbackgroundborderwidth) | Sets the text background border width of the text style. |
+| [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderWidth(OH_ArkUI_TextEditorTextStyle* style, float* borderWidth)](#oh_arkui_texteditortextstyle_gettextbackgroundborderwidth) | Obtains the text background border width of the text style. |
+| [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t borderColor)](#oh_arkui_texteditortextstyle_settextbackgroundbordercolor) | Sets the text background border color of the text style. |
+| [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t* borderColor)](#oh_arkui_texteditortextstyle_gettextbackgroundbordercolor) | Obtains the text background border color of the text style. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingStyle(OH_ArkUI_TextEditorStyledStringController* controller, OH_ArkUI_TextEditorTextStyle* style)](#oh_arkui_texteditorstyledstringcontroller_settypingstyle) | Sets the typing style using the styled string controller. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetTypingStyle(OH_ArkUI_TextEditorStyledStringController* controller, OH_ArkUI_TextEditorTextStyle* style)](#oh_arkui_texteditorstyledstringcontroller_gettypingstyle) | Obtains the typing style using the styled string controller. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType(OH_ArkUI_TextEditorSelectionMenuOptions* options, OH_ArkUI_TextEditorSpanType textEditorSpanType)](#oh_arkui_texteditorselectionmenuoptions_setspantype) | Sets the span type of the text selection menu in the text editor. |
@@ -5169,6 +5173,114 @@ Obtains the radius of the rounded corner of the text background of the text styl
 | float* topRight | Pointer to the radius of the rounded corner in the upper right corner of the text background. The unit is vp. |
 | float* bottomLeft | Pointer to the radius of the rounded corner in the lower left corner of the text background. The unit is vp. |
 | float* bottomRight | Pointer to the radius of the rounded corner in the lower right corner of the text background. The unit is vp. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. |
+
+### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderWidth()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderWidth(OH_ArkUI_TextEditorTextStyle* style, float borderWidth)
+```
+
+**Description**
+
+Sets the text background border width of the text style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | [in] Pointer to the text style of the **TextEditor** component. |
+| float borderWidth | [in] Text background border width, in vp. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. |
+
+### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderWidth()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderWidth(OH_ArkUI_TextEditorTextStyle* style, float* borderWidth)
+```
+
+**Description**
+
+Obtains the text background border width of the text style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | [in] Pointer to the text style of the **TextEditor** component. |
+| float* borderWidth | [out] Pointer to the text background border width, in vp. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. |
+
+### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderColor()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundBorderColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t borderColor)
+```
+
+**Description**
+
+Sets the text background border color of the text style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | [in] Pointer to the text style of the **TextEditor** component. |
+| uint32_t borderColor | [in] Text background border color, in 0xARGB format. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. |
+
+### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderColor()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundBorderColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t* borderColor)
+```
+
+**Description**
+
+Obtains the text background border color of the text style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | [in] Pointer to the text style of the **TextEditor** component. |
+| uint32_t* borderColor | [out] Pointer to the text background border color, in 0xARGB format. |
 
 **Returns**:
 

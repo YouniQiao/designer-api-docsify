@@ -676,6 +676,7 @@ Enum for remote camera device type.
 | HOST_DEVICE_TYPE_UNKNOWN_TYPE = 0 | Indicates an unknown device camera. |
 | HOST_DEVICE_TYPE_PHONE = 0x0E | Indicates a smartphone camera. |
 | HOST_DEVICE_TYPE_TABLET = 0x11 | Indicates tablet camera. |
+| HOST_DEVICE_TYPE_GLASSES = 0xA31 | Indicates glasses camera.<br>**Since**: 26.0.1 |
 
 ### Camera_FoldStatus
 

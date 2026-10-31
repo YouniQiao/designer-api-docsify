@@ -193,13 +193,13 @@ import { audio } from '@kit.AudioKit';
 | [AudioState](arkts-audio-audio-audiostate-e.md) | 表示音频状态的枚举。 |
 | [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md) | 表示流设备变更原因的枚举。 |
 | [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md) | 表示音量模式的枚举。 |
-| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 枚举，音频流类型。 |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 表示音频音量类型的枚举。 |
 | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | 表示在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类枚举。 |
 | [ChannelBlendMode](arkts-audio-audio-channelblendmode-e.md) | 表示声道混合模式类型的枚举。 |
 | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 表示用于通信的可用设备类型的枚举。 |
 | [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md) | 表示音频设备是否被堵塞的枚举。 |
 | [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md) | 表示设备连接状态变化的枚举。 |
-| [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | 枚举，可获取的设备种类。 |
+| [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | 表示音频设备类型的枚举。 |
 | [DeviceRole](arkts-audio-audio-devicerole-e.md) | 表示设备角色的枚举。 |
 | [DeviceType](arkts-audio-audio-devicetype-e.md) | 表示设备类型的枚举。 |
 | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 表示音频设备类型的枚举（根据用途分类）。 |
@@ -236,9 +236,9 @@ import { audio } from '@kit.AudioKit';
 | [AudioSpatializationSceneType](arkts-audio-audio-audiospatializationscenetype-e-sys.md) | 枚举，空间音频渲染场景类型。 |
 | [AudioSuiteFeatureStatus](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md) | 枚举，音频编创特性状态。 |
 | [AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md) | 枚举，音频编创特性类型。 |
-| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 枚举，音频流类型。 |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 表示音频音量类型的枚举。 |
 | [ConnectType](arkts-audio-audio-connecttype-e-sys.md) | 枚举，设备连接类型。 |
-| [DeviceFlag](arkts-audio-audio-deviceflag-e-sys.md) | 枚举，可获取的设备种类。 |
+| [DeviceFlag](arkts-audio-audio-deviceflag-e-sys.md) | 表示音频设备类型的枚举。 |
 | [DeviceType](arkts-audio-audio-devicetype-e-sys.md) | 表示设备类型的枚举。 |
 | [EffectFlag](arkts-audio-audio-effectflag-e-sys.md) | 枚举，音效分类。 |
 | [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md) | 枚举，音频中断请求结果类型。 |

@@ -6,7 +6,7 @@ This file provides C APIs for IPC serialization and deserialization, which are u
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
-**Since**: 12
+
 
 ## Files
 

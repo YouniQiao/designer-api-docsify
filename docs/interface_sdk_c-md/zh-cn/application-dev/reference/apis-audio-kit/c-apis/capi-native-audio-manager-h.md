@@ -97,7 +97,7 @@ OH_AudioCommon_Result OH_GetAudioScene(OH_AudioManager* manager, OH_AudioScene *
 
 | 参数项 | 描述 |
 | -- | -- |
-| audioManager | the [OH_AudioManager](capi-ohaudio-oh-audiomanager.md) handle received from [OH_GetAudioManager](capi-native-audio-manager-h.md#oh_getaudiomanager). |
+| [OH_AudioManager](capi-ohaudio-oh-audiomanager.md)* manager | [in] 指向通过[OH_GetAudioManager](capi-native-audio-manager-h.md#oh_getaudiomanager)获取的音频管理器实例。 |
 | [OH_AudioScene](capi-native-audio-common-h.md#oh_audioscene) *scene | [out] 用于接收获取的音频场景。 |
 
 **返回值：**

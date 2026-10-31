@@ -6,7 +6,7 @@ This file provides C APIs for remote object creation, destruction, data sending,
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
-**Since**: 12
+
 
 ## Files
 

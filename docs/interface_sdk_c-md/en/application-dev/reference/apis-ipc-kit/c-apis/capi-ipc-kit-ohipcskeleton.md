@@ -2,14 +2,14 @@
 
 ## Overview
 
-This file provides C APIs for IPC framework features such as the token ID, credentials, PID/UID, and thread pool configuration. It is mainly used for context management and thread management in inter-process communication.
+The **ipc_cskeleton.h** module provides C APIs for managing the token IDs, credentials, process IDs (PIDs), user IDs (UIDs), and thread pool in the IPC framework. These APIs are mainly used for context and thread management in inter-process communication.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
-**Since**: 12
+
 
 ## Files
 
 | Name | Description |
 | -- | -- |
-| [ipc_cskeleton.h](capi-ipc-cskeleton-h.md) | This file provides C APIs for IPC framework features such as the token ID, credentials, PID/UID, and thread pool configuration. It is mainly used for context management and thread management in inter-process communication. |
+| [ipc_cskeleton.h](capi-ipc-cskeleton-h.md) | The **ipc_cskeleton.h** module provides C APIs for managing the token IDs, credentials, process IDs (PIDs), user IDs (UIDs), and thread pool in the IPC framework. These APIs are mainly used for context and thread management in inter-process communication. |

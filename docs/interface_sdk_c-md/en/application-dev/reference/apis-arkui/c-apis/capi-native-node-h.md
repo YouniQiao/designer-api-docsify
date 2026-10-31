@@ -182,6 +182,8 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Sets the child node mounting policy for a target node. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | Obtains the current child node mounting policy of a target node. The default child node mounting policy of a target node is OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE. |
 | [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | Sets the UI Dvsync switch.<br> When enabled, the system responds to Vsync requests more promptly and executes rendering tasks more frequently. It is typically enabled at the start of an animation in a self-rendering framework and disabled when the animation ends, to ensure smoother animation effects while preventing frequent Vsync requests from affecting other functionalities. Calling this function on a non-UI thread will cause the application to exit. |
+| [int32_t OH_ArkUI_NativeModule_RegisterInspectorTreeGetter(ArkUI_NodeHandle node, void* userData, void (\*getInspectorTree)(void *userData, char** inspectorTree))](#oh_arkui_nativemodule_registerinspectortreegetter) | - | Registers an inspector tree getter callback on the specified node.<br> This API allows third-party frameworks (such as Flutter, CMP, and ArkWeb) to report component tree information to the ArkUI inspector. When the inspector traverses the component tree and encounters a node with a registered callback, it invokes <b>getInspectorTree</b> to obtain the external component subtree and merges the result into the complete inspector tree output.<br> one more inspector tree getter callback can be registered for the same node. |
+| [int32_t OH_ArkUI_NativeModule_UnregisterInspectorTreeGetter(ArkUI_NodeHandle node, void (\*getInspectorTree)(void *userData, char** inspectorTree))](#oh_arkui_nativemodule_unregisterinspectortreegetter) | - | Unregister the inspector tree getter callback on the specified node.<br> After unregistration, the inspector will no longer invoke the callback when traversing this node. The <b>userData</b> previously passed to [OH_ArkUI_NativeModule_RegisterInspectorTreeGetter](capi-native-node-h.md#oh_arkui_nativemodule_registerinspectortreegetter) is not released by this function; the caller is responsible for freeing it. |
 | [int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_NodeHandle child, OH_ArkUI_AdoptPolicy policy)](#oh_arkui_nativemodule_adoptchildwithpolicy) | - | Adopts the target node as an affiliated node. The adopted node must not have an existing parent. This API is not used to add a node as a child node. Instead, it only allows the node to receive lifecycle callbacks of the corresponding child node. Configure the render position of the overlay node of the adopted node by policy. |
 | [int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_NodeHandle adoptedChild, const ArkUI_PointF* compensationOffset, const ArkUI_Matrix4* compensationTransform)](#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation) | - | Sets the position compensation from an adopted child to its adopt parent. The compensation represents the aggregate effect of the pure rendering node tree between them. First, the translation is performed using compensationOffset, and then the transformation is performed using compensationTransform. Compensation only takes effect if the child node has been adopted using the following policy [OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN](capi-native-node-h.md#oh_arkui_adoptpolicy). |
 
@@ -3698,6 +3700,66 @@ Sets the UI Dvsync switch.<br> When enabled, the system responds to Vsync reques
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result. <ul><li>ARKUI_ERROR_CODE_NO_ERROR The operation is successful. </li><li>ARKUI_ERROR_CODE_CAPI_INIT_ERROR Failed to initialize the CAPI. </li><li>ARKUI_ERROR_CODE_PARAM_INVALID The function parameter is invalid.</li></ul> |
+
+### OH_ArkUI_NativeModule_RegisterInspectorTreeGetter()
+
+```c
+int32_t OH_ArkUI_NativeModule_RegisterInspectorTreeGetter(ArkUI_NodeHandle node, void* userData, void (*getInspectorTree)(void *userData, char** inspectorTree))
+```
+
+**Description**
+
+Registers an inspector tree getter callback on the specified node.<br> This API allows third-party frameworks (such as Flutter, CMP, and ArkWeb) to report component tree information to the ArkUI inspector. When the inspector traverses the component tree and encounters a node with a registered callback, it invokes <b>getInspectorTree</b> to obtain the external component subtree and merges the result into the complete inspector tree output.<br> one more inspector tree getter callback can be registered for the same node.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| rkUI_NodeHandle node | [in] Indicates the host node of the third-party framework. Only <b>ARKUI_NODE_XCOMPONENT</b> and <b>ARKUI_NODE_CUSTOM</b> and <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> nodes are supported. |
+| void* userData | [in] Indicates the custom data to be saved. This value is passed back as the <b>userData</b> parameter when the <b>getInspectorTree</b>  callback is invoked. |
+| void (*getInspectorTree)(void *userData | [in] Indicates the callback function invoked by the inspector to obtain the component subtree of the third-party framework. The <b>inspectorTree</b> output should be a JSON string in a format consistent with the ArkUI inspector output. The memory for the string is allocated by the callback implementation and should be freed by the caller using <b>free()</b>. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | Error code. <ul><li>ARKUI_ERROR_CODE_NO_ERROR Success. </li><li>RKUI_ERROR_CODE_CAPI_INIT_ERROR Failed to initialize the CAPI. </li><li>ARKUI_ERROR_CODE_PARAM_INVALID Function parameter exception, or the node type is not <b>ARKUI_NODE_XCOMPONENT</b> or <b>ARKUI_NODE_CUSTOM</b> or <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> or getInspectorTree is null.</li></ul> |
+
+**Reference**:
+
+[OH_ArkUI_NativeModule_UnregisterInspectorTreeGetter](capi-native-node-h.md#oh_arkui_nativemodule_unregisterinspectortreegetter) for unregister inspector tree getter
+
+
+### OH_ArkUI_NativeModule_UnregisterInspectorTreeGetter()
+
+```c
+int32_t OH_ArkUI_NativeModule_UnregisterInspectorTreeGetter(ArkUI_NodeHandle node, void (*getInspectorTree)(void *userData, char** inspectorTree))
+```
+
+**Description**
+
+Unregister the inspector tree getter callback on the specified node.<br> After unregistration, the inspector will no longer invoke the callback when traversing this node. The <b>userData</b> previously passed to [OH_ArkUI_NativeModule_RegisterInspectorTreeGetter](capi-native-node-h.md#oh_arkui_nativemodule_registerinspectortreegetter) is not released by this function; the caller is responsible for freeing it.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| rkUI_NodeHandle node | [in] Indicates the target node. Only <b>ARKUI_NODE_XCOMPONENT</b> and <b>ARKUI_NODE_CUSTOM</b> and <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> nodes are supported. |
+| void (*getInspectorTree)(void *userData | [in] Indicates the callback function pointer to unregister. This must be the same function pointer that was passed to [OH_ArkUI_NativeModule_RegisterInspectorTreeGetter](capi-native-node-h.md#oh_arkui_nativemodule_registerinspectortreegetter) during registration. If the pointer does not match any registered callback on the node, the operation has no effect. If the pointer is null, all callbck of the node will be unregistered. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | Error code. <ul><li>ARKUI_ERROR_CODE_NO_ERROR Success. </li><li>RKUI_ERROR_CODE_CAPI_INIT_ERROR Failed to initialize the CAPI. </li><li>ARKUI_ERROR_CODE_PARAM_INVALID Function parameter exception, or the node type is not <b>ARKUI_NODE_XCOMPONENT</b> or <b>ARKUI_NODE_CUSTOM</b> or <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> or getInspectorTree is not registered.</li></ul> |
 
 ### OH_ArkUI_NativeModule_AdoptChildWithPolicy()
 

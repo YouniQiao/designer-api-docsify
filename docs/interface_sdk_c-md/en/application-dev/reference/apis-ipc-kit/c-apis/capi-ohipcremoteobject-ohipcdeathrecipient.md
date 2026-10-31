@@ -6,7 +6,7 @@ typedef struct OHIPCDeathRecipient OHIPCDeathRecipient
 
 ## Overview
 
-Defines an IPC death notification object used to listen for the death event of an IPC remote object. After an **OHIPCDeathRecipient** object is created, it must be registered with an **OHIPCRemoteObject** object to take effect. If not registered, the death event cannot be detected. When the remote process terminates unexpectedly or is destroyed proactively, the local process that has registered the death event listener will receive a death notification callback, allowing it to release related resources or perform error handling in a timely manner.
+Defines the IPC death notification object, which is used to listen for the death event of a remote IPC object. After an **OHIPCDeathRecipient** object is created, it must be registered with the OHIPCRemoteObject object to take effect. If it is not registered, death events cannot be listened for. When a remote process terminates unexpectedly or is destroyed, the local process that has registered the death listener will receive a death notification callback. This allows the local process to release related resources or handle errors in a timely manner.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 

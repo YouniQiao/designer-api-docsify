@@ -867,7 +867,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | 创建的UI实例的上下文，创建失败时返回undefined。 |
 
 **错误码：**
 
