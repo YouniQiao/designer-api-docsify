@@ -2041,7 +2041,7 @@ bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 
 Popup控制。<p><strong>NOTE</strong>: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
-**起始版本：** 11
+**起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -2054,7 +2054,7 @@ Popup控制。<p><strong>NOTE</strong>: <br>The popup can be displayed only afte
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | show | boolean | 是 |  |
-| popup | [PopupOptions](arkts-arkui-common-comp-popupoptions-i.md) &#124; [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | 是 |  |
+| popup | [PopupOptions](arkts-arkui-common-comp-popupoptions-i.md) &#124; [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | 是 | <br>**适用版本：** 8 |
 
 **返回值：**
 
