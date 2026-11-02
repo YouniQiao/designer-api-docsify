@@ -6,9 +6,11 @@ The file declares the APIs for image decoding.
 
 **Library**: libimage_source.so
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## Summary
 
@@ -113,6 +115,8 @@ enum IMAGE_DYNAMIC_RANGE
 
 Enumerates the desired dynamic range for decoding.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 | Enum item | Description |
@@ -130,6 +134,8 @@ enum IMAGE_ALLOCATOR_TYPE
 **Description**
 
 Enumerates the types of allocators used to allocate PixelMap memory.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 15
 
@@ -149,12 +155,14 @@ enum Image_CropAndScaleStrategy
 
 Enumerates the cropping and scaling strategies when **desiredSize** and **desiredRegion** are both specified.<br> If the **ImageCropAndScaleStrategy** parameter is not specified in [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) and both **desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences in decoding algorithms used for different image formats.<br> For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150}, desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of the original image and then scale the pixelMap size to 150x150.<br> For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore are treated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and then crop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger than the top-left 1/4 of the original image.<br> For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image based on the ratio of **desiredSize** to the original image size and then crops the region. This results in a decoded region that may differ from the exact 1/4 region of the original image.<br> To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **ImageCropAndScaleStrategy**<br>parameter to **CROP_FIRST**.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 18
 
 | Enum item | Description |
 | -- | -- |
-| IMAGE_CROP_AND_SCALE_STRATEGY_SCALE_FIRST = 1 |  |
-| IMAGE_CROP_AND_SCALE_STRATEGY_CROP_FIRST = 2 |  |
+| IMAGE_CROP_AND_SCALE_STRATEGY_SCALE_FIRST = 1 | Scales and then crops the image.<br>**Since**: 18 |
+| IMAGE_CROP_AND_SCALE_STRATEGY_CROP_FIRST = 2 | Crops and then scales the image.<br>**Since**: 18 |
 
 
 ## Function description
@@ -169,9 +177,11 @@ Image_ErrorCode OH_ImageSourceInfo_Create(OH_ImageSource_Info **info)
 
 Creates the pointer to an OH_ImageSource_Info object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
-**Resource release**: image_source_native/OH_ImageSourceInfo_Release {info}
+**Resource release**: [OH_ImageSourceInfo_Release](#oh_imagesourceinfo_release)
 
 **Parameters**:
 
@@ -194,6 +204,8 @@ Image_ErrorCode OH_ImageSourceInfo_GetWidth(OH_ImageSource_Info *info, uint32_t 
 **Description**
 
 Obtains the image width.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -220,6 +232,8 @@ Image_ErrorCode OH_ImageSourceInfo_GetHeight(OH_ImageSource_Info *info, uint32_t
 
 Obtains the image height.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -244,6 +258,8 @@ Image_ErrorCode OH_ImageSourceInfo_GetDynamicRange(OH_ImageSource_Info *info, bo
 **Description**
 
 Obtains the dynamic range of an image.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -270,6 +286,8 @@ Image_ErrorCode OH_ImageSourceInfo_GetMimeType(OH_ImageSource_Info *info, Image_
 
 Obtains the MIME type of an image source.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 20
 
 **Parameters**:
@@ -277,7 +295,7 @@ Obtains the MIME type of an image source.
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) *info | Pointer to the OH_ImageSource_Info struct. |
-| [Image_MimeType](capi-image-nativemodule-image-mimetype.md) *mimetype | Pointer to the MIME type of the image source. |
+| [Image_MimeType](capi-image-nativemodule-image-string.md) *mimetype | Pointer to the MIME type of the image source. |
 
 **Returns**:
 
@@ -294,6 +312,8 @@ Image_ErrorCode OH_ImageSourceInfo_Release(OH_ImageSource_Info *info)
 **Description**
 
 Releases the pointer to an OH_ImageSource_Info object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -319,9 +339,11 @@ Image_ErrorCode OH_DecodingOptions_Create(OH_DecodingOptions **options)
 
 Creates the pointer to an OH_DecodingOptions object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
-**Resource release**: image_source_native/OH_DecodingOptions_Release {options}
+**Resource release**: [OH_DecodingOptions_Release](#oh_decodingoptions_release)
 
 **Parameters**:
 
@@ -344,6 +366,8 @@ Image_ErrorCode OH_DecodingOptions_GetPixelFormat(OH_DecodingOptions *options, i
 **Description**
 
 Obtains the pixel format.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -370,6 +394,8 @@ Image_ErrorCode OH_DecodingOptions_SetPixelFormat(OH_DecodingOptions *options, i
 
 Sets the pixel format.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -394,6 +420,8 @@ Image_ErrorCode OH_DecodingOptions_GetIndex(OH_DecodingOptions *options, uint32_
 **Description**
 
 Obtains the index of an image.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -420,6 +448,8 @@ Image_ErrorCode OH_DecodingOptions_SetIndex(OH_DecodingOptions *options, uint32_
 
 Sets the index for an image.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -444,6 +474,8 @@ Image_ErrorCode OH_DecodingOptions_GetRotate(OH_DecodingOptions *options, float 
 **Description**
 
 Obtains the rotation degree.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -470,6 +502,8 @@ Image_ErrorCode OH_DecodingOptions_SetRotate(OH_DecodingOptions *options, float 
 
 Sets the rotation angle.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -494,6 +528,8 @@ Image_ErrorCode OH_DecodingOptions_GetDesiredSize(OH_DecodingOptions *options, I
 **Description**
 
 Obtains the desired output size.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -520,6 +556,8 @@ Image_ErrorCode OH_DecodingOptions_SetDesiredSize(OH_DecodingOptions *options, I
 
 Sets the desired output size.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -544,6 +582,8 @@ Image_ErrorCode OH_DecodingOptions_GetDesiredRegion(OH_DecodingOptions *options,
 **Description**
 
 Obtains the region to decode. Since the corresponding **SetDesiredRegion** function cannot meet the regional decoding requirements, starting from API version 19, you are advised to use [OH_DecodingOptions_GetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_getcropregion) instead.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -570,6 +610,8 @@ Image_ErrorCode OH_DecodingOptions_SetDesiredRegion(OH_DecodingOptions *options,
 
 Sets the region to decode. The actual decoding will process the entire original image, without any regional decoding effect. Starting from API version 19, you are advised to use [OH_DecodingOptions_SetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_setcropregion) instead.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -594,6 +636,8 @@ Image_ErrorCode OH_DecodingOptions_GetDesiredDynamicRange(OH_DecodingOptions *op
 **Description**
 
 Obtains the desired dynamic range configured during decoding.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -620,6 +664,8 @@ Image_ErrorCode OH_DecodingOptions_SetDesiredDynamicRange(OH_DecodingOptions *op
 
 Sets the desired dynamic range during decoding.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -644,6 +690,8 @@ Image_ErrorCode OH_DecodingOptions_GetCropAndScaleStrategy(OH_DecodingOptions *o
 **Description**
 
 Obtains the cropping and scaling strategy used during decoding.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 18
 
@@ -670,6 +718,8 @@ Image_ErrorCode OH_DecodingOptions_SetCropAndScaleStrategy(OH_DecodingOptions *o
 
 Sets the cropping and scaling strategy used during decoding.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 18
 
 **Parameters**:
@@ -694,6 +744,8 @@ Image_ErrorCode OH_DecodingOptions_SetDesiredColorSpace(OH_DecodingOptions *opti
 **Description**
 
 Sets the desired color space for the decoding options.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 20
 
@@ -720,6 +772,8 @@ Image_ErrorCode OH_DecodingOptions_GetDesiredColorSpace(OH_DecodingOptions *opti
 
 Obtains the color space set in the decoding options.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 20
 
 **Parameters**:
@@ -744,6 +798,8 @@ Image_ErrorCode OH_DecodingOptions_SetCropRegion(OH_DecodingOptions *options, Im
 **Description**
 
 Sets the cropping region in the decoding options.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 19
 
@@ -770,6 +826,8 @@ Image_ErrorCode OH_DecodingOptions_GetCropRegion(OH_DecodingOptions *options, Im
 
 Obtains the cropping region in the decoding options.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 19
 
 **Parameters**:
@@ -795,6 +853,8 @@ Image_ErrorCode OH_DecodingOptions_Release(OH_DecodingOptions *options)
 
 Releases the pointer to an OH_DecodingOptions object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -818,6 +878,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromUri(char *uri, size_t uriSize, OH
 **Description**
 
 Creates the pointer to an OH_ImageSourceNative object based on a URI.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -845,6 +907,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromFd(int32_t fd, OH_ImageSourceNati
 
 Creates the pointer to an OH_ImageSourceNative object based on a file descriptor.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -869,6 +933,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSi
 **Description**
 
 Creates the pointer to an OH_ImageSourceNative object based on buffer data. The buffer data must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [OH_PixelmapNative_CreatePixelmap](capi-pixelmap-native-h.md#oh_pixelmapnative_createpixelmap).
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -896,6 +962,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromDataWithUserBuffer(uint8_t *data,
 
 Creates an image source from data buffer. The data buffer is directly accessed by the image source object, and therefore the data buffer must remain accessible within the lifecycle of the image source object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 20
 
 **Parameters**:
@@ -922,6 +990,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFil
 
 Creates the pointer to an OH_ImageSourceNative object by using the raw file descriptor of an image resource file.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -946,6 +1016,8 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source
 **Description**
 
 Creates the pointer to an OH_PixelmapNative object based on decoding options.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -972,6 +1044,8 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSource
 **Description**
 
 Creates an OH_PixelmapNative object based on decoding options and memory type, where **allocatorType**<br>specifies the memory type of the PixelMap. By default, the system selects an appropriate memory type based on the image type, image size, and platform capability. When processing the returned PixelMap object, consider the impact of stride.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 15
 
@@ -1000,6 +1074,8 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *so
 
 Creates an array of OH_PixelmapNative objects based on decoding options. This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1027,6 +1103,8 @@ Image_ErrorCode OH_ImageSourceNative_CreatePicture(OH_ImageSourceNative *source,
 
 Creates the pointer to an OH_PictureNative object based on decoding options.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 13
 
 **Parameters**:
@@ -1052,6 +1130,8 @@ Image_ErrorCode OH_ImageSourceNative_CreatePictureAtIndex(OH_ImageSourceNative *
 **Description**
 
 Creates the pointer to an OH_PictureNative object at the specified index.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 20
 
@@ -1079,6 +1159,8 @@ Image_ErrorCode OH_ImageSourceNative_GetDelayTimeList(OH_ImageSourceNative *sour
 
 Obtains the image delay time list.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1104,6 +1186,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImageInfo(OH_ImageSourceNative *source, 
 **Description**
 
 Obtains the information about an image with a given index.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 12
 
@@ -1131,6 +1215,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImageProperty(OH_ImageSourceNative *sour
 
 Obtains the value of an image property.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1156,6 +1242,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyWithNull(OH_ImageSourceNati
 **Description**
 
 Obtains the value of an image property from an <b>ImageSource</b> object. The output value.data is null-terminated.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 19
 
@@ -1183,6 +1271,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImageProperty(OH_ImageSourceNative *s
 
 Obtains the value of an image property. The output **value.data** is terminated with a string terminator.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1209,6 +1299,8 @@ Image_ErrorCode OH_ImageSourceNative_GetFrameCount(OH_ImageSourceNative *source,
 
 Obtains the number of image frames.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1234,6 +1326,8 @@ Image_ErrorCode OH_ImageSourceNative_Release(OH_ImageSourceNative *source)
 
 Releases the pointer to an OH_ImageSourceNative object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 12
 
 **Parameters**:
@@ -1258,6 +1352,8 @@ Image_ErrorCode OH_DecodingOptionsForPicture_Create(OH_DecodingOptionsForPicture
 
 Creates the pointer to an OH_DecodingOptionsForPicture object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 13
 
 **Parameters**:
@@ -1281,6 +1377,8 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures(OH_Deco
 **Description**
 
 Obtains desired auxiliary pictures in the decoding options (auxiliary pictures contained in **picture**<br>expected to be decoded.)
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 13
 
@@ -1308,6 +1406,8 @@ Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredAuxiliaryPictures(OH_Deco
 
 Sets desired auxiliary pictures in the decoding options.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 13
 
 **Parameters**:
@@ -1334,6 +1434,8 @@ Image_ErrorCode OH_DecodingOptionsForPicture_Release(OH_DecodingOptionsForPictur
 
 Releases the pointer to an OH_DecodingOptionsForPicture object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 13
 
 **Parameters**:
@@ -1358,13 +1460,15 @@ Image_ErrorCode OH_ImageSourceNative_GetSupportedFormats(Image_MimeType** suppor
 
 Obtains the supported image formats that can be decoded.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 20
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [Image_MimeType](capi-image-nativemodule-image-mimetype.md)** supportedFormats | Double pointer to the supported image formats. |
+| [Image_MimeType](capi-image-nativemodule-image-string.md)** supportedFormats | Double pointer to the supported image formats. |
 | size_t* length | Pointer to the size of the array. |
 
 **Returns**:
@@ -1382,6 +1486,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyShort(OH_ImageSourceNative 
 **Description**
 
 Obtains the value of an image property as short int type.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1409,6 +1515,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyLong(OH_ImageSourceNative *
 
 Obtains the value of an image property as long int type.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1434,6 +1542,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyDouble(OH_ImageSourceNative
 **Description**
 
 Obtains the value of an image property as double type.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1461,6 +1571,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyArraySize(OH_ImageSourceNat
 
 Gets the array length of an array type property or the string length of a string type property.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1486,6 +1598,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyString(OH_ImageSourceNative
 **Description**
 
 Obtains the value of an image property as string type.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1514,6 +1628,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyIntArray(OH_ImageSourceNati
 
 Obtains the value of an image property as int array.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1540,6 +1656,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyDoubleArray(OH_ImageSourceN
 **Description**
 
 Obtains the value of an image property as double array.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1568,6 +1686,8 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyBlob(OH_ImageSourceNative *
 
 Obtains the value of an image property as blob.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1595,6 +1715,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyShort(OH_ImageSourceNati
 
 Modify the value of an image property as short int.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1620,6 +1742,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyLong(OH_ImageSourceNativ
 **Description**
 
 Modify the value of an image property as long int.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1647,6 +1771,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyDouble(OH_ImageSourceNat
 
 Modify the value of an image property as double.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1672,6 +1798,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyIntArray(OH_ImageSourceN
 **Description**
 
 Modify the value of an image property as int array.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1700,6 +1828,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyDoubleArray(OH_ImageSour
 
 Modify the value of an image property as double array.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 23
 
 **Parameters**:
@@ -1726,6 +1856,8 @@ Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyBlob(OH_ImageSourceNativ
 **Description**
 
 Modify the value of an image property as blob.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 23
 
@@ -1754,6 +1886,8 @@ Image_ErrorCode OH_ImageSourceNative_CreateImageRawData(const OH_ImageSourceNati
 
 Obtains rawData object from an image. The rawData object usually occupies a large amount of memory because it contains raw data from the camera. When the rawData object and the data it contains are not used, call the [OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata) method to destroy them in a timely manner.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 24
 
 **Parameters**:
@@ -1778,6 +1912,8 @@ Image_ErrorCode OH_ImageSourceNative_GetBufferFromRawData(const OH_ImageRawData 
 **Description**
 
 Gets binary data from the rawData object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 24
 
@@ -1805,6 +1941,8 @@ Image_ErrorCode OH_ImageSourceNative_GetBitsPerPixelFromRawData(const OH_ImageRa
 
 Gets number of bits that each pixel actually occupies in the buffer data.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 24
 
 **Parameters**:
@@ -1829,6 +1967,8 @@ Image_ErrorCode OH_ImageSourceNative_DestroyImageRawData(OH_ImageRawData *rawDat
 **Description**
 
 Destroys the rawData object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 24
 

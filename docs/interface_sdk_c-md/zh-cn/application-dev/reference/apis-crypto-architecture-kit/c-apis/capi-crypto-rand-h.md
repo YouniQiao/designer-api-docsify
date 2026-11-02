@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**相关模块：** [CryptoRandApi](capi-cryptorandapi.md)
+**相关模块：** [CryptoRandApi](capi-crypto-architecture-kit-cryptorandapi.md)
 
 ## 汇总
 
@@ -43,9 +45,11 @@ OH_Crypto_ErrCode OH_CryptoRand_Create(OH_CryptoRand **ctx)
 
 创建随机数生成器上下文。
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_rand/OH_CryptoRand_Destroy {ctx}
+**资源释放：** [OH_CryptoRand_Destroy](#oh_cryptorand_destroy)
 
 **参数：**
 
@@ -69,9 +73,11 @@ OH_Crypto_ErrCode OH_CryptoRand_GenerateRandom(OH_CryptoRand *ctx, int len, Cryp
 
 生成随机数。
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -97,6 +103,8 @@ const char *OH_CryptoRand_GetAlgoName(OH_CryptoRand *ctx)
 
 获取随机数生成器的算法名称。
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 **参数：**
@@ -120,6 +128,8 @@ OH_Crypto_ErrCode OH_CryptoRand_SetSeed(OH_CryptoRand *ctx, Crypto_DataBlob *see
 **描述：**
 
 设置随机数生成器的种子。
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -146,6 +156,8 @@ OH_Crypto_ErrCode OH_CryptoRand_EnableHardwareEntropy(OH_CryptoRand *ctx)
 
 启用硬件熵源。
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 21
 
 **参数：**
@@ -169,6 +181,8 @@ void OH_CryptoRand_Destroy(OH_CryptoRand *ctx)
 **描述：**
 
 销毁随机数生成器上下文。
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

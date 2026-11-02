@@ -6,13 +6,13 @@ typedef struct ArkUI_NodeComponentEvent {...} ArkUI_NodeComponentEvent
 
 ## Overview
 
-Defines the parameter type of the component callback event.
+Defines the parameter type of a component callback event, which is used to pass event-related data when the component callback is triggered, so that the application can obtain the callback event parameters.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-others-arkui-nativemodule.md)
 
 **Header file**: [native_node.h](capi-native-node-h.md)
 

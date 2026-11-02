@@ -6,9 +6,11 @@ Defines the enums, structs, and error codes used in the asset store service.
 
 **Library**: libasset_ndk.z.so
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
-**Related module**: [AssetType](capi-assettype.md)
+**Related module**: [AssetType](capi-asset-store-kit-assettype.md)
 
 ## Summary
 
@@ -56,6 +58,8 @@ enum Asset_TagType
 
 Enumerates the types of the tags of asset attributes.
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
 | Enum item | Description |
@@ -73,6 +77,8 @@ enum Asset_Tag
 **Description**
 
 Enumerates the tags of asset attributes.
+
+**System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
@@ -96,20 +102,20 @@ Enumerates the tags of asset attributes.
 | ASSET_TAG_DATA_LABEL_NORMAL_2 = ASSET_TYPE_BYTES \| 0x31 | Custom data, which is of the bytes type and can be changed. |
 | ASSET_TAG_DATA_LABEL_NORMAL_3 = ASSET_TYPE_BYTES \| 0x32 | Custom data, which is of the bytes type and can be changed. |
 | ASSET_TAG_DATA_LABEL_NORMAL_4 = ASSET_TYPE_BYTES \| 0x33 | Custom data, which is of the bytes type and can be changed. |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34 |  |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35 |  |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36 |  |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37 |  |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12 |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12 |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12 |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12 |
 | ASSET_TAG_RETURN_TYPE = ASSET_TYPE_NUMBER \| 0x40 | Type of asset information to return. The value is of the uint32_t type. |
 | ASSET_TAG_RETURN_LIMIT = ASSET_TYPE_NUMBER \| 0x41 | Maximum number of assets that can be returned in a query operation. The value is of the uint32_t type. |
 | ASSET_TAG_RETURN_OFFSET = ASSET_TYPE_NUMBER \| 0x42 | Offset of the returned assets in a batch query. The value is of the uint32_t type. |
 | ASSET_TAG_RETURN_ORDERED_BY = ASSET_TYPE_NUMBER \| 0x43 | Sorting order of the assets in the query result. The value is of the uint32_t type. |
 | ASSET_TAG_CONFLICT_RESOLUTION = ASSET_TYPE_NUMBER \| 0x44 | Policy for resolving the conflict when an asset is added. The value is of the uint32_t type. |
-| ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45 |  |
-| ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46 |  |
-| ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47 |  |
-| ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48 |  |
-| ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49 |  |
+| ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45 | Asset update time, in timestamp format. The value is of the bytes type.<br>**Since**: 12 |
+| ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46 | Additional operation type. The value is of the uint32_t type.<br>**Since**: 12 |
+| ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47 | Whether to encrypt the additional information customized by the service. The value is of the Boolean type. true indicates that the additional information customized by the service is encrypted, and false indicates that the additional information customized by the service is not encrypted.<br>**Since**: 14 |
+| ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48 | Group to which the asset belongs. The value is of the bytes type.<br>**Since**: 18 |
+| ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49 | Encrypted import/export type supported by the asset. The value is of the uint32_t type.<br>**Since**: 18 |
 
 ### Asset_ResultCode
 
@@ -120,6 +126,8 @@ enum Asset_ResultCode
 **Description**
 
 Enumerates the result codes used in the ASSET APIs.
+
+**System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
@@ -145,7 +153,7 @@ Enumerates the result codes used in the ASSET APIs.
 | ASSET_GET_SYSTEM_TIME_ERROR = 24000015 | Failed to obtain the system time. |
 | ASSET_LIMIT_EXCEEDED = 24000016 | The number of cached assets exceeds the limit. |
 | ASSET_UNSUPPORTED = 24000017 | The function is not supported. |
-| ASSET_PARAM_VERIFICATION_FAILED = 24000018 |  |
+| ASSET_PARAM_VERIFICATION_FAILED = 24000018 | The parameter verification fails.<br>**Since**: 20 |
 
 ### Asset_Accessibility
 
@@ -156,6 +164,8 @@ enum Asset_Accessibility
 **Description**
 
 Enumerates the types of the access control based on the lock screen status.
+
+**System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
@@ -175,6 +185,8 @@ enum Asset_AuthType
 
 Enumerates the user authentication types supported by assets.
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
 | Enum item | Description |
@@ -192,6 +204,8 @@ enum Asset_SyncType
 
 Asset sync type.
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
 | Enum item | Description |
@@ -199,7 +213,7 @@ Asset sync type.
 | ASSET_SYNC_TYPE_NEVER = 0 | Asset sync is not allowed. |
 | ASSET_SYNC_TYPE_THIS_DEVICE = 1 << 0 | Asset sync is allowed only on the local device, for example, in data restore on the local device. |
 | ASSET_SYNC_TYPE_TRUSTED_DEVICE = 1 << 1 | Asset sync is allowed only between trusted devices, for example, in the case of cloning. |
-| ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2 |  |
+| ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2 | Asset sync is allowed only between the devices that are logged in with trusted accounts, for example, in cloud sync scenarios.<br>**Since**: 12 |
 
 ### Asset_WrapType
 
@@ -210,6 +224,8 @@ enum Asset_WrapType
 **Description**
 
 Encrypted import/export type supported by the asset.
+
+**System capability**: SystemCapability.Security.Asset
 
 **Since**: 18
 
@@ -228,6 +244,8 @@ enum Asset_ConflictResolution
 
 Policy for resolving the conflict (for example, a duplicate alias).
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
 | Enum item | Description |
@@ -245,6 +263,8 @@ enum Asset_ReturnType
 
 Type of the asset query result to return.
 
+**System capability**: SystemCapability.Security.Asset
+
 **Since**: 11
 
 | Enum item | Description |
@@ -261,6 +281,8 @@ enum Asset_OperationType
 **Description**
 
 Enumerates the additional asset operation types.
+
+**System capability**: SystemCapability.Security.Asset
 
 **Since**: 12
 

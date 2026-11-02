@@ -6,9 +6,11 @@ Defines the data structures for the C APIs of the network connection module.
 
 **Library**: libnet_connection.so
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 11
 
-**Related module**: [NetConnection](capi-netconnection.md)
+**Related module**: [NetConnection](capi-network-kit-netconnection.md)
 
 ## Summary
 
@@ -65,20 +67,6 @@ Defines the data structures for the C APIs of the network connection module.
 | [typedef void (\*OH_NetConn_NetUnavailable)(void)](#oh_netconn_netunavailable) | OH_NetConn_NetUnavailable | Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered. |
 | [typedef void (\*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bool blocked)](#oh_netconn_netblockstatuschange) | OH_NetConn_NetBlockStatusChange | Defines the callback invoked when the network blocking status changes. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| int (*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, const struct addrinfo *hint, struct addrinfo **res) | Defines the pointer to the custom DNS resolver.<br>**Since**: 11<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy) | Defines the callback invoked when the HTTP proxy information of the application changes.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_GlobalHttpProxyRefreshCallback)( int32_t result, const NetConn_HttpProxy *proxy, void *userContext) | Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.<br> This callback is invoked at most once for each successful call to OH_NetConn_RefreshGlobalHttpProxyWithCallback.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle) | Defines the callback invoked when the network is available.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities) | Defines the callback invoked when the network capabilities change.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetConnectionPropertiesChange)(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *connConnetionProperties) | Defines the callback invoked when network connection properties change.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetLost)(NetConn_NetHandle *netHandle) | Defines the callback invoked when the network is disconnected.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetUnavailable)(void) | Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-| void (*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bool blocked) | Defines the callback invoked when the network blocking status changes.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.NetManager.Core |
-
 ## Enum type description
 
 ### NetConn_NetCap
@@ -91,6 +79,8 @@ enum NetConn_NetCap
 
 Enumerates the network capabilities.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 11
 
 | Enum item | Description |
@@ -100,8 +90,8 @@ Enumerates the network capabilities.
 | NETCONN_NET_CAPABILITY_INTERNET = 12 | Internet. |
 | NETCONN_NET_CAPABILITY_NOT_VPN = 15 | Non-VPN. |
 | NETCONN_NET_CAPABILITY_VALIDATED = 16 | Verified. |
-| NETCONN_NET_CAPABILITY_PORTAL = 17 |  |
-| NETCONN_NET_CAPABILITY_CHECKING_CONNECTIVITY = 31 |  |
+| NETCONN_NET_CAPABILITY_PORTAL = 17 | Portal.<br>**Since**: 12 |
+| NETCONN_NET_CAPABILITY_CHECKING_CONNECTIVITY = 31 | Connectivity check.<br>**Since**: 12 |
 
 ### NetConn_NetBearerType
 
@@ -113,15 +103,17 @@ enum NetConn_NetBearerType
 
 Enumerates the network carrier types.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
 | NETCONN_BEARER_CELLULAR = 0 | Cellular network. |
 | NETCONN_BEARER_WIFI = 1 | Wi-Fi. |
-| NETCONN_BEARER_BLUETOOTH = 2 |  |
+| NETCONN_BEARER_BLUETOOTH = 2 | Bluetooth.<br>**Since**: 12 |
 | NETCONN_BEARER_ETHERNET = 3 | Ethernet. |
-| NETCONN_BEARER_VPN = 4 |  |
+| NETCONN_BEARER_VPN = 4 | VPN.<br>**Since**: 12 |
 
 ### NetConn_ErrorCode
 
@@ -132,6 +124,8 @@ enum NetConn_ErrorCode
 **Description**
 
 Enumerates network connection error codes.
+
+**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 15
 
@@ -153,6 +147,8 @@ enum NetConn_PacketsType
 
 Enumerates trace route packet types.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 20
 
 | Enum item | Description |
@@ -172,6 +168,8 @@ typedef int (*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, 
 **Description**
 
 Defines the pointer to the custom DNS resolver.
+
+**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 11
 
@@ -194,6 +192,8 @@ typedef void (*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)
 
 Defines the callback invoked when the HTTP proxy information of the application changes.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -211,6 +211,8 @@ typedef void (*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const 
 **Description**
 
 Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.<br> This callback is invoked at most once for each successful call to OH_NetConn_RefreshGlobalHttpProxyWithCallback.
+
+**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 26.0.0
 
@@ -232,6 +234,8 @@ typedef void (*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle)
 
 Defines the callback invoked when the network is available.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -249,6 +253,8 @@ typedef void (*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, N
 **Description**
 
 Defines the callback invoked when the network capabilities change.
+
+**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 12
 
@@ -269,6 +275,8 @@ typedef void (*OH_NetConn_NetConnectionPropertiesChange)(NetConn_NetHandle *netH
 
 Defines the callback invoked when network connection properties change.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -288,6 +296,8 @@ typedef void (*OH_NetConn_NetLost)(NetConn_NetHandle *netHandle)
 
 Defines the callback invoked when the network is disconnected.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -306,6 +316,8 @@ typedef void (*OH_NetConn_NetUnavailable)(void)
 
 Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered.
 
+**System capability**: SystemCapability.Communication.NetManager.Core
+
 **Since**: 12
 
 ### OH_NetConn_NetBlockStatusChange()
@@ -317,6 +329,8 @@ typedef void (*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bo
 **Description**
 
 Defines the callback invoked when the network blocking status changes.
+
+**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 12
 

@@ -6,9 +6,11 @@ The file declares the common enums and structs used by the image interface.
 
 **Library**: libimage_common.so
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## Summary
 
@@ -20,7 +22,6 @@ The file declares the common enums and structs used by the image interface.
 | [Image_Region](capi-image-nativemodule-image-region.md) | Image_Region | Declaration the image region. |
 | [OH_PictureMetadata](capi-image-nativemodule-oh-picturemetadata.md) | - | Define a PictureMetadata struct type, used for picture metadata. |
 | [Image_String](capi-image-nativemodule-image-string.md) | Image_String | Defines the property string (in key-value format) of the image source. |
-| [Image_MimeType](capi-image-nativemodule-image-mimetype.md) | Image_MimeType | Defines the image encode format. |
 
 ### Enum
 
@@ -56,13 +57,15 @@ enum Image_ErrorCode
 
 Enumerates the return values that may be used by the interface.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
 | IMAGE_SUCCESS = 0 | operation success |
 | IMAGE_BAD_PARAMETER = 401 | invalid parameter |
-| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;Permission verification failed. A non-system application calls a system API.<br>**Since**: 26.1.0 |
+| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;Permission verification failed. A non-system application calls a system API.<br>**Since**: 26.0.1 |
 | IMAGE_UNSUPPORTED_MIME_TYPE = 7600101 | unsupported mime type |
 | IMAGE_UNKNOWN_MIME_TYPE = 7600102 | unknown mime type |
 | IMAGE_TOO_LARGE = 7600103 | too large data or image |
@@ -77,7 +80,7 @@ Enumerates the return values that may be used by the interface.
 | IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205 | &nbsp;unsupported memory format<br>**Since**: 13 |
 | IMAGE_INVALID_PARAMETER = 7600206 | &nbsp;Invalid parameter.<br>**Since**: 19 |
 | IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207 | &nbsp;Unsupported data format<br>**Since**: 22 |
-| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;the decomposition process failed.<br>**Since**: 26.1.0 |
+| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;the decomposition process failed.<br>**Since**: 26.0.1 |
 | IMAGE_ALLOC_FAILED = 7600301 | failed to allocate memory |
 | IMAGE_COPY_FAILED = 7600302 | memory copy failed |
 | IMAGE_LOCK_UNLOCK_FAILED = 7600303 | &nbsp;memory lock or unlock failed<br>**Since**: 15 |
@@ -109,13 +112,15 @@ enum Image_MetadataType
 
 Enumerates the metadata types.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| EXIF_METADATA = 1 |  |
-| FRAGMENT_METADATA = 2 |  |
-| GIF_METADATA = 5 |  |
+| EXIF_METADATA = 1 | Exif metadata.<br>**Since**: 13 |
+| FRAGMENT_METADATA = 2 | Fragment map metadata.<br>**Since**: 13 |
+| GIF_METADATA = 5 | GIF image metadata.<br>**Since**: 20 |
 
 ### IMAGE_ALLOCATOR_MODE
 
@@ -127,13 +132,15 @@ enum IMAGE_ALLOCATOR_MODE
 
 Type of allocator used to allocate memory of a PixelMap.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| IMAGE_ALLOCATOR_MODE_AUTO = 0 |  |
-| IMAGE_ALLOCATOR_MODE_DMA = 1 |  |
-| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 |  |
+| IMAGE_ALLOCATOR_MODE_AUTO = 0 | The system determines which memory to use to create the PixelMap.<br>**Since**: 20 |
+| IMAGE_ALLOCATOR_MODE_DMA = 1 | Use DMA buffer to create the PixelMap.<br>**Since**: 20 |
+| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 | Use share memory to create the PixelMap.<br>**Since**: 20 |
 
 
 ## Function description
@@ -147,6 +154,8 @@ Image_ErrorCode OH_PictureMetadata_Create(Image_MetadataType metadataType, OH_Pi
 **Description**
 
 Creates the pointer to an OH_PictureMetadata struct.
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -172,6 +181,8 @@ Image_ErrorCode OH_PictureMetadata_GetProperty(OH_PictureMetadata *metadata, Ima
 **Description**
 
 Obtains a property of metadata based on the key. **value.data** obtained through this API lacks the string terminator **\0**. Please use it with caution.
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -199,6 +210,8 @@ Image_ErrorCode OH_PictureMetadata_GetPropertyWithNull(OH_PictureMetadata *metad
 
 Obtains the metadata value of an OH_PictureMetadata instance. The output **value.data** ends with the string terminator **\0**.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 19
 
 **Parameters**:
@@ -224,6 +237,8 @@ Image_ErrorCode OH_PictureMetadata_SetProperty(OH_PictureMetadata *metadata, Ima
 **Description**
 
 Sets a property of metadata based on the key.
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -251,6 +266,8 @@ Image_ErrorCode OH_PictureMetadata_SetBlobData(OH_PictureMetadata *metadata, uin
 
 Sets blob data in the metadata.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -277,6 +294,8 @@ Image_ErrorCode OH_PictureMetadata_GetBlobDataSize(OH_PictureMetadata *metadata,
 
 Obtains the size of the blob data in the metadata.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -301,6 +320,8 @@ Image_ErrorCode OH_PictureMetadata_GetBlobData(OH_PictureMetadata *metadata, uin
 **Description**
 
 Obtains blob data from the metadata.
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -328,6 +349,8 @@ Image_ErrorCode OH_PictureMetadata_Release(OH_PictureMetadata *metadata)
 
 Releases the pointer to an OH_PictureMetadata struct.
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -351,6 +374,8 @@ Image_ErrorCode OH_PictureMetadata_Clone(OH_PictureMetadata *oldMetadata, OH_Pic
 **Description**
 
 Clones metadata.
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 

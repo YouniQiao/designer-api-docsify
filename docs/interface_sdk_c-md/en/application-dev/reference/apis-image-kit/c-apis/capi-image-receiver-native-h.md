@@ -6,9 +6,11 @@ The file declares the APIs used to obtain image data from the native layer.
 
 **Library**: libimage_receiver.so
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## Summary
 
@@ -40,16 +42,9 @@ The file declares the APIs used to obtain image data from the native layer.
 | [Image_ErrorCode OH_ImageReceiverNative_GetSize(OH_ImageReceiverNative* receiver, Image_Size* size)](#oh_imagereceivernative_getsize) | - | Obtains the size of an **ImageReceiver** using **OH_ImageReceiverNative**. |
 | [Image_ErrorCode OH_ImageReceiverNative_GetCapacity(OH_ImageReceiverNative* receiver, int32_t* capacity)](#oh_imagereceivernative_getcapacity) | - | Obtains the capacity of an **OH_ImageReceiverNative**. |
 | [Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)](#oh_imagereceivernative_release) | - | Releases an OH_ImageReceiverNative object. |
-| [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - |  |
-| [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - |  |
+| [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - | Registers an [OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback) callback. |
+| [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - | Unregisters an [OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback) callback. |
 | [Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)](#oh_imagereceivernative_setmemoryname) | - | Sets the memory name for an OH_ImageReceiverNative object.<br> Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended. The filtered size must not exceed 256 bytes (including the null terminator). |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_ImageReceiver_OnCallback)(OH_ImageReceiverNative *receiver) | Defines the callbacks for the image receiver at the native layer.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Image.ImageReceiver |
-| void (*OH_ImageReceiver_ImageArriveCallback)(OH_ImageReceiverNative *receiver, void *userData) | Defines the callback for the ImageArrive event.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Image.ImageReceiver |
 
 ## Function description
 
@@ -63,6 +58,8 @@ typedef void (*OH_ImageReceiver_OnCallback)(OH_ImageReceiverNative *receiver)
 
 Defines the callbacks for the image receiver at the native layer.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 ### OH_ImageReceiver_ImageArriveCallback()
@@ -75,6 +72,8 @@ typedef void (*OH_ImageReceiver_ImageArriveCallback)(OH_ImageReceiverNative *rec
 
 Defines the callback for the ImageArrive event.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 20
 
 ### OH_ImageReceiverOptions_Create()
@@ -86,6 +85,8 @@ Image_ErrorCode OH_ImageReceiverOptions_Create(OH_ImageReceiverOptions **options
 **Description**
 
 Creates an OH_ImageReceiverOptions object at the application layer.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -110,6 +111,8 @@ Image_ErrorCode OH_ImageReceiverOptions_GetSize(OH_ImageReceiverOptions* options
 **Description**
 
 Obtains the image size of an OH_ImageReceiverOptions object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -136,6 +139,8 @@ Image_ErrorCode OH_ImageReceiverOptions_SetSize(OH_ImageReceiverOptions* options
 
 Sets the image size of an OH_ImageReceiverOptions object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -160,6 +165,8 @@ Image_ErrorCode OH_ImageReceiverOptions_GetCapacity(OH_ImageReceiverOptions* opt
 **Description**
 
 Obtains the image cache capacity of an OH_ImageReceiverOptions object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -186,6 +193,8 @@ Image_ErrorCode OH_ImageReceiverOptions_SetCapacity(OH_ImageReceiverOptions* opt
 
 Sets the image cache capacity of an OH_ImageReceiverOptions object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -210,6 +219,8 @@ Image_ErrorCode OH_ImageReceiverOptions_Release(OH_ImageReceiverOptions* options
 **Description**
 
 Releases an OH_ImageReceiverOptions object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -240,6 +251,8 @@ Image_ErrorCode OH_ImageReceiverNative_Create(OH_ImageReceiverOptions* options, 
 
 Creates an OH_ImageReceiverNative object at the application layer.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -264,6 +277,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetReceivingSurfaceId(OH_ImageReceiverNat
 **Description**
 
 Obtains the surface ID through an OH_ImageReceiverNative object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -295,6 +310,8 @@ Image_ErrorCode OH_ImageReceiverNative_ReadLatestImage(OH_ImageReceiverNative* r
 
 Obtains the latest image through an OH_ImageReceiverNative object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -324,6 +341,8 @@ Image_ErrorCode OH_ImageReceiverNative_ReadNextImage(OH_ImageReceiverNative* rec
 **Description**
 
 Obtains the next image through an OH_ImageReceiverNative object.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -355,6 +374,8 @@ Image_ErrorCode OH_ImageReceiverNative_On(OH_ImageReceiverNative* receiver, OH_I
 
 Registers the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_imagereceiver_oncallback) callback.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -385,6 +406,8 @@ Image_ErrorCode OH_ImageReceiverNative_Off(OH_ImageReceiverNative* receiver)
 
 Unregisters the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_imagereceiver_oncallback) callback.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -413,6 +436,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetSize(OH_ImageReceiverNative* receiver,
 **Description**
 
 Obtains the size of an **ImageReceiver** using **OH_ImageReceiverNative**.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 12
 
@@ -444,6 +469,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetCapacity(OH_ImageReceiverNative* recei
 
 Obtains the capacity of an **OH_ImageReceiverNative**.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -474,6 +501,8 @@ Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)
 
 Releases an OH_ImageReceiverNative object.
 
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 12
 
 **Parameters**:
@@ -501,6 +530,10 @@ Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* rec
 
 **Description**
 
+Registers an [OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback) callback.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
 **Since**: 20
 
 **Parameters**:
@@ -524,6 +557,10 @@ Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* re
 ```
 
 **Description**
+
+Unregisters an [OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback) callback.
+
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 20
 
@@ -550,7 +587,9 @@ Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNativ
 
 Sets the memory name for an OH_ImageReceiverNative object.<br> Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended. The filtered size must not exceed 256 bytes (including the null terminator).
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+
+**Since**: 26.0.1
 
 **Parameters**:
 

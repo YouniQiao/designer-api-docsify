@@ -6,9 +6,11 @@ The **HiAppEvent** module provides event subscription and event logging function
 
 **Library**: libhiappevent_ndk.z.so
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
-**Related module**: [HiAppEvent](capi-hiappevent.md)
+**Related module**: [HiAppEvent](capi-performance-analysis-kit-hiappevent.md)
 
 ## Summary
 
@@ -19,7 +21,7 @@ The **HiAppEvent** module provides event subscription and event logging function
 | [HiAppEvent_AppEventInfo](capi-hiappevent-hiappevent-appeventinfo.md) | - | Defines a struct for the information about a single event, including the domain, name, type, and custom parameter list in JSON string format. |
 | [HiAppEvent_AppEventGroup](capi-hiappevent-hiappevent-appeventgroup.md) | - | Defines the information of an event group, including its name, the array of event information grouped by name, and the length of the event array. |
 | [OH_HiAppEvent_ExternalLog](capi-hiappevent-oh-hiappevent-externallog.md) | - | The OH_HiAppEvent_ExternalLog structure is used to describe external log information, including the file path, the generation timestamp, file size, and type of system event. |
-| [ParamList](capi-hiappevent-paramlist.md) | ParamList | Defines the event parameter list node. |
+| [ParamListNode*](capi-hiappevent-paramlistnode8h.md) | ParamList | Defines the event parameter list node. |
 | [HiAppEvent_Watcher](capi-hiappevent-hiappevent-watcher.md) | HiAppEvent_Watcher | Defines the watcher for application events. |
 | [HiAppEvent_Processor](capi-hiappevent-hiappevent-processor.md) | HiAppEvent_Processor | Defines a processor for application events. |
 | [HiAppEvent_Config](capi-hiappevent-hiappevent-config.md) | HiAppEvent_Config | Defines the configuration object used to set the conditions for triggering system events. |
@@ -30,8 +32,8 @@ The **HiAppEvent** module provides event subscription and event logging function
 | -- | -- | -- |
 | [HiAppEvent_ErrorCode](#hiappevent_errorcode) | HiAppEvent_ErrorCode | Enumerates the error codes used in the HiAppEvent module. |
 | [EventType](#eventtype) | EventType | Enumerates the event types. You are advised to select different event types based on application scenarios. |
-| [OH_HiAppEvent_FrameworkType](#oh_hiappevent_frameworktype) | OH_HiAppEvent_FrameworkType | Enumerates the application framework types. You are advised to select an application framework type based on the actual application scenario. |
 | [OH_HiAppEvent_SysEvent](#oh_hiappevent_sysevent) | OH_HiAppEvent_SysEvent | System event types.<br> You are advised to select system event types based on their respective usage scenarios. |
+| [OH_HiAppEvent_FrameworkType](#oh_hiappevent_frameworktype) | OH_HiAppEvent_FrameworkType | Enumerates the application framework types. You are advised to select an application framework type based on the actual application scenario. |
 
 ### Function
 
@@ -85,19 +87,10 @@ The **HiAppEvent** module provides event subscription and event logging function
 | [HiAppEvent_Config* OH_HiAppEvent_CreateConfig(void)](#oh_hiappevent_createconfig) | - | Creates a pointer to the configuration object that sets the conditions for triggering system events. Note: If the created pointer to the configuration object that sets the conditions for triggering system events is no longer used, destroy it by calling [OH_HiAppEvent_DestroyConfig](capi-hiappevent-h.md#oh_hiappevent_destroyconfig). |
 | [void OH_HiAppEvent_DestroyConfig(HiAppEvent_Config* config)](#oh_hiappevent_destroyconfig) | - | Destroys a configuration object. Note: If a configuration object is no longer used, destroy it to release memory to prevent memory leaks. After the object is destroyed, set its pointer to null. |
 | [int OH_HiAppEvent_SetConfigItem(HiAppEvent_Config* config, const char* itemName, const char* itemValue)](#oh_hiappevent_setconfigitem) | - | Sets the items in the configuration object. |
-| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | Sets event configuration parameters. Configuration items vary depending on events. Currently, only the following events are supported: **MAIN_THREAD_JANK**. (For details about the parameter configuration, see Main Thread Jank Event Overview.) **MAIN_THREAD_JANK_V2**. (For details about the parameter configuration, see Main Thread Jank Event Overview.) **EVENT_APP_CRASH**. (For details about the parameter configuration, see Crash Event Overview.) This event is supported since API version 24. |
-| [int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)](#oh_hiappevent_reportframeworkmemanomaly) | - | Reports information about abnormal memory usage of the application framework. <br>This API can be called once every minute at most. If the frequency limit is exceeded, the error code **HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED** will be returned. <br>When the application detects that the memory usage of the application framework is abnormal and the operation is successful after this API is called: <br>1. If you have subscribed to the application event whose domain is **HIVIEWDFX** and name is **FW_MEM_ANOMALY**, the application will receive a callback containing the information about the abnormal memory usage of the application framework. <br>2. If you have not subscribed to this application event, the application will not receive the callback containing the information about the abnormal memory usage of the application framework. |
+| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | Sets event configuration parameters. Configuration items vary depending on events. Currently, only the following events are supported: **MAIN_THREAD_JANK**. **MAIN_THREAD_JANK_V2**. **EVENT_APP_CRASH**, is supported since API version 24. |
 | [typedef void (\*OH_HiAppEvent_ExternalLogCapacityReachedCallback)(OH_HiAppEvent_ExternalLog* externalLogArr, uint32_t arrLen)](#oh_hiappevent_externallogcapacityreachedcallback) | OH_HiAppEvent_ExternalLogCapacityReachedCallback | The parameter of OH_HiAppEvent_RegExternalLogCapacityReachedCallback function which acts as the callback function when external log directory capacity is reached. |
 | [int OH_HiAppEvent_RegExternalLogCapacityReachedCallback(OH_HiAppEvent_ExternalLogCapacityReachedCallback callback)](#oh_hiappevent_regexternallogcapacityreachedcallback) | - | The interface to set the callback when external log directory capacity is reached. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_HiAppEvent_OnReceive)( const char* domain, const struct HiAppEvent_AppEventGroup* appEventGroups, uint32_t groupLen) | Passes event content to the caller. Note: The lifecycle of the object pointed by the pointer in the callback is limited to the callback function. Do not use the pointer outside of the callback function. If the information needs to be cached, perform a deep copy of the content pointed by the pointer.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiAppEvent |
-| void (*OH_HiAppEvent_OnTrigger)(int row, int size) | Invoked if the event received by the watcher meets the conditions specified by [OH_HiAppEvent_SetTriggerCondition](capi-hiappevent-h.md#oh_hiappevent_settriggercondition). When the **OH_HiAppEvent_OnReceive** callback is not set in the watcher, the event received by the watcher will be saved. After the callback is complete, if a newly saved event meets the specified condition, the callback is invoked again.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiAppEvent |
-| void (*OH_HiAppEvent_OnTake)(const char* const *events, uint32_t eventLen) | Passes the events received by the watcher to the caller when [OH_HiAppEvent_TakeWatcherData](capi-hiappevent-h.md#oh_hiappevent_takewatcherdata) is used to obtain the events. Note: The lifecycle of the object pointed by the pointer in the callback is limited to the callback function. Do not use the pointer outside of the callback function. If the information needs to be cached, perform a deep copy of the content pointed by the pointer.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiAppEvent |
-| void (*OH_HiAppEvent_ExternalLogCapacityReachedCallback)( OH_HiAppEvent_ExternalLog* externalLogArr, uint32_t arrLen) | The parameter of OH_HiAppEvent_RegExternalLogCapacityReachedCallback function which acts as the callback function when external log directory capacity is reached.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.HiviewDFX.HiAppEvent |
+| [int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)](#oh_hiappevent_reportframeworkmemanomaly) | - | Reports information about abnormal memory usage of the application framework. <br>This API can be called once every minute at most. If the frequency limit is exceeded, the error code **HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED** will be returned. <br>When the application detects that the memory usage of the application framework is abnormal and the operation is successful after this API is called: <br>1. If you have subscribed to the application event whose domain is **HIVIEWDFX** and name is **FW_MEM_ANOMALY**, the application will receive a callback containing the information about the abnormal memory usage of the application framework. <br>2. If you have not subscribed to this application event, the application will not receive the callback containing the information about the abnormal memory usage of the application framework. |
 
 ## Enum type description
 
@@ -111,19 +104,21 @@ enum HiAppEvent_ErrorCode
 
 Enumerates the error codes used in the HiAppEvent module.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 15
 
 | Enum item | Description |
 | -- | -- |
-| HIAPPEVENT_SUCCESS = 0 |  |
-| HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH = 4 |  |
-| HIAPPEVENT_PROCESSOR_IS_NULL = -7 |  |
-| HIAPPEVENT_PROCESSOR_NOT_FOUND = -8 |  |
-| HIAPPEVENT_INVALID_PARAM_VALUE = -9 |  |
-| HIAPPEVENT_EVENT_CONFIG_IS_NULL = -10 |  |
-| HIAPPEVENT_OPERATE_FAILED = -100 |  |
-| HIAPPEVENT_INVALID_UID = -200 |  |
-| HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED = -300 |  |
+| HIAPPEVENT_SUCCESS = 0 | The operation is successful.<br>**Since**: 15 |
+| HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH = 4 | The parameter value length is invalid.<br>**Since**: 18 |
+| HIAPPEVENT_PROCESSOR_IS_NULL = -7 | The processor is null.<br>**Since**: 18 |
+| HIAPPEVENT_PROCESSOR_NOT_FOUND = -8 | The processor is not found.<br>**Since**: 18 |
+| HIAPPEVENT_INVALID_PARAM_VALUE = -9 | The parameter value is invalid.<br>**Since**: 15 |
+| HIAPPEVENT_EVENT_CONFIG_IS_NULL = -10 | The event configuration is null.<br>**Since**: 15 |
+| HIAPPEVENT_OPERATE_FAILED = -100 | The operation failed.<br>**Since**: 18 |
+| HIAPPEVENT_INVALID_UID = -200 | The user ID is invalid.<br>**Since**: 18 |
+| HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED = -300 | The reporting frequency exceeds the limit.<br>**Since**: 26.0.0 |
 
 ### EventType
 
@@ -135,6 +130,8 @@ enum EventType
 
 Enumerates the event types. You are advised to select different event types based on application scenarios.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 | Enum item | Description |
@@ -143,24 +140,6 @@ Enumerates the event types. You are advised to select different event types base
 | STATISTIC = 2 | Statistic event type |
 | SECURITY = 3 | Security event type |
 | BEHAVIOR = 4 | Behavior event type |
-
-### OH_HiAppEvent_FrameworkType
-
-```c
-enum OH_HiAppEvent_FrameworkType
-```
-
-**Description**
-
-Enumerates the application framework types. You are advised to select an application framework type based on the actual application scenario.
-
-**Since**: 26.0.0
-
-| Enum item | Description |
-| -- | -- |
-| OH_FLUTTER_DART = 0 |  |
-| OH_REACT_NATIVE_HERMES = 1 |  |
-| OH_KMP_KOTLIN = 2 |  |
 
 ### OH_HiAppEvent_SysEvent
 
@@ -172,16 +151,38 @@ enum OH_HiAppEvent_SysEvent
 
 System event types.<br> You are advised to select system event types based on their respective usage scenarios.
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
+**Since**: 26.0.1
 
 | Enum item | Description |
 | -- | -- |
-| OH_APP_CRASH = 1 |  |
-| OH_APP_FREEZE = 2 |  |
-| OH_RESOURCE_OVERLIMIT = 3 |  |
-| OH_ADDRESS_SANITIZER = 4 |  |
-| OH_APP_HICOLLIE = 5 |  |
-| OH_CPU_USAGE_HIGH = 6 |  |
+| OH_APP_CRASH = 1 | App crash event type.<br>**Since**: 26.0.1 |
+| OH_APP_FREEZE = 2 | App freeze event type.<br>**Since**: 26.0.1 |
+| OH_RESOURCE_OVERLIMIT = 3 | Resource overlimit event type.<br>**Since**: 26.0.1 |
+| OH_ADDRESS_SANITIZER = 4 | Address sanitizer event type.<br>**Since**: 26.0.1 |
+| OH_APP_HICOLLIE = 5 | App hicollie event type.<br>**Since**: 26.0.1 |
+| OH_CPU_USAGE_HIGH = 6 | CPU usage high event type.<br>**Since**: 26.0.1 |
+
+### OH_HiAppEvent_FrameworkType
+
+```c
+enum OH_HiAppEvent_FrameworkType
+```
+
+**Description**
+
+Enumerates the application framework types. You are advised to select an application framework type based on the actual application scenario.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
+**Since**: 26.0.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_FLUTTER_DART = 0 | Flutter_dart type.<br>**Since**: 26.0.0 |
+| OH_REACT_NATIVE_HERMES = 1 | React_native_hermes type.<br>**Since**: 26.0.0 |
+| OH_KMP_KOTLIN = 2 | Kmp_kotlin type.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -195,6 +196,8 @@ typedef void (*OH_HiAppEvent_OnReceive)(const char* domain, const struct HiAppEv
 **Description**
 
 Passes event content to the caller. Note: The lifecycle of the object pointed by the pointer in the callback is limited to the callback function. Do not use the pointer outside of the callback function. If the information needs to be cached, perform a deep copy of the content pointed by the pointer.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -216,6 +219,8 @@ typedef void (*OH_HiAppEvent_OnTrigger)(int row, int size)
 
 Invoked if the event received by the watcher meets the conditions specified by [OH_HiAppEvent_SetTriggerCondition](capi-hiappevent-h.md#oh_hiappevent_settriggercondition). When the **OH_HiAppEvent_OnReceive** callback is not set in the watcher, the event received by the watcher will be saved. After the callback is complete, if a newly saved event meets the specified condition, the callback is invoked again.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -234,6 +239,8 @@ typedef void (*OH_HiAppEvent_OnTake)(const char* const *events, uint32_t eventLe
 **Description**
 
 Passes the events received by the watcher to the caller when [OH_HiAppEvent_TakeWatcherData](capi-hiappevent-h.md#oh_hiappevent_takewatcherdata) is used to obtain the events. Note: The lifecycle of the object pointed by the pointer in the callback is limited to the callback function. Do not use the pointer outside of the callback function. If the information needs to be cached, perform a deep copy of the content pointed by the pointer.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -254,13 +261,15 @@ ParamList OH_HiAppEvent_CreateParamList(void)
 
 Creates a pointer to a parameter list object. Note: If the created pointer to a parameter list object is no longer used, destroy it by calling [OH_HiAppEvent_DestroyParamList](capi-hiappevent-h.md#oh_hiappevent_destroyparamlist).
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list object. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list object. |
 
 ### OH_HiAppEvent_DestroyParamList()
 
@@ -272,13 +281,15 @@ void OH_HiAppEvent_DestroyParamList(ParamList list)
 
 Destroys a pointer to a parameter list object and releases its allocated memory.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list object. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list object. |
 
 ### OH_HiAppEvent_AddBoolParam()
 
@@ -290,13 +301,15 @@ ParamList OH_HiAppEvent_AddBoolParam(ParamList list, const char* name, bool bool
 
 Adds an event parameter of the Boolean type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | bool boolean | Value of the parameter to be added. |
 
@@ -304,7 +317,7 @@ Adds an event parameter of the Boolean type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddBoolArrayParam()
 
@@ -316,13 +329,15 @@ ParamList OH_HiAppEvent_AddBoolArrayParam(ParamList list, const char* name, cons
 
 Adds an event parameter of the Boolean array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const bool* booleans | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -331,7 +346,7 @@ Adds an event parameter of the Boolean array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt8Param()
 
@@ -343,13 +358,15 @@ ParamList OH_HiAppEvent_AddInt8Param(ParamList list, const char* name, int8_t nu
 
 Adds an event parameter of the int8_t type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | int8_t num | Value of the parameter to be added. |
 
@@ -357,7 +374,7 @@ Adds an event parameter of the int8_t type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt8ArrayParam()
 
@@ -369,13 +386,15 @@ ParamList OH_HiAppEvent_AddInt8ArrayParam(ParamList list, const char* name, cons
 
 Adds an event parameter of the int8_t array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const int8_t* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -384,7 +403,7 @@ Adds an event parameter of the int8_t array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt16Param()
 
@@ -396,13 +415,15 @@ ParamList OH_HiAppEvent_AddInt16Param(ParamList list, const char* name, int16_t 
 
 Adds an event parameter of the int16_t type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | int16_t num | Value of the parameter to be added. |
 
@@ -410,7 +431,7 @@ Adds an event parameter of the int16_t type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt16ArrayParam()
 
@@ -422,13 +443,15 @@ ParamList OH_HiAppEvent_AddInt16ArrayParam(ParamList list, const char* name, con
 
 Adds an event parameter of the int16_t array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const int16_t* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -437,7 +460,7 @@ Adds an event parameter of the int16_t array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt32Param()
 
@@ -449,13 +472,15 @@ ParamList OH_HiAppEvent_AddInt32Param(ParamList list, const char* name, int32_t 
 
 Adds an event parameter of the int32_t type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | int32_t num | Value of the parameter to be added. |
 
@@ -463,7 +488,7 @@ Adds an event parameter of the int32_t type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt32ArrayParam()
 
@@ -475,13 +500,15 @@ ParamList OH_HiAppEvent_AddInt32ArrayParam(ParamList list, const char* name, con
 
 Adds an event parameter of the int32_t array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const int32_t* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -490,7 +517,7 @@ Adds an event parameter of the int32_t array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt64Param()
 
@@ -502,13 +529,15 @@ ParamList OH_HiAppEvent_AddInt64Param(ParamList list, const char* name, int64_t 
 
 Adds an event parameter of the int64_t type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | int64_t num | Value of the parameter to be added. |
 
@@ -516,7 +545,7 @@ Adds an event parameter of the int64_t type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddInt64ArrayParam()
 
@@ -528,13 +557,15 @@ ParamList OH_HiAppEvent_AddInt64ArrayParam(ParamList list, const char* name, con
 
 Adds an event parameter of the int64_t array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const int64_t* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -543,7 +574,7 @@ Adds an event parameter of the int64_t array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddFloatParam()
 
@@ -555,13 +586,15 @@ ParamList OH_HiAppEvent_AddFloatParam(ParamList list, const char* name, float nu
 
 Adds an event parameter of the float type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | float num | Value of the parameter to be added. |
 
@@ -569,7 +602,7 @@ Adds an event parameter of the float type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddFloatArrayParam()
 
@@ -581,13 +614,15 @@ ParamList OH_HiAppEvent_AddFloatArrayParam(ParamList list, const char* name, con
 
 Adds an event parameter of the float array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const float* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -596,7 +631,7 @@ Adds an event parameter of the float array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddDoubleParam()
 
@@ -608,13 +643,15 @@ ParamList OH_HiAppEvent_AddDoubleParam(ParamList list, const char* name, double 
 
 Adds an event parameter of the Double type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | double num | Value of the parameter to be added. |
 
@@ -622,7 +659,7 @@ Adds an event parameter of the Double type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddDoubleArrayParam()
 
@@ -634,13 +671,15 @@ ParamList OH_HiAppEvent_AddDoubleArrayParam(ParamList list, const char* name, co
 
 Adds an event parameter of the double array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const double* nums | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -649,7 +688,7 @@ Adds an event parameter of the double array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddStringParam()
 
@@ -661,13 +700,15 @@ ParamList OH_HiAppEvent_AddStringParam(ParamList list, const char* name, const c
 
 Adds a parameter of the string type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const char* str | Value of the parameter to be added. |
 
@@ -675,7 +716,7 @@ Adds a parameter of the string type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_AddStringArrayParam()
 
@@ -687,13 +728,15 @@ ParamList OH_HiAppEvent_AddStringArrayParam(ParamList list, const char* name, co
 
 Adds a parameter of the string array type to the parameter list.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) list | Pointer to the parameter list to which parameters need to be added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) list | Pointer to the parameter list to which parameters need to be added. |
 | const char* name | Name of the parameter to be added. |
 | const char * const *strs | Value of the parameter to be added. |
 | int arrSize | Size of the parameter array to be added. |
@@ -702,7 +745,7 @@ Adds a parameter of the string array type to the parameter list.
 
 | Type | Description |
 | -- | -- |
-| [ParamList](capi-hiappevent-paramlist.md) | Pointer to the parameter list that contains the parameters added. |
+| [ParamList](capi-hiappevent-paramlistnode8h.md) | Pointer to the parameter list that contains the parameters added. |
 
 ### OH_HiAppEvent_Write()
 
@@ -714,6 +757,8 @@ int OH_HiAppEvent_Write(const char* domain, const char* name, enum EventType typ
 
 Logs application events whose parameters are of the list type. Before application event logging, use this API to verify parameters of the events. If the verification is successful, the API writes the events to the event file.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 8
 
 **Parameters**:
@@ -723,7 +768,7 @@ Logs application events whose parameters are of the list type. Before applicatio
 | const char* domain | Event domain. You can customize event domains as required. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z) (A to Z), and underscore (\_). It must start with a letter and cannot end with an underscore (\_). |
 | const char* name | Event name. You can customize event names as required. The value is a string that contains a maximum of 48 characters, including digits (0 to 9), letters (a to z) (A to Z), underscore (\_), and dollar sign (`$`). It must start with a letter or dollar sign (`$`) and end with a digit or letter. |
 | enum EventType type | Event type. For details, see [EventType](capi-hiappevent-h.md#eventtype). |
-| [const ParamList](capi-hiappevent-paramlist.md) list | List of event parameters, each of which consists of a parameter name and a parameter value. The specifications are as follows: <br>1. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z),underscore (_), and dollar sign (`$`). It must start with a letter or dollar sign (`$`) and end with a digit or letter. <br>2. The parameter value can be a string, number, Boolean, or array. The length of a string must be less than 8 * 1024 characters. If this limit is exceeded, excess characters will be truncated. The element type of an array parameter can only be a string, number, or Boolean, and the number of elements must be less than 100. If this limit is exceeded, excess elements will be discarded. <br>3. The maximum number of parameters is 32. If this limit is exceeded, excess parameters will be discarded. |
+| [const ParamList](capi-hiappevent-paramlistnode8h.md) list | List of event parameters, each of which consists of a parameter name and a parameter value. The specifications are as follows: <br>1. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z),underscore (_), and dollar sign (`$`). It must start with a letter or dollar sign (`$`) and end with a digit or letter. <br>2. The parameter value can be a string, number, Boolean, or array. The length of a string must be less than 8 * 1024 characters. If this limit is exceeded, excess characters will be truncated. The element type of an array parameter can only be a string, number, or Boolean, and the number of elements must be less than 100. If this limit is exceeded, excess elements will be discarded. <br>3. The maximum number of parameters is 32. If this limit is exceeded, excess parameters will be discarded. |
 
 **Returns**:
 
@@ -740,6 +785,8 @@ bool OH_HiAppEvent_Configure(const char* name, const char* value)
 **Description**
 
 Configures the application event logging function. This function is used to configure the event logging function and the storage quota of the event file directory.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 8
 
@@ -766,6 +813,8 @@ HiAppEvent_Watcher* OH_HiAppEvent_CreateWatcher(const char* name)
 
 Creates a watcher for application events. Note: If a created watcher is no longer used, destroy it by calling [OH_HiAppEvent_DestroyWatcher](capi-hiappevent-h.md#oh_hiappevent_destroywatcher).
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -790,6 +839,8 @@ void OH_HiAppEvent_DestroyWatcher(HiAppEvent_Watcher* watcher)
 
 Destroys a created watcher. Note: If a created watcher is no longer used, destroy it to release memory to prevent memory leaks. After the watcher is destroyed, set its pointer to null.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -807,6 +858,8 @@ int OH_HiAppEvent_SetTriggerCondition(HiAppEvent_Watcher* watcher, int row, int 
 **Description**
 
 Sets the trigger condition of the [OH_HiAppEvent_OnTrigger](capi-hiappevent-h.md#oh_hiappevent_ontrigger) callback. You can set the trigger condition by the number and size of new events received by the watcher, and **onTrigger**<br>timeout interval. Ensure that at least one of the trigger conditions is set on the caller side.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -834,6 +887,8 @@ int OH_HiAppEvent_SetAppEventFilter(HiAppEvent_Watcher* watcher, const char* dom
 **Description**
 
 Sets the type of events to listen for. This function can be called repeatedly. You can add multiple filtering conditions instead of replacing them. The watcher will receive notifications of events that meet any of the filtering conditions.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -863,6 +918,8 @@ int OH_HiAppEvent_SetWatcherOnTrigger(HiAppEvent_Watcher* watcher, OH_HiAppEvent
 
 Sets the **onTrigger** callback. If **OnReceive** is not set or is set to **nullptr**, the application events received by the watcher will be saved. If the saved application events meet the trigger conditions of the **onTrigger** callback, the **onTrigger**<br>callback will be called.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -887,6 +944,8 @@ int OH_HiAppEvent_SetWatcherOnReceive(HiAppEvent_Watcher* watcher, OH_HiAppEvent
 **Description**
 
 Sets the **onReceive** callback. When the listener detects the corresponding event, the onReceive callback is called.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -913,6 +972,8 @@ int OH_HiAppEvent_TakeWatcherData(HiAppEvent_Watcher* watcher, uint32_t eventNum
 
 Obtains the event saved by the watcher.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -937,7 +998,16 @@ int OH_HiAppEvent_AddWatcher(HiAppEvent_Watcher* watcher)
 
 **Description**
 
-Adds a watcher. Once a watcher is added, it starts to listen for system messages.<br> > **NOTE**<br>> > The [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) API involves I/O operations. In performance-sensitive service scenarios, > you need to determine whether to call this API in the main thread or a child thread based on the actual service > requirements. > The name passed to the [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) API should be unique. If the same name is passed, the > previous subscription will be overwritten.
+Adds a watcher. Once a watcher is added, it starts to listen for system messages.<br>
+> **NOTE**
+>
+> The [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) API involves I/O operations. In performance-sensitive service scenarios,
+> you need to determine whether to call this API in the main thread or a child thread based on the actual service
+> requirements.
+> The name passed to the [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) API should be unique. If the same name is passed, the
+> previous subscription will be overwritten.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
@@ -963,6 +1033,8 @@ int OH_HiAppEvent_RemoveWatcher(HiAppEvent_Watcher* watcher)
 
 Removes a watcher. Once a watcher is removed, it stops listening for system messages. Note: This API only enables the watcher to stop listening for system messages. It does not destroy the watcher. The watcher still resides in the memory until the [OH_HiAppEvent_DestroyWatcher](capi-hiappevent-h.md#oh_hiappevent_destroywatcher) API is called.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 **Parameters**:
@@ -987,6 +1059,8 @@ void OH_HiAppEvent_ClearData()
 
 Clears the events saved by all watchers.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 12
 
 ### OH_HiAppEvent_CreateProcessor()
@@ -998,6 +1072,8 @@ HiAppEvent_Processor* OH_HiAppEvent_CreateProcessor(const char* name)
 **Description**
 
 Creates a processor for application events. Note: If a created processor is no longer used, destroy it by calling [OH_HiAppEvent_DestroyProcessor](capi-hiappevent-h.md#oh_hiappevent_destroyprocessor).
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 18
 
@@ -1022,6 +1098,8 @@ int OH_HiAppEvent_SetReportRoute(HiAppEvent_Processor* processor, const char* ap
 **Description**
 
 Sets the report route for the processor.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 18
 
@@ -1048,6 +1126,8 @@ int OH_HiAppEvent_SetReportPolicy(HiAppEvent_Processor* processor, int periodRep
 **Description**
 
 Sets the report policy for the processor.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 18
 
@@ -1077,6 +1157,8 @@ int OH_HiAppEvent_SetReportEvent(HiAppEvent_Processor* processor, const char* do
 
 Sets the report event for the processor.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1104,6 +1186,8 @@ int OH_HiAppEvent_SetCustomConfig(HiAppEvent_Processor* processor, const char* k
 
 Sets the custom extension parameters of the processor.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1130,6 +1214,8 @@ int OH_HiAppEvent_SetConfigId(HiAppEvent_Processor* processor, int configId)
 
 Sets the configuration ID of the processor.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1155,6 +1241,8 @@ int OH_HiAppEvent_SetConfigName(HiAppEvent_Processor* processor, const char* con
 
 Sets the configuration name of the processor.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 20
 
 **Parameters**:
@@ -1179,6 +1267,8 @@ int OH_HiAppEvent_SetReportUserId(HiAppEvent_Processor* processor, const char* c
 **Description**
 
 Sets the report user ID of the processor.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 18
 
@@ -1206,6 +1296,8 @@ int OH_HiAppEvent_SetReportUserProperty(HiAppEvent_Processor* processor, const c
 
 Sets the report user property of the processor.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1232,6 +1324,8 @@ int64_t OH_HiAppEvent_AddProcessor(HiAppEvent_Processor* processor)
 
 Adds a processor. You can add a processor to migrate event data to the cloud. You can preset the implementation of the processor on the device and set its properties based on its constraints. Note that the configuration information of **Processor** must be provided by the data processor. Yet, as no data processor is preset in the device for interaction for the moment, migrating events to the cloud is unavailable.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1256,6 +1350,8 @@ void OH_HiAppEvent_DestroyProcessor(HiAppEvent_Processor* processor)
 
 Destroys a processor. Note: If a processor is no longer used, destroy it to release memory to prevent memory leaks. After the processor is destroyed, set its pointer to null.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 18
 
 **Parameters**:
@@ -1273,6 +1369,8 @@ int OH_HiAppEvent_RemoveProcessor(int64_t processorId)
 **Description**
 
 Removes a processor. Once a processor is removed, it stops reporting events. Note: This API only stops the processor reporting events but does not destroy the processor. You can call [OH_HiAppEvent_DestroyProcessor](capi-hiappevent-h.md#oh_hiappevent_destroyprocessor) to destroy the processor and release the memory.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 18
 
@@ -1298,6 +1396,8 @@ HiAppEvent_Config* OH_HiAppEvent_CreateConfig(void)
 
 Creates a pointer to the configuration object that sets the conditions for triggering system events. Note: If the created pointer to the configuration object that sets the conditions for triggering system events is no longer used, destroy it by calling [OH_HiAppEvent_DestroyConfig](capi-hiappevent-h.md#oh_hiappevent_destroyconfig).
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 15
 
 **Returns**:
@@ -1316,6 +1416,8 @@ void OH_HiAppEvent_DestroyConfig(HiAppEvent_Config* config)
 
 Destroys a configuration object. Note: If a configuration object is no longer used, destroy it to release memory to prevent memory leaks. After the object is destroyed, set its pointer to null.
 
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
 **Since**: 15
 
 **Parameters**:
@@ -1333,6 +1435,8 @@ int OH_HiAppEvent_SetConfigItem(HiAppEvent_Config* config, const char* itemName,
 **Description**
 
 Sets the items in the configuration object.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 15
 
@@ -1358,7 +1462,9 @@ int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)
 
 **Description**
 
-Sets event configuration parameters. Configuration items vary depending on events. Currently, only the following events are supported: **MAIN_THREAD_JANK**. (For details about the parameter configuration, see Main Thread Jank Event Overview.) **MAIN_THREAD_JANK_V2**. (For details about the parameter configuration, see Main Thread Jank Event Overview.) **EVENT_APP_CRASH**. (For details about the parameter configuration, see Crash Event Overview.) This event is supported since API version 24.
+Sets event configuration parameters. Configuration items vary depending on events. Currently, only the following events are supported: **MAIN_THREAD_JANK**. **MAIN_THREAD_JANK_V2**. **EVENT_APP_CRASH**, is supported since API version 24.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 15
 
@@ -1375,32 +1481,6 @@ Sets event configuration parameters. Configuration items vary depending on event
 | -- | -- |
 | int | <ul> <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li> <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter.</li> </ul> For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
-### OH_HiAppEvent_ReportFrameworkMemAnomaly()
-
-```c
-int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)
-```
-
-**Description**
-
-Reports information about abnormal memory usage of the application framework. <br>This API can be called once every minute at most. If the frequency limit is exceeded, the error code **HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED** will be returned. <br>When the application detects that the memory usage of the application framework is abnormal and the operation is successful after this API is called: <br>1. If you have subscribed to the application event whose domain is **HIVIEWDFX** and name is **FW_MEM_ANOMALY**, the application will receive a callback containing the information about the abnormal memory usage of the application framework. <br>2. If you have not subscribed to this application event, the application will not receive the callback containing the information about the abnormal memory usage of the application framework.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| enum OH_HiAppEvent_FrameworkType frameworkType | Application framework type. |
-| const char* frameworkVersion | Pointer to the application framework version. |
-| const char* description | Description of the abnormal memory usage of the application framework. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int | <ul> <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation succeeded.</li> <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li> <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) System/application event write failed, or timestamp retrieval failed.</li> <li>[HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED](capi-hiappevent-h.md#hiappevent_errorcode) The reporting frequency exceeds the limit.</li> </ul> For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
-
 ### OH_HiAppEvent_ExternalLogCapacityReachedCallback()
 
 ```c
@@ -1411,7 +1491,9 @@ typedef void (*OH_HiAppEvent_ExternalLogCapacityReachedCallback)(OH_HiAppEvent_E
 
 The parameter of OH_HiAppEvent_RegExternalLogCapacityReachedCallback function which acts as the callback function when external log directory capacity is reached.
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -1430,7 +1512,9 @@ int OH_HiAppEvent_RegExternalLogCapacityReachedCallback(OH_HiAppEvent_ExternalLo
 
 The interface to set the callback when external log directory capacity is reached.
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -1443,5 +1527,33 @@ The interface to set the callback when external log directory capacity is reache
 | Type | Description |
 | -- | -- |
 | int | set callback result. [HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) The operation is successful. [HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) The operation failed. |
+
+### OH_HiAppEvent_ReportFrameworkMemAnomaly()
+
+```c
+int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)
+```
+
+**Description**
+
+Reports information about abnormal memory usage of the application framework. <br>This API can be called once every minute at most. If the frequency limit is exceeded, the error code **HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED** will be returned. <br>When the application detects that the memory usage of the application framework is abnormal and the operation is successful after this API is called: <br>1. If you have subscribed to the application event whose domain is **HIVIEWDFX** and name is **FW_MEM_ANOMALY**, the application will receive a callback containing the information about the abnormal memory usage of the application framework. <br>2. If you have not subscribed to this application event, the application will not receive the callback containing the information about the abnormal memory usage of the application framework.
+
+**System capability**: SystemCapability.HiviewDFX.HiAppEvent
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| enum OH_HiAppEvent_FrameworkType frameworkType | Application framework type. |
+| const char* frameworkVersion | Pointer to the application framework version. |
+| const char* description | Description of the abnormal memory usage of the application framework. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | <ul> <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation succeeded.</li> <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li> <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) System/application event write failed, or timestamp retrieval failed.</li> <li>[HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED](capi-hiappevent-h.md#hiappevent_errorcode) The reporting frequency exceeds the limit.</li> </ul> For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 

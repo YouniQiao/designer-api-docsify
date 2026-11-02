@@ -6,9 +6,11 @@ Provides Checkbox node type definitions for <b>NativeNode</b> APIs.
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -30,11 +32,13 @@ enum ArkUI_CheckboxShape
 
 定义CheckBox组件形状。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ArkUI_CHECKBOX_SHAPE_CIRCLE = 0 |  |
-| ArkUI_CHECKBOX_SHAPE_ROUNDED_SQUARE |  |
+| ArkUI_CHECKBOX_SHAPE_CIRCLE = 0 | 圆形。<br>**起始版本：** 12 |
+| ArkUI_CHECKBOX_SHAPE_ROUNDED_SQUARE | 圆角方形。<br>**起始版本：** 12 |
 
 

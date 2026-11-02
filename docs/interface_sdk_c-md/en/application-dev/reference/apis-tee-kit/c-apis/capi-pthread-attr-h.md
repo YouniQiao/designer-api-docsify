@@ -6,9 +6,11 @@ Provides the attr about TA multi-thread.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -39,6 +41,8 @@ int pthread_attr_settee(pthread_attr_t *a, int ca, int task_id, int shadow)
 **Description**
 
 Sets thread attributes for CA, task ID, and shadow settings.
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

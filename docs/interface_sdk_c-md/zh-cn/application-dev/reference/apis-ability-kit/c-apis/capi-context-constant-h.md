@@ -6,9 +6,11 @@
 
 **库：** libability_runtime.so
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 13
 
-**相关模块：** [AbilityRuntime](capi-abilityruntime.md)
+**相关模块：** [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## 汇总
 
@@ -19,7 +21,7 @@
 | [AbilityRuntime_AreaMode](#abilityruntime_areamode) | AbilityRuntime_AreaMode | 文件数据加密等级。 |
 | [AbilityRuntime_StartVisibility](#abilityruntime_startvisibility) | AbilityRuntime_StartVisibility | 启动Ability时的窗口和dock栏图标的显示模式。例如：需要在后台静默启动服务而不显示UI时使用隐藏模式；需要正常显示UI并与用户交互时使用显示模式。 |
 | [AbilityRuntime_WindowMode](#abilityruntime_windowmode) | AbilityRuntime_WindowMode | 窗口模式。 |
-| [AbilityRuntime_SupportedWindowMode](#abilityruntime_supportedwindowmode) | AbilityRuntime_SupportedWindowMode |  |
+| [AbilityRuntime_SupportedWindowMode](#abilityruntime_supportedwindowmode) | AbilityRuntime_SupportedWindowMode | 在应用内启动UIAbility时，指定窗口支持的显示模式。如果未配置该字段，则默认采用该UIAbility对应的module.json5配置文件中abilities标签 的supportWindowMode字段取值。 |
 
 ## 枚举类型说明
 
@@ -32,6 +34,8 @@ enum AbilityRuntime_AreaMode
 **描述：**
 
 文件数据加密等级。
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 13
 
@@ -53,6 +57,8 @@ enum AbilityRuntime_StartVisibility
 
 启动Ability时的窗口和dock栏图标的显示模式。例如：需要在后台静默启动服务而不显示UI时使用隐藏模式；需要正常显示UI并与用户交互时使用显示模式。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 17
 
 | 枚举项 | 描述 |
@@ -70,6 +76,8 @@ enum AbilityRuntime_WindowMode
 
 窗口模式。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 17
 
 | 枚举项 | 描述 |
@@ -84,6 +92,12 @@ enum AbilityRuntime_SupportedWindowMode
 ```
 
 **描述：**
+
+在应用内启动UIAbility时，指定窗口支持的显示模式。如果未配置该字段，则默认采用该UIAbility对应的module.json5配置文件中abilities标签的supportWindowMode字段取值。
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**起始版本：** 17
 
 | 枚举项 | 描述 |
 | -- | -- |

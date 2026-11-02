@@ -6,13 +6,13 @@ typedef struct OH_AbilityRuntime_ModObjDispatcher_InputParams {...} OH_AbilityRu
 
 ## Overview
 
-Defines a parameter structure for method invocation.
+Defines the parameter structure for method invocation. rgvarg points to the array of parameter variants, and the array length is specified by cArgs. The parameter order must be consistent with the parameter order in the method definition.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
-**Related module**: [AbilityRuntime](capi-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-others-abilityruntime.md)
 
 **Header file**: [modular_object_dispatcher.h](capi-modular-object-dispatcher-h.md)
 

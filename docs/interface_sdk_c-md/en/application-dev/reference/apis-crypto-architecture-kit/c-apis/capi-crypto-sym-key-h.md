@@ -4,13 +4,15 @@
 
 Defines the symmetric key interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_sym_key.h>
+**File to Include**: <CryptoArchitectureKit/crypto_sym_key.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Related module**: [CryptoSymKeyApi](capi-cryptosymkeyapi.md)
+**Related module**: [CryptoSymKeyApi](capi-crypto-architecture-kit-cryptosymkeyapi.md)
 
 ## Summary
 
@@ -46,9 +48,11 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Create(const char *algoName, OH_Crypt
 
 Creates a symmetric key generator based on the given algorithm name, e.g. AES256.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_sym_key/OH_CryptoSymKeyGenerator_Destroy {ctx}
+**Resource release**: [OH_CryptoSymKeyGenerator_Destroy](#oh_cryptosymkeygenerator_destroy)
 
 **Parameters**:
 
@@ -79,9 +83,11 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Generate(OH_CryptoSymKeyGenerator *ct
 
 Generates a symmetric key randomly.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_sym_key/OH_CryptoSymKey_Destroy {keyCtx}
+**Resource release**: [OH_CryptoSymKey_Destroy](#oh_cryptosymkey_destroy)
 
 **Parameters**:
 
@@ -106,9 +112,11 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Convert(OH_CryptoSymKeyGenerator *ctx
 
 Converts symmetric key data to a symmetric key.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_sym_key/OH_CryptoSymKey_Destroy {keyCtx}
+**Resource release**: [OH_CryptoSymKey_Destroy](#oh_cryptosymkey_destroy)
 
 **Parameters**:
 
@@ -134,6 +142,8 @@ const char *OH_CryptoSymKeyGenerator_GetAlgoName(OH_CryptoSymKeyGenerator *ctx)
 
 Obtains the algorithm name of the symmetric key generator.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 **Parameters**:
@@ -158,6 +168,8 @@ void OH_CryptoSymKeyGenerator_Destroy(OH_CryptoSymKeyGenerator *ctx)
 
 Destroys the symmetric key generator.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 **Parameters**:
@@ -175,6 +187,8 @@ const char *OH_CryptoSymKey_GetAlgoName(OH_CryptoSymKey *keyCtx)
 **Description**
 
 Obtains the symmetric key algorithm name from the symmetric key.
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -200,9 +214,11 @@ OH_Crypto_ErrCode OH_CryptoSymKey_GetKeyData(OH_CryptoSymKey *keyCtx, Crypto_Dat
 
 Obtains the symmetric key data from the symmetric key.
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -226,6 +242,8 @@ void OH_CryptoSymKey_Destroy(OH_CryptoSymKey *keyCtx)
 **Description**
 
 Destroys the symmetric key.
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 

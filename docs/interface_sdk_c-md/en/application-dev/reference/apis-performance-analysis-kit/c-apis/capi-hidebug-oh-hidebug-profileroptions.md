@@ -10,9 +10,9 @@ Forward declaration for resource profiler options.
 
 **System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
-**Related module**: [HiDebug](capi-hidebug.md)
+**Related module**: [HiDebug](capi-others-hidebug.md)
 
 **Header file**: [hidebug.h](capi-hidebug-h.md)
 

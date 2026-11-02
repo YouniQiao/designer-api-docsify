@@ -6,9 +6,11 @@ Provides Slider node type definitions for <b>NativeNode</b> APIs.
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -32,13 +34,15 @@ enum ArkUI_SliderBlockStyle
 
 定义滑块形状。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SLIDER_BLOCK_STYLE_DEFAULT = 0 |  |
-| ARKUI_SLIDER_BLOCK_STYLE_IMAGE |  |
-| ARKUI_SLIDER_BLOCK_STYLE_SHAPE |  |
+| ARKUI_SLIDER_BLOCK_STYLE_DEFAULT = 0 | 使用默认滑块（圆形）。<br>**起始版本：** 12 |
+| ARKUI_SLIDER_BLOCK_STYLE_IMAGE | 使用图片资源作为滑块。<br>**起始版本：** 12 |
+| ARKUI_SLIDER_BLOCK_STYLE_SHAPE | 使用自定义形状作为滑块。<br>**起始版本：** 12 |
 
 ### ArkUI_SliderDirection
 
@@ -50,12 +54,14 @@ enum ArkUI_SliderDirection
 
 定义滑动条滑动方向。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SLIDER_DIRECTION_VERTICAL = 0 |  |
-| ARKUI_SLIDER_DIRECTION_HORIZONTAL |  |
+| ARKUI_SLIDER_DIRECTION_VERTICAL = 0 | 方向为纵向。<br>**起始版本：** 12 |
+| ARKUI_SLIDER_DIRECTION_HORIZONTAL | 方向为横向。<br>**起始版本：** 12 |
 
 ### ArkUI_SliderStyle
 
@@ -67,12 +73,14 @@ enum ArkUI_SliderStyle
 
 定义滑块与滑轨显示样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SLIDER_STYLE_OUT_SET = 0 |  |
-| ARKUI_SLIDER_STYLE_IN_SET |  |
-| ARKUI_SLIDER_STYLE_NONE |  |
+| ARKUI_SLIDER_STYLE_OUT_SET = 0 | 滑块在滑轨上。<br>**起始版本：** 12 |
+| ARKUI_SLIDER_STYLE_IN_SET | 滑块在滑轨内。<br>**起始版本：** 12 |
+| ARKUI_SLIDER_STYLE_NONE | 无滑块。<br>**起始版本：** 12 |
 
 

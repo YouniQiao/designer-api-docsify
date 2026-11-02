@@ -12,7 +12,7 @@ ArkWeb_JavaScriptValueAPI是JavaScript相关Native API结构体。该结构体�
 
 **起始版本：** 18
 
-**相关模块：** [Web](capi-web.md)
+**相关模块：** [Web](capi-others-web.md)
 
 **所在头文件：** [arkweb_type.h](capi-arkweb-type-h.md)
 
@@ -29,7 +29,7 @@ ArkWeb_JavaScriptValueAPI是JavaScript相关Native API结构体。该结构体�
 
 | 名称 | 描述 |
 | -- | -- |
-| [ArkWeb_JavaScriptValuePtr (\*createJavaScriptValue)(ArkWeb_JavaScriptValueType type, void* data, size_t dataLength)](#createjavascriptvalue) | 创建一个JavaScript值，用于返回给HTML。该函数根据指定的type参数对data缓冲区中的数据进行类型转换和封装，生成对应的JavaScript值对象，转换失败时返回NULL。 使用前需通过OH_ArkWeb_GetNativeAPI获取JavaScript接口，并建议校验函数指针可用性。 |
+| [ArkWeb_JavaScriptValuePtr (\*createJavaScriptValue)(ArkWeb_JavaScriptValueType type, void* data, size_t dataLength)](#createjavascriptvalue) | - | 创建一个JavaScript值，用于返回给HTML。该函数根据指定的type参数对data缓冲区中的数据进行类型转换和封装，生成对应的JavaScript值对象，转换失败时返回NULL。 使用前需通过OH_ArkWeb_GetNativeAPI获取JavaScript接口，并建议校验函数指针可用性。 |
 
 ## 成员函数说明
 
@@ -55,6 +55,6 @@ ArkWeb_JavaScriptValuePtr (*createJavaScriptValue)(ArkWeb_JavaScriptValueType ty
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalueptr.md) | 创建出来的JavaScript值。当输入参数无效或内存分配失败时，返回NULL。 |
+| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalue8h.md) | 创建出来的JavaScript值。当输入参数无效或内存分配失败时，返回NULL。 |
 
 

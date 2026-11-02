@@ -10,9 +10,9 @@ typedef struct OH_TrafficFilter_PacketController OH_TrafficFilter_PacketControll
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
-**相关模块：** [TrafficFilter](capi-trafficfilter.md)
+**相关模块：** [TrafficFilter](capi-others-trafficfilter.md)
 
 **所在头文件：** [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 

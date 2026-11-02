@@ -6,9 +6,11 @@
 
 **库：** libability_base_want.so
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
-**相关模块：** [AbilityBase](capi-abilitybase.md)
+**相关模块：** [AbilityBase](capi-ability-kit-abilitybase.md)
 
 ## 汇总
 
@@ -29,6 +31,8 @@ enum AbilityBase_ErrorCode
 **描述：**
 
 AbilityBase相关错误码枚举。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 

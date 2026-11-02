@@ -6,9 +6,11 @@ Declare underlying data structure.
 
 **Library**: libohaudiosuite.so
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
-**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
 ## Summary
 
@@ -17,7 +19,7 @@ Declare underlying data structure.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md) | - | Define the audio converter format info structure, used to describe basic audio format. |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md) | OH_AudioConverter | Declare the audio converter. The handle of audio converter is used for audio converter related functions. |
+| [OH_AudioConverterStruct](capi-ohaudiosuite-oh-audioconverterstruct.md) | OH_AudioConverter | Declare the audio converter. The handle of audio converter is used for audio converter related functions. |
 
 ### Enum
 
@@ -36,12 +38,6 @@ Declare underlying data structure.
 | [OH_AudioConverter_Result OH_AudioConverter_SetInputCallback(OH_AudioConverter* converter, OH_AudioConverter_RequestDataCallback callback, void* userData)](#oh_audioconverter_setinputcallback) | - | Set converter request data callback.<br> This function binds the input data callback function for the audio converter. The callback is used by [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) to pull input audio data dynamically. |
 | [OH_AudioConverter_Result OH_AudioConverter_Process(OH_AudioConverter* converter, void* outputData, int32_t outputCapacity, int32_t* outputSize)](#oh_audioconverter_process) | - | Executing the audio format conversion.<br> This function executes audio conversion to convert to the target format, and writes the result to the user-provided output buffer. This function must be called after [OH_AudioConverter_SetInputCallback](capi-native-audio-converter-h.md#oh_audioconverter_setinputcallback). The output buffer must be allocated and managed by the caller. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| int32_t (*OH_AudioConverter_RequestDataCallback)( void* userData, const void** outInputData, OH_AudioConverter_InputStatus* outStatus ) | Callback function of request data.<br> The converter invokes this callback to actively request input audio data during [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process). The caller must populate the output parameters (outInputData, outStatus) and return the valid size of input data. The maximum data size returned by a single callback is 400KB. The memory pointed to by outInputData must remain valid until [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) returns.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine |
-
 ## Enum type description
 
 ### OH_AudioConverter_Result
@@ -53,6 +49,8 @@ enum OH_AudioConverter_Result
 **Description**
 
 Define the result of the function execution.
+
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 26.0.0
 
@@ -78,13 +76,15 @@ enum OH_AudioConverter_InputStatus
 
 Define the status of input audio data provided by the callback [OH_AudioConverter_RequestDataCallback](capi-native-audio-converter-h.md#oh_audioconverter_requestdatacallback). The converter uses this status to determine how to handle subsequent conversion logic (e.g., continue pulling data, pause, or flush cached data). Note for callers: Even if the callback returns [AUDIOCONVERTER_INPUT_DATA_FINISHED](capi-native-audio-converter-h.md#oh_audioconverter_inputstatus), [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) must be called repeatedly until it returns [AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) with outputSize being 0 (indicating all cached data has been flushed).
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| AUDIOCONVERTER_INPUT_HAVE_DATA = 1 |  |
-| AUDIOCONVERTER_INPUT_NO_AVAILABLE_DATA = 2 |  |
-| AUDIOCONVERTER_INPUT_DATA_FINISHED = 3 |  |
+| AUDIOCONVERTER_INPUT_HAVE_DATA = 1 | Valid input data is available and provided.<br>**Since**: 26.0.0 |
+| AUDIOCONVERTER_INPUT_NO_AVAILABLE_DATA = 2 | No input data is available temporarily.<br>**Since**: 26.0.0 |
+| AUDIOCONVERTER_INPUT_DATA_FINISHED = 3 | The input data stream is complete.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -99,9 +99,11 @@ OH_AudioConverter_Result OH_AudioConverter_Create(const OH_AudioConverter_Format
 
 Request to create the audio converter.<br> The converter instance created by this function must be explicitly destroyed via [OH_AudioConverter_Destroy](capi-native-audio-converter-h.md#oh_audioconverter_destroy). Supported audio format specifications (valid for Input/Output) The converter only supports PCM (Pulse Code Modulation) audio formats. Sample rate supports 8000 Hz, 11025 Hz, 12000 Hz, 16000 Hz, 22050 Hz, 24000 Hz, 32000 Hz, 44100 Hz, 48000 Hz, 64000 Hz, 88200 Hz, 96000 Hz, 176400 Hz and 192000 Hz. Channel layout supports [CH_LAYOUT_MONO](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_STEREO](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_STEREO_DOWNMIX](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_2POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_3POINT0](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_SURROUND](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_3POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_4POINT0](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_QUAD_SIDE](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_QUAD](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_2POINT0POINT2](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_4POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_5POINT0](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_5POINT0_BACK](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_2POINT1POINT2](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_3POINT0POINT2](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_5POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_5POINT1_BACK](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_6POINT0](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_3POINT1POINT2](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_6POINT0_FRONT](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_HEXAGONAL](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_6POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_6POINT1_BACK](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_6POINT1_FRONT](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_7POINT0](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_7POINT0_FRONT](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_7POINT1](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_OCTAGONAL](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_5POINT1POINT2](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout), [CH_LAYOUT_7POINT1_WIDE](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout) and [CH_LAYOUT_7POINT1_WIDE_BACK](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout). Sample format (bit depth) supports SAMPLE_U8 (8-bit unsigned PCM), SAMPLE_S16LE (16-bit short little-endian PCM), SAMPLE_S24LE (24-bit short little-endian PCM), SAMPLE_S32LE (32-bit short little-endian PCM), and SAMPLE_F32LE (32-bit float little-endian PCM).
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
-**Resource release**: OH_AudioConverter_Destroy {converter}
+**Resource release**: [OH_AudioConverter_Destroy](#oh_audioconverter_destroy)
 
 **Parameters**:
 
@@ -109,7 +111,7 @@ Request to create the audio converter.<br> The converter instance created by thi
 | -- | -- |
 | [const OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md)* inputFormat | Pointer to the input audio format configuration. |
 | [const OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md)* outputFormat | Pointer to the output audio format configuration. |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md)** converter | Pointer to a variable that receives the created audio converter instance. |
+| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)** converter | Pointer to a variable that receives the created audio converter instance. |
 
 **Returns**:
 
@@ -127,13 +129,15 @@ void OH_AudioConverter_Destroy(OH_AudioConverter* converter)
 
 Request to release the converter.
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md)* converter | Reference created by OH_AudioConverter_Create. |
+| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
 
 ### OH_AudioConverter_RequestDataCallback()
 
@@ -144,6 +148,8 @@ typedef int32_t (*OH_AudioConverter_RequestDataCallback)(void* userData, const v
 **Description**
 
 Callback function of request data.<br> The converter invokes this callback to actively request input audio data during [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process). The caller must populate the output parameters (outInputData, outStatus) and return the valid size of input data. The maximum data size returned by a single callback is 400KB. The memory pointed to by outInputData must remain valid until [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) returns.
+
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 26.0.0
 
@@ -171,13 +177,15 @@ OH_AudioConverter_Result OH_AudioConverter_SetInputCallback(OH_AudioConverter* c
 
 Set converter request data callback.<br> This function binds the input data callback function for the audio converter. The callback is used by [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) to pull input audio data dynamically.
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md)* converter | Reference created by OH_AudioConverter_Create. |
+| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
 | [OH_AudioConverter_RequestDataCallback](capi-native-audio-converter-h.md#oh_audioconverter_requestdatacallback) callback | Callback function that will be invoked during [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process) to actively request input audio data. |
 | void* userData | Pointer to an application data structure that will be passed to the callback functions. |
 
@@ -197,13 +205,15 @@ OH_AudioConverter_Result OH_AudioConverter_Process(OH_AudioConverter* converter,
 
 Executing the audio format conversion.<br> This function executes audio conversion to convert to the target format, and writes the result to the user-provided output buffer. This function must be called after [OH_AudioConverter_SetInputCallback](capi-native-audio-converter-h.md#oh_audioconverter_setinputcallback). The output buffer must be allocated and managed by the caller.
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md)* converter | Reference created by [OH_AudioConverter_Create](capi-native-audio-converter-h.md#oh_audioconverter_create). |
+| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by [OH_AudioConverter_Create](capi-native-audio-converter-h.md#oh_audioconverter_create). |
 | void* outputData | Pointer to the output buffer allocated by the caller to receive converted audio data. |
 | int32_t outputCapacity | Size of the output buffer in bytes specified by the user. |
 | int32_t* outputSize | Size of output buffer the system really writes. Returns the number of bytes actually written on success. When [AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) is returned but outputSize is 0, it indicates that all buffered data has been fully flushed. |

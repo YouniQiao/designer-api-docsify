@@ -366,7 +366,6 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | permission denied. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by ErrorCallback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by ErrorCallback. |
 

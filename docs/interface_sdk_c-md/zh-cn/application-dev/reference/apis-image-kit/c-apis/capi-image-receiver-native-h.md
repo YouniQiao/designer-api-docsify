@@ -6,9 +6,11 @@
 
 **库：** libimage_receiver.so
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
-**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## 汇总
 
@@ -40,16 +42,9 @@
 | [Image_ErrorCode OH_ImageReceiverNative_GetSize(OH_ImageReceiverNative* receiver, Image_Size* size)](#oh_imagereceivernative_getsize) | - | 通过OH_ImageReceiverNative获取ImageReceiver的大小。 |
 | [Image_ErrorCode OH_ImageReceiverNative_GetCapacity(OH_ImageReceiverNative* receiver, int32_t* capacity)](#oh_imagereceivernative_getcapacity) | - | 通过OH_ImageReceiverNative获取ImageReceiver的容量。 |
 | [Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)](#oh_imagereceivernative_release) | - | 释放Native OH_ImageReceiverNative对象。 |
-| [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - |  |
-| [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - |  |
+| [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - | 注册[OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback)回调。 |
+| [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - | 注销[OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback)回调。 |
 | [Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)](#oh_imagereceivernative_setmemoryname) | - | 设置OH_ImageReceiverNative对象的内存名称。<br> 仅支持可见ASCII字符，空格、换行、制表符及其他控制字符将被过滤掉。 如果过滤后的结果完全由数字组成，将自动添加前缀"ImageReceiver:"。 过滤后的名称长度（包括结束符'\0'）不得超过256字节。 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_ImageReceiver_OnCallback)(OH_ImageReceiverNative *receiver) | 定义native层图片的回调方法。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver |
-| void (*OH_ImageReceiver_ImageArriveCallback)(OH_ImageReceiverNative *receiver, void *userData) | ImageArrive事件的回调方法。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver |
 
 ## 函数说明
 
@@ -63,6 +58,8 @@ typedef void (*OH_ImageReceiver_OnCallback)(OH_ImageReceiverNative *receiver)
 
 定义native层图片的回调方法。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 ### OH_ImageReceiver_ImageArriveCallback()
@@ -75,6 +72,8 @@ typedef void (*OH_ImageReceiver_ImageArriveCallback)(OH_ImageReceiverNative *rec
 
 ImageArrive事件的回调方法。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 20
 
 ### OH_ImageReceiverOptions_Create()
@@ -86,6 +85,8 @@ Image_ErrorCode OH_ImageReceiverOptions_Create(OH_ImageReceiverOptions **options
 **描述：**
 
 Creates an OH_ImageReceiverOptions object at the application layer.
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -110,6 +111,8 @@ Image_ErrorCode OH_ImageReceiverOptions_GetSize(OH_ImageReceiverOptions* options
 **描述：**
 
 获取OH_ImageReceiverOptions对象的Image_Size。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -136,6 +139,8 @@ Image_ErrorCode OH_ImageReceiverOptions_SetSize(OH_ImageReceiverOptions* options
 
 设置OH_ImageReceiverOptions对象的Image_Size。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -160,6 +165,8 @@ Image_ErrorCode OH_ImageReceiverOptions_GetCapacity(OH_ImageReceiverOptions* opt
 **描述：**
 
 获取OH_ImageReceiverOptions对象的图片缓存容量。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -186,6 +193,8 @@ Image_ErrorCode OH_ImageReceiverOptions_SetCapacity(OH_ImageReceiverOptions* opt
 
 设置OH_ImageReceiverOptions对象的图片缓存容量。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -210,6 +219,8 @@ Image_ErrorCode OH_ImageReceiverOptions_Release(OH_ImageReceiverOptions* options
 **描述：**
 
 释放OH_ImageReceiverOptions对象。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -240,6 +251,8 @@ Image_ErrorCode OH_ImageReceiverNative_Create(OH_ImageReceiverOptions* options, 
 
 创建应用层OH_ImageReceiverNative对象。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -264,6 +277,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetReceivingSurfaceId(OH_ImageReceiverNat
 **描述：**
 
 通过OH_ImageReceiverNative获取SurfaceId。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -295,6 +310,8 @@ Image_ErrorCode OH_ImageReceiverNative_ReadLatestImage(OH_ImageReceiverNative* r
 
 通过OH_ImageReceiverNative获取最新的一张图片。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -324,6 +341,8 @@ Image_ErrorCode OH_ImageReceiverNative_ReadNextImage(OH_ImageReceiverNative* rec
 **描述：**
 
 通过OH_ImageReceiverNative获取下一张图片。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -355,6 +374,8 @@ Image_ErrorCode OH_ImageReceiverNative_On(OH_ImageReceiverNative* receiver, OH_I
 
 注册一个[OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_imagereceiver_oncallback)回调事件。 <br>每当接收到新的图片，该回调事件就会响应。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -385,6 +406,8 @@ Image_ErrorCode OH_ImageReceiverNative_Off(OH_ImageReceiverNative* receiver)
 
 关闭[OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_imagereceiver_oncallback)回调事件。 <br>关闭被[OH_ImageReceiverNative_On](capi-image-receiver-native-h.md#oh_imagereceivernative_on)开启的回调事件。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -413,6 +436,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetSize(OH_ImageReceiverNative* receiver,
 **描述：**
 
 通过OH_ImageReceiverNative获取ImageReceiver的大小。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 12
 
@@ -444,6 +469,8 @@ Image_ErrorCode OH_ImageReceiverNative_GetCapacity(OH_ImageReceiverNative* recei
 
 通过OH_ImageReceiverNative获取ImageReceiver的容量。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -474,6 +501,8 @@ Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)
 
 释放Native OH_ImageReceiverNative对象。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 12
 
 **参数：**
@@ -501,6 +530,10 @@ Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* rec
 
 **描述：**
 
+注册[OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback)回调。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
 **起始版本：** 20
 
 **参数：**
@@ -524,6 +557,10 @@ Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* re
 ```
 
 **描述：**
+
+注销[OH_ImageReceiver_ImageArriveCallback](capi-image-receiver-native-h.md#oh_imagereceiver_imagearrivecallback)回调。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 20
 
@@ -550,7 +587,9 @@ Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNativ
 
 设置OH_ImageReceiverNative对象的内存名称。<br> 仅支持可见ASCII字符，空格、换行、制表符及其他控制字符将被过滤掉。 如果过滤后的结果完全由数字组成，将自动添加前缀"ImageReceiver:"。 过滤后的名称长度（包括结束符'\0'）不得超过256字节。
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
+**起始版本：** 26.0.1
 
 **参数：**
 

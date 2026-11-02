@@ -14,10 +14,6 @@ Provides the capability of integrating advertising services with vendors.
 
 **System API:** This is a system API.
 
-## ExtensionAbility Usage Restrictions
-
-To ensure system security and stability, AdsServiceExtensionAbility is restricted from abusing system resources. The system controls its capabilities and does not support referencing some modules. For details, see [Appendix](#appendix).
-
 ## Modules to Import
 
 ```TypeScript
@@ -109,14 +105,3 @@ export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
 ```
 
 <!--DelEnd-->
-
-## Appendix
-
-AdsServiceExtensionAbility does not support referencing the following modules.
-
-| Kit | Module |
-| --- | --- |
-| Camera Kit | [@ohos.multimedia.camera](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md) |
-| Telephony Kit | [@ohos.telephony.sim](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sim.md) |
-| Telephony Kit | [@ohos.telephony.sms](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sms.md) |
-| Contacts Kit | [@ohos.contact](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact.md) |

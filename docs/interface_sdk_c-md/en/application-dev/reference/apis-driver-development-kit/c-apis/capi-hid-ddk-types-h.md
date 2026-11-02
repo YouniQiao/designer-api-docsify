@@ -6,9 +6,11 @@ Defines the enum variables and structs used in the HID DDK.
 
 **Library**: libhid.z.so
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
-**Related module**: [HidDdk](capi-hidddk.md)
+**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
 
 ## Summary
 
@@ -59,6 +61,8 @@ enum Hid_DeviceProp
 
 Enumerates the properties of input devices.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -66,7 +70,7 @@ Enumerates the properties of input devices.
 | HID_PROP_POINTER = 0x00 | Pointer device. |
 | HID_PROP_DIRECT = 0x01 | Direct input device. |
 | HID_PROP_BUTTON_PAD = 0x02 | Touch device with bottom keys. |
-| HID_PROP_SEMI_MT = 0x03 | Full multi-touch device. |
+| HID_PROP_SEMI_MT = 0x03 | Semi-multitouch device. |
 | HID_PROP_TOP_BUTTON_PAD = 0x04 | Touch device with top soft keys. |
 | HID_PROP_POINTING_STICK = 0x05 | Pointing stick. |
 | HID_PROP_ACCELEROMETER = 0x06 | Accelerometer. |
@@ -80,6 +84,8 @@ enum Hid_EventType
 **Description**
 
 Enumerates the event types.
+
+**System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
@@ -101,6 +107,8 @@ enum Hid_SynEvent
 
 Enumerates sync events.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -119,6 +127,8 @@ enum Hid_KeyCode
 **Description**
 
 Enumerates the key codes.
+
+**System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
@@ -245,6 +255,8 @@ enum Hid_AbsAxes
 
 Enumerates the absolute coordinates.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -286,6 +298,8 @@ enum Hid_RelAxes
 
 Enumerates the relative coordinates.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -314,6 +328,8 @@ enum Hid_MscEvent
 
 Enumerates miscellaneous input events.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -335,6 +351,8 @@ enum Hid_DdkErrCode
 
 Enumerates the HID DDK error codes.
 
+**System capability**: SystemCapability.Driver.HID.Extension
+
 **Since**: 11
 
 | Enum item | Description |
@@ -346,11 +364,11 @@ Enumerates the HID DDK error codes.
 | HID_DDK_NULL_PTR = 27300002 | Null pointer. The value is changed from **-4** to **27300002** since API version 16. |
 | HID_DDK_INVALID_OPERATION = 27300003 | Invalid operation. The value is changed from **-3** to **27300003** since API version 16. |
 | HID_DDK_TIMEOUT = 27300004 | Timeout. The value is changed from **-5** to **27300004** since API version 16. |
-| HID_DDK_INIT_ERROR = 27300005 |  |
-| HID_DDK_SERVICE_ERROR = 27300006 |  |
-| HID_DDK_MEMORY_ERROR  = 27300007 |  |
-| HID_DDK_IO_ERROR = 27300008 |  |
-| HID_DDK_DEVICE_NOT_FOUND = 27300009 |  |
+| HID_DDK_INIT_ERROR = 27300005 | DDK initialization error.<br>**Since**: 18 |
+| HID_DDK_SERVICE_ERROR = 27300006 | Service communication error.<br>**Since**: 18 |
+| HID_DDK_MEMORY_ERROR  = 27300007 | Memory errors, such as memory data copy failure and memory allocation failure.<br>**Since**: 18 |
+| HID_DDK_IO_ERROR = 27300008 | I/O operation error.<br>**Since**: 18 |
+| HID_DDK_DEVICE_NOT_FOUND = 27300009 | Device not found.<br>**Since**: 18 |
 
 ### Hid_ReportType
 
@@ -361,6 +379,8 @@ enum Hid_ReportType
 **Description**
 
 Defines the report (data packets exchanged between the HID device and the host) type.
+
+**System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 18
 

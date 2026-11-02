@@ -6,9 +6,11 @@ Provides BASE DDK types and declares the macros, enums, and data structures requ
 
 **Library**: libddk_base.z.so
 
+**System capability**: SystemCapability.Driver.DDK.Extension
+
 **Since**: 12
 
-**Related module**: [Ddk](capi-ddk.md)
+**Related module**: [Ddk](capi-driver-development-kit-ddk.md)
 
 ## Summary
 
@@ -16,7 +18,7 @@ Provides BASE DDK types and declares the macros, enums, and data structures requ
 
 | Name | Description |
 | -- | -- |
-| [DDK_Ashmem](capi-ddk-ddk-ashmem.md) | Device memory map created by calling OH_DDK_CreateAshmem. A buffer using the device memory map can provide better performance. |
+| [DDK_Ashmem](capi-ddk-ddk-ashmem.md) | Device memory map created by calling [OH_DDK_CreateAshmem](capi-ddk-api-h.md#oh_ddk_createashmem). A buffer using the device memory map can provide better performance. |
 
 ### Enum
 
@@ -35,6 +37,8 @@ enum DDK_RetCode
 **Description**
 
 Enumerates error codes used in the BASE DDK.
+
+**System capability**: SystemCapability.Driver.DDK.Extension
 
 **Since**: 12
 

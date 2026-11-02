@@ -6,9 +6,11 @@
 
 **库：** libability_runtime.so
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
-**相关模块：** [AbilityRuntime](capi-abilityruntime.md)
+**相关模块：** [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## 汇总
 
@@ -16,7 +18,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) | OH_AbilityRuntime_ModObjExtensionContextHandle | 表示ModularObjectExtensionAbility上下文的句柄。 |
+| [OH_AbilityRuntime_ModularObjectExtensionContext*](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) | OH_AbilityRuntime_ModObjExtensionContextHandle | 表示ModularObjectExtensionAbility上下文的句柄。 |
 
 ### 函数
 
@@ -41,14 +43,16 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_GetBaseContext
 
 从ModularObjectExtensionAbility上下文中获取基础上下文。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) modObjExtensionContext | 指向ModularObjectExtensionAbility上下文的指针。 |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md)* baseContext | 指向[AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md)的指针，用于接收结果。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) modObjExtensionContext | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md)* baseContext | 指向[AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md)的指针，用于接收结果。 |
 
 **返回值：**
 
@@ -66,6 +70,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 
 启动当前应用的UIAbility。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **需要权限：** ohos.permission.NDK_START_SELF_UI_ABILITY
 
 **起始版本：** 26.0.0
@@ -74,7 +80,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 | [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 
 **返回值：**
@@ -93,6 +99,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 
 通过StartOptions启动当前应用的UIAbility。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **需要权限：** ohos.permission.NDK_START_SELF_UI_ABILITY
 
 **起始版本：** 26.0.0
@@ -101,7 +109,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 | [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 | const AbilityRuntime_StartOptions *options | 启动当前应用UIAbility时需要的StartOptions信息。详细内容参考AbilityRuntime_StartOptions。 |
 
@@ -121,13 +129,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_TerminateSelf(
 
 销毁ModularObjectExtensionAbility自身。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 
 **返回值：**
 
@@ -145,13 +155,15 @@ OHIPCRemoteStub* OH_AbilityRuntime_ModObjExtensionContext_CreateIPCRemoteStub(OH
 
 创建一个OHIPCRemoteStub对象，回调函数将在ExtensionAbility指定的线程上运行。requestCallback和destroyCallback将在由ExtensionAbility的 [OH_AbilityRuntime_ThreadMode](capi-modular-object-extension-manager-h.md#oh_abilityruntime_threadmode)决定的线程上按顺序执行。调用 [OH_AbilityRuntime_ModObjExtensionContext_DestroyIPCRemoteStub](capi-modular-object-extension-context-h.md#oh_abilityruntime_modobjextensioncontext_destroyipcremotestub)后，不会再有新的requestCallback回调， 且正在执行的requestCallback完成后才会回调destroyCallback。调用方需调用 [OH_AbilityRuntime_ModObjExtensionContext_DestroyIPCRemoteStub](capi-modular-object-extension-context-h.md#oh_abilityruntime_modobjextensioncontext_destroyipcremotestub)销毁返回的对象，避免内存泄漏。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 | const char *descriptor | 指向待创建的OHIPCRemoteStub对象描述符的指针，不能为NULL。创建过程中会内部拷贝该字符串，调用方可在本函数返回后释放该描述符。 |
 | [OH_OnRemoteRequestCallback](../../apis-ipc-kit/c-apis/capi-ipc-cremote-object-h.md#oh_onremoterequestcallback) requestCallback | 处理数据请求的回调函数，不能为NULL。 |
 | [OH_OnRemoteDestroyCallback](../../apis-ipc-kit/c-apis/capi-ipc-cremote-object-h.md#oh_onremotedestroycallback) destroyCallback | 对象销毁时调用的回调函数，可以为NULL。 |
@@ -173,13 +185,15 @@ void OH_AbilityRuntime_ModObjExtensionContext_DestroyIPCRemoteStub(OH_AbilityRun
 
 销毁OHIPCRemoteStub对象。
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 | OHIPCRemoteStub *stub | 指向待销毁的OHIPCRemoteStub对象的指针。 |
 
 

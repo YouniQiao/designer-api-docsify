@@ -6,9 +6,11 @@ The file declares the metadata output concepts.
 
 **Library**: libohcamera.so
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## Summary
 
@@ -41,15 +43,8 @@ The file declares the metadata output concepts.
 | [bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_islockmetadataobjecttrackingsupported) | - | Checks whether the lock metadata object tracking is supported. |
 | [Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput, Camera_Point* pointOfInterest)](#oh_metadataoutput_lockmetadataobjecttracking) | - | Lock metadata object tracking, can be unlocked by [OH_MetadataOutput_UnlockMetadataObjectTracking](capi-metadata-output-h.md#oh_metadataoutput_unlockmetadataobjecttracking). |
 | [Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_unlockmetadataobjecttracking) | - | Unlock metadata object tracking. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutput* metadataOutput, Camera_MetadataObject* metadataObject, uint32_t size) | Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md) struct and used to report metadata output data.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t size) | Defines the callback used to listen for metadata object ext available.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput, Camera_ErrorCode errorCode) | Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md) struct and used to report metadata output errors.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode errorCode) | Defines the callback used to listen for error ext event.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| [Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)](#oh_metadataoutput_setinframemetadataforencoderenabled) | - | Enable or disable in frame metadata delivery for encoder. |
+| [bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_isinframemetadataforencodersupported) | - | Check if in frame metdata for encoder is supported. |
 
 ## Function description
 
@@ -62,6 +57,8 @@ typedef void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutpu
 **Description**
 
 Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md) struct and used to report metadata output data.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -83,6 +80,8 @@ typedef void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH
 
 Defines the callback used to listen for metadata object ext available.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -102,6 +101,8 @@ typedef void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput,
 **Description**
 
 Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md) struct and used to report metadata output errors.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -127,6 +128,8 @@ typedef void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode err
 
 Defines the callback used to listen for error ext event.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -150,6 +153,8 @@ Camera_ErrorCode OH_MetadataOutput_RegisterCallback(Camera_MetadataOutput* metad
 **Description**
 
 Registers a callback to listen for metadata output events.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -176,6 +181,8 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterCallback(Camera_MetadataOutput* met
 
 Unregisters the callback used to listen for metadata output events.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -200,6 +207,8 @@ Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Ca
 **Description**
 
 Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) events. The callback can be unregistered by [OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback).
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -227,6 +236,8 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback(
 
 Unregisters the callback used to listen for metadata object ext events.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -252,6 +263,8 @@ Camera_ErrorCode OH_MetadataOutput_RegisterErrorExtCallback(Camera_MetadataOutpu
 **Description**
 
 Registers a callback to listen for error ext events. The callback can be unregistered by [OH_MetadataOutput_UnregisterErrorExtCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistererrorextcallback).
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -279,6 +292,8 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterErrorExtCallback(Camera_MetadataOut
 
 Unregisters the callback used to listen for error ext events.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -305,6 +320,8 @@ Camera_ErrorCode OH_MetadataOutput_Start(Camera_MetadataOutput* metadataOutput)
 
 Starts metadata output.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -328,6 +345,8 @@ Camera_ErrorCode OH_MetadataOutput_Stop(Camera_MetadataOutput* metadataOutput)
 **Description**
 
 Stops metadata output.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -353,6 +372,8 @@ Camera_ErrorCode OH_MetadataOutput_Release(Camera_MetadataOutput* metadataOutput
 
 Releases a MetadataOutput instance.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -376,6 +397,8 @@ Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes (Camera_MetadataOutput
 **Description**
 
 Adds the metadata object types.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 23
 
@@ -403,6 +426,8 @@ Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes (Camera_MetadataOut
 
 Removes the metadata object types.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -429,6 +454,8 @@ bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_Metada
 
 Checks whether the lock metadata object tracking is supported.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -452,6 +479,8 @@ Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOut
 **Description**
 
 Lock metadata object tracking, can be unlocked by [OH_MetadataOutput_UnlockMetadataObjectTracking](capi-metadata-output-h.md#oh_metadataoutput_unlockmetadataobjecttracking).
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -478,6 +507,8 @@ Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataO
 
 Unlock metadata object tracking.
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -491,5 +522,58 @@ Unlock metadata object tracking.
 | Type | Description |
 | -- | -- |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | **CAMERA_OK**: The operation is successful. <br>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect. <br>**CAMERA_SESSION_NOT_CONFIG**: The capture session is not configured. <br>**CAMERA_SERVICE_FATAL_ERROR**: The camera service is abnormal. |
+
+### OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled()
+
+```c
+Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)
+```
+
+**Description**
+
+Enable or disable in frame metadata delivery for encoder.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | [in] Pointer to a MetadataOutput instance. |
+| bool enable | [in] Whether to enable delivery of in frame metadata for encoder. **true** to enable, **false** otherwise. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | **CAMERA_OK**: The operation is successful. <br>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect. <br>**CAMERA_SERVICE_FATAL_ERROR**: The camera service is abnormal. |
+
+### OH_MetadataOutput_IsInFrameMetadataForEncoderSupported()
+
+```c
+bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)
+```
+
+**Description**
+
+Check if in frame metdata for encoder is supported.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | [in] Pointer to a MetadataOutput instance. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| bool | **true** if supported, **false** otherwise. |
 
 

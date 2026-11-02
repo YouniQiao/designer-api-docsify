@@ -12,7 +12,7 @@ struct Hid_EventProperties {...}
 
 **起始版本：** 11
 
-**相关模块：** [HidDdk](capi-hidddk.md)
+**相关模块：** [HidDdk](capi-others-hidddk.md)
 
 **所在头文件：** [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -27,9 +27,9 @@ struct Hid_EventProperties {...}
 | [struct Hid_AbsAxesArray](capi-hidddk-hid-absaxesarray.md) hidAbs | 绝对坐标属性编码数组，用于配置绝对坐标输入（如触摸屏、手柄摇杆）。 |
 | [struct Hid_RelAxesArray](capi-hidddk-hid-relaxesarray.md) hidRelBits | 相对坐标属性编码数组，用于配置相对坐标输入（如鼠标移动）。 |
 | [struct Hid_MscEventArray](capi-hidddk-hid-msceventarray.md) hidMiscellaneous | 其他特殊事件属性编码数组，用于配置特殊输入事件（如扫描、手势）。 |
-| int32_t hidAbsMax[64] | 绝对坐标属性最大值。数组元素按索引对应各坐标轴，必须不小于对应坐标轴的最小值。 |
-| int32_t hidAbsMin[64] | 绝对坐标属性最小值。数组元素按索引对应各坐标轴，必须不大于对应坐标轴的最大值。 |
-| int32_t hidAbsFuzz[64] | 绝对坐标属性模糊值。数组元素按索引对应各坐标轴，用于定义输入事件的模糊容差，建议不超过坐标范围。 |
-| int32_t hidAbsFlat[64] | 绝对坐标属性平坦值。数组元素按索引对应各坐标轴，用于定义输入事件死区的平坦范围（此范围内的值不触发事件上报），建议不超过模糊值。 |
+| int32_t hidAbsMax | 绝对坐标属性最大值。数组元素按索引对应各坐标轴，必须不小于对应坐标轴的最小值。 |
+| int32_t hidAbsMin | 绝对坐标属性最小值。数组元素按索引对应各坐标轴，必须不大于对应坐标轴的最大值。 |
+| int32_t hidAbsFuzz | 绝对坐标属性模糊值。数组元素按索引对应各坐标轴，用于定义输入事件的模糊容差，建议不超过坐标范围。 |
+| int32_t hidAbsFlat | 绝对坐标属性平坦值。数组元素按索引对应各坐标轴，用于定义输入事件死区的平坦范围（此范围内的值不触发事件上报），建议不超过模糊值。 |
 
 
