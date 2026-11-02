@@ -4,7 +4,7 @@
 interface NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, Beauty, ColorManagement, ManualExposure
 ```
 
-夜间拍照会话类，继承自 Session、Flash、AutoExposure、Focus、Zoom、ColorEffect、ColorManagement、ManualExposure 接口。用于设置夜间拍照模式的参数，并保存运行相机所需的 [CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md) 和[PhotoOutput](arkts-camera-camera-photooutput-i.md) 实例。继承自[Session](arkts-camera-camera-session-i.md)。夜间拍照场景下，必须监听[onCaptureEnd](arkts-camera-camera-photooutput-i.md#oncaptureend)事件，以标记拍照会话结束。
+夜间拍照会话类。用于设置夜间拍照模式的参数，并保存运行相机所需的 [CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md) 和[PhotoOutput](arkts-camera-camera-photooutput-i.md) 实例。夜间拍照场景下，必须监听[onCaptureEnd](arkts-camera-camera-photooutput-i.md#oncaptureend)事件，以标记拍照会话结束。
 
 **继承/实现关系：** NightPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)<!--Del-->, [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd--><!--Del-->, [Beauty](arkts-camera-camera-beauty-i-sys.md)<!--DelEnd-->, [ColorManagement](arkts-camera-camera-colormanagement-i.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md)
 

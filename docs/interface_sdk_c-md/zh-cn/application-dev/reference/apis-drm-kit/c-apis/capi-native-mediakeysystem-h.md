@@ -8,11 +8,9 @@
 
 **库：** libnative_drm.so
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm-kit-drm.md)
+**相关模块：** [Drm](capi-drm.md)
 
 ## 汇总
 
@@ -44,6 +42,13 @@
 | [Drm_ErrCode OH_MediaKeySystem_GetCertificateStatus(MediaKeySystem *mediaKeySystem, DRM_CertificateStatus *certStatus)](#oh_mediakeysystem_getcertificatestatus) | - | 获取设备DRM证书状态。 |
 | [Drm_ErrCode OH_MediaKeySystem_Destroy(MediaKeySystem *mediaKeySystem)](#oh_mediakeysystem_destroy) | - | 销毁MediaKeySystem实例。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| Drm_ErrCode (*MediaKeySystem_Callback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | MediaKeySystem事件触发时将调用的回调函数，不返回MediaKeySystem实例，适用于单个MediaKeySystem场景。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*OH_MediaKeySystem_Callback)(MediaKeySystem *mediaKeySystem, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | MediaKeySystem事件触发时将调用的回调函数，返回MediaKeySystem实例，适用于多个MediaKeySystem场景。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+
 ## 函数说明
 
 ### MediaKeySystem_Callback()
@@ -55,8 +60,6 @@ typedef Drm_ErrCode (*MediaKeySystem_Callback)(DRM_EventType eventType, uint8_t 
 **描述：**
 
 MediaKeySystem事件触发时将调用的回调函数，不返回MediaKeySystem实例，适用于单个MediaKeySystem场景。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -84,8 +87,6 @@ typedef Drm_ErrCode (*OH_MediaKeySystem_Callback)(MediaKeySystem *mediaKeySystem
 **描述：**
 
 MediaKeySystem事件触发时将调用的回调函数，返回MediaKeySystem实例，适用于多个MediaKeySystem场景。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 12
 
@@ -115,8 +116,6 @@ Drm_ErrCode OH_MediaKeySystem_SetCallback(MediaKeySystem *mediaKeySystem, OH_Med
 
 设置MediaKeySystem事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -141,8 +140,6 @@ Drm_ErrCode OH_MediaKeySystem_GetMediaKeySystems(DRM_MediaKeySystemDescription *
 **描述：**
 
 获取设备支持的DRM解决方案的名称和唯一标识的列表。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 12
 
@@ -169,8 +166,6 @@ bool OH_MediaKeySystem_IsSupported(const char *name)
 
 查询设备是否支持对应的DRM解决方案。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -194,8 +189,6 @@ bool OH_MediaKeySystem_IsSupported2(const char *name, const char *mimeType)
 **描述：**
 
 查询设备是否支持对应的DRM解决方案名称及媒体类型。可通过[OH_MediaKeySystem_IsSupported](capi-native-mediakeysystem-h.md#oh_mediakeysystem_issupported)接口先确认name参数对应的DRM解决方案是否是设备支持的。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -221,8 +214,6 @@ bool OH_MediaKeySystem_IsSupported3(const char *name, const char *mimeType, DRM_
 **描述：**
 
 查询设备是否支持对应的DRM解决方案、媒体类型、内容保护级别。可通过[OH_MediaKeySystem_IsSupported2](capi-native-mediakeysystem-h.md#oh_mediakeysystem_issupported2)接口先判断mimeType是否支持。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -250,8 +241,6 @@ Drm_ErrCode OH_MediaKeySystem_Create(const char *name, MediaKeySystem **mediaKey
 
 创建MediaKeySystem实例。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -276,8 +265,6 @@ Drm_ErrCode OH_MediaKeySystem_SetConfigurationString(MediaKeySystem *mediaKeySys
 **描述：**
 
 设置字符串类型的配置属性。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -304,8 +291,6 @@ Drm_ErrCode OH_MediaKeySystem_GetConfigurationString(MediaKeySystem *mediaKeySys
 **描述：**
 
 获取字符串类型配置属性值。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -334,8 +319,6 @@ Drm_ErrCode OH_MediaKeySystem_SetConfigurationByteArray(MediaKeySystem *mediaKey
 
 设置字符数组类型的配置属性值。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -362,8 +345,6 @@ Drm_ErrCode OH_MediaKeySystem_GetConfigurationByteArray(MediaKeySystem *mediaKey
 **描述：**
 
 获取字符数组类型配置属性值。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -392,8 +373,6 @@ Drm_ErrCode OH_MediaKeySystem_GetStatistics(MediaKeySystem *mediaKeySystem, DRM_
 
 获取度量记录。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -418,8 +397,6 @@ Drm_ErrCode OH_MediaKeySystem_GetMaxContentProtectionLevel(MediaKeySystem *media
 **描述：**
 
 获取设备支持的最大内容保护级别。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -446,8 +423,6 @@ Drm_ErrCode OH_MediaKeySystem_SetMediaKeySystemCallback(MediaKeySystem *mediaKey
 
 设置MediaKeySystem事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -472,8 +447,6 @@ Drm_ErrCode OH_MediaKeySystem_CreateMediaKeySession(MediaKeySystem *mediaKeySyst
 **描述：**
 
 创建MediaKeySession会话实例。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -500,8 +473,6 @@ Drm_ErrCode OH_MediaKeySystem_GenerateKeySystemRequest(MediaKeySystem *mediaKeyS
 **描述：**
 
 生成设备DRM证书请求。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -531,8 +502,6 @@ Drm_ErrCode OH_MediaKeySystem_ProcessKeySystemResponse(MediaKeySystem *mediaKeyS
 
 处理设备DRM证书请求响应。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -559,8 +528,6 @@ Drm_ErrCode OH_MediaKeySystem_GetOfflineMediaKeyIds(MediaKeySystem *mediaKeySyst
 
 获取离线媒体密钥标识列表，媒体密钥标识用于对离线媒体密钥的管理。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -585,8 +552,6 @@ Drm_ErrCode OH_MediaKeySystem_GetOfflineMediaKeyStatus(MediaKeySystem *mediaKeyS
 **描述：**
 
 获取离线媒体密钥状态。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -615,8 +580,6 @@ Drm_ErrCode OH_MediaKeySystem_ClearOfflineMediaKeys(MediaKeySystem *mediaKeySyst
 
 按ID清除离线媒体密钥。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -643,8 +606,6 @@ Drm_ErrCode OH_MediaKeySystem_GetCertificateStatus(MediaKeySystem *mediaKeySyste
 
 获取设备DRM证书状态。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -669,8 +630,6 @@ Drm_ErrCode OH_MediaKeySystem_Destroy(MediaKeySystem *mediaKeySystem)
 **描述：**
 
 销毁MediaKeySystem实例。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 

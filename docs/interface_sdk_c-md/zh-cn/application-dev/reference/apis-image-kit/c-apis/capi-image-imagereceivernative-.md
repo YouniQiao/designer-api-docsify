@@ -1,7 +1,7 @@
 # ImageReceiverNative_
 
 ```c
-typedef struct ImageReceiverNative_ ImageReceiverNative
+struct ImageReceiverNative_
 ```
 
 ## 概述
@@ -12,7 +12,7 @@ typedef struct ImageReceiverNative_ ImageReceiverNative
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-others-image.md)
+**相关模块：** [Image](capi-image.md)
 
 **所在头文件：** [image_receiver_mdk.h](capi-image-receiver-mdk-h.md)
 

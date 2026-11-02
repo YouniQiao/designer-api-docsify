@@ -6,11 +6,9 @@ Provides the enum variables, structures, and macros used in the SCSI Peripheral 
 
 **Library**: libscsi.z.so
 
-**System capability**: SystemCapability.Driver.SCSI.Extension
-
 **Since**: 18
 
-**Related module**: [ScsiPeripheralDDK](capi-driver-development-kit-scsiperipheralddk.md)
+**Related module**: [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
 
 ## Summary
 
@@ -18,7 +16,7 @@ Provides the enum variables, structures, and macros used in the SCSI Peripheral 
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ScsiPeripheral_DeviceMemMap](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) | - | Represents the device memory mapping created by calling [OH_ScsiPeripheral_CreateDeviceMemMap](capi-scsi-peripheral-api-h.md#oh_scsiperipheral_createdevicememmap). The buffer that uses the device memory mapping can provide better performance. |
+| [ScsiPeripheral_DeviceMemMap](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) | - | Represents the device memory mapping created by calling OH_ScsiPeripheral_CreateDeviceMemMap. The buffer that uses the device memory mapping can provide better performance. |
 | [ScsiPeripheral_IORequest](capi-scsiperipheralddk-scsiperipheral-iorequest.md) | - | Defines the read/write operation request. |
 | [ScsiPeripheral_Request](capi-scsiperipheralddk-scsiperipheral-request.md) | - | Defines the request structure. |
 | [ScsiPeripheral_Response](capi-scsiperipheralddk-scsiperipheral-response.md) | - | Defines the response structure. |
@@ -63,8 +61,6 @@ enum ScsiPeripheral_DdkErrCode
 
 SCSI Peripheral DDK error codes.
 
-**System capability**: SystemCapability.Driver.SCSI.Extension
-
 **Since**: 18
 
 | Enum item | Description |
@@ -89,8 +85,6 @@ enum ScsiPeripheral_Status
 **Description**
 
 Enumerates the SCSI status codes used for the response.
-
-**System capability**: SystemCapability.Driver.SCSI.Extension
 
 **Since**: 18
 

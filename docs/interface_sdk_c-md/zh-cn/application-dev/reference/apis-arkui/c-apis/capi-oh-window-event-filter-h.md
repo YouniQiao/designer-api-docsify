@@ -6,11 +6,9 @@ The file declares the APIs for a window to filter multimodal key events. When a 
 
 **库：** libnative_window_manager.so
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 12
 
-**相关模块：** [WindowManager](capi-arkui-windowmanager.md)
+**相关模块：** [WindowManager](capi-windowmanager.md)
 
 ## 汇总
 
@@ -31,6 +29,14 @@ The file declares the APIs for a window to filter multimodal key events. When a 
 | [WindowManager_ErrorCode OH_NativeWindowManager_GetMouseEventFilter(int32_t windowId, OH_NativeWindowManager_MouseEventFilter* outMouseEventFilter)](#oh_nativewindowmanager_getmouseeventfilter) | - | 获取指定窗口注册的多模鼠标事件过滤函数。 |
 | [WindowManager_ErrorCode OH_NativeWindowManager_GetTouchEventFilter(int32_t windowId, OH_NativeWindowManager_TouchEventFilter* outTouchEventFilter)](#oh_nativewindowmanager_gettoucheventfilter) | - | 获取指定窗口注册的多模触摸事件过滤函数。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| bool (*OH_NativeWindowManager_KeyEventFilter)(Input_KeyEvent* keyEvent) | 定义多模按键的过滤函数。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Window.SessionManager |
+| bool (*OH_NativeWindowManager_MouseEventFilter)(Input_MouseEvent* mouseEvent) | 定义多模鼠标事件的过滤函数。<br>**起始版本：** 15<br>**系统能力：** SystemCapability.Window.SessionManager |
+| bool (*OH_NativeWindowManager_TouchEventFilter)(Input_TouchEvent* touchEvent) | 定义多模触摸事件的过滤函数。<br>**起始版本：** 15<br>**系统能力：** SystemCapability.Window.SessionManager |
+
 ## 函数说明
 
 ### OH_NativeWindowManager_KeyEventFilter()
@@ -42,8 +48,6 @@ typedef bool (*OH_NativeWindowManager_KeyEventFilter)(Input_KeyEvent* keyEvent)
 **描述：**
 
 定义多模按键的过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 12
 
@@ -68,8 +72,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_RegisterKeyEventFilter(int32_t wi
 **描述：**
 
 注册按键事件的过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 12
 
@@ -96,8 +98,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_UnregisterKeyEventFilter(int32_t 
 
 取消注册窗口的按键事件过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 12
 
 **参数：**
@@ -122,8 +122,6 @@ typedef bool (*OH_NativeWindowManager_MouseEventFilter)(Input_MouseEvent* mouseE
 
 定义多模鼠标事件的过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -147,8 +145,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_RegisterMouseEventFilter(int32_t 
 **描述：**
 
 注册鼠标事件的过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 15
 
@@ -175,8 +171,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_UnregisterMouseEventFilter(int32_
 
 取消注册窗口的鼠标事件过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -201,8 +195,6 @@ typedef bool (*OH_NativeWindowManager_TouchEventFilter)(Input_TouchEvent* touchE
 
 定义多模触摸事件的过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -226,8 +218,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_RegisterTouchEventFilter(int32_t 
 **描述：**
 
 注册触摸事件的过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 15
 
@@ -254,8 +244,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_UnregisterTouchEventFilter(int32_
 
 取消注册窗口的触摸事件过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -279,8 +267,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_GetKeyEventFilter(int32_t windowI
 **描述：**
 
 获取指定窗口注册的多模按键事件过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 26.0.0
 
@@ -307,8 +293,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_GetMouseEventFilter(int32_t windo
 
 获取指定窗口注册的多模鼠标事件过滤函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -333,8 +317,6 @@ WindowManager_ErrorCode OH_NativeWindowManager_GetTouchEventFilter(int32_t windo
 **描述：**
 
 获取指定窗口注册的多模触摸事件过滤函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 26.0.0
 

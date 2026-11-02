@@ -8,11 +8,9 @@
 
 **库：** libhuks_external_crypto.z.so
 
-**系统能力：** SystemCapability.Security.Huks.CryptoExtension
-
 **起始版本：** 22
 
-**相关模块：** [HuksExternalCryptoTypeApi](capi-universal-keystore-kit-huksexternalcryptotypeapi.md)
+**相关模块：** [HuksExternalCryptoTypeApi](capi-huksexternalcryptotypeapi.md)
 
 ## 汇总
 
@@ -49,8 +47,6 @@ enum OH_Huks_ExternalCryptoTag
 
 列举参数集合中使用的标签值。
 
-**系统能力：** SystemCapability.Security.Huks.CryptoExtension
-
 **起始版本：** 22
 
 | 枚举项 | 描述 |
@@ -71,8 +67,6 @@ enum OH_Huks_ExternalPinAuthState
 **描述：**
 
 列举Ukey PIN码认证状态。
-
-**系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **起始版本：** 22
 

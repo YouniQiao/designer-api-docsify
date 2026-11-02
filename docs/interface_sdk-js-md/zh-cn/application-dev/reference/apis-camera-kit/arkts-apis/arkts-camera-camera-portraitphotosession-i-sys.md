@@ -4,7 +4,7 @@
 interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture
 ```
 
-人像拍照会话类，继承自 Session、Flash、AutoExposure、Focus、Zoom、Beauty、ColorEffect、ColorManagement、Portrait、Aperture 接口。用于设置人像拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。
+人像拍照会话类。用于设置人像拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。
 
 **继承/实现关系：** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)<!--Del-->, [Beauty](arkts-camera-camera-beauty-i-sys.md)<!--DelEnd--><!--Del-->, [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->, [ColorManagement](arkts-camera-camera-colormanagement-i.md)<!--Del-->, [Portrait](arkts-camera-camera-portrait-i-sys.md)<!--DelEnd-->, [Aperture](arkts-camera-camera-aperture-i.md)
 

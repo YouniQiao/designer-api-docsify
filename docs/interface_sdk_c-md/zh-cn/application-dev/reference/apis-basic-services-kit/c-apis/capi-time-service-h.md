@@ -6,11 +6,9 @@
 
 **库：** libtime_service_ndk.so
 
-**系统能力：** SystemCapability.MiscServices.Time
-
 **起始版本：** 12
 
-**相关模块：** [TimeService](capi-basic-services-kit-timeservice.md)
+**相关模块：** [TimeService](capi-timeservice.md)
 
 ## 汇总
 
@@ -38,8 +36,6 @@ enum TimeService_ErrCode
 
 枚举错误码。
 
-**系统能力：** SystemCapability.MiscServices.Time
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -60,8 +56,6 @@ TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)
 **描述：**
 
 获取当前系统时区。
-
-**系统能力：** SystemCapability.MiscServices.Time
 
 **起始版本：** 12
 

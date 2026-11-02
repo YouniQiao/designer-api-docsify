@@ -6,11 +6,9 @@ Declare avcastcontroller interface.
 
 **Library**: libohavsession.so
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
-**Related module**: [OHAVSession](capi-avsession-kit-ohavsession.md)
+**Related module**: [OHAVSession](capi-ohavsession.md)
 
 ## Summary
 
@@ -53,8 +51,20 @@ Declare avcastcontroller interface.
 | [AVSession_ErrCode OH_AVCastController_SendRewindCommand(OH_AVCastController* avcastcontroller, int32_t rewindTimeS)](#oh_avcastcontroller_sendrewindcommand) | - | Request to send rewind command to Remote. |
 | [AVSession_ErrCode OH_AVCastController_SendSetSpeedCommand(OH_AVCastController* avcastcontroller, AVSession_PlaybackSpeed speed)](#oh_avcastcontroller_sendsetspeedcommand) | - | Request to send set speed command to Remote. |
 | [AVSession_ErrCode OH_AVCastController_SendVolumeCommand(OH_AVCastController* avcastcontroller, int32_t volume)](#oh_avcastcontroller_sendvolumecommand) | - | Request to send volume command to Remote. |
-| [AVSession_ErrCode OH_AVCastController_Prepare(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem *avqueueItem)](#oh_avcastcontroller_prepare) | - | Request to prepare the current player item, this is needed for sink media information displaying. |
-| [AVSession_ErrCode OH_AVCastController_Start(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem *avqueueItem)](#oh_avcastcontroller_start) | - | Request to Play the current item, should contain media uri otherwise the playback will fail. |
+| [AVSession_ErrCode OH_AVCastController_Prepare(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)](#oh_avcastcontroller_prepare) | - | Request to prepare the current player item, this is needed for sink media information displaying. |
+| [AVSession_ErrCode OH_AVCastController_Start(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)](#oh_avcastcontroller_start) | - | Request to Play the current item, should contain media uri otherwise the playback will fail. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlaybackStateChanged)( OH_AVCastController* avcastcontroller, OH_AVSession_AVPlaybackState* playbackState, void* userData) | Declaring the callback struct for playback state change<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_MediaItemChange)(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avQueueItem, void* userData) | Declaring the callback struct for media item change<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayNext)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for Play Next<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayPrevious)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for Play Previous<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_SeekDone)(OH_AVCastController* avcastcontroller, int32_t position, void* userData) | Declaring the callback struct for seekDone<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_EndOfStream)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for EndOfStream<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_Error)(OH_AVCastController* avcastcontroller, void* userData, AVSession_ErrCode error) | Declaring the callback struct for cast play error<br>**Since**: 23<br>**System capability**: SystemCapability.Multimedia.AVSession.Core |
 
 ## Function description
 
@@ -67,8 +77,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_PlaybackStateChang
 **Description**
 
 Declaring the callback struct for playback state change
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -90,8 +98,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_MediaItemChange)(O
 
 Declaring the callback struct for media item change
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -112,8 +118,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayNext)(OH_AVCas
 
 Declaring the callback struct for Play Next
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -133,8 +137,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayPrevious)(OH_A
 
 Declaring the callback struct for Play Previous
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -153,8 +155,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_SeekDone)(OH_AVCas
 **Description**
 
 Declaring the callback struct for seekDone
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -176,8 +176,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_EndOfStream)(OH_AV
 
 Declaring the callback struct for EndOfStream
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -196,8 +194,6 @@ typedef AVSessionCallback_Result(*OH_AVCastControllerCallback_Error)(OH_AVCastCo
 **Description**
 
 Declaring the callback struct for cast play error
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -218,8 +214,6 @@ AVSession_ErrCode OH_AVCastController_Destroy(OH_AVCastController* avcastcontrol
 **Description**
 
 Request to destroy the avcastcontroller.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -245,8 +239,6 @@ AVSession_ErrCode OH_AVCastController_GetPlaybackState(OH_AVCastController* avca
 
 Get the playback status of the current player. Do not release the playbackState pointer separately. It will be destroyed when [OH_AVCastController_Destroy](capi-native-avcastcontroller-h.md#oh_avcastcontroller_destroy) is called.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -271,8 +263,6 @@ AVSession_ErrCode OH_AVCastController_RegisterPlaybackStateChangedCallback(OH_AV
 **Description**
 
 Request to register playback state changed callback.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -301,8 +291,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterPlaybackStateChangedCallback(OH_
 
 Request to unregister playback state changed callback.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -327,8 +315,6 @@ AVSession_ErrCode OH_AVCastController_RegisterMediaItemChangedCallback(OH_AVCast
 **Description**
 
 Request to register current media changed callback.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -356,8 +342,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterMediaItemChangedCallback(OH_AVCa
 
 Request to unregister current media item changed callback.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -382,8 +366,6 @@ AVSession_ErrCode OH_AVCastController_RegisterPlayNextCallback(OH_AVCastControll
 **Description**
 
 Request to register playnext callback send by remote side or media center.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -411,8 +393,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterPlayNextCallback(OH_AVCastContro
 
 Request to unregister playnext callback send by remote side or media center.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -437,8 +417,6 @@ AVSession_ErrCode OH_AVCastController_RegisterPlayPreviousCallback(OH_AVCastCont
 **Description**
 
 Request to register playprevious command callback send by remote side or media center.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -466,8 +444,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterPlayPreviousCallback(OH_AVCastCo
 
 Request to unregister playprevious command callback send by remote side or media center.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -492,8 +468,6 @@ AVSession_ErrCode OH_AVCastController_RegisterSeekDoneCallback(OH_AVCastControll
 **Description**
 
 Request to register seek done callback.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -521,8 +495,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterSeekDoneCallback(OH_AVCastContro
 
 Request to unregister seek done callback.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -547,8 +519,6 @@ AVSession_ErrCode OH_AVCastController_RegisterEndOfStreamCallback(OH_AVCastContr
 **Description**
 
 Request to register end of stream callback.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -576,8 +546,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterEndOfStreamCallback(OH_AVCastCon
 
 Request to unregister end of stream callback.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -602,8 +570,6 @@ AVSession_ErrCode OH_AVCastController_RegisterErrorCallback(OH_AVCastController*
 **Description**
 
 Request to register listener for playback error events.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -631,8 +597,6 @@ AVSession_ErrCode OH_AVCastController_UnregisterErrorCallback(OH_AVCastControlle
 
 Request to unregister listener for playback error events.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -657,8 +621,6 @@ AVSession_ErrCode OH_AVCastController_SendCommonCommand(OH_AVCastController* avc
 **Description**
 
 Request to send common command to Remote, only support to send play pause stop playnext playprevious command.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -685,8 +647,6 @@ AVSession_ErrCode OH_AVCastController_SendSeekCommand(OH_AVCastController* avcas
 
 Request to send seek command to Remote.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -711,8 +671,6 @@ AVSession_ErrCode OH_AVCastController_SendFastForwardCommand(OH_AVCastController
 **Description**
 
 Request to send forward command to Remote.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -739,8 +697,6 @@ AVSession_ErrCode OH_AVCastController_SendRewindCommand(OH_AVCastController* avc
 
 Request to send rewind command to Remote.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -765,8 +721,6 @@ AVSession_ErrCode OH_AVCastController_SendSetSpeedCommand(OH_AVCastController* a
 **Description**
 
 Request to send set speed command to Remote.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -793,8 +747,6 @@ AVSession_ErrCode OH_AVCastController_SendVolumeCommand(OH_AVCastController* avc
 
 Request to send volume command to Remote.
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -813,14 +765,12 @@ Request to send volume command to Remote.
 ### OH_AVCastController_Prepare()
 
 ```c
-AVSession_ErrCode OH_AVCastController_Prepare(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem *avqueueItem)
+AVSession_ErrCode OH_AVCastController_Prepare(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)
 ```
 
 **Description**
 
 Request to prepare the current player item, this is needed for sink media information displaying.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -829,7 +779,7 @@ Request to prepare the current player item, this is needed for sink media inform
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)* avcastcontroller | The avcastcontroller instance pointer |
-| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md) *avqueueItem |  media item info [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md). |
+| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md)* avqueueItem |  media item info [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md). |
 
 **Returns**:
 
@@ -840,14 +790,12 @@ Request to prepare the current player item, this is needed for sink media inform
 ### OH_AVCastController_Start()
 
 ```c
-AVSession_ErrCode OH_AVCastController_Start(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem *avqueueItem)
+AVSession_ErrCode OH_AVCastController_Start(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)
 ```
 
 **Description**
 
 Request to Play the current item, should contain media uri otherwise the playback will fail.
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -856,7 +804,7 @@ Request to Play the current item, should contain media uri otherwise the playbac
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)* avcastcontroller | The avcastcontroller instance pointer |
-| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md) *avqueueItem |  media item info [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md). |
+| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md)* avqueueItem |  media item info [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md). |
 
 **Returns**:
 

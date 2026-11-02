@@ -8,11 +8,9 @@
 
 **库：** libnative_drm.so
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm-kit-drm.md)
+**相关模块：** [Drm](capi-drm.md)
 
 ## 汇总
 
@@ -44,6 +42,15 @@
 | [Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_MediaKeySession_Callback *callback)](#oh_mediakeysession_setcallback) | - | 设置MediaKeySession事件回调。该回调返回MediaKeySession实例，适用于多个MediaKeySession场景。 |
 | [Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)](#oh_mediakeysession_destroy) | - | 销毁MediaKeySession实例。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | MediaKeySession事件触发时将调用的回调函数，如密钥过期事件。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo, bool newKeysAvailable) | 密钥变更时调用的回调函数。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKeySession, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | 事件触发时将调用的回调函数。事件信息来源于媒体播放过程中的DRM事件，通过MediaKeySession实例触发。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *mediaKeySession, DRM_KeysInfo *keysInfo, bool newKeysAvailable) | 密钥变更时将调用的回调。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+
 ## 函数说明
 
 ### MediaKeySession_EventCallback()
@@ -55,8 +62,6 @@ typedef Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, ui
 **描述：**
 
 MediaKeySession事件触发时将调用的回调函数，如密钥过期事件。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -85,8 +90,6 @@ typedef Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo,
 
 密钥变更时调用的回调函数。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -111,8 +114,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKe
 **描述：**
 
 事件触发时将调用的回调函数。事件信息来源于媒体播放过程中的DRM事件，通过MediaKeySession实例触发。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 12
 
@@ -142,8 +143,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *med
 
 密钥变更时将调用的回调。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -170,8 +169,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateMediaKeyRequest(MediaKeySession *mediaKey
 
 生成媒体密钥请求。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -197,8 +194,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessMediaKeyResponse(MediaKeySession *mediaKey
 **描述：**
 
 处理媒体密钥请求响应。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -228,8 +223,6 @@ Drm_ErrCode OH_MediaKeySession_CheckMediaKeyStatus(MediaKeySession *mediaKeySess
 
 检查媒体密钥状态。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -255,8 +248,6 @@ Drm_ErrCode OH_MediaKeySession_ClearMediaKeys(MediaKeySession *mediaKeySession)
 
 清除当前会话的媒体密钥。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -280,8 +271,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateOfflineReleaseRequest(MediaKeySession *me
 **描述：**
 
 生成离线媒体密钥释放请求。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -311,8 +300,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessOfflineReleaseResponse(MediaKeySession *me
 
 处理离线媒体密钥释放请求响应。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -341,8 +328,6 @@ Drm_ErrCode OH_MediaKeySession_RestoreOfflineMediaKeys(MediaKeySession *mediaKey
 
 恢复离线媒体密钥到当前会话。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -369,8 +354,6 @@ Drm_ErrCode OH_MediaKeySession_GetContentProtectionLevel(MediaKeySession *mediaK
 
 获取会话的内容保护级别。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -395,8 +378,6 @@ Drm_ErrCode OH_MediaKeySession_RequireSecureDecoderModule(MediaKeySession *media
 **描述：**
 
 是否需要安全解码。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -424,8 +405,6 @@ Drm_ErrCode OH_MediaKeySession_SetMediaKeySessionCallback(MediaKeySession *media
 
 设置MediaKeySession事件回调。该回调不返回MediaKeySession实例，适用于单个MediaKeySession场景。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -451,8 +430,6 @@ Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_
 
 设置MediaKeySession事件回调。该回调返回MediaKeySession实例，适用于多个MediaKeySession场景。
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -477,8 +454,6 @@ Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)
 **描述：**
 
 销毁MediaKeySession实例。
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 

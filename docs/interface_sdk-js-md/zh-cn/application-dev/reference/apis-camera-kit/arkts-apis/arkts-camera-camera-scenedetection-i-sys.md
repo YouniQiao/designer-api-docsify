@@ -4,7 +4,7 @@
 interface SceneDetection extends SceneDetectionQuery
 ```
 
-提供场景检测能力，继承自[SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)。
+提供场景检测能力。
 
 **继承/实现关系：** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 

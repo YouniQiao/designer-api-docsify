@@ -6,11 +6,9 @@ Provides the error codes returned by internationalization APIs.
 
 **Library**: libohi18n.so
 
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
-**Related module**: [i18n](capi-localization-kit-i18n.md)
+**Related module**: [i18n](capi-i18n.md)
 
 ## Summary
 
@@ -31,8 +29,6 @@ enum I18n_ErrorCode
 **Description**
 
 error codes of i18n
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 

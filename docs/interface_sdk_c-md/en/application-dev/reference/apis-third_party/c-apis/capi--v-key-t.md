@@ -2,12 +2,3 @@
 
 ## Overview
 
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| DWORD tls_index |  |
-
-

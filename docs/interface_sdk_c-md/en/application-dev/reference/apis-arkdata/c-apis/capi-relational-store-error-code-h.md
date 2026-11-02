@@ -6,11 +6,9 @@ Declaration error code information.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
@@ -31,8 +29,6 @@ enum OH_Rdb_ErrCode
 **Description**
 
 Indicates the error code information.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 

@@ -4,7 +4,7 @@
 interface Portrait extends PortraitQuery
 ```
 
-Portrait 继承自[PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)。提供人像拍照设置相关接口。
+提供人像拍照设置相关接口。
 
 **继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
 

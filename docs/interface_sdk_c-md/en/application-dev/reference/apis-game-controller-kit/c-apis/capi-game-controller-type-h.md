@@ -6,11 +6,9 @@ Defines common enumeration types for the GameController module.
 
 **Library**: libohgame_controller.z.so
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
-**Related module**: [GameController](capi-game-controller-kit-gamecontroller.md)
+**Related module**: [GameController](capi-gamecontroller.md)
 
 ## Summary
 
@@ -32,13 +30,11 @@ enum GameController_ErrorCode
 
 Defines error codes of the game controller.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| GAME_CONTROLLER_SUCCESS = 0 | Success.<br>**Since**: 21 |
+| GAME_CONTROLLER_SUCCESS = 0 |  |
 | GAME_CONTROLLER_PARAM_ERROR = 401 | &nbsp;Invalid parameter. <br>**Since**: 21 |
 | GAME_CONTROLLER_MULTIMODAL_INPUT_ERROR = 32200001 | &nbsp;Failed to query all game device information in multimodal input. <br>**Since**: 21 |
 | GAME_CONTROLLER_NO_MEMORY = 32200002 | &nbsp;Insufficient game device memory. <br>**Since**: 21 |

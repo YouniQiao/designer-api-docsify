@@ -4,7 +4,7 @@
 interface PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect
 ```
 
-全景拍照会话类，继承自 Session、Focus、AutoExposure、WhiteBalance、ColorEffect 接口。用于设置全景拍照模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。
+全景拍照会话类。用于设置全景拍照模式的参数，并保存运行相机所需的全部[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。
 
 **继承/实现关系：** PanoramaPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Focus](arkts-camera-camera-focus-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md)<!--Del-->, [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->
 

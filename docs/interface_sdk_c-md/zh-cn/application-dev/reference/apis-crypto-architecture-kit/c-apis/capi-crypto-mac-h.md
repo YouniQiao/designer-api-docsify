@@ -8,11 +8,9 @@
 
 **库：** libohcrypto.so
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**相关模块：** [CryptoMacApi](capi-crypto-architecture-kit-cryptomacapi.md)
+**相关模块：** [CryptoMacApi](capi-cryptomacapi.md)
 
 ## 汇总
 
@@ -52,8 +50,6 @@ enum CryptoMac_ParamType
 
 定义MAC算法参数类型。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -74,11 +70,9 @@ OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)
 
 根据给定的算法名称创建MAC上下文。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_CryptoMac_Destroy](#oh_cryptomac_destroy)
+**资源释放：** crypto_mac/OH_CryptoMac_Destroy {ctx}
 
 **参数：**
 
@@ -107,8 +101,6 @@ OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType t
 **描述：**
 
 设置MAC上下文的指定参数。
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -141,8 +133,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *ke
 
 使用对称密钥初始化MAC上下文。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
 **参数：**
@@ -172,8 +162,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *
 **描述：**
 
 更新MAC数据。
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -205,11 +193,9 @@ OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)
 
 结束MAC操作。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **参数：**
 
@@ -233,8 +219,6 @@ OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)
 **描述：**
 
 获取MAC结果的长度。
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -260,8 +244,6 @@ void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)
 **描述：**
 
 销毁MAC上下文。
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

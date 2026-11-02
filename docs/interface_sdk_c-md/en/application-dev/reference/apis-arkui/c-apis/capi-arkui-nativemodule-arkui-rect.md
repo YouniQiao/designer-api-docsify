@@ -12,7 +12,7 @@ Defines a rectangular area.
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-others-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [common_type.h](capi-common-type-h.md)
 
@@ -22,9 +22,9 @@ Defines a rectangular area.
 
 | Name | Description |
 | -- | -- |
-| float x | X coordinate of the rectangular area.<br>**Since**: 12 |
-| float y | Y coordinate of the rectangular area.<br>**Since**: 12 |
-| float width | Width of the rectangular area.<br>**Since**: 12 |
-| float height | Height of the rectangular area.<br>**Since**: 12 |
+| float x |  |
+| float y |  |
+| float width |  |
+| float height |  |
 
 

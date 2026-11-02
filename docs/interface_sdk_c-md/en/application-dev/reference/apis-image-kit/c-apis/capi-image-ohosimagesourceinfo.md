@@ -12,7 +12,7 @@ Defines the image source information, which is obtained by calling [OH_ImageSour
 
 **Since**: 10
 
-**Related module**: [Image](capi-others-image.md)
+**Related module**: [Image](capi-image.md)
 
 **Header file**: [image_source_mdk.h](capi-image-source-mdk-h.md)
 

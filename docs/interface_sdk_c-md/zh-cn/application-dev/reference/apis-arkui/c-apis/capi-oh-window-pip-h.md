@@ -6,11 +6,9 @@
 
 **库：** libnative_window_manager.so
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
-**相关模块：** [WindowManager](capi-arkui-windowmanager.md)
+**相关模块：** [WindowManager](capi-windowmanager.md)
 
 ## 汇总
 
@@ -29,6 +27,12 @@
 | [PictureInPicture_PipControlType](#pictureinpicture_pipcontroltype) | PictureInPicture_PipControlType | 控制面板控件类型枚举。 |
 | [PictureInPicture_PipControlStatus](#pictureinpicture_pipcontrolstatus) | PictureInPicture_PipControlStatus | 控制面板控件状态枚举。 |
 | [PictureInPicture_PipState](#pictureinpicture_pipstate) | PictureInPicture_PipState | 画中画生命周期状态枚举。 |
+
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| OH_WINDOW_PIP_H | 定义画中画功能的相关接口，包含创建、删除画中画控制器，以及启动、停止画中画等。主要用于视频播放、直播、视频通话或视频会议场景下，以小窗（画中画）模式呈现内容。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
 
 ### 函数
 
@@ -74,6 +78,10 @@
 | 名称 | 描述 |
 | -- | -- |
 | void* PictureInPicture_PipConfig | Picture in picture config.<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
+| void (*WebPipStartPipCallback)(uint32_t controllerId, uint8_t requestId, uint64_t surfaceId) | 定义画中画窗口创建完成的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
+| void (*WebPipLifecycleCallback)(uint32_t controllerId, PictureInPicture_PipState state, int32_t errcode) | 定义画中画窗口的生命周期回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
+| void (*WebPipControlEventCallback)(uint32_t controllerId, PictureInPicture_PipControlType controlType, PictureInPicture_PipControlStatus status) | 定义画中画窗口的控件点击事件回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
+| void (*WebPipResizeCallback)(uint32_t controllerId, uint32_t width, uint32_t height, double scale) | 定义画中画窗口的尺寸变化回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
 
 ## 枚举类型说明
 
@@ -87,16 +95,14 @@ enum PictureInPicture_PipTemplateType
 
 画中画模板类型。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| VIDEO_PLAY = 0 | 表示将要切换为画中画播放的媒体类型是视频，系统依此加载视频播放模板。<br>**起始版本：** 20 |
-| VIDEO_CALL = 1 | 表示将要切换为画中画播放的媒体类型是视频通话，系统依此加载视频通话模板。<br>**起始版本：** 20 |
-| VIDEO_MEETING = 2 | 表示将要切换为画中画播放的媒体类型是视频会议，系统依此加载视频会议模板。<br>**起始版本：** 20 |
-| VIDEO_LIVE = 3 | 表示将要切换为画中画播放的媒体类型是直播，系统依此加载直播模板。<br>**起始版本：** 20 |
+| VIDEO_PLAY = 0 |  |
+| VIDEO_CALL = 1 |  |
+| VIDEO_MEETING = 2 |  |
+| VIDEO_LIVE = 3 |  |
 
 ### PictureInPicture_PipControlGroup
 
@@ -108,24 +114,22 @@ enum PictureInPicture_PipControlGroup
 
 画中画控制面板的控件组类型。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| VIDEO_PLAY_VIDEO_PREVIOUS_NEXT = 101 | 视频播放模板的视频上一个/下一个控件组。与视频快进/后退控件组为互斥控件组。如添加视频快进/后退控件组，则不可添加该控件组。<br>**起始版本：** 20 |
-| VIDEO_PLAY_FAST_FORWARD_BACKWARD = 102 | 视频播放模板的视频快进/后退控件组。与视频上一个/下一个控件组为互斥控件组。如添加视频上一个/下一个控件组，则不可添加该控件组。<br>**起始版本：** 20 |
-| VIDEO_CALL_MICROPHONE_SWITCH = 201 | 视频通话模板的打开/关闭麦克风控件组。<br>**起始版本：** 20 |
-| VIDEO_CALL_HANG_UP_BUTTON = 202 | 视频通话模板的挂断控件组。<br>**起始版本：** 20 |
-| VIDEO_CALL_CAMERA_SWITCH = 203 | 视频通话模板的打开/关闭摄像头控件组。<br>**起始版本：** 20 |
-| VIDEO_CALL_MUTE_SWITCH = 204 | 视频通话模板的静音控件组。<br>**起始版本：** 20 |
-| VIDEO_MEETING_HANG_UP_BUTTON = 301 | 视频会议模板的挂断控件组。<br>**起始版本：** 20 |
-| VIDEO_MEETING_CAMERA_SWITCH = 302 | 视频会议模板的打开/关闭摄像头控件组。<br>**起始版本：** 20 |
-| VIDEO_MEETING_MUTE_SWITCH = 303 | 视频会议模板的静音控件组。<br>**起始版本：** 20 |
-| VIDEO_MEETING_MICROPHONE_SWITCH = 304 | 视频会议模板的打开/关闭麦克风控件组。<br>**起始版本：** 20 |
-| VIDEO_LIVE_VIDEO_PLAY_PAUSE = 401 | 直播模板的播放/暂停直播控件组。<br>**起始版本：** 20 |
-| VIDEO_LIVE_MUTE_SWITCH = 402 | 直播模板的静音控件组。<br>**起始版本：** 20 |
+| VIDEO_PLAY_VIDEO_PREVIOUS_NEXT = 101 |  |
+| VIDEO_PLAY_FAST_FORWARD_BACKWARD = 102 |  |
+| VIDEO_CALL_MICROPHONE_SWITCH = 201 |  |
+| VIDEO_CALL_HANG_UP_BUTTON = 202 |  |
+| VIDEO_CALL_CAMERA_SWITCH = 203 |  |
+| VIDEO_CALL_MUTE_SWITCH = 204 |  |
+| VIDEO_MEETING_HANG_UP_BUTTON = 301 |  |
+| VIDEO_MEETING_CAMERA_SWITCH = 302 |  |
+| VIDEO_MEETING_MUTE_SWITCH = 303 |  |
+| VIDEO_MEETING_MICROPHONE_SWITCH = 304 |  |
+| VIDEO_LIVE_VIDEO_PLAY_PAUSE = 401 |  |
+| VIDEO_LIVE_MUTE_SWITCH = 402 |  |
 
 ### PictureInPicture_PipControlType
 
@@ -137,21 +141,19 @@ enum PictureInPicture_PipControlType
 
 控制面板控件类型枚举。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| VIDEO_PLAY_PAUSE = 0 | 播放/暂停控件。<br>**起始版本：** 20 |
-| VIDEO_PREVIOUS = 1 | 视频上一个控件。<br>**起始版本：** 20 |
-| VIDEO_NEXT = 2 | 视频下一个控件。<br>**起始版本：** 20 |
-| FAST_FORWARD = 3 | 视频快进控件。<br>**起始版本：** 20 |
-| FAST_BACKWARD = 4 | 视频快退控件。<br>**起始版本：** 20 |
-| HANG_UP_BUTTON = 5 | 挂断控件。<br>**起始版本：** 20 |
-| MICROPHONE_SWITCH = 6 | 打开/关闭麦克风控件。<br>**起始版本：** 20 |
-| CAMERA_SWITCH = 7 | 打开/关闭摄像头控件。<br>**起始版本：** 20 |
-| MUTE_SWITCH = 8 | 打开/关闭静音控件。<br>**起始版本：** 20 |
+| VIDEO_PLAY_PAUSE = 0 |  |
+| VIDEO_PREVIOUS = 1 |  |
+| VIDEO_NEXT = 2 |  |
+| FAST_FORWARD = 3 |  |
+| FAST_BACKWARD = 4 |  |
+| HANG_UP_BUTTON = 5 |  |
+| MICROPHONE_SWITCH = 6 |  |
+| CAMERA_SWITCH = 7 |  |
+| MUTE_SWITCH = 8 |  |
 
 ### PictureInPicture_PipControlStatus
 
@@ -163,16 +165,14 @@ enum PictureInPicture_PipControlStatus
 
 控制面板控件状态枚举。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| PLAY = 1 | 视频播放状态。<br>**起始版本：** 20 |
-| PAUSE = 0 | 视频暂停状态。<br>**起始版本：** 20 |
-| OPEN = 1 | 摄像头/麦克风/静音控件的打开状态。<br>**起始版本：** 20 |
-| CLOSE = 0 | 摄像头/麦克风/静音控件的关闭状态。<br>**起始版本：** 20 |
+| PLAY = 1 |  |
+| PAUSE = 0 |  |
+| OPEN = 1 |  |
+| CLOSE = 0 |  |
 
 ### PictureInPicture_PipState
 
@@ -184,18 +184,16 @@ enum PictureInPicture_PipState
 
 画中画生命周期状态枚举。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ABOUT_TO_START = 1 | 表示画中画将要启动。<br>**起始版本：** 20 |
-| STARTED = 2 | 表示画中画已经启动。<br>**起始版本：** 20 |
-| ABOUT_TO_STOP = 3 | 表示画中画将要停止。<br>**起始版本：** 20 |
-| STOPPED = 4 | 表示画中画已经停止。<br>**起始版本：** 20 |
-| ABOUT_TO_RESTORE = 5 | 表示画中画将从小窗播放恢复到原始播放界面。<br>**起始版本：** 20 |
-| ERROR = 6 | 表示画中画生命周期执行过程出现了异常。<br>**起始版本：** 20 |
+| ABOUT_TO_START = 1 |  |
+| STARTED = 2 |  |
+| ABOUT_TO_STOP = 3 |  |
+| STOPPED = 4 |  |
+| ABOUT_TO_RESTORE = 5 |  |
+| ERROR = 6 |  |
 
 
 ## 函数说明
@@ -209,8 +207,6 @@ typedef void (*WebPipStartPipCallback)(uint32_t controllerId, uint8_t requestId,
 **描述：**
 
 定义画中画窗口创建完成的回调函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -232,8 +228,6 @@ typedef void (*WebPipLifecycleCallback)(uint32_t controllerId, PictureInPicture_
 
 定义画中画窗口的生命周期回调函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -253,8 +247,6 @@ typedef void (*WebPipControlEventCallback)(uint32_t controllerId, PictureInPictu
 **描述：**
 
 定义画中画窗口的控件点击事件回调函数。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -276,8 +268,6 @@ typedef void (*WebPipResizeCallback)(uint32_t controllerId, uint32_t width, uint
 
 定义画中画窗口的尺寸变化回调函数。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -298,8 +288,6 @@ int32_t OH_PictureInPicture_CreatePipConfig(PictureInPicture_PipConfig* pipConfi
 **描述：**
 
 创建画中画参数配置器。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -325,8 +313,6 @@ int32_t OH_PictureInPicture_DestroyPipConfig(PictureInPicture_PipConfig* pipConf
 
 销毁画中画参数配置器。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -350,8 +336,6 @@ int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipCon
 **描述：**
 
 Sets the 拉起画中画的主窗口Id。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -378,8 +362,6 @@ int32_t OH_PictureInPicture_SetPipTemplateType(PictureInPicture_PipConfig pipCon
 
 设置画中画模板类型，默认为视频播放。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -404,8 +386,6 @@ int32_t OH_PictureInPicture_SetPipRect(PictureInPicture_PipConfig pipConfig, uin
 **描述：**
 
 设置画中画窗口大小，用于计算尺寸比例。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -433,8 +413,6 @@ int32_t OH_PictureInPicture_SetPipControlGroup(PictureInPicture_PipConfig pipCon
 
 设置画中画控件组，需保证控件组与模板类型匹配。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -461,8 +439,6 @@ int32_t OH_PictureInPicture_SetPipNapiEnv(PictureInPicture_PipConfig pipConfig, 
 
 设置拉起画中画的运行时环境。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -487,8 +463,6 @@ int32_t OH_PictureInPicture_CreatePip(PictureInPicture_PipConfig pipConfig, uint
 **描述：**
 
 创建画中画控制器。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -515,8 +489,6 @@ int32_t OH_PictureInPicture_DeletePip(uint32_t controllerId)
 
 删除画中画控制器。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -540,8 +512,6 @@ int32_t OH_PictureInPicture_StartPip(uint32_t controllerId)
 **描述：**
 
 开启画中画。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -567,8 +537,6 @@ int32_t OH_PictureInPicture_StopPip(uint32_t controllerId)
 
 关闭画中画。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -592,8 +560,6 @@ int32_t OH_PictureInPicture_UpdatePipContentSize(uint32_t controllerId, uint32_t
 **描述：**
 
 当媒体源切换时，向画中画控制器更新媒体源尺寸信息。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -621,8 +587,6 @@ int32_t OH_PictureInPicture_UpdatePipControlStatus(uint32_t controllerId, Pictur
 
 更新画中画控制面板控件功能状态。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -648,8 +612,6 @@ int32_t OH_PictureInPicture_SetPipControlEnabled(uint32_t controllerId, PictureI
 **描述：**
 
 设置控制面板控件使能状态。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -677,8 +639,6 @@ int32_t OH_PictureInPicture_SetParentWindowId(uint32_t controllerId, uint32_t wi
 
 设置画中画主窗口ID。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 22
 
 **参数：**
@@ -703,8 +663,6 @@ int32_t OH_PictureInPicture_SetPipInitialSurfaceRect(uint32_t controllerId, int3
 **描述：**
 
 设置画中画拉起动效开始时的位置和大小，可用于实现一镜到底效果。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -734,8 +692,6 @@ int32_t OH_PictureInPicture_UnsetPipInitialSurfaceRect(uint32_t controllerId)
 
 取消已设置的画中画拉起动效的起始位置和大小。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -759,8 +715,6 @@ int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebP
 **描述：**
 
 开启画中画窗口创建完成的监听。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -787,8 +741,6 @@ int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, We
 
 关闭画中画窗口创建完成的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -814,8 +766,6 @@ int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId
 
 关闭所有画中画窗口创建完成的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -839,8 +789,6 @@ int32_t OH_PictureInPicture_RegisterLifecycleListener(uint32_t controllerId, Web
 **描述：**
 
 开启画中画生命周期状态的监听。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -867,8 +815,6 @@ int32_t OH_PictureInPicture_UnregisterLifecycleListener(uint32_t controllerId, W
 
 关闭画中画生命周期状态的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -894,8 +840,6 @@ int32_t OH_PictureInPicture_UnregisterAllLifecycleListeners(uint32_t controllerI
 
 关闭所有画中画生命周期状态的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -919,8 +863,6 @@ int32_t OH_PictureInPicture_RegisterControlEventListener(uint32_t controllerId, 
 **描述：**
 
 开启画中画控制面板控件动作事件的监听。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -947,8 +889,6 @@ int32_t OH_PictureInPicture_UnregisterControlEventListener(uint32_t controllerId
 
 关闭画中画控制面板控件动作事件的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -974,8 +914,6 @@ int32_t OH_PictureInPicture_UnregisterAllControlEventListeners(uint32_t controll
 
 关闭所有画中画控制面板控件动作事件的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -999,8 +937,6 @@ int32_t OH_PictureInPicture_RegisterResizeListener(uint32_t controllerId, WebPip
 **描述：**
 
 开启画中画窗口尺寸变化事件的监听。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -1027,8 +963,6 @@ int32_t OH_PictureInPicture_UnregisterResizeListener(uint32_t controllerId, WebP
 
 关闭画中画窗口尺寸变化事件的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -1054,8 +988,6 @@ int32_t OH_PictureInPicture_UnregisterAllResizeListeners(uint32_t controllerId)
 
 关闭所有画中画窗口尺寸变化事件的监听。
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 20
 
 **参数：**
@@ -1079,8 +1011,6 @@ int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enab
 **描述：**
 
 设置是否在返回桌面时自动启动画中画，默认不自动拉起。
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 26.0.0
 

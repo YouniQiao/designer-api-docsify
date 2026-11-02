@@ -6,11 +6,9 @@ Declares the connection options for extension ability, including callbacks for c
 
 **Library**: libability_runtime.so
 
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
-
 **Since**: 26.0.0
 
-**Related module**: [AbilityRuntime](capi-ability-kit-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
 ## Summary
 
@@ -18,7 +16,7 @@ Declares the connection options for extension ability, including callbacks for c
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md) | OH_AbilityRuntime_ConnectOptions | Defines the OH_AbilityRuntime_ConnectOptions struct, which is used to configure the callback options when connecting to an ExtensionAbility, including the callbacks for successful connection, disconnection, and connection failure. |
+| [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md) | OH_AbilityRuntime_ConnectOptions | Defines the OH_AbilityRuntime_ConnectOptions structure type. |
 
 ### Function
 
@@ -33,6 +31,14 @@ Declares the connection options for extension ability, including callbacks for c
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectOptions_SetOnDisconnectCallback(OH_AbilityRuntime_ConnectOptions *connectOptions, OH_AbilityRuntime_ConnectOptions_OnDisconnectCallback onDisconnectCallback)](#oh_abilityruntime_connectoptions_setondisconnectcallback) | - | Set the callback [OH_AbilityRuntime_ConnectOptions_OnDisconnectCallback](capi-connect-options-h.md#oh_abilityruntime_connectoptions_ondisconnectcallback) in [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md). |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectOptions_SetOnFailedCallback(OH_AbilityRuntime_ConnectOptions *connectOptions, OH_AbilityRuntime_ConnectOptions_OnFailedCallback onFailedCallback)](#oh_abilityruntime_connectoptions_setonfailedcallback) | - | Set the callback [OH_AbilityRuntime_ConnectOptions_OnFailedCallback](capi-connect-options-h.md#oh_abilityruntime_connectoptions_onfailedcallback) in [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md). |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_AbilityRuntime_ConnectOptions_OnConnectCallback)( OH_AbilityRuntime_ConnectOptions *connectOptions, AbilityBase_Element *element, OHIPCRemoteProxy *proxy) | The callback interface is invoked when the connection succeeds.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Ability.AbilityRuntime.Core |
+| void (*OH_AbilityRuntime_ConnectOptions_OnDisconnectCallback)( OH_AbilityRuntime_ConnectOptions *connectOptions, AbilityBase_Element *element) | The callback interface is invoked when the disconnection occurs.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Ability.AbilityRuntime.Core |
+| void (*OH_AbilityRuntime_ConnectOptions_OnFailedCallback)( OH_AbilityRuntime_ConnectOptions *connectOptions, AbilityRuntime_ErrorCode code) | The callback interface is invoked when the connection fails.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Ability.AbilityRuntime.Core |
+
 ## Function description
 
 ### OH_AbilityRuntime_ConnectOptions_OnConnectCallback()
@@ -44,8 +50,6 @@ typedef void (*OH_AbilityRuntime_ConnectOptions_OnConnectCallback)(OH_AbilityRun
 **Description**
 
 The callback interface is invoked when the connection succeeds.
-
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -67,8 +71,6 @@ typedef void (*OH_AbilityRuntime_ConnectOptions_OnDisconnectCallback)(OH_Ability
 
 The callback interface is invoked when the disconnection occurs.
 
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -87,8 +89,6 @@ typedef void (*OH_AbilityRuntime_ConnectOptions_OnFailedCallback)(OH_AbilityRunt
 **Description**
 
 The callback interface is invoked when the connection fails.
-
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -109,8 +109,6 @@ OH_AbilityRuntime_ConnectOptions* OH_AbilityRuntime_CreateConnectOptions()
 
 Creates a ConnectOptions object.<br> *
 
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
-
 **Since**: 26.0.0
 
 **Returns**:
@@ -128,8 +126,6 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_DestroyConnectOptions(OH_AbilityRunti
 **Description**
 
 Destroys the specified ConnectOptions.
-
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -154,8 +150,6 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectOptions_SetOnConnectCallback(O
 **Description**
 
 Set the callback [OH_AbilityRuntime_ConnectOptions_OnConnectCallback](capi-connect-options-h.md#oh_abilityruntime_connectoptions_onconnectcallback) in [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md).
-
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -182,8 +176,6 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectOptions_SetOnDisconnectCallbac
 
 Set the callback [OH_AbilityRuntime_ConnectOptions_OnDisconnectCallback](capi-connect-options-h.md#oh_abilityruntime_connectoptions_ondisconnectcallback) in [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md).
 
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -208,8 +200,6 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectOptions_SetOnFailedCallback(OH
 **Description**
 
 Set the callback [OH_AbilityRuntime_ConnectOptions_OnFailedCallback](capi-connect-options-h.md#oh_abilityruntime_connectoptions_onfailedcallback) in [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md).
-
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 

@@ -6,13 +6,11 @@ Declare the error codes of swapfs module.
 
 **Library**: libohswapfs.so
 
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
-**Related module**: [Swapfs](capi-core-file-kit-swapfs.md)
+**Related module**: [Swapfs](capi-swapfs.md)
 
 ## Summary
 
@@ -33,8 +31,6 @@ enum OH_Swapfs_ErrCode
 **Description**
 
 Error codes of swapfs module.
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
 
 **Since**: 26.0.0
 

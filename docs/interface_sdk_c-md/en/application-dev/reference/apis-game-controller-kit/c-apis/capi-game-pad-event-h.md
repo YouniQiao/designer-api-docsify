@@ -6,11 +6,9 @@ Defines APIs for gamepad events.
 
 **Library**: libohgame_controller.z.so
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
-**Related module**: [GameController](capi-game-controller-kit-gamecontroller.md)
+**Related module**: [GameController](capi-gamecontroller.md)
 
 ## Summary
 
@@ -57,6 +55,13 @@ Defines APIs for gamepad events.
 | [GameController_ErrorCode OH_GamePad_AxisEvent_GetGasAxisValue(const struct GamePad_AxisEvent* axisEvent, double* axisValue)](#oh_gamepad_axisevent_getgasaxisvalue) | - | Obtains the Gas-axis value from an axis event. |
 | [GameController_ErrorCode OH_GamePad_AxisEvent_GetActionTime(const struct GamePad_AxisEvent* axisEvent, int64_t* actionTime)](#oh_gamepad_axisevent_getactiontime) | - | Obtains the action time from an axis event. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void(* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEvent* buttonEvent) | Defines the callback function used by the button event listener registration API. The callback is triggered when a player presses a button.<br>**Since**: 21<br>**System capability**: SystemCapability.Game.GameController |
+| void(* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent* axisEvent) | Defines the callback function used by the axis event listener registration API. The callback is triggered when a player operates a joystick.<br>**Since**: 21<br>**System capability**: SystemCapability.Game.GameController |
+
 ## Enum type description
 
 ### GamePad_AxisSourceType
@@ -69,17 +74,15 @@ enum GamePad_AxisSourceType
 
 Defines source types of gamepad axis events.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| DPAD = 0 | The axis event comes from the directional pad (D-pad).<br>**Since**: 21 |
-| LEFT_THUMBSTICK = 1 | The axis event comes from the left thumbstick.<br>**Since**: 21 |
-| RIGHT_THUMBSTICK = 2 | The axis event comes from the right thumbstick.<br>**Since**: 21 |
-| LEFT_TRIGGER = 3 | The axis event comes from the left trigger.<br>**Since**: 21 |
-| RIGHT_TRIGGER = 4 | The axis event comes from the right trigger.<br>**Since**: 21 |
+| DPAD = 0 |  |
+| LEFT_THUMBSTICK = 1 |  |
+| RIGHT_THUMBSTICK = 2 |  |
+| LEFT_TRIGGER = 3 |  |
+| RIGHT_TRIGGER = 4 |  |
 
 ### GamePad_Button_ActionType
 
@@ -91,14 +94,12 @@ enum GamePad_Button_ActionType
 
 Defines action types of gamepad button events.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| DOWN = 0 | The button is pressed.<br>**Since**: 21 |
-| UP = 1 | The button is released.<br>**Since**: 21 |
+| DOWN = 0 |  |
+| UP = 1 |  |
 
 
 ## Function description
@@ -112,8 +113,6 @@ typedef void(* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEv
 **Description**
 
 Defines the callback function used by the button event listener registration API. The callback is triggered when a player presses a button.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -133,8 +132,6 @@ typedef void(* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent*
 
 Defines the callback function used by the axis event listener registration API. The callback is triggered when a player operates a joystick.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -152,8 +149,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetDeviceId(const struct GamePad
 **Description**
 
 Obtains the device ID from a button event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -180,8 +175,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonAction(const struct Gam
 
 Obtains the button action type from a button event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -206,8 +199,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonCode(const struct GameP
 **Description**
 
 Obtains the button code from a button event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -234,8 +225,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonCodeName(const struct G
 
 Obtains the button name from a button event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -261,8 +250,6 @@ GameController_ErrorCode OH_GamePad_PressedButtons_GetCount(const struct GamePad
 
 Obtains the number of pressed buttons from a button event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -287,8 +274,6 @@ GameController_ErrorCode OH_GamePad_PressedButtons_GetButtonInfo(const struct Ga
 **Description**
 
 Obtains the button information at a specified index from a button event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -321,8 +306,6 @@ GameController_ErrorCode OH_GamePad_DestroyPressedButton(GamePad_PressedButton**
 
 Destroys a pressed button instance.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -346,8 +329,6 @@ GameController_ErrorCode OH_GamePad_PressedButton_GetButtonCode(const struct Gam
 **Description**
 
 Obtains the button code from a pressed button.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -374,8 +355,6 @@ GameController_ErrorCode OH_GamePad_PressedButton_GetButtonCodeName(const struct
 
 Obtains the button name from a pressed button.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -400,8 +379,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetActionTime(const struct GameP
 **Description**
 
 Obtains the action time from a button event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -428,8 +405,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetDeviceId(const struct GamePad_A
 
 Obtains the device ID from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -454,8 +429,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetAxisSourceType(const struct Gam
 **Description**
 
 Obtains the source type of an axis event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -482,8 +455,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetXAxisValue(const struct GamePad
 
 Obtains the X-axis value from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -508,8 +479,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetYAxisValue(const struct GamePad
 **Description**
 
 Obtains the Y-axis value from an axis event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -536,8 +505,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetZAxisValue(const struct GamePad
 
 Obtains the Z-axis value from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -562,8 +529,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetRZAxisValue(const struct GamePa
 **Description**
 
 Obtains the RZ-axis value from an axis event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -590,8 +555,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetHatXAxisValue(const struct Game
 
 Obtains the HatX-axis value from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -616,8 +579,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetHatYAxisValue(const struct Game
 **Description**
 
 Obtains the HatY-axis value from an axis event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -644,8 +605,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetBrakeAxisValue(const struct Gam
 
 Obtains the Brake-axis value from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -671,8 +630,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetGasAxisValue(const struct GameP
 
 Obtains the Gas-axis value from an axis event.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -697,8 +654,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetActionTime(const struct GamePad
 **Description**
 
 Obtains the action time from an axis event.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
