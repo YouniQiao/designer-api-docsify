@@ -4,13 +4,15 @@
 
 Audio AudioChannel Layout
 
-**Include**: <multimedia/player_framework/avcodec_audio_channel_layout.h>
+**File to Include**: <multimedia/player_framework/avcodec_audio_channel_layout.h>
 
 **Library**: libnative_media_codecbase.so
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
-**Related module**: [CodecBase](capi-codecbase.md)
+**Related module**: [CodecBase](capi-avcodec-kit-codecbase.md)
 
 ## Summary
 
@@ -32,6 +34,8 @@ enum AudioChannelSet
 **Description**
 
 Enumerates the audio channels. Each channel is mapped to a variable of uint64_t.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -71,6 +75,8 @@ enum AudioChannelLayout
 **Description**
 
 Enumerates the layouts of audio channels. The output format of the decoder is described using the channel layout of the codec.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 

@@ -12,7 +12,7 @@ struct UsbDdkConfigDescriptor {...}
 
 **起始版本：** 10
 
-**相关模块：** [UsbDdk](capi-usbddk.md)
+**相关模块：** [UsbDdk](capi-others-usbddk.md)
 
 **所在头文件：** [usb_ddk_types.h](capi-usb-ddk-types-h.md)
 
@@ -24,7 +24,7 @@ struct UsbDdkConfigDescriptor {...}
 | -- | -- |
 | [struct UsbConfigDescriptor](capi-usbddk-usbconfigdescriptor.md) configDescriptor | 标准配置描述符。 |
 | struct UsbDdkInterface *interface | 该配置所包含的接口。 |
-| const uint8_t* extra | 未做解析的描述符指针，包含特定于类或供应商的描述符。 |
+| const uint8_t *extra | 未做解析的描述符指针，包含特定于类或供应商的描述符。 |
 | uint32_t extraLength | 未做解析的描述符长度。 |
 
 

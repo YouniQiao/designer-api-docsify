@@ -6,13 +6,13 @@ struct ArkUI_AccessibilityProviderCallbacksWithInstance {...}
 
 ## 概述
 
-适配多实例场景第三方操作provider回调函数结构定义，包含节点信息查询、焦点查找与清除、操作执行、光标位置获取等无障碍相关回调函数。 该结构需由第三方平台实现，并通过OH_ArkUI_AccessibilityProviderRegisterCallbackWithInstance注册到系统侧，以支持第三方平台接入系统无障碍服务。
+适配多实例场景第三方操作provider回调函数结构定义，包含节点信息查询、焦点查找与清除、操作执行、光标位置获取等无障碍相关回调函数。 该结构需由第三方平台实现，并通过OH_ArkUI_AccessibilityProviderRegisterCallbackWithInstance注册到系统侧，以支持第三方平台接入系统无障碍服务。 所有的回调函数执行线程为IPC线程，非UI线程。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
-**相关模块：** [ArkUI_Accessibility](capi-arkui-accessibility.md)
+**相关模块：** [ArkUI_Accessibility](capi-others-arkui-accessibility.md)
 
 **所在头文件：** [native_interface_accessibility.h](capi-native-interface-accessibility-h.md)
 
@@ -22,13 +22,13 @@ struct ArkUI_AccessibilityProviderCallbacksWithInstance {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [int32_t (\*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId,ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbyid) | 基于指定的节点，根据搜索模式查询对应的节点信息。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
-| [int32_t (\*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text,int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbytext) | 基于指定的节点，查询文本内容匹配指定文本的节点信息。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务执行文本搜索（如用户通过屏幕阅读器查找包含特定文本的元素）时，通过此回调向接入方平台查询匹配的节点。 |
-| [int32_t (\*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId,ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findfocusedaccessibilitynode) | 从指定节点查找已经聚焦的节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务需要确定当前焦点所在元素（如屏幕阅读器朗读当前焦点元素内容）时，通过此回调向接入方平台查询。 |
-| [int32_t (\*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction,int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findnextfocusaccessibilitynode) | 从指定节点查询指定方向的下一个可聚焦节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
-| [int32_t (\*executeAccessibilityAction)(const char* instanceId, int64_t elementId,ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)](#executeaccessibilityaction) | 对指定节点执行指定的操作。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务代替用户对界面元素执行操作（如自动点击、聚焦、滚动等）时，通过此回调通知接入方平台执行对应的操作。 |
-| [int32_t (\*clearFocusedFocusAccessibilityNode)(const char* instanceId)](#clearfocusedfocusaccessibilitynode) | 清除当前获焦的节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
-| [int32_t (\*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId,int32_t requestId, int32_t* index)](#getaccessibilitynodecursorposition) | 获取当前文本组件中的光标位置。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
+| [int32_t (\*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId,ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbyid) | - | 基于指定的节点，根据搜索模式查询对应的节点信息。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
+| [int32_t (\*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text,int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbytext) | - | 基于指定的节点，查询文本内容匹配指定文本的节点信息。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务执行文本搜索（如用户通过屏幕阅读器查找包含特定文本的元素）时，通过此回调向接入方平台查询匹配的节点。 |
+| [int32_t (\*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId,ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findfocusedaccessibilitynode) | - | 从指定节点查找已经聚焦的节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务需要确定当前焦点所在元素（如屏幕阅读器朗读当前焦点元素内容）时，通过此回调向接入方平台查询。 |
+| [int32_t (\*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction,int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findnextfocusaccessibilitynode) | - | 从指定节点查询指定方向的下一个可聚焦节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
+| [int32_t (\*executeAccessibilityAction)(const char* instanceId, int64_t elementId,ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)](#executeaccessibilityaction) | - | 对指定节点执行指定的操作。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。<b>使用场景</b>：当无障碍服务代替用户对界面元素执行操作（如自动点击、聚焦、滚动等）时，通过此回调通知接入方平台执行对应的操作。 |
+| [int32_t (\*clearFocusedFocusAccessibilityNode)(const char* instanceId)](#clearfocusedfocusaccessibilitynode) | - | 清除当前获焦的节点。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
+| [int32_t (\*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId,int32_t requestId, int32_t* index)](#getaccessibilitynodecursorposition) | - | 获取当前文本组件中的光标位置。 由接入方平台实现的回调函数，注册给系统侧调用。支持多实例场景。 |
 
 ## 成员函数说明
 
@@ -182,7 +182,7 @@ int32_t (*clearFocusedFocusAccessibilityNode)(const char* instanceId)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 成功返回ARKUI_ACCESSIBILITY_NATIVE_RESULT_SUCCESSFUL。参数错误返回ARKUI_ACCESSIBILITY_NATIVE_RESULT_BAD_PARAMETER。 |
+| int32_t | 成功返回ARKUI_ACCESSIBILITY_NATIVE_RESULT_SUCCESSFUL。操作失败返回ARKUI_ACCESSIBILITY_NATIVE_RESULT_FAILED。 |
 
 ### getAccessibilityNodeCursorPosition()
 

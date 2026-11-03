@@ -6,9 +6,11 @@ Provides Checkbox node type definitions for <b>NativeNode</b> APIs.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -30,11 +32,13 @@ enum ArkUI_CheckboxShape
 
 Enumerates the shapes of the check box.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ArkUI_CHECKBOX_SHAPE_CIRCLE = 0 |  |
-| ArkUI_CHECKBOX_SHAPE_ROUNDED_SQUARE |  |
+| ArkUI_CHECKBOX_SHAPE_CIRCLE = 0 | Checkbox shape is circle.<br>**Since**: 12 |
+| ArkUI_CHECKBOX_SHAPE_ROUNDED_SQUARE | Checkbox shape is rounded square.<br>**Since**: 12 |
 
 

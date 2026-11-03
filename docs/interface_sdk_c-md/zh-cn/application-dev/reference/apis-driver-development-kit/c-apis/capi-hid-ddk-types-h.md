@@ -4,11 +4,15 @@
 
 提供HID DDK中的枚举变量与结构体定义，支持开发者在驱动开发中定义和操作HID设备，适用于与鼠标、键盘、触摸屏等输入设备交互的场景，提供了设备特性、事件类型、键值编码、坐标轴等完整定义， 帮助开发者快速实现HID设备的驱动开发。
 
+**引用文件：** <hid/hid_ddk_types.h>
+
 **库：** libhid.z.so
+
+**系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 11
 
-**相关模块：** [HidDdk](capi-hidddk.md)
+**相关模块：** [HidDdk](capi-driver-development-kit-hidddk.md)
 
 ## 汇总
 
@@ -59,6 +63,8 @@ enum Hid_DeviceProp
 
 输入设备特性定义。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -81,6 +87,8 @@ enum Hid_EventType
 
 事件类型。用于标识HID设备产生的事件类别，在驱动开发中用于事件分类和处理。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -101,6 +109,8 @@ enum Hid_SynEvent
 
 同步事件编码。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -119,6 +129,8 @@ enum Hid_KeyCode
 **描述：**
 
 键值编码。包括键盘、鼠标、触摸屏等输入设备的按键和事件编码。
+
+**系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 11
 
@@ -245,6 +257,8 @@ enum Hid_AbsAxes
 
 绝对坐标编码。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -286,6 +300,8 @@ enum Hid_RelAxes
 
 相对坐标编码。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -298,8 +314,8 @@ enum Hid_RelAxes
 | HID_REL_RZ = 0x05 | 右模拟摇杆的 Z 轴。 |
 | HID_REL_HWHEEL = 0x06 | 水平滚轮，表示鼠标水平滚轮的滚动方向和距离，用于水平方向的滚动操作。 |
 | HID_REL_DIAL = 0x07 | 刻度，表示旋钮或刻度盘的旋转方向和距离，用于调节音量、亮度或其他可调节参数。 |
-| HID_REL_WHEEL = 0x08 | 垂直滚轮，表示鼠标垂直滚轮的滚动方向和距离，用于垂直方向的滚动操作。 |
-| HID_REL_MISC = 0x09 | 其他类型的相对坐标事件，用于不适合归入上述分类的特殊相对坐标事件。 |
+| HID_REL_WHEEL = 0x08 | 滚轮。 |
+| HID_REL_MISC = 0x09 | 其他类型的绝对坐标轴，用于不适合归入上述分类的特殊轴类型。 |
 | HID_REL_RESERVED = 0x0a | 预留。 |
 | HID_REL_WHEEL_HI_RES = 0x0b | 高分辨率滚轮，表示鼠标高分辨率滚轮的滚动方向和距离，提供比普通滚轮更高的分辨率和精度。 |
 | HID_REL_HWHEEL_HI_RES = 0x0c | 高分辨率水平滚轮，表示鼠标高分辨率水平滚轮的滚动方向和距离，提供比普通水平滚轮更高的分辨率和精度。 |
@@ -313,6 +329,8 @@ enum Hid_MscEvent
 **描述：**
 
 不适合其他类型的输入事件编码。
+
+**系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 11
 
@@ -335,6 +353,8 @@ enum Hid_DdkErrCode
 
 HID DDK错误码定义。
 
+**系统能力：** SystemCapability.Driver.HID.Extension
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -348,7 +368,7 @@ HID DDK错误码定义。
 | HID_DDK_TIMEOUT = 27300004 | 超时，从API 16起，取值由-5变更为27300004。请检查设备状态和超时时间设置。 |
 | HID_DDK_INIT_ERROR = 27300005 | 初始化DDK失败或DDK未初始化。请检查系统服务状态，确保在调用API前先初始化DDK。<br>**起始版本：** 18 |
 | HID_DDK_SERVICE_ERROR = 27300006 | 服务通信过程中错误。可能原因：服务内部错误。请检查当前操作和设备状态。<br>**起始版本：** 18 |
-| HID_DDK_MEMORY_ERROR = 27300007 | 内存相关的错误，包括：内存数据拷贝失败、内存申请失败等。请检查内存使用情况和相关参数。<br>**起始版本：** 18 |
+| HID_DDK_MEMORY_ERROR  = 27300007 | 内存相关的错误，包括：内存数据拷贝失败、内存申请失败等。请检查内存使用情况和相关参数。<br>**起始版本：** 18 |
 | HID_DDK_IO_ERROR = 27300008 | I/O操作失败。请检查设备状态和传输参数。<br>**起始版本：** 18 |
 | HID_DDK_DEVICE_NOT_FOUND = 27300009 | 设备未找到。可能原因：设备未连接或设备ID错误。请检查设备是否连接、设备ID是否正确。<br>**起始版本：** 18 |
 
@@ -361,6 +381,8 @@ enum Hid_ReportType
 **描述：**
 
 报告（HID设备与主机之间交换的数据包）类型定义，用于标识HID设备与主机之间通信的数据包类型，在设备通信和数据交换场景中使用。
+
+**系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 18
 

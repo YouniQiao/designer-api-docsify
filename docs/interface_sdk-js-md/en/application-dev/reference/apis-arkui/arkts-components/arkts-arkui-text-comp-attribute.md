@@ -4,7 +4,7 @@
 declare class TextAttribute extends CommonMethod<TextAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** TextAttribute extends CommonMethod&lt;TextAttribute&gt;
 
@@ -51,7 +51,7 @@ Sets the custom selection menu. If this API is not used, the default menu type i
 
 The long-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1) is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.
 
-When the custom menu is too long, it is recommended that nest a [Scroll](arkts-arkui-scroll-comp.md) component inside to prevent the keyboard from being obscured.
+When the custom menu is too long, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
 
 Since API version 26.0.0, when the text component calls this API, the image preview menu takes effect if the **menuType** attribute in **options** is set to **MenuType.PREVIEW_MENU**.
 
@@ -645,10 +645,10 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
 > clipped.
 > 
-> When multiple **Text** components are placed in the [Row](arkts-arkui-row-comp.md) container with no specific layout or space
+> When multiple **Text** components are placed in the Row container with no specific layout or space
 > allocation settings configured, the components are laid out based on the maximum size of the container. To make
 > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
-> [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight) or use the [flex layout](arkts-arkui-common-comp.md).
+> [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight) or use the [flex layout](arkts-arkui-common-comp-commonmethod-c.md).
 > 
 > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
 > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the

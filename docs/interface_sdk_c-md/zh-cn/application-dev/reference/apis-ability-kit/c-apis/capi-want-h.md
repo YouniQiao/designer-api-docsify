@@ -6,9 +6,11 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 
 **库：** libability_base_want.so
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
-**相关模块：** [AbilityBase](capi-abilitybase.md)
+**相关模块：** [AbilityBase](capi-ability-kit-abilitybase.md)
 
 ## 汇总
 
@@ -38,9 +40,7 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 | [AbilityBase_ErrorCode OH_AbilityBase_SetWantBoolParam(AbilityBase_Want* want, const char* key, bool value)](#oh_abilitybase_setwantboolparam) | 设置Want中bool类型的值。 |
 | [AbilityBase_ErrorCode OH_AbilityBase_GetWantBoolParam(AbilityBase_Want* want, const char* key, bool* value)](#oh_abilitybase_getwantboolparam) | 获取Want中bool类型的值。 |
 | [AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, const char* key, double value)](#oh_abilitybase_setwantdoubleparam) | 设置Want中double类型的值。 |
-| [AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)
-
-} // extern "C"](#oh_abilitybase_getwantdoubleparam) | 获取Want中double类型的值。 |
+| [AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)](#oh_abilitybase_getwantdoubleparam) | 获取Want中double类型的值。 |
 
 ## 函数说明
 
@@ -53,6 +53,8 @@ AbilityBase_Want* OH_AbilityBase_CreateWant(AbilityBase_Element element)
 **描述：**
 
 创建Want。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
@@ -78,6 +80,8 @@ AbilityBase_ErrorCode OH_AbilityBase_DestroyWant(AbilityBase_Want* want)
 
 销毁Want。销毁后的Want不可使用，否则会导致未定义行为。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
 **参数：**
@@ -101,6 +105,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantElement(AbilityBase_Want* want, Abil
 **描述：**
 
 设置Want中由bundleName、moduleName与abilityName组成的Element结构体。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
@@ -127,6 +133,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantElement(AbilityBase_Want* want, Abil
 
 获取Want中由bundleName、moduleName与abilityName组成的Element结构体。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
 **参数：**
@@ -151,6 +159,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantCharParam(AbilityBase_Want* want, co
 **描述：**
 
 设置Want Param参数，Param可参考Want中的parameters参数。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
@@ -177,6 +187,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantCharParam(AbilityBase_Want* want, co
 **描述：**
 
 获取[OH_AbilityBase_SetWantCharParam](capi-want-h.md#oh_abilitybase_setwantcharparam)方法设置的Want Param参数。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
@@ -205,6 +217,8 @@ AbilityBase_ErrorCode OH_AbilityBase_AddWantFd(AbilityBase_Want* want, const cha
 
 添加Want文件描述符，文件描述符可通过fileIo.open获取。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
 **参数：**
@@ -230,6 +244,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantFd(AbilityBase_Want* want, const cha
 **描述：**
 
 获取Want文件描述符。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
@@ -257,6 +273,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantUri(AbilityBase_Want* want, const ch
 
 设置Want中URI字符串，URI可参考Want中的uri描述。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 17
 
 **参数：**
@@ -281,6 +299,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantUri(AbilityBase_Want* want, char* ur
 **描述：**
 
 获取Want中URI字符串。URI可参考Want中的uri描述。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 17
 
@@ -308,6 +328,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantInt32Param(AbilityBase_Want* want, c
 
 设置Want中int32_t类型的值。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 17
 
 **参数：**
@@ -333,6 +355,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantInt32Param(AbilityBase_Want* want, c
 **描述：**
 
 获取Want中int32_t类型的值。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 17
 
@@ -360,6 +384,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantBoolParam(AbilityBase_Want* want, co
 
 设置Want中bool类型的值。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 17
 
 **参数：**
@@ -385,6 +411,8 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantBoolParam(AbilityBase_Want* want, co
 **描述：**
 
 获取Want中bool类型的值。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 17
 
@@ -412,6 +440,8 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, 
 
 设置Want中double类型的值。
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 17
 
 **参数：**
@@ -432,13 +462,13 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, 
 
 ```c
 AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)
-
-} // extern "C"
 ```
 
 **描述：**
 
 获取Want中double类型的值。
+
+**系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 17
 
@@ -448,7 +478,7 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, 
 | -- | -- |
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md)* want | Want指针。 |
 | const char* key | Want中double类型值的参数键名。 |
-| value | Want中double类型的值。 |
+| double* value | Want中double类型的值。 |
 
 **返回值：**
 

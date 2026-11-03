@@ -6,9 +6,11 @@ Declares the [ffrt_usleep](capi-sleep-h.md#ffrt_usleep) and [ffrt_yield](capi-sl
 
 **Library**: libffrt.z.so
 
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
-**Related module**: [FFRT](capi-ffrt.md)
+**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 ## Summary
 
@@ -30,6 +32,8 @@ FFRT_C_API int ffrt_usleep(uint64_t usec)
 **Description**
 
 Suspends the calling thread for a given duration.<br> If `usec` exceeds the maximum supported value, it is clamped to that maximum.
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -54,6 +58,8 @@ FFRT_C_API void ffrt_yield(void)
 **Description**
 
 Passes control to other tasks so that they can be executed.
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 

@@ -6,9 +6,11 @@ Declares the functions for setting filter parameters, registering custom filter 
 
 **Library**: libimage_effect.so
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
-**Related module**: [ImageEffect](capi-imageeffect.md)
+**Related module**: [ImageEffect](capi-image-kit-imageeffect.md)
 
 ## Summary
 
@@ -82,16 +84,6 @@ Declares the functions for setting filter parameters, registering custom filter 
 | [ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filter, int32_t inputTextureId, int32_t outputTextureId, int32_t colorSpace)](#oh_effectfilter_renderwithtextureid) | - | Applies the filter effect using texture IDs. This function does not support using the same texture for for both input and output. |
 | [ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)](#oh_effectfilter_release) | - | Clear the internal resources of the OH_EffectFilter and destroy the OH_EffectFilter instance |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value) | When executing the method of [OH_EffectFilter_SetValue](capi-image-effect-filter-h.md#oh_effectfilter_setvalue) for the delegate filter, the function pointer will be called for checking the parameters is valid for the delegate filter<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.ImageEffect.Core |
-| void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_EffectBufferInfo *info) | Actively execute this callback function at the end of invoking the method of [OH_EffectFilterDelegate_Render](capi-image-effect-filter-h.md#oh_effectfilterdelegate_render) for passing possible new OH_EffectBufferInfo to the next filter. It should be noted that when passing new OH_EffectBufferInfo, the buffer in OH_EffectBufferInfo needs to be manually released after the execution of the function ends<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.ImageEffect.Core |
-| bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_EffectBufferInfo *info, OH_EffectFilterDelegate_PushData pushData) | When the method of OH_ImageEffect_Start is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for rendering the delegate filter effects<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.ImageEffect.Core |
-| bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **info) | When the method of OH_ImageEffect_Save is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for serializing the delegate filter parameters<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.ImageEffect.Core |
-| OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info) | When the method of OH_ImageEffect_Restore is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for deserializing the delegate filter parameters<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.ImageEffect.Core |
-
 ## Enum type description
 
 ### ImageEffect_DataType
@@ -103,6 +95,8 @@ enum ImageEffect_DataType
 **Description**
 
 Enumerates the data type
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -127,6 +121,8 @@ enum ImageEffect_Format
 
 Enumerates the pixel format type
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -149,6 +145,8 @@ enum ImageEffect_BufferType
 
 Enumerates the effect buffer type
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -170,6 +168,8 @@ OH_EffectFilterInfo *OH_EffectFilterInfo_Create()
 
 Create an OH_EffectFilterInfo instance. It should be noted that the life cycle of the OH_EffectFilterInfo instance pointed to by the return value * needs to be manually released by [OH_EffectFilterInfo_Release](capi-image-effect-filter-h.md#oh_effectfilterinfo_release)
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Returns**:
@@ -187,6 +187,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetFilterName(OH_EffectFilterInfo *inf
 **Description**
 
 Set the filter name for OH_EffectFilterInfo structure
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -213,6 +215,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetFilterName(OH_EffectFilterInfo *inf
 
 Get the filter name from OH_EffectFilterInfo structure
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -237,6 +241,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedBufferTypes(OH_EffectFilte
 **Description**
 
 Set the supported buffer types for OH_EffectFilterInfo structure
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -264,6 +270,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedBufferTypes(OH_EffectFilte
 
 Get the supported buffer types from OH_EffectFilterInfo structure
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -289,6 +297,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedFormats(OH_EffectFilterInf
 **Description**
 
 Set the supported formats for OH_EffectFilterInfo structure
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -316,6 +326,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedFormats(OH_EffectFilterInf
 
 Get the supported formats from OH_EffectFilterInfo structure
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -342,6 +354,8 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_Release(OH_EffectFilterInfo *info)
 
 Clear the internal resources of the OH_EffectFilterInfo and destroy the OH_EffectFilterInfo instance
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -366,6 +380,8 @@ OH_EffectBufferInfo *OH_EffectBufferInfo_Create()
 
 Create an OH_EffectBufferInfo instance. It should be noted that the life cycle of the OH_EffectBufferInfo instance pointed to by the return value * needs to be manually released by [OH_EffectBufferInfo_Release](capi-image-effect-filter-h.md#oh_effectbufferinfo_release)
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Returns**:
@@ -383,6 +399,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetAddr(OH_EffectBufferInfo *info, voi
 **Description**
 
 Set access to the address of the image in memory
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -409,6 +427,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetAddr(OH_EffectBufferInfo *info, voi
 
 Provide direct access to the address of the image in memory for rendering the filter effects
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -433,6 +453,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetWidth(OH_EffectBufferInfo *info, in
 **Description**
 
 Set the width of the image in pixels
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -459,6 +481,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetWidth(OH_EffectBufferInfo *info, in
 
 Get the width of the image in pixels
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -483,6 +507,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetHeight(OH_EffectBufferInfo *info, i
 **Description**
 
 Set the height of the image in pixels
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -509,6 +535,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetHeight(OH_EffectBufferInfo *info, i
 
 Get the height of the image in pixels
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -533,6 +561,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetRowSize(OH_EffectBufferInfo *info, 
 **Description**
 
 Set number of bytes per row for the image
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -559,6 +589,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetRowSize(OH_EffectBufferInfo *info, 
 
 Get number of bytes per row for the image
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -583,6 +615,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetEffectFormat(OH_EffectBufferInfo *i
 **Description**
 
 Set the format of the image for OH_EffectBufferInfo
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -609,6 +643,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetEffectFormat(OH_EffectBufferInfo *i
 
 Get the format of the image from OH_EffectBufferInfo
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -633,6 +669,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info
 **Description**
 
 Set the timestamp of the image for OH_EffectBufferInfo
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -659,6 +697,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info
 
 Get the timestamp of the image from OH_EffectBufferInfo
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -683,6 +723,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTextureId(OH_EffectBufferInfo *info
 **Description**
 
 Sets the texture ID of the image for an OH_EffectBufferInfo struct.
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 20
 
@@ -709,6 +751,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTextureId(OH_EffectBufferInfo *info
 
 Obtains the texture ID of an image from an OH_EffectBufferInfo struct.
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -734,6 +778,8 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_Release(OH_EffectBufferInfo *info)
 
 Clear the internal resources of the OH_EffectBufferInfo and destroy the OH_EffectBufferInfo instance
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -757,6 +803,8 @@ typedef bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const 
 **Description**
 
 When executing the method of [OH_EffectFilter_SetValue](capi-image-effect-filter-h.md#oh_effectfilter_setvalue) for the delegate filter, the function pointer will be called for checking the parameters is valid for the delegate filter
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -784,6 +832,8 @@ typedef void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_Eff
 
 Actively execute this callback function at the end of invoking the method of [OH_EffectFilterDelegate_Render](capi-image-effect-filter-h.md#oh_effectfilterdelegate_render) for passing possible new OH_EffectBufferInfo to the next filter. It should be noted that when passing new OH_EffectBufferInfo, the buffer in OH_EffectBufferInfo needs to be manually released after the execution of the function ends
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -802,6 +852,8 @@ typedef bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_Effec
 **Description**
 
 When the method of OH_ImageEffect_Start is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for rendering the delegate filter effects
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -829,6 +881,8 @@ typedef bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **inf
 
 When the method of OH_ImageEffect_Save is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for serializing the delegate filter parameters
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -854,6 +908,8 @@ typedef OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info)
 
 When the method of OH_ImageEffect_Restore is executed on delegate filter that is contained in OH_ImageEffect, the function pointer will be called for deserializing the delegate filter parameters
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -878,6 +934,8 @@ OH_EffectFilter *OH_EffectFilter_Create(const char *name)
 
 Create an OH_EffectFilter instance. It should be noted that the life cycle of the OH_EffectFilter instance pointed to by the return value * needs to be manually released by [OH_EffectFilter_Release](capi-image-effect-filter-h.md#oh_effectfilter_release)
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -901,6 +959,8 @@ ImageEffect_ErrorCode OH_EffectFilter_SetValue(OH_EffectFilter *filter, const ch
 **Description**
 
 Set the filter parameter. It can be set multiple parameters by invoking this function multiple times
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -928,6 +988,8 @@ ImageEffect_ErrorCode OH_EffectFilter_GetValue(OH_EffectFilter *filter, const ch
 
 Get the filter parameter
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -954,6 +1016,8 @@ ImageEffect_ErrorCode OH_EffectFilter_Register(const OH_EffectFilterInfo *info, 
 
 Register the delegate filter
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -979,6 +1043,8 @@ ImageEffect_FilterNames *OH_EffectFilter_LookupFilters(const char *key)
 
 Lookup for the filter names that matches the lookup condition. It should be noted that the allocated memory of ImageEffect_FilterNames can be manually released by invoking [OH_EffectFilter_ReleaseFilterNames](capi-image-effect-filter-h.md#oh_effectfilter_releasefilternames) if need
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1003,6 +1069,8 @@ void OH_EffectFilter_ReleaseFilterNames()
 
 Clear the internal cached resources of the ImageEffect_FilterNames
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
 ### OH_EffectFilter_LookupFilterInfo()
@@ -1014,6 +1082,8 @@ ImageEffect_ErrorCode OH_EffectFilter_LookupFilterInfo(const char *name, OH_Effe
 **Description**
 
 Lookup for the capabilities that supported by the filter
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -1039,6 +1109,8 @@ ImageEffect_ErrorCode OH_EffectFilter_Render(OH_EffectFilter *filter, OH_Pixelma
 **Description**
 
 Render the filter effects. The function is designed to support the same input and output image
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -1066,6 +1138,8 @@ ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filte
 
 Applies the filter effect using texture IDs. This function does not support using the same texture for for both input and output.
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -1092,6 +1166,8 @@ ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)
 **Description**
 
 Clear the internal resources of the OH_EffectFilter and destroy the OH_EffectFilter instance
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 

@@ -182,7 +182,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 Sets the sensitivity of the digital crown's response to events.
 
-A component must have focus to receive [crown events](arkts-arkui-common-comp.md). Focus control can be managed using [focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable), [defaultFocus](arkts-arkui-common-comp-commonmethod-c.md#defaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch).
+A component must have focus to receive [crown events](arkts-arkui-common-comp-commonmethod-c.md). Focus control can be managed using [focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable), [defaultFocus](arkts-arkui-common-comp-commonmethod-c.md#defaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch).
 
 **Since:** 18
 
@@ -736,7 +736,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 Triggered before the scrollable component scrolls. Comparison with [onDidScroll](#ondidscroll): **onWillScroll** is triggered before scrolling occurs and can specify the offset to be scrolled through its return value, making it suitable for scenarios where scrolling needs to be intercepted or customized; **onDidScroll **is triggered when scrolling occurs and returns the actual scroll offset and scrolling state of the current frame, making it suitable for scenarios where only the scrolling process needs to be monitored. The two can be used together.
 
-Called to return the offset to be scrolled in the current frame, the current scroll state, and the source of the scroll operation. The offset returned in the callback is the calculated offset to be scrolled, not the final actual scroll offset. You can specify the offset to be scrolled by the scrollable component through the return value of this callback. The parameter type of the [onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll) API of the [Scroll](arkts-arkui-scroll-comp.md) component is [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md).
+Called to return the offset to be scrolled in the current frame, the current scroll state, and the source of the scroll operation. The offset returned in the callback is the calculated offset to be scrolled, not the final actual scroll offset. You can specify the offset to be scrolled by the scrollable component through the return value of this callback. The parameter type of the [onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll) API of the Scroll component is [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md).
 
 > **NOTE:** 
 > 

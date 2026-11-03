@@ -6,9 +6,11 @@ Provides the JSVM API type define.<br> Provides API to Provide independent, stan
 
 **Library**: libjsvm.so
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 11
 
-**Related module**: [JSVM](capi-jsvm.md)
+**Related module**: [JSVM](capi-arkts-jsvm.md)
 
 ## Summary
 
@@ -28,22 +30,23 @@ Provides the JSVM API type define.<br> Provides API to Provide independent, stan
 | [JSVM_ScriptOrigin](capi-jsvm-jsvm-scriptorigin.md) | JSVM_ScriptOrigin | Source code information. |
 | [JSVM_CompileOptions](capi-jsvm-jsvm-compileoptions.md) | JSVM_CompileOptions | Compile Options |
 | [JSVM_CodeCache](capi-jsvm-jsvm-codecache.md) | JSVM_CodeCache | code cache passed with JSVM_COMPILE_CODE_CACHE |
+| [JSVM_CompileProfile](capi-jsvm-jsvm-compileprofile.md) | JSVM_CompileProfile | compile profile passed with JSVM_COMPILE_COMPILE_PROFILE |
 | [JSVM_DefineClassOptions](capi-jsvm-jsvm-defineclassoptions.md) | JSVM_DefineClassOptions | DefineClass options. |
 | [JSVM_PropertyHandler](capi-jsvm-jsvm-propertyhandler.md) | JSVM_PropertyHandler | The property-handler used to define class. |
-| [JSVM_VM](capi-jsvm-jsvm-vm.md) | JSVM_VM | To represent a JavaScript VM instance. |
-| [JSVM_VMScope](capi-jsvm-jsvm-vmscope.md) | JSVM_VMScope | To represent a JavaScript VM scope. |
-| [JSVM_EnvScope](capi-jsvm-jsvm-envscope.md) | JSVM_EnvScope | To represent a JavaScript VM environment scope. |
-| [JSVM_Script](capi-jsvm-jsvm-script.md) | JSVM_Script | To represent a JavaScript code. |
-| [JSVM_Env](capi-jsvm-jsvm-env.md) | JSVM_Env | To represent a JavaScript VM instance. |
-| [JSVM_CpuProfiler](capi-jsvm-jsvm-cpuprofiler.md) | JSVM_CpuProfiler | To represent a JavaScript profiler. |
-| [JSVM_Value](capi-jsvm-jsvm-value.md) | JSVM_Value | To represent a JavaScript VM environment. |
-| [JSVM_Ref](capi-jsvm-jsvm-ref.md) | JSVM_Ref | To represent a JavaScript value references. |
-| [JSVM_HandleScope](capi-jsvm-jsvm-handlescope.md) | JSVM_HandleScope | To represent a JavaScript VM handle scope. |
-| [JSVM_EscapableHandleScope](capi-jsvm-jsvm-escapablehandlescope.md) | JSVM_EscapableHandleScope | To represent a JavaScript VM escapable handle scope. |
-| [JSVM_CallbackInfo](capi-jsvm-jsvm-callbackinfo.md) | JSVM_CallbackInfo | To represent a JavaScript VM callback additional information. |
-| [JSVM_Deferred](capi-jsvm-jsvm-deferred.md) | JSVM_Deferred | To represent a JavaScript VM value deferred. |
-| [JSVM_Data](capi-jsvm-jsvm-data.md) | JSVM_Data | To represent a JavaScript Data type. |
-| [JSVM_DeserializeResult](capi-jsvm-jsvm-deserializeresult.md) | JSVM_DeserializeResult | To represent a JavaScript background deserialize result. |
+| [JSVM_VM\_\_*](capi-jsvm-jsvm-vm--8h.md) | JSVM_VM | To represent a JavaScript VM instance. |
+| [JSVM_VMScope\_\_*](capi-jsvm-jsvm-vmscope--8h.md) | JSVM_VMScope | To represent a JavaScript VM scope. |
+| [JSVM_EnvScope\_\_*](capi-jsvm-jsvm-envscope--8h.md) | JSVM_EnvScope | To represent a JavaScript VM environment scope. |
+| [JSVM_Script\_\_*](capi-jsvm-jsvm-script--8h.md) | JSVM_Script | To represent a JavaScript code. |
+| [JSVM_Env\_\_*](capi-jsvm-jsvm-env--8h.md) | JSVM_Env | To represent a JavaScript VM instance. |
+| [JSVM_CpuProfiler\_\_*](capi-jsvm-jsvm-cpuprofiler--8h.md) | JSVM_CpuProfiler | To represent a JavaScript profiler. |
+| [JSVM_Value\_\_*](capi-jsvm-jsvm-value--8h.md) | JSVM_Value | To represent a JavaScript VM environment. |
+| [JSVM_Ref\_\_*](capi-jsvm-jsvm-ref--8h.md) | JSVM_Ref | To represent a JavaScript value references. |
+| [JSVM_HandleScope\_\_*](capi-jsvm-jsvm-handlescope--8h.md) | JSVM_HandleScope | To represent a JavaScript VM handle scope. |
+| [JSVM_EscapableHandleScope\_\_*](capi-jsvm-jsvm-escapablehandlescope--8h.md) | JSVM_EscapableHandleScope | To represent a JavaScript VM escapable handle scope. |
+| [JSVM_CallbackInfo\_\_*](capi-jsvm-jsvm-callbackinfo--8h.md) | JSVM_CallbackInfo | To represent a JavaScript VM callback additional information. |
+| [JSVM_Deferred\_\_*](capi-jsvm-jsvm-deferred--8h.md) | JSVM_Deferred | To represent a JavaScript VM value deferred. |
+| [JSVM_Data\_\_*](capi-jsvm-jsvm-data--8h.md) | JSVM_Data | To represent a JavaScript Data type. |
+| [JSVM_DeserializeResult\_\_*](capi-jsvm-jsvm-deserializeresult--8h.md) | JSVM_DeserializeResult | To represent a JavaScript background deserialize result. |
 | [JSVM_CallbackStruct*](capi-jsvm-jsvm-callbackstruct8h.md) | JSVM_Callback | Function pointer type for user-provided native function which are to exposed to js via JSVM-API. |
 | [JSVM_PropertyHandlerConfigurationStruct*](capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md) | JSVM_PropertyHandlerCfg | The pointer type of the structure which contains the property handlers. |
 
@@ -92,20 +95,8 @@ Provides the JSVM API type define.<br> Provides API to Provide independent, stan
 
 | Name | Description |
 | -- | -- |
-| int *profile | profile pointer.<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| size_t length | length.<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| JSVM_CompileProfile  |  |
 | JSVM_CallbackStruct* JSVM_Callback | Function pointer type for user-provided native function which are to exposed to js via JSVM-API.<br>**Since**: 11<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_Finalize)(JSVM_Env env, void* finalizeData, void* finalizeHint) | Function pointer type for add-on provided function that allow the user to be notified.<br>**Since**: 11<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied) | Finalize callback for ArrayBuffers created from external memory.<br> Similar to JSVM_Finalize, but includes a copied parameter indicating whether the engine copied the external data into an internal buffer (true) or used zero-copy (false). When copied is true, the engine does not hold a reference to the original external data, so the caller may free it immediately after the API call returns. When copied is false, finalizeData points to the original external memory that the engine is releasing — the callback should free it.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* streamData) | Function pointer type for callback of output stream. The first parameter data is the data pointer. And the second parameter size is the data size to output. A null data pointer indicates the end of the stream. The third parameter streamData is the pointer passed in together with the callback to the API functions that generate data to the output stream. The callback returns true to indicate the stream can continue to accept data. Otherwise, it will abort the stream.<br>**Since**: 12<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
 | JSVM_PropertyHandlerConfigurationStruct* JSVM_PropertyHandlerCfg | The pointer type of the structure which contains the property handlers.<br>**Since**: 12<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| const struct { /** profile pointer. */ int *profile | compile profile passed with JSVM_COMPILE_COMPILE_PROFILE<br>**Since**: 12<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_HandlerForOOMError)(const char* location, const char* detail, bool isHeapOOM) | Function pointer type of OOM-Error callback.<br>**Since**: 18<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_HandlerForFatalError)(const char* location, const char* message) | Function pointer type of Fatal-Error callback.<br>**Since**: 18<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_HandlerForPromiseReject)(JSVM_Env env, JSVM_PromiseRejectEvent rejectEvent, JSVM_Value rejectInfo) | Function pointer type of Promise-Reject callback.<br>**Since**: 18<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_HandlerForGC)(JSVM_VM vm, JSVM_GCType gcType, JSVM_GCCallbackFlags flags, void* data) | Function pointer type of GC callback.<br>**Since**: 18<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
-| void(JSVM_CDECL* JSVM_HandlerForHeapThreshold)(JSVM_VM vm, uint64_t threshold, void* data) | Function pointer type for heap threshold callback.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
 | typedef uint16_t char16_t | Provides the JSVM API type define.<br> Provides API to Provide independent, standard, and complete JavaScript engine capabilities for developers, including managing the engine lifecycle, compiling and running JS code, implementing JS/C++ cross language calls, and taking snapshots.<br>**Since**: 11 /#define ARK_RUNTIME_JSVM_JSVM_TYPE_H#include <stddef.h>  // NOLINT(modernize-deprecated-headers)#include <stdint.h>  // NOLINT(modernize-deprecated-headers)#include <stdbool.h>  // NOLINT(modernize-deprecated-headers)<br>**System capability**: SystemCapability.ArkCompiler.JSVM |
 
 ## Enum type description
@@ -119,6 +110,8 @@ enum JSVM_PropertyAttributes
 **Description**
 
 JSVM_PropertyAttributes are flag used to control the behavior of properties set on a js object.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
@@ -145,6 +138,8 @@ enum JSVM_ValueType
 
 Describes the type of a JSVM_Value.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 11
 
 | Enum item | Description |
@@ -169,6 +164,8 @@ enum JSVM_TypedarrayType
 **Description**
 
 Describes the type of a typedarray.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
@@ -195,6 +192,8 @@ enum JSVM_Status
 **Description**
 
 Integral status code indicating the success or failure of a JSVM-API call.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
@@ -224,8 +223,8 @@ Integral status code indicating the success or failure of a JSVM-API call.
 | JSVM_WOULD_DEADLOCK | would deadlock status. |
 | JSVM_NO_EXTERNAL_BUFFERS_ALLOWED | no external buffers allowed status. |
 | JSVM_CANNOT_RUN_JS | cannot run +js status. |
-| JSVM_INVALID_TYPE |  |
-| JSVM_JIT_MODE_EXPECTED |  |
+| JSVM_INVALID_TYPE | invalid input type status.<br>**Since**: 18 |
+| JSVM_JIT_MODE_EXPECTED | jit mode expected status.<br>**Since**: 18 |
 
 ### JSVM_KeyCollectionMode
 
@@ -236,6 +235,8 @@ enum JSVM_KeyCollectionMode
 **Description**
 
 limits the range of collected properties..
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
@@ -253,6 +254,8 @@ enum JSVM_KeyFilter
 **Description**
 
 Property filter bits. They can be or'ed to build a composite filter..
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
@@ -275,6 +278,8 @@ enum JSVM_KeyConversion
 
 key conversion select.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 11
 
 | Enum item | Description |
@@ -292,6 +297,8 @@ enum JSVM_MemoryPressureLevel
 
 Memory pressure level.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 11
 
 | Enum item | Description |
@@ -299,7 +306,7 @@ Memory pressure level.
 | JSVM_MEMORY_PRESSURE_LEVEL_NONE | none pressure. |
 | JSVM_MEMORY_PRESSURE_LEVEL_MODERATE | moderate pressure. |
 | JSVM_MEMORY_PRESSURE_LEVEL_CRITICAL | critical pressure. |
-| JSVM_MEMORY_PRESSURE_LEVEL_LOW_MEMORY |  |
+| JSVM_MEMORY_PRESSURE_LEVEL_LOW_MEMORY | Notifies that the system is running low on memory and triggers garbage collection immediately.<br>**Since**: 22 |
 
 ### JSVM_CompileMode
 
@@ -310,6 +317,8 @@ enum JSVM_CompileMode
 **Description**
 
 Compile mode
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 12
 
@@ -331,6 +340,8 @@ enum JSVM_CompileOptionId
 
 Compile option id
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 12
 
 | Enum item | Description |
@@ -340,8 +351,8 @@ Compile option id
 | JSVM_COMPILE_SCRIPT_ORIGIN | script origin. |
 | JSVM_COMPILE_COMPILE_PROFILE | compile profile content. |
 | JSVM_COMPILE_ENABLE_SOURCE_MAP | switch for source map support. |
-| JSVM_COMPILE_BACKGROUND_DESERIALIZE_RESULT |  |
-| JSVM_COMPILE_CODE_CACHE_REJECTED |  |
+| JSVM_COMPILE_BACKGROUND_DESERIALIZE_RESULT | background deserialize code cache result.<br>**Since**: 24 |
+| JSVM_COMPILE_CODE_CACHE_REJECTED | whether the code cache is rejected.<br>**Since**: 24 |
 
 ### JSVM_RegExpFlags
 
@@ -352,6 +363,8 @@ enum JSVM_RegExpFlags
 **Description**
 
 Regular expression flag bits. They can be or'ed to enable a set of flags.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 12
 
@@ -378,6 +391,8 @@ enum JSVM_InitializedFlag
 
 initialization flag
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 12
 
 | Enum item | Description |
@@ -394,6 +409,8 @@ enum JSVM_WasmOptLevel
 **Description**
 
 WebAssembly function optimization level
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 12
 
@@ -412,6 +429,8 @@ enum JSVM_CacheType
 
 Cache data type
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 12
 
 | Enum item | Description |
@@ -429,6 +448,8 @@ enum JSVM_MicrotaskPolicy
 
 Microtask policies of JSVM.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 | Enum item | Description |
@@ -445,6 +466,8 @@ enum JSVM_TraceCategory
 **Description**
 
 Trace category for jsvm internal trace events.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 18
 
@@ -468,6 +491,8 @@ enum JSVM_PromiseRejectEvent
 
 The promise-reject event.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 | Enum item | Description |
@@ -488,6 +513,8 @@ enum JSVM_MessageErrorLevel
 
 The level of message error.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 | Enum item | Description |
@@ -497,7 +524,7 @@ The level of message error.
 | JSVM_MESSAGE_INFO = (1 << 2) | Info level message. |
 | JSVM_MESSAGE_ERROR = (1 << 3) | Error level message. |
 | JSVM_MESSAGE_WARNING = (1 << 4) | Warning level message. |
-| JSVM_MESSAGE_ALL = JSVM_MESSAGE_LOG \| JSVM_MESSAGE_DEBUG \| JSVM_MESSAGE_INFO \| JSVM_MESSAGE_ERROR \| | All level message. |
+| JSVM_MESSAGE_ALL = JSVM_MESSAGE_LOG \| JSVM_MESSAGE_DEBUG \| JSVM_MESSAGE_INFO \| JSVM_MESSAGE_ERROR \| JSVM_MESSAGE_WARNING | All level message. |
 
 ### JSVM_DefineClassOptionsId
 
@@ -508,6 +535,8 @@ enum JSVM_DefineClassOptionsId
 **Description**
 
 DefineClass options id.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 18
 
@@ -527,6 +556,8 @@ enum JSVM_CBTriggerTimeForGC
 
 The timing of GC callback trigger.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 | Enum item | Description |
@@ -544,6 +575,8 @@ enum JSVM_GCType
 
 The GC type.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 | Enum item | Description |
@@ -553,7 +586,7 @@ The GC type.
 | JSVM_GC_TYPE_MARK_SWEEP_COMPACT = 1 << 2 | The GC algorithm is Mark-Sweep-Compact. |
 | JSVM_GC_TYPE_INCREMENTAL_MARKING = 1 << 3 | The GC algorithm is Incremental-Marking. |
 | JSVM_GC_TYPE_PROCESS_WEAK_CALLBACKS = 1 << 4 | The GC algorithm is Weak-Callbacks. |
-| JSVM_GC_TYPE_ALL = JSVM_GC_TYPE_SCAVENGE \| JSVM_GC_TYPE_MINOR_MARK_COMPACT \| | All GC algorithm. |
+| JSVM_GC_TYPE_ALL = JSVM_GC_TYPE_SCAVENGE \| JSVM_GC_TYPE_MINOR_MARK_COMPACT \| JSVM_GC_TYPE_MARK_SWEEP_COMPACT \| JSVM_GC_TYPE_INCREMENTAL_MARKING \| JSVM_GC_TYPE_PROCESS_WEAK_CALLBACKS | All GC algorithm. |
 
 ### JSVM_GCCallbackFlags
 
@@ -564,6 +597,8 @@ enum JSVM_GCCallbackFlags
 **Description**
 
 The GC callback flags.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 18
 
@@ -587,6 +622,8 @@ enum JSVM_DebugOption
 
 Debug options.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 20
 
 | Enum item | Description |
@@ -606,17 +643,23 @@ typedef void(JSVM_CDECL* JSVM_Finalize)(JSVM_Env env, void* finalizeData, void* 
 
 Function pointer type for add-on provided function that allow the user to be notified.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 11
 
 ### JSVM_CDECL* JSVM_FinalizeArrayBuffer()
 
 ```c
-typedef void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied)
+#ifdef JSVM_EXPERIMENTAL
+typedef void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied);
+#endif // JSVM_EXPERIMENTAL
 ```
 
 **Description**
 
 Finalize callback for ArrayBuffers created from external memory.<br> Similar to JSVM_Finalize, but includes a copied parameter indicating whether the engine copied the external data into an internal buffer (true) or used zero-copy (false). When copied is true, the engine does not hold a reference to the original external data, so the caller may free it immediately after the API call returns. When copied is false, finalizeData points to the original external memory that the engine is releasing — the callback should free it.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 26.0.0
 
@@ -630,6 +673,8 @@ typedef bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* st
 
 Function pointer type for callback of output stream. The first parameter data is the data pointer. And the second parameter size is the data size to output. A null data pointer indicates the end of the stream. The third parameter streamData is the pointer passed in together with the callback to the API functions that generate data to the output stream. The callback returns true to indicate the stream can continue to accept data. Otherwise, it will abort the stream.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 12
 
 ### JSVM_CDECL* JSVM_HandlerForOOMError()
@@ -641,6 +686,8 @@ typedef void(JSVM_CDECL* JSVM_HandlerForOOMError)(const char* location, const ch
 **Description**
 
 Function pointer type of OOM-Error callback.
+
+**System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 18
 
@@ -662,6 +709,8 @@ typedef void(JSVM_CDECL* JSVM_HandlerForFatalError)(const char* location, const 
 
 Function pointer type of Fatal-Error callback.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 **Parameters**:
@@ -681,15 +730,17 @@ typedef void(JSVM_CDECL* JSVM_HandlerForPromiseReject)(JSVM_Env env, JSVM_Promis
 
 Function pointer type of Promise-Reject callback.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [JSVM_Env](capi-jsvm-jsvm-env.md) env | The environment that the function is invoked under. |
+| [JSVM_Env](capi-jsvm-jsvm-env--8h.md) env | The environment that the function is invoked under. |
 | [JSVM_PromiseRejectEvent](capi-jsvm-types-h.md#jsvm_promiserejectevent) rejectEvent | The promise-reject event. |
-| [JSVM_Value](capi-jsvm-jsvm-value.md) rejectInfo | An JS-object containing two properties: 'promise' and 'value'. The 'promise' represents a reference to the Promise object that was rejected. The 'value' represents the rejection reason associated with that promise. |
+| [JSVM_Value](capi-jsvm-jsvm-value--8h.md) rejectInfo | An JS-object containing two properties: 'promise' and 'value'. The 'promise' represents a reference to the Promise object that was rejected. The 'value' represents the rejection reason associated with that promise. |
 
 ### JSVM_CDECL* JSVM_HandlerForGC()
 
@@ -701,13 +752,15 @@ typedef void(JSVM_CDECL* JSVM_HandlerForGC)(JSVM_VM vm, JSVM_GCType gcType, JSVM
 
 Function pointer type of GC callback.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 18
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [JSVM_VM](capi-jsvm-jsvm-vm.md) vm | The VM instance that the JSVM-API call is invoked under. |
+| [JSVM_VM](capi-jsvm-jsvm-vm--8h.md) vm | The VM instance that the JSVM-API call is invoked under. |
 | [JSVM_GCType](capi-jsvm-types-h.md#jsvm_gctype) gcType | The gc type. |
 | [JSVM_GCCallbackFlags](capi-jsvm-types-h.md#jsvm_gccallbackflags) flags | The GC callback flags. |
 | void* data | The native pointer data. |
@@ -722,13 +775,15 @@ typedef void(JSVM_CDECL* JSVM_HandlerForHeapThreshold)(JSVM_VM vm, uint64_t thre
 
 Function pointer type for heap threshold callback.
 
+**System capability**: SystemCapability.ArkCompiler.JSVM
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [JSVM_VM](capi-jsvm-jsvm-vm.md) vm | The VM instance whose heap usage is observed at or above the threshold. |
+| [JSVM_VM](capi-jsvm-jsvm-vm--8h.md) vm | The VM instance whose heap usage is observed at or above the threshold. |
 | uint64_t threshold | The heap usage threshold in bytes. |
 | void* data | The native pointer data. |
 

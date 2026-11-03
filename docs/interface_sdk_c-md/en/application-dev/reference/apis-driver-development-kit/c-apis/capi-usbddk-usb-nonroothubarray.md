@@ -6,13 +6,13 @@ struct Usb_NonRootHubArray {...}
 
 ## Overview
 
-The list of non-root hubs, which is used to store the non-root hub IDs and quantity obtained using OH_Usb_GetNonRootHubs.
+Defines the non-root hub array, which is used to store the non-root hub IDs and quantity obtained using [OH_Usb_GetNonRootHubs](capi-usb-ddk-api-h.md#oh_usb_getnonroothubs). After using the structure, you must release the memory allocated for the non-root hub ID array. Otherwise, resource leaks may occur.
 
 **System capability**: SystemCapability.Driver.USB.Extension
 
 **Since**: 26.0.0
 
-**Related module**: [UsbDdk](capi-usbddk.md)
+**Related module**: [UsbDdk](capi-others-usbddk.md)
 
 **Header file**: [usb_ddk_types.h](capi-usb-ddk-types-h.md)
 
@@ -22,7 +22,7 @@ The list of non-root hubs, which is used to store the non-root hub IDs and quant
 
 | Name | Description |
 | -- | -- |
-| uint64_t* nonRootHubIds |  |
-| uint32_t num |  |
+| uint64_t* nonRootHubIds | Start address of the non-root hub ID array. It is recommended that the number of non-root hub IDs not exceed 128 to prevent excessive memory usage. The device ID of a non-root USB hub is constructed by left-shifting its bus number by 32 bits and adding it to its device address.<br>**Since**: 26.0.0 |
+| uint32_t num | Number of returned non-root hubs. The system traverses **nonRootHubIds** to obtain the non-root hub ID based on the number. If the value is **0**, no non-root hub exists.<br>**Since**: 26.0.0 |
 
 

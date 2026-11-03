@@ -6,11 +6,13 @@ The file declares the APIs for image encoding.
 
 **Library**: libimage_packer.so
 
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
+
 **Since**: 12
 
 **System API:** This is a system API.
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## Summary
 
@@ -34,6 +36,8 @@ Image_ErrorCode OH_PackingOptions_GetNeedsPackDfxData(OH_PackingOptions *options
 **Description**
 
 Obtains the **needsPackDfxData** parameter in the OH_PackingOptions struct.
+
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 26.0.0
 
@@ -62,6 +66,8 @@ Image_ErrorCode OH_PackingOptions_SetNeedsPackDfxData(OH_PackingOptions *options
 
 Sets the **needsPackDfxData** parameter in the OH_PackingOptions struct.
 
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
+
 **Since**: 26.0.0
 
 **System API:** This is a system API.
@@ -89,7 +95,9 @@ Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, ui
 
 Sets the C2PA data size in the OH_PackingOptions struct. The default value is 0, indicating no reserved space is added.
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
+
+**Since**: 26.0.1
 
 **System API:** This is a system API.
 
@@ -116,7 +124,9 @@ Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *optio
 
 Obtains the C2PA data size in the OH_PackingOptions struct.
 
-**Since**: 26.1.0
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
+
+**Since**: 26.0.1
 
 **System API:** This is a system API.
 

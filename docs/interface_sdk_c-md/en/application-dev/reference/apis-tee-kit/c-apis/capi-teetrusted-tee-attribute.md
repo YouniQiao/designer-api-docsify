@@ -1,7 +1,7 @@
 # TEE_Attribute
 
 ```c
-typedef union TEE_Attribute {...} TEE_Attribute
+typedef struct TEE_Attribute {...} TEE_Attribute
 ```
 
 ## Overview
@@ -12,7 +12,7 @@ Defines an object attribute.
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-others-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -22,14 +22,13 @@ Defines an object attribute.
 
 | Name | Description |
 | -- | -- |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Reference type content.<br>**Since**: 20 |
-| void *buffer | Buffer pointer. |
-| size_t length;
- } ref | Length of the buffer. |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Value type content.<br>**Since**: 20 |
-| uint32_t a | First value. |
-| uint32_t b;
- } value;
- } content | Second value. |
+| uint32_t attributeID | Attribute ID. |
+| content | Attribute content.<br>**Since**: 20 |
+| TEE_Attribute.ref | Reference type content.<br>**Since**: 20 |
+| content.ref.buffer | Buffer pointer. |
+| content.ref.length | Length of the buffer. |
+| TEE_Attribute.value | Value type content.<br>**Since**: 20 |
+| content.value.a | First value. |
+| content.value.b | Second value. |
 
 

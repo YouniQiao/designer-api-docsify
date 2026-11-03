@@ -2,13 +2,15 @@
 
 ## Overview
 
-Declare common types and interfaces for modular object dispatcher.
+Declares the ModularObject dispatcher APIs, providing cross-process deferred binding invocation capabilities based on type library metadata. Through this module, developers can create a main service or sub-instance dispatcher from a remote Proxy object, query the type library metadata (interface/method/enum/struct) of the remote service, dynamically invoke remote methods by member ID (MemberID), and create and operate container types (Array/Vector/Set/Map) and structs.<br> **File to include:** <AbilityKit/ability_runtime/modular_object_dispatcher.h>
 
 **Library**: libability_runtime.so
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
-**Related module**: [AbilityRuntime](capi-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## Summary
 
@@ -16,16 +18,16 @@ Declare common types and interfaces for modular object dispatcher.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) | - | Defines the parameter type descriptor for modular object dispatcher.<br> Describes the type of a parameter or return value using a tagged union. for array types, use u.arrayType.pElementType and u.arrayType.size; for vector/set types, use u.pElementType; for struct/proxy/stub/enum types, use u.idlType. |
-| [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md) | OH_AbilityRuntime_ModObjDispatcher_Variant | Defines a variant structure using union + type tag for ABI compatibility. |
-| [OH_AbilityRuntime_ModObjDispatcher_InputParams](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-inputparams.md) | OH_AbilityRuntime_ModObjDispatcher_InputParams | Defines a parameter structure for method invocation. |
-| [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md) | - | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_TypeDescriptor. |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) | OH_AbilityRuntime_ModObjDispatcherHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher. |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md) | OH_AbilityRuntime_ModObjDispatcher_ArrayHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_Array. |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) | OH_AbilityRuntime_ModObjDispatcher_VectorHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_Vector. |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) | OH_AbilityRuntime_ModObjDispatcher_SetHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_Set. |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) | OH_AbilityRuntime_ModObjDispatcher_MapHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_Map. |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md) | OH_AbilityRuntime_ModObjDispatcher_StructHandle | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_Struct. |
+| [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) | - | Defines the type information of a parameter or return value. Uses the tagged union u to describe the type information, and uses the vt field to determine which member of the union is valid. - For the map (MAP) type, use u.mapType.keyType to describe the key type and u.mapType.pValueType to describe the value type. - For the array (ARRAY) type, use u.arrayType.pElementType to describe the element type and u.arrayType.size to describe the fixed size of the array. - For the vector (VECTOR) or set (SET) type, use u.pElementType to describe the element type. - For the struct (STRUCT), remote communication object (IPC_REMOTE_PROXY, IPC_REMOTE_STUB), and enum (ENUM) types, use u.idlType to describe the IDL type name. After use, call [OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_typeinfoclear) to release the heap resources held internally. |
+| [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md) | OH_AbilityRuntime_ModObjDispatcher_Variant | Defines a variant struct that uses a union with a type tag to distinguish the actual data type, for safely passing values of multiple types during parameter passing and return value receiving. The value of a variant is determined by the vt field, which specifies the actual stored data type and the valid member of the union. When a variant holds heap-allocated resources (such as strings and container handles), call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear). Simple types (boolean, integer, and floating-point) do not hold heap resources and do not need to be released by calling OH_AbilityRuntime_ModObjDispatcher_VariantClear.<br> > **NOTE**<br>> > Do not call OH_AbilityRuntime_ModObjDispatcher_VariantClear on a shallow copy of the variant. > If Variant v2 = v1 is executed, only one of them can be cleared. |
+| [OH_AbilityRuntime_ModObjDispatcher_InputParams](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-inputparams.md) | OH_AbilityRuntime_ModObjDispatcher_InputParams | Defines the parameter structure for method invocation. rgvarg points to the array of parameter variants, and the array length is specified by cArgs. The parameter order must be consistent with the parameter order in the method definition. |
+| [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md) | - | Defines the type descriptor handle of the ModularObject dispatcher. The handle points to the access interface of the type library metadata, and can be used to query information such as interfaces, methods, enums, and structs defined by remote services. It can be obtained through [OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_gettypedescriptor). After use, it must be released through [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release). |
+| [OH_AbilityRuntime_ModularObjectDispatcher*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) | OH_AbilityRuntime_ModObjDispatcherHandle | Handle to a ModularObject dispatcher. This handle points to a ModularObject dispatcher instance. It can be created by [OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceInstance](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_createmainserviceinstance) or [OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_createsubinstance), and must be released by [OH_AbilityRuntime_ModObjDispatcher_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_release) after use. |
+| [OH_AbilityRuntime_ModularObjectDispatcher_Array*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md) | OH_AbilityRuntime_ModObjDispatcher_ArrayHandle | Array handle. This handle points to a fixed-size ordered collection of elements of the same type. It supports setting and obtaining elements by index and querying the array size. It can be created by [OH_AbilityRuntime_ModObjDispatcher_ArrayCreate](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_arraycreate) and must be released by [OH_AbilityRuntime_ModObjDispatcher_ArrayRelease](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_arrayrelease) after use. |
+| [OH_AbilityRuntime_ModularObjectDispatcher_Vector*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) | OH_AbilityRuntime_ModObjDispatcher_VectorHandle | Vector handle. The handle points to a dynamic-sized ordered collection of elements of the same type, and supports adding elements, obtaining elements by index, querying the vector size, and clearing operations. It can be created through [OH_AbilityRuntime_ModObjDispatcher_VectorCreate](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_vectorcreate), and must be released through [OH_AbilityRuntime_ModObjDispatcher_VectorRelease](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_vectorrelease) after use. |
+| [OH_AbilityRuntime_ModularObjectDispatcher_Set*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) | OH_AbilityRuntime_ModObjDispatcher_SetHandle | Set handle. This handle points to an unordered set of unique elements of the same type. It supports adding elements, removing elements, querying whether a specified element exists, obtaining an element by index, querying the set size, and clearing the set. You can create it through [OH_AbilityRuntime_ModObjDispatcher_SetCreate](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_setcreate), and release it through [OH_AbilityRuntime_ModObjDispatcher_SetRelease](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_setrelease) when it is no longer needed. |
+| [OH_AbilityRuntime_ModularObjectDispatcher_Map*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) | OH_AbilityRuntime_ModObjDispatcher_MapHandle | Map handle. The handle points to an ordered collection of key-value pairs. The key and value types are specified at creation. It supports adding or updating key-value pairs, obtaining values by key, deleting key-value pairs, querying whether a specified key exists, obtaining keys or values by index, querying the map size, and clearing operations. Keys support only basic types (BOOL, signed integer, unsigned integer, floating-point number, STRING, ENUM). It can be created through [OH_AbilityRuntime_ModObjDispatcher_MapCreate](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_mapcreate), and must be released through [OH_AbilityRuntime_ModObjDispatcher_MapRelease](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_maprelease) after use. |
+| [OH_AbilityRuntime_ModularObjectDispatcher_Struct*](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md) | OH_AbilityRuntime_ModObjDispatcher_StructHandle | Struct handle. The handle points to a struct instance with named fields, and the field types are defined by the type library metadata. It can be created by [OH_AbilityRuntime_ModObjDispatcher_StructCreate](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_structcreate) and must be released by [OH_AbilityRuntime_ModObjDispatcher_StructRelease](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_structrelease) after use. |
 
 ### Enum
 
@@ -125,6 +127,8 @@ enum OH_AbilityRuntime_ModObjDispatcher_ValueType
 
 Enumerates variant types.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -165,6 +169,8 @@ void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDi
 
 Clear TypeInfo resources.<br> Recursively release any heap resources held by a TypeInfo struct (idlType strings, child TypeInfo nodes for map/array/vector/set types). After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed (it is typically stack-allocated by the caller).<br> TypeInfoClear must NOT be called on a shallow copy of another TypeInfo. If TypeInfo t2 = t1 is performed, only clear one of them.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -181,7 +187,13 @@ void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDis
 
 **Description**
 
-Clear variant resources.<br> Release any resources held by the variant (strings, container handles, etc.). After clearing, the variant is reset to VT_EMPTY with all fields zeroed.<br> Ownership rules: - When a Variant is passed to a function (e.g. Array_Set, Map_Put), the function performs a deep copy. The caller retains ownership of the original Variant and is responsible for freeing its own resources (e.g. free(bstrVal) for strings, Release for container handles). - When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod), the function performs a deep copy and the caller owns the returned Variant. The caller must call VariantClear exactly once to release the resources. - Simple types (bool, i32, f64, etc.) do not hold heap resources and do not require VariantClear, though calling it is harmless. - VariantClear must NOT be called on a shallow copy of another Variant. If Variant v2 = v1 is performed, only clear one of them.
+Clear variant resources.<br> Release any resources held by the variant (strings, container handles, etc.). After clearing, the variant is reset to VT_EMPTY with all fields zeroed.<br> Ownership rules:
+- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the function performs a deep copy. The caller retains ownership of the original Variant and is responsible for freeing its own resources (e.g. free(bstrVal) for strings, Release for container handles).
+- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod), the function performs a deep copy and the caller owns the returned Variant. The caller must call VariantClear exactly once to release the resources.
+- Simple types (bool, i32, f64, etc.) do not hold heap resources and do not require VariantClear, though calling it is harmless.
+- VariantClear must NOT be called on a shallow copy of another Variant. If Variant v2 = v1 is performed, only clear one of them.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -201,6 +213,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceIns
 
 Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.<br> The type library metadata will be lazily loaded from the remote service on the first call that requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -208,7 +222,7 @@ Create a modular object dispatcher instance from an IPC remote proxy for the mai
 | Parameter | Description |
 | -- | -- |
 | [OHIPCRemoteProxy](../../apis-ipc-kit/c-apis/capi-ohipcparcel-ohipcremoteproxy.md)* remoteProxy | Indicates IPC remote proxy handle obtained from connectExtension. |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md)* ppModObjDispatcher | Indicates a pointer to receive modular object dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md)* ppModObjDispatcher | Indicates a pointer to receive modular object dispatcher handle. |
 
 **Returns**:
 
@@ -226,15 +240,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH
 
 Create a sub-instance dispatcher bound to a mainService dispatcher.<br> The sub-instance shares the mainService dispatcher's metadata but uses its own IPC proxy. When CallMethod is invoked on the sub-instance, method metadata is resolved from the mainService dispatcher and the call is sent through subProxy.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) mainServiceDispatcher | Indicates mainService dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) mainServiceDispatcher | Indicates mainService dispatcher handle. |
 | [OHIPCRemoteProxy](../../apis-ipc-kit/c-apis/capi-ohipcparcel-ohipcremoteproxy.md)* subProxy | Indicates IPC remote proxy for the non-mainService interface. |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md)* ppModObjDispatcher | Indicates a pointer to receive the created sub-instance dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md)* ppModObjDispatcher | Indicates a pointer to receive the created sub-instance dispatcher handle. |
 
 **Returns**:
 
@@ -252,13 +268,15 @@ void OH_AbilityRuntime_ModObjDispatcher_Release(OH_AbilityRuntime_ModObjDispatch
 
 Release modular object dispatcher instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md)* ppModObjDispatcher | Indicates a pointer to modular object dispatcher handle to release. After release, handle will be set to NULL. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md)* ppModObjDispatcher | Indicates a pointer to modular object dispatcher handle to release. After release, handle will be set to NULL. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_HasTypeDescriptor()
 
@@ -270,13 +288,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_HasTypeDescriptor(OH
 
 Check if the type library metadata is available from the remote service.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
 | uint32_t* pctinfo | Indicates a pointer to receive support status (1 if supported, 0 if not supported). |
 
 **Returns**:
@@ -295,13 +315,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor(OH
 
 Get type descriptor for querying interface metadata information.<br> The type descriptor provides access to type library metadata including interfaces, methods, enums, and structs defined in the remote service's type library. Must call [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release) to release the handle when no longer needed.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md)* ppTypeDescriptor | Indicates a pointer to receive type descriptor handle. |
 
 **Returns**:
@@ -320,13 +342,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInte
 
 Query member IDs of method names in the main service interface.<br> The returned member IDs can be used as the memID parameter in [OH_AbilityRuntime_ModObjDispatcher_CallMethod](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_callmethod).
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
 | const char** rgszNames | Indicates array of method names. |
 | uint32_t cNames | Indicates number of names. |
 | uint32_t* pMemID | Indicates pointer to receive member IDs (MemberIDs). |
@@ -349,13 +373,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_Abilit
 
 Call a method.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcherhandle.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md) pModObjDispatcher | Indicates modular object dispatcher handle. |
 | uint32_t memID | Indicates method member ID (MemberID). |
 | [OH_AbilityRuntime_ModObjDispatcher_InputParams](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-inputparams.md)* pInputParams | Indicates parameter structure containing arguments. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pResult | Indicates pointer to receive result variant. |
@@ -379,6 +405,8 @@ void OH_AbilityRuntime_TypeDescriptor_Release(OH_AbilityRuntime_ModObjDispatcher
 
 Release TypeDescriptor instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -396,6 +424,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetVersion(OH_AbilityR
 **Description**
 
 Get version of the type library.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -423,6 +453,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount(OH_A
 
 Get total number of interfaces.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -447,6 +479,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceName(OH_Ab
 **Description**
 
 Get interface name by index.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -475,6 +509,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceIsCallback
 
 Check if interface is a callback type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -500,6 +536,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMainServiceInterfac
 **Description**
 
 Get main service interface name.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -527,6 +565,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodCount(OH_Abil
 
 Get method count from interface.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -552,6 +592,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodName(OH_Abili
 **Description**
 
 Get method name by index from interface.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -581,6 +623,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodMemberId(OH_A
 
 Get method MemberID by name from interface.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -607,6 +651,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType(OH
 **Description**
 
 Get method return type by name from interface.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -635,6 +681,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount(OH
 
 Get method parameter count by name from interface.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -661,6 +709,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamType(OH_
 **Description**
 
 Get method parameter type by name and index from interface.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -691,6 +741,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_
 **Description**
 
 Get method parameter name by name and index from interface.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -723,6 +775,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumCount(OH_Abilit
 
 Get enum count.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -747,6 +801,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumName(OH_Ability
 **Description**
 
 Get enum name by index.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -775,6 +831,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount(OH_A
 
 Get enum value count by enum name.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -800,6 +858,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValueName(OH_Ab
 **Description**
 
 Get enum value name by enum name and value index.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -829,6 +889,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValue(OH_Abilit
 
 Get enum value by enum name and value name.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -856,6 +918,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructCount(OH_Abil
 
 Get struct count.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -880,6 +944,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructName(OH_Abili
 **Description**
 
 Get struct name by index.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -908,6 +974,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldCount(OH
 
 Get struct field count by struct name.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -933,6 +1001,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldName(OH_
 **Description**
 
 Get struct field name by struct name and field index.
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -962,6 +1032,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldType(OH_
 
 Get struct field type by struct name and field name.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -989,6 +1061,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayCreate(OH_Abili
 
 Create an array instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -997,7 +1071,7 @@ Create an array instance.
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) *elementType | Indicates element type. |
 | uint32_t size | Indicates initial array size. |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md)* ppArray | Indicates a pointer to receive array handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md)* ppArray | Indicates a pointer to receive array handle. |
 
 **Returns**:
 
@@ -1015,13 +1089,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGetElementType(
 
 Get array element type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md) pArray | Indicates array handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md) pArray | Indicates array handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md)* pElementType | Indicates a pointer to receive element type. |
 
 **Returns**:
@@ -1040,13 +1116,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArraySet(OH_AbilityR
 
 Set an array element value.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md) pArray | Indicates array handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md) pArray | Indicates array handle. |
 | uint32_t index | Indicates element index. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to element value variant. |
 
@@ -1066,13 +1144,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGet(OH_AbilityR
 
 Get an array element value.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md) pArray | Indicates array handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md) pArray | Indicates array handle. |
 | uint32_t index | Indicates element index. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive element value variant. |
 
@@ -1092,13 +1172,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGetSize(OH_Abil
 
 Get array size.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md) pArray | Indicates array handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md) pArray | Indicates array handle. |
 | uint32_t* pSize | Indicates a pointer to receive array size. |
 
 **Returns**:
@@ -1117,13 +1199,15 @@ void OH_AbilityRuntime_ModObjDispatcher_ArrayRelease(OH_AbilityRuntime_ModObjDis
 
 Release array instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-arrayhandle.md)* ppArray | Indicates array handle to release. |
+| [OH_AbilityRuntime_ModObjDispatcher_ArrayHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-array8h.md)* ppArray | Indicates array handle to release. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorCreate()
 
@@ -1135,6 +1219,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorCreate(OH_Abil
 
 Create a vector instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1142,7 +1228,7 @@ Create a vector instance.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) *elementType | Indicates element type. |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md)* ppVector | Indicates a pointer to receive vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md)* ppVector | Indicates a pointer to receive vector handle. |
 
 **Returns**:
 
@@ -1160,13 +1246,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGetElementType
 
 Get vector element type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) pVector | Indicates vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) pVector | Indicates vector handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md)* pElementType | Indicates a pointer to receive element type. |
 
 **Returns**:
@@ -1185,13 +1273,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorAdd(OH_Ability
 
 Add an element to vector.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) pVector | Indicates vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) pVector | Indicates vector handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to element value variant. |
 
 **Returns**:
@@ -1210,13 +1300,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGet(OH_Ability
 
 Get a vector element value.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) pVector | Indicates vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) pVector | Indicates vector handle. |
 | uint32_t index | Indicates element index. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive element value variant. |
 
@@ -1236,13 +1328,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGetSize(OH_Abi
 
 Get vector size.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) pVector | Indicates vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) pVector | Indicates vector handle. |
 | uint32_t* pSize | Indicates a pointer to receive vector size. |
 
 **Returns**:
@@ -1261,13 +1355,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorClear(OH_Abili
 
 Clear vector.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md) pVector | Indicates vector handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md) pVector | Indicates vector handle. |
 
 **Returns**:
 
@@ -1285,13 +1381,15 @@ void OH_AbilityRuntime_ModObjDispatcher_VectorRelease(OH_AbilityRuntime_ModObjDi
 
 Release vector instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-vectorhandle.md)* ppVector | Indicates vector handle to release. |
+| [OH_AbilityRuntime_ModObjDispatcher_VectorHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-vector8h.md)* ppVector | Indicates vector handle to release. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetCreate()
 
@@ -1303,6 +1401,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetCreate(OH_Ability
 
 Create a set instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1310,7 +1410,7 @@ Create a set instance.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) *elementType | Indicates element type. |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md)* ppSet | Indicates a pointer to receive set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md)* ppSet | Indicates a pointer to receive set handle. |
 
 **Returns**:
 
@@ -1328,13 +1428,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetElementType(OH
 
 Get set element type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md)* pElementType | Indicates a pointer to receive element type. |
 
 **Returns**:
@@ -1353,13 +1455,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetAdd(OH_AbilityRun
 
 Add an element to set.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to element value variant. |
 
 **Returns**:
@@ -1378,13 +1482,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetRemove(OH_Ability
 
 Remove an element from set.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to element value variant. |
 
 **Returns**:
@@ -1403,13 +1509,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetContains(OH_Abili
 
 Check if an element exists in set.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to element value variant. |
 | bool* pExists | Indicates a pointer to receive existence flag. |
 
@@ -1429,13 +1537,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetSize(OH_Abilit
 
 Get set size.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | uint32_t* pSize | Indicates a pointer to receive set size. |
 
 **Returns**:
@@ -1454,13 +1564,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityR
 
 Get a set element value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 | uint32_t index | Indicates element index. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive element value variant. |
 
@@ -1480,13 +1592,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetClear(OH_AbilityR
 
 Clear set.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md) pSet | Indicates set handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md) pSet | Indicates set handle. |
 
 **Returns**:
 
@@ -1504,13 +1618,15 @@ void OH_AbilityRuntime_ModObjDispatcher_SetRelease(OH_AbilityRuntime_ModObjDispa
 
 Release set instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-sethandle.md)* ppSet | Indicates set handle to release. |
+| [OH_AbilityRuntime_ModObjDispatcher_SetHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-set8h.md)* ppSet | Indicates set handle to release. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapCreate()
 
@@ -1522,6 +1638,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapCreate(OH_Ability
 
 Create a map instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1530,7 +1648,7 @@ Create a map instance.
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_ValueType](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype) keyType | Indicates key type. Only basic types are supported, such as [OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_BOOL](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype), [OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_I32](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype), [OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_STRING](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype), and [OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_ENUM](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype). Container types (ARRAY, VECTOR, SET, MAP) and complex types (STRUCT, IPC_REMOTE_PROXY, IPC_REMOTE_STUB) are not supported. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) *valueType | Indicates value type. |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md)* ppMap | Indicates a pointer to receive map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md)* ppMap | Indicates a pointer to receive map handle. |
 
 **Returns**:
 
@@ -1548,13 +1666,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyType(OH_Abi
 
 Get map key type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_ValueType](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_valuetype)* pKeyType | Indicates a pointer to receive key type. |
 
 **Returns**:
@@ -1573,13 +1693,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueType(OH_A
 
 Get map value type.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md)* pValueType | Indicates a pointer to receive value type. |
 
 **Returns**:
@@ -1598,13 +1720,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapPut(OH_AbilityRun
 
 Put a key-value pair into map.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pKey | Indicates a pointer to key variant. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to value variant. |
 
@@ -1624,13 +1748,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGet(OH_AbilityRun
 
 Get a value from map by key.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pKey | Indicates a pointer to key variant. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive value variant. |
 
@@ -1650,13 +1776,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapRemove(OH_Ability
 
 Remove a key-value pair from map.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pKey | Indicates a pointer to key variant. |
 
 **Returns**:
@@ -1675,13 +1803,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapContainsKey(OH_Ab
 
 Check if a key exists in map.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pKey | Indicates a pointer to key variant. |
 | bool* pExists | Indicates a pointer to receive existence flag. |
 
@@ -1701,13 +1831,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetSize(OH_Abilit
 
 Get map size.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | uint32_t* pSize | Indicates a pointer to receive map size. |
 
 **Returns**:
@@ -1726,13 +1858,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_Abili
 
 Get a map key by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | uint32_t index | Indicates entry index. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pKey | Indicates a pointer to receive key variant. |
 
@@ -1752,13 +1886,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_Abi
 
 Get a map value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 | uint32_t index | Indicates entry index. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive value variant. |
 
@@ -1778,13 +1914,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapClear(OH_AbilityR
 
 Clear map.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md) pMap | Indicates map handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pMap | Indicates map handle. |
 
 **Returns**:
 
@@ -1802,13 +1940,15 @@ void OH_AbilityRuntime_ModObjDispatcher_MapRelease(OH_AbilityRuntime_ModObjDispa
 
 Release map instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-maphandle.md)* ppMap | Indicates map handle to release. |
+| [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md)* ppMap | Indicates map handle to release. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructCreate()
 
@@ -1820,6 +1960,8 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructCreate(const c
 
 Create a struct instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1827,7 +1969,7 @@ Create a struct instance.
 | Parameter | Description |
 | -- | -- |
 | const char* structName | Indicates struct name from type metadata. |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md)* ppStruct | Indicates a pointer to receive struct handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md)* ppStruct | Indicates a pointer to receive struct handle. |
 
 **Returns**:
 
@@ -1845,13 +1987,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructGetName(OH_Abi
 
 Get struct name.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md) pStruct | Indicates struct handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md) pStruct | Indicates struct handle. |
 | char* pbstrName | Indicates a buffer to receive struct name. |
 | uint32_t cMaxName | Indicates size of buffer. |
 
@@ -1871,13 +2015,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructSetField(OH_Ab
 
 Set a struct field value.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md) pStruct | Indicates struct handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md) pStruct | Indicates struct handle. |
 | const char* szName | Indicates field name. |
 | [const OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to field value variant. |
 
@@ -1897,13 +2043,15 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructGetField(OH_Ab
 
 Get a struct field value.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md) pStruct | Indicates struct handle. |
+| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md) pStruct | Indicates struct handle. |
 | const char* szName | Indicates field name. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pValue | Indicates a pointer to receive field value variant. |
 
@@ -1923,12 +2071,14 @@ void OH_AbilityRuntime_ModObjDispatcher_StructRelease(OH_AbilityRuntime_ModObjDi
 
 Release struct instance.
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-structhandle.md)* ppStruct | Indicates struct handle to release. |
+| [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md)* ppStruct | Indicates struct handle to release. |
 
 

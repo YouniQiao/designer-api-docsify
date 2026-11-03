@@ -6,9 +6,11 @@ The file declares the common enums and definitions of the display.
 
 **Library**: libnative_display_manager.so
 
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
+
 **Since**: 12
 
-**Related module**: [OH_DisplayManager](capi-oh-displaymanager.md)
+**Related module**: [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
 
 ## Summary
 
@@ -53,6 +55,8 @@ enum NativeDisplayManager_Rotation
 
 Enumerates the clockwise rotation angles of a display.
 
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -71,6 +75,8 @@ enum NativeDisplayManager_Orientation
 **Description**
 
 Enumerates the orientations of a display.
+
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -92,6 +98,8 @@ enum NativeDisplayManager_ErrorCode
 
 Enumerates the status codes returned by the display manager interface.
 
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -104,7 +112,7 @@ Enumerates the status codes returned by the display manager interface.
 | DISPLAY_MANAGER_ERROR_INVALID_SCREEN = 1400001 | The display is invalid. |
 | DISPLAY_MANAGER_ERROR_INVALID_CALL = 1400002 | The current operation object does not have the operation permission. |
 | DISPLAY_MANAGER_ERROR_SYSTEM_ABNORMAL = 1400003 | The system service is abnormal. |
-| DISPLAY_MANAGER_ERROR_ILLEGAL_PARAM = 1400004 |  |
+| DISPLAY_MANAGER_ERROR_ILLEGAL_PARAM = 1400004 | Invalid parameter.<br>**Since**: 20 |
 
 ### NativeDisplayManager_FoldDisplayMode
 
@@ -115,6 +123,8 @@ enum NativeDisplayManager_FoldDisplayMode
 **Description**
 
 Enumerates the display modes of a foldable device.
+
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -135,6 +145,8 @@ enum NativeDisplayManager_DisplayState
 **Description**
 
 Enumerates the states of a display.
+
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 14
 
@@ -157,6 +169,8 @@ enum NativeDisplayManager_SourceMode
 **Description**
 
 Enumerates the source modes of a device.
+
+**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 

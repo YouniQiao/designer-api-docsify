@@ -6,11 +6,13 @@ Declare underlying data structure.
 
 **Library**: libohaudiosuite.so
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 22
 
 **System API:** This is a system API.
 
-**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
 ## Summary
 
@@ -39,13 +41,15 @@ enum OH_AudioSuite_SystemNodeType
 
 Define audio node system type.
 
+**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
+
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
 | Enum item | Description |
 | -- | -- |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 |  |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 |  |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 | Dialogue Algo System Effect Node.<br>**Since**: 26.0.0 |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 | Voice Beautifier System Effect Node.<br>**Since**: 26.0.0 |
 
 

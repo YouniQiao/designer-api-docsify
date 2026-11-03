@@ -6,9 +6,11 @@
 
 **库：** libimage_ndk.z.so
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image.md)
+**相关模块：** [Image](capi-image-kit-image.md)
 
 ## 汇总
 
@@ -35,6 +37,8 @@ enum IRNdkErrCode
 **描述：**
 
 被使用的接口返回值的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 10
 

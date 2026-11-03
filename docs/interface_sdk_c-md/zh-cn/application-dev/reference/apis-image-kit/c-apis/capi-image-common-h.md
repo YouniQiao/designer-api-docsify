@@ -6,9 +6,11 @@
 
 **库：** libimage_common.so
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 12
 
-**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## 汇总
 
@@ -20,7 +22,6 @@
 | [Image_Region](capi-image-nativemodule-image-region.md) | Image_Region | 待解码的图像源区域结构体。 |
 | [OH_PictureMetadata](capi-image-nativemodule-oh-picturemetadata.md) | - | OH_PictureMetadata用于承载Picture元数据。<br>有多种方式创建和获取OH_PictureMetadata：<br>\| 函数 \| 描述 \|\| -- \| -- \|\| [OH_PictureMetadata_Create()](capi-image-common-h.md#oh_picturemetadata_create()) \| 创建OH_PictureMetadata指针。 \|\| [OH_PictureMetadata_Clone()](capi-image-common-h.md#oh_picturemetadata_clone()) \| 拷贝元数据。 \|\| OH_PictureNative_GetMetadata() \| 获取主图的元数据。 \|\| OH_AuxiliaryPictureNative_GetMetadata() \| 获取辅助图的元数据。 \|< br>使用[OH_PictureMetadata_Release()](capi-image-common-h.md#oh_picturemetadata_release())函数释放OH_PictureMetadata对象。<br>资源管理：通过[OH_PictureMetadata_Create()](capi-image-common-h.md#oh_picturemetadata_create())、 [OH_PictureMetadata_Clone()](capi-image-common-h.md#oh_picturemetadata_clone())、OH_PictureNative_GetMetadata()或 OH_AuxiliaryPictureNative_GetMetadata()获取到的OH_PictureMetadata对象由调用方管理，使用完成后应调用 [OH_PictureMetadata_Release()](capi-image-common-h.md#oh_picturemetadata_release())释放。通过OH_PictureNative_SetMetadata()或 OH_AuxiliaryPictureNative_SetMetadata()设置元数据时，接口不会释放传入的OH_PictureMetadata对象。<br> OH_PictureMetadata结构体内容和操作方式如下：<br>\| 字段类型 \| 字段名称 \| 字段描述 \| 字段获取函数 \| 字段设置函数 \|\| -- \| -- \| -- \| -- \| -- \|\| [Image_String](capi-image-nativemodule-image-string.md) \| property \| 元数据属性。 \| [OH_PictureMetadata_GetProperty()](capi-image-common-h.md#oh_picturemetadata_getproperty())、 [OH_PictureMetadata_GetPropertyWithNull()](capi-image-common-h.md#oh_picturemetadata_getpropertywithnull()) \| [OH_PictureMetadata_SetProperty()](capi-image-common-h.md#oh_picturemetadata_setproperty()) \|\| OH_PictureMetadata \| metadata \| 元数据对象副本。 \| [OH_PictureMetadata_Clone()](capi-image-common-h.md#oh_picturemetadata_clone()) \| - \| |
 | [Image_String](capi-image-nativemodule-image-string.md) | Image_String | 字符串结构，用于描述字符串数据地址和数据长度。Image_MimeType是Image_String的别名，用于表示MIME类型。<br>作为输入参数使用时，调用方负责保证data和size有效；作为输出参数使用时， data的分配和释放方式以具体接口说明为准。 |
-| [Image_MimeType](capi-image-nativemodule-image-mimetype.md) | Image_MimeType | Defines the image encode format. |
 
 ### 枚举
 
@@ -28,7 +29,7 @@
 | -- | -- | -- |
 | [Image_ErrorCode](#image_errorcode) | Image_ErrorCode | 错误码。 |
 | [Image_MetadataType](#image_metadatatype) | Image_MetadataType | 定义元数据类型。 |
-| [IMAGE_ALLOCATOR_MODE](#image_allocator_mode) | IMAGE_ALLOCATOR_MODE | Type of allocator used to allocate memory of a PixelMap. |
+| [IMAGE_ALLOCATOR_MODE](#image_allocator_mode) | IMAGE_ALLOCATOR_MODE | Pixelmap的内存分配类型。 |
 
 ### 函数
 
@@ -56,13 +57,15 @@ enum Image_ErrorCode
 
 错误码。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
 | IMAGE_SUCCESS = 0 | 操作成功。 |
 | IMAGE_BAD_PARAMETER = 401 | 无效参数。 |
-| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;权限校验失败。非系统应用调用系统接口。<br>**起始版本：** 26.1.0 |
+| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;权限校验失败。非系统应用调用系统接口。<br>**起始版本：** 26.0.1 |
 | IMAGE_UNSUPPORTED_MIME_TYPE = 7600101 | 不支持的MIME类型。 |
 | IMAGE_UNKNOWN_MIME_TYPE = 7600102 | 未知的MIME类型。 |
 | IMAGE_TOO_LARGE = 7600103 | 过大的数据或图片。 |
@@ -75,9 +78,9 @@ enum Image_ErrorCode
 | IMAGE_UNSUPPORTED_CONVERSION = 7600203 | 不支持的转换。 |
 | IMAGE_INVALID_REGION = 7600204 | 无效区域。 |
 | IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205 | &nbsp;unsupported memory format<br>**起始版本：** 13 |
-| IMAGE_INVALID_PARAMETER = 7600206 |  |
+| IMAGE_INVALID_PARAMETER = 7600206 | 无效参数。<br>**起始版本：** 19 |
 | IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207 | &nbsp;Unsupported data format<br>**起始版本：** 22 |
-| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;图像分解失败。<br>**起始版本：** 26.1.0 |
+| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;图像分解失败。<br>**起始版本：** 26.0.1 |
 | IMAGE_ALLOC_FAILED = 7600301 | 申请内存失败。 |
 | IMAGE_COPY_FAILED = 7600302 | 内存拷贝失败。 |
 | IMAGE_LOCK_UNLOCK_FAILED = 7600303 | &nbsp;memory lock or unlock failed<br>**起始版本：** 15 |
@@ -87,17 +90,17 @@ enum Image_ErrorCode
 | IMAGE_ALLOCATOR_MODE_UNSUPPORTED = 7600501 | &nbsp;unsupported allocator mode, e.g., use share memory to create a HDR image as only DMA supported hdr metadata.<br>**起始版本：** 20 |
 | IMAGE_UNKNOWN_ERROR = 7600901 | 未知错误。 |
 | IMAGE_BAD_SOURCE = 7700101 | 解码数据源异常。 |
-| IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102 |  |
-| IMAGE_SOURCE_TOO_LARGE = 7700103 |  |
-| IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201 |  |
-| IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202 |  |
-| IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203 |  |
-| IMAGE_SOURCE_INVALID_PARAMETER = 7700204 |  |
+| IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102 | 图片解码中不支持的MIME类型。<br>**起始版本：** 15 |
+| IMAGE_SOURCE_TOO_LARGE = 7700103 | 图像过大。<br>**起始版本：** 15 |
+| IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201 | 不支持的分配器类型。例如，DMA支持HDR元数据，可以使用共享内存解码HDR图像。<br>**起始版本：** 15 |
+| IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202 | 不支持的元数据类型。如不支持的属性名或属性值非法。<br>**起始版本：** 23 |
+| IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203 | 不支持的选项。例如，无法将图像转换为所需的像素格式。<br>**起始版本：** 15 |
+| IMAGE_SOURCE_INVALID_PARAMETER = 7700204 | 无效参数。<br>**起始版本：** 19 |
 | IMAGE_DECODE_FAILED = 7700301 | 解码失败。 |
-| IMAGE_SOURCE_ALLOC_FAILED = 7700302 |  |
-| IMAGE_PACKER_INVALID_PARAMETER = 7800202 |  |
+| IMAGE_SOURCE_ALLOC_FAILED = 7700302 | 内存申请失败。<br>**起始版本：** 15 |
+| IMAGE_PACKER_INVALID_PARAMETER = 7800202 | ImagePacker的无效参数。<br>**起始版本：** 19 |
 | IMAGE_ENCODE_FAILED = 7800301 | 编码失败。 |
-| IMAGE_RECEIVER_INVALID_PARAMETER = 7900201 |  |
+| IMAGE_RECEIVER_INVALID_PARAMETER = 7900201 | ImageReceiver的无效参数。<br>**起始版本：** 20 |
 
 ### Image_MetadataType
 
@@ -109,13 +112,15 @@ enum Image_MetadataType
 
 定义元数据类型。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| EXIF_METADATA = 1 |  |
-| FRAGMENT_METADATA = 2 |  |
-| GIF_METADATA = 5 |  |
+| EXIF_METADATA = 1 | EXIF元数据。<br>**起始版本：** 13 |
+| FRAGMENT_METADATA = 2 | 水印裁剪图元数据。<br>**起始版本：** 13 |
+| GIF_METADATA = 5 | GIF图片元数据。<br>**起始版本：** 20 |
 
 ### IMAGE_ALLOCATOR_MODE
 
@@ -125,15 +130,17 @@ enum IMAGE_ALLOCATOR_MODE
 
 **描述：**
 
-Type of allocator used to allocate memory of a PixelMap.
+Pixelmap的内存分配类型。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| IMAGE_ALLOCATOR_MODE_AUTO = 0 |  |
-| IMAGE_ALLOCATOR_MODE_DMA = 1 |  |
-| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 |  |
+| IMAGE_ALLOCATOR_MODE_AUTO = 0 | 系统决定内存分配类型。系统会根据图像类型、图像大小、平台能力等选择内存类型。<br>**起始版本：** 20 |
+| IMAGE_ALLOCATOR_MODE_DMA = 1 | 使用DMA（Direct Memory Access，直接内存访问）的内存类型，适用于对解码及渲染性能有较高要求的场景。 根据设备硬件的差异可能会在每行像素的末尾产生用于内存对齐的空白填充字节。<br>**起始版本：** 20 |
+| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 | 使用共享内存（Shared Memory）的内存类型。<br>**起始版本：** 20 |
 
 
 ## 函数说明
@@ -147,6 +154,8 @@ Image_ErrorCode OH_PictureMetadata_Create(Image_MetadataType metadataType, OH_Pi
 **描述：**
 
 创建OH_PictureMetadata指针。 <br>使用约束：metadata不能为空指针。接口返回失败时，输出参数内容不应使用。 <br>资源管理：接口成功返回的OH_PictureMetadata对象由调用方管理，使用完成后应调用[OH_PictureMetadata_Release](capi-image-common-h.md#oh_picturemetadata_release)释放。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 13
 
@@ -172,6 +181,8 @@ Image_ErrorCode OH_PictureMetadata_GetProperty(OH_PictureMetadata *metadata, Ima
 **描述：**
 
 根据key获取Metadata的单条属性。该接口获取到的value.data缺少字符串结束符'\0'，请谨慎使用。 <br>使用约束：metadata、key、key->data和value均不能为空指针，key->size必须大于0。接口返回失败时，不应读取value.data。 <br>资源管理：接口执行成功后，value.data由接口分配，调用方使用完成后应使用delete[]释放。该接口返回的value.data不以字符串结束符'\0'结尾，如需按C字符串处理，建议使用 [OH_PictureMetadata_GetPropertyWithNull](capi-image-common-h.md#oh_picturemetadata_getpropertywithnull)。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 13
 
@@ -199,6 +210,8 @@ Image_ErrorCode OH_PictureMetadata_GetPropertyWithNull(OH_PictureMetadata *metad
 
 获取图片元数据的属性值。输出的value.data以字符串结束符'\0'结尾。 <br>使用场景：适用于读取字符串形式的元数据属性值。与[OH_PictureMetadata_GetProperty](capi-image-common-h.md#oh_picturemetadata_getproperty)相比，本接口返回的value.data以'\0'结尾，更适合直接按C字符串处理。 <br>使用约束：metadata、key、key->data和value均不能为空指针，key->size必须大于0。接口返回失败时，不应读取value.data。 <br>资源管理：接口执行成功后，value.data由接口分配，调用方使用完成后应使用delete[]释放。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 19
 
 **参数：**
@@ -224,6 +237,8 @@ Image_ErrorCode OH_PictureMetadata_SetProperty(OH_PictureMetadata *metadata, Ima
 **描述：**
 
 根据key修改Metadata的单条属性。 <br>使用约束：metadata、key、key->data、value和value->data均不能为空指针，key->size和value->size必须大于0。 <br>资源管理：接口会读取传入的key和value内容，不持有调用方传入的Image_String指针。接口返回后，调用方仍需自行管理key和value的生命周期。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 13
 
@@ -251,6 +266,8 @@ Image_ErrorCode OH_PictureMetadata_SetBlobData(OH_PictureMetadata *metadata, uin
 
 使用二进制数据替换当前元数据。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -277,6 +294,8 @@ Image_ErrorCode OH_PictureMetadata_GetBlobDataSize(OH_PictureMetadata *metadata,
 
 获取元数据中blob数据的大小。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -301,6 +320,8 @@ Image_ErrorCode OH_PictureMetadata_GetBlobData(OH_PictureMetadata *metadata, uin
 **描述：**
 
 以二进制数据的形式获取元数据。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
@@ -328,6 +349,8 @@ Image_ErrorCode OH_PictureMetadata_Release(OH_PictureMetadata *metadata)
 
 释放OH_PictureMetadata指针。 <br>使用约束：metadata不能为空指针。 <br>资源管理：调用该接口后，metadata指向的OH_PictureMetadata对象会被释放，不应继续使用。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -351,6 +374,8 @@ Image_ErrorCode OH_PictureMetadata_Clone(OH_PictureMetadata *oldMetadata, OH_Pic
 **描述：**
 
 拷贝元数据。 <br>使用约束：oldMetadata和newMetadata均不能为空指针；接口返回失败时，输出参数内容不应使用。 <br>资源管理：接口成功返回的newMetadata由调用方管理，使用完成后应调用[OH_PictureMetadata_Release](capi-image-common-h.md#oh_picturemetadata_release)释放。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 13
 

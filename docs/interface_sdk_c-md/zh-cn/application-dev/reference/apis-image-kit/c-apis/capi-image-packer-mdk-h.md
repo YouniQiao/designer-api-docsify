@@ -6,9 +6,11 @@
 
 **库：** libimage_packer_ndk.z.so
 
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
 **起始版本：** 11
 
-**相关模块：** [Image](capi-image.md)
+**相关模块：** [Image](capi-image-kit-image.md)
 
 ## 汇总
 
@@ -16,9 +18,8 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ImagePacker_Opts_](capi-image-imagepacker-opts-.md) | - | 定义图像编码选项信息。 |
-| [ImagePacker_Native](capi-image-imagepacker-native.md) | ImagePacker_Native | 为编码器方法定义native层编码器对象。 |
-| [ImagePacker_Opts](capi-image-imagepacker-opts.md) | ImagePacker_Opts | 定义图像编码选项信息。 |
+| [ImagePacker_Opts_](capi-image-imagepacker-opts-.md) | ImagePacker_Opts | 定义图像编码选项信息。 |
+| [ImagePacker_Native_](capi-image-imagepacker-native-.md) | ImagePacker_Native | 为编码器方法定义native层编码器对象。 |
 
 ### 函数
 
@@ -41,6 +42,8 @@ int32_t OH_ImagePacker_Create(napi_env env, napi_value *res)
 **描述：**
 
 获取JavaScript native层ImagePacker对象。
+
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **起始版本：** 11
 
@@ -67,6 +70,8 @@ ImagePacker_Native* OH_ImagePacker_InitNative(napi_env env, napi_value packer)
 
 从输入JavaScript native层ImagePacker对象中，转换成ImagePacker_Native值。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
 **起始版本：** 11
 
 **参数：**
@@ -80,7 +85,7 @@ ImagePacker_Native* OH_ImagePacker_InitNative(napi_env env, napi_value packer)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImagePacker_Native*](capi-image-imagepacker-native.md) | 如果操作成功则返回ImagePacker_Native指针，否则返回空指针。 |
+| [ImagePacker_Native*](capi-image-imagepacker-native-.md) | 如果操作成功则返回ImagePacker_Native指针，否则返回空指针。 |
 
 **参考：**
 
@@ -97,15 +102,17 @@ int32_t OH_ImagePacker_PackToData(ImagePacker_Native* native, napi_value source,
 
 通过一个给定的选项ImagePacker_Opts结构体，将输入JavaScript native层PixelMap对象或者ImageSource对象编码并输出到指定的缓冲区outData中。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ImagePacker_Native](capi-image-imagepacker-native.md)* native | 表明指向native层ImagePacker的指针。 |
+| [ImagePacker_Native](capi-image-imagepacker-native-.md)* native | 表明指向native层ImagePacker的指针。 |
 | napi_value source | 表明待编码JavaScript native层PixelMap对象或者ImageSource对象。 |
-| [ImagePacker_Opts](capi-image-imagepacker-opts.md)* opts | 表明位图编码的选项。 |
+| [ImagePacker_Opts](capi-image-imagepacker-opts-.md)* opts | 表明位图编码的选项。 |
 | uint8_t* outData | 输出的指定缓存区。 |
 | size_t* size | 输出的指定缓存区大小。 |
 
@@ -130,15 +137,17 @@ int32_t OH_ImagePacker_PackToFile(ImagePacker_Native* native, napi_value source,
 
 通过一个给定的选项ImagePacker_Opts结构体，将输入JavaScript native层PixelMap对象或者ImageSource对象编码并输出到指定的文件中。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ImagePacker_Native](capi-image-imagepacker-native.md)* native | 表明指向native层ImagePacker的指针。 |
+| [ImagePacker_Native](capi-image-imagepacker-native-.md)* native | 表明指向native层ImagePacker的指针。 |
 | napi_value source | 表明待编码JavaScript native层PixelMap对象或者ImageSource对象。 |
-| [ImagePacker_Opts](capi-image-imagepacker-opts.md)* opts | 表明位图编码的选项。 |
+| [ImagePacker_Opts](capi-image-imagepacker-opts-.md)* opts | 表明位图编码的选项。 |
 | int fd | 输出的指定文件描述符。 |
 
 **返回值：**
@@ -162,13 +171,15 @@ int32_t OH_ImagePacker_Release(ImagePacker_Native* native)
 
 释放native层编码器对象[ImagePacker_Native](capi-image-imagepacker-native-.md)。 <br>此API不用于释放JavaScript原生API ImagePacker对象，它用于释放native层对象ImagePacker_Native。 <br>通过调用[OH_ImagePacker_InitNative](capi-image-packer-mdk-h.md#oh_imagepacker_initnative)解析。
 
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ImagePacker_Native](capi-image-imagepacker-native.md)* native | 表明native层ImagePacker_Native值的指针。 |
+| [ImagePacker_Native](capi-image-imagepacker-native-.md)* native | 表明native层ImagePacker_Native值的指针。 |
 
 **返回值：**
 

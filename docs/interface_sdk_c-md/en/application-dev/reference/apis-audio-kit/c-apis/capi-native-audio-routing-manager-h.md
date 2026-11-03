@@ -6,9 +6,11 @@ Declare audio routing manager related interfaces.<br> This file interface is use
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
@@ -41,15 +43,6 @@ Declare audio routing manager related interfaces.<br> This file interface is use
 | [OH_AudioCommon_Result OH_AudioRoutingManager_IsMicBlockDetectionSupported(OH_AudioRoutingManager *audioRoutingManager, bool *supported)](#oh_audioroutingmanager_ismicblockdetectionsupported) | - | Query whether microphone block detection is supported on current device. |
 | [OH_AudioCommon_Result OH_AudioRoutingManager_SetMicBlockStatusCallback(OH_AudioRoutingManager *audioRoutingManager, OH_AudioRoutingManager_OnDeviceBlockStatusCallback callback, void *userData)](#oh_audioroutingmanager_setmicblockstatuscallback) | - | Set the microphone block status callback. Before using this function, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| int32_t (*OH_AudioRoutingManager_OnDeviceChangedCallback) ( OH_AudioDevice_ChangeType type, OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray ) | This function pointer will point to the callback function that is used to return the changing audio device descriptors. There may be more than one audio device descriptor returned.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-| int32_t (*OH_AudioRoutingManager_OnPreferredOutputDeviceChangedCallback) ( OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray) | This callback function pointer is used to return the preferred audio output device descriptors. Multiple audio device descriptors may be returned.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-| int32_t (*OH_AudioRoutingManager_OnPreferredInputDeviceChangedCallback) ( OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray) | This callback function pointer is used to return the preferred audio input device descriptors. Multiple audio device descriptors may be returned.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-| void (*OH_AudioRoutingManager_OnDeviceBlockStatusCallback)( OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray, OH_AudioDevice_BlockStatus status, void *userData) | This type defines the callback function that is used to receive the audio devices' block status.<br>**Since**: 13<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-
 ## Function description
 
 ### OH_AudioRoutingManager_OnDeviceChangedCallback()
@@ -61,6 +54,8 @@ typedef int32_t (*OH_AudioRoutingManager_OnDeviceChangedCallback)(OH_AudioDevice
 **Description**
 
 This function pointer will point to the callback function that is used to return the changing audio device descriptors. There may be more than one audio device descriptor returned.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -81,6 +76,8 @@ typedef int32_t (*OH_AudioRoutingManager_OnPreferredOutputDeviceChangedCallback)
 
 This callback function pointer is used to return the preferred audio output device descriptors. Multiple audio device descriptors may be returned.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -99,6 +96,8 @@ typedef int32_t (*OH_AudioRoutingManager_OnPreferredInputDeviceChangedCallback)(
 
 This callback function pointer is used to return the preferred audio input device descriptors. Multiple audio device descriptors may be returned.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -116,6 +115,8 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioRoutingManager(OH_AudioRoutingMana
 **Description**
 
 Query the audio routing manager handle. which should be set as the first parameter in routing releated functions.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -140,6 +141,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_GetDevices(OH_AudioRoutingManager *
 **Description**
 
 Query the available devices according to the input deviceFlag.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -167,6 +170,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_GetAvailableDevices(OH_AudioRouting
 
 Get available devices by device usage.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -192,6 +197,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_GetPreferredOutputDevice(OH_AudioRo
 **Description**
 
 Get preferred output devices by audio usage.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -219,6 +226,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_GetPreferredInputDevice(OH_AudioRou
 
 Get preferred input devices by audio source type.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -244,6 +253,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_RegisterDeviceChangeCallback(OH_Aud
 **Description**
 
 Register the device change callback of the audio routing manager.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -271,6 +282,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_UnregisterDeviceChangeCallback(OH_A
 
 Unregister the device change callback of the audio routing manager.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -295,6 +308,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_RegisterPreferredOutputDevicesChang
 **Description**
 
 Subscribes to preferred output device change events. When the preferred output device for the target audio stream usage changes, registered clients will receive the callback. To avoid resource waste or other abnormal situations, when your application no longer needs this callback, you must release it by calling [OH_AudioRoutingManager_UnregisterPreferredOutputDevicesChangeCallback](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_unregisterpreferredoutputdeviceschangecallback).
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
@@ -322,6 +337,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_UnregisterPreferredOutputDevicesCha
 
 Unsubscribes from the preferred output device change events that were registered via [OH_AudioRoutingManager_RegisterPreferredOutputDevicesChangeCallback](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_registerpreferredoutputdeviceschangecallback).
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -346,6 +363,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_RegisterPreferredInputDevicesChange
 **Description**
 
 Subscribes to preferred input device change events. When preferred input device for target audio stream source type changes, registered clients will receive the callback. To avoid resource waste or other abnormal situations, when your application no longer needs this callback, you must release it by calling [OH_AudioRoutingManager_UnregisterPreferredInputDevicesChangeCallback](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_unregisterpreferredinputdeviceschangecallback).
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
@@ -373,6 +392,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_UnregisterPreferredInputDevicesChan
 
 Unsubscribes from the preferred input device change events that were registered via [OH_AudioRoutingManager_RegisterPreferredInputDevicesChangeCallback](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_registerpreferredinputdeviceschangecallback).
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -397,6 +418,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_ReleaseDevices(OH_AudioRoutingManag
 **Description**
 
 Release the audio device descriptor array object.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -423,6 +446,8 @@ typedef void (*OH_AudioRoutingManager_OnDeviceBlockStatusCallback)(OH_AudioDevic
 
 This type defines the callback function that is used to receive the audio devices' block status.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -442,6 +467,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_IsMicBlockDetectionSupported(OH_Aud
 **Description**
 
 Query whether microphone block detection is supported on current device.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 13
 
@@ -467,6 +494,8 @@ OH_AudioCommon_Result OH_AudioRoutingManager_SetMicBlockStatusCallback(OH_AudioR
 **Description**
 
 Set the microphone block status callback. Before using this function, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 13
 

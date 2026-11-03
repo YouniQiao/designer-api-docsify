@@ -8,7 +8,7 @@ The file declares the AVRecorder APIs. Applications can use the APIs to record m
 
 **Since**: 18
 
-**Related module**: [AVRecorder](capi-avrecorder.md)
+**Related module**: [AVRecorder](capi-media-kit-avrecorder.md)
 
 ## Summary
 
@@ -122,7 +122,7 @@ Obtains an input surface. This function must be called after [OH_AVRecorder_Prep
 | Parameter | Description |
 | -- | -- |
 | [OH_AVRecorder](capi-avrecorder-oh-avrecorder.md) *recorder | Pointer to the OH_AVRecorder instance. |
-| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) **window | Pointer to the OHNativeWindow instance. |
+| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) **window | Pointer to the OHNativeWindow instance. |
 
 **Returns**:
 

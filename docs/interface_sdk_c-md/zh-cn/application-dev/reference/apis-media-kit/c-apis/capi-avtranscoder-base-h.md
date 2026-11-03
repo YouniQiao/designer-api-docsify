@@ -8,9 +8,11 @@
 
 **库：** libavtranscoder.so
 
+**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
+
 **起始版本：** 20
 
-**相关模块：** [AVTranscoder](capi-avtranscoder.md)
+**相关模块：** [AVTranscoder](capi-media-kit-avtranscoder.md)
 
 ## 汇总
 
@@ -41,14 +43,6 @@
 | [typedef void (\*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData)](#oh_avtranscoder_onerror) | OH_AVTranscoder_OnError | 转码过程中错误事件的回调函数。 |
 | [typedef void (\*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData)](#oh_avtranscoder_onprogressupdate) | OH_AVTranscoder_OnProgressUpdate | 转码进度更新时的回调函数。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AVTranscoder_State state, void *userData) | 转码过程的状态回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder |
-| void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData) | 转码过程中错误事件的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder |
-| void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData) | 转码进度更新时的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder |
-
 ## 枚举类型说明
 
 ### OH_AVTranscoder_State
@@ -60,6 +54,8 @@ enum OH_AVTranscoder_State
 **描述：**
 
 转码状态。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **起始版本：** 20
 
@@ -84,6 +80,8 @@ typedef void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AV
 
 转码过程的状态回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
+
 **起始版本：** 20
 
 **参数：**
@@ -103,6 +101,8 @@ typedef void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t err
 **描述：**
 
 转码过程中错误事件的回调函数。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **起始版本：** 20
 
@@ -124,6 +124,8 @@ typedef void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, in
 **描述：**
 
 转码进度更新时的回调函数。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **起始版本：** 20
 
