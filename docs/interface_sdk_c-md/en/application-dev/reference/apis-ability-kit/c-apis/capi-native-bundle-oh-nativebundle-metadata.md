@@ -12,7 +12,7 @@ The struct describes the metadata information.
 
 **Since**: 20
 
-**Related module**: [Native_Bundle](capi-others-native-bundle.md)
+**Related module**: [Native_Bundle](capi-native-bundle.md)
 
 **Header file**: [native_interface_bundle.h](capi-native-interface-bundle-h.md)
 
@@ -22,8 +22,8 @@ The struct describes the metadata information.
 
 | Name | Description |
 | -- | -- |
-| char* name | Pointer to the name of the metadata.<br>**Since**: 20 |
-| char* value | Pointer to the value of the metadata.<br>**Since**: 20 |
-| char* resource | Pointer to the resource linked to the metadata.<br>**Since**: 20 |
+| char* name | Pointer to the name of the metadata. |
+| char* value | Pointer to the value of the metadata. |
+| char* resource | Pointer to the resource linked to the metadata. |
 
 

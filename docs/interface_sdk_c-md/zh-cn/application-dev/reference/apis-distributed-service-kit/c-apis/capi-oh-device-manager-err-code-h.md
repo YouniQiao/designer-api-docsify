@@ -4,15 +4,11 @@
 
 声明设备管理模块错误码信息。
 
-**引用文件：** <distributedhardware/device_manager/oh_device_manager_err_code.h>
-
 **库：** libdevicemanager_ndk.so
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **起始版本：** 20
 
-**相关模块：** [DeviceManager](capi-distributed-service-kit-devicemanager.md)
+**相关模块：** [DeviceManager](capi-devicemanager.md)
 
 ## 汇总
 
@@ -33,8 +29,6 @@ enum DeviceManager_ErrorCode
 **描述：**
 
 分布式设备管理错误码信息。
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **起始版本：** 20
 

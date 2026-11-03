@@ -6,13 +6,11 @@
 
 **库：** libimage_packer.so
 
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-
 **起始版本：** 12
 
 **系统接口：** 此接口为系统接口。
 
-**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
 
 ## 汇总
 
@@ -36,8 +34,6 @@ Image_ErrorCode OH_PackingOptions_GetNeedsPackDfxData(OH_PackingOptions *options
 **描述：**
 
 获取OH_PackingOptions结构体中的needsPackDfxData参数。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **起始版本：** 26.0.0
 
@@ -66,8 +62,6 @@ Image_ErrorCode OH_PackingOptions_SetNeedsPackDfxData(OH_PackingOptions *options
 
 设置OH_PackingOptions结构体中的needsPackDfxData参数。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -95,9 +89,7 @@ Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, ui
 
 设置OH_PackingOptions结构体中的C2PA数据大小，默认值为0，表示不预留空间。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **系统接口：** 此接口为系统接口。
 
@@ -124,9 +116,7 @@ Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *optio
 
 获取OH_PackingOptions结构体中的C2PA数据大小。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **系统接口：** 此接口为系统接口。
 

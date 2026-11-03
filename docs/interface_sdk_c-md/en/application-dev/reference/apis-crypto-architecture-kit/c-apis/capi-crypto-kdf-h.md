@@ -4,15 +4,13 @@
 
 Defines the key derivation interfaces.
 
-**File to Include**: <CryptoArchitectureKit/crypto_kdf.h>
+**Include**: <CryptoArchitectureKit/crypto_kdf.h>
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Related module**: [CryptoKdfApi](capi-crypto-architecture-kit-cryptokdfapi.md)
+**Related module**: [CryptoKdfApi](capi-cryptokdfapi.md)
 
 ## Summary
 
@@ -52,8 +50,6 @@ enum CryptoKdf_ParamType
 
 Defines KDF parameter types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
@@ -80,11 +76,9 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfPa
 
 Creates KDF parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoKdfParams_Destroy](#oh_cryptokdfparams_destroy)
+**Resource release**: crypto_kdf/OH_CryptoKdfParams_Destroy {params}
 
 **Parameters**:
 
@@ -114,8 +108,6 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, Crypto
 
 Sets KDF parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -142,8 +134,6 @@ void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)
 
 Destroys KDF parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -162,11 +152,9 @@ OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)
 
 Creates a KDF context based on the given algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoKdf_Destroy](#oh_cryptokdf_destroy)
+**Resource release**: crypto_kdf/OH_CryptoKdf_Destroy {ctx}
 
 **Parameters**:
 
@@ -196,11 +184,9 @@ OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParam
 
 Derives a key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {key}
 
 **Parameters**:
 
@@ -226,8 +212,6 @@ void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)
 **Description**
 
 Destroys the KDF context.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

@@ -6,11 +6,9 @@
 
 **库：** libnet_http.so
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
-**相关模块：** [netstack](capi-network-kit-netstack.md)
+**相关模块：** [netstack](capi-netstack.md)
 
 ## 汇总
 
@@ -68,6 +66,16 @@
 | [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | 收到HTTP响应头的回调函数。 |
 | [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | 请求的DataEnd或Cancel事件回调的回调函数。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode) | 接收到HTTP响应的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Communication.NetStack |
+| void (*Http_OnDataReceiveCallback)(const char *data, size_t length) | 接收到数据的回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Communication.NetStack |
+| void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize) | 请求/响应数据传输过程中调用的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Communication.NetStack |
+| void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers) | 收到HTTP响应头的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Communication.NetStack |
+| void (*Http_OnVoidCallback)(void) | 请求的DataEnd或Cancel事件回调的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Communication.NetStack |
+
 ## 枚举类型说明
 
 ### Http_ErrCode
@@ -79,8 +87,6 @@ enum Http_ErrCode
 **描述：**
 
 定义HTTP请求的错误码。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -131,8 +137,6 @@ enum Http_ResponseCode
 **描述：**
 
 定义HTTP响应码。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -185,8 +189,6 @@ enum Http_AddressFamilyType
 
 定义解析目标域名时限定的地址类型。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -204,8 +206,6 @@ enum Http_HttpProtocol
 **描述：**
 
 HTTP协议版本号枚举定义。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -226,8 +226,6 @@ enum Http_CertType
 
 证书类型枚举。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -245,8 +243,6 @@ enum Http_ProxyType
 **描述：**
 
 代理配置类型枚举定义。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -269,8 +265,6 @@ typedef void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t e
 
 接收到HTTP响应的回调函数。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
 **参数：**
@@ -289,8 +283,6 @@ typedef void (*Http_OnDataReceiveCallback)(const char *data, size_t length)
 **描述：**
 
 接收到数据的回调。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -311,8 +303,6 @@ typedef void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferred
 
 请求/响应数据传输过程中调用的回调函数。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
 **参数：**
@@ -332,8 +322,6 @@ typedef void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers)
 
 收到HTTP响应头的回调函数。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 20
 
 **参数：**
@@ -351,8 +339,6 @@ typedef void (*Http_OnVoidCallback)(void)
 **描述：**
 
 请求的DataEnd或Cancel事件回调的回调函数。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 

@@ -6,11 +6,9 @@
 
 **库：** libohcamera.so
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 ## 汇总
 
@@ -157,9 +155,22 @@
 | [bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession* session)](#oh_capturesession_islockfocustrackingsupported) | - | 查询是否支持锁定焦点跟踪。 |
 | [Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)](#oh_capturesession_lockfocustracking) | - | 锁定焦点跟踪，可通过[OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking)解锁。 |
 | [Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)](#oh_capturesession_unlockfocustracking) | - | 解锁焦点跟踪。 |
-| [typedef void (\*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)](#oh_capturesession_oncameradeviceswitchrequest) | OH_CaptureSession_OnCameraDeviceSwitchRequest | 定义一个回调函数，当发生相机设备切换请求时调用。 |
-| [Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_registercameradeviceswitchrequestcallback) | - | 注册相机设备切换请求回调。<br> 注册此回调后，当相机设备切换请求发生在 捕获会话。 |
-| [Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_unregistercameradeviceswitchrequestcallback) | - | 取消注册相机设备切换请求回调。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState) | 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话焦点状态回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode) | 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话错误回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo) | 拍照会话平滑变焦信息回调，触发平滑变焦后该回调会返回。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo) | 捕获会话设备切换状态回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel) | 捕获系统压力状态变化回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState) | 捕获会话闪光灯状态变更回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState) | 定义曝光状态变更时的回调函数。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue) | 用于在相机会话中监听感光度（ISO）变化的回调函数。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration) | 捕获会话曝光时间变更回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected) | 相机会话微距状态改变回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo) | 相机控制器效果激活状态变化回调。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
 
 ## 函数说明
 
@@ -172,8 +183,6 @@ typedef void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* sess
 **描述：**
 
 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话焦点状态回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -193,8 +202,6 @@ typedef void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera
 **描述：**
 
 在[CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)中被调用的捕获会话错误回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -220,8 +227,6 @@ typedef void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* sessio
 
 拍照会话平滑变焦信息回调，触发平滑变焦后该回调会返回。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -240,8 +245,6 @@ typedef void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureS
 **描述：**
 
 捕获会话设备切换状态回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
@@ -262,8 +265,6 @@ typedef void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSess
 
 捕获系统压力状态变化回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -282,8 +283,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterCallback(Camera_CaptureSession* sessi
 **描述：**
 
 注册捕获会话事件回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -310,8 +309,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterCallback(Camera_CaptureSession* ses
 
 注销捕获会话事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -336,8 +333,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterSmoothZoomInfoCallback(Camera_Capture
 **描述：**
 
 注册平滑变焦信息事件回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -364,8 +359,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterSmoothZoomInfoCallback(Camera_Captu
 
 注销平滑变焦信息事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -390,8 +383,6 @@ Camera_ErrorCode OH_CaptureSession_SetSessionMode(Camera_CaptureSession* session
 **描述：**
 
 设置会话模式。 <br>此接口不能在[OH_CaptureSession_BeginConfig](capi-capture-session-h.md#oh_capturesession_beginconfig)之后使用。 <br>建议在使用[OH_CameraManager_CreateCaptureSession](capi-camera-manager-h.md#oh_cameramanager_createcapturesession)后立即使用此接口。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -418,8 +409,6 @@ Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* sessio
 
 把其中一条PreviewOutput标记成安全输出。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -445,8 +434,6 @@ Camera_ErrorCode OH_CaptureSession_BeginConfig(Camera_CaptureSession* session)
 
 开始捕获会话配置。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -471,8 +458,6 @@ Camera_ErrorCode OH_CaptureSession_CommitConfig(Camera_CaptureSession* session)
 
 提交捕获会话配置。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -496,8 +481,6 @@ Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Came
 **描述：**
 
 添加相机输入。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -524,8 +507,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, C
 
 删除相机输入。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -550,8 +531,6 @@ Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* sessi
 **描述：**
 
 添加预览输出。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -578,8 +557,6 @@ Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* se
 
 删除预览输出。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -604,8 +581,6 @@ Camera_ErrorCode OH_CaptureSession_AddPhotoOutput(Camera_CaptureSession* session
 **描述：**
 
 添加拍照输出。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -632,8 +607,6 @@ Camera_ErrorCode OH_CaptureSession_RemovePhotoOutput(Camera_CaptureSession* sess
 
 删除拍照输出。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -658,8 +631,6 @@ Camera_ErrorCode OH_CaptureSession_AddVideoOutput(Camera_CaptureSession* session
 **描述：**
 
 添加录像输出。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -686,8 +657,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveVideoOutput(Camera_CaptureSession* sess
 
 删除录像输出。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -712,8 +681,6 @@ Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* sess
 **描述：**
 
 添加元数据输出。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -740,8 +707,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* s
 
 删除元数据输出。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -767,8 +732,6 @@ Camera_ErrorCode OH_CaptureSession_Start(Camera_CaptureSession* session)
 
 启动捕获会话。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -792,8 +755,6 @@ Camera_ErrorCode OH_CaptureSession_Stop(Camera_CaptureSession* session)
 **描述：**
 
 停止捕获会话。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -819,8 +780,6 @@ Camera_ErrorCode OH_CaptureSession_Release(Camera_CaptureSession* session)
 
 释放捕获会话。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -844,8 +803,6 @@ Camera_ErrorCode OH_CaptureSession_HasFlash(Camera_CaptureSession* session, bool
 **描述：**
 
 检查设备是否有闪光灯。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -871,8 +828,6 @@ Camera_ErrorCode OH_CaptureSession_IsFlashModeSupported(Camera_CaptureSession* s
 **描述：**
 
 检查是否支持指定的闪光灯模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -900,8 +855,6 @@ Camera_ErrorCode OH_CaptureSession_GetFlashMode(Camera_CaptureSession* session, 
 
 获取当前闪光灯模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -926,8 +879,6 @@ Camera_ErrorCode OH_CaptureSession_SetFlashMode(Camera_CaptureSession* session, 
 **描述：**
 
 设置闪光灯模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -954,8 +905,6 @@ typedef void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession
 
 捕获会话闪光灯状态变更回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -974,8 +923,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterFlashStateChangeCallback(const Camera
 **描述：**
 
 注册闪光灯状态变更事件回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1002,8 +949,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterFlashStateChangeCallback(const Came
 
 注销闪光灯状态变更回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1029,8 +974,6 @@ typedef void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera
 
 定义曝光状态变更时的回调函数。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1049,8 +992,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Cam
 **描述：**
 
 注册曝光状态变化的回调。注册此回调后，当捕获会话中的曝光状态发生变化时，将调用该回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -1078,8 +1019,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const C
 
 注销曝光状态变更时的回调函数。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1105,8 +1044,6 @@ Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession
 **描述：**
 
 检查是否支持指定的曝光模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -1134,8 +1071,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* sessio
 
 获取当前曝光模式。如果未通过[OH_CaptureSession_SetExposureMode](capi-capture-session-h.md#oh_capturesession_setexposuremode)接口进行设置，则直接调用该接口查询当前曝光模式，会返回无效值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -1160,8 +1095,6 @@ Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSes
 **描述：**
 
 检查是否支持指定的白平衡模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -1189,8 +1122,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceMode(Camera_CaptureSession* se
 
 获取当前的白平衡模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -1216,8 +1147,6 @@ Camera_ErrorCode OH_CaptureSession_SetWhiteBalanceMode(Camera_CaptureSession* se
 
 设置白平衡模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -1242,8 +1171,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceRange(Camera_CaptureSession* s
 **描述：**
 
 获取支持配置的白平衡色温范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -1271,8 +1198,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalance(Camera_CaptureSession* sessio
 
 获取当前白平衡色温值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -1298,8 +1223,6 @@ Camera_ErrorCode OH_CaptureSession_SetWhiteBalance(Camera_CaptureSession* sessio
 
 设置白平衡的色温。 <br>设置前，建议通过[OH_CaptureSession_GetWhiteBalanceRange](capi-capture-session-h.md#oh_capturesession_getwhitebalancerange)获取支持配置的白平衡色温范围。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -1324,8 +1247,6 @@ Camera_ErrorCode OH_CaptureSession_GetColorTintRange(const Camera_CaptureSession
 **描述：**
 
 获取支持配置的白平衡色调调节范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -1353,8 +1274,6 @@ Camera_ErrorCode OH_CaptureSession_GetColorTint(const Camera_CaptureSession* ses
 
 获取当前白平衡的色调调节值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1379,8 +1298,6 @@ Camera_ErrorCode OH_CaptureSession_SetColorTint(Camera_CaptureSession* session, 
 **描述：**
 
 设置白平衡的色调调节值。设置前，建议通过[OH_CaptureSession_GetColorTintRange](capi-capture-session-h.md#oh_capturesession_getcolortintrange)获取支持配置的白平衡色调调节范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -1407,8 +1324,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureMode(Camera_CaptureSession* sessio
 
 设置曝光模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -1433,8 +1348,6 @@ Camera_ErrorCode OH_CaptureSession_GetMeteringPoint(Camera_CaptureSession* sessi
 **描述：**
 
 获取当前测量点。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -1461,8 +1374,6 @@ Camera_ErrorCode OH_CaptureSession_SetMeteringPoint(Camera_CaptureSession* sessi
 
 设置计量区域的中心点。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -1487,8 +1398,6 @@ Camera_ErrorCode OH_CaptureSession_IsExposureMeteringModeSupported(const Camera_
 **描述：**
 
 查询指定曝光测光模式是否支持。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1516,8 +1425,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureMeteringMode(const Camera_CaptureS
 
 获取当前曝光测光模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1543,8 +1450,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureMeteringMode(const Camera_CaptureS
 
 设置曝光测光模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1569,8 +1474,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedISORange(const Camera_CaptureSess
 **描述：**
 
 查询ISO感光度范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1598,8 +1501,6 @@ Camera_ErrorCode OH_CaptureSession_GetIso(const Camera_CaptureSession* session, 
 
 获取当前ISO感光度值（遵循ISO 12232:2006标准）。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1624,8 +1525,6 @@ Camera_ErrorCode OH_CaptureSession_SetIso(const Camera_CaptureSession* session, 
 **描述：**
 
 设置ISO感光度值。设置的值需在[OH_CaptureSession_GetSupportedISORange](capi-capture-session-h.md#oh_capturesession_getsupportedisorange)范围内。当曝光锁定模式ExposureMode 为EXPOSURE_MODE_LOCKED时，不支持设置ISO感光度值。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1652,8 +1551,6 @@ typedef void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, in
 
 用于在相机会话中监听感光度（ISO）变化的回调函数。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 22
 
 **参数：**
@@ -1672,8 +1569,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterIsoChangeCallback(Camera_CaptureSessi
 **描述：**
 
 注册监听感光度（ISO）改变的事件回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 22
 
@@ -1700,8 +1595,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterIsoChangeCallback(Camera_CaptureSes
 
 取消注册监听感光度（ISO）改变的事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 22
 
 **参数：**
@@ -1726,8 +1619,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedPhysicalApertures(const Camera_Ca
 **描述：**
 
 获取支持的物理光圈列表。调用[OH_CaptureSession_DeletePhysicalApertures](capi-capture-session-h.md#oh_capturesession_deletephysicalapertures)删除支持的物理光圈列表。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1755,8 +1646,6 @@ Camera_ErrorCode OH_CaptureSession_GetPhysicalAperture(const Camera_CaptureSessi
 
 获取当前物理光圈值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1781,8 +1670,6 @@ Camera_ErrorCode OH_CaptureSession_DeletePhysicalApertures(const Camera_CaptureS
 **描述：**
 
 删除支持的物理光圈列表。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1810,8 +1697,6 @@ Camera_ErrorCode OH_CaptureSession_SetPhysicalAperture(const Camera_CaptureSessi
 
 设置物理光圈值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1836,8 +1721,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureBiasRange(Camera_CaptureSession* s
 **描述：**
 
 查询曝光补偿范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -1866,8 +1749,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureBias(Camera_CaptureSession* sessio
 
 设置曝光补偿。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -1893,8 +1774,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureBias(Camera_CaptureSession* sessio
 
 获取当前曝光补偿。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -1919,8 +1798,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedExposureDurationRange(const Camer
 **描述：**
 
 获取支持的曝光时间范围。单位：微秒。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -1948,8 +1825,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureDuration(const Camera_CaptureSessi
 
 设置曝光时间。单位：微秒。若传感器无法精确使用该曝光时间，系统会自动调整为最近的支持值，并通过[OH_CaptureSession_OnExposureDurationChange](capi-capture-session-h.md#oh_capturesession_onexposuredurationchange)回调通知。仅在 ExposureMode.EXPOSURE_MODE_MANUAL手动曝光模式下设置生效。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -1974,8 +1849,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureDuration(const Camera_CaptureSessi
 **描述：**
 
 获取当前曝光时间。单位：微秒。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -2002,8 +1875,6 @@ typedef void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureS
 
 捕获会话曝光时间变更回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -2022,8 +1893,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterExposureInfoChangeCallback(const Came
 **描述：**
 
 注册曝光信息变更事件回调，曝光参数变更后系统会返回更新后的曝光信息。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -2050,8 +1919,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterExposureInfoChangeCallback(const Ca
 
 注销曝光信息变更回调，相机操作完成后调用该方法。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -2076,8 +1943,6 @@ Camera_ErrorCode OH_CaptureSession_IsFocusModeSupported(Camera_CaptureSession* s
 **描述：**
 
 检查是否支持指定的聚焦模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -2105,8 +1970,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusMode(Camera_CaptureSession* session, 
 
 获取当前聚焦模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2131,8 +1994,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusMode(Camera_CaptureSession* session, 
 **描述：**
 
 设置聚焦模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -2159,8 +2020,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusPoint(Camera_CaptureSession* session,
 
 获取当前焦点。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2186,8 +2045,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusPoint(Camera_CaptureSession* session,
 
 设置焦点。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2212,8 +2069,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomRatioRange(Camera_CaptureSession* sess
 **描述：**
 
 获取所有支持的缩放比例范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -2241,8 +2096,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomRatio(Camera_CaptureSession* session, 
 
 获取当前缩放比例。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2268,8 +2121,6 @@ Camera_ErrorCode OH_CaptureSession_SetZoomRatio(Camera_CaptureSession* session, 
 
 设置缩放比例。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2294,8 +2145,6 @@ Camera_ErrorCode OH_CaptureSession_IsVideoStabilizationModeSupported(Camera_Capt
 **描述：**
 
 检查是否支持指定的录像防抖模式。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -2323,8 +2172,6 @@ Camera_ErrorCode OH_CaptureSession_GetVideoStabilizationMode(Camera_CaptureSessi
 
 获取当前录像防抖模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2350,8 +2197,6 @@ Camera_ErrorCode OH_CaptureSession_SetVideoStabilizationMode(Camera_CaptureSessi
 
 设置录像防抖模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -2376,8 +2221,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, C
 **描述：**
 
 确定是否可以将相机输入添加到会话中。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2405,8 +2248,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* se
 
 确定是否可以将相机预览输出添加到会话中。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2432,8 +2273,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddPhotoOutput(Camera_CaptureSession* sess
 **描述：**
 
 确定是否可以将拍照输出添加到会话中。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2461,8 +2300,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddVideoOutput(Camera_CaptureSession* sess
 
 确定是否可以将录像输出添加到会话中。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2489,8 +2326,6 @@ Camera_ErrorCode OH_CaptureSession_CanPreconfig(Camera_CaptureSession* session, 
 
 检查是否支持指定的预配置类型。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2516,8 +2351,6 @@ Camera_ErrorCode OH_CaptureSession_CanPreconfigWithRatio(Camera_CaptureSession* 
 **描述：**
 
 检查是否支持带比例的预配置类型。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2546,8 +2379,6 @@ Camera_ErrorCode OH_CaptureSession_Preconfig(Camera_CaptureSession* session, Cam
 
 设置预配置类型。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2572,8 +2403,6 @@ Camera_ErrorCode OH_CaptureSession_PreconfigWithRatio(Camera_CaptureSession* ses
 **描述：**
 
 设置带有比例的预配置类型。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2601,8 +2430,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureValue(Camera_CaptureSession* sessi
 
 查询曝光值。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2627,8 +2454,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocalLength(Camera_CaptureSession* session
 **描述：**
 
 获取当前焦距值。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2655,8 +2480,6 @@ Camera_ErrorCode OH_CaptureSession_IsFocusDistanceSupported(const Camera_Capture
 
 查询是否支持对焦距离设置。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -2681,8 +2504,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusDistance(const Camera_CaptureSession*
 **描述：**
 
 获取当前对焦距离。取值范围为[0.0, 1.0]。0.0表示镜头可对焦的最近距离；1.0表示最远距离。默认值为1.0。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -2709,8 +2530,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusDistance(const Camera_CaptureSession*
 
 设置对焦距离。取值范围为[0.0, 1.0]。0.0表示镜头可对焦的最近距离；1.0表示最远距离。默认值为1.0。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -2735,8 +2554,6 @@ Camera_ErrorCode OH_CaptureSession_SetSmoothZoom(Camera_CaptureSession* session,
 **描述：**
 
 触发平滑变焦。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2764,8 +2581,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedColorSpaces(Camera_CaptureSession
 
 获取支持的色彩空间列表。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2792,8 +2607,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteColorSpaces(Camera_CaptureSession* sess
 
 删除色彩空间列表。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2818,8 +2631,6 @@ Camera_ErrorCode OH_CaptureSession_GetActiveColorSpace(Camera_CaptureSession* se
 **描述：**
 
 获取当前色彩空间。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -2846,8 +2657,6 @@ Camera_ErrorCode OH_CaptureSession_SetActiveColorSpace(Camera_CaptureSession* se
 
 设置当前色彩空间。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -2872,8 +2681,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterAutoDeviceSwitchStatusCallback(Camera
 **描述：**
 
 注册设备切换事件回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
@@ -2900,8 +2707,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterAutoDeviceSwitchStatusCallback(Came
 
 注销设备切换事件回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -2926,8 +2731,6 @@ Camera_ErrorCode OH_CaptureSession_IsAutoDeviceSwitchSupported(Camera_CaptureSes
 **描述：**
 
 检查是否支持自动设备切换。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
@@ -2954,8 +2757,6 @@ Camera_ErrorCode OH_CaptureSession_EnableAutoDeviceSwitch(Camera_CaptureSession*
 
 是否启用相机设备的自动切换。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -2980,8 +2781,6 @@ Camera_ErrorCode OH_CaptureSession_SetQualityPrioritization(Camera_CaptureSessio
 **描述：**
 
 设置录像质量优先级。 <br>默认为高录像质量，设置为功耗平衡将降低录像质量以减少功耗。实际功耗收益因平台而异。建议该接口在[OH_CaptureSession_CommitConfig](capi-capture-session-h.md#oh_capturesession_commitconfig)和 [OH_CaptureSession_Start](capi-capture-session-h.md#oh_capturesession_start)之间调用。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 14
 
@@ -3008,8 +2807,6 @@ Camera_ErrorCode OH_CaptureSession_IsMacroSupported(Camera_CaptureSession* sessi
 
 检查是否支持微距能力。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 19
 
 **参数：**
@@ -3034,8 +2831,6 @@ Camera_ErrorCode OH_CaptureSession_EnableMacro(Camera_CaptureSession* session, b
 **描述：**
 
 是否启用相机设备的微距能力。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 19
 
@@ -3062,8 +2857,6 @@ typedef void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* ses
 
 相机会话微距状态改变回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3082,8 +2875,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterMacroStatusChangeCallback(Camera_Capt
 **描述：**
 
 注册相机会话微距状态改变回调函数。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -3110,8 +2901,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterMacroStatusChangeCallback(Camera_Ca
 
 取消注册相机会话微距状态改变回调函数。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3136,8 +2925,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterSystemPressureLevelChangeCallback(Cam
 **描述：**
 
 注册系统压力状态变化回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -3164,8 +2951,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterSystemPressureLevelChangeCallback(C
 
 注销系统压力状态变化回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3191,8 +2976,6 @@ Camera_ErrorCode OH_CaptureSession_IsControlCenterSupported(Camera_CaptureSessio
 
 检查是否支持相机控制器。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3217,8 +3000,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedEffectTypes(Camera_CaptureSession
 **描述：**
 
 获取相机控制器支持的效果类型。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -3246,8 +3027,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteSupportedEffectTypes(Camera_CaptureSess
 
 删除相机控制器效果类型列表。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3274,8 +3053,6 @@ Camera_ErrorCode OH_CaptureSession_EnableControlCenter(Camera_CaptureSession* se
 
 是否启用相机控制器。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3301,8 +3078,6 @@ typedef void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_Captu
 
 相机控制器效果激活状态变化回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3321,8 +3096,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterControlCenterEffectStatusChangeCallba
 **描述：**
 
 注册相机控制器效果激活状态变化回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -3349,8 +3122,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterControlCenterEffectStatusChangeCall
 
 注销相机控制器效果激活状态变化回调。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -3376,8 +3147,6 @@ Camera_ErrorCode OH_CaptureSession_GetRAWCaptureZoomRatioRange(const Camera_Capt
 
 查询物理镜头RAW图拍照支持的变焦范围。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -3392,7 +3161,7 @@ Camera_ErrorCode OH_CaptureSession_GetRAWCaptureZoomRatioRange(const Camera_Capt
 
 | 类型 | 说明 |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK：方法调用成功。<br>CAMERA_INVALID_ARGUMENT：参数丢失或者参数不正确。<br>CAMERA_OPERATION_NOT_ALLOWED：操作不允许，会话或相机状态异常。<br>CAMERA_SESSION_NOT_CONFIG：捕获会话未配置。 |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK：方法调用成功。<br>CAMERA_INVALID_ARGUMENT：参数丢失或者参数不正确。<br>CAMERA_OPERATION_NOT_ALLOWED：操作不允许,会话或相机状态异常。<br>CAMERA_SESSION_NOT_CONFIG：捕获会话未配置。 |
 
 ### OH_CaptureSession_IsOISModeSupported()
 
@@ -3403,8 +3172,6 @@ Camera_ErrorCode OH_CaptureSession_IsOISModeSupported(const Camera_CaptureSessio
 **描述：**
 
 检查指定的光学防抖（OIS）模式是否支持。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -3431,8 +3198,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedOISBiasRange(const Camera_Capture
 **描述：**
 
 获取指定光学防抖轴支持的偏移范围。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -3462,8 +3227,6 @@ Camera_ErrorCode OH_CaptureSession_GetCurrentOISMode(const Camera_CaptureSession
 
 获取当前光学防抖（OIS）模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -3488,8 +3251,6 @@ Camera_ErrorCode OH_CaptureSession_GetCurrentCustomOISBias(const Camera_CaptureS
 **描述：**
 
 获取所有光学防抖轴当前的自定义偏移值。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -3517,8 +3278,6 @@ Camera_ErrorCode OH_CaptureSession_SetOISMode(const Camera_CaptureSession* sessi
 
 设置光学防抖（OIS）模式。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 24
 
 **参数：**
@@ -3543,8 +3302,6 @@ Camera_ErrorCode OH_CaptureSession_SetOISModeCustom(const Camera_CaptureSession*
 **描述：**
 
 为对应轴设置自定义光学防抖偏移值。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -3572,8 +3329,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomPointInfos(const Camera_CaptureSession
 
 获取变焦点信息。 <br>需要通过调用[OH_CaptureSession_DeleteZoomPointInfos](capi-capture-session-h.md#oh_capturesession_deletezoompointinfos)来释放变焦点信息的内存。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -3600,8 +3355,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteZoomPointInfos(const Camera_CaptureSess
 
 删除变焦点信息。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -3627,8 +3380,6 @@ bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession*
 
 查询是否支持锁定焦点跟踪。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -3652,8 +3403,6 @@ Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* sess
 **描述：**
 
 锁定焦点跟踪，可通过[OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking)解锁。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -3680,8 +3429,6 @@ Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* se
 
 解锁焦点跟踪。
 
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -3695,95 +3442,5 @@ Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* se
 | 类型 | 说明 |
 | -- | -- |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK：方法调用成功。<br>CAMERA_INVALID_ARGUMENT：参数丢失或者参数不正确。<br>CAMERA_SERVICE_FATAL_ERROR：相机服务异常。 |
-
-### OH_CaptureSession_OnCameraDeviceSwitchRequest()
-
-```c
-typedef void (*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)
-```
-
-**描述：**
-
-定义一个回调函数，当发生相机设备切换请求时调用。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**起始版本：** 26.0.1
-
-**资源释放：** OH_CameraManager_DeleteCameraDevices {userDevice}
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| void *userContext | 【out】输出参数，指向自定义上下文的指针。 |
-| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *userSession | 【out】输出参数，指向[Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)实例的指针。 |
-| [Camera_Device](capi-oh-camera-camera-device.md) *userDevice | 【out】输出参数，指向[Camera_Device](capi-oh-camera-camera-device.md)实例的指针。 |
-
-### OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback()
-
-```c
-Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
-```
-
-**描述：**
-
-注册相机设备切换请求回调。<br> 注册此回调后，当相机设备切换请求发生在 捕获会话。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**起始版本：** 26.0.1
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)实例。 |
-| void *context | 指向自定义上下文的指针。 |
-| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest)表示注册的回调。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | _OK 如果方法调用成功。如果参数缺失或参数类型不正确，则[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode)。 |
-
-**参考：**
-
-[OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) 了解更多信息。
-
-
-### OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback()
-
-```c
-Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
-```
-
-**描述：**
-
-取消注册相机设备切换请求回调。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**起始版本：** 26.0.1
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)实例。 |
-| void *context | 指向注册回调时指定的用户定义上下文的指针。 |
-| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest)取消注册回调。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | _OK 如果方法调用成功。如果参数缺失或参数类型不正确，则[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode)。 |
-
-**参考：**
-
-[OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) 了解更多信息。
-
 
 

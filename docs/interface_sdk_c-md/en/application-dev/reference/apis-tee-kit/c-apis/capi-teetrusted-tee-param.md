@@ -12,7 +12,7 @@ Enumerates the TEE parameter.
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-others-teetrusted.md)
+**Related module**: [TeeTrusted](capi-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -22,14 +22,17 @@ Enumerates the TEE parameter.
 
 | Name | Description |
 | -- | -- |
-| memref | Describes a memory reference.<br>**Since**: 20 |
-| memref.buffer | Pointer to the memory buffer. |
-| memref.size | Size of the memory buffer. |
-| value | Describes value parameters.<br>**Since**: 20 |
-| value.a | First value. |
-| value.b | Second value. |
-| sharedmem | Describes shared memory reference.<br>**Since**: 20 |
-| sharedmem.buffer | Pointer to the shared memory buffer. |
-| sharedmem.size | Size of the shared memory buffer. |
+| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes a memory reference.<br>**Since**: 20 |
+| void *buffer | Pointer to the memory buffer. |
+| size_t size;
+ } memref | Size of the memory buffer. |
+| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes value parameters.<br>**Since**: 20 |
+| unsigned int a | First value. |
+| unsigned int b;
+ } value | Second value. |
+| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes shared memory reference.<br>**Since**: 20 |
+| void *buffer | Pointer to the shared memory buffer. |
+| size_t size;
+ } sharedmem | Size of the shared memory buffer. |
 
 

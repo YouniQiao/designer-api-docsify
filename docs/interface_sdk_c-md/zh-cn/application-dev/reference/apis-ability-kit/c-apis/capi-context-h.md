@@ -6,11 +6,9 @@
 
 **库：** libability_runtime.so
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
-**相关模块：** [AbilityRuntime](capi-ability-kit-abilityruntime.md)
+**相关模块：** [AbilityRuntime](capi-abilityruntime.md)
 
 ## 汇总
 
@@ -19,7 +17,7 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [AbilityRuntime_Context](capi-abilityruntime-abilityruntime-context.md) | - | 定义AbilityRuntime_Context结构体类型。 |
-| [AbilityRuntime_Context*](capi-abilityruntime-abilityruntime-context8h.md) | AbilityRuntime_ContextHandle | 定义AbilityRuntime_Context对象指针。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) | AbilityRuntime_ContextHandle | 定义AbilityRuntime_Context对象指针。 |
 
 ### 函数
 
@@ -51,15 +49,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetCacheDir(AbilityRuntime_Co
 
 获取上下文的缓存目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取缓存目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取缓存目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的缓存目录。 |
 | int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength |   在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -80,15 +76,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetTempDir(AbilityRuntime_Con
 
 获取上下文的临时文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取临时文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取临时文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的临时文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -109,15 +103,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetFilesDir(AbilityRuntime_Co
 
 获取上下文的通用文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取通用文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取通用文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的通用文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -138,15 +130,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetDatabaseDir(AbilityRuntime
 
 获取上下文的数据库文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取数据库文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取数据库文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的数据库文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -167,15 +157,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetPreferencesDir(AbilityRunt
 
 获取上下文的首选项文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取首选项文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取首选项文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的首选项文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -196,15 +184,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetBundleCodeDir(AbilityRunti
 
 获取上下文的安装文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取安装文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取安装文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的安装文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength |   在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -225,15 +211,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetDistributedFilesDir(Abilit
 
 获取上下文的分布式文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取分布式文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取分布式文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的分布式文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -254,15 +238,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetResourceDir(AbilityRuntime
 
 获取上下文的资源目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取资源目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取资源目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的资源目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -283,15 +265,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetCloudFileDir(AbilityRuntim
 
 获取上下文的云文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取云文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取云文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的云文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -312,15 +292,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetAreaMode(AbilityRuntime_Co
 
 获取上下文的数据加密等级。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取数据加密等级的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取数据加密等级的上下文。 |
 | [AbilityRuntime_AreaMode](capi-context-constant-h.md#abilityruntime_areamode)* areaMode | 指向接收数据加密等级的指针。 |
 
 **返回值：**
@@ -339,15 +317,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_SetAreaMode(AbilityRuntime_Co
 
 设置上下文的数据加密等级。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要设置数据加密等级的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要设置数据加密等级的上下文。 |
 | [AbilityRuntime_AreaMode](capi-context-constant-h.md#abilityruntime_areamode) areaMode | 数据加密等级。 |
 
 **返回值：**
@@ -366,15 +342,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetLogFileDir(AbilityRuntime_
 
 获取上下文的日志文件目录。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取日志文件目录的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取日志文件目录的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收上下文的日志文件目录。 |
 | const int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |
@@ -395,15 +369,13 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_Context_GetProcessName(AbilityRuntime
 
 获取上下文所在的进程名称。
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 **起始版本：** 24
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | 要获取进程名称的上下文。 |
+| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-contexthandle.md) context | 要获取进程名称的上下文。 |
 | char* buffer | 指向缓冲区的指针，用于接收进程名称。 |
 | int32_t bufferSize | 缓冲区大小，单位为字节。 |
 | int32_t* writeLength | 在返回[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode)时，表示实际写入到缓冲区的字符串长度，单位为字节。 |

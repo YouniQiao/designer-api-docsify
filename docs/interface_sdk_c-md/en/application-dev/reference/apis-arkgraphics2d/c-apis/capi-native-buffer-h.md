@@ -6,11 +6,9 @@ Defines the functions for obtaining and using a native buffer.
 
 **Library**: libnative_buffer.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
-**Related module**: [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
+**Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
 
 ## Summary
 
@@ -66,8 +64,6 @@ enum OH_NativeBuffer_Usage
 
 Indicates the usage of a native buffer.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 10
 
 | Enum item | Description |
@@ -75,11 +71,11 @@ Indicates the usage of a native buffer.
 | NATIVEBUFFER_USAGE_CPU_READ = (1ULL << 0) | CPU read buffer |
 | NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1) | CPU write memory |
 | NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3) | Direct memory access (DMA) buffer |
-| NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) | MMZ with cache<br>**Since**: 20 |
-| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) | For GPU write case<br>**Since**: 12 |
-| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) | For GPU read case<br>**Since**: 12 |
-| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) | Often be mapped for direct CPU reads<br>**Since**: 12 |
-| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) | 512 bytes alignment<br>**Since**: 12 |
+| NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) |  |
+| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) |  |
+| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) |  |
+| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) |  |
+| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) |  |
 
 ### OH_NativeBuffer_ColorGamut
 
@@ -90,8 +86,6 @@ enum OH_NativeBuffer_ColorGamut
 **Description**
 
 Indicates the color gamut of a native buffer.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
@@ -122,8 +116,6 @@ OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)
 
 Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. A new <b>OH_NativeBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
 **Parameters**:
@@ -147,8 +139,6 @@ int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)
 **Description**
 
 Adds the reference count of a OH_NativeBuffer. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 9
 
@@ -174,8 +164,6 @@ int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)
 
 Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0, destroys this OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
 **Parameters**:
@@ -200,8 +188,6 @@ void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* 
 
 Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
 **Parameters**:
@@ -220,8 +206,6 @@ int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)
 **Description**
 
 Provide direct cpu access to the OH_NativeBuffer in the process's address space. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 9
 
@@ -248,8 +232,6 @@ int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)
 
 Remove direct cpu access ability of the OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
 **Parameters**:
@@ -274,8 +256,6 @@ uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)
 
 Get the system wide unique sequence number of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 9
 
 **Parameters**:
@@ -299,8 +279,6 @@ int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_Na
 **Description**
 
 Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
@@ -328,8 +306,6 @@ int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindo
 
 Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 12
 
 **Parameters**:
@@ -354,8 +330,6 @@ int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 **Description**
 
 Set the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 11
 
@@ -382,8 +356,6 @@ int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 
 Get the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 12
 
 **Parameters**:
@@ -408,8 +380,6 @@ int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 **Description**
 
 Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
@@ -438,8 +408,6 @@ int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 
 Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 12
 
 **Parameters**:
@@ -467,8 +435,6 @@ int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, v
 
 Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence. If the interface returns OK, fenceFd does not need to be closed by the developer, Otherwise, the developer needs to close the fenceFd. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 23
 
 **Parameters**:
@@ -495,8 +461,6 @@ int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parc
 
 Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 23
 
 **Parameters**:
@@ -521,8 +485,6 @@ int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** bu
 **Description**
 
 Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object. This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 23
 
@@ -549,8 +511,6 @@ int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSuppo
 
 Check whether the system supports the <b>NativeBufferConfig</b>. This interface is a non-thread-safe type interface.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
 **Since**: 23
 
 **Parameters**:
@@ -575,8 +535,6 @@ int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr,
 **Description**
 
 Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space, and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 23
 
@@ -604,9 +562,7 @@ int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *na
 
 Set the dma buffer name of the OH_NativeBuffer.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
-
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Parameters**:
 

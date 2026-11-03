@@ -12,7 +12,7 @@ Defines the information of an event group, including its name, the array of even
 
 **Since**: 12
 
-**Related module**: [HiAppEvent](capi-others-hiappevent.md)
+**Related module**: [HiAppEvent](capi-hiappevent.md)
 
 **Header file**: [hiappevent.h](capi-hiappevent-h.md)
 
@@ -22,11 +22,8 @@ Defines the information of an event group, including its name, the array of even
 
 | Name | Description |
 | -- | -- |
-| /* The name of the event. */
-    const char* name |  |
-| /* The event array which is grouped by the name. */
-    const struct HiAppEvent_AppEventInfo* appEventInfos |  |
-| /* The length of appEventInfos array. */
-    uint32_t infoLen |  |
+| const char* name | The name of the event. |
+| [const struct HiAppEvent_AppEventInfo*](capi-hiappevent-hiappevent-appeventinfo.md) appEventInfos | The event array which is grouped by the name. |
+| uint32_t infoLen | The length of appEventInfos array. |
 
 

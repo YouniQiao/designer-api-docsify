@@ -6,11 +6,9 @@
 
 **库：** libohpreferences.so
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
-**相关模块：** [Preferences](capi-arkdata-preferences.md)
+**相关模块：** [Preferences](capi-preferences.md)
 
 ## 汇总
 
@@ -48,6 +46,12 @@
 | [int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)](#oh_preferences_registermultiprocessdataobserver) | - | 为Preferences对象注册一个多进程数据观察者。 |
 | [int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)](#oh_preferences_unregistermultiprocessdataobserver) | - | 取消注册Preferences对象的多进程数据观察者。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPair *pairs, uint32_t count) | 定义数据变更触发的回调函数类型。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core * |
+
 ## 函数说明
 
 ### OH_PreferencesDataObserver()
@@ -59,8 +63,6 @@ typedef void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPa
 **描述：**
 
 定义数据变更触发的回调函数类型。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -86,8 +88,6 @@ OH_Preferences *OH_Preferences_Open(OH_PreferencesOption *option, int *errCode)
 **描述：**
 
 打开一个Preferences实例对象并创建指向它的指针。 <br>当不再需要使用指针时，请使用[OH_Preferences_Close](capi-oh-preferences-h.md#oh_preferences_close)关闭实例对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -119,8 +119,6 @@ int OH_Preferences_Close(OH_Preferences *preference)
 
 关闭一个Preferences实例对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -150,8 +148,6 @@ int OH_Preferences_DeletePreferences(OH_PreferencesOption *option)
 
 删除指定的Preferences对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -180,8 +176,6 @@ int OH_Preferences_GetInt(OH_Preferences *preference, const char *key, int *valu
 **描述：**
 
 获取Preferences实例对象中Key对应的整型值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -214,8 +208,6 @@ int OH_Preferences_GetBool(OH_Preferences *preference, const char *key, bool *va
 
 获取Preferences实例对象中Key对应的布尔值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -246,8 +238,6 @@ int OH_Preferences_GetString(OH_Preferences *preference, const char *key, char *
 **描述：**
 
 获取Preferences实例对象中Key对应的字符串。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -281,8 +271,6 @@ void OH_Preferences_FreeString(char *string)
 
 释放从Preferences实例对象中获取的字符串。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -305,8 +293,6 @@ int OH_Preferences_SetInt(OH_Preferences *preference, const char *key, int value
 **描述：**
 
 根据Key设置Preferences实例对象中的整型值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -339,8 +325,6 @@ int OH_Preferences_SetBool(OH_Preferences *preference, const char *key, bool val
 
 根据Key设置Preferences实例对象中的布尔值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -371,8 +355,6 @@ int OH_Preferences_SetString(OH_Preferences *preference, const char *key, const 
 **描述：**
 
 根据Key设置Preferences实例对象中的字符串。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -405,8 +387,6 @@ int OH_Preferences_Delete(OH_Preferences *preference, const char *key)
 
 在Preferences实例对象中删除Key对应的KV数据。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -436,8 +416,6 @@ int OH_Preferences_RegisterDataObserver(OH_Preferences *preference, void *contex
 **描述：**
 
 对选取的Key注册数据变更订阅。订阅的Key的值发生变更后，并且在调用OH_Preferences_Close()后触发回调。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -472,8 +450,6 @@ int OH_Preferences_UnregisterDataObserver(OH_Preferences *preference, void *cont
 
 取消注册选取Key的数据变更订阅。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -507,8 +483,6 @@ int OH_Preferences_IsStorageTypeSupported(Preferences_StorageType type, bool *is
 
 校验当前平台是否支持对应存储模式。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -533,8 +507,6 @@ int OH_Preferences_SetValue(OH_Preferences *preference, const char *key, OH_Pref
 **描述：**
 
 在Preferences对象中设置值[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -567,8 +539,6 @@ int OH_Preferences_GetValue(OH_Preferences *preference, const char *key, OH_Pref
 
 根据给定的Key获取Preferences对象中的值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -599,8 +569,6 @@ int OH_Preferences_GetAll(OH_Preferences *preference, OH_PreferencesPair **pairs
 **描述：**
 
 获取Preferences对象中的所有值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -633,8 +601,6 @@ bool OH_Preferences_HasKey(OH_Preferences *preference, const char *key)
 
 检查Preferences对象是否包含与指定Key匹配的KV数据，若包含则返回true，否则返回false。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -665,8 +631,6 @@ int OH_Preferences_Flush(OH_Preferences *preference)
 
 将[OH_Preferences](capi-preferences-oh-preferences.md)对象的缓存保存到xml文件中。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -696,8 +660,6 @@ int OH_Preferences_ClearCache(OH_Preferences *preference)
 
 清除[OH_Preferences](capi-preferences-oh-preferences.md)对象缓存中的所有值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -726,8 +688,6 @@ int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, 
 **描述：**
 
 为Preferences对象注册一个多进程数据观察者。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -759,8 +719,6 @@ int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference
 **描述：**
 
 取消注册Preferences对象的多进程数据观察者。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 

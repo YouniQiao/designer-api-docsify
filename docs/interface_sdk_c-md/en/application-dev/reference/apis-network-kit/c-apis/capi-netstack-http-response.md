@@ -12,7 +12,7 @@ Defines the structure of HTTP responses.
 
 **Since**: 20
 
-**Related module**: [netstack](capi-others-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 **Header file**: [net_http_type.h](capi-net-http-type-h.md)
 
@@ -31,9 +31,9 @@ Defines the structure of HTTP responses.
 
 ### Member functions
 
-| Name | Complete quotation | Description |
-| -- | -- | -- |
-| [void (\*destroyResponse)(struct Http_Response **response)](#destroyresponse) | destroyResponse | Callback function for destroying an HTTP response. |
+| Name | Description |
+| -- | -- |
+| [void (\*destroyResponse)(struct Http_Response **response)](#destroyresponse) | Callback function for destroying an HTTP response. |
 
 ## Member function description
 

@@ -14,17 +14,7 @@ Defines the HDR metadata.
 
 **Deprecated**: 10
 
-**Related module**: [NativeWindow](capi-others-nativewindow.md)
+**Related module**: [NativeWindow](capi-nativewindow.md)
 
 **Header file**: [external_window.h](capi-external-window-h.md)
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| [OHHDRMetadataKey](capi-external-window-h.md#ohhdrmetadatakey) key |  |
-| float value |  |
-
 

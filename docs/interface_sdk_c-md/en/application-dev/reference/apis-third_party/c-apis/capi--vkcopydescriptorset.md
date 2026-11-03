@@ -2,20 +2,3 @@
 
 ## Overview
 
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| VkStructureType sType |  |
-| const void* pNext |  |
-| VkDescriptorSet srcSet |  |
-| uint32_t srcBinding |  |
-| uint32_t srcArrayElement |  |
-| VkDescriptorSet dstSet |  |
-| uint32_t dstBinding |  |
-| uint32_t dstArrayElement |  |
-| uint32_t descriptorCount |  |
-
-

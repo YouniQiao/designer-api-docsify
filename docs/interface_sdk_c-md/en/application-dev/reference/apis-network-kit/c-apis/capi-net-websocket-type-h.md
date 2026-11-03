@@ -6,11 +6,9 @@ Defines the data structure for the C APIs of the WebSocket client module.
 
 **Library**: libnet_websocket.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
@@ -41,6 +39,15 @@ Defines the data structure for the C APIs of the WebSocket client module.
 | [typedef void (\*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult)](#websocket_onerrorcallback) | WebSocket_OnErrorCallback | Callback invoked when the WebSocket client receives an **Error** message. |
 | [typedef void (\*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult)](#websocket_onclosecallback) | WebSocket_OnCloseCallback | Callback invoked when the WebSocket client receives a **Close** message. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_OpenResult openResult) | Callback invoked when the WebSocket client receives an **Open** message.<br>**Since**: 11<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data, uint32_t length) | Callback invoked when the WebSocket client receives a **Message** message.<br>**Since**: 11<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult) | Callback invoked when the WebSocket client receives an **Error** message.<br>**Since**: 11<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult) | Callback invoked when the WebSocket client receives a **Close** message.<br>**Since**: 11<br>**System capability**: SystemCapability.Communication.NetStack |
+
 ## Enum type description
 
 ### WebSocket_ErrCode
@@ -52,8 +59,6 @@ enum WebSocket_ErrCode
 **Description**
 
 Defines the parameters for the connection closure received by the WebSocket client.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 11
 
@@ -92,8 +97,6 @@ typedef void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_Ope
 
 Callback invoked when the WebSocket client receives an **Open** message.
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
 **Parameters**:
@@ -112,8 +115,6 @@ typedef void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data
 **Description**
 
 Callback invoked when the WebSocket client receives a **Message** message.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 11
 
@@ -135,8 +136,6 @@ typedef void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_Er
 
 Callback invoked when the WebSocket client receives an **Error** message.
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
 **Parameters**:
@@ -155,8 +154,6 @@ typedef void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_Cl
 **Description**
 
 Callback invoked when the WebSocket client receives a **Close** message.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 11
 

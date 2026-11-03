@@ -12,7 +12,7 @@ Defines a struct for sampling configuration.
 
 **Since**: 22
 
-**Related module**: [HiDebug](capi-others-hidebug.md)
+**Related module**: [HiDebug](capi-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 

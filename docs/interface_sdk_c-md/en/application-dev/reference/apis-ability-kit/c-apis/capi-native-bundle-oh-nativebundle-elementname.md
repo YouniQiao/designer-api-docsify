@@ -12,7 +12,7 @@ The struct describes the elementName information.
 
 **Since**: 13
 
-**Related module**: [Native_Bundle](capi-others-native-bundle.md)
+**Related module**: [Native_Bundle](capi-native-bundle.md)
 
 **Header file**: [native_interface_bundle.h](capi-native-interface-bundle-h.md)
 
@@ -22,8 +22,8 @@ The struct describes the elementName information.
 
 | Name | Description |
 | -- | -- |
-| char* bundleName | Pointer to the bundle name of the application.<br>**Since**: 13 |
-| char* moduleName | Pointer to the module name.<br>**Since**: 13 |
-| char* abilityName | Pointer to the ability name.<br>**Since**: 13 |
+| char* bundleName | Pointer to the bundle name of the application. |
+| char* moduleName | Pointer to the module name. |
+| char* abilityName | Pointer to the ability name. |
 
 

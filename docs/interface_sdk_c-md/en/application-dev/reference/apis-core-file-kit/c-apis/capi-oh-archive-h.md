@@ -6,11 +6,9 @@ Provides archive APIs.
 
 **Library**: liboharchive.so
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Related module**: [Archive](capi-core-file-kit-archive.md)
+**Related module**: [Archive](capi-archive.md)
 
 ## Summary
 
@@ -20,10 +18,10 @@ Provides archive APIs.
 | -- | -- | -- |
 | [OH_Archive_StreamInfo](capi-archive-oh-archive-streaminfo.md) | OH_Archive_StreamInfo | Stream compression information structure. |
 | [OH_Archive_Stream_Config](capi-archive-oh-archive-stream-config.md) | OH_Archive_Stream_Config | Stream compression configuration structure. |
-| [ArchiveWriteCtx](capi-archive-archivewritectx.md) | *OH_Archive_Writer_Ctx | Archive Writer context structure. |
-| [ArchiveReadCtx](capi-archive-archivereadctx.md) | *OH_Archive_Reader_Ctx | Archive Reader context structure. |
-| [ArchiveStreamWriteCtx](capi-archive-archivestreamwritectx.md) | *OH_Archive_StreamWrite_Ctx | Archive streamWrite context structure. |
-| [ArchiveStreamReadCtx](capi-archive-archivestreamreadctx.md) | *OH_Archive_StreamRead_Ctx | Archive streamRead context structure. |
+| [*OH_Archive_Writer_Ctx](capi-archive-8hoh-archive-writer-ctx.md) | *OH_Archive_Writer_Ctx | Archive Writer context structure. |
+| [*OH_Archive_Reader_Ctx](capi-archive-8hoh-archive-reader-ctx.md) | *OH_Archive_Reader_Ctx | Archive Reader context structure. |
+| [*OH_Archive_StreamWrite_Ctx](capi-archive-8hoh-archive-streamwrite-ctx.md) | *OH_Archive_StreamWrite_Ctx | Archive streamWrite context structure. |
+| [*OH_Archive_StreamRead_Ctx](capi-archive-8hoh-archive-streamread-ctx.md) | *OH_Archive_StreamRead_Ctx | Archive streamRead context structure. |
 
 ### Enum
 
@@ -73,6 +71,13 @@ Provides archive APIs.
 | [OH_Archive_ErrCode OH_Archive_StreamRead_End(OH_Archive_StreamRead_Ctx ctx, OH_Archive_StreamInfo *streamInfo)](#oh_archive_streamread_end) | - | End the decompression, flush all remaining data, and clean up memory |
 | [void OH_Archive_StreamRead_Destroy(OH_Archive_StreamRead_Ctx ctx)](#oh_archive_streamread_destroy) | - | Destroy the decompression instance and release associated resources |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| OH_Archive_ProgressType (*OH_Archive_ProgressHandlerWithData)(int32_t progress, void *userData) | Defines a function pointer type OH_Archive_ProgressHandlerWithData for specifying the progress display handler.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.FileManagement.File.FileIO |
+| uint64_t (*OH_Archive_Stream_OutputHandler)(const void* data, uint64_t size, void* userData) | Function pointer type for user-defined callback function to handle compressed data.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.FileManagement.File.FileIO |
+
 ## Enum type description
 
 ### OH_Archive_Format
@@ -84,8 +89,6 @@ enum OH_Archive_Format
 **Description**
 
 Archive format enumeration.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -102,8 +105,6 @@ enum OH_Archive_CompressMethod
 **Description**
 
 Archive compression method enumeration.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -122,8 +123,6 @@ enum OH_Archive_OpenMode
 
 Archive open mode enumeration.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -139,8 +138,6 @@ enum OH_Archive_ProgressType
 **Description**
 
 Archive progress type enumeration.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -158,8 +155,6 @@ enum OH_Archive_StreamChecksumAlg
 **Description**
 
 Hash algorithm used for checksum.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -180,8 +175,6 @@ typedef OH_Archive_ProgressType (*OH_Archive_ProgressHandlerWithData)(int32_t pr
 **Description**
 
 Defines a function pointer type OH_Archive_ProgressHandlerWithData for specifying the progress display handler.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -207,8 +200,6 @@ typedef uint64_t (*OH_Archive_Stream_OutputHandler)(const void* data, uint64_t s
 **Description**
 
 Function pointer type for user-defined callback function to handle compressed data.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -240,11 +231,9 @@ Opens an archive file for reading.
 >
 > The returned context must be freed by calling OH_Archive_Reader_Close() to release allocated resources.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Resource release**: [OH_Archive_Reader_Close](#oh_archive_reader_close)
+**Resource release**: archive/OH_Archive_Reader_Close {return}
 
 **Parameters**:
 
@@ -267,8 +256,6 @@ OH_Archive_ErrCode OH_Archive_Reader_SetProgressHandlerWithData(OH_Archive_Reade
 **Description**
 
 Sets the progress callback function with user data for the archive reader.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -296,8 +283,6 @@ OH_Archive_ErrCode OH_Archive_Reader_ExtractAllFile(OH_Archive_Reader_Ctx arc, c
 
 Extract all files from the archive.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -322,8 +307,6 @@ OH_Archive_ErrCode OH_Archive_Reader_Close(OH_Archive_Reader_Ctx arc)
 **Description**
 
 Closes an opened archive file and releases associated resources.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -353,11 +336,9 @@ Creates and opens an archive file.
 >
 > The returned context must be freed by calling OH_Archive_Writer_Close() to release allocated resources.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Resource release**: [OH_Archive_Writer_Close](#oh_archive_writer_close)
+**Resource release**: archive/OH_Archive_Writer_Close {return}
 
 **Parameters**:
 
@@ -382,8 +363,6 @@ OH_Archive_ErrCode OH_Archive_Writer_SetCompressMethod(OH_Archive_Writer_Ctx arc
 **Description**
 
 Set the compression method for the archive file
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -411,8 +390,6 @@ OH_Archive_ErrCode OH_Archive_Writer_SetProgressHandlerWithData(OH_Archive_Write
 
 Set the compression progress function for the archive file.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -438,8 +415,6 @@ OH_Archive_ErrCode OH_Archive_Writer_Add(OH_Archive_Writer_Ctx arc, const char *
 **Description**
 
 Adds a list of files to the archive.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -467,8 +442,6 @@ OH_Archive_ErrCode OH_Archive_Writer_Close(OH_Archive_Writer_Ctx arc)
 
 Closes the archive writer. This function finalizes the archive writing process, flushes any buffered data to the output, and releases the resources associated with the archive context.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -492,8 +465,6 @@ uint64_t OH_Archive_BufferWriteCompressBound(OH_Archive_CompressMethod method, u
 **Description**
 
 Calculates the maximum compressed data size for a given source length.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -519,8 +490,6 @@ OH_Archive_ErrCode OH_Archive_BufferWrite(uint8_t *dstBuffer, uint64_t *dstSize,
 **Description**
 
 Writes data to buffer and compresses it.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -551,8 +520,6 @@ OH_Archive_ErrCode OH_Archive_BufferRead(uint8_t *dstBuffer, uint64_t *dstSize, 
 
 Reads data from buffer and decompresses it.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -581,11 +548,9 @@ OH_Archive_StreamWrite_Ctx OH_Archive_StreamWrite_Create(OH_Archive_Stream_Confi
 
 Creates a compression instance.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Resource release**: [OH_Archive_StreamWrite_Destroy](#oh_archive_streamwrite_destroy)
+**Resource release**: archive/OH_Archive_StreamWrite_Destroy {return}
 
 **Parameters**:
 
@@ -608,8 +573,6 @@ OH_Archive_ErrCode OH_Archive_StreamWrite_Start(OH_Archive_StreamWrite_Ctx ctx, 
 **Description**
 
 Starts a compression task, initializing user callback function and user data.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -637,8 +600,6 @@ OH_Archive_ErrCode OH_Archive_StreamWrite_SetCompressLevel(OH_Archive_StreamWrit
 
 Sets the compression level for StreamCompress.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -664,8 +625,6 @@ OH_Archive_ErrCode OH_Archive_StreamWrite_Cancel(OH_Archive_StreamWrite_Ctx ctx)
 
 Forces cancellation of the current blocking operation and wakes up all waiting threads.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -689,8 +648,6 @@ OH_Archive_ErrCode OH_Archive_StreamWrite_Update(OH_Archive_StreamWrite_Ctx ctx,
 **Description**
 
 Submits compression data. This interface will block when the memory pool is full.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -718,8 +675,6 @@ OH_Archive_ErrCode OH_Archive_StreamWrite_End(OH_Archive_StreamWrite_Ctx ctx, OH
 
 Ends the compression, flushes all remaining data, and cleans up memory.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -745,8 +700,6 @@ void OH_Archive_StreamWrite_Destroy(OH_Archive_StreamWrite_Ctx ctx)
 
 Destroys the compression instance and releases associated resources.
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -765,11 +718,9 @@ OH_Archive_StreamRead_Ctx OH_Archive_StreamRead_Create(OH_Archive_Stream_Config 
 
 Create a decompression instance
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Resource release**: [OH_Archive_StreamRead_Destroy](#oh_archive_streamread_destroy)
+**Resource release**: archive/OH_Archive_StreamRead_Destroy {return}
 
 **Parameters**:
 
@@ -792,8 +743,6 @@ OH_Archive_ErrCode OH_Archive_StreamRead_Start(OH_Archive_StreamRead_Ctx ctx, OH
 **Description**
 
 Start a decompression task, initialize user callback function and user data
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -821,8 +770,6 @@ OH_Archive_ErrCode OH_Archive_StreamRead_Cancel(OH_Archive_StreamRead_Ctx ctx)
 
 Force cancellation of the current blocking operation and wake up all waiting threads
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -846,8 +793,6 @@ OH_Archive_ErrCode OH_Archive_StreamRead_Update(OH_Archive_StreamRead_Ctx ctx, c
 **Description**
 
 Submit decompression data. This interface will block when the memory pool is full
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 
@@ -875,8 +820,6 @@ OH_Archive_ErrCode OH_Archive_StreamRead_End(OH_Archive_StreamRead_Ctx ctx, OH_A
 
 End the decompression, flush all remaining data, and clean up memory
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -901,8 +844,6 @@ void OH_Archive_StreamRead_Destroy(OH_Archive_StreamRead_Ctx ctx)
 **Description**
 
 Destroy the decompression instance and release associated resources
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 

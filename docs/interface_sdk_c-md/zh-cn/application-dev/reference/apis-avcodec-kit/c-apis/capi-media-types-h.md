@@ -8,11 +8,9 @@
 
 **库：** libnative_media_core.so
 
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 18
 
-**相关模块：** [Core](capi-avcodec-kit-core.md)
+**相关模块：** [Core](capi-core.md)
 
 ## 汇总
 
@@ -34,13 +32,11 @@ enum OH_Core_HdrType
 
 HDR类型枚举。
 
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CORE_HDR_TYPE_NONE = 0 | 此选项用于标记非HDR类型。<br>**起始版本：** 18 |
-| OH_CORE_HDR_TYPE_VIVID = 1 | 此选项用于标记HDR Vivid类型。<br>**起始版本：** 18 |
+| OH_CORE_HDR_TYPE_NONE = 0 |  |
+| OH_CORE_HDR_TYPE_VIVID = 1 |  |
 
 

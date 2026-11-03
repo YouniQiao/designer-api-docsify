@@ -6,11 +6,9 @@ Provides the enums, structs, macros, and error codes used by **CertManager** API
 
 **Library**: libohcert_manager.z.so
 
-**System capability**: SystemCapability.Security.CertificateManager
-
 **Since**: 22
 
-**Related module**: [CertManagerType](capi-device-certificate-kit-certmanagertype.md)
+**Related module**: [CertManagerType](capi-certmanagertype.md)
 
 ## Summary
 
@@ -51,8 +49,6 @@ enum OH_CM_ErrorCode
 
 Enumerates error codes.
 
-**System capability**: SystemCapability.Security.CertificateManager
-
 **Since**: 22
 
 | Enum item | Description |
@@ -79,8 +75,6 @@ enum OH_CM_CertificatePurpose
 **Description**
 
 Enumerates the certificate credential purposes.
-
-**System capability**: SystemCapability.Security.CertificateManager
 
 **Since**: 22
 

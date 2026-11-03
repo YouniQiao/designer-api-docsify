@@ -6,11 +6,9 @@ Declares the APIs for Transient task management.
 
 **Library**: libtransient_task.so
 
-**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **Since**: 13
 
-**Related module**: [TransientTask](capi-background-tasks-kit-transienttask.md)
+**Related module**: [TransientTask](capi-transienttask.md)
 
 ## Summary
 
@@ -34,8 +32,6 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 **Description**
 
 Requests a transient task.
-
-**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Since**: 13
 
@@ -63,8 +59,6 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 Obtains the remaining time of a transient task.
 
-**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **Since**: 13
 
 **Parameters**:
@@ -90,8 +84,6 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 Cancels a transient task.
 
-**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **Since**: 13
 
 **Parameters**:
@@ -115,8 +107,6 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 **Description**
 
 Obtains all information about a transient task, including the remaining quota of the current day.
-
-**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Since**: 20
 

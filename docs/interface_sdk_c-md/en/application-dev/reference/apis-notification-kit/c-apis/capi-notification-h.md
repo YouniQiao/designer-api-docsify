@@ -6,11 +6,9 @@ Defines APIs for notification services.
 
 **Library**: libohnotification.so
 
-**System capability**: SystemCapability.Notification.Notification
-
 **Since**: 13
 
-**Related module**: [NOTIFICATION](capi-notification-kit-notification.md)
+**Related module**: [NOTIFICATION](capi-notification.md)
 
 ## Summary
 
@@ -31,8 +29,6 @@ bool OH_Notification_IsNotificationEnabled(void)
 **Description**
 
 Checks whether the notification of the specified application is enabled.
-
-**System capability**: SystemCapability.Notification.Notification
 
 **Since**: 13
 

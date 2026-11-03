@@ -12,7 +12,7 @@ Want data structure.
 
 **Since**: 15
 
-**Related module**: [AbilityBase](capi-others-abilitybase.md)
+**Related module**: [AbilityBase](capi-abilitybase.md)
 
 **Header file**: [want.h](capi-want-h.md)
 

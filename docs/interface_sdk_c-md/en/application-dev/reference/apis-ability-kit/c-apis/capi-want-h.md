@@ -6,11 +6,9 @@ Want is a carrier for information transfer between objects (application componen
 
 **Library**: libability_base_want.so
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
-**Related module**: [AbilityBase](capi-ability-kit-abilitybase.md)
+**Related module**: [AbilityBase](capi-abilitybase.md)
 
 ## Summary
 
@@ -40,7 +38,9 @@ Want is a carrier for information transfer between objects (application componen
 | [AbilityBase_ErrorCode OH_AbilityBase_SetWantBoolParam(AbilityBase_Want* want, const char* key, bool value)](#oh_abilitybase_setwantboolparam) | Sets a value of the bool type in Want. |
 | [AbilityBase_ErrorCode OH_AbilityBase_GetWantBoolParam(AbilityBase_Want* want, const char* key, bool* value)](#oh_abilitybase_getwantboolparam) | Obtains a value of the bool type set in Want. |
 | [AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, const char* key, double value)](#oh_abilitybase_setwantdoubleparam) | Sets a value of the double type in Want. |
-| [AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)](#oh_abilitybase_getwantdoubleparam) | Obtains a value of the double type set in Want. |
+| [AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)
+
+} // extern "C"](#oh_abilitybase_getwantdoubleparam) | Obtains a value of the double type set in Want. |
 
 ## Function description
 
@@ -53,8 +53,6 @@ AbilityBase_Want* OH_AbilityBase_CreateWant(AbilityBase_Element element)
 **Description**
 
 Creates Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -80,8 +78,6 @@ AbilityBase_ErrorCode OH_AbilityBase_DestroyWant(AbilityBase_Want* want)
 
 Destroys Want. Want cannot be used after being destroyed. Otherwise, undefined behavior may occur.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -105,8 +101,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantElement(AbilityBase_Want* want, Abil
 **Description**
 
 Sets the Element struct, which consists of **bundleName**, **moduleName**, and **abilityName** in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -133,8 +127,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantElement(AbilityBase_Want* want, Abil
 
 Obtains the Element struct, which consists of **bundleName**, **moduleName**, and **abilityName** in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -159,8 +151,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantCharParam(AbilityBase_Want* want, co
 **Description**
 
 Sets **Param** in Want. For details about **Param**, see parameters in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -187,8 +177,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantCharParam(AbilityBase_Want* want, co
 **Description**
 
 Obtains **Param** set by [OH_AbilityBase_SetWantCharParam](capi-want-h.md#oh_abilitybase_setwantcharparam) in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -217,8 +205,6 @@ AbilityBase_ErrorCode OH_AbilityBase_AddWantFd(AbilityBase_Want* want, const cha
 
 Adds a Want file descriptor. The file descriptor can be obtained through fs.open.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -244,8 +230,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantFd(AbilityBase_Want* want, const cha
 **Description**
 
 Obtains a Want file descriptor.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -273,8 +257,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantUri(AbilityBase_Want* want, const ch
 
 Sets **uri** in Want. For details about the URI, see uri in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -299,8 +281,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantUri(AbilityBase_Want* want, char* ur
 **Description**
 
 Obtains **uri** set in Want. For details about the URI, see uri in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -328,8 +308,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantInt32Param(AbilityBase_Want* want, c
 
 Sets a value of the int32_t type in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -355,8 +333,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantInt32Param(AbilityBase_Want* want, c
 **Description**
 
 Obtains a value of the int32_t type set in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -384,8 +360,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantBoolParam(AbilityBase_Want* want, co
 
 Sets a value of the bool type in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -411,8 +385,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantBoolParam(AbilityBase_Want* want, co
 **Description**
 
 Obtains a value of the bool type set in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -440,8 +412,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, 
 
 Sets a value of the double type in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -462,13 +432,13 @@ Sets a value of the double type in Want.
 
 ```c
 AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, const char* key, double* value)
+
+} // extern "C"
 ```
 
 **Description**
 
 Obtains a value of the double type set in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -478,7 +448,7 @@ Obtains a value of the double type set in Want.
 | -- | -- |
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md)* want | Pointer to Want. |
 | const char* key | Pointer to a key in Want. |
-| double* value | Pointer to the value of the double type of the key. |
+| value | Pointer to the value of the double type of the key. |
 
 **Returns**:
 

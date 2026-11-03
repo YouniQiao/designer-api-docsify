@@ -6,11 +6,9 @@
 
 **库：** libimage_source_ndk.z.so
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image-kit-image.md)
+**相关模块：** [Image](capi-image.md)
 
 ## 汇总
 
@@ -29,6 +27,7 @@
 | [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md) | - | 定义图像源属性键值字符串。此选项给[OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty)和[OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty)接口使用。 |
 | [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md) | - | 定义图像源更新数据选项，由[OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata)获取。 |
 | [ImageSourceNative_](capi-image-imagesourcenative-.md) | - | 为图像源方法定义native层图像源对象。 |
+| [ImageSourceNative](capi-image-imagesourcenative.md) | ImageSourceNative | 为图像源方法定义native层图像源对象。 |
 
 ### 函数
 
@@ -84,8 +83,6 @@ int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct 
 
 通过给定的信息OhosImageSource和OhosImageSourceOps结构体，获取JavaScript native层API ImageSource对象。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -122,8 +119,6 @@ int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struc
 
 通过给定的标识符URI和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取JavaScript native层API ImageSource对象。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 11
 
 **参数：**
@@ -157,8 +152,6 @@ int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSo
 
 通过给定的文件描述符fd和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取JavaScript native层API ImageSource对象。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 11
 
 **参数：**
@@ -190,8 +183,6 @@ int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSi
 **描述：**
 
 通过给定的图像源缓冲区资源data和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取JavaScript native层API ImageSource对象。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 11
 
@@ -226,8 +217,6 @@ int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile
 
 通过给定的资源描述符[RawFileDescriptor](../../apis-localization-kit/c-apis/capi-rawfile-rawfiledescriptor.md)和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取JavaScript native层API ImageSource对象。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 11
 
 **参数：**
@@ -259,8 +248,6 @@ int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* s
 **描述：**
 
 通过[OhosImageSource](capi-image-ohosimagesource.md)和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取增量类型的JavaScript Native API ImageSource对象。 图像数据应通过[OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata)更新。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 10
 
@@ -298,8 +285,6 @@ int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, si
 
 通过给定的图像源缓冲区资源data和[OhosImageSourceOps](capi-image-ohosimagesourceops.md)结构体，获取增量类型的JavaScript Native API ImageSource对象，图像数据应通过 [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata)更新。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 11
 
 **参数：**
@@ -333,8 +318,6 @@ int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormat
 
 获取所有支持的解码格式元标记。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
@@ -364,8 +347,6 @@ ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)
 
 从输入JavaScript native层ImageSource对象中，转换成[ImageSourceNative](capi-image-imagesourcenative-.md)值。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
@@ -379,7 +360,7 @@ ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageSourceNative*](capi-image-imagesourcenative-.md) | 如果操作成功返回[ImageSourceNative](capi-image-imagesourcenative-.md)指针；如果操作失败，返回空指针。 |
+| [ImageSourceNative*](capi-image-imagesourcenative.md) | 如果操作成功返回[ImageSourceNative](capi-image-imagesourcenative-.md)指针；如果操作失败，返回空指针。 |
 
 **参考：**
 
@@ -396,15 +377,13 @@ int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct Oh
 
 通过一个给定的选项[OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)结构体，从ImageSource中解码JavaScript native层PixelMap对象。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | 表明为了解码图像源的选项。 |
 | napi_value *res | 表明JavaScript native层PixelMap对象的指针。 |
 
@@ -429,15 +408,13 @@ int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struc
 
 通过一个给定的选项[OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)结构体，从ImageSource中解码所有的JavaScript native层PixelMap对象列表。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | 表明为了解码图像源的选项。 |
 | napi_value *res | 表明JavaScript native层PixelMap列表对象的指针。 |
 
@@ -462,15 +439,13 @@ int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct Ohos
 
 从ImageSource（如GIF图像源）获取延迟时间列表。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)* res | 表明延迟时间列表OhosImageSourceDelayTimeList的指针。 <br>当输入的res中delayTimeList是空指针并且size是0时，将通过res的size中返回延迟时间列表大小为了获取延迟时间，需要比返回的delayTimeList大小值大的足够空间。 |
 
 **返回值：**
@@ -494,15 +469,13 @@ int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *
 
 从ImageSource中获取帧计数。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | uint32_t *res | 表明帧计数的指针。 |
 
 **返回值：**
@@ -526,15 +499,13 @@ int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t ind
 
 通过索引从ImageSource获取图像源信息。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | int32_t index | 表明帧计数的指针。 |
 | [struct OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)* info | 表明图像源信息OhosImageSourceInfo的指针。 |
 
@@ -559,15 +530,13 @@ int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct 
 
 通过关键字从ImageSource中获取图像源属性。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | 表明属性关键字OhosImageSourceProperty的指针。 |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | 表明作为结果的属性值OhosImageSourceProperty的指针。当输入的value中value是空指针并且size是0时，将通过value中的size返回属性值的大小。为了获取属性值， 需要比value中的结果大小大的足够的空间。 |
 
@@ -592,15 +561,13 @@ int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, stru
 
 通过关键字为ImageSource修改图像源属性。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | 表明属性关键字OhosImageSourceProperty的指针。 |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | 为了修改表明属性值OhosImageSourceProperty的指针。 |
 
@@ -625,15 +592,13 @@ int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosIm
 
 为了增量类型的ImageSource更新源数据。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 | [struct OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)* data | 表明更新数据信息OhosImageSourceUpdateData的指针。 |
 
 **返回值：**
@@ -657,15 +622,13 @@ int32_t OH_ImageSource_Release(ImageSourceNative* native)
 
 释放native层图像源ImageSourceNative。
 
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
 **起始版本：** 10
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ImageSourceNative](capi-image-imagesourcenative-.md)* native | 表明native层ImageSourceNative值的指针。 |
+| [ImageSourceNative](capi-image-imagesourcenative.md)* native | 表明native层ImageSourceNative值的指针。 |
 
 **返回值：**
 

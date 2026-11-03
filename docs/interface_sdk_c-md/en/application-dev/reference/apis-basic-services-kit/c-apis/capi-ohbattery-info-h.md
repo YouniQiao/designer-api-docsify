@@ -6,11 +6,9 @@ Declares the battery APIs that are used to obtain the current battery capacity a
 
 **Library**: libohbattery_info.so
 
-**System capability**: SystemCapability.PowerManager.BatteryManager.Core
-
 **Since**: 13
 
-**Related module**: [OH_BatteryInfo](capi-basic-services-kit-oh-batteryinfo.md)
+**Related module**: [OH_BatteryInfo](capi-oh-batteryinfo.md)
 
 ## Summary
 
@@ -47,17 +45,15 @@ enum BatteryInfo_BatteryPluggedType
 
 Enumerates the battery plugged types.
 
-**System capability**: SystemCapability.PowerManager.BatteryManager.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| PLUGGED_TYPE_NONE | No power supply.<br>**Since**: 13 |
-| PLUGGED_TYPE_AC | AC charging.<br>**Since**: 13 |
-| PLUGGED_TYPE_USB | USB DC charging.<br>**Since**: 13 |
-| PLUGGED_TYPE_WIRELESS | Wireless charging.<br>**Since**: 13 |
-| PLUGGED_TYPE_BUTT | Unknown type.<br>**Since**: 13 |
+| PLUGGED_TYPE_NONE |  |
+| PLUGGED_TYPE_AC |  |
+| PLUGGED_TYPE_USB |  |
+| PLUGGED_TYPE_WIRELESS |  |
+| PLUGGED_TYPE_BUTT |  |
 
 
 ## Function description
@@ -71,8 +67,6 @@ int32_t OH_BatteryInfo_GetCapacity()
 **Description**
 
 Obtains the current battery capacity in percent.
-
-**System capability**: SystemCapability.PowerManager.BatteryManager.Core
 
 **Since**: 13
 
@@ -91,8 +85,6 @@ BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()
 **Description**
 
 Obtains the battery plugged type.
-
-**System capability**: SystemCapability.PowerManager.BatteryManager.Core
 
 **Since**: 13
 

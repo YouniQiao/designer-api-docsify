@@ -6,11 +6,9 @@ Declare audio manager related interfaces.
 
 **Library**: libohaudio.so
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
-**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
+**Related module**: [OHAudio](capi-ohaudio.md)
 
 ## Summary
 
@@ -19,6 +17,12 @@ Declare audio manager related interfaces.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioManager](capi-ohaudio-oh-audiomanager.md) | OH_AudioManager | Declare the audio manager. The handle of audio manager is used for audio management related functions. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NATIVE_AUDIO_MANAGER_H | Declare audio manager related interfaces.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
 
 ### Function
 
@@ -29,6 +33,12 @@ Declare audio manager related interfaces.
 | [OH_AudioCommon_Result OH_GetAudioScene(OH_AudioManager* manager, OH_AudioScene *scene)](#oh_getaudioscene) | - | Get audio scene. |
 | [OH_AudioCommon_Result OH_AudioManager_RegisterAudioSceneChangeCallback(OH_AudioManager *manager, OH_AudioManager_OnAudioSceneChangeCallback callback, void *userData)](#oh_audiomanager_registeraudioscenechangecallback) | - | Register callback to receive audio scene changed events. |
 | [OH_AudioCommon_Result OH_AudioManager_UnregisterAudioSceneChangeCallback(OH_AudioManager *manager, OH_AudioManager_OnAudioSceneChangeCallback callback)](#oh_audiomanager_unregisteraudioscenechangecallback) | - | Unregister audio scene change callback. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_AudioManager_OnAudioSceneChangeCallback) ( void *userData, OH_AudioScene scene ) | Prototype for the audio scene change function that is passed to [OH_AudioManager_RegisterAudioSceneChangeCallback](capi-native-audio-manager-h.md#oh_audiomanager_registeraudioscenechangecallback).<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
 
 ## Function description
 
@@ -41,8 +51,6 @@ typedef void (*OH_AudioManager_OnAudioSceneChangeCallback)(void *userData, OH_Au
 **Description**
 
 Prototype for the audio scene change function that is passed to [OH_AudioManager_RegisterAudioSceneChangeCallback](capi-native-audio-manager-h.md#oh_audiomanager_registeraudioscenechangecallback).
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -62,8 +70,6 @@ OH_AudioCommon_Result OH_GetAudioManager(OH_AudioManager **audioManager)
 **Description**
 
 Get audio manager handle.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -88,8 +94,6 @@ OH_AudioCommon_Result OH_GetAudioScene(OH_AudioManager* manager, OH_AudioScene *
 **Description**
 
 Get audio scene.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -116,8 +120,6 @@ OH_AudioCommon_Result OH_AudioManager_RegisterAudioSceneChangeCallback(OH_AudioM
 
 Register callback to receive audio scene changed events.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -143,8 +145,6 @@ OH_AudioCommon_Result OH_AudioManager_UnregisterAudioSceneChangeCallback(OH_Audi
 **Description**
 
 Unregister audio scene change callback.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 

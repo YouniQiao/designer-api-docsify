@@ -6,11 +6,9 @@
 
 **库：** liblocation_ndk.so
 
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
-**相关模块：** [Location](capi-location-kit-location.md)
+**相关模块：** [Location](capi-location.md)
 
 ## 汇总
 
@@ -33,8 +31,6 @@ Location_ResultCode OH_Location_IsLocatingEnabled(bool* enabled)
 **描述：**
 
 查询位置开关是否开启。
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **起始版本：** 13
 
@@ -59,8 +55,6 @@ Location_ResultCode OH_Location_StartLocating(const Location_RequestConfig* requ
 **描述：**
 
 启动定位并订阅位置变化。
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -87,8 +81,6 @@ Location_ResultCode OH_Location_StopLocating(const Location_RequestConfig* reque
 **描述：**
 
 停止定位并取消订阅位置变化。
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 

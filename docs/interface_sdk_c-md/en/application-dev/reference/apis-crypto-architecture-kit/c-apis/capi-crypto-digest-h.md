@@ -4,15 +4,13 @@
 
 Defines the digest algorithm interfaces.
 
-**File to Include**: <CryptoArchitectureKit/crypto_digest.h>
+**Include**: <CryptoArchitectureKit/crypto_digest.h>
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Related module**: [CryptoDigestApi](capi-crypto-architecture-kit-cryptodigestapi.md)
+**Related module**: [CryptoDigestApi](capi-cryptodigestapi.md)
 
 ## Summary
 
@@ -45,11 +43,9 @@ OH_Crypto_ErrCode OH_CryptoDigest_Create(const char *algoName, OH_CryptoDigest *
 
 Creates a digest context based on the given algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_DigestCrypto_Destroy](#oh_digestcrypto_destroy)
+**Resource release**: crypto_digest/OH_DigestCrypto_Destroy {ctx}
 
 **Parameters**:
 
@@ -78,8 +74,6 @@ OH_Crypto_ErrCode OH_CryptoDigest_Update(OH_CryptoDigest *ctx, Crypto_DataBlob *
 **Description**
 
 Updates digest data.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -111,11 +105,9 @@ OH_Crypto_ErrCode OH_CryptoDigest_Final(OH_CryptoDigest *ctx, Crypto_DataBlob *o
 
 Finishes the digest operation and outputs the result.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -139,8 +131,6 @@ uint32_t OH_CryptoDigest_GetLength(OH_CryptoDigest *ctx)
 **Description**
 
 Obtains the length of the digest result.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -166,8 +156,6 @@ const char *OH_CryptoDigest_GetAlgoName(OH_CryptoDigest *ctx)
 
 Obtains the algorithm name of the digest context.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -191,8 +179,6 @@ void OH_DigestCrypto_Destroy(OH_CryptoDigest *ctx)
 **Description**
 
 Destroys the digest context.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
