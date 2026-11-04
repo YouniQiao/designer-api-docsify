@@ -3,7 +3,7 @@
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-ads-advertising.md)
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-api10lessdeprecatedmodules-bytrace.md)
 - [Arkdata (486)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability.md)
-- [Arkgraphics2D (365)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit.md)
+- [Arkgraphics2D (366)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit.md)
 - [Arkgraphics3D (101)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-graphics-scene.md)
 - [Arkts (306)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkts/arkts-apis/arkts-arkts-collections.md)
 - [Arkui (2015)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-animation-windowanimationmanager.md)
