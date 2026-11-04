@@ -191,7 +191,7 @@ int32_t OH_UsbSerial_Write(UsbSerial_Device *dev, uint8_t *buff, uint32_t buffer
 | -- | -- |
 | [UsbSerial_Device](capi-usbserialddk-usbserial-device.md) *dev | 设备句柄，需调用[OH_UsbSerial_Open](capi-usb-serial-api-h.md#oh_usbserial_open)接口打开设备并获取。 |
 | uint8_t *buff | 写入USB串口设备数据的缓冲区，需由调用方分配且容量不小于bufferSize。 |
-| uint32_t bufferSize | 缓冲区的大小。 |
+| uint32_t bufferSize | 缓冲区的大小。最大4096字节，超出内容会被截断。 |
 | uint32_t *bytesWritten | 实际写入的字节数。仅在接口返回成功时有效，且可能小于bufferSize。 |
 
 **返回值：**

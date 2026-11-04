@@ -347,6 +347,8 @@ EllipsisMode.START和EllipsisMode.CENTER仅在单行文本超长时生效。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+**卡片能力：** 从API版本26.1.0开始，该接口支持在ArkTS卡片中使用。
+
 <!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute--><!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -2036,6 +2038,8 @@ WordBreak.BREAK_ALL与{overflow:&nbsp;TextOverflow.Ellipsis}、maxLines组合使
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**卡片能力：** 从API版本26.1.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute--><!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute-End-->
 

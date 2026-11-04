@@ -355,6 +355,8 @@ The **EllipsisMode.START** and **EllipsisMode.CENTER** attributes take effect on
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+
 <!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute--><!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -2067,6 +2069,8 @@ To break text by character, with the excess part displayed as an ellipsis (...),
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
 
 <!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute--><!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute-End-->
 
