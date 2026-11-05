@@ -12,7 +12,7 @@ function offDataFabricAddress(inputParams: DataFabricAddressParams,
     callback?: Callback<DataProcessingResponse>): void
 ```
 
-Unsubscribes from address data fabric interface. This method should be called after successfully subscribing with onDataFabricAddress. Calling this method without <br> a successful subscription will result in error 36900004.
+Unsubscribes from address data fabric interface. This method should be called after successfully subscribing with onDataFabricAddress. Calling this method without <br> a successful subscription will result in error 36900003.
 
 **Since:** 26.1.0
 
@@ -42,5 +42,4 @@ Unsubscribes from address data fabric interface. This method should be called af
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to <br> limited device capabilities. |
 | [36900001](../errorcode-dataFabricAddress-sys.md#36900001-internal-error-in-the-api) | Internal error in the API. |
 | [36900003](../errorcode-dataFabricAddress-sys.md#36900003-unsubscription-failed) | Unsubscription failed. |
-| [36900004](../errorcode-dataFabricAddress-sys.md#36900004-operation-not-supported) | Operation not supported. |
 | [36900005](../errorcode-dataFabricAddress-sys.md#36900005-invalid-parameter) | Invalid parameter. |
