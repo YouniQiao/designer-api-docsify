@@ -4,6 +4,8 @@
 
 Provides type definitions for <b>NativeNode</b> APIs.
 
+**引用文件：** <arkui/native_node.h>
+
 **库：** libace_ndk.z.so
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

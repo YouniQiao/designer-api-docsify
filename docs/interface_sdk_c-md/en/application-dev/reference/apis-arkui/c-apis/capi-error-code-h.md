@@ -4,6 +4,8 @@
 
 Defines the error code for the native module.
 
+**File to Include**: <arkui/error_code.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full

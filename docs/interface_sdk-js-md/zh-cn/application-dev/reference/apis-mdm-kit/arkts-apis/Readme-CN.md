@@ -106,6 +106,7 @@
   - [queryBundleStatsInfos](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md)
   - [queryTrafficStats](arkts-mdm-applicationmanager-querytrafficstats-f.md)
   - [releaseExemptionResource](arkts-mdm-applicationmanager-releaseexemptionresource-f.md)
+  - [removeAllNotifications](arkts-mdm-applicationmanager-removeallnotifications-f.md)
   - [removeAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-removealloweddistributeabilityconnbundles-f.md)
   - [removeAllowedNotificationBundles](arkts-mdm-applicationmanager-removeallowednotificationbundles-f.md)
   - [removeAllowedRunningBundles](arkts-mdm-applicationmanager-removeallowedrunningbundles-f.md)

@@ -29,6 +29,8 @@ Declare audio stream manager related interfaces.<br> This file interface is used
 | [OH_AudioCommon_Result OH_AudioStreamManager_IsAcousticEchoCancelerSupported(OH_AudioStreamManager *streamManager, OH_AudioStream_SourceType sourceType, bool *supported)](#oh_audiostreammanager_isacousticechocancelersupported) | Query whether acoustic echo canceler is supported by input source. |
 | [bool OH_AudioStreamManager_IsFastPlaybackSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_Usage usage)](#oh_audiostreammanager_isfastplaybacksupported) | Return if fast playback is supported for the specific audio stream info and usage type in current device situation. |
 | [bool OH_AudioStreamManager_IsFastRecordingSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_SourceType source)](#oh_audiostreammanager_isfastrecordingsupported) | Return if fast recording is supported for the specific audio stream info and source type in current device situation. |
+| [OH_AudioCommon_Result OH_AudioStreamManager_IsUltraFastPlaybackSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_Usage usage, bool *supported)](#oh_audiostreammanager_isultrafastplaybacksupported) | This API is used to query whether the current device supports ultra-low latency playback in specific audio stream information and application scenarios. |
+| [OH_AudioCommon_Result OH_AudioStreamManager_IsUltraFastRecordingSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_SourceType source, bool *supported)](#oh_audiostreammanager_isultrafastrecordingsupported) | This API is used to query whether the current device supports ultra-low latency recording in specific audio stream information and application scenarios. |
 | [bool OH_AudioStreamManager_IsIntelligentNoiseReductionEnabledForCurrentDevice(OH_AudioStreamManager *streamManager, OH_AudioStream_SourceType source)](#oh_audiostreammanager_isintelligentnoisereductionenabledforcurrentdevice) | Return if the system recording enables intelligent noise reduction for current device. |
 | [bool OH_AudioStreamManager_IsMultichannelPlaybackSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_Usage usage)](#oh_audiostreammanager_ismultichannelplaybacksupported) | Returns if multichannel playback is supported for the specific audio stream info and usage type in current device situation. |
 | [bool OH_AudioStreamManager_IsDirectPlaybackSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_Usage usage)](#oh_audiostreammanager_isdirectplaybacksupported) | Returns if direct playback is supported for the specific audio stream info and usage type in current device situation. |
@@ -174,6 +176,64 @@ Return if fast recording is supported for the specific audio stream info and sou
 | Type | Description |
 | -- | -- |
 | bool | {@code true} if fast recording is supported in this situation. |
+
+### OH_AudioStreamManager_IsUltraFastPlaybackSupported()
+
+```c
+OH_AudioCommon_Result OH_AudioStreamManager_IsUltraFastPlaybackSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_Usage usage, bool *supported)
+```
+
+**Description**
+
+This API is used to query whether the current device supports ultra-low latency playback in specific audio stream information and application scenarios.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioStreamManager](capi-ohaudio-oh-audiostreammanager.md) *streamManager | [in] Handle of the audio stream manager. Obtain the handle through [OH_AudioManager_GetAudioStreamManager](capi-native-audio-stream-manager-h.md#oh_audiomanager_getaudiostreammanager). |
+| [OH_AudioStreamInfo](capi-ohaudio-oh-audiostreaminfo.md) *streamInfo | [in] Pointer to audio stream information. |
+| [OH_AudioStream_Usage](capi-native-audiostream-base-h.md#oh_audiostream_usage) usage | [in] Audio stream usage scenario. |
+| bool *supported | [out] indicates the variable indicating whether the ultra-low latency playback result is supported. Only if the function returns [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result): This parameter is valid. The value true indicates that this parameter is supported, and the value false indicates that this parameter is not supported. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul> <li>AUDIOCOMMON_RESULT_SUCCESS: The query is successful. </li> <li>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM: streamManager, streamInfo, supported parameter null pointer The * or usage parameter is invalid. </li> <li>AUDIOCOMMON_RESULT_ERROR_SERVICE_DIED: The audio service process exits unexpectedly. </li> </ul> |
+
+### OH_AudioStreamManager_IsUltraFastRecordingSupported()
+
+```c
+OH_AudioCommon_Result OH_AudioStreamManager_IsUltraFastRecordingSupported(OH_AudioStreamManager *streamManager, OH_AudioStreamInfo *streamInfo, OH_AudioStream_SourceType source, bool *supported)
+```
+
+**Description**
+
+This API is used to query whether the current device supports ultra-low latency recording in specific audio stream information and application scenarios.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioStreamManager](capi-ohaudio-oh-audiostreammanager.md) *streamManager | [in] Handle of the audio stream manager. Obtain the handle through [OH_AudioManager_GetAudioStreamManager](capi-native-audio-stream-manager-h.md#oh_audiomanager_getaudiostreammanager). |
+| [OH_AudioStreamInfo](capi-ohaudio-oh-audiostreaminfo.md) *streamInfo | [in] Pointer to audio stream information. |
+| [OH_AudioStream_SourceType](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype) source | [in] Audio stream usage scenario. |
+| bool *supported | [out] indicates whether to receive the result of ultra-low-latency recording. Only if the function returns [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result): This parameter is valid. The value true indicates that this parameter is supported, and the value false indicates that this parameter is not supported. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul> <li>AUDIOCOMMON_RESULT_SUCCESS: The query is successful. </li> <li>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM: streamManager, streamInfo, supported parameter null pointer The * or source parameter is invalid. </li> <li>AUDIOCOMMON_RESULT_ERROR_SERVICE_DIED: The audio service process exits unexpectedly. </li> </ul> |
 
 ### OH_AudioStreamManager_IsIntelligentNoiseReductionEnabledForCurrentDevice()
 

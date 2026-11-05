@@ -84,6 +84,7 @@ Define the result of the function execution.
 | AUDIOSTREAM_ERROR_ILLEGAL_STATE = 2 | &nbsp;Execution status exception.<br>**Since**: 10 |
 | AUDIOSTREAM_ERROR_SYSTEM = 3 | &nbsp;An system error has occurred.<br>**Since**: 10 |
 | AUDIOSTREAM_ERROR_UNSUPPORTED_FORMAT = 4 | &nbsp;Unsupported audio format, such as unsupported encoding type, sample format etc.<br>**Since**: 19 |
+| AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED = 201 | Permission denied.<br>**Since**: 26.1.0 |
 | AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY = 6800104 | &nbsp;Unsupported audio stream ability, including function and configuration.<br>**Since**: 26.0.0 |
 | AUDIOSTREAM_ERROR_SERVICE_DIED = 6800302 | &nbsp;Audio server process died.<br>**Since**: 26.0.0 |
 
@@ -197,6 +198,7 @@ Define the audio latency mode.
 | -- | -- |
 | AUDIOSTREAM_LATENCY_MODE_NORMAL = 0 | This is a normal audio scene.<br>**Since**: 10 |
 | AUDIOSTREAM_LATENCY_MODE_FAST = 1 | This is a low latency audio scene.<br>**Since**: 10 |
+| AUDIOSTREAM_LATENCY_MODE_ULTRA_FAST = 2 | Indicates the ultra-low latency audio stream mode. <br>In this mode, the length of each callback data is 2.5 ms, and the length of each callback data is 5 ms in low-latency mode. <br>The performance requirements and power consumption impact of this mode are significantly higher than those of the low-latency mode, which may cause audio freeze risks and increased power consumption. Recommended only in scenarios where delay is extremely sensitive and the [AUDIOSTREAM_LATENCY_MODE_FAST](capi-native-audiostream-base-h.md#oh_audiostream_latencymode) mode cannot meet delay requirements. Use this mode again, for example, in scenarios such as K song soft ear return. <br>This mode is recommended for continuous audio playback or recording. It is not recommended for short audio. Otherwise, user experience may be affected. <br>Before creating audio streams in this mode, you must have the `ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM` permission. <br>This mode supports less [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) than [AUDIOSTREAM_LATENCY_MODE_FAST](capi-native-audiostream-base-h.md#oh_audiostream_latencymode), So before setting this mode, use [OH_AudioStreamManager_IsUltraFastPlaybackSupported](capi-native-audio-stream-manager-h.md#oh_audiostreammanager_isultrafastplaybacksupported) or [OH_AudioStreamManager_IsUltraFastRecordingSupported](capi-native-audio-stream-manager-h.md#oh_audiostreammanager_isultrafastrecordingsupported) Queries whether the current device supports this function. <br>If you do not have the permission, [AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned when you create an audio stream. The current hardware is used. If this function is not supported, [AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned when an audio stream is created. <br>After the audio stream is successfully started, the audio stream can be started through [OH_AudioRenderer_GetFastStatus](capi-native-audiorenderer-h.md#oh_audiorenderer_getfaststatus) or [OH_AudioCapturer_GetFastStatus](capi-native-audiocapturer-h.md#oh_audiocapturer_getfaststatus) Check whether the system is running in this mode. <br>If you want to obtain the change of the running mode in a timely manner, click {@link} OH_AudioStreamBuilder_SetRendererFastStatusChangeCallback} or {@link OH_AudioStreamBuilder_SetCapturerFastStatusChangeCallback} Register callback.<br>**Since**: 26.1.0 |
 
 ### OH_AudioStream_DirectPlaybackMode
 
@@ -391,6 +393,7 @@ Defines the fast status.
 | -- | -- |
 | AUDIOSTREAM_FASTSTATUS_NORMAL = 0 | normal status |
 | AUDIOSTREAM_FASTSTATUS_FAST = 1 | fast status |
+| AUDIOSTREAM_FASTSTATUS_ULTRA_FAST = 2 | Indicates the status of the ultra-low latency audio stream.<br>**Since**: 26.1.0 |
 
 ### OH_AudioStream_DeviceChangeReason
 

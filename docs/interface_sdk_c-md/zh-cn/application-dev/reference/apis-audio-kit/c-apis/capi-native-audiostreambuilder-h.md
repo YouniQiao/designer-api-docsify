@@ -32,8 +32,8 @@
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetRendererOutputDeviceChangeCallback(OH_AudioStreamBuilder* builder, OH_AudioRenderer_OutputDeviceChangeCallback callback, void* userData)](#oh_audiostreambuilder_setrendereroutputdevicechangecallback) | 设置音频播放流设备变化的回调。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetRendererPrivacy(OH_AudioStreamBuilder* builder, OH_AudioStream_PrivacyType privacy)](#oh_audiostreambuilder_setrendererprivacy) | 设置当前音频播放流的隐私类型。 <br>默认的隐私类型为公开类型，当音频流的[OH_AudioStream_Usage](capi-native-audiostream-base-h.md#oh_audiostream_usage)不是通话类型时， 允许被其他应用录制或进行屏幕投射。 <br>如果音频播放流内容包含隐私或专利版权内容，开发者可通过此接口调整隐私类型， 避免被其他应用通过内录（录制系统内部音频）录制。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetCapturerCallback(OH_AudioStreamBuilder* builder, OH_AudioCapturer_Callbacks callbacks, void* userData)](#oh_audiostreambuilder_setcapturercallback) | 设置音频录制流的回调。 <br>可同时设置4个回调，包括读取音频数据、音频录制流事件、音频录制中断事件和音频录制错误回调函数。 <br>注意，在设置音频回调函数时，请确保每一个成员变量都被自定义的回调函数或空指针初始化， 避免未初始化的回调函数被系统调用，引起不可预知的行为。(API20废弃) |
-| [OH_AudioStream_Result OH_AudioStreamBuilder_GenerateRenderer(OH_AudioStreamBuilder* builder, OH_AudioRenderer** audioRenderer)](#oh_audiostreambuilder_generaterenderer) | 创建音频播放流实例。 <br>创建的播放流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。 |
-| [OH_AudioStream_Result OH_AudioStreamBuilder_GenerateCapturer(OH_AudioStreamBuilder* builder, OH_AudioCapturer** audioCapturer)](#oh_audiostreambuilder_generatecapturer) | 创建音频录制流实例。 <br>创建的录制流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。 |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_GenerateRenderer(OH_AudioStreamBuilder* builder, OH_AudioRenderer** audioRenderer)](#oh_audiostreambuilder_generaterenderer) | 创建音频播放流实例。 <br>创建的播放流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。<br> 在26.1.0与更高API版本，支持应用创建超低时延音频流，在创建超低时延音频流时，应用必须具备 `ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM`权限。 未具备权限时， 函数返回[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result)； 当前硬件不支持超低时延时，函数返回[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result)。 |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_GenerateCapturer(OH_AudioStreamBuilder* builder, OH_AudioCapturer** audioCapturer)](#oh_audiostreambuilder_generatecapturer) | 创建音频录制流实例。 <br>创建的录制流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。<br> 在26.1.0与更高API版本，支持应用创建超低时延音频流，在创建超低时延音频流时，应用必须具备 `ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM`权限。 未具备权限时， 函数返回[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result)； 当前硬件不支持超低时延时，函数返回[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result)。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetFrameSizeInCallback(OH_AudioStreamBuilder* builder, int32_t frameSize)](#oh_audiostreambuilder_setframesizeincallback) | 设置音频播放流每次数据回调的帧长。 <br>此设置影响的回调函数包括[OH_AudioRenderer_OnWriteData](capi-ohaudio-oh-audiorenderer-callbacks-struct.md#oh_audiorenderer_onwritedata)，[OH_AudioRenderer_OnWriteDataCallback](capi-native-audiostream-base-h.md#oh_audiorenderer_onwritedatacallback) 和 [OH_AudioRenderer_OnWriteDataCallbackAdvanced](capi-native-audiorenderer-h.md#oh_audiorenderer_onwritedatacallbackadvanced) <br>不同播放通路可设置的范围如下： <br>低时延播放：frameSize可设置为5ms、10ms、15ms、20ms音频数据对应的帧长。 <br>普通通路播放：frameSize可设置为20ms-100ms音频数据对应的帧长。 <br>帧长的含义是音频帧的采样点数量。当采样率为48000Hz时，20ms音频数据对应的帧长为48000 * 0.02，即960个采样点。 而对应的回调内数据长度计算方式为帧长 * 声道数 * 采样位宽（字节数）。当声道为双声道， 采样格式为16bit（2个字节）时，960帧长对应数据长度为960 * 2 * 2 = 3840字节。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetWriteDataWithMetadataCallback(OH_AudioStreamBuilder* builder, OH_AudioRenderer_WriteDataWithMetadataCallback callback, void* userData)](#oh_audiostreambuilder_setwritedatawithmetadatacallback) | 设置同时写入音频数据和元数据的回调。 <br>本接口主要用于含元数据的音频格式播放场景，如Audio Vivid格式的音频播放。 <br>在音频播放流运行过程中，此回调函数会被周期性的触发，让调用者写入要播放的音频数据。 <br>使用本接口时，不应再设置其他音频播放写入数据回调。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetRendererInterruptMode(OH_AudioStreamBuilder* builder, OH_AudioInterrupt_Mode mode)](#oh_audiostreambuilder_setrendererinterruptmode) | 设置音频播放流的中断模式。 <br>中断模式会影响同一个应用进程内不同音频播放流之间的中断策略。默认为共享模式， 应用的不同音频流之间不会相互打断，而是由开发者自行管理。 |
@@ -452,7 +452,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateRenderer(OH_AudioStreamBuild
 
 **描述：**
 
-创建音频播放流实例。 <br>创建的播放流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。
+创建音频播放流实例。 <br>创建的播放流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。<br> 在26.1.0与更高API版本，支持应用创建超低时延音频流，在创建超低时延音频流时，应用必须具备 `ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM`权限。 未具备权限时， 函数返回[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result)； 当前硬件不支持超低时延时，函数返回[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result)。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -469,7 +469,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateRenderer(OH_AudioStreamBuild
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 函数执行成功。</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. 参数builder为空指针；2. builder不是播放流类型；3. 创建OHAudioRenderer失败，可能是音频服务异常或系统资源不足。</li> </ul> |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 函数执行成功。</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. 参数builder为空指针；2. builder不是播放流类型；3. 创建OHAudioRenderer失败，可能是音频服务异常或系统资源不足。</li> <li>[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result) 权限缺失。[since 26.1.0]</li> <li>[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result) 当前硬件不支持超低时延。[since 26.1.0]</li> </ul> |
 
 ### OH_AudioStreamBuilder_GenerateCapturer()
 
@@ -479,7 +479,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateCapturer(OH_AudioStreamBuild
 
 **描述：**
 
-创建音频录制流实例。 <br>创建的录制流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。
+创建音频录制流实例。 <br>创建的录制流会使用所有已设置的音频参数和回调函数，相关的参数支持范围和权限要求也会在此时进行校验。<br> 在26.1.0与更高API版本，支持应用创建超低时延音频流，在创建超低时延音频流时，应用必须具备 `ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM`权限。 未具备权限时， 函数返回[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result)； 当前硬件不支持超低时延时，函数返回[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result)。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -496,7 +496,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateCapturer(OH_AudioStreamBuild
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 函数执行成功。</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. 参数builder为空指针；2. builder不是录制流类型；3. 创建OHAudioCapturer失败，可能是音频服务异常、系统资源不足或权限不足。</li> </ul> |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 函数执行成功。</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. 参数builder为空指针；2. builder不是录制流类型；3. 创建OHAudioCapturer失败，可能是音频服务异常、系统资源不足或权限不足。</li> <li>[AUDIOSTREAM_RESULT_ERROR_PERMISSION_DENIED](capi-native-audiostream-base-h.md#oh_audiostream_result) 权限缺失。[since 26.1.0]</li> <li>[AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY](capi-native-audiostream-base-h.md#oh_audiostream_result) 当前硬件不支持超低时延。[since 26.1.0]</li> </ul> |
 
 ### OH_AudioStreamBuilder_SetFrameSizeInCallback()
 

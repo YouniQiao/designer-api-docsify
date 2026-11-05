@@ -196,6 +196,28 @@ let count: number = util.ArkTSVM.getGlobalHandleCount();
 console.info(`current global handle count: ${count}`);
 ```
 
+## hintGC
+
+```TypeScript
+static hintGC(level?: UrgencyLevel): void
+```
+
+提示当前ArkTS虚拟机主动触发GC的接口。虚拟机根据当前内存状态和紧急程度决定是否触发GC。默认参数值是Urgency.LOW。不推荐高频调用，因为GC可能带来较高的性能开销
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static hintGC(level?: UrgencyLevel): void--><!--Device-ArkTSVM-static hintGC(level?: UrgencyLevel): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| level | [UrgencyLevel](arkts-arkts-util-urgencylevel-e.md) | 否 | 紧急程度.<br>可选的参数值如下: <br>- **Urgency.LOW** (默认值): 紧急程度低, GC触发阈值相对较高,适用于开发者期望主动触发GC去回收已死亡的对象但是应用的ArkTS内存压力仍然可控的场景。<br>- **Urgency.MEDIUM**: 紧急程度中等, GC触发阈值介于LOW和HIGH之间。<br>- **Urgency.HIGH**: 紧急程度高, GC触发阈值低,适用于应用的ArkTS内存压力已经非常高，开发者期望系统尽可能快地触发GC去回收内存的场景 |
+
 ## offVMHeapMemoryPressure
 
 ```TypeScript

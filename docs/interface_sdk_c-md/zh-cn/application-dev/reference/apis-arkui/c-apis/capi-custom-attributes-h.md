@@ -4,6 +4,8 @@
 
 为NativeNode API提供自定义节点事件定义。
 
+**引用文件：** <arkui/custom_attributes.h>
+
 **库：** libace_ndk.z.so
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

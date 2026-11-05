@@ -4,6 +4,8 @@
 
 提供ArkTS侧的FrameNode转换NodeHandle的方式。
 
+**引用文件：** <arkui/native_node_napi.h>
+
 **库：** libace_ndk.z.so
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

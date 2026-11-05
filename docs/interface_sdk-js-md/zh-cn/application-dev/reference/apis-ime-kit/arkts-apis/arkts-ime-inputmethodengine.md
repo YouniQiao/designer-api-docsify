@@ -56,6 +56,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [Panel](arkts-ime-inputmethodengine-panel-i.md) | Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)接口获取，使用完毕后需调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel-1)销毁以释放资源。createPanel与destroyPanel必须配对调用。<br> <br>核心功能概述：<br> <br>- 页面加载：通过[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent-1)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。<br>- 显示与隐藏：通过[show](arkts-ime-inputmethodengine-panel-i.md#show-1)显示面板，通过[hide](arkts-ime-inputmethodengine-panel-i.md#hide-1)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。<br>- 尺寸与位置调整：通过[resize](arkts-ime-inputmethodengine-panel-i.md#resize)调整面板尺寸，通过[moveTo](arkts-ime-inputmethodengine-panel-i.md#moveto)移动面板位置，通过[startMoving](arkts-ime-inputmethodengine-panel-i.md#startmoving)拖拽移动面板，通过[adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect-1)/ [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect-1)/ [updateRegion](arkts-ime-inputmethodengine-panel-i.md#updateregion)调整面板区域。<br>- 模式设置：通过[changeFlag](arkts-ime-inputmethodengine-panel-i.md#changeflag)切换面板固定态/浮动态，通过[setPrivacyMode](arkts-ime-inputmethodengine-panel-i.md#setprivacymode)设置隐私模式，通过[setImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode)/ [getImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#getimmersivemode)设置/获取沉浸模式。<br>- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。<br> <br>面板生命周期：<br> <br>1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)中创建Panel实例并指定面板类型和标志位。<br>2. 调用[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent-1)加载键盘页面内容。<br>3. 调用[show](arkts-ime-inputmethodengine-panel-i.md#show-1)显示面板，用户可交互。<br>4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。<br>5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel-1)销毁面板，释放资源。<br> <br>下列API均需使用[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)获取到Panel实例后，通过实例调用。destroyPanel成功销毁后，不得复用该实例，应创建并使用新的面板。 |
 | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | 输入法面板属性。 |
 | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 输入法面板位置大小信息。 |
+| [PreviewTextStyle](arkts-ime-inputmethodengine-previewtextstyle-i.md) | 预上屏文本的样式。 |
 | [Range](arkts-ime-inputmethodengine-range-i.md) | 选中的文本范围。 |
 | [RichTextSpan](arkts-ime-inputmethodengine-richtextspan-i.md) | 定义富文本中的跨度。 |
 | [SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md) | 输入法软键盘相对系统面板的偏移区域。 |
@@ -102,6 +103,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 枚举，请求键盘输入的原因。<br> |
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | 输入法的安全模式，如BASIC或FULL。 |
 | [SpanType](arkts-ime-inputmethodengine-spantype-e.md) | 枚举，富文本中span的类型。<br> <br> |
+| [UnderlineStyle](arkts-ime-inputmethodengine-underlinestyle-e.md) | 枚举预上屏文本的下划线样式。 |
 
 <!--Del-->
 ### 枚举（系统接口）

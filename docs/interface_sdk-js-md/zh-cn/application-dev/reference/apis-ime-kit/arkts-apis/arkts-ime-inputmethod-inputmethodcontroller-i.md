@@ -1211,6 +1211,28 @@ inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
 
+## offSetPreviewTextWithStyle
+
+```TypeScript
+offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void
+```
+
+取消订阅带样式的预上屏文本事件。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void--><!--Device-InputMethodController-offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SetPreviewTextWithStyleCallback](arkts-ime-inputmethod-setpreviewtextwithstylecallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+
 ## on('selectByRange')
 
 ```TypeScript
@@ -1776,6 +1798,33 @@ console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
 inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
+
+## onSetPreviewTextWithStyle
+
+```TypeScript
+onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void
+```
+
+订阅带样式的预上屏文本事件。使用callback异步回调。<br> <br>  
+> **说明：** <br>
+> <br>
+> 使用带样式的预上屏文本功能，需在调用<br>
+> [attach](#attach-1) <br>
+> 前订阅此事件。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void--><!--Device-InputMethodController-onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SetPreviewTextWithStyleCallback](arkts-ime-inputmethod-setpreviewtextwithstylecallback-t.md) | 是 | 回调函数。用于接收带样式的预上屏文本内容。 |
 
 ## recvMessage
 

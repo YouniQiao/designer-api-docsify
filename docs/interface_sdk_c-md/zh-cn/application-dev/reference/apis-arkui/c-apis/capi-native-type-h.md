@@ -4,6 +4,8 @@
 
 提供NativeModule公共的类型定义。
 
+**引用文件：** <arkui/native_type.h>
+
 **库：** libace_ndk.z.so
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

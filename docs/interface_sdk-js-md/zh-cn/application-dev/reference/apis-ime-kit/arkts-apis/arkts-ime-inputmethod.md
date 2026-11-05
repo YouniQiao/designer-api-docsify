@@ -83,6 +83,7 @@ import { inputMethod } from '@kit.IMEKit';
 | [InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md) | 输入法软键盘的窗口信息。 |
 | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 自定义通信对象。<br> <br> |
 | [Movement](arkts-ime-inputmethod-movement-i.md) | 选中文本时，光标移动的方向。 |
+| [PreviewTextStyle](arkts-ime-inputmethod-previewtextstyle-i.md) | 预上屏文本的样式。 |
 | [Range](arkts-ime-inputmethod-range-i.md) | 文本的选中范围。 |
 | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 编辑框的配置信息。 |
 
@@ -101,6 +102,7 @@ import { inputMethod } from '@kit.IMEKit';
 | 名称 | 说明 |
 | --- | --- |
 | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 当输入法框架需要显示预览文本时触发的回调。 |
+| [SetPreviewTextWithStyleCallback](arkts-ime-inputmethod-setpreviewtextwithstylecallback-t.md) | 当输入法框架需要显示带样式的预览文本时触发的回调。 |
 
 <!--Del-->
 ### 类型（系统接口）
@@ -123,6 +125,7 @@ import { inputMethod } from '@kit.IMEKit';
 | [KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md) | 输入法软键盘状态。 |
 | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | 请求键盘输入的原因。 |
 | [TextInputType](arkts-ime-inputmethod-textinputtype-e.md) | 文本输入类型。 |
+| [UnderlineStyle](arkts-ime-inputmethod-underlinestyle-e.md) | 枚举预上屏文本的下划线样式。 |
 
 ### 常量
 

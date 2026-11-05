@@ -581,7 +581,7 @@
   - [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
   - [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
 <!--Del-->
-- [@ohos.arkui.performanceMonitor](arkts-arkui-arkui-performancemonitor.md)<!--DelEnd-->
+- [@ohos.arkui.performanceMonitor(Performance Monitoring)](arkts-arkui-arkui-performancemonitor.md)<!--DelEnd-->
   <!--Del-->
   - [begin(system api)](arkts-arkui-performancemonitor-begin-f-sys.md)<!--DelEnd-->
   <!--Del-->

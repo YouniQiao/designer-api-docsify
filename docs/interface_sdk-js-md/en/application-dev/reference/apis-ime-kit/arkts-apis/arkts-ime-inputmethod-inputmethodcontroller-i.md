@@ -1203,6 +1203,28 @@ inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
 
+## offSetPreviewTextWithStyle
+
+```TypeScript
+offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void
+```
+
+Unsubscribe 'setPreviewTextWithStyle' event.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodController-offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void--><!--Device-InputMethodController-offSetPreviewTextWithStyle(callback?:SetPreviewTextWithStyleCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [SetPreviewTextWithStyleCallback](arkts-ime-inputmethod-setpreviewtextwithstylecallback-t.md) | No | optional, the callback called when the input method sets preview text with style. |
+
 ## on('selectByRange')
 
 ```TypeScript
@@ -1766,6 +1788,28 @@ console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
 inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
+
+## onSetPreviewTextWithStyle
+
+```TypeScript
+onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void
+```
+
+<p>Subscribe 'setPreviewTextWithStyle' event.</p> <p>To support the preview text with style feature, developers should subscribe to this event before calling attach.</p>
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodController-onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void--><!--Device-InputMethodController-onSetPreviewTextWithStyle(callback: SetPreviewTextWithStyleCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [SetPreviewTextWithStyleCallback](arkts-ime-inputmethod-setpreviewtextwithstylecallback-t.md) | Yes | the callback called when the input method sets preview text with style. |
 
 ## recvMessage
 
