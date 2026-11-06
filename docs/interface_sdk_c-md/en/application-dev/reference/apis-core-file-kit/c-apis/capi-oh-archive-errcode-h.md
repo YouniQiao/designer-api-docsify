@@ -6,11 +6,9 @@ Declares the error codes of Archive module.
 
 **Library**: liboharchive.so
 
-**System capability**: SystemCapability.FileManagement.File.FileIO
-
 **Since**: 26.0.0
 
-**Related module**: [Archive](capi-core-file-kit-archive.md)
+**Related module**: [Archive](capi-archive.md)
 
 ## Summary
 
@@ -37,8 +35,6 @@ enum OH_Archive_ErrCode
 **Description**
 
 Error codes for the Archive.
-
-**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 26.0.0
 

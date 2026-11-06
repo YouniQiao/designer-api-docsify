@@ -6,11 +6,9 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 11
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 ## 汇总
 
@@ -38,15 +36,13 @@ uint32_t OH_Drawing_RegisterFont(OH_Drawing_FontCollection* fontCollection, cons
 
 用于在字体管理器中注册自定义字体，支持的字体文件格式包含：ttf、otf。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* fontCollection | 指向[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)对象的指针。 |
+| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* fontCollection | Indicates the pointer to an <b>OH_Drawing_FontCollection</b> object. |
 | const char* fontFamily | 需要注册的字体的字体名称。 |
 | const char* familySrc | 需要注册的字体文件的路径。 |
 
@@ -66,15 +62,13 @@ uint32_t OH_Drawing_RegisterFontBuffer(OH_Drawing_FontCollection* fontCollection
 
 用于在字体管理器中注册字体缓冲区，支持从ttf、otf文件读取的数据。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* fontCollection | 指向[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)对象的指针。 |
+| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* fontCollection | Indicates the pointer to an <b>OH_Drawing_FontCollection</b> object. |
 | const char* fontFamily | 需要注册的字体名称。 |
 | uint8_t* fontBuffer | 需要注册的字体文件的缓冲区。 |
 | size_t length | 需要注册的字体文件的长度，需与fontBuffer实际长度保持一致。 |
@@ -94,8 +88,6 @@ uint32_t OH_Drawing_RegisterFontByIndex(OH_Drawing_FontCollection* fontCollectio
 **描述：**
 
 使用ttc/otc文件注册自定义字体，通过index参数指定需要注册的字体索引。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -123,8 +115,6 @@ uint32_t OH_Drawing_RegisterFontBufferByIndex(OH_Drawing_FontCollection* fontCol
 **描述：**
 
 使用ttc/otc文件字节流注册字体。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -154,8 +144,6 @@ uint32_t OH_Drawing_UnregisterFont(OH_Drawing_FontCollection* fontCollection, co
 
 通过字体名称取消注册自定义字体。 <br>取消注册当前正在使用的字体可能导致文本渲染异常，包括乱码或字形缺失。 <br>所有使用被取消注册的字体名称的排版对象都应该被销毁重建。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 20
 
 **参数：**
@@ -181,8 +169,6 @@ bool OH_Drawing_IsFontSupportedFromPath(const char* path)
 
 检查系统是否支持指定路径的字体格式。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 23
 
 **参数：**
@@ -206,8 +192,6 @@ bool OH_Drawing_IsFontSupportedFromBuffer(uint8_t* data, size_t dataLength)
 **描述：**
 
 检查系统是否支持缓冲区中指定的字体格式。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 

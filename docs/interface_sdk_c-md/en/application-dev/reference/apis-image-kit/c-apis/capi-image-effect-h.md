@@ -6,11 +6,9 @@ Declares the functions for rendering image.
 
 **Library**: libimage_effect.so
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
-**Related module**: [ImageEffect](capi-image-kit-imageeffect.md)
+**Related module**: [ImageEffect](capi-imageeffect.md)
 
 ## Summary
 
@@ -66,8 +64,6 @@ OH_ImageEffect *OH_ImageEffect_Create(const char *name)
 
 Create an OH_ImageEffect instance. It should be noted that the life cycle of the OH_ImageEffect instance pointed to by the return value * needs to be manually released by [OH_ImageEffect_Release](capi-image-effect-h.md#oh_imageeffect_release)
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -91,8 +87,6 @@ OH_EffectFilter *OH_ImageEffect_AddFilter(OH_ImageEffect *imageEffect, const cha
 **Description**
 
 Create and add the OH_EffectFilter to the OH_ImageEffect
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -119,8 +113,6 @@ ImageEffect_ErrorCode OH_ImageEffect_AddFilterByFilter(OH_ImageEffect *imageEffe
 
 Add the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance pointer
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -145,8 +137,6 @@ OH_EffectFilter *OH_ImageEffect_InsertFilter(OH_ImageEffect *imageEffect, uint32
 **Description**
 
 Create and add the OH_EffectFilter to the OH_ImageEffect by specified position
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -174,8 +164,6 @@ ImageEffect_ErrorCode OH_ImageEffect_InsertFilterByFilter(OH_ImageEffect *imageE
 
 Insert the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance pointer
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -202,8 +190,6 @@ int32_t OH_ImageEffect_RemoveFilter(OH_ImageEffect *imageEffect, const char *fil
 
 Remove all filters of the specified filter name
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -229,8 +215,6 @@ ImageEffect_ErrorCode OH_ImageEffect_RemoveFilterByIndex(OH_ImageEffect *imageEf
 
 Remove the filter of the specified position
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -255,8 +239,6 @@ OH_EffectFilter *OH_ImageEffect_ReplaceFilter(OH_ImageEffect *imageEffect, uint3
 **Description**
 
 Create and replace the OH_EffectFilter in the OH_ImageEffect by the filter name
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -284,8 +266,6 @@ ImageEffect_ErrorCode OH_ImageEffect_ReplaceFilterByFilter(OH_ImageEffect *image
 
 Replace the OH_EffectFilter in the OH_ImageEffect by the OH_EffectFilter instance pointer
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -312,8 +292,6 @@ int32_t OH_ImageEffect_GetFilterCount(OH_ImageEffect *imageEffect)
 
 Get the number of the filters in OH_ImageEffect
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -337,8 +315,6 @@ OH_EffectFilter *OH_ImageEffect_GetFilter(OH_ImageEffect *imageEffect, uint32_t 
 **Description**
 
 Get an OH_EffectFilter instance that add to OH_ImageEffect by the index
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -364,8 +340,6 @@ ImageEffect_ErrorCode OH_ImageEffect_Configure(OH_ImageEffect *imageEffect, cons
 **Description**
 
 Set configuration information to the OH_ImageEffect
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -393,8 +367,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputSurface(OH_ImageEffect *imageEffec
 
 Set the Surface to the image effect, this interface must be called before
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -402,7 +374,7 @@ Set the Surface to the image effect, this interface must be called before
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) *nativeWindow | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) |
+| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) *nativeWindow | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) |
 
 **Returns**:
 
@@ -420,8 +392,6 @@ ImageEffect_ErrorCode OH_ImageEffect_GetInputSurface(OH_ImageEffect *imageEffect
 
 Get the input Surface from the image effect, this interface must be called after
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -429,7 +399,7 @@ Get the input Surface from the image effect, this interface must be called after
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) **nativeWindow | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) |
+| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) **nativeWindow | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) |
 
 **Returns**:
 
@@ -446,8 +416,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffec
 **Description**
 
 Set input pixelmap that contains the image information. It should be noted that the input pixel map will be directly rendered and modified if the output is not set
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -474,8 +442,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPixelmap(OH_ImageEffect *imageEffe
 
 Set output pixelmap that contains the image information
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -500,8 +466,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageE
 **Description**
 
 Set input NativeBuffer that contains the image information. It should be noted that the input NativeBuffer will be directly rendered and modified if the output is not set
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -528,8 +492,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputNativeBuffer(OH_ImageEffect *image
 
 Set output NativeBuffer that contains the image information
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -554,8 +516,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputUri(OH_ImageEffect *imageEffect, co
 **Description**
 
 Set input URI of the image. It should be noted that the image resource will be directly rendered and modified if the output is not set
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -582,8 +542,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputUri(OH_ImageEffect *imageEffect, c
 
 Set output URI of the image
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -608,8 +566,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect
 **Description**
 
 Set input picture that contains the image information. It should be noted that the input picture will be directly rendered and modified if the output is not set
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 13
 
@@ -636,8 +592,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPicture(OH_ImageEffect *imageEffec
 
 Set output picture that contains the image information
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -662,8 +616,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputTextureId(OH_ImageEffect *imageEffe
 **Description**
 
 Sets the ID of the input texture that contains the image information.
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 20
 
@@ -691,8 +643,6 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputTextureId(OH_ImageEffect *imageEff
 
 Sets the ID of the output texture that contains the rendered image information.
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -718,8 +668,6 @@ ImageEffect_ErrorCode OH_ImageEffect_Start(OH_ImageEffect *imageEffect)
 
 Render the filter effects that can be a single filter or a chain of filters
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -743,8 +691,6 @@ ImageEffect_ErrorCode OH_ImageEffect_Stop(OH_ImageEffect *imageEffect)
 **Description**
 
 Stop rendering the filter effects for next image frame data
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -770,8 +716,6 @@ ImageEffect_ErrorCode OH_ImageEffect_Release(OH_ImageEffect *imageEffect)
 
 Clear the internal resources of the OH_ImageEffect and destroy the OH_ImageEffect instance
 
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -795,8 +739,6 @@ ImageEffect_ErrorCode OH_ImageEffect_Save(OH_ImageEffect *imageEffect, char **in
 **Description**
 
 Convert the OH_ImageEffect and the information of the filters in OH_ImageEffect to JSON string
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 
@@ -822,8 +764,6 @@ OH_ImageEffect *OH_ImageEffect_Restore(const char *info)
 **Description**
 
 Create an OH_ImageEffect instance by deserializing the JSON string info
-
-**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 

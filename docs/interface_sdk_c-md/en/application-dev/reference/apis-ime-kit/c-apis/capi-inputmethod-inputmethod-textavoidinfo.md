@@ -6,13 +6,13 @@ typedef struct InputMethod_TextAvoidInfo InputMethod_TextAvoidInfo
 
 ## Overview
 
-Information used by the input box to avoid the keyboard.
+Represents the information used by the input box to avoid the keyboard.
 
 **System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
-**Related module**: [InputMethod](capi-others-inputmethod.md)
+**Related module**: [InputMethod](capi-inputmethod.md)
 
 **Header file**: [inputmethod_text_avoid_info_capi.h](capi-inputmethod-text-avoid-info-capi-h.md)
 

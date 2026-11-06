@@ -12,7 +12,7 @@ Defines the native stack frame content.
 
 **Since**: 20
 
-**Related module**: [HiDebug](capi-others-hidebug.md)
+**Related module**: [HiDebug](capi-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 

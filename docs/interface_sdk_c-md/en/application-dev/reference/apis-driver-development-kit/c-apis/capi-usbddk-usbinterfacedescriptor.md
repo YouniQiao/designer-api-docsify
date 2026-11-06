@@ -12,7 +12,7 @@ Defines standard interface descriptors, which correspond to **Standard Interface
 
 **Since**: 10
 
-**Related module**: [UsbDdk](capi-others-usbddk.md)
+**Related module**: [UsbDdk](capi-usbddk.md)
 
 **Header file**: [usb_ddk_types.h](capi-usb-ddk-types-h.md)
 
@@ -22,7 +22,7 @@ Defines standard interface descriptors, which correspond to **Standard Interface
 
 | Name | Description |
 | -- | -- |
-| uint8_t bLength | Size of this descriptor, in bytes. |
+| uint8_t bLength | Size of the descriptor, in bytes. |
 | uint8_t bDescriptorType | Descriptor type. |
 | uint8_t bInterfaceNumber | Interface ID. |
 | uint8_t bAlternateSetting | Value used to select the alternate setting of the interface. |

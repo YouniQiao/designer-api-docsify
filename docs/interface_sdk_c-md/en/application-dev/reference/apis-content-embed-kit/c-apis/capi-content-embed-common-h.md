@@ -6,11 +6,9 @@ Provides the error code definitions for the ContentEmbed module and the type enu
 
 **Library**: libcontent_embed_ndk.so
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Related module**: [ContentEmbed](capi-content-embed-kit-contentembed.md)
+**Related module**: [ContentEmbed](capi-contentembed.md)
 
 ## Summary
 
@@ -38,8 +36,6 @@ enum ContentEmbed_ErrorCode
 **Description**
 
 Defines the error codes of the Content Embed Kit.
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -75,8 +71,6 @@ enum ContentEmbed_CapabilityCode
 **Description**
 
 Enumerates the functions supported by embedded document objects. Multiple capability values can be combined using bit masks.
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 

@@ -8,11 +8,9 @@
 
 **库：** libnative_media_core.so
 
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 9
 
-**相关模块：** [Core](capi-avcodec-kit-core.md)
+**相关模块：** [Core](capi-core.md)
 
 **相关示例：** [AVCodec](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/AVCodec)
 
@@ -41,8 +39,6 @@ enum OH_AVCodecBufferFlags
 **描述：**
 
 枚举OH_AVCodec缓冲区标记的类别。
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 9
 

@@ -12,7 +12,7 @@ Defines the struct for the local memory information of the application process.
 
 **Since**: 12
 
-**Related module**: [HiDebug](capi-others-hidebug.md)
+**Related module**: [HiDebug](capi-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 

@@ -6,13 +6,13 @@ typedef struct Print_StringList {...} Print_StringList
 
 ## Overview
 
-Represents a string list, which is used to transfer multiple strings in the print module. This struct uses the **count** field to record the number of strings and the **list** field to point to the string array. It can be used to transfer multiple strings in batches. For details about related APIs, see OH_Print.
+Defines a struct for the string list.
 
 **System capability**: SystemCapability.Print.PrintFramework
 
 **Since**: 12
 
-**Related module**: [Print](capi-others-print.md)
+**Related module**: [Print](capi-print.md)
 
 **Header file**: [ohprint.h](capi-ohprint-h.md)
 
@@ -22,7 +22,7 @@ Represents a string list, which is used to transfer multiple strings in the prin
 
 | Name | Description |
 | -- | -- |
-| uint32_t count | String count, which indicates the number of elements in the **list** array. |
-| char **list | Pointer to the string array. The number of elements in the array must be the same as the value of **count**. |
+| uint32_t count | Number of strings. |
+| char **list | Double pointer to the string array. |
 
 

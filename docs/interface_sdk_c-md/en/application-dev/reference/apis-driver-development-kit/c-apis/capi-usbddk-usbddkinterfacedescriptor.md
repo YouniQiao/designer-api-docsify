@@ -6,13 +6,13 @@ struct UsbDdkInterfaceDescriptor {...}
 
 ## Overview
 
-Defines interface descriptors, including standard interface descriptors and endpoint descriptors.
+Defines USB interface descriptors.
 
 **System capability**: SystemCapability.Driver.USB.Extension
 
 **Since**: 10
 
-**Related module**: [UsbDdk](capi-others-usbddk.md)
+**Related module**: [UsbDdk](capi-usbddk.md)
 
 **Header file**: [usb_ddk_types.h](capi-usb-ddk-types-h.md)
 
@@ -23,8 +23,8 @@ Defines interface descriptors, including standard interface descriptors and endp
 | Name | Description |
 | -- | -- |
 | [struct UsbInterfaceDescriptor](capi-usbddk-usbinterfacedescriptor.md) interfaceDescriptor | Standard USB interface descriptor. |
-| struct UsbDdkEndpointDescriptor *endPoint | Endpoint descriptor contained in the interface. This parameter can be a null pointer, indicating that there is no endpoint (excluding control endpoint 0). |
-| const uint8_t *extra | Pointer to the unresolved descriptor, including class- or vendor-specific descriptors. |
+| struct UsbDdkEndpointDescriptor *endPoint | Endpoint descriptor contained in the interface. |
+| const uint8_t *extra | Unresolved descriptor, including class- or vendor-specific descriptors. |
 | uint32_t extraLength | Length of the unresolved descriptor. |
 
 

@@ -6,11 +6,9 @@ Defines the APIs of the HTTP global interceptor module. With interceptors, you c
 
 **Library**: libhttp_interceptor.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 24
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
@@ -40,8 +38,6 @@ Adds a global read-only HTTP interceptor.
 > **Note**:
 >
 > The interceptor remains active until it is explicitly removed by the developer. you must call [OH_Http_RemoveInterceptor](capi-http-interceptor-h.md#oh_http_removeinterceptor) to release a specific interceptor or [OH_Http_RemoveAllInterceptors](capi-http-interceptor-h.md#oh_http_removeallinterceptors) to release a group of interceptors.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -73,8 +69,6 @@ add a writable http global interceptor for HTTP requests.
 >
 > The interceptor remains active until it is explicitly removed by the developer. you must call [OH_Http_RemoveInterceptor](capi-http-interceptor-h.md#oh_http_removeinterceptor) to release a specific interceptor or [OH_Http_RemoveAllInterceptors](capi-http-interceptor-h.md#oh_http_removeallinterceptors) to release a group of interceptors.
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 26.0.0
@@ -100,8 +94,6 @@ int32_t OH_Http_RemoveInterceptor(struct OH_Http_Interceptor *interceptor)
 **Description**
 
 Removes a specified global HTTP interceptor.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -133,8 +125,6 @@ Removes all HTTP interceptors of a specified group ID.
 >
 > The groupId is allocated and managed by the application itself when creating interceptors. If multiple modules within the application need to use interceptors, the application must properly allocate and manage groupId to avoid conflicts. Conflicts in groupId between internal modules may lead to accidental deletion of interceptors when calling this function.
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 24
@@ -161,8 +151,6 @@ int32_t OH_Http_StartAllInterceptors(int32_t groupId)
 
 Enables all HTTP interceptors of a specified group ID.
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 24
@@ -188,8 +176,6 @@ int32_t OH_Http_StopAllInterceptors(int32_t groupId)
 **Description**
 
 Disables all HTTP interceptors of a specified group ID.
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Required permission**: ohos.permission.INTERNET
 

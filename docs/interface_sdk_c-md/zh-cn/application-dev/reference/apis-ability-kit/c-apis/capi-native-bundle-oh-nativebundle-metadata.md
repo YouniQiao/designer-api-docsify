@@ -12,7 +12,7 @@ struct OH_NativeBundle_Metadata {...}
 
 **起始版本：** 20
 
-**相关模块：** [Native_Bundle](capi-others-native-bundle.md)
+**相关模块：** [Native_Bundle](capi-native-bundle.md)
 
 **所在头文件：** [native_interface_bundle.h](capi-native-interface-bundle-h.md)
 
@@ -22,8 +22,8 @@ struct OH_NativeBundle_Metadata {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| char* name | 元数据名称。<br>**起始版本：** 20 |
-| char* value | 元数据值。<br>**起始版本：** 20 |
-| char* resource | 元数据资源。<br>**起始版本：** 20 |
+| char* name | 元数据名称。 |
+| char* value | 元数据值。 |
+| char* resource | 元数据资源。 |
 
 

@@ -4,15 +4,13 @@
 
 Defines the symmetric key cipher interfaces.
 
-**File to Include**: <CryptoArchitectureKit/crypto_sym_cipher.h>
+**Include**: <CryptoArchitectureKit/crypto_sym_cipher.h>
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Related module**: [CryptoSymCipherApi](capi-crypto-architecture-kit-cryptosymcipherapi.md)
+**Related module**: [CryptoSymCipherApi](capi-cryptosymcipherapi.md)
 
 ## Summary
 
@@ -55,8 +53,6 @@ enum CryptoSymCipher_ParamsType
 
 Defines the cipher parameter types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -78,11 +74,9 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **par
 
 Creates symmetric cipher parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoSymCipherParams_Destroy](#oh_cryptosymcipherparams_destroy)
+**Resource release**: crypto_sym_cipher/OH_CryptoSymCipherParams_Destroy {params}
 
 **Parameters**:
 
@@ -111,8 +105,6 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *pa
 
 Sets cipher parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -139,8 +131,6 @@ void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)
 
 Destroys cipher parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -159,11 +149,9 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCi
 
 Creates a symmetric cipher context based on the given algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoSymCipher_Destroy](#oh_cryptosymcipher_destroy)
+**Resource release**: crypto_sym_cipher/OH_CryptoSymCipher_Destroy {ctx}
 
 **Parameters**:
 
@@ -192,8 +180,6 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_Cipher
 **Description**
 
 Initializes the cipher operation with the given mode, key, and parameters.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -228,11 +214,9 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_Data
 
 Updates cipher data, outputting encrypted or decrypted data.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -263,11 +247,9 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataB
 
 Finishes the cipher operation, outputting the final result.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -293,8 +275,6 @@ const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)
 
 Obtains the symmetric cipher algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -318,8 +298,6 @@ void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)
 **Description**
 
 Destroys the symmetric cipher context.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 

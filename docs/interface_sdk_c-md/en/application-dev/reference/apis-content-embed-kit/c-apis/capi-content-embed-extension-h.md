@@ -6,11 +6,9 @@ Defines the data structures and operation APIs related to the OE Extension of th
 
 **Library**: libcontent_embed_ndk.so
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Related module**: [ContentEmbed](capi-content-embed-kit-contentembed.md)
+**Related module**: [ContentEmbed](capi-contentembed.md)
 
 ## Summary
 
@@ -20,11 +18,11 @@ Defines the data structures and operation APIs related to the OE Extension of th
 | -- | -- | -- |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure of the embedded document. |
 | [ContentEmbed_ExtensionContext](capi-contentembed-contentembed-extensioncontext.md) | ContentEmbed_ExtensionContext | Defines the structure type of the OE Extension context. |
-| [ContentEmbed_ExtensionContext*](capi-contentembed-contentembed-extensioncontext8h.md) | ContentEmbed_ExtensionContextHandle | Declares the pointer type of the context object of the OE Extension. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) | ContentEmbed_ExtensionContextHandle | Declares the pointer type of the context object of the OE Extension. |
 | [ContentEmbed_ExtensionInstance](capi-contentembed-contentembed-extensioninstance.md) | ContentEmbed_ExtensionInstance | Declares the structure type of an OE Extension instance. Manages the core functions of the extension, such as lifecycle management, callback registration, and association with the client's OE object. |
-| [ContentEmbed_ExtensionInstance*](capi-contentembed-contentembed-extensioninstance8h.md) | ContentEmbed_ExtensionInstanceHandle | Declares the pointer type of the instance object of the ContentEmbed extension. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) | ContentEmbed_ExtensionInstanceHandle | Declares the pointer type of the instance object of the ContentEmbed extension. |
 | [ContentEmbed_Object](capi-contentembed-contentembed-object.md) | ContentEmbed_Object | Declares the ContentEmbed_Object structure. Points to the program object (server-side OE object for short) for embedding and editing the OE document encapsulated by the server. |
-| [ContentEmbed_Object*](capi-contentembed-contentembed-object8h.md) | ContentEmbed_ObjectHandle | Declares the pointer type of the ContentEmbed_Object object. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) | ContentEmbed_ObjectHandle | Declares the pointer type of the ContentEmbed_Object object. |
 
 ### Function
 
@@ -63,6 +61,20 @@ Defines the data structures and operation APIs related to the OE Extension of th
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextStartSelfUIAbilityWithStartOptions(ContentEmbed_ExtensionContextHandle context, AbilityBase_Want *want, AbilityRuntime_StartOptions *options)](#oh_contentembed_extension_contextstartselfuiabilitywithstartoptions) | - | Starts the UIAbility of the OE Extension context using the start options. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextTerminateAbility(ContentEmbed_ExtensionContextHandle context)](#oh_contentembed_extension_contextterminateability) | - | Destroys the OE Extension. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_ContentEmbed_Extension_OnCreateFunc)( ContentEmbed_ExtensionInstanceHandle instance, AbilityBase_Want *want) | Indicates the lifecycle function type when an OE Extension instance is created. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnCreateFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeroncreatefunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnDestroyFunc)( ContentEmbed_ExtensionInstanceHandle instance) | Indicates the lifecycle function type when an OE Extension instance is destroyed. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnDestroyFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerondestroyfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnObjectAttachFunc)( ContentEmbed_ExtensionInstanceHandle instance, ContentEmbed_ObjectHandle object) | This callback function is triggered when the client's OE object is connected to the OE Extension instance. It is used to perform the initialization operation after the server's OE object is associated. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnObjectAttachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronobjectattachfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnObjectDetachFunc)( ContentEmbed_ExtensionInstanceHandle instance, ContentEmbed_ObjectHandle object) | This callback function is triggered when the client disconnects from the OE Extension instance, and is used to perform cleanup operations after the server disconnects from the OE Extension instance. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnObjectDetachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronobjectdetachfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnWriteToDataStreamFunc)( ContentEmbed_ObjectHandle object) | Callback function type used when the server-side OE object writes data to the OE document. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnWriteToDataStreamFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronwritetodatastreamfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnGetSnapshotFunc)( ContentEmbed_ObjectHandle object) | Callback function type used when the client-side OE object requests to obtain the OE document snapshot. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnGetSnapshotFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongetsnapshotfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnDoEditFunc)( ContentEmbed_ObjectHandle object) | Callback function type when the client's OE object requests to edit an OE document. <br>You need to implement this function and register it with the server's OE object through [OH_ContentEmbed_Extension_RegisterOnDoEditFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerondoeditfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnGetEditStatusFunc)( ContentEmbed_ObjectHandle object, bool *isEditing, bool *isModified) | Callback function type when the client's OE object requests the editing state of an OE document. <br>You need to implement this function and register it with the server's OE object through [OH_ContentEmbed_Extension_RegisterOnGetEditStatusFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongeteditstatusfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+| void (*OH_ContentEmbed_Extension_OnGetCapabilityFunc)( ContentEmbed_ObjectHandle object, uint32_t *bitmask) | Indicates the callback function type when the client queries the capabilities supported by the OE Extension instance. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnGetCapabilityFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongetcapabilityfunc).<br>**Since**: 24<br>**System capability**: SystemCapability.ContentEmbed.ObjectEditor |
+
 ## Function description
 
 ### OH_ContentEmbed_Extension_GetContentEmbedContext()
@@ -75,16 +87,14 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetContentEmbedContext(ContentE
 
 Obtains the corresponding OE Extension context object from the OE Extension instance.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) ceInstance | Pointer to the OE Extension instance object. |
-| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) *ceContext | Output parameter. After the function is successfully called, this pointer points to the context object of the OE Extension instance. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) ceInstance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) *ceContext | Output parameter. After the function is successfully called, this pointer points to the context object of the OE Extension instance. |
 
 **Returns**:
 
@@ -102,15 +112,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetContext(ContentEmbed_Extensi
 
 Obtains the AbilityRuntime context from the OE Extension context.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) ceContext | Pointer to the OE Extension context object. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) ceContext | Pointer to the OE Extension context object. |
 | AbilityRuntime_ContextHandle *context | Output parameter. After the call is successful, this pointer points to the [AbilityRuntime_Context](../../apis-mind-spore-lite-kit/c-apis/capi-abilityruntime-abilityruntime-context.md) context object. |
 
 **Returns**:
@@ -129,16 +137,14 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetExtensionInstance(AbilityRun
 
 Obtains the corresponding OE Extension instance from the ExtensionAbility base class instance.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [AbilityRuntime_ExtensionInstanceHandle](../../apis-ability-kit/c-apis/capi-abilityruntime-abilityruntime-extensioninstance8h.md) baseInstance | [AbilityRuntime_ExtensionInstance](capi-abilityruntime-abilityruntime-extensioninstance.md) instance. |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) *ceInstance | Output parameter. After the call is successful, this pointer points to the OE Extension instance object. |
+| [AbilityRuntime_ExtensionInstanceHandle](../../apis-ability-kit/c-apis/capi-abilityruntime-abilityruntime-extensioninstancehandle.md) baseInstance | [AbilityRuntime_ExtensionInstance](../../apis-ability-kit/c-apis/capi-abilityruntime-abilityruntime-extensioninstance.md) instance. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) *ceInstance | Output parameter. After the call is successful, this pointer points to the OE Extension instance object. |
 
 **Returns**:
 
@@ -156,15 +162,13 @@ typedef void (*OH_ContentEmbed_Extension_OnCreateFunc)(ContentEmbed_ExtensionIns
 
 Indicates the lifecycle function type when an OE Extension instance is created. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnCreateFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeroncreatefunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 | [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md) *want | Represents a pointer to an [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnDestroyFunc()
@@ -177,15 +181,13 @@ typedef void (*OH_ContentEmbed_Extension_OnDestroyFunc)(ContentEmbed_ExtensionIn
 
 Indicates the lifecycle function type when an OE Extension instance is destroyed. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnDestroyFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerondestroyfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 
 ### OH_ContentEmbed_Extension_OnObjectAttachFunc()
 
@@ -197,16 +199,14 @@ typedef void (*OH_ContentEmbed_Extension_OnObjectAttachFunc)(ContentEmbed_Extens
 
 This callback function is triggered when the client's OE object is connected to the OE Extension instance. It is used to perform the initialization operation after the server's OE object is associated. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnObjectAttachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronobjectattachfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnObjectDetachFunc()
 
@@ -218,16 +218,14 @@ typedef void (*OH_ContentEmbed_Extension_OnObjectDetachFunc)(ContentEmbed_Extens
 
 This callback function is triggered when the client disconnects from the OE Extension instance, and is used to perform cleanup operations after the server disconnects from the OE Extension instance. <br>You need to implement this function and register it with the OE Extension instance through [OH_ContentEmbed_Extension_RegisterOnObjectDetachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronobjectdetachfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnWriteToDataStreamFunc()
 
@@ -239,15 +237,13 @@ typedef void (*OH_ContentEmbed_Extension_OnWriteToDataStreamFunc)(ContentEmbed_O
 
 Callback function type used when the server-side OE object writes data to the OE document. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnWriteToDataStreamFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registeronwritetodatastreamfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnGetSnapshotFunc()
 
@@ -259,15 +255,13 @@ typedef void (*OH_ContentEmbed_Extension_OnGetSnapshotFunc)(ContentEmbed_ObjectH
 
 Callback function type used when the client-side OE object requests to obtain the OE document snapshot. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnGetSnapshotFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongetsnapshotfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnDoEditFunc()
 
@@ -279,15 +273,13 @@ typedef void (*OH_ContentEmbed_Extension_OnDoEditFunc)(ContentEmbed_ObjectHandle
 
 Callback function type when the client's OE object requests to edit an OE document. <br>You need to implement this function and register it with the server's OE object through [OH_ContentEmbed_Extension_RegisterOnDoEditFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerondoeditfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnGetEditStatusFunc()
 
@@ -299,15 +291,13 @@ typedef void (*OH_ContentEmbed_Extension_OnGetEditStatusFunc)(ContentEmbed_Objec
 
 Callback function type when the client's OE object requests the editing state of an OE document. <br>You need to implement this function and register it with the server's OE object through [OH_ContentEmbed_Extension_RegisterOnGetEditStatusFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongeteditstatusfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | bool *isEditing | Indicates that the content embed document is being edited. |
 | bool *isModified | Indicates that the content embed document has been modified. |
 
@@ -321,15 +311,13 @@ typedef void (*OH_ContentEmbed_Extension_OnGetCapabilityFunc)(ContentEmbed_Objec
 
 Indicates the callback function type when the client queries the capabilities supported by the OE Extension instance. <br>You need to implement this function and register it with the server-side OE object through [OH_ContentEmbed_Extension_RegisterOnGetCapabilityFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_registerongetcapabilityfunc).
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | uint32_t *bitmask | Indicates the capabilities possessed by a content embed extension instance. |
 
 ### OH_ContentEmbed_Extension_RegisterOnCreateFunc()
@@ -342,15 +330,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnCreateFunc(ContentEmb
 
 Registers the lifecycle function for creating an OE Extension instance.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 | [OH_ContentEmbed_Extension_OnCreateFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_oncreatefunc) onCreateFunc | [OH_ContentEmbed_Extension_OnCreateFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_oncreatefunc) lifecycle function to be registered. |
 
 **Returns**:
@@ -369,15 +355,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnDestroyFunc(ContentEm
 
 Registers the lifecycle function for destroying an OE Extension instance.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 | [OH_ContentEmbed_Extension_OnDestroyFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ondestroyfunc) onDestroyFunc | [OH_ContentEmbed_Extension_OnDestroyFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ondestroyfunc) lifecycle function to be registered. |
 
 **Returns**:
@@ -396,15 +380,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnObjectAttachFunc(Cont
 
 Registers the callback function for connecting to the client's OE object. <br>You can call [OH_ContentEmbed_Extension_UnRegisterOnObjectAttachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_unregisteronobjectattachfunc) to deregister the callback function.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 | [OH_ContentEmbed_Extension_OnObjectAttachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onobjectattachfunc) onObjectAttachFunc | [OH_ContentEmbed_Extension_OnObjectAttachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onobjectattachfunc) callback function to be registered. |
 
 **Returns**:
@@ -423,15 +405,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_UnRegisterOnObjectAttachFunc(Co
 
 Cancels the registration of the callback function for disconnecting the client from the OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 
 **Returns**:
 
@@ -449,15 +429,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnObjectDetachFunc(Cont
 
 Registers the callback function for disconnecting the client from the OE object. <br>You can call [OH_ContentEmbed_Extension_UnRegisterOnObjectDetachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_unregisteronobjectdetachfunc) to cancel the registration.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the instance object of the OE Extension. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the instance object of the OE Extension. |
 | [OH_ContentEmbed_Extension_OnObjectDetachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onobjectdetachfunc) onObjectDetachFunc | [OH_ContentEmbed_Extension_OnObjectDetachFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onobjectdetachfunc) callback function to be registered. |
 
 **Returns**:
@@ -476,15 +454,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_UnRegisterOnObjectDetachFunc(Co
 
 Cancels the callback function for disconnecting the client from the OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 
 **Returns**:
 
@@ -502,15 +478,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnWriteToDataStreamFunc
 
 Registers the callback function for the server to write data streams to the OE document.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [OH_ContentEmbed_Extension_OnWriteToDataStreamFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onwritetodatastreamfunc) onWriteToDataStreamFunc | [OH_ContentEmbed_Extension_OnWriteToDataStreamFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_onwritetodatastreamfunc) callback function to be registered. |
 
 **Returns**:
@@ -529,15 +503,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnGetSnapshotFunc(Conte
 
 Registers the callback function for obtaining the OE document snapshot when the client requests to obtain the OE document snapshot.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [OH_ContentEmbed_Extension_OnGetSnapshotFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongetsnapshotfunc) onGetSnapshotFunc | [OH_ContentEmbed_Extension_OnGetSnapshotFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongetsnapshotfunc) callback function to be registered. |
 
 **Returns**:
@@ -556,15 +528,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnDoEditFunc(ContentEmb
 
 Registers the callback function for editing an OE document when the client requests to edit the OE document.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [OH_ContentEmbed_Extension_OnDoEditFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ondoeditfunc) onDoEditFunc | [OH_ContentEmbed_Extension_OnDoEditFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ondoeditfunc) callback function to be registered. |
 
 **Returns**:
@@ -583,15 +553,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnGetEditStatusFunc(Con
 
 Registers the callback function for requesting the editing state of an OE document from the client.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [OH_ContentEmbed_Extension_OnGetEditStatusFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongeteditstatusfunc) onGetEditStatusFunc | [OH_ContentEmbed_Extension_OnGetEditStatusFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongeteditstatusfunc) callback function to be registered. |
 
 **Returns**:
@@ -610,15 +578,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_RegisterOnGetCapabilityFunc(Con
 
 Registers the callback function for querying whether the OE Extension instance supports the capability of the client's OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [OH_ContentEmbed_Extension_OnGetCapabilityFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongetcapabilityfunc) onGetCapabilityFunc | [OH_ContentEmbed_Extension_OnGetCapabilityFunc](capi-content-embed-extension-h.md#oh_contentembed_extension_ongetcapabilityfunc) callback function to be registered. |
 
 **Returns**:
@@ -637,15 +603,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetContentEmbedDocument(Content
 
 Obtains the instance of the OE document associated with the server-side OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **ceDocument | Output parameter. After the call is successful, this pointer points to the associated OE document instance. |
 
 **Returns**:
@@ -664,15 +628,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_CallbackToOnUpdate(ContentEmbed
 
 Triggers the callback function for updating the OE document to register the client's OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 
 **Returns**:
 
@@ -690,15 +652,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_CallbackToOnError(ContentEmbed_
 
 Trigger the callback function of the error in the OE document that triggers the registration of the client's OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) code | Error code. For details, see [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
 
 **Returns**:
@@ -717,15 +677,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_CallbackToOnEditingFinished(Con
 
 Registers the callback function for finishing editing an OE document.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | bool dataModified | Indicates whether the document data has been modified. The value true indicates that the file is modified, and the value false indicates that the file is not modified. |
 
 **Returns**:
@@ -744,15 +702,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_CallbackToOnExtensionStopped(Co
 
 Stops the callback function of the OE Extension that is associated with all client-side OE objects and registered by the OE Extension.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | Pointer to the OE Extension instance object. |
+| [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstancehandle.md) instance | Pointer to the OE Extension instance object. |
 
 **Returns**:
 
@@ -770,15 +726,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_SetSnapshot(ContentEmbed_Object
 
 Sets the snapshot image of the OE document associated with the client-side OE object.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
+| [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-objecthandle.md) instance. |
 | OH_PixelmapNative *pixelMap | Pixel map object of the document snapshot. For details, see [OH_PixelmapNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmapnative.md). |
 
 **Returns**:
@@ -797,15 +751,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextStartSelfUIAbility(Conte
 
 Starts the UIAbility of the current instance using the OE Extension context.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | Pointer to the context object of the OE Extension. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) context | Pointer to the context object of the OE Extension. |
 | [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md) *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md). |
 
 **Returns**:
@@ -824,15 +776,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextStartSelfUIAbilityWithSt
 
 Starts the UIAbility of the OE Extension context using the start options.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | Pointer to the OE Extension context object. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) context | Pointer to the OE Extension context object. |
 | [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md) *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../../apis-ability-kit/c-apis/capi-abilitybase-abilitybase-want.md). |
 | AbilityRuntime_StartOptions *options | Additional options for starting the UIAbility. For details, see AbilityRuntime_StartOptions. |
 
@@ -852,15 +802,13 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextTerminateAbility(Content
 
 Destroys the OE Extension.
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | Pointer to the OE Extension context object. |
+| [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontexthandle.md) context | Pointer to the OE Extension context object. |
 
 **Returns**:
 

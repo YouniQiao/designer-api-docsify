@@ -12,7 +12,7 @@ struct OH_AVRecorder_MetadataTemplate {...}
 
 **起始版本：** 18
 
-**相关模块：** [AVRecorder](capi-others-avrecorder.md)
+**相关模块：** [AVRecorder](capi-avrecorder.md)
 
 **所在头文件：** [avrecorder_base.h](capi-avrecorder-base-h.md)
 
@@ -22,7 +22,7 @@ struct OH_AVRecorder_MetadataTemplate {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| char *key | 元数据的键。<br>**起始版本：** 18 |
-| char *value | 元数据的值。<br>**起始版本：** 18 |
+| char *key | 元数据的键。 |
+| char *value | 元数据的值。 |
 
 

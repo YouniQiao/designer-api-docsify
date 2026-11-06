@@ -4,15 +4,13 @@
 
 Provides methods for creating, destroying, reading, and writing cursor information objects.
 
-**File to Include**: <inputmethod/inputmethod_cursor_info_capi.h>
+**Include**: <inputmethod/inputmethod_cursor_info_capi.h>
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
-**Related module**: [InputMethod](capi-ime-kit-inputmethod.md)
+**Related module**: [InputMethod](capi-inputmethod.md)
 
 ## Summary
 
@@ -20,16 +18,16 @@ Provides methods for creating, destroying, reading, and writing cursor informati
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Represents the cursor information, Coordinates, width, and height of the cursor. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Represents the cursor information, including the coordinates, width, and height of the cursor.<br> * |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [InputMethod_CursorInfo *OH_CursorInfo_Create(double left, double top, double width, double height)](#oh_cursorinfo_create) | Creates an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| [void OH_CursorInfo_Destroy(InputMethod_CursorInfo *cursorInfo)](#oh_cursorinfo_destroy) | Destroys an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| [InputMethod_ErrorCode OH_CursorInfo_SetRect(InputMethod_CursorInfo *cursorInfo, double left, double top, double width, double height)](#oh_cursorinfo_setrect) | Sets the cursor information. |
-| [InputMethod_ErrorCode OH_CursorInfo_GetRect(InputMethod_CursorInfo *cursorInfo, double *left, double *top, double *width, double *height)](#oh_cursorinfo_getrect) | Obtains the cursor information. |
+| [InputMethod_CursorInfo *OH_CursorInfo_Create(double left, double top, double width, double height)](#oh_cursorinfo_create) | Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
+| [void OH_CursorInfo_Destroy(InputMethod_CursorInfo *cursorInfo)](#oh_cursorinfo_destroy) | Destroy a [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
+| [InputMethod_ErrorCode OH_CursorInfo_SetRect(InputMethod_CursorInfo *cursorInfo, double left, double top, double width, double height)](#oh_cursorinfo_setrect) | Set cursor info. |
+| [InputMethod_ErrorCode OH_CursorInfo_GetRect(InputMethod_CursorInfo *cursorInfo, double *left, double *top, double *width, double *height)](#oh_cursorinfo_getrect) | Get cursor info. |
 
 ## Function description
 
@@ -41,9 +39,7 @@ InputMethod_CursorInfo *OH_CursorInfo_Create(double left, double top, double wid
 
 **Description**
 
-Creates an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
+Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
 
 **Since**: 12
 
@@ -53,14 +49,14 @@ Creates an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) 
 | -- | -- |
 | double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
 | double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
-| double width | Width, in px. |
-| double height | Height, in px. |
+| double width | The width of the cursor.in px. |
+| double height | The height of the cursor.in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_CursorInfo *](capi-inputmethod-inputmethod-cursorinfo.md) | If the operation is successful, a pointer to the created [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance is returned. <br>If the operation fails, **NULL** is returned. This may occur when the application's address space is exhausted. |
+| [InputMethod_CursorInfo *](capi-inputmethod-inputmethod-cursorinfo.md) | If the creation succeeds, a pointer to the newly created [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance is returned. If the creation fails, NULL is returned, possible cause is insufficient memory. |
 
 ### OH_CursorInfo_Destroy()
 
@@ -70,9 +66,7 @@ void OH_CursorInfo_Destroy(InputMethod_CursorInfo *cursorInfo)
 
 **Description**
 
-Destroys an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
+Destroy a [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
 
 **Since**: 12
 
@@ -80,7 +74,7 @@ Destroys an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)
 
 | Parameter | Description |
 | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Pointer to the [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance to be destroyed. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance which will be destroyed. |
 
 ### OH_CursorInfo_SetRect()
 
@@ -90,9 +84,7 @@ InputMethod_ErrorCode OH_CursorInfo_SetRect(InputMethod_CursorInfo *cursorInfo, 
 
 **Description**
 
-Sets the cursor information.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
+Set cursor info.
 
 **Since**: 12
 
@@ -100,17 +92,17 @@ Sets the cursor information.
 
 | Parameter | Description |
 | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Pointer to the [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
 | double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
 | double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
-| double width | Width, in px. |
-| double height | Height, in px. |
+| double width | The width of the cursor.in px. |
+| double height | The height of the cursor.in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | An error code. <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Success. <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - An unexpected null pointer. <br>For details about the error codes, see [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code. <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success. <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer. <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_CursorInfo_GetRect()
 
@@ -120,9 +112,7 @@ InputMethod_ErrorCode OH_CursorInfo_GetRect(InputMethod_CursorInfo *cursorInfo, 
 
 **Description**
 
-Obtains the cursor information.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
+Get cursor info.
 
 **Since**: 12
 
@@ -130,16 +120,16 @@ Obtains the cursor information.
 
 | Parameter | Description |
 | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Pointer to the [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
 | double *left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
 | double *top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
-| double *width | Width, in px. |
-| double *height | Height, in px. |
+| double *width | The width of the cursor.in px. |
+| double *height | The height of the cursor.in px. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | An error code. <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Success. <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - An unexpected null pointer. <br>For details about the error codes, see [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code. <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success. <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer. <br>Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 

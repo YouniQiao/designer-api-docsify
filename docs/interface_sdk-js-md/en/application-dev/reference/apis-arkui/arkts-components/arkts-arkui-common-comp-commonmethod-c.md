@@ -3031,8 +3031,7 @@ Sets the constraint size, which limits the size range during component layout. A
 | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of  
 **width** cannot be greater than that of **maxWidth**.<br>The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|
 
-| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.<br>The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|
-
+| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.<br>The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|  
 | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.|  
 | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 

@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **所在头文件：** [native_node.h](capi-native-node-h.md)
 
@@ -198,7 +198,7 @@ NODE_TEXT_TEXT_SHADOW
 
 **描述：**
 
-文字阴影效果属性，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：阴影模糊半径，单位为vp。取值范围：[0, +∞)。默认值为0，表示无模糊效果。</li> <li>.value[1].i32：阴影类型，具体枚举值请参考[ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype)。默认值为ARKUI_SHADOW_TYPE_COLOR，表示颜色阴影。</li> <li>.value[2].u32：阴影颜色，0xargb格式，形如 0xFFFF0000 表示红色。</li> <li>.value[3].f32：阴影X轴偏移量，单位为vp。</li> <li>.value[4].f32：阴影Y轴偏移量，单位为vp。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：阴影模糊半径，单位为vp。</li> <li>.value[1].i32：阴影类型[ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype)。</li> <li>.value[2].u32：阴影颜色，0xargb格式。</li> <li>.value[3].f32：阴影X轴偏移量，单位为vp。</li> <li>.value[4].f32：阴影Y轴偏移量，单位为vp。</li> </ul>
+文字阴影效果属性，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：阴影模糊半径，单位为vp。取值范围：[0, +∞)。默认值为0，表示无模糊效果。</li> <li>.value[1].i32：阴影类型，具体枚举值请参考[ArkUI_ShadowType](capi-native-type-h.md#arkui_shadowtype)。默认值为ARKUI_SHADOW_TYPE_COLOR，表示颜色阴影。</li> <li>.value[2].u32：阴影颜色，0xargb格式，形如 0xFFFF0000 表示红色。</li> <li>.value[3].f32：阴影X轴偏移量，单位为vp。</li> <li>.value[4].f32：阴影Y轴偏移量，单位为vp。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：阴影模糊半径，单位为vp。</li> <li>.value[1].i32：阴影类型[ArkUI_ShadowType](capi-native-type-h.md#arkui_shadowtype)。</li> <li>.value[2].u32：阴影颜色，0xargb格式。</li> <li>.value[3].f32：阴影X轴偏移量，单位为vp。</li> <li>.value[4].f32：阴影Y轴偏移量，单位为vp。</li> </ul>
 
 **起始版本：** 12
 
@@ -294,7 +294,7 @@ NODE_TEXT_LINE_SPACING
 
 **描述：**
 
-文本行间距属性，支持属性设置、属性重置和属性获取接口。适用于调整多行文本的间距，如优化阅读体验、或实现特定的排版风格效果。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>?.object：可选。指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于设置行间距选项。 从API version 26.0.1开始支持。 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Create](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_create)创建对象， 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy)销毁对象。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。</li> <li>.object：指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于获取行间距选项。 从API version 26.0.1开始支持。</li> </ul>
+文本行间距属性，支持属性设置、属性重置和属性获取接口。适用于调整多行文本的间距，如优化阅读体验、或实现特定的排版风格效果。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>?.object：可选。指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于设置行间距选项。 从API version 26.1.0开始支持。 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Create](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_create)创建对象， 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy)销毁对象。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。</li> <li>.object：指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于获取行间距选项。 从API version 26.1.0开始支持。</li> </ul>
 
 **起始版本：** 12
 
@@ -354,10 +354,7 @@ NODE_TEXT_CONTENT_WITH_STYLED_STRING
 
 **描述：**
 
-Text组件使用格式化字符串对象设置文本内容属性，支持属性设置、属性重置和属性获取接口。 配置自定义[OH_Drawing_Typography](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typography.md)对象到Text组件，会跳过文本控件的布局测算阶段。注意事项：<br>
-1. 需要保证OH_ArkUI_StyledString对象、OH_Drawing_Typography对象的生命周期跟随Text组件生命周期， Text组件析构时重置OH_ArkUI_StyledString对象，否则会导致应用出现空指针崩溃。<br>
-2. 保证OH_Drawing_TypographyLayout方法调用时序在Text组件的布局测算之前。<br>
-3. 释放OH_ArkUI_StyledString对象、OH_Drawing_Typography对象时，需要同步调用Text组件的reset方法，否则会导致应用出现空指针崩溃。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul>
+Text组件使用格式化字符串对象设置文本内容属性，支持属性设置、属性重置和属性获取接口。 配置自定义[OH_Drawing_Typography](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typography.md)对象到Text组件，会跳过文本控件的布局测算阶段。注意事项： 1. 需要保证OH_ArkUI_StyledString对象、OH_Drawing_Typography对象的生命周期跟随Text组件生命周期， Text组件析构时重置OH_ArkUI_StyledString对象，否则会导致应用出现空指针崩溃。 2. 保证OH_Drawing_TypographyLayout方法调用时序在Text组件的布局测算之前。 3. 释放OH_ArkUI_StyledString对象、OH_Drawing_Typography对象时，需要同步调用Text组件的reset方法，否则会导致应用出现空指针崩溃。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：表示 ArkUI_StyledString 格式化字符串数据，参数类型为[ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)。</li> </ul>
 
 **起始版本：** 12
 
@@ -417,7 +414,7 @@ NODE_TEXT_LINEAR_GRADIENT = 1033
 
 **描述：**
 
-设置文本线性渐变效果，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：线性渐变的起始角度，单位为deg。当direction属性设置为ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM时，angle属性生效； 否则，以direction属性为主要布局方式。0点方向顺时针旋转为正向角度，默认值：180。</li> <li>.value[1].i32：线性渐变的方向[ArkUI_LinearGradientDirection](capi-native-type-visual-h.md#arkui_lineargradientdirection)。设置除ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM之外的线性渐变方向后，angle不生效。 默认值：ARKUI_LINEAR_GRADIENT_DIRECTION_LEFT_BOTTOM。</li> <li>.value[2].i32：是否为渐变的颜色重复着色，0表示不重复着色，1表示重复着色。默认值：0。</li> <li>.object：参数类型为[ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md)。指定某百分比位置处的渐变色颜色，设置非法颜色直接跳过。</li> <li>colors：渐变色颜色数组，数组元素为0xargb格式，形如0xFFFF0000表示红色。</li> <li>stops：stops表示指定颜色所处位置的数组，数组元素取值范围为[0,1.0]，0表示需要设置渐变色的容器的开始处，1.0表示容器的结尾处。 想要实现多个颜色渐变效果时，数组元素建议递增设置，如后一个数组元素比前一个数组元素小的话，按照等于前一个数组元素的值处理。</li> <li>size：颜色个数，若小于colors数组长度则仅生效前size个颜色，不建议设置大于colors数组长度或小于等于0的值以及异常值。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：线性渐变的起始角度。当为ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM时，angle为设置值，其他情况均为默认值0。</li> <li>.value[1].i32：线性渐变的方向[ArkUI_LinearGradientDirection](capi-native-type-visual-h.md#arkui_lineargradientdirection)。</li> <li>.value[2].i32：为渐变的颜色重复着色，0表示不重复着色，1表示重复着色。默认值：0。</li> <li>.object：参数类型为[ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md)。指定某百分比位置处的渐变色颜色，设置非法颜色直接跳过。</li> <li>colors：渐变色颜色数组，数组元素为0xargb格式，形如0xFFFF0000表示红色。</li> <li>stops：stops表示指定颜色所处位置的数组，数组元素取值范围为[0,1.0]，0表示需要设置渐变色的容器的开始处，1.0表示容器的结尾处。</li> <li>size：生效后渐变色的颜色个数。</li> </ul>
+设置文本线性渐变效果，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：线性渐变的起始角度，单位为deg。当direction属性设置为ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM时，angle属性生效； 否则，以direction属性为主要布局方式。0点方向顺时针旋转为正向角度，默认值：180。</li> <li>.value[1].i32：线性渐变的方向[ArkUI_LinearGradientDirection](capi-native-type-h.md#arkui_lineargradientdirection)。设置除ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM之外的线性渐变方向后，angle不生效。 默认值：ARKUI_LINEAR_GRADIENT_DIRECTION_LEFT_BOTTOM。</li> <li>.value[2].i32：是否为渐变的颜色重复着色，0表示不重复着色，1表示重复着色。默认值：0。</li> <li>.object：参数类型为[ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md)。指定某百分比位置处的渐变色颜色，设置非法颜色直接跳过。</li> <li>colors：渐变色颜色数组，数组元素为0xargb格式，形如0xFFFF0000表示红色。</li> <li>stops：stops表示指定颜色所处位置的数组，数组元素取值范围为[0,1.0]，0表示需要设置渐变色的容器的开始处，1.0表示容器的结尾处。 想要实现多个颜色渐变效果时，数组元素建议递增设置，如后一个数组元素比前一个数组元素小的话，按照等于前一个数组元素的值处理。</li> <li>size：颜色个数，若小于colors数组长度则仅生效前size个颜色，不建议设置大于colors数组长度或小于等于0的值以及异常值。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：线性渐变的起始角度。当为ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM时，angle为设置值，其他情况均为默认值0。</li> <li>.value[1].i32：线性渐变的方向[ArkUI_LinearGradientDirection](capi-native-type-h.md#arkui_lineargradientdirection)。</li> <li>.value[2].i32：为渐变的颜色重复着色，0表示不重复着色，1表示重复着色。默认值：0。</li> <li>.object：参数类型为[ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md)。指定某百分比位置处的渐变色颜色，设置非法颜色直接跳过。</li> <li>colors：渐变色颜色数组，数组元素为0xargb格式，形如0xFFFF0000表示红色。</li> <li>stops：stops表示指定颜色所处位置的数组，数组元素取值范围为[0,1.0]，0表示需要设置渐变色的容器的开始处，1.0表示容器的结尾处。</li> <li>size：生效后渐变色的颜色个数。</li> </ul>
 
 **起始版本：** 20
 
@@ -661,42 +658,6 @@ NODE_TEXT_CONTROLLER = 1054
 
 **起始版本：** 26.0.0
 
-### NODE_TEXT_STROKE_WIDTH
-
-```c
-NODE_TEXT_STROKE_WIDTH = 1057
-```
-
-**描述：**
-
-设置文本描边宽度，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：文本描边宽度，单位为vp。默认值：0，表示无描边效果。小于0时显示实心字，大于0时显示空心字。不支持百分比。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：文本描边宽度，单位为vp。</li> </ul>
-
-**起始版本：** 26.1.0
-
-### NODE_TEXT_STROKE_COLOR
-
-```c
-NODE_TEXT_STROKE_COLOR = 1058
-```
-
-**描述：**
-
-设置文本描边颜色，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本描边颜色，0xARGB格式。默认值为字体颜色，设置异常值时取默认值。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本描边颜色，0xARGB格式。</li> </ul>
-
-**起始版本：** 26.1.0
-
-### NODE_TEXT_STROKE_JOIN_STYLE
-
-```c
-NODE_TEXT_STROKE_JOIN_STYLE = 1059
-```
-
-**描述：**
-
-设置文本描边拐角样式，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].i32：文本描边拐角样式，参数类型为[OH_ArkUI_StrokeJoinStyle](capi-text-common-h.md#oh_arkui_strokejoinstyle)。默认值为OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN，表示尖角连接。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].i32：文本描边拐角样式，参数类型为[OH_ArkUI_StrokeJoinStyle](capi-text-common-h.md#oh_arkui_strokejoinstyle)。</li> </ul>
-
-**起始版本：** 26.1.0
-
 ### NODE_SPAN_CONTENT
 
 ```c
@@ -717,7 +678,7 @@ NODE_SPAN_TEXT_BACKGROUND_STYLE
 
 **描述：**
 
-文本背景色属性，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：表示文本背景颜色，0xargb格式，形如0xFFFF0000表示红色。</li> <li>.value[1].f32：文本背景圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。支持两种设置方式： 1）仅设置.value[1].f32，未设置.value[2].f32~.value[4].f32时，表示四个方向的圆角半径统一设置； 2）设置了.value[2].f32~.value[4].f32中任意项时，.value[1].f32仅表示左上角圆角半径。</li> <li>.value[2].f32：设置右上角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>.value[3].f32：设置左下角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>.value[4].f32：设置右下角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>.value[5]?.f32：文本背景的边框宽度，单位为vp。可选。默认值为<b>0</b>。 该参数从API version 26.1.0开始支持。</li> <li>.value[6]?.u32：文本背景的边框颜色，0xargb格式。可选。 默认值为<b>0x00000000</b>（透明）。该参数从API version 26.1.0开始支持。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本背景颜色，0xargb格式。</li> <li>.value[1].f32：左上角圆角半径，单位为vp。</li> <li>.value[2].f32：右上角圆角半径，单位为vp。</li> <li>.value[3].f32：左下角圆角半径，单位为vp。</li> <li>.value[4].f32：右下角圆角半径，单位为vp。</li> <li>.value[5].f32：文本背景的边框宽度，单位为vp。 该参数从API version 26.1.0开始支持。</li> <li>.value[6].u32：文本背景的边框颜色，0xargb格式。 该参数从API version 26.1.0开始支持。</li> </ul>
+文本背景色属性，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：表示文本背景颜色，0xargb格式，形如0xFFFF0000表示红色。</li> <li>.value[1].f32：文本背景圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。支持两种设置方式： 1）仅设置.value[1].f32，未设置.value[2].f32~.value[4].f32时，表示四个方向的圆角半径统一设置； 2）设置了.value[2].f32~.value[4].f32中任意项时，.value[1].f32仅表示左上角圆角半径。</li> <li>.value[2].f32：设置右上角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>.value[3].f32：设置左下角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>.value[4].f32：设置右下角圆角半径，单位为vp。取值范围：[0, +∞)。传入负数时参数不生效。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本背景颜色，0xargb格式。</li> <li>.value[1].f32：左上角圆角半径，单位为vp。</li> <li>.value[2].f32：右上角圆角半径，单位为vp。</li> <li>.value[3].f32：左下角圆角半径，单位为vp。</li> <li>.value[4].f32：右下角圆角半径，单位为vp。</li> </ul>
 
 **起始版本：** 12
 
@@ -839,6 +800,6 @@ NODE_IMAGE_SPAN_RESIZABLE = 3006
 
 imageSpan组件图片拉伸时，支持通过设置边框大小或者使用矩阵方格对象调整其大小，支持属性设置、属性重置和属性获取接口。接口调用时需要保证设置和获取的参数类型是相同的。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：左边缘宽度，单位为vp。</li> <li>.value[1].f32：上边缘宽度，单位为vp。</li> <li>.value[2].f32：右边缘宽度，单位为vp。</li> <li>.value[3].f32：下边缘宽度，单位为vp。</li> <li>.object：参数类型为[OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：左边缘宽度，单位为vp。</li> <li>.value[1].f32：上边缘宽度，单位为vp。</li> <li>.value[2].f32：右边缘宽度，单位为vp。</li> <li>.value[3].f32：下边缘宽度，单位为vp。</li> <li>.object：参数类型为[OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)。</li> </ul>
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 

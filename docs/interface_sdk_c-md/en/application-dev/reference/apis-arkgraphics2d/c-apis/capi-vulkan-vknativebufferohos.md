@@ -14,18 +14,7 @@ move to vk_ohos_native_buffer.h
 
 **Deprecated**: 23
 
-**Related module**: [Vulkan](capi-others-vulkan.md)
+**Related module**: [Vulkan](capi-vulkan.md)
 
 **Header file**: [vulkan_ohos.h](capi-vulkan-ohos-h.md)
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| VkStructureType    sType |  |
-| const void*        pNext |  |
-| struct OHBufferHandle*      handle |  |
-
 

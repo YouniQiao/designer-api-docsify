@@ -6,11 +6,9 @@ The file declares the common enums and definitions of the display.
 
 **库：** libnative_display_manager.so
 
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
 **起始版本：** 12
 
-**相关模块：** [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
+**相关模块：** [OH_DisplayManager](capi-oh-displaymanager.md)
 
 ## 汇总
 
@@ -55,8 +53,6 @@ enum NativeDisplayManager_Rotation
 
 屏幕顺时针的旋转角度。
 
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -75,8 +71,6 @@ enum NativeDisplayManager_Orientation
 **描述：**
 
 屏幕的旋转方向。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -98,8 +92,6 @@ enum NativeDisplayManager_ErrorCode
 
 屏幕管理接口返回状态码枚举。
 
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -112,7 +104,7 @@ enum NativeDisplayManager_ErrorCode
 | DISPLAY_MANAGER_ERROR_INVALID_SCREEN = 1400001 | 操作的显示设备无效。 |
 | DISPLAY_MANAGER_ERROR_INVALID_CALL = 1400002 | 当前操作对象无操作权限。 |
 | DISPLAY_MANAGER_ERROR_SYSTEM_ABNORMAL = 1400003 | 系统服务工作异常。 |
-| DISPLAY_MANAGER_ERROR_ILLEGAL_PARAM = 1400004 | 非法参数。<br>**起始版本：** 20 |
+| DISPLAY_MANAGER_ERROR_ILLEGAL_PARAM = 1400004 |  |
 
 ### NativeDisplayManager_FoldDisplayMode
 
@@ -123,8 +115,6 @@ enum NativeDisplayManager_FoldDisplayMode
 **描述：**
 
 可折叠设备的显示模式枚举。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -145,8 +135,6 @@ enum NativeDisplayManager_DisplayState
 **描述：**
 
 显示设备的状态枚举。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 14
 
@@ -169,8 +157,6 @@ enum NativeDisplayManager_SourceMode
 **描述：**
 
 设备的显示模式枚举。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 

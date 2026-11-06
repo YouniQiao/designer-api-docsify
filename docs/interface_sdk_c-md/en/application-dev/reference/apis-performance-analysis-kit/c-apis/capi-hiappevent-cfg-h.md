@@ -6,11 +6,9 @@ Defines the names of all the configuration items of the event logging configurat
 
 **Library**: libhiappevent_ndk.z.so
 
-**System capability**: SystemCapability.HiviewDFX.HiAppEvent
-
 **Since**: 8
 
-**Related module**: [HiAppEvent](capi-performance-analysis-kit-hiappevent.md)
+**Related module**: [HiAppEvent](capi-hiappevent.md)
 
 ## Summary
 

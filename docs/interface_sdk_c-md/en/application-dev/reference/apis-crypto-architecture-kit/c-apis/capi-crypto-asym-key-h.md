@@ -4,15 +4,13 @@
 
 Defines the asymmetric key interfaces.
 
-**File to Include**: <CryptoArchitectureKit/crypto_asym_key.h>
+**Include**: <CryptoArchitectureKit/crypto_asym_key.h>
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Related module**: [CryptoAsymKeyApi](capi-crypto-architecture-kit-cryptoasymkeyapi.md)
+**Related module**: [CryptoAsymKeyApi](capi-cryptoasymkeyapi.md)
 
 ## Summary
 
@@ -86,8 +84,6 @@ enum CryptoAsymKey_ParamType
 
 Defines asymmetric key parameter types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -133,8 +129,6 @@ enum Crypto_EncodingType
 
 Defines the encoding type.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -152,8 +146,6 @@ enum CryptoPrivKeyEncoding_ParamType
 
 Defines private key encoding parameter types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
@@ -170,8 +162,6 @@ enum CryptoAsymKeySpec_Type
 **Description**
 
 Defines asymmetric key specification types.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -195,11 +185,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Create(const char *algoName, OH_Cryp
 
 Creates an asymmetric key generator based on the given algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoAsymKeyGenerator_Destroy](#oh_cryptoasymkeygenerator_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeyGenerator_Destroy {ctx}
 
 **Parameters**:
 
@@ -230,11 +218,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Generate(OH_CryptoAsymKeyGenerator *
 
 Generates an asymmetric key pair.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyCtx}
 
 **Parameters**:
 
@@ -259,11 +245,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Convert(OH_CryptoAsymKeyGenerator *c
 
 Converts asymmetric key data to a key pair.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyCtx}
 
 **Parameters**:
 
@@ -291,8 +275,6 @@ const char *OH_CryptoAsymKeyGenerator_GetAlgoName(OH_CryptoAsymKeyGenerator *ctx
 
 Obtains the algorithm name of the asymmetric key generator.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -317,8 +299,6 @@ void OH_CryptoAsymKeyGenerator_Destroy(OH_CryptoAsymKeyGenerator *ctx)
 
 Destroys the asymmetric key generator.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -337,8 +317,6 @@ void OH_CryptoKeyPair_Destroy(OH_CryptoKeyPair *keyCtx)
 
 Destroys the key pair.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -356,8 +334,6 @@ OH_CryptoPubKey *OH_CryptoKeyPair_GetPubKey(OH_CryptoKeyPair *keyCtx)
 **Description**
 
 Obtains the public key from the key pair.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -383,8 +359,6 @@ OH_CryptoPrivKey *OH_CryptoKeyPair_GetPrivKey(OH_CryptoKeyPair *keyCtx)
 
 Obtains the private key from the key pair.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -409,11 +383,9 @@ OH_Crypto_ErrCode OH_CryptoPubKey_Encode(OH_CryptoPubKey *key, Crypto_EncodingTy
 
 Encodes the public key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -440,11 +412,9 @@ OH_Crypto_ErrCode OH_CryptoPubKey_GetParam(OH_CryptoPubKey *key, CryptoAsymKey_P
 
 Obtains the specified parameter of the public key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -469,8 +439,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_SetPassword(OH_CryptoAsymKeyGenerato
 **Description**
 
 Sets the password for the asymmetric key generator. Call this method to set the password if you need to use [OH_CryptoAsymKeyGenerator_Convert](capi-crypto-asym-key-h.md#oh_cryptoasymkeygenerator_convert) to convert encrypted private key data to a key pair.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -498,11 +466,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_Create(OH_CryptoPrivKeyEncoding
 
 Creates private key encoding parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoPrivKeyEncodingParams_Destroy](#oh_cryptoprivkeyencodingparams_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoPrivKeyEncodingParams_Destroy {ctx}
 
 **Parameters**:
 
@@ -531,8 +497,6 @@ OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_SetParam(OH_CryptoPrivKeyEncodi
 
 Sets private key encoding parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -559,8 +523,6 @@ void OH_CryptoPrivKeyEncodingParams_Destroy(OH_CryptoPrivKeyEncodingParams *ctx)
 
 Destroys private key encoding parameters.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -579,11 +541,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKey_Encode(OH_CryptoPrivKey *key, Crypto_Encoding
 
 Encodes the private key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -611,11 +571,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKey_GetParam(OH_CryptoPrivKey *key, CryptoAsymKey
 
 Obtains the specified parameter of the private key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -641,11 +599,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenEcCommonParamsSpec(const char *curveNa
 
 Generates EC common parameter specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -670,11 +626,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenDhCommonParamsSpec(int pLen, int skLen
 
 Generates DH common parameter specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -700,11 +654,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_Create(const char *algoName, CryptoAsymKe
 
 Creates an asymmetric key specification based on the given algorithm name and specification type.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -729,8 +681,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetParam(OH_CryptoAsymKeySpec *spec, Cryp
 **Description**
 
 Sets the specified parameter of the asymmetric key specification.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -758,8 +708,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetCommonParamsSpec(OH_CryptoAsymKeySpec 
 
 Sets the common parameter specification into the asymmetric key specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -785,11 +733,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GetParam(OH_CryptoAsymKeySpec *spec, Cryp
 
 Obtains the specified parameter of the asymmetric key specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -815,8 +761,6 @@ void OH_CryptoAsymKeySpec_Destroy(OH_CryptoAsymKeySpec *spec)
 
 Destroys the asymmetric key specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -835,11 +779,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_Create(OH_CryptoAsymKeySpec 
 
 Creates a key generator based on the asymmetric key specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeyGeneratorWithSpec_Destroy](#oh_cryptoasymkeygeneratorwithspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeyGeneratorWithSpec_Destroy {generator}
 
 **Parameters**:
 
@@ -869,11 +811,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_GenKeyPair(OH_CryptoAsymKeyG
 
 Generates a key pair based on the asymmetric key specification.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyPair}
 
 **Parameters**:
 
@@ -898,8 +838,6 @@ void OH_CryptoAsymKeyGeneratorWithSpec_Destroy(OH_CryptoAsymKeyGeneratorWithSpec
 
 Destroys the specification-based asymmetric key generator.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -918,11 +856,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_Create(const char *curveName, Crypto_DataBlob
 
 Creates an elliptic curve point.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoEcPoint_Destroy](#oh_cryptoecpoint_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoEcPoint_Destroy {point}
 
 **Parameters**:
 
@@ -954,11 +890,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_GetCoordinate(OH_CryptoEcPoint *point, Crypto
 
 Obtains the x and y coordinates of the elliptic curve point.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {x}
 
 **Parameters**:
 
@@ -983,8 +917,6 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_SetCoordinate(OH_CryptoEcPoint *point, Crypto
 **Description**
 
 Sets the x and y coordinates of the elliptic curve point.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -1017,11 +949,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_Encode(OH_CryptoEcPoint *point, const char *f
 
 Encodes the elliptic curve point to the specified format.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -1046,8 +976,6 @@ void OH_CryptoEcPoint_Destroy(OH_CryptoEcPoint *point)
 **Description**
 
 Destroys the elliptic curve point.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

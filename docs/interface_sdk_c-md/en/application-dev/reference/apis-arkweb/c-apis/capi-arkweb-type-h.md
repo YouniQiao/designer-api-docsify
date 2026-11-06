@@ -6,11 +6,9 @@ Defines the native common types of ArkWeb.
 
 **Library**: libohweb.so
 
-**System capability**: SystemCapability.Web.Webview.Core
-
 **Since**: 12
 
-**Related module**: [Web](capi-arkweb-web.md)
+**Related module**: [Web](capi-web.md)
 
 ## Summary
 
@@ -28,11 +26,11 @@ Defines the native common types of ArkWeb.
 | [ArkWeb_ComponentAPI](capi-web-arkweb-componentapi.md) | ArkWeb_ComponentAPI | ArkWeb_ComponentAPI is an API struct provided by ArkWeb on the native side for listening to Web component lifecycle events. It inherits from the base native API type [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md). Developers obtain this struct by calling [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) with the `ARKWEB_NATIVE_COMPONENT` type, and then register event callbacks for Web component Controller attached, page load begin, page load end, and component destruction. This struct is suitable for scenarios where you need to perceive key state changes of the Web component in native code (C/ C++), such as initializing native resources, synchronizing page load status, collecting analytics data, or releasing associated resources upon component destruction. The related APIs must be called in the UI thread. Before calling a specific member function, it is recommended to use the [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) macro to check whether the function pointer exists. |
 | [ArkWeb_WebMessagePortAPI](capi-web-arkweb-webmessageportapi.md) | ArkWeb_WebMessagePortAPI | ArkWeb_WebMessagePortAPI is a native API struct for web message ports. This struct provides functions such as message port creation, closing, message sending, and message receiving callback registration. This API is a core component of the postMessage bridge, supporting the establishment of persistent bidirectional communication channels between native code and web pages. It is suitable for scenarios where data interaction between native apps and web pages is required, solving cross-language communication challenges and improving app extensibility and development efficiency.<br>Web message port related APIs must be called on the UI thread by using the OH_ArkWeb_GetNativeAPI method. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of function pointers, preventing crashes caused by mismatches between the SDK and the device ROM. |
 | [ArkWeb_WebMessageAPI](capi-web-arkweb-webmessageapi.md) | ArkWeb_WebMessageAPI | ArkWeb_WebMessageAPI is a native API struct for Web messages. This struct provides functions for creating and destroying messages, setting and obtaining message types, and managing message data buffers. This API is part of the postMessage bridge, supporting bidirectional communication between Native code and HTML pages.<br>Web message APIs must be called on the UI thread by calling the OH_ArkWeb_GetNativeAPI method. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of function pointers, preventing crashes caused by a mismatch between the SDK and device ROM. |
-| [ArkWeb_CookieManagerAPI](capi-web-arkweb-cookiemanagerapi.md) | ArkWeb_CookieManagerAPI | ArkWeb_CookieManagerAPI is a Native API struct for cookie management. This struct provides capabilities such as reading, setting, clearing, and synchronizing cookies. It is applicable to scenarios where user sessions need to be managed and user preferences need to be tracked in the Web component, helping developers conveniently implement data persistence and state synchronization.<br>CookieManager APIs must be obtained by calling the OH_ArkWeb_GetNativeAPI method in the UI thread. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of function pointers, so as to avoid crashes caused by mismatch between the SDK and the device ROM. Starting from API version 26.0.1, when calling [OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager](capi-native-interface-arkweb-h.md#oh_nativearkweb_lazyinitializewebengineincookiemanager) and setting it to true, CookieManager related interfaces are supported for use in non-UI threads. |
+| [ArkWeb_CookieManagerAPI](capi-web-arkweb-cookiemanagerapi.md) | ArkWeb_CookieManagerAPI | ArkWeb_CookieManagerAPI is a Native API struct for cookie management. This struct provides capabilities such as reading, setting, clearing, and synchronizing cookies. It is applicable to scenarios where user sessions need to be managed and user preferences need to be tracked in the Web component, helping developers conveniently implement data persistence and state synchronization.<br>CookieManager APIs must be obtained by calling the OH_ArkWeb_GetNativeAPI method in the UI thread. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of function pointers, so as to avoid crashes caused by mismatch between the SDK and the device ROM. |
 | [ArkWeb_JavaScriptValueAPI](capi-web-arkweb-javascriptvalueapi.md) | - | ArkWeb_JavaScriptValueAPI is a JavaScript-related Native API struct. This struct provides functions for creating JavaScript values, supporting the conversion of Native data into a JavaScript-recognizable format and returning it to HTML. This conversion mechanism parses and encapsulates the Native data buffer based on the specified JavaScript value type to generate the corresponding JavaScript value object. It is applicable to scenarios where data needs to be passed from the Native layer to the Web layer, enabling bidirectional data interaction between Native and Web and improving app development flexibility. <br>Call the OH_ArkWeb_GetNativeAPI method on the UI thread to obtain JavaScript-related APIs. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of the function pointer, to prevent crashes caused by mismatch between the SDK and device ROM. |
-| [ArkWeb_WebMessage*](capi-web-arkweb-webmessage8h.md) | ArkWeb_WebMessagePtr | ArkWeb_WebMessage is a web message struct used for cross-context message communication. It defines the basic format and data carrying capability of messages. This struct serves as the fundamental data unit for web message communication, supporting the transfer of strings and binary data between native code and web pages.<br> **Usage scenario**<br>Used for message communication between the native side and web pages, for example: - The native side sends control instructions or data to the web page. - The web page sends user operation results or requested data to the native side. - Asynchronous message passing and data synchronization across contexts. |
-| [ArkWeb_JavaScriptValue*](capi-web-arkweb-javascriptvalue8h.md) | ArkWeb_JavaScriptValuePtr | ArkWeb_JavaScriptValue is a struct used to encapsulate JavaScript values in native code. It provides basic creation and manipulation capabilities for JavaScript values. This struct supports converting native data into a JavaScript-recognizable format, addressing type safety and format compatibility issues in bidirectional data transfer between native and JavaScript. As the fundamental data transfer type in JavaScript bridge communication, it helps reduce manual conversion costs, improve bridge communication efficiency, and enhance maintainability. |
-| [ArkWeb_WebMessagePort*](capi-web-arkweb-webmessageport8h.md) | ArkWeb_WebMessagePortPtr | ArkWeb_WebMessagePort is a web message port struct that represents one of the two ports of a MessageChannel, used to send and receive messages. This struct supports bidirectional message communication between native code and web pages. |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessageptr.md) | ArkWeb_WebMessagePtr | ArkWeb_WebMessage is a web message struct used for cross-context message communication. It defines the basic format and data carrying capability of messages. This struct serves as the fundamental data unit for web message communication, supporting the transfer of strings and binary data between native code and web pages. |
+| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalueptr.md) | ArkWeb_JavaScriptValuePtr | ArkWeb_JavaScriptValue is a struct used to encapsulate JavaScript values in native code. It provides basic creation and manipulation capabilities for JavaScript values. This struct supports converting native data into a JavaScript-recognizable format, addressing type safety and format compatibility issues in bidirectional data transfer between native and JavaScript. As the fundamental data transfer type in JavaScript bridge communication, it helps reduce manual conversion costs, improve bridge communication efficiency, and enhance maintainability. |
+| [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageportptr.md) | ArkWeb_WebMessagePortPtr | ArkWeb_WebMessagePort is a web message port struct that represents one of the two ports of a MessageChannel, used to send and receive messages. This struct supports bidirectional message communication between native code and web pages. |
 
 ### Enum
 
@@ -46,7 +44,7 @@ Defines the native common types of ArkWeb.
 | Name | Description |
 | -- | -- |
 | ARKWEB_MEMBER_EXISTS(s, f)  ((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *(size_t *)(s)) | Check whether the member variables of the current struct exist.<br>**Since**: 12 |
-| ARKWEB_MEMBER_MISSING(s, f) (!ARKWEB_MEMBER_EXISTS(s, f) \|\| !((s)->f)) | Return true if the struct member does not exist, otherwise false.<br>**Since**: 12 |
+| ARKWEB_MEMBER_MISSING(s, f) (!ARKWEB_MEMBER_EXISTS(s, f) \|\| !((s)->f)) | Return false if the struct member does not exist, otherwise true.<br>**Since**: 12 |
 
 ### Function
 
@@ -59,6 +57,17 @@ Defines the native common types of ArkWeb.
 | [typedef void (\*ArkWeb_OnScrollCallback)(const char* webTag, void* userData, double x, double y)](#arkweb_onscrollcallback) | ArkWeb_OnScrollCallback | Callback invoked when the Web component scrolls. |
 | [typedef void (\*ArkWeb_OnMessageEventHandler)(const char* webTag, const ArkWeb_WebMessagePortPtr port, const ArkWeb_WebMessagePtr message, void* userData)](#arkweb_onmessageeventhandler) | ArkWeb_OnMessageEventHandler | Called when a post message is sent from the HTML page. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*ArkWeb_OnJavaScriptCallback)( const char* webTag, const ArkWeb_JavaScriptBridgeData* data, void* userData) | Callback invoked when the injected JavaScript execution is complete. It is used to obtain the execution result of JavaScript code in the Web component, for example, in scenarios where the native UI needs to be updated or subsequent logic needs to be executed based on the data returned by JavaScript.<br>**Since**: 12<br>**System capability**: SystemCapability.Web.Webview.Core |
+| void (*ArkWeb_OnJavaScriptProxyCallback)( const char* webTag, const ArkWeb_JavaScriptBridgeData* dataArray, size_t arraySize, void* userData) | Callback invoked when a Proxy method is executed. Proxy methods are used for object interaction and custom operations between the native side and the JavaScript side.<br>**Since**: 12<br>**System capability**: SystemCapability.Web.Webview.Core |
+| ArkWeb_JavaScriptValuePtr (*ArkWeb_OnJavaScriptProxyCallbackWithResult)( const char* webTag, const ArkWeb_JavaScriptBridgeData* dataArray, size_t arraySize, void* userData) | Callback invoked when a Proxy method is executed (with a return value). It is used to receive a notification and return the execution result when JavaScript calls an injected Proxy method. This is suitable for implementing bridge communication between JavaScript and native code, for example, intercepting JavaScript calls, executing native logic, computing results, and returning the results to JavaScript.<br>**Since**: 18<br>**System capability**: SystemCapability.Web.Webview.Core |
+| void (*ArkWeb_OnComponentCallback)(const char* webTag, void* userData) | Callback for receiving Web component event notifications. It is used to receive lifecycle event notifications of the Web component, such as status change notifications in scenarios like page loading completion, page destruction, and component visibility changes.<br>**Since**: 12<br>**System capability**: SystemCapability.Web.Webview.Core |
+| void (*ArkWeb_OnScrollCallback)(const char* webTag, void* userData, double x, double y) | Callback invoked when the Web component scrolls.<br>**Since**: 18<br>**System capability**: SystemCapability.Web.Webview.Core |
+| void (*ArkWeb_OnMessageEventHandler)( const char* webTag, const ArkWeb_WebMessagePortPtr port, const ArkWeb_WebMessagePtr message, void* userData) | Called when a post message is sent from the HTML page.<br>**Since**: 12<br>**System capability**: SystemCapability.Web.Webview.Core |
+
 ## Enum type description
 
 ### ArkWeb_WebMessageType
@@ -70,8 +79,6 @@ enum ArkWeb_WebMessageType
 **Description**
 
 Enumerates the data types of post message.
-
-**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
 
@@ -90,8 +97,6 @@ enum ArkWeb_JavaScriptValueType
 **Description**
 
 Enumerates the JavaScript data types.
-
-**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 18
 
@@ -114,17 +119,7 @@ typedef void (*ArkWeb_OnJavaScriptCallback)(const char* webTag, const ArkWeb_Jav
 
 Callback invoked when the injected JavaScript execution is complete. It is used to obtain the execution result of JavaScript code in the Web component, for example, in scenarios where the native UI needs to be updated or subsequent logic needs to be executed based on the data returned by JavaScript.
 
-**System capability**: SystemCapability.Web.Webview.Core
-
 **Since**: 12
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| const char* webTag | [in] Name of the **Web** component. |
-| [const ArkWeb_JavaScriptBridgeData](capi-web-arkweb-javascriptbridgedata.md)* data | [in] JavaScriptBridge data. |
-| void* userData | [in] Pointer to user-defined data. |
 
 ### ArkWeb_OnJavaScriptProxyCallback()
 
@@ -136,18 +131,7 @@ typedef void (*ArkWeb_OnJavaScriptProxyCallback)(const char* webTag, const ArkWe
 
 Callback invoked when a Proxy method is executed. Proxy methods are used for object interaction and custom operations between the native side and the JavaScript side.
 
-**System capability**: SystemCapability.Web.Webview.Core
-
 **Since**: 12
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| const char* webTag | [in] Name of the **Web** component. |
-| [const ArkWeb_JavaScriptBridgeData](capi-web-arkweb-javascriptbridgedata.md)* dataArray | [in] Pointer to data array. |
-| size_t arraySize | [in] Array size. |
-| void* userData | [in] Pointer to user-defined data. |
 
 ### ArkWeb_OnJavaScriptProxyCallbackWithResult()
 
@@ -158,8 +142,6 @@ typedef ArkWeb_JavaScriptValuePtr (*ArkWeb_OnJavaScriptProxyCallbackWithResult)(
 **Description**
 
 Callback invoked when a Proxy method is executed (with a return value). It is used to receive a notification and return the execution result when JavaScript calls an injected Proxy method. This is suitable for implementing bridge communication between JavaScript and native code, for example, intercepting JavaScript calls, executing native logic, computing results, and returning the results to JavaScript.
-
-**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 18
 
@@ -182,16 +164,7 @@ typedef void (*ArkWeb_OnComponentCallback)(const char* webTag, void* userData)
 
 Callback for receiving Web component event notifications. It is used to receive lifecycle event notifications of the Web component, such as status change notifications in scenarios like page loading completion, page destruction, and component visibility changes.
 
-**System capability**: SystemCapability.Web.Webview.Core
-
 **Since**: 12
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| const char* webTag | [in] Name of the **Web** component. |
-| void* userData | [in] Pointer to user-defined data. |
 
 ### ArkWeb_OnScrollCallback()
 
@@ -202,8 +175,6 @@ typedef void (*ArkWeb_OnScrollCallback)(const char* webTag, void* userData, doub
 **Description**
 
 Callback invoked when the Web component scrolls.
-
-**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 18
 
@@ -226,8 +197,6 @@ typedef void (*ArkWeb_OnMessageEventHandler)(const char* webTag, const ArkWeb_We
 
 Called when a post message is sent from the HTML page.
 
-**System capability**: SystemCapability.Web.Webview.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -235,8 +204,8 @@ Called when a post message is sent from the HTML page.
 | Parameter | Description |
 | -- | -- |
 | const char* webTag | Name of the **Web** component. |
-| [const ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) port | Post message port. |
-| [const ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) message | Post message data. |
+| [const ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageportptr.md) port | Post message port. |
+| [const ArkWeb_WebMessagePtr](capi-web-arkweb-webmessageptr.md) message | Post message data. |
 | void* userData | User-defined data. |
 
 

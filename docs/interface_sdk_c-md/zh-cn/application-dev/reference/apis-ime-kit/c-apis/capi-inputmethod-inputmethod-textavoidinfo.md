@@ -15,16 +15,16 @@ typedef struct InputMethod_TextAvoidInfo InputMethod_TextAvoidInfo
 \| [OH_TextAvoidInfo_SetHeight](capi-inputmethod-text-avoid-info-capi-h.md#oh_textavoidinfo_setheight) \| 设置高度值 \|
 \| [OH_TextAvoidInfo_GetPositionY](capi-inputmethod-text-avoid-info-capi-h. md#oh_textavoidinfo_getpositiony) \| 获取Y坐标值 \|
 \| [OH_TextAvoidInfo_GetHeight](capi-inputmethod-text-avoid-info-capi-h.md#oh_textavoidinfo_getheight) \| 获取高度值 \|
-\| [OH_TextConfig_GetTextAvoidInfo](capi-inputmethod-text-config-capi-h. md#oh_textconfig_gettextavoidinfo) \| 从TextConfig中获取TextAvoidInfo \| <br> <br>相关结构体：<br>
+\| [OH_TextConfig_GetTextAvoidInfo](capi-inputmethod-text-config-capi-h.md# oh_textconfig_gettextavoidinfo) \| 从TextConfig中获取TextAvoidInfo \| <br> <br>相关结构体：<br>
 \| 结构体 \| 说明 \|
 \| --- \| --- \|
-\| [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) \| 文本输入框配置结构体，TextAvoidInfo作 为其子属性被包含 \| <br> <br>句柄与所有权：仅可使用本API创建的有效句柄或框架提供的借用句柄；仅可销毁独立创建的对象。 回调提供的对象和TextConfig的子对象视图均为借用对象。访问接口对未注册或已失效的句柄返回IME_ERR_PARAMCHECK， NULL参数仍按原有规则返回错误。 <br>保护边界：生命周期检查不保证对象成员的线程安全，也不能在地址复用后识别所有失效地址。 对象销毁后应将指针置空；不得在回调结束后保留回调对象。
+\| [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) \| 文本输入框配置结构体，TextAvoidInfo作 为其子属性被包含 \|
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
 
-**相关模块：** [InputMethod](capi-others-inputmethod.md)
+**相关模块：** [InputMethod](capi-inputmethod.md)
 
 **所在头文件：** [inputmethod_text_avoid_info_capi.h](capi-inputmethod-text-avoid-info-capi-h.md)
 

@@ -6,11 +6,9 @@ The file declares the functions for basic display management. You can call the f
 
 **Library**: libnative_display_manager.so
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
-**Related module**: [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
+**Related module**: [OH_DisplayManager](capi-oh-displaymanager.md)
 
 ## Summary
 
@@ -59,6 +57,16 @@ The file declares the functions for basic display management. You can call the f
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint64_t displayId, NativeDisplayManager_SourceMode *sourceMode)](#oh_nativedisplaymanager_getdisplaysourcemode) | - | Obtains the display source mode. The default value is **DisplaySourceMode.None**. |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64_t displayId, int32_t *x, int32_t *y)](#oh_nativedisplaymanager_getdisplayposition) | - | Obtains the display position, that is, the x-coordinate and y-coordinate relative to the original point (the upper left corner of the main screen). |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId) | Defines a callback function to listen for display status changes.<br>**Since**: 12<br>**System capability**: SystemCapability.WindowManager.WindowManager.Core |
+| void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)( NativeDisplayManager_FoldDisplayMode displayMode) | Defines a callback function to listen for folded/unfolded state changes of the display.<br>**Since**: 12<br>**System capability**: SystemCapability.WindowManager.WindowManager.Core |
+| void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId) | Defines a callback function to listen for available area changes of a display.<br>**Since**: 20<br>**System capability**: SystemCapability.WindowManager.WindowManager.Core |
+| void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId) | Defines a callback function to listen for display addition events.<br>**Since**: 20<br>**System capability**: SystemCapability.WindowManager.WindowManager.Core |
+| void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId) | Defines a callback function to listen for display removal events.<br>**Since**: 20<br>**System capability**: SystemCapability.WindowManager.WindowManager.Core |
+
 ## Function description
 
 ### OH_NativeDisplayManager_GetDefaultDisplayId()
@@ -70,8 +78,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayId(uint6
 **Description**
 
 Obtains the ID of the default display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -97,8 +103,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayWidth(in
 
 Obtains the width of the default display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -122,8 +126,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayHeight(i
 **Description**
 
 Obtains the height of the default display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -149,8 +151,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRotation
 
 Obtains the clockwise rotation angle of the default display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -174,8 +174,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayOrientat
 **Description**
 
 Obtains the orientation of the default display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -201,8 +199,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayVirtualP
 
 Obtains the virtual pixel ratio of the default display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -226,8 +222,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRefreshR
 **Description**
 
 Obtains the refresh rate of the default display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -253,8 +247,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityD
 
 Obtains the physical pixel density of the default display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -278,8 +270,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityP
 **Description**
 
 Obtains the logical pixel density of the default display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -305,8 +295,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayScaledDe
 
 Obtains the scale factor of fonts displayed on the default display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -330,8 +318,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityX
 **Description**
 
 Obtains the number of physical pixels per inch on the default display in the X dimension.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -357,8 +343,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityY
 
 Obtains the number of physical pixels per inch on the default display in the Y dimension.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -382,8 +366,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDefaultDisplayCutou
 **Description**
 
 Obtains the unusable area of the default display, including punch hole, notch, and curved area of a waterfall display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -409,8 +391,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyDefaultDisplayCuto
 
 Destroys the unusable area of the default display, including punch hole, notch, and curved area of a waterfall display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -435,8 +415,6 @@ bool OH_NativeDisplayManager_IsFoldable()
 
 Checks whether the current device is foldable.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Returns**:
@@ -454,8 +432,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetFoldDisplayMode(Native
 **Description**
 
 Obtains the display mode of the foldable device.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -481,8 +457,6 @@ typedef void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId
 
 Defines a callback function to listen for display status changes.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -500,8 +474,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayChangeList
 **Description**
 
 Registers a listener for display status changes (such as rotation, refresh rate, DPI, and resolution changes).
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -528,8 +500,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayChangeLi
 
 Unregisters a listener for display status changes.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -554,8 +524,6 @@ typedef void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)(NativeDisp
 
 Defines a callback function to listen for folded/unfolded state changes of the display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -573,8 +541,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterFoldDisplayModeCh
 **Description**
 
 Registers a listener for folded/unfolded state changes of the display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
@@ -601,8 +567,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterFoldDisplayMode
 
 Unregisters a listener for folded/unfolded state changes of the display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -626,8 +590,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAllDisplays(NativeD
 **Description**
 
 Obtains the object that contains the information about all displays.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 14
 
@@ -653,8 +615,6 @@ void OH_NativeDisplayManager_DestroyAllDisplays(NativeDisplayManager_DisplaysInf
 
 Destroys the object that contains the information about all displays.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -672,8 +632,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDisplayById(uint32_
 **Description**
 
 Obtains the object that contains the information about a display.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 14
 
@@ -700,8 +658,6 @@ void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *di
 
 Destroys the object that contains the information about a display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -719,8 +675,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(Nati
 **Description**
 
 Obtains the object that contains the information about the primary display. For devices other than 2-in-1 devices, the displayInfo object obtained contains information about the built-in screen. For 2-in-1 devices with an external screen, the displayInfo object obtained contains information about the current primary screen. For 2-in-1 devices without an external screen, the displayInfo object obtained contains information about the built-in screen.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 14
 
@@ -746,8 +700,6 @@ typedef void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t dis
 
 Defines a callback function to listen for available area changes of a display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -765,8 +717,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChan
 **Description**
 
 Registers a listener for available area changes of the display.<br> This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
@@ -793,8 +743,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaCh
 
 Unregisters a listener for available area changes of the display.<br> This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -818,8 +766,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint6
 **Description**
 
 Obtains the available area of a display.<br> This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the available screen area on the current device, call [OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth) and [OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight).
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
@@ -846,8 +792,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(Nati
 
 Destroys the available area of a display.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -872,8 +816,6 @@ typedef void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)
 
 Defines a callback function to listen for display addition events.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -891,8 +833,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListene
 **Description**
 
 Registers a listener for display addition events (for example, monitor inserted).
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
@@ -919,8 +859,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayAddListe
 
 Unregisters a listener for display addition events.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -945,8 +883,6 @@ typedef void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId
 
 Defines a callback function to listen for display removal events.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -964,8 +900,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayRemoveList
 **Description**
 
 Registers a listener for display removal events (for example, monitor removed).
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
@@ -992,8 +926,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayRemoveLi
 
 Unregisters the listener for display removal events.
 
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1017,8 +949,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint
 **Description**
 
 Obtains the display source mode. The default value is **DisplaySourceMode.None**.
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
@@ -1044,8 +974,6 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64
 **Description**
 
 Obtains the display position, that is, the x-coordinate and y-coordinate relative to the original point (the upper left corner of the main screen).
-
-**System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 20
 
