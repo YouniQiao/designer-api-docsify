@@ -8,9 +8,11 @@
 
 **库：** liblowpower_avsink.so
 
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
-**相关模块：** [LowPowerVideoSink](capi-lowpowervideosink.md)
+**相关模块：** [LowPowerVideoSink](capi-media-kit-lowpowervideosink.md)
 
 ## 汇总
 
@@ -60,6 +62,10 @@ OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)
 
 创建LowPowerVideoSink。
 
+<!--Device-OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)--><!--Device-OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -83,6 +89,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH
 **描述：**
 
 配置LowPowerVideoSink，需要在[OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare)前完成。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -109,6 +119,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const
 
 为LowPowerVideoSink设置参数，支持[OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare)后动态设置。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -133,6 +147,10 @@ OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AV
 **描述：**
 
 获取LowPowerVideoSink的相关参数。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AVFormat* format)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -159,6 +177,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 
 为LowPowerVideoSink设置渲染画面窗口。 需要在[OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare)前完成。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, const OHNativeWindow* surface)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, const OHNativeWindow* surface)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -166,7 +188,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [const OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md)* surface | 指向OHNativeWindow实例的指针。请参考[OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) |
+| [const OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md)* surface | 指向OHNativeWindow实例的指针。请参考[OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) |
 
 **返回值：**
 
@@ -183,6 +205,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)
 **描述：**
 
 开始LowPowerVideoSink准备，需要在[OH_LowPowerVideoSink_SetSyncAudioSink](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_setsyncaudiosink)之后调用。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -208,6 +234,10 @@ OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)
 
 开始LowPowerVideoSink解码，在[OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare)后或非播放中[OH_LowPowerVideoSink_SetTargetStartFrame](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_settargetstartframe) 后调用。 启动成功后，LowPowerVideoSink将开始上报[OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded)事件。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -231,6 +261,10 @@ OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)
 **描述：**
 
 渲染LowPowerVideoSink解码出的第一帧，在[OH_LowPowerVideoSink_StartDecoder](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startdecoder)之后调用。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -256,6 +290,10 @@ OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)
 
 开始LowPowerVideoSink渲染，在[OH_LowPowerVideoSink_StartDecoder](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startdecoder)之后调用。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -279,6 +317,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)
 **描述：**
 
 暂停LowPowerVideoSink，在[OH_LowPowerVideoSink_StartRenderer](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startrenderer)或[OH_LowPowerVideoSink_Resume](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_resume)后调用。 暂停成功后，LowPowerVideoSink将暂停[OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded)事件的上报。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -304,6 +346,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)
 
 恢复LowPowerVideoSink，在[OH_LowPowerVideoSink_Pause](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_pause)后调用。 恢复成功后，LowPowerVideoSink将恢复[OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded)事件的上报。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -327,6 +373,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)
 **描述：**
 
 清除LowPowerVideoSink中所有解码器和渲染缓存的输入输出数据。 此接口不建议在[OH_LowPowerVideoSink_StartRenderer](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startrenderer)或[OH_LowPowerVideoSink_Resume](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_resume)之后调用。 需要注意的是，如果编解码器之前已输入数据，则需要重新输入编解码器数据。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -352,6 +402,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)
 
 停止LowPowerVideoSink。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -375,6 +429,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)
 **描述：**
 
 重置LowPowerVideoSink。 如果要重新使用该实例，需要调用[OH_LowPowerVideoSink_Configure](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_configure)完成配置。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -400,6 +458,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)
 
 清理解码器内部资源，销毁LowPowerVideoSink实例。不能重复销毁。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -423,6 +485,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSi
 **描述：**
 
 LowPowerVideoSink设置用于音画同步的OH_LowPowerAudioSink。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSink, OH_LowPowerAudioSink* audioSink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSink, OH_LowPowerAudioSink* audioSink)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -448,6 +514,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink
 **描述：**
 
 为LowPowerVideoSink设置目标渲染帧。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink, const int64_t framePts, OH_LowPowerVideoSink_OnTargetArrived onTargetArrived, const int64_t timeoutMs, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink, const int64_t framePts, OH_LowPowerVideoSink_OnTargetArrived onTargetArrived, const int64_t timeoutMs, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -477,6 +547,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, c
 
 为LowPowerVideoSink设置播放倍速。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, const float speed)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, const float speed)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -501,6 +575,10 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 **描述：**
 
 给LowPowerVideoSink输入buffer。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_AVSamplesBuffer* samples)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_AVSamplesBuffer* samples)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -527,6 +605,10 @@ OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, O
 
 为LowPowerVideoSink注册回调。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, OH_LowPowerVideoSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, OH_LowPowerVideoSinkCallback* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -552,6 +634,10 @@ OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)
 
 创建OH_LowPowerVideoSinkCallback。
 
+<!--Device-OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)--><!--Device-OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **返回值：**
@@ -569,6 +655,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* 
 **描述：**
 
 销毁OH_LowPowerVideoSinkCallback对象。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -593,6 +683,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideo
 **描述：**
 
 为LowPowerVideoSinkCallback设置需要数据监听。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnDataNeeded onDataNeeded, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnDataNeeded onDataNeeded, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -620,6 +714,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkC
 
 为LowPowerVideoSinkCallback回调设置错误监听。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnError onError, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnError onError, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -645,6 +743,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVide
 **描述：**
 
 为LowPowerVideoSinkCallback回调设置开始渲染监听。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnRenderStarted onRenderStarted, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnRenderStarted onRenderStarted, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -672,6 +774,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVi
 
 为LowPowerVideoSinkCallback回调设置流切换监听。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnStreamChanged onStreamChanged, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnStreamChanged onStreamChanged, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -697,6 +803,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPow
 **描述：**
 
 为LowPowerVideoSinkCallback回调设置首帧解码完成监听。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnFirstFrameDecoded onFirstFrameDecoded, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnFirstFrameDecoded onFirstFrameDecoded, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 20
 
@@ -724,6 +834,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCal
 
 为LowPowerVideoSinkCallback回调设置播放结束监听。
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnEos onEos, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnEos onEos, void* userData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **起始版本：** 20
 
 **参数：**
@@ -749,6 +863,10 @@ OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64
 **描述：**
 
 获取当前播放的视频显示时间戳（pts）。
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64_t *pts)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64_t *pts)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **起始版本：** 21
 

@@ -8,9 +8,11 @@
 
 **库：** libnative_drm.so
 
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm.md)
+**相关模块：** [Drm](capi-drm-kit-drm.md)
 
 ## 汇总
 
@@ -31,6 +33,10 @@ enum Drm_ErrCode
 **描述：**
 
 DRM错误码。
+
+<!--Device-Drm_ErrCode--><!--Device-Drm_ErrCode-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 

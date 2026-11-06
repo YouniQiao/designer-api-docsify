@@ -8,11 +8,13 @@ struct FileShare_PolicyInfo {...}
 
 需要授予或激活URI访问权限的策略信息，用于描述跨应用文件共享场景中的目标URI和访问模式。
 
+<!--Device-struct FileShare_PolicyInfo {...}--><!--Device-struct FileShare_PolicyInfo {...}-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **起始版本：** 12
 
-**相关模块：** [fileShare](capi-fileshare.md)
+**相关模块：** [fileShare](capi-core-file-kit-fileshare.md)
 
 **所在头文件：** [oh_file_share.h](capi-oh-file-share-h.md)
 

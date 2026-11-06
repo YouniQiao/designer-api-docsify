@@ -39,6 +39,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [addOptimizationBatteryExclusionApps](arkts-mdm-applicationmanager-addoptimizationbatteryexclusionapps-f.md#addoptimizationbatteryexclusionapps-1) | 添加应用至电池优化排除列表。使用异步回调返回结果。 |
 | [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps-1) | 为指定用户添加不可关停应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略名单中不会重复添加该应用。 |
 | [clearUpApplicationData](arkts-mdm-applicationmanager-clearupapplicationdata-f.md#clearupapplicationdata-1) | 清除应用产生的所有数据。 |
+| [getAllMainWindowStates](arkts-mdm-applicationmanager-getallmainwindowstates-f.md#getallmainwindowstates-1) | 获取所有主窗口的状态。 |
 | [getAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-getalloweddistributeabilityconnbundles-f.md#getalloweddistributeabilityconnbundles-1) | 获取指定用户下特定分布式业务的允许跨设备应用名单。 |
 | [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md#getallowedkioskapps-1) | 获取允许在Kiosk模式下运行的应用。 |
 | [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md#getallowedkioskapps-2) | 获取允许在Kiosk模式下运行的应用。 |
@@ -111,6 +112,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [BundleStatsInfo](arkts-mdm-applicationmanager-bundlestatsinfo-i.md) | 应用包统计信息。 |
 | [DockInfo](arkts-mdm-applicationmanager-dockinfo-i.md) | 快捷栏中的应用信息。 |
 | [FormInfo](arkts-mdm-applicationmanager-forminfo-i.md) | 卡片信息 |
+| [MainWindowStates](arkts-mdm-applicationmanager-mainwindowstates-i.md) | 主窗口显示信息。 |
 | [WindowStateInfo](arkts-mdm-applicationmanager-windowstateinfo-i.md) | 应用窗口状态信息。 |
 
 ### 枚举

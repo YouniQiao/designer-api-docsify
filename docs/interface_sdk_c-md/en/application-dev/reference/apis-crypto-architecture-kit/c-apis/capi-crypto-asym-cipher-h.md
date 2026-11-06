@@ -4,13 +4,15 @@
 
 Defines the asymmetric cipher interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_asym_cipher.h>
+**File to Include**: <CryptoArchitectureKit/crypto_asym_cipher.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Related module**: [CryptoAsymCipherApi](capi-cryptoasymcipherapi.md)
+**Related module**: [CryptoAsymCipherApi](capi-crypto-architecture-kit-cryptoasymcipherapi.md)
 
 ## Summary
 
@@ -53,6 +55,10 @@ enum CryptoSm2CiphertextSpec_item
 
 Defines SM2 ciphertext specification item types.
 
+<!--Device-CryptoSm2CiphertextSpec_item--><!--Device-CryptoSm2CiphertextSpec_item-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 | Enum item | Description |
@@ -75,9 +81,13 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsym
 
 Creates an asymmetric cipher context based on the given algorithm name.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsymCipher **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsymCipher **ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_asym_cipher/OH_CryptoAsymCipher_Destroy {ctx}
+**Resource release**: [OH_CryptoAsymCipher_Destroy](#oh_cryptoasymcipher_destroy)
 
 **Parameters**:
 
@@ -106,6 +116,10 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_Ciph
 **Description**
 
 Initializes the asymmetric cipher context with the given cipher mode and key.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_CipherMode mode, OH_CryptoKeyPair *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_CipherMode mode, OH_CryptoKeyPair *key)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -138,9 +152,13 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Cryp
 
 Finishes the cipher operation.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -166,6 +184,10 @@ void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)
 
 Destroys the asymmetric cipher context.
 
+<!--Device-void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)--><!--Device-void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 **Parameters**:
@@ -184,9 +206,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Cipherte
 
 Creates an SM2 ciphertext specification.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Ciphertext, OH_CryptoSm2CiphertextSpec **spec)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Ciphertext, OH_CryptoSm2CiphertextSpec **spec)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_asym_cipher/OH_CryptoSm2CiphertextSpec_Destroy {spec}
+**Resource release**: [OH_CryptoSm2CiphertextSpec_Destroy](#oh_cryptosm2ciphertextspec_destroy)
 
 **Parameters**:
 
@@ -217,9 +243,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec 
 
 Obtains the specified item of the SM2 ciphertext.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -244,6 +274,10 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec 
 **Description**
 
 Sets the specified item of the SM2 ciphertext specification.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *in)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *in)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -276,9 +310,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *
 
 Encodes the SM2 ciphertext specification to DER format ciphertext.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *spec, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *spec, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -302,6 +340,10 @@ void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)
 **Description**
 
 Destroys the SM2 ciphertext specification.
+
+<!--Device-void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)--><!--Device-void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

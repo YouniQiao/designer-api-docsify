@@ -8,11 +8,13 @@ struct ScsiPeripheral_IORequest {...}
 
 读/写操作的请求参数。该结构体定义了SCSI外设进行读/写操作时所需的请求参数，包括逻辑块起始地址、传输长度、控制信息等。
 
+<!--Device-struct ScsiPeripheral_IORequest {...}--><!--Device-struct ScsiPeripheral_IORequest {...}-End-->
+
 **系统能力：** SystemCapability.Driver.SCSI.Extension
 
 **起始版本：** 18
 
-**相关模块：** [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
+**相关模块：** [ScsiPeripheralDDK](capi-driver-development-kit-scsiperipheralddk.md)
 
 **所在头文件：** [scsi_peripheral_types.h](capi-scsi-peripheral-types-h.md)
 
@@ -27,7 +29,7 @@ struct ScsiPeripheral_IORequest {...}
 | uint8_t control | Control字段，用于指定SCSI命令的控制标志，如优先级、链接命令等控制选项。 |
 | uint8_t byte1 | SCSI命令描述符块（CDB）的第一个字节，通常包含操作码和操作组信息。 |
 | uint8_t byte6 | SCSI命令描述符块（CDB）的第六个字节，根据命令类型包含不同的参数或标志信息。 |
-| [ScsiPeripheral_DeviceMemMap*](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) data | 数据传输的缓冲区。 |
+| ScsiPeripheral_DeviceMemMap *data | 数据传输的缓冲区。 |
 | uint32_t timeout | 超时时间（单位：ms）。 |
 
 

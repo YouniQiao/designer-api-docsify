@@ -6,9 +6,11 @@ Declare audio volume manager related interfaces.<br> This file interfaces are us
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
@@ -35,13 +37,6 @@ Declare audio volume manager related interfaces.<br> This file interfaces are us
 | [OH_AudioCommon_Result OH_AudioVolumeManager_RegisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback, void *userData)](#oh_audiovolumemanager_registerringermodechangecallback) | - | Register callback to receive ringer mode changed events. |
 | [OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback)](#oh_audiovolumemanager_unregisterringermodechangecallback) | - | Unregister ringer mode change callback. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_AudioVolumeManager_OnStreamVolumeChangeCallback)( void *userData, OH_AudioStream_Usage usage, int32_t volumeLevel, bool updateUi ) | Prototype for the volume change function that is passed to [OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback](capi-native-audio-volume-manager-h.md#oh_audiovolumemanager_registerstreamvolumechangecallback).<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-| void (*OH_AudioVolumeManager_OnRingerModeChangeCallback)( void *userData, OH_AudioRingerMode ringerMode ) | Prototype for the volume change function that is passed to [OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback](capi-native-audio-volume-manager-h.md#oh_audiovolumemanager_registerstreamvolumechangecallback).<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Audio.Core |
-
 ## Function description
 
 ### OH_AudioVolumeManager_OnStreamVolumeChangeCallback()
@@ -53,6 +48,10 @@ typedef void (*OH_AudioVolumeManager_OnStreamVolumeChangeCallback)(void *userDat
 **Description**
 
 Prototype for the volume change function that is passed to [OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback](capi-native-audio-volume-manager-h.md#oh_audiovolumemanager_registerstreamvolumechangecallback).
+
+<!--Device-typedef void (*OH_AudioVolumeManager_OnStreamVolumeChangeCallback)(void *userData, OH_AudioStream_Usage usage, int32_t volumeLevel, bool updateUi)--><!--Device-typedef void (*OH_AudioVolumeManager_OnStreamVolumeChangeCallback)(void *userData, OH_AudioStream_Usage usage, int32_t volumeLevel, bool updateUi)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -75,6 +74,10 @@ typedef void (*OH_AudioVolumeManager_OnRingerModeChangeCallback)(void *userData,
 
 Prototype for the volume change function that is passed to [OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback](capi-native-audio-volume-manager-h.md#oh_audiovolumemanager_registerstreamvolumechangecallback).
 
+<!--Device-typedef void (*OH_AudioVolumeManager_OnRingerModeChangeCallback)(void *userData, OH_AudioRingerMode ringerMode)--><!--Device-typedef void (*OH_AudioVolumeManager_OnRingerModeChangeCallback)(void *userData, OH_AudioRingerMode ringerMode)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -93,6 +96,10 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioVolumeManager(OH_AudioVolumeManage
 **Description**
 
 Fetch the audio volume manager handle, which is a singleton.
+
+<!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioVolumeManager(OH_AudioVolumeManager **volumeManager)--><!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioVolumeManager(OH_AudioVolumeManager **volumeManager)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -117,6 +124,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_GetMaxVolumeByUsage(OH_AudioVolumeMa
 **Description**
 
 Obtains the maximum volume level for a specific stream usage type.
+
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetMaxVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *maxVolumeLevel)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetMaxVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *maxVolumeLevel)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -144,6 +155,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_GetMinVolumeByUsage(OH_AudioVolumeMa
 
 Obtains the minimum volume level for a specific stream usage type.
 
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetMinVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *minVolumeLevel)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetMinVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *minVolumeLevel)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -169,6 +184,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_GetVolumeByUsage(OH_AudioVolumeManag
 **Description**
 
 Obtains the system volume level for a specific stream usage type.
+
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *volumeLevel)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetVolumeByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, int32_t *volumeLevel)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -196,6 +215,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_IsMuteByUsage(OH_AudioVolumeManager 
 
 Checks whether a stream is muted for a specific stream usage type.
 
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_IsMuteByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, bool *muted)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_IsMuteByUsage(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, bool *muted)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -221,6 +244,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback(O
 **Description**
 
 Register callback to receive stream volume changed events.
+
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, OH_AudioVolumeManager_OnStreamVolumeChangeCallback callback, void *userData)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_RegisterStreamVolumeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioStream_Usage usage, OH_AudioVolumeManager_OnStreamVolumeChangeCallback callback, void *userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -249,6 +276,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterStreamVolumeChangeCallback
 
 Unregister stream volume change callback.
 
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterStreamVolumeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnStreamVolumeChangeCallback callback)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterStreamVolumeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnStreamVolumeChangeCallback callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -273,6 +304,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_GetRingerMode(OH_AudioVolumeManager 
 **Description**
 
 Get current ringer mode.
+
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetRingerMode(OH_AudioVolumeManager *volumeManager, OH_AudioRingerMode *ringerMode)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_GetRingerMode(OH_AudioVolumeManager *volumeManager, OH_AudioRingerMode *ringerMode)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -299,6 +334,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_RegisterRingerModeChangeCallback(OH_
 
 Register callback to receive ringer mode changed events.
 
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_RegisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback, void *userData)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_RegisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback, void *userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -324,6 +363,10 @@ OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterRingerModeChangeCallback(O
 **Description**
 
 Unregister ringer mode change callback.
+
+<!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback)--><!--Device-OH_AudioCommon_Result OH_AudioVolumeManager_UnregisterRingerModeChangeCallback(OH_AudioVolumeManager *volumeManager, OH_AudioVolumeManager_OnRingerModeChangeCallback callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 

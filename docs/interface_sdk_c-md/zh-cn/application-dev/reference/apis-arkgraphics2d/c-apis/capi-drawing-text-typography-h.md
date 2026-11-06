@@ -6,9 +6,11 @@
 
 **库：** libnative_drawing.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## 汇总
 
@@ -306,6 +308,10 @@ enum OH_Drawing_TextDirection
 
 文字方向。
 
+<!--Device-OH_Drawing_TextDirection--><!--Device-OH_Drawing_TextDirection-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -322,6 +328,10 @@ enum OH_Drawing_TextAlign
 **描述：**
 
 文字对齐方式。
+
+<!--Device-OH_Drawing_TextAlign--><!--Device-OH_Drawing_TextAlign-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -343,6 +353,10 @@ enum OH_Drawing_FontWeight
 **描述：**
 
 字重。
+
+<!--Device-OH_Drawing_FontWeight--><!--Device-OH_Drawing_FontWeight-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -368,6 +382,10 @@ enum OH_Drawing_TextBaseline
 
 基线位置。
 
+<!--Device-OH_Drawing_TextBaseline--><!--Device-OH_Drawing_TextBaseline-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -384,6 +402,10 @@ enum OH_Drawing_TextDecoration
 **描述：**
 
 文本装饰。
+
+<!--Device-OH_Drawing_TextDecoration--><!--Device-OH_Drawing_TextDecoration-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -404,6 +426,10 @@ enum OH_Drawing_FontStyle
 
 字体样式，包括非斜体、斜体和倾斜字体。
 
+<!--Device-OH_Drawing_FontStyle--><!--Device-OH_Drawing_FontStyle-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -422,6 +448,10 @@ enum OH_Drawing_PlaceholderVerticalAlignment
 
 占位符垂直对齐枚举。
 
+<!--Device-OH_Drawing_PlaceholderVerticalAlignment--><!--Device-OH_Drawing_PlaceholderVerticalAlignment-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -432,7 +462,7 @@ enum OH_Drawing_PlaceholderVerticalAlignment
 | ALIGNMENT_TOP_OF_ROW_BOX | 行框顶部对齐。 |
 | ALIGNMENT_BOTTOM_OF_ROW_BOX | 行框底部对齐。 |
 | ALIGNMENT_CENTER_OF_ROW_BOX | 行框中心对齐。 |
-| ALIGNMENT_FOLLOW_PARAGRAPH |  |
+| ALIGNMENT_FOLLOW_PARAGRAPH | 跟随文本垂直对齐方式。<br>**起始版本：** 20 |
 
 ### OH_Drawing_TextDecorationStyle
 
@@ -443,6 +473,10 @@ enum OH_Drawing_TextDecorationStyle
 **描述：**
 
 文本装饰样式枚举。
+
+<!--Device-OH_Drawing_TextDecorationStyle--><!--Device-OH_Drawing_TextDecorationStyle-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -464,6 +498,10 @@ enum OH_Drawing_EllipsisModal
 
 省略号样式枚举。
 
+<!--Device-OH_Drawing_EllipsisModal--><!--Device-OH_Drawing_EllipsisModal-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -471,8 +509,8 @@ enum OH_Drawing_EllipsisModal
 | ELLIPSIS_MODAL_HEAD = 0 | 头部省略号模式，即省略号位置出现在行首。该枚举值仅在使用[OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置文本最大行数为1时有效。 |
 | ELLIPSIS_MODAL_MIDDLE = 1 | 中部省略号模式，即省略号位置出现在行的中间。该枚举值仅在使用[OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置文本最大行数为1时有效。 |
 | ELLIPSIS_MODAL_TAIL = 2 | 尾部省略号模式，即省略号位置出现在行的尾部。该枚举值在使用[OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置文本最大行数为任何值时均有效。 |
-| ELLIPSIS_MODAL_MULTILINE_HEAD = 3 |  |
-| ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4 |  |
+| ELLIPSIS_MODAL_MULTILINE_HEAD = 3 | 头部省略号模式，即省略号位置出现在行首。该枚举值在使用[OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置文本最大行数为任何值时均有效。<br>**起始版本：** 24 |
+| ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4 | 中间省略号模式，即省略号位置出现在行的中间。该枚举值在使用[OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置文本最大行数为任何值时均有效。<br>**起始版本：** 24 |
 
 ### OH_Drawing_BreakStrategy
 
@@ -483,6 +521,10 @@ enum OH_Drawing_BreakStrategy
 **描述：**
 
 文本的中断策略枚举。
+
+<!--Device-OH_Drawing_BreakStrategy--><!--Device-OH_Drawing_BreakStrategy-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -502,6 +544,10 @@ enum OH_Drawing_WordBreakType
 
 单词的断词方式枚举。
 
+<!--Device-OH_Drawing_WordBreakType--><!--Device-OH_Drawing_WordBreakType-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -509,7 +555,7 @@ enum OH_Drawing_WordBreakType
 | WORD_BREAK_TYPE_NORMAL = 0 | 常规方式。 |
 | WORD_BREAK_TYPE_BREAK_ALL = 1 | 全部中断方式。 |
 | WORD_BREAK_TYPE_BREAK_WORD = 2 | 单词中断方式。 |
-| WORD_BREAK_TYPE_BREAK_HYPHEN = 3 |  |
+| WORD_BREAK_TYPE_BREAK_HYPHEN = 3 | 每行末尾单词尝试通过连字符"-"进行断行，若无法添加连字符"-"，则跟`WORD_BREAK_TYPE_BREAK_WORD`保持一致。<br>**起始版本：** 18 |
 
 ### OH_Drawing_RectHeightStyle
 
@@ -520,6 +566,10 @@ enum OH_Drawing_RectHeightStyle
 **描述：**
 
 矩形框高度样式枚举。
+
+<!--Device-OH_Drawing_RectHeightStyle--><!--Device-OH_Drawing_RectHeightStyle-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -542,6 +592,10 @@ enum OH_Drawing_RectWidthStyle
 
 矩形框宽度样式枚举。
 
+<!--Device-OH_Drawing_RectWidthStyle--><!--Device-OH_Drawing_RectWidthStyle-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -558,6 +612,10 @@ enum OH_Drawing_FontConfigInfoErrorCode
 **描述：**
 
 系统字体配置信息列表错误码枚举。
+
+<!--Device-OH_Drawing_FontConfigInfoErrorCode--><!--Device-OH_Drawing_FontConfigInfoErrorCode-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -579,6 +637,10 @@ enum OH_Drawing_TextHeightBehavior
 
 文本高度修饰符模式枚举。
 
+<!--Device-OH_Drawing_TextHeightBehavior--><!--Device-OH_Drawing_TextHeightBehavior-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -597,6 +659,10 @@ enum OH_Drawing_TextStyleType
 **描述：**
 
 文本样式类型枚举。
+
+<!--Device-OH_Drawing_TextStyleType--><!--Device-OH_Drawing_TextStyleType-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -622,6 +688,10 @@ enum OH_Drawing_FontWidth
 
 字体宽度的枚举。
 
+<!--Device-OH_Drawing_FontWidth--><!--Device-OH_Drawing_FontWidth-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -646,6 +716,10 @@ enum OH_Drawing_TextStyleAttributeId
 
 文本样式属性枚举。
 
+<!--Device-OH_Drawing_TextStyleAttributeId--><!--Device-OH_Drawing_TextStyleAttributeId-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -654,7 +728,7 @@ enum OH_Drawing_TextStyleAttributeId
 | TEXT_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1 | 行高下限。<br>若同时开启行高缩放，当FontHeight（可由[OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)接口获取）大于0时行高下限才生效。<br>取值范围为单精度浮点数非负部分， 默认值为0。 |
 | TEXT_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 2 | 行高缩放基数样式。具体行高缩放基数样式可见[OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle)。 |
 | TEXT_STYLE_ATTR_I_FONT_WIDTH = 3 | 字宽。 |
-| TEXT_STYLE_ATTR_I_FONT_EDGING = 4 |  |
+| TEXT_STYLE_ATTR_I_FONT_EDGING = 4 | 字体边缘处理方式。默认为抗锯齿，具体字体边缘处理方式可见[OH_Drawing_FontEdging](capi-drawing-font-h.md#oh_drawing_fontedging)。<br>**起始版本：** 24 |
 
 ### OH_Drawing_LineHeightStyle
 
@@ -665,6 +739,10 @@ enum OH_Drawing_LineHeightStyle
 **描述：**
 
 行高缩放基数样式枚举。默认样式为TEXT_LINE_HEIGHT_BY_FONT_SIZE。
+
+<!--Device-OH_Drawing_LineHeightStyle--><!--Device-OH_Drawing_LineHeightStyle-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 21
 
@@ -683,6 +761,10 @@ enum OH_Drawing_TypographyStyleAttributeId
 
 排版样式属性枚举。 <br>针对排版样式和文本样式中的共有属性，建议优先使用文本样式属性（可由[OH_Drawing_TextStyleAttributeId](capi-drawing-text-typography-h.md#oh_drawing_textstyleattributeid)获取）。
 
+<!--Device-OH_Drawing_TypographyStyleAttributeId--><!--Device-OH_Drawing_TypographyStyleAttributeId-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -692,13 +774,13 @@ enum OH_Drawing_TypographyStyleAttributeId
 | TYPOGRAPHY_STYLE_ATTR_D_LINE_SPACING = 2 | 行间距。<br>lineSpacing不受行高上下限的限制。<br>尾行默认添加行间距。<br>可通过[OH_Drawing_TypographyTextSetHeightBehavior](capi-drawing-text-typography-h.md#oh_drawing_typographytextsetheightbehavior) 接口设置textHeightBehavior为DISABLE_LAST_ASCENT禁用尾行行间距。<br>默认值为0。 |
 | TYPOGRAPHY_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 3 | 行高缩放基数样式。具体行高缩放基数样式可见[OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle)。 |
 | TYPOGRAPHY_STYLE_ATTR_I_FONT_WIDTH = 4 | 字宽。 |
-| TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5 |  |
-| TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6 |  |
-| TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7 |  |
-| TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8 |  |
-| TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9 |  |
-| TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10 |  |
-| TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11 |  |
+| TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5 | 设置文本排版时是否启用行首标点压缩。<br>**说明：**<br>1. 需要字体文件支持[OH_Drawing_FontFeature](capi-drawing-oh-drawing-fontfeature.md)中的"ss08"特性，否则无法压缩。<br>2. 在行首标点压缩范围内的标点才在本特性作用范围内。<br>**起始版本：** 23 |
+| TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6 | 设置文本排版时是否启用字体内部的padding。<br>**起始版本：** 23 |
+| TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7 | 设置文本排版时是否启用行间距回退机制。<br>**起始版本：** 23 |
+| TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8 | 省略号样式。具体省略号样式可见[OH_Drawing_EllipsisModal](capi-drawing-text-typography-h.md#oh_drawing_ellipsismodal)。<br>**起始版本：** 24 |
+| TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9 | 行首缩进数组。<br>缩进数组值需全部大于等于0，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值。<br>**起始版本：** 26.0.0 |
+| TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10 | 段落首行缩进。缩进值需大于等于0。<br>**起始版本：** 26.0.0 |
+| TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11 | 行尾缩进数组。<br>缩进数组值需全部大于等于0，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值。<br>**起始版本：** 26.0.0 |
 
 ### OH_Drawing_TypographyAttributeId
 
@@ -710,11 +792,15 @@ enum OH_Drawing_TypographyAttributeId
 
 排版属性枚举。
 
+<!--Device-OH_Drawing_TypographyAttributeId--><!--Device-OH_Drawing_TypographyAttributeId-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 |  |
+| TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 | 是否强制复用光栅化结果。设置后，在下次调用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)绘制时生效。<br>true表示强制复用光栅化结果，false表示允许更新光栅化结果，默认值为false。<br>**起始版本：** 26.0.0 |
 
 ### OH_Drawing_TextBadgeType
 
@@ -725,6 +811,10 @@ enum OH_Drawing_TextBadgeType
 **描述：**
 
 上下标样式枚举。
+
+<!--Device-OH_Drawing_TextBadgeType--><!--Device-OH_Drawing_TextBadgeType-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -743,6 +833,10 @@ enum OH_Drawing_TextVerticalAlignment
 **描述：**
 
 垂直对齐方式枚举。
+
+<!--Device-OH_Drawing_TextVerticalAlignment--><!--Device-OH_Drawing_TextVerticalAlignment-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -765,6 +859,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typo
 **描述：**
 
 获取bool类型排版的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 26.0.0
 
@@ -792,6 +890,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography
 
 设置bool类型的排版属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -817,6 +919,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle
 **描述：**
 
 设置double类型文本样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 21
 
@@ -844,6 +950,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle
 
 获取double类型文本样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 **参数：**
@@ -869,6 +979,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* s
 **描述：**
 
 设置int类型文本样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 21
 
@@ -896,6 +1010,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* s
 
 获取int类型文本样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 **参数：**
@@ -921,6 +1039,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_Typ
 **描述：**
 
 设置double类型排版样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 21
 
@@ -948,6 +1070,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_Typ
 
 获取double类型排版样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 **参数：**
@@ -973,6 +1099,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_Typogr
 **描述：**
 
 设置int类型排版样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 21
 
@@ -1000,6 +1130,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_Typogr
 
 获取int类型排版样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 21
 
 **参数：**
@@ -1025,6 +1159,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_Typog
 **描述：**
 
 设置bool类型排版样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -1052,6 +1190,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_Typog
 
 获取bool类型排版样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool* value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 23
 
 **参数：**
@@ -1077,6 +1219,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawin
 **描述：**
 
 设置浮点数数组类型排版样式的属性。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* arrayValue, size_t arrayLength)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* arrayValue, size_t arrayLength)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 26.0.0
 
@@ -1105,6 +1251,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_
 
 获取浮点数数组类型排版样式的属性。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double** arrayValue, size_t* arrayLength)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double** arrayValue, size_t* arrayLength)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1132,6 +1282,10 @@ OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)
 
 创建指向OH_Drawing_TypographyStyle对象的指针。不再需要[OH_Drawing_TypographyStyle](capi-drawing-oh-drawing-typographystyle.md)时，请使用 [OH_Drawing_DestroyTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytypographystyle)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)--><!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **返回值：**
@@ -1150,6 +1304,10 @@ void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)
 
 释放被OH_Drawing_TypographyStyle对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)--><!--Device-void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1167,6 +1325,10 @@ void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, in
 **描述：**
 
 设置指定排版样式中的文本方向。
+
+<!--Device-void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, int direction)--><!--Device-void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, int direction)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1187,6 +1349,10 @@ void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int al
 
 设置文本对齐方式。
 
+<!--Device-void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int align)--><!--Device-void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int align)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1205,6 +1371,10 @@ void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int
 **描述：**
 
 设置文本最大行数。
+
+<!--Device-void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int lineNumber)--><!--Device-void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int lineNumber)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1225,6 +1395,10 @@ OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)
 
 创建指向OH_Drawing_TextStyle对象的指针。不再需要[OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md)时，请使用[OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) 接口释放该对象的指针。
 
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **返回值：**
@@ -1243,6 +1417,10 @@ void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)
 
 释放被OH_Drawing_TextStyle对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1260,6 +1438,10 @@ void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)
 **描述：**
 
 设置文本颜色。
+
+<!--Device-void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)--><!--Device-void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1280,6 +1462,10 @@ void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSiz
 
 设置字号。
 
+<!--Device-void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSize)--><!--Device-void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1298,6 +1484,10 @@ void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeig
 **描述：**
 
 设置字重。在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，仅系统字体中的可变字体支持字重调节；从<!--RP1-->OpenHarmony 6.1<!--RP1End-->开始， 系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold时字体粗细无变化，设置字重值大于等于semi-bold时可能会触发伪加粗效果。
+
+<!--Device-void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeight)--><!--Device-void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1318,6 +1508,10 @@ void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)
 
 设置文本样式的字体基线位置。
 
+<!--Device-void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)--><!--Device-void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1336,6 +1530,10 @@ void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decorati
 **描述：**
 
 设置指定文本样式中的装饰线类型，只能设置一个装饰线类型，添加多个需要使用[OH_Drawing_AddTextStyleDecoration](capi-drawing-text-typography-h.md#oh_drawing_addtextstyledecoration)。
+
+<!--Device-void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1356,6 +1554,10 @@ void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decorati
 
 新增指定装饰，可同时显示多种装饰线。
 
+<!--Device-void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 18
 
 **参数：**
@@ -1374,6 +1576,10 @@ void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decor
 **描述：**
 
 删除指定装饰。
+
+<!--Device-void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -1394,6 +1600,10 @@ void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_
 
 设置指定文本样式中的装饰线颜色。如果不调用该接口或者设置color为0时，装饰线颜色跟随文本颜色。
 
+<!--Device-void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_t color)--><!--Device-void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_t color)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1413,6 +1623,10 @@ void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontH
 
 设置行高，按当前字体大小的倍数进行设置。
 
+<!--Device-void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontHeight)--><!--Device-void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontHeight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1431,6 +1645,10 @@ void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFa
 **描述：**
 
 设置指定文本样式的字体家族类型。
+
+<!--Device-void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFamiliesNumber, const char* fontFamilies[])--><!--Device-void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFamiliesNumber, const char* fontFamilies[])-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1452,6 +1670,10 @@ void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle
 
 为指定文本样式设置字体样式。
 
+<!--Device-void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1470,6 +1692,10 @@ void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* loca
 **描述：**
 
 设置文本语言环境。
+
+<!--Device-void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* locale)--><!--Device-void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* locale)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1490,6 +1716,10 @@ void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 
 设置指定文本样式中的前景色画刷。
 
+<!--Device-void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)--><!--Device-void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1508,6 +1738,10 @@ void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 **描述：**
 
 返回设置的前景色画刷。
+
+<!--Device-void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)--><!--Device-void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -1528,6 +1762,10 @@ void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 设置指定文本样式中的前景色画笔。
 
+<!--Device-void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)--><!--Device-void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1546,6 +1784,10 @@ void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 **描述：**
 
 返回设置的前景色画笔。
+
+<!--Device-void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)--><!--Device-void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -1566,6 +1808,10 @@ void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 
 设置指定文本样式中的背景色画刷。
 
+<!--Device-void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)--><!--Device-void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1584,6 +1830,10 @@ void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 **描述：**
 
 返回设置的背景色画刷。
+
+<!--Device-void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)--><!--Device-void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -1604,6 +1854,10 @@ void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 设置指定文本样式中的背景色画笔。
 
+<!--Device-void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)--><!--Device-void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1623,6 +1877,10 @@ void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 返回设置的背景色画笔。
 
+<!--Device-void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)--><!--Device-void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1641,6 +1899,10 @@ OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_Typog
 **描述：**
 
 创建指向OH_Drawing_TypographyCreate对象的指针。不再需要[OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md)时，请使用 [OH_Drawing_DestroyTypographyHandler](capi-drawing-text-typography-h.md#oh_drawing_destroytypographyhandler)接口释放该对象的指针。建议优先使用[OH_Drawing_CreateSharedFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createsharedfontcollection)函数创建 [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)对象。
+
+<!--Device-OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_TypographyStyle* style, OH_Drawing_FontCollection* fontCollection)--><!--Device-OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_TypographyStyle* style, OH_Drawing_FontCollection* fontCollection)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1667,6 +1929,10 @@ void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)
 
 释放被OH_Drawing_TypographyCreate对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)--><!--Device-void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1684,6 +1950,10 @@ void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* hand
 **描述：**
 
 将指定文本样式压入文本样式栈，后续添加的文本总是会使用栈顶的文本样式。
+
+<!--Device-void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* handler, OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* handler, OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1704,6 +1974,10 @@ void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, c
 
 设置文本内容。
 
+<!--Device-void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, const char* text)--><!--Device-void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, const char* text)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1723,6 +1997,10 @@ void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handl
 
 从文本样式栈中弹出栈顶文本样式。
 
+<!--Device-void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handler)--><!--Device-void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handler)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1740,6 +2018,10 @@ OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* 
 **描述：**
 
 创建指向OH_Drawing_Typography对象的指针。不再需要[OH_Drawing_Typography](capi-drawing-oh-drawing-typography.md)时，请使用[OH_Drawing_DestroyTypography](capi-drawing-text-typography-h.md#oh_drawing_destroytypography) 接口释放该对象的指针。
+
+<!--Device-OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* handler)--><!--Device-OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* handler)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1765,6 +2047,10 @@ void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)
 
 释放OH_Drawing_Typography对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)--><!--Device-void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
 **参数：**
@@ -1782,6 +2068,10 @@ void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWi
 **描述：**
 
 对排版对象进行布局计算，根据指定的最大宽度对文本进行换行。调用该接口后，排版对象的各项属性才可被正确获取。
+
+<!--Device-void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWidth)--><!--Device-void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWidth)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1801,6 +2091,10 @@ void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Ca
 **描述：**
 
 在指定位置绘制文本，从左上角开始绘制，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用并生效之后调用。
+
+<!--Device-void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, double positionX, double positionY)--><!--Device-void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, double positionX, double positionY)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
@@ -1823,6 +2117,10 @@ void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Draw
 
 沿指定路径绘制文本，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用并生效之后调用。建议搭配 [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置最大行为1行，避免因文本宽度超过排版宽度出现跨行重叠问题。
 
+<!--Device-void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, double hOffset, double vOffset)--><!--Device-void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, double hOffset, double vOffset)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -1844,6 +2142,10 @@ OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Draw
 **描述：**
 
 在约束矩形内布局文本。
+
+<!--Device-OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Drawing_Typography* typography, OH_Drawing_RectSize constraintsRect, OH_Drawing_Array** fitStrRangeArr, size_t* fitStrRangeArrayLen)--><!--Device-OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Drawing_Typography* typography, OH_Drawing_RectSize constraintsRect, OH_Drawing_Array** fitStrRangeArr, size_t* fitStrRangeArrayLen)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 24
 
@@ -1872,6 +2174,10 @@ OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_
 
 根据数组索引获取指向OH_Drawing_Range对象的指针。
 
+<!--Device-OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_t index)--><!--Device-OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_t index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 24
 
 **参数：**
@@ -1897,6 +2203,10 @@ OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)
 
 释放[OH_Drawing_Array](capi-drawing-oh-drawing-array.md)对象占用的内存。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 24
 
 **参数：**
@@ -1920,6 +2230,10 @@ double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)
 **描述：**
 
 获取用户设置的排版宽度，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 9
 
@@ -1945,6 +2259,10 @@ double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)
 
 获取排版对象整体的高度，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
 
+<!--Device-double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 9
 
 **参数：**
@@ -1968,6 +2286,10 @@ double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)
 **描述：**
 
 获取排版对象最长行的宽度，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用，建议实际使用时将返回值向上取整。当文本内容为空时，返回0.0。
+
+<!--Device-double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 9
 
@@ -1993,6 +2315,10 @@ double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typo
 
 获取排版对象最长行的宽度（该宽度包含当前行缩进的宽度），该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用，建议实际使用时将返回值向上取整。当文本内容为空时，返回0.0。
 
+<!--Device-double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 13
 
 **参数：**
@@ -2016,6 +2342,10 @@ double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typograp
 **描述：**
 
 获取排版对象的最小固有宽度，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 9
 
@@ -2041,6 +2371,10 @@ double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typograp
 
 获取排版对象的最大固有宽度，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
 
+<!--Device-double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 9
 
 **参数：**
@@ -2064,6 +2398,10 @@ double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typogra
 **描述：**
 
 获取排版对象的字母基线位置，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 9
 
@@ -2089,6 +2427,10 @@ double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typogr
 
 获取排版对象的表意文字基线位置，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
 
+<!--Device-double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 9
 
 **参数：**
@@ -2113,6 +2455,10 @@ void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* han
 
 设置占位符。
 
+<!--Device-void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* handler, OH_Drawing_PlaceholderSpan* span)--><!--Device-void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* handler, OH_Drawing_PlaceholderSpan* span)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2131,6 +2477,10 @@ bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)
 **描述：**
 
 获取排版对象中文本是否超过最大行，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用，如果没有通过 [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines)接口设置最大行，则返回false。
+
+<!--Device-bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)--><!--Device-bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2155,6 +2505,10 @@ OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography*
 **描述：**
 
 获取排版对象中指定范围内的文本框，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。不再需要[OH_Drawing_TextBox](capi-drawing-oh-drawing-textbox.md)时，请使用 [OH_Drawing_TypographyDestroyTextBox](capi-drawing-text-typography-h.md#oh_drawing_typographydestroytextbox)接口释放该对象的指针。
+
+<!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography* typography, size_t start, size_t end, OH_Drawing_RectHeightStyle heightStyle, OH_Drawing_RectWidthStyle widthStyle)--><!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography* typography, size_t start, size_t end, OH_Drawing_RectHeightStyle heightStyle, OH_Drawing_RectWidthStyle widthStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2184,6 +2538,10 @@ OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typo
 
 获取排版对象中占位符的文本框，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。不再需要[OH_Drawing_TextBox](capi-drawing-oh-drawing-textbox.md)时，请使用 [OH_Drawing_TypographyDestroyTextBox](capi-drawing-text-typography-h.md#oh_drawing_typographydestroytextbox)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typography* typography)--><!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2207,6 +2565,10 @@ float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)
 **描述：**
 
 获取文本框左侧位置。
+
+<!--Device-float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2233,6 +2595,10 @@ float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)
 
 获取文本框右侧位置。
 
+<!--Device-float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2257,6 +2623,10 @@ float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)
 **描述：**
 
 获取文本框顶部位置。
+
+<!--Device-float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2283,6 +2653,10 @@ float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)
 
 获取文本框底部位置。
 
+<!--Device-float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2307,6 +2681,10 @@ int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int inde
 **描述：**
 
 获取文本框方向。
+
+<!--Device-int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2333,6 +2711,10 @@ size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)
 
 获取文本框的数量。
 
+<!--Device-size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)--><!--Device-size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2356,6 +2738,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinat
 **描述：**
 
 获取坐标处文本的索引位置和亲和性。
+
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2387,6 +2773,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinat
 
 获取坐标处文本所属字符簇的索引位置和亲和性，字符簇指一个或多个字符组成的整体。不再需要[OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)时，请使用 [OH_Drawing_DestroyPositionAndAffinity](capi-drawing-text-typography-h.md#oh_drawing_destroypositionandaffinity)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinateWithCluster(OH_Drawing_Typography* typography, double dx, double dy)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinateWithCluster(OH_Drawing_Typography* typography, double dx, double dy)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2413,6 +2803,10 @@ size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffin
 
 获取OH_Drawing_PositionAndAffinity对象的位置属性。
 
+<!--Device-size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2437,6 +2831,10 @@ int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity
 
 获取OH_Drawing_PositionAndAffinity对象的亲和性，根据亲和性可判断字体会靠近前方文本还是后方文本。
 
+<!--Device-int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2460,6 +2858,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* ty
 **描述：**
 
 获取排版对象中单词的边界。不再需要[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)时，请使用[OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)接口释放该对象的指针。
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* typography, size_t offset)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* typography, size_t offset)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2486,6 +2888,10 @@ size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)
 
 获取OH_Drawing_Range对象开始位置。
 
+<!--Device-size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)--><!--Device-size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2509,6 +2915,10 @@ size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)
 **描述：**
 
 获取OH_Drawing_Range对象结束位置。
+
+<!--Device-size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)--><!--Device-size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2534,6 +2944,10 @@ size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)
 
 获取排版对象中文本行数，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
 
+<!--Device-size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)--><!--Device-size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2558,6 +2972,10 @@ void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int dec
 
 设置指定文本样式中的装饰线样式。
 
+<!--Device-void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int decorationStyle)--><!--Device-void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int decorationStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2576,6 +2994,10 @@ void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style
 **描述：**
 
 设置文本装饰线的粗细缩放比例。
+
+<!--Device-void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style, double decorationThicknessScale)--><!--Device-void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style, double decorationThicknessScale)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2596,6 +3018,10 @@ void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double le
 
 设置文本的字符间距。
 
+<!--Device-void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double letterSpacing)--><!--Device-void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double letterSpacing)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2614,6 +3040,10 @@ void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double word
 **描述：**
 
 设置文本的单词间距。
+
+<!--Device-void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double wordSpacing)--><!--Device-void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double wordSpacing)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2634,6 +3064,10 @@ void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLe
 
 设置文本为一半行间距。
 
+<!--Device-void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLeading)--><!--Device-void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLeading)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2652,6 +3086,10 @@ void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* el
 **描述：**
 
 设置文本的省略号内容。
+
+<!--Device-void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)--><!--Device-void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2676,6 +3114,10 @@ void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellip
 
 设置文本的省略号样式。
 
+<!--Device-void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)--><!--Device-void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **废弃版本：** 18
@@ -2699,6 +3141,10 @@ void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style
 
 设置文本的中断策略。
 
+<!--Device-void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style, int breakStrategy)--><!--Device-void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style, int breakStrategy)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2717,6 +3163,10 @@ void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style
 **描述：**
 
 设置单词的断词方式。
+
+<!--Device-void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style, int wordBreakType)--><!--Device-void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style, int wordBreakType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2737,6 +3187,10 @@ void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style
 
 设置文本的省略模式。
 
+<!--Device-void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style, int ellipsisModal)--><!--Device-void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style, int ellipsisModal)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2755,6 +3209,10 @@ double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int
 **描述：**
 
 获取排版对象中指定行的行高，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int lineNumber)--><!--Device-double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int lineNumber)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -2781,6 +3239,10 @@ double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int 
 
 获取指定行的行宽，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
 
+<!--Device-double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int lineNumber)--><!--Device-double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int lineNumber)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 11
 
 **参数：**
@@ -2805,6 +3267,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* t
 **描述：**
 
 获取排版对象中行的边界，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。该接口只能获取已有行的边界，即输入行索引从0开始，最大行索引为 [OH_Drawing_TypographyGetLineCount](capi-drawing-text-typography-h.md#oh_drawing_typographygetlinecount) - 1。
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* typography, int lineNumber, bool includeSpaces)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* typography, int lineNumber, bool includeSpaces)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -2832,6 +3298,10 @@ OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)
 
 构造字体描述对象，用于描述系统字体详细信息。不再需要[OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md)时，请使用[OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) 接口释放该对象的指针。
 
+<!--Device-OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)--><!--Device-OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **返回值：**
@@ -2849,6 +3319,10 @@ void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)
 **描述：**
 
 释放字体描述对象占用的内存。
+
+<!--Device-void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)--><!--Device-void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -2868,6 +3342,10 @@ OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)
 
 构造字体解析对象，用于解析系统字体。不再需要[OH_Drawing_FontParser](capi-drawing-oh-drawing-fontparser.md)时，请使用[OH_Drawing_DestroyFontParser](capi-drawing-text-typography-h.md#oh_drawing_destroyfontparser)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)--><!--Device-OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **返回值：**
@@ -2886,6 +3364,10 @@ void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)
 
 释放字体解析对象占用的内存。
 
+<!--Device-void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)--><!--Device-void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -2903,6 +3385,10 @@ char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser,
 **描述：**
 
 获取系统字体名称列表。不再需要该列表时，请使用[OH_Drawing_DestroySystemFontList](capi-drawing-text-typography-h.md#oh_drawing_destroysystemfontlist)释放内存。此接口仅在Phone、PC/2in1设备上支持。
+
+<!--Device-char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser, size_t* num)--><!--Device-char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser, size_t* num)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -2929,6 +3415,10 @@ void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)
 
 释放系统字体名称列表占用的内存。
 
+<!--Device-void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)--><!--Device-void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -2947,6 +3437,10 @@ OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontPar
 **描述：**
 
 根据传入的系统字体名称获取系统字体的相关信息。此接口仅在Phone、PC/2in1设备上支持。
+
+<!--Device-OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontParser* fontParser, const char* name)--><!--Device-OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontParser* fontParser, const char* name)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -2973,6 +3467,10 @@ OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typograph
 
 获取排版对象的行位置信息，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。不再需要[OH_Drawing_LineMetrics](capi-drawing-oh-drawing-linemetrics.md)时，请使用 [OH_Drawing_DestroyLineMetrics](capi-drawing-text-typography-h.md#oh_drawing_destroylinemetrics)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typography* typography)--><!--Device-OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -2996,6 +3494,10 @@ size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)
 **描述：**
 
 获取行数量。
+
+<!--Device-size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)--><!--Device-size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3021,6 +3523,10 @@ void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)
 
 释放行位置信息对象占用的内存。
 
+<!--Device-void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)--><!--Device-void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3038,6 +3544,10 @@ bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, in
 **描述：**
 
 获取排版对象的指定行位置信息，具体参见[OH_Drawing_LineMetrics](capi-drawing-oh-drawing-linemetrics.md)结构体，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, int lineNumber, OH_Drawing_LineMetrics* lineMetric)--><!--Device-bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, int lineNumber, OH_Drawing_LineMetrics* lineMetric)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3065,6 +3575,10 @@ void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, con
 
 设置排版样式省略号文本。
 
+<!--Device-void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, const char* ellipsis)--><!--Device-void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, const char* ellipsis)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3083,6 +3597,10 @@ void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const
 **描述：**
 
 设置指定排版样式的语言环境。
+
+<!--Device-void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const char* locale)--><!--Device-void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const char* locale)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3103,6 +3621,10 @@ void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, f
 
 设置文本划分比率，用于点击定位字符时，确定光标在一个字形内的归属位置。
 
+<!--Device-void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, float textSplitRatio)--><!--Device-void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, float textSplitRatio)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3121,6 +3643,10 @@ OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographySty
 **描述：**
 
 获取指定排版样式中设置的默认文本样式。
+
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3145,6 +3671,10 @@ int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style
 **描述：**
 
 获取文字对齐方式。
+
+<!--Device-int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)--><!--Device-int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3174,6 +3704,10 @@ bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)
 
 获取文本是否有最大行数限制。
 
+<!--Device-bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3197,6 +3731,10 @@ bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)
 **描述：**
 
 获取指定排版样式是否配置省略号。
+
+<!--Device-bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3222,6 +3760,10 @@ void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_D
 
 设置排版样式。
 
+<!--Device-void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3240,6 +3782,10 @@ bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Dr
 **描述：**
 
 获取文本字体属性。
+
+<!--Device-bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Drawing_TextStyle* style, OH_Drawing_Font_Metrics* fontmetrics)--><!--Device-bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Drawing_TextStyle* style, OH_Drawing_Font_Metrics* fontmetrics)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3266,6 +3812,10 @@ bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lin
 **描述：**
 
 获取排版对象中指定行的位置信息或指定行第一个字符的位置信息，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用。
+
+<!--Device-bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lineNumber, bool oneLine, bool includeWhitespace, OH_Drawing_LineMetrics* drawingLineMetrics)--><!--Device-bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lineNumber, bool oneLine, bool includeWhitespace, OH_Drawing_LineMetrics* drawingLineMetrics)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3295,6 +3845,10 @@ void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, i
 
 设置排版样式默认字重。在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，仅系统字体中的可变字体支持字重调节；从<!--RP1-->OpenHarmony 6.1<!--RP1End--> 开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold时字体粗细无变化，设置字重值大于等于semi-bold时可能会触发伪加粗效果。
 
+<!--Device-void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, int weight)--><!--Device-void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, int weight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3313,6 +3867,10 @@ void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, in
 **描述：**
 
 设置排版样式默认的字体样式。
+
+<!--Device-void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3333,6 +3891,10 @@ void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, c
 
 设置字体家族的名称。
 
+<!--Device-void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, const char* fontFamily)--><!--Device-void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, const char* fontFamily)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3351,6 +3913,10 @@ void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, dou
 **描述：**
 
 设置文本排版字号。
+
+<!--Device-void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, double fontSize)--><!--Device-void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, double fontSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3371,6 +3937,10 @@ void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, d
 
 设置文本排版字体高度，按当前字体大小的倍数进行设置。
 
+<!--Device-void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, double fontHeight)--><!--Device-void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, double fontHeight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3389,6 +3959,10 @@ void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, 
 **描述：**
 
 设置文本排版是否为一半行间距。
+
+<!--Device-void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, bool halfLeading)--><!--Device-void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, bool halfLeading)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3409,6 +3983,10 @@ void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style,
 
 设置文本排版是否启用行样式。
 
+<!--Device-void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style, bool useLineStyle)--><!--Device-void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style, bool useLineStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3427,6 +4005,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle*
 **描述：**
 
 设置排版样式中支柱样式的文本样式字重。在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，仅系统字体中的可变字体支持字重调节；从<!--RP1-->OpenHarmony 6.1<!-- RP1End-->开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold时字体粗细无变化，设置字重值大于等于semi-bold时可能会触发伪加粗效果。
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle* style, int weight)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle* style, int weight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3447,6 +4029,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* 
 
 设置文本排版样式中支柱样式的字体样式。
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3465,6 +4051,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyl
 **描述：**
 
 设置文本排版行样式字体家族。
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyle* style, int fontFamiliesNumber, const char* fontFamilies[])--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyle* style, int fontFamiliesNumber, const char* fontFamilies[])-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3486,6 +4076,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* s
 
 设置文本排版行样式字号。
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* style, double lineStyleFontSize)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* style, double lineStyleFontSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3504,6 +4098,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle*
 **描述：**
 
 设置文本排版行样式字体高度，按当前字体大小的倍数进行设置。
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle* style, double lineStyleFontHeight)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle* style, double lineStyleFontHeight)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3524,6 +4122,10 @@ void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle
 
 设置文本排版行样式是否为一半行间距。
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle* style, bool lineStyleHalfLeading)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle* style, bool lineStyleHalfLeading)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3542,6 +4144,10 @@ void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyl
 **描述：**
 
 设置文本排版行样式间距比例。
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyle* style, double spacingScale)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyle* style, double spacingScale)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3562,6 +4168,10 @@ void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style
 
 设置文本排版是否仅启用行样式。
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style, bool lineStyleOnly)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style, bool lineStyleOnly)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3581,6 +4191,10 @@ OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)
 
 创建指向文本阴影对象的指针。不再需要[OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md)时，请使用[OH_Drawing_DestroyTextShadow](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadow)接口释放该对象的指针。
 
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **返回值：**
@@ -3599,6 +4213,10 @@ void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)
 
 释放被文本阴影对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3616,6 +4234,10 @@ OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* styl
 **描述：**
 
 获取文本阴影容器。不再需要[OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md)时，请使用[OH_Drawing_DestroyTextShadows](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadows)接口释放该对象的指针。
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3641,6 +4263,10 @@ int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)
 
 获取文本阴影容器的大小。
 
+<!--Device-int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)--><!--Device-int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3665,6 +4291,10 @@ void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing
 
 文本阴影容器中添加文本阴影元素。
 
+<!--Device-void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing_TextShadow* shadow)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3684,6 +4314,10 @@ void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)
 
 清除文本阴影容器中的所有元素。
 
+<!--Device-void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3701,6 +4335,10 @@ OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextSty
 **描述：**
 
 根据下标获取文本阴影容器中的元素。
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextStyle* style, int index)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextStyle* style, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3727,6 +4365,10 @@ void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int inde
 
 设置文本的排版缩进，不调用此接口默认文本无缩进。
 
+<!--Device-void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int indentsNumber, const float indents[])--><!--Device-void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int indentsNumber, const float indents[])-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3746,6 +4388,10 @@ float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography
 **描述：**
 
 根据行索引获取排版对象缩进容器中的元素，行索引从0开始。
+
+<!--Device-float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography, int index)--><!--Device-float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography, int index)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3772,6 +4418,10 @@ void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)
 
 释放由被文本阴影对象OH_Drawing_TextShadow构成的vector占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3789,6 +4439,10 @@ void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* styl
 **描述：**
 
 设置文本高度修饰符模式。
+
+<!--Device-void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* style, OH_Drawing_TextHeightBehavior heightMode)--><!--Device-void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* style, OH_Drawing_TextHeightBehavior heightMode)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3808,6 +4462,10 @@ OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Draw
 **描述：**
 
 获取文本高度修饰符模式。
+
+<!--Device-OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3833,6 +4491,10 @@ void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH
 
 设置文本背景矩形框和样式id。样式id仅当背景框为圆角矩形时有效。
 
+<!--Device-void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH_Drawing_RectStyle_Info* rectStyleInfo, int styleId)--><!--Device-void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH_Drawing_RectStyle_Info* rectStyleInfo, int styleId)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3853,6 +4515,10 @@ void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler,
 
 设置排版创建过程中的符号。
 
+<!--Device-void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler, uint32_t symbol)--><!--Device-void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler, uint32_t symbol)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3871,6 +4537,10 @@ void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char*
 **描述：**
 
 设置文本样式中指定字体特征是否启用。
+
+<!--Device-void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char* tag, int value)--><!--Device-void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char* tag, int value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3892,6 +4562,10 @@ void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const cha
 
 添加可变字体属性。对应的字体文件（.ttf文件）需要支持可变调节，此接口才能生效。当对应的字体不支持可变调节时，此接口调用不生效。
 
+<!--Device-void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const char* axis, const float value)--><!--Device-void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const char* axis, const float value)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3912,6 +4586,10 @@ void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle*
 
 添加归一化后的可变字体属性。对应的字体文件（.ttf文件）需要支持可变调节，此接口才能生效。
 
+<!--Device-void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle* style, const char* axis, const float normalizedValue)--><!--Device-void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle* style, const char* axis, const float normalizedValue)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 24
 
 **参数：**
@@ -3931,6 +4609,10 @@ OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle
 **描述：**
 
 获取指定文本样式的字体特征map容器中所有内容。
+
+<!--Device-OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3956,6 +4638,10 @@ void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature
 
 释放存放字体特征所有内容的结构体数组所占用的空间。
 
+<!--Device-void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature, size_t fontFeatureSize)--><!--Device-void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature, size_t fontFeatureSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -3974,6 +4660,10 @@ size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取指定文本样式中字体特征map容器的大小。
+
+<!--Device-size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)--><!--Device-size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -3999,6 +4689,10 @@ void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)
 
 清除指定文本样式的字体特征map容器中所有内容。
 
+<!--Device-void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4016,6 +4710,10 @@ void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double li
 **描述：**
 
 设置文本样式基线偏移。
+
+<!--Device-void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double lineShift)--><!--Device-void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double lineShift)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4035,6 +4733,10 @@ double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取指定文本样式的基线偏移。
+
+<!--Device-double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4060,6 +4762,10 @@ uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)
 
 获取文本颜色。
 
+<!--Device-uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)--><!--Device-uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4083,6 +4789,10 @@ OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing
 **描述：**
 
 获取文本装饰样式。
+
+<!--Device-OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4108,6 +4818,10 @@ OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* st
 
 获取字重。
 
+<!--Device-OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4131,6 +4845,10 @@ OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* styl
 **描述：**
 
 获取指定文本样式的字体样式。
+
+<!--Device-OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4156,6 +4874,10 @@ OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* st
 
 获取指定文本样式的字体基线位置。
 
+<!--Device-OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4179,6 +4901,10 @@ char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* 
 **描述：**
 
 获取字体家族名称列表。
+
+<!--Device-char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* num)--><!--Device-char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* num)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4205,6 +4931,10 @@ void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)
 
 释放长度为num的字体家族名称列表占用的内存。
 
+<!--Device-void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)--><!--Device-void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4223,6 +4953,10 @@ double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取指定文本样式字号。
+
+<!--Device-double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4248,6 +4982,10 @@ double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)
 
 获取指定文本样式的字符间距。
 
+<!--Device-double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4271,6 +5009,10 @@ double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取指定文本样式的单词间距。
+
+<!--Device-double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4296,6 +5038,10 @@ double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)
 
 获取指定文本样式行高缩放系数。
 
+<!--Device-double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4319,6 +5065,10 @@ bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取指定文本样式一半行间距开关状态。
+
+<!--Device-bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)--><!--Device-bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4344,6 +5094,10 @@ void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style
 
 设置文本垂直对齐方式。
 
+<!--Device-void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style, OH_Drawing_TextVerticalAlignment align)--><!--Device-void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style, OH_Drawing_TextVerticalAlignment align)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -4362,6 +5116,10 @@ const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)
 **描述：**
 
 获取语言环境。
+
+<!--Device-const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)--><!--Device-const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4387,6 +5145,10 @@ void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_Te
 
 设置文本排版时是否启用上标或下标。未调用此接口时，默认不启用。
 
+<!--Device-void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_TextBadgeType textBadgeType)--><!--Device-void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_TextBadgeType textBadgeType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -4406,6 +5168,10 @@ void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextSty
 
 设置文本样式中的字体样式，包括字体字重、字体宽度和字体斜度。
 
+<!--Device-void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle, OH_Drawing_FontStyleStruct fontStyle)--><!--Device-void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle, OH_Drawing_FontStyleStruct fontStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4424,6 +5190,10 @@ OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_Tex
 **描述：**
 
 获取文本样式中的字体样式，包括字体字重、字体宽度和字体斜度。
+
+<!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle)--><!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4449,6 +5219,10 @@ void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* dr
 
 设置排版样式中默认文本样式的字体样式，包括字体字重、字体宽度和字体斜度。
 
+<!--Device-void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle, OH_Drawing_FontStyleStruct fontStyle)--><!--Device-void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle, OH_Drawing_FontStyleStruct fontStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4467,6 +5241,10 @@ OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawi
 **描述：**
 
 获取排版样式中默认文本样式的字体样式，包括字体字重、字体宽度和字体斜度。
+
+<!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle)--><!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4491,6 +5269,10 @@ bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Dra
 **描述：**
 
 判断两个文本样式对象是否相等，字宽属性不参与对比。
+
+<!--Device-bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)--><!--Device-bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4517,6 +5299,10 @@ bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const 
 
 判断两个文本样式对象的字体样式属性是否相等。
 
+<!--Device-bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)--><!--Device-bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4541,6 +5327,10 @@ bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, c
 **描述：**
 
 判断两个文本样式对象是否有一样的字体样式类型。
+
+<!--Device-bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle, OH_Drawing_TextStyleType textStyleType)--><!--Device-bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle, OH_Drawing_TextStyleType textStyleType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4568,6 +5358,10 @@ void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)
 
 设置占位符。
 
+<!--Device-void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4585,6 +5379,10 @@ bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)
 **描述：**
 
 返回是否有设置文本占位符。
+
+<!--Device-bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)--><!--Device-bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4610,6 +5408,10 @@ OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_
 
 获取文本对齐模式。
 
+<!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4633,6 +5435,10 @@ bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)
 **描述：**
 
 获取文本是否启用字形轮廓自动调整，字形轮廓自动调整用于在渲染小字号文本时改善其可读性和外观。
+
+<!--Device-bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4658,6 +5464,10 @@ OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontCon
 
 获取系统字体配置信息。
 
+<!--Device-OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontConfigInfoErrorCode* errorCode)--><!--Device-OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontConfigInfoErrorCode* errorCode)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4682,6 +5492,10 @@ void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontC
 
 释放系统字体配置信息占用的内存。
 
+<!--Device-void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontCfgInfo)--><!--Device-void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontCfgInfo)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4699,6 +5513,10 @@ void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* sty
 **描述：**
 
 设置文本支柱样式。
+
+<!--Device-void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* style, OH_Drawing_StrutStyle* strutstyle)--><!--Device-void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* style, OH_Drawing_StrutStyle* strutstyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4719,6 +5537,10 @@ void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutsty
 
 释放被支柱样式对象占据的内存。
 
+<!--Device-void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutstyle)--><!--Device-void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutstyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4736,6 +5558,10 @@ OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_Typogr
 **描述：**
 
 获取文本支柱样式。
+
+<!--Device-OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4761,6 +5587,10 @@ bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_
 
 判断支柱样式结构体是否相同。
 
+<!--Device-bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_Drawing_StrutStyle* to)--><!--Device-bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_Drawing_StrutStyle* to)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4780,6 +5610,10 @@ void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style
 
 设置文本是否启用字形轮廓自动调整，字形轮廓自动调整用于在渲染小字号文本时改善其可读性和外观。
 
+<!--Device-void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style, bool hintsEnabled)--><!--Device-void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style, bool hintsEnabled)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4798,6 +5632,10 @@ OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typo
 **描述：**
 
 从排版对象中目标行获取所有字体度量信息，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用之后调用，否则会返回空指针。不再需要 [OH_Drawing_Font_Metrics](capi-drawing-oh-drawing-font-metrics.md)时，请使用[OH_Drawing_TypographyDestroyLineFontMetrics](capi-drawing-text-typography-h.md#oh_drawing_typographydestroylinefontmetrics)接口释放该对象的指针。
+
+<!--Device-OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typography* typography, size_t lineNumber, size_t* fontMetricsSize)--><!--Device-OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typography* typography, size_t lineNumber, size_t* fontMetricsSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4825,6 +5663,10 @@ void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFo
 
 释放指定行所有字体度量结构体集合所占用的所有空间。
 
+<!--Device-void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFontMetric)--><!--Device-void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFontMetric)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4843,6 +5685,10 @@ void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)
 
 将排版标记为脏数据，用于初始化排版状态。
 
+<!--Device-void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)--><!--Device-void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4860,6 +5706,10 @@ int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typ
 **描述：**
 
 获取文本中尚未解析的字形的数量，该接口需要在[OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout)接口调用并生效之后调用。
+
+<!--Device-int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typography)--><!--Device-int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typography)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -4885,6 +5735,10 @@ void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size
 
 更新排版对象中的字体大小。
 
+<!--Device-void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size_t from, size_t to, float fontSize)--><!--Device-void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size_t from, size_t to, float fontSize)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -4906,6 +5760,10 @@ void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uin
 
 更新排版对象中的字体颜色。如果当前装饰线未设置颜色，使用该接口也会同时更新装饰线的颜色。使用该接口更新字体颜色属性后，可直接使用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)进行绘制生效。
 
+<!--Device-void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uint32_t color)--><!--Device-void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uint32_t color)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -4924,6 +5782,10 @@ void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH
 **描述：**
 
 更新排版对象中的文本装饰线类型。使用该接口更新文本装饰线类型属性后，可直接使用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)进行绘制生效。
+
+<!--Device-void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH_Drawing_TextDecoration decoration)--><!--Device-void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH_Drawing_TextDecoration decoration)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -4944,6 +5806,10 @@ void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* 
 
 更新排版对象中的文本装饰线的粗细缩放比例。使用该接口更新文本装饰线粗细缩放比例属性后，可直接使用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)进行绘制生效。
 
+<!--Device-void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* typography, double decorationThicknessScale)--><!--Device-void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* typography, double decorationThicknessScale)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -4962,6 +5828,10 @@ void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typograph
 **描述：**
 
 更新排版对象中的文本装饰线样式。使用该接口更新文本装饰线样式属性后，可直接使用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)进行绘制生效。
+
+<!--Device-void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typography, OH_Drawing_TextDecorationStyle decorationStyle)--><!--Device-void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typography, OH_Drawing_TextDecorationStyle decorationStyle)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -4982,6 +5852,10 @@ void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typograph
 
 更新排版对象中的文本装饰线颜色。 <br> 使用该接口更新文本装饰线颜色属性后，可直接使用[OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint)进行绘制生效。
 
+<!--Device-void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typography, uint32_t color)--><!--Device-void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typography, uint32_t color)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -5000,6 +5874,10 @@ bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)
 **描述：**
 
 获取文本排版是否启用行样式。
+
+<!--Device-bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5025,6 +5903,10 @@ OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing
 
 获取文本排版行样式字重。
 
+<!--Device-OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5049,6 +5931,10 @@ OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_T
 
 获取文本排版样式中支柱样式的字体样式。
 
+<!--Device-OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5072,6 +5958,10 @@ char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographySt
 **描述：**
 
 获取文本排版行样式字体家族名。
+
+<!--Device-char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographyStyle* style, size_t* num)--><!--Device-char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographyStyle* style, size_t* num)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5098,6 +5988,10 @@ void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, 
 
 释放字体家族名称列表占用的内存。
 
+<!--Device-void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, size_t fontFamiliesNum)--><!--Device-void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, size_t fontFamiliesNum)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5116,6 +6010,10 @@ double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle*
 **描述：**
 
 获取文本排版行样式字号。
+
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5141,6 +6039,10 @@ double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographySty
 
 获取文本排版行样式的行高缩放系数。
 
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5164,6 +6066,10 @@ bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle*
 **描述：**
 
 获取字体渲染过程中计算字体块高度相关参数的方法。
+
+<!--Device-bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5189,6 +6095,10 @@ bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle
 
 获取文本排版行样式是否为一半行间距。
 
+<!--Device-bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5212,6 +6122,10 @@ double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographySt
 **描述：**
 
 获取文本排版行样式间距比例。
+
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5237,6 +6151,10 @@ bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style
 
 获取文本排版是否仅启用行样式。
 
+<!--Device-bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5260,6 +6178,10 @@ OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyl
 **描述：**
 
 获取文本对齐方式。
+
+<!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5285,6 +6207,10 @@ OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_Typogr
 
 获取指定排版样式中的文本方向。
 
+<!--Device-OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5308,6 +6234,10 @@ size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)
 **描述：**
 
 获取文本的最大行数。
+
+<!--Device-size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)--><!--Device-size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5333,6 +6263,10 @@ char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)
 
 获取指定排版样式设置的省略号文本。
 
+<!--Device-char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)--><!--Device-char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5357,6 +6291,10 @@ void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)
 
 释放省略号文本占用的内存。
 
+<!--Device-void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)--><!--Device-void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5374,6 +6312,10 @@ bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawi
 **描述：**
 
 判断排版样式是否相同，当前文本高度修饰符模式[OH_Drawing_TextHeightBehavior](capi-drawing-text-typography-h.md#oh_drawing_textheightbehavior)没有被纳入比较。
+
+<!--Device-bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawing_TypographyStyle* to)--><!--Device-bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawing_TypographyStyle* to)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5400,6 +6342,10 @@ void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)
 
 释放文本框占用的内存。
 
+<!--Device-void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)--><!--Device-void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **参数：**
@@ -5417,6 +6363,10 @@ void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_
 **描述：**
 
 设置文本阴影对象的参数。
+
+<!--Device-void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_Drawing_Point* offset, double blurRadius)--><!--Device-void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_Drawing_Point* offset, double blurRadius)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -5438,6 +6388,10 @@ OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, flo
 **描述：**
 
 创建文本制表符对象。
+
+<!--Device-OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, float location)--><!--Device-OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, float location)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -5464,6 +6418,10 @@ void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)
 
 释放文本制表符对象占据的内存。
 
+<!--Device-void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)--><!--Device-void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 18
 
 **参数：**
@@ -5481,6 +6439,10 @@ OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)
 **描述：**
 
 获取文本制表符对象的对齐方式。
+
+<!--Device-OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)--><!--Device-OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -5506,6 +6468,10 @@ float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)
 
 获取文本制表符的位置。
 
+<!--Device-float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)--><!--Device-float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 18
 
 **参数：**
@@ -5530,6 +6496,10 @@ void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawi
 
 设置文本制表符对齐方式及位置。当设置了文本对齐方式或者省略号风格时制表符不生效，当制表符位置小于1.0时为替换成空格的效果。
 
+<!--Device-void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawing_TextTab* tab)--><!--Device-void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawing_TextTab* tab)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 18
 
 **参数：**
@@ -5548,6 +6518,10 @@ size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)
 **描述：**
 
 获取传入类型为对象数组[OH_Drawing_Array](capi-drawing-oh-drawing-array.md)中的对象个数。
+
+<!--Device-size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)--><!--Device-size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 14
 
@@ -5573,6 +6547,10 @@ void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographySty
 
 设置文本排版时行尾空格是否参与对齐计算。
 
+<!--Device-void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographyStyle* style, bool trailingSpaceOptimized)--><!--Device-void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographyStyle* style, bool trailingSpaceOptimized)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -5591,6 +6569,10 @@ void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* han
 **描述：**
 
 添加指定编码的文本。
+
+<!--Device-void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* handler, const void* text, size_t byteLength, OH_Drawing_TextEncoding textEncodingType)--><!--Device-void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* handler, const void* text, size_t byteLength, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -5613,6 +6595,10 @@ void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bo
 
 设置文本排版时是否启用自动间距。 <br>默认不启用自动间距，一旦启用则会自动调整CJK（中文字符、日文字符、韩文字符）与西文（拉丁字母、西里尔字母、希腊字母）、CJK与数字、CJK与版权符号、版权符号与数字、版权符号与西文之间的间距。
 
+<!--Device-void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bool enableAutoSpace)--><!--Device-void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bool enableAutoSpace)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -5631,6 +6617,10 @@ OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_Typography
 **描述：**
 
 创建一个段落样式的对象副本，用于拷贝一个已有的段落样式对象。
+
+<!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -5656,6 +6646,10 @@ OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)
 
 创建一个文本样式的对象副本，用于拷贝一个已有的文本样式对象。
 
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 **参数：**
@@ -5679,6 +6673,10 @@ OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)
 **描述：**
 
 创建一个文本阴影的对象副本，用于拷贝一个已有的文本阴影对象。
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -5704,6 +6702,10 @@ void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* posit
 
 释放[OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)对象持有的内存。
 
+<!--Device-void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 23
 
 **参数：**
@@ -5721,6 +6723,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(
 **描述：**
 
 获取指定字形范围对应的字符范围。
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(OH_Drawing_Typography* typography, size_t glyphRangeStart, size_t glyphRangeEnd, OH_Drawing_Range** actualGlyphRange, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(OH_Drawing_Typography* typography, size_t glyphRangeStart, size_t glyphRangeEnd, OH_Drawing_Range** actualGlyphRange, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 24
 
@@ -5750,6 +6756,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoord
 
 获取与指定坐标最接近的字符位置信息。
 
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoordinateWithBuffer(OH_Drawing_Typography* typography, double dx, double dy, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoordinateWithBuffer(OH_Drawing_Typography* typography, double dx, double dy, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 24
 
 **参数：**
@@ -5776,6 +6786,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(
 **描述：**
 
 获取指定字符范围对应的字形范围。
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(OH_Drawing_Typography* typography, size_t characterRangeStart, size_t characterRangeEnd, OH_Drawing_Range** actualCharacterRange, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(OH_Drawing_Typography* typography, size_t characterRangeStart, size_t characterRangeEnd, OH_Drawing_Range** actualCharacterRange, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 24
 
@@ -5804,6 +6818,10 @@ void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)
 **描述：**
 
 释放[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象占用的内存。
+
+<!--Device-void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)--><!--Device-void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 24
 

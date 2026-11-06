@@ -6,7 +6,19 @@ struct OH_AI_CallBackParam {...}
 
 ## Overview
 
-**Related module**: [MindSpore](capi-mindspore.md)
+<!--Device-struct OH_AI_CallBackParam {...}--><!--Device-struct OH_AI_CallBackParam {...}-End-->
+
+**Related module**: [MindSpore](capi-mind-spore-lite-kit-mindspore.md)
 
 **Header file**: [model.h](capi-model-h.md)
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| char *node_name |  |
+| char *node_type |  |
+
 

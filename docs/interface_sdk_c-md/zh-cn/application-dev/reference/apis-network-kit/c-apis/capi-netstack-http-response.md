@@ -8,11 +8,13 @@ struct Http_Response {...}
 
 定义HTTP响应的结构体。
 
+<!--Device-struct Http_Response {...}--><!--Device-struct Http_Response {...}-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
-**相关模块：** [netstack](capi-netstack.md)
+**相关模块：** [netstack](capi-network-kit-netstack.md)
 
 **所在头文件：** [net_http_type.h](capi-net-http-type-h.md)
 
@@ -31,9 +33,9 @@ struct Http_Response {...}
 
 ### 成员函数
 
-| 名称 | 描述 |
-| -- | -- |
-| [void (\*destroyResponse)(struct Http_Response **response)](#destroyresponse) | 销毁HTTP响应的回调函数 |
+| 名称 | 完整引用 | 描述 |
+| -- | -- | -- |
+| [void (\*destroyResponse)(struct Http_Response **response)](#destroyresponse) | destroyResponse | 销毁HTTP响应的回调函数 |
 
 ## 成员函数说明
 
@@ -46,6 +48,8 @@ void (*destroyResponse)(struct Http_Response **response)
 **描述：**
 
 销毁HTTP响应的回调函数
+
+<!--Device-void (*destroyResponse)(struct Http_Response **response)--><!--Device-void (*destroyResponse)(struct Http_Response **response)-End-->
 
 **起始版本：** 20
 

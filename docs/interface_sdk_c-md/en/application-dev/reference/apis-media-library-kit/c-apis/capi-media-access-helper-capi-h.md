@@ -6,9 +6,11 @@ The file declares the APIs for album management.
 
 **Library**: libmedia_asset_manager.so
 
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
-**Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
+**Related module**: [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
 
 ## Summary
 
@@ -29,6 +31,10 @@ MediaLibrary_ErrorCode OH_MediaAccessHelper_ApplyChanges(OH_MediaAssetChangeRequ
 **Description**
 
 Applies changes to an asset or album.
+
+<!--Device-MediaLibrary_ErrorCode OH_MediaAccessHelper_ApplyChanges(OH_MediaAssetChangeRequest* changeRequest)--><!--Device-MediaLibrary_ErrorCode OH_MediaAccessHelper_ApplyChanges(OH_MediaAssetChangeRequest* changeRequest)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.WRITE_IMAGEVIDEO
 

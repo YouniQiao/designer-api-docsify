@@ -6,9 +6,11 @@ Provides APIs for memory management.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -57,6 +59,10 @@ enum MALLOC_HINT
 
 Defines the enumeration values for memory allocation hints.
 
+<!--Device-MALLOC_HINT--><!--Device-MALLOC_HINT-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -91,6 +97,10 @@ void TEE_MemFill(void *buffer, uint8_t x, size_t size)
 
 Fills <b>x</b> into the first <b>size</b> bytes of the buffer.
 
+<!--Device-void TEE_MemFill(void *buffer, uint8_t x, size_t size)--><!--Device-void TEE_MemFill(void *buffer, uint8_t x, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -111,6 +121,10 @@ void TEE_MemMove(void *dest, const void *src, size_t size)
 
 Copies bytes.
 
+<!--Device-void TEE_MemMove(void *dest, const void *src, size_t size)--><!--Device-void TEE_MemMove(void *dest, const void *src, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -130,6 +144,10 @@ void *TEE_Malloc(size_t size, uint32_t hint)
 **Description**
 
 Allocates space of the specified size for an object.
+
+<!--Device-void *TEE_Malloc(size_t size, uint32_t hint)--><!--Device-void *TEE_Malloc(size_t size, uint32_t hint)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -156,6 +174,10 @@ void TEE_Free(void *buffer)
 
 Releases the memory allocated by <b>TEE_Malloc</b>.<br> If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing. The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot be released repeatedly. Otherwise, unexpected result may be caused.
 
+<!--Device-void TEE_Free(void *buffer)--><!--Device-void TEE_Free(void *buffer)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -173,6 +195,10 @@ void *TEE_Realloc(void *buffer, size_t new_size)
 **Description**
 
 Reallocates memory.<br> If <b>new_size</b> is greater than the old size, the content of the original memory does not change and the space in excess of the old size contains unspecified content. If the new size of the memory object requires movement of the object, the space for the previous instantiation of the object is deallocated. If the space cannot be allocated, the original object remains allocated and this function returns a <b>NULL</b> pointer. If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>.
+
+<!--Device-void *TEE_Realloc(void *buffer, size_t new_size)--><!--Device-void *TEE_Realloc(void *buffer, size_t new_size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -198,6 +224,10 @@ int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)
 **Description**
 
 Compares memory content from the beginning.
+
+<!--Device-int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)--><!--Device-int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -225,6 +255,10 @@ TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer,
 
 Checks whether this TA has the requested permissions to access a buffer.
 
+<!--Device-TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer, size_t size)--><!--Device-TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -251,6 +285,10 @@ void TEE_SetInstanceData(void *instanceData)
 
 Sets the TA instance data pointer.
 
+<!--Device-void TEE_SetInstanceData(void *instanceData)--><!--Device-void TEE_SetInstanceData(void *instanceData)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -268,6 +306,10 @@ void *TEE_GetInstanceData(void)
 **Description**
 
 Obtains the instance data pointer set by the TA using <b>TEE_SetInstanceData</b>.
+
+<!--Device-void *TEE_GetInstanceData(void)--><!--Device-void *TEE_GetInstanceData(void)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

@@ -6,9 +6,11 @@
 
 **库：** libnet_http.so
 
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
-**相关模块：** [netstack](capi-netstack.md)
+**相关模块：** [netstack](capi-network-kit-netstack.md)
 
 ## 汇总
 
@@ -38,6 +40,10 @@ Http_Headers *OH_Http_CreateHeaders(void)
 
 创建HTTP请求或者响应的头。
 
+<!--Device-Http_Headers *OH_Http_CreateHeaders(void)--><!--Device-Http_Headers *OH_Http_CreateHeaders(void)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
 **返回值：**
@@ -56,6 +62,10 @@ void OH_Http_DestroyHeaders(Http_Headers **headers)
 
 销毁HTTP请求或者响应的头。
 
+<!--Device-void OH_Http_DestroyHeaders(Http_Headers **headers)--><!--Device-void OH_Http_DestroyHeaders(Http_Headers **headers)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
 **参数：**
@@ -73,6 +83,10 @@ uint32_t OH_Http_SetHeaderValue(struct Http_Headers *headers, const char *name, 
 **描述：**
 
 设置HTTP请求或者响应的头的键值对。
+
+<!--Device-uint32_t OH_Http_SetHeaderValue(struct Http_Headers *headers, const char *name, const char *value)--><!--Device-uint32_t OH_Http_SetHeaderValue(struct Http_Headers *headers, const char *name, const char *value)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -100,6 +114,10 @@ Http_HeaderValue *OH_Http_GetHeaderValue(Http_Headers *headers, const char *name
 
 通过键获取请求或响应头的值。
 
+<!--Device-Http_HeaderValue *OH_Http_GetHeaderValue(Http_Headers *headers, const char *name)--><!--Device-Http_HeaderValue *OH_Http_GetHeaderValue(Http_Headers *headers, const char *name)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
 **参数：**
@@ -125,6 +143,10 @@ Http_HeaderEntry *OH_Http_GetHeaderEntries(Http_Headers *headers)
 
 获取请求或响应头的所有键值对。
 
+<!--Device-Http_HeaderEntry *OH_Http_GetHeaderEntries(Http_Headers *headers)--><!--Device-Http_HeaderEntry *OH_Http_GetHeaderEntries(Http_Headers *headers)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
 **参数：**
@@ -149,6 +171,10 @@ void OH_Http_DestroyHeaderEntries(Http_HeaderEntry **headerEntry)
 
 销毁OH_Http_GetHeaderEntries中获取的所有键值对。
 
+<!--Device-void OH_Http_DestroyHeaderEntries(Http_HeaderEntry **headerEntry)--><!--Device-void OH_Http_DestroyHeaderEntries(Http_HeaderEntry **headerEntry)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 20
 
 **参数：**
@@ -166,6 +192,10 @@ Http_Request *OH_Http_CreateRequest(const char *url)
 **描述：**
 
 创建HTTP请求。
+
+<!--Device-Http_Request *OH_Http_CreateRequest(const char *url)--><!--Device-Http_Request *OH_Http_CreateRequest(const char *url)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
@@ -190,6 +220,10 @@ int OH_Http_Request(Http_Request *request, Http_ResponseCallback callback, Http_
 **描述：**
 
 发起HTTP请求。
+
+<!--Device-int OH_Http_Request(Http_Request *request, Http_ResponseCallback callback, Http_EventsHandler handler)--><!--Device-int OH_Http_Request(Http_Request *request, Http_ResponseCallback callback, Http_EventsHandler handler)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -218,6 +252,10 @@ void OH_Http_Destroy(struct Http_Request **request)
 **描述：**
 
 中断HTTP请求。
+
+<!--Device-void OH_Http_Destroy(struct Http_Request **request)--><!--Device-void OH_Http_Destroy(struct Http_Request **request)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 

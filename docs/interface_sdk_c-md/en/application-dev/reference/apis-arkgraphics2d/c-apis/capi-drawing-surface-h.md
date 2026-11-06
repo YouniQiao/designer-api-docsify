@@ -6,9 +6,11 @@ This file declares the functions related to the surface in the drawing module, i
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -33,6 +35,10 @@ OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext
 **Description**
 
 Creates an **OH_Drawing_Surface** object using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **gpuContext** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext* gpuContext, bool flag, OH_Drawing_Image_Info imageInfo)--><!--Device-OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext* gpuContext, bool flag, OH_Drawing_Image_Info imageInfo)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -60,6 +66,10 @@ OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuC
 
 Creates an **OH_Drawing_Surface** object bound to the window using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). **OH_DRAWING_ERROR_INVALID_PARAMETER** if **gpuContext** or **window** is NULL.
 
+<!--Device-OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuContext, OH_Drawing_Image_Info imageInfo, void* window)--><!--Device-OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuContext, OH_Drawing_Image_Info imageInfo, void* window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 16
 
 **Parameters**:
@@ -86,6 +96,10 @@ OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)
 
 Obtains a canvas from an **OH_Drawing_Surface** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **surface** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)--><!--Device-OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -110,6 +124,10 @@ OH_Drawing_ErrorCode OH_Drawing_SurfaceFlush(OH_Drawing_Surface* surface)
 
 Pushes the drawing content from an **OH_Drawing_Surface** object to the GPU for rendering.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SurfaceFlush(OH_Drawing_Surface* surface)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SurfaceFlush(OH_Drawing_Surface* surface)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 16
 
 **Parameters**:
@@ -133,6 +151,10 @@ void OH_Drawing_SurfaceDestroy(OH_Drawing_Surface* surface)
 **Description**
 
 Destroys an **OH_Drawing_Surface** object and reclaims the memory occupied.
+
+<!--Device-void OH_Drawing_SurfaceDestroy(OH_Drawing_Surface* surface)--><!--Device-void OH_Drawing_SurfaceDestroy(OH_Drawing_Surface* surface)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

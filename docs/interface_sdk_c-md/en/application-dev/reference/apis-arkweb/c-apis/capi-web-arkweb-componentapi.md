@@ -8,11 +8,13 @@ typedef struct ArkWeb_ComponentAPI {...} ArkWeb_ComponentAPI
 
 ArkWeb_ComponentAPI is an API struct provided by ArkWeb on the native side for listening to Web component lifecycle events. It inherits from the base native API type [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md). Developers obtain this struct by calling [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) with the `ARKWEB_NATIVE_COMPONENT` type, and then register event callbacks for Web component Controller attached, page load begin, page load end, and component destruction. This struct is suitable for scenarios where you need to perceive key state changes of the Web component in native code (C/ C++), such as initializing native resources, synchronizing page load status, collecting analytics data, or releasing associated resources upon component destruction. The related APIs must be called in the UI thread. Before calling a specific member function, it is recommended to use the [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) macro to check whether the function pointer exists.
 
+<!--Device-typedef struct ArkWeb_ComponentAPI {...} ArkWeb_ComponentAPI--><!--Device-typedef struct ArkWeb_ComponentAPI {...} ArkWeb_ComponentAPI-End-->
+
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
 
-**Related module**: [Web](capi-web.md)
+**Related module**: [Web](capi-arkweb-web.md)
 
 **Header file**: [arkweb_type.h](capi-arkweb-type-h.md)
 
@@ -29,10 +31,10 @@ ArkWeb_ComponentAPI is an API struct provided by ArkWeb on the native side for l
 
 | Name | Description |
 | -- | -- |
-| [void (\*onControllerAttached)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#oncontrollerattached) | Registers a callback listener for the Controller attached event. Note: This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
-| [void (\*onPageBegin)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#onpagebegin) | This callback is triggered when the web page starts loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
-| [void (\*onPageEnd)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#onpageend) | This callback is triggered when the web page finishes loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
-| [void (\*onDestroy)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#ondestroy) | Triggered when this **Web** component is destroyed. |
+| [void (\*onControllerAttached)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#oncontrollerattached) | - | Registers a callback listener for the Controller attached event. Note: This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
+| [void (\*onPageBegin)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#onpagebegin) | - | This callback is triggered when the web page starts loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
+| [void (\*onPageEnd)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#onpageend) | - | This callback is triggered when the web page finishes loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists. |
+| [void (\*onDestroy)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)](#ondestroy) | - | Triggered when this **Web** component is destroyed. |
 
 ## Member function description
 
@@ -46,6 +48,16 @@ void (*onControllerAttached)(const char* webTag, ArkWeb_OnComponentCallback call
 
 Registers a callback listener for the Controller attached event. Note: This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists.
 
+<!--Device-void (*onControllerAttached)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)--><!--Device-void (*onControllerAttached)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)-End-->
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* webTag | [in] Name of the **Web** component. |
+|  [ArkWeb_OnComponentCallback](capi-arkweb-type-h.md#arkweb_oncomponentcallback) callback | [in] Callback of **onControllerAttached**. |
+|  void* userData | [in] User-defined data. |
+
 ### onPageBegin()
 
 ```c
@@ -55,6 +67,16 @@ void (*onPageBegin)(const char* webTag, ArkWeb_OnComponentCallback callback, voi
 **Description**
 
 This callback is triggered when the web page starts loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists.
+
+<!--Device-void (*onPageBegin)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)--><!--Device-void (*onPageBegin)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)-End-->
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* webTag | [in] Name of the **Web** component. |
+|  [ArkWeb_OnComponentCallback](capi-arkweb-type-h.md#arkweb_oncomponentcallback) callback | [in] Callback invoked when the web page starts loading, used to handle the business logic at the beginning of the page load. |
+|  void* userData | [in] Pointer to the user-defined data. This data is passed to the callback when the callback is triggered, and can be used to save context information or state data. |
 
 ### onPageEnd()
 
@@ -66,6 +88,16 @@ void (*onPageEnd)(const char* webTag, ArkWeb_OnComponentCallback callback, void*
 
 This callback is triggered when the web page finishes loading. It is triggered only for the main frame, not for iframe or frameset content loading. This callback must be called in the UI thread. Before calling, it is recommended to use the ARKWEB_MEMBER_MISSING macro to check whether the function pointer exists.
 
+<!--Device-void (*onPageEnd)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)--><!--Device-void (*onPageEnd)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)-End-->
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* webTag | [in] Name of the **Web** component. |
+|  [ArkWeb_OnComponentCallback](capi-arkweb-type-h.md#arkweb_oncomponentcallback) callback | [in] Callback triggered when page load completes, used to handle business logic after page load completes. |
+|  void* userData | [in] User-defined data pointer. This data is passed to the callback function when the callback is triggered, and can be used to save context information or state data. |
+
 ### onDestroy()
 
 ```c
@@ -75,5 +107,15 @@ void (*onDestroy)(const char* webTag, ArkWeb_OnComponentCallback callback, void*
 **Description**
 
 Triggered when this **Web** component is destroyed.
+
+<!--Device-void (*onDestroy)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)--><!--Device-void (*onDestroy)(const char* webTag, ArkWeb_OnComponentCallback callback, void* userData)-End-->
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* webTag | [in] Name of the **Web** component. |
+|  [ArkWeb_OnComponentCallback](capi-arkweb-type-h.md#arkweb_oncomponentcallback) callback | [in] Callback of **onDestroy**. |
+|  void* userData | [in] Pointer to the user-defined data. |
 
 

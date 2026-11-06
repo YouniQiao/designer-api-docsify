@@ -8,7 +8,7 @@ Declares tensor data formats.
 
 **Since**: 9
 
-**Related module**: [MindSpore](capi-mindspore.md)
+**Related module**: [MindSpore](capi-mind-spore-lite-kit-mindspore.md)
 
 ## Summary
 
@@ -35,6 +35,8 @@ enum OH_AI_Format
 **Description**
 
 Declares tensor data formats.
+
+<!--Device-OH_AI_Format--><!--Device-OH_AI_Format-End-->
 
 **Since**: 9 /
 #define MINDSPORE_INCLUDE_C_API_FORMAT_C_H

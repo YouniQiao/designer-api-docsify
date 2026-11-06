@@ -8,11 +8,13 @@ typedef struct ArkUI_NativeGestureAPI_2 {...} ArkUI_NativeGestureAPI_2
 
 定义手势模块接口集合，在[ArkUI_NativeGestureAPI_1](capi-arkui-nativemodule-arkui-nativegestureapi-1.md)的基础上扩展提供设置手势打断事件回调函数的能力，用于在手势识别过程中根据回调结果继续或打断手势。开发者可以通过 [gestureApi1](capi-arkui-nativemodule-arkui-nativegestureapi-2.md)访问基础手势接口，配合[setGestureInterrupterToNode](capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setgestureinterruptertonode)处理手势打断。
 
+<!--Device-typedef struct ArkUI_NativeGestureAPI_2 {...} ArkUI_NativeGestureAPI_2--><!--Device-typedef struct ArkUI_NativeGestureAPI_2 {...} ArkUI_NativeGestureAPI_2-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 18
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **所在头文件：** [native_gesture.h](capi-native-gesture-h.md)
 
@@ -29,7 +31,7 @@ typedef struct ArkUI_NativeGestureAPI_2 {...} ArkUI_NativeGestureAPI_2
 
 | 名称 | 描述 |
 | -- | -- |
-| [int32_t (\*setGestureInterrupterToNode)(ArkUI_NodeHandle node, void* userData, ArkUI_GestureInterruptResult (\*interrupter)(ArkUI_GestureInterruptInfo* info))](#setgestureinterruptertonode) | Sets the callback for gesture interruption events. |
+| [int32_t (\*setGestureInterrupterToNode)(ArkUI_NodeHandle node, void* userData, ArkUI_GestureInterruptResult (\*interrupter)(ArkUI_GestureInterruptInfo* info))](#setgestureinterruptertonode) | - | Sets the callback for gesture interruption events. |
 
 ## 成员函数说明
 
@@ -43,6 +45,8 @@ int32_t (*setGestureInterrupterToNode)(ArkUI_NodeHandle node, void* userData, Ar
 
 Sets the callback for gesture interruption events.
 
+<!--Device-int32_t (*setGestureInterrupterToNode)(ArkUI_NodeHandle node, void* userData, ArkUI_GestureInterruptResult (*interrupter)(ArkUI_GestureInterruptInfo* info))--><!--Device-int32_t (*setGestureInterrupterToNode)(ArkUI_NodeHandle node, void* userData, ArkUI_GestureInterruptResult (*interrupter)(ArkUI_GestureInterruptInfo* info))-End-->
+
 **参数：**
 
 | 参数项 | 描述 |
@@ -55,6 +59,6 @@ Sets the callback for gesture interruption events.
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code. <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful. <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Error code. <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 

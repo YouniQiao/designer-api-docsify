@@ -6,9 +6,11 @@ This file declares the capabilities for obtaining the character position in a te
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -36,12 +38,6 @@ This file declares the capabilities for obtaining the character position in a te
 | [void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)](#oh_drawing_textlineenumeratecaretoffsets) | - | Enumerates the offset and index of each character in a text line object and passes them to a custom callback function. You can use the offset and index array for other operations. |
 | [double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double alignmentFactor, double alignmentWidth)](#oh_drawing_textlinegetalignmentoffset) | - | Obtains the offset of a text line object after alignment based on the alignment factor and alignment width. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge) | Defines a custom callback used to receive the offset and index of each character in a text line object as its parameters.<br>**Since**: 18<br>**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing |
-
 ## Function description
 
 ### OH_Drawing_TypographyGetTextLines()
@@ -53,6 +49,10 @@ OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typog
 **Description**
 
 Obtains the array of text lines in a typography object. This array contains one or more text line objects. Release this pointer by calling [OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) when this object is no longer needed.
+
+<!--Device-OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)--><!--Device-OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -78,6 +78,10 @@ void OH_Drawing_DestroyTextLines(OH_Drawing_Array* lines)
 
 Releases the memory occupied by a text line array.
 
+<!--Device-void OH_Drawing_DestroyTextLines(OH_Drawing_Array* lines)--><!--Device-void OH_Drawing_DestroyTextLines(OH_Drawing_Array* lines)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -96,6 +100,10 @@ void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)
 
 Releases the memory of a single text line object. Only the memory of a text line object that is independently allocated can be released. The memory of a text line object obtained from a line array through [OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex) cannot be released.
 
+<!--Device-void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)--><!--Device-void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -113,6 +121,10 @@ OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size
 **Description**
 
 Obtains the text line object with the specified index in a text line array.
+
+<!--Device-OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size_t index)--><!--Device-OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size_t index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -139,6 +151,10 @@ double OH_Drawing_TextLineGetGlyphCount(OH_Drawing_TextLine* line)
 
 Obtains the number of glyphs in a text line object.
 
+<!--Device-double OH_Drawing_TextLineGetGlyphCount(OH_Drawing_TextLine* line)--><!--Device-double OH_Drawing_TextLineGetGlyphCount(OH_Drawing_TextLine* line)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -163,6 +179,10 @@ void OH_Drawing_TextLineGetTextRange(OH_Drawing_TextLine* line, size_t* start, s
 
 Obtains the range of the text in a text line object in the entire paragraph.
 
+<!--Device-void OH_Drawing_TextLineGetTextRange(OH_Drawing_TextLine* line, size_t* start, size_t* end)--><!--Device-void OH_Drawing_TextLineGetTextRange(OH_Drawing_TextLine* line, size_t* start, size_t* end)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -182,6 +202,10 @@ OH_Drawing_Array* OH_Drawing_TextLineGetGlyphRuns(OH_Drawing_TextLine* line)
 **Description**
 
 Obtains the array of text rendering units [OH_Drawing_Run](capi-drawing-oh-drawing-run.md) in the text line object.
+
+<!--Device-OH_Drawing_Array* OH_Drawing_TextLineGetGlyphRuns(OH_Drawing_TextLine* line)--><!--Device-OH_Drawing_Array* OH_Drawing_TextLineGetGlyphRuns(OH_Drawing_TextLine* line)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -207,6 +231,10 @@ void OH_Drawing_DestroyRuns(OH_Drawing_Array* runs)
 
 Releases the memory occupied by a glyph run array.
 
+<!--Device-void OH_Drawing_DestroyRuns(OH_Drawing_Array* runs)--><!--Device-void OH_Drawing_DestroyRuns(OH_Drawing_Array* runs)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -224,6 +252,10 @@ OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)
 **Description**
 
 Obtains the glyph run object with the specified index in a glyph run array.
+
+<!--Device-OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)--><!--Device-OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -250,6 +282,10 @@ void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canv
 
 Paints a text line on the canvas with the coordinate point (x, y) as the upper left corner.
 
+<!--Device-void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canvas, double x, double y)--><!--Device-void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canvas, double x, double y)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -270,6 +306,10 @@ OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine*
 **Description**
 
 Creates a truncated text line object. Truncates the original text line based on the specified width, truncation type, and truncation mark string, inserts the specified mark string at the truncation position, and generates and returns a new independent text line object. The original text is not affected.
+
+<!--Device-OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode, const char* ellipsis)--><!--Device-OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode, const char* ellipsis)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -298,6 +338,10 @@ double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double
 
 Obtains the typographic bounds of the text line object. The typographic bounds of a text line are related to the typographic font and typographic font size, and are independent of the characters themselves. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the typographic bounds include the bounds of the leading and trailing spaces. For example, for the string "j" or "E", the typographic bounds are the same, i.e., independent of the characters themselves. <br>The text height can be calculated using height = ascent + descent + leading.
 
+<!--Device-double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)--><!--Device-double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -325,6 +369,10 @@ OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)
 
 Obtains the image bounds of the text line object. The image bounds of a text line are related to the typographic font, typographic font size, and the characters themselves, and are equivalent to the visual bounds. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the user can only see "a b" on the UI, and the image bounds are the bounds excluding the leading and trailing spaces. <br>For example, for the string "j" or "E", the visual bounds are different, i.e., related to the characters themselves. The visual bounds width of the string "j" is smaller than that of the string "E", and the visual bounds height of the string "j" is greater than that of the string "E".
 
+<!--Device-OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)--><!--Device-OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -349,6 +397,10 @@ double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)
 
 Obtains the width of the spaces at the end of a text line object.
 
+<!--Device-double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)--><!--Device-double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -372,6 +424,10 @@ int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, 
 **Description**
 
 Obtains the string index at the specified position in the text line object.
+
+<!--Device-int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, OH_Drawing_Point* point)--><!--Device-int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, OH_Drawing_Point* point)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -398,6 +454,10 @@ double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int
 
 Obtains the offset of a character with the specified index in a text line object.
 
+<!--Device-double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int32_t index)--><!--Device-double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int32_t index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -422,6 +482,10 @@ typedef bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool 
 **Description**
 
 Defines a custom callback used to receive the offset and index of each character in a text line object as its parameters.
+
+<!--Device-typedef bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge)--><!--Device-typedef bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -449,6 +513,10 @@ void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing
 
 Enumerates the offset and index of each character in a text line object and passes them to a custom callback function. You can use the offset and index array for other operations.
 
+<!--Device-void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)--><!--Device-void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -467,6 +535,10 @@ double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double a
 **Description**
 
 Obtains the offset of a text line object after alignment based on the alignment factor and alignment width.
+
+<!--Device-double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double alignmentFactor, double alignmentWidth)--><!--Device-double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double alignmentFactor, double alignmentWidth)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 

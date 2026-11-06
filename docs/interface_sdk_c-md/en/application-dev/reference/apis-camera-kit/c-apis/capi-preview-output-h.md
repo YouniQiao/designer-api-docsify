@@ -6,9 +6,11 @@ The file declares the preview output concepts.
 
 **Library**: libohcamera.so
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## Summary
 
@@ -47,14 +49,6 @@ The file declares the preview output concepts.
 | [Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)](#oh_previewoutput_setlogviewassistenable) | - | Log video view assistance toggle.Before enabling this feature, you can call [isLogViewAssistSupported]camera.PreviewOutput.isLogViewAssistSupported to check whether the device supports log video view assistance. |
 | [Camera_ErrorCode OH_PreviewOutput_AddDeferredSurface(const Camera_PreviewOutput* previewOutput, const char* surfaceId)](#oh_previewoutput_adddeferredsurface) | - | add surface for preview output. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame start events.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame end events.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-| void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output errors.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
-
 ## Function description
 
 ### OH_PreviewOutput_OnFrameStart()
@@ -66,6 +60,10 @@ typedef void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutpu
 **Description**
 
 Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame start events.
+
+<!--Device-typedef void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput)--><!--Device-typedef void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -85,6 +83,10 @@ typedef void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput,
 
 Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame end events.
 
+<!--Device-typedef void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount)--><!--Device-typedef void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -103,6 +105,10 @@ typedef void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Ca
 **Description**
 
 Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output errors.
+
+<!--Device-typedef void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode)--><!--Device-typedef void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -127,6 +133,10 @@ Camera_ErrorCode OH_PreviewOutput_RegisterCallback(Camera_PreviewOutput* preview
 **Description**
 
 Registers a callback to listen for preview output events.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_RegisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_PreviewOutput_RegisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -153,6 +163,10 @@ Camera_ErrorCode OH_PreviewOutput_UnregisterCallback(Camera_PreviewOutput* previ
 
 Unregisters the callback used to listen for preview output events.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_UnregisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_PreviewOutput_UnregisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -178,6 +192,10 @@ Camera_ErrorCode OH_PreviewOutput_Start(Camera_PreviewOutput* previewOutput)
 
 Starts preview output.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_Start(Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_PreviewOutput_Start(Camera_PreviewOutput* previewOutput)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -201,6 +219,10 @@ Camera_ErrorCode OH_PreviewOutput_Stop(Camera_PreviewOutput* previewOutput)
 **Description**
 
 Stops preview output.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_Stop(Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_PreviewOutput_Stop(Camera_PreviewOutput* previewOutput)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -226,6 +248,10 @@ Camera_ErrorCode OH_PreviewOutput_Release(Camera_PreviewOutput* previewOutput)
 
 Releases a PreviewOutput instance.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_Release(Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_PreviewOutput_Release(Camera_PreviewOutput* previewOutput)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -249,6 +275,10 @@ Camera_ErrorCode OH_PreviewOutput_GetActiveProfile(Camera_PreviewOutput* preview
 **Description**
 
 Obtains the profile of a PreviewOutput instance.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_GetActiveProfile(Camera_PreviewOutput* previewOutput, Camera_Profile** profile)--><!--Device-Camera_ErrorCode OH_PreviewOutput_GetActiveProfile(Camera_PreviewOutput* previewOutput, Camera_Profile** profile)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -275,6 +305,10 @@ Camera_ErrorCode OH_PreviewOutput_DeleteProfile(Camera_Profile* profile)
 
 Deletes the profile of a PreviewOutput instance.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_DeleteProfile(Camera_Profile* profile)--><!--Device-Camera_ErrorCode OH_PreviewOutput_DeleteProfile(Camera_Profile* profile)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -298,6 +332,10 @@ Camera_ErrorCode OH_PreviewOutput_GetPreviewRotation(Camera_PreviewOutput* previ
 **Description**
 
 Obtains the preview rotation angle.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_GetPreviewRotation(Camera_PreviewOutput* previewOutput, int displayRotation, Camera_ImageRotation* imageRotation)--><!--Device-Camera_ErrorCode OH_PreviewOutput_GetPreviewRotation(Camera_PreviewOutput* previewOutput, int displayRotation, Camera_ImageRotation* imageRotation)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -325,6 +363,10 @@ Camera_ErrorCode OH_PreviewOutput_GetPreviewRotationWithoutDisplayRotation(Camer
 
 Obtains the preview rotation angle.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_GetPreviewRotationWithoutDisplayRotation(Camera_PreviewOutput* previewOutput, Camera_ImageRotation* imageRotation)--><!--Device-Camera_ErrorCode OH_PreviewOutput_GetPreviewRotationWithoutDisplayRotation(Camera_PreviewOutput* previewOutput, Camera_ImageRotation* imageRotation)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -349,6 +391,10 @@ Camera_ErrorCode OH_PreviewOutput_SetPreviewRotation(Camera_PreviewOutput* previ
 **Description**
 
 Sets the preview rotation angle.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_SetPreviewRotation(Camera_PreviewOutput* previewOutput, Camera_ImageRotation previewRotation, bool isDisplayLocked)--><!--Device-Camera_ErrorCode OH_PreviewOutput_SetPreviewRotation(Camera_PreviewOutput* previewOutput, Camera_ImageRotation previewRotation, bool isDisplayLocked)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -376,6 +422,10 @@ Camera_ErrorCode OH_PreviewOutput_GetSupportedFrameRates(Camera_PreviewOutput* p
 
 Obtains the list of frame rates supported by a PreviewOutput instance.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_GetSupportedFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange** frameRateRange, uint32_t* size)--><!--Device-Camera_ErrorCode OH_PreviewOutput_GetSupportedFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange** frameRateRange, uint32_t* size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -402,6 +452,10 @@ Camera_ErrorCode OH_PreviewOutput_DeleteFrameRates(Camera_PreviewOutput* preview
 
 Deletes the frame rate list.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_DeleteFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)--><!--Device-Camera_ErrorCode OH_PreviewOutput_DeleteFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -426,6 +480,10 @@ Camera_ErrorCode OH_PreviewOutput_SetFrameRate(Camera_PreviewOutput* previewOutp
 **Description**
 
 Sets the frame rates for a PreviewOutput instance.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_SetFrameRate(Camera_PreviewOutput* previewOutput, int32_t minFps, int32_t maxFps)--><!--Device-Camera_ErrorCode OH_PreviewOutput_SetFrameRate(Camera_PreviewOutput* previewOutput, int32_t minFps, int32_t maxFps)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -453,6 +511,10 @@ Camera_ErrorCode OH_PreviewOutput_GetActiveFrameRate(Camera_PreviewOutput* previ
 
 Obtains the active frame rates of a PreviewOutput instance.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_GetActiveFrameRate(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)--><!--Device-Camera_ErrorCode OH_PreviewOutput_GetActiveFrameRate(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -479,6 +541,10 @@ Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_Preview
 
 Checks whether preview bandwidth compression is supported. This involves reducing data volume through encoding to minimize bandwidth usage during transmission.
 
+<!--Device-Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)--><!--Device-Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -503,6 +569,10 @@ Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutpu
 **Description**
 
 Enables preview bandwidth compression. This function must be called prior to OH_CaptureSession_CommitConfig(). Otherwise, the preview output stream format will be affected.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutput* previewOutput, bool enabled)--><!--Device-Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutput* previewOutput, bool enabled)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 23
 
@@ -529,6 +599,10 @@ bool OH_PreviewOutput_IsLogViewAssistSupported(const Camera_PreviewOutput* previ
 
 Checks whether log video view assistance is supported.
 
+<!--Device-bool OH_PreviewOutput_IsLogViewAssistSupported(const Camera_PreviewOutput* previewOutput)--><!--Device-bool OH_PreviewOutput_IsLogViewAssistSupported(const Camera_PreviewOutput* previewOutput)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -552,6 +626,10 @@ Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* p
 **Description**
 
 Log video view assistance toggle.Before enabling this feature, you can call [isLogViewAssistSupported]camera.PreviewOutput.isLogViewAssistSupported to check whether the device supports log video view assistance.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)--><!--Device-Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -577,6 +655,10 @@ Camera_ErrorCode OH_PreviewOutput_AddDeferredSurface(const Camera_PreviewOutput*
 **Description**
 
 add surface for preview output.
+
+<!--Device-Camera_ErrorCode OH_PreviewOutput_AddDeferredSurface(const Camera_PreviewOutput* previewOutput, const char* surfaceId)--><!--Device-Camera_ErrorCode OH_PreviewOutput_AddDeferredSurface(const Camera_PreviewOutput* previewOutput, const char* surfaceId)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 

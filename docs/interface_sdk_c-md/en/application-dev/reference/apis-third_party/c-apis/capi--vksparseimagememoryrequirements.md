@@ -2,3 +2,18 @@
 
 ## Overview
 
+<!--Device-struct VkSparseImageMemoryRequirements {...}--><!--Device-struct VkSparseImageMemoryRequirements {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| [VkSparseImageFormatProperties](capi--vksparseimageformatproperties.md) formatProperties |  |
+| uint32_t imageMipTailFirstLod |  |
+| VkDeviceSize imageMipTailSize |  |
+| VkDeviceSize imageMipTailOffset |  |
+| VkDeviceSize imageMipTailStride |  |
+
+

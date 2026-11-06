@@ -8,11 +8,13 @@ struct OhosImageSourceSupportedFormat {...}
 
 Defines image source supported format string. [OhosImageSourceSupportedFormatList](capi-image-ohosimagesourcesupportedformatlist.md) and [OH_ImageSource_GetSupportedFormats](capi-image-source-mdk-h.md#oh_imagesource_getsupportedformats)
 
+<!--Device-struct OhosImageSourceSupportedFormat {...}--><!--Device-struct OhosImageSourceSupportedFormat {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 10
 
-**Related module**: [Image](capi-image.md)
+**Related module**: [Image](capi-image-kit-image.md)
 
 **Header file**: [image_source_mdk.h](capi-image-source-mdk-h.md)
 
@@ -22,9 +24,9 @@ Defines image source supported format string. [OhosImageSourceSupportedFormatLis
 
 | Name | Description |
 | -- | -- |
-| char* format = nullptr |  |
-| size_t size = 0 |  |
-| char* format |  |
-| size_t size |  |
+| char* format = nullptr | Image source supported format string head.<br>**Since**: 10 |
+| size_t size = 0 | Image source supported format string size.<br>**Since**: 10 |
+| char* format | Image source supported format string head.<br>**Since**: 10 |
+| size_t size | Image source supported format string size.<br>**Since**: 10 |
 
 

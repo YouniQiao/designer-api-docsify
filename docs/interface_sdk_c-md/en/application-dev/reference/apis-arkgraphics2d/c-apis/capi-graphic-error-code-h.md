@@ -6,9 +6,11 @@ Defines the error codes.
 
 **Library**: libnative_window.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
-**Related module**: [NativeWindow](capi-nativewindow.md)
+**Related module**: [NativeWindow](capi-arkgraphics2d-nativewindow.md)
 
 ## Summary
 
@@ -29,6 +31,10 @@ enum OHNativeErrorCode
 **Description**
 
 native error code.
+
+<!--Device-OHNativeErrorCode--><!--Device-OHNativeErrorCode-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 12
 

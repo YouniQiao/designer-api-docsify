@@ -8,11 +8,13 @@ struct OH_HiDebug_ProfilingResult {...}
 
 Defines a struct for encapsulating the result of a single resource collection.
 
+<!--Device-struct OH_HiDebug_ProfilingResult {...}--><!--Device-struct OH_HiDebug_ProfilingResult {...}-End-->
+
 **System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Since**: 24
 
-**Related module**: [HiDebug](capi-hidebug.md)
+**Related module**: [HiDebug](capi-performance-analysis-kit-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -22,7 +24,7 @@ Defines a struct for encapsulating the result of a single resource collection.
 
 | Name | Description |
 | -- | -- |
-| [OH_HiDebug_ResourceType](capi-hidebug-type-h.md#oh_hidebug_resourcetype) resourceType |  |
-| const char* filePath |  |
+| [OH_HiDebug_ResourceType](capi-hidebug-type-h.md#oh_hidebug_resourcetype) resourceType | Profiled resource type.<br>**Since**: 24 |
+| const char* filePath | File path of the profiling result data. Null if the profiling fails.<br>**Since**: 24 |
 
 

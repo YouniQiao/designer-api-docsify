@@ -6,9 +6,11 @@ This file declares the functions related to the coordinate point in the drawing 
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -36,6 +38,10 @@ OH_Drawing_Point* OH_Drawing_PointCreate(float x, float y)
 
 Creates an **OH_Drawing_Point** object.
 
+<!--Device-OH_Drawing_Point* OH_Drawing_PointCreate(float x, float y)--><!--Device-OH_Drawing_Point* OH_Drawing_PointCreate(float x, float y)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -60,6 +66,10 @@ OH_Drawing_ErrorCode OH_Drawing_PointGetX(const OH_Drawing_Point* point, float* 
 **Description**
 
 Obtains the X coordinate of a point.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PointGetX(const OH_Drawing_Point* point, float* x)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PointGetX(const OH_Drawing_Point* point, float* x)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -86,6 +96,10 @@ OH_Drawing_ErrorCode OH_Drawing_PointGetY(const OH_Drawing_Point* point, float* 
 
 Obtains the Y coordinate of a point.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PointGetY(const OH_Drawing_Point* point, float* y)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PointGetY(const OH_Drawing_Point* point, float* y)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -110,6 +124,10 @@ OH_Drawing_ErrorCode OH_Drawing_PointSet(OH_Drawing_Point* point, float x, float
 **Description**
 
 Sets the X and Y coordinates of a point.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PointSet(OH_Drawing_Point* point, float x, float y)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PointSet(OH_Drawing_Point* point, float x, float y)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -137,6 +155,10 @@ OH_Drawing_ErrorCode OH_Drawing_PointNegate(OH_Drawing_Point* point)
 
 Negates the point's coordinates.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PointNegate(OH_Drawing_Point* point)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PointNegate(OH_Drawing_Point* point)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -160,6 +182,10 @@ OH_Drawing_ErrorCode OH_Drawing_PointOffset(OH_Drawing_Point* point, float dx, f
 **Description**
 
 Offsets the point's coordinates by dx, dy.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PointOffset(OH_Drawing_Point* point, float dx, float dy)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PointOffset(OH_Drawing_Point* point, float dx, float dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 26.0.0
 
@@ -186,6 +212,10 @@ void OH_Drawing_PointDestroy(OH_Drawing_Point* point)
 **Description**
 
 Destroys an **OH_Drawing_Point** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_PointDestroy(OH_Drawing_Point* point)--><!--Device-void OH_Drawing_PointDestroy(OH_Drawing_Point* point)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 

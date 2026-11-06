@@ -6,9 +6,11 @@ Declare the Native API used for querying encoding and decoding capabilities.
 
 **Library**: libnative_media_codecbase.so
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
-**Related module**: [AVCapability](capi-avcapability.md)
+**Related module**: [AVCapability](capi-avcodec-kit-avcapability.md)
 
 ## Summary
 
@@ -77,6 +79,10 @@ enum OH_AVCodecCategory
 
 The codec category
 
+<!--Device-OH_AVCodecCategory--><!--Device-OH_AVCodecCategory-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 | Enum item | Description |
@@ -92,14 +98,18 @@ enum OH_AVCodecType
 
 The codec type
 
+<!--Device-OH_AVCodecType--><!--Device-OH_AVCodecType-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 |  |
-| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 |  |
-| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 |  |
-| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 |  |
+| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | Indicates video encoder.<br>**Since**: 24 |
+| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | Indicates video decoder.<br>**Since**: 24 |
+| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | Indicates audio encoder<br>**Since**: 24 |
+| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | Indicates audio decoder<br>**Since**: 24 |
 
 ### OH_AVCapabilityFeature
 
@@ -111,6 +121,10 @@ enum OH_AVCapabilityFeature
 
 The enum of optional features that can be used in specific codec seenarios.
 
+<!--Device-OH_AVCapabilityFeature--><!--Device-OH_AVCapabilityFeature-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 12
 
 | Enum item | Description |
@@ -118,8 +132,8 @@ The enum of optional features that can be used in specific codec seenarios.
 | VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | Feature for codec supports temporal scalability. It is only used in video encoder. |
 | VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | Feature for codec supports long-term reference. It is only used in video encoder. |
 | VIDEO_LOW_LATENCY = 2 | Feature for codec supports low latency. It is only used in video decoder. |
-| VIDEO_ENCODER_B_FRAME = 7 |  |
-| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 |  |
+| VIDEO_ENCODER_B_FRAME = 7 | Feature for codec supports B-frame encoding. It is only used in video encoder.<br>**Since**: 20 |
+| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | Feature for codec supports decoding sequence output. It is only used in video decoder.<br>**Since**: 26.0.0 |
 | VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | Feature for codec supports downsampling preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0 |
 | VIDEO_ENCODER_PREPROC_CROP = 10 | Feature for codec supports Crop preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0 |
 
@@ -135,6 +149,10 @@ OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)
 **Description**
 
 Get a system-recommended codec's capability.
+
+<!--Device-OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)--><!--Device-OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -160,6 +178,10 @@ OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEnc
 **Description**
 
 Get a codec's capability within the specified category. By specifying the category, the matched codec is limited to either hardware codecs or software codecs.
+
+<!--Device-OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)--><!--Device-OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -191,6 +213,10 @@ Obtains a list of codec capabilities for a specified codec type.<br> This functi
 >
 > The memory for the codec capability list is managed internally. Developers MUST NOT manually allocate or free this memory.
 
+<!--Device-OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)--><!--Device-OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 24
 
 **Parameters**:
@@ -216,6 +242,10 @@ bool OH_AVCapability_IsHardware(OH_AVCapability *capability)
 
 Check if the capability instance is describing a hardware codec.
 
+<!--Device-bool OH_AVCapability_IsHardware(OH_AVCapability *capability)--><!--Device-bool OH_AVCapability_IsHardware(OH_AVCapability *capability)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -239,6 +269,10 @@ bool OH_AVCapability_IsSecure(OH_AVCapability *capability)
 **Description**
 
 Check if the capability instance is describing a secure codec.
+
+<!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)--><!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 24
 
@@ -264,6 +298,10 @@ const char *OH_AVCapability_GetName(OH_AVCapability *capability)
 
 Get the codec name.
 
+<!--Device-const char *OH_AVCapability_GetName(OH_AVCapability *capability)--><!--Device-const char *OH_AVCapability_GetName(OH_AVCapability *capability)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -288,6 +326,10 @@ const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)
 
 Get the codec mime type.
 
+<!--Device-const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)--><!--Device-const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 24
 
 **Parameters**:
@@ -311,6 +353,10 @@ bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mime
 **Description**
 
 Check if the mime type of the codec of the capability matches the specified mime type.
+
+<!--Device-bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)--><!--Device-bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 24
 
@@ -337,6 +383,10 @@ int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)
 
 Get the supported max instance number of the codec.
 
+<!--Device-int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)--><!--Device-int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -360,6 +410,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability,
 **Description**
 
 Get the encoder's supported bitrate range.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability, OH_AVRange *bitrateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability, OH_AVRange *bitrateRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -386,6 +440,10 @@ bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, 
 
 Check if the encoder supports the specific bitrate mode.
 
+<!--Device-bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, OH_BitrateMode bitrateMode)--><!--Device-bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, OH_BitrateMode bitrateMode)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -410,6 +468,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability,
 **Description**
 
 Get the encoder's supported quality range.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability, OH_AVRange *qualityRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability, OH_AVRange *qualityRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -436,6 +498,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capabili
 
 Get the encoder's supported encoder complexity range.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capability, OH_AVRange *complexityRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capability, OH_AVRange *complexityRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -460,6 +526,10 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capab
 **Description**
 
 Get the audio codec's supported sample rates.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capability, const int32_t **sampleRates, uint32_t *sampleRateNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capability, const int32_t **sampleRates, uint32_t *sampleRateNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -487,6 +557,10 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *
 
 Get the audio codec's supported sample rate ranges.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 20
 
 **Parameters**:
@@ -513,6 +587,10 @@ OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capabili
 
 Get the audio codec's supported audio channel count range.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capability, OH_AVRange *channelCountRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capability, OH_AVRange *channelCountRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -537,6 +615,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability,
 **Description**
 
 Get the video codec's supported video width alignment.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability, int32_t *widthAlignment)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability, int32_t *widthAlignment)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -563,6 +645,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability
 
 Get the video codec's supported video height alignment.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability, int32_t *heightAlignment)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability, int32_t *heightAlignment)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -587,6 +673,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capabi
 **Description**
 
 Get the video codec's supported video width range for a specific height.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capability, int32_t height, OH_AVRange *widthRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capability, int32_t height, OH_AVRange *widthRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -614,6 +704,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capabi
 
 Get the video codec's supported video height range for a specific width.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capability, int32_t width, OH_AVRange *heightRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capability, int32_t width, OH_AVRange *heightRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -640,6 +734,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_
 
 Get the video codec's supported video width range.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_AVRange *widthRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_AVRange *widthRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -665,6 +763,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH
 
 Get the video codec's supported video height range.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH_AVRange *heightRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH_AVRange *heightRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -689,6 +791,10 @@ bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t w
 **Description**
 
 Check if the video codec supports the specific video size.
+
+<!--Device-bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t width, int32_t height)--><!--Device-bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t width, int32_t height)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -716,6 +822,10 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability,
 
 Get the video codec's supported video frame rate range.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability, OH_AVRange *frameRateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability, OH_AVRange *frameRateRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -740,6 +850,10 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capa
 **Description**
 
 Get the Video codec's supported video frame rate range for a specified video size.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -768,6 +882,10 @@ bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capabili
 
 Check if the video codec supports the specific combination of video size and frame rate.
 
+<!--Device-bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)--><!--Device-bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -795,6 +913,10 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capa
 
 Get the video codec's supported video pixel format.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -820,6 +942,10 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapabilit
 **Description**
 
 Get the native buffer formats supported by the video codec.<br> This function provides information about the native buffer formats that the video codec can handle.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 22
 
@@ -847,6 +973,10 @@ OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, c
 
 Get the codec's supported profiles.
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -872,6 +1002,10 @@ OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capab
 **Description**
 
 Get codec's supported levels for a specific profile.
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -900,6 +1034,10 @@ bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, in
 
 Check if the codec supports the specific combination of the profile and level.
 
+<!--Device-bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)--><!--Device-bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 **Parameters**:
@@ -926,6 +1064,10 @@ bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabi
 
 Check if the codec supports the specified feature.
 
+<!--Device-bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabilityFeature feature)--><!--Device-bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabilityFeature feature)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 12
 
 **Parameters**:
@@ -950,6 +1092,10 @@ OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, O
 **Description**
 
 Get the properties of the specified feature. It should be noted that the life cycle of the OH_AVFormat instance pointed to by the return value * needs to be manually released by the caller.
+
+<!--Device-OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)--><!--Device-OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 12
 

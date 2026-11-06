@@ -6,9 +6,11 @@ The file declares the native APIs provided by the LowPowerVideoSink. You can use
 
 **Library**: liblowpower_avsink.so
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
-**Related module**: [LowPowerVideoSink](capi-lowpowervideosink.md)
+**Related module**: [LowPowerVideoSink](capi-media-kit-lowpowervideosink.md)
 
 ## Summary
 
@@ -58,6 +60,10 @@ OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)
 
 Creates an OH_LowPowerVideoSink instance.
 
+<!--Device-OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)--><!--Device-OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -81,6 +87,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH
 **Description**
 
 Configures an OH_LowPowerVideoSink instance. This function must be called before [OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare).
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -107,6 +117,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const
 
 Sets parameters for an OH_LowPowerVideoSink instance. The parameters can be dynamically set after [OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare).
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -131,6 +145,10 @@ OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AV
 **Description**
 
 Obtains the parameters of an OH_LowPowerVideoSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -157,6 +175,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 
 Sets the rendering window for an OH_LowPowerVideoSink instance. This function must be called before [OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare).
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, const OHNativeWindow* surface)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, const OHNativeWindow* surface)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -164,7 +186,7 @@ Sets the rendering window for an OH_LowPowerVideoSink instance. This function mu
 | Parameter | Description |
 | -- | -- |
 | [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | Pointer to an OH_LowPowerVideoSink instance |
-| [const OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) |
+| [const OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-nativewindow.md) |
 
 **Returns**:
 
@@ -181,6 +203,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)
 **Description**
 
 Prepares an OH_LowPowerVideoSink instance for decoding and rendering. This function must be called after [OH_LowPowerVideoSink_SetSyncAudioSink](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_setsyncaudiosink).
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -206,6 +232,10 @@ OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)
 
 Starts an OH_LowPowerVideoSink instance for decoding. This function must be called after [OH_LowPowerVideoSink_Prepare](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_prepare) or if no video is playing, after [OH_LowPowerVideoSink_SetTargetStartFrame](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_settargetstartframe).
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -229,6 +259,10 @@ OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)
 **Description**
 
 Renders the first frame decoded by an OH_LowPowerVideoSink instance. This function must be called after [OH_LowPowerVideoSink_StartDecoder](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startdecoder).
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -254,6 +288,10 @@ OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)
 
 Starts an OH_LowPowerVideoSink instance for rendering. This function must be called after [OH_LowPowerVideoSink_StartDecoder](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startdecoder).
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -277,6 +315,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)
 **Description**
 
 Pauses an OH_LowPowerVideoSink instance. This function must be called after [OH_LowPowerVideoSink_StartRenderer](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_startrenderer) or [OH_LowPowerVideoSink_Resume](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_resume).
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -302,6 +344,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)
 
 Resumes an OH_LowPowerVideoSink instance. This function must be called after[OH_LowPowerVideoSink_Pause](capi-lowpower-video-sink-h.md#oh_lowpowervideosink_pause).
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -325,6 +371,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)
 **Description**
 
 Clears all input and output data from the decoders and render buffers of an OH_LowPowerVideoSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -350,6 +400,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)
 
 Stops an OH_LowPowerVideoSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -373,6 +427,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)
 **Description**
 
 Resets an OH_LowPowerVideoSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -398,6 +456,10 @@ OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)
 
 Clears internal resources of an OH_LowPowerVideoSink instance and destroys the instance. You only need to call the function once.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -421,6 +483,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSi
 **Description**
 
 Sets an OH_LowPowerAudioSink instance for audio-video synchronization in an OH_LowPowerVideoSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSink, OH_LowPowerAudioSink* audioSink)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetSyncAudioSink(OH_LowPowerVideoSink* videoSink, OH_LowPowerAudioSink* audioSink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -446,6 +512,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink
 **Description**
 
 Sets the target rendering frame for an OH_LowPowerVideoSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink, const int64_t framePts, OH_LowPowerVideoSink_OnTargetArrived onTargetArrived, const int64_t timeoutMs, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink, const int64_t framePts, OH_LowPowerVideoSink_OnTargetArrived onTargetArrived, const int64_t timeoutMs, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -475,6 +545,10 @@ OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, c
 
 Sets the playback speed for an OH_LowPowerVideoSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, const float speed)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, const float speed)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -499,6 +573,10 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 **Description**
 
 Provides a buffer to an OH_LowPowerVideoSink instance for procesing.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_AVSamplesBuffer* samples)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_AVSamplesBuffer* samples)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -525,6 +603,10 @@ OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, O
 
 Registers a callback for an OH_LowPowerVideoSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, OH_LowPowerVideoSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, OH_LowPowerVideoSinkCallback* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -550,6 +632,10 @@ OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)
 
 Creates an OH_LowPowerVideoSinkCallback instance.
 
+<!--Device-OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)--><!--Device-OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Returns**:
@@ -567,6 +653,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* 
 **Description**
 
 Destroys an OH_LowPowerVideoSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -591,6 +681,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideo
 **Description**
 
 Sets a data needed listener for an OH_LowPowerVideoSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnDataNeeded onDataNeeded, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnDataNeeded onDataNeeded, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -618,6 +712,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkC
 
 Sets an error listener for an OH_LowPowerVideoSinkCallback instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnError onError, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnError onError, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -643,6 +741,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVide
 **Description**
 
 Sets a render start listener for an OH_LowPowerVideoSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnRenderStarted onRenderStarted, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnRenderStarted onRenderStarted, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -670,6 +772,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVi
 
 Sets a stream change listener for an OH_LowPowerVideoSinkCallback instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnStreamChanged onStreamChanged, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnStreamChanged onStreamChanged, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -695,6 +801,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPow
 **Description**
 
 Sets a first-frame ready listener for an OH_LowPowerVideoSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnFirstFrameDecoded onFirstFrameDecoded, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnFirstFrameDecoded onFirstFrameDecoded, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -722,6 +832,10 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCal
 
 Sets an end-of-stream listener for an OH_LowPowerVideoSinkCallback instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnEos onEos, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCallback* callback, OH_LowPowerVideoSink_OnEos onEos, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -747,6 +861,10 @@ OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64
 **Description**
 
 Obtains the Presentation Timestamp (PTS) of the video that is playing.
+
+<!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64_t *pts)--><!--Device-OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64_t *pts)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 21
 

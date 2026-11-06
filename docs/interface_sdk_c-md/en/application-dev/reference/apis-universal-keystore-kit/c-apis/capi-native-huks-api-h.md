@@ -4,21 +4,17 @@
 
 Declares the APIs used to access HUKS.
 
-**Include**: <huks/native_huks_api.h>
+**File to Include**: <huks/native_huks_api.h>
 
 **Library**: libhuks_ndk.z.so
 
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
-**Related module**: [HuksKeyApi](capi-hukskeyapi.md)
+**Related module**: [HuksKeyApi](capi-universal-keystore-kit-hukskeyapi.md)
 
 ## Summary
-
-### Macro
-
-| Name | Description |
-| -- | -- |
-| NATIVE_HUKS_API_H | Declares the APIs used to access HUKS.<br>**Since**: 9<br>**System capability**: SystemCapability.Security.Huks.Core |
 
 ### Function
 
@@ -54,6 +50,10 @@ struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)
 
 Obtains the current HUKS SDK version number.
 
+<!--Device-struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)--><!--Device-struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -77,6 +77,10 @@ struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlia
 **Description**
 
 Generates a key.
+
+<!--Device-struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)--><!--Device-struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -104,6 +108,10 @@ struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Imports a key in plaintext.
 
+<!--Device-struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)--><!--Device-struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -129,6 +137,10 @@ struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *ke
 **Description**
 
 Imports a key in ciphertext.
+
+<!--Device-struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)--><!--Device-struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -157,6 +169,10 @@ struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *key
 
 Exports the public key.
 
+<!--Device-struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)--><!--Device-struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -183,6 +199,10 @@ struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Deletes a key.
 
+<!--Device-struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -207,6 +227,10 @@ struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyA
 **Description**
 
 Obtains the properties of a key.
+
+<!--Device-struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)--><!--Device-struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -234,6 +258,10 @@ struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias
 
 Checks whether a key exists.
 
+<!--Device-struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -258,6 +286,10 @@ struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias,
 **Description**
 
 Obtains the certificate chain of a key. This API is open only to system applications.
+
+<!--Device-struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)--><!--Device-struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Required permission**: ohos.permission.ATTEST_KEY
 
@@ -287,6 +319,10 @@ struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAl
 
 Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread
 
+<!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)--><!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -312,6 +348,10 @@ struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, c
 **Description**
 
 Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) .
+
+<!--Device-struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)--><!--Device-struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -347,6 +387,10 @@ struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, c
 
 Adds data by segment for the key operation, performs the related key operation, and outputs the processed data.
 
+<!--Device-struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)--><!--Device-struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -380,6 +424,10 @@ struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, c
 **Description**
 
 Finishes a key session.
+
+<!--Device-struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)--><!--Device-struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -415,6 +463,10 @@ struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, co
 
 Aborts a key session.
 
+<!--Device-struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 9
 
 **Parameters**:
@@ -447,6 +499,10 @@ struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSe
 
 Obtains the key alias set.
 
+<!--Device-struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)--><!--Device-struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -471,6 +527,10 @@ struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const
 **Description**
 
 Exports a wrapped key.
+
+<!--Device-struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)--><!--Device-struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 
@@ -497,6 +557,10 @@ struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, con
 **Description**
 
 Imports a wrapped key.
+
+<!--Device-struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)--><!--Device-struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)-End-->
+
+**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 

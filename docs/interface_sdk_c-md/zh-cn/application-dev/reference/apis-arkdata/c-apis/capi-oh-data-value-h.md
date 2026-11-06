@@ -8,9 +8,11 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 ## 汇总
 
@@ -67,6 +69,10 @@ enum OH_ColumnType
 
 表示列的类型。
 
+<!--Device-OH_ColumnType--><!--Device-OH_ColumnType-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 10
 
 | 枚举项 | 描述 |
@@ -94,6 +100,10 @@ OH_Data_Value *OH_Value_Create(void)
 
 创建[OH_Data_Value](capi-rdb-oh-data-value.md)实例，用于存储单条键值对数据。
 
+<!--Device-OH_Data_Value *OH_Value_Create(void)--><!--Device-OH_Data_Value *OH_Value_Create(void)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **返回值：**
@@ -116,6 +126,10 @@ int OH_Value_Destroy(OH_Data_Value *value)
 **描述：**
 
 销毁[OH_Data_Value](capi-rdb-oh-data-value.md)对象。
+
+<!--Device-int OH_Value_Destroy(OH_Data_Value *value)--><!--Device-int OH_Value_Destroy(OH_Data_Value *value)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -141,6 +155,10 @@ int OH_Value_PutNull(OH_Data_Value *value)
 
 添加空数据。
 
+<!--Device-int OH_Value_PutNull(OH_Data_Value *value)--><!--Device-int OH_Value_PutNull(OH_Data_Value *value)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -164,6 +182,10 @@ int OH_Value_PutInt(OH_Data_Value *value, int64_t val)
 **描述：**
 
 添加整型数据。
+
+<!--Device-int OH_Value_PutInt(OH_Data_Value *value, int64_t val)--><!--Device-int OH_Value_PutInt(OH_Data_Value *value, int64_t val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -190,6 +212,10 @@ int OH_Value_PutReal(OH_Data_Value *value, double val)
 
 添加REAL类型数据。
 
+<!--Device-int OH_Value_PutReal(OH_Data_Value *value, double val)--><!--Device-int OH_Value_PutReal(OH_Data_Value *value, double val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -215,6 +241,10 @@ int OH_Value_PutText(OH_Data_Value *value, const char *val)
 
 添加字符串类型数据。
 
+<!--Device-int OH_Value_PutText(OH_Data_Value *value, const char *val)--><!--Device-int OH_Value_PutText(OH_Data_Value *value, const char *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -239,6 +269,10 @@ int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t leng
 **描述：**
 
 添加BLOB类型数据。
+
+<!--Device-int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t length)--><!--Device-int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -266,6 +300,10 @@ int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)
 
 添加ASSET类型数据。
 
+<!--Device-int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)--><!--Device-int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -290,6 +328,10 @@ int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, siz
 **描述：**
 
 添加ASSETS类型数据。
+
+<!--Device-int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, size_t length)--><!--Device-int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, size_t length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -317,6 +359,10 @@ int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t lengt
 
 添加float数组类型数据。
 
+<!--Device-int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t length)--><!--Device-int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -342,6 +388,10 @@ int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *tru
 **描述：**
 
 添加任意长度的整型数组数据。
+
+<!--Device-int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *trueForm, size_t length)--><!--Device-int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *trueForm, size_t length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -370,6 +420,10 @@ int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)
 
 获取数据类型。
 
+<!--Device-int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)--><!--Device-int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -394,6 +448,10 @@ int OH_Value_IsNull(OH_Data_Value *value, bool *val)
 **描述：**
 
 检查数据是否为空。
+
+<!--Device-int OH_Value_IsNull(OH_Data_Value *value, bool *val)--><!--Device-int OH_Value_IsNull(OH_Data_Value *value, bool *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -420,6 +478,10 @@ int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)
 
 获取整型数据。
 
+<!--Device-int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)--><!--Device-int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -444,6 +506,10 @@ int OH_Value_GetReal(OH_Data_Value *value, double *val)
 **描述：**
 
 获取REAL类型数据。
+
+<!--Device-int OH_Value_GetReal(OH_Data_Value *value, double *val)--><!--Device-int OH_Value_GetReal(OH_Data_Value *value, double *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -470,6 +536,10 @@ int OH_Value_GetText(OH_Data_Value *value, const char **val)
 
 获取字符串类型数据。
 
+<!--Device-int OH_Value_GetText(OH_Data_Value *value, const char **val)--><!--Device-int OH_Value_GetText(OH_Data_Value *value, const char **val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -494,6 +564,10 @@ int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)
 **描述：**
 
 获取BLOB类型数据。
+
+<!--Device-int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)--><!--Device-int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -521,6 +595,10 @@ int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)
 
 获取ASSET类型数据。
 
+<!--Device-int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)--><!--Device-int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -546,6 +624,10 @@ int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)
 
 获取ASSETS类型数据的大小。
 
+<!--Device-int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -570,6 +652,10 @@ int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, siz
 **描述：**
 
 获取ASSETS类型数据。
+
+<!--Device-int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, size_t *outLen)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -603,6 +689,10 @@ int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)
 
 获取float数组类型数据的大小。
 
+<!--Device-int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -627,6 +717,10 @@ int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size
 **描述：**
 
 获取float数组类型数据。
+
+<!--Device-int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size_t *outLen)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -660,6 +754,10 @@ int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)
 
 获取任意长度的整型数据的大小。
 
+<!--Device-int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -684,6 +782,10 @@ int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm
 **描述：**
 
 获取任意长度的整型数据。
+
+<!--Device-int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 

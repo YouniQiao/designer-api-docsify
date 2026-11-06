@@ -8,7 +8,9 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**相关模块：** [CryptoArchitectureKit](capi-cryptoarchitecturekit.md)
+**相关模块：** [CryptoArchitectureKit](capi-crypto-architecture-kit-cryptoarchitecturekit.md)
 

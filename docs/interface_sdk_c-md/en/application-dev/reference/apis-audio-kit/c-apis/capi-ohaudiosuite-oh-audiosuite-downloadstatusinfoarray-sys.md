@@ -8,13 +8,15 @@ struct OH_AudioSuite_DownloadStatusInfoArray {...}
 
 Define download status information array structure.
 
+<!--Device-struct OH_AudioSuite_DownloadStatusInfoArray {...}--><!--Device-struct OH_AudioSuite_DownloadStatusInfoArray {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
-**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
 **Header file**: [native_audio_suite_download_manager.h(System API)](capi-native-audio-suite-download-manager-h-sys.md)
 

@@ -4,13 +4,15 @@
 
 Defines the structs, enums, and macros for external key management extensions.
 
-**Include**: <huks/native_huks_external_crypto_type.h>
+**File to Include**: <huks/native_huks_external_crypto_type.h>
 
 **Library**: libhuks_external_crypto.z.so
 
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
-**Related module**: [HuksExternalCryptoTypeApi](capi-huksexternalcryptotypeapi.md)
+**Related module**: [HuksExternalCryptoTypeApi](capi-universal-keystore-kit-huksexternalcryptotypeapi.md)
 
 ## Summary
 
@@ -47,6 +49,10 @@ enum OH_Huks_ExternalCryptoTag
 
 Enumerates the tag values used in a parameter set.
 
+<!--Device-OH_Huks_ExternalCryptoTag--><!--Device-OH_Huks_ExternalCryptoTag-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 | Enum item | Description |
@@ -67,6 +73,10 @@ enum OH_Huks_ExternalPinAuthState
 **Description**
 
 Enumerates the UKey PIN authentication states.
+
+<!--Device-OH_Huks_ExternalPinAuthState--><!--Device-OH_Huks_ExternalPinAuthState-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Since**: 22
 

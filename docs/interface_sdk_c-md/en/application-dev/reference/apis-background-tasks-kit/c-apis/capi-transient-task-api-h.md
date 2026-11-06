@@ -6,9 +6,11 @@ Declares the APIs for Transient task management.
 
 **Library**: libtransient_task.so
 
+**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **Since**: 13
 
-**Related module**: [TransientTask](capi-transienttask.md)
+**Related module**: [TransientTask](capi-background-tasks-kit-transienttask.md)
 
 ## Summary
 
@@ -32,6 +34,10 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 **Description**
 
 Requests a transient task.
+
+<!--Device-int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, TransientTask_Callback callback, TransientTask_DelaySuspendInfo *info)--><!--Device-int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, TransientTask_Callback callback, TransientTask_DelaySuspendInfo *info)-End-->
+
+**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Since**: 13
 
@@ -59,6 +65,10 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 Obtains the remaining time of a transient task.
 
+<!--Device-int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_t *delayTime)--><!--Device-int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_t *delayTime)-End-->
+
+**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **Since**: 13
 
 **Parameters**:
@@ -84,6 +94,10 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 Cancels a transient task.
 
+<!--Device-int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)--><!--Device-int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)-End-->
+
+**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **Since**: 13
 
 **Parameters**:
@@ -107,6 +121,10 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 **Description**
 
 Obtains all information about a transient task, including the remaining quota of the current day.
+
+<!--Device-int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTaskInfo *transientTaskInfo)--><!--Device-int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTaskInfo *transientTaskInfo)-End-->
+
+**System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Since**: 20
 

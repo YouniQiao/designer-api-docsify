@@ -1,18 +1,20 @@
 # __TEE_OperationHandle
 
 ```c
-struct __TEE_OperationHandle {...}
+typedef struct __TEE_OperationHandle {...} TEE_OperationHandleVar
 ```
 
 ## Overview
 
 Defines the cryptographic operation handle.
 
+<!--Device-typedef struct __TEE_OperationHandle {...} TEE_OperationHandleVar--><!--Device-typedef struct __TEE_OperationHandle {...} TEE_OperationHandleVar-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 **Header file**: [tee_crypto_api.h](capi-tee-crypto-api-h.md)
 
@@ -49,5 +51,6 @@ Defines the cryptographic operation handle.
  uint32_t dh_prime_size | TEE_DH_OpMode_t |
 | pthread_mutex_t operation_lock | Operation lock |
 | void *hal_info | HAL information |
+| void *dh_prime |  |
 
 

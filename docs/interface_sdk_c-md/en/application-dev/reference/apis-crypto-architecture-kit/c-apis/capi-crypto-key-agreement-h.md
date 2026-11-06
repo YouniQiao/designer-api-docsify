@@ -4,13 +4,15 @@
 
 Defines the key agreement interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_key_agreement.h>
+**File to Include**: <CryptoArchitectureKit/crypto_key_agreement.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Related module**: [CryptoKeyAgreementApi](capi-cryptokeyagreementapi.md)
+**Related module**: [CryptoKeyAgreementApi](capi-crypto-architecture-kit-cryptokeyagreementapi.md)
 
 ## Summary
 
@@ -40,9 +42,13 @@ OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKe
 
 Creates a key agreement context based on the given algorithm name.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKeyAgreement **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKeyAgreement **ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_key_agreement/OH_CryptoKeyAgreement_Destroy {ctx}
+**Resource release**: [OH_CryptoKeyAgreement_Destroy](#oh_cryptokeyagreement_destroy)
 
 **Parameters**:
 
@@ -72,9 +78,13 @@ OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ct
 
 Generates a shared secret.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ctx, OH_CryptoPrivKey *privkey, OH_CryptoPubKey *pubkey, Crypto_DataBlob *secret)--><!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ctx, OH_CryptoPrivKey *privkey, OH_CryptoPubKey *pubkey, Crypto_DataBlob *secret)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {secret}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -100,6 +110,10 @@ void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)
 **Description**
 
 Destroys the key agreement context.
+
+<!--Device-void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)--><!--Device-void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

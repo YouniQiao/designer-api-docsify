@@ -8,11 +8,13 @@ typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config
 
 <b>OH_NativeBuffer</b> config. Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones.
 
+<!--Device-typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config--><!--Device-typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config-End-->
+
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 9
 
-**Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
+**Related module**: [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
 
 **Header file**: [native_buffer.h](capi-native-buffer-h.md)
 
@@ -26,6 +28,6 @@ typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config
 | int32_t height | Height in pixels |
 | int32_t format | One of PixelFormat |
 | int32_t usage | Combination of buffer usage |
-| int32_t stride |  |
+| int32_t stride | the stride of memory in bytes<br>**Since**: 10 |
 
 

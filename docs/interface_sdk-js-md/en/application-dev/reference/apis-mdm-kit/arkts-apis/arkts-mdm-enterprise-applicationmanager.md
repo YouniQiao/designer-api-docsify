@@ -41,6 +41,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [addOptimizationBatteryExclusionApps](arkts-mdm-applicationmanager-addoptimizationbatteryexclusionapps-f.md#addoptimizationbatteryexclusionapps-1) | Adds applications to the battery optimization exclusion list. This API uses an asynchronous callback to return the result. |
 | [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps-1) | Adds applications to the non-stoppable application list for a specified user. This policy only applies to installed applications. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list. |
 | [clearUpApplicationData](arkts-mdm-applicationmanager-clearupapplicationdata-f.md#clearupapplicationdata-1) | Clears all application data. |
+| [getAllMainWindowStates](arkts-mdm-applicationmanager-getallmainwindowstates-f.md#getallmainwindowstates-1) | Obtains the states of all main windows. |
 | [getAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-getalloweddistributeabilityconnbundles-f.md#getalloweddistributeabilityconnbundles-1) | Obtains the cross-device application trustlist for a specific distributed service under a specified user. |
 | [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md#getallowedkioskapps-1) | Obtains the applications allowed to run in kiosk mode. |
 | [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md#getallowedkioskapps-2) | Obtains the applications allowed to run in kiosk mode. |
@@ -113,6 +114,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [BundleStatsInfo](arkts-mdm-applicationmanager-bundlestatsinfo-i.md) | Application bundle statistics. |
 | [DockInfo](arkts-mdm-applicationmanager-dockinfo-i.md) | Describes information about an application in the shortcut bar. |
 | [FormInfo](arkts-mdm-applicationmanager-forminfo-i.md) | Information about a form. |
+| [MainWindowStates](arkts-mdm-applicationmanager-mainwindowstates-i.md) | Main window states information. |
 | [WindowStateInfo](arkts-mdm-applicationmanager-windowstateinfo-i.md) | Defines the application window state information. |
 
 ### Enums

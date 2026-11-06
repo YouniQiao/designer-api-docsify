@@ -6,9 +6,11 @@ Provides TEE log APIs.<br> Reference of TEE log APIs and internal definitions.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -78,6 +80,10 @@ enum LOG_LEVEL
 
 Enumerates the levels of the log.
 
+<!--Device-LOG_LEVEL--><!--Device-LOG_LEVEL-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -102,6 +108,10 @@ void uart_cprintf(const char *fmt, ...)
 
 Provides to print UART logs.
 
+<!--Device-void uart_cprintf(const char *fmt, ...)--><!--Device-void uart_cprintf(const char *fmt, ...)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -119,6 +129,10 @@ void uart_printf_func(const char *fmt, ...)
 **Description**
 
 Provides to print UART logs.
+
+<!--Device-void uart_printf_func(const char *fmt, ...)--><!--Device-void uart_printf_func(const char *fmt, ...)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -138,6 +152,10 @@ void tee_print(LOG_LEVEL log_level, const char *fmt, ...)
 
 Provides to print TEE logs.
 
+<!--Device-void tee_print(LOG_LEVEL log_level, const char *fmt, ...)--><!--Device-void tee_print(LOG_LEVEL log_level, const char *fmt, ...)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -156,6 +174,10 @@ void tee_print_driver(LOG_LEVEL log_level, const char *log_tag, const char *fmt,
 **Description**
 
 Provides to print TEE driver logs.
+
+<!--Device-void tee_print_driver(LOG_LEVEL log_level, const char *log_tag, const char *fmt, ...)--><!--Device-void tee_print_driver(LOG_LEVEL log_level, const char *log_tag, const char *fmt, ...)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

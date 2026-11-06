@@ -8,9 +8,11 @@
 
 **库：** libtransient_task.so
 
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **起始版本：** 13
 
-**相关模块：** [TransientTask](capi-transienttask.md)
+**相关模块：** [TransientTask](capi-background-tasks-kit-transienttask.md)
 
 ## 汇总
 
@@ -34,6 +36,10 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 **描述：**
 
 申请短时任务。用于在应用进入后台或被挂起时，继续执行一些需要短时间的后台操作，如数据同步、状态保存等场景。
+
+<!--Device-int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, TransientTask_Callback callback, TransientTask_DelaySuspendInfo *info)--><!--Device-int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, TransientTask_Callback callback, TransientTask_DelaySuspendInfo *info)-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **起始版本：** 13
 
@@ -61,6 +67,10 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 获取本次短时任务的剩余时间。
 
+<!--Device-int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_t *delayTime)--><!--Device-int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_t *delayTime)-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **起始版本：** 13
 
 **参数：**
@@ -86,6 +96,10 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 取消短时任务。
 
+<!--Device-int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)--><!--Device-int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
 **起始版本：** 13
 
 **参数：**
@@ -109,6 +123,10 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 **描述：**
 
 获取所有短时任务信息，如当日剩余总配额等。
+
+<!--Device-int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTaskInfo *transientTaskInfo)--><!--Device-int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTaskInfo *transientTaskInfo)-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **起始版本：** 20
 

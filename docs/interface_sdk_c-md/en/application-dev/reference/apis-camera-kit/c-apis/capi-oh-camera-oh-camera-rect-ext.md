@@ -8,11 +8,13 @@ struct OH_Camera_Rect_Ext {...}
 
 Describes the camera rect ext.
 
+<!--Device-struct OH_Camera_Rect_Ext {...}--><!--Device-struct OH_Camera_Rect_Ext {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,9 +24,9 @@ Describes the camera rect ext.
 
 | Name | Description |
 | -- | -- |
-| double topLeftX |  |
-| double topLeftY |  |
-| double width |  |
-| double height |  |
+| double topLeftX | X coordinate of the top-left corner of the rectangle, in the range of [0, 1].<br>**Since**: 26.0.0 |
+| double topLeftY | Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].<br>**Since**: 26.0.0 |
+| double width | Width of the rectangle, in the range of [0, 1].<br>**Since**: 26.0.0 |
+| double height | Height of the rectangle, in the range of [0, 1].<br>**Since**: 26.0.0 |
 
 

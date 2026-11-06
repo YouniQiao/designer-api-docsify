@@ -8,7 +8,7 @@ The file declares the struct and enums used by the AVTranscoder.
 
 **Since**: 20
 
-**Related module**: [AVTranscoder](capi-avtranscoder.md)
+**Related module**: [AVTranscoder](capi-media-kit-avtranscoder.md)
 
 ## Summary
 
@@ -39,14 +39,6 @@ The file declares the struct and enums used by the AVTranscoder.
 | [typedef void (\*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData)](#oh_avtranscoder_onerror) | OH_AVTranscoder_OnError | Defines a callback invoked when an error occurs during the transcoding process. |
 | [typedef void (\*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData)](#oh_avtranscoder_onprogressupdate) | OH_AVTranscoder_OnProgressUpdate | Defines a callback invoked when the progress of the transcoding process is updated. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AVTranscoder_State state, void *userData) | Defines a callback invoked when the state of the transcoding process changes.<br>**Since**: 20 |
-| void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData) | Defines a callback invoked when an error occurs during the transcoding process.<br>**Since**: 20 |
-| void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData) | Defines a callback invoked when the progress of the transcoding process is updated.<br>**Since**: 20 |
-
 ## Enum type description
 
 ### OH_AVTranscoder_State
@@ -58,6 +50,8 @@ enum OH_AVTranscoder_State
 **Description**
 
 Enumerates the transcoding states.
+
+<!--Device-OH_AVTranscoder_State--><!--Device-OH_AVTranscoder_State-End-->
 
 **Since**: 20
 
@@ -82,6 +76,8 @@ typedef void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AV
 
 Defines a callback invoked when the state of the transcoding process changes.
 
+<!--Device-typedef void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AVTranscoder_State state, void *userData)--><!--Device-typedef void (*OH_AVTranscoder_OnStateChange)(OH_AVTranscoder *transcoder, OH_AVTranscoder_State state, void *userData)-End-->
+
 **Since**: 20
 
 **Parameters**:
@@ -101,6 +97,8 @@ typedef void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t err
 **Description**
 
 Defines a callback invoked when an error occurs during the transcoding process.
+
+<!--Device-typedef void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData)--><!--Device-typedef void (*OH_AVTranscoder_OnError)(OH_AVTranscoder *transcoder, int32_t errorCode, const char *errorMsg, void *userData)-End-->
 
 **Since**: 20
 
@@ -122,6 +120,8 @@ typedef void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, in
 **Description**
 
 Defines a callback invoked when the progress of the transcoding process is updated.
+
+<!--Device-typedef void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData)--><!--Device-typedef void (*OH_AVTranscoder_OnProgressUpdate)(OH_AVTranscoder *transcoder, int32_t progress, void *userData)-End-->
 
 **Since**: 20
 

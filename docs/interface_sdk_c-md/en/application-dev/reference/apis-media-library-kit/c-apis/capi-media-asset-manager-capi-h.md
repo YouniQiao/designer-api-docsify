@@ -6,9 +6,11 @@ The file declares the APIs of the media asset manager. You can use the functions
 
 **Library**: libmedia_asset_manager.so
 
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
-**Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
+**Related module**: [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
 
 ## Summary
 
@@ -37,6 +39,10 @@ OH_MediaAssetManager* OH_MediaAssetManager_Create(void)
 
 Creates an **OH_MediaAssetManager** instance.
 
+<!--Device-OH_MediaAssetManager* OH_MediaAssetManager_Create(void)--><!--Device-OH_MediaAssetManager* OH_MediaAssetManager_Create(void)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 **Returns**:
@@ -54,6 +60,10 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetMan
 **Description**
 
 Requests an image in the specified directory.
+
+<!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)--><!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
@@ -85,6 +95,10 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetMan
 
 Requests a video in the specified directory.
 
+<!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)--><!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -115,6 +129,10 @@ bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const Med
 
 Cancels a request based on the request ID.
 
+<!--Device-bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const MediaLibrary_RequestId requestId)--><!--Device-bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const MediaLibrary_RequestId requestId)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -141,6 +159,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetMana
 **Description**
 
 Requests a moving photo based on different policies.
+
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnMovingPhotoDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnMovingPhotoDataPrepared callback)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
@@ -172,6 +194,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* m
 
 Requests an image based on different policies.
 
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnImageDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnImageDataPrepared callback)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -202,6 +228,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manage
 
 Releases an [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md) instance.
 
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manager)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manager)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -225,6 +255,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManag
 **Description**
 
 Requests an image based on different policies.
+
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnQuickImageDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnQuickImageDataPrepared callback)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 

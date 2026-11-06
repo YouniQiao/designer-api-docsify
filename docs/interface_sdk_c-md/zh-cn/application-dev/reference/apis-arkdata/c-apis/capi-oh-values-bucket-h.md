@@ -8,9 +8,11 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 10
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 ## 汇总
 
@@ -40,6 +42,10 @@ int OH_VBucket_PutAsset(OH_VBucket *bucket, const char *field, Data_Asset *value
 **描述：**
 
 将[Data_Asset](capi-rdb-data-asset.md) 类型的对象放入给定列名的[OH_VBucket](capi-rdb-oh-vbucket.md)对象中。
+
+<!--Device-int OH_VBucket_PutAsset(OH_VBucket *bucket, const char *field, Data_Asset *value)--><!--Device-int OH_VBucket_PutAsset(OH_VBucket *bucket, const char *field, Data_Asset *value)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
@@ -71,6 +77,10 @@ int OH_VBucket_PutAssets(OH_VBucket *bucket, const char *field, Data_Asset **val
 **描述：**
 
 将[Data_Asset](capi-rdb-data-asset.md) 类型的对象数组放入给定列名的[OH_VBucket](capi-rdb-oh-vbucket.md)对象中。
+
+<!--Device-int OH_VBucket_PutAssets(OH_VBucket *bucket, const char *field, Data_Asset **value, uint32_t count)--><!--Device-int OH_VBucket_PutAssets(OH_VBucket *bucket, const char *field, Data_Asset **value, uint32_t count)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
@@ -104,6 +114,10 @@ int OH_VBucket_PutFloatVector(OH_VBucket *bucket, const char *field, const float
 
 将float数组类型对象放入给定列名的[OH_VBucket](capi-rdb-oh-vbucket.md)对象中。
 
+<!--Device-int OH_VBucket_PutFloatVector(OH_VBucket *bucket, const char *field, const float *vec, size_t len)--><!--Device-int OH_VBucket_PutFloatVector(OH_VBucket *bucket, const char *field, const float *vec, size_t len)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -135,6 +149,10 @@ int OH_VBucket_PutUnlimitedInt(OH_VBucket *bucket, const char *field, int sign, 
 **描述：**
 
 将任意长度的整数类型对象放入给定列名的[OH_VBucket](capi-rdb-oh-vbucket.md)对象中。
+
+<!--Device-int OH_VBucket_PutUnlimitedInt(OH_VBucket *bucket, const char *field, int sign, const uint64_t *trueForm, size_t len)--><!--Device-int OH_VBucket_PutUnlimitedInt(OH_VBucket *bucket, const char *field, int sign, const uint64_t *trueForm, size_t len)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 

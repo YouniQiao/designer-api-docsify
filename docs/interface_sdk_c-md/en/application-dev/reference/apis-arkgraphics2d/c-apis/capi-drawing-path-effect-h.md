@@ -6,9 +6,11 @@ This file declares the functions related to the path effect in the drawing modul
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -42,6 +44,10 @@ enum OH_Drawing_PathDashStyle
 
 Enumerates the drawing styles for path effects.
 
+<!--Device-OH_Drawing_PathDashStyle--><!--Device-OH_Drawing_PathDashStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 | Enum item | Description |
@@ -62,6 +68,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreateComposePathEffect(OH_Drawing_PathEffect*
 **Description**
 
 Creates a path effect by sequentially applying the inner effect and then the outer effect.
+
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateComposePathEffect(OH_Drawing_PathEffect* outer, OH_Drawing_PathEffect* inner)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateComposePathEffect(OH_Drawing_PathEffect* outer, OH_Drawing_PathEffect* inner)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -88,6 +98,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)
 
 Creates a path effect that transforms the sharp angle between line segments into a rounded corner with the specified radius.
 
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -111,6 +125,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int cou
 **Description**
 
 Creates a dashed path effect. The dashed line effect is determined by a group of "on" and "off" intervals. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **intervals** is NULL or **count** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int count, float phase)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int count, float phase)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -138,6 +156,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreateDiscretePathEffect(float segLength, floa
 
 Creates a path effect that segments the path and scatters the segments in an irregular pattern along the path.
 
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateDiscretePathEffect(float segLength, float deviation)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateDiscretePathEffect(float segLength, float deviation)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -162,6 +184,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreatePathDashEffect(const OH_Drawing_Path* pa
 **Description**
 
 Creates a dashed path effect.
+
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreatePathDashEffect(const OH_Drawing_Path* path, float advance, float phase, OH_Drawing_PathDashStyle type)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreatePathDashEffect(const OH_Drawing_Path* path, float advance, float phase, OH_Drawing_PathDashStyle type)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -190,6 +216,10 @@ OH_Drawing_PathEffect* OH_Drawing_CreateSumPathEffect(OH_Drawing_PathEffect* fir
 
 Creates an overlay path effect based on two distinct path effects that take effect separately.
 
+<!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateSumPathEffect(OH_Drawing_PathEffect* firstPathEffect, OH_Drawing_PathEffect* secondPathEffect)--><!--Device-OH_Drawing_PathEffect* OH_Drawing_CreateSumPathEffect(OH_Drawing_PathEffect* firstPathEffect, OH_Drawing_PathEffect* secondPathEffect)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -214,6 +244,10 @@ void OH_Drawing_PathEffectDestroy(OH_Drawing_PathEffect* pathEffect)
 **Description**
 
 Destroys an **OH_Drawing_PathEffect** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_PathEffectDestroy(OH_Drawing_PathEffect* pathEffect)--><!--Device-void OH_Drawing_PathEffectDestroy(OH_Drawing_PathEffect* pathEffect)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

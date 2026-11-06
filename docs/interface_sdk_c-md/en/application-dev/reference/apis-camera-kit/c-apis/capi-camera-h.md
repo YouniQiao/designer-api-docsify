@@ -6,9 +6,11 @@ Defines the basic APIs of the camera.
 
 **Library**: libohcamera.so
 
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## Summary
 
@@ -78,6 +80,7 @@ Defines the basic APIs of the camera.
 | [Camera_HostDeviceType](#camera_hostdevicetype) | Camera_HostDeviceType | Enum for remote camera device type. |
 | [Camera_FoldStatus](#camera_foldstatus) | Camera_FoldStatus | Enumerates the fold statuses. |
 | [Camera_QualityPrioritization](#camera_qualityprioritization) | Camera_QualityPrioritization | Enum for quality prioritization. |
+| [OH_Camera_AuxiliaryPhotoType](#oh_camera_auxiliaryphototype) | OH_Camera_AuxiliaryPhotoType | Enumerates the camera auxiliary photo types for skin analysis. Use these types to specify the detection target when capturing auxiliary photos for skin health assessment. |
 | [Camera_ConcurrentType](#camera_concurrenttype) | Camera_ConcurrentType | Enum for camera concurrent type. |
 | [Camera_SystemPressureLevel](#camera_systempressurelevel) | Camera_SystemPressureLevel | Enumerates the system pressure levels. |
 | [Camera_PhotoQualityPrioritization](#camera_photoqualityprioritization) | Camera_PhotoQualityPrioritization | Enumerates the photo quality prioritization strategies. |
@@ -105,6 +108,10 @@ enum Camera_ErrorCode
 
 Enumerates the camera error codes.
 
+<!--Device-Camera_ErrorCode--><!--Device-Camera_ErrorCode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
@@ -119,10 +126,12 @@ Enumerates the camera error codes.
 | CAMERA_CONFLICT_CAMERA = 7400107 | The device is already started. |
 | CAMERA_DEVICE_DISABLED = 7400108 | The camera is disabled for security reasons. |
 | CAMERA_DEVICE_PREEMPTED = 7400109 | The camera is preempted. |
-| CAMERA_UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110 |  |
-| CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST = 7400113 |  |
+| CAMERA_UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110 | The configuration conflicts with the current configuration.<br>**Since**: 12 |
+| CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST = 7400113 | The optional property does not exist.<br>**Since**: 26.0.0 |
 | CAMERA_SERVICE_FATAL_ERROR = 7400201 | The camera service is abnormal, for example, no camera permission, camera service restart, or abnormal cross- process invocation. |
-| CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED = 7400114 |  |
+| CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED = 7400114 | The capability is not supported.<br>**Since**: 26.0.0 |
+| CAMERA_ERROR_UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400115 | The multiple cameras combination isn't supported. This error is returned when attempting to use an unsupported combination of multiple cameras due to hardware limitations or driver constraints. Consider using a different camera combination or check the device's supported camera configurations.<br>**Since**: 26.0.1 |
+| CAMERA_ERROR_PARAM_OUT_OF_RANGE = 7400116 | The parameter is out of range. This error is returned when a parameter value exceeds the valid range, such as ISO, exposure time, or focus distance. Check the parameter constraints in the API documentation and ensure the value is within the supported range for the current camera configuration.<br>**Since**: 26.0.1 |
 
 ### Camera_Status
 
@@ -133,6 +142,10 @@ enum Camera_Status
 **Description**
 
 Enumerates the camera statuses.
+
+<!--Device-Camera_Status--><!--Device-Camera_Status-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -153,13 +166,17 @@ enum Camera_SceneMode
 
 Enumerates the camera scene modes.
 
+<!--Device-Camera_SceneMode--><!--Device-Camera_SceneMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
 | NORMAL_PHOTO = 1 | Normal photo mode. |
 | NORMAL_VIDEO = 2 | Normal video mode. |
-| SECURE_PHOTO = 12 | Secure mode, which is mainly provided for high-security applications like banking that require features such as biometric verification. The secure mode requires the encryption algorithm framework and trusted application services. For details, see [Device Certificate Kit](../../../security/DeviceCertificateKit/device-certificate-kit-intro.md). |
+| SECURE_PHOTO = 12 | Secure mode, which is mainly provided for high-security applications like banking that require features such as biometric verification. The secure mode requires the encryption algorithm framework and trusted application services. For details, see [Device Certificate Kit](../../../../security/DeviceCertificateKit/device-certificate-kit-intro.md). |
 
 ### Camera_Position
 
@@ -170,6 +187,10 @@ enum Camera_Position
 **Description**
 
 Enumerates the camera positions.
+
+<!--Device-Camera_Position--><!--Device-Camera_Position-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -189,25 +210,29 @@ enum OH_Camera_AutomotiveCameraPosition
 
 Enum for automotive camera position.
 
+<!--Device-OH_Camera_AutomotiveCameraPosition--><!--Device-OH_Camera_AutomotiveCameraPosition-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT = 1 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_RIGHT = 4 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_OTHER = 5 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_RIGHT = 8 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_RIGHT = 11 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13 |  |
-| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_RIGHT = 14 |  |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0 | Exterior other position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT = 1 | Exterior front position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2 | Exterior rear position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3 | Exterior left position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_RIGHT = 4 | Exterior right position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_OTHER = 5 | Interior other position.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6 | Interior left side position of the first row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7 | Interior center side position of the first row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_RIGHT = 8 | Interior right side position of the first row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9 | Interior left side position of the second row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10 | Interior center side position of the second row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_RIGHT = 11 | Interior right side position of the second row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12 | Interior left side position of the third row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13 | Interior center side position of the third row.<br>**Since**: 26.0.0 |
+| OH_CAMERA_AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_RIGHT = 14 | Interior right side position of the third row.<br>**Since**: 26.0.0 |
 
 ### Camera_Type
 
@@ -218,6 +243,10 @@ enum Camera_Type
 **Description**
 
 Enumerates the camera types.
+
+<!--Device-Camera_Type--><!--Device-Camera_Type-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -239,6 +268,10 @@ enum Camera_Connection
 
 Enumerates the camera connection types.
 
+<!--Device-Camera_Connection--><!--Device-Camera_Connection-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
@@ -257,14 +290,18 @@ enum OH_Camera_SensorColorFilterArrangement
 
 Sensor color filter arrangement.
 
+<!--Device-OH_Camera_SensorColorFilterArrangement--><!--Device-OH_Camera_SensorColorFilterArrangement-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_SENSOR_CFA_BGGR = 0 |  |
-| OH_CAMERA_SENSOR_CFA_GBRG = 1 |  |
-| OH_CAMERA_SENSOR_CFA_GRBG = 2 |  |
-| OH_CAMERA_SENSOR_CFA_RGGB = 3 |  |
+| OH_CAMERA_SENSOR_CFA_BGGR = 0 | Blue-Green-Green-Red (BGGR) filter arrangement.<br>**Since**: 24 |
+| OH_CAMERA_SENSOR_CFA_GBRG = 1 | Green-Blue-Red-Green (GBRG) filter arrangement.<br>**Since**: 24 |
+| OH_CAMERA_SENSOR_CFA_GRBG = 2 | Green-Red-Green-Blue (GRBG) filter arrangement.<br>**Since**: 24 |
+| OH_CAMERA_SENSOR_CFA_RGGB = 3 | Red-Green-Green-Blue (RGGB) filter arrangement.<br>**Since**: 24 |
 
 ### Camera_Format
 
@@ -276,18 +313,22 @@ enum Camera_Format
 
 Enumerates the camera output formats.
 
+<!--Device-Camera_Format--><!--Device-Camera_Format-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
 | CAMERA_FORMAT_RGBA_8888 = 3 | RGBA 8888. |
-| CAMERA_FORMAT_DNG = 4 |  |
-| CAMERA_FORMAT_DNG_XDRAW = 5 |  |
+| CAMERA_FORMAT_DNG = 4 | DNG Format.<br>**Since**: 24 |
+| CAMERA_FORMAT_DNG_XDRAW = 5 | Enhanced DNG image format.<br>**Since**: 26.0.0 |
 | CAMERA_FORMAT_YUV_420_SP = 1003 | YUV 420 SP. |
 | CAMERA_FORMAT_JPEG = 2000 | JPEG. |
-| CAMERA_FORMAT_YCBCR_P010 = 2001 |  |
-| CAMERA_FORMAT_YCRCB_P010 = 2002 |  |
-| CAMERA_FORMAT_HEIC = 2003 |  |
+| CAMERA_FORMAT_YCBCR_P010 = 2001 | YCBCR P010.<br>**Since**: 12 |
+| CAMERA_FORMAT_YCRCB_P010 = 2002 | YCRCB P010.<br>**Since**: 12 |
+| CAMERA_FORMAT_HEIC = 2003 | HEIC.<br>**Since**: 23 |
 
 ### Camera_FlashMode
 
@@ -298,6 +339,10 @@ enum Camera_FlashMode
 **Description**
 
 Enumerates the flash modes.
+
+<!--Device-Camera_FlashMode--><!--Device-Camera_FlashMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -318,13 +363,17 @@ enum OH_Camera_FlashState
 
 Enum for flash state.
 
+<!--Device-OH_Camera_FlashState--><!--Device-OH_Camera_FlashState-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_FLASH_STATE_UNAVAILABLE = 0 |  |
-| OH_CAMERA_FLASH_STATE_READY = 1 |  |
-| OH_CAMERA_FLASH_STATE_FLASHING = 2 |  |
+| OH_CAMERA_FLASH_STATE_UNAVAILABLE = 0 | Flash is unavailable, default value.<br>**Since**: 24 |
+| OH_CAMERA_FLASH_STATE_READY = 1 | This status indicates that the flash is available.<br>**Since**: 24 |
+| OH_CAMERA_FLASH_STATE_FLASHING = 2 | This status indicates that flashing can be performed.<br>**Since**: 24 |
 
 ### Camera_ExposureMode
 
@@ -336,15 +385,19 @@ enum Camera_ExposureMode
 
 Enumerates the exposure modes.
 
+<!--Device-Camera_ExposureMode--><!--Device-Camera_ExposureMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| EXPOSURE_MODE_UNSPECIFIED = -1 |  |
+| EXPOSURE_MODE_UNSPECIFIED = -1 | Unspecified exposure.<br>**Since**: 24 |
 | EXPOSURE_MODE_LOCKED = 0 | Exposure locked. The metering point cannot be set.<br>After this mode is used, the exposure will be locked by default for each photo capture. |
-| EXPOSURE_MODE_AUTO = 1 | Auto exposure. The metering point can be set by calling OH_CaptureSession_SetMeteringPoint. After this mode is used, it takes effect only for the first photo capture. |
+| EXPOSURE_MODE_AUTO = 1 | Auto exposure. The metering point can be set by calling [OH_CaptureSession_SetMeteringPoint](capi-capture-session-h.md#oh_capturesession_setmeteringpoint). After this mode is used, it takes effect only for the first photo capture. |
 | EXPOSURE_MODE_CONTINUOUS_AUTO = 2 | Continuous auto exposure.<br>After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time. |
-| EXPOSURE_MODE_MANUAL = 3 |  |
+| EXPOSURE_MODE_MANUAL = 3 | Manual exposure mode.<br>**Since**: 24 |
 
 ### OH_Camera_ExposureMeteringMode
 
@@ -356,13 +409,17 @@ enum OH_Camera_ExposureMeteringMode
 
 Enum for exposure metering mode.
 
+<!--Device-OH_Camera_ExposureMeteringMode--><!--Device-OH_Camera_ExposureMeteringMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_EXPOSURE_METERING_MODE_MATRIX = 0 |  |
-| OH_CAMERA_EXPOSURE_METERING_MODE_CENTER = 1 |  |
-| OH_CAMERA_EXPOSURE_METERING_MODE_SPOT = 2 |  |
+| OH_CAMERA_EXPOSURE_METERING_MODE_MATRIX = 0 | Matrix metering mode: Measures the light in the whole frame, ideal for shooting natural landscapes.<br>**Since**: 24 |
+| OH_CAMERA_EXPOSURE_METERING_MODE_CENTER = 1 | Center metering mode: Focuses in on light near the center of the screen, ideal for shooting portraits.<br>**Since**: 24 |
+| OH_CAMERA_EXPOSURE_METERING_MODE_SPOT = 2 | Spot metering mode: Focuses in on light from a specific tiny region, such as a subject's eyes.<br>**Since**: 24 |
 
 ### OH_Camera_ExposureState
 
@@ -374,12 +431,16 @@ enum OH_Camera_ExposureState
 
 Enumerates camera exposure states.
 
+<!--Device-OH_Camera_ExposureState--><!--Device-OH_Camera_ExposureState-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_EXPOSURE_STATE_SCAN = 0 |  |
-| OH_CAMERA_EXPOSURE_STATE_CONVERGED = 1 |  |
+| OH_CAMERA_EXPOSURE_STATE_SCAN = 0 | Indicates that the exposure is in scanning state.<br>**Since**: 26.0.0 |
+| OH_CAMERA_EXPOSURE_STATE_CONVERGED = 1 | Indicates that the exposure has converged.<br>**Since**: 26.0.0 |
 
 ### Camera_WhiteBalanceMode
 
@@ -390,6 +451,10 @@ enum Camera_WhiteBalanceMode
 **Description**
 
 Enumerates the white balance modes.
+
+<!--Device-Camera_WhiteBalanceMode--><!--Device-Camera_WhiteBalanceMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -413,6 +478,10 @@ enum Camera_FocusMode
 
 Enumerates the focus modes.
 
+<!--Device-Camera_FocusMode--><!--Device-Camera_FocusMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
@@ -432,6 +501,10 @@ enum Camera_FocusState
 
 Enumerates the focus states.
 
+<!--Device-Camera_FocusState--><!--Device-Camera_FocusState-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
@@ -449,6 +522,10 @@ enum Camera_VideoStabilizationMode
 **Description**
 
 Enumerates the video stabilization modes.
+
+<!--Device-Camera_VideoStabilizationMode--><!--Device-Camera_VideoStabilizationMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -470,18 +547,22 @@ enum Camera_ImageRotation
 
 Enumerates the image rotation angles.
 
+<!--Device-Camera_ImageRotation--><!--Device-Camera_ImageRotation-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
 | IAMGE_ROTATION_0 = 0 | The image rotates 0 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_0](capi-camera-h.md#camera_imagerotation) instead. |
-| CAMERA_IMAGE_ROTATION_0 = 0 |  |
+| CAMERA_IMAGE_ROTATION_0 = 0 | The image rotates 0 degrees.<br>**Since**: 23 |
 | IAMGE_ROTATION_90 = 90 | The image rotates 90 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_90](capi-camera-h.md#camera_imagerotation) instead. |
-| CAMERA_IMAGE_ROTATION_90 = 90 |  |
+| CAMERA_IMAGE_ROTATION_90 = 90 | The image rotates 90 degrees.<br>**Since**: 23 |
 | IAMGE_ROTATION_180 = 180 | The image rotates 180 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_180](capi-camera-h.md#camera_imagerotation) instead. |
-| CAMERA_IMAGE_ROTATION_180 = 180 |  |
+| CAMERA_IMAGE_ROTATION_180 = 180 | The image rotates 180 degrees.<br>**Since**: 23 |
 | IAMGE_ROTATION_270 = 270 | The image rotates 270 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_270](capi-camera-h.md#camera_imagerotation) instead. |
-| CAMERA_IMAGE_ROTATION_270 = 270 |  |
+| CAMERA_IMAGE_ROTATION_270 = 270 | The image rotates 270 degrees.<br>**Since**: 23 |
 
 ### Camera_QualityLevel
 
@@ -492,6 +573,10 @@ enum Camera_QualityLevel
 **Description**
 
 Enumerates the image quality levels.
+
+<!--Device-Camera_QualityLevel--><!--Device-Camera_QualityLevel-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -511,20 +596,24 @@ enum Camera_MetadataObjectType
 
 Enumerates the metadata object types.
 
+<!--Device-Camera_MetadataObjectType--><!--Device-Camera_MetadataObjectType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
 | FACE_DETECTION = 0 | Metadata object used for face detection.<br> Since API version 23, you are advised to use the new enum value [CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION](capi-camera-h.md#camera_metadataobjecttype) instead. |
-| CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION = 0 |  |
-| CAMERA_METADATA_OBJECT_TYPE_HUMAN_BODY = 1 |  |
-| CAMERA_METADATA_OBJECT_TYPE_CAT_FACE = 2 |  |
-| CAMERA_METADATA_OBJECT_TYPE_CAT_BODY = 3 |  |
-| CAMERA_METADATA_OBJECT_TYPE_DOG_FACE = 4 |  |
-| CAMERA_METADATA_OBJECT_TYPE_DOG_BODY = 5 |  |
-| CAMERA_METADATA_OBJECT_TYPE_SALIENT_DETECTION = 6 |  |
-| CAMERA_METADATA_OBJECT_TYPE_BAR_CODE_DETECTION = 7 |  |
-| CAMERA_METADATA_OBJECT_TYPE_BASIC_FACE_DETECTION = 8 |  |
+| CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION = 0 | Metadata object used for face detection.<br>**Since**: 23 |
+| CAMERA_METADATA_OBJECT_TYPE_HUMAN_BODY = 1 | Metadata object used for body detection.<br>**Since**: 23 |
+| CAMERA_METADATA_OBJECT_TYPE_CAT_FACE = 2 | Metadata object used for cat face detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_CAT_BODY = 3 | Metadata object used for cat body detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_DOG_FACE = 4 | Metadata object used for dog face detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_DOG_BODY = 5 | Metadata object used for dog body detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_SALIENT_DETECTION = 6 | Metadata object used for salient detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_BAR_CODE_DETECTION = 7 | Metadata object used for bar code detection.<br>**Since**: 26.0.0 |
+| CAMERA_METADATA_OBJECT_TYPE_BASIC_FACE_DETECTION = 8 | Metadata object used for basic face detection.<br>**Since**: 26.0.0 |
 
 ### Camera_TorchMode
 
@@ -536,16 +625,20 @@ enum Camera_TorchMode
 
 Enumerates the flashlight modes.
 
+<!--Device-Camera_TorchMode--><!--Device-Camera_TorchMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
 | OFF = 0 | The flashlight is always off.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_OFF](capi-camera-h.md#camera_torchmode) instead. |
-| CAMERA_TORCH_MODE_OFF = 0 |  |
+| CAMERA_TORCH_MODE_OFF = 0 | The flashlight is always off.<br>**Since**: 23 |
 | ON = 1 | The flashlight is always on.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_ON](capi-camera-h.md#camera_torchmode) instead. |
-| CAMERA_TORCH_MODE_ON = 1 |  |
+| CAMERA_TORCH_MODE_ON = 1 | The flashlight is always on.<br>**Since**: 23 |
 | AUTO = 2 | The flashlight will be turned on automatically based on the ambient lighting level.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_AUTO](capi-camera-h.md#camera_torchmode) instead. |
-| CAMERA_TORCH_MODE_AUTO = 2 |  |
+| CAMERA_TORCH_MODE_AUTO = 2 | The flashlight will be turned on automatically based on the ambient lighting level.<br>**Since**: 23 |
 
 ### Camera_SmoothZoomMode
 
@@ -557,12 +650,16 @@ enum Camera_SmoothZoomMode
 
 Enumerates the smooth zoom modes.
 
+<!--Device-Camera_SmoothZoomMode--><!--Device-Camera_SmoothZoomMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
 | NORMAL = 0 | Bessel curve mode.<br> Since API version 23, you are advised to use the new enum value [CAMERA_SMOOTH_ZOOM_MODE_NORMAL](capi-camera-h.md#camera_smoothzoommode) instead. |
-| CAMERA_SMOOTH_ZOOM_MODE_NORMAL = 0 |  |
+| CAMERA_SMOOTH_ZOOM_MODE_NORMAL = 0 | Bessel curve mode.<br>**Since**: 23 |
 
 ### Camera_PreconfigType
 
@@ -574,6 +671,10 @@ enum Camera_PreconfigType
 
 Enumerates the preconfigured photo resolution types.
 
+<!--Device-Camera_PreconfigType--><!--Device-Camera_PreconfigType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -582,7 +683,7 @@ Enumerates the preconfigured photo resolution types.
 | PRECONFIG_1080P = 1 | 1080p resolution. |
 | PRECONFIG_4K = 2 | 4K resolution. |
 | PRECONFIG_HIGH_QUALITY = 3 | High-quality photos. |
-| PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4 |  |
+| PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4 | Resolution that supports HDR preview and GIF photography.<br>**Since**: 23 |
 
 ### Camera_PreconfigRatio
 
@@ -593,6 +694,10 @@ enum Camera_PreconfigRatio
 **Description**
 
 Enumerates the preconfigured photo aspect ratios.
+
+<!--Device-Camera_PreconfigRatio--><!--Device-Camera_PreconfigRatio-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -612,6 +717,10 @@ enum Camera_HostDeviceType
 
 Enum for remote camera device type.
 
+<!--Device-Camera_HostDeviceType--><!--Device-Camera_HostDeviceType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 15
 
 | Enum item | Description |
@@ -619,6 +728,7 @@ Enum for remote camera device type.
 | HOST_DEVICE_TYPE_UNKNOWN_TYPE = 0 | Indicates an unknown device camera. |
 | HOST_DEVICE_TYPE_PHONE = 0x0E | Indicates a smartphone camera. |
 | HOST_DEVICE_TYPE_TABLET = 0x11 | Indicates tablet camera. |
+| HOST_DEVICE_TYPE_GLASSES = 0xA31 | Indicates glasses camera.<br>**Since**: 26.0.1 |
 
 ### Camera_FoldStatus
 
@@ -630,16 +740,20 @@ enum Camera_FoldStatus
 
 Enumerates the fold statuses.
 
+<!--Device-Camera_FoldStatus--><!--Device-Camera_FoldStatus-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
 | NON_FOLDABLE = 0 | Unfoldable.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_NON_FOLDABLE](capi-camera-h.md#camera_foldstatus) instead. |
-| CAMERA_FOLD_STATUS_NON_FOLDABLE = 0 |  |
+| CAMERA_FOLD_STATUS_NON_FOLDABLE = 0 | Unfoldable.<br>**Since**: 23 |
 | EXPANDED = 1 | Unfolded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_EXPANDED](capi-camera-h.md#camera_foldstatus) instead. |
-| CAMERA_FOLD_STATUS_EXPANDED = 1 |  |
+| CAMERA_FOLD_STATUS_EXPANDED = 1 | Unfolded.<br>**Since**: 23 |
 | FOLDED = 2 | Folded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_FOLDED](capi-camera-h.md#camera_foldstatus) instead. |
-| CAMERA_FOLD_STATUS_FOLDED = 2 |  |
+| CAMERA_FOLD_STATUS_FOLDED = 2 | Folded.<br>**Since**: 23 |
 
 ### Camera_QualityPrioritization
 
@@ -651,12 +765,37 @@ enum Camera_QualityPrioritization
 
 Enum for quality prioritization.
 
+<!--Device-Camera_QualityPrioritization--><!--Device-Camera_QualityPrioritization-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 14
 
 | Enum item | Description |
 | -- | -- |
 | HIGH_QUALITY = 0 | Hight quality priority. |
 | POWER_BALANCE = 1 | Power balance priority. |
+
+### OH_Camera_AuxiliaryPhotoType
+
+```c
+enum OH_Camera_AuxiliaryPhotoType
+```
+
+**Description**
+
+Enumerates the camera auxiliary photo types for skin analysis. Use these types to specify the detection target when capturing auxiliary photos for skin health assessment.
+
+<!--Device-OH_Camera_AuxiliaryPhotoType--><!--Device-OH_Camera_AuxiliaryPhotoType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_OXYGEN = 0 | Auxiliary photo type oxygen.<br>**Since**: 26.0.1 |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_PIGMENTATION = 1 | Auxiliary photo type pigmentation.<br>**Since**: 26.0.1 |
 
 ### Camera_ConcurrentType
 
@@ -667,6 +806,10 @@ enum Camera_ConcurrentType
 **Description**
 
 Enum for camera concurrent type.
+
+<!--Device-Camera_ConcurrentType--><!--Device-Camera_ConcurrentType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 18
 
@@ -684,6 +827,10 @@ enum Camera_SystemPressureLevel
 **Description**
 
 Enumerates the system pressure levels.
+
+<!--Device-Camera_SystemPressureLevel--><!--Device-Camera_SystemPressureLevel-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -705,6 +852,10 @@ enum Camera_PhotoQualityPrioritization
 
 Enumerates the photo quality prioritization strategies.
 
+<!--Device-Camera_PhotoQualityPrioritization--><!--Device-Camera_PhotoQualityPrioritization-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 21
 
 | Enum item | Description |
@@ -722,14 +873,18 @@ enum Camera_ControlCenterEffectType
 
 Enumerates the effect types of a camera controller.
 
+<!--Device-Camera_ControlCenterEffectType--><!--Device-Camera_ControlCenterEffectType-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
 | CONTROL_CENTER_EFFECT_TYPE_BEAUTY = 0 | Beauty effect. |
 | CONTROL_CENTER_EFFECT_TYPE_PORTRAIT = 1 | Portrait blur effect. |
-| CONTROL_CENTER_EFFECT_TYPE_AUTO_FRAMING = 2 |  |
-| CONTROL_CENTER_EFFECT_TYPE_COLOR_EFFECT = 3 |  |
+| CONTROL_CENTER_EFFECT_TYPE_AUTO_FRAMING = 2 | Applies a auto-framing effect.<br>**Since**: 24 |
+| CONTROL_CENTER_EFFECT_TYPE_COLOR_EFFECT = 3 | Color effect.<br>**Since**: 26.0.0 |
 
 ### OH_Camera_OISMode
 
@@ -741,13 +896,17 @@ enum OH_Camera_OISMode
 
 Enum for OIS (Optical Image Stabilization) mode.
 
+<!--Device-OH_Camera_OISMode--><!--Device-OH_Camera_OISMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_OIS_MODE_OFF = 0 |  |
-| OH_CAMERA_OIS_MODE_AUTO = 1 |  |
-| OH_CAMERA_OIS_MODE_CUSTOM = 2 |  |
+| OH_CAMERA_OIS_MODE_OFF = 0 | OIS is disabled.<br>**Since**: 24 |
+| OH_CAMERA_OIS_MODE_AUTO = 1 | OIS is controlled automatically.<br>**Since**: 24 |
+| OH_CAMERA_OIS_MODE_CUSTOM = 2 | OIS is controlled by the application.<br>**Since**: 24 |
 
 ### OH_Camera_OISAxes
 
@@ -759,12 +918,16 @@ enum OH_Camera_OISAxes
 
 Enum for OIS (Optical Image Stabilization) axes.
 
+<!--Device-OH_Camera_OISAxes--><!--Device-OH_Camera_OISAxes-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_OIS_AXES_PITCH = 0 |  |
-| OH_CAMERA_OIS_AXES_YAW = 1 |  |
+| OH_CAMERA_OIS_AXES_PITCH = 0 | Pitch axis: up-and-down rotation of the camera body. Rotation around the horizontal axis through the lens.<br>**Since**: 24 |
+| OH_CAMERA_OIS_AXES_YAW = 1 | Yaw axis: side-to-side rotation of the camera body. Rotation around the vertical axis.<br>**Since**: 24 |
 
 ### OH_Camera_MetadataObjectEmotion
 
@@ -776,14 +939,18 @@ enum OH_Camera_MetadataObjectEmotion
 
 Enum for metadata object emotion.
 
+<!--Device-OH_Camera_MetadataObjectEmotion--><!--Device-OH_Camera_MetadataObjectEmotion-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAMERA_METADATA_OBJECT_EMOTION_NEUTRAL = 0 |  |
-| OH_CAMERA_METADATA_OBJECT_EMOTION_SADNESS = 1 |  |
-| OH_CAMERA_METADATA_OBJECT_EMOTION_SMILE = 2 |  |
-| OH_CAMERA_METADATA_OBJECT_EMOTION_SURPRISE = 3 |  |
+| OH_CAMERA_METADATA_OBJECT_EMOTION_NEUTRAL = 0 | Quiet and calm.<br>**Since**: 26.0.0 |
+| OH_CAMERA_METADATA_OBJECT_EMOTION_SADNESS = 1 | Sadness.<br>**Since**: 26.0.0 |
+| OH_CAMERA_METADATA_OBJECT_EMOTION_SMILE = 2 | Smile.<br>**Since**: 26.0.0 |
+| OH_CAMERA_METADATA_OBJECT_EMOTION_SURPRISE = 3 | Surprise.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -797,6 +964,10 @@ Camera_ErrorCode OH_Camera_GetCameraManager(Camera_Manager** cameraManager)
 **Description**
 
 Obtains a Camera_Manager instance.
+
+<!--Device-Camera_ErrorCode OH_Camera_GetCameraManager(Camera_Manager** cameraManager)--><!--Device-Camera_ErrorCode OH_Camera_GetCameraManager(Camera_Manager** cameraManager)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -821,6 +992,10 @@ Camera_ErrorCode OH_Camera_DeleteCameraManager(Camera_Manager* cameraManager)
 **Description**
 
 Deletes a Camera_Manager instance.
+
+<!--Device-Camera_ErrorCode OH_Camera_DeleteCameraManager(Camera_Manager* cameraManager)--><!--Device-Camera_ErrorCode OH_Camera_DeleteCameraManager(Camera_Manager* cameraManager)-End-->
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 

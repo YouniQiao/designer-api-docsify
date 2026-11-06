@@ -6,9 +6,11 @@ Define interfaces for querying bluetooth switch status.
 
 **Library**: libbluetooth_ndk.so
 
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
-**Related module**: [Bluetooth](capi-bluetooth.md)
+**Related module**: [Bluetooth](capi-connectivity-kit-bluetooth.md)
 
 ## Summary
 
@@ -37,6 +39,10 @@ enum Bluetooth_SwitchState
 
 Enumeration state of bluetooth switch.
 
+<!--Device-Bluetooth_SwitchState--><!--Device-Bluetooth_SwitchState-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
 | Enum item | Description |
@@ -59,6 +65,10 @@ enum Bluetooth_ResultCode
 
 Enumeration the bluetooth result codes.
 
+<!--Device-Bluetooth_ResultCode--><!--Device-Bluetooth_ResultCode-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
 | Enum item | Description |
@@ -78,6 +88,10 @@ Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState 
 **Description**
 
 Get the bluetooth switch state.
+
+<!--Device-Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState *state)--><!--Device-Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState *state)-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
 
 **Since**: 13
 

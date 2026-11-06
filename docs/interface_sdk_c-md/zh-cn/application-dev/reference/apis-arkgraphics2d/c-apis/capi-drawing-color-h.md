@@ -6,9 +6,11 @@
 
 **库：** libnative_drawing.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 8
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## 汇总
 
@@ -29,6 +31,10 @@ uint32_t OH_Drawing_ColorSetArgb(uint32_t alpha, uint32_t red, uint32_t green, u
 **描述：**
 
 用于将4个变量（分别描述透明度、红色、绿色和蓝色）转化为一个描述颜色的32位（ARGB）变量。
+
+<!--Device-uint32_t OH_Drawing_ColorSetArgb(uint32_t alpha, uint32_t red, uint32_t green, uint32_t blue)--><!--Device-uint32_t OH_Drawing_ColorSetArgb(uint32_t alpha, uint32_t red, uint32_t green, uint32_t blue)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 

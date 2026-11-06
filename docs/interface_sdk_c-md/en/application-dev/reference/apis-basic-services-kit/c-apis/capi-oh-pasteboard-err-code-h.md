@@ -4,13 +4,15 @@
 
 Declaration error code information.
 
-**Include**: <database/pasteboard/oh_pasteboard_err_code.h>
+**File to Include**: <database/pasteboard/oh_pasteboard_err_code.h>
 
 **Library**: libpasteboard.so
 
+**System capability**: SystemCapability.MiscServices.Pasteboard
+
 **Since**: 13
 
-**Related module**: [Pasteboard](capi-pasteboard.md)
+**Related module**: [Pasteboard](capi-basic-services-kit-pasteboard.md)
 
 ## Summary
 
@@ -31,6 +33,10 @@ enum PASTEBOARD_ErrCode
 **Description**
 
 Enumerates the error codes.
+
+<!--Device-PASTEBOARD_ErrCode--><!--Device-PASTEBOARD_ErrCode-End-->
+
+**System capability**: SystemCapability.MiscServices.Pasteboard
 
 **Since**: 13
 

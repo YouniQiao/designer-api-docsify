@@ -56,6 +56,7 @@
   - [EnabledState](arkts-ime-inputmethod-enabledstate-e.md)
   - [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md)
   - [ExtendAction](arkts-ime-inputmethod-extendaction-e.md)
+  - [InputCapabilityType](arkts-ime-inputmethod-inputcapabilitytype-e.md)
   - [KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)
   - [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
   - [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)

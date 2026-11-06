@@ -2,3 +2,17 @@
 
 ## Overview
 
+<!--Device-struct VkRenderPassStripeSubmitInfoARM {...}--><!--Device-struct VkRenderPassStripeSubmitInfoARM {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| const void* pNext |  |
+| uint32_t stripeSemaphoreInfoCount |  |
+| [const VkSemaphoreSubmitInfo*](capi--vksemaphoresubmitinfo.md) pStripeSemaphoreInfos |  |
+
+

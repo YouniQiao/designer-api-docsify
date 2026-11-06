@@ -6,9 +6,11 @@ Declares the APIs for accessing assets.
 
 **库：** libasset_ndk.z.so
 
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
-**相关模块：** [AssetApi](capi-assetapi.md)
+**相关模块：** [AssetApi](capi-asset-store-kit-assetapi.md)
 
 ## 汇总
 
@@ -39,6 +41,10 @@ int32_t OH_Asset_Add(const Asset_Attr *attributes, uint32_t attrCnt)
 
 新增一条关键资产。 如果要设置Asset_Tag.ASSET_TAG_IS_PERSISTENT属性，需要申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考声明权限。
 
+<!--Device-int32_t OH_Asset_Add(const Asset_Attr *attributes, uint32_t attrCnt)--><!--Device-int32_t OH_Asset_Add(const Asset_Attr *attributes, uint32_t attrCnt)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -64,6 +70,10 @@ int32_t OH_Asset_Remove(const Asset_Attr *query, uint32_t queryCnt)
 
 删除符合条件的一条或多条关键资产。
 
+<!--Device-int32_t OH_Asset_Remove(const Asset_Attr *query, uint32_t queryCnt)--><!--Device-int32_t OH_Asset_Remove(const Asset_Attr *query, uint32_t queryCnt)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -88,6 +98,10 @@ int32_t OH_Asset_Update(const Asset_Attr *query, uint32_t queryCnt, const Asset_
 **描述：**
 
 更新符合条件的一条关键资产。
+
+<!--Device-int32_t OH_Asset_Update(const Asset_Attr *query, uint32_t queryCnt, const Asset_Attr *attributesToUpdate, uint32_t updateCnt)--><!--Device-int32_t OH_Asset_Update(const Asset_Attr *query, uint32_t queryCnt, const Asset_Attr *attributesToUpdate, uint32_t updateCnt)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
@@ -116,6 +130,10 @@ int32_t OH_Asset_PreQuery(const Asset_Attr *query, uint32_t queryCnt, Asset_Blob
 
 查询的预处理，用于需要用户认证的关键资产。
 
+<!--Device-int32_t OH_Asset_PreQuery(const Asset_Attr *query, uint32_t queryCnt, Asset_Blob *challenge)--><!--Device-int32_t OH_Asset_PreQuery(const Asset_Attr *query, uint32_t queryCnt, Asset_Blob *challenge)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -141,6 +159,10 @@ int32_t OH_Asset_Query(const Asset_Attr *query, uint32_t queryCnt, Asset_ResultS
 **描述：**
 
 查询一条或多条符合条件的关键资产。
+
+<!--Device-int32_t OH_Asset_Query(const Asset_Attr *query, uint32_t queryCnt, Asset_ResultSet *resultSet)--><!--Device-int32_t OH_Asset_Query(const Asset_Attr *query, uint32_t queryCnt, Asset_ResultSet *resultSet)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
@@ -168,6 +190,10 @@ int32_t OH_Asset_PostQuery(const Asset_Attr *handle, uint32_t handleCnt)
 
 查询的后置处理，用于需要用户认证的关键资产。
 
+<!--Device-int32_t OH_Asset_PostQuery(const Asset_Attr *handle, uint32_t handleCnt)--><!--Device-int32_t OH_Asset_PostQuery(const Asset_Attr *handle, uint32_t handleCnt)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -192,6 +218,10 @@ int32_t OH_Asset_QuerySyncResult(const Asset_Attr *query, uint32_t queryCnt, Ass
 **描述：**
 
 查询关键资产的同步结果。
+
+<!--Device-int32_t OH_Asset_QuerySyncResult(const Asset_Attr *query, uint32_t queryCnt, Asset_SyncResult *syncResult)--><!--Device-int32_t OH_Asset_QuerySyncResult(const Asset_Attr *query, uint32_t queryCnt, Asset_SyncResult *syncResult)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 20
 
@@ -219,6 +249,10 @@ Asset_Attr *OH_Asset_ParseAttr(const Asset_Result *result, Asset_Tag tag)
 
 解析查询结果，并获取指定的属性值。
 
+<!--Device-Asset_Attr *OH_Asset_ParseAttr(const Asset_Result *result, Asset_Tag tag)--><!--Device-Asset_Attr *OH_Asset_ParseAttr(const Asset_Result *result, Asset_Tag tag)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -244,6 +278,10 @@ void OH_Asset_FreeBlob(Asset_Blob *blob)
 
 释放挑战值所占用的内存。
 
+<!--Device-void OH_Asset_FreeBlob(Asset_Blob *blob)--><!--Device-void OH_Asset_FreeBlob(Asset_Blob *blob)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
 **起始版本：** 11
 
 **参数：**
@@ -261,6 +299,10 @@ void OH_Asset_FreeResultSet(Asset_ResultSet *resultSet)
 **描述：**
 
 释放查询结果所占用的内存。
+
+<!--Device-void OH_Asset_FreeResultSet(Asset_ResultSet *resultSet)--><!--Device-void OH_Asset_FreeResultSet(Asset_ResultSet *resultSet)-End-->
+
+**系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 

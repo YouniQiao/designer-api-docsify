@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**相关模块：** [CryptoSymKeyApi](capi-cryptosymkeyapi.md)
+**相关模块：** [CryptoSymKeyApi](capi-crypto-architecture-kit-cryptosymkeyapi.md)
 
 ## 汇总
 
@@ -46,9 +48,13 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Create(const char *algoName, OH_Crypt
 
 根据给定的算法名称创建对称密钥生成器。例如AES256。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Create(const char *algoName, OH_CryptoSymKeyGenerator **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Create(const char *algoName, OH_CryptoSymKeyGenerator **ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_sym_key/OH_CryptoSymKeyGenerator_Destroy {ctx}
+**资源释放：** [OH_CryptoSymKeyGenerator_Destroy](#oh_cryptosymkeygenerator_destroy)
 
 **参数：**
 
@@ -79,9 +85,13 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Generate(OH_CryptoSymKeyGenerator *ct
 
 随机生成对称密钥。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Generate(OH_CryptoSymKeyGenerator *ctx, OH_CryptoSymKey **keyCtx)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Generate(OH_CryptoSymKeyGenerator *ctx, OH_CryptoSymKey **keyCtx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_sym_key/OH_CryptoSymKey_Destroy {keyCtx}
+**资源释放：** [OH_CryptoSymKey_Destroy](#oh_cryptosymkey_destroy)
 
 **参数：**
 
@@ -106,9 +116,13 @@ OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Convert(OH_CryptoSymKeyGenerator *ctx
 
 将对称密钥数据转换为对称密钥。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Convert(OH_CryptoSymKeyGenerator *ctx, const Crypto_DataBlob *keyData, OH_CryptoSymKey **keyCtx)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymKeyGenerator_Convert(OH_CryptoSymKeyGenerator *ctx, const Crypto_DataBlob *keyData, OH_CryptoSymKey **keyCtx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_sym_key/OH_CryptoSymKey_Destroy {keyCtx}
+**资源释放：** [OH_CryptoSymKey_Destroy](#oh_cryptosymkey_destroy)
 
 **参数：**
 
@@ -134,6 +148,10 @@ const char *OH_CryptoSymKeyGenerator_GetAlgoName(OH_CryptoSymKeyGenerator *ctx)
 
 获取对称密钥生成器的算法名称。
 
+<!--Device-const char *OH_CryptoSymKeyGenerator_GetAlgoName(OH_CryptoSymKeyGenerator *ctx)--><!--Device-const char *OH_CryptoSymKeyGenerator_GetAlgoName(OH_CryptoSymKeyGenerator *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 **参数：**
@@ -158,6 +176,10 @@ void OH_CryptoSymKeyGenerator_Destroy(OH_CryptoSymKeyGenerator *ctx)
 
 销毁对称密钥生成器。
 
+<!--Device-void OH_CryptoSymKeyGenerator_Destroy(OH_CryptoSymKeyGenerator *ctx)--><!--Device-void OH_CryptoSymKeyGenerator_Destroy(OH_CryptoSymKeyGenerator *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 **参数：**
@@ -175,6 +197,10 @@ const char *OH_CryptoSymKey_GetAlgoName(OH_CryptoSymKey *keyCtx)
 **描述：**
 
 从对称密钥中获取对称密钥算法名称。
+
+<!--Device-const char *OH_CryptoSymKey_GetAlgoName(OH_CryptoSymKey *keyCtx)--><!--Device-const char *OH_CryptoSymKey_GetAlgoName(OH_CryptoSymKey *keyCtx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 
@@ -200,9 +226,13 @@ OH_Crypto_ErrCode OH_CryptoSymKey_GetKeyData(OH_CryptoSymKey *keyCtx, Crypto_Dat
 
 从对称密钥中获取对称密钥数据。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymKey_GetKeyData(OH_CryptoSymKey *keyCtx, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymKey_GetKeyData(OH_CryptoSymKey *keyCtx, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -226,6 +256,10 @@ void OH_CryptoSymKey_Destroy(OH_CryptoSymKey *keyCtx)
 **描述：**
 
 销毁对称密钥。
+
+<!--Device-void OH_CryptoSymKey_Destroy(OH_CryptoSymKey *keyCtx)--><!--Device-void OH_CryptoSymKey_Destroy(OH_CryptoSymKey *keyCtx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 

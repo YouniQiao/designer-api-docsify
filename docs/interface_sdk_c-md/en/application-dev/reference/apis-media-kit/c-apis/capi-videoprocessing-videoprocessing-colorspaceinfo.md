@@ -6,13 +6,15 @@ struct VideoProcessing_ColorSpaceInfo {...}
 
 ## Overview
 
-Video color space information structure of querying if video color space conversion is supported.
+The struct describes the color space information of video processing.
+
+<!--Device-struct VideoProcessing_ColorSpaceInfo {...}--><!--Device-struct VideoProcessing_ColorSpaceInfo {...}-End-->
 
 **System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
-**Related module**: [VideoProcessing](capi-videoprocessing.md)
+**Related module**: [VideoProcessing](capi-media-kit-videoprocessing.md)
 
 **Header file**: [video_processing_types.h](capi-video-processing-types-h.md)
 

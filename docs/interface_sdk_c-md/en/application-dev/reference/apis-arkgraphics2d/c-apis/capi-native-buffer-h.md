@@ -6,9 +6,11 @@ Defines the functions for obtaining and using a native buffer.
 
 **Library**: libnative_buffer.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
-**Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
+**Related module**: [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
 
 ## Summary
 
@@ -19,6 +21,7 @@ Defines the functions for obtaining and using a native buffer.
 | [OH_NativeBuffer_Config](capi-oh-nativebuffer-oh-nativebuffer-config.md) | OH_NativeBuffer_Config | <b>OH_NativeBuffer</b> config. Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones. |
 | [OH_NativeBuffer_Plane](capi-oh-nativebuffer-oh-nativebuffer-plane.md) | OH_NativeBuffer_Plane | Holds info for a single image plane. |
 | [OH_NativeBuffer_Planes](capi-oh-nativebuffer-oh-nativebuffer-planes.md) | OH_NativeBuffer_Planes | Holds all image planes. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) | OH_NativeBuffer |  |
 | [OHIPCParcel](capi-oh-nativebuffer-ohipcparcel.md) | OHIPCParcel | Defines the ipc parcel. |
 
 ### Enum
@@ -64,6 +67,10 @@ enum OH_NativeBuffer_Usage
 
 Indicates the usage of a native buffer.
 
+<!--Device-OH_NativeBuffer_Usage--><!--Device-OH_NativeBuffer_Usage-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 10
 
 | Enum item | Description |
@@ -71,11 +78,11 @@ Indicates the usage of a native buffer.
 | NATIVEBUFFER_USAGE_CPU_READ = (1ULL << 0) | CPU read buffer |
 | NATIVEBUFFER_USAGE_CPU_WRITE = (1ULL << 1) | CPU write memory |
 | NATIVEBUFFER_USAGE_MEM_DMA = (1ULL << 3) | Direct memory access (DMA) buffer |
-| NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) |  |
-| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) |  |
-| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) |  |
-| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) |  |
-| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) |  |
+| NATIVEBUFFER_USAGE_MEM_MMZ_CACHE = (1ULL << 5) | MMZ with cache<br>**Since**: 20 |
+| NATIVEBUFFER_USAGE_HW_RENDER = (1ULL << 8) | For GPU write case<br>**Since**: 12 |
+| NATIVEBUFFER_USAGE_HW_TEXTURE = (1ULL << 9) | For GPU read case<br>**Since**: 12 |
+| NATIVEBUFFER_USAGE_CPU_READ_OFTEN = (1ULL << 16) | Often be mapped for direct CPU reads<br>**Since**: 12 |
+| NATIVEBUFFER_USAGE_ALIGNMENT_512 = (1ULL << 18) | 512 bytes alignment<br>**Since**: 12 |
 
 ### OH_NativeBuffer_ColorGamut
 
@@ -86,6 +93,10 @@ enum OH_NativeBuffer_ColorGamut
 **Description**
 
 Indicates the color gamut of a native buffer.
+
+<!--Device-OH_NativeBuffer_ColorGamut--><!--Device-OH_NativeBuffer_ColorGamut-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
@@ -116,6 +127,10 @@ OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)
 
 Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. A new <b>OH_NativeBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
+<!--Device-OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)--><!--Device-OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
@@ -128,7 +143,7 @@ Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. A ne
 
 | Type | Description |
 | -- | -- |
-| OH_NativeBuffer* | Returns the pointer to the <b>OH_NativeBuffer</b> instance created if the operation is successful, \n returns <b>NULL</b> otherwise. |
+| [OH_NativeBuffer*](capi-oh-nativebuffer-oh-nativebuffer.md) | Returns the pointer to the <b>OH_NativeBuffer</b> instance created if the operation is successful, \n returns <b>NULL</b> otherwise. |
 
 ### OH_NativeBuffer_Reference()
 
@@ -140,13 +155,17 @@ int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)
 
 Adds the reference count of a OH_NativeBuffer. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)--><!--Device-int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 
 **Returns**:
 
@@ -164,13 +183,17 @@ int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)
 
 Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0, destroys this OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)--><!--Device-int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 
 **Returns**:
 
@@ -188,13 +211,17 @@ void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* 
 
 Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct. This interface is a non-thread-safe type interface.
 
+<!--Device-void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* config)--><!--Device-void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* config)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | [OH_NativeBuffer_Config](capi-oh-nativebuffer-oh-nativebuffer-config.md)* config | Indicates the pointer to the <b>NativeBufferConfig</b> of the buffer. |
 
 ### OH_NativeBuffer_Map()
@@ -207,13 +234,17 @@ int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)
 
 Provide direct cpu access to the OH_NativeBuffer in the process's address space. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)--><!--Device-int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | void **virAddr | Indicates the address of the <b>OH_NativeBuffer</b> in virtual memory. |
 
 **Returns**:
@@ -232,13 +263,17 @@ int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)
 
 Remove direct cpu access ability of the OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)--><!--Device-int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 
 **Returns**:
 
@@ -256,13 +291,17 @@ uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)
 
 Get the system wide unique sequence number of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)--><!--Device-uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 9
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 
 **Returns**:
 
@@ -280,13 +319,17 @@ int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_Na
 
 Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_NativeBuffer_Planes *outPlanes)--><!--Device-int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_NativeBuffer_Planes *outPlanes)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | void **virAddr | Indicates the address of the <b>OH_NativeBuffer</b> in virtual memory. |
 | [OH_NativeBuffer_Planes](capi-oh-nativebuffer-oh-nativebuffer-planes.md) *outPlanes | Indicates all image planes that contain the pixel data. |
 
@@ -306,6 +349,10 @@ int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindo
 
 Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindowBuffer, OH_NativeBuffer **buffer)--><!--Device-int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindowBuffer, OH_NativeBuffer **buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 12
 
 **Parameters**:
@@ -313,7 +360,7 @@ Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>. T
 | Parameter | Description |
 | -- | -- |
 | OHNativeWindowBuffer *nativeWindowBuffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
-| OH_NativeBuffer **buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> pointer. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) **buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> pointer. |
 
 **Returns**:
 
@@ -331,13 +378,17 @@ int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 
 Set the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace colorSpace)--><!--Device-int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace colorSpace)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 11
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | OH_NativeBuffer_ColorSpace colorSpace | Indicates the color space of native buffer, see <b>OH_NativeBuffer_ColorSpace</b>. |
 
 **Returns**:
@@ -356,13 +407,17 @@ int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 
 Get the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace *colorSpace)--><!--Device-int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace *colorSpace)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | OH_NativeBuffer_ColorSpace *colorSpace | Indicates the color space of native buffer, see <b>OH_NativeBuffer_ColorSpace</b>. |
 
 **Returns**:
@@ -381,13 +436,17 @@ int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 
 Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)--><!--Device-int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | OH_NativeBuffer_MetadataKey metadataKey | Indicates the metadata type of native buffer, see <b>OH_NativeBuffer_MetadataKey</b>. |
 | int32_t size | Indicates the size of a uint8_t vector. |
 | uint8_t *metadata | Indicates the pointer to a uint8_t vector. |
@@ -408,13 +467,17 @@ int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 
 Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)--><!--Device-int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | OH_NativeBuffer_MetadataKey metadataKey | Indicates the metadata type of native buffer, see <b>OH_NativeBuffer_MetadataKey</b>. |
 | int32_t *size | Indicates the size of a uint8_t vector. |
 | uint8_t **metadata | Indicates the pointer to a uint8_t vector. |
@@ -435,13 +498,17 @@ int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, v
 
 Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence. If the interface returns OK, fenceFd does not need to be closed by the developer, Otherwise, the developer needs to close the fenceFd. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, void **virAddr)--><!--Device-int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, void **virAddr)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | int32_t fenceFd | Indicates the pointer to a file descriptor handle. |
 | void **virAddr | Indicates the address of the <b>OH_NativeBuffer</b> in virtual memory. |
 
@@ -461,13 +528,17 @@ int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parc
 
 Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parcel)--><!--Device-int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parcel)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer* buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md)* buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | [OHIPCParcel](capi-oh-nativebuffer-ohipcparcel.md)* parcel | Indicates the serialized <b>OHIPCParcel</b> object. |
 
 **Returns**:
@@ -486,6 +557,10 @@ int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** bu
 
 Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object. This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)--><!--Device-int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 23
 
 **Parameters**:
@@ -493,7 +568,7 @@ Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH
 | Parameter | Description |
 | -- | -- |
 | [OHIPCParcel](capi-oh-nativebuffer-ohipcparcel.md)* parcel | Indicates the serialized <b>OHIPCParcel</b> object. |
-| OH_NativeBuffer** buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> pointer. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md)** buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> pointer. |
 
 **Returns**:
 
@@ -510,6 +585,10 @@ int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSuppo
 **Description**
 
 Check whether the system supports the <b>NativeBufferConfig</b>. This interface is a non-thread-safe type interface.
+
+<!--Device-int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)--><!--Device-int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 23
 
@@ -536,13 +615,17 @@ int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr,
 
 Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space, and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)--><!--Device-int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer* buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md)* buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | void** virAddr | Indicates the address of the <b>OH_NativeBuffer</b> in virtual memory. |
 | [OH_NativeBuffer_Config](capi-oh-nativebuffer-oh-nativebuffer-config.md)* config | Indicates the pointer to the <b>NativeBufferConfig</b> of the buffer. |
 
@@ -562,13 +645,17 @@ int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *na
 
 Set the dma buffer name of the OH_NativeBuffer.
 
-**Since**: 26.1.0
+<!--Device-int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)--><!--Device-int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
+
+**Since**: 26.0.1
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
+| [OH_NativeBuffer](capi-oh-nativebuffer-oh-nativebuffer.md) *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
 | const char *name | Indicates the dma buffer name string. The name must start with a letter, only contain letters or digits, and be no longer than 64 bytes. |
 
 **Returns**:

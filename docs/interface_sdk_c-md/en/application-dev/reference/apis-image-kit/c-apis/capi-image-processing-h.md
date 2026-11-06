@@ -6,9 +6,11 @@ Declare image processing functions.<br> Provides SDR content processing for imag
 
 **Library**: libimage_processing.so
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
-**Related module**: [ImageProcessing](capi-imageprocessing.md)
+**Related module**: [ImageProcessing](capi-image-kit-imageprocessing.md)
 
 ## Summary
 
@@ -44,6 +46,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)
 
 Initialize global environment for image processing.<br> This function is optional. Typically, this function is called once when the host process is started to initialize the global environment for image processing, which can reduce the time of [OH_ImageProcessing_Create](capi-image-processing-h.md#oh_imageprocessing_create). To deinitialize global environment, call [OH_ImageProcessing_DeinitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_deinitializeenvironment).
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Returns**:
@@ -62,6 +68,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)
 
 Deinitialize global environment for image processing.<br> This function is required if [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment) is called. Typically, this function is called when the host process is about to exit to deinitialize the global environment, which is initialized by calling [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment). If there is some image processing instance existing, this function should not be called. If the [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment) is not called, this function should not be called.
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Returns**:
@@ -79,6 +89,10 @@ bool OH_ImageProcessing_IsColorSpaceConversionSupported(const ImageProcessing_Co
 **Description**
 
 Query whether the image color space conversion is supported.
+
+<!--Device-bool OH_ImageProcessing_IsColorSpaceConversionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)--><!--Device-bool OH_ImageProcessing_IsColorSpaceConversionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -104,6 +118,10 @@ bool OH_ImageProcessing_IsCompositionSupported(const ImageProcessing_ColorSpaceI
 **Description**
 
 Query whether the image composition is supported.
+
+<!--Device-bool OH_ImageProcessing_IsCompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* sourceGainmapInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)--><!--Device-bool OH_ImageProcessing_IsCompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* sourceGainmapInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -131,6 +149,10 @@ bool OH_ImageProcessing_IsDecompositionSupported(const ImageProcessing_ColorSpac
 
 Query whether the image decomposition is supported.
 
+<!--Device-bool OH_ImageProcessing_IsDecompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo, const ImageProcessing_ColorSpaceInfo* destinationGainmapInfo)--><!--Device-bool OH_ImageProcessing_IsDecompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo, const ImageProcessing_ColorSpaceInfo* destinationGainmapInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -157,6 +179,10 @@ bool OH_ImageProcessing_IsMetadataGenerationSupported(const ImageProcessing_Colo
 
 Query whether the image metadata generation is supported.
 
+<!--Device-bool OH_ImageProcessing_IsMetadataGenerationSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo)--><!--Device-bool OH_ImageProcessing_IsMetadataGenerationSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -180,6 +206,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Create(OH_ImageProcessing** imagePr
 **Description**
 
 Create an image processing instance.
+
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Create(OH_ImageProcessing** imageProcessor, int32_t type)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Create(OH_ImageProcessing** imageProcessor, int32_t type)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -206,6 +236,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Destroy(OH_ImageProcessing* imagePr
 
 Destroy the image processing instance.
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Destroy(OH_ImageProcessing* imageProcessor)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Destroy(OH_ImageProcessing* imageProcessor)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -229,6 +263,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_SetParameter(OH_ImageProcessing* im
 **Description**
 
 Set parameter for image processing.<br> Add parameter identified by the specified parameter key.
+
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_SetParameter(OH_ImageProcessing* imageProcessor, const OH_AVFormat* parameter)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_SetParameter(OH_ImageProcessing* imageProcessor, const OH_AVFormat* parameter)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -255,6 +293,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_GetParameter(OH_ImageProcessing* im
 
 Get parameter of image processing.<br> Get parameter identified by the specified parameter key.
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_GetParameter(OH_ImageProcessing* imageProcessor, OH_AVFormat* parameter)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_GetParameter(OH_ImageProcessing* imageProcessor, OH_AVFormat* parameter)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -279,6 +321,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_ConvertColorSpace(OH_ImageProcessin
 **Description**
 
 Conversion between single-layer images.<br> The function generate the destinationImage from sourceImage. It include the colorspace conversion from HDR image to SDR image, SDR image to HDR image, SDR image to SDR image and HDR image to HDR image.
+
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_ConvertColorSpace(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_ConvertColorSpace(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -305,6 +351,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Compose(OH_ImageProcessing* imagePr
 **Description**
 
 Composition from dual-layer HDR images to single-layer HDR images.<br> The function generate the destinationImage from sourceImage and sourceGainmap.
+
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Compose(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* sourceGainmap, OH_PixelmapNative* destinationImage)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Compose(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* sourceGainmap, OH_PixelmapNative* destinationImage)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 
@@ -333,6 +383,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Decompose(OH_ImageProcessing* image
 
 Decomposition from single-layer HDR images to dual-layer HDR images.<br> The function generate the destinationImage and destinationGainmap from sourceImage.
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Decompose(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage, OH_PixelmapNative* destinationGainmap)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_Decompose(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage, OH_PixelmapNative* destinationGainmap)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -360,6 +414,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_GenerateMetadata(OH_ImageProcessing
 
 Metadata Generation for HDR images.<br> The function generate metadata for the sourceImage.
 
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_GenerateMetadata(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_GenerateMetadata(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 13
 
 **Parameters**:
@@ -384,6 +442,10 @@ ImageProcessing_ErrorCode OH_ImageProcessing_EnhanceDetail(OH_ImageProcessing* i
 **Description**
 
 Clarity enhancement for images.<br> The function generate the destinationImage from sourceImage with necessary scaling operation according to the size preset in the sourceImage and destinationImage. Different levels of scaling methonds are provided to balance performance and image quality.
+
+<!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_EnhanceDetail(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage)--><!--Device-ImageProcessing_ErrorCode OH_ImageProcessing_EnhanceDetail(OH_ImageProcessing* imageProcessor, OH_PixelmapNative* sourceImage, OH_PixelmapNative* destinationImage)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 13
 

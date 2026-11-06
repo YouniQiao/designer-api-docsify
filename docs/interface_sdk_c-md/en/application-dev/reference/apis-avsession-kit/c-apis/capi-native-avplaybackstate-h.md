@@ -6,9 +6,11 @@ Declare playbackState interfaces.
 
 **Library**: libohavsession.so
 
+**System capability**: SystemCapability.Multimedia.AVSession.Core
+
 **Since**: 23
 
-**Related module**: [OHAVSession](capi-ohavsession.md)
+**Related module**: [OHAVSession](capi-avsession-kit-ohavsession.md)
 
 ## Summary
 
@@ -40,6 +42,10 @@ AVSession_ErrCode OH_AVSession_GetPlaybackState(OH_AVSession_AVPlaybackState* pl
 
 Get State of PlayBackState.
 
+<!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackState(OH_AVSession_AVPlaybackState* playbackState, AVSession_PlaybackState* state)--><!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackState(OH_AVSession_AVPlaybackState* playbackState, AVSession_PlaybackState* state)-End-->
+
+**System capability**: SystemCapability.Multimedia.AVSession.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -64,6 +70,10 @@ AVSession_ErrCode OH_AVSession_GetPlaybackPosition(OH_AVSession_AVPlaybackState*
 **Description**
 
 Get position of PlaybackState.
+
+<!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackPosition(OH_AVSession_AVPlaybackState* playbackState, AVSession_PlaybackPosition* position)--><!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackPosition(OH_AVSession_AVPlaybackState* playbackState, AVSession_PlaybackPosition* position)-End-->
+
+**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
@@ -90,6 +100,10 @@ AVSession_ErrCode OH_AVSession_GetPlaybackSpeed(OH_AVSession_AVPlaybackState* pl
 
 Get speed of PlaybackState.
 
+<!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackSpeed(OH_AVSession_AVPlaybackState* playbackState, int32_t* speed)--><!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackSpeed(OH_AVSession_AVPlaybackState* playbackState, int32_t* speed)-End-->
+
+**System capability**: SystemCapability.Multimedia.AVSession.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -114,6 +128,10 @@ AVSession_ErrCode OH_AVSession_GetPlaybackVolume(OH_AVSession_AVPlaybackState* p
 **Description**
 
 Get volume of PlaybackState.
+
+<!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackVolume(OH_AVSession_AVPlaybackState* playbackState, int32_t* volume)--><!--Device-AVSession_ErrCode OH_AVSession_GetPlaybackVolume(OH_AVSession_AVPlaybackState* playbackState, int32_t* volume)-End-->
+
+**System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 

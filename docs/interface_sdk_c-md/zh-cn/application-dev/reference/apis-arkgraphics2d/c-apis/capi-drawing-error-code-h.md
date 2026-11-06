@@ -6,9 +6,11 @@
 
 **库：** libnative_drawing.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## 汇总
 
@@ -36,6 +38,10 @@ enum OH_Drawing_ErrorCode
 **描述：**
 
 枚举本模块可能产生的错误码。
+
+<!--Device-OH_Drawing_ErrorCode--><!--Device-OH_Drawing_ErrorCode-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -69,6 +75,10 @@ OH_Drawing_ErrorCode OH_Drawing_ErrorCodeGet()
 
 获取本模块最近一次的错误码。 <br>本模块的错误码会在不以错误码为返回值的接口执行失败时被置为对应的错误编号， 在执行成功后不会被重置为OH_DRAWING_SUCCESS。可通过[OH_Drawing_ErrorCodeReset](capi-drawing-error-code-h.md#oh_drawing_errorcodereset)重置错误码。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_ErrorCodeGet()--><!--Device-OH_Drawing_ErrorCode OH_Drawing_ErrorCodeGet()-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 12
 
 **返回值：**
@@ -86,6 +96,10 @@ void OH_Drawing_ErrorCodeReset(void)
 **描述：**
 
 将本模块的错误码重置为OH_DRAWING_SUCCESS。 <br>通过[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget)获取的本模块错误码会在不以错误码为返回值的接口执行失败时被置为对应的错误编号， 但是不会在执行成功后被重置为OH_DRAWING_SUCCESS。 <br>调用本接口可将错误码重置为OH_DRAWING_SUCCESS，避免多个接口间互相干扰，方便开发者调试。
+
+<!--Device-void OH_Drawing_ErrorCodeReset(void)--><!--Device-void OH_Drawing_ErrorCodeReset(void)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 

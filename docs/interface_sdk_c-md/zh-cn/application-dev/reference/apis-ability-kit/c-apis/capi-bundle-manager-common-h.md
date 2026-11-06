@@ -2,13 +2,15 @@
 
 ## 概述
 
-The file declares the error codes defined by BundleManager.
+声明BundleManager定义的相关错误码。
 
 **库：** libbundle_ndk.z.so
 
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
 **起始版本：** 21
 
-**相关模块：** [Native_Bundle](capi-native-bundle.md)
+**相关模块：** [Native_Bundle](capi-ability-kit-native-bundle.md)
 
 ## 汇总
 
@@ -30,12 +32,16 @@ enum BundleManager_ErrorCode
 
 枚举错误码，详细介绍请参见通用错误码。
 
+<!--Device-BundleManager_ErrorCode--><!--Device-BundleManager_ErrorCode-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
 | -- | -- |
-| BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0 |  |
-| BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201 |  |
-| BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401 |  |
+| BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0 | 执行成功。<br>**起始版本：** 21 |
+| BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201 | 权限被拒绝。<br>**起始版本：** 21 |
+| BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401 | 参数无效。<br>**起始版本：** 21 |
 
 

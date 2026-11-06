@@ -8,11 +8,13 @@ struct OH_TrafficFilter_TCPFlagsMatch {...}
 
 TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
+<!--Device-struct OH_TrafficFilter_TCPFlagsMatch {...}--><!--Device-struct OH_TrafficFilter_TCPFlagsMatch {...}-End-->
+
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
-**Related module**: [TrafficFilter](capi-trafficfilter.md)
+**Related module**: [TrafficFilter](capi-network-kit-trafficfilter.md)
 
 **Header file**: [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -22,8 +24,8 @@ TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
 | Name | Description |
 | -- | -- |
-| bool enable | Enable TCP flags matching<br>**Since**: 26.1.0 |
-| uint8_t flagMask | Flag mask (which flags to check, use OH_TRAFFICFILTER_TCP_FLAG_* constants)<br>**Since**: 26.1.0 |
-| uint8_t flagComp | Flag to compare (which flags must be set)<br>**Since**: 26.1.0 |
+| bool enable | Enable TCP flags matching<br>**Since**: 26.0.1 |
+| uint8_t flagMask | Flag mask (which flags to check, use OH_TRAFFICFILTER_TCP_FLAG_* constants)<br>**Since**: 26.0.1 |
+| uint8_t flagComp | Flag to compare (which flags must be set)<br>**Since**: 26.0.1 |
 
 

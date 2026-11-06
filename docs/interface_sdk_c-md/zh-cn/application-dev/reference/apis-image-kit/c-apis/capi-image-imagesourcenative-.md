@@ -1,18 +1,20 @@
 # ImageSourceNative_
 
 ```c
-struct ImageSourceNative_
+typedef struct ImageSourceNative_ ImageSourceNative
 ```
 
 ## 概述
 
 为图像源方法定义native层图像源对象。
 
+<!--Device-typedef struct ImageSourceNative_ ImageSourceNative--><!--Device-typedef struct ImageSourceNative_ ImageSourceNative-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image.md)
+**相关模块：** [Image](capi-image-kit-image.md)
 
 **所在头文件：** [image_source_mdk.h](capi-image-source-mdk-h.md)
 

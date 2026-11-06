@@ -6,9 +6,11 @@ Declare audio debugging manager related interfaces.<br> This file interfaces are
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
@@ -40,6 +42,10 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioDebuggingManager(OH_AudioDebugging
 
 Gets the audio debugging manager handle, which is a singleton.
 
+<!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioDebuggingManager(OH_AudioDebuggingManager **manager)--><!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioDebuggingManager(OH_AudioDebuggingManager **manager)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -63,6 +69,10 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintAppInfo(OH_AudioDebuggingMan
 **Description**
 
 Prints full audio runtime snapshot for current app process. The snapshot will contain all audio renderers, capturers, audio session information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+
+<!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintAppInfo(OH_AudioDebuggingManager *manager, int32_t fd)--><!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintAppInfo(OH_AudioDebuggingManager *manager, int32_t fd)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
@@ -89,6 +99,10 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintRendererInfo(OH_AudioDebuggi
 
 Prints full audio runtime snapshot for target audio renderer instance. The snapshot will contain the stream, pipe, volume and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintRendererInfo(OH_AudioDebuggingManager *manager, OH_AudioRenderer *renderer, int32_t fd)--><!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintRendererInfo(OH_AudioDebuggingManager *manager, OH_AudioRenderer *renderer, int32_t fd)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -96,7 +110,7 @@ Prints full audio runtime snapshot for target audio renderer instance. The snaps
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) *manager | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) handle provided by [OH_AudioManager_GetAudioDebuggingManager](capi-native-audio-debugging-manager-h.md#oh_audiomanager_getaudiodebuggingmanager). |
-| [OH_AudioRenderer](capi-ohaudio-oh-audiorenderer.md) *renderer | Pointer to the target audio renderer instance to print snapshot. |
+| [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md) *renderer | Pointer to the target audio renderer instance to print snapshot. |
 | int32_t fd | is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 **Returns**:
@@ -115,6 +129,10 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintCapturerInfo(OH_AudioDebuggi
 
 Prints full audio runtime snapshot for target audio capturer instance. The snapshot will contain the stream, pipe, volume and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintCapturerInfo(OH_AudioDebuggingManager *manager, OH_AudioCapturer *capturer, int32_t fd)--><!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintCapturerInfo(OH_AudioDebuggingManager *manager, OH_AudioCapturer *capturer, int32_t fd)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -122,7 +140,7 @@ Prints full audio runtime snapshot for target audio capturer instance. The snaps
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) *manager | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) handle provided by [OH_AudioManager_GetAudioDebuggingManager](capi-native-audio-debugging-manager-h.md#oh_audiomanager_getaudiodebuggingmanager). |
-| [OH_AudioCapturer](capi-ohaudio-oh-audiocapturer.md) *capturer | Pointer to the target audio capturer instance to print snapshot. |
+| [OH_AudioCapturer](capi-ohaudio-oh-audiocapturerstruct.md) *capturer | Pointer to the target audio capturer instance to print snapshot. |
 | int32_t fd | is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 **Returns**:
@@ -140,6 +158,10 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintSessionInfo(OH_AudioDebuggin
 **Description**
 
 Prints full audio runtime snapshot for target audio session manager instance. The snapshot will contain the session status, scene, strategy and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+
+<!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintSessionInfo(OH_AudioDebuggingManager *manager, OH_AudioSessionManager *session, int32_t fd)--><!--Device-OH_AudioCommon_Result OH_AudioDebuggingManager_PrintSessionInfo(OH_AudioDebuggingManager *manager, OH_AudioSessionManager *session, int32_t fd)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 

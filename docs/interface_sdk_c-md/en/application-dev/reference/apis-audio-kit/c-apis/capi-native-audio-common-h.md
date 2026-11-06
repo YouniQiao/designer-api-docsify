@@ -6,9 +6,11 @@ Declare the audio common base data structure.<br> Defines the types of public re
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
@@ -33,6 +35,10 @@ enum OH_AudioCommon_Result
 
 Define the result of the function execution.
 
+<!--Device-OH_AudioCommon_Result--><!--Device-OH_AudioCommon_Result-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -47,6 +53,9 @@ Define the result of the function execution.
 | AUDIOCOMMON_RESULT_ERROR_FRAME_LENGTH_MISMATCH = 6800106 | &nbsp;This means the input audio data does not match the required frame length.<br>**Since**: 26.0.0 |
 | AUDIOCOMMON_RESULT_ERROR_STREAM_LIMIT = 6800201 | &nbsp;This means the stream limit is reached. |
 | AUDIOCOMMON_RESULT_ERROR_SYSTEM = 6800301 | &nbsp;A system error has occurred. |
+| AUDIOCOMMON_RESULT_ERROR_SERVICE_DIED = 6800302 | System service process terminated.<br>**Since**: 26.0.1 |
+| AUDIOCOMMON_RESULT_ERROR_NETWORK_CONDITION_NOT_MET = 6800501 | Required network conditions not met.<br>**Since**: 26.0.1 |
+| AUDIOCOMMON_RESULT_ERROR_STORAGE_NOT_ENOUGH = 6800502 | Insufficient storage space.<br>**Since**: 26.0.1 |
 
 ### OH_AudioScene
 
@@ -58,14 +67,18 @@ enum OH_AudioScene
 
 Defines the audio scene.
 
+<!--Device-OH_AudioScene--><!--Device-OH_AudioScene-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_SCENE_DEFAULT = 0 |  |
-| AUDIO_SCENE_RINGING = 1 |  |
-| AUDIO_SCENE_PHONE_CALL = 2 |  |
-| AUDIO_SCENE_VOICE_CHAT = 3 |  |
+| AUDIO_SCENE_DEFAULT = 0 | Default audio scene.<br>**Since**: 12 |
+| AUDIO_SCENE_RINGING = 1 | Ringing scene.<br>**Since**: 12 |
+| AUDIO_SCENE_PHONE_CALL = 2 | Phone call scene.<br>**Since**: 12 |
+| AUDIO_SCENE_VOICE_CHAT = 3 | Voice chat scene.<br>**Since**: 12 |
 
 ### OH_AudioRingerMode
 
@@ -77,13 +90,17 @@ enum OH_AudioRingerMode
 
 Defines the ringer mode.
 
+<!--Device-OH_AudioRingerMode--><!--Device-OH_AudioRingerMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_RINGER_MODE_SILENT = 0 |  |
-| AUDIO_RINGER_MODE_VIBRATE = 1 |  |
-| AUDIO_RINGER_MODE_NORMAL = 2 |  |
+| AUDIO_RINGER_MODE_SILENT = 0 | Silent ringer mode.<br>**Since**: 20 |
+| AUDIO_RINGER_MODE_VIBRATE = 1 | Vibrate ringer mode.<br>**Since**: 20 |
+| AUDIO_RINGER_MODE_NORMAL = 2 | Normal ringer mode.<br>**Since**: 20 |
 
 ### OH_AudioNoiseReductionMode
 
@@ -94,6 +111,10 @@ enum OH_AudioNoiseReductionMode
 **Description**
 
 Enumerates the noise reduction modes.
+
+<!--Device-OH_AudioNoiseReductionMode--><!--Device-OH_AudioNoiseReductionMode-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 

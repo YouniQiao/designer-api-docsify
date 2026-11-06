@@ -6,9 +6,11 @@ Defines **ImageAnimator** node types for **NativeNode** APIs.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -28,9 +30,9 @@ Defines **ImageAnimator** node types for **NativeNode** APIs.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)](#oh_arkui_imageanimatorframeinfo_createfromstring) | Creates an image frame information object based on an image path, with the image format being SVG, PNG, or JPG. Both relative and absolute paths in the application sandbox are supported. |
-| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)](#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) | Creates an image frame information object based on an [[ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with the image format being Resource or PixelMap. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_dispose) | Disposes of the pointer to an image frame information object. |
+| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)](#oh_arkui_imageanimatorframeinfo_createfromstring) | Creates an image frame information object based on an image path, with the image format being SVG, PNG, or JPG. Both relative and absolute paths in the application sandbox are supported. After the returned image frame information object is used, call [OH_ArkUI_ImageAnimatorFrameInfo_Dispose](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_dispose) to release it to prevent memory leakage. |
+| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)](#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) | Creates an image frame information object based on an [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with the image format being Resource or PixelMap. After the returned image frame information object is used, call [OH_ArkUI_ImageAnimatorFrameInfo_Dispose](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_dispose) to release it to prevent memory leakage. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_dispose) | Disposes of the pointer to an image frame information object. This API is used to release the objects created by [OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_createfromstring) and [OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) to prevent memory leakage. |
 | [void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t width)](#oh_arkui_imageanimatorframeinfo_setwidth) | Sets the image width. |
 | [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getwidth) | Obtains the image width. |
 | [void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t height)](#oh_arkui_imageanimatorframeinfo_setheight) | Sets the image height. |
@@ -54,14 +56,18 @@ enum ArkUI_AnimationStatus
 
 Enumerates the playback states of the frame-by-frame animation.
 
+<!--Device-ArkUI_AnimationStatus--><!--Device-ArkUI_AnimationStatus-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_ANIMATION_STATUS_INITIAL = 0 |  |
-| ARKUI_ANIMATION_STATUS_RUNNING = 1 |  |
-| ARKUI_ANIMATION_STATUS_PAUSED = 2 |  |
-| ARKUI_ANIMATION_STATUS_STOPPED = 3 |  |
+| ARKUI_ANIMATION_STATUS_INITIAL = 0 | The animation is in the initial state.<br>**Since**: 12 |
+| ARKUI_ANIMATION_STATUS_RUNNING = 1 | The animation is being played.<br>**Since**: 12 |
+| ARKUI_ANIMATION_STATUS_PAUSED = 2 | The animation is paused.<br>**Since**: 12 |
+| ARKUI_ANIMATION_STATUS_STOPPED = 3 | The animation is stopped.<br>**Since**: 12 |
 
 
 ## Function description
@@ -74,7 +80,11 @@ ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(c
 
 **Description**
 
-Creates an image frame information object based on an image path, with the image format being SVG, PNG, or JPG. Both relative and absolute paths in the application sandbox are supported.
+Creates an image frame information object based on an image path, with the image format being SVG, PNG, or JPG. Both relative and absolute paths in the application sandbox are supported. After the returned image frame information object is used, call [OH_ArkUI_ImageAnimatorFrameInfo_Dispose](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_dispose) to release it to prevent memory leakage.
+
+<!--Device-ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)--><!--Device-ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -98,7 +108,11 @@ ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawable
 
 **Description**
 
-Creates an image frame information object based on an [[ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with the image format being Resource or PixelMap.
+Creates an image frame information object based on an [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with the image format being Resource or PixelMap. After the returned image frame information object is used, call [OH_ArkUI_ImageAnimatorFrameInfo_Dispose](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_dispose) to release it to prevent memory leakage.
+
+<!--Device-ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)--><!--Device-ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -122,7 +136,11 @@ void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* image
 
 **Description**
 
-Disposes of the pointer to an image frame information object.
+Disposes of the pointer to an image frame information object. This API is used to release the objects created by [OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_createfromstring) and [OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor](capi-image-animator-h.md#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) to prevent memory leakage.
+
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -142,6 +160,10 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imag
 
 Sets the image width.
 
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t width)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t width)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -149,7 +171,7 @@ Sets the image width.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
-| int32_t width | Image width, in px. |
+| int32_t width | Image width, in px. The value range is [0, +∞). |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetWidth()
 
@@ -161,6 +183,10 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* i
 
 Obtains the image width.
 
+<!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -173,7 +199,7 @@ Obtains the image width.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Image width, in px. If **imageInfo** is a null pointer, **0** is returned. |
+| int32_t | Image width, in px. If **imageInfo** is a null pointer or this parameter is not set, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetHeight()
 
@@ -185,6 +211,10 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* ima
 
 Sets the image height.
 
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t height)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t height)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -192,7 +222,7 @@ Sets the image height.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
-| int32_t height | Image height, in px. |
+| int32_t height | Image height, in px. The value range is [0, +∞). |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetHeight()
 
@@ -203,6 +233,10 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* 
 **Description**
 
 Obtains the image height.
+
+<!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -216,7 +250,7 @@ Obtains the image height.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Image height, in px. If **imageInfo** is a null pointer, **0** is returned. |
+| int32_t | Image height, in px. If **imageInfo** is a null pointer or this parameter is not set, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetTop()
 
@@ -227,6 +261,10 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageI
 **Description**
 
 Sets the vertical coordinate of an image relative to the upper left corner of the component.
+
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t top)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t top)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -247,6 +285,10 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* ima
 
 Obtains the vertical coordinate of an image relative to the upper left corner of the component.
 
+<!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -259,7 +301,7 @@ Obtains the vertical coordinate of an image relative to the upper left corner of
 
 | Type | Description |
 | -- | -- |
-| int32_t | Vertical coordinate of the image relative to the upper left corner of the component, in px. If **imageInfo** is a null pointer, **0** is returned. |
+| int32_t | Vertical coordinate of the image relative to the upper left corner of the component, in px. If **imageInfo** is a null pointer or this parameter is not set, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetLeft()
 
@@ -270,6 +312,10 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* image
 **Description**
 
 Sets the horizontal coordinate of an image relative to the upper left corner of the component.
+
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t left)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t left)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -290,6 +336,10 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* im
 
 Obtains the horizontal coordinate of an image relative to the upper left corner of the component.
 
+<!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -302,7 +352,7 @@ Obtains the horizontal coordinate of an image relative to the upper left corner 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Horizontal coordinate of the image relative to the upper left corner of the component, in px. If **imageInfo* * is a null pointer, **0** is returned. |
+| int32_t | Horizontal coordinate of the image relative to the upper left corner of the component, in px. If **imageInfo* * is a null pointer or this parameter is not set, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetDuration()
 
@@ -314,6 +364,10 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* i
 
 Sets the playback duration of an image.
 
+<!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t duration)--><!--Device-void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t duration)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -321,7 +375,7 @@ Sets the playback duration of an image.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
-| int32_t duration | Playback duration of an image, in ms. |
+| int32_t duration | Playback duration of an image, in ms. The value range is [0, +∞). |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetDuration()
 
@@ -332,6 +386,10 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo
 **Description**
 
 Obtains the playback duration of an image.
+
+<!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo)--><!--Device-int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -345,6 +403,6 @@ Obtains the playback duration of an image.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Playback duration of the image, in milliseconds. If **imageInfo** is a null pointer, **0** is returned. |
+| int32_t | Playback duration of the image, in ms. If **imageInfo** is a null pointer or this parameter is not set, 0 is returned. |
 
 

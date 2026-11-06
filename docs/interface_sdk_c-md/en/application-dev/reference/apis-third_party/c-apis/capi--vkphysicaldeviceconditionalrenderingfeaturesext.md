@@ -2,3 +2,17 @@
 
 ## Overview
 
+<!--Device-struct VkPhysicalDeviceConditionalRenderingFeaturesEXT {...}--><!--Device-struct VkPhysicalDeviceConditionalRenderingFeaturesEXT {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| void* pNext |  |
+| VkBool32 conditionalRendering |  |
+| VkBool32 inheritedConditionalRendering |  |
+
+

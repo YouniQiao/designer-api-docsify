@@ -6,13 +6,15 @@ typedef struct ArkUI_ListChildrenMainSize ArkUI_ListChildrenMainSize
 
 ## Overview
 
-Defines the **ChildrenMainSize** information of the **List** component.
+Defines the main axis size information of the child component of the **List** component.
+
+<!--Device-typedef struct ArkUI_ListChildrenMainSize ArkUI_ListChildrenMainSize--><!--Device-typedef struct ArkUI_ListChildrenMainSize ArkUI_ListChildrenMainSize-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **Header file**: [list.h](capi-list-h.md)
 

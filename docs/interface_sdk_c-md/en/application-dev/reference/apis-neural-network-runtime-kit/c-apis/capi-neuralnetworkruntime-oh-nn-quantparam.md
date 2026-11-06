@@ -8,6 +8,8 @@ struct OH_NN_QuantParam {...}
 
 Quantization information.<br> In quantization scenarios, the 32-bit floating-point data type is quantized into the fixed-point data type according to the following formula: \f[ q = clamp(round(\frac{r}{s}+z), q_{min}, q_{max}) \f] s and z are quantization parameters, which are stored by <b>scale</b> and <b>zeroPoint</b> in [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md). r is a floating point number, q is the quantization result, q_min is the lower bound of the quantization result, and q_max is an upper bound of a quantization result. The calculation method is as follows:<br> \f[ \text{clamp}(x,min,max) = \begin{cases} q_{min} = -(1 << (numBits - 1)) \ q_{max} = (1 << (numBits - 1)) \ \end{cases}<br> \f] The clamp function is defined as follows: \f[ \text{clamp}(x,min,max) = \begin{cases} \text{max} & \text{ if } x > \text{ max } \ \text{min} & \text{ if } x < \text{ min } \ x & \text{ otherwise } \ \end{cases}<br> \f]
 
+<!--Device-struct OH_NN_QuantParam {...}--><!--Device-struct OH_NN_QuantParam {...}-End-->
+
 **System capability**: SystemCapability.AI.NeuralNetworkRuntime
 
 **Since**: 9
@@ -16,7 +18,7 @@ Quantization information.<br> In quantization scenarios, the 32-bit floating-poi
 
 **Replaced by**: [NN_QuantParam](capi-neuralnetworkruntime-nn-quantparam.md)
 
-**Related module**: [NeuralNetworkRuntime](capi-neuralnetworkruntime.md)
+**Related module**: [NeuralNetworkRuntime](capi-neural-network-runtime-kit-neuralnetworkruntime.md)
 
 **Header file**: [neural_network_runtime_type.h](capi-neural-network-runtime-type-h.md)
 
@@ -26,7 +28,7 @@ Quantization information.<br> In quantization scenarios, the 32-bit floating-poi
 
 | Name | Description |
 | -- | -- |
-| uint32_t quantCount |  |
+| uint32_t quantCount | Specifies the length of the numBits, scale, and zeroPoint arrays. In the per-layer quantization scenario, <b>quantCount</b> is usually set to <b>1</b>. That is, all channels of a tensor share a set of quantization parameters. In the per-channel quantization scenario, <b>quantCount</b> is usually the same as the number of tensor channels, and each channel uses its own quantization parameters.<br>**Since**: 9 |
 | const uint32_t *numBits | Number of quantization bits |
 | const double *scale | Pointer to the scale data in the quantization formula |
 | const int32_t *zeroPoint | Pointer to the zero point data in the quantization formula |

@@ -8,9 +8,11 @@
 
 **库：** libnative_drm.so
 
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm.md)
+**相关模块：** [Drm](capi-drm-kit-drm.md)
 
 ## 汇总
 
@@ -75,12 +77,6 @@
 | -- | -- | -- |
 | [typedef void (\*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#drm_mediakeysysteminfocallback) | DRM_MediaKeySystemInfoCallback | 应用为从媒体源获取DRM信息而设置的回调函数。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo) | 应用为从媒体源获取DRM信息而设置的回调函数。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
-
 ## 枚举类型说明
 
 ### DRM_EventType
@@ -92,6 +88,10 @@ enum DRM_EventType
 **描述：**
 
 监听事件类型。
+
+<!--Device-DRM_EventType--><!--Device-DRM_EventType-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -114,6 +114,10 @@ enum DRM_ContentProtectionLevel
 
 内容保护级别。
 
+<!--Device-DRM_ContentProtectionLevel--><!--Device-DRM_ContentProtectionLevel-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -134,6 +138,10 @@ enum DRM_MediaKeyType
 
 媒体密钥类型。
 
+<!--Device-DRM_MediaKeyType--><!--Device-DRM_MediaKeyType-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -150,6 +158,10 @@ enum DRM_MediaKeyRequestType
 **描述：**
 
 媒体密钥请求类型。
+
+<!--Device-DRM_MediaKeyRequestType--><!--Device-DRM_MediaKeyRequestType-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -172,6 +184,10 @@ enum DRM_OfflineMediaKeyStatus
 
 离线媒体密钥状态。
 
+<!--Device-DRM_OfflineMediaKeyStatus--><!--Device-DRM_OfflineMediaKeyStatus-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -189,6 +205,10 @@ enum DRM_CertificateStatus
 **描述：**
 
 设备DRM证书状态。
+
+<!--Device-DRM_CertificateStatus--><!--Device-DRM_CertificateStatus-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
@@ -212,6 +232,10 @@ typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeyS
 **描述：**
 
 应用为从媒体源获取DRM信息而设置的回调函数。
+
+<!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 

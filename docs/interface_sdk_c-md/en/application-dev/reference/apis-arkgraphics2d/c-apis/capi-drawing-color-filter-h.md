@@ -6,9 +6,11 @@ This file declares the functions related to the color filter in the drawing modu
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -37,6 +39,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateBlendMode(uint32_t color, OH
 
 Creates an **OH_Drawing_ColorFilter** object with a given blend mode.
 
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateBlendMode(uint32_t color, OH_Drawing_BlendMode blendMode)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateBlendMode(uint32_t color, OH_Drawing_BlendMode blendMode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -61,6 +67,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilt
 **Description**
 
 Creates an **OH_Drawing_ColorFilter** object by combining another two color filters. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **outerColorFilter** or **innerColorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilter* outerColorFilter, OH_Drawing_ColorFilter* innerColorFilter)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilter* outerColorFilter, OH_Drawing_ColorFilter* innerColorFilter)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -87,6 +97,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20
 
 Creates an **OH_Drawing_ColorFilter** object with a given 5x4 color matrix. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20])--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -111,6 +125,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLinearToSrgbGamma(void)
 
 Creates an **OH_Drawing_ColorFilter** object that applies the sRGB gamma curve to the RGB channels.
 
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLinearToSrgbGamma(void)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLinearToSrgbGamma(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Returns**:
@@ -128,6 +146,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateSrgbGammaToLinear(void)
 **Description**
 
 Creates an **OH_Drawing_ColorFilter** object that applies the RGB channels to the sRGB gamma curve.
+
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateSrgbGammaToLinear(void)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateSrgbGammaToLinear(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -147,6 +169,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)
 
 Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to zero.
 
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Returns**:
@@ -164,6 +190,10 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, 
 **Description**
 
 Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color value. The final output stays between 0 and 255.
+
+<!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, uint32_t addColor)--><!--Device-OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, uint32_t addColor)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -189,6 +219,10 @@ void OH_Drawing_ColorFilterDestroy(OH_Drawing_ColorFilter* colorFilter)
 **Description**
 
 Destroys an **OH_Drawing_ColorFilter** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_ColorFilterDestroy(OH_Drawing_ColorFilter* colorFilter)--><!--Device-void OH_Drawing_ColorFilterDestroy(OH_Drawing_ColorFilter* colorFilter)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 

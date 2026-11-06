@@ -6,9 +6,11 @@
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -29,6 +31,7 @@
 | [ArkUI_ScrollAlignment](#arkui_scrollalignment) | ArkUI_ScrollAlignment | 滚动到具体item时的对齐方式。 |
 | [ArkUI_ScrollState](#arkui_scrollstate) | ArkUI_ScrollState | 定义当前滚动状态。 |
 | [ArkUI_ScrollSource](#arkui_scrollsource) | ArkUI_ScrollSource | 定义滚动来源枚举值。 |
+| [OH_ArkUI_FastScrollMode](#oh_arkui_fastscrollmode) | OH_ArkUI_FastScrollMode | 枚举滚动到指定索引的快速滚动模式。 |
 
 ## 枚举类型说明
 
@@ -41,6 +44,10 @@ enum ArkUI_EdgeEffect
 **描述：**
 
 定义边缘滑动效果枚举值。Grid、Scroll、WaterFlow组件默认值为ARKUI_EDGE_EFFECT_NONE，List组件默认值为ARKUI_EDGE_EFFECT_SPRING。
+
+<!--Device-ArkUI_EdgeEffect--><!--Device-ArkUI_EdgeEffect-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -60,6 +67,10 @@ enum ArkUI_BarState
 
 定义文本控制滚动条状态枚举值。
 
+<!--Device-ArkUI_BarState--><!--Device-ArkUI_BarState-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
@@ -78,6 +89,10 @@ enum ArkUI_EffectEdge
 
 定义边缘效果生效边缘的方向枚举值。
 
+<!--Device-ArkUI_EffectEdge--><!--Device-ArkUI_EffectEdge-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -95,6 +110,10 @@ enum ArkUI_ScrollDirection
 
 定义Scroll组件排列方向枚举值。
 
+<!--Device-ArkUI_ScrollDirection--><!--Device-ArkUI_ScrollDirection-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -102,7 +121,7 @@ enum ArkUI_ScrollDirection
 | ARKUI_SCROLL_DIRECTION_VERTICAL = 0 | 仅支持竖直方向滚动。 |
 | ARKUI_SCROLL_DIRECTION_HORIZONTAL | 仅支持水平方向滚动。 |
 | ARKUI_SCROLL_DIRECTION_NONE = 3 | 禁止滚动。 |
-| ARKUI_SCROLL_DIRECTION_FREE = 4 |  |
+| ARKUI_SCROLL_DIRECTION_FREE = 4 | 自由滚动，支持竖直和水平方向滚动，仅在Scroll组件中可用。<br>**起始版本：** 20 |
 
 ### ArkUI_ScrollSnapAlign
 
@@ -113,6 +132,10 @@ enum ArkUI_ScrollSnapAlign
 **描述：**
 
 定义列表项滚动结束对齐效果枚举值。
+
+<!--Device-ArkUI_ScrollSnapAlign--><!--Device-ArkUI_ScrollSnapAlign-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -133,6 +156,10 @@ enum ArkUI_ScrollSnapAnimationSpeed
 
 列表限位滚动动画速度。
 
+<!--Device-ArkUI_ScrollSnapAnimationSpeed--><!--Device-ArkUI_ScrollSnapAnimationSpeed-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
@@ -149,6 +176,10 @@ enum ArkUI_ScrollBarDisplayMode
 **描述：**
 
 定义滚动条状态枚举值。
+
+<!--Device-ArkUI_ScrollBarDisplayMode--><!--Device-ArkUI_ScrollBarDisplayMode-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -168,13 +199,17 @@ enum ArkUI_ContentClipMode
 
 定义滚动容器的内容层裁剪区域枚举值。
 
+<!--Device-ArkUI_ContentClipMode--><!--Device-ArkUI_ContentClipMode-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 18
 
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_CONTENT_CLIP_MODE_CONTENT_ONLY = 0 | 按内容区裁剪。 |
 | ARKUI_CONTENT_CLIP_MODE_BOUNDARY | 按组件区域裁剪。 |
-| ARKUI_CONTENT_CLIP_MODE_SAFE_AREA | Clip to the safe area configured for the component. |
+| ARKUI_CONTENT_CLIP_MODE_SAFE_AREA | 按组件配置的safe area裁剪。 |
 
 ### ArkUI_ScrollNestedMode
 
@@ -185,6 +220,10 @@ enum ArkUI_ScrollNestedMode
 **描述：**
 
 定义嵌套滚动选项。
+
+<!--Device-ArkUI_ScrollNestedMode--><!--Device-ArkUI_ScrollNestedMode-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -205,6 +244,10 @@ enum ArkUI_ScrollEdge
 
 定义滚动到的边缘位置。
 
+<!--Device-ArkUI_ScrollEdge--><!--Device-ArkUI_ScrollEdge-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -223,6 +266,10 @@ enum ArkUI_ScrollAlignment
 **描述：**
 
 滚动到具体item时的对齐方式。
+
+<!--Device-ArkUI_ScrollAlignment--><!--Device-ArkUI_ScrollAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -243,6 +290,10 @@ enum ArkUI_ScrollState
 
 定义当前滚动状态。
 
+<!--Device-ArkUI_ScrollState--><!--Device-ArkUI_ScrollState-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -261,17 +312,43 @@ enum ArkUI_ScrollSource
 
 定义滚动来源枚举值。
 
+<!--Device-ArkUI_ScrollSource--><!--Device-ArkUI_ScrollSource-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_SCROLL_SOURCE_DRAG = 0 | 手指拖动。 |
 | ARKUI_SCROLL_SOURCE_FLING | 手指拖动后的惯性滚动。 |
-| ARKUI_SCROLL_SOURCE_EDGE_EFFECT | EdgeEffect.Spring for boundary crossing. |
+| ARKUI_SCROLL_SOURCE_EDGE_EFFECT | 在过界时执行EdgeEffect.Spring边缘特效。 |
 | ARKUI_SCROLL_SOURCE_OTHER_USER_INPUT | 除了拖动以外的其他用户输入，如鼠标滚轮、键盘事件等。 |
 | ARKUI_SCROLL_SOURCE_SCROLL_BAR | 拖动滚动条。 |
 | ARKUI_SCROLL_SOURCE_SCROLL_BAR_FLING | 拖动滚动条后的惯性滚动。 |
 | ARKUI_SCROLL_SOURCE_SCROLLER | 滚动控制器引起的无动画的滚动。 |
 | ARKUI_SCROLL_SOURCE_ANIMATION | 滚动控制器引起的带动画的滚动。 |
+
+### OH_ArkUI_FastScrollMode
+
+```c
+enum OH_ArkUI_FastScrollMode
+```
+
+**描述：**
+
+枚举滚动到指定索引的快速滚动模式。
+
+<!--Device-OH_ArkUI_FastScrollMode--><!--Device-OH_ArkUI_FastScrollMode-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.1.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_ARKUI_FAST_SCROLL_MODE_NONE = 0 | 不启用快速滚动优化。在动画开始前创建并测量所有中间子组件。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_FAST_SCROLL_MODE_SKIP_MEASURE = 1 | 快速滚动优化，跳过中间子组件的测量。中间子组件会被创建但不会被测量。 该模式适用于List多列且ListItem和ListItemGroup同时存在的场景。 此时ListItem只占一行中的一列，但ListItemGroup会占满一整行，因此List需要创建所有中间子组件来获取这些子组件类型从而计算出目标索引的行位置。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_FAST_SCROLL_MODE_SKIP_CREATE_AND_MEASURE = 2 | 快速滚动优化，跳过中间子组件的创建和测量。中间子组件既不会被创建，也不会被测量。 该模式提供最大限度的优化性能。但该模式不适用于List多列且ListItem和ListItemGroup同时存在的场景。 在此场景下，请使用OH_ARKUI_FAST_SCROLL_MODE_SKIP_MEASURE。<br>**起始版本：** 26.1.0 |
 
 

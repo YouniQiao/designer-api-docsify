@@ -6,13 +6,15 @@ typedef struct OH_UdmfDataLoadParams OH_UdmfDataLoadParams
 
 ## Overview
 
-Indicates data loading params.
+Defines a struct for data loading parameters.
+
+<!--Device-typedef struct OH_UdmfDataLoadParams OH_UdmfDataLoadParams--><!--Device-typedef struct OH_UdmfDataLoadParams OH_UdmfDataLoadParams-End-->
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 20
 
-**Related module**: [UDMF](capi-udmf.md)
+**Related module**: [UDMF](capi-arkdata-udmf.md)
 
 **Header file**: [udmf.h](capi-udmf-h.md)
 

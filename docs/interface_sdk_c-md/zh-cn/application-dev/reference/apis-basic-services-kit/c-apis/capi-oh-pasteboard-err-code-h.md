@@ -8,9 +8,11 @@
 
 **库：** libpasteboard.so
 
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
 **起始版本：** 13
 
-**相关模块：** [Pasteboard](capi-pasteboard.md)
+**相关模块：** [Pasteboard](capi-basic-services-kit-pasteboard.md)
 
 ## 汇总
 
@@ -31,6 +33,10 @@ enum PASTEBOARD_ErrCode
 **描述：**
 
 剪贴板错误码枚举，用于标识剪贴板操作的执行结果，开发者可通过错误码判断操作是否成功以及失败的具体原因。
+
+<!--Device-PASTEBOARD_ErrCode--><!--Device-PASTEBOARD_ErrCode-End-->
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **起始版本：** 13
 

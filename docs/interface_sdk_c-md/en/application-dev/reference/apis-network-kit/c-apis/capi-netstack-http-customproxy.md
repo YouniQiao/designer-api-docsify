@@ -8,11 +8,13 @@ struct Http_CustomProxy {...}
 
 Defines the custom proxy configuration.
 
+<!--Device-struct Http_CustomProxy {...}--><!--Device-struct Http_CustomProxy {...}-End-->
+
 **System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 20
 
-**Related module**: [netstack](capi-netstack.md)
+**Related module**: [netstack](capi-network-kit-netstack.md)
 
 **Header file**: [net_http_type.h](capi-net-http-type-h.md)
 
@@ -25,5 +27,6 @@ Defines the custom proxy configuration.
 | const char *host;
  int32_t port;
  const char *exclusionLists | Host name of the proxy server. If no port is explicitly set, the port number is defaulted to **1080**. |
+| int32_t port |  |
 
 

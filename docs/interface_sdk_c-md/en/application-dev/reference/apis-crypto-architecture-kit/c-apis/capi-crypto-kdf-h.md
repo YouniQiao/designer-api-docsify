@@ -4,13 +4,15 @@
 
 Defines the key derivation interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_kdf.h>
+**File to Include**: <CryptoArchitectureKit/crypto_kdf.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Related module**: [CryptoKdfApi](capi-cryptokdfapi.md)
+**Related module**: [CryptoKdfApi](capi-crypto-architecture-kit-cryptokdfapi.md)
 
 ## Summary
 
@@ -50,6 +52,10 @@ enum CryptoKdf_ParamType
 
 Defines KDF parameter types.
 
+<!--Device-CryptoKdf_ParamType--><!--Device-CryptoKdf_ParamType-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 | Enum item | Description |
@@ -76,9 +82,13 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfPa
 
 Creates KDF parameters.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_kdf/OH_CryptoKdfParams_Destroy {params}
+**Resource release**: [OH_CryptoKdfParams_Destroy](#oh_cryptokdfparams_destroy)
 
 **Parameters**:
 
@@ -108,6 +118,10 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, Crypto
 
 Sets KDF parameters.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 **Parameters**:
@@ -134,6 +148,10 @@ void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)
 
 Destroys KDF parameters.
 
+<!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)--><!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 **Parameters**:
@@ -152,9 +170,13 @@ OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)
 
 Creates a KDF context based on the given algorithm name.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_kdf/OH_CryptoKdf_Destroy {ctx}
+**Resource release**: [OH_CryptoKdf_Destroy](#oh_cryptokdf_destroy)
 
 **Parameters**:
 
@@ -184,9 +206,13 @@ OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParam
 
 Derives a key.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {key}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -212,6 +238,10 @@ void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)
 **Description**
 
 Destroys the KDF context.
+
+<!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)--><!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

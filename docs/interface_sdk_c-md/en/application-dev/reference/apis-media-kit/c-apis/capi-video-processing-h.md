@@ -6,9 +6,11 @@ Declare video processing functions.<br> Provides SDR content processing for vide
 
 **Library**: libvideo_processing.so
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
-**Related module**: [VideoProcessing](capi-videoprocessing.md)
+**Related module**: [VideoProcessing](capi-media-kit-videoprocessing.md)
 
 ## Summary
 
@@ -24,7 +26,7 @@ Declare video processing functions.<br> Provides SDR content processing for vide
 | [VideoProcessing_ErrorCode OH_VideoProcessing_Destroy(OH_VideoProcessing* videoProcessor)](#oh_videoprocessing_destroy) | Destroy the video processing instance.<br> Stop the instance before destroying it. see [OH_VideoProcessing_Stop](capi-video-processing-h.md#oh_videoprocessing_stop). |
 | [VideoProcessing_ErrorCode OH_VideoProcessing_RegisterCallback(OH_VideoProcessing* videoProcessor, const VideoProcessing_Callback* callback, void* userData)](#oh_videoprocessing_registercallback) | Register callback object.<br> Register the callback object before starting video processing. |
 | [VideoProcessing_ErrorCode OH_VideoProcessing_SetSurface(OH_VideoProcessing* videoProcessor, const OHNativeWindow* window)](#oh_videoprocessing_setsurface) | Set the output surface for video processing.<br> Set the output surface before starting video processing. |
-| [VideoProcessing_ErrorCode OH_VideoProcessing_GetSurface(OH_VideoProcessing* videoProcessor, OHNativeWindow** window)](#oh_videoprocessing_getsurface) | Create an input surface.<br> Create the input surface before starting video processing. Call OH_NativeWindow_DestroyNativeWindow to destroy the input surface. |
+| [VideoProcessing_ErrorCode OH_VideoProcessing_GetSurface(OH_VideoProcessing* videoProcessor, OHNativeWindow** window)](#oh_videoprocessing_getsurface) | Create an input surface.<br> Create the input surface before starting video processing. Call [OH_NativeWindow_DestroyNativeWindow](../../apis-arkgraphics2d/c-apis/capi-external-window-h.md#oh_nativewindow_destroynativewindow) to destroy the input surface. |
 | [VideoProcessing_ErrorCode OH_VideoProcessing_SetParameter(OH_VideoProcessing* videoProcessor, const OH_AVFormat* parameter)](#oh_videoprocessing_setparameter) | Set parameter for video processing.<br> Add parameter identified by the specified parameter key. |
 | [VideoProcessing_ErrorCode OH_VideoProcessing_GetParameter(OH_VideoProcessing* videoProcessor, OH_AVFormat* parameter)](#oh_videoprocessing_getparameter) | Get parameter of video processing.<br> Get parameter identified by the specified parameter key. |
 | [VideoProcessing_ErrorCode OH_VideoProcessing_Start(OH_VideoProcessing* videoProcessor)](#oh_videoprocessing_start) | Start video processing instance.<br> After successfully calling this function, the state [VIDEO_PROCESSING_STATE_RUNNING](capi-video-processing-types-h.md#videoprocessing_state) is reported by callback function [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate). |
@@ -51,6 +53,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_InitializeEnvironment(void)
 
 Initialize global environment for video processing.<br> This function is optional. Typically, this function is called once when the host process is started to initialize the global environment for video processing, which can reduce the time of [OH_VideoProcessing_Create](capi-video-processing-h.md#oh_videoprocessing_create). To deinitialize global environment, call [OH_VideoProcessing_DeinitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_deinitializeenvironment).
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_InitializeEnvironment(void)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_InitializeEnvironment(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Returns**:
@@ -69,6 +75,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_DeinitializeEnvironment(void)
 
 Deinitialize global environment for video processing.<br> This function is required if [OH_VideoProcessing_InitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_initializeenvironment) is called. Typically, this function is called when the host process is about to exit to deinitialize the global environment, which is initialized by calling [OH_VideoProcessing_InitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_initializeenvironment). If there is some video processing instance existing, this function should not be called. If the [OH_VideoProcessing_InitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_initializeenvironment) is not called, this function should not be called.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_DeinitializeEnvironment(void)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_DeinitializeEnvironment(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Returns**:
@@ -86,6 +96,10 @@ bool OH_VideoProcessing_IsColorSpaceConversionSupported(const VideoProcessing_Co
 **Description**
 
 Query if the video color space conversion is supported.
+
+<!--Device-bool OH_VideoProcessing_IsColorSpaceConversionSupported(const VideoProcessing_ColorSpaceInfo* sourceVideoInfo, const VideoProcessing_ColorSpaceInfo* destinationVideoInfo)--><!--Device-bool OH_VideoProcessing_IsColorSpaceConversionSupported(const VideoProcessing_ColorSpaceInfo* sourceVideoInfo, const VideoProcessing_ColorSpaceInfo* destinationVideoInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -112,6 +126,10 @@ bool OH_VideoProcessing_IsMetadataGenerationSupported(const VideoProcessing_Colo
 
 Query if the video metadata generation is supported.
 
+<!--Device-bool OH_VideoProcessing_IsMetadataGenerationSupported(const VideoProcessing_ColorSpaceInfo* sourceVideoInfo)--><!--Device-bool OH_VideoProcessing_IsMetadataGenerationSupported(const VideoProcessing_ColorSpaceInfo* sourceVideoInfo)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -135,6 +153,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_Create(OH_VideoProcessing** videoPr
 **Description**
 
 Create a video processing instance.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Create(OH_VideoProcessing** videoProcessor, int type)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Create(OH_VideoProcessing** videoProcessor, int type)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -161,6 +183,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_Destroy(OH_VideoProcessing* videoPr
 
 Destroy the video processing instance.<br> Stop the instance before destroying it. see [OH_VideoProcessing_Stop](capi-video-processing-h.md#oh_videoprocessing_stop).
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Destroy(OH_VideoProcessing* videoProcessor)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Destroy(OH_VideoProcessing* videoProcessor)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -184,6 +210,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_RegisterCallback(OH_VideoProcessing
 **Description**
 
 Register callback object.<br> Register the callback object before starting video processing.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_RegisterCallback(OH_VideoProcessing* videoProcessor, const VideoProcessing_Callback* callback, void* userData)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_RegisterCallback(OH_VideoProcessing* videoProcessor, const VideoProcessing_Callback* callback, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -211,6 +241,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_SetSurface(OH_VideoProcessing* vide
 
 Set the output surface for video processing.<br> Set the output surface before starting video processing.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetSurface(OH_VideoProcessing* videoProcessor, const OHNativeWindow* window)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetSurface(OH_VideoProcessing* videoProcessor, const OHNativeWindow* window)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -218,7 +252,7 @@ Set the output surface for video processing.<br> Set the output surface before s
 | Parameter | Description |
 | -- | -- |
 | [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)* videoProcessor | A video processing instance pointer. |
-| [const OHNativeWindow](capi-videoprocessing-ohnativewindow.md)* window | The output surface pointer. |
+| [const OHNativeWindow](capi-videoprocessing-nativewindow.md)* window | The output surface pointer. |
 
 **Returns**:
 
@@ -234,7 +268,11 @@ VideoProcessing_ErrorCode OH_VideoProcessing_GetSurface(OH_VideoProcessing* vide
 
 **Description**
 
-Create an input surface.<br> Create the input surface before starting video processing. Call OH_NativeWindow_DestroyNativeWindow to destroy the input surface.
+Create an input surface.<br> Create the input surface before starting video processing. Call [OH_NativeWindow_DestroyNativeWindow](../../apis-arkgraphics2d/c-apis/capi-external-window-h.md#oh_nativewindow_destroynativewindow) to destroy the input surface.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_GetSurface(OH_VideoProcessing* videoProcessor, OHNativeWindow** window)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_GetSurface(OH_VideoProcessing* videoProcessor, OHNativeWindow** window)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -243,7 +281,7 @@ Create an input surface.<br> Create the input surface before starting video proc
 | Parameter | Description |
 | -- | -- |
 | [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)* videoProcessor | A video processing instance pointer. |
-| [OHNativeWindow](capi-videoprocessing-ohnativewindow.md)** window | The input surface pointer. For example, it is the output surface of a video decoder. |
+| [OHNativeWindow](capi-videoprocessing-nativewindow.md)** window | The input surface pointer. For example, it is the output surface of a video decoder. |
 
 **Returns**:
 
@@ -260,6 +298,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_SetParameter(OH_VideoProcessing* vi
 **Description**
 
 Set parameter for video processing.<br> Add parameter identified by the specified parameter key.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetParameter(OH_VideoProcessing* videoProcessor, const OH_AVFormat* parameter)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetParameter(OH_VideoProcessing* videoProcessor, const OH_AVFormat* parameter)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -286,6 +328,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_GetParameter(OH_VideoProcessing* vi
 
 Get parameter of video processing.<br> Get parameter identified by the specified parameter key.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_GetParameter(OH_VideoProcessing* videoProcessor, OH_AVFormat* parameter)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_GetParameter(OH_VideoProcessing* videoProcessor, OH_AVFormat* parameter)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -311,6 +357,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_Start(OH_VideoProcessing* videoProc
 
 Start video processing instance.<br> After successfully calling this function, the state [VIDEO_PROCESSING_STATE_RUNNING](capi-video-processing-types-h.md#videoprocessing_state) is reported by callback function [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate).
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Start(OH_VideoProcessing* videoProcessor)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Start(OH_VideoProcessing* videoProcessor)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -335,6 +385,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_Stop(OH_VideoProcessing* videoProce
 
 To stop video processing instance.<br> After the video processing instance is stopped successfully, the state [VIDEO_PROCESSING_STATE_STOPPED](capi-video-processing-types-h.md#videoprocessing_state) is reported by callback function OH_VideoProcessing_OnState.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Stop(OH_VideoProcessing* videoProcessor)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_Stop(OH_VideoProcessing* videoProcessor)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -358,6 +412,10 @@ VideoProcessing_ErrorCode OH_VideoProcessing_RenderOutputBuffer(OH_VideoProcessi
 **Description**
 
 Send the output buffer out.<br> If the callback function [OH_VideoProcessingCallback_OnNewOutputBuffer](capi-video-processing-types-h.md#oh_videoprocessingcallback_onnewoutputbuffer) is set, the buffer's index is reported to user by the callback function when an output buffer is ready.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_RenderOutputBuffer(OH_VideoProcessing* videoProcessor, uint32_t index)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_RenderOutputBuffer(OH_VideoProcessing* videoProcessor, uint32_t index)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -384,6 +442,10 @@ VideoProcessing_ErrorCode OH_VideoProcessingCallback_Create(VideoProcessing_Call
 
 Create a video processing callback object.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_Create(VideoProcessing_Callback** callback)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_Create(VideoProcessing_Callback** callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -408,6 +470,10 @@ VideoProcessing_ErrorCode OH_VideoProcessingCallback_Destroy(VideoProcessing_Cal
 
 Destroy the callback object.<br> The callback object can be destroyed after it is registered to video processing instance.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_Destroy(VideoProcessing_Callback* callback)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_Destroy(VideoProcessing_Callback* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -431,6 +497,10 @@ VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnError(VideoProcessing
 **Description**
 
 Bind the [OH_VideoProcessingCallback_OnError](capi-video-processing-types-h.md#oh_videoprocessingcallback_onerror) callback function to callback object.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnError(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnError onError)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnError(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnError onError)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -457,6 +527,10 @@ VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnState(VideoProcessing
 
 Bind the [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate) callback function to callback object.
 
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnState(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnState onState)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnState(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnState onState)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -481,6 +555,10 @@ VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnNewOutputBuffer(Video
 **Description**
 
 Bind the [OH_VideoProcessingCallback_OnNewOutputBuffer](capi-video-processing-types-h.md#oh_videoprocessingcallback_onnewoutputbuffer) callback function to callback object.
+
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnNewOutputBuffer(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnNewOutputBuffer onNewOutputBuffer)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessingCallback_BindOnNewOutputBuffer(VideoProcessing_Callback* callback, OH_VideoProcessingCallback_OnNewOutputBuffer onNewOutputBuffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -507,7 +585,11 @@ bool OH_VideoProcessing_IsAutoEffectSupported(uint32_t type)
 
 Query if the autoeffect is supported.
 
-**Since**: 26.1.0
+<!--Device-bool OH_VideoProcessing_IsAutoEffectSupported(uint32_t type)--><!--Device-bool OH_VideoProcessing_IsAutoEffectSupported(uint32_t type)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -531,7 +613,11 @@ VideoProcessing_ErrorCode OH_VideoProcessing_UseAutoEffect(uint32_t type, bool e
 
 Specifies whether the type effect is required in the XComponent named name that will be created.<br> Records the mapping between type, enable, and name in the internal map. This should be called before [OH_VideoProcessing_SetAutoEffectParam](capi-video-processing-h.md#oh_videoprocessing_setautoeffectparam).
 
-**Since**: 26.1.0
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_UseAutoEffect(uint32_t type, bool enable, const char *name)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_UseAutoEffect(uint32_t type, bool enable, const char *name)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -557,7 +643,11 @@ VideoProcessing_ErrorCode OH_VideoProcessing_SetAutoEffectParam(uint32_t type, c
 
 Sets parameters for the automatic effect associated with the XComponent. Currently, the AutoEffect only takes effect on the last invoked XComponent.
 
-**Since**: 26.1.0
+<!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetAutoEffectParam(uint32_t type, const char *name, const OH_AVFormat *param)--><!--Device-VideoProcessing_ErrorCode OH_VideoProcessing_SetAutoEffectParam(uint32_t type, const char *name, const OH_AVFormat *param)-End-->
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
+**Since**: 26.0.1
 
 **Parameters**:
 

@@ -6,9 +6,11 @@ Defines the interface of the HiCollie module.
 
 **Library**: libohhicollie.so
 
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 12
 
-**Related module**: [HiCollie](capi-hicollie.md)
+**Related module**: [HiCollie](capi-performance-analysis-kit-hicollie.md)
 
 ## Summary
 
@@ -46,16 +48,6 @@ Defines the interface of the HiCollie module.
 | [void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)](#oh_hicollie_setfreezecallback) | - | Sets the freeze event callback in the system. The system calls this function when a freeze event occurs. |
 | [HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)](#oh_hicollie_associateprocessreport) | - | Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type is generated. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_HiCollie_Task)(void) | Checks whether a service thread is stuck. This function is called by HiCollie every 3 seconds in a service thread. For example, this function can be used to send a message to a service thread and set a flag after the service thread receives the message. Then the flag is checked to determine whether the service thread is stuck.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiCollie |
-| void (*OH_HiCollie_BeginFunc)(const char* eventName) | In jank scenario, you need to insert two stub functions before and after each event processing of your business thread. By checking these two function executing timestamp, HiCollie will know consuming time for every event. If it exceeds the preset threshold, a jank event will be reported. This is the stub function inserted before each event processing.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiCollie |
-| void (*OH_HiCollie_EndFunc)(const char* eventName) | Records the end time when a service thread processes an event. This function is used in the jank event detection. HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event is reported. This is the stub function inserted after each event processing.<br>**Since**: 12<br>**System capability**: SystemCapability.HiviewDFX.HiCollie |
-| void (*OH_HiCollie_Callback)(void*) | Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called within the custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called.<br>**Since**: 18<br>**System capability**: SystemCapability.HiviewDFX.HiCollie |
-| size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size) | the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#oh_hicollie_setfreezecallback)<br>**Since**: 24<br>**System capability**: SystemCapability.HiviewDFX.HiCollie |
-
 ## Enum type description
 
 ### HiCollie_ErrorCode
@@ -68,19 +60,23 @@ enum HiCollie_ErrorCode
 
 Enumerates the error codes used in the HiCollie module.
 
+<!--Device-HiCollie_ErrorCode--><!--Device-HiCollie_ErrorCode-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| HICOLLIE_SUCCESS = 0 |  |
-| HICOLLIE_INVALID_ARGUMENT = 401 |  |
-| HICOLLIE_WRONG_THREAD_CONTEXT = 29800001 |  |
-| HICOLLIE_REMOTE_FAILED = 29800002 |  |
-| HICOLLIE_INVALID_TIMER_NAME = 29800003 |  |
-| HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004 |  |
-| HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005 |  |
-| HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006 |  |
-| OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007 |  |
+| HICOLLIE_SUCCESS = 0 | The operation is successful.<br>**Since**: 12 |
+| HICOLLIE_INVALID_ARGUMENT = 401 | The parameter is invalid.<br>**Since**: 12 |
+| HICOLLIE_WRONG_THREAD_CONTEXT = 29800001 | The called thread is incorrect.<br>**Since**: 12 |
+| HICOLLIE_REMOTE_FAILED = 29800002 | The remote call fails.<br>**Since**: 12 |
+| HICOLLIE_INVALID_TIMER_NAME = 29800003 | The timer name is invalid.<br>**Since**: 18 |
+| HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004 | The function execution timeout value is invalid.<br>**Since**: 18 |
+| HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005 | The process to be accessed is incorrect.<br>**Since**: 18 |
+| HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006 | The pointer used to save the returned timer ID is null.<br>**Since**: 18 |
+| OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007 | The reporting frequency exceeds the limit.<br>**Since**: 24 |
 
 ### HiCollie_Flag
 
@@ -92,14 +88,18 @@ enum HiCollie_Flag
 
 Enumerates the actions to be performed when a function times out.
 
+<!--Device-HiCollie_Flag--><!--Device-HiCollie_Flag-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 18
 
 | Enum item | Description |
 | -- | -- |
-| HICOLLIE_FLAG_DEFAULT = (~0) |  |
-| HICOLLIE_FLAG_NOOP = (0) |  |
-| HICOLLIE_FLAG_LOG = (1 << 0) |  |
-| HICOLLIE_FLAG_RECOVERY = (1 << 1) |  |
+| HICOLLIE_FLAG_DEFAULT = (~0) | Default action is generate log file and do recovery.<br>**Since**: 18 |
+| HICOLLIE_FLAG_NOOP = (0) | Do nothing except call the callback function<br>**Since**: 18 |
+| HICOLLIE_FLAG_LOG = (1 << 0) | Generate log file<br>**Since**: 18 |
+| HICOLLIE_FLAG_RECOVERY = (1 << 1) | Do recovery by call the exit syscall<br>**Since**: 18 |
 
 ### OH_HiCollie_Freeze_Type
 
@@ -110,6 +110,10 @@ enum OH_HiCollie_Freeze_Type
 **Description**
 
 Enumerates the freeze event types returned by **FreezeCallback**.
+
+<!--Device-OH_HiCollie_Freeze_Type--><!--Device-OH_HiCollie_Freeze_Type-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 24
 
@@ -137,6 +141,10 @@ typedef void (*OH_HiCollie_Task)(void)
 
 Checks whether a service thread is stuck. This function is called by HiCollie every 3 seconds in a service thread. For example, this function can be used to send a message to a service thread and set a flag after the service thread receives the message. Then the flag is checked to determine whether the service thread is stuck.
 
+<!--Device-typedef void (*OH_HiCollie_Task)(void)--><!--Device-typedef void (*OH_HiCollie_Task)(void)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 12
 
 ### OH_HiCollie_BeginFunc()
@@ -148,6 +156,10 @@ typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)
 **Description**
 
 In jank scenario, you need to insert two stub functions before and after each event processing of your business thread. By checking these two function executing timestamp, HiCollie will know consuming time for every event. If it exceeds the preset threshold, a jank event will be reported. This is the stub function inserted before each event processing.
+
+<!--Device-typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)--><!--Device-typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 12
 
@@ -167,6 +179,10 @@ typedef void (*OH_HiCollie_EndFunc)(const char* eventName)
 
 Records the end time when a service thread processes an event. This function is used in the jank event detection. HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event is reported. This is the stub function inserted after each event processing.
 
+<!--Device-typedef void (*OH_HiCollie_EndFunc)(const char* eventName)--><!--Device-typedef void (*OH_HiCollie_EndFunc)(const char* eventName)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 12
 
 **Parameters**:
@@ -184,6 +200,10 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)
 **Description**
 
 Registers a callback used to periodically detect service thread stuck events. By default, the **BUSSINESS_THREAD_BLOCK_3S** event is reported when the thread is blocked for 3s and the **<br>BUSSINESS_THREAD_BLOCK_6S** event is reported when the thread is blocked for 6s.
+
+<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 12
 
@@ -209,6 +229,10 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task t
 
 Registers a callback used to periodically detect service thread stuck events. You can set the interval for the stuck event detection. The value range is [3, 15], in seconds.
 
+<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 18
 
 **Parameters**:
@@ -233,6 +257,10 @@ HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFu
 **Description**
 
 Registers a callback used to detect service thread jank events. To monitor service thread jank events, you can implement two callbacks as instrumentation functions, placing them before and after the service thread event.
+
+<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 12
 
@@ -260,6 +288,10 @@ HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)
 
 Reports a service thread stuck event and generates logs to help locate application stuck issues. Call **OH_HiCollie_Init_StuckDetection()** or **OH_HiCollie_Init_StuckDetectionWithTimeout()** to initialize the detection task. If the task times out, call **OH_HiCollie_Report()** to report the stuck event based on the service logic.
 
+<!--Device-HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 12
 
 **Parameters**:
@@ -284,6 +316,10 @@ HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()
 
 Reports an application input unresponsive event and generates logs to help locate application freeze issues. On a PC or tablet, a dialog box is displayed, prompting the user to wait or close the application. On other devices, no dialog box is displayed. You are advised to use this API in either of the following ways: Method 1 (recommended): Use this API together with **OH_HiCollie_Report**, **OH_HiCollie_Init_StuckDetection**, or **<br>OH_HiCollie_Init_StuckDetectionWithTimeout**. The service thread periodically checks whether it is frozen through the preceding APIs. When the service thread is frozen and an input event (such as screen tapping, mouse clicking, or keyboard input) occurs, the service thread calls **OH_HiCollie_ReportInputBlock**. Method 2: If the service thread can detect its own freeze without using the **OH_HiCollie_Report**, **<br>OH_HiCollie_Init_StuckDetection**, or **OH_HiCollie_Init_StuckDetectionWithTimeout** API, the application calls the *<br>*OH_HiCollie_ReportInputBlock** API based on the service thread freeze and input event.
 
+<!--Device-HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()--><!--Device-HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 24
 
 **Returns**:
@@ -302,6 +338,10 @@ typedef void (*OH_HiCollie_Callback)(void*)
 
 Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called within the custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called.
 
+<!--Device-typedef void (*OH_HiCollie_Callback)(void*)--><!--Device-typedef void (*OH_HiCollie_Callback)(void*)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 18
 
 ### OH_HiCollie_SetTimer()
@@ -313,6 +353,10 @@ HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)
 **Description**
 
 Registers a timer to check whether the execution time of a function or code block exceeds the custom time. This API is used together with the **OH_HiCollie_CancelTimer** API.
+
+<!--Device-HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)--><!--Device-HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 18
 
@@ -339,6 +383,10 @@ void OH_HiCollie_CancelTimer(int id)
 
 Cancels a timer based on the ID. This API is used together with the **OH_HiCollie_SetTimer** API. It must be used after the function or code block is executed. If a timer is not canceled within the custom time, a callback function is executed to generate fault logs for the specified timeout event.
 
+<!--Device-void OH_HiCollie_CancelTimer(int id)--><!--Device-void OH_HiCollie_CancelTimer(int id)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 18
 
 **Parameters**:
@@ -356,6 +404,10 @@ typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void*
 **Description**
 
 the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#oh_hicollie_setfreezecallback)
+
+<!--Device-typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size)--><!--Device-typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 24
 
@@ -383,6 +435,10 @@ void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)
 
 Sets the freeze event callback in the system. The system calls this function when a freeze event occurs.
 
+<!--Device-void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)--><!--Device-void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
+
 **Since**: 24
 
 **Parameters**:
@@ -406,6 +462,10 @@ HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)
 **Description**
 
 Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type is generated.
+
+<!--Device-HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)--><!--Device-HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)-End-->
+
+**System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 24
 

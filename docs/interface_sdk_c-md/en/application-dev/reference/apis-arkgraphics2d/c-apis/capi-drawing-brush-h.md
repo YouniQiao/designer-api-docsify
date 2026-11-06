@@ -6,9 +6,11 @@ This file declares the functions related to the brush in the drawing module.
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -55,6 +57,10 @@ OH_Drawing_Brush* OH_Drawing_BrushCreate(void)
 
 Creates an **OH_Drawing_Brush** object.
 
+<!--Device-OH_Drawing_Brush* OH_Drawing_BrushCreate(void)--><!--Device-OH_Drawing_Brush* OH_Drawing_BrushCreate(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Returns**:
@@ -72,6 +78,10 @@ OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)
 **Description**
 
 Copies an existing [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object to create a new one. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)--><!--Device-OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -97,6 +107,10 @@ void OH_Drawing_BrushDestroy(OH_Drawing_Brush* brush)
 
 Destroys an **OH_Drawing_Brush** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_BrushDestroy(OH_Drawing_Brush* brush)--><!--Device-void OH_Drawing_BrushDestroy(OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -114,6 +128,10 @@ bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)
 **Description**
 
 Checks whether anti-aliasing is enabled for a brush. Anti-aliasing makes the pixels around the shape edges semi-transparent. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)--><!--Device-bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -139,6 +157,10 @@ void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)
 
 Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)--><!--Device-void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -157,6 +179,10 @@ uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)
 **Description**
 
 Obtains the color of a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)--><!--Device-uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -182,6 +208,10 @@ void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)
 
 Sets the color for a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)--><!--Device-void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -200,6 +230,10 @@ uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)
 **Description**
 
 Obtains the alpha value of a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)--><!--Device-uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -225,6 +259,10 @@ void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)
 
 Sets the alpha value for a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)--><!--Device-void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -243,6 +281,10 @@ OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a
 **Description**
 
 Sets a color for this brush. The color will be used by the brush to fill in a shape. The color is in ARGB format represented by floating-point numbers. The color space is specified by [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md). If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2. 1:1999) color space is used as the default value.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -273,6 +315,10 @@ OH_Drawing_ErrorCode OH_Drawing_BrushGetAlphaFloat(const OH_Drawing_Brush* brush
 
 Obtains the alpha value of the brush color.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetAlphaFloat(const OH_Drawing_Brush* brush, float* a)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetAlphaFloat(const OH_Drawing_Brush* brush, float* a)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -297,6 +343,10 @@ OH_Drawing_ErrorCode OH_Drawing_BrushGetRedFloat(const OH_Drawing_Brush* brush, 
 **Description**
 
 Obtains the red component of the brush color.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetRedFloat(const OH_Drawing_Brush* brush, float* r)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetRedFloat(const OH_Drawing_Brush* brush, float* r)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -323,6 +373,10 @@ OH_Drawing_ErrorCode OH_Drawing_BrushGetGreenFloat(const OH_Drawing_Brush* brush
 
 Obtains the green component of the brush color.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetGreenFloat(const OH_Drawing_Brush* brush, float* g)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetGreenFloat(const OH_Drawing_Brush* brush, float* g)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -347,6 +401,10 @@ OH_Drawing_ErrorCode OH_Drawing_BrushGetBlueFloat(const OH_Drawing_Brush* brush,
 **Description**
 
 Obtains the blue component of the brush color.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetBlueFloat(const OH_Drawing_Brush* brush, float* b)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_BrushGetBlueFloat(const OH_Drawing_Brush* brush, float* b)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -373,6 +431,10 @@ void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderE
 
 Sets the shader effect for a brush. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderEffect* shaderEffect)--><!--Device-void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderEffect* shaderEffect)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -391,6 +453,10 @@ void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLa
 **Description**
 
 Sets the shadow layer for a brush. The shadow layer effect takes effect only when text is drawn. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLayer* shadowLayer)--><!--Device-void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLayer* shadowLayer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -411,6 +477,10 @@ void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filte
 
 Sets the filter [OH_Drawing_Filter](capi-drawing-oh-drawing-filter.md) for a brush. The filter is a container that holds a mask filter and color filter. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)--><!--Device-void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -429,6 +499,10 @@ void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filte
 **Description**
 
 Obtains the [OH_Drawing_Filter](capi-drawing-oh-drawing-filter.md) object from the brush. The filter is a container that holds a mask filter and color filter. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **brush** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)--><!--Device-void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -449,6 +523,10 @@ void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode 
 
 Sets a blender for a brush. The blender implements the specified blend mode. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
+<!--Device-void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode blendMode)--><!--Device-void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode blendMode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -467,6 +545,10 @@ void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)
 **Description**
 
 Resets a brush to the initial state. All configured attributes are cleared. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)--><!--Device-void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

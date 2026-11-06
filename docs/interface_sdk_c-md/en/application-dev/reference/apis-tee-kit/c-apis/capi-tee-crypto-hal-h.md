@@ -6,9 +6,11 @@ Provides APIs for cryptographic operations.<br> You can use these APIs to implem
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -37,6 +39,10 @@ enum CRYPTO_ENGINE
 
 Enumerates the types of the crypto engine.
 
+<!--Device-CRYPTO_ENGINE--><!--Device-CRYPTO_ENGINE-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -59,6 +65,10 @@ TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)
 **Description**
 
 Sets the encryption and decryption engines to an operation.
+
+<!--Device-TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)--><!--Device-TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -84,6 +94,10 @@ TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)
 **Description**
 
 Sets the encryption and decryption engines to an object.
+
+<!--Device-TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)--><!--Device-TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

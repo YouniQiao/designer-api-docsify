@@ -4,13 +4,15 @@
 
 Defines the message authentication code interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_mac.h>
+**File to Include**: <CryptoArchitectureKit/crypto_mac.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Related module**: [CryptoMacApi](capi-cryptomacapi.md)
+**Related module**: [CryptoMacApi](capi-crypto-architecture-kit-cryptomacapi.md)
 
 ## Summary
 
@@ -50,6 +52,10 @@ enum CryptoMac_ParamType
 
 Defines MAC algorithm parameter types.
 
+<!--Device-CryptoMac_ParamType--><!--Device-CryptoMac_ParamType-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 | Enum item | Description |
@@ -70,9 +76,13 @@ OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)
 
 Creates a MAC context based on the given algorithm name.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_mac/OH_CryptoMac_Destroy {ctx}
+**Resource release**: [OH_CryptoMac_Destroy](#oh_cryptomac_destroy)
 
 **Parameters**:
 
@@ -101,6 +111,10 @@ OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType t
 **Description**
 
 Sets the specified parameter of the MAC context.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType type, const Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType type, const Crypto_DataBlob *value)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -133,6 +147,10 @@ OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *ke
 
 Initializes the MAC context with a symmetric key.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *key)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
 **Parameters**:
@@ -162,6 +180,10 @@ OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *
 **Description**
 
 Updates MAC data.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *in)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *in)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -193,9 +215,13 @@ OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)
 
 Finishes the MAC operation.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 20
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -219,6 +245,10 @@ OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)
 **Description**
 
 Obtains the MAC result length.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -244,6 +274,10 @@ void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)
 **Description**
 
 Destroys the MAC context.
+
+<!--Device-void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)--><!--Device-void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

@@ -6,9 +6,11 @@ The file declares the structs and enums of the LowPowerAudioSink.
 
 **Library**: liblowpower_avsink.so
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
-**Related module**: [LowPowerAudioSink](capi-lowpoweraudiosink.md)
+**Related module**: [LowPowerAudioSink](capi-media-kit-lowpoweraudiosink.md)
 
 ## Summary
 
@@ -30,17 +32,6 @@ The file declares the structs and enums of the LowPowerAudioSink.
 | [typedef void (\*OH_LowPowerAudioSink_OnDeviceChanged)(OH_LowPowerAudioSink* sink, OH_AudioStream_DeviceChangeReason reason, void* userData)](#oh_lowpoweraudiosink_ondevicechanged) | OH_LowPowerAudioSink_OnDeviceChanged | Called when the audio device changes in the LowPowerAudioSink. |
 | [typedef void (\*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* userData)](#oh_lowpoweraudiosink_oneos) | OH_LowPowerAudioSink_OnEos | Called when the playback is complete in the LowPowerAudioSink. This callback is included in [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md). |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_LowPowerAudioSink_OnError)( OH_LowPowerAudioSink* sink, OH_AVErrCode errCode, const char* errorMsg, void* userData) | Called when an error occurs in the LowPowerAudioSink.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-| void (*OH_LowPowerAudioSink_OnPositionUpdated)( OH_LowPowerAudioSink* sink, int64_t currentPosition, void* userData) | Called when the playback position is updated in the LowPowerAudioSink.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-| void (*OH_LowPowerAudioSink_OnDataNeeded)( OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples, void* userData) | Called when the LowPowerAudioSink needs more data.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-| void (*OH_LowPowerAudioSink_OnInterrupted)( OH_LowPowerAudioSink* sink, OH_AudioInterrupt_ForceType type, OH_AudioInterrupt_Hint hint, void* userData) | Called when the audio focus is interrupted in the LowPowerAudioSink.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-| void (*OH_LowPowerAudioSink_OnDeviceChanged)( OH_LowPowerAudioSink* sink, OH_AudioStream_DeviceChangeReason reason, void* userData) | Called when the audio device changes in the LowPowerAudioSink.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-| void (*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* userData) | Called when the playback is complete in the LowPowerAudioSink. This callback is included in [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md).<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink |
-
 ## Function description
 
 ### OH_LowPowerAudioSink_OnError()
@@ -52,6 +43,10 @@ typedef void (*OH_LowPowerAudioSink_OnError)(OH_LowPowerAudioSink* sink, OH_AVEr
 **Description**
 
 Called when an error occurs in the LowPowerAudioSink.
+
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnError)(OH_LowPowerAudioSink* sink, OH_AVErrCode errCode, const char* errorMsg, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnError)(OH_LowPowerAudioSink* sink, OH_AVErrCode errCode, const char* errorMsg, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -74,6 +69,10 @@ typedef void (*OH_LowPowerAudioSink_OnPositionUpdated)(OH_LowPowerAudioSink* sin
 
 Called when the playback position is updated in the LowPowerAudioSink.
 
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnPositionUpdated)(OH_LowPowerAudioSink* sink, int64_t currentPosition, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnPositionUpdated)(OH_LowPowerAudioSink* sink, int64_t currentPosition, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -94,6 +93,10 @@ typedef void (*OH_LowPowerAudioSink_OnDataNeeded)(OH_LowPowerAudioSink* sink, OH
 
 Called when the LowPowerAudioSink needs more data.
 
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnDataNeeded)(OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnDataNeeded)(OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -113,6 +116,10 @@ typedef void (*OH_LowPowerAudioSink_OnInterrupted)(OH_LowPowerAudioSink* sink, O
 **Description**
 
 Called when the audio focus is interrupted in the LowPowerAudioSink.
+
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnInterrupted)(OH_LowPowerAudioSink* sink, OH_AudioInterrupt_ForceType type, OH_AudioInterrupt_Hint hint, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnInterrupted)(OH_LowPowerAudioSink* sink, OH_AudioInterrupt_ForceType type, OH_AudioInterrupt_Hint hint, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -135,6 +142,10 @@ typedef void (*OH_LowPowerAudioSink_OnDeviceChanged)(OH_LowPowerAudioSink* sink,
 
 Called when the audio device changes in the LowPowerAudioSink.
 
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnDeviceChanged)(OH_LowPowerAudioSink* sink, OH_AudioStream_DeviceChangeReason reason, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnDeviceChanged)(OH_LowPowerAudioSink* sink, OH_AudioStream_DeviceChangeReason reason, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -154,6 +165,10 @@ typedef void (*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* use
 **Description**
 
 Called when the playback is complete in the LowPowerAudioSink. This callback is included in [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md).
+
+<!--Device-typedef void (*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* userData)--><!--Device-typedef void (*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 

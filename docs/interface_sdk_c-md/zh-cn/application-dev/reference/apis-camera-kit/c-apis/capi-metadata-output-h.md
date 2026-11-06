@@ -6,9 +6,11 @@
 
 **库：** libohcamera.so
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## 汇总
 
@@ -41,15 +43,8 @@
 | [bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_islockmetadataobjecttrackingsupported) | - | 检查设备是否支持锁定元数据对象（如猫脸、狗脸）追踪功能。 |
 | [Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput, Camera_Point* pointOfInterest)](#oh_metadataoutput_lockmetadataobjecttracking) | - | 锁定对特定元数据对象（如猫脸、狗脸）的追踪。 <br>该功能以pointOfInterest所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。 <br>被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。 |
 | [Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_unlockmetadataobjecttracking) | - | 解锁元数据对象（如猫脸、狗脸）的追踪。 |
-
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutput* metadataOutput, Camera_MetadataObject* metadataObject, uint32_t size) | 在[MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)中被调用的元数据输出元数据对象可用回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t size) | 用于监听元数据对象上报事件的回调。使用[OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_registermetadataobjectextavailablecallback)进行注册。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput, Camera_ErrorCode errorCode) | 在[MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)中被调用的元数据输出错误回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode errorCode) | 在元数据输出期间，用于监听错误事件的回调。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
+| [Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)](#oh_metadataoutput_setinframemetadataforencoderenabled) | - | 启用或关闭编码器传递帧内元数据。 |
+| [bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)](#oh_metadataoutput_isinframemetadataforencodersupported) | - | 查询相机设备是否支持编码器帧内元数据。 |
 
 ## 函数说明
 
@@ -62,6 +57,10 @@ typedef void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutpu
 **描述：**
 
 在[MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)中被调用的元数据输出元数据对象可用回调。
+
+<!--Device-typedef void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutput* metadataOutput, Camera_MetadataObject* metadataObject, uint32_t size)--><!--Device-typedef void (*OH_MetadataOutput_OnMetadataObjectAvailable)(Camera_MetadataOutput* metadataOutput, Camera_MetadataObject* metadataObject, uint32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -83,6 +82,10 @@ typedef void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH
 
 用于监听元数据对象上报事件的回调。使用[OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_registermetadataobjectextavailablecallback)进行注册。
 
+<!--Device-typedef void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t size)--><!--Device-typedef void (*OH_MetadataOutput_OnMetadataObjectExtAvailable)(void* context, OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -102,6 +105,10 @@ typedef void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput,
 **描述：**
 
 在[MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)中被调用的元数据输出错误回调。
+
+<!--Device-typedef void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput, Camera_ErrorCode errorCode)--><!--Device-typedef void (*OH_MetadataOutput_OnError)(Camera_MetadataOutput* metadataOutput, Camera_ErrorCode errorCode)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -127,6 +134,10 @@ typedef void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode err
 
 在元数据输出期间，用于监听错误事件的回调。
 
+<!--Device-typedef void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode errorCode)--><!--Device-typedef void (*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode errorCode)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -150,6 +161,10 @@ Camera_ErrorCode OH_MetadataOutput_RegisterCallback(Camera_MetadataOutput* metad
 **描述：**
 
 注册元数据输出更改事件回调。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -176,6 +191,10 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterCallback(Camera_MetadataOutput* met
 
 注销元数据输出更改事件回调。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -200,6 +219,10 @@ Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Ca
 **描述：**
 
 注册监听元数据对象上报事件的回调。该回调可通过[OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback)注销。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -227,6 +250,10 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback(
 
 注销监听元数据对象上报事件的回调。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -252,6 +279,10 @@ Camera_ErrorCode OH_MetadataOutput_RegisterErrorExtCallback(Camera_MetadataOutpu
 **描述：**
 
 注册监听错误事件的回调。该回调可通过[OH_MetadataOutput_UnregisterErrorExtCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistererrorextcallback)注销。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_RegisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -279,6 +310,10 @@ Camera_ErrorCode OH_MetadataOutput_UnregisterErrorExtCallback(Camera_MetadataOut
 
 注销监听错误事件的回调。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)--><!--Device-Camera_ErrorCode OH_MetadataOutput_UnregisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -305,6 +340,10 @@ Camera_ErrorCode OH_MetadataOutput_Start(Camera_MetadataOutput* metadataOutput)
 
 启动元数据输出。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_Start(Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_MetadataOutput_Start(Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -328,6 +367,10 @@ Camera_ErrorCode OH_MetadataOutput_Stop(Camera_MetadataOutput* metadataOutput)
 **描述：**
 
 停止元数据输出。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_Stop(Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_MetadataOutput_Stop(Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -353,6 +396,10 @@ Camera_ErrorCode OH_MetadataOutput_Release(Camera_MetadataOutput* metadataOutput
 
 释放元数据输出实例。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_Release(Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_MetadataOutput_Release(Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -376,6 +423,10 @@ Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes (Camera_MetadataOutput
 **描述：**
 
 添加元数据对象类型。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes (Camera_MetadataOutput* metadataOutput, Camera_MetadataObjectType* types, uint32_t size)--><!--Device-Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes (Camera_MetadataOutput* metadataOutput, Camera_MetadataObjectType* types, uint32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 23
 
@@ -403,6 +454,10 @@ Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes (Camera_MetadataOut
 
 移除元数据对象类型。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes (Camera_MetadataOutput* metadataOutput, Camera_MetadataObjectType* types, uint32_t size)--><!--Device-Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes (Camera_MetadataOutput* metadataOutput, Camera_MetadataObjectType* types, uint32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -429,6 +484,10 @@ bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_Metada
 
 检查设备是否支持锁定元数据对象（如猫脸、狗脸）追踪功能。
 
+<!--Device-bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_MetadataOutput* metadataOutput)--><!--Device-bool OH_MetadataOutput_IsLockMetadataObjectTrackingSupported(const Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -452,6 +511,10 @@ Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOut
 **描述：**
 
 锁定对特定元数据对象（如猫脸、狗脸）的追踪。 <br>该功能以pointOfInterest所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。 <br>被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput, Camera_Point* pointOfInterest)--><!--Device-Camera_ErrorCode OH_MetadataOutput_LockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput, Camera_Point* pointOfInterest)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -478,6 +541,10 @@ Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataO
 
 解锁元数据对象（如猫脸、狗脸）的追踪。
 
+<!--Device-Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -491,5 +558,62 @@ Camera_ErrorCode OH_MetadataOutput_UnlockMetadataObjectTracking(Camera_MetadataO
 | 类型 | 说明 |
 | -- | -- |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK：操作成功。<br>CAMERA_INVALID_ARGUMENT：参数缺失或参数类型错误。<br>CAMERA_SESSION_NOT_CONFIG：捕获会话未配置。<br>CAMERA_SERVICE_FATAL_ERROR：相机服务异常。 |
+
+### OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled()
+
+```c
+Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)
+```
+
+**描述：**
+
+启用或关闭编码器传递帧内元数据。
+
+<!--Device-Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)--><!--Device-Camera_ErrorCode OH_MetadataOutput_SetInFrameMetadataForEncoderEnabled(Camera_MetadataOutput* metadataOutput, bool enable)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | [入参] 元数据输出实例的指针。 |
+| bool enable | [入参] 是否启用编码器传递帧内元数据。 **true**表示启用，**false**表示禁用。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK：操作成功。<br>CAMERA_INVALID_ARGUMENT：参数缺失或参数类型错误。<br>CAMERA_SERVICE_FATAL_ERROR：相机服务异常。 |
+
+### OH_MetadataOutput_IsInFrameMetadataForEncoderSupported()
+
+```c
+bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)
+```
+
+**描述：**
+
+查询相机设备是否支持编码器帧内元数据。
+
+<!--Device-bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)--><!--Device-bool OH_MetadataOutput_IsInFrameMetadataForEncoderSupported(const Camera_MetadataOutput* metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | [入参] 元数据输出实例的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| bool | true表示支持该功能。<br>false表示不支持该功能。 |
 
 

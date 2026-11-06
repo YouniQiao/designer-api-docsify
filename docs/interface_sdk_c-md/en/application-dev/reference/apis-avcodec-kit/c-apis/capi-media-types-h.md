@@ -6,9 +6,11 @@ Declared the common media types definition.
 
 **Library**: libnative_media_core.so
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 18
 
-**Related module**: [Core](capi-core.md)
+**Related module**: [Core](capi-avcodec-kit-core.md)
 
 ## Summary
 
@@ -29,6 +31,10 @@ enum OH_Core_HdrType
 **Description**
 
 Enumerates HDR types.
+
+<!--Device-OH_Core_HdrType--><!--Device-OH_Core_HdrType-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 18
 

@@ -6,9 +6,11 @@ The file declares the APIs for obtaining the following ability resource informat
 
 **Library**: libbundle_ndk.z.so
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
-**Related module**: [Native_Bundle](capi-native-bundle.md)
+**Related module**: [Native_Bundle](capi-ability-kit-native-bundle.md)
 
 ## Summary
 
@@ -16,7 +18,7 @@ The file declares the APIs for obtaining the following ability resource informat
 
 | Name | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md) | The struct describes the ability resource information. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md) | Represents the ability resource information, which is used to store and pass the basic configuration information of an ability, including attributes such as name and type. It is applicable to scenarios where the native layer queries and manages ability resources. |
 
 ### Function
 
@@ -30,8 +32,7 @@ The file declares the APIs for obtaining the following ability resource informat
 | [BundleManager_ErrorCode OH_NativeBundle_CheckDefaultApp(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, bool* isDefault)](#oh_nativebundle_checkdefaultapp) | Checks whether the application to which the ability belongs is a default application. |
 | [BundleManager_ErrorCode OH_AbilityResourceInfo_Destroy(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, size_t count)](#oh_abilityresourceinfo_destroy) | Releases memory allocated for ability resource information. |
 | [int OH_NativeBundle_GetSize()](#oh_nativebundle_getsize) | Obtains the size of a single [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md) struct. |
-| [BundleManager_ErrorCode OH_NativeBundle_GetDrawableDescriptor(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, ArkUI_DrawableDescriptor** drawableIcon)
-} // extern "C"](#oh_nativebundle_getdrawabledescriptor) | Obtains the DrawableDescriptor object of the ability icon resource. After using this function, you must manually release the pointer returned to prevent memory leakage. |
+| [BundleManager_ErrorCode OH_NativeBundle_GetDrawableDescriptor(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, ArkUI_DrawableDescriptor** drawableIcon)](#oh_nativebundle_getdrawabledescriptor) | Obtains the DrawableDescriptor object of the ability icon resource. After using this function, you must manually release the pointer returned to prevent memory leakage. |
 
 ## Function description
 
@@ -45,14 +46,18 @@ BundleManager_ErrorCode OH_NativeBundle_GetBundleName(OH_NativeBundle_AbilityRes
 
 Obtains the bundle name of the ability. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetBundleName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** bundleName)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetBundleName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** bundleName)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| char** bundleName | Double pointer to the bundle name. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| char** bundleName | [in] Double pointer to the bundle name. |
 
 **Returns**:
 
@@ -70,14 +75,18 @@ BundleManager_ErrorCode OH_NativeBundle_GetModuleName(OH_NativeBundle_AbilityRes
 
 Obtains the module name of the ability. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetModuleName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** moduleName)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetModuleName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** moduleName)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| char** moduleName | Double pointer to the module name. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| char** moduleName | [in] Double pointer to the module name. |
 
 **Returns**:
 
@@ -95,14 +104,18 @@ BundleManager_ErrorCode OH_NativeBundle_GetAbilityName(OH_NativeBundle_AbilityRe
 
 Obtains the ability name. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAbilityName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** abilityName)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAbilityName(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** abilityName)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| char** abilityName | Double pointer to the ability name. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| char** abilityName | [in] Double pointer to the ability name. |
 
 **Returns**:
 
@@ -120,14 +133,18 @@ BundleManager_ErrorCode OH_NativeBundle_GetLabel(OH_NativeBundle_AbilityResource
 
 Obtains the application name of the ability. After using this function, you must manually release the pointerreturned to prevent memory leakage.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetLabel(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** label)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetLabel(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, char** label)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| char** label | Double pointer to the application name. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| char** label | [in] Double pointer to the application name. |
 
 **Returns**:
 
@@ -145,14 +162,18 @@ BundleManager_ErrorCode OH_NativeBundle_GetAppIndex(OH_NativeBundle_AbilityResou
 
 Obtains the clone index of the ability.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAppIndex(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, int* appIndex)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAppIndex(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, int* appIndex)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| int* appIndex | Pointer to the clone index. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| int* appIndex | [in] Pointer to the clone index. |
 
 **Returns**:
 
@@ -170,14 +191,18 @@ BundleManager_ErrorCode OH_NativeBundle_CheckDefaultApp(OH_NativeBundle_AbilityR
 
 Checks whether the application to which the ability belongs is a default application.
 
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_CheckDefaultApp(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, bool* isDefault)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_CheckDefaultApp(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, bool* isDefault)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| bool* isDefault | Pointer to the check result for whether the application is a default application. A default application is the preferred application set by the user for a specific file type or operation. **true** if the application is a default application, **false** otherwise. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| bool* isDefault | [in] Pointer to the check result for whether the application is a default application. A default application is the preferred application set by the user for a specific file type or operation. **true** if the application is a default application, **false** otherwise. |
 
 **Returns**:
 
@@ -195,14 +220,18 @@ BundleManager_ErrorCode OH_AbilityResourceInfo_Destroy(OH_NativeBundle_AbilityRe
 
 Releases memory allocated for ability resource information.
 
+<!--Device-BundleManager_ErrorCode OH_AbilityResourceInfo_Destroy(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, size_t count)--><!--Device-BundleManager_ErrorCode OH_AbilityResourceInfo_Destroy(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, size_t count)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| size_t count | Size of the ability resource information array. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| size_t count | [in] Size of the ability resource information array. |
 
 **Returns**:
 
@@ -220,6 +249,10 @@ int OH_NativeBundle_GetSize()
 
 Obtains the size of a single [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md) struct.
 
+<!--Device-int OH_NativeBundle_GetSize()--><!--Device-int OH_NativeBundle_GetSize()-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 21
 
 **Returns**:
@@ -232,12 +265,15 @@ Obtains the size of a single [OH_NativeBundle_AbilityResourceInfo](capi-native-b
 
 ```c
 BundleManager_ErrorCode OH_NativeBundle_GetDrawableDescriptor(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, ArkUI_DrawableDescriptor** drawableIcon)
-} // extern "C"
 ```
 
 **Description**
 
 Obtains the DrawableDescriptor object of the ability icon resource. After using this function, you must manually release the pointer returned to prevent memory leakage.
+
+<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetDrawableDescriptor(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, ArkUI_DrawableDescriptor** drawableIcon)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetDrawableDescriptor(OH_NativeBundle_AbilityResourceInfo* abilityResourceInfo, ArkUI_DrawableDescriptor** drawableIcon)-End-->
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
 
 **Since**: 21
 
@@ -245,8 +281,8 @@ Obtains the DrawableDescriptor object of the ability icon resource. After using 
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | Pointer to the ability resource information. |
-| drawableIcon | Double pointer to the DrawableDescriptor object. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)* abilityResourceInfo | [in] Pointer to the ability resource information. |
+| [ArkUI_DrawableDescriptor](../../apis-arkui/c-apis/capi-arkui-nativemodule-arkui-drawabledescriptor.md)** drawableIcon | [in] Double pointer to the DrawableDescriptor object. |
 
 **Returns**:
 

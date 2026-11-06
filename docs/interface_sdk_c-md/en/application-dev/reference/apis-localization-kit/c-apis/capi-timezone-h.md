@@ -6,9 +6,11 @@ Provides the capability of obtaining time zone information.
 
 **Library**: libohi18n.so
 
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
-**Related module**: [i18n](capi-i18n.md)
+**Related module**: [i18n](capi-localization-kit-i18n.md)
 
 ## Summary
 
@@ -64,6 +66,10 @@ enum DateRuleType
 
 Enumerates the types of rules for defining dates.
 
+<!--Device-DateRuleType--><!--Device-DateRuleType-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 | Enum item | Description |
@@ -82,6 +88,10 @@ enum TimeRuleType
 **Description**
 
 Enumerates the types of rules for defining time.
+
+<!--Device-TimeRuleType--><!--Device-TimeRuleType-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -103,6 +113,10 @@ I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* r
 **Description**
 
 Obtains the timezone rules by timezone ID.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)--><!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -129,6 +143,10 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 Obtains the time when the TimeArrayTimeZoneRule first took effect.
 
+<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 **Parameters**:
@@ -153,6 +171,10 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule first took effect.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -179,6 +201,10 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 Obtains the time when the TimeArrayTimeZoneRule final took effect.
 
+<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 **Parameters**:
@@ -203,6 +229,10 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule final took effect.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -229,6 +259,10 @@ I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 Obtains the time when the TimeArrayTimeZoneRule next took effect.
 
+<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 **Parameters**:
@@ -253,6 +287,10 @@ I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule next took effect.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -279,6 +317,10 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 Obtains the time when the TimeArrayTimeZoneRule previous took effect.
 
+<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 **Parameters**:
@@ -303,6 +345,10 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule previous took effect.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -329,6 +375,10 @@ I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index
 
 Obtain the effective start time of a specific rule in the TimeArrayTimeZoneRule.
 
+<!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)--><!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)-End-->
+
+**System capability**: SystemCapability.Global.I18n
+
 **Since**: 22
 
 **Parameters**:
@@ -354,6 +404,10 @@ I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, Ti
 **Description**
 
 Obtain the effective start time of a specific rule for target year in the AnnualTimeZoneRule.
+
+<!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)-End-->
+
+**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 

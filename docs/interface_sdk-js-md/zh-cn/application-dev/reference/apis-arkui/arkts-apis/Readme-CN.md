@@ -1432,7 +1432,6 @@
   - [TitleHeight](arkts-arkui-titleheight-e.md)
   - [TouchType](arkts-arkui-touchtype-e.md)
   - [TransitionType](arkts-arkui-transitiontype-e.md)
-  - [UIMaterialAnimationMode](arkts-arkui-uimaterialanimationmode-e.md)
   - [VerticalAlign](arkts-arkui-verticalalign-e.md)
   - [Visibility](arkts-arkui-visibility-e.md)
   - [Week](arkts-arkui-week-e.md)

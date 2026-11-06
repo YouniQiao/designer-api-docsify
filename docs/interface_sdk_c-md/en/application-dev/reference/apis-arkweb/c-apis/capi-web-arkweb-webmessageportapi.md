@@ -8,11 +8,13 @@ typedef struct ArkWeb_WebMessagePortAPI {...} ArkWeb_WebMessagePortAPI
 
 ArkWeb_WebMessagePortAPI is a native API struct for web message ports. This struct provides functions such as message port creation, closing, message sending, and message receiving callback registration. This API is a core component of the postMessage bridge, supporting the establishment of persistent bidirectional communication channels between native code and web pages. It is suitable for scenarios where data interaction between native apps and web pages is required, solving cross-language communication challenges and improving app extensibility and development efficiency.<br>Web message port related APIs must be called on the UI thread by using the OH_ArkWeb_GetNativeAPI method. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#宏定义) to check the availability of function pointers, preventing crashes caused by mismatches between the SDK and the device ROM.
 
+<!--Device-typedef struct ArkWeb_WebMessagePortAPI {...} ArkWeb_WebMessagePortAPI--><!--Device-typedef struct ArkWeb_WebMessagePortAPI {...} ArkWeb_WebMessagePortAPI-End-->
+
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
 
-**Related module**: [Web](capi-web.md)
+**Related module**: [Web](capi-arkweb-web.md)
 
 **Header file**: [arkweb_type.h](capi-arkweb-type-h.md)
 
@@ -29,9 +31,9 @@ ArkWeb_WebMessagePortAPI is a native API struct for web message ports. This stru
 
 | Name | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode (\*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)](#postmessage) | Sends a message to the HTML page. It is used when native code needs to pass data, instructions, or configuration information to a web page, for example, form data synchronization and control command delivery. |
-| [void (\*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)](#close) | Closes a message port. |
-| [void (\*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag,ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)](#setmessageeventhandler) | Sets a callback for receiving HTML messages. It is used when messages, requests, or event notifications from a web page need to be received and processed, for example, receiving user input and status update notifications. |
+| [ArkWeb_ErrorCode (\*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)](#postmessage) | - | Sends a message to the HTML page. It is used when native code needs to pass data, instructions, or configuration information to a web page, for example, form data synchronization and control command delivery. |
+| [void (\*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)](#close) | - | Closes a message port. |
+| [void (\*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag,ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)](#setmessageeventhandler) | - | Sets a callback for receiving HTML messages. It is used when messages, requests, or event notifications from a web page need to be received and processed, for example, receiving user input and status update notifications. |
 
 ## Member function description
 
@@ -45,13 +47,15 @@ ArkWeb_ErrorCode (*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, c
 
 Sends a message to the HTML page. It is used when native code needs to pass data, instructions, or configuration information to a web page, for example, form data synchronization and control command delivery.
 
+<!--Device-ArkWeb_ErrorCode (*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)--><!--Device-ArkWeb_ErrorCode (*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageportptr.md) webMessagePort | Pointer to the message port. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
 |  const char* webTag | Name of the Web component, used to identify the Web component to operate. It must be a unique identifier bound to the Web component. If no Web component bound to webTag is found, an initialization failure error is returned. |
-|  const [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessageptr.md) webMessage | Message to send. |
+|  const [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Message to send. |
 
 **Returns**:
 
@@ -69,11 +73,13 @@ void (*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)
 
 Closes a message port.
 
+<!--Device-void (*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)--><!--Device-void (*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageportptr.md) webMessagePort | Pointer to the message port. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
 |  const char* webTag | Name of the **Web** component. |
 
 ### setMessageEventHandler()
@@ -86,11 +92,13 @@ void (*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, co
 
 Sets a callback for receiving HTML messages. It is used when messages, requests, or event notifications from a web page need to be received and processed, for example, receiving user input and status update notifications.
 
+<!--Device-void (*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)--><!--Device-void (*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageportptr.md) webMessagePort | Pointer to the message port. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
 |  const char* webTag | Name of the **Web** component. |
 | [ArkWeb_OnMessageEventHandler](capi-arkweb-type-h.md#arkweb_onmessageeventhandler) messageEventHandler | Callback used to handle messages. |
 |  void* userData | User-defined data that is passed to the messageEventHandler callback when triggered. It can be used to carry context information or additional service data, and its lifecycle is managed by the app. |

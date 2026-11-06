@@ -6,9 +6,11 @@
 
 **库：** libmedia_asset_manager.so
 
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **起始版本：** 12
 
-**相关模块：** [MediaAssetManager](capi-mediaassetmanager.md)
+**相关模块：** [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
 
 ## 汇总
 
@@ -37,6 +39,10 @@ OH_MediaAssetManager* OH_MediaAssetManager_Create(void)
 
 创建一个媒体资产管理器。
 
+<!--Device-OH_MediaAssetManager* OH_MediaAssetManager_Create(void)--><!--Device-OH_MediaAssetManager* OH_MediaAssetManager_Create(void)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -54,6 +60,10 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetMan
 **描述：**
 
 请求具有目标路径的图像资源。
+
+<!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)--><!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -85,6 +95,10 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetMan
 
 请求具有目标路径的视频资源。
 
+<!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)--><!--Device-MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetManager* manager, const char* uri, MediaLibrary_RequestOptions requestOptions, const char* destPath, OH_MediaLibrary_OnDataPrepared callback)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **起始版本：** 12
@@ -115,6 +129,10 @@ bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const Med
 
 通过请求Id取消请求。
 
+<!--Device-bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const MediaLibrary_RequestId requestId)--><!--Device-bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const MediaLibrary_RequestId requestId)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **起始版本：** 12
@@ -141,6 +159,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetMana
 **描述：**
 
 根据不同的策略模式请求动态照片资源。
+
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnMovingPhotoDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnMovingPhotoDataPrepared callback)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -172,6 +194,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* m
 
 根据不同的策略模式请求图像资源。
 
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnImageDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnImageDataPrepared callback)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **起始版本：** 12
@@ -202,6 +228,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManag
 
 根据不同的策略模式请求图像资源。
 
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnQuickImageDataPrepared callback)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManager* manager, OH_MediaAsset* mediaAsset, MediaLibrary_RequestOptions requestOptions, MediaLibrary_RequestId* requestId, OH_MediaLibrary_OnQuickImageDataPrepared callback)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **起始版本：** 23
@@ -231,6 +261,10 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manage
 **描述：**
 
 释放[OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md)实例。
+
+<!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manager)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manager)-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **起始版本：** 13
 

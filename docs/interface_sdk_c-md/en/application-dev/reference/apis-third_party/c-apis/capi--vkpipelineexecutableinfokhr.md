@@ -2,3 +2,17 @@
 
 ## Overview
 
+<!--Device-struct VkPipelineExecutableInfoKHR {...}--><!--Device-struct VkPipelineExecutableInfoKHR {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| const void* pNext |  |
+| VkPipeline pipeline |  |
+| uint32_t executableIndex |  |
+
+

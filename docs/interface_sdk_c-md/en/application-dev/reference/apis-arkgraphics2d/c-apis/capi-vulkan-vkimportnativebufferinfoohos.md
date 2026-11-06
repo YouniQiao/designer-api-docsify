@@ -8,11 +8,13 @@ struct VkImportNativeBufferInfoOHOS {...}
 
 Defines the pointer to an <b>OH_NativeBuffer</b> struct.
 
+<!--Device-struct VkImportNativeBufferInfoOHOS {...}--><!--Device-struct VkImportNativeBufferInfoOHOS {...}-End-->
+
 **System capability**: SystemCapability.Graphic.Vulkan
 
 **Since**: 10
 
-**Related module**: [Vulkan](capi-vulkan.md)
+**Related module**: [Vulkan](capi-arkgraphics2d-vulkan.md)
 
 **Header file**: [vulkan_ohos.h](capi-vulkan-ohos-h.md)
 
@@ -22,8 +24,8 @@ Defines the pointer to an <b>OH_NativeBuffer</b> struct.
 
 | Name | Description |
 | -- | -- |
-| VkStructureType sType | Struct type. |
-| const void* pNext | Pointer to the next-level struct. |
-| [struct OH_NativeBuffer*](capi-vulkan-oh-nativebuffer.md) buffer | Pointer to an <b>OH_NativeBuffer</b> struct. |
+| VkStructureType            sType | Struct type. |
+| const void*                pNext | Pointer to the next-level struct. |
+| [struct OH_NativeBuffer*](capi-vulkan-oh-nativebuffer.md)    buffer | Pointer to an <b>OH_NativeBuffer</b> struct. |
 
 

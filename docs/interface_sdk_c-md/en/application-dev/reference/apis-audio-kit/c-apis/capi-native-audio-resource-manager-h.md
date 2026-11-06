@@ -6,9 +6,11 @@ Declare audio stream manager related interfaces.<br> This file interfaces are us
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
@@ -43,6 +45,10 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceMa
 
 Fetch the audio resource manager handle, which is a singleton.
 
+<!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceManager **resourceManager)--><!--Device-OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceManager **resourceManager)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -66,6 +72,10 @@ OH_AudioCommon_Result OH_AudioResourceManager_CreateWorkgroup(OH_AudioResourceMa
 **Description**
 
 Create a workgroup for audio data processing threads in application. System manages cpu resources by workgroup configuration.
+
+<!--Device-OH_AudioCommon_Result OH_AudioResourceManager_CreateWorkgroup(OH_AudioResourceManager *resourceManager, const char *name, OH_AudioWorkgroup **group)--><!--Device-OH_AudioCommon_Result OH_AudioResourceManager_CreateWorkgroup(OH_AudioResourceManager *resourceManager, const char *name, OH_AudioWorkgroup **group)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -93,6 +103,10 @@ OH_AudioCommon_Result OH_AudioResourceManager_ReleaseWorkgroup(OH_AudioResourceM
 
 Release the workgroup created before.
 
+<!--Device-OH_AudioCommon_Result OH_AudioResourceManager_ReleaseWorkgroup(OH_AudioResourceManager *resourceManager, OH_AudioWorkgroup *group)--><!--Device-OH_AudioCommon_Result OH_AudioResourceManager_ReleaseWorkgroup(OH_AudioResourceManager *resourceManager, OH_AudioWorkgroup *group)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -117,6 +131,10 @@ OH_AudioCommon_Result OH_AudioWorkgroup_AddCurrentThread(OH_AudioWorkgroup *grou
 **Description**
 
 Add current thread into a specified audio workgroup as audio data processing thread.
+
+<!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_AddCurrentThread(OH_AudioWorkgroup *group, int32_t *tokenId)--><!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_AddCurrentThread(OH_AudioWorkgroup *group, int32_t *tokenId)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -143,6 +161,10 @@ OH_AudioCommon_Result OH_AudioWorkgroup_RemoveThread(OH_AudioWorkgroup *group, i
 
 Remove the thread from a specified audio workgroup.
 
+<!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_RemoveThread(OH_AudioWorkgroup *group, int32_t tokenId)--><!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_RemoveThread(OH_AudioWorkgroup *group, int32_t tokenId)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -167,6 +189,10 @@ OH_AudioCommon_Result OH_AudioWorkgroup_Start(OH_AudioWorkgroup *group, uint64_t
 **Description**
 
 Notify system the audio workgroup start working. Call this function before processing the audio frame.
+
+<!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_Start(OH_AudioWorkgroup *group, uint64_t startTime, uint64_t deadlineTime)--><!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_Start(OH_AudioWorkgroup *group, uint64_t startTime, uint64_t deadlineTime)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -193,6 +219,10 @@ OH_AudioCommon_Result OH_AudioWorkgroup_Stop(OH_AudioWorkgroup *group)
 **Description**
 
 Notify system the audio workgroup stop working. Call this function after the audio frame processing is completed.
+
+<!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_Stop(OH_AudioWorkgroup *group)--><!--Device-OH_AudioCommon_Result OH_AudioWorkgroup_Stop(OH_AudioWorkgroup *group)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 

@@ -6,9 +6,11 @@ This file declares the functions related to the memory stream in the drawing mod
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -30,6 +32,10 @@ OH_Drawing_MemoryStream* OH_Drawing_MemoryStreamCreate(const void* data, size_t 
 **Description**
 
 Creates an **OH_Drawing_MemoryStream** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **data** is NULL or **length** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-OH_Drawing_MemoryStream* OH_Drawing_MemoryStreamCreate(const void* data, size_t length, bool copyData)--><!--Device-OH_Drawing_MemoryStream* OH_Drawing_MemoryStreamCreate(const void* data, size_t length, bool copyData)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -56,6 +62,10 @@ void OH_Drawing_MemoryStreamDestroy(OH_Drawing_MemoryStream* memoryStream)
 **Description**
 
 Destroys an **OH_Drawing_MemoryStream** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_MemoryStreamDestroy(OH_Drawing_MemoryStream* memoryStream)--><!--Device-void OH_Drawing_MemoryStreamDestroy(OH_Drawing_MemoryStream* memoryStream)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

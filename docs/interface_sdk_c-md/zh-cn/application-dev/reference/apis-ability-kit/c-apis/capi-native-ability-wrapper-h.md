@@ -6,9 +6,11 @@
 
 **库：** libability_runtime.so
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
-**相关模块：** [AbilityRuntime](capi-abilityruntime.md)
+**相关模块：** [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## 汇总
 
@@ -38,6 +40,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityInstanceId(const AbilityRun
 
 从NativeAbility数据信息中获取Ability实例ID。
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityInstanceId(const AbilityRuntime_NativeAbilityWrapper* nativeAbilityWrapper, char* buffer, const int32_t bufferSize)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityInstanceId(const AbilityRuntime_NativeAbilityWrapper* nativeAbilityWrapper, char* buffer, const int32_t bufferSize)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -63,6 +69,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityName(const AbilityRuntime_N
 **描述：**
 
 从NativeAbility数据信息中获取Ability名称。
+
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityName(const AbilityRuntime_NativeAbilityWrapper *nativeAbilityWrapper, char *buffer, const int32_t bufferSize, int32_t *writeLength)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetAbilityName(const AbilityRuntime_NativeAbilityWrapper *nativeAbilityWrapper, char *buffer, const int32_t bufferSize, int32_t *writeLength)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 
@@ -90,6 +100,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetEnv(const AbilityRuntime_NativeAbi
 **描述：**
 
 从NativeAbility数据信息中获取napi_env。
+
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetEnv(const AbilityRuntime_NativeAbilityWrapper* nativeAbilityWrapper, napi_env* env)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetEnv(const AbilityRuntime_NativeAbilityWrapper* nativeAbilityWrapper, napi_env* env)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 

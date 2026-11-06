@@ -6,9 +6,11 @@ This file declares the functions related to the mask filter in the drawing modul
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -37,6 +39,10 @@ enum OH_Drawing_BlurType
 
 Defines an enum for the blur types.
 
+<!--Device-OH_Drawing_BlurType--><!--Device-OH_Drawing_BlurType-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
@@ -58,6 +64,10 @@ OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurT
 **Description**
 
 Creates an **OH_Drawing_MaskFilter** object with a blur type.
+
+<!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)--><!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -84,6 +94,10 @@ void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)
 **Description**
 
 Destroys an **OH_Drawing_MaskFilter** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)--><!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 

@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**相关模块：** [CryptoAsymCipherApi](capi-cryptoasymcipherapi.md)
+**相关模块：** [CryptoAsymCipherApi](capi-crypto-architecture-kit-cryptoasymcipherapi.md)
 
 ## 汇总
 
@@ -53,6 +55,10 @@ enum CryptoSm2CiphertextSpec_item
 
 定义SM2密文规格项类型。
 
+<!--Device-CryptoSm2CiphertextSpec_item--><!--Device-CryptoSm2CiphertextSpec_item-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -75,9 +81,13 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsym
 
 根据给定的算法名称创建非对称加解密上下文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsymCipher **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsymCipher **ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_asym_cipher/OH_CryptoAsymCipher_Destroy {ctx}
+**资源释放：** [OH_CryptoAsymCipher_Destroy](#oh_cryptoasymcipher_destroy)
 
 **参数：**
 
@@ -106,6 +116,10 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_Ciph
 **描述：**
 
 使用给定的加解密模式和密钥初始化非对称加解密上下文。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_CipherMode mode, OH_CryptoKeyPair *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_CipherMode mode, OH_CryptoKeyPair *key)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -138,9 +152,13 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Cryp
 
 结束加解密操作。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -166,6 +184,10 @@ void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)
 
 销毁非对称加解密上下文。
 
+<!--Device-void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)--><!--Device-void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 **参数：**
@@ -184,9 +206,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Cipherte
 
 创建SM2密文规格。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Ciphertext, OH_CryptoSm2CiphertextSpec **spec)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Ciphertext, OH_CryptoSm2CiphertextSpec **spec)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_asym_cipher/OH_CryptoSm2CiphertextSpec_Destroy {spec}
+**资源释放：** [OH_CryptoSm2CiphertextSpec_Destroy](#oh_cryptosm2ciphertextspec_destroy)
 
 **参数：**
 
@@ -217,9 +243,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec 
 
 获取SM2密文的指定项。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -244,6 +274,10 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec 
 **描述：**
 
 设置SM2密文规格的指定项。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *in)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec *spec, CryptoSm2CiphertextSpec_item item, Crypto_DataBlob *in)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -276,9 +310,13 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *
 
 将SM2密文规格编码为DER格式密文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *spec, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *spec, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -302,6 +340,10 @@ void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)
 **描述：**
 
 销毁SM2密文规格。
+
+<!--Device-void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)--><!--Device-void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

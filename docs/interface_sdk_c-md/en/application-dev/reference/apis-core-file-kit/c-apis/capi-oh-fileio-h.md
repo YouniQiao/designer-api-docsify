@@ -6,9 +6,11 @@ Defines the native APIs used to obtain the location of a file.
 
 **Library**: libohfileio.so
 
+**System capability**: SystemCapability.FileManagement.File.FileIO
+
 **Since**: 12
 
-**Related module**: [FileIO](capi-fileio.md)
+**Related module**: [FileIO](capi-core-file-kit-fileio.md)
 
 ## Summary
 
@@ -36,6 +38,10 @@ enum FileIO_FileLocation
 
 Enumerates the file location.
 
+<!--Device-FileIO_FileLocation--><!--Device-FileIO_FileLocation-End-->
+
+**System capability**: SystemCapability.FileManagement.File.FileIO
+
 **Since**: 12
 
 | Enum item | Description |
@@ -56,6 +62,10 @@ FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileI
 **Description**
 
 Obtains the location of a file.
+
+<!--Device-FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileIO_FileLocation *location)--><!--Device-FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileIO_FileLocation *location)-End-->
+
+**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 12
 

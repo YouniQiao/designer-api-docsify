@@ -1790,7 +1790,13 @@ bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: Co
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
 
-**起始版本：** 11
+> **NOTE:** 
+> 
+> - **bindContextMenu** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
+> - Long pressing with a mouse device is not supported when **responseType** is **ResponseType.RightClick**.
+
+**起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -1980,7 +1986,13 @@ bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 
 Menu control
 
-**起始版本：** 11
+> **NOTE:** 
+> 
+> - This API can be called within [attributeModifier](#attributemodifier) since API version 20only if the input parameter type of **content** is Array&lt;MenuElement&gt;.
+> - Multi-level menus cannot be displayed using **bindMenu** in **CustomBuilder**. Use the Menu component instead.
+> - **bindMenu** can be configured to display in subwindows by setting the **showInSubWindow** property in MenuOptions.
+
+**起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -2009,7 +2021,7 @@ bindMenu(isShow: boolean, content: Array<MenuElement> | CustomBuilder, options?:
 
 Menu control
 
-**起始版本：** 12
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2023,7 +2035,7 @@ Menu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | true means display menu, false means hide menu. |
+| isShow | boolean | 是 | true means display menu, false means hide menu, default is false. |
 | content | Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the content of menu. |
 | options | [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 否 | Indicates the options of menu. |
 

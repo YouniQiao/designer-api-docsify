@@ -8,9 +8,11 @@
 
 **库：** libnative_media_core.so
 
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 9
 
-**相关模块：** [Core](capi-core.md)
+**相关模块：** [Core](capi-avcodec-kit-core.md)
 
 ## 汇总
 
@@ -41,6 +43,10 @@ OH_AVMemory *OH_AVMemory_Create(int32_t size)
 
 创建OH_AVMemory实例的指针。
 
+<!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)--><!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -68,6 +74,10 @@ uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)
 **描述：**
 
 获取内存虚拟地址。
+
+<!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)--><!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 9
 
@@ -97,6 +107,10 @@ int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)
 
 获取内存长度。
 
+<!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)--><!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 9
 
 **废弃版本：** 11
@@ -124,6 +138,10 @@ OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)
 **描述：**
 
 释放OH_AVMemory实例指针的资源。
+
+<!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)--><!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 10
 

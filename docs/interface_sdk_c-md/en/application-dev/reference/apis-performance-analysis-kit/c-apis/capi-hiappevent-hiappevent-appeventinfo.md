@@ -8,11 +8,13 @@ struct HiAppEvent_AppEventInfo {...}
 
 Defines a struct for the information about a single event, including the domain, name, type, and custom parameter list in JSON string format.
 
+<!--Device-struct HiAppEvent_AppEventInfo {...}--><!--Device-struct HiAppEvent_AppEventInfo {...}-End-->
+
 **System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
 **Since**: 12
 
-**Related module**: [HiAppEvent](capi-hiappevent.md)
+**Related module**: [HiAppEvent](capi-performance-analysis-kit-hiappevent.md)
 
 **Header file**: [hiappevent.h](capi-hiappevent-h.md)
 
@@ -22,9 +24,13 @@ Defines a struct for the information about a single event, including the domain,
 
 | Name | Description |
 | -- | -- |
-| const char* domain | The domain of the event. |
-| const char* name | The name of the event. |
-| enum EventType type | The type of the event. |
-| const char* params | The JSON string of the parameter. |
+| /* The domain of the event. */
+    const char* domain |  |
+| /* The name of the event. */
+    const char* name |  |
+| /* The type of the event. */
+    enum EventType type |  |
+| /* The JSON string of the parameter. */
+    const char* params |  |
 
 

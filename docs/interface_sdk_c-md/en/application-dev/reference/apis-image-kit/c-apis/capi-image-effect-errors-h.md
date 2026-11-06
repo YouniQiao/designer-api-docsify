@@ -6,9 +6,11 @@ Defines the error code used in ImageEffect.
 
 **Library**: libimage_effect.so
 
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
+
 **Since**: 12
 
-**Related module**: [ImageEffect](capi-imageeffect.md)
+**Related module**: [ImageEffect](capi-image-kit-imageeffect.md)
 
 ## Summary
 
@@ -29,6 +31,10 @@ enum ImageEffect_ErrorCode
 **Description**
 
 Effect error code
+
+<!--Device-ImageEffect_ErrorCode--><!--Device-ImageEffect_ErrorCode-End-->
+
+**System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
 **Since**: 12
 

@@ -2,6 +2,8 @@
 
 ## Overview
 
+<!--Device-struct gz_header_s {...}--><!--Device-struct gz_header_s {...}-End-->
+
 ## Summary
 
 ### Member variables
@@ -21,5 +23,6 @@
 | int hcrc | space at comment (only when reading header) |
 | int done | true if there was or will be a header crc |
 | [](capi--z-stream-s.md) | true when done reading gzip header (not used when writing a gzip file) |
+| int text |  |
 
 

@@ -951,6 +951,7 @@ Updates credentials. This API uses an asynchronous callback to return the result
 | [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
 | [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| 12300121 | The credential has been used recently and cannot be reused. Suggested solutions: Use an unused credential.<br>**Applicable version:** 26.1.0 and later |
 
 <!--Del-->
 **Examples**

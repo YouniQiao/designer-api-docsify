@@ -6,9 +6,11 @@
 
 **库：** libohpreferences.so
 
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
 **起始版本：** 13
 
-**相关模块：** [Preferences](capi-preferences.md)
+**相关模块：** [Preferences](capi-arkdata-preferences.md)
 
 ## 汇总
 
@@ -29,6 +31,10 @@ enum OH_Preferences_ErrCode
 **描述：**
 
 错误码信息。
+
+<!--Device-OH_Preferences_ErrCode--><!--Device-OH_Preferences_ErrCode-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 

@@ -4616,7 +4616,7 @@ showActionSheet(value: ActionSheetOptions): void
 
 Shows an action sheet in the given settings.
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,11 +6,19 @@ Defines the start options APIs.
 
 **Library**: libability_runtime.so
 
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
-**Related module**: [AbilityRuntime](capi-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## Summary
+
+### Struct
+
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) | AbilityRuntime_StartOptions |  |
 
 ### Function
 
@@ -61,9 +69,7 @@ Defines the start options APIs.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowWidth)](#oh_abilityruntime_getstartoptionsminwindowwidthvalue) | Get the minimum window width from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowWidth)](#oh_abilityruntime_getstartoptionsmaxwindowwidthvalue) | Get the maximum window width from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowHeight)](#oh_abilityruntime_getstartoptionsminwindowheightvalue) | Get the minimum window height from start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)
-
-} // extern "C"](#oh_abilityruntime_getstartoptionsmaxwindowheightvalue) | Get the maximum window height from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)](#oh_abilityruntime_getstartoptionsmaxwindowheightvalue) | Get the maximum window height from start options. |
 
 ## Function description
 
@@ -77,13 +83,17 @@ AbilityRuntime_StartOptions* OH_AbilityRuntime_CreateStartOptions(void)
 
 Create start options.
 
+<!--Device-AbilityRuntime_StartOptions* OH_AbilityRuntime_CreateStartOptions(void)--><!--Device-AbilityRuntime_StartOptions* OH_AbilityRuntime_CreateStartOptions(void)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions* | Returns the newly created AbilityRuntime_StartOptions object. |
+| [AbilityRuntime_StartOptions*](capi-abilityruntime-abilityruntime-startoptions.md) | Returns the newly created AbilityRuntime_StartOptions object. |
 
 ### OH_AbilityRuntime_DestroyStartOptions()
 
@@ -95,13 +105,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_DestroyStartOptions(AbilityRuntime_St
 
 Destroy input start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_DestroyStartOptions(AbilityRuntime_StartOptions **startOptions)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_DestroyStartOptions(AbilityRuntime_StartOptions **startOptions)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions **startOptions | The options to be deleted. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) **startOptions | The options to be deleted. |
 
 **Returns**:
 
@@ -119,13 +133,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowMode(AbilityRunt
 
 Set window mode for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode windowMode)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode windowMode)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set window mode for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set window mode for. |
 | [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) windowMode | The window mode. |
 
 **Returns**:
@@ -144,13 +162,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowMode(AbilityRunt
 
 Get window mode from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode &windowMode)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode &windowMode)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window mode from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get window mode from. |
 | windowMode | The obtained window mode. |
 
 **Returns**:
@@ -169,13 +191,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsDisplayId(AbilityRunti
 
 Set display id for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t displayId)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t displayId)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set display id for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set display id for. |
 | int32_t displayId | The display id. |
 
 **Returns**:
@@ -194,13 +220,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayId(AbilityRunti
 
 Get display id from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t &displayId)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t &displayId)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get display id from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get display id from. |
 | displayId | The obtained display id. |
 
 **Returns**:
@@ -219,13 +249,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWithAnimation(AbilityR
 
 Set with animation flag for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool withAnimation)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool withAnimation)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set with animation for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set with animation for. |
 | bool withAnimation | The with animation. |
 
 **Returns**:
@@ -244,13 +278,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimation(AbilityR
 
 Get with animation from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool &withAnimation)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool &withAnimation)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get with animation from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get with animation from. |
 | withAnimation | The obtained with animation. |
 
 **Returns**:
@@ -269,13 +307,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowLeft(AbilityRunt
 
 Set window left for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t windowLeft)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t windowLeft)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set window left for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set window left for. |
 | int32_t windowLeft | The window left. |
 
 **Returns**:
@@ -294,13 +336,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeft(AbilityRunt
 
 Get window left from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t &windowLeft)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t &windowLeft)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window left from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get window left from. |
 | windowLeft | The obtained window left. |
 
 **Returns**:
@@ -319,13 +365,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowTop(AbilityRunti
 
 Set window top for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t windowTop)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t windowTop)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set window top for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set window top for. |
 | int32_t windowTop | The window top. |
 
 **Returns**:
@@ -344,13 +394,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTop(AbilityRunti
 
 Get window top from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t &windowTop)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t &windowTop)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window top from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get window top from. |
 | windowTop | The obtained window top. |
 
 **Returns**:
@@ -369,13 +423,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowHeight(AbilityRu
 
 Set window height for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t windowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t windowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set window height for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set window height for. |
 | int32_t windowHeight | The window height. |
 
 **Returns**:
@@ -394,13 +452,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeight(AbilityRu
 
 Get window height from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &windowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &windowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window height from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get window height from. |
 | windowHeight | The obtained window height. |
 
 **Returns**:
@@ -419,13 +481,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowWidth(AbilityRun
 
 Set window width for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t windowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t windowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set window width for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set window width for. |
 | int32_t windowWidth | The window width. |
 
 **Returns**:
@@ -444,13 +510,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidth(AbilityRun
 
 Get window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &windowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &windowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window width from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get window width from. |
 | windowWidth | The obtained window width. |
 
 **Returns**:
@@ -469,13 +539,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartVisibility(Abilit
 
 Set start visibility for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility startVisibility)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility startVisibility)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set start visibility for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set start visibility for. |
 | [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) startVisibility | The start visibility. |
 
 **Returns**:
@@ -494,13 +568,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibility(Abilit
 
 Get start visibility from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility &startVisibility)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility &startVisibility)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start visibility from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get start visibility from. |
 | startVisibility | The obtained start visibility. |
 
 **Returns**:
@@ -519,13 +597,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowIcon(Abilit
 
 Set start window icon for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative *startWindowIcon)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative *startWindowIcon)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set start window icon for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set start window icon for. |
 | [OH_PixelmapNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmapnative.md) *startWindowIcon | The start window icon. |
 
 **Returns**:
@@ -544,13 +626,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowIcon(Abilit
 
 Get start window icon from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative **startWindowIcon)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative **startWindowIcon)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start window icon from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get start window icon from. |
 | [OH_PixelmapNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmapnative.md) **startWindowIcon | The obtained start window icon. |
 
 **Returns**:
@@ -569,13 +655,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowBackgroundC
 
 Set start window background color for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, const char *startWindowBackgroundColor)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, const char *startWindowBackgroundColor)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set start window background color for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set start window background color for. |
 | const char *startWindowBackgroundColor | The start window background color. |
 
 **Returns**:
@@ -594,13 +684,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundC
 
 Get start window background color from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t &size)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t &size)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start window background color from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get start window background color from. |
 | char **startWindowBackgroundColor | The obtained start window background color. |
 | size | The size of start window background color. |
 
@@ -620,13 +714,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsSupportedWindowModes(A
 
 Set start window modes for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode *supportedWindowModes, size_t size)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode *supportedWindowModes, size_t size)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set start window modes for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set start window modes for. |
 | [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) *supportedWindowModes | The start window modes. |
 | size_t size | The size of start window modes. |
 
@@ -646,6 +744,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModes(A
 
 Get the supported start window modes from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t &size)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t &size)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Resource release**: free {supportedWindowModes}
@@ -654,7 +756,7 @@ Get the supported start window modes from start options.
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) **supportedWindowModes | [out] The pointer used to receive the supported start window modes. It must not be NULL and must point to NULL before the call. |
 | size | [out] The number of returned supported start window modes. |
 
@@ -674,13 +776,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowWidth(Ability
 
 Set min window width for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t minWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t minWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set min window width for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set min window width for. |
 | int32_t minWindowWidth | The min window width. |
 
 **Returns**:
@@ -699,13 +805,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidth(Ability
 
 Get min window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get min window width from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get min window width from. |
 | minWindowWidth | The obtained min window width. |
 
 **Returns**:
@@ -724,13 +834,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowWidth(Ability
 
 Set max window width for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set max window width for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set max window width for. |
 | int32_t maxWindowWidth | The max window width. |
 
 **Returns**:
@@ -749,13 +863,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidth(Ability
 
 Get max window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get max window width from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get max window width from. |
 | maxWindowWidth | The obtained max window width. |
 
 **Returns**:
@@ -774,13 +892,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowHeight(Abilit
 
 Set min window height for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t minWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t minWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set min window height for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set min window height for. |
 | int32_t minWindowHeight | The min window height. |
 
 **Returns**:
@@ -799,13 +921,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeight(Abilit
 
 Get min window height from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get min window height from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get min window height from. |
 | minWindowHeight | The obtained min window height. |
 
 **Returns**:
@@ -824,13 +950,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowHeight(Abilit
 
 Set max window height for start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to set max window height for. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to set max window height for. |
 | int32_t maxWindowHeight | The max window height. |
 
 **Returns**:
@@ -849,13 +979,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeight(Abilit
 
 Get max window height from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get max window height from. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | The options to get max window height from. |
 | maxWindowHeight | The obtained max window height. |
 
 **Returns**:
@@ -874,13 +1008,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(Abilit
 
 Get the window mode from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode *windowMode)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode *windowMode)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) *windowMode | [out] The obtained window mode. It must not be NULL. |
 
 **Returns**:
@@ -899,13 +1037,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayIdValue(Ability
 
 Get the display ID from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayIdValue(AbilityRuntime_StartOptions *startOptions, int32_t *displayId)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayIdValue(AbilityRuntime_StartOptions *startOptions, int32_t *displayId)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *displayId | [out] The obtained display ID. It must not be NULL. |
 
 **Returns**:
@@ -924,13 +1066,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimationValue(Abi
 
 Get whether animation is enabled from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimationValue(AbilityRuntime_StartOptions *startOptions, bool *withAnimation)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimationValue(AbilityRuntime_StartOptions *startOptions, bool *withAnimation)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | bool *withAnimation | [out] The obtained animation flag. It must not be NULL. |
 
 **Returns**:
@@ -949,13 +1095,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeftValue(Abilit
 
 Get the window left position from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeftValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowLeft)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeftValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowLeft)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *windowLeft | [out] The obtained window left position. It must not be NULL. |
 
 **Returns**:
@@ -974,13 +1124,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTopValue(Ability
 
 Get the window top position from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTopValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowTop)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTopValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowTop)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *windowTop | [out] The obtained window top position. It must not be NULL. |
 
 **Returns**:
@@ -999,13 +1153,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeightValue(Abil
 
 Get the window height from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *windowHeight | [out] The obtained window height. It must not be NULL. |
 
 **Returns**:
@@ -1024,13 +1182,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidthValue(Abili
 
 Get the window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *windowWidth | [out] The obtained window width. It must not be NULL. |
 
 **Returns**:
@@ -1049,13 +1211,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(A
 
 Get the start visibility from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility *startVisibility)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility *startVisibility)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) *startVisibility | [out] The obtained start visibility. It must not be NULL. |
 
 **Returns**:
@@ -1078,6 +1244,10 @@ Get the start window background color from start options.
 >
 > If the background color is not set, [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) is returned, *startWindowBackgroundColor remains NULL, and *size is set to 0.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColorValue(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t *size)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColorValue(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t *size)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Resource release**: free {startWindowBackgroundColor}
@@ -1086,7 +1256,7 @@ Get the start window background color from start options.
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | char **startWindowBackgroundColor | [out] The pointer used to receive the UTF-8 background color string. It must not be NULL and must point to NULL before the call. |
 | size_t *size | [out] The length of the background color string, excluding the trailing NUL. It must not be NULL. |
 
@@ -1110,6 +1280,10 @@ Get the supported start window modes from start options.
 >
 > If no supported window modes are set, [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) is returned, *supportedWindowModes remains NULL, and *size is set to 0.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModesValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t *size)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModesValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t *size)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Resource release**: free {supportedWindowModes}
@@ -1118,7 +1292,7 @@ Get the supported start window modes from start options.
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) **supportedWindowModes | [out] The pointer used to receive the supported start window modes. It must not be NULL and must point to NULL before the call. |
 | size_t *size | [out] The number of returned supported start window modes. It must not be NULL. |
 
@@ -1138,13 +1312,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(Ab
 
 Get the minimum window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *minWindowWidth | [out] The obtained minimum window width. It must not be NULL. |
 
 **Returns**:
@@ -1163,13 +1341,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(Ab
 
 Get the maximum window width from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowWidth)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowWidth)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *maxWindowWidth | [out] The obtained maximum window width. It must not be NULL. |
 
 **Returns**:
@@ -1188,13 +1370,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(A
 
 Get the minimum window height from start options.
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
 | int32_t *minWindowHeight | [out] The obtained minimum window height. It must not be NULL. |
 
 **Returns**:
@@ -1207,13 +1393,15 @@ Get the minimum window height from start options.
 
 ```c
 AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)
-
-} // extern "C"
 ```
 
 **Description**
 
 Get the maximum window height from start options.
+
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)-End-->
+
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
@@ -1221,8 +1409,8 @@ Get the maximum window height from start options.
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
-| maxWindowHeight | [out] The obtained maximum window height. It must not be NULL. |
+| [AbilityRuntime_StartOptions](capi-abilityruntime-abilityruntime-startoptions.md) *startOptions | [in] The start options to read. |
+| int32_t *maxWindowHeight | [out] The obtained maximum window height. It must not be NULL. |
 
 **Returns**:
 

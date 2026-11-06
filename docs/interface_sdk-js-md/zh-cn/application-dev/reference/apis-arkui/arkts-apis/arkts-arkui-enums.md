@@ -111,7 +111,6 @@
 | [TitleHeight](arkts-arkui-titleheight-e.md) | 设置标题栏的推荐高度。 |
 | [TouchType](arkts-arkui-touchtype-e.md) | 定义触摸操作的触发状态类型。 |
 | [TransitionType](arkts-arkui-transitiontype-e.md) | 指定该转场样式生效的场景。 |
-| [UIMaterialAnimationMode](arkts-arkui-uimaterialanimationmode-e.md) | Enumerates the component animation modes under the UI material effect. |
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | 定义子组件在垂直方向上的对齐格式。 |
 | [Visibility](arkts-arkui-visibility-e.md) | 定义组件的可见性及布局占位状态。 |
 | [Week](arkts-arkui-week-e.md) | 定义星期枚举值。 |

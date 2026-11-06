@@ -120,6 +120,7 @@ import { inputMethod } from '@kit.IMEKit';
 | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 输入法启用状态。 |
 | [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md) | Enter键的功能类型。 |
 | [ExtendAction](arkts-ime-inputmethod-extendaction-e.md) | 编辑框中文本的扩展编辑操作类型，如剪切、复制等。 |
+| [InputCapabilityType](arkts-ime-inputmethod-inputcapabilitytype-e.md) | 系统输入能力类型。用于[requestSystemInputCapability](arkts-ime-inputmethod-inputmethodcontroller-i.md#requestsysteminputcapability)指定请求的系统输入能力类型。 |
 | [KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md) | 输入法软键盘状态。 |
 | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | 请求键盘输入的原因。 |
 | [TextInputType](arkts-ime-inputmethod-textinputtype-e.md) | 文本输入类型。 |

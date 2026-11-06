@@ -6,9 +6,11 @@ Defines embedded component attribute and interface.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
@@ -31,7 +33,7 @@ Defines embedded component attribute and interface.
 | -- | -- |
 | [ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()](#oh_arkui_embeddedcomponentoption_create) | Creates an **EmbeddedComponent** option object. |
 | [void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)](#oh_arkui_embeddedcomponentoption_dispose) | Disposes of an **EmbeddedComponent** option object. |
-| [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Sets the [onError](../../apis-camera-kit/c-apis/capi-oh-camera-camerainput-callbacks.md) callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component. |
+| [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Sets the [onError](../../apis-media-kit/c-apis/capi-avplayer-avplayercallback.md) callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component. |
 | [void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, AbilityBase_Want* want))](#oh_arkui_embeddedcomponentoption_setonterminated) | Sets the onTerminated callback for the **EmbeddedComponent** component. This callback is triggered when the **EmbeddedComponent** component exits properly. |
 
 ## Function description
@@ -45,6 +47,10 @@ ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()
 **Description**
 
 Creates an **EmbeddedComponent** option object.
+
+<!--Device-ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()--><!--Device-ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 20
 
@@ -64,6 +70,10 @@ void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* opt
 
 Disposes of an **EmbeddedComponent** option object.
 
+<!--Device-void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)--><!--Device-void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 20
 
 **Parameters**:
@@ -80,7 +90,11 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* 
 
 **Description**
 
-Sets the [onError](../../apis-camera-kit/c-apis/capi-oh-camera-camerainput-callbacks.md) callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component.
+Sets the [onError](../../apis-media-kit/c-apis/capi-avplayer-avplayercallback.md) callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component.
+
+<!--Device-void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (*callback)(int32_t code, const char* name, const char* message))--><!--Device-void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (*callback)(int32_t code, const char* name, const char* message))-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 20
 
@@ -100,6 +114,10 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOpt
 **Description**
 
 Sets the onTerminated callback for the **EmbeddedComponent** component. This callback is triggered when the **EmbeddedComponent** component exits properly.
+
+<!--Device-void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (*callback)(int32_t code, AbilityBase_Want* want))--><!--Device-void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (*callback)(int32_t code, AbilityBase_Want* want))-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 20
 

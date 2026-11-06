@@ -6,9 +6,11 @@ Declares common types.
 
 **Library**: libffrt.z.so
 
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
-**Related module**: [FFRT](capi-ffrt.md)
+**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 ## Summary
 
@@ -57,10 +59,7 @@ Declares common types.
 | -- | -- |
 | using qos = int | Defines the QoS type.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
 | int ffrt_qos_t | Defines the QoS type used to set the QoS level of a task.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
-| void (*ffrt_function_t)(void*) | Defines the task function pointer type.<br> The function pointer defines the entry point of an FFRT task. FFRT invokes this function when the task is scheduled for execution, passing the user data pointer through the single `void*` argument.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
 | void* ffrt_task_handle_t | Defines the task handle, which identifies different tasks.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
-| void (*ffrt_poller_cb)(void* data, uint32_t event) | Defines the poller callback function type.<br> The callback is invoked when the poller detects a registered event. The data pointer carries user data passed in at registration time, and the event value identifies the triggered event type.<br>**Since**: 12<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
-| void (*ffrt_timer_cb)(void* data) | Defines the timer callback function type.<br> The callback is invoked when the timer expires. The data pointer carries user data passed in at timer registration.<br>**Since**: 12<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
 | int ffrt_timer_t | Defines the timer handle used to identify a created timer.<br>**Since**: 12<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
 | typedef int ffrt_qos_t | Defines the QoS type used to set the QoS level of a task.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
 | typedef int ffrt_timer_t | Defines the timer handle used to identify a created timer.<br>**Since**: 12<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
@@ -76,6 +75,10 @@ enum ffrt_queue_priority_t
 **Description**
 
 Enumerates the task priority types used by concurrent queues to order task dispatch.
+
+<!--Device-ffrt_queue_priority_t--><!--Device-ffrt_queue_priority_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -95,6 +98,10 @@ enum ffrt_qos_default_t
 **Description**
 
 Enumerates the task QoS types.
+
+<!--Device-ffrt_qos_default_t--><!--Device-ffrt_qos_default_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -119,6 +126,10 @@ enum ffrt_storage_size_t
 
 Defines the storage size of multiple types of structs, in bytes.
 
+<!--Device-ffrt_storage_size_t--><!--Device-ffrt_storage_size_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 | Enum item | Description |
@@ -141,6 +152,10 @@ enum ffrt_function_kind_t
 
 Enumerates the task types, distinguishing general concurrent tasks from queue-scheduled tasks.
 
+<!--Device-ffrt_function_kind_t--><!--Device-ffrt_function_kind_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 | Enum item | Description |
@@ -158,6 +173,10 @@ enum ffrt_dependence_type_t
 
 Enumerates the dependency types.<br> Specifies how tasks depend on each other (data readiness or task completion).
 
+<!--Device-ffrt_dependence_type_t--><!--Device-ffrt_dependence_type_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 | Enum item | Description |
@@ -174,6 +193,10 @@ enum ffrt_error_t
 **Description**
 
 Enumerates the error codes returned by FFRT APIs.
+
+<!--Device-ffrt_error_t--><!--Device-ffrt_error_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -196,6 +219,10 @@ enum ffrt_mutex_type
 
 Enumerates the mutex types.
 
+<!--Device-ffrt_mutex_type--><!--Device-ffrt_mutex_type-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -213,6 +240,10 @@ enum qos_default
 **Description**
 
 Enumerates the task QoS types.<br> Each enumerator mirrors the corresponding enumerator in [ffrt_qos_default_t](capi-type-def-h.md#ffrt_qos_default_t).
+
+<!--Device-qos_default--><!--Device-qos_default-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -240,6 +271,10 @@ typedef void (*ffrt_function_t)(void*)
 
 Defines the task function pointer type.<br> The function pointer defines the entry point of an FFRT task. FFRT invokes this function when the task is scheduled for execution, passing the user data pointer through the single `void*` argument.
 
+<!--Device-typedef void (*ffrt_function_t)(void*)--><!--Device-typedef void (*ffrt_function_t)(void*)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 ### ffrt_poller_cb()
@@ -251,6 +286,10 @@ typedef void (*ffrt_poller_cb)(void* data, uint32_t event)
 **Description**
 
 Defines the poller callback function type.<br> The callback is invoked when the poller detects a registered event. The data pointer carries user data passed in at registration time, and the event value identifies the triggered event type.
+
+<!--Device-typedef void (*ffrt_poller_cb)(void* data, uint32_t event)--><!--Device-typedef void (*ffrt_poller_cb)(void* data, uint32_t event)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -270,6 +309,10 @@ typedef void (*ffrt_timer_cb)(void* data)
 **Description**
 
 Defines the timer callback function type.<br> The callback is invoked when the timer expires. The data pointer carries user data passed in at timer registration.
+
+<!--Device-typedef void (*ffrt_timer_cb)(void* data)--><!--Device-typedef void (*ffrt_timer_cb)(void* data)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 

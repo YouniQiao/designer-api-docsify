@@ -8,9 +8,11 @@
 
 **库：** libnative_media_avdemuxer.so
 
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 10
 
-**相关模块：** [AVDemuxer](capi-avdemuxer.md)
+**相关模块：** [AVDemuxer](capi-avcodec-kit-avdemuxer.md)
 
 **相关示例：** [AVCodec](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/AVCodec)
 
@@ -40,13 +42,6 @@
 | [OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)](#oh_avdemuxer_setdemuxermediakeysysteminfocallback) | - | 设置DRM信息回调函数。 |
 | [OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#oh_avdemuxer_getmediakeysysteminfo) | - | 获取DRM信息。在[Demuxer_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#demuxer_mediakeysysteminfocallback)或[DRM_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#drm_mediakeysysteminfocallback)接口成功回调以后， 调用此接口才能获取到DRM信息。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo* mediaKeySystemInfo) | DRM_MediaKeySystemInfo回调函数指针类型，不返回解封装器实例，适用于单个解封装器实例场景。<br> 需要使用[OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback)接口将其设置为回调。<br>**起始版本：** 11<br>**废弃版本：** 14<br>**替代接口：** [Demuxer_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#demuxer_mediakeysysteminfocallback)<br>**系统能力：** SystemCapability.Multimedia.Media.Spliter |
-| void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo) | DRM_MediaKeySystemInfo回调函数指针类型，返回解封装器实例，适用于多个解封装器实例场景。<br> 需要使用[OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setdemuxermediakeysysteminfocallback)接口将其设置为回调，推荐使用。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Media.Spliter |
-
 ## 函数说明
 
 ### DRM_MediaKeySystemInfoCallback()
@@ -58,6 +53,10 @@ typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo* mediaKeyS
 **描述：**
 
 DRM_MediaKeySystemInfo回调函数指针类型，不返回解封装器实例，适用于单个解封装器实例场景。<br> 需要使用[OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback)接口将其设置为回调。
+
+<!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo* mediaKeySystemInfo)--><!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo* mediaKeySystemInfo)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 11
 
@@ -74,6 +73,10 @@ typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_Me
 **描述：**
 
 DRM_MediaKeySystemInfo回调函数指针类型，返回解封装器实例，适用于多个解封装器实例场景。<br> 需要使用[OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setdemuxermediakeysysteminfocallback)接口将其设置为回调，推荐使用。
+
+<!--Device-typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
@@ -93,6 +96,10 @@ OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)
 **描述：**
 
 通过source实例创建OH_AVDemuxer实例。<br> source的创建、销毁及使用，详情请参考[OH_AVSource](capi-avsource-oh-avsource.md)。
+
+<!--Device-OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)--><!--Device-OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 10
 
@@ -118,6 +125,10 @@ OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)
 
 销毁OH_AVDemuxer实例并清理内部资源。同一实例只能被销毁一次。<br> 注意，销毁的实例在被重新创建之前不能再被使用。建议实例销毁成功后将指针置为NULL。
 
+<!--Device-OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)--><!--Device-OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 10
 
 **参数：**
@@ -141,6 +152,10 @@ OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackI
 **描述：**
 
 指定读取sample的轨道，解封装器将会从该轨道中读取数据，未指定的轨道不会读取。<br> 注意，通过多次调用接口并传入不同轨道的索引来选中多个轨道。<br> 调用[OH_AVDemuxer_ReadSample](capi-native-avdemuxer-h.md#oh_avdemuxer_readsample)时只会读取被选中的轨道中数据，同一轨道被选择多次时，接口会返回AV_ERR_OK，并且只会生效一次。
+
+<!--Device-OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)--><!--Device-OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 10
 
@@ -167,6 +182,10 @@ OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trac
 
 移除读取sample的轨道，未选中的轨道的数据不会被解封装器读取。<br> 注意，通过多次调用接口并传入不同轨道的索引来取消对多个轨道的选择。<br> 同一轨道被多次取消选择时，接口会返回AV_ERR_OK，并且只会生效一次。
 
+<!--Device-OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)--><!--Device-OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 10
 
 **参数：**
@@ -191,6 +210,10 @@ OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex,
 **描述：**
 
 获取指定轨道的sample及相关信息。<br> 注意，读取轨道sample前，轨道必须被选中。调用接口后解封装器将自动前进到下一帧。
+
+<!--Device-OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)--><!--Device-OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 10
 
@@ -223,6 +246,10 @@ OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t track
 
 获取指定轨道的sample及相关信息。<br> 注意，读取轨道sample前，轨道必须被选中。调用接口后解封装器将自动前进到下一帧。
 
+<!--Device-OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVBuffer *sample)--><!--Device-OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVBuffer *sample)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 11
 
 **参数：**
@@ -249,6 +276,10 @@ OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond,
 
 根据设定的跳转模式，将所有选中的轨道到指定时间附近。
 
+<!--Device-OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)--><!--Device-OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 10
 
 **参数：**
@@ -274,6 +305,10 @@ OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, D
 **描述：**
 
 设置DRM信息回调函数。
+
+<!--Device-OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)--><!--Device-OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 11
 
@@ -304,6 +339,10 @@ OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *dem
 
 设置DRM信息回调函数。
 
+<!--Device-OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)--><!--Device-OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
+
 **起始版本：** 12
 
 **参数：**
@@ -328,6 +367,10 @@ OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_Media
 **描述：**
 
 获取DRM信息。在[Demuxer_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#demuxer_mediakeysysteminfocallback)或[DRM_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#drm_mediakeysysteminfocallback)接口成功回调以后， 调用此接口才能获取到DRM信息。
+
+<!--Device-OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 11
 

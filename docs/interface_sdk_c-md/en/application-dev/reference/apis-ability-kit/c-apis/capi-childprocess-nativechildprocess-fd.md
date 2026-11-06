@@ -8,11 +8,13 @@ struct NativeChildProcess_Fd {...}
 
 The struct describes the information about the file descriptor passed to the child process.
 
+<!--Device-struct NativeChildProcess_Fd {...}--><!--Device-struct NativeChildProcess_Fd {...}-End-->
+
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 13
 
-**Related module**: [ChildProcess](capi-childprocess.md)
+**Related module**: [ChildProcess](capi-ability-kit-childprocess.md)
 
 **Header file**: [native_child_process.h](capi-native-child-process-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the information about the file descriptor passed to the chi
 
 | Name | Description |
 | -- | -- |
-| char* fdName |  |
-| int32_t fd |  |
-| [struct NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) next |  |
+| char* fdName | Pointer to the name of the file descriptor. It contains a maximum of 20 characters.<br>**Since**: 13 |
+| int32_t fd | Value of the file descriptor.<br>**Since**: 13 |
+| [struct NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) next | Pointer to the next file descriptor.<br>**Since**: 13 |
 
 

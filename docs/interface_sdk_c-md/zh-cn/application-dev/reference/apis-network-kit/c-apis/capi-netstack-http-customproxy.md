@@ -8,11 +8,13 @@ struct Http_CustomProxy {...}
 
 用户自定义代理配置。
 
+<!--Device-struct Http_CustomProxy {...}--><!--Device-struct Http_CustomProxy {...}-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
-**相关模块：** [netstack](capi-netstack.md)
+**相关模块：** [netstack](capi-network-kit-netstack.md)
 
 **所在头文件：** [net_http_type.h](capi-net-http-type-h.md)
 
@@ -25,5 +27,6 @@ struct Http_CustomProxy {...}
 | const char *host;
  int32_t port;
  const char *exclusionLists | 代理服务器主机名， 如果没有显式设置端口，端口将默认为1080。 |
+| int32_t port |  |
 
 

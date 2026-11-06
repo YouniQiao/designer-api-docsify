@@ -2,3 +2,17 @@
 
 ## Overview
 
+<!--Device-struct VkDirectDriverLoadingInfoLUNARG {...}--><!--Device-struct VkDirectDriverLoadingInfoLUNARG {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| void* pNext |  |
+| VkDirectDriverLoadingFlagsLUNARG flags |  |
+| PFN_vkGetInstanceProcAddrLUNARG pfnGetInstanceProcAddr |  |
+
+

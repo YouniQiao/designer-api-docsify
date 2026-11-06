@@ -8,11 +8,13 @@ typedef struct ArkUI_IntSize {...} ArkUI_IntSize
 
 Describes the width and height of a component.
 
+<!--Device-typedef struct ArkUI_IntSize {...} ArkUI_IntSize--><!--Device-typedef struct ArkUI_IntSize {...} ArkUI_IntSize-End-->
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **Header file**: [common_type.h](capi-common-type-h.md)
 
@@ -22,7 +24,7 @@ Describes the width and height of a component.
 
 | Name | Description |
 | -- | -- |
-| int32_t width |  |
-| int32_t height |  |
+| int32_t width | Width, in px.<br>**Since**: 12 |
+| int32_t height | Height, in px.<br>**Since**: 12 |
 
 

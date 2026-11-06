@@ -8,7 +8,7 @@ The file declares the enums used by the AVImageGenerator.
 
 **Since**: 18
 
-**Related module**: [AVImageGenerator](capi-avimagegenerator.md)
+**Related module**: [AVImageGenerator](capi-media-kit-avimagegenerator.md)
 
 ## Summary
 
@@ -29,6 +29,8 @@ enum OH_AVImageGenerator_QueryOptions
 **Description**
 
 Enumerates the mappings between time points and video frames.
+
+<!--Device-OH_AVImageGenerator_QueryOptions--><!--Device-OH_AVImageGenerator_QueryOptions-End-->
 
 **Since**: 18
 

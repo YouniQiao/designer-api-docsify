@@ -6,9 +6,11 @@
 
 **库：** libability_runtime.so
 
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
-**相关模块：** [AbilityRuntime](capi-abilityruntime.md)
+**相关模块：** [AbilityRuntime](capi-ability-kit-abilityruntime.md)
 
 ## 汇总
 
@@ -16,8 +18,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modobjextensioninstance.md) | OH_AbilityRuntime_ModObjExtensionInstance | 定义OH_AbilityRuntime_ModObjExtensionInstance结构体。 |
-| [OH_AbilityRuntime_ModObjExtensionInstance*](capi-abilityruntime-oh-abilityruntime-modobjextensioninstance8h.md) | OH_AbilityRuntime_ModObjExtensionInstanceHandle | 定义指向OH_AbilityRuntime_ModObjExtensionInstance的指针。 |
+| [OH_AbilityRuntime_ModularObjectExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md) | OH_AbilityRuntime_ModObjExtensionInstance | 定义OH_AbilityRuntime_ModObjExtensionInstance结构体。 |
 
 ### 函数
 
@@ -39,10 +40,6 @@
 | 名称 | 描述 |
 | -- | -- |
 | OH_AbilityRuntime_ModObjExtensionInstance* OH_AbilityRuntime_ModObjExtensionInstanceHandle | 定义指向OH_AbilityRuntime_ModObjExtensionInstance的指针。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Ability.AbilityRuntime.Core |
-| void (*OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc)( OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want) | ModularObjectExtensionAbility创建时触发的回调函数，用于初始化。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Ability.AbilityRuntime.Core |
-| void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc)( OH_AbilityRuntime_ModObjExtensionInstanceHandle instance) | ModularObjectExtensionAbility销毁前触发的回调函数。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Ability.AbilityRuntime.Core |
-| OHIPCRemoteStub* (*OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc)( OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want) | ModularObjectExtensionAbility被连接时触发的回调函数。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Ability.AbilityRuntime.Core |
-| void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc)( OH_AbilityRuntime_ModObjExtensionInstanceHandle instance) | 当前ModularObjectExtensionAbility的所有连接都断开时触发的回调函数。<br>**起始版本：** 26.0.0<br>**系统能力：** SystemCapability.Ability.AbilityRuntime.Core |
 
 ## 函数说明
 
@@ -55,6 +52,10 @@ typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc)(OH_Ability
 **描述：**
 
 ModularObjectExtensionAbility创建时触发的回调函数，用于初始化。
+
+<!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want)--><!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 
@@ -75,6 +76,10 @@ typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc)(OH_Abilit
 
 ModularObjectExtensionAbility销毁前触发的回调函数。
 
+<!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance)--><!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -92,6 +97,10 @@ typedef OHIPCRemoteStub* (*OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFun
 **描述：**
 
 ModularObjectExtensionAbility被连接时触发的回调函数。
+
+<!--Device-typedef OHIPCRemoteStub* (*OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want)--><!--Device-typedef OHIPCRemoteStub* (*OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, AbilityBase_Want *want)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 
@@ -112,6 +121,10 @@ typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc)(OH_Abi
 
 当前ModularObjectExtensionAbility的所有连接都断开时触发的回调函数。
 
+<!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance)--><!--Device-typedef void (*OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc)(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -129,6 +142,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnCrea
 **描述：**
 
 向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)注册 [OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc](capi-modular-object-extension-ability-h.md#oh_abilityruntime_modobjextensionability_oncreatefunc)回调函数。
+
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnCreateFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc onCreateFunc)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnCreateFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnCreateFunc onCreateFunc)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 
@@ -155,6 +172,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDest
 
 向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)注册 [OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc](capi-modular-object-extension-ability-h.md#oh_abilityruntime_modobjextensionability_ondestroyfunc)回调函数。
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDestroyFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc onDestroyFunc)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDestroyFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnDestroyFunc onDestroyFunc)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -179,6 +200,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnConn
 **描述：**
 
 向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)注册 [OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc](capi-modular-object-extension-ability-h.md#oh_abilityruntime_modobjextensionability_onconnectfunc)回调函数。
+
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnConnectFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc onConnectFunc)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnConnectFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnConnectFunc onConnectFunc)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 26.0.0
 
@@ -205,6 +230,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDisc
 
 向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)注册 [OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc](capi-modular-object-extension-ability-h.md#oh_abilityruntime_modobjextensionability_ondisconnectfunc)回调函数。
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDisconnectFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc onDisconnectFunc)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_RegisterOnDisconnectFunc(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionAbility_OnDisconnectFunc onDisconnectFunc)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -230,6 +259,10 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetContextFrom
 
 从ModularObjectExtensionAbility实例中获取ExtensionAbility上下文。
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetContextFromInstance(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionContextHandle* context)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetContextFromInstance(OH_AbilityRuntime_ModObjExtensionInstanceHandle instance, OH_AbilityRuntime_ModObjExtensionContextHandle* context)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -237,7 +270,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetContextFrom
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle instance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)实例的指针。 |
-| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md)* context | 指向[OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modobjextensioncontexthandle.md)的指针，用于接收ExtensionAbility上下文。 |
+| [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md)* context | 指向[OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md)的指针，用于接收ExtensionAbility上下文。 |
 
 **返回值：**
 
@@ -255,13 +288,17 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetInstanceFro
 
 从基础ExtensionAbility实例中获取ModularObjectExtensionAbility实例。
 
+<!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetInstanceFromBase(AbilityRuntime_ExtensionInstanceHandle baseExtensionInstance, OH_AbilityRuntime_ModObjExtensionInstanceHandle* modObjExtensionInstance)--><!--Device-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionAbility_GetInstanceFromBase(AbilityRuntime_ExtensionInstanceHandle baseExtensionInstance, OH_AbilityRuntime_ModObjExtensionInstanceHandle* modObjExtensionInstance)-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ExtensionInstanceHandle](capi-abilityruntime-abilityruntime-extensioninstancehandle.md) baseExtensionInstance | 指向[AbilityRuntime_ExtensionInstance](capi-abilityruntime-abilityruntime-extensioninstance.md)的指针。 |
+| [AbilityRuntime_ExtensionInstanceHandle](capi-abilityruntime-abilityruntime-extensioninstance8h.md) baseExtensionInstance | 指向[AbilityRuntime_ExtensionInstance](capi-abilityruntime-abilityruntime-extensioninstance.md)的指针。 |
 | OH_AbilityRuntime_ModObjExtensionInstanceHandle* modObjExtensionInstance | 指向[OH_AbilityRuntime_ModObjExtensionInstance](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninstance.md)的指针， 用于接收ModularObjectExtensionAbility实例，作为输出参数。 |
 
 **返回值：**

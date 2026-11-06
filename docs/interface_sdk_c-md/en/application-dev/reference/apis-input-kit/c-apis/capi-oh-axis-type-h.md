@@ -2,13 +2,17 @@
 
 ## Overview
 
-**Include**: <multimodalinput/oh_axis_type.h>
+Axis event enums of input devices. The axis type defines the physical behavior characteristics of the input device in different interaction scenarios. The system distinguishes and delivers different gesture interaction information through the axis type.
+
+**File to Include**: <multimodalinput/oh_axis_type.h>
 
 **Library**: libohinput.so
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
-**Related module**: [input](capi-input.md)
+**Related module**: [input](capi-input-kit-input.md)
 
 ## Summary
 
@@ -32,6 +36,10 @@ enum InputEvent_AxisType
 
 Defines the axis type of an input device.
 
+<!--Device-InputEvent_AxisType--><!--Device-InputEvent_AxisType-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -52,6 +60,10 @@ enum InputEvent_AxisEventType
 
 Event type of the input device.
 
+<!--Device-InputEvent_AxisEventType--><!--Device-InputEvent_AxisEventType-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -68,6 +80,10 @@ enum InputEvent_AxisAction
 **Description**
 
 Action of the input device.
+
+<!--Device-InputEvent_AxisAction--><!--Device-InputEvent_AxisAction-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
 
 **Since**: 12
 

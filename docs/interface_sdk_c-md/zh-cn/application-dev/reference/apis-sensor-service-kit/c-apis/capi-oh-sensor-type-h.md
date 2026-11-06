@@ -6,9 +6,11 @@
 
 **库：** libohsensor.so
 
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
-**相关模块：** [Sensor](capi-sensor.md)
+**相关模块：** [Sensor](capi-sensor-service-kit-sensor.md)
 
 ## 汇总
 
@@ -45,7 +47,7 @@
 | [int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)](#oh_sensorevent_gettype) | - | 获取传感器类型。 |
 | [int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)](#oh_sensorevent_gettimestamp) | - | 获取传感器数据的时间戳。 |
 | [int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)](#oh_sensorevent_getaccuracy) | - | 获取传感器数据的精度。 |
-| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | 数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
+| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | 获取传感器数据。数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
 \| --- \| --- \|
 \| SENSOR_TYPE_ACCELEROMETER \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的加速度分量，单位：m/s² \|
 \| SENSOR_TYPE_GYROSCOPE \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的旋转角速度，单位：rad/s（弧度/秒） \|
@@ -76,12 +78,6 @@
 | [int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)](#oh_sensorsubscriber_setcallback) | - | 设置一个回调函数来报告传感器数据。调用成功后，订阅者将使用指定的回调函数来报告传感器数据。 |
 | [int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)](#oh_sensorsubscriber_getcallback) | - | 获取用于报告传感器数据的回调函数。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*Sensor_EventCallback)(Sensor_Event *event) | 定义用于报告传感器数据的回调函数。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Sensors.Sensor |
-
 ## 枚举类型说明
 
 ### Sensor_Type
@@ -93,6 +89,10 @@ enum Sensor_Type
 **描述：**
 
 枚举传感器类型。
+
+<!--Device-Sensor_Type--><!--Device-Sensor_Type-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -124,6 +124,10 @@ enum Sensor_Result
 
 定义传感器错误码。
 
+<!--Device-Sensor_Result--><!--Device-Sensor_Result-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -142,6 +146,10 @@ enum Sensor_Accuracy
 **描述：**
 
 枚举传感器报告的数据的精度级别。
+
+<!--Device-Sensor_Accuracy--><!--Device-Sensor_Accuracy-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -164,6 +172,10 @@ Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)
 **描述：**
 
 用给定的数字创建一个实例数组，请参考[Sensor_Info](capi-sensor-sensor-info.md)。创建成功后，返回指向count个Sensor_Info实例的指针数组。 <br>调用此函数创建的实例数组，在使用完毕后必须调用OH_Sensor_DestroyInfos()销毁并回收内存，否则会导致资源泄漏。
+
+<!--Device-Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)--><!--Device-Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -189,6 +201,10 @@ int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)
 
 销毁实例数组并回收内存，请参考[Sensor_Info](capi-sensor-sensor-info.md)。调用成功后，实例数组占用的内存被释放，sensors指针及其指向的所有Sensor_Info实例不能再使用。
 
+<!--Device-int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)--><!--Device-int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -213,6 +229,10 @@ int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *l
 **描述：**
 
 获取传感器名称。获取成功后，sensorName参数中会填充传感器名称的字符串，length参数中会返回字符串的长度（包含结束符）。
+
+<!--Device-int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)--><!--Device-int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -240,6 +260,10 @@ int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint3
 
 获取传感器的厂商名称。获取成功后，vendorName参数中会填充传感器厂商名称的字符串，length参数中会返回字符串的长度（包含结束符）。
 
+<!--Device-int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)--><!--Device-int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -266,6 +290,10 @@ int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)
 
 获取[Sensor_Type](capi-oh-sensor-type-h.md#sensor_type)。获取成功后，sensorType参数中会填充传感器的类型值。
 
+<!--Device-int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -290,6 +318,10 @@ int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)
 **描述：**
 
 获取传感器分辨率。获取成功后，resolution参数中会填充传感器的分辨率值。
+
+<!--Device-int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)--><!--Device-int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -316,6 +348,10 @@ int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSa
 
 获取传感器的最小数据上报间隔。获取成功后，minSamplingInterval参数中会填充传感器的最小数据上报间隔值，单位：ns（纳秒）。
 
+<!--Device-int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)--><!--Device-int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -340,6 +376,10 @@ int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSa
 **描述：**
 
 获取传感器的最大数据上报间隔。获取成功后，maxSamplingInterval参数中会填充传感器的最大数据上报间隔值，单位：ns（纳秒）。
+
+<!--Device-int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)--><!--Device-int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -366,6 +406,10 @@ int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorTyp
 
 获取传感器类型。
 
+<!--Device-int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -390,6 +434,10 @@ int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestam
 **描述：**
 
 获取传感器数据的时间戳。
+
+<!--Device-int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)--><!--Device-int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -416,6 +464,10 @@ int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *a
 
 获取传感器数据的精度。
 
+<!--Device-int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)--><!--Device-int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -439,7 +491,7 @@ int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t
 
 **描述：**
 
-数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
+获取传感器数据。数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
 \| --- \| --- \|
 \| SENSOR_TYPE_ACCELEROMETER \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的加速度分量，单位：m/s² \|
 \| SENSOR_TYPE_GYROSCOPE \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的旋转角速度，单位：rad/s（弧度/秒） \|
@@ -456,6 +508,10 @@ int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t
 \| SENSOR_TYPE_HEART_RATE \| data[0]表示心率数值 \|
 \| SENSOR_TYPE_LINEAR_ACCELERATION \| 从API version 13开始支持。data[0]、data[1]、data[2]分别表示设备x、y、z轴的线性加速度，单位：m/s² \|
 \| SENSOR_TYPE_GAME_ROTATION_VECTOR \| 从API version 13开始支持。data[0]、data[1]、data[2]分别表示设备x、y、z轴的旋转角度，单位：°（度）； data[3]表示旋转向量 \|
+
+<!--Device-int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)--><!--Device-int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -483,6 +539,10 @@ Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)
 
 创建一个[Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md)实例。 <br>调用此函数创建的实例，在使用完毕后必须调用OH_Sensor_DestroySubscriptionId()销毁并回收内存，否则会导致资源泄漏。
 
+<!--Device-Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)--><!--Device-Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **返回值：**
@@ -500,6 +560,10 @@ int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)
 **描述：**
 
 销毁[Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md)实例并回收内存。
+
+<!--Device-int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)--><!--Device-int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -524,6 +588,10 @@ int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *
 **描述：**
 
 获取传感器类型。
+
+<!--Device-int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *sensorType)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -550,6 +618,10 @@ int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_
 
 设置传感器类型。调用成功后，订阅ID的类型被设置为指定的sensorType值。
 
+<!--Device-int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)--><!--Device-int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -575,6 +647,10 @@ Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)
 
 创建[Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md)实例。 <br>调用此函数创建的实例，在使用完毕后必须调用OH_Sensor_DestroySubscriptionAttribute()销毁并回收内存，否则会导致资源泄漏。
 
+<!--Device-Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)--><!--Device-Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **返回值：**
@@ -592,6 +668,10 @@ int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *att
 **描述：**
 
 销毁[Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md)实例并回收内存。
+
+<!--Device-int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *attribute)--><!--Device-int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *attribute)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -616,6 +696,10 @@ int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAt
 **描述：**
 
 设置传感器数据报告间隔。调用成功后，订阅属性的采样间隔被设置为指定的samplingInterval值，后续传感器数据上报将按照此间隔进行。
+
+<!--Device-int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)--><!--Device-int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -642,6 +726,10 @@ int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAt
 
 获取传感器数据报告间隔。
 
+<!--Device-int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAttribute* attribute, int64_t *samplingInterval)--><!--Device-int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAttribute* attribute, int64_t *samplingInterval)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -667,6 +755,10 @@ typedef void (*Sensor_EventCallback)(Sensor_Event *event)
 
 定义用于报告传感器数据的回调函数。
 
+<!--Device-typedef void (*Sensor_EventCallback)(Sensor_Event *event)--><!--Device-typedef void (*Sensor_EventCallback)(Sensor_Event *event)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -685,6 +777,10 @@ Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)
 
 创建一个[Sensor_Subscriber](capi-sensor-sensor-subscriber.md)实例。 <br>调用此函数创建的实例，在使用完毕后必须调用OH_Sensor_DestroySubscriber()销毁并回收内存，否则会导致资源泄漏。
 
+<!--Device-Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)--><!--Device-Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **返回值：**
@@ -702,6 +798,10 @@ int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)
 **描述：**
 
 销毁[Sensor_Subscriber](capi-sensor-sensor-subscriber.md)实例并回收内存。
+
+<!--Device-int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)--><!--Device-int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 
@@ -727,6 +827,10 @@ int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sen
 
 设置一个回调函数来报告传感器数据。调用成功后，订阅者将使用指定的回调函数来报告传感器数据。
 
+<!--Device-int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)--><!--Device-int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
 **起始版本：** 11
 
 **参数：**
@@ -751,6 +855,10 @@ int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_Ev
 **描述：**
 
 获取用于报告传感器数据的回调函数。
+
+<!--Device-int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)--><!--Device-int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
 
 **起始版本：** 11
 

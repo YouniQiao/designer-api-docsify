@@ -8,6 +8,8 @@ struct OH_AudioRenderer_Callbacks_Struct {...}
 
 Declaring the callback struct for renderer stream.
 
+<!--Device-struct OH_AudioRenderer_Callbacks_Struct {...}--><!--Device-struct OH_AudioRenderer_Callbacks_Struct {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
@@ -16,7 +18,7 @@ Declaring the callback struct for renderer stream.
 
 **Replaced by**: Use the callback type: OH_AudioRenderer_OnWriteDataCallback, OH_AudioRenderer_OutputDeviceChangeCallback, OH_AudioRenderer_OnInterruptCallback, OH_AudioRenderer_OnErrorCallback separately.
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 **Header file**: [native_audiostream_base.h](capi-native-audiostream-base-h.md)
 
@@ -26,10 +28,10 @@ Declaring the callback struct for renderer stream.
 
 | Name | Description |
 | -- | -- |
-| [int32_t (\*OH_AudioRenderer_OnWriteData)(OH_AudioRenderer* renderer,void* userData,void* buffer,int32_t length)](#oh_audiorenderer_onwritedata) |  |
-| [int32_t (\*OH_AudioRenderer_OnStreamEvent)(OH_AudioRenderer* renderer,void* userData,OH_AudioStream_Event event)](#oh_audiorenderer_onstreamevent) |  |
-| [int32_t (\*OH_AudioRenderer_OnInterruptEvent)(OH_AudioRenderer* renderer,void* userData,OH_AudioInterrupt_ForceType type,OH_AudioInterrupt_Hint hint)](#oh_audiorenderer_oninterruptevent) |  |
-| [int32_t (\*OH_AudioRenderer_OnError)(OH_AudioRenderer* renderer,void* userData,OH_AudioStream_Result error)](#oh_audiorenderer_onerror) |  |
+| [int32_t (\*OH_AudioRenderer_OnWriteData)(OH_AudioRenderer* renderer,void* userData,void* buffer,int32_t length)](#oh_audiorenderer_onwritedata) | - | This function pointer will point to the callback function that is used to write audio data |
+| [int32_t (\*OH_AudioRenderer_OnStreamEvent)(OH_AudioRenderer* renderer,void* userData,OH_AudioStream_Event event)](#oh_audiorenderer_onstreamevent) | - | This function pointer will point to the callback function that is used to handle audio renderer stream events. |
+| [int32_t (\*OH_AudioRenderer_OnInterruptEvent)(OH_AudioRenderer* renderer,void* userData,OH_AudioInterrupt_ForceType type,OH_AudioInterrupt_Hint hint)](#oh_audiorenderer_oninterruptevent) | - | This function pointer will point to the callback function that is used to handle audio interrupt events. |
+| [int32_t (\*OH_AudioRenderer_OnError)(OH_AudioRenderer* renderer,void* userData,OH_AudioStream_Result error)](#oh_audiorenderer_onerror) | - | This function pointer will point to the callback function that is used to handle audio error result. |
 
 ## Member function description
 
@@ -40,6 +42,10 @@ int32_t (*OH_AudioRenderer_OnWriteData)(OH_AudioRenderer* renderer,void* userDat
 ```
 
 **Description**
+
+This function pointer will point to the callback function thatis used to write audio data
+
+<!--Device-int32_t (*OH_AudioRenderer_OnWriteData)(OH_AudioRenderer* renderer, void* userData, void* buffer, int32_t length)--><!--Device-int32_t (*OH_AudioRenderer_OnWriteData)(OH_AudioRenderer* renderer, void* userData, void* buffer, int32_t length)-End-->
 
 **Since**: 10
 
@@ -55,6 +61,10 @@ int32_t (*OH_AudioRenderer_OnStreamEvent)(OH_AudioRenderer* renderer,void* userD
 
 **Description**
 
+This function pointer will point to the callback function thatis used to handle audio renderer stream events.
+
+<!--Device-int32_t (*OH_AudioRenderer_OnStreamEvent)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_Event event)--><!--Device-int32_t (*OH_AudioRenderer_OnStreamEvent)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_Event event)-End-->
+
 **Since**: 10
 
 **Deprecated**: 20
@@ -69,6 +79,10 @@ int32_t (*OH_AudioRenderer_OnInterruptEvent)(OH_AudioRenderer* renderer,void* us
 
 **Description**
 
+This function pointer will point to the callback function thatis used to handle audio interrupt events.
+
+<!--Device-int32_t (*OH_AudioRenderer_OnInterruptEvent)(OH_AudioRenderer* renderer, void* userData, OH_AudioInterrupt_ForceType type, OH_AudioInterrupt_Hint hint)--><!--Device-int32_t (*OH_AudioRenderer_OnInterruptEvent)(OH_AudioRenderer* renderer, void* userData, OH_AudioInterrupt_ForceType type, OH_AudioInterrupt_Hint hint)-End-->
+
 **Since**: 10
 
 **Deprecated**: 20
@@ -82,6 +96,10 @@ int32_t (*OH_AudioRenderer_OnError)(OH_AudioRenderer* renderer,void* userData,OH
 ```
 
 **Description**
+
+This function pointer will point to the callback function thatis used to handle audio error result.
+
+<!--Device-int32_t (*OH_AudioRenderer_OnError)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_Result error)--><!--Device-int32_t (*OH_AudioRenderer_OnError)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_Result error)-End-->
 
 **Since**: 10
 

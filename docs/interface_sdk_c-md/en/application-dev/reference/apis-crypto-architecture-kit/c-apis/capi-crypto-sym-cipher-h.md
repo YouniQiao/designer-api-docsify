@@ -4,13 +4,15 @@
 
 Defines the symmetric key cipher interfaces.
 
-**Include**: <CryptoArchitectureKit/crypto_sym_cipher.h>
+**File to Include**: <CryptoArchitectureKit/crypto_sym_cipher.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Related module**: [CryptoSymCipherApi](capi-cryptosymcipherapi.md)
+**Related module**: [CryptoSymCipherApi](capi-crypto-architecture-kit-cryptosymcipherapi.md)
 
 ## Summary
 
@@ -53,6 +55,10 @@ enum CryptoSymCipher_ParamsType
 
 Defines the cipher parameter types.
 
+<!--Device-CryptoSymCipher_ParamsType--><!--Device-CryptoSymCipher_ParamsType-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 | Enum item | Description |
@@ -74,9 +80,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **par
 
 Creates symmetric cipher parameters.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **params)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **params)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_sym_cipher/OH_CryptoSymCipherParams_Destroy {params}
+**Resource release**: [OH_CryptoSymCipherParams_Destroy](#oh_cryptosymcipherparams_destroy)
 
 **Parameters**:
 
@@ -105,6 +115,10 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *pa
 
 Sets cipher parameters.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *params, CryptoSymCipher_ParamsType paramsType, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *params, CryptoSymCipher_ParamsType paramsType, Crypto_DataBlob *value)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 **Parameters**:
@@ -131,6 +145,10 @@ void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)
 
 Destroys cipher parameters.
 
+<!--Device-void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)--><!--Device-void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 **Parameters**:
@@ -149,9 +167,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCi
 
 Creates a symmetric cipher context based on the given algorithm name.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCipher **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCipher **ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_sym_cipher/OH_CryptoSymCipher_Destroy {ctx}
+**Resource release**: [OH_CryptoSymCipher_Destroy](#oh_cryptosymcipher_destroy)
 
 **Parameters**:
 
@@ -180,6 +202,10 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_Cipher
 **Description**
 
 Initializes the cipher operation with the given mode, key, and parameters.
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_CipherMode mod, OH_CryptoSymKey *key, OH_CryptoSymCipherParams *params)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_CipherMode mod, OH_CryptoSymKey *key, OH_CryptoSymCipherParams *params)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -214,9 +240,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_Data
 
 Updates cipher data, outputting encrypted or decrypted data.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -247,9 +277,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataB
 
 Finishes the cipher operation, outputting the final result.
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
+**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **Parameters**:
 
@@ -275,6 +309,10 @@ const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)
 
 Obtains the symmetric cipher algorithm name.
 
+<!--Device-const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)--><!--Device-const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 **Parameters**:
@@ -298,6 +336,10 @@ void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)
 **Description**
 
 Destroys the symmetric cipher context.
+
+<!--Device-void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)--><!--Device-void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 

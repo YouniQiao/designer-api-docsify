@@ -1,18 +1,20 @@
 # HiDebug_StackFrame
 
 ```c
-union HiDebug_StackFrame {...}
+struct HiDebug_StackFrame {...}
 ```
 
 ## Overview
 
 Defines the stack frame content.
 
+<!--Device-struct HiDebug_StackFrame {...}--><!--Device-struct HiDebug_StackFrame {...}-End-->
+
 **System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Since**: 20
 
-**Related module**: [HiDebug](capi-hidebug.md)
+**Related module**: [HiDebug](capi-performance-analysis-kit-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -22,8 +24,9 @@ Defines the stack frame content.
 
 | Name | Description |
 | -- | -- |
-| [struct HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) js | Js stack frame defined in [HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) |
-| struct HiDebug_NativeStackFrame native;
- } frame | Native frame defined in [HiDebug_NativeStackFrame](capi-hidebug-hidebug-nativestackframe.md) |
+| [HiDebug_StackFrameType](capi-hidebug-type-h.md#hidebug_stackframetype) type | Type of the current stack. |
+| frame | frame content. |
+| frame.js | Js stack frame defined in [HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) |
+| frame.native | Native frame defined in [HiDebug_NativeStackFrame](capi-hidebug-hidebug-nativestackframe.md) |
 
 

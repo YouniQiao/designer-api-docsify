@@ -6,9 +6,11 @@ Provides type define related to the data value.
 
 **Library**: libnative_rdb_ndk.z.so
 
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
-**Related module**: [RDB](capi-rdb.md)
+**Related module**: [RDB](capi-arkdata-rdb.md)
 
 ## Summary
 
@@ -47,6 +49,10 @@ enum Rdb_ConflictResolution
 
 Describe the security area of the database.
 
+<!--Device-Rdb_ConflictResolution--><!--Device-Rdb_ConflictResolution-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 | Enum item | Description |
@@ -71,6 +77,10 @@ OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)
 
 Creates an OH_RDB_ReturningContext instance object.
 
+<!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)--><!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Returns**:
@@ -94,6 +104,10 @@ void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)
 
 Destroys an OH_RDB_ReturningContext instance object.
 
+<!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)--><!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -111,6 +125,10 @@ int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *cons
 **Description**
 
 Set the returning fields.
+
+<!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)--><!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -138,6 +156,10 @@ int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)
 
 Set the maximum returning value.
 
+<!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)--><!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -163,6 +185,10 @@ OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)
 
 Get the cursor of data changes, includes 1024 by default.
 
+<!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)--><!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -186,6 +212,10 @@ int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)
 **Description**
 
 Get the number of rows affected by this operation.
+
+<!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)--><!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 

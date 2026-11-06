@@ -6,9 +6,11 @@
 
 **库：** libohbattery_info.so
 
+**系统能力：** SystemCapability.PowerManager.BatteryManager.Core
+
 **起始版本：** 13
 
-**相关模块：** [OH_BatteryInfo](capi-oh-batteryinfo.md)
+**相关模块：** [OH_BatteryInfo](capi-basic-services-kit-oh-batteryinfo.md)
 
 ## 汇总
 
@@ -45,15 +47,19 @@ enum BatteryInfo_BatteryPluggedType
 
 定义连接的充电器类型。
 
+<!--Device-BatteryInfo_BatteryPluggedType--><!--Device-BatteryInfo_BatteryPluggedType-End-->
+
+**系统能力：** SystemCapability.PowerManager.BatteryManager.Core
+
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| PLUGGED_TYPE_NONE |  |
-| PLUGGED_TYPE_AC |  |
-| PLUGGED_TYPE_USB |  |
-| PLUGGED_TYPE_WIRELESS |  |
-| PLUGGED_TYPE_BUTT |  |
+| PLUGGED_TYPE_NONE | 电源已拔下。<br>**起始版本：** 13 |
+| PLUGGED_TYPE_AC | 电源是交流充电。<br>**起始版本：** 13 |
+| PLUGGED_TYPE_USB | 电源是USB充电。<br>**起始版本：** 13 |
+| PLUGGED_TYPE_WIRELESS | 电源是无线充电。<br>**起始版本：** 13 |
+| PLUGGED_TYPE_BUTT | 未知类型。<br>**起始版本：** 13 |
 
 
 ## 函数说明
@@ -67,6 +73,10 @@ int32_t OH_BatteryInfo_GetCapacity()
 **描述：**
 
 返回当前电池电量百分比。可用于电池监控应用显示电量信息、低电量提醒功能判断是否需要提示用户、省电模式触发判断等场景。
+
+<!--Device-int32_t OH_BatteryInfo_GetCapacity()--><!--Device-int32_t OH_BatteryInfo_GetCapacity()-End-->
+
+**系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **起始版本：** 13
 
@@ -85,6 +95,10 @@ BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()
 **描述：**
 
 返回连接的充电器类型。可用于充电状态检测应用判断当前充电方式、充电提醒功能展示充电类型图标、省电策略根据充电类型调整等场景。
+
+<!--Device-BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()--><!--Device-BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()-End-->
+
+**系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **起始版本：** 13
 

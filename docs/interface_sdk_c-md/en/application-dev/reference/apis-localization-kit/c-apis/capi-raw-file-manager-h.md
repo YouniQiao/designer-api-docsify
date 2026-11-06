@@ -6,9 +6,11 @@ This module allows you to create and release `NativeResourceManager` objects, an
 
 **Library**: librawfile.z.so
 
+**System capability**: SystemCapability.Global.ResourceManager
+
 **Since**: 8
 
-**Related module**: [rawfile](capi-rawfile.md)
+**Related module**: [rawfile](capi-localization-kit-rawfile.md)
 
 ## Summary
 
@@ -47,6 +49,10 @@ NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env
 
 Initializes a `NativeResourceManager` object.
 
+<!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)--><!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
+
 **Since**: 8
 
 **Parameters**:
@@ -72,6 +78,10 @@ void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resM
 
 Releases a `NativeResourceManager` object and its associated resources.
 
+<!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)--><!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
+
 **Since**: 8
 
 **Parameters**:
@@ -89,6 +99,10 @@ RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const ch
 **Description**
 
 Opens the `rawfile` directory.
+
+<!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)--><!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 8
 
@@ -121,6 +135,10 @@ RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const 
 
 Opens a rawfile and returns a `RawFile` object for reading the rawfile content.
 
+<!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
+
 **Since**: 8
 
 **Parameters**:
@@ -152,6 +170,10 @@ RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, co
 
 Opens a rawfile and returns a `RawFile` object for reading the rawfile content. Files larger than 2 GB are supported.
 
+<!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
+
 **Since**: 11
 
 **Parameters**:
@@ -182,6 +204,10 @@ bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *p
 **Description**
 
 Checks whether the specified path is a subdirectory of `rawfile`. It is used to determine whether the specified path is a directory before traversing it, or whether the specified path is a file before opening it.
+
+<!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)--><!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)-End-->
+
+**System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 12
 

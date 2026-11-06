@@ -2,3 +2,21 @@
 
 ## Overview
 
+<!--Device-struct Elf32_Phdr {...}--><!--Device-struct Elf32_Phdr {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| Elf32_Word p_type |  |
+| Elf32_Off p_offset |  |
+| Elf32_Addr p_vaddr |  |
+| Elf32_Addr p_paddr |  |
+| Elf32_Word p_filesz |  |
+| Elf32_Word p_memsz |  |
+| Elf32_Word p_flags |  |
+| Elf32_Word p_align |  |
+
+

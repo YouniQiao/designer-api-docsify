@@ -6,9 +6,11 @@ This file declares the functions related to the GPU context in the drawing modul
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -38,6 +40,10 @@ OH_Drawing_GpuContext* OH_Drawing_GpuContextCreateFromGL(OH_Drawing_GpuContextOp
 
 Creates an **OH_Drawing_GpuContext** object that uses OpenGL as the backend interface.
 
+<!--Device-OH_Drawing_GpuContext* OH_Drawing_GpuContextCreateFromGL(OH_Drawing_GpuContextOptions gpuContextOptions)--><!--Device-OH_Drawing_GpuContext* OH_Drawing_GpuContextCreateFromGL(OH_Drawing_GpuContextOptions gpuContextOptions)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Deprecated**: 18
@@ -66,6 +72,10 @@ OH_Drawing_GpuContext* OH_Drawing_GpuContextCreate(void)
 
 Creates an **OH_Drawing_GpuContext** object, for which the backend type depends on the device.
 
+<!--Device-OH_Drawing_GpuContext* OH_Drawing_GpuContextCreate(void)--><!--Device-OH_Drawing_GpuContext* OH_Drawing_GpuContextCreate(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 16
 
 **Returns**:
@@ -83,6 +93,10 @@ void OH_Drawing_GpuContextDestroy(OH_Drawing_GpuContext* gpuContext)
 **Description**
 
 Destroys an **OH_Drawing_GpuContext** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_GpuContextDestroy(OH_Drawing_GpuContext* gpuContext)--><!--Device-void OH_Drawing_GpuContextDestroy(OH_Drawing_GpuContext* gpuContext)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

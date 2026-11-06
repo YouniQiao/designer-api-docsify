@@ -6,9 +6,11 @@ Provides database transaction related functions and enumerations.
 
 **Library**: libnative_rdb_ndk.z.so
 
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
-**Related module**: [RDB](capi-rdb.md)
+**Related module**: [RDB](capi-arkdata-rdb.md)
 
 ## Summary
 
@@ -40,7 +42,7 @@ Provides database transaction related functions and enumerations.
 | [int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_update) | Updates data in the database based on specified conditions. |
 | [int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdbtrans_updatewithconflictresolution) | Updates data in the database based on specified conditions and support conflict resolution. |
 | [int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_delete) | Deletes data from the database based on specified conditions |
-| [OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char * const columns[], int len)](#oh_rdbtrans_querywithoutrowcount) | Queries data in the database based on specified conditions without row count. |
+| [OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)](#oh_rdbtrans_querywithoutrowcount) | Queries data in the database based on specified conditions without row count. |
 | [OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *columns[], int len)](#oh_rdbtrans_query) | Queries data in the database based on specified conditions. |
 | [OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysql) | Queries data in the database based on SQL statement. |
 | [OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysqlwithoutrowcount) | Queries data in the database based on SQL statement without row count. |
@@ -61,6 +63,10 @@ enum OH_RDB_TransType
 **Description**
 
 Indicates relation database transaction type.
+
+<!--Device-OH_RDB_TransType--><!--Device-OH_RDB_TransType-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -83,6 +89,10 @@ OH_RDB_TransOptions *OH_RdbTrans_CreateOptions(void)
 **Description**
 
 Creates an OH_RDB_TransOptions instance object.
+
+<!--Device-OH_RDB_TransOptions *OH_RdbTrans_CreateOptions(void)--><!--Device-OH_RDB_TransOptions *OH_RdbTrans_CreateOptions(void)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -107,6 +117,10 @@ int OH_RdbTrans_DestroyOptions(OH_RDB_TransOptions *options)
 
 Destroys an OH_RDB_TransOptions instance object.
 
+<!--Device-int OH_RdbTrans_DestroyOptions(OH_RDB_TransOptions *options)--><!--Device-int OH_RdbTrans_DestroyOptions(OH_RDB_TransOptions *options)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -130,6 +144,10 @@ int OH_RdbTransOption_SetType(OH_RDB_TransOptions *options, OH_RDB_TransType typ
 **Description**
 
 Sets integer data to the options object.
+
+<!--Device-int OH_RdbTransOption_SetType(OH_RDB_TransOptions *options, OH_RDB_TransType type)--><!--Device-int OH_RdbTransOption_SetType(OH_RDB_TransOptions *options, OH_RDB_TransType type)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -156,6 +174,10 @@ int OH_RdbTrans_Commit(OH_Rdb_Transaction *trans)
 
 Commits a transaction of a relational database.
 
+<!--Device-int OH_RdbTrans_Commit(OH_Rdb_Transaction *trans)--><!--Device-int OH_RdbTrans_Commit(OH_Rdb_Transaction *trans)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -180,6 +202,10 @@ int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)
 
 Roll back a transaction of a relational database.
 
+<!--Device-int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)--><!--Device-int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -203,6 +229,10 @@ int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VB
 **Description**
 
 Inserts a row of data into the target table.
+
+<!--Device-int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, int64_t *rowId)--><!--Device-int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, int64_t *rowId)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -230,6 +260,10 @@ int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const ch
 **Description**
 
 Inserts a row of data into the target table and support conflict resolution.
+
+<!--Device-int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)--><!--Device-int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -259,6 +293,10 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 
 Inserts a batch of data into the target table.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
+<!--Device-int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)--><!--Device-int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -287,6 +325,10 @@ int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const O
 
 Updates data in the database based on specified conditions.
 
+<!--Device-int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, int64_t *changes)--><!--Device-int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, int64_t *changes)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -313,6 +355,10 @@ int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH
 **Description**
 
 Updates data in the database based on specified conditions and support conflict resolution.
+
+<!--Device-int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)--><!--Device-int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -342,6 +388,10 @@ int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicate
 
 Deletes data from the database based on specified conditions
 
+<!--Device-int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, int64_t *changes)--><!--Device-int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, int64_t *changes)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -361,12 +411,16 @@ Deletes data from the database based on specified conditions
 ### OH_RdbTrans_QueryWithoutRowCount()
 
 ```c
-OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char * const columns[], int len)
+OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)
 ```
 
 **Description**
 
 Queries data in the database based on specified conditions without row count.
+
+<!--Device-OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)--><!--Device-OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -376,7 +430,7 @@ Queries data in the database based on specified conditions without row count.
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | [const OH_Predicates](capi-rdb-oh-predicates.md) *predicates | Represents the specified update condition by the instance object of OH_Predicates. |
-| const char * const columns[] | Represents the columns to query. If the value is empty array, the query applies to all columns. |
+| const char *const columns[] | Represents the columns to query. If the value is empty array, the query applies to all columns. |
 | int len | Represents the number of columns elements. |
 
 **Returns**:
@@ -394,6 +448,10 @@ OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *pre
 **Description**
 
 Queries data in the database based on specified conditions.
+
+<!--Device-OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *columns[], int len)--><!--Device-OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *columns[], int len)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -422,6 +480,10 @@ OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, cons
 
 Queries data in the database based on SQL statement.
 
+<!--Device-OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)--><!--Device-OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -448,6 +510,10 @@ OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const 
 
 Queries data in the database based on SQL statement without row count.
 
+<!--Device-OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)--><!--Device-OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -473,6 +539,10 @@ int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Dat
 **Description**
 
 Executes an SQL statement that contains specified parameters.
+
+<!--Device-int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)--><!--Device-int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -506,6 +576,10 @@ int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)
 
 Destroys an OH_Rdb_Transaction instance object.
 
+<!--Device-int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)--><!--Device-int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -529,6 +603,10 @@ int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *
 **Description**
 
 Inserts a batch of data into the target table and output change info to context.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+
+<!--Device-int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)--><!--Device-int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -563,6 +641,10 @@ int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, 
 
 Updates data in the database based on specified conditions and output change info to context.
 
+<!--Device-int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)--><!--Device-int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -595,6 +677,10 @@ int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *pr
 **Description**
 
 Deletes data from the database based on specified conditions and output change info to context.
+
+<!--Device-int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *predicates, OH_RDB_ReturningContext *context)--><!--Device-int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *predicates, OH_RDB_ReturningContext *context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 

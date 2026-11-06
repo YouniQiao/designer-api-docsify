@@ -8,7 +8,7 @@ The file declares the structs and enums of the AVPlayer.
 
 **Since**: 11
 
-**Related module**: [AVPlayer](capi-avplayer.md)
+**Related module**: [AVPlayer](capi-media-kit-avplayer.md)
 
 ## Summary
 
@@ -17,6 +17,7 @@ The file declares the structs and enums of the AVPlayer.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [AVPlayerCallback](capi-avplayer-avplayercallback.md) | - | The struct contains the set of the **OH_AVPlayerOnInfo** and **OH_AVPlayerOnError** callback function pointers. To ensure the normal running of OH_AVPlayer, you must register the instance of this struct with the OH_AVPlayer instance and process the information reported by the callback functions. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) | OH_AVPlayer | Defines a struct for the AVPlayer. |
 | [OH_AVSeiMessageArray](capi-avplayer-oh-avseimessagearray.md) | OH_AVSeiMessageArray | Defines a struct for the SEI message array. |
 | [OH_AVPlaybackStrategy](capi-avplayer-oh-avplaybackstrategy.md) | OH_AVPlaybackStrategy | Defines a struct for the audio and video playback strategy. |
 
@@ -68,8 +69,8 @@ The file declares the structs and enums of the AVPlayer.
 | const char *OH_PLAYER_VIDEO_HEIGHT | Pointer to the key for obtaining the video height. The value is of the int32_t type.<br>**Since**: 12 |
 | const char *OH_PLAYER_MESSAGE_TYPE | Pointer to the key for obtaining the type of message received by the AVPlayer. The value is of the int32_t type. The value **1** means that the video frame starts to be rendered.<br>**Since**: 12 |
 | const char *OH_PLAYER_IS_LIVE_STREAM | Pointer to the key for checking whether a media asset is live streaming. The value is of the int32_t type. The value **1** means live streaming.<br>**Since**: 12 |
-| const char *OH_PLAYER_SEI_PAYLOAD_TYPE |  |
-| const char *OH_PLAYER_SEI_PAYLOAD_CONTENT |  |
+| const char *OH_PLAYER_SEI_PAYLOAD_TYPE | Sei message key for payload type.<br>**Since**: 23 |
+| const char *OH_PLAYER_SEI_PAYLOAD_CONTENT | Sei message key for payload content.<br>**Since**: 23 |
 | const char *OH_PLAYER_SUPER_RESOLUTION_ENABLE_STATE | Pointer to the key for indicating the enable state of the super resolution feature. The value type is int32_t. The value **1** indicates that the feature is enabled, and **0** indicates the opposite. It is used for information callback when the super resolution state changes.<br>**Since**: 23 |
 | const char *OH_PLAYER_TRACH_CHANGE_INFO_TRACK_INDEX | Pointer to the key for indicating the track index in the track change information. The value type is int32_t.<br>**Since**: 23 |
 | const char *OH_PLAYER_TRACH_CHANGE_INFO_TRACK_SELECTED | Pointer to the key for indicating whether the track is selected in the track change information. The value type is int32_t.<br>**Since**: 23 |
@@ -90,19 +91,11 @@ The file declares the structs and enums of the AVPlayer.
 | const char *OH_MEDIA_EVENT_INFO_DOWNLOAD_TOTAL_SIZE | Pointer to the key for obtaining the total size of loaded media resources in the statistic metric information. The value type is int64_t.<br>**Since**: 23 |
 | const char *OH_MEDIA_EVENT_INFO_STALLING_COUNT | Pointer to the key for obtaining the total number of stalling times in the statistic metric information. The value type is uint32_t.<br>**Since**: 23 |
 | const char *OH_MEDIA_EVENT_INFO_TOTAL_STALLING_TIME | Pointer to the key for obtaining the total stalling duration in the statistic metric information. The value type is uint32_t, and the unit is millisecond.<br>**Since**: 23 |
-| const char *OH_PLAYER_SERVER_IP_ADDRESS |  |
-| const char *OH_PLAYER_IS_DOWNLOADING |  |
-| const char *OH_PLAYER_BUFFER_DURATION |  |
-| const char *OH_PLAYER_DOWNLOAD_RATE |  |
-| const char *OH_PLAYER_AVG_DOWNLOAD_RATE |  |
-| void (*OH_AVPlayerOnInfo)(OH_AVPlayer *player, AVPlayerOnInfoType type, int32_t extra) | Called when the AVPlayer receives a message.<br>**Since**: 11<br>**Deprecated**: 12<br>**Replaced by**: [OH_AVPlayerOnInfoCallback](capi-avplayer-base-h.md#oh_avplayeroninfocallback) |
-| void (*OH_AVPlayerOnInfoCallback)(OH_AVPlayer *player, AVPlayerOnInfoType type, OH_AVFormat* infoBody, void *userData) | Called when the AVPlayer receives a message. If this callback is successfully set, the **OH_AVPlayerOnInfo**<br>function will not be invoked.<br>**Since**: 12 |
-| void (*OH_AVPlayerOnError)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg) | Called when an error occurs in the AVPlayer. This callback is available in API version 9 or later.<br>**Since**: 11<br>**Deprecated**: 12<br>**Replaced by**: [OH_AVPlayerOnErrorCallback](capi-avplayer-base-h.md#oh_avplayeronerrorcallback) |
-| void (*OH_AVPlayerOnErrorCallback)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg, void *userData) | Called when an error occurs in the AVPlayer. If this callback is successfully set, the **OH_AVPlayerOnError**<br>function will not be invoked.<br>**Since**: 12 |
-| void (*OH_AVPlayerOnAmplitudeUpdateCallback)(OH_AVPlayer *player, double *amplitudes, uint32_t size, void *userData) | Called when the maximum audio amplitude is calculated.<br>**Since**: 23 |
-| void (*OH_AVPlayerOnSeiMessageReceivedCallback)(OH_AVPlayer *player, OH_AVSeiMessageArray *message, int32_t playbackPosition, void *userData) | Called for obtaining SEI messages. This function is used to subscribe to SEI message events and returns detailed SEI information.<br>**Since**: 23 |
-| void (*OH_AVPlayerPCMOutputCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData) | Describes the handle used to obtain the decoded audio PCM data.<br>**Since**: 26.0.0 |
-| void (*OH_AVPlayerPCMProcessorCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData) | This callback provides a PCM buffer for processing. AVPlayer needs to use the processed data for audio playback, and processing must be completed in a timely manner, otherwise it will block playback. Do not change sampling rate, channels, or sampling format.<br>**Since**: 26.0.0 |
+| const char *OH_PLAYER_SERVER_IP_ADDRESS | Playback info key for server ip address.<br>**Since**: 23 |
+| const char *OH_PLAYER_IS_DOWNLOADING | Playback info key for downloading state.<br>**Since**: 23 |
+| const char *OH_PLAYER_BUFFER_DURATION | Playback info key for buffer duration.<br>**Since**: 23 |
+| const char *OH_PLAYER_DOWNLOAD_RATE | Playback info key for download rate.<br>**Since**: 23 |
+| const char *OH_PLAYER_AVG_DOWNLOAD_RATE | Playback info key for average download rate.<br>**Since**: 23 |
 
 ## Enum type description
 
@@ -115,6 +108,8 @@ enum AVPlayerState
 **Description**
 
 Enumerates the AVPlayer states.
+
+<!--Device-AVPlayerState--><!--Device-AVPlayerState-End-->
 
 **Since**: 11
 
@@ -140,6 +135,8 @@ enum AVPlayerSeekMode
 
 Enumerates the seek modes.
 
+<!--Device-AVPlayerSeekMode--><!--Device-AVPlayerSeekMode-End-->
+
 **Since**: 11
 
 | Enum item | Description |
@@ -147,7 +144,7 @@ Enumerates the seek modes.
 | AV_SEEK_NEXT_SYNC = 0 | sync to keyframes after the time point. |
 | AV_SEEK_PREVIOUS_SYNC | sync to keyframes before the time point. |
 | AV_SEEK_CLOSEST = 2 | Seeks to the frame closest to the specified position.<br>**Since**: 12 |
-| AV_SEEK_CONTINUOUS = 3 |  |
+| AV_SEEK_CONTINUOUS = 3 | Seeks in continuous drag mode. This mode provides a smoother drag experience, but the device must support continuous seeking for the current stream. Before using this mode, check whether continuous seeking is supported. For details, see [OH_AVPlayer_IsSeekContinuousSupported](capi-avplayer-h.md#oh_avplayer_isseekcontinuoussupported).<br>**Since**: 23 |
 
 ### AVPlaybackSpeed
 
@@ -158,6 +155,8 @@ enum AVPlaybackSpeed
 **Description**
 
 Enumerates the playback speeds of the AVPlayer.
+
+<!--Device-AVPlaybackSpeed--><!--Device-AVPlaybackSpeed-End-->
 
 **Since**: 11
 
@@ -183,6 +182,8 @@ enum AVPlayerOnInfoType
 **Description**
 
 Enumerates the types of messages received by the AVPlayer. The enum can be used in **OH_AVPlayerOnInfoCallback** and **OH_AVPlayerOnInfo** (deprecated) to indicate the type of information received by the AVPlayer. Starting from API version 12, you are advised to use [OH_AVPlayerOnInfoCallback](capi-avplayer-base-h.md#oh_avplayeroninfocallback) instead. Different information (**infoBody**) can be obtained for different **OnInfo** types. **infoBody** contains the key-value pairs. For details, see the following enumerated value table. If you are using API version 11 for development, use **OH_AVPlayerOnInfo (deprecated)**. For details about the mappings used in this deprecated API, see [OH_AVPlayerOnInfo](capi-avplayer-base-h.md#oh_avplayeroninfo).
+
+<!--Device-AVPlayerOnInfoType--><!--Device-AVPlayerOnInfoType-End-->
 
 **Since**: 11
 
@@ -219,6 +220,8 @@ enum AVPlayerBufferingType
 
 Enumerates the types of buffer messages of the AVPlayer.
 
+<!--Device-AVPlayerBufferingType--><!--Device-AVPlayerBufferingType-End-->
+
 **Since**: 12
 
 | Enum item | Description |
@@ -238,6 +241,8 @@ enum AVPlayerTrackSwitchMode
 
 Enumerates the track switching modes.
 
+<!--Device-AVPlayerTrackSwitchMode--><!--Device-AVPlayerTrackSwitchMode-End-->
+
 **Since**: 23
 
 | Enum item | Description |
@@ -255,6 +260,8 @@ enum OH_VideoOutputResult
 **Description**
 
 Result of Video output.
+
+<!--Device-OH_VideoOutputResult--><!--Device-OH_VideoOutputResult-End-->
 
 **Since**: 26.0.0
 
@@ -276,6 +283,8 @@ typedef void (*OH_AVPlayerOnInfo)(OH_AVPlayer *player, AVPlayerOnInfoType type, 
 
 Called when the AVPlayer receives a message.
 
+<!--Device-typedef void (*OH_AVPlayerOnInfo)(OH_AVPlayer *player, AVPlayerOnInfoType type, int32_t extra)--><!--Device-typedef void (*OH_AVPlayerOnInfo)(OH_AVPlayer *player, AVPlayerOnInfoType type, int32_t extra)-End-->
+
 **Since**: 11
 
 **Deprecated**: 12
@@ -286,7 +295,7 @@ Called when the AVPlayer receives a message.
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance. |
 | [AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype) type | Message type. For details about the available options, see [AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype). For details about the mappings between **type** and **extra** values, see the function description. |
 | int32_t extra | Other information, such as the start time and position of the media file to play. |
 
@@ -300,13 +309,15 @@ typedef void (*OH_AVPlayerOnInfoCallback)(OH_AVPlayer *player, AVPlayerOnInfoTyp
 
 Called when the AVPlayer receives a message. If this callback is successfully set, the **OH_AVPlayerOnInfo**<br>function will not be invoked.
 
+<!--Device-typedef void (*OH_AVPlayerOnInfoCallback)(OH_AVPlayer *player, AVPlayerOnInfoType type, OH_AVFormat* infoBody, void *userData)--><!--Device-typedef void (*OH_AVPlayerOnInfoCallback)(OH_AVPlayer *player, AVPlayerOnInfoType type, OH_AVFormat* infoBody, void *userData)-End-->
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance. |
 | [AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype) type | Message type. For details about the available options, see [AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype). |
 | [OH_AVFormat](../../apis-avcodec-kit/c-apis/capi-core-oh-avformat.md)* infoBody | Pointer to the message. The pointer is valid only in this callback. |
 | void *userData | Pointer to the instance provided by the caller when setting the callback function. |
@@ -321,6 +332,8 @@ typedef void (*OH_AVPlayerOnError)(OH_AVPlayer *player, int32_t errorCode, const
 
 Called when an error occurs in the AVPlayer. This callback is available in API version 9 or later.
 
+<!--Device-typedef void (*OH_AVPlayerOnError)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg)--><!--Device-typedef void (*OH_AVPlayerOnError)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg)-End-->
+
 **Since**: 11
 
 **Deprecated**: 12
@@ -331,8 +344,8 @@ Called when an error occurs in the AVPlayer. This callback is available in API v
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
-| int32_t errorCode | Error code. **AV_ERR_NO_MEMORY**: No memory. The value is **1**. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not allowed. The value is **2**. [AV_ERR_INVALID_VA](capi-native-averrors-h.md#oh_averrcode): Invalid value. The value is **3**. **AV_ERR_IO**: I/O error. The value is **4**. **AV_ERR_TIMEOUT**: Timeout. The value is **5**. **AV_ERR_UNKNOWN**: Unknown error. The value is **6**. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The service is dead. The value is **7**. **AV_ERR_INVALID_STATE**: The operation is not supported in the current state. The value is **8**. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The function is not supported. The value is **9**. **AV_ERR_EXTEND_START**: Initial value for extended error codes. The value is **100**. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance. |
+| int32_t errorCode | Error code. **AV_ERR_NO_MEMORY**: No memory. The value is **1**. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not allowed. The value is **2**. AV_ERR_INVALID_VA: Invalid value. The value is **3**. **AV_ERR_IO**: I/O error. The value is **4**. **AV_ERR_TIMEOUT**: Timeout. The value is **5**. **AV_ERR_UNKNOWN**: Unknown error. The value is **6**. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The service is dead. The value is **7**. **AV_ERR_INVALID_STATE**: The operation is not supported in the current state. The value is **8**. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The function is not supported. The value is **9**. **AV_ERR_EXTEND_START**: Initial value for extended error codes. The value is **100**. |
 | const char *errorMsg | Error message. |
 
 ### OH_AVPlayerOnErrorCallback()
@@ -345,14 +358,16 @@ typedef void (*OH_AVPlayerOnErrorCallback)(OH_AVPlayer *player, int32_t errorCod
 
 Called when an error occurs in the AVPlayer. If this callback is successfully set, the **OH_AVPlayerOnError**<br>function will not be invoked.
 
+<!--Device-typedef void (*OH_AVPlayerOnErrorCallback)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg, void *userData)--><!--Device-typedef void (*OH_AVPlayerOnErrorCallback)(OH_AVPlayer *player, int32_t errorCode, const char *errorMsg, void *userData)-End-->
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
-| int32_t errorCode | Error code. **AV_ERR_NO_MEMORY**: No memory. The value is **1**. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not allowed. The value is **2**. [AV_ERR_INVALID_VA](capi-native-averrors-h.md#oh_averrcode): Invalid value. The value is **3**. **AV_ERR_IO**: I/O error. For API versions 12 and 13, the value is **4**. Starting from API version 14, it corresponds to more specific error codes ranging from 5411001 to 5411011. **AV_ERR_TIMEOUT**: Timeout. The value is **5**. **AV_ERR_UNKNOWN**: Unknown error. The value is **6**. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The service is dead. The value is **7**. **AV_ERR_INVALID_STATE**: The operation is not supported in the current state. The value is **8**. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The function is not supported. The value is **9**. **AV_ERR_EXTEND_START**: Initial value for extended error codes. The value is **100**. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance. |
+| int32_t errorCode | Error code. **AV_ERR_NO_MEMORY**: No memory. The value is **1**. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not allowed. The value is **2**. AV_ERR_INVALID_VA: Invalid value. The value is **3**. **AV_ERR_IO**: I/O error. For API versions 12 and 13, the value is **4**. Starting from API version 14, it corresponds to more specific error codes ranging from 5411001 to 5411011. **AV_ERR_TIMEOUT**: Timeout. The value is **5**. **AV_ERR_UNKNOWN**: Unknown error. The value is **6**. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The service is dead. The value is **7**. **AV_ERR_INVALID_STATE**: The operation is not supported in the current state. The value is **8**. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The function is not supported. The value is **9**. **AV_ERR_EXTEND_START**: Initial value for extended error codes. The value is **100**. |
 | const char *errorMsg | Error message, only valid in callback function. |
 | void *userData | Pointer to user specific data. |
 
@@ -366,13 +381,15 @@ typedef void (*OH_AVPlayerOnAmplitudeUpdateCallback)(OH_AVPlayer *player, double
 
 Called when the maximum audio amplitude is calculated.
 
+<!--Device-typedef void (*OH_AVPlayerOnAmplitudeUpdateCallback)(OH_AVPlayer *player, double *amplitudes, uint32_t size, void *userData)--><!--Device-typedef void (*OH_AVPlayerOnAmplitudeUpdateCallback)(OH_AVPlayer *player, double *amplitudes, uint32_t size, void *userData)-End-->
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance. |
 | double *amplitudes | The pointer to the maximum audio level values array. Note: the amplitudes array will be released after callback automatically. If necessary, user need copy the data for the further use. |
 | uint32_t size | Size of the maximum audio amplitude array. |
 | void *userData | Pointer to user specific data. |
@@ -387,13 +404,15 @@ typedef void (*OH_AVPlayerOnSeiMessageReceivedCallback)(OH_AVPlayer *player, OH_
 
 Called for obtaining SEI messages. This function is used to subscribe to SEI message events and returns detailed SEI information.
 
+<!--Device-typedef void (*OH_AVPlayerOnSeiMessageReceivedCallback)(OH_AVPlayer *player, OH_AVSeiMessageArray *message, int32_t playbackPosition, void *userData)--><!--Device-typedef void (*OH_AVPlayerOnSeiMessageReceivedCallback)(OH_AVPlayer *player, OH_AVSeiMessageArray *message, int32_t playbackPosition, void *userData)-End-->
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance |
 | [OH_AVSeiMessageArray](capi-avplayer-oh-avseimessagearray.md) *message | SEI message array. Note: the message array will be released after callback automatically. If necessary, user need copy the data for the further use. |
 | int32_t playbackPosition | Playback position. |
 | void *userData | Pointer to user specific data |
@@ -408,13 +427,15 @@ typedef void (*OH_AVPlayerPCMOutputCallback)(OH_AVPlayer *player, OH_AVBuffer *p
 
 Describes the handle used to obtain the decoded audio PCM data.
 
+<!--Device-typedef void (*OH_AVPlayerPCMOutputCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData)--><!--Device-typedef void (*OH_AVPlayerPCMOutputCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData)-End-->
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance |
 | [OH_AVBuffer](../../apis-avcodec-kit/c-apis/capi-core-oh-avbuffer.md) *pcmBuffer | Decoded PCM audio data. The pcmBuffer is valid only within this callback,  and released by the player after the callback returns. |
 | void *userData | Pointer to user specific data |
 
@@ -428,13 +449,15 @@ typedef void (*OH_AVPlayerPCMProcessorCallback)(OH_AVPlayer *player, OH_AVBuffer
 
 This callback provides a PCM buffer for processing. AVPlayer needs to use the processed data for audio playback, and processing must be completed in a timely manner, otherwise it will block playback. Do not change sampling rate, channels, or sampling format.
 
+<!--Device-typedef void (*OH_AVPlayerPCMProcessorCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData)--><!--Device-typedef void (*OH_AVPlayerPCMProcessorCallback)(OH_AVPlayer *player, OH_AVBuffer *pcmBuffer, void *userData)-End-->
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
+| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | Pointer to an OH_AVPlayer instance |
 | [OH_AVBuffer](../../apis-avcodec-kit/c-apis/capi-core-oh-avbuffer.md) *pcmBuffer | Decoded PCM audio data. The pcmBuffer is valid only within this callback,  and released by the player after the callback returns. |
 | void *userData | Pointer to user specific data |
 

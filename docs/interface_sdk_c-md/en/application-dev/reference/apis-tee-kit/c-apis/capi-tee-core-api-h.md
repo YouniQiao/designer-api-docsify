@@ -6,9 +6,11 @@ Provides APIs for managing trusted application (TA) sessions.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -46,6 +48,10 @@ void TEE_Panic(TEE_Result panicCode)
 
 Raises a panic in the TA instance.
 
+<!--Device-void TEE_Panic(TEE_Result panicCode)--><!--Device-void TEE_Panic(TEE_Result panicCode)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -63,6 +69,10 @@ TEE_Result TEE_OpenTASession(const TEE_UUID *destination, uint32_t cancellationR
 **Description**
 
 Opens a new session with a TA.
+
+<!--Device-TEE_Result TEE_OpenTASession(const TEE_UUID *destination, uint32_t cancellationRequestTimeout, uint32_t paramTypes, TEE_Param params[TEE_PARAMS_NUM], TEE_TASessionHandle *session, uint32_t *returnOrigin)--><!--Device-TEE_Result TEE_OpenTASession(const TEE_UUID *destination, uint32_t cancellationRequestTimeout, uint32_t paramTypes, TEE_Param params[TEE_PARAMS_NUM], TEE_TASessionHandle *session, uint32_t *returnOrigin)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -93,6 +103,10 @@ void TEE_CloseTASession(TEE_TASessionHandle session)
 
 Closes a client session.
 
+<!--Device-void TEE_CloseTASession(TEE_TASessionHandle session)--><!--Device-void TEE_CloseTASession(TEE_TASessionHandle session)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -110,6 +124,10 @@ TEE_Result TEE_InvokeTACommand(TEE_TASessionHandle session, uint32_t cancellatio
 **Description**
 
 Invokes a command in a session opened between this client TA instance and a target TA instance.
+
+<!--Device-TEE_Result TEE_InvokeTACommand(TEE_TASessionHandle session, uint32_t cancellationRequestTimeout, uint32_t commandID, uint32_t paramTypes, TEE_Param params[TEE_PARAMS_NUM], uint32_t *returnOrigin)--><!--Device-TEE_Result TEE_InvokeTACommand(TEE_TASessionHandle session, uint32_t cancellationRequestTimeout, uint32_t commandID, uint32_t paramTypes, TEE_Param params[TEE_PARAMS_NUM], uint32_t *returnOrigin)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

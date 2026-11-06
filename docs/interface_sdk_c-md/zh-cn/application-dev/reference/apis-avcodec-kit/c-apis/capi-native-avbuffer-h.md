@@ -8,9 +8,11 @@
 
 **库：** libnative_media_core.so
 
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
-**相关模块：** [Core](capi-core.md)
+**相关模块：** [Core](capi-avcodec-kit-core.md)
 
 **相关示例：** [AVCodec](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/AVCodec)
 
@@ -35,7 +37,7 @@
 | [OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)](#oh_avbuffer_setparameter) | 设置除基础属性外的其他参数，信息在OH_AVFormat中承载。 |
 | [uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)](#oh_avbuffer_getaddr) | 获取数据缓冲区的虚拟地址。 |
 | [int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)](#oh_avbuffer_getcapacity) | 获取数据缓冲区的容量（字节数）。 |
-| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | 获取OH_NativeBuffer实例的指针。 需要注意的是，返回值指向的创建OH_NativeBuffer的实例需要开发者主动调用接口释放，请参阅OH_NativeBuffer_Unreference。 |
+| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | 获取OH_NativeBuffer实例的指针。 需要注意的是，返回值指向的创建OH_NativeBuffer的实例需要开发者主动调用接口释放，请参阅[OH_NativeBuffer_Unreference](../../apis-arkgraphics2d/c-apis/capi-native-buffer-h.md#oh_nativebuffer_unreference)。 |
 
 ## 函数说明
 
@@ -48,6 +50,10 @@ OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)
 **描述：**
 
 创建OH_AVBuffer实例。 需要注意的是，返回值指向的创建OH_AVBuffer的实例需要开发者主动调用接口释放，请参阅[OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy)。
+
+<!--Device-OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)--><!--Device-OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 11
 
@@ -73,6 +79,10 @@ OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)
 
 释放OH_AVBuffer实例指针的资源，同一个buffer不允许重复销毁。
 
+<!--Device-OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)--><!--Device-OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -96,6 +106,10 @@ OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr
 **描述：**
 
 获取数据缓冲区的pts、size、offset、flags高频属性参数。
+
+<!--Device-OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr *attr)--><!--Device-OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr *attr)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 11
 
@@ -122,6 +136,10 @@ OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBuff
 
 设置数据缓冲区的pts、size、offset、flags高频属性参数。
 
+<!--Device-OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBufferAttr *attr)--><!--Device-OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBufferAttr *attr)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -147,6 +165,10 @@ OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)
 
 获取除基础属性外的其他参数，信息在OH_AVFormat中承载。 需要注意的是，返回值指向的创建OH_AVFormat的实例需要开发者主动释放，请参阅[OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy)。
 
+<!--Device-OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)--><!--Device-OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -170,6 +192,10 @@ OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *fo
 **描述：**
 
 设置除基础属性外的其他参数，信息在OH_AVFormat中承载。
+
+<!--Device-OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)--><!--Device-OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 11
 
@@ -196,6 +222,10 @@ uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)
 
 获取数据缓冲区的虚拟地址。
 
+<!--Device-uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)--><!--Device-uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -220,6 +250,10 @@ int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)
 
 获取数据缓冲区的容量（字节数）。
 
+<!--Device-int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)--><!--Device-int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -242,7 +276,11 @@ OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)
 
 **描述：**
 
-获取OH_NativeBuffer实例的指针。 需要注意的是，返回值指向的创建OH_NativeBuffer的实例需要开发者主动调用接口释放，请参阅OH_NativeBuffer_Unreference。
+获取OH_NativeBuffer实例的指针。 需要注意的是，返回值指向的创建OH_NativeBuffer的实例需要开发者主动调用接口释放，请参阅[OH_NativeBuffer_Unreference](../../apis-arkgraphics2d/c-apis/capi-native-buffer-h.md#oh_nativebuffer_unreference)。
+
+<!--Device-OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)--><!--Device-OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 11
 

@@ -2,3 +2,28 @@
 
 ## Overview
 
+<!--Device-struct __ptrace_syscall_info {...}--><!--Device-struct __ptrace_syscall_info {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| uint8_t op |  |
+| uint8_t \_\_pad |  |
+| uint32_t arch |  |
+| uint64_t instruction_pointer |  |
+| uint64_t stack_pointer |  |
+| entry |  |
+| entry.nr |  |
+| entry.args |  |
+| exit |  |
+| exit.rval |  |
+| exit.is_error |  |
+| seccomp |  |
+| seccomp.nr |  |
+| seccomp.args |  |
+| seccomp.ret_data |  |
+
+

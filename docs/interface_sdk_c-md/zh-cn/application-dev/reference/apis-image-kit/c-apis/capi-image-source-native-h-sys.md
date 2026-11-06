@@ -6,11 +6,13 @@
 
 **库：** libimage_source.so
 
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
 **起始版本：** 12
 
 **系统接口：** 此接口为系统接口。
 
-**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## 汇总
 
@@ -46,16 +48,20 @@ enum OH_ImageSource_SVGResourceLimitLevel
 
 SVG资源限制级别的枚举。 级别越高，解析和渲染SVG图片时允许使用的资源越少。 无论指定哪个级别，系统资源限制都会生效。
 
-**起始版本：** 26.1.0
+<!--Device-OH_ImageSource_SVGResourceLimitLevel--><!--Device-OH_ImageSource_SVGResourceLimitLevel-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+**起始版本：** 26.0.1
 
 **系统接口：** 此接口为系统接口。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_NONE = 0 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_LOW = 1 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_MEDIUM = 2 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_HIGH = 3 |  |
+| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_NONE = 0 | 使用默认的SVG资源限制。该级别不会禁用SVG资源保护。<br>**起始版本：** 26.0.1 |
+| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_LOW = 1 | 使用低级别限制，允许更多SVG资源预算用于复杂的SVG图片。<br>**起始版本：** 26.0.1 |
+| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_MEDIUM = 2 | 使用中级别限制，允许适中的SVG资源预算， 在SVG兼容性和资源消耗之间取得平衡，适用于大多数SVG图片。<br>**起始版本：** 26.0.1 |
+| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_HIGH = 3 | 使用高级别限制，允许较少的SVG资源预算，适用于简单的SVG图片， 例如图标和基础UI资源。<br>**起始版本：** 26.0.1 |
 
 
 ## 函数说明
@@ -70,7 +76,11 @@ Image_ErrorCode OH_ImageSourceNative_SetSvgResourceLimitLevel(OH_ImageSourceNati
 
 设置图像源的SVG资源限制级别。 仅对SVG格式图片生效。对于非SVG图片，此函数无效果。 必须在[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)之前调用，以确保限制在DOM解析和渲染阶段均生效。
 
-**起始版本：** 26.1.0
+<!--Device-Image_ErrorCode OH_ImageSourceNative_SetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel level)--><!--Device-Image_ErrorCode OH_ImageSourceNative_SetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel level)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+**起始版本：** 26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -97,7 +107,11 @@ Image_ErrorCode OH_ImageSourceNative_GetSvgResourceLimitLevel(OH_ImageSourceNati
 
 获取图像源的SVG资源限制级别。
 
-**起始版本：** 26.1.0
+<!--Device-Image_ErrorCode OH_ImageSourceNative_GetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel *level)--><!--Device-Image_ErrorCode OH_ImageSourceNative_GetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel *level)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+**起始版本：** 26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -123,6 +137,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData(OH_DecodingOp
 **描述：**
 
 获取解码选项中的needsDecodeDfxData参数。
+
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool *needsDecodeDfxData)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool *needsDecodeDfxData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 26.0.0
 
@@ -151,6 +169,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData(OH_DecodingOp
 
 设置解码选项中的needsDecodeDfxData参数。
 
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool needsDecodeDfxData)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool needsDecodeDfxData)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -177,6 +199,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap(OH_De
 **描述：**
 
 获取DecodingOptionsForPicture结构体中的主图期望尺寸。
+
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size *desiredSizeForMainPixelmap)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size *desiredSizeForMainPixelmap)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 26.0.0
 
@@ -205,6 +231,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap(OH_De
 
 设置DecodingOptionsForPicture结构体中的主图期望尺寸。
 
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size desiredSizeForMainPixelmap)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size desiredSizeForMainPixelmap)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -231,6 +261,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOp
 **描述：**
 
 获取DecodingOptionsForPicture结构体中的像素格式。
+
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT *desiredPixelFormat)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT *desiredPixelFormat)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 26.0.0
 
@@ -259,6 +293,10 @@ Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOp
 
 设置DecodingOptionsForPicture结构体中的像素格式。
 
+<!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT desiredPixelFormat)--><!--Device-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT desiredPixelFormat)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -286,9 +324,13 @@ Image_ErrorCode OH_ImageSourceNative_ReadImageMetadataByType(OH_ImageSourceNativ
 
 读取图像源的元数据，使用metadataTypes参数指定要读取的元数据类型。如果未指定metadataTypes，将返回所有支持的元数据。
 
+<!--Device-Image_ErrorCode OH_ImageSourceNative_ReadImageMetadataByType(OH_ImageSourceNative *source, uint32_t index, Image_MetadataType *metadataTypes, size_t typeCount, OH_PictureMetadata **outMetadataArray, size_t *metadataCount)--><!--Device-Image_ErrorCode OH_ImageSourceNative_ReadImageMetadataByType(OH_ImageSourceNative *source, uint32_t index, Image_MetadataType *metadataTypes, size_t typeCount, OH_PictureMetadata **outMetadataArray, size_t *metadataCount)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
 **起始版本：** 26.0.0
 
-**资源释放：** image_common/OH_PictureMetadatas_Release {outMetadataArray}
+**资源释放：** [OH_PictureMetadatas_Release](capi-image-common-h-sys.md#oh_picturemetadatas_release)
 
 **系统接口：** 此接口为系统接口。
 

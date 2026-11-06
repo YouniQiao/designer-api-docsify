@@ -6,9 +6,11 @@ This file declares the functions related to the matrix in the drawing module.
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
@@ -67,6 +69,10 @@ enum OH_Drawing_ScaleToFit
 
 Defines an enum for the matrix scaling modes.
 
+<!--Device-OH_Drawing_ScaleToFit--><!--Device-OH_Drawing_ScaleToFit-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 | Enum item | Description |
@@ -89,6 +95,10 @@ OH_Drawing_Matrix* OH_Drawing_MatrixCreate(void)
 
 Creates an **OH_Drawing_Matrix** object.
 
+<!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreate(void)--><!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreate(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Returns**:
@@ -106,6 +116,10 @@ OH_Drawing_Matrix* OH_Drawing_MatrixCopy(const OH_Drawing_Matrix* matrix)
 **Description**
 
 Creates a copy of a matrix object.
+
+<!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCopy(const OH_Drawing_Matrix* matrix)--><!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCopy(const OH_Drawing_Matrix* matrix)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -130,6 +144,10 @@ OH_Drawing_Matrix* OH_Drawing_MatrixCreateRotation(float deg, float x, float y)
 **Description**
 
 Creates an **OH_Drawing_Matrix** with the rotation attribute. The matrix is obtained by rotating an identity matrix by a given degree around the rotation point (x, y).
+
+<!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateRotation(float deg, float x, float y)--><!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateRotation(float deg, float x, float y)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -156,6 +174,10 @@ OH_Drawing_Matrix* OH_Drawing_MatrixCreateScale(float sx, float sy, float px, fl
 **Description**
 
 Creates an **OH_Drawing_Matrix** with the scale attribute. The matrix is obtained by scaling an identity matrix with the factor (sx, sy) at the rotation point (px, py).
+
+<!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateScale(float sx, float sy, float px, float py)--><!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateScale(float sx, float sy, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -184,6 +206,10 @@ OH_Drawing_Matrix* OH_Drawing_MatrixCreateTranslation(float dx, float dy)
 
 Creates an **OH_Drawing_Matrix** with the translation attribute. The matrix is obtained by translating the identity matrix by the distance (dx, dy).
 
+<!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateTranslation(float dx, float dy)--><!--Device-OH_Drawing_Matrix* OH_Drawing_MatrixCreateTranslation(float dx, float dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -208,6 +234,10 @@ void OH_Drawing_MatrixSetMatrix(OH_Drawing_Matrix* matrix, float scaleX, float s
 **Description**
 
 Sets matrix parameters for an **OH_Drawing_Matrix** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **OH_Drawing_Matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_MatrixSetMatrix(OH_Drawing_Matrix* matrix, float scaleX, float skewX, float transX, float skewY, float scaleY, float transY, float persp0, float persp1, float persp2)--><!--Device-void OH_Drawing_MatrixSetMatrix(OH_Drawing_Matrix* matrix, float scaleX, float skewX, float transX, float skewY, float scaleY, float transY, float persp0, float persp1, float persp2)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -236,6 +266,10 @@ bool OH_Drawing_MatrixSetRectToRect(OH_Drawing_Matrix* matrix, const OH_Drawing_
 
 Scales a matrix to map a source rectangle to a destination rectangle. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **matrix**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-bool OH_Drawing_MatrixSetRectToRect(OH_Drawing_Matrix* matrix, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, OH_Drawing_ScaleToFit stf)--><!--Device-bool OH_Drawing_MatrixSetRectToRect(OH_Drawing_Matrix* matrix, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, OH_Drawing_ScaleToFit stf)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -263,6 +297,10 @@ void OH_Drawing_MatrixPreRotate(OH_Drawing_Matrix* matrix, float degree, float p
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixPreRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)--><!--Device-void OH_Drawing_MatrixPreRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -283,6 +321,10 @@ void OH_Drawing_MatrixPreScale(OH_Drawing_Matrix* matrix, float sx, float sy, fl
 **Description**
 
 Premultiplies a matrix by an identity matrix that scales with the factor (sx, sy) at the scale point (px, py).
+
+<!--Device-void OH_Drawing_MatrixPreScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)--><!--Device-void OH_Drawing_MatrixPreScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -306,6 +348,10 @@ void OH_Drawing_MatrixPreTranslate(OH_Drawing_Matrix* matrix, float dx, float dy
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixPreTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)--><!--Device-void OH_Drawing_MatrixPreTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -325,6 +371,10 @@ void OH_Drawing_MatrixPostRotate(OH_Drawing_Matrix* matrix, float degree, float 
 **Description**
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_MatrixPostRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)--><!--Device-void OH_Drawing_MatrixPostRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -346,6 +396,10 @@ void OH_Drawing_MatrixPostScale(OH_Drawing_Matrix* matrix, float sx, float sy, f
 **Description**
 
 Post multiplies a matrix by an identity matrix that scales with the factor (sx, sy) at the scale point (px, py). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_MatrixPostScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)--><!--Device-void OH_Drawing_MatrixPostScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -369,6 +423,10 @@ void OH_Drawing_MatrixPostTranslate(OH_Drawing_Matrix* matrix, float dx, float d
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixPostTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)--><!--Device-void OH_Drawing_MatrixPostTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -389,6 +447,10 @@ void OH_Drawing_MatrixReset(OH_Drawing_Matrix* matrix)
 
 Resets a matrix to an identity matrix. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixReset(OH_Drawing_Matrix* matrix)--><!--Device-void OH_Drawing_MatrixReset(OH_Drawing_Matrix* matrix)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -406,6 +468,10 @@ void OH_Drawing_MatrixConcat(OH_Drawing_Matrix* total, const OH_Drawing_Matrix* 
 **Description**
 
 Multiplies two matrices to produce a new matrix. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **total**, **a**, and **b** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_MatrixConcat(OH_Drawing_Matrix* total, const OH_Drawing_Matrix* a, const OH_Drawing_Matrix* b)--><!--Device-void OH_Drawing_MatrixConcat(OH_Drawing_Matrix* total, const OH_Drawing_Matrix* a, const OH_Drawing_Matrix* b)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -426,6 +492,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixGetAll(OH_Drawing_Matrix* matrix, float va
 **Description**
 
 Obtains all element values of a matrix.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixGetAll(OH_Drawing_Matrix* matrix, float value[9])--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixGetAll(OH_Drawing_Matrix* matrix, float value[9])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -452,6 +522,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixPreConcat(OH_Drawing_Matrix* a, OH_Drawing
 
 Left-multiplies matrix a by matrix b.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixPreConcat(OH_Drawing_Matrix* a, OH_Drawing_Matrix* b)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixPreConcat(OH_Drawing_Matrix* a, OH_Drawing_Matrix* b)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 22
 
 **Parameters**:
@@ -476,6 +550,10 @@ float OH_Drawing_MatrixGetValue(OH_Drawing_Matrix* matrix, int index)
 **Description**
 
 Obtains a matrix value of a given index, which ranges from 0 to 8. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **index** is less than 0 or greater than 8, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+
+<!--Device-float OH_Drawing_MatrixGetValue(OH_Drawing_Matrix* matrix, int index)--><!--Device-float OH_Drawing_MatrixGetValue(OH_Drawing_Matrix* matrix, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -502,6 +580,10 @@ void OH_Drawing_MatrixRotate(OH_Drawing_Matrix* matrix, float degree, float px, 
 
 Sets this matrix as an identity matrix and rotates it by a given degree around the rotation point (px, py). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)--><!--Device-void OH_Drawing_MatrixRotate(OH_Drawing_Matrix* matrix, float degree, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -523,6 +605,10 @@ void OH_Drawing_MatrixTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)
 
 Sets a matrix as an identity matrix and translates it by a given distance (dx, dy). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)--><!--Device-void OH_Drawing_MatrixTranslate(OH_Drawing_Matrix* matrix, float dx, float dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -542,6 +628,10 @@ void OH_Drawing_MatrixScale(OH_Drawing_Matrix* matrix, float sx, float sy, float
 **Description**
 
 Sets a matrix as an identity matrix and scales it with the factor (sx, sy) at the rotation point (px, py). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-void OH_Drawing_MatrixScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)--><!--Device-void OH_Drawing_MatrixScale(OH_Drawing_Matrix* matrix, float sx, float sy, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -564,6 +654,10 @@ bool OH_Drawing_MatrixInvert(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* inver
 **Description**
 
 Inverts a matrix and returns the result. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **matrix** or **inverse** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-bool OH_Drawing_MatrixInvert(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* inverse)--><!--Device-bool OH_Drawing_MatrixInvert(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* inverse)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -589,6 +683,10 @@ bool OH_Drawing_MatrixSetPolyToPoly(OH_Drawing_Matrix* matrix, const OH_Drawing_
 **Description**
 
 Generates a transformation matrix by setting source points and destination points. Both the number of source points and that of destination points must be in the range [0, 4]. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **count** is less than 0 or greater than 4, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+
+<!--Device-bool OH_Drawing_MatrixSetPolyToPoly(OH_Drawing_Matrix* matrix, const OH_Drawing_Point2D* src, const OH_Drawing_Point2D* dst, uint32_t count)--><!--Device-bool OH_Drawing_MatrixSetPolyToPoly(OH_Drawing_Matrix* matrix, const OH_Drawing_Point2D* src, const OH_Drawing_Point2D* dst, uint32_t count)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -617,6 +715,10 @@ void OH_Drawing_MatrixMapPoints(const OH_Drawing_Matrix* matrix, const OH_Drawin
 
 Maps a source point array to a destination point array by means of matrix transformation. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **matrix**, **src**, and **dst** is NULL or **count** is less than or equal to 0, **<br>OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-void OH_Drawing_MatrixMapPoints(const OH_Drawing_Matrix* matrix, const OH_Drawing_Point2D* src, OH_Drawing_Point2D* dst, int count)--><!--Device-void OH_Drawing_MatrixMapPoints(const OH_Drawing_Matrix* matrix, const OH_Drawing_Point2D* src, OH_Drawing_Point2D* dst, int count)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -637,6 +739,10 @@ bool OH_Drawing_MatrixMapRect(const OH_Drawing_Matrix* matrix, const OH_Drawing_
 **Description**
 
 Maps a rectangle to the smallest rectangle that can enclose the vertices to which the four source vertices are mapped by means of matrix transformation. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **matrix**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+<!--Device-bool OH_Drawing_MatrixMapRect(const OH_Drawing_Matrix* matrix, const OH_Drawing_Rect* src, OH_Drawing_Rect* dst)--><!--Device-bool OH_Drawing_MatrixMapRect(const OH_Drawing_Matrix* matrix, const OH_Drawing_Rect* src, OH_Drawing_Rect* dst)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -664,6 +770,10 @@ bool OH_Drawing_MatrixIsEqual(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* othe
 
 Checks whether two **OH_Drawing_Matrix** objects are equal. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **matrix** or **other** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-bool OH_Drawing_MatrixIsEqual(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* other)--><!--Device-bool OH_Drawing_MatrixIsEqual(OH_Drawing_Matrix* matrix, OH_Drawing_Matrix* other)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -689,6 +799,10 @@ bool OH_Drawing_MatrixIsIdentity(OH_Drawing_Matrix* matrix)
 
 Checks whether an **OH_Drawing_Matrix** object is an identity matrix. An identity matrix is as follows: \| 1 0 0 \|\| 0 1 0 \|\| 0 0 1 \|. This API may return an error code. For details, see [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget) . If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+<!--Device-bool OH_Drawing_MatrixIsIdentity(OH_Drawing_Matrix* matrix)--><!--Device-bool OH_Drawing_MatrixIsIdentity(OH_Drawing_Matrix* matrix)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -712,6 +826,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixIsAffine(const OH_Drawing_Matrix* matrix, 
 **Description**
 
 Checks whether the existing matrix is an affine matrix, which includes transformations such as translation, rotation, and scaling.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixIsAffine(const OH_Drawing_Matrix* matrix, bool* isAffine)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixIsAffine(const OH_Drawing_Matrix* matrix, bool* isAffine)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -737,6 +855,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixPreSkew(OH_Drawing_Matrix* matrix, float k
 **Description**
 
 Left multiplies the current matrix by a matrix constructed based on (px, py) and (kx, ky).
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixPreSkew(OH_Drawing_Matrix* matrix, float kx, float ky, float px, float py)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixPreSkew(OH_Drawing_Matrix* matrix, float kx, float ky, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -766,6 +888,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixRectStaysRect(const OH_Drawing_Matrix* mat
 
 Checks whether the rectangle remains rectangular after being mapped by the current matrix. This condition is met when the matrix is an identity matrix or contains only affine transformations such as translation, scaling, and rotation by 90 degrees.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixRectStaysRect(const OH_Drawing_Matrix* matrix, bool* isRectStaysRect)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixRectStaysRect(const OH_Drawing_Matrix* matrix, bool* isRectStaysRect)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 23
 
 **Parameters**:
@@ -790,6 +916,10 @@ OH_Drawing_ErrorCode OH_Drawing_MatrixSetSinCos(OH_Drawing_Matrix* matrix, float
 **Description**
 
 Sets the matrix to rotate around the rotation center (px, py) with the specified sine and cosine values.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixSetSinCos(OH_Drawing_Matrix* matrix, float sinValue, float cosValue, float px, float py)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_MatrixSetSinCos(OH_Drawing_Matrix* matrix, float sinValue, float cosValue, float px, float py)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -818,6 +948,10 @@ void OH_Drawing_MatrixDestroy(OH_Drawing_Matrix* matrix)
 **Description**
 
 Destroys an **OH_Drawing_Matrix** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_MatrixDestroy(OH_Drawing_Matrix* matrix)--><!--Device-void OH_Drawing_MatrixDestroy(OH_Drawing_Matrix* matrix)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 

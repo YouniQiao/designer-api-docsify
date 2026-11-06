@@ -8,11 +8,13 @@ struct ArkUI_AccessibilityProviderCallbacksWithInstance {...}
 
 Registers callbacks with instance for the accessibility provider.
 
+<!--Device-struct ArkUI_AccessibilityProviderCallbacksWithInstance {...}--><!--Device-struct ArkUI_AccessibilityProviderCallbacksWithInstance {...}-End-->
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
-**Related module**: [ArkUI_Accessibility](capi-arkui-accessibility.md)
+**Related module**: [ArkUI_Accessibility](capi-arkui-arkui-accessibility.md)
 
 **Header file**: [native_interface_accessibility.h](capi-native-interface-accessibility-h.md)
 
@@ -22,13 +24,13 @@ Registers callbacks with instance for the accessibility provider.
 
 | Name | Description |
 | -- | -- |
-| [int32_t (\*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId,ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbyid) | Called to obtain element information based on a specified node. |
-| [int32_t (\*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text,int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbytext) | Called to obtain element information based on a specified node and text content. |
-| [int32_t (\*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId,ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findfocusedaccessibilitynode) | Called to obtain focused element information based on a specified node. |
-| [int32_t (\*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction,int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findnextfocusaccessibilitynode) | Called to find the next focusable node based on the reference node. |
-| [int32_t (\*executeAccessibilityAction)(const char* instanceId, int64_t elementId,ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)](#executeaccessibilityaction) | Called to execute a specified action on a specified node. |
-| [int32_t (\*clearFocusedFocusAccessibilityNode)(const char* instanceId)](#clearfocusedfocusaccessibilitynode) | Called to clear the focus state of the current focused node. |
-| [int32_t (\*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId,int32_t requestId, int32_t* index)](#getaccessibilitynodecursorposition) | Called to query the current cursor position of the specified node. |
+| [int32_t (\*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId,ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbyid) | - | Called to obtain element information based on a specified node. |
+| [int32_t (\*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text,int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)](#findaccessibilitynodeinfosbytext) | - | Called to obtain element information based on a specified node and text content. |
+| [int32_t (\*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId,ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findfocusedaccessibilitynode) | - | Called to obtain focused element information based on a specified node. |
+| [int32_t (\*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction,int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)](#findnextfocusaccessibilitynode) | - | Called to find the next focusable node based on the reference node. |
+| [int32_t (\*executeAccessibilityAction)(const char* instanceId, int64_t elementId,ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)](#executeaccessibilityaction) | - | Called to execute a specified action on a specified node. |
+| [int32_t (\*clearFocusedFocusAccessibilityNode)(const char* instanceId)](#clearfocusedfocusaccessibilitynode) | - | Called to clear the focus state of the current focused node. |
+| [int32_t (\*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId,int32_t requestId, int32_t* index)](#getaccessibilitynodecursorposition) | - | Called to query the current cursor position of the specified node. |
 
 ## Member function description
 
@@ -41,6 +43,8 @@ int32_t (*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elemen
 **Description**
 
 Called to obtain element information based on a specified node.
+
+<!--Device-int32_t (*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId, ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)--><!--Device-int32_t (*findAccessibilityNodeInfosById)(const char* instanceId, int64_t elementId, ArkUI_AccessibilitySearchMode mode, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)-End-->
 
 **Parameters**:
 
@@ -68,6 +72,8 @@ int32_t (*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elem
 
 Called to obtain element information based on a specified node and text content.
 
+<!--Device-int32_t (*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)--><!--Device-int32_t (*findAccessibilityNodeInfosByText)(const char* instanceId, int64_t elementId, const char* text, int32_t requestId, ArkUI_AccessibilityElementInfoList* elementList)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
@@ -93,6 +99,8 @@ int32_t (*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementI
 **Description**
 
 Called to obtain focused element information based on a specified node.
+
+<!--Device-int32_t (*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)--><!--Device-int32_t (*findFocusedAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusType focusType, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)-End-->
 
 **Parameters**:
 
@@ -120,6 +128,8 @@ int32_t (*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elemen
 
 Called to find the next focusable node based on the reference node.
 
+<!--Device-int32_t (*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)--><!--Device-int32_t (*findNextFocusAccessibilityNode)(const char* instanceId, int64_t elementId, ArkUI_AccessibilityFocusMoveDirection direction, int32_t requestId, ArkUI_AccessibilityElementInfo* elementInfo)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
@@ -145,6 +155,8 @@ int32_t (*executeAccessibilityAction)(const char* instanceId, int64_t elementId,
 **Description**
 
 Called to execute a specified action on a specified node.
+
+<!--Device-int32_t (*executeAccessibilityAction)(const char* instanceId, int64_t elementId, ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)--><!--Device-int32_t (*executeAccessibilityAction)(const char* instanceId, int64_t elementId, ArkUI_Accessibility_ActionType action, ArkUI_AccessibilityActionArguments *actionArguments, int32_t requestId)-End-->
 
 **Parameters**:
 
@@ -172,6 +184,8 @@ int32_t (*clearFocusedFocusAccessibilityNode)(const char* instanceId)
 
 Called to clear the focus state of the current focused node.
 
+<!--Device-int32_t (*clearFocusedFocusAccessibilityNode)(const char* instanceId)--><!--Device-int32_t (*clearFocusedFocusAccessibilityNode)(const char* instanceId)-End-->
+
 **Parameters**:
 
 | Parameter | Description |
@@ -193,6 +207,8 @@ int32_t (*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t el
 **Description**
 
 Called to query the current cursor position of the specified node.
+
+<!--Device-int32_t (*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId, int32_t requestId, int32_t* index)--><!--Device-int32_t (*getAccessibilityNodeCursorPosition)(const char* instanceId, int64_t elementId, int32_t requestId, int32_t* index)-End-->
 
 **Parameters**:
 

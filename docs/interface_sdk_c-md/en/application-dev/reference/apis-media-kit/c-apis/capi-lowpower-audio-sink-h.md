@@ -6,9 +6,11 @@ The file declares the native APIs provided by the OH_LowPowerAudioSink instance.
 
 **Library**: liblowpower_avsink.so
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
-**Related module**: [LowPowerAudioSink](capi-lowpoweraudiosink.md)
+**Related module**: [LowPowerAudioSink](capi-media-kit-lowpoweraudiosink.md)
 
 ## Summary
 
@@ -54,6 +56,10 @@ OH_LowPowerAudioSink* OH_LowPowerAudioSink_CreateByMime(const char* mime)
 
 Creates an OH_LowPowerAudioSink instance.
 
+<!--Device-OH_LowPowerAudioSink* OH_LowPowerAudioSink_CreateByMime(const char* mime)--><!--Device-OH_LowPowerAudioSink* OH_LowPowerAudioSink_CreateByMime(const char* mime)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -78,6 +84,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Configure(OH_LowPowerAudioSink* sink, const OH
 
 Configures an OH_LowPowerAudioSink instance. This function must be called before [OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare).
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Configure(OH_LowPowerAudioSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Configure(OH_LowPowerAudioSink* sink, const OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -91,7 +101,7 @@ Configures an OH_LowPowerAudioSink instance. This function must be called before
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetParameter()
 
@@ -102,6 +112,10 @@ OH_AVErrCode OH_LowPowerAudioSink_SetParameter(OH_LowPowerAudioSink* sink, const
 **Description**
 
 Sets parameters for an OH_LowPowerAudioSink instance. The parameters can be dynamically set after [OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare).
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetParameter(OH_LowPowerAudioSink* sink, const OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetParameter(OH_LowPowerAudioSink* sink, const OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -116,7 +130,7 @@ Sets parameters for an OH_LowPowerAudioSink instance. The parameters can be dyna
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_GetParameter()
 
@@ -127,6 +141,10 @@ OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AV
 **Description**
 
 Obtains the parameters of an OH_LowPowerAudioSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AVFormat* format)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AVFormat* format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -141,7 +159,7 @@ Obtains the parameters of an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Prepare()
 
@@ -153,6 +171,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)
 
 Prepares an OH_LowPowerAudioSink instance for decoding and rendering. This function must be called after [OH_LowPowerAudioSink_Configure](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_configure).
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -165,7 +187,7 @@ Prepares an OH_LowPowerAudioSink instance for decoding and rendering. This funct
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Start()
 
@@ -177,6 +199,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)
 
 Starts an OH_LowPowerAudioSink instance. This function must be called after a successful call to [OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare).
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -189,7 +215,7 @@ Starts an OH_LowPowerAudioSink instance. This function must be called after a su
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_UNSUPPORT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The format is not supported. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Pause()
 
@@ -201,6 +227,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)
 
 Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Start](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_start) or [OH_LowPowerAudioSink_Resume](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_resume).
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -213,7 +243,7 @@ Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Resume()
 
@@ -225,6 +255,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)
 
 Resumes an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Pause](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_pause).
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -237,7 +271,7 @@ Resumes an OH_LowPowerAudioSink instance. This function must be called after [OH
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Flush()
 
@@ -249,6 +283,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)
 
 Clears all input and output data from the decoders and render buffers of an OH_LowPowerAudioSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -261,7 +299,7 @@ Clears all input and output data from the decoders and render buffers of an OH_L
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Stop()
 
@@ -273,6 +311,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)
 
 Stops an OH_LowPowerAudioSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -285,7 +327,7 @@ Stops an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Reset()
 
@@ -297,6 +339,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)
 
 Resets an OH_LowPowerAudioSink instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -309,7 +355,7 @@ Resets an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Destroy()
 
@@ -321,6 +367,10 @@ OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)
 
 Clears internal resources of an OH_LowPowerAudioSink instance and destroys the instance. You only need to call the function once.
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -333,7 +383,7 @@ Clears internal resources of an OH_LowPowerAudioSink instance and destroys the i
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetVolume()
 
@@ -344,6 +394,10 @@ OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const fl
 **Description**
 
 Sets the rendering volume for an OH_LowPowerAudioSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const float volume)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const float volume)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -358,7 +412,7 @@ Sets the rendering volume for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetPlaybackSpeed()
 
@@ -369,6 +423,10 @@ OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, c
 **Description**
 
 Sets the audio rendering speed for an OH_LowPowerAudioSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, const float speed)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, const float speed)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -383,7 +441,7 @@ Sets the audio rendering speed for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_ReturnSamples()
 
@@ -394,6 +452,10 @@ OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_A
 **Description**
 
 Provides a buffer to an OH_LowPowerAudioSink instance for procesing.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -408,7 +470,7 @@ Provides a buffer to an OH_LowPowerAudioSink instance for procesing.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_RegisterCallback()
 
@@ -419,6 +481,10 @@ OH_AVErrCode OH_LowPowerAudioSink_RegisterCallback(OH_LowPowerAudioSink* sink, O
 **Description**
 
 Registers a callback for an OH_LowPowerAudioSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_RegisterCallback(OH_LowPowerAudioSink* sink, OH_LowPowerAudioSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_RegisterCallback(OH_LowPowerAudioSink* sink, OH_LowPowerAudioSinkCallback* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -433,7 +499,7 @@ Registers a callback for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_Create()
 
@@ -444,6 +510,10 @@ OH_LowPowerAudioSinkCallback* OH_LowPowerAudioSinkCallback_Create(void)
 **Description**
 
 Creates an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_LowPowerAudioSinkCallback* OH_LowPowerAudioSinkCallback_Create(void)--><!--Device-OH_LowPowerAudioSinkCallback* OH_LowPowerAudioSinkCallback_Create(void)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -463,6 +533,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_Destroy(OH_LowPowerAudioSinkCallback* 
 
 Destroys an OH_LowPowerAudioSinkCallback instance.
 
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_Destroy(OH_LowPowerAudioSinkCallback* callback)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_Destroy(OH_LowPowerAudioSinkCallback* callback)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -475,7 +549,7 @@ Destroys an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. |
 
 ### OH_LowPowerAudioSinkCallback_SetPositionUpdateListener()
 
@@ -486,6 +560,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetPositionUpdateListener(OH_LowPowerA
 **Description**
 
 Sets a progress update listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetPositionUpdateListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnPositionUpdated onPositionUpdated, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetPositionUpdateListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnPositionUpdated onPositionUpdated, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -501,7 +579,7 @@ Sets a progress update listener for an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetDataNeededListener()
 
@@ -512,6 +590,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDataNeededListener(OH_LowPowerAudio
 **Description**
 
 Sets a data needed listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDataNeededListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnDataNeeded onDataNeeded, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDataNeededListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnDataNeeded onDataNeeded, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -527,7 +609,7 @@ Sets a data needed listener for an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetErrorListener()
 
@@ -538,6 +620,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetErrorListener(OH_LowPowerAudioSinkC
 **Description**
 
 Sets an error listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetErrorListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnError onError, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetErrorListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnError onError, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -553,7 +639,7 @@ Sets an error listener for an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetInterruptListener()
 
@@ -564,6 +650,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioS
 **Description**
 
 Sets an audio focus interruption listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnInterrupted onInterrupted, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnInterrupted onInterrupted, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -579,7 +669,7 @@ Sets an audio focus interruption listener for an OH_LowPowerAudioSinkCallback in
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetDeviceChangeListener()
 
@@ -590,6 +680,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAud
 **Description**
 
 Sets an audio device change listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAudioSinkCallback* callback, OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -605,7 +699,7 @@ Sets an audio device change listener for an OH_LowPowerAudioSinkCallback instanc
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetEosListener()
 
@@ -616,6 +710,10 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCal
 **Description**
 
 Sets an end-of-stream listener for an OH_LowPowerAudioSinkCallback instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCallback *callback, OH_LowPowerAudioSink_OnEos onEos, void* userData)--><!--Device-OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCallback *callback, OH_LowPowerAudioSink_OnEos onEos, void* userData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -631,7 +729,7 @@ Sets an end-of-stream listener for an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_OPERATE_NOT_PERMIT](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetLoudnessGain()
 
@@ -642,6 +740,10 @@ OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, fl
 **Description**
 
 Sets the loudness gain for an OH_LowPowerAudioSink instance.
+
+<!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, float loudnessGain)--><!--Device-OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, float loudnessGain)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 21
 
@@ -656,6 +758,6 @@ Sets the loudness gain for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. |
+| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid. [AV_ERR_SERVICE_DIED](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode): The media server is destroyed. |
 
 

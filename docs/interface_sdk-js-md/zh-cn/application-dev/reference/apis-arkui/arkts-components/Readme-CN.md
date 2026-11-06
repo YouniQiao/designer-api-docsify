@@ -407,6 +407,8 @@
   - [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)
   <!--Del-->
   - [SheetOptions（系统接口）](arkts-arkui-common-comp-sheetoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SheetTitleBarBackgroundBlurOptions（系统接口）](arkts-arkui-common-comp-sheettitlebarbackgroundbluroptions-i-sys.md)<!--DelEnd-->
   - [SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md)
   - [SizeResult](arkts-arkui-common-comp-sizeresult-i.md)
   - [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md)
@@ -559,6 +561,8 @@
   - [SheetKeyboardAvoidMode](arkts-arkui-common-comp-sheetkeyboardavoidmode-e.md)
   - [SheetMode](arkts-arkui-common-comp-sheetmode-e.md)
   - [SheetSize](arkts-arkui-common-comp-sheetsize-e.md)
+  <!--Del-->
+  - [SheetTitleBarBackgroundBlur（系统接口）](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e-sys.md)<!--DelEnd-->
   - [SheetTitleBarHoverMode](arkts-arkui-common-comp-sheettitlebarhovermode-e.md)
   - [SheetType](arkts-arkui-common-comp-sheettype-e.md)
   - [SourceTool](arkts-arkui-common-comp-sourcetool-e.md)

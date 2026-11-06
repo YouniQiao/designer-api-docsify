@@ -2,3 +2,17 @@
 
 ## Overview
 
+<!--Device-struct VkPhysicalDeviceInlineUniformBlockFeatures {...}--><!--Device-struct VkPhysicalDeviceInlineUniformBlockFeatures {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| void* pNext |  |
+| VkBool32 inlineUniformBlock |  |
+| VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind |  |
+
+

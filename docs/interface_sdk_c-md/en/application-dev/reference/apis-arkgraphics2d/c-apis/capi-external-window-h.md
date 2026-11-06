@@ -6,9 +6,11 @@ Defines the functions for obtaining and using a native window.
 
 **Library**: libnative_window.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
-**Related module**: [NativeWindow](capi-nativewindow.md)
+**Related module**: [NativeWindow](capi-arkgraphics2d-nativewindow.md)
 
 ## Summary
 
@@ -17,14 +19,13 @@ Defines the functions for obtaining and using a native window.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Region](capi-nativewindow-region.md) | - | indicates a dirty region where content is updated. |
+| [OH_NativeWindow_ScreenInfoRect](capi-nativewindow-oh-nativewindow-screeninforect.md) | - | Describes a rectangle with int32_t coordinates and dimensions.<br> Used by SET_SCREEN_INFO and GET_SCREEN_INFO operation codes of [OH_NativeWindow_NativeWindowHandleOpt](capi-external-window-h.md#oh_nativewindow_nativewindowhandleopt) to carry per-frame offset/size and original-in-screen offset/size. |
 | [OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) | OHHDRMetaData | Defines the HDR metadata. |
 | [OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) | - | Defines the ExtData Handle |
 | [OH_NativeBuffer](capi-nativewindow-oh-nativebuffer.md) | OH_NativeBuffer | Provides native buffer capability. |
 | [OHIPCParcel](capi-nativewindow-ohipcparcel.md) | OHIPCParcel | Defines the ipc parcel. |
 | [NativeWindow](capi-nativewindow-nativewindow.md) | - | native window. |
 | [NativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) | - | native window buffer. |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) | OHNativeWindow | define the new type name OHNativeWindow for struct NativeWindow. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) | OHNativeWindowBuffer | define the new type name OHNativeWindowBuffer for struct NativeWindowBuffer. |
 
 ### Enum
 
@@ -90,6 +91,10 @@ enum NativeWindowOperation
 
 Indicates the operation code in the function OH_NativeWindow_NativeWindowHandleOpt.
 
+<!--Device-NativeWindowOperation--><!--Device-NativeWindowOperation-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 | Enum item | Description |
@@ -100,8 +105,8 @@ Indicates the operation code in the function OH_NativeWindow_NativeWindowHandleO
 | SET_FORMAT | set native window buffer format, variable parameter in function is [in] int32_t format, the enumeration value refers to [OH_NativeBuffer_Format](capi-buffer-common-h.md#oh_nativebuffer_format). |
 | GET_USAGE | get native window buffer usage, variable parameter in function is [out] uint64_t *usage, the enumeration value refers to [OH_NativeBuffer_Usage](capi-native-buffer-h.md#oh_nativebuffer_usage). |
 | SET_USAGE | set native window buffer usage, variable parameter in function is [in] uint64_t usage, the enumeration value refers to [OH_NativeBuffer_Usage](capi-native-buffer-h.md#oh_nativebuffer_usage). |
-| SET_STRIDE |  |
-| GET_STRIDE |  |
+| SET_STRIDE | set native window buffer stride, variable parameter in function is [in] int32_t stride.<br>**Deprecated**: 16 |
+| GET_STRIDE | get native window buffer stride, variable parameter in function is [out] int32_t *stride.<br>**Deprecated**: 16<br>**Replaced by**: Use [OH_NativeWindow_GetBufferHandleFromNative](capi-external-window-h.md#oh_nativewindow_getbufferhandlefromnative) to get a BufferHandleand from a buffer and then retrieve the stride from the [BufferHandle](capi-nativewindow-bufferhandle.md).  |
 | SET_SWAP_INTERVAL | set native window buffer swap interval, variable parameter in function is [in] int32_t interval. |
 | GET_SWAP_INTERVAL | get native window buffer swap interval, variable parameter in function is [out] int32_t *interval. |
 | SET_TIMEOUT | set the timeout in milliseconds when the native window requests a buffer, the default value is 3000 milliseconds when not set, variable parameter in function is [in] int32_t timeout, in milliseconds. |
@@ -111,15 +116,17 @@ Indicates the operation code in the function OH_NativeWindow_NativeWindowHandleO
 | SET_TRANSFORM | set native window buffer transform, variable parameter in function is [in] int32_t transform, the enumeration value refers to [OH_NativeBuffer_TransformType](capi-buffer-common-h.md#oh_nativebuffer_transformtype). |
 | GET_TRANSFORM | get native window buffer transform, variable parameter in function is [out] int32_t *transform, the enumeration value refers to [OH_NativeBuffer_TransformType](capi-buffer-common-h.md#oh_nativebuffer_transformtype). |
 | SET_UI_TIMESTAMP | set native window buffer uiTimestamp, variable parameter in function is [in] uint64_t uiTimestamp. |
-| GET_BUFFERQUEUE_SIZE |  |
-| SET_SOURCE_TYPE |  |
-| GET_SOURCE_TYPE |  |
-| SET_APP_FRAMEWORK_TYPE |  |
-| GET_APP_FRAMEWORK_TYPE |  |
-| SET_HDR_WHITE_POINT_BRIGHTNESS |  |
-| SET_SDR_WHITE_POINT_BRIGHTNESS |  |
-| SET_DESIRED_PRESENT_TIMESTAMP = 24 |  |
-| OH_NATIVEWINDOW_SET_DMABUFFER_NAME = 25 |  |
+| GET_BUFFERQUEUE_SIZE | get native window bufferqueue size, variable parameter in function is [out] int32_t *size.<br>**Since**: 12 |
+| SET_SOURCE_TYPE | set surface source type, variable parameter in function is [in] int32_t sourceType, the enumeration value refers to [OHSurfaceSource](capi-external-window-h.md#ohsurfacesource).<br>**Since**: 12 |
+| GET_SOURCE_TYPE | get surface source type, variable parameter in function is [out] int32_t *sourceType, the enumeration value refers to [OHSurfaceSource](capi-external-window-h.md#ohsurfacesource).<br>**Since**: 12 |
+| SET_APP_FRAMEWORK_TYPE | set app framework type, variable parameter in function is [in] char* frameworkType. maximum length is 64 bytes, otherwise the setting fails.<br>**Since**: 12 |
+| GET_APP_FRAMEWORK_TYPE | get app framework type, variable parameter in function is [out] char** frameworkType.<br>**Since**: 12 |
+| SET_HDR_WHITE_POINT_BRIGHTNESS | set hdr white point brightness, variable parameter in function is [in] float brightness. the value range is 0.0f to 1.0f.<br>**Since**: 12 |
+| SET_SDR_WHITE_POINT_BRIGHTNESS | set sdr white point brightness, variable parameter in function is [in] float brightness. the value range is 0.0f to 1.0f.<br>**Since**: 12 |
+| SET_DESIRED_PRESENT_TIMESTAMP = 24 | Set native window buffer desiredPresentTimestamp, indicates the desired time to present the buffer. Which should be generated by std::chrono::steady_clock in nanoseconds. It is only effective when RenderService is the consumer. The buffer will wait until desiredPresentTimestamp is reached before being consumed and displayed. If multiple buffers reach desiredPresentTimestamp, the earlier buffer will be dropped. This Operation should be called before calling <b>OH_NativeWindow_NativeWindowFlushBuffer</b>. If desiredPresentTimestamp is greater than 1 second of the consumer-provided timestamp, the desiredPresentTimestamp will be ignored. Variable parameter in function is [in] int64_t desiredPresentTimestamp.<br>**Since**: 13 |
+| OH_NATIVEWINDOW_SET_DMABUFFER_NAME = 25 | Set dma buffer name, variable parameter in function is [in] const char* name. The dma buffer name string. The name must start with a letter, only contain letters or digits, and be no longer than 64 bytes.<br>**Since**: 26.0.1 |
+| OH_NATIVEWINDOW_SET_SCREEN_INFO = 26 | Set native window screen info, includes current-frame rect, original-in-screen rect and free-form rotation angle in degree. variable parameters in function are [in] const OH_NativeWindow_ScreenInfoRect *currentFrameRect, [in] const OH_NativeWindow_ScreenInfoRect *originalRect, [in] float angle (range 0.0f to 360.0f). Note: the variadic entrypoint always returns GSERROR_OK to the caller; IPC errors are written into the reply parcel by the consumer-side stub but are NOT propagated back through the variadic handler.<br>**Since**: 26.1.0 |
+| OH_NATIVEWINDOW_GET_SCREEN_INFO = 27 | Get native window screen info previously set via SET_SCREEN_INFO. variable parameters in function are [out] OH_NativeWindow_ScreenInfoRect *currentFrameRect, [out] OH_NativeWindow_ScreenInfoRect *originalRect, [out] float *angle. Note: same variadic-return limitation as SET_SCREEN_INFO applies.<br>**Since**: 26.1.0 |
 
 ### OHScalingMode
 
@@ -130,6 +137,10 @@ enum OHScalingMode
 **Description**
 
 Indicates Scaling Mode.
+
+<!--Device-OHScalingMode--><!--Device-OHScalingMode-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 9
 
@@ -154,6 +165,10 @@ enum OHScalingModeV2
 
 Indicates Scaling Mode.
 
+<!--Device-OHScalingModeV2--><!--Device-OHScalingModeV2-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 | Enum item | Description |
@@ -174,6 +189,10 @@ enum OHHDRMetadataKey
 
 Enumerates the HDR metadata keys.
 
+<!--Device-OHHDRMetadataKey--><!--Device-OHHDRMetadataKey-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 9
 
 **Deprecated**: 10
@@ -190,6 +209,10 @@ enum OHSurfaceSource
 **Description**
 
 Indicates the source type of surface.
+
+<!--Device-OHSurfaceSource--><!--Device-OHSurfaceSource-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 12
 
@@ -214,6 +237,10 @@ OHNativeWindow* OH_NativeWindow_CreateNativeWindow(void* pSurface)
 
 Creates a <b>OHNativeWindow</b> instance. A new <b>OHNativeWindow</b> instance is created each time this function is called.
 
+<!--Device-OHNativeWindow* OH_NativeWindow_CreateNativeWindow(void* pSurface)--><!--Device-OHNativeWindow* OH_NativeWindow_CreateNativeWindow(void* pSurface)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Deprecated**: 12
@@ -228,7 +255,7 @@ Creates a <b>OHNativeWindow</b> instance. A new <b>OHNativeWindow</b> instance i
 
 | Type | Description |
 | -- | -- |
-| [OHNativeWindow*](capi-nativewindow-ohnativewindow.md) | Returns the pointer to the <b>OHNativeWindow</b> instance created. |
+| [OHNativeWindow*](capi-nativewindow-nativewindow.md) | Returns the pointer to the <b>OHNativeWindow</b> instance created. |
 
 ### OH_NativeWindow_DestroyNativeWindow()
 
@@ -240,13 +267,17 @@ void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)
 
 Decreases the reference count of a <b>OHNativeWindow</b> instance by 1, and when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface.
 
+<!--Device-void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)--><!--Device-void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 
 ### OH_NativeWindow_CreateNativeWindowBufferFromSurfaceBuffer()
 
@@ -257,6 +288,10 @@ OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromSurfaceBuffer(
 **Description**
 
 Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called.
+
+<!--Device-OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromSurfaceBuffer(void* pSurfaceBuffer)--><!--Device-OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromSurfaceBuffer(void* pSurfaceBuffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 8
 
@@ -274,7 +309,7 @@ Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b
 
 | Type | Description |
 | -- | -- |
-| [OHNativeWindowBuffer*](capi-nativewindow-ohnativewindowbuffer.md) | Returns the pointer to the <b>OHNativeWindowBuffer</b> instance created. |
+| [OHNativeWindowBuffer*](capi-nativewindow-nativewindowbuffer.md) | Returns the pointer to the <b>OHNativeWindowBuffer</b> instance created. |
 
 ### OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer()
 
@@ -285,6 +320,10 @@ OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(O
 **Description**
 
 Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindowBuffer</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
+
+<!--Device-OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(OH_NativeBuffer* nativeBuffer)--><!--Device-OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(OH_NativeBuffer* nativeBuffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 11
 
@@ -298,7 +337,7 @@ Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b
 
 | Type | Description |
 | -- | -- |
-| [OHNativeWindowBuffer*](capi-nativewindow-ohnativewindowbuffer.md) | Returns the pointer to the <b>OHNativeWindowBuffer</b> instance created. |
+| [OHNativeWindowBuffer*](capi-nativewindow-nativewindowbuffer.md) | Returns the pointer to the <b>OHNativeWindowBuffer</b> instance created. |
 
 ### OH_NativeWindow_DestroyNativeWindowBuffer()
 
@@ -310,13 +349,17 @@ void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)
 
 Decreases the reference count of a <b>OHNativeWindowBuffer</b> instance by 1 and, when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface.
 
+<!--Device-void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)--><!--Device-void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md)* buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md)* buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 
 ### OH_NativeWindow_NativeWindowRequestBuffer()
 
@@ -328,14 +371,18 @@ int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNati
 
 Requests a <b>OHNativeWindowBuffer</b> through a <b>OHNativeWindow</b> instance for content production. Before calling this interface, you need to set the width and height of <b>OHNativeWindow</b> through <b>SET_BUFFER_GEOMETRY</b>. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowFlushBuffer</b>, otherwise buffer will be exhausted. When the fenceFd is used up, you need to close it. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd)--><!--Device-int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) **buffer | Indicates the double pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) **buffer | Indicates the double pointer to a <b>OHNativeWindowBuffer</b> instance. |
 | int *fenceFd | Indicates the pointer to a file descriptor handle. |
 
 **Returns**:
@@ -354,14 +401,18 @@ int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNative
 
 Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through a <b>OHNativeWindow</b> instance for content consumption. The fenceFd will be close by system. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer, int fenceFd, Region region)--><!--Device-int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer, int fenceFd, Region region)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 | int fenceFd | Indicates a file descriptor handle, which is used for timing synchronization. |
 | [Region](capi-nativewindow-region.md) region | Indicates a dirty region where content is updated. |
 
@@ -381,6 +432,10 @@ int32_t OH_NativeWindow_GetLastFlushedBuffer(OHNativeWindow *window, OHNativeWin
 
 Get the last flushed <b>OHNativeWindowBuffer</b> from a <b>OHNativeWindow</b> instance.
 
+<!--Device-int32_t OH_NativeWindow_GetLastFlushedBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])--><!--Device-int32_t OH_NativeWindow_GetLastFlushedBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 11
 
 **Deprecated**: 12
@@ -391,8 +446,8 @@ Get the last flushed <b>OHNativeWindowBuffer</b> from a <b>OHNativeWindow</b> in
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) **buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> pointer. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) **buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> pointer. |
 | int *fenceFd | Indicates the pointer to a file descriptor handle. |
 | float matrix[16] | Indicates the retrieved 4*4 transform matrix. |
 
@@ -412,14 +467,18 @@ int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNative
 
 Returns the <b>OHNativeWindowBuffer</b> to the buffer queue through a <b>OHNativeWindow</b> instance, without filling in any content. The <b>OHNativeWindowBuffer</b> can be used for another request. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)--><!--Device-int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 
 **Returns**:
 
@@ -437,13 +496,17 @@ int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, 
 
 Sets or obtains the attributes of a native window, including the width, height, and content format. This interface is a non-thread-safe type interface.<br> <p><strong>API Note</strong><br> <strong>Performance Note</strong> <p>By default, the window buffer in the current operating system is accessed via the CPU. If an application does not need to access the window buffer data using the CPU, it can proactively disable CPU access to enhance energy efficiency and reduce power consumption. </p> <p>For details about how to optimize power consumption for data read/write operations in data buffers, see [How do I proactively disable CPU access to window buffers to reduce power consumption?]https://developer.huawei.com/consumer/en/doc/harmonyos-faqs/faqs-arkgraphics-2d-14.</p> </p>
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, ...)--><!--Device-int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, ...)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | int code | Indicates the operation code, pointer to <b>NativeWindowOperation</b>. |
 | [](capi-nativewindow-region.md).[](capi-nativewindow-region.md).[](capi-nativewindow-region.md).[](capi-nativewindow-region.md) | variable parameter, must correspond to code one-to-one. |
 
@@ -463,13 +526,17 @@ BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *bu
 
 Obtains the pointer to a <b>BufferHandle</b> of a <b>OHNativeWindowBuffer</b> instance. This interface is a non-thread-safe type interface.
 
+<!--Device-BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *buffer)--><!--Device-BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 
 **Returns**:
 
@@ -486,6 +553,10 @@ int32_t OH_NativeWindow_NativeObjectReference(void *obj)
 **Description**
 
 Adds the reference count of a native object. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
+
+<!--Device-int32_t OH_NativeWindow_NativeObjectReference(void *obj)--><!--Device-int32_t OH_NativeWindow_NativeObjectReference(void *obj)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 8
 
@@ -511,6 +582,10 @@ int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)
 
 Decreases the reference count of a native object and, when the reference count reaches 0, destroys this object. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)--><!--Device-int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 8
 
 **Parameters**:
@@ -534,6 +609,10 @@ int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)
 **Description**
 
 Obtains the magic ID of a native object. This interface is a non-thread-safe type interface.
+
+<!--Device-int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)--><!--Device-int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
 **Since**: 8
 
@@ -559,6 +638,10 @@ int32_t OH_NativeWindow_NativeWindowSetScalingMode(OHNativeWindow *window, uint3
 
 Sets scalingMode of a native window.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowSetScalingMode(OHNativeWindow *window, uint32_t sequence, OHScalingMode scalingMode)--><!--Device-int32_t OH_NativeWindow_NativeWindowSetScalingMode(OHNativeWindow *window, uint32_t sequence, OHScalingMode scalingMode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 9
 
 **Deprecated**: 10
@@ -569,7 +652,7 @@ Sets scalingMode of a native window.
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | uint32_t sequence | Indicates the sequence to a produce buffer. |
 | [OHScalingMode](capi-external-window-h.md#ohscalingmode) scalingMode | Indicates the enum value to <b>OHScalingMode</b> |
 
@@ -589,6 +672,10 @@ int32_t OH_NativeWindow_NativeWindowSetMetaData(OHNativeWindow *window, uint32_t
 
 Sets metaData of a native window.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowSetMetaData(OHNativeWindow *window, uint32_t sequence, int32_t size, const OHHDRMetaData *metaData)--><!--Device-int32_t OH_NativeWindow_NativeWindowSetMetaData(OHNativeWindow *window, uint32_t sequence, int32_t size, const OHHDRMetaData *metaData)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 9
 
 **Deprecated**: 10
@@ -597,7 +684,7 @@ Sets metaData of a native window.
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | uint32_t sequence | Indicates the sequence to a produce buffer. |
 | int32_t size | Indicates the size of a <b>OHHDRMetaData</b> vector. |
 | [const OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) *metaData | Indicates the pointer to a <b>OHHDRMetaData</b> vector. |
@@ -618,6 +705,10 @@ int32_t OH_NativeWindow_NativeWindowSetMetaDataSet(OHNativeWindow *window, uint3
 
 Sets metaDataSet of a native window.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowSetMetaDataSet(OHNativeWindow *window, uint32_t sequence, OHHDRMetadataKey key, int32_t size, const uint8_t *metaData)--><!--Device-int32_t OH_NativeWindow_NativeWindowSetMetaDataSet(OHNativeWindow *window, uint32_t sequence, OHHDRMetadataKey key, int32_t size, const uint8_t *metaData)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 9
 
 **Deprecated**: 10
@@ -626,7 +717,7 @@ Sets metaDataSet of a native window.
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | uint32_t sequence | Indicates the sequence to a produce buffer. |
 | [OHHDRMetadataKey](capi-external-window-h.md#ohhdrmetadatakey) key | Indicates the enum value to <b>OHHDRMetadataKey</b> |
 | int32_t size | Indicates the size of a uint8_t vector. |
@@ -648,6 +739,10 @@ int32_t OH_NativeWindow_NativeWindowSetTunnelHandle(OHNativeWindow *window, cons
 
 Sets tunnel handle of a native window.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowSetTunnelHandle(OHNativeWindow *window, const OHExtDataHandle *handle)--><!--Device-int32_t OH_NativeWindow_NativeWindowSetTunnelHandle(OHNativeWindow *window, const OHExtDataHandle *handle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 9
 
 **Deprecated**: 10
@@ -656,7 +751,7 @@ Sets tunnel handle of a native window.
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [const OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) *handle | Indicates the pointer to a <b>OHExtDataHandle</b>. |
 
 **Returns**:
@@ -675,14 +770,18 @@ int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativ
 
 Attach a buffer to an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowDetachBuffer</b>, otherwise buffer management will be chaotic. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)--><!--Device-int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 
 **Returns**:
 
@@ -700,14 +799,18 @@ int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativ
 
 Detach a buffer from an <b>OHNativeWindow</b> instance. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)--><!--Device-int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) *buffer | Indicates the pointer to a <b>OHNativeWindowBuffer</b> instance. |
 
 **Returns**:
 
@@ -725,13 +828,17 @@ int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId
 
 Get surfaceId from native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId)--><!--Device-int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
 | uint64_t *surfaceId | Indicates the pointer to a surfaceId. |
 
 **Returns**:
@@ -750,6 +857,10 @@ int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNa
 
 Creates an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindow</b>, otherwise memory leaks will occur. If there is a concurrent destroy OHNativeWindow, you need to add once and decrement once to the OHNativeWindow reference count through <b>OH_NativeWindow_NativeObjectReference</b> and <b>OH_NativeWindow_NativeObjectUnreference</b>. If the surface obtained through surfaceId is created in this process, the surface cannot be obtained across processes. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNativeWindow **window)--><!--Device-int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNativeWindow **window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
@@ -757,7 +868,7 @@ Creates an <b>OHNativeWindow</b> instance. This interface needs to be used in co
 | Parameter | Description |
 | -- | -- |
 | uint64_t surfaceId | Indicates the surfaceId to a surface. |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) **window | indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) **window | indicates the pointer to an <b>OHNativeWindow</b> instance. |
 
 **Returns**:
 
@@ -775,13 +886,17 @@ int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHS
 
 Sets scalingMode of a native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHScalingModeV2 scalingMode)--><!--Device-int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHScalingModeV2 scalingMode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | indicates the pointer to an <b>OHNativeWindow</b> instance. |
 | [OHScalingModeV2](capi-external-window-h.md#ohscalingmodev2) scalingMode | Indicates the enum value to <b>OHScalingModeV2</b> |
 
 **Returns**:
@@ -800,13 +915,17 @@ void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)
 
 Set native window buffer hold. This interface is a non-thread-safe type interface.
 
+<!--Device-void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)--><!--Device-void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
 
 ### OH_NativeWindow_WriteToParcel()
 
@@ -818,13 +937,17 @@ int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parce
 
 Write an OHNativeWindow to an OHIPCParcel. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parcel)--><!--Device-int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parcel)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
 | [OHIPCParcel](capi-nativewindow-ohipcparcel.md) *parcel | Indicates the pointer to an <b>OHIPCParcel</b> instance. |
 
 **Returns**:
@@ -843,6 +966,10 @@ int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **win
 
 Read an OHNativeWindow from an OHIPCParcel. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **window)--><!--Device-int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
@@ -850,7 +977,7 @@ Read an OHNativeWindow from an OHIPCParcel. This interface is a non-thread-safe 
 | Parameter | Description |
 | -- | -- |
 | [OHIPCParcel](capi-nativewindow-ohipcparcel.md) *parcel | Indicates the pointer to an <b>OHIPCParcel</b> instance. |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) **window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) **window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
 
 **Returns**:
 
@@ -868,14 +995,18 @@ int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeW
 
 Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> instance. When the fenceFd is used up, you need to close it. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])--><!--Device-int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md) **buffer | Indicates the pointer to an <b>OHNativeWindowBuffer</b> pointer. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to an <b>OHNativeWindow</b> instance. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) **buffer | Indicates the pointer to an <b>OHNativeWindowBuffer</b> pointer. |
 | int *fenceFd | Indicates the pointer to a file descriptor handle. |
 | float matrix[16] | Indicates the retrieved 4*4 transform matrix. |
 
@@ -895,13 +1026,17 @@ int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_Co
 
 Set the color space of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace colorSpace)--><!--Device-int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace colorSpace)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_ColorSpace](capi-buffer-common-h.md#oh_nativebuffer_colorspace) colorSpace | Indicates the color space of native window, see <b>OH_NativeBuffer_ColorSpace</b>. |
 
 **Returns**:
@@ -920,13 +1055,17 @@ int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_Co
 
 Get the color space of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace *colorSpace)--><!--Device-int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace *colorSpace)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_ColorSpace](capi-buffer-common-h.md#oh_nativebuffer_colorspace) *colorSpace | Indicates the color space of native window, see <b>OH_NativeBuffer_ColorSpace</b>. |
 
 **Returns**:
@@ -945,13 +1084,17 @@ int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer
 
 Set the metadata type of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)--><!--Device-int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_metadatakey) metadataKey | Indicates the metadata type of native window, see <b>OH_NativeBuffer_MetadataKey</b>. |
 | int32_t size | Indicates the size of a uint8_t vector. |
 | uint8_t *metadata | Indicates the pointer to a uint8_t vector. |
@@ -972,13 +1115,17 @@ int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer
 
 Set the metadata type of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)--><!--Device-int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_metadatakey) metadataKey | Indicates the metadata type of native window, see <b>OH_NativeBuffer_MetadataKey</b>. |
 | int32_t *size | Indicates the size of a uint8_t vector. |
 | uint8_t **metadata | Indicates the pointer to a uint8_t vector. |
@@ -999,13 +1146,17 @@ int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)
 
 Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)--><!--Device-int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 19
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 
 **Returns**:
 
@@ -1023,13 +1174,17 @@ int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBu
 
 PreAlloc <b>OHNativeWindowBuffer</b> of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBufferCnt)--><!--Device-int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBufferCnt)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 22
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | uint32_t allocBufferCnt | Indicates the count of <b>OHNativeWindowBuffers</b>. |
 
 **Returns**:
@@ -1048,15 +1203,19 @@ int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNati
 
 Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instance for content production, and lock the <b>OHNativeWindowBuffer</b>, the interface needs to be paired with <b>OH_NativeWindow_UnlockAndFlushBuffer</b> for use, after lock, it must be unlocked in order to relock, repeatedly lock or unlock will return an illegal operation error code, the interface supports rendering images directly through memory read and write on the CPU. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNativeWindowBuffer** buffer)--><!--Device-int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNativeWindowBuffer** buffer)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [Region](capi-nativewindow-region.md) region | Indicates the info of the dirty region. |
-| [OHNativeWindowBuffer](capi-nativewindow-ohnativewindowbuffer.md)** buffer | Indicates the pointer to an <b>OHNativeWindowBuffer</b> pointer. |
+| [OHNativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md)** buffer | Indicates the pointer to an <b>OHNativeWindowBuffer</b> pointer. |
 
 **Returns**:
 
@@ -1074,13 +1233,17 @@ int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)
 
 Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through an <b>OHNativeWindow</b> instance for content consumption, and unlock the <b>OHNativeWindowBuffer</b>. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)--><!--Device-int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md)* window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 
 **Returns**:
 
@@ -1098,13 +1261,17 @@ int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuff
 
 Set the 3D metadata of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)--><!--Device-int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_3D_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_3d_metadatakey) metadataKey | Indicates the 3D metadata type of native window, see <b>OH_NativeBuffer_3D_MetadataKey</b>. |
 | int32_t size | Indicates the size of a uint8_t vector. |
 | uint8_t *metadata | Indicates the pointer to a uint8_t vector. |
@@ -1125,13 +1292,17 @@ int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuff
 
 Get the 3D metadata of the native window. This interface is a non-thread-safe type interface.
 
+<!--Device-int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)--><!--Device-int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OHNativeWindow](capi-nativewindow-ohnativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | Indicates the pointer to a <b>OHNativeWindow</b> instance. |
 | [OH_NativeBuffer_3D_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_3d_metadatakey) metadataKey | Indicates the 3D metadata type of native window, see <b>OH_NativeBuffer_3D_MetadataKey</b>. |
 | int32_t *size | Indicates the size of a uint8_t vector. |
 | uint8_t **metadata | Indicates the pointer to a uint8_t vector. |

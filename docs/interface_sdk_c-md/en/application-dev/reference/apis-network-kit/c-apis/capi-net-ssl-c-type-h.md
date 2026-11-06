@@ -6,9 +6,11 @@ Defines the data structures for the C APIs of the SSL/TLS certificate chain veri
 
 **Library**: libnet_ssl.so
 
+**System capability**: SystemCapability.Communication.NetStack
+
 **Since**: 11
 
-**Related module**: [netstack](capi-netstack.md)
+**Related module**: [netstack](capi-network-kit-netstack.md)
 
 ## Summary
 
@@ -40,6 +42,10 @@ enum NetStack_CertType
 
 Certificate type enums.
 
+<!--Device-NetStack_CertType--><!--Device-NetStack_CertType-End-->
+
+**System capability**: SystemCapability.Communication.NetStack
+
 **Since**: 11
 
 | Enum item | Description |
@@ -58,6 +64,10 @@ enum NetStack_CertificatePinningKind
 
 Certificate pinning type enums.
 
+<!--Device-NetStack_CertificatePinningKind--><!--Device-NetStack_CertificatePinningKind-End-->
+
+**System capability**: SystemCapability.Communication.NetStack
+
 **Since**: 12
 
 | Enum item | Description |
@@ -73,6 +83,10 @@ enum NetStack_HashAlgorithm
 **Description**
 
 Hash algorithm enums.
+
+<!--Device-NetStack_HashAlgorithm--><!--Device-NetStack_HashAlgorithm-End-->
+
+**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 12
 

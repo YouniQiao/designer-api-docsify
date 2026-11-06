@@ -6,9 +6,11 @@ Declares APIs for decoding an image source into a pixel map.
 
 **Library**: libimage_source_ndk.z.so
 
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
-**Related module**: [Image](capi-image.md)
+**Related module**: [Image](capi-image-kit-image.md)
 
 ## Summary
 
@@ -27,7 +29,6 @@ Declares APIs for decoding an image source into a pixel map.
 | [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md) | - | Defines the property string (in key-value format) of the image source. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). |
 | [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md) | - | Defines the update data of the image source. It is obtained by calling [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata). |
 | [ImageSourceNative_](capi-image-imagesourcenative-.md) | - | Defines a native image source object for the image source APIs. |
-| [ImageSourceNative](capi-image-imagesourcenative.md) | ImageSourceNative | Defines a native image source object for the image source APIs. |
 
 ### Function
 
@@ -83,6 +84,10 @@ int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct 
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
+<!--Device-int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Deprecated**: 11
@@ -119,6 +124,10 @@ int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struc
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source URI and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
+<!--Device-int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 11
 
 **Parameters**:
@@ -152,6 +161,10 @@ int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSo
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
+<!--Device-int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 11
 
 **Parameters**:
@@ -183,6 +196,10 @@ int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSi
 **Description**
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
+
+<!--Device-int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 11
 
@@ -217,6 +234,10 @@ int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified raw file's file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
+<!--Device-int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 11
 
 **Parameters**:
@@ -248,6 +269,10 @@ int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* s
 **Description**
 
 Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).
+
+<!--Device-int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 10
 
@@ -285,6 +310,10 @@ int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, si
 
 Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).
 
+<!--Device-int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 11
 
 **Parameters**:
@@ -318,6 +347,10 @@ int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormat
 
 Obtains all supported decoding formats.
 
+<!--Device-int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormatList* res)--><!--Device-int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormatList* res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
@@ -347,6 +380,10 @@ ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)
 
 Converts an ImageSource object at the JavaScript native layer to an <b>ImageSourceNative</b> object at the C++ native layer.
 
+<!--Device-ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)--><!--Device-ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
@@ -360,11 +397,11 @@ Converts an ImageSource object at the JavaScript native layer to an <b>ImageSour
 
 | Type | Description |
 | -- | -- |
-| [ImageSourceNative*](capi-image-imagesourcenative.md) | Returns a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object if the operation is successful; returns a null pointer otherwise. |
+| [ImageSourceNative*](capi-image-imagesourcenative-.md) | Returns a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object if the operation is successful; returns a null pointer otherwise. |
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OH_ImageSource_Release](capi-image-source-mdk-h.md#oh_imagesource_release)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OH_ImageSource_Release](capi-image-source-mdk-h.md#oh_imagesource_release)
 
 
 ### OH_ImageSource_CreatePixelMap()
@@ -377,13 +414,17 @@ int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct Oh
 
 Decodes an <b>ImageSource</b> object to obtain a <b>PixelMap</b> object at the JavaScript native layer based on the specified [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md) struct.
 
+<!--Device-int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | Indicates a pointer to the options for decoding the image source. For details, see [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md). |
 | napi_value *res | Indicates a pointer to the <b>PixelMap</b> object obtained at the JavaScript native layer. |
 
@@ -395,7 +436,7 @@ Decodes an <b>ImageSource</b> object to obtain a <b>PixelMap</b> object at the J
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
 
 
 ### OH_ImageSource_CreatePixelMapList()
@@ -408,13 +449,17 @@ int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struc
 
 Decodes an <b>ImageSource</b> to obtain all the <b>PixelMap</b> objects at the JavaScript native layer based on the specified [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md) struct.
 
+<!--Device-int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | Indicates a pointer to the options for decoding the image source. For details, see [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md). |
 | napi_value *res | Indicates a pointer to the <b>PixelMap</b> objects obtained at the JavaScript native layer. |
 
@@ -426,7 +471,7 @@ Decodes an <b>ImageSource</b> to obtain all the <b>PixelMap</b> objects at the J
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
 
 
 ### OH_ImageSource_GetDelayTime()
@@ -439,13 +484,17 @@ int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct Ohos
 
 Obtains the delay time list from some <b>ImageSource</b> objects (such as GIF image sources).
 
+<!--Device-int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct OhosImageSourceDelayTimeList* res)--><!--Device-int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct OhosImageSourceDelayTimeList* res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)* res | Indicates a pointer to the delay time list obtained. For details, see [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md). When the input <b>delayTimeList</b> is a null pointer and <b>size</b> is <b>0</b>, the size of the delay time list is returned through <b>size</b> in <b>res</b>. To obtain the complete delay time list, a space greater than <b>size</b> is required. |
 
 **Returns**:
@@ -456,7 +505,7 @@ Obtains the delay time list from some <b>ImageSource</b> objects (such as GIF im
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)
 
 
 ### OH_ImageSource_GetFrameCount()
@@ -469,13 +518,17 @@ int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *
 
 Obtains the number of frames from an <b>ImageSource</b> object.
 
+<!--Device-int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *res)--><!--Device-int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *res)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | uint32_t *res | Indicates a pointer to the number of frames obtained. |
 
 **Returns**:
@@ -486,7 +539,7 @@ Obtains the number of frames from an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md)
 
 
 ### OH_ImageSource_GetImageInfo()
@@ -499,13 +552,17 @@ int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t ind
 
 Obtains image source information from an <b>ImageSource</b> object by index.
 
+<!--Device-int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t index, struct OhosImageSourceInfo* info)--><!--Device-int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t index, struct OhosImageSourceInfo* info)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | int32_t index | Indicates the index of the frame. |
 | [struct OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)* info | Indicates a pointer to the image source information obtained. For details, see [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md). |
 
@@ -517,7 +574,7 @@ Obtains image source information from an <b>ImageSource</b> object by index.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)
 
 
 ### OH_ImageSource_GetImageProperty()
@@ -530,13 +587,17 @@ int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct 
 
 Obtains the value of an image property from an <b>ImageSource</b> object.
 
+<!--Device-int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)--><!--Device-int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | Indicates a pointer to the property. For details, see [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md). |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | Indicates a pointer to the property value obtained. If the input <b>value</b> is a null pointer and <b>size</b> is <b>0</b>, the size of the property value is returned through <b>size</b> in <b>value</b>. To obtain the complete property value, a space greater than <b>size</b> is required. |
 
@@ -548,7 +609,7 @@ Obtains the value of an image property from an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
 
 
 ### OH_ImageSource_ModifyImageProperty()
@@ -561,13 +622,17 @@ int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, stru
 
 Modifies the value of an image property of an <b>ImageSource</b> object.
 
+<!--Device-int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)--><!--Device-int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | Indicates a pointer to the property. For details, see [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md). |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | Indicates a pointer to the new value of the property. |
 
@@ -579,7 +644,7 @@ Modifies the value of an image property of an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
 
 
 ### OH_ImageSource_UpdateData()
@@ -592,13 +657,17 @@ int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosIm
 
 Updates the data of an <b>ImageSource</b> object.
 
+<!--Device-int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosImageSourceUpdateData* data)--><!--Device-int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosImageSourceUpdateData* data)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 | [struct OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)* data | Indicates a pointer to the update data. For details, see [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md). |
 
 **Returns**:
@@ -609,7 +678,7 @@ Updates the data of an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)
 
 
 ### OH_ImageSource_Release()
@@ -622,13 +691,17 @@ int32_t OH_ImageSource_Release(ImageSourceNative* native)
 
 Releases an <b>ImageSourceNative</b> object.
 
+<!--Device-int32_t OH_ImageSource_Release(ImageSourceNative* native)--><!--Device-int32_t OH_ImageSource_Release(ImageSourceNative* native)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.ImageSource
+
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
+| [ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
 
 **Returns**:
 
@@ -638,7 +711,7 @@ Releases an <b>ImageSourceNative</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative.md), [OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create), [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental)
+[ImageSourceNative](capi-image-imagesourcenative-.md), [OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create), [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental)
 
 
 

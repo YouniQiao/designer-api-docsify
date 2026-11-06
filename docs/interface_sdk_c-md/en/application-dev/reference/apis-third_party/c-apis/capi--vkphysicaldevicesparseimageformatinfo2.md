@@ -2,3 +2,20 @@
 
 ## Overview
 
+<!--Device-struct VkPhysicalDeviceSparseImageFormatInfo2 {...}--><!--Device-struct VkPhysicalDeviceSparseImageFormatInfo2 {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType |  |
+| const void* pNext |  |
+| VkFormat format |  |
+| VkImageType type |  |
+| VkSampleCountFlagBits samples |  |
+| VkImageUsageFlags usage |  |
+| VkImageTiling tiling |  |
+
+

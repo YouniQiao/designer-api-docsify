@@ -110,6 +110,7 @@ import { inputMethod } from '@kit.IMEKit';
 | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Indicates whether the input method is enabled. |
 | [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md) | Enumerates the function types represented by the Enter key of the input method. |
 | [ExtendAction](arkts-ime-inputmethod-extendaction-e.md) | Enumerates the types of extended edit actions on the edit box. |
+| [InputCapabilityType](arkts-ime-inputmethod-inputcapabilitytype-e.md) | Enumerates the input capability types. <br> <br>Used by [requestSystemInputCapability](arkts-ime-inputmethod-inputmethodcontroller-i.md#requestsysteminputcapability) to specify the system input capability to request. |
 | [KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md) | Enumerates the soft keyboard states of the input method. |
 | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Enumerates the reasons for requesting the keyboard. |
 | [TextInputType](arkts-ime-inputmethod-textinputtype-e.md) | Enumerates the text input types. |

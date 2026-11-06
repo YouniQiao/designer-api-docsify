@@ -8,11 +8,13 @@ struct OH_Huks_ParamSet {...}
 
 定义参数集的结构体类型。
 
+<!--Device-struct OH_Huks_ParamSet {...}--><!--Device-struct OH_Huks_ParamSet {...}-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
-**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -24,6 +26,6 @@ struct OH_Huks_ParamSet {...}
 | -- | -- |
 | uint32_t paramSetSize | 参数集的内存大小。 |
 | uint32_t paramsCnt | 参数的个数。 |
-| [struct OH_Huks_Param](capi-hukstypeapi-oh-huks-param.md) params[] | 参数数组。 |
+| [struct OH_Huks_Param](capi-hukstypeapi-oh-huks-param.md) params | 参数数组。 |
 
 

@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**相关模块：** [CryptoSymCipherApi](capi-cryptosymcipherapi.md)
+**相关模块：** [CryptoSymCipherApi](capi-crypto-architecture-kit-cryptosymcipherapi.md)
 
 ## 汇总
 
@@ -53,6 +55,10 @@ enum CryptoSymCipher_ParamsType
 
 定义加解密参数类型。
 
+<!--Device-CryptoSymCipher_ParamsType--><!--Device-CryptoSymCipher_ParamsType-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -74,9 +80,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **par
 
 创建对称密钥加解密参数。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **params)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_Create(OH_CryptoSymCipherParams **params)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_sym_cipher/OH_CryptoSymCipherParams_Destroy {params}
+**资源释放：** [OH_CryptoSymCipherParams_Destroy](#oh_cryptosymcipherparams_destroy)
 
 **参数：**
 
@@ -105,6 +115,10 @@ OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *pa
 
 设置加解密参数。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *params, CryptoSymCipher_ParamsType paramsType, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipherParams_SetParam(OH_CryptoSymCipherParams *params, CryptoSymCipher_ParamsType paramsType, Crypto_DataBlob *value)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 **参数：**
@@ -131,6 +145,10 @@ void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)
 
 销毁加解密参数。
 
+<!--Device-void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)--><!--Device-void OH_CryptoSymCipherParams_Destroy(OH_CryptoSymCipherParams *params)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 **参数：**
@@ -149,9 +167,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCi
 
 根据给定的算法名称创建对称密钥加解密上下文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCipher **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Create(const char *algoName, OH_CryptoSymCipher **ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_sym_cipher/OH_CryptoSymCipher_Destroy {ctx}
+**资源释放：** [OH_CryptoSymCipher_Destroy](#oh_cryptosymcipher_destroy)
 
 **参数：**
 
@@ -180,6 +202,10 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_Cipher
 **描述：**
 
 使用给定的加解密模式、密钥和参数初始化加解密操作。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_CipherMode mod, OH_CryptoSymKey *key, OH_CryptoSymCipherParams *params)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Init(OH_CryptoSymCipher *ctx, Crypto_CipherMode mod, OH_CryptoSymKey *key, OH_CryptoSymCipherParams *params)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 
@@ -214,9 +240,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_Data
 
 更新加解密数据，输出已加密或已解密的数据。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Update(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -247,9 +277,13 @@ OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataB
 
 结束加解密操作，输出最终结果。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoSymCipher_Final(OH_CryptoSymCipher *ctx, Crypto_DataBlob *in, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -275,6 +309,10 @@ const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)
 
 获取对称密钥加解密算法名称。
 
+<!--Device-const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)--><!--Device-const char *OH_CryptoSymCipher_GetAlgoName(OH_CryptoSymCipher *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 12
 
 **参数：**
@@ -298,6 +336,10 @@ void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)
 **描述：**
 
 销毁对称密钥加解密上下文。
+
+<!--Device-void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)--><!--Device-void OH_CryptoSymCipher_Destroy(OH_CryptoSymCipher *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 

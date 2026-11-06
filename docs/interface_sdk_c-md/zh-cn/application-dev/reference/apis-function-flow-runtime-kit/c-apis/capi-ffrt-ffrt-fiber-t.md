@@ -8,11 +8,13 @@ typedef struct ffrt_fiber_t {...} ffrt_fiber_t
 
 纤程结构体，用于存储纤程执行上下文。
 
+<!--Device-typedef struct ffrt_fiber_t {...} ffrt_fiber_t--><!--Device-typedef struct ffrt_fiber_t {...} ffrt_fiber_t-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.Ffrt.Core
 
 **起始版本：** 20
 
-**相关模块：** [FFRT](capi-ffrt.md)
+**相关模块：** [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 **所在头文件：** [type_def.h](capi-type-def-h.md)
 
@@ -22,6 +24,6 @@ typedef struct ffrt_fiber_t {...} ffrt_fiber_t
 
 | 名称 | 描述 |
 | -- | -- |
-| uintptr_t storage[ffrt_fiber_storage_size] | 纤程执行上下文的内部存储。请勿直接访问， 通过ffrt_fiber_init初始化，通过ffrt_fiber_switch切换。 |
+| uintptr_t storage[ffrt_fiber_storage_size] | 纤程执行上下文的内部存储。请勿直接访问， 通过[ffrt_fiber_init](capi-fiber-h.md#ffrt_fiber_init)初始化，通过[ffrt_fiber_switch](capi-fiber-h.md#ffrt_fiber_switch)切换。 |
 
 

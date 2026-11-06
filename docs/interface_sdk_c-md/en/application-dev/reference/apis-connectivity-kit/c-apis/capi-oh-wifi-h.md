@@ -6,9 +6,11 @@ Define interfaces for querying wifi switch status.
 
 **Library**: libwifi_ndk.so
 
+**System capability**: SystemCapability.Communication.WiFi.STA
+
 **Since**: 13
 
-**Related module**: [Wifi](capi-wifi.md)
+**Related module**: [Wifi](capi-connectivity-kit-wifi.md)
 
 ## Summary
 
@@ -56,6 +58,10 @@ enum Wifi_ResultCode
 
 Enumerates the wifi result codes.
 
+<!--Device-Wifi_ResultCode--><!--Device-Wifi_ResultCode-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
+
 **Since**: 13
 
 | Enum item | Description |
@@ -76,6 +82,10 @@ enum OH_WifiLinkType
 **Description**
 
 Enumerates Wi-Fi link types.
+
+<!--Device-OH_WifiLinkType--><!--Device-OH_WifiLinkType-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Since**: 24
 
@@ -98,6 +108,10 @@ enum OH_WifiConnState
 **Description**
 
 Enumerates Wi-Fi connection states.
+
+<!--Device-OH_WifiConnState--><!--Device-OH_WifiConnState-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Since**: 24
 
@@ -123,6 +137,10 @@ enum OH_WifiChannelWidth
 
 Enumerates Wi-Fi channel widths.
 
+<!--Device-OH_WifiChannelWidth--><!--Device-OH_WifiChannelWidth-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
+
 **Since**: 24
 
 | Enum item | Description |
@@ -144,6 +162,10 @@ enum OH_WifiCategory
 
 Wi-Fi categories.
 
+<!--Device-OH_WifiCategory--><!--Device-OH_WifiCategory-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
+
 **Since**: 24
 
 | Enum item | Description |
@@ -163,6 +185,10 @@ enum OH_WifiStandard
 **Description**
 
 Enumerates Wi-Fi standards.
+
+<!--Device-OH_WifiStandard--><!--Device-OH_WifiStandard-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Since**: 24
 
@@ -190,6 +216,10 @@ Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)
 
 Check whether the wifi switch is enabled.
 
+<!--Device-Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)--><!--Device-Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
+
 **Since**: 13
 
 **Parameters**:
@@ -213,6 +243,10 @@ Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddr
 **Description**
 
 Get the device Mac address.
+
+<!--Device-Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddrLen)--><!--Device-Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddrLen)-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Required permission**: ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO.
 
@@ -240,6 +274,10 @@ Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)
 **Description**
 
 Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid in the returned result will be the real BSSID address; otherwise, it will be a randomized device address.
+
+<!--Device-Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)--><!--Device-Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)-End-->
+
+**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Required permission**: ohos.permission.GET_WIFI_INFO.
 

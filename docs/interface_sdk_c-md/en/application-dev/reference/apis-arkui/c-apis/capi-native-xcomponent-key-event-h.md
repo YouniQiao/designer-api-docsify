@@ -6,9 +6,11 @@ Declares enums for key event of Native XComponent.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 10
 
-**Related module**: [OH_NativeXComponent Native XComponent](capi-oh-nativexcomponent-native-xcomponent.md)
+**Related module**: [OH_NativeXComponent Native XComponent](capi-arkui-oh-nativexcomponent-native-xcomponent.md)
 
 ## Summary
 
@@ -31,6 +33,10 @@ enum OH_NativeXComponent_KeyCode
 
 Represents the key event code.
 
+<!--Device-OH_NativeXComponent_KeyCode--><!--Device-OH_NativeXComponent_KeyCode-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 10
 
 | Enum item | Description |
@@ -45,6 +51,10 @@ enum OH_NativeXComponent_KeyAction
 **Description**
 
 Represents the key event action.
+
+<!--Device-OH_NativeXComponent_KeyAction--><!--Device-OH_NativeXComponent_KeyAction-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 10
 

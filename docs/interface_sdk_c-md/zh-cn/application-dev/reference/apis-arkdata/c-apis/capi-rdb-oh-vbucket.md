@@ -8,11 +8,13 @@ typedef struct OH_VBucket {...} OH_VBucket
 
 用于存储键值对的类型。
 
+<!--Device-typedef struct OH_VBucket {...} OH_VBucket--><!--Device-typedef struct OH_VBucket {...} OH_VBucket-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 10
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 **所在头文件：** [oh_values_bucket.h](capi-oh-values-bucket-h.md)
 
@@ -30,13 +32,13 @@ typedef struct OH_VBucket {...} OH_VBucket
 
 | 名称 | 描述 |
 | -- | -- |
-| [int (\*putText)(OH_VBucket *bucket, const char *field, const char *value)](#puttext) | 将char*值放入给定列名的OH_VBucket对象中。 |
-| [int (\*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)](#putint64) | 将int64_t值放入给定列名的OH_VBucket对象中。 |
-| [int (\*putReal)(OH_VBucket *bucket, const char *field, double value)](#putreal) | 将double值放入给定列名的OH_VBucket对象中。 |
-| [int (\*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)](#putblob) | 将const uint8_t *值放入给定列名的OH_VBucket对象中。 |
-| [int (\*putNull)(OH_VBucket *bucket, const char *field)](#putnull) | 将NULL值放入给定列名的OH_VBucket对象中。 |
-| [int (\*clear)(OH_VBucket *bucket)](#clear) | 清空[OH_VBucket](capi-rdb-oh-vbucket.md)对象。 |
-| [int (\*destroy)(OH_VBucket *bucket)](#destroy) | 销毁[OH_VBucket](capi-rdb-oh-vbucket.md)对象，并回收该对象占用的内存。 |
+| [int (\*putText)(OH_VBucket *bucket, const char *field, const char *value)](#puttext) | - | 将char*值放入给定列名的OH_VBucket对象中。 |
+| [int (\*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)](#putint64) | - | 将int64_t值放入给定列名的OH_VBucket对象中。 |
+| [int (\*putReal)(OH_VBucket *bucket, const char *field, double value)](#putreal) | - | 将double值放入给定列名的OH_VBucket对象中。 |
+| [int (\*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)](#putblob) | - | 将const uint8_t *值放入给定列名的OH_VBucket对象中。 |
+| [int (\*putNull)(OH_VBucket *bucket, const char *field)](#putnull) | - | 将NULL值放入给定列名的OH_VBucket对象中。 |
+| [int (\*clear)(OH_VBucket *bucket)](#clear) | - | 清空[OH_VBucket](capi-rdb-oh-vbucket.md)对象。 |
+| [int (\*destroy)(OH_VBucket *bucket)](#destroy) | - | 销毁[OH_VBucket](capi-rdb-oh-vbucket.md)对象，并回收该对象占用的内存。 |
 
 ## 成员函数说明
 
@@ -49,6 +51,8 @@ int (*putText)(OH_VBucket *bucket, const char *field, const char *value)
 **描述：**
 
 将char*值放入给定列名的OH_VBucket对象中。
+
+<!--Device-int (*putText)(OH_VBucket *bucket, const char *field, const char *value)--><!--Device-int (*putText)(OH_VBucket *bucket, const char *field, const char *value)-End-->
 
 **起始版本：** 10
 
@@ -81,6 +85,8 @@ int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)
 
 将int64_t值放入给定列名的OH_VBucket对象中。
 
+<!--Device-int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)--><!--Device-int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)-End-->
+
 **起始版本：** 10
 
 **参数：**
@@ -112,6 +118,8 @@ int (*putReal)(OH_VBucket *bucket, const char *field, double value)
 
 将double值放入给定列名的OH_VBucket对象中。
 
+<!--Device-int (*putReal)(OH_VBucket *bucket, const char *field, double value)--><!--Device-int (*putReal)(OH_VBucket *bucket, const char *field, double value)-End-->
+
 **起始版本：** 10
 
 **参数：**
@@ -142,6 +150,8 @@ int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint
 **描述：**
 
 将const uint8_t *值放入给定列名的OH_VBucket对象中。
+
+<!--Device-int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)--><!--Device-int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)-End-->
 
 **起始版本：** 10
 
@@ -175,6 +185,8 @@ int (*putNull)(OH_VBucket *bucket, const char *field)
 
 将NULL值放入给定列名的OH_VBucket对象中。
 
+<!--Device-int (*putNull)(OH_VBucket *bucket, const char *field)--><!--Device-int (*putNull)(OH_VBucket *bucket, const char *field)-End-->
+
 **起始版本：** 10
 
 **参数：**
@@ -205,6 +217,8 @@ int (*clear)(OH_VBucket *bucket)
 
 清空[OH_VBucket](capi-rdb-oh-vbucket.md)对象。
 
+<!--Device-int (*clear)(OH_VBucket *bucket)--><!--Device-int (*clear)(OH_VBucket *bucket)-End-->
+
 **起始版本：** 10
 
 **参数：**
@@ -233,6 +247,8 @@ int (*destroy)(OH_VBucket *bucket)
 **描述：**
 
 销毁[OH_VBucket](capi-rdb-oh-vbucket.md)对象，并回收该对象占用的内存。
+
+<!--Device-int (*destroy)(OH_VBucket *bucket)--><!--Device-int (*destroy)(OH_VBucket *bucket)-End-->
 
 **起始版本：** 10
 

@@ -1865,6 +1865,43 @@ inputMethodController.recvMessage(messageHandler);
 inputMethodController.recvMessage();
 ```
 
+## requestSystemInputCapability
+
+```TypeScript
+requestSystemInputCapability(type: InputCapabilityType): Promise<void>
+```
+
+Requests system input capability. This API uses a promise to return the result. <br> <br>For [TRANSLATION](arkts-ime-inputmethod-inputcapabilitytype-e.md#translation), the current input method must be the system default input method; otherwise, the request is rejected.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodController-requestSystemInputCapability(type: InputCapabilityType): Promise<void>--><!--Device-InputMethodController-requestSystemInputCapability(type: InputCapabilityType): Promise<void>-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [InputCapabilityType](arkts-ime-inputmethod-inputcapabilitytype-e.md) | Yes | The input capability type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise | Promise that returns no result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | current ime application is not the system-configured default input method. |
+| 12800029 | the input type is not supported. |
+
 ## sendMessage
 
 ```TypeScript

@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**相关模块：** [CryptoKdfApi](capi-cryptokdfapi.md)
+**相关模块：** [CryptoKdfApi](capi-crypto-architecture-kit-cryptokdfapi.md)
 
 ## 汇总
 
@@ -50,6 +52,10 @@ enum CryptoKdf_ParamType
 
 定义KDF参数类型。
 
+<!--Device-CryptoKdf_ParamType--><!--Device-CryptoKdf_ParamType-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -76,9 +82,13 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfPa
 
 创建KDF参数。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_kdf/OH_CryptoKdfParams_Destroy {params}
+**资源释放：** [OH_CryptoKdfParams_Destroy](#oh_cryptokdfparams_destroy)
 
 **参数：**
 
@@ -108,6 +118,10 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, Crypto
 
 设置KDF参数。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 **参数：**
@@ -134,6 +148,10 @@ void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)
 
 销毁KDF参数。
 
+<!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)--><!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 **参数：**
@@ -152,9 +170,13 @@ OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)
 
 根据给定的算法名称创建KDF上下文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_kdf/OH_CryptoKdf_Destroy {ctx}
+**资源释放：** [OH_CryptoKdf_Destroy](#oh_cryptokdf_destroy)
 
 **参数：**
 
@@ -184,9 +206,13 @@ OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParam
 
 派生密钥。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {key}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -212,6 +238,10 @@ void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)
 **描述：**
 
 销毁KDF上下文。
+
+<!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)--><!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

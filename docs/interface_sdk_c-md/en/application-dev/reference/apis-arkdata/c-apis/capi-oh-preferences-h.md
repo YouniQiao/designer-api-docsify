@@ -6,9 +6,11 @@ Provides APIs and structs for accessing the **Preferences** object.
 
 **Library**: libohpreferences.so
 
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
-**Related module**: [Preferences](capi-preferences.md)
+**Related module**: [Preferences](capi-arkdata-preferences.md)
 
 ## Summary
 
@@ -46,12 +48,6 @@ Provides APIs and structs for accessing the **Preferences** object.
 | [int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)](#oh_preferences_registermultiprocessdataobserver) | - | Registers a multi-process data observer for the **Preferences** object. |
 | [int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)](#oh_preferences_unregistermultiprocessdataobserver) | - | Unregisters the multi-process data observer of the **Preferences** object. |
 
-### Variable
-
-| Name | Description |
-| -- | -- |
-| void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPair *pairs, uint32_t count) | Defines a struct for the callback for data changes.<br>**Since**: 13<br>**System capability**: SystemCapability.DistributedDataManager.Preferences.Core * |
-
 ## Function description
 
 ### OH_PreferencesDataObserver()
@@ -63,6 +59,10 @@ typedef void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPa
 **Description**
 
 Defines a struct for the callback for data changes.
+
+<!--Device-typedef void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPair *pairs, uint32_t count)--><!--Device-typedef void (*OH_PreferencesDataObserver)(void *context, const OH_PreferencesPair *pairs, uint32_t count)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -88,6 +88,10 @@ OH_Preferences *OH_Preferences_Open(OH_PreferencesOption *option, int *errCode)
 **Description**
 
 Opens a **Preferences** instance and creates a pointer to it. If this pointer is no longer required, use [OH_Preferences_Close](capi-oh-preferences-h.md#oh_preferences_close) to close the instance.
+
+<!--Device-OH_Preferences *OH_Preferences_Open(OH_PreferencesOption *option, int *errCode)--><!--Device-OH_Preferences *OH_Preferences_Open(OH_PreferencesOption *option, int *errCode)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -119,6 +123,10 @@ int OH_Preferences_Close(OH_Preferences *preference)
 
 Closes a **Preferences** instance.
 
+<!--Device-int OH_Preferences_Close(OH_Preferences *preference)--><!--Device-int OH_Preferences_Close(OH_Preferences *preference)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -148,6 +156,10 @@ int OH_Preferences_DeletePreferences(OH_PreferencesOption *option)
 
 Deletes the specified **Preferences** object.
 
+<!--Device-int OH_Preferences_DeletePreferences(OH_PreferencesOption *option)--><!--Device-int OH_Preferences_DeletePreferences(OH_PreferencesOption *option)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -176,6 +188,10 @@ int OH_Preferences_GetInt(OH_Preferences *preference, const char *key, int *valu
 **Description**
 
 Obtains an integer corresponding to the specified key in a **Preferences** instance.
+
+<!--Device-int OH_Preferences_GetInt(OH_Preferences *preference, const char *key, int *value)--><!--Device-int OH_Preferences_GetInt(OH_Preferences *preference, const char *key, int *value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -208,6 +224,10 @@ int OH_Preferences_GetBool(OH_Preferences *preference, const char *key, bool *va
 
 Obtains a Boolean value corresponding to the specified key in a **Preferences** instance.
 
+<!--Device-int OH_Preferences_GetBool(OH_Preferences *preference, const char *key, bool *value)--><!--Device-int OH_Preferences_GetBool(OH_Preferences *preference, const char *key, bool *value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -238,6 +258,10 @@ int OH_Preferences_GetString(OH_Preferences *preference, const char *key, char *
 **Description**
 
 Obtains a string corresponding to the specified key in a **Preferences** instance.
+
+<!--Device-int OH_Preferences_GetString(OH_Preferences *preference, const char *key, char **value, uint32_t *valueLen)--><!--Device-int OH_Preferences_GetString(OH_Preferences *preference, const char *key, char **value, uint32_t *valueLen)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -271,6 +295,10 @@ void OH_Preferences_FreeString(char *string)
 
 Releases a string obtained from a **Preferences** instance.
 
+<!--Device-void OH_Preferences_FreeString(char *string)--><!--Device-void OH_Preferences_FreeString(char *string)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -293,6 +321,10 @@ int OH_Preferences_SetInt(OH_Preferences *preference, const char *key, int value
 **Description**
 
 Sets an integer based on the specified key in a **Preferences** instance.
+
+<!--Device-int OH_Preferences_SetInt(OH_Preferences *preference, const char *key, int value)--><!--Device-int OH_Preferences_SetInt(OH_Preferences *preference, const char *key, int value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -325,6 +357,10 @@ int OH_Preferences_SetBool(OH_Preferences *preference, const char *key, bool val
 
 Sets a Boolean value based on the specified key in a **Preferences** instance.
 
+<!--Device-int OH_Preferences_SetBool(OH_Preferences *preference, const char *key, bool value)--><!--Device-int OH_Preferences_SetBool(OH_Preferences *preference, const char *key, bool value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -355,6 +391,10 @@ int OH_Preferences_SetString(OH_Preferences *preference, const char *key, const 
 **Description**
 
 Sets a string based on the specified key in a **Preferences** instance.
+
+<!--Device-int OH_Preferences_SetString(OH_Preferences *preference, const char *key, const char *value)--><!--Device-int OH_Preferences_SetString(OH_Preferences *preference, const char *key, const char *value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -387,6 +427,10 @@ int OH_Preferences_Delete(OH_Preferences *preference, const char *key)
 
 Deletes the KV data corresponding to the specified key from a **Preferences** instance.
 
+<!--Device-int OH_Preferences_Delete(OH_Preferences *preference, const char *key)--><!--Device-int OH_Preferences_Delete(OH_Preferences *preference, const char *key)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -416,6 +460,10 @@ int OH_Preferences_RegisterDataObserver(OH_Preferences *preference, void *contex
 **Description**
 
 Subscribes to data changes of the specified keys. If the value of the specified key changes, a callback will be invoked after **OH_Preferences_Close()** is called.
+
+<!--Device-int OH_Preferences_RegisterDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer, const char *keys[], uint32_t keyCount)--><!--Device-int OH_Preferences_RegisterDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer, const char *keys[], uint32_t keyCount)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -450,6 +498,10 @@ int OH_Preferences_UnregisterDataObserver(OH_Preferences *preference, void *cont
 
 Unsubscribes from data changes of the specified keys.
 
+<!--Device-int OH_Preferences_UnregisterDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer, const char *keys[], uint32_t keyCount)--><!--Device-int OH_Preferences_UnregisterDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer, const char *keys[], uint32_t keyCount)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -483,6 +535,10 @@ int OH_Preferences_IsStorageTypeSupported(Preferences_StorageType type, bool *is
 
 Check if a type is supported or not.
 
+<!--Device-int OH_Preferences_IsStorageTypeSupported(Preferences_StorageType type, bool *isSupported)--><!--Device-int OH_Preferences_IsStorageTypeSupported(Preferences_StorageType type, bool *isSupported)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 18
 
 **Parameters**:
@@ -507,6 +563,10 @@ int OH_Preferences_SetValue(OH_Preferences *preference, const char *key, OH_Pref
 **Description**
 
 Sets [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) in the **Preferences** object.
+
+<!--Device-int OH_Preferences_SetValue(OH_Preferences *preference, const char *key, OH_PreferencesValue *value)--><!--Device-int OH_Preferences_SetValue(OH_Preferences *preference, const char *key, OH_PreferencesValue *value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -539,6 +599,10 @@ int OH_Preferences_GetValue(OH_Preferences *preference, const char *key, OH_Pref
 
 Obtains the value from the **Preferences** object based on the given key.
 
+<!--Device-int OH_Preferences_GetValue(OH_Preferences *preference, const char *key, OH_PreferencesValue **value)--><!--Device-int OH_Preferences_GetValue(OH_Preferences *preference, const char *key, OH_PreferencesValue **value)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -569,6 +633,10 @@ int OH_Preferences_GetAll(OH_Preferences *preference, OH_PreferencesPair **pairs
 **Description**
 
 Obtains all the values from the **Preferences** object.
+
+<!--Device-int OH_Preferences_GetAll(OH_Preferences *preference, OH_PreferencesPair **pairs, uint32_t *count)--><!--Device-int OH_Preferences_GetAll(OH_Preferences *preference, OH_PreferencesPair **pairs, uint32_t *count)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -601,6 +669,10 @@ bool OH_Preferences_HasKey(OH_Preferences *preference, const char *key)
 
 Checks whether the **Preferences** object contains KV data matching the specified key. Returns **true** if present, and **false** otherwise.
 
+<!--Device-bool OH_Preferences_HasKey(OH_Preferences *preference, const char *key)--><!--Device-bool OH_Preferences_HasKey(OH_Preferences *preference, const char *key)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -631,6 +703,10 @@ int OH_Preferences_Flush(OH_Preferences *preference)
 
 Saves the cache of the [OH_Preferences](capi-preferences-oh-preferences.md) object to an XML file.
 
+<!--Device-int OH_Preferences_Flush(OH_Preferences *preference)--><!--Device-int OH_Preferences_Flush(OH_Preferences *preference)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -660,6 +736,10 @@ int OH_Preferences_ClearCache(OH_Preferences *preference)
 
 Clears all values in the cache of the [OH_Preferences](capi-preferences-oh-preferences.md) object.
 
+<!--Device-int OH_Preferences_ClearCache(OH_Preferences *preference)--><!--Device-int OH_Preferences_ClearCache(OH_Preferences *preference)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -688,6 +768,10 @@ int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, 
 **Description**
 
 Registers a multi-process data observer for the **Preferences** object.
+
+<!--Device-int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)--><!--Device-int OH_Preferences_RegisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -719,6 +803,10 @@ int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference
 **Description**
 
 Unregisters the multi-process data observer of the **Preferences** object.
+
+<!--Device-int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)--><!--Device-int OH_Preferences_UnregisterMultiProcessDataObserver(OH_Preferences *preference, void *context, OH_PreferencesDataObserver observer)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 

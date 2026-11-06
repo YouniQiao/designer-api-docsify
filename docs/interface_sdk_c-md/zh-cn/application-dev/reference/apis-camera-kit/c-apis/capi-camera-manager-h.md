@@ -6,9 +6,11 @@
 
 **库：** libohcamera.so
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 ## 汇总
 
@@ -63,14 +65,6 @@
 | [Camera_ErrorCode OH_CameraManager_DeleteCameraDevices(Camera_Manager* cameraManager, Camera_Device* cameras)](#oh_cameramanager_deletecameradevices) | - | 删除指定相机设备。 |
 | [Camera_ErrorCode OH_CameraManager_GetCameraConcurrentInfos(Camera_Manager* cameraManager, const Camera_Device* camera, uint32_t deviceSize, Camera_ConcurrentInfo** cameraConcurrentInfo, uint32_t* infoSize)](#oh_cameramanager_getcameraconcurrentinfos) | - | 获取指定相机的并发信息。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status) | 在[CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md)中被调用的相机管理器状态回调。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManager, Camera_TorchStatusInfo* status) | 手电筒状态变化回调。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-| void (*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraManager, Camera_FoldStatusInfo* foldStatusInfo) | 相机管理器折叠状态信息回调。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Multimedia.Camera.Core |
-
 ## 函数说明
 
 ### OH_CameraManager_StatusCallback()
@@ -82,6 +76,10 @@ typedef void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, C
 **描述：**
 
 在[CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md)中被调用的相机管理器状态回调。
+
+<!--Device-typedef void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status)--><!--Device-typedef void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -102,6 +100,10 @@ typedef void (*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManag
 
 手电筒状态变化回调。
 
+<!--Device-typedef void (*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManager, Camera_TorchStatusInfo* status)--><!--Device-typedef void (*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManager, Camera_TorchStatusInfo* status)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -121,6 +123,10 @@ typedef void (*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraMa
 
 相机管理器折叠状态信息回调。
 
+<!--Device-typedef void (*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraManager, Camera_FoldStatusInfo* foldStatusInfo)--><!--Device-typedef void (*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraManager, Camera_FoldStatusInfo* foldStatusInfo)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -139,6 +145,10 @@ Camera_ErrorCode OH_CameraManager_RegisterCallback(Camera_Manager* cameraManager
 **描述：**
 
 注册相机状态更改事件回调。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_RegisterCallback(Camera_Manager* cameraManager, CameraManager_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_CameraManager_RegisterCallback(Camera_Manager* cameraManager, CameraManager_Callbacks* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -165,6 +175,10 @@ Camera_ErrorCode OH_CameraManager_UnregisterCallback(Camera_Manager* cameraManag
 
 注销相机状态更改事件回调。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_UnregisterCallback(Camera_Manager* cameraManager, CameraManager_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_CameraManager_UnregisterCallback(Camera_Manager* cameraManager, CameraManager_Callbacks* callback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -189,6 +203,10 @@ Camera_ErrorCode OH_CameraManager_RegisterTorchStatusCallback(Camera_Manager* ca
 **描述：**
 
 注册手电筒状态变更事件回调。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_RegisterTorchStatusCallback(Camera_Manager* cameraManager, OH_CameraManager_TorchStatusCallback torchStatusCallback)--><!--Device-Camera_ErrorCode OH_CameraManager_RegisterTorchStatusCallback(Camera_Manager* cameraManager, OH_CameraManager_TorchStatusCallback torchStatusCallback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -215,6 +233,10 @@ Camera_ErrorCode OH_CameraManager_UnregisterTorchStatusCallback(Camera_Manager* 
 
 注销手电筒状态变更事件回调。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_UnregisterTorchStatusCallback(Camera_Manager* cameraManager, OH_CameraManager_TorchStatusCallback torchStatusCallback)--><!--Device-Camera_ErrorCode OH_CameraManager_UnregisterTorchStatusCallback(Camera_Manager* cameraManager, OH_CameraManager_TorchStatusCallback torchStatusCallback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -239,6 +261,10 @@ Camera_ErrorCode OH_CameraManager_RegisterFoldStatusInfoCallback(Camera_Manager*
 **描述：**
 
 注册折叠状态信息变更事件回调。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_RegisterFoldStatusInfoCallback(Camera_Manager* cameraManager, OH_CameraManager_OnFoldStatusInfoChange foldStatusInfoCallback)--><!--Device-Camera_ErrorCode OH_CameraManager_RegisterFoldStatusInfoCallback(Camera_Manager* cameraManager, OH_CameraManager_OnFoldStatusInfoChange foldStatusInfoCallback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
@@ -265,6 +291,10 @@ Camera_ErrorCode OH_CameraManager_UnregisterFoldStatusInfoCallback(Camera_Manage
 
 注销折叠状态信息变更事件回调。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_UnregisterFoldStatusInfoCallback(Camera_Manager* cameraManager, OH_CameraManager_OnFoldStatusInfoChange foldStatusInfoCallback)--><!--Device-Camera_ErrorCode OH_CameraManager_UnregisterFoldStatusInfoCallback(Camera_Manager* cameraManager, OH_CameraManager_OnFoldStatusInfoChange foldStatusInfoCallback)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -289,6 +319,10 @@ Camera_ErrorCode OH_CameraManager_GetSupportedCameras(Camera_Manager* cameraMana
 **描述：**
 
 获取支持指定的相机设备实例。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameras(Camera_Manager* cameraManager, Camera_Device** cameras, uint32_t* size)--><!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameras(Camera_Manager* cameraManager, Camera_Device** cameras, uint32_t* size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -316,6 +350,10 @@ Camera_ErrorCode OH_CameraManager_DeleteSupportedCameras(Camera_Manager* cameraM
 
 删除支持的相机。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_DeleteSupportedCameras(Camera_Manager* cameraManager, Camera_Device* cameras, uint32_t size)--><!--Device-Camera_ErrorCode OH_CameraManager_DeleteSupportedCameras(Camera_Manager* cameraManager, Camera_Device* cameras, uint32_t size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -342,6 +380,10 @@ Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapability(Camera_Mana
 
 查询指定相机支持的输出能力。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapability(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_OutputCapability** cameraOutputCapability)--><!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapability(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_OutputCapability** cameraOutputCapability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -367,6 +409,10 @@ Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapabilityWithSceneMod
 **描述：**
 
 查询指定相机在指定模式下支持的输出能力。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)--><!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -395,6 +441,10 @@ Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithScen
 
 查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)--><!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -422,6 +472,10 @@ Camera_ErrorCode OH_CameraManager_DeleteSupportedCameraOutputCapability(Camera_M
 
 删除支持的输出能力。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_DeleteSupportedCameraOutputCapability(Camera_Manager* cameraManager, Camera_OutputCapability* cameraOutputCapability)--><!--Device-Camera_ErrorCode OH_CameraManager_DeleteSupportedCameraOutputCapability(Camera_Manager* cameraManager, Camera_OutputCapability* cameraOutputCapability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -446,6 +500,10 @@ Camera_ErrorCode OH_CameraManager_IsCameraMuted(Camera_Manager* cameraManager, b
 **描述：**
 
 确定相机是否静音。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_IsCameraMuted(Camera_Manager* cameraManager, bool* isCameraMuted)--><!--Device-Camera_ErrorCode OH_CameraManager_IsCameraMuted(Camera_Manager* cameraManager, bool* isCameraMuted)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -472,6 +530,10 @@ Camera_ErrorCode OH_CameraManager_CreateCaptureSession(Camera_Manager* cameraMan
 
 创建捕获会话实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateCaptureSession(Camera_Manager* cameraManager, Camera_CaptureSession** captureSession)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateCaptureSession(Camera_Manager* cameraManager, Camera_CaptureSession** captureSession)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -496,6 +558,10 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput(Camera_Manager* cameraManage
 **描述：**
 
 创建相机输入实例。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateCameraInput(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_Input** cameraInput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateCameraInput(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_Input** cameraInput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -524,6 +590,10 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_M
 **描述：**
 
 创建具有位置和类型的相机输入实例。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Input** cameraInput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Input** cameraInput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -554,6 +624,10 @@ Camera_ErrorCode OH_CameraManager_CreatePreviewOutput(Camera_Manager* cameraMana
 
 创建预览输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreatePreviewOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PreviewOutput** previewOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreatePreviewOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PreviewOutput** previewOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -581,6 +655,10 @@ Camera_ErrorCode OH_CameraManager_CreatePreviewOutputUsedInPreconfig(Camera_Mana
 
 创建在预配置流中使用的预览输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreatePreviewOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PreviewOutput** previewOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreatePreviewOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PreviewOutput** previewOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -607,6 +685,10 @@ Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manag
 
 创建延迟预览输出实例。使用结束后，必须调用[OH_PreviewOutput_Release](capi-preview-output-h.md#oh_previewoutput_release)释放预览输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manager* cameraManager, const Camera_Profile* profile, Camera_PreviewOutput** previewOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manager* cameraManager, const Camera_Profile* profile, Camera_PreviewOutput** previewOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -632,6 +714,10 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManage
 **描述：**
 
 创建一个拍照输出实例。该接口只支持创建JPEG格式的拍照输出对象。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PhotoOutput** photoOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PhotoOutput** photoOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -660,6 +746,10 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutputUsedInPreconfig(Camera_Manage
 
 创建在预配置流中使用的照片输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PhotoOutput** photoOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PhotoOutput** photoOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -686,6 +776,10 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutputWithoutSurface(Camera_Manager
 
 创建照片输出实例，调用此函数不需要surfaceId。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutputWithoutSurface(Camera_Manager *cameraManager, const Camera_Profile *profile, Camera_PhotoOutput **photoOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreatePhotoOutputWithoutSurface(Camera_Manager *cameraManager, const Camera_Profile *profile, Camera_PhotoOutput **photoOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -711,6 +805,10 @@ Camera_ErrorCode OH_CameraManager_CreateVideoOutput(Camera_Manager* cameraManage
 **描述：**
 
 创建一个录像输出实例。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateVideoOutput(Camera_Manager* cameraManager, const Camera_VideoProfile* profile, const char* surfaceId, Camera_VideoOutput** videoOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateVideoOutput(Camera_Manager* cameraManager, const Camera_VideoProfile* profile, const char* surfaceId, Camera_VideoOutput** videoOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -739,6 +837,10 @@ Camera_ErrorCode OH_CameraManager_CreateVideoOutputUsedInPreconfig(Camera_Manage
 
 创建在预配置流中使用的视频输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateVideoOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_VideoOutput** videoOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateVideoOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_VideoOutput** videoOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -765,6 +867,10 @@ Camera_ErrorCode OH_CameraManager_CreateMetadataOutput(Camera_Manager* cameraMan
 
 创建元数据输出实例。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateMetadataOutput(Camera_Manager* cameraManager, const Camera_MetadataObjectType* profile, Camera_MetadataOutput** metadataOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateMetadataOutput(Camera_Manager* cameraManager, const Camera_MetadataObjectType* profile, Camera_MetadataOutput** metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **参数：**
@@ -790,6 +896,10 @@ Camera_ErrorCode OH_CameraManager_CreateMetadataOutputWithObjectTypes(Camera_Man
 **描述：**
 
 使用元数据对象类型数组创建元数据输出实例。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_CreateMetadataOutputWithObjectTypes(Camera_Manager* cameraManager, const Camera_MetadataObjectType* metadataObjectTypes, uint32_t size, Camera_MetadataOutput** metadataOutput)--><!--Device-Camera_ErrorCode OH_CameraManager_CreateMetadataOutputWithObjectTypes(Camera_Manager* cameraManager, const Camera_MetadataObjectType* metadataObjectTypes, uint32_t size, Camera_MetadataOutput** metadataOutput)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 23
 
@@ -818,6 +928,10 @@ Camera_ErrorCode OH_CameraManager_GetSupportedSceneModes(Camera_Device* camera, 
 
 获取特定相机支持的场景模式。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedSceneModes(Camera_Device* camera, Camera_SceneMode** sceneModes, uint32_t* size)--><!--Device-Camera_ErrorCode OH_CameraManager_GetSupportedSceneModes(Camera_Device* camera, Camera_SceneMode** sceneModes, uint32_t* size)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -844,6 +958,10 @@ Camera_ErrorCode OH_CameraManager_DeleteSceneModes(Camera_Manager* cameraManager
 
 删除场景模式。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_DeleteSceneModes(Camera_Manager* cameraManager, Camera_SceneMode* sceneModes)--><!--Device-Camera_ErrorCode OH_CameraManager_DeleteSceneModes(Camera_Manager* cameraManager, Camera_SceneMode* sceneModes)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -869,6 +987,10 @@ Camera_ErrorCode OH_CameraManager_IsTorchSupported(Camera_Manager* cameraManager
 
 检查设备是否支持手电筒。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_IsTorchSupported(Camera_Manager* cameraManager, bool* isTorchSupported)--><!--Device-Camera_ErrorCode OH_CameraManager_IsTorchSupported(Camera_Manager* cameraManager, bool* isTorchSupported)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -893,6 +1015,10 @@ Camera_ErrorCode OH_CameraManager_IsTorchSupportedByTorchMode(Camera_Manager* ca
 **描述：**
 
 检查设备是否支持指定的手电筒模式。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_IsTorchSupportedByTorchMode(Camera_Manager* cameraManager, Camera_TorchMode torchMode, bool* isTorchSupported)--><!--Device-Camera_ErrorCode OH_CameraManager_IsTorchSupportedByTorchMode(Camera_Manager* cameraManager, Camera_TorchMode torchMode, bool* isTorchSupported)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -920,6 +1046,10 @@ Camera_ErrorCode OH_CameraManager_SetTorchMode(Camera_Manager* cameraManager, Ca
 
 设置相机手电筒模式。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_SetTorchMode(Camera_Manager* cameraManager, Camera_TorchMode torchMode)--><!--Device-Camera_ErrorCode OH_CameraManager_SetTorchMode(Camera_Manager* cameraManager, Camera_TorchMode torchMode)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -944,6 +1074,10 @@ Camera_ErrorCode OH_CameraManager_IsTorchLevelControlSupported(const Camera_Mana
 **描述：**
 
 检查设备是否支持手电筒亮度控制。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_IsTorchLevelControlSupported(const Camera_Manager* cameraManager, bool* isTorchLevelControlSupported)--><!--Device-Camera_ErrorCode OH_CameraManager_IsTorchLevelControlSupported(const Camera_Manager* cameraManager, bool* isTorchLevelControlSupported)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -970,6 +1104,10 @@ Camera_ErrorCode OH_CameraManager_SetTorchModeOnWithLevel(Camera_Manager* camera
 
 将手电筒模式设置为打开，并设置亮度值。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_SetTorchModeOnWithLevel(Camera_Manager* cameraManager, double torchLevel)--><!--Device-Camera_ErrorCode OH_CameraManager_SetTorchModeOnWithLevel(Camera_Manager* cameraManager, double torchLevel)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -994,6 +1132,10 @@ Camera_ErrorCode OH_CameraManager_GetCameraDevice(Camera_Manager* cameraManager,
 **描述：**
 
 根据相机位置和相机类型查询指定的相机。 <br>获取指定[Camera_Position](capi-camera-h.md#camera_position)和[Camera_Type](capi-camera-h.md#camera_type)的相机镜头，如果该接口返回值为CAMERA_SERVICE_FATAL_ERROR，表示当前设备未查询到该镜头。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_GetCameraDevice(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Device* camera)--><!--Device-Camera_ErrorCode OH_CameraManager_GetCameraDevice(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Device* camera)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 18
 
@@ -1022,6 +1164,10 @@ Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager
 
 根据相机位置、相机类型数组和连接类型查询符合条件的相机列表。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager, Camera_DeviceQueryInfo* deviceQueryInfo, uint32_t* cameraSize, Camera_Device** cameras)--><!--Device-Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager, Camera_DeviceQueryInfo* deviceQueryInfo, uint32_t* cameraSize, Camera_Device** cameras)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -1049,6 +1195,10 @@ Camera_ErrorCode OH_CameraManager_DeleteCameraDevices(Camera_Manager* cameraMana
 
 删除指定相机设备。
 
+<!--Device-Camera_ErrorCode OH_CameraManager_DeleteCameraDevices(Camera_Manager* cameraManager, Camera_Device* cameras)--><!--Device-Camera_ErrorCode OH_CameraManager_DeleteCameraDevices(Camera_Manager* cameraManager, Camera_Device* cameras)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -1073,6 +1223,10 @@ Camera_ErrorCode OH_CameraManager_GetCameraConcurrentInfos(Camera_Manager* camer
 **描述：**
 
 获取指定相机的并发信息。
+
+<!--Device-Camera_ErrorCode OH_CameraManager_GetCameraConcurrentInfos(Camera_Manager* cameraManager, const Camera_Device* camera, uint32_t deviceSize, Camera_ConcurrentInfo** cameraConcurrentInfo, uint32_t* infoSize)--><!--Device-Camera_ErrorCode OH_CameraManager_GetCameraConcurrentInfos(Camera_Manager* cameraManager, const Camera_Device* camera, uint32_t deviceSize, Camera_ConcurrentInfo** cameraConcurrentInfo, uint32_t* infoSize)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 18
 

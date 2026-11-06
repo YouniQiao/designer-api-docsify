@@ -4,13 +4,15 @@
 
 Defines the OpenHarmony Universal KeyStore (HUKS) APIs for external key management extensions.
 
-**Include**: <huks/native_huks_external_crypto_api.h>
+**File to Include**: <huks/native_huks_external_crypto_api.h>
 
 **Library**: libhuks_external_crypto.z.so
 
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
-**Related module**: [HuksExternalCryptoApi](capi-huksexternalcryptoapi.md)
+**Related module**: [HuksExternalCryptoApi](capi-universal-keystore-kit-huksexternalcryptoapi.md)
 
 ## Summary
 
@@ -42,6 +44,10 @@ struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *provid
 
 Registers an external key management extension provider.
 
+<!--Device-struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Required permission**: ohos.permission.CRYPTO_EXTENSION_REGISTER
 
 **Since**: 22
@@ -68,6 +74,10 @@ struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *prov
 **Description**
 
 Unregisters an external key management extension provider.
+
+<!--Device-struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Required permission**: ohos.permission.CRYPTO_EXTENSION_REGISTER
 
@@ -96,6 +106,10 @@ struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId
 
 Opens a resource based on the specified resource ID. <br>Note: The opened resource must be closed using [OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource).
 
+<!--Device-struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 **Parameters**:
@@ -120,6 +134,10 @@ struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceI
 **Description**
 
 Closes a resource based on the specified resource ID.
+
+<!--Device-struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Since**: 22
 
@@ -146,6 +164,10 @@ struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *res
 
 Obtains the PIN authorization state of the specified UKey resource ID.
 
+<!--Device-struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet, OH_Huks_ExternalPinAuthState *authState)--><!--Device-struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet, OH_Huks_ExternalPinAuthState *authState)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 **Parameters**:
@@ -171,6 +193,10 @@ struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId,
 **Description**
 
 Obtains the property information of the external key management capability extension provider.
+
+<!--Device-struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId, const struct OH_Huks_Blob *propertyId, const OH_Huks_ExternalCryptoParamSet *paramSetIn, OH_Huks_ExternalCryptoParamSet **paramSetOut)--><!--Device-struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId, const struct OH_Huks_Blob *propertyId, const OH_Huks_ExternalCryptoParamSet *paramSetIn, OH_Huks_ExternalCryptoParamSet **paramSetOut)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Since**: 22
 
@@ -199,6 +225,10 @@ struct OH_Huks_Result OH_Huks_InitExternalCryptoParamSet(OH_Huks_ExternalCryptoP
 
 Initializes a parameter set.
 
+<!--Device-struct OH_Huks_Result OH_Huks_InitExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_InitExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 **Parameters**:
@@ -222,6 +252,10 @@ struct OH_Huks_Result OH_Huks_AddExternalCryptoParams(OH_Huks_ExternalCryptoPara
 **Description**
 
 Adds parameters to a parameter set.
+
+<!--Device-struct OH_Huks_Result OH_Huks_AddExternalCryptoParams(OH_Huks_ExternalCryptoParamSet *paramSet, const OH_Huks_ExternalCryptoParam *params, uint32_t paramCnt)--><!--Device-struct OH_Huks_Result OH_Huks_AddExternalCryptoParams(OH_Huks_ExternalCryptoParamSet *paramSet, const OH_Huks_ExternalCryptoParam *params, uint32_t paramCnt)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Since**: 22
 
@@ -249,6 +283,10 @@ struct OH_Huks_Result OH_Huks_BuildExternalCryptoParamSet(OH_Huks_ExternalCrypto
 
 Builds a parameter set.
 
+<!--Device-struct OH_Huks_Result OH_Huks_BuildExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_BuildExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 **Parameters**:
@@ -273,6 +311,10 @@ void OH_Huks_FreeExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSe
 
 Destroys a parameter set and releases related memory.
 
+<!--Device-void OH_Huks_FreeExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)--><!--Device-void OH_Huks_FreeExternalCryptoParamSet(OH_Huks_ExternalCryptoParamSet **paramSet)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
+
 **Since**: 22
 
 **Parameters**:
@@ -290,6 +332,10 @@ struct OH_Huks_Result OH_Huks_GetExternalCryptoParam(OH_Huks_ExternalCryptoParam
 **Description**
 
 Obtains a specified parameter from a parameter set.
+
+<!--Device-struct OH_Huks_Result OH_Huks_GetExternalCryptoParam(OH_Huks_ExternalCryptoParamSet *paramSet, const uint32_t tag, OH_Huks_ExternalCryptoParam **param)--><!--Device-struct OH_Huks_Result OH_Huks_GetExternalCryptoParam(OH_Huks_ExternalCryptoParamSet *paramSet, const uint32_t tag, OH_Huks_ExternalCryptoParam **param)-End-->
+
+**System capability**: SystemCapability.Security.Huks.CryptoExtension
 
 **Since**: 22
 

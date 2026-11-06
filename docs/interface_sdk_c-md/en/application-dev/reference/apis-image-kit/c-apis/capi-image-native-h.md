@@ -6,9 +6,11 @@ The file declares the cropping rectangle, size, and component data of an image.
 
 **Library**: libohimage.so
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 ## Summary
 
@@ -17,7 +19,7 @@ The file declares the cropping rectangle, size, and component data of an image.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) | - | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) is the image data struct encapsulated at the native layer. To obtain an [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) object, call [OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata).<br> The struct stores the shallow copy of the original image data. Once the original data is released, no read or write operations should be performed on the pointers within this struct; otherwise, undefined behavior will occur. |
-| [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) | - | The struct describes the alias for an image object at the native layer. |
+| [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) | OH_ImageNative | The struct describes the alias for an image object at the native layer. |
 
 ### Function
 
@@ -47,6 +49,10 @@ Image_ErrorCode OH_ImageNative_GetImageSize(OH_ImageNative *image, Image_Size *s
 
 Obtains [Image_Size](capi-image-nativemodule-image-size.md) of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
+<!--Device-Image_ErrorCode OH_ImageNative_GetImageSize(OH_ImageNative *image, Image_Size *size)--><!--Device-Image_ErrorCode OH_ImageNative_GetImageSize(OH_ImageNative *image, Image_Size *size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -71,6 +77,10 @@ Image_ErrorCode OH_ImageNative_GetComponentTypes(OH_ImageNative *image, uint32_t
 **Description**
 
 Obtains the component types of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
+
+<!--Device-Image_ErrorCode OH_ImageNative_GetComponentTypes(OH_ImageNative *image, uint32_t **types, size_t *typeSize)--><!--Device-Image_ErrorCode OH_ImageNative_GetComponentTypes(OH_ImageNative *image, uint32_t **types, size_t *typeSize)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -98,6 +108,10 @@ Image_ErrorCode OH_ImageNative_GetByteBuffer(OH_ImageNative *image, uint32_t com
 
 Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
+<!--Device-Image_ErrorCode OH_ImageNative_GetByteBuffer(OH_ImageNative *image, uint32_t componentType, OH_NativeBuffer **nativeBuffer)--><!--Device-Image_ErrorCode OH_ImageNative_GetByteBuffer(OH_ImageNative *image, uint32_t componentType, OH_NativeBuffer **nativeBuffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -106,7 +120,7 @@ Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi
 | -- | -- |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) *image | Pointer to an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | uint32_t componentType | Component type. The value is obtained using the [OH_ImageNative_GetComponentTypes](capi-image-native-h.md#oh_imagenative_getcomponenttypes) API. |
-| OH_NativeBuffer **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) object. |
+| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) object. |
 
 **Returns**:
 
@@ -123,6 +137,10 @@ Image_ErrorCode OH_ImageNative_GetBufferSize(OH_ImageNative *image, uint32_t com
 **Description**
 
 Obtains the size of the buffer corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
+
+<!--Device-Image_ErrorCode OH_ImageNative_GetBufferSize(OH_ImageNative *image, uint32_t componentType, size_t *size)--><!--Device-Image_ErrorCode OH_ImageNative_GetBufferSize(OH_ImageNative *image, uint32_t componentType, size_t *size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -150,6 +168,10 @@ Image_ErrorCode OH_ImageNative_GetRowStride(OH_ImageNative *image, uint32_t comp
 
 Obtains the row stride corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
+<!--Device-Image_ErrorCode OH_ImageNative_GetRowStride(OH_ImageNative *image, uint32_t componentType, int32_t *rowStride)--><!--Device-Image_ErrorCode OH_ImageNative_GetRowStride(OH_ImageNative *image, uint32_t componentType, int32_t *rowStride)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -175,6 +197,10 @@ Image_ErrorCode OH_ImageNative_GetPixelStride(OH_ImageNative *image, uint32_t co
 **Description**
 
 Obtains the pixel stride corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
+
+<!--Device-Image_ErrorCode OH_ImageNative_GetPixelStride(OH_ImageNative *image, uint32_t componentType, int32_t *pixelStride)--><!--Device-Image_ErrorCode OH_ImageNative_GetPixelStride(OH_ImageNative *image, uint32_t componentType, int32_t *pixelStride)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -202,6 +228,10 @@ Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *time
 
 Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. Timestamps, measured in nanoseconds, are usually monotonically increasing.
 
+<!--Device-Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *timestamp)--><!--Device-Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *timestamp)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -227,6 +257,10 @@ Image_ErrorCode OH_ImageNative_Release(OH_ImageNative *image)
 
 Releases an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
+<!--Device-Image_ErrorCode OH_ImageNative_Release(OH_ImageNative *image)--><!--Device-Image_ErrorCode OH_ImageNative_Release(OH_ImageNative *image)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -250,6 +284,10 @@ Image_ErrorCode OH_ImageNative_GetColorSpace(OH_ImageNative *image, int32_t *col
 **Description**
 
 Obtains the color space in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
+
+<!--Device-Image_ErrorCode OH_ImageNative_GetColorSpace(OH_ImageNative *image, int32_t *colorSpaceName)--><!--Device-Image_ErrorCode OH_ImageNative_GetColorSpace(OH_ImageNative *image, int32_t *colorSpaceName)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 23
 
@@ -276,6 +314,10 @@ Image_ErrorCode OH_ImageNative_GetFormat(OH_ImageNative *image, OH_NativeBuffer_
 
 Obtains the image format in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
+<!--Device-Image_ErrorCode OH_ImageNative_GetFormat(OH_ImageNative *image, OH_NativeBuffer_Format *format)--><!--Device-Image_ErrorCode OH_ImageNative_GetFormat(OH_ImageNative *image, OH_NativeBuffer_Format *format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 23
 
 **Parameters**:
@@ -300,6 +342,10 @@ Image_ErrorCode OH_ImageNative_GetBufferData(OH_ImageNative *image, OH_ImageBuff
 **Description**
 
 Obtains the image buffer data object in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
+
+<!--Device-Image_ErrorCode OH_ImageNative_GetBufferData(OH_ImageNative *image, OH_ImageBufferData *imageBufferData)--><!--Device-Image_ErrorCode OH_ImageNative_GetBufferData(OH_ImageNative *image, OH_ImageBufferData *imageBufferData)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 23
 

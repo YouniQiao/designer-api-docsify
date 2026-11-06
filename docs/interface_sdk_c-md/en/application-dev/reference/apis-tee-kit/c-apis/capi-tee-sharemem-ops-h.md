@@ -6,9 +6,11 @@ Provides  APIs for developers to apply for shared memory.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -33,6 +35,10 @@ void *tee_alloc_sharemem_aux(const struct tee_uuid *uuid, uint32_t size)
 **Description**
 
 Alloc shared memory in TEE.
+
+<!--Device-void *tee_alloc_sharemem_aux(const struct tee_uuid *uuid, uint32_t size)--><!--Device-void *tee_alloc_sharemem_aux(const struct tee_uuid *uuid, uint32_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -59,6 +65,10 @@ void *tee_alloc_coherent_sharemem_aux(const struct tee_uuid *uuid, uint32_t size
 
 Alloc continuous shared memory in TEE.
 
+<!--Device-void *tee_alloc_coherent_sharemem_aux(const struct tee_uuid *uuid, uint32_t size)--><!--Device-void *tee_alloc_coherent_sharemem_aux(const struct tee_uuid *uuid, uint32_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -84,6 +94,10 @@ uint32_t tee_free_sharemem(void *addr, uint32_t size)
 
 Free the shared memory in TEE.
 
+<!--Device-uint32_t tee_free_sharemem(void *addr, uint32_t size)--><!--Device-uint32_t tee_free_sharemem(void *addr, uint32_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -108,6 +122,10 @@ int32_t copy_from_sharemem(uint32_t src_task, uint64_t src, uint32_t src_size, u
 **Description**
 
 Copy shared memory from source task.
+
+<!--Device-int32_t copy_from_sharemem(uint32_t src_task, uint64_t src, uint32_t src_size, uintptr_t dst, uint32_t dst_size)--><!--Device-int32_t copy_from_sharemem(uint32_t src_task, uint64_t src, uint32_t src_size, uintptr_t dst, uint32_t dst_size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -136,6 +154,10 @@ int32_t copy_to_sharemem(uintptr_t src, uint32_t src_size, uint32_t dst_task, ui
 **Description**
 
 Copy shared memory to destination task.
+
+<!--Device-int32_t copy_to_sharemem(uintptr_t src, uint32_t src_size, uint32_t dst_task, uint64_t dst, uint32_t dst_size)--><!--Device-int32_t copy_to_sharemem(uintptr_t src, uint32_t src_size, uint32_t dst_task, uint64_t dst, uint32_t dst_size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

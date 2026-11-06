@@ -6,9 +6,11 @@ Provides APIs for cryptographic operations.<br> You can use these APIs to implem
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
@@ -17,16 +19,14 @@ Provides APIs for cryptographic operations.<br> You can use these APIs to implem
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [TEE_DH_OtherInfo](capi-teetrusted-tee-dh-otherinfo.md) | TEE_DH_OtherInfo | Defines a struct for TEE_DH_OtherInfo. |
-| [\_\_TEE_OperationInfo](capi-teetrusted---tee-operationinfo.md) | - | Defines the operation information. |
+| [\_\_TEE_OperationInfo](capi-teetrusted---tee-operationinfo.md) | TEE_OperationInfo | Defines the operation information. |
 | [TEE_OperationInfoKey](capi-teetrusted-tee-operationinfokey.md) | TEE_OperationInfoKey | Defines the key information stored in the <b>OperationInfo</b>. |
 | [TEE_OperationInfoMultiple](capi-teetrusted-tee-operationinfomultiple.md) | TEE_OperationInfoMultiple | Defines information about an operation. |
-| [\_\_TEE_OperationHandle](capi-teetrusted---tee-operationhandle.md) | - | Defines the cryptographic operation handle. |
+| [\_\_TEE_OperationHandle](capi-teetrusted---tee-operationhandle.md) | TEE_OperationHandleVar | Defines the cryptographic operation handle. |
 | [crypto_uint2uint](capi-teetrusted-crypto-uint2uint.md) | crypto_uint2uint | Defines the data used for conversion of integers. |
 | [peration_src_dest](capi-teetrusted-peration-src-dest.md) | - | Defines a structure to hold the input and output data. |
 | [peration_ae_init](capi-teetrusted-peration-ae-init.md) | - | Defines the AE initialization data. |
-| [TEE_OperationInfo](capi-teetrusted-tee-operationinfo.md) | TEE_OperationInfo | Defines a struct for \_\_TEE_OperationInfo. |
-| [TEE_OperationHandleVar](capi-teetrusted-tee-operationhandlevar.md) | TEE_OperationHandleVar | Defines the <b>\_\_TEE_OperationHandle</b> struct. |
-| [TEE_ObjectHandleVar](capi-teetrusted-tee-objecthandlevar.md) | TEE_ObjectHandleVar | Defines the <b>\_\_TEE_ObjectHandle</b> struct. |
+| [\_\_TEE_ObjectHandle](capi-teetrusted---tee-objecthandle.md) | TEE_ObjectHandleVar | Defines the <b>\_\_TEE_ObjectHandle</b> struct. |
 
 ### Enum
 
@@ -108,6 +108,10 @@ enum __TEE_Operation_Constants
 
 Enumerates the cryptographic operation handles.
 
+<!--Device-__TEE_Operation_Constants--><!--Device-__TEE_Operation_Constants-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -130,6 +134,10 @@ enum __tee_crypto_algorithm_id
 **Description**
 
 Enumerates the cryptographic algorithms.
+
+<!--Device-__tee_crypto_algorithm_id--><!--Device-__tee_crypto_algorithm_id-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -247,6 +255,10 @@ enum TEE_ECC_CURVE
 
 Enumerates the Elliptic-Curve Cryptography (ECC) curves supported.
 
+<!--Device-TEE_ECC_CURVE--><!--Device-TEE_ECC_CURVE-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -269,6 +281,10 @@ enum TEE_DH_HASH_Mode
 
 Enumerates the Mask Generation Function (MGF1) modes.
 
+<!--Device-TEE_DH_HASH_Mode--><!--Device-TEE_DH_HASH_Mode-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -290,6 +306,10 @@ enum TEE_DH_OpMode_t
 
 Enumerates the Diffie-Hellman operation modes.
 
+<!--Device-TEE_DH_OpMode_t--><!--Device-TEE_DH_OpMode_t-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -307,6 +327,10 @@ enum TEE_DH_DerivFuncMode
 **Description**
 
 Defines an enum for TEE_DH_DerivFuncMode.
+
+<!--Device-TEE_DH_DerivFuncMode--><!--Device-TEE_DH_DerivFuncMode-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -330,6 +354,10 @@ enum __TEE_DK_ObjectAttribute
 
 Enumerates the object attributes for cryptographic operations.
 
+<!--Device-__TEE_DK_ObjectAttribute--><!--Device-__TEE_DK_ObjectAttribute-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -348,6 +376,10 @@ enum __TEE_OperationMode
 **Description**
 
 Enumerates the cryptographic operation modes.
+
+<!--Device-__TEE_OperationMode--><!--Device-__TEE_OperationMode-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -371,6 +403,10 @@ enum tee_operation_state
 
 Enumerates the cryptographic operation states.
 
+<!--Device-tee_operation_state--><!--Device-tee_operation_state-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
@@ -390,6 +426,10 @@ TEE_Result TEE_AllocateOperation(TEE_OperationHandle *operation, uint32_t algori
 **Description**
 
 Allocates an operation handle.
+
+<!--Device-TEE_Result TEE_AllocateOperation(TEE_OperationHandle *operation, uint32_t algorithm, uint32_t mode, uint32_t maxKeySize)--><!--Device-TEE_Result TEE_AllocateOperation(TEE_OperationHandle *operation, uint32_t algorithm, uint32_t mode, uint32_t maxKeySize)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -418,6 +458,10 @@ void TEE_FreeOperation(TEE_OperationHandle operation)
 
 Releases an operation handle.
 
+<!--Device-void TEE_FreeOperation(TEE_OperationHandle operation)--><!--Device-void TEE_FreeOperation(TEE_OperationHandle operation)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -436,6 +480,10 @@ void TEE_GetOperationInfo(const TEE_OperationHandle operation, TEE_OperationInfo
 
 Obtains operation information.
 
+<!--Device-void TEE_GetOperationInfo(const TEE_OperationHandle operation, TEE_OperationInfo *operationInfo)--><!--Device-void TEE_GetOperationInfo(const TEE_OperationHandle operation, TEE_OperationInfo *operationInfo)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -443,7 +491,7 @@ Obtains operation information.
 | Parameter | Description |
 | -- | -- |
 | const TEE_OperationHandle operation | Indicates the operation handle. |
-| [TEE_OperationInfo](capi-teetrusted-tee-operationinfo.md) *operationInfo | Indicates the pointer to the operation information. |
+| [TEE_OperationInfo](capi-teetrusted---tee-operationinfo.md) *operationInfo | Indicates the pointer to the operation information. |
 
 ### TEE_ResetOperation()
 
@@ -454,6 +502,10 @@ void TEE_ResetOperation(TEE_OperationHandle operation)
 **Description**
 
 Resets an operation handle.
+
+<!--Device-void TEE_ResetOperation(TEE_OperationHandle operation)--><!--Device-void TEE_ResetOperation(TEE_OperationHandle operation)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -472,6 +524,10 @@ TEE_Result TEE_SetOperationKey(TEE_OperationHandle operation, const TEE_ObjectHa
 **Description**
 
 Sets the key for an operation.
+
+<!--Device-TEE_Result TEE_SetOperationKey(TEE_OperationHandle operation, const TEE_ObjectHandle key)--><!--Device-TEE_Result TEE_SetOperationKey(TEE_OperationHandle operation, const TEE_ObjectHandle key)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -497,6 +553,10 @@ TEE_Result TEE_SetOperationKey2(TEE_OperationHandle operation, const TEE_ObjectH
 **Description**
 
 Sets two keys for an operation.
+
+<!--Device-TEE_Result TEE_SetOperationKey2(TEE_OperationHandle operation, const TEE_ObjectHandle key1, const TEE_ObjectHandle key2)--><!--Device-TEE_Result TEE_SetOperationKey2(TEE_OperationHandle operation, const TEE_ObjectHandle key1, const TEE_ObjectHandle key2)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -524,6 +584,10 @@ void TEE_CopyOperation(TEE_OperationHandle dstOperation, const TEE_OperationHand
 
 Copies an operation handle.
 
+<!--Device-void TEE_CopyOperation(TEE_OperationHandle dstOperation, const TEE_OperationHandle srcOperation)--><!--Device-void TEE_CopyOperation(TEE_OperationHandle dstOperation, const TEE_OperationHandle srcOperation)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -542,6 +606,10 @@ void TEE_CipherInit(TEE_OperationHandle operation, const void *IV, size_t IVLen)
 **Description**
 
 Initializes the context to start a cipher operation.
+
+<!--Device-void TEE_CipherInit(TEE_OperationHandle operation, const void *IV, size_t IVLen)--><!--Device-void TEE_CipherInit(TEE_OperationHandle operation, const void *IV, size_t IVLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -562,6 +630,10 @@ TEE_Result TEE_CipherUpdate(TEE_OperationHandle operation, const void *srcData, 
 **Description**
 
 Updates the data for a cipher operation.
+
+<!--Device-TEE_Result TEE_CipherUpdate(TEE_OperationHandle operation, const void *srcData, size_t srcLen, void *destData, size_t *destLen)--><!--Device-TEE_Result TEE_CipherUpdate(TEE_OperationHandle operation, const void *srcData, size_t srcLen, void *destData, size_t *destLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -591,6 +663,10 @@ TEE_Result TEE_CipherDoFinal(TEE_OperationHandle operation, const void *srcData,
 
 Finalizes a cipher operation.
 
+<!--Device-TEE_Result TEE_CipherDoFinal(TEE_OperationHandle operation, const void *srcData, size_t srcLen, void *destData, size_t *destLen)--><!--Device-TEE_Result TEE_CipherDoFinal(TEE_OperationHandle operation, const void *srcData, size_t srcLen, void *destData, size_t *destLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -619,6 +695,10 @@ void TEE_DigestUpdate(TEE_OperationHandle operation, const void *chunk, size_t c
 
 Updates the digest.
 
+<!--Device-void TEE_DigestUpdate(TEE_OperationHandle operation, const void *chunk, size_t chunkSize)--><!--Device-void TEE_DigestUpdate(TEE_OperationHandle operation, const void *chunk, size_t chunkSize)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -638,6 +718,10 @@ TEE_Result TEE_DigestDoFinal(TEE_OperationHandle operation, const void *chunk, s
 **Description**
 
 Finalizes the message digest operation.
+
+<!--Device-TEE_Result TEE_DigestDoFinal(TEE_OperationHandle operation, const void *chunk, size_t chunkLen, void *hash, size_t *hashLen)--><!--Device-TEE_Result TEE_DigestDoFinal(TEE_OperationHandle operation, const void *chunk, size_t chunkLen, void *hash, size_t *hashLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -667,6 +751,10 @@ void TEE_MACInit(TEE_OperationHandle operation, void *IV, size_t IVLen)
 
 Initializes a MAC operation.
 
+<!--Device-void TEE_MACInit(TEE_OperationHandle operation, void *IV, size_t IVLen)--><!--Device-void TEE_MACInit(TEE_OperationHandle operation, void *IV, size_t IVLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -687,6 +775,10 @@ void TEE_MACUpdate(TEE_OperationHandle operation, const void *chunk, size_t chun
 
 Updates the MAC.
 
+<!--Device-void TEE_MACUpdate(TEE_OperationHandle operation, const void *chunk, size_t chunkSize)--><!--Device-void TEE_MACUpdate(TEE_OperationHandle operation, const void *chunk, size_t chunkSize)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -706,6 +798,10 @@ TEE_Result TEE_MACComputeFinal(TEE_OperationHandle operation, const void *messag
 **Description**
 
 MAC Finalizes the MAC operation with a last chunk of message and computes the MAC.
+
+<!--Device-TEE_Result TEE_MACComputeFinal(TEE_OperationHandle operation, const void *message, size_t messageLen, void *mac, size_t *macLen)--><!--Device-TEE_Result TEE_MACComputeFinal(TEE_OperationHandle operation, const void *message, size_t messageLen, void *mac, size_t *macLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -735,6 +831,10 @@ TEE_Result TEE_MACCompareFinal(TEE_OperationHandle operation, const void *messag
 
 Finalizes the MAC operation and compares the MAC with the one passed in.
 
+<!--Device-TEE_Result TEE_MACCompareFinal(TEE_OperationHandle operation, const void *message, size_t messageLen, const void *mac, const size_t macLen)--><!--Device-TEE_Result TEE_MACCompareFinal(TEE_OperationHandle operation, const void *message, size_t messageLen, const void *mac, const size_t macLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -763,6 +863,10 @@ void TEE_DeriveKey(TEE_OperationHandle operation, const TEE_Attribute *params, u
 
 Derives a key.
 
+<!--Device-void TEE_DeriveKey(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, TEE_ObjectHandle derivedKey)--><!--Device-void TEE_DeriveKey(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, TEE_ObjectHandle derivedKey)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -784,6 +888,10 @@ void TEE_GenerateRandom(void *randomBuffer, size_t randomBufferLen)
 
 Generates random data.
 
+<!--Device-void TEE_GenerateRandom(void *randomBuffer, size_t randomBufferLen)--><!--Device-void TEE_GenerateRandom(void *randomBuffer, size_t randomBufferLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -802,6 +910,10 @@ TEE_Result TEE_AEInit(TEE_OperationHandle operation, void *nonce, size_t nonceLe
 **Description**
 
 Initializes an AE operation.
+
+<!--Device-TEE_Result TEE_AEInit(TEE_OperationHandle operation, void *nonce, size_t nonceLen, uint32_t tagLen, size_t AADLen, size_t payloadLen)--><!--Device-TEE_Result TEE_AEInit(TEE_OperationHandle operation, void *nonce, size_t nonceLen, uint32_t tagLen, size_t AADLen, size_t payloadLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -832,6 +944,10 @@ void TEE_AEUpdateAAD(TEE_OperationHandle operation, const void *AADdata, size_t 
 
 Updates the AAD in an AE operation.
 
+<!--Device-void TEE_AEUpdateAAD(TEE_OperationHandle operation, const void *AADdata, size_t AADdataLen)--><!--Device-void TEE_AEUpdateAAD(TEE_OperationHandle operation, const void *AADdata, size_t AADdataLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -851,6 +967,10 @@ TEE_Result TEE_AEUpdate(TEE_OperationHandle operation, void *srcData, size_t src
 **Description**
 
 Updates data for an AE operation.
+
+<!--Device-TEE_Result TEE_AEUpdate(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen)--><!--Device-TEE_Result TEE_AEUpdate(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -879,6 +999,10 @@ TEE_Result TEE_AEEncryptFinal(TEE_OperationHandle operation, void *srcData, size
 **Description**
 
 Finalizes the AE encryption operation.
+
+<!--Device-TEE_Result TEE_AEEncryptFinal(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen, void *tag, size_t *tagLen)--><!--Device-TEE_Result TEE_AEEncryptFinal(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen, void *tag, size_t *tagLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -910,6 +1034,10 @@ TEE_Result TEE_AEDecryptFinal(TEE_OperationHandle operation, void *srcData, size
 
 Finalizes an AE decryption operation.
 
+<!--Device-TEE_Result TEE_AEDecryptFinal(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen, void *tag, size_t tagLen)--><!--Device-TEE_Result TEE_AEDecryptFinal(TEE_OperationHandle operation, void *srcData, size_t srcLen, void *destData, size_t *destLen, void *tag, size_t tagLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -939,6 +1067,10 @@ TEE_Result TEE_AsymmetricEncrypt(TEE_OperationHandle operation, const TEE_Attrib
 **Description**
 
 Performs asymmetric encryption.
+
+<!--Device-TEE_Result TEE_AsymmetricEncrypt(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *srcData, size_t srcLen, void *destData, size_t *destLen)--><!--Device-TEE_Result TEE_AsymmetricEncrypt(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *srcData, size_t srcLen, void *destData, size_t *destLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -970,6 +1102,10 @@ TEE_Result TEE_AsymmetricDecrypt(TEE_OperationHandle operation, const TEE_Attrib
 
 Performs asymmetric decryption.
 
+<!--Device-TEE_Result TEE_AsymmetricDecrypt(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *srcData, size_t srcLen, void *destData, size_t *destLen)--><!--Device-TEE_Result TEE_AsymmetricDecrypt(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *srcData, size_t srcLen, void *destData, size_t *destLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -999,6 +1135,10 @@ TEE_Result TEE_AsymmetricSignDigest(TEE_OperationHandle operation, const TEE_Att
 **Description**
 
 Signs a message digest in an asymmetric operation.
+
+<!--Device-TEE_Result TEE_AsymmetricSignDigest(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *digest, size_t digestLen, void *signature, size_t *signatureLen)--><!--Device-TEE_Result TEE_AsymmetricSignDigest(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *digest, size_t digestLen, void *signature, size_t *signatureLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -1030,6 +1170,10 @@ TEE_Result TEE_AsymmetricVerifyDigest(TEE_OperationHandle operation, const TEE_A
 
 Verifies a message digest signature in an asymmetric operation.
 
+<!--Device-TEE_Result TEE_AsymmetricVerifyDigest(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *digest, size_t digestLen, void *signature, size_t signatureLen)--><!--Device-TEE_Result TEE_AsymmetricVerifyDigest(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *digest, size_t digestLen, void *signature, size_t signatureLen)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -1060,6 +1204,10 @@ TEE_Result TEE_GetOperationInfoMultiple(TEE_OperationHandle operation, TEE_Opera
 
 Obtains information about the operation involving multiple keys.
 
+<!--Device-TEE_Result TEE_GetOperationInfoMultiple(TEE_OperationHandle operation, TEE_OperationInfoMultiple *operationInfoMultiple, const size_t *operationSize)--><!--Device-TEE_Result TEE_GetOperationInfoMultiple(TEE_OperationHandle operation, TEE_OperationInfoMultiple *operationInfoMultiple, const size_t *operationSize)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -1085,6 +1233,10 @@ TEE_Result TEE_IsAlgorithmSupported(uint32_t algId, uint32_t element)
 **Description**
 
 Checks whether the algorithm is supported.
+
+<!--Device-TEE_Result TEE_IsAlgorithmSupported(uint32_t algId, uint32_t element)--><!--Device-TEE_Result TEE_IsAlgorithmSupported(uint32_t algId, uint32_t element)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

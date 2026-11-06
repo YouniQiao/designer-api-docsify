@@ -8,11 +8,13 @@ typedef struct ArkUI_Rect {...} ArkUI_Rect
 
 Defines a rectangular area.
 
+<!--Device-typedef struct ArkUI_Rect {...} ArkUI_Rect--><!--Device-typedef struct ArkUI_Rect {...} ArkUI_Rect-End-->
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **Header file**: [common_type.h](capi-common-type-h.md)
 
@@ -22,9 +24,9 @@ Defines a rectangular area.
 
 | Name | Description |
 | -- | -- |
-| float x |  |
-| float y |  |
-| float width |  |
-| float height |  |
+| float x | X coordinate of the rectangular area.<br>**Since**: 12 |
+| float y | Y coordinate of the rectangular area.<br>**Since**: 12 |
+| float width | Width of the rectangular area.<br>**Since**: 12 |
+| float height | Height of the rectangular area.<br>**Since**: 12 |
 
 
