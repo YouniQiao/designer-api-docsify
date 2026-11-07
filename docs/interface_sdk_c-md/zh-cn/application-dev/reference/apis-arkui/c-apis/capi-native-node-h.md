@@ -146,7 +146,7 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_RegisterDrawCallbackOnNodeHandle(ArkUI_NodeHandle node, void* userData, void (\*onDrawCompleted)(void* userData))](#oh_arkui_registerdrawcallbackonnodehandle) | - | Registers a callback for node when draw is completed. |
 | [int32_t OH_ArkUI_UnregisterLayoutCallbackOnNodeHandle(ArkUI_NodeHandle node)](#oh_arkui_unregisterlayoutcallbackonnodehandle) | - | Unregisters the layout completed callback for node. |
 | [int32_t OH_ArkUI_UnregisterDrawCallbackOnNodeHandle(ArkUI_NodeHandle node)](#oh_arkui_unregisterdrawcallbackonnodehandle) | - | Unregisters the draw completed callback for node. |
-| [int32_t OH_ArkUI_GetNodeSnapshot(ArkUI_NodeHandle node, ArkUI_SnapshotOptions* snapshotOptions, OH_PixelmapNative** pixelmap)](#oh_arkui_getnodesnapshot) | - | Obtains a snapshot of a given component. If the node is not in the component tree or has not been rendered, the snapshot operation will fail. When the <b>Pixelmap</b> object created is no longer in use, it should be released by calling [OH_PixelmapNative_Release](../../apis-image-kit/c-apis/capi-pixelmap-native-h.md#oh_pixelmapnative_release). |
+| [int32_t OH_ArkUI_GetNodeSnapshot(ArkUI_NodeHandle node, ArkUI_SnapshotOptions* snapshotOptions, OH_PixelmapNative** pixelmap)](#oh_arkui_getnodesnapshot) | - | 同步获取给定节点的快照像素图。如果该节点不在树中或者尚未渲染，则会返回错误。 注意：当不再使用该像素图时，应通过 OH_PixelmapNative_Release 释放它。 |
 | [int32_t OH_ArkUI_GetNodeSnapshotSizeLimitation(int32_t* maxWidth, int32_t* maxHeight)](#oh_arkui_getnodesnapshotsizelimitation) | - | Query the size limitation of the component snapshot. |
 | [int32_t OH_ArkUI_NodeUtils_GetPositionToParent(ArkUI_NodeHandle node, ArkUI_IntOffset* globalOffset)](#oh_arkui_nodeutils_getpositiontoparent) | - | 获取目标节点相对于父节点的偏移值，单位：px。 |
 | [ArkUI_ErrorCode OH_ArkUI_AddSupportedUIStates(ArkUI_NodeHandle node, int32_t uiStates, void (statesChangeHandler)(int32_t currentStates, void* userData), bool excludeInner, void* userData)](#oh_arkui_addsupporteduistates) | - | 设置组件支持的多态样式状态。为了更高效地处理，需传入所关注的状态值及对应的状态处理函数，当关注的状态发生时，处理函数会被执行。 可在回调中根据当前状态调整UI样式。当在同一个节点上多次调用该方法时，将以最后一次传入的状态及处理函数为准。 有些类型的组件节点，系统内部已有对某些状态的默认处理。例如，Button组件默认具备对PRESSED状态的样式变化，当在此类组件上使用此方法自定义状态处理时， 会先应用系统默认样式变化，再执行自定义的样式处理，最终效果为两者叠加。 可以通过指定excludeInner为true来禁用系统内部的默认样式效果，但这通常取决于系统内部实现规范是否允许。当调用该函数时，传入的statesChangeHandler函数会立即执行一次， 且无需特意注册对NORMAL状态的监听，只要注册了非NORMAL状态，当状态从任意状态变化回NORMAL时，系统都会进行回调，以便应用进行样式复原。 |
@@ -2835,27 +2835,27 @@ int32_t OH_ArkUI_GetNodeSnapshot(ArkUI_NodeHandle node, ArkUI_SnapshotOptions* s
 
 **描述：**
 
-Obtains a snapshot of a given component. If the node is not in the component tree or has not been rendered, the snapshot operation will fail. When the <b>Pixelmap</b> object created is no longer in use, it should be released by calling [OH_PixelmapNative_Release](../../apis-image-kit/c-apis/capi-pixelmap-native-h.md#oh_pixelmapnative_release).
+同步获取给定节点的快照像素图。如果该节点不在树中或者尚未渲染，则会返回错误。 注意：当不再使用该像素图时，应通过 OH_PixelmapNative_Release 释放它。
 
 <!--Device-int32_t OH_ArkUI_GetNodeSnapshot(ArkUI_NodeHandle node, ArkUI_SnapshotOptions* snapshotOptions, OH_PixelmapNative** pixelmap)--><!--Device-int32_t OH_ArkUI_GetNodeSnapshot(ArkUI_NodeHandle node, ArkUI_SnapshotOptions* snapshotOptions, OH_PixelmapNative** pixelmap)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**起始版本：** 23
+**起始版本：** 15
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
-| ArkUI_SnapshotOptions* snapshotOptions | Snapshot settings. If the value is null, the default settings are used. Snapshot settings include scaling, color space, and dynamic range configuration. Scaling: floating-point value greater than 0. Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB). Dynamic range: [ArkUI_DynamicRangeMode](capi-image-h.md#arkui_dynamicrangemode). |
-| OH_PixelmapNative** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 待截图的目标节点 |
+| ArkUI_SnapshotOptions* snapshotOptions | 用于截图的给定配置，可以为空以使用默认值。 |
+| OH_PixelmapNative** pixelmap | 截图结果位图 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Result code. [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. Returns [ARKUI_ERROR_CODE_INTERNAL_ERROR](capi-error-code-h.md#arkui_errorcode) if the snapshot fails, returning a null pointer. Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_TIMEOUT](capi-error-code-h.md#arkui_errorcode) if the snapshot operation times out. Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_MODE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the provided color space or dynamic range mode is not supported. Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_AUTO_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the isAuto parameter of the color space or dynamic range mode is set to true for offscreen node snapshot. |
+| int32_t | 返回结果码。如果操作成功，返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。如果发生参数错误，返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。如果截图失败，返回空像素图，返回结果码为 [ARKUI_ERROR_CODE_INTERNAL_ERROR](capi-error-code-h.md#arkui_errorcode)。如果截图超时，返回结果码为 [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_TIMEOUT](capi-error-code-h.md#arkui_errorcode)。如果截图选项中的色彩空间或动态范围模式不被支持，返回结果码为 [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_MODE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode)。如果设置了 isAuto(true) 但不被支持，返回结果码为 [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_AUTO_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_GetNodeSnapshotSizeLimitation()
 
