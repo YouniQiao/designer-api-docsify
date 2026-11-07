@@ -61,6 +61,7 @@ import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorControll
 
 | Name | Description |
 | --- | --- |
+| [ApplicationShortcutCallbackInfo](arkts-arkui-arkui-uicontext-applicationshortcutcallbackinfo-i.md) | Provides information about the UI instance that triggers an application-level keyboard shortcut. |
 | [AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md) | The AtomicServiceBar interface provides the ability to set properties of the atomic service menu bar, including the visibility, background color, title content, title font style, and icon color, and also supports obtaining menu bar layout information and listening for layout changes. It is suitable for scenarios where you need to customize the appearance and behavior of the menu bar in atomic services. |
 | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Specifies the gesture callback phases to listen for (passing an empty array means no gesture callback stage is listened for). Notifications are sent only when the gesture triggers the specified phases. |
 | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Defines the information provided when a specific gesture callback is triggered. |

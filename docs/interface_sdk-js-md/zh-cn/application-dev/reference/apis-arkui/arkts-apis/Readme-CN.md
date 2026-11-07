@@ -609,6 +609,7 @@
   - [UIContext（系统接口）](arkts-arkui-arkui-uicontext-uicontext-c-sys.md)<!--DelEnd-->
   - [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md)
   - [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md)
+  - [ApplicationShortcutCallbackInfo](arkts-arkui-arkui-uicontext-applicationshortcutcallbackinfo-i.md)
   - [AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)
   <!--Del-->
   - [BackgroundLuminanceSamplingConfigs（系统接口）](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md)<!--DelEnd-->

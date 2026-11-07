@@ -61,6 +61,7 @@ import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorControll
 
 | 名称 | 说明 |
 | --- | --- |
+| [ApplicationShortcutCallbackInfo](arkts-arkui-arkui-uicontext-applicationshortcutcallbackinfo-i.md) | 应用级快捷键触发时的回调信息。 |
 | [AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md) | interface AtomicServiceBar |
 | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | 该参数用于指定需要监听的手势回调阶段（传入空数组时不监听任何手势回调阶段），仅当手势触发指定阶段时才会发送通知。 |
 | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | 特定手势回调函数触发时的信息。 |
