@@ -686,6 +686,38 @@ accessibilityVirtualNode(builder: CustomBuilder): T
 | --- | --- |
 | T | 返回当前对象。 |
 
+## agentControlMode
+
+```TypeScript
+agentControlMode(value: AgentControlMode | undefined): T
+```
+
+设置组件对Agent生成事件的输入管控级别。
+
+Agent生成的事件包括系统Agent生成的事件，以及具有ohos.permission.CONTROL_DEVICE权限的应用注入的事件。该设置适用于支持的Agent生成输入事件，例如触摸和鼠标事件，不影响用户生成的输入事件或其他注入事件。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonMethod-agentControlMode(value: AgentControlMode | undefined): T--><!--Device-CommonMethod-agentControlMode(value: AgentControlMode | undefined): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [AgentControlMode](../arkts-apis/arkts-arkui-agentcontrolmode-e.md) &#124; undefined | 是 | 系统Agent生成事件的输入管控级别。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
 ## align
 
 ```TypeScript

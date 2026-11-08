@@ -13,6 +13,7 @@
 | Name | Description |
 | --- | --- |
 | [AccessibilityHoverType](arkts-arkui-accessibilityhovertype-e.md) | Enumerates the accessibility hover action types. |
+| [AgentControlMode](arkts-arkui-agentcontrolmode-e.md) | Defines the input control mode for Agent-generated events. |
 | [Alignment](arkts-arkui-alignment-e.md) | Defines the alignment mode for child elements in the container drawing area. |
 | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | Enumerates animatable property types for component animations. |
 | [AnimationStatus](arkts-arkui-animationstatus-e.md) | Sets the animation playback status. |

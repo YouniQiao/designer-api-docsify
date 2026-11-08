@@ -13,6 +13,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [AccessibilityHoverType](arkts-arkui-accessibilityhovertype-e.md) | 辅助功能悬停事件的类型。 |
+| [AgentControlMode](arkts-arkui-agentcontrolmode-e.md) | 定义Agent生成事件的输入管控模式。 |
 | [Alignment](arkts-arkui-alignment-e.md) | 定义容器元素绘制区域内的子元素的对齐方式。 |
 | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | 用于动画的属性类型。 |
 | [AnimationStatus](arkts-arkui-animationstatus-e.md) | 用于动画播放状态。 |

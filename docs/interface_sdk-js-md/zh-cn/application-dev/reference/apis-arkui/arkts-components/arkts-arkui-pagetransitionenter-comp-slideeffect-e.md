@@ -31,7 +31,7 @@ Bottom
 ## END
 
 ```TypeScript
-END
+END = 6
 ```
 
 设置LTR入场时表示从右边滑入，退场时表示滑出到右边。RTL入场时表示从左边滑入，退场时表示滑出到左边。
@@ -42,7 +42,7 @@ END
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-SlideEffect-END--><!--Device-SlideEffect-END-End-->
+<!--Device-SlideEffect-END = 6--><!--Device-SlideEffect-END = 6-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +81,7 @@ Right
 ## START
 
 ```TypeScript
-START
+START = 5
 ```
 
 设置LTR入场时表示从左边滑入，退场时表示滑出到左边。RTL入场时表示从右边滑入，退场时表示滑出到右边。
@@ -92,7 +92,7 @@ START
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-SlideEffect-START--><!--Device-SlideEffect-START-End-->
+<!--Device-SlideEffect-START = 5--><!--Device-SlideEffect-START = 5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
