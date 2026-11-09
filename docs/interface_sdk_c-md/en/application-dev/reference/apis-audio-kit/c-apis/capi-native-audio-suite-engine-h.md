@@ -289,7 +289,7 @@ The application uses this interface for audio data processing.<br> The applicati
 | void* audioData | Audio data pointer, where user should read, unit is byte. |
 | int32_t requestFrameSize | Size of audio data user specified, unit is byte. |
 | int32_t* responseSize | Size of audio data the system really writes. |
-| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. |
+| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. True means all data processing has been completed and the application should no longer call this interface. False means data processing is not yet completed. |
 
 **Returns**:
 
@@ -320,7 +320,7 @@ The application uses this interface for audio data processing.<br> For most node
 | [OH_AudioSuitePipeline](capi-ohaudiosuite-oh-audiosuitepipelinestruct.md)* audioSuitePipeline | Reference created by OH_AudioSuiteEngine_CreatePipeline. |
 | [OH_AudioDataArray](capi-ohaudiosuite-oh-audiodataarray.md)* audioDataArray | Audio data array pointer, where user should read, The size of each one-dimensional array should be consistent. |
 | int32_t* responseSize | Size of audio data the system really writes, The system ensures that the data size filled for each one-dimensional array is consistent, unit is byte. |
-| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. |
+| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. True means all data processing has been completed and the application should no longer call this interface. False means data processing is not yet completed. |
 
 **Returns**:
 
@@ -494,7 +494,7 @@ Callback function of request data, Only [INPUT_NODE_TYPE_DEFAULT](capi-native-au
 | void* userData | User data which is passed by user. |
 | void* audioData | Audio data pointer, where user should fill in audio data. |
 | int32_t audioDataSize | Size of audio data that user should fill in, unit is byte. |
-| bool* finished | This boolean value indicates that all data of the application has been consumed since last execute [OH_AudioSuiteEngine_StartPipeline](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_startpipeline). |
+| bool* finished | This boolean value indicates that all data of the application has been consumed since last execute [OH_AudioSuiteEngine_StartPipeline](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_startpipeline). True means all data of the application has been consumed and the pipeline will no longer call this interface. False means the application still has data to be passed to the pipeline. |
 
 **Returns**:
 
@@ -640,7 +640,7 @@ Request to set the effect node bypass.<br> This command can only be set on an ef
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | Reference created by OH_AudioSuiteEngine_CreateNode. |
-| bool bypass | This parameter determines whether the node merely forwards data transparently. |
+| bool bypass | This parameter determines whether the node merely forwards data transparently. True means the effect node only passes data to the next node without performing any effect processing. False means the effect node performs normal effect processing on the data. |
 
 **Returns**:
 

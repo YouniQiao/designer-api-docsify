@@ -2,7 +2,7 @@
 
 ## 概述
 
-Declare audio download manager related interfaces.
+声明音频下载管理器相关接口。
 
 **库：** libohaudiosuite.so
 
@@ -221,7 +221,7 @@ int32_t OH_AudioSuite_PauseDownload(OH_AudioSuite_DownloadManager *downloadManag
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | <ul> <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result)如果执行成功</li> <li>202如果非系统应用程序调用此系统API。</li> <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM如果downloadManager或featureName为nullptr。</li> <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result)如果IPC通信失败或操作失败。</li> </ul> |
+| int32_t | <ul> <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result)如果执行成功</li> <li>202如果非系统应用程序调用此系统API。</li> <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result)如果downloadManager或featureName为nullptr。</li> <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result)如果IPC通信失败或操作失败。</li> </ul> |
 
 ### OH_AudioSuite_CancelDownload()
 
@@ -252,7 +252,7 @@ int32_t OH_AudioSuite_CancelDownload(OH_AudioSuite_DownloadManager *downloadMana
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | <ul> <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result)如果执行成功</li> <li>202如果非系统应用程序调用此系统API。</li> <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result)如果downloadManager或featureName为nullptr。</li> <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result)如果IPC通信失败或操作失败。</li> <li>AVPCOMMON_RESULT_ERROR_LINAL_STATE如果当前状态不允许取消。</li> </ul> |
+| int32_t | <ul> <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result)如果执行成功</li> <li>202如果非系统应用程序调用此系统API。</li> <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result)如果downloadManager或featureName为nullptr。</li> <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result)如果IPC通信失败或操作失败。</li> <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result)如果当前状态不允许取消。</li> </ul> |
 
 ### OH_AudioSuite_StartBackgroundDownload()
 

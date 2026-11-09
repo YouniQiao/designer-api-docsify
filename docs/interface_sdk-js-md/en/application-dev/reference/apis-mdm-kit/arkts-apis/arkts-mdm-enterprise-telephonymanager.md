@@ -40,6 +40,7 @@ import { telephonyManager } from '@kit.MDMKit';
 | [getIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-getincomingcallpolicynumbers-f.md#getincomingcallpolicynumbers-2) | Obtains the trustlist or blocklist for incoming calls. |
 | [getOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-getoutgoingcallpolicynumbers-f.md#getoutgoingcallpolicynumbers-1) | Obtains the trustlist or blocklist for outgoing calls. |
 | [getOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-getoutgoingcallpolicynumbers-f.md#getoutgoingcallpolicynumbers-2) | Obtains the trustlist or blocklist for outgoing calls. |
+| [getSmsMessages](arkts-mdm-telephonymanager-getsmsmessages-f.md#getsmsmessages-1) | Query SMS messages based on the specified time range and phone number. |
 | [hangupCalling](arkts-mdm-telephonymanager-hangupcalling-f.md#hangupcalling-1) | Ends the current call. Only carrier calls are supported, excluding MeeTime calls. For example, an enterprise device administrator can forcibly hang up a non-compliant call that an employee is currently on in enterprise security management scenarios. |
 | [isSimDisabled](arkts-mdm-telephonymanager-issimdisabled-f.md#issimdisabled-1) | Checks whether the SIM card in a specified slot is disabled. This API is applicable in scenarios where enterprise administrators need to check whether the SIM card disablement policy has taken effect. It helps administrators confirm the policy enforcement status and ensure that call control policies are correctly implemented. |
 | [removeIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-removeincomingcallpolicynumbers-f.md#removeincomingcallpolicynumbers-1) | Removes the trustlist or blocklist for incoming calls. If the list is not set, the removal fails. For example, an enterprise can use this API when lifting incoming call restrictions and restoring employees' normal answering permissions. |
@@ -53,4 +54,5 @@ import { telephonyManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [CallLogInfo](arkts-mdm-telephonymanager-callloginfo-i.md) | Call log information. Provides detailed information about a call log entry, including call duration, direction (incoming/outgoing), timestamp, and SIM card slot used. |
+| [SmsMessageInfo](arkts-mdm-telephonymanager-smsmessageinfo-i.md) | SMS message information. Provides detailed information about an SMS message, including the message content, sender/receiver information, timestamp, and SIM card slot used. |
 | [TelephonyQueryConfig](arkts-mdm-telephonymanager-telephonyqueryconfig-i.md) | Config for querying SMS messages and call logs. Provides common query parameters for telephony-related queries. |

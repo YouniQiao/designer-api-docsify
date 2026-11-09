@@ -59,7 +59,9 @@
   - [setEnterpriseInfo（系统接口）](arkts-mdm-adminmanager-setenterpriseinfo-f-sys.md)<!--DelEnd-->
   - [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md)
   - [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md)
+  - [subscribeSmsEvent](arkts-mdm-adminmanager-subscribesmsevent-f.md)
   - [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md)
+  - [unsubscribeSmsEvent](arkts-mdm-adminmanager-unsubscribesmsevent-f.md)
   <!--Del-->
   - [subscribeManagedEvent（系统接口）](arkts-mdm-adminmanager-subscribemanagedevent-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -227,6 +229,7 @@
   - [ExternalStorageDeviceInfo](arkts-mdm-common-externalstoragedeviceinfo-i.md)
   - [InstallationResult](arkts-mdm-common-installationresult-i.md)
   - [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md)
+  - [SmsReceiveInfo](arkts-mdm-common-smsreceiveinfo-i.md)
   - [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md)
   - [DiskType](arkts-mdm-common-disktype-e.md)
   - [ManagedFeature](arkts-mdm-common-managedfeature-e.md)
@@ -531,6 +534,7 @@
   - [getDefaultData](arkts-mdm-telephonymanager-getdefaultdata-f.md)
   - [getIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-getincomingcallpolicynumbers-f.md)
   - [getOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-getoutgoingcallpolicynumbers-f.md)
+  - [getSmsMessages](arkts-mdm-telephonymanager-getsmsmessages-f.md)
   - [hangupCalling](arkts-mdm-telephonymanager-hangupcalling-f.md)
   - [isSimDisabled](arkts-mdm-telephonymanager-issimdisabled-f.md)
   - [removeIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-removeincomingcallpolicynumbers-f.md)
@@ -539,6 +543,7 @@
   - [setSimDisabled](arkts-mdm-telephonymanager-setsimdisabled-f.md)
   - [setSimEnabled](arkts-mdm-telephonymanager-setsimenabled-f.md)
   - [CallLogInfo](arkts-mdm-telephonymanager-callloginfo-i.md)
+  - [SmsMessageInfo](arkts-mdm-telephonymanager-smsmessageinfo-i.md)
   - [TelephonyQueryConfig](arkts-mdm-telephonymanager-telephonyqueryconfig-i.md)
 - [@ohos.enterprise.usbManager（USB管理）](arkts-mdm-enterprise-usbmanager.md)
   - [addAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-addallowedopticaldiscdriveburnusbdevices-f.md)

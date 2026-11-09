@@ -1913,7 +1913,7 @@ requestSystemInputCapability(type: InputCapabilityType): Promise<void>
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | 输入法管理服务错误。可能原因：系统错误，如空指针、IPC异常。 |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | 输入法客户端断开连接。 |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | 当前输入法应用不是系统配置的默认输入法。 |
-| 12800029 | 输入类型不支持。 |
+| [12800029](../errorcode-inputmethod-framework.md#12800029-输入类型不支持) | 输入类型不支持。 |
 
 ## sendMessage
 

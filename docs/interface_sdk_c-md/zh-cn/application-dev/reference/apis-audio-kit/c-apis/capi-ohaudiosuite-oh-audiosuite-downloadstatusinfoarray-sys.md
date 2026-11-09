@@ -26,7 +26,7 @@ struct OH_AudioSuite_DownloadStatusInfoArray {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 数组大小。<br>**起始版本：** 26.0.0 |
+| uint32_t size | 下载状态信息指针数组大小。<br>**起始版本：** 26.0.0 |
 | OH_AudioSuite_DownloadStatusInfo **downloadStatusInfo | 下载状态信息指针数组。<br>**起始版本：** 26.0.0 |
 
 

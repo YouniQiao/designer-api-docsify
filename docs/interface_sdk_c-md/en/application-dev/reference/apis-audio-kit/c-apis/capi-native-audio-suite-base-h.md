@@ -90,8 +90,8 @@ Define audio node type.
 
 | Enum item | Description |
 | -- | -- |
-| INPUT_NODE_TYPE_DEFAULT = 1 | default input node type, this input node type supports getting audio data from application.<br>**Since**: 22 |
-| OUTPUT_NODE_TYPE_DEFAULT = 101 | default output node type, this output node type supports providing audio data to the application.<br>**Since**: 22 |
+| INPUT_NODE_TYPE_DEFAULT = 1 | Default input node type, this input node type supports getting audio data from application.<br>**Since**: 22 |
+| OUTPUT_NODE_TYPE_DEFAULT = 101 | Default output node type, this output node type supports providing audio data to the application.<br>**Since**: 22 |
 | EFFECT_NODE_TYPE_EQUALIZER = 201 | Equalization node type. The audio format output by the equalizer node is as follows: Sample rate: 48000 Hz. Sample format: [AUDIO_SAMPLE_S16LE](capi-native-audio-suite-base-h.md#oh_audio_sampleformat). Channels: 2.<br>**Since**: 22 |
 | EFFECT_NODE_TYPE_NOISE_REDUCTION = 202 | Noise reduction node type. The audio format output by the noise reduction node is as follows: Sample rate: 16000 Hz. Sample format: [AUDIO_SAMPLE_S16LE](capi-native-audio-suite-base-h.md#oh_audio_sampleformat). Channels: 1.<br>**Since**: 22 |
 | EFFECT_NODE_TYPE_SOUND_FIELD = 203 | Sound field node type. Support sound field type [OH_SoundFieldType](capi-native-audio-suite-base-h.md#oh_soundfieldtype). The audio format output by the sound field node is as follows: Sample rate: 48000 Hz. Sample format: [AUDIO_SAMPLE_S16LE](capi-native-audio-suite-base-h.md#oh_audio_sampleformat). Channels: 2.<br>**Since**: 22 |
@@ -365,8 +365,8 @@ Define speaker gender in change voice option
 
 | Enum item | Description |
 | -- | -- |
-| PURE_VOICE_CHANGE_FEMALE = 1 | set female voice.<br>**Since**: 23 |
-| PURE_VOICE_CHANGE_MALE = 2 | set male voice.<br>**Since**: 23 |
+| PURE_VOICE_CHANGE_FEMALE = 1 | Set female voice.<br>**Since**: 23 |
+| PURE_VOICE_CHANGE_MALE = 2 | Set male voice.<br>**Since**: 23 |
 
 ### OH_AudioSuite_PureVoiceChangeType
 

@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-arkts-->
 
-- [@arkts.collections（Defines the collections for ArkTS）](arkts-arkts-collections.md)
+- [@arkts.collections（定义ArkTS容器集）](arkts-arkts-collections.md)
   - [Array](arkts-arkts-collections-array-c.md)
   - [ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md)
   - [BitVector](arkts-arkts-collections-bitvector-c.md)

@@ -58,7 +58,7 @@ The application uses this interface for audio data and meta data processing.<br>
 | [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md)* metaFrame | Pointer to audio meta data frame structure. |
 | int32_t* responseAudioSize | Size of audio data the interface really write, unit is byte. |
 | int32_t* responseMetaSize | Size of meta data the interface really write, unit is byte. |
-| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. |
+| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. True means all data processing has been completed and the application should no longer call this interface. False means data processing is not yet completed. |
 
 **Returns**:
 
@@ -154,7 +154,7 @@ Callback function of request meta data, Only [INPUT_NODE_TYPE_DEFAULT](capi-nati
 | void* userData | User data which is passed by user. |
 | [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md)* metaFrame | Pointer to audio meta data frame structure. |
 | int32_t* responseMetaDataSize | Size of meta data the application really write, unit is byte. |
-| bool* finished | This Boolean value indicates whether all audio data was successfully written. |
+| bool* finished | This Boolean value indicates whether all audio data was successfully written. True means all audio data has been successfully written. False means there is still audio data to be written. |
 
 **Returns**:
 

@@ -58,7 +58,7 @@ int32_t OH_AudioSuiteEngine_MetaRenderFrame(OH_AudioSuitePipeline* audioSuitePip
 | [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md)* metaFrame | 音频元数据帧结构体指针。 |
 | int32_t* responseAudioSize | 接口实际写入的音频数据的大小，单位是字节(Byte)。 |
 | int32_t* responseMetaSize | 接口实际写入的元数据的大小，单位是字节(Byte)。 |
-| bool* finishedFlag | 该标志用于向用户指示是否已完成所有数据处理。 |
+| bool* finishedFlag | 该标志用于向用户指示是否已完成所有数据处理。 true表示所有数据处理已完成，应用不应再调用此接口；false表示数据处理尚未完成。 |
 
 **返回值：**
 
@@ -154,7 +154,7 @@ typedef int32_t (*OH_InputNode_RequestMetaDataCallback)(OH_AudioNode* audioNode,
 | void* userData | 由用户传递的用户数据指针。 |
 | [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md)* metaFrame | 音频元数据帧结构体指针。 |
 | int32_t* responseMetaDataSize | 应用程序实际写入的元数据的大小，单位是字节(Byte)。 |
-| bool* finished | 此布尔值表示是否已成功写入所有音频数据。 |
+| bool* finished | 此布尔值表示是否已成功写入所有音频数据。 true表示所有音频数据已成功写入；false表示仍有音频数据待写入。 |
 
 **返回值：**
 

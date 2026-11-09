@@ -26,7 +26,7 @@ Define download status information array structure.
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Array size.<br>**Since**: 26.0.0 |
+| uint32_t size | Download status Info Array size.<br>**Since**: 26.0.0 |
 | OH_AudioSuite_DownloadStatusInfo **downloadStatusInfo | Array of download status info pointers.<br>**Since**: 26.0.0 |
 
 

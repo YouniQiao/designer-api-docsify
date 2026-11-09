@@ -289,7 +289,7 @@ OH_AudioSuite_Result OH_AudioSuiteEngine_RenderFrame(OH_AudioSuitePipeline* audi
 | void* audioData | 获取音频需要写入的数据地址。 |
 | int32_t requestFrameSize | audioData的内存字节大小，需大于0。 |
 | int32_t* responseSize | 管线写入audioData的音频数据大小，不会大于requestFrameSize，单位为字节(Byte)。 |
-| bool* finishedFlag | 标识当前管线是否渲染完成。 |
+| bool* finishedFlag | 标识当前管线是否渲染完成。 true表示所有数据处理已完成，应用不应再调用此接口；false表示数据处理尚未完成。 |
 
 **返回值：**
 
@@ -320,7 +320,7 @@ OH_AudioSuite_Result OH_AudioSuiteEngine_MultiRenderFrame(OH_AudioSuitePipeline*
 | [OH_AudioSuitePipeline](capi-ohaudiosuite-oh-audiosuitepipelinestruct.md)* audioSuitePipeline | 音频编创管线句柄。通过[OH_AudioSuiteEngine_CreatePipeline](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createpipeline)获取句柄。 |
 | [OH_AudioDataArray](capi-ohaudiosuite-oh-audiodataarray.md)* audioDataArray | 用户读取音频数据时所使用的数组指针，每个一维数组大小需一致。 |
 | int32_t* responseSize | 管线写入audioDataArray的音频数据大小。系统会确保每个一维数组被填充的数据大小一致， 单位为字节(Byte)。 |
-| bool* finishedFlag | 标记当前管线是否渲染完成。 |
+| bool* finishedFlag | 标记当前管线是否渲染完成。 true表示所有数据处理已完成，应用不应再调用此接口；false表示数据处理尚未完成。 |
 
 **返回值：**
 
@@ -494,7 +494,7 @@ typedef int32_t (*OH_InputNode_RequestDataCallback)(OH_AudioNode* audioNode, voi
 | void* userData | 用户使用的数据指针。系统调用此回调函数时， 将使用[OH_AudioSuiteNodeBuilder_SetRequestDataCallback](capi-native-audio-suite-engine-h.md#oh_audiosuitenodebuilder_setrequestdatacallback)接口传入的userData。 |
 | void* audioData | 系统提供的内存地址，用于将需要处理的音频数据流写入（需由用户填充）。 |
 | int32_t audioDataSize | audioData内存地址指向的音频数据大小，单位为字节(Byte)。 |
-| bool* finished | 标记audioNode节点需要处理的音频数据流是否已经写入完成。true表示已完成，false表示未完成。 |
+| bool* finished | 标记audioNode节点需要处理的音频数据流是否已经写入完成。 true表示应用的所有数据已被消费，pipeline将不再调用此接口；false表示应用仍有数据需要传递给pipeline。 |
 
 **返回值：**
 
@@ -640,7 +640,7 @@ OH_AudioSuite_Result OH_AudioSuiteEngine_BypassEffectNode(OH_AudioNode* audioNod
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | 音频编创节点句柄。通过[OH_AudioSuiteEngine_CreateNode](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createnode)获取句柄。 |
-| bool bypass | 当前效果类节点使能状态。 |
+| bool bypass | 当前效果类节点使能状态。 true表示效果节点仅将数据透传给下一个节点，不执行任何效果处理；false表示效果节点对数据正常执行效果处理。 |
 
 **返回值：**
 

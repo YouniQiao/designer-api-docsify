@@ -54,7 +54,7 @@
 | 名称 | 描述 |
 | -- | -- |
 | EQUALIZER_BAND_NUM (10) | 定义均衡器频带数量为10个。<br>**起始版本：** 22 |
-| OH_PURE_VOICE_DEFAULT_PITCH (0.0f) | Use system recommended pitch. Use in [OH_AudioSuite_PureVoiceChangeOption](capi-ohaudiosuite-oh-audiosuite-purevoicechangeoption.md).<br>**起始版本：** 23 |
+| OH_PURE_VOICE_DEFAULT_PITCH (0.0f) | 使用系统推荐的音调。 用于 [OH_AudioSuite_PureVoiceChangeOption](capi-ohaudiosuite-oh-audiosuite-purevoicechangeoption.md).<br>**起始版本：** 23 |
 
 ### 变量
 
