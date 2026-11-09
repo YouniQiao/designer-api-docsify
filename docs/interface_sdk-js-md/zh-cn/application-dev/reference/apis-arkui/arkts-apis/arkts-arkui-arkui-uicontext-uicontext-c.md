@@ -1116,6 +1116,8 @@ fp2px(value: number): number
 
 <!--Device-UIContext-fp2px(value: number): number--><!--Device-UIContext-fp2px(value: number): number-End-->
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3403,6 +3405,8 @@ lpx2px(value: number): number
 
 <!--Device-UIContext-lpx2px(value: number): number--><!--Device-UIContext-lpx2px(value: number): number-End-->
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3722,6 +3726,8 @@ px2fp(value: number): number
 
 <!--Device-UIContext-px2fp(value: number): number--><!--Device-UIContext-px2fp(value: number): number-End-->
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3783,6 +3789,8 @@ px2lpx(value: number): number
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIContext-px2lpx(value: number): number--><!--Device-UIContext-px2lpx(value: number): number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
@@ -3847,6 +3855,8 @@ px2vp(value: number): number
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIContext-px2vp(value: number): number--><!--Device-UIContext-px2vp(value: number): number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
@@ -5278,6 +5288,8 @@ vp2px(value: number): number
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIContext-vp2px(value: number): number--><!--Device-UIContext-vp2px(value: number): number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 

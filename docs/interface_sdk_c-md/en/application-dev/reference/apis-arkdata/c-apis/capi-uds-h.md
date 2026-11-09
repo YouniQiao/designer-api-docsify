@@ -18,11 +18,14 @@ Defines the APIs and structs related to the uniform data structs. If the paramet
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
+| [OH_UDMF_VirtualFileCallbacks](capi-udmf-oh-udmf-virtualfilecallbacks.md) | - | Describes the callbacks used to provide virtual file metadata and content.<br> <code>structSize</code> must be set to <code>sizeof(OH_UDMF_VirtualFileCallbacks)</code>. <code>onRead</code> is mandatory, and <code>onStat</code> and <code>onCancel</code> are optional. All files must be pre-declared in size. Set <code>onCancel</code> to nullptr if you do not need to cancel the notification. Different threads may invoke callbacks concurrently. Callbacks cannot be blocked indefinitely. |
 | [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) | OH_UdsPlainText | Describes the unified data struct of plaintext. |
 | [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) | OH_UdsHyperlink | Describes the unified data struct of hyperlink. |
 | [OH_UdsHtml](capi-udmf-oh-udshtml.md) | OH_UdsHtml | Defines a struct for the unified data of the Hypertext Markup Language (HTML) type. |
 | [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) | OH_UdsAppItem | Describes the unified data struct of open harmony application item. |
 | [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) | OH_UdsFileUri | Describes the unified data struct of file uri. |
+| [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md) | OH_UDMF_VirtualItem | Describes a virtual file or virtual directory node. |
+| [OH_UDMF_VirtualFileInfo](capi-udmf-oh-udmf-virtualfileinfo.md) | OH_UDMF_VirtualFileInfo | Describes virtual file entries and their data callbacks. |
 | [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) | OH_UdsPixelMap | Describes the unified data struct of open harmony pixel map. |
 | [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) | OH_UdsContentForm | Defines a struct for the unified data of the content card type. |
 | [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) | OH_UdsArrayBuffer | Describes the unified data struct of array buffer. |
@@ -36,97 +39,111 @@ Defines the APIs and structs related to the uniform data structs. If the paramet
 
 ### Function
 
-| Name | Description |
-| -- | -- |
-| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur. |
-| [void OH_UdsPlainText_Destroy(OH_UdsPlainText* pThis)](#oh_udsplaintext_destroy) | Destroy a pointer that points to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance. |
-| [const char* OH_UdsPlainText_GetType(OH_UdsPlainText* pThis)](#oh_udsplaintext_gettype) | Get type id from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [const char* OH_UdsPlainText_GetContent(OH_UdsPlainText* pThis)](#oh_udsplaintext_getcontent) | Get content from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [const char* OH_UdsPlainText_GetAbstract(OH_UdsPlainText* pThis)](#oh_udsplaintext_getabstract) | Get abstract from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [int OH_UdsPlainText_GetDetails(OH_UdsPlainText* pThis, OH_UdsDetails* details)](#oh_udsplaintext_getdetails) | Get details from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [int OH_UdsPlainText_SetContent(OH_UdsPlainText* pThis, const char* content)](#oh_udsplaintext_setcontent) | Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [int OH_UdsPlainText_SetAbstract(OH_UdsPlainText* pThis, const char* abstract)](#oh_udsplaintext_setabstract) | Set abstract to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [int OH_UdsPlainText_SetDetails(OH_UdsPlainText* pThis, const OH_UdsDetails* details)](#oh_udsplaintext_setdetails) | Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| [OH_UdsHyperlink* OH_UdsHyperlink_Create()](#oh_udshyperlink_create) | Creates a pointer to the instance of the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [void OH_UdsHyperlink_Destroy(OH_UdsHyperlink* pThis)](#oh_udshyperlink_destroy) | Destroy a pointer that points to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
-| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
-| [const char* OH_UdsHyperlink_GetUrl(OH_UdsHyperlink* pThis)](#oh_udshyperlink_geturl) | Get url from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [const char* OH_UdsHyperlink_GetDescription(OH_UdsHyperlink* pThis)](#oh_udshyperlink_getdescription) | Get description from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [int OH_UdsHyperlink_GetDetails(OH_UdsHyperlink* pThis, OH_UdsDetails* details)](#oh_udshyperlink_getdetails) | Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [int OH_UdsHyperlink_SetUrl(OH_UdsHyperlink* pThis, const char* url)](#oh_udshyperlink_seturl) | Set url to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [int OH_UdsHyperlink_SetDescription(OH_UdsHyperlink* pThis, const char* description)](#oh_udshyperlink_setdescription) | Set description to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [int OH_UdsHyperlink_SetDetails(OH_UdsHyperlink* pThis, const OH_UdsDetails* details)](#oh_udshyperlink_setdetails) | Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
-| [OH_UdsHtml* OH_UdsHtml_Create()](#oh_udshtml_create) | Creates a pointer to the instance of the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [void OH_UdsHtml_Destroy(OH_UdsHtml* pThis)](#oh_udshtml_destroy) | Destroy a pointer that points to the [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
-| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
-| [const char* OH_UdsHtml_GetContent(OH_UdsHtml* pThis)](#oh_udshtml_getcontent) | Get content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [const char* OH_UdsHtml_GetPlainContent(OH_UdsHtml* pThis)](#oh_udshtml_getplaincontent) | Get plain content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [int OH_UdsHtml_GetDetails(OH_UdsHtml* pThis, OH_UdsDetails* details)](#oh_udshtml_getdetails) | Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [int OH_UdsHtml_SetContent(OH_UdsHtml* pThis, const char* content)](#oh_udshtml_setcontent) | Set content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [int OH_UdsHtml_SetPlainContent(OH_UdsHtml* pThis, const char* plainContent)](#oh_udshtml_setplaincontent) | Set plain content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [int OH_UdsHtml_SetDetails(OH_UdsHtml* pThis, const OH_UdsDetails* details)](#oh_udshtml_setdetails) | Set details to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [int OH_UdsHtml_SetAuthPolicy(OH_UdsHtml* pThis, uint32_t authPolicy)](#oh_udshtml_setauthpolicy) | Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| [OH_UdsAppItem* OH_UdsAppItem_Create()](#oh_udsappitem_create) | Creates a pointer to the instance of the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [void OH_UdsAppItem_Destroy(OH_UdsAppItem* pThis)](#oh_udsappitem_destroy) | Destroy a pointer that points to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) instance. |
-| [const char* OH_UdsAppItem_GetType(OH_UdsAppItem* pThis)](#oh_udsappitem_gettype) | Get type from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetId(OH_UdsAppItem* pThis)](#oh_udsappitem_getid) | Get app id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetName(OH_UdsAppItem* pThis)](#oh_udsappitem_getname) | Get app name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetIconId(OH_UdsAppItem* pThis)](#oh_udsappitem_geticonid) | Get app icon id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetLabelId(OH_UdsAppItem* pThis)](#oh_udsappitem_getlabelid) | Get app label id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetBundleName(OH_UdsAppItem* pThis)](#oh_udsappitem_getbundlename) | Get bundle name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [const char* OH_UdsAppItem_GetAbilityName(OH_UdsAppItem* pThis)](#oh_udsappitem_getabilityname) | Get ability name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_GetDetails(OH_UdsAppItem* pThis, OH_UdsDetails* details)](#oh_udsappitem_getdetails) | Get details from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetId(OH_UdsAppItem* pThis, const char* appId)](#oh_udsappitem_setid) | Set application id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetName(OH_UdsAppItem* pThis, const char* appName)](#oh_udsappitem_setname) | Set application name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetIconId(OH_UdsAppItem* pThis, const char* appIconId)](#oh_udsappitem_seticonid) | Set application icon id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetLabelId(OH_UdsAppItem* pThis, const char* appLabelId)](#oh_udsappitem_setlabelid) | Set application label id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetBundleName(OH_UdsAppItem* pThis, const char* bundleName)](#oh_udsappitem_setbundlename) | Set bundle name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetAbilityName(OH_UdsAppItem* pThis, const char* abilityName)](#oh_udsappitem_setabilityname) | Set ability name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [int OH_UdsAppItem_SetDetails(OH_UdsAppItem* pThis, const OH_UdsDetails* details)](#oh_udsappitem_setdetails) | Set details to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
-| [OH_UdsFileUri* OH_UdsFileUri_Create()](#oh_udsfileuri_create) | Creates a pointer to the instance of the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [void OH_UdsFileUri_Destroy(OH_UdsFileUri* pThis)](#oh_udsfileuri_destroy) | Destroy a pointer that points to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) instance. |
-| [const char* OH_UdsFileUri_GetType(OH_UdsFileUri* pThis)](#oh_udsfileuri_gettype) | Get type id from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [const char* OH_UdsFileUri_GetFileUri(OH_UdsFileUri* pThis)](#oh_udsfileuri_getfileuri) | Get file uri from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [const char* OH_UdsFileUri_GetFileType(OH_UdsFileUri* pThis)](#oh_udsfileuri_getfiletype) | Get file type from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [int OH_UdsFileUri_GetDetails(OH_UdsFileUri* pThis, OH_UdsDetails* details)](#oh_udsfileuri_getdetails) | Get details from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [int OH_UdsFileUri_SetFileUri(OH_UdsFileUri* pThis, const char* fileUri)](#oh_udsfileuri_setfileuri) | Set file uri to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [int OH_UdsFileUri_SetFileType(OH_UdsFileUri* pThis, const char* fileType)](#oh_udsfileuri_setfiletype) | Set file type to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [int OH_UdsFileUri_SetDetails(OH_UdsFileUri* pThis, const OH_UdsDetails* details)](#oh_udsfileuri_setdetails) | Set details to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [int OH_UdsFileUri_SetAuthPolicy(OH_UdsFileUri* pThis, uint32_t authPolicy)](#oh_udsfileuri_setauthpolicy) | Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| [OH_UdsPixelMap* OH_UdsPixelMap_Create()](#oh_udspixelmap_create) | Creates a pointer to the instance of the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [void OH_UdsPixelMap_Destroy(OH_UdsPixelMap* pThis)](#oh_udspixelmap_destroy) | Destroy a pointer that points to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) instance. |
-| [const char* OH_UdsPixelMap_GetType(OH_UdsPixelMap* pThis)](#oh_udspixelmap_gettype) | Get type id from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [void OH_UdsPixelMap_GetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelmapNative)](#oh_udspixelmap_getpixelmap) | Get pixel map from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [int OH_UdsPixelMap_GetDetails(OH_UdsPixelMap* pThis, OH_UdsDetails* details)](#oh_udspixelmap_getdetails) | Get details from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [int OH_UdsPixelMap_SetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelmapNative)](#oh_udspixelmap_setpixelmap) | Set pixel map to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [int OH_UdsPixelMap_SetDetails(OH_UdsPixelMap* pThis, const OH_UdsDetails* details)](#oh_udspixelmap_setdetails) | Set details to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
-| [OH_UdsArrayBuffer* OH_UdsArrayBuffer_Create()](#oh_udsarraybuffer_create) | Creates a pointer to the instance of the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
-| [int OH_UdsArrayBuffer_Destroy(OH_UdsArrayBuffer* buffer)](#oh_udsarraybuffer_destroy) | Destroy a pointer that points to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) instance. |
-| [int OH_UdsArrayBuffer_SetData(OH_UdsArrayBuffer* buffer, unsigned char* data, unsigned int len)](#oh_udsarraybuffer_setdata) | Set array buffer data to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
-| [int OH_UdsArrayBuffer_GetData(OH_UdsArrayBuffer* buffer, unsigned char** data, unsigned int* len)](#oh_udsarraybuffer_getdata) | Get array buffer data from the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
-| [OH_UdsContentForm* OH_UdsContentForm_Create()](#oh_udscontentform_create) | Creates a pointer to the instance of the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [void OH_UdsContentForm_Destroy(OH_UdsContentForm* pThis)](#oh_udscontentform_destroy) | Destroy a pointer that points to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
-| [const char* OH_UdsContentForm_GetType(OH_UdsContentForm* pThis)](#oh_udscontentform_gettype) | Get type id from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_GetThumbData(OH_UdsContentForm* pThis, unsigned char** thumbData, unsigned int* len)](#oh_udscontentform_getthumbdata) | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [const char* OH_UdsContentForm_GetDescription(OH_UdsContentForm* pThis)](#oh_udscontentform_getdescription) | Get description from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [const char* OH_UdsContentForm_GetTitle(OH_UdsContentForm* pThis)](#oh_udscontentform_gettitle) | Get title from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
-| [const char* OH_UdsContentForm_GetAppName(OH_UdsContentForm* pThis)](#oh_udscontentform_getappname) | Get app name from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [const char* OH_UdsContentForm_GetLinkUri(OH_UdsContentForm* pThis)](#oh_udscontentform_getlinkuri) | Get link url from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetThumbData(OH_UdsContentForm* pThis, const unsigned char* thumbData, unsigned int len)](#oh_udscontentform_setthumbdata) | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetDescription(OH_UdsContentForm* pThis, const char* description)](#oh_udscontentform_setdescription) | Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetTitle(OH_UdsContentForm* pThis, const char* title)](#oh_udscontentform_settitle) | Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
-| [int OH_UdsContentForm_SetAppName(OH_UdsContentForm* pThis, const char* appName)](#oh_udscontentform_setappname) | Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetLinkUri(OH_UdsContentForm* pThis, const char* linkUri)](#oh_udscontentform_setlinkuri) | Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [OH_UdsDetails* OH_UdsDetails_Create()](#oh_udsdetails_create) | Creates a pointer to the instance of the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
-| [void OH_UdsDetails_Destroy(OH_UdsDetails* pThis)](#oh_udsdetails_destroy) | Destroy a pointer that points to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) instance. |
-| [bool OH_UdsDetails_HasKey(const OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_haskey) | Determine whether the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) contain the specified key. |
-| [int OH_UdsDetails_Remove(OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_remove) | Remove the value corresponding to this key from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
-| [int OH_UdsDetails_Clear(OH_UdsDetails* pThis)](#oh_udsdetails_clear) | Clear all data in the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
-| [int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* value)](#oh_udsdetails_setvalue) | Set key-value data to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
-| [const char* OH_UdsDetails_GetValue(const OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_getvalue) | Get the value from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) using the key. |
-| [char** OH_UdsDetails_GetAllKeys(OH_UdsDetails* pThis, unsigned int* count)](#oh_udsdetails_getallkeys) | Get the all keys from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [typedef OH_UDMF_VirtualItem* (\*OH_UDMF_VirtualFileOnStat)(void* context, const char* id)](#oh_udmf_virtualfileonstat) | OH_UDMF_VirtualFileOnStat | This interface is invoked when virtual file metadata needs to be obtained.<br> The returned node must be created by [OH_UDMF_CreateVirtualFileItem](capi-uds-h.md#oh_udmf_createvirtualfileitem), its ownership is transferred to UDMF, and the node cannot be destroyed after the callback returns. |
+| [typedef int (\*OH_UDMF_VirtualFileOnRead)(void* context, const char* id, int64_t offset, uint32_t length, uint8_t* data, uint32_t* bytesRead)](#oh_udmf_virtualfileonread) | OH_UDMF_VirtualFileOnRead | This function is invoked when virtual file data needs to be read.<br> A maximum of <code>length</code> bytes can be written to <code>data</code> and the actual number of written bytes can be returned through <code>bytesRead</code>. The actual number of bytes can be less than <code>length</code> or zero. |
+| [typedef int (\*OH_UDMF_VirtualFileOnCancel)(void* context, const char* const *idList, uint32_t count)](#oh_udmf_virtualfileoncancel) | OH_UDMF_VirtualFileOnCancel | Called when a virtual file operation is canceled. |
+| [typedef void (\*OH_UDMF_VirtualFileFinalize)(void* context)](#oh_udmf_virtualfilefinalize) | OH_UDMF_VirtualFileFinalize | Releases the user contexts held by the UDMF.<br> This callback is executed only once after all virtual file objects referencing the context are freed. The callback may be executed on any thread. |
+| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | - | Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur. |
+| [void OH_UdsPlainText_Destroy(OH_UdsPlainText* pThis)](#oh_udsplaintext_destroy) | - | Destroy a pointer that points to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance. |
+| [const char* OH_UdsPlainText_GetType(OH_UdsPlainText* pThis)](#oh_udsplaintext_gettype) | - | Get type id from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [const char* OH_UdsPlainText_GetContent(OH_UdsPlainText* pThis)](#oh_udsplaintext_getcontent) | - | Get content from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [const char* OH_UdsPlainText_GetAbstract(OH_UdsPlainText* pThis)](#oh_udsplaintext_getabstract) | - | Get abstract from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [int OH_UdsPlainText_GetDetails(OH_UdsPlainText* pThis, OH_UdsDetails* details)](#oh_udsplaintext_getdetails) | - | Get details from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [int OH_UdsPlainText_SetContent(OH_UdsPlainText* pThis, const char* content)](#oh_udsplaintext_setcontent) | - | Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [int OH_UdsPlainText_SetAbstract(OH_UdsPlainText* pThis, const char* abstract)](#oh_udsplaintext_setabstract) | - | Set abstract to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [int OH_UdsPlainText_SetDetails(OH_UdsPlainText* pThis, const OH_UdsDetails* details)](#oh_udsplaintext_setdetails) | - | Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [OH_UdsHyperlink* OH_UdsHyperlink_Create()](#oh_udshyperlink_create) | - | Creates a pointer to the instance of the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [void OH_UdsHyperlink_Destroy(OH_UdsHyperlink* pThis)](#oh_udshyperlink_destroy) | - | Destroy a pointer that points to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
+| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | - | Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
+| [const char* OH_UdsHyperlink_GetUrl(OH_UdsHyperlink* pThis)](#oh_udshyperlink_geturl) | - | Get url from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [const char* OH_UdsHyperlink_GetDescription(OH_UdsHyperlink* pThis)](#oh_udshyperlink_getdescription) | - | Get description from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [int OH_UdsHyperlink_GetDetails(OH_UdsHyperlink* pThis, OH_UdsDetails* details)](#oh_udshyperlink_getdetails) | - | Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [int OH_UdsHyperlink_SetUrl(OH_UdsHyperlink* pThis, const char* url)](#oh_udshyperlink_seturl) | - | Set url to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [int OH_UdsHyperlink_SetDescription(OH_UdsHyperlink* pThis, const char* description)](#oh_udshyperlink_setdescription) | - | Set description to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [int OH_UdsHyperlink_SetDetails(OH_UdsHyperlink* pThis, const OH_UdsDetails* details)](#oh_udshyperlink_setdetails) | - | Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [OH_UdsHtml* OH_UdsHtml_Create()](#oh_udshtml_create) | - | Creates a pointer to the instance of the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [void OH_UdsHtml_Destroy(OH_UdsHtml* pThis)](#oh_udshtml_destroy) | - | Destroy a pointer that points to the [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
+| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | - | Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
+| [const char* OH_UdsHtml_GetContent(OH_UdsHtml* pThis)](#oh_udshtml_getcontent) | - | Get content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [const char* OH_UdsHtml_GetPlainContent(OH_UdsHtml* pThis)](#oh_udshtml_getplaincontent) | - | Get plain content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [int OH_UdsHtml_GetDetails(OH_UdsHtml* pThis, OH_UdsDetails* details)](#oh_udshtml_getdetails) | - | Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [int OH_UdsHtml_SetContent(OH_UdsHtml* pThis, const char* content)](#oh_udshtml_setcontent) | - | Set content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [int OH_UdsHtml_SetPlainContent(OH_UdsHtml* pThis, const char* plainContent)](#oh_udshtml_setplaincontent) | - | Set plain content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [int OH_UdsHtml_SetDetails(OH_UdsHtml* pThis, const OH_UdsDetails* details)](#oh_udshtml_setdetails) | - | Set details to the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [int OH_UdsHtml_SetAuthPolicy(OH_UdsHtml* pThis, uint32_t authPolicy)](#oh_udshtml_setauthpolicy) | - | Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [OH_UdsAppItem* OH_UdsAppItem_Create()](#oh_udsappitem_create) | - | Creates a pointer to the instance of the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [void OH_UdsAppItem_Destroy(OH_UdsAppItem* pThis)](#oh_udsappitem_destroy) | - | Destroy a pointer that points to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) instance. |
+| [const char* OH_UdsAppItem_GetType(OH_UdsAppItem* pThis)](#oh_udsappitem_gettype) | - | Get type from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetId(OH_UdsAppItem* pThis)](#oh_udsappitem_getid) | - | Get app id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetName(OH_UdsAppItem* pThis)](#oh_udsappitem_getname) | - | Get app name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetIconId(OH_UdsAppItem* pThis)](#oh_udsappitem_geticonid) | - | Get app icon id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetLabelId(OH_UdsAppItem* pThis)](#oh_udsappitem_getlabelid) | - | Get app label id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetBundleName(OH_UdsAppItem* pThis)](#oh_udsappitem_getbundlename) | - | Get bundle name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [const char* OH_UdsAppItem_GetAbilityName(OH_UdsAppItem* pThis)](#oh_udsappitem_getabilityname) | - | Get ability name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_GetDetails(OH_UdsAppItem* pThis, OH_UdsDetails* details)](#oh_udsappitem_getdetails) | - | Get details from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetId(OH_UdsAppItem* pThis, const char* appId)](#oh_udsappitem_setid) | - | Set application id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetName(OH_UdsAppItem* pThis, const char* appName)](#oh_udsappitem_setname) | - | Set application name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetIconId(OH_UdsAppItem* pThis, const char* appIconId)](#oh_udsappitem_seticonid) | - | Set application icon id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetLabelId(OH_UdsAppItem* pThis, const char* appLabelId)](#oh_udsappitem_setlabelid) | - | Set application label id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetBundleName(OH_UdsAppItem* pThis, const char* bundleName)](#oh_udsappitem_setbundlename) | - | Set bundle name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetAbilityName(OH_UdsAppItem* pThis, const char* abilityName)](#oh_udsappitem_setabilityname) | - | Set ability name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [int OH_UdsAppItem_SetDetails(OH_UdsAppItem* pThis, const OH_UdsDetails* details)](#oh_udsappitem_setdetails) | - | Set details to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md). |
+| [OH_UdsFileUri* OH_UdsFileUri_Create()](#oh_udsfileuri_create) | - | Creates a pointer to the instance of the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [void OH_UdsFileUri_Destroy(OH_UdsFileUri* pThis)](#oh_udsfileuri_destroy) | - | Destroy a pointer that points to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) instance. |
+| [const char* OH_UdsFileUri_GetType(OH_UdsFileUri* pThis)](#oh_udsfileuri_gettype) | - | Get type id from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [const char* OH_UdsFileUri_GetFileUri(OH_UdsFileUri* pThis)](#oh_udsfileuri_getfileuri) | - | Get file uri from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [const char* OH_UdsFileUri_GetFileType(OH_UdsFileUri* pThis)](#oh_udsfileuri_getfiletype) | - | Get file type from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [int OH_UdsFileUri_GetDetails(OH_UdsFileUri* pThis, OH_UdsDetails* details)](#oh_udsfileuri_getdetails) | - | Get details from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [int OH_UdsFileUri_SetFileUri(OH_UdsFileUri* pThis, const char* fileUri)](#oh_udsfileuri_setfileuri) | - | Set file uri to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [int OH_UdsFileUri_SetFileType(OH_UdsFileUri* pThis, const char* fileType)](#oh_udsfileuri_setfiletype) | - | Set file type to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [int OH_UdsFileUri_SetDetails(OH_UdsFileUri* pThis, const OH_UdsDetails* details)](#oh_udsfileuri_setdetails) | - | Set details to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [int OH_UdsFileUri_SetAuthPolicy(OH_UdsFileUri* pThis, uint32_t authPolicy)](#oh_udsfileuri_setauthpolicy) | - | Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
+| [OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualFileItem(const char* name, const char* id, int64_t modifyTime)](#oh_udmf_createvirtualfileitem) | - | Create a virtual file node that must explicitly set the file size.<br> Before adding a node to a directory or creating virtual file information, you must call [OH_UDMF_SetVirtualFileSize](capi-uds-h.md#oh_udmf_setvirtualfilesize) to set the file size. A size of zero indicates an empty file, and the file size will not be inferred by other means when the size is not set. |
+| [OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualDirectoryItem(const char* name, int64_t modifyTime)](#oh_udmf_createvirtualdirectoryitem) | - | Create a virtual directory node. |
+| [void OH_UDMF_DestroyVirtualItem(OH_UDMF_VirtualItem* item)](#oh_udmf_destroyvirtualitem) | - | Destroy a virtual node. |
+| [int OH_UDMF_SetVirtualFileSize(OH_UDMF_VirtualItem* item, int64_t size)](#oh_udmf_setvirtualfilesize) | - | Set the file size of a virtual file node. |
+| [int OH_UDMF_ClearVirtualFileSize(OH_UDMF_VirtualItem* item)](#oh_udmf_clearvirtualfilesize) | - | The file size that must be set for the virtual file node is cleared during the build process.<br> After clearing, the non-negative file size must be set again via [OH_UDMF_SetVirtualFileSize](capi-uds-h.md#oh_udmf_setvirtualfilesize) before the node can be added to the directory or used to create Virtual file information; The stat callback cannot replace this step. |
+| [int OH_UDMF_AddVirtualItemChild(OH_UDMF_VirtualItem* directory, const OH_UDMF_VirtualItem* child)](#oh_udmf_addvirtualitemchild) | - | Adds a child node to the virtual directory.<br> This interface copies <code>child</code>, and the caller still retains the ownership of the original node. |
+| [OH_UDMF_VirtualFileInfo* OH_UDMF_CreateVirtualFileInfo(const OH_UDMF_VirtualItem* itemInfo, const OH_UDMF_VirtualFileCallbacks* callbacks, void* context, OH_UDMF_VirtualFileFinalize finalize)](#oh_udmf_createvirtualfileinfo) | - | Create virtual file information.<br> This interface copies the node tree and callback table. <code>finalize</code> must be provided when <code>context</code> is not nullptr. After the interface is successfully executed, the UDMF holds the context until the last reference is released. |
+| [void OH_UDMF_DestroyVirtualFileInfo(OH_UDMF_VirtualFileInfo* info)](#oh_udmf_destroyvirtualfileinfo) | - | Destroy virtual file information.<br> When virtual file information has been attached to a file URI or unified data record, the callback state remains in effect until all related references are released. |
+| [int OH_UDMF_SetFileUriVirtualEntry(OH_UdsFileUri* fileUri, const OH_UDMF_VirtualFileInfo* info)](#oh_udmf_setfileurivirtualentry) | - | Appends virtual file information to the file URI. |
+| [int OH_UDMF_ClearFileUriVirtualEntry(OH_UdsFileUri* fileUri)](#oh_udmf_clearfileurivirtualentry) | - | Removes virtual file information from file URI. |
+| [OH_UdsPixelMap* OH_UdsPixelMap_Create()](#oh_udspixelmap_create) | - | Creates a pointer to the instance of the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [void OH_UdsPixelMap_Destroy(OH_UdsPixelMap* pThis)](#oh_udspixelmap_destroy) | - | Destroy a pointer that points to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) instance. |
+| [const char* OH_UdsPixelMap_GetType(OH_UdsPixelMap* pThis)](#oh_udspixelmap_gettype) | - | Get type id from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [void OH_UdsPixelMap_GetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelmapNative)](#oh_udspixelmap_getpixelmap) | - | Get pixel map from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [int OH_UdsPixelMap_GetDetails(OH_UdsPixelMap* pThis, OH_UdsDetails* details)](#oh_udspixelmap_getdetails) | - | Get details from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [int OH_UdsPixelMap_SetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelmapNative)](#oh_udspixelmap_setpixelmap) | - | Set pixel map to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [int OH_UdsPixelMap_SetDetails(OH_UdsPixelMap* pThis, const OH_UdsDetails* details)](#oh_udspixelmap_setdetails) | - | Set details to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md). |
+| [OH_UdsArrayBuffer* OH_UdsArrayBuffer_Create()](#oh_udsarraybuffer_create) | - | Creates a pointer to the instance of the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
+| [int OH_UdsArrayBuffer_Destroy(OH_UdsArrayBuffer* buffer)](#oh_udsarraybuffer_destroy) | - | Destroy a pointer that points to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) instance. |
+| [int OH_UdsArrayBuffer_SetData(OH_UdsArrayBuffer* buffer, unsigned char* data, unsigned int len)](#oh_udsarraybuffer_setdata) | - | Set array buffer data to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
+| [int OH_UdsArrayBuffer_GetData(OH_UdsArrayBuffer* buffer, unsigned char** data, unsigned int* len)](#oh_udsarraybuffer_getdata) | - | Get array buffer data from the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md). |
+| [OH_UdsContentForm* OH_UdsContentForm_Create()](#oh_udscontentform_create) | - | Creates a pointer to the instance of the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [void OH_UdsContentForm_Destroy(OH_UdsContentForm* pThis)](#oh_udscontentform_destroy) | - | Destroy a pointer that points to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
+| [const char* OH_UdsContentForm_GetType(OH_UdsContentForm* pThis)](#oh_udscontentform_gettype) | - | Get type id from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_GetThumbData(OH_UdsContentForm* pThis, unsigned char** thumbData, unsigned int* len)](#oh_udscontentform_getthumbdata) | - | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [const char* OH_UdsContentForm_GetDescription(OH_UdsContentForm* pThis)](#oh_udscontentform_getdescription) | - | Get description from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [const char* OH_UdsContentForm_GetTitle(OH_UdsContentForm* pThis)](#oh_udscontentform_gettitle) | - | Get title from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | - | Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
+| [const char* OH_UdsContentForm_GetAppName(OH_UdsContentForm* pThis)](#oh_udscontentform_getappname) | - | Get app name from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [const char* OH_UdsContentForm_GetLinkUri(OH_UdsContentForm* pThis)](#oh_udscontentform_getlinkuri) | - | Get link url from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetThumbData(OH_UdsContentForm* pThis, const unsigned char* thumbData, unsigned int len)](#oh_udscontentform_setthumbdata) | - | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetDescription(OH_UdsContentForm* pThis, const char* description)](#oh_udscontentform_setdescription) | - | Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetTitle(OH_UdsContentForm* pThis, const char* title)](#oh_udscontentform_settitle) | - | Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | - | Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
+| [int OH_UdsContentForm_SetAppName(OH_UdsContentForm* pThis, const char* appName)](#oh_udscontentform_setappname) | - | Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetLinkUri(OH_UdsContentForm* pThis, const char* linkUri)](#oh_udscontentform_setlinkuri) | - | Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [OH_UdsDetails* OH_UdsDetails_Create()](#oh_udsdetails_create) | - | Creates a pointer to the instance of the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| [void OH_UdsDetails_Destroy(OH_UdsDetails* pThis)](#oh_udsdetails_destroy) | - | Destroy a pointer that points to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) instance. |
+| [bool OH_UdsDetails_HasKey(const OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_haskey) | - | Determine whether the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) contain the specified key. |
+| [int OH_UdsDetails_Remove(OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_remove) | - | Remove the value corresponding to this key from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| [int OH_UdsDetails_Clear(OH_UdsDetails* pThis)](#oh_udsdetails_clear) | - | Clear all data in the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| [int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* value)](#oh_udsdetails_setvalue) | - | Add key-value pair data to the dictionary type [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| [const char* OH_UdsDetails_GetValue(const OH_UdsDetails* pThis, const char* key)](#oh_udsdetails_getvalue) | - | Get the value from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) using the key. |
+| [char** OH_UdsDetails_GetAllKeys(OH_UdsDetails* pThis, unsigned int* count)](#oh_udsdetails_getallkeys) | - | Get the all keys from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
 
 ## Enum type description
 
@@ -170,6 +187,130 @@ Enumerates the URI authorization policies in the drag scenario.<br>
 
 
 ## Function description
+
+### OH_UDMF_VirtualFileOnStat()
+
+```c
+typedef OH_UDMF_VirtualItem* (*OH_UDMF_VirtualFileOnStat)(void* context, const char* id)
+```
+
+**Description**
+
+This interface is invoked when virtual file metadata needs to be obtained.<br> The returned node must be created by [OH_UDMF_CreateVirtualFileItem](capi-uds-h.md#oh_udmf_createvirtualfileitem), its ownership is transferred to UDMF, and the node cannot be destroyed after the callback returns.
+
+<!--Device-typedef OH_UDMF_VirtualItem* (*OH_UDMF_VirtualFileOnStat)(void* context, const char* id)--><!--Device-typedef OH_UDMF_VirtualItem* (*OH_UDMF_VirtualFileOnStat)(void* context, const char* id)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void* context | [in] User context transferred through [OH_UDMF_CreateVirtualFileInfo](capi-uds-h.md#oh_udmf_createvirtualfileinfo). |
+| const char* id | [in] ID of the requested virtual file. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem*](capi-udmf-oh-udmf-virtualitem.md) | Returns the virtual file node on success and nullptr on failure. |
+
+### OH_UDMF_VirtualFileOnRead()
+
+```c
+typedef int (*OH_UDMF_VirtualFileOnRead)(void* context, const char* id, int64_t offset, uint32_t length, uint8_t* data, uint32_t* bytesRead)
+```
+
+**Description**
+
+This function is invoked when virtual file data needs to be read.<br> A maximum of <code>length</code> bytes can be written to <code>data</code> and the actual number of written bytes can be returned through <code>bytesRead</code>. The actual number of bytes can be less than <code>length</code> or zero.
+
+<!--Device-typedef int (*OH_UDMF_VirtualFileOnRead)(void* context, const char* id, int64_t offset, uint32_t length, uint8_t* data, uint32_t* bytesRead)--><!--Device-typedef int (*OH_UDMF_VirtualFileOnRead)(void* context, const char* id, int64_t offset, uint32_t length, uint8_t* data, uint32_t* bytesRead)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void* context | [in] User context transferred through [OH_UDMF_CreateVirtualFileInfo](capi-uds-h.md#oh_udmf_createvirtualfileinfo). |
+| const char* id | [in] ID of the requested virtual file. |
+| int64_t offset | [in] Read offset, in bytes. |
+| uint32_t length | [in] Maximum read length. |
+| uint8_t* data | [out] Target buffer provided by the UDMF, valid only during callback execution. |
+| uint32_t* bytesRead | [out] Number of bytes actually written to <code>data</code>. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the data is successfully read. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that an invalid parameter is transferred. </li> <li>[UDMF_ERR](capi-udmf-err-code-h.md#udmf_errcode) indicates that an internal error occurs and data cannot be provided. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_VirtualFileOnCancel()
+
+```c
+typedef int (*OH_UDMF_VirtualFileOnCancel)(void* context, const char* const *idList, uint32_t count)
+```
+
+**Description**
+
+Called when a virtual file operation is canceled.
+
+<!--Device-typedef int (*OH_UDMF_VirtualFileOnCancel)(void* context, const char* const *idList, uint32_t count)--><!--Device-typedef int (*OH_UDMF_VirtualFileOnCancel)(void* context, const char* const *idList, uint32_t count)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void* context | [in] User context transferred through [OH_UDMF_CreateVirtualFileInfo](capi-uds-h.md#oh_udmf_createvirtualfileinfo). |
+| const char* const *idList | [in] ID list of canceled virtual files. This array and the strings in it are valid only during the execution of the callback. |
+| uint32_t count | [in] Number of identifiers in <code>idList</code>. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the cancellation is successful. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that an invalid parameter is transferred. </li> <li>[UDMF_ERR](capi-udmf-err-code-h.md#udmf_errcode) indicates that an internal error occurs and the cancellation fails. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_VirtualFileFinalize()
+
+```c
+typedef void (*OH_UDMF_VirtualFileFinalize)(void* context)
+```
+
+**Description**
+
+Releases the user contexts held by the UDMF.<br> This callback is executed only once after all virtual file objects referencing the context are freed. The callback may be executed on any thread.
+
+<!--Device-typedef void (*OH_UDMF_VirtualFileFinalize)(void* context)--><!--Device-typedef void (*OH_UDMF_VirtualFileFinalize)(void* context)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void* context | [in] UE contexts to be released. |
 
 ### OH_UdsPlainText_Create()
 
@@ -1952,6 +2093,314 @@ Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 OH_UdsFileUri Udmf_ErrCode
 
 
+### OH_UDMF_CreateVirtualFileItem()
+
+```c
+OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualFileItem(const char* name, const char* id, int64_t modifyTime)
+```
+
+**Description**
+
+Create a virtual file node that must explicitly set the file size.<br> Before adding a node to a directory or creating virtual file information, you must call [OH_UDMF_SetVirtualFileSize](capi-uds-h.md#oh_udmf_setvirtualfilesize) to set the file size. A size of zero indicates an empty file, and the file size will not be inferred by other means when the size is not set.
+
+<!--Device-OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualFileItem(const char* name, const char* id, int64_t modifyTime)--><!--Device-OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualFileItem(const char* name, const char* id, int64_t modifyTime)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Resource release**: [OH_UDMF_DestroyVirtualItem](#oh_udmf_destroyvirtualitem)
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* name | [in] File name, which cannot contain path separators. |
+| const char* id | [in] File ID transferred to the virtual file callback. |
+| int64_t modifyTime | [in] Time when the file is modified. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem*](capi-udmf-oh-udmf-virtualitem.md) | If the operation is successful, the created virtual node is returned. Returns nullptr when the parameter is invalid or memory allocation fails. |
+
+### OH_UDMF_CreateVirtualDirectoryItem()
+
+```c
+OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualDirectoryItem(const char* name, int64_t modifyTime)
+```
+
+**Description**
+
+Create a virtual directory node.
+
+<!--Device-OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualDirectoryItem(const char* name, int64_t modifyTime)--><!--Device-OH_UDMF_VirtualItem* OH_UDMF_CreateVirtualDirectoryItem(const char* name, int64_t modifyTime)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Resource release**: [OH_UDMF_DestroyVirtualItem](#oh_udmf_destroyvirtualitem)
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* name | [in] Directory name, which cannot contain path separators. |
+| int64_t modifyTime | [in] Directory modification time. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem*](capi-udmf-oh-udmf-virtualitem.md) | If the operation is successful, the created virtual node is returned. Returns nullptr when the parameter is invalid or memory allocation fails. |
+
+### OH_UDMF_DestroyVirtualItem()
+
+```c
+void OH_UDMF_DestroyVirtualItem(OH_UDMF_VirtualItem* item)
+```
+
+**Description**
+
+Destroy a virtual node.
+
+<!--Device-void OH_UDMF_DestroyVirtualItem(OH_UDMF_VirtualItem* item)--><!--Device-void OH_UDMF_DestroyVirtualItem(OH_UDMF_VirtualItem* item)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* item | [in] Virtual node to be destroyed. |
+
+### OH_UDMF_SetVirtualFileSize()
+
+```c
+int OH_UDMF_SetVirtualFileSize(OH_UDMF_VirtualItem* item, int64_t size)
+```
+
+**Description**
+
+Set the file size of a virtual file node.
+
+<!--Device-int OH_UDMF_SetVirtualFileSize(OH_UDMF_VirtualItem* item, int64_t size)--><!--Device-int OH_UDMF_SetVirtualFileSize(OH_UDMF_VirtualItem* item, int64_t size)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* item | [in,out] Virtual file node. |
+| int64_t size | [in] File size, in bytes. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the setting is successful. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that <code>item</code> is invalid, is not a file node, or <code>size</code> is a negative number. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_ClearVirtualFileSize()
+
+```c
+int OH_UDMF_ClearVirtualFileSize(OH_UDMF_VirtualItem* item)
+```
+
+**Description**
+
+The file size that must be set for the virtual file node is cleared during the build process.<br> After clearing, the non-negative file size must be set again via [OH_UDMF_SetVirtualFileSize](capi-uds-h.md#oh_udmf_setvirtualfilesize) before the node can be added to the directory or used to create Virtual file information; The stat callback cannot replace this step.
+
+<!--Device-int OH_UDMF_ClearVirtualFileSize(OH_UDMF_VirtualItem* item)--><!--Device-int OH_UDMF_ClearVirtualFileSize(OH_UDMF_VirtualItem* item)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* item | [in,out] Virtual file node. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the deletion is successful. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that <code>item</code> is invalid or is not a file node. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_AddVirtualItemChild()
+
+```c
+int OH_UDMF_AddVirtualItemChild(OH_UDMF_VirtualItem* directory, const OH_UDMF_VirtualItem* child)
+```
+
+**Description**
+
+Adds a child node to the virtual directory.<br> This interface copies <code>child</code>, and the caller still retains the ownership of the original node.
+
+<!--Device-int OH_UDMF_AddVirtualItemChild(OH_UDMF_VirtualItem* directory, const OH_UDMF_VirtualItem* child)--><!--Device-int OH_UDMF_AddVirtualItemChild(OH_UDMF_VirtualItem* directory, const OH_UDMF_VirtualItem* child)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* directory | [in,out] Virtual directory node. |
+| [const OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* child | [in] Subnode to be added. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the user is added successfully. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that the node is invalid, <code>directory</code> is not a directory, or the result violates a virtual file tree constraint. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_CreateVirtualFileInfo()
+
+```c
+OH_UDMF_VirtualFileInfo* OH_UDMF_CreateVirtualFileInfo(const OH_UDMF_VirtualItem* itemInfo, const OH_UDMF_VirtualFileCallbacks* callbacks, void* context, OH_UDMF_VirtualFileFinalize finalize)
+```
+
+**Description**
+
+Create virtual file information.<br> This interface copies the node tree and callback table. <code>finalize</code> must be provided when <code>context</code> is not nullptr. After the interface is successfully executed, the UDMF holds the context until the last reference is released.
+
+<!--Device-OH_UDMF_VirtualFileInfo* OH_UDMF_CreateVirtualFileInfo(const OH_UDMF_VirtualItem* itemInfo, const OH_UDMF_VirtualFileCallbacks* callbacks, void* context, OH_UDMF_VirtualFileFinalize finalize)--><!--Device-OH_UDMF_VirtualFileInfo* OH_UDMF_CreateVirtualFileInfo(const OH_UDMF_VirtualItem* itemInfo, const OH_UDMF_VirtualFileCallbacks* callbacks, void* context, OH_UDMF_VirtualFileFinalize finalize)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Resource release**: [OH_UDMF_DestroyVirtualFileInfo](#oh_udmf_destroyvirtualfileinfo)
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)* itemInfo | [in] Virtual root node. Each file in the tree must explicitly set a non-negative file size. |
+| [const OH_UDMF_VirtualFileCallbacks](capi-udmf-oh-udmf-virtualfilecallbacks.md)* callbacks | [in] Virtual file callback. |
+| void* context | [in] User context passed to each callback. |
+| [OH_UDMF_VirtualFileFinalize](capi-uds-h.md#oh_udmf_virtualfilefinalize) finalize | [in] Callback for releasing <code>context</code>. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_UDMF_VirtualFileInfo*](capi-udmf-oh-udmf-virtualfileinfo.md) | If the operation is successful, the information about the created virtual file is returned. Returns nullptr when the node or callback is invalid or memory allocation fails. |
+
+### OH_UDMF_DestroyVirtualFileInfo()
+
+```c
+void OH_UDMF_DestroyVirtualFileInfo(OH_UDMF_VirtualFileInfo* info)
+```
+
+**Description**
+
+Destroy virtual file information.<br> When virtual file information has been attached to a file URI or unified data record, the callback state remains in effect until all related references are released.
+
+<!--Device-void OH_UDMF_DestroyVirtualFileInfo(OH_UDMF_VirtualFileInfo* info)--><!--Device-void OH_UDMF_DestroyVirtualFileInfo(OH_UDMF_VirtualFileInfo* info)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_VirtualFileInfo](capi-udmf-oh-udmf-virtualfileinfo.md)* info | [in] Information about the virtual file to be destroyed. |
+
+### OH_UDMF_SetFileUriVirtualEntry()
+
+```c
+int OH_UDMF_SetFileUriVirtualEntry(OH_UdsFileUri* fileUri, const OH_UDMF_VirtualFileInfo* info)
+```
+
+**Description**
+
+Appends virtual file information to the file URI.
+
+<!--Device-int OH_UDMF_SetFileUriVirtualEntry(OH_UdsFileUri* fileUri, const OH_UDMF_VirtualFileInfo* info)--><!--Device-int OH_UDMF_SetFileUriVirtualEntry(OH_UdsFileUri* fileUri, const OH_UDMF_VirtualFileInfo* info)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md)* fileUri | [in,out] URI instance of the file to be updated. |
+| [const OH_UDMF_VirtualFileInfo](capi-udmf-oh-udmf-virtualfileinfo.md)* info | [in] Information about the virtual file to be attached. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the attachment is successful. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that <code>fileUri</code> or <code>info</code> is invalid. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_ClearFileUriVirtualEntry()
+
+```c
+int OH_UDMF_ClearFileUriVirtualEntry(OH_UdsFileUri* fileUri)
+```
+
+**Description**
+
+Removes virtual file information from file URI.
+
+<!--Device-int OH_UDMF_ClearFileUriVirtualEntry(OH_UdsFileUri* fileUri)--><!--Device-int OH_UDMF_ClearFileUriVirtualEntry(OH_UdsFileUri* fileUri)-End-->
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md)* fileUri | [in,out] URI instance of the file to be updated. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Return the execution status code. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <ul> <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) indicates that the deletion is successful. </li> <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) indicates that <code>fileUri</code> is invalid. </li> </ul> |
+
+**Reference**:
+
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
 ### OH_UdsPixelMap_Create()
 
 ```c
@@ -2957,7 +3406,7 @@ int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* va
 
 **Description**
 
-Set key-value data to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
+Add key-value pair data to the dictionary type [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 <!--Device-int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* value)--><!--Device-int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* value)-End-->
 
@@ -2969,15 +3418,15 @@ Set key-value data to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 | Parameter | Description |
 | -- | -- |
-| [OH_UdsDetails](capi-udmf-oh-udsdetails.md)* pThis | Represents a pointer to an instance of [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
-| const char* key | Represents the key data to be written. |
-| const char* value | Represents the value data to be written. |
+| [OH_UdsDetails](capi-udmf-oh-udsdetails.md)* pThis | Represents a pointer to an instance of the dictionary type [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
+| const char* key | Represents the key of a key-value pair in a dictionary type. |
+| const char* value | [in] indicates the value of the key-value pair in the dictionary type. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success. [UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args. |
+| int | Returns the status code of the execution. <br>If UDMF_E_OK is returned, the operation is successful. <br>If UDMF_E_INVALID_PARAM is returned, an invalid parameter is transferred. For details, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). |
 
 **Reference**:
 

@@ -19,6 +19,9 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md) | - | 定义音频转换器格式数据结构，用于描述基本音频格式。 |
+| [OH_AudioSuite_ConverterFormatEx](capi-ohaudiosuite-oh-audiosuite-converterformatex.md) | - | 定义扩展音频转换器格式信息结构体，用于描述支持任意采样率的音频格式。 |
+| [OH_AudioSuite_ConverterInputInfo](capi-ohaudiosuite-oh-audiosuite-converterinputinfo.md) | - | 定义音频转换器输入数据结构体。 |
+| [OH_AudioSuite_ConverterOutputInfo](capi-ohaudiosuite-oh-audiosuite-converteroutputinfo.md) | - | 定义音频转换器输出数据结构体，用于直接处理模式接收转换后的音频数据。 |
 | [OH_AudioConverterStruct](capi-ohaudiosuite-oh-audioconverterstruct.md) | OH_AudioConverter | 声明音频格式转换器。<br> 音频格式转换器句柄用于执行音频格式转换相关功能。 |
 
 ### 枚举
@@ -67,6 +70,8 @@ enum OH_AudioConverter_Result
 | AUDIOCONVERTER_ERROR_NOT_INITIALIZED = 6 | &nbsp;音频转换器实例未初始化。例如未创建格式转换器直接执行格式转换处理函数。<br>**起始版本：** 26.0.0 |
 | AUDIOCONVERTER_ERROR_CALLBACK_INVALID = 7 | &nbsp;输入回调函数无效。例如输入回调函数返回数据量小于0或大于最大值400KB。<br>**起始版本：** 26.0.0 |
 | AUDIOCONVERTER_ERROR_CALLBACK_NOT_SET = 8 | &nbsp;未设置回调函数。例如输入回调函数指针为空指针。<br>**起始版本：** 26.0.0 |
+| AUDIOCONVERTER_ERROR_NOT_SYSTEM_APP = 202 | 权限校验失败，非系统应用调用了系统API。<br>**起始版本：** 26.1.0 |
+| AUDIOCONVERTER_ERROR_UNSUPPORTED_OPERATION = 6800104 | 操作不支持。<br>**起始版本：** 26.1.0 |
 
 ### OH_AudioConverter_InputStatus
 
@@ -205,7 +210,7 @@ OH_AudioConverter_Result OH_AudioConverter_SetInputCallback(OH_AudioConverter* c
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AudioConverter_Result](capi-native-audio-converter-h.md#oh_audioconverter_result) | AUDIOCONVERTER_SUCCESS：设置输入回调函数成功，可以正常执行后续流程。<br>AUDIOCONVERTER_ERROR_INVALID_PARAM：函数输入参数无效，需要检查传入的音频格式转换器指针是否非空指针。<br>AUDIOCONVERTER_ERROR_NOT_INITIALIZED：音频格式转换器未初始化，需要检查当前音频格式转换器是否有效。<br>AUDIOCONVERTER_ERROR_CALLBACK_INVALID：回调函数无效，需要检查输入回调函数返回数据量是否在允许范围内。<br>AUDIOCONVERTER_ERROR_CALLBACK_NOT_SET：回调函数未设置，需要检查回调函数指针是否非空。<br>AUDIOCONVERTER_ERROR_SYSTEM：系统错误，需要检查是否使用已销毁的音频格式转换器执行格式转换。 |
+| [OH_AudioConverter_Result](capi-native-audio-converter-h.md#oh_audioconverter_result) | <ul> <li>[AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) 设置输入回调函数成功，可以正常执行后续流程。</li> <li>[AUDIOCONVERTER_ERROR_INVALID_PARAM](capi-native-audio-converter-h.md#oh_audioconverter_result) 函数输入参数无效，需要检查传入的音频格式转换器指针是否非空指针。</li> <li>[AUDIOCONVERTER_ERROR_NOT_INITIALIZED](capi-native-audio-converter-h.md#oh_audioconverter_result) 音频格式转换器未初始化，需要检查当前音频格式转换器是否有效。</li> <li>[AUDIOCONVERTER_ERROR_CALLBACK_INVALID](capi-native-audio-converter-h.md#oh_audioconverter_result) 回调函数无效，需要检查输入回调函数返回数据量是否在允许范围内。</li> <li>[AUDIOCONVERTER_ERROR_CALLBACK_NOT_SET](capi-native-audio-converter-h.md#oh_audioconverter_result) 回调函数未设置，需要检查回调函数指针是否非空。</li> <li>[AUDIOCONVERTER_ERROR_SYSTEM](capi-native-audio-converter-h.md#oh_audioconverter_result) 系统错误，需要检查是否使用已销毁的音频格式转换器执行格式转换。</li> <li>[AUDIOCONVERTER_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-converter-h.md#oh_audioconverter_result) 当前处理流程不支持设置回调。[since 26.1.0]</li> </ul> |
 
 ### OH_AudioConverter_Process()
 

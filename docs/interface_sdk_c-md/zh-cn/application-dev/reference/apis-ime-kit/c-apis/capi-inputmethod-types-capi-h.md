@@ -28,6 +28,8 @@
 | [InputMethod_CommandValueType](#inputmethod_commandvaluetype) | InputMethod_CommandValueType | 私有数据类型枚举，定义了InputMethod_PrivateCommand中value的数据类型，用于支持输入法应用与客户端之间的私有参数传递。每 个PrivateCommand实例只能持有一种类型的value，通过OH_PrivateCommand_GetValueType获取当前value的类型后，再调用对应的GetValue 函数获取实际值。 <br> <br>用途：标识PrivateCommand实例中value的数据类型，指导接收方选择正确的GetValue函数。 <br> <br>取值建议：在获取PrivateCommand的value值之前，必须先通过OH_PrivateCommand_GetValueType获取类型，再根据类型选择对应 的GetValue函数： IME_COMMAND_VALUE_TYPE_BOOL调用OH_PrivateCommand_GetBoolValue，IME_COMMAND_VALUE_TYPE_INT32调用 OH_PrivateCommand_GetIntValue，IME_COMMAND_VALUE_TYPE_STRING 调用OH_PrivateCommand_GetStrValue。IME_COMMAND_VALUE_TYPE_NONE表示未设置value，此时不应调用任何GetValue函数。 <br> <br>枚举值间关系：枚举值从0开始连续递增（0-3），共4个枚举项。NONE（0）为初始状态，表示PrivateCommand创建后尚未设置 value。STRING/BOOL/INT32三个值类型互斥， 同一个PrivateCommand实例在任意时刻只能持有其中一种类型的value。设置一种类型的value后，之前设置的value及其类型将被覆盖。 |
 | [InputMethod_ErrorCode](#inputmethod_errorcode) | InputMethod_ErrorCode | 输入法错误码枚举，定义了输入法框架中可能出现的错误码，涵盖了参数检查失败、包管理异常、输入法应用异常、输入框客户端异常等 各种错误场景。开发者应根据具体的错误码判断错误类型并采取相应的错误处理措施。详细错误处理说明请参见[输入法框架错误码](errorcode-inputmethod-framework.md)。 <br> <br>用途：标识输入法框架中各类操作的执行结果和错误类型，用于接口返回值判断和错误处理。 <br> <br>取值建议：在调用输入法C API接口后，应检查返回值是否为IME_ERR_OK（0）。若返回非IME_ERR_OK值，根据具体错误码采取相应处 理：IME_ERR_NULL_POINTER检查参数是否为NULL；IME_ERR_PARAMCHECK检查参数类型和范围；IME_ERR_IMCLIENT/IME_ERR_DETACHED检查输 入框与输入法服务的连接状态；IME_ERR_IMENGINE检查输入法应用运行状态；IME_ERR_QUERY_FAILED检查查询条件和数据状态。 <br> <br>枚举值间关系：枚举值分为三组：通用错误码（0, 1, 401）、框架服务错误码（12800001-12800016）、C API专用错误码 （12802000-12802001）。通用错误码适用于所有接口； 框架服务错误码与系统服务状态相关；C API专用错误码针对C语言接口特有的空指针和查询失败场景。IME_ERR_OK（0）为成功标识，其余值为 错误标识。 |
 | [InputMethod_RequestKeyboardReason](#inputmethod_requestkeyboardreason) | InputMethod_RequestKeyboardReason | 请求键盘输入原因枚举，定义了触发键盘请求的不同触发源，用于区分不同的键盘触发场景，以便输入法进行针对性适配。该枚举作为 InputMethod_AttachOptions的requestKeyboardReason属性，通过OH_InputMethodProxy_ShowTextInput传递给输入法框架。区分触发原 因可以帮助输入法应用针对不同的交互场景优化键盘行为和输入体验。 <br> <br>用途：标识触发键盘弹出的原因（鼠标点击、触摸操作或其他），用于输入法应用针对性优化。 <br> <br>取值建议：根据实际触发场景选择对应的RequestKeyboardReason。鼠标点击输入框触发使用IME_REQUEST_REASON_MOUSE，触摸输入 框触发使用IME_REQUEST_REASON_TOUCH，其他触发方式（如API调用、焦点切换等）使用IME_REQUEST_REASON_OTHER。不确定触发原因时使用 IME_REQUEST_REASON_NONE，输入法将使用默认行为。 <br> <br>枚举值间关系：枚举值不连续（0, 1, 2, 20），NONE/MOUSE/TOUCH为常规触发源（值0-2连续），OTHER为特殊触发源（值20）。 MOUSE和TOUCH分别代表两种最常见的用户直接交互触发方式，OTHER涵盖了所有非直接交互的触发场景。NONE不表示任何触发原因，通常作为默 认值使用。 |
+| [OH_InputMethod_UnderlineStyle](#oh_inputmethod_underlinestyle) | OH_InputMethod_UnderlineStyle | 预上屏文本下划线样式枚举。 |
+| [OH_InputMethod_InputCapabilityType](#oh_inputmethod_inputcapabilitytype) | OH_InputMethod_InputCapabilityType | 枚举输入能力类型。 |
 
 ### 宏定义
 
@@ -220,7 +222,9 @@ enum InputMethod_ErrorCode
 | IME_ERR_SETTINGS = 12800007 | 输入法设置器异常。可能是输入法设置参数无效或权限不足，请检查设置参数和权限配置。该错误码在输入法设置服务无法正常处理 配置变更时返回。 |
 | IME_ERR_IMMS = 12800008 | 输入法管理服务异常。可能是输入法管理服务未启动或异常终止，建议检查系统服务状态或重启输入法管理服务。该错误码在输入法 管理服务（IMMS）无法正常工作时返回。 |
 | IME_ERR_DETACHED = 12800009 | 输入框未绑定。可能是输入框与输入法服务未建立连接，请调用绑定接口重新建立连接。该错误码在编辑框未通过 OH_InputMethodController_Attach绑定输入法服务时调用需要绑定关系的接口时返回。 |
+| OH_INPUTMETHOD_ERR_NOT_DEFAULT_IME = 12800010 | 当前输入法应用非系统预置的默认输入法。<br>**起始版本：** 26.1.0 |
 | IME_ERR_EDITABLE = 12800016 | 输入框处于非编辑态。输入框可能仍已绑定，不能将此错误等同于已解绑。 |
+| OH_INPUTMETHOD_ERR_INPUT_CAPABILITY_TYPE_NOT_SUPPORTED = 12800029 | 输入能力类型不支持。<br>**起始版本：** 26.1.0 |
 | IME_ERR_NULL_POINTER = 12802000 | 空指针异常。可能是传入的参数为空指针，请检查输入参数是否正确初始化。该错误码在C API接口收到NULL指针参数时返回，属于 C语言特有的参数错误类型。开发者应在调用接口前确保所有指针参数均为非NULL。 |
 | IME_ERR_QUERY_FAILED = 12802001 | 查询失败。可能是查询条件无效或目标数据不存在，请检查查询参数和数据状态。该错误码在Get类接口的查询条件与实际数据不匹 配时返回，典型场景： OH_PrivateCommand_GetBoolValue在value实际类型为int32_t时调用，将返回此错误码表示类型不匹配——命令中没有布尔值。 |
 
@@ -246,5 +250,48 @@ enum InputMethod_RequestKeyboardReason
 | IME_REQUEST_REASON_MOUSE = 1 | 表示键盘请求是由鼠标操作触发的。用户通过鼠标点击输入框区域触发键盘弹出，输入法应用可针对鼠标交互场景优化键盘行为（如 提供更精确的光标定位、适配鼠标操作习惯的键盘布局）。适用于桌面设备或支持鼠标输入的平板设备场景。 |
 | IME_REQUEST_REASON_TOUCH = 2 | 表示键盘请求是由触摸操作触发的。用户通过手指触摸输入框区域触发键盘弹出，输入法应用可针对触摸交互场景优化键盘行为（如 提供更大的按键间距、适配触摸操作的键盘布局）。适用于移动设备的手指触摸交互场景。 |
 | IME_REQUEST_REASON_OTHER = 20 | 表示键盘请求是由其他原因触发的，包括但不限于：程序主动调用ShowKeyboard/ShowTextInput接口、焦点自动切换、配置变更 触发等非直接用户交互场景。输入法应用可针对此类场景做特殊适配（如不弹出过渡动画、 使用紧凑键盘布局）。 |
+
+### OH_InputMethod_UnderlineStyle
+
+```c
+enum OH_InputMethod_UnderlineStyle
+```
+
+**描述：**
+
+预上屏文本下划线样式枚举。
+
+<!--Device-OH_InputMethod_UnderlineStyle--><!--Device-OH_InputMethod_UnderlineStyle-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**起始版本：** 26.1.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_NONE = 0 | 无下划线。<br>**起始版本：** 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_SOLID = 1 | 实线下划线。<br>**起始版本：** 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_WAVY = 2 | 波浪线下划线。<br>**起始版本：** 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_DASHED = 3 | 虚线下划线。<br>**起始版本：** 26.1.0 |
+
+### OH_InputMethod_InputCapabilityType
+
+```c
+enum OH_InputMethod_InputCapabilityType
+```
+
+**描述：**
+
+枚举输入能力类型。
+
+<!--Device-OH_InputMethod_InputCapabilityType--><!--Device-OH_InputMethod_InputCapabilityType-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**起始版本：** 26.1.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_INPUTMETHOD_INPUT_CAPABILITY_TYPE_SYSTEM = 0 | 系统输入能力。<br>**起始版本：** 26.1.0 |
 
 

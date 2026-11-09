@@ -28,7 +28,6 @@
 | [ArkUI_ParallelInnerGestureEvent](capi-arkui-nativemodule-arkui-parallelinnergestureevent.md) | ArkUI_ParallelInnerGestureEvent | 定义并行内部手势事件。该结构体作为[setInnerGestureParallelTo](capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto)回调函数的参数传递，包含当前内置手势识别器、响应链中的冲突手势识别器和用户自定义数据， 供回调选择需要与当前内置手势并行识别的对象。 |
 | [ArkUI_ParallelGestureEvent](capi-arkui-nativemodule-arkui-parallelgestureevent.md) | ArkUI_ParallelGestureEvent | 定义手势模块接口集合，包含[ArkUI_NativeGestureAPI_1](capi-arkui-nativemodule-arkui-nativegestureapi-1.md)、[ArkUI_NativeGestureAPI_2](capi-arkui-nativemodule-arkui-nativegestureapi-2.md)结构体中的手势接口及新增手势接口。<br> 该接口集合支持为ArkUI节点设置并行手势事件回调。回调可从响应链中的冲突手势识别器中选择需要与当前手势并行识别的对象。相关事件数据请参见[ArkUI_ParallelGestureEvent](capi-arkui-nativemodule-arkui-parallelgestureevent.md)。 |
 | [ArkUI_TouchRecognizer](capi-arkui-nativemodule-arkui-touchrecognizer.md) | ArkUI_TouchRecognizer | 定义触摸识别器。触摸识别器用于表示手势打断或手势收集拦截信息中返回的触摸事件处理对象，可通过相关接口获取其节点句柄或取消触摸事件。具体接口请参见[native_gesture.h](capi-native-gesture-h.md)。 |
-| [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | Defines information about gesture collection interception. |
 | [ArkUI_GestureRecognizer*](capi-arkui-nativemodule-arkui-gesturerecognizer8h.md) | ArkUI_GestureRecognizerHandle | 定义手势识别器句柄类型，是ArkUI_GestureRecognizer指针类型的别名封装，用于在ArkUI原生手势接口中表示手势识别器对象。 |
 | [ArkUI_TouchRecognizer*](capi-arkui-nativemodule-arkui-touchrecognizer8h.md) | ArkUI_TouchRecognizerHandle | 定义触摸识别器句柄，用于表示触摸识别器对象，并在手势打断、手势收集拦截等接口中传递该对象。 |
 

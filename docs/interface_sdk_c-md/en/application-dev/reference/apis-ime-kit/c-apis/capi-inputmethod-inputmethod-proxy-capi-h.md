@@ -33,6 +33,7 @@ Provides methods for using the input method, allowing requests and notifications
 | [InputMethod_ErrorCode OH_InputMethodProxy_NotifyConfigurationChange(InputMethod_InputMethodProxy *inputMethodProxy, InputMethod_EnterKeyType enterKey, InputMethod_TextInputType textType)](#oh_inputmethodproxy_notifyconfigurationchange) | Notifies the change of the text box configuration. |
 | [InputMethod_ErrorCode OH_InputMethodProxy_NotifyCursorUpdate(InputMethod_InputMethodProxy *inputMethodProxy, InputMethod_CursorInfo *cursorInfo)](#oh_inputmethodproxy_notifycursorupdate) | Notifies the cursor position change. |
 | [InputMethod_ErrorCode OH_InputMethodProxy_SendPrivateCommand(InputMethod_InputMethodProxy *inputMethodProxy, InputMethod_PrivateCommand *privateCommand[], size_t size)](#oh_inputmethodproxy_sendprivatecommand) | Sends a private data command. |
+| [InputMethod_ErrorCode OH_InputMethod_InputMethodProxy_RequestSystemInputCapability(InputMethod_InputMethodProxy *inputMethodProxy, OH_InputMethod_InputCapabilityType type)](#oh_inputmethod_inputmethodproxy_requestsysteminputcapability) | Request system input capability. |
 
 ## Function description
 
@@ -241,5 +242,34 @@ Sends a private data command.
 | Type | Description |
 | -- | -- |
 | [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | An error code. <br>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Success. <br>[IME_ERR_PARAMCHECK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Parameter error. <br>[IME_ERR_IMCLIENT](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Client error in input method. <br>[IME_ERR_IMMS](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Input method service error. <br>[IME_ERR_DETACHED](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Input method not bound. <br>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - An unexpected null pointer. <br>For details about the error codes, see [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+
+### OH_InputMethod_InputMethodProxy_RequestSystemInputCapability()
+
+```c
+InputMethod_ErrorCode OH_InputMethod_InputMethodProxy_RequestSystemInputCapability(InputMethod_InputMethodProxy *inputMethodProxy, OH_InputMethod_InputCapabilityType type)
+```
+
+**Description**
+
+Request system input capability.
+
+<!--Device-InputMethod_ErrorCode OH_InputMethod_InputMethodProxy_RequestSystemInputCapability(InputMethod_InputMethodProxy *inputMethodProxy, OH_InputMethod_InputCapabilityType type)--><!--Device-InputMethod_ErrorCode OH_InputMethod_InputMethodProxy_RequestSystemInputCapability(InputMethod_InputMethodProxy *inputMethodProxy, OH_InputMethod_InputCapabilityType type)-End-->
+
+**System capability**: SystemCapability.MiscServices.InputMethodFramework
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) *inputMethodProxy | [in] indicates the pointer to the [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance. The value of inputMethodProxy is obtained from [OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach). |
+| [OH_InputMethod_InputCapabilityType](capi-inputmethod-types-capi-h.md#oh_inputmethod_inputcapabilitytype) type | [out] indicates the input capability type. [OH_InputMethod_InputCapabilityType](capi-inputmethod-types-capi-h.md#oh_inputmethod_inputcapabilitytype) |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code. <ul> <li>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Success.</li> <li>[IME_ERR_PARAMCHECK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Parameter verification failed.</li> <li>[IME_ERR_IMMS](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Input method management service error.</li> <li>IME_ERR_DETAACHE - The input method client is disconnected.</li> <li>OH_INPUT METHOD_ERR_NOT_DEFAULT_IME - The current input method is not the default input method configured in the system.</li> <li>OH_INPUT METHOD_ERR_INPUT_CAPABLE_TYPE_NOT_SUPPORTED - The input capability type is not supported.</li> <li>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Unexpected null pointer.</li> <li>For details about the error code, see [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode).</li> <ul> |
 
 

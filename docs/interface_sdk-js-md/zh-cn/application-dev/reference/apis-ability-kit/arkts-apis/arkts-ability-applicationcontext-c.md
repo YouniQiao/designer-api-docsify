@@ -1879,12 +1879,6 @@ setFont(font: string, enableAnimation: boolean): void
 | font | string | 是 | 设置字体类型，字体可以通过UIContext.registerFont方法进行注册使用。 |
 | enableAnimation | boolean | 是 | 设置字体类型时是否使用动画，true表示使用动画，false表示不使用动画。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-
 **示例**
 
 参见 [setFont](#setfont)

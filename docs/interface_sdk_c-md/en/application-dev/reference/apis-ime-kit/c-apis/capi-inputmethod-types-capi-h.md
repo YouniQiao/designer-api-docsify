@@ -28,6 +28,8 @@ Defines the types related to the input method.
 | [InputMethod_CommandValueType](#inputmethod_commandvaluetype) | InputMethod_CommandValueType | Enumerates the private data types. |
 | [InputMethod_ErrorCode](#inputmethod_errorcode) | InputMethod_ErrorCode | Enumerates the input method error codes. |
 | [InputMethod_RequestKeyboardReason](#inputmethod_requestkeyboardreason) | InputMethod_RequestKeyboardReason | Enumerates the reasons for requesting the keyboard. |
+| [OH_InputMethod_UnderlineStyle](#oh_inputmethod_underlinestyle) | OH_InputMethod_UnderlineStyle | Pre-screen text underline style enumeration. |
+| [OH_InputMethod_InputCapabilityType](#oh_inputmethod_inputcapabilitytype) | OH_InputMethod_InputCapabilityType | Input capability type enumeration. |
 
 ### Macro
 
@@ -220,6 +222,8 @@ Enumerates the input method error codes.
 | IME_ERR_SETTINGS = 12800007 | &nbsp;Input method setter error. |
 | IME_ERR_IMMS = 12800008 | &nbsp;Input method manager service error. |
 | IME_ERR_DETACHED = 12800009 | &nbsp;Text box unbound. |
+| OH_INPUTMETHOD_ERR_NOT_DEFAULT_IME = 12800010 | Error code when the current input method is not the default input method preset in the system.<br>**Since**: 26.1.0 |
+| OH_INPUTMETHOD_ERR_INPUT_CAPABILITY_TYPE_NOT_SUPPORTED = 12800029 | Error code when the input capability type is not supported.<br>**Since**: 26.1.0 |
 | IME_ERR_NULL_POINTER = 12802000 | &nbsp;Null pointer. |
 | IME_ERR_QUERY_FAILED = 12802001 | &nbsp;Query failed. |
 
@@ -245,5 +249,48 @@ Enumerates the reasons for requesting the keyboard.
 | IME_REQUEST_REASON_MOUSE = 1 | Mouse operation. |
 | IME_REQUEST_REASON_TOUCH = 2 | Touch operation. |
 | IME_REQUEST_REASON_OTHER = 20 | Other reasons. |
+
+### OH_InputMethod_UnderlineStyle
+
+```c
+enum OH_InputMethod_UnderlineStyle
+```
+
+**Description**
+
+Pre-screen text underline style enumeration.
+
+<!--Device-OH_InputMethod_UnderlineStyle--><!--Device-OH_InputMethod_UnderlineStyle-End-->
+
+**System capability**: SystemCapability.MiscServices.InputMethodFramework
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_NONE = 0 | No underline.<br>**Since**: 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_SOLID = 1 | Solid underline.<br>**Since**: 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_WAVY = 2 | Wavy lines underline.<br>**Since**: 26.1.0 |
+| OH_INPUTMETHOD_UNDERLINE_STYLE_DASHED = 3 | Dotted underline.<br>**Since**: 26.1.0 |
+
+### OH_InputMethod_InputCapabilityType
+
+```c
+enum OH_InputMethod_InputCapabilityType
+```
+
+**Description**
+
+Input capability type enumeration.
+
+<!--Device-OH_InputMethod_InputCapabilityType--><!--Device-OH_InputMethod_InputCapabilityType-End-->
+
+**System capability**: SystemCapability.MiscServices.InputMethodFramework
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_INPUTMETHOD_INPUT_CAPABILITY_TYPE_TRANSLATION = 0 | Set Capability Type to Translation.<br>**Since**: 26.1.0 |
 
 

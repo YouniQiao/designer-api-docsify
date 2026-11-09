@@ -18,6 +18,22 @@ class ArkTSVM
 import { util } from '@kit.ArkTS';
 ```
 
+## enableHandleMemoryOptimization
+
+```TypeScript
+static enableHandleMemoryOptimization(): void
+```
+
+开启按比例的 handle/原始类型存储收缩优化。默认关闭；一旦开启将无法关闭。开启前使用传统的保守收缩策略。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static enableHandleMemoryOptimization(): void--><!--Device-ArkTSVM-static enableHandleMemoryOptimization(): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
 ## enableLocalHandleDetection
 
 ```TypeScript

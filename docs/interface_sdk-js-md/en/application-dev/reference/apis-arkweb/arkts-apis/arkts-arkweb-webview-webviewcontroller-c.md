@@ -7668,6 +7668,57 @@ Removes the user data associated with the specified key from the current navigat
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. Ensure that the WebviewController is associated with a Web component before calling this API. |
 
+## removeVisitedLinksSince
+
+```TypeScript
+static removeVisitedLinksSince(date: Date, callback: Callback<void>): void
+```
+
+Removes visited link records that changed after the specified date. This API uses an asynchronous callback to return the result.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static removeVisitedLinksSince(date: Date, callback: Callback<void>): void--><!--Device-WebviewController-static removeVisitedLinksSince(date: Date, callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | Date | Yes | The time point for the data removal.     The visited link records remove data that changed after the date. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## removeVisitedLinksSince
+
+```TypeScript
+static removeVisitedLinksSince(date: Date): Promise<void>
+```
+
+Removes visited link records that changed after the specified date. This API uses a promise to return the result.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static removeVisitedLinksSince(date: Date): Promise<void>--><!--Device-WebviewController-static removeVisitedLinksSince(date: Date): Promise<void>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| date | Date | Yes | The time point for the data removal.     The visited link records remove data that changed after the date. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
 ## requestFocus
 
 ```TypeScript

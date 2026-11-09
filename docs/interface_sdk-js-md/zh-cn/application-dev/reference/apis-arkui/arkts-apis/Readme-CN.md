@@ -475,6 +475,64 @@
 - [@ohos.arkui.inspector（布局回调）](arkts-arkui-arkui-inspector.md)
   - [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md)
   - [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md)
+<!--Del-->
+- [@ohos.arkui.intelligence.imageGeneration](arkts-arkui-arkui-intelligence-imagegeneration.md)<!--DelEnd-->
+  <!--Del-->
+  - [closeGeneratorDialog（系统接口）](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [closeGeneratorNodeGraph（系统接口）](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [hideGeneratorDialog（系统接口）](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [hideGeneratorNodeGraph（系统接口）](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [openGeneratorNodeGraph（系统接口）](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [restoreGeneratorDialog（系统接口）](arkts-arkui-imagegeneration-restoregeneratordialog-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [restoreGeneratorNodeGraph（系统接口）](arkts-arkui-imagegeneration-restoregeneratornodegraph-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [showGeneratorDialog（系统接口）](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startSmartCanvasService（系统接口）](arkts-arkui-imagegeneration-startsmartcanvasservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CustomImportIcon（系统接口）](arkts-arkui-imagegeneration-customimporticon-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CustomImportResult（系统接口）](arkts-arkui-imagegeneration-customimportresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GenerateImageTaskParams（系统接口）](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GenerateImageTaskPartialResult（系统接口）](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GenerateImageTaskResult（系统接口）](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GenerateTextTaskPartialResult（系统接口）](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GenerateTextTaskResult（系统接口）](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GeneratorDialogOptions（系统接口）](arkts-arkui-imagegeneration-generatordialogoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GeneratorNodeGraphOptions（系统接口）](arkts-arkui-imagegeneration-generatornodegraphoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GeneratorResult（系统接口）](arkts-arkui-imagegeneration-generatorresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [GeneratorResultPageIcon（系统接口）](arkts-arkui-imagegeneration-generatorresultpageicon-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImageGenerationModel（系统接口）](arkts-arkui-imagegeneration-imagegenerationmodel-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImageItem（系统接口）](arkts-arkui-imagegeneration-imageitem-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImageStyle（系统接口）](arkts-arkui-imagegeneration-imagestyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LiveViewInfo（系统接口）](arkts-arkui-imagegeneration-liveviewinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TaskStatistic（系统接口）](arkts-arkui-imagegeneration-taskstatistic-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TextGenerationModel（系统接口）](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CustomImportCallback（系统接口）](arkts-arkui-imagegeneration-customimportcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PartialResultType（系统接口）](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)<!--DelEnd-->
 - [@ohos.arkui.node（自定义节点）](arkts-arkui-arkui-node.md)
 - [@ohos.arkui.observer（无感监听）](arkts-arkui-arkui-observer.md)
   - [off](arkts-arkui-uiobserver-off-f.md)

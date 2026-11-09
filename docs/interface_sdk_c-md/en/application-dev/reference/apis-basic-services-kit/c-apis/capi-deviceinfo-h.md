@@ -720,7 +720,7 @@ Obtains the Disk Serial Number.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <li>0 if the operation is successful.</li> <li>201 if the caller does not have ohos.permission.ACCESS_DISK_PHY_INFO.</li> </ul> |
+| int32_t | <ul> <li>0 if the operation is successful.</li> <li>201 if the caller does not have ohos.permission.ACCESS_DISK_PHY_INFO.</li> <li>401 if the caller passes an invalid input parameter.</li> </ul> |
 
 ### OH_GetOdid()
 

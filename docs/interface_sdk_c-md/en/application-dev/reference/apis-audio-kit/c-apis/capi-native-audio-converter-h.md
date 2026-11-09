@@ -19,6 +19,9 @@ Declare underlying data structure.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md) | - | Define the audio converter format info structure, used to describe basic audio format. |
+| [OH_AudioSuite_ConverterFormatEx](capi-ohaudiosuite-oh-audiosuite-converterformatex.md) | - | Defines the format information of the extended audio converter, which is used to describe the audio format that supports any sampling rate. |
+| [OH_AudioSuite_ConverterInputInfo](capi-ohaudiosuite-oh-audiosuite-converterinputinfo.md) | - | Defines the input data structure of the audio converter. |
+| [OH_AudioSuite_ConverterOutputInfo](capi-ohaudiosuite-oh-audiosuite-converteroutputinfo.md) | - | Defines the output data structure of the audio converter, which is used to receive the converted audio data in direct processing mode. |
 | [OH_AudioConverterStruct](capi-ohaudiosuite-oh-audioconverterstruct.md) | OH_AudioConverter | Declare the audio converter. The handle of audio converter is used for audio converter related functions. |
 
 ### Enum
@@ -67,6 +70,8 @@ Define the result of the function execution.
 | AUDIOCONVERTER_ERROR_NOT_INITIALIZED = 6 | &nbsp;Audio converter instance is not initialized.<br>**Since**: 26.0.0 |
 | AUDIOCONVERTER_ERROR_CALLBACK_INVALID = 7 | &nbsp;Callback is invalid.<br>**Since**: 26.0.0 |
 | AUDIOCONVERTER_ERROR_CALLBACK_NOT_SET = 8 | &nbsp;Callback is not set.<br>**Since**: 26.0.0 |
+| AUDIOCONVERTER_ERROR_NOT_SYSTEM_APP = 202 | Permission verification failed. A non-system application invokes the system API.<br>**Since**: 26.1.0 |
+| AUDIOCONVERTER_ERROR_UNSUPPORTED_OPERATION = 6800104 | The operation is not supported.<br>**Since**: 26.1.0 |
 
 ### OH_AudioConverter_InputStatus
 
@@ -205,7 +210,7 @@ Set converter request data callback.<br> This function binds the input data call
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioConverter_Result](capi-native-audio-converter-h.md#oh_audioconverter_result) | <ul> <li>[AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) if execution succeeds.</li> <li>[AUDIOCONVERTER_ERROR_INVALID_PARAM](capi-native-audio-converter-h.md#oh_audioconverter_result) if parameter is invalid, e.g. converter is nullptr, e.t.c.</li> <li>[AUDIOCONVERTER_ERROR_NOT_INITIALIZED](capi-native-audio-converter-h.md#oh_audioconverter_result) if the converter instance is not initialized</li> <li>[AUDIOCONVERTER_ERROR_CALLBACK_INVALID](capi-native-audio-converter-h.md#oh_audioconverter_result) if callback is invalid, e.g. invalid callback return, e.t.c.</li> <li>[AUDIOCONVERTER_ERROR_SYSTEM](capi-native-audio-converter-h.md#oh_audioconverter_result) if the system has other abnormalities</li> </ul> |
+| [OH_AudioConverter_Result](capi-native-audio-converter-h.md#oh_audioconverter_result) | <ul> <li>[AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) Succeeded in setting the input callback function, and subsequent processes can be properly executed. </li> <li>[AUDIOCONVERTER_ERROR_INVALID_PARAM](capi-native-audio-converter-h.md#oh_audioconverter_result) The input parameter of the function is invalid, Check whether the input audio format converter pointer is a non-null pointer. </li> <li>AUDIOCONVERTER_ERROR_NOT_INITIALIZATIONThe audio format converter is not initialized, Check whether the current audio format converter is valid. </li> <li>[AUDIOCONVERTER_ERROR_CALLBACK_INVALID](capi-native-audio-converter-h.md#oh_audioconverter_result) The callback function is invalid, Check whether the amount of data returned by the input callback function is within the allowed range. </li> <li>[AUDIOCONVERTER_ERROR_CALLBACK_NOT_SET](capi-native-audio-converter-h.md#oh_audioconverter_result)The callback function is not set. Check whether the callback function pointer is empty. </li> <li>[AUDIOCONVERTER_ERROR_SYSTEM](capi-native-audio-converter-h.md#oh_audioconverter_result) System error. Check whether the format conversion is performed using the destroyed audio format converter. </li> <li>[AUDIOCONVERTER_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-converter-h.md#oh_audioconverter_result) The current processing process does not support callback setting. [since 26.1.0]</li> </ul> |
 
 ### OH_AudioConverter_Process()
 

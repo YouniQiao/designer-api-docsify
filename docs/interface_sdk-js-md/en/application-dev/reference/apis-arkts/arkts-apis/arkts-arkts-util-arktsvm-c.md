@@ -18,6 +18,22 @@ A class that provides VM maintenance and test capabilities for developers.
 import { util } from '@kit.ArkTS';
 ```
 
+## enableHandleMemoryOptimization
+
+```TypeScript
+static enableHandleMemoryOptimization(): void
+```
+
+Enable the proportional handle/primitive storage shrink optimization. OFF by default; once enabled it cannot be turned off. Before enablement the legacy conservative shrink is used.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ArkTSVM-static enableHandleMemoryOptimization(): void--><!--Device-ArkTSVM-static enableHandleMemoryOptimization(): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
 ## enableLocalHandleDetection
 
 ```TypeScript
