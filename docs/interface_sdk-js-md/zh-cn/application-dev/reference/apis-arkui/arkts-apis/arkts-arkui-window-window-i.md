@@ -117,7 +117,7 @@ clientToGlobalDisplay(winX: number, winY: number): Position
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 **示例**
 
@@ -1116,7 +1116,7 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed;         2. Convert avoid area failed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -1661,7 +1661,7 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 **示例**
 
@@ -1730,7 +1730,7 @@ globalDisplayToClient(globalDisplayX: number, globalDisplayY: number): Position
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 **示例**
 
@@ -1999,7 +1999,7 @@ isInWindowPostureMode(mode: WindowPostureMode): boolean
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -3045,7 +3045,7 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause:         1. Invalid window type. Only main windows and maximizable subwindows are supported;         2. The acrossDisplay parameter only supports main windows.         3. The snapshotAnimationConfig parameter only supports main windows. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -3646,7 +3646,7 @@ moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed.         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 **示例**
 
@@ -5217,7 +5217,7 @@ offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -6758,7 +6758,7 @@ onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>):
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -6932,7 +6932,7 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error;         3. The window does not support floating mode. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause:         1. The snapshotAnimationConfig parameter only supports main windows. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -7710,7 +7710,7 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause:         1. Invalid parameter range.         2. Invalid parameter length. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause:         1. Invalid parameter range.         2. Invalid parameter length. |
 
 **示例**
 
@@ -7941,7 +7941,7 @@ setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause:         1. Invalid parameter range; 2. The parameter format is incorrect. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause:         1. Invalid parameter range; 2. The parameter format is incorrect. |
 
 **示例**
 
@@ -9441,7 +9441,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed.         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause:         1. Only main windows and subwindows are supported.         2. Not supported when subwindows are set to follow the main window. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause:         1. When called on a main window, the parameter should not only contain SPLIT.         2. When called on a sub window, the parameter should not contain SPLIT. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause:         1. When called on a main window, the parameter should not only contain SPLIT.         2. When called on a sub window, the parameter should not contain SPLIT. |
 
 **示例**
 
@@ -9677,7 +9677,7 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例**
 
@@ -11194,7 +11194,7 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: number, maskHeight: nu
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed;                                         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause:         1. The maskWidth is not equal to the window width or the maskHeight is not equal to the window height.         2. The length of windowMask is not equal to maskWidth multiplied by maskHeight. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause:         1. The maskWidth is not equal to the window width or the maskHeight is not equal to the window height.         2. The length of windowMask is not equal to maskWidth multiplied by maskHeight. |
 
 **示例**
 
@@ -12214,7 +12214,7 @@ setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: Tr
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause:         1. Invalid parameter range;         2. Invalid parameter length. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter error. Possible cause:         1. Invalid parameter range;         2. Invalid parameter length. |
 
 **示例**
 
@@ -12473,7 +12473,7 @@ showWindow(options: ShowWindowOptions): Promise<void>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Function showWindow cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Modal subwindow and dialog window cannot set focusOnShow. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter validation error. Possible cause: 1. The value of the parameter is out of the allowed range;         2. The length of the parameter exceeds the allowed length;         3. The parameter format is incorrect. |
+| [1300016](../errorcode-window.md#1300016-参数错误) | Parameter validation error. Possible cause: 1. The value of the parameter is out of the allowed range;         2. The length of the parameter exceeds the allowed length;         3. The parameter format is incorrect. |
 
 **示例**
 

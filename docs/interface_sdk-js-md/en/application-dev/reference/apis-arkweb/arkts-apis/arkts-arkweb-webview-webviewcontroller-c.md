@@ -2853,6 +2853,32 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getDefaultUserAgentLite
+
+```TypeScript
+static getDefaultUserAgentLite(): string
+```
+
+Obtains the default user agent without initializing the ArkWeb kernel.
+
+Unlike [getDefaultUserAgent](#getdefaultuseragent), this API does not trigger web engine initialization, so it can be called during application startup to report the user agent to a server without extra memory cost.
+
+If the ArkWeb engine library is unavailable, an empty string is returned.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static getDefaultUserAgentLite(): string--><!--Device-WebviewController-static getDefaultUserAgentLite(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Default **User-Agent** string of ArkWeb, identical to the string returned by [getUserAgent](#getuseragent) after the web engine is initialized. |
+
 ## getErrorPageEnabled
 
 ```TypeScript
