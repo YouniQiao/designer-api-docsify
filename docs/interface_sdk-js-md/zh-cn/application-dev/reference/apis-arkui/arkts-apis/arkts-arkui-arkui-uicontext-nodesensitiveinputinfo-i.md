@@ -24,7 +24,7 @@ import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorControll
 isAgent: boolean
 ```
 
-事件是否为Agent生成的事件。**true**表示该事件由系统Agent生成，或由具有ohos.permission.CONTROL_DEVICE权限的应用注入；**false**表示用户生成的输入事件或其他注入事件。
+事件是否为Agent生成的事件。**true**表示该事件由系统Agent生成，或由具有ohos.permission.CONTROL_COMPONENT权限的应用注入；**false**表示用户生成的输入事件或其他注入事件。
 
 **类型：** boolean
 

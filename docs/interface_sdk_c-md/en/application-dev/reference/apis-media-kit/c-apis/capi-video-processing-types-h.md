@@ -31,7 +31,7 @@ Type definitions for video processing.
 | [VideoDetailEnhancer_QualityLevel](#videodetailenhancer_qualitylevel) | VideoDetailEnhancer_QualityLevel | The quality level is used for detail enhancement.<br> It is the value of the key parameter [VIDEO_DETAIL_ENHANCER_PARAMETER_KEY_QUALITY_LEVEL](capi-video-processing-types-h.md#变量). |
 | [VideoMetadataGeneratorStyleControl](#videometadatageneratorstylecontrol) | VideoMetadataGeneratorStyleControl | The style control is used for video metadata generator.<br> It is the value of the key parameter [VIDEO_METADATA_GENERATOR_STYLE_CONTROL](capi-video-processing-types-h.md#变量). |
 | [VideoProcessing_ErrorCode](#videoprocessing_errorcode) | VideoProcessing_ErrorCode | Video processing error code. |
-| [VideoProcessing_State](#videoprocessing_state) | VideoProcessing_State | Video processing states.<br> The state is reported to user by callback function OH_VideoProcessing_OnState. |
+| [VideoProcessing_State](#videoprocessing_state) | VideoProcessing_State | Video processing states.<br> The state is reported to user by callback function [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate). |
 
 ### Function
 
@@ -151,7 +151,7 @@ enum VideoProcessing_State
 
 **Description**
 
-Video processing states.<br> The state is reported to user by callback function OH_VideoProcessing_OnState.
+Video processing states.<br> The state is reported to user by callback function [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#oh_videoprocessingcallback_onstate).
 
 <!--Device-VideoProcessing_State--><!--Device-VideoProcessing_State-End-->
 

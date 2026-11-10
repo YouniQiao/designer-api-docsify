@@ -13,7 +13,7 @@
 - [Automatic Scene Configuration Kit (10)](interface_sdk-js-md/en/application-dev/reference/apis-automatic-scene-configuration-kit/arkts-apis/arkts-automaticsceneconfiguration-customization-assessment.md)
 - [Avcodec Kit (63)](interface_sdk_c-md/en/application-dev/reference/apis-avcodec-kit/c-apis/capi-avcodec-kit-core.md)
 - [Avsession Kit (233)](interface_sdk-js-md/en/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-avsession-app-ability-mediacontrolextensionability.md)
-- [Background Tasks Kit (206)](interface_sdk-js-md/en/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagentmanager.md)
+- [Background Tasks Kit (212)](interface_sdk-js-md/en/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagentmanager.md)
 - [Basic Services Kit (986)](interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-account-appaccount.md)
 - [Calendar Kit (19)](interface_sdk-js-md/en/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager.md)
 - [Camera Kit (305)](interface_sdk-js-md/en/application-dev/reference/apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md)
