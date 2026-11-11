@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 ```
 
 ## registerSuspendStateObserver
