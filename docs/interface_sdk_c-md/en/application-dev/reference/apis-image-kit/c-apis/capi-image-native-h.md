@@ -14,14 +14,14 @@ The file declares the cropping rectangle, size, and component data of an image.
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) | - | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) is the image data struct encapsulated at the native layer. To obtain an [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) object, call [OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata).<br> The struct stores the shallow copy of the original image data. Once the original data is released, no read or write operations should be performed on the pointers within this struct; otherwise, undefined behavior will occur. |
+| [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) | OH_ImageBufferData | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) is the image data struct encapsulated at the native layer. To obtain an [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) object, call [OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata).<br> The struct stores the shallow copy of the original image data. Once the original data is released, no read or write operations should be performed on the pointers within this struct; otherwise, undefined behavior will occur. |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) | OH_ImageNative | The struct describes the alias for an image object at the native layer. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -120,7 +120,7 @@ Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi
 | -- | -- |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) *image | Pointer to an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | uint32_t componentType | Component type. The value is obtained using the [OH_ImageNative_GetComponentTypes](capi-image-native-h.md#oh_imagenative_getcomponenttypes) API. |
-| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) object. |
+| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) object. |
 
 **Returns**:
 

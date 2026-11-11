@@ -14,7 +14,7 @@ The file declares the error codes of the AbilityRuntime module.
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |

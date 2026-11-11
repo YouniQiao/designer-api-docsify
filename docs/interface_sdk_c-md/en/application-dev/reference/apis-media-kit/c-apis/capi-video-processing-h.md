@@ -14,7 +14,7 @@ Declare video processing functions.<br> Provides SDR content processing for vide
 
 ## Summary
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -631,7 +631,7 @@ Specifies whether the type effect is required in the XComponent named name that 
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li> <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is not [VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR](capi-video-processing-types-h.md#变量) or name is null.</li> <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported) returns false for the type, or the same name has already been registered by calling this function.</li></ul> |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li> <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is not [VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR](capi-video-processing-types-h.md#variables) or name is null.</li> <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported) returns false for the type, or the same name has already been registered by calling this function.</li></ul> |
 
 ### OH_VideoProcessing_SetAutoEffectParam()
 

@@ -23,3 +23,19 @@ function init(): void
 <!--Device-hiRetrieval-function init(): void--><!--Device-hiRetrieval-function init(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
+
+try {
+  // 初始化应用灰度模块
+  hiRetrieval.init();
+} catch (err) {
+  // 捕获并打印错误信息
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+// 后续可以完成其他的灰度接口调用
+```

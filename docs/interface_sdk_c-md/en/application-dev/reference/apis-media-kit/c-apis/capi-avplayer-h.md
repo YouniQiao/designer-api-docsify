@@ -12,7 +12,7 @@ The **avplayer.h** file declares the AVPlayer APIs. You can use the native AVPla
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -20,7 +20,7 @@ The **avplayer.h** file declares the AVPlayer APIs. You can use the native AVPla
 | [DRM_MediaKeySystemInfo](capi-avplayer-drm-mediakeysysteminfo.md) | DRM_MediaKeySystemInfo | The DRM_MediaKeySystemInfo struct describes the media key system information. |
 | [OH_AVPlayerVideoOutput](capi-avplayer-oh-avplayervideooutput.md) | OH_AVPlayerVideoOutput | OH_AVPlayerVideoOutput field. |
 
-### Function
+### Functions
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |

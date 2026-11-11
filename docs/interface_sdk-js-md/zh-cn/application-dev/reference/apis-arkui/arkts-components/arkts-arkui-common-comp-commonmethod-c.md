@@ -5311,6 +5311,8 @@ monopolizeEvents(monopolize: boolean): T
 
 <!--Device-CommonMethod-monopolizeEvents(monopolize: boolean): T--><!--Device-CommonMethod-monopolizeEvents(monopolize: boolean): T-End-->
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -9431,9 +9433,9 @@ width(value: Length): T
 
 > **说明：** 
 > 
-> - 在[TextInput](./ts-basic-components-textinput.md)组件中，width设置auto表示自适应文本宽度。
+> - 在[TextInput](arkts-arkui-textinput-comp.md)组件中，width设置auto表示自适应文本宽度。
 > 
-> - 在[AlphabetIndexer](./ts-container-alphabet-indexer.md)组件中，width设置auto表示自适应宽度最大索引项的宽度。
+> - 在[AlphabetIndexer](arkts-arkui-alphabetindexer-comp.md)组件中，width设置auto表示自适应宽度最大索引项的宽度。
 > 
 > - 在Row、Column、[RelativeContainer](arkts-arkui-relativecontainer-comp.md)组件中，width设置auto表示自适应子组件。
 > 

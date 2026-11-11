@@ -16,13 +16,13 @@ Defines the child process active state type and notification function.
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AbilityRuntime_ChildProcessState](#oh_abilityruntime_childprocessstate) | OH_AbilityRuntime_ChildProcessState | Enumerates the active states of a child process.<br> A child process is in the active state by default when it is started. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
