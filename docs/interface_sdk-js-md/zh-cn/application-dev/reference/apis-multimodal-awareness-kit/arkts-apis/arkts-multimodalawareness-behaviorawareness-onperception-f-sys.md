@@ -15,9 +15,9 @@ export function onPerception(
   ): Promise<void>
 ```
 
-发起订阅。业务侧向 MSDP 注册订阅关系，同时注册感知事件回调。
+发起订阅。业务侧向MSDP注册订阅关系，同时注册感知事件回调。
 
-当用户执行动作时，MSDP 从感知事件表过滤匹配项并通过回调实时推送。同一订阅目标重复订阅时，后传入的回调覆盖之前的回调。
+当用户执行操作时，MSDP从感知事件表过滤匹配项并通过回调实时推送。同一订阅目标重复订阅时，后传入的回调覆盖之前的回调。
 
 **起始版本：** 26.1.0
 
@@ -40,7 +40,7 @@ export function onPerception(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回值的 Promise。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

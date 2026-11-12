@@ -178,6 +178,35 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+## onAccountSwitched
+
+```TypeScript
+onAccountSwitched(fromAccountId: number, toAccountId: number): void
+```
+
+Callback for account switched events. Called when the current user account is switched from one account to another. This callback differs from the existing onAccountSwitched(accountId: number) by providing both source and target account IDs for more detailed account transition tracking.
+
+You should register the **MANAGED_EVENT_ACCOUNT_SWITCHED** event through the [adminManager.subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md) API.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(fromAccountId: number, toAccountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(fromAccountId: number, toAccountId: number): void-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fromAccountId | number | Yes | ID of the account that was switched from. |
+| toAccountId | number | Yes | ID of the account that was switched to. |
+
+**Examples**
+
+See [onAccountSwitched](#onaccountswitched)
+
 ## onAdminDisabled
 
 ```TypeScript

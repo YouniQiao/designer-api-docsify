@@ -2228,7 +2228,7 @@ getMeasureUtils(): MeasureUtils
 getMediaQuery(): MediaQuery
 ```
 
-get object mediaQuery.
+获取MediaQuery对象。
 
 **起始版本：** 10
 
@@ -2244,7 +2244,7 @@ get object mediaQuery.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | MediaQuery实例对象。 |
 
 **示例**
 

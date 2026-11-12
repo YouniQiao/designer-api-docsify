@@ -146,6 +146,7 @@
   - [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f.md)
   <!--Del-->
   - [cancelPairedDevice（系统接口）](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
+  - [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f.md)
   <!--Del-->
   - [cancelPairingDevice（系统接口）](arkts-connectivity-connection-cancelpairingdevice-f-sys.md)<!--DelEnd-->
   - [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md)

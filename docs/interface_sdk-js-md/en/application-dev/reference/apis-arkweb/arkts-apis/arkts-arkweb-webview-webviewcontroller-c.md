@@ -2812,6 +2812,30 @@ struct WebComponent {
 }
 ```
 
+## getDataDirectorySuffix
+
+```TypeScript
+static getDataDirectorySuffix(): string
+```
+
+Obtains the data directory suffix for current process.
+
+If the data directory suffix has not been set, an empty string is returned.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static getDataDirectorySuffix(): string--><!--Device-WebviewController-static getDataDirectorySuffix(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | The current data directory suffix, or an empty string if not set. |
+
 ## getDefaultUserAgent
 
 ```TypeScript
@@ -9944,6 +9968,30 @@ struct WebComponent {
   }
 }
 ```
+
+## setDataDirectorySuffix
+
+```TypeScript
+static setDataDirectorySuffix(suffix: string): void
+```
+
+Sets the data directory suffix for the WebEngine in current process.
+
+The provided suffix is appended to the data directory path to achieve data isolation for different processes. If this API is not called, no suffix will be used. The WebEngine in current process uses the default data directory. This API must be called before WebEngine is initialized.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static setDataDirectorySuffix(suffix: string): void--><!--Device-WebviewController-static setDataDirectorySuffix(suffix: string): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| suffix | string | Yes | The data directory suffix. <br>The maximum length is 128. <br>Must not contain a path separator. <br>This value cannot be null. |
 
 ## setDownloadDelegate
 

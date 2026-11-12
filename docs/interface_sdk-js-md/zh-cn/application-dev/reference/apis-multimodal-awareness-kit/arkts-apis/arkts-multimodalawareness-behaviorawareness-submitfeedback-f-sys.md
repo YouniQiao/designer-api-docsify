@@ -12,7 +12,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 export function submitFeedback(feedback: FeedbackData): Promise<void>
 ```
 
-提交用户反馈。业务侧将用户反馈发送给 MSDP。
+提交用户反馈。业务侧将用户对感知事件的反馈传递给MSDP。
 
 **起始版本：** 26.1.0
 
@@ -34,7 +34,7 @@ export function submitFeedback(feedback: FeedbackData): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回值的 Promise。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

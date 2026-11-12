@@ -177,6 +177,35 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+## onAccountSwitched
+
+```TypeScript
+onAccountSwitched(fromAccountId: number, toAccountId: number): void
+```
+
+系统账号切换事件回调。当系统账号从一个账号切换到另一个账号时触发。与已有的onAccountSwitched(accountId: number)相比，该回调同时提供切出账号ID和切入账号ID，便于更详细地跟踪账号切换过程。
+
+通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md)注册MANAGED_EVENT_ACCOUNT_SWITCHED事件才能收到此回调。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(fromAccountId: number, toAccountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(fromAccountId: number, toAccountId: number): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromAccountId | number | 是 | 切换前的用户ID，即切出的账号ID。 |
+| toAccountId | number | 是 | 切换后的用户ID，即切入的账号ID。 |
+
+**示例**
+
+参见 [onAccountSwitched](#onaccountswitched)
+
 ## onAdminDisabled
 
 ```TypeScript
