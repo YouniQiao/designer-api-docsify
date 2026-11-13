@@ -19,7 +19,6 @@ Widget information.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.application.formInfo';
 ```
 
 ## abilityName

@@ -5,7 +5,6 @@ fileio
 ## Modules to Import
 
 ```TypeScript
-import { fileIO } from '@ohos.fileio';
 ```
 
 ## Summary

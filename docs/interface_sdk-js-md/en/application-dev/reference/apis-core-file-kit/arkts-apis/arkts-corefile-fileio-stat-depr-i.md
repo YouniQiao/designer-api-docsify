@@ -19,7 +19,6 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 ## Modules to Import
 
 ```TypeScript
-import { fileIO } from '@ohos.fileio';
 ```
 
 ## isBlockDevice

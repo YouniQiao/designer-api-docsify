@@ -17,7 +17,6 @@ Defines the options used in writeText().
 ## Modules to Import
 
 ```TypeScript
-import { FileWriteTextOption } from '@system.file';
 ```
 
 ## complete

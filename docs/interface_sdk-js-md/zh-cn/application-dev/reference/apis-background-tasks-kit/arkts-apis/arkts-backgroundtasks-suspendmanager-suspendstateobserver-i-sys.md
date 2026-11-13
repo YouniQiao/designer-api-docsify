@@ -17,7 +17,6 @@ export interface SuspendStateObserver
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 ```
 
 ## onActive

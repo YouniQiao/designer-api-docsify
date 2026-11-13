@@ -17,7 +17,6 @@ export interface FileReadTextOption
 ## 导入模块
 
 ```TypeScript
-import { FileReadTextOption } from '@system.file';
 ```
 
 ## complete

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@ohos.application.abilityManager';
 ```
 
 ## updateConfiguration

@@ -15,7 +15,6 @@ export default class Storage
 ## Modules to Import
 
 ```TypeScript
-import { Storage } from '@system.storage';
 ```
 
 ## clear

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.backgroundTaskManager';
 ```
 
 ## getRemainingDelayTime

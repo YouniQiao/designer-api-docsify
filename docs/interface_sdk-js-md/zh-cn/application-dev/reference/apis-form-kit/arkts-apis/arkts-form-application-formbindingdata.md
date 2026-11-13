@@ -19,7 +19,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formBindingData } from '@ohos.application.formBindingData';
 ```
 
 ## 汇总

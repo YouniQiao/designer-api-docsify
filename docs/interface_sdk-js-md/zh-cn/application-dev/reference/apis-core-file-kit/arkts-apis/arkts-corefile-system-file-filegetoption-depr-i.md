@@ -17,7 +17,6 @@ export interface FileGetOption
 ## 导入模块
 
 ```TypeScript
-import { FileGetOption } from '@system.file';
 ```
 
 ## complete

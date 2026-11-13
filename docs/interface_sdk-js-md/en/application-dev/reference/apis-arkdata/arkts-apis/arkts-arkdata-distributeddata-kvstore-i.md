@@ -19,7 +19,6 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## commit

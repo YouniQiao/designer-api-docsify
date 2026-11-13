@@ -19,7 +19,6 @@ Provides KV store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## autoSync

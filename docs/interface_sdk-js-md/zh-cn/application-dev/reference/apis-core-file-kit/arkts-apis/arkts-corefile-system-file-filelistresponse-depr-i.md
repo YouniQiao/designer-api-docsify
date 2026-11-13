@@ -17,7 +17,6 @@ export interface FileListResponse
 ## 导入模块
 
 ```TypeScript
-import { FileListResponse } from '@system.file';
 ```
 
 ## fileList

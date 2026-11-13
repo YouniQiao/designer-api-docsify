@@ -21,7 +21,6 @@ export interface FetchResponse
 ## 导入模块
 
 ```TypeScript
-import { FetchResponse } from '@system.fetch';
 ```
 
 ## code

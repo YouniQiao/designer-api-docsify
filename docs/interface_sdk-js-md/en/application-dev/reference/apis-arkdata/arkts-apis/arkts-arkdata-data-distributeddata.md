@@ -20,7 +20,6 @@ device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddat
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## Summary

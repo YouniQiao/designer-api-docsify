@@ -19,7 +19,6 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## 汇总

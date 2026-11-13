@@ -15,7 +15,6 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 ## Modules to Import
 
 ```TypeScript
-import { Statfs } from '@ohos.statfs';
 ```
 
 ## Summary

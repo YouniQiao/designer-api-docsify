@@ -7,7 +7,6 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 ## 导入模块
 
 ```TypeScript
-import { wantAgent } from '@ohos.wantAgent';
 ```
 
 ## 汇总

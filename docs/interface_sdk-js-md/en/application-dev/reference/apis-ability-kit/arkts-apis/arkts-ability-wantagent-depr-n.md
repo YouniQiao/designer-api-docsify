@@ -19,7 +19,6 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent } from '@ohos.wantAgent';
 ```
 
 ## Summary

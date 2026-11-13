@@ -17,7 +17,6 @@ Defines the options used in delete().
 ## Modules to Import
 
 ```TypeScript
-import { FileDeleteOption } from '@system.file';
 ```
 
 ## complete

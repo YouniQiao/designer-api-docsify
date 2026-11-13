@@ -15,7 +15,6 @@ The ConfigurationConstant module provides the enumerated values of the environme
 ## Modules to Import
 
 ```TypeScript
-import { ConfigurationConstant } from '@ohos.application.ConfigurationConstant';
 ```
 
 ## Summary

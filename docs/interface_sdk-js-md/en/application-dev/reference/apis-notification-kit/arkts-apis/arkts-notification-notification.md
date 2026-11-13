@@ -15,7 +15,6 @@ The **Notification** module provides notification management capabilities, cover
 ## Modules to Import
 
 ```TypeScript
-import { notification } from '@ohos.notification';
 ```
 
 ## Summary

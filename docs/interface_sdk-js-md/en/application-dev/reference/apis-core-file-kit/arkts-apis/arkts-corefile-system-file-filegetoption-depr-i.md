@@ -17,7 +17,6 @@ Defines the options used in get().
 ## Modules to Import
 
 ```TypeScript
-import { FileGetOption } from '@system.file';
 ```
 
 ## complete

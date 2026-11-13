@@ -19,7 +19,6 @@ interface FormInfo
 ## 导入模块
 
 ```TypeScript
-import { formInfo } from '@ohos.application.formInfo';
 ```
 
 ## abilityName

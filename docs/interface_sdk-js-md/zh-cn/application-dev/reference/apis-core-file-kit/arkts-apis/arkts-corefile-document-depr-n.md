@@ -17,5 +17,4 @@ document
 ## 导入模块
 
 ```TypeScript
-import { document } from '@ohos.document';
 ```

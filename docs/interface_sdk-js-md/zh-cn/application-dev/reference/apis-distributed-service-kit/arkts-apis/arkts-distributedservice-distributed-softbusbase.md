@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { softbusBase } from '@ohos.distributed.softbusBase';
 ```
 
 ## 汇总

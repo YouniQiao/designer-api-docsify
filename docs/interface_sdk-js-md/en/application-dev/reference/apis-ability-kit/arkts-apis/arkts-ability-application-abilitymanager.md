@@ -17,7 +17,6 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@ohos.application.abilityManager';
 ```
 
 ## Summary

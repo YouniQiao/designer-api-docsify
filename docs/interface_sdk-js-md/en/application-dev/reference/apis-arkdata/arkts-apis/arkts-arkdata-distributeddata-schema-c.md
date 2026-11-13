@@ -19,7 +19,6 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## constructor

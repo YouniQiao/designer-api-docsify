@@ -19,7 +19,6 @@ The **formInfo** module provides types and enums related to the widget informati
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.application.formInfo';
 ```
 
 ## Summary

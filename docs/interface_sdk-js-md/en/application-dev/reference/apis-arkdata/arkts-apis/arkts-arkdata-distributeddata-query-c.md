@@ -19,7 +19,6 @@ Provides APIs to create a **Query** object, which defines different data query c
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## and

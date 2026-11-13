@@ -15,7 +15,6 @@ export interface DeleteStorageOptions
 ## Modules to Import
 
 ```TypeScript
-import { DeleteStorageOptions } from '@system.storage';
 ```
 
 ## complete

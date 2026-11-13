@@ -15,7 +15,6 @@ AbilityDelegatorRegistry模块提供用于存储已注册的[AbilityDelegator](.
 ## 导入模块
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@ohos.application.abilityDelegatorRegistry';
 ```
 
 ## 汇总

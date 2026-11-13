@@ -203,3 +203,43 @@ rejectRecords: Array<UsedRecordDetail>
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## targetBundleName
+
+```TypeScript
+targetBundleName?: string
+```
+
+目标应用的包名。仅在权限名称为ohos.permission.AUTOMATION_CONTROL时该值有效，表示被自动化控制的目标应用的包名。非自动化控制访问记录场景下，该值为空字符串。默认值：空。
+
+**类型：** string
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionUsedRecord-targetBundleName?: string--><!--Device-PermissionUsedRecord-targetBundleName?: string-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**系统接口：** 此接口为系统接口。
+
+## targetTokenId
+
+```TypeScript
+targetTokenId?: number
+```
+
+目标应用的身份标识。仅在权限名称为ohos.permission.AUTOMATION_CONTROL时返回有效值，表示被自动化控制的目标应用的身份标识。非自动化控制访问记录下，该参数返回值为0。取值限定为整数。默认值：0。
+
+**类型：** number
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionUsedRecord-targetTokenId?: int--><!--Device-PermissionUsedRecord-targetTokenId?: int-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**系统接口：** 此接口为系统接口。

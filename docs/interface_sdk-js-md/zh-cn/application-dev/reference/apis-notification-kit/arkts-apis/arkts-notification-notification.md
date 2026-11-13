@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { notification } from '@ohos.notification';
 ```
 
 ## 汇总

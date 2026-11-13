@@ -17,7 +17,6 @@ export interface FileMoveOption
 ## 导入模块
 
 ```TypeScript
-import { FileMoveOption } from '@system.file';
 ```
 
 ## complete

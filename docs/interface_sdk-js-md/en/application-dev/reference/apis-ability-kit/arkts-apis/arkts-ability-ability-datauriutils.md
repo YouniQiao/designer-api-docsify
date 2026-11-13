@@ -21,7 +21,6 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from '@ohos.ability.dataUriUtils';
 ```
 
 ## Summary

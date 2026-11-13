@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { softbusBase } from '@ohos.distributed.softbusBase';
 ```
 
 ## getPerceptionDeviceList

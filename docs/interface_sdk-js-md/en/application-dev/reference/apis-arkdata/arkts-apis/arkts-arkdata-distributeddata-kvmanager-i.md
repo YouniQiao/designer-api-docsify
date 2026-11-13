@@ -19,7 +19,6 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## closeKVStore

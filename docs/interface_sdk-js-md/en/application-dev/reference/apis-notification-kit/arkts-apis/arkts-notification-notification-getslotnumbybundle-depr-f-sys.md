@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { notification } from '@ohos.notification';
 ```
 
 ## getSlotNumByBundle

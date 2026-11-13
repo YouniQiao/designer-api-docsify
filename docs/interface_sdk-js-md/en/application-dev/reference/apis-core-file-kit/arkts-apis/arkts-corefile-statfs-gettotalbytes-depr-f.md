@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { Statfs } from '@ohos.statfs';
 ```
 
 ## getTotalBytes

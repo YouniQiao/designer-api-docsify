@@ -17,7 +17,6 @@ Returns a file, including the file information.
 ## Modules to Import
 
 ```TypeScript
-import { FileResponse } from '@system.file';
 ```
 
 ## lastModifiedTime

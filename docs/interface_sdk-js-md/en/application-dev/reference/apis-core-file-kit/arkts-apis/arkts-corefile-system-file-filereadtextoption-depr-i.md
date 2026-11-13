@@ -17,7 +17,6 @@ Defines the options used in readText().
 ## Modules to Import
 
 ```TypeScript
-import { FileReadTextOption } from '@system.file';
 ```
 
 ## complete

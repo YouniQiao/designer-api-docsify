@@ -15,7 +15,6 @@ export interface GetStorageOptions
 ## Modules to Import
 
 ```TypeScript
-import { GetStorageOptions } from '@system.storage';
 ```
 
 ## complete

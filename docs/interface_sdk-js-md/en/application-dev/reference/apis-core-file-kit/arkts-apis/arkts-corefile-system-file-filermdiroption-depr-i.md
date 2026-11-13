@@ -17,7 +17,6 @@ Defines the options used in rmdir().
 ## Modules to Import
 
 ```TypeScript
-import { FileRmdirOption } from '@system.file';
 ```
 
 ## complete

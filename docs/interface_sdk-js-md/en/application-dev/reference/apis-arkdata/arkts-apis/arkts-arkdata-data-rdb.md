@@ -21,7 +21,6 @@ properties, characteristics, or relationships between data entities in an RDB st
 ## Modules to Import
 
 ```TypeScript
-import { rdb } from '@ohos.data.rdb';
 ```
 
 ## Summary

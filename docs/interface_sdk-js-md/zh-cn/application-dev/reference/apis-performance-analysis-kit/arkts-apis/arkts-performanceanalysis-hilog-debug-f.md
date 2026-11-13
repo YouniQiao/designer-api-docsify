@@ -35,7 +35,7 @@ DEBUG级别的日志在正式发布版本中默认不被打印，只有在调试
 
 **示例**
 
-输出一条DEBUG信息，格式字符串为。其中变参为明文显示的字符串；为隐私的整型数。
+输出一条DEBUG信息，格式字符串为`"%{public}s World %{private}d"`。其中变参`%{public}s`为明文显示的字符串；`%{private}d`为隐私的整型数。
 
 ```TypeScript
 hilog.debug(0x0001, "testTag", "%{public}s World %{private}d", "hello", 3);

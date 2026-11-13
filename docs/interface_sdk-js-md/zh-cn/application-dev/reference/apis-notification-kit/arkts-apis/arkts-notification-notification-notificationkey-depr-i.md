@@ -17,7 +17,6 @@ export interface NotificationKey
 ## 导入模块
 
 ```TypeScript
-import { notification } from '@ohos.notification';
 ```
 
 ## id

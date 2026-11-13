@@ -21,7 +21,6 @@ declare namespace jsLeakWatcherNative
 ## 导入模块
 
 ```TypeScript
-import { jsLeakWatcherNative } from '@ohos.hiviewdfx.jsLeakWatcherNative';
 ```
 
 ## 汇总

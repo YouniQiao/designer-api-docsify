@@ -17,7 +17,6 @@ Defines the options used in mkdir().
 ## Modules to Import
 
 ```TypeScript
-import { FileMkdirOption } from '@system.file';
 ```
 
 ## complete

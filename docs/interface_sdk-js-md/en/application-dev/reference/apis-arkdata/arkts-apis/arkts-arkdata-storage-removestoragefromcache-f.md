@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { storage } from '@ohos.data.storage';
 ```
 
 ## removeStorageFromCache

@@ -22,7 +22,6 @@ export default class Fetch
 ## Modules to Import
 
 ```TypeScript
-import { Fetch } from '@system.fetch';
 ```
 
 ## fetch

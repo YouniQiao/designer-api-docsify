@@ -17,7 +17,6 @@ Indicates the subscription and unsubscription interface parameters.
 ## Modules to Import
 
 ```TypeScript
-import { dataFabricAddress } from '@ohos.data.dataFabricAddress';
 ```
 
 ## locationInfo

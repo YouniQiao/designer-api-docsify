@@ -9,7 +9,6 @@ The **hiAppEvent** module provides the application event logging functions, such
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiAppEvent';
 ```
 
 ## Summary

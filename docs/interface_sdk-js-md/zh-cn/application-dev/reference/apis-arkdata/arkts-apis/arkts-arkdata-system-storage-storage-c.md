@@ -15,7 +15,6 @@ export default class Storage
 ## 导入模块
 
 ```TypeScript
-import { Storage } from '@system.storage';
 ```
 
 ## clear

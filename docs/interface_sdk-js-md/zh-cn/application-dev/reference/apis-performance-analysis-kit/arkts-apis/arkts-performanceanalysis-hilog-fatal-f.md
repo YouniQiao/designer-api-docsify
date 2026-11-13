@@ -33,7 +33,7 @@ function fatal(domain: number, tag: string, format: string, ...args: any[]): voi
 
 **示例**
 
-输出一条FATAL信息，格式字符串为。其中变参为明文显示的字符串；为隐私的整型数。
+输出一条FATAL信息，格式字符串为`"%{public}s World %{private}d"`。其中变参`%{public}s`为明文显示的字符串；`%{private}d`为隐私的整型数。
 
 ```TypeScript
 hilog.fatal(0x0001, "testTag", "%{public}s World %{private}d", "hello", 3);

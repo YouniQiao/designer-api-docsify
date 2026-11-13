@@ -19,7 +19,6 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 ## Modules to Import
 
 ```TypeScript
-import { distributedData } from '@ohos.data.distributedData';
 ```
 
 ## getCount

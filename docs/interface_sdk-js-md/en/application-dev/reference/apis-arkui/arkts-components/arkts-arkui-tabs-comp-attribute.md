@@ -1484,6 +1484,30 @@ Sets the width of the sidebar tab bar. This attribute takes effect only when the
 | --- | --- | --- | --- |
 | value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Width of the sidebar tab bar. <br>Default value: **240vp**. |
 
+## tabViewCustomization
+
+```TypeScript
+tabViewCustomization(value: Optional<TabViewCustomization>)
+```
+
+Sets the centralized customization configuration for the sidebar tab bar.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-TabsAttribute-tabViewCustomization(value: Optional<TabViewCustomization>): TabsAttribute--><!--Device-TabsAttribute-tabViewCustomization(value: Optional<TabViewCustomization>): TabsAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[TabViewCustomization](arkts-arkui-tabs-comp-tabviewcustomization-i.md)&gt; | Yes | The centralized customization configuration. |
+
 ## topBarFloatingStyle
 
 ```TypeScript

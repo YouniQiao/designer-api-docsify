@@ -19,7 +19,6 @@ declare interface Dir
 ## 导入模块
 
 ```TypeScript
-import { fileIO } from '@ohos.fileio';
 ```
 
 ## close

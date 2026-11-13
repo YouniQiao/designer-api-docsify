@@ -17,7 +17,6 @@ Manages the freeze state of background applications. The **suspendManager** modu
 ## Modules to Import
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 ```
 
 ## Summary

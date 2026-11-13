@@ -17,7 +17,6 @@ Indicates the coordinates of a point.
 ## Modules to Import
 
 ```TypeScript
-import { dataFabricAddress } from '@ohos.data.dataFabricAddress';
 ```
 
 ## latitude

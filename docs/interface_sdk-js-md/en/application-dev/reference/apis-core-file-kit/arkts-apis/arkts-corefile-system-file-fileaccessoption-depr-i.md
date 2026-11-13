@@ -17,7 +17,6 @@ Defines the options used in access().
 ## Modules to Import
 
 ```TypeScript
-import { FileAccessOption } from '@system.file';
 ```
 
 ## complete

@@ -17,7 +17,6 @@ Defines the options used in copy().
 ## Modules to Import
 
 ```TypeScript
-import { FileCopyOption } from '@system.file';
 ```
 
 ## complete

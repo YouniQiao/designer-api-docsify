@@ -19,7 +19,6 @@ Provides the configuration items for application event logging.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiAppEvent';
 ```
 
 ## disable

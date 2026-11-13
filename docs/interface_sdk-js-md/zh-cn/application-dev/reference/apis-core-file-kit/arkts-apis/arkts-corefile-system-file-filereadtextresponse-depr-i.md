@@ -17,7 +17,6 @@ export interface FileReadTextResponse
 ## 导入模块
 
 ```TypeScript
-import { FileReadTextResponse } from '@system.file';
 ```
 
 ## text

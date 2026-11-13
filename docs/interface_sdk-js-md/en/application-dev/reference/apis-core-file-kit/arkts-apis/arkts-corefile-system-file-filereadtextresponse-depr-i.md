@@ -17,7 +17,6 @@ Returns the text read, including the text content.
 ## Modules to Import
 
 ```TypeScript
-import { FileReadTextResponse } from '@system.file';
 ```
 
 ## text

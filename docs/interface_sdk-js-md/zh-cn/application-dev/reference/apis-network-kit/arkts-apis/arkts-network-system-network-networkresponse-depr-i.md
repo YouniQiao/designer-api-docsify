@@ -15,7 +15,6 @@ This module provides the Network Response.
 ## 导入模块
 
 ```TypeScript
-import { NetworkResponse } from '@system.network';
 ```
 
 ## metered

@@ -17,7 +17,6 @@ Defines the device information discovered by perception scanning, including the 
 ## Modules to Import
 
 ```TypeScript
-import { softbusBase } from '@ohos.distributed.softbusBase';
 ```
 
 ## customData

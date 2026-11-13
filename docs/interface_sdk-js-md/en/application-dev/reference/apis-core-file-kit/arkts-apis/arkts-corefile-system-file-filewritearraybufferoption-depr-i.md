@@ -17,7 +17,6 @@ Defines the options used in writeArrayBuffer().
 ## Modules to Import
 
 ```TypeScript
-import { FileWriteArrayBufferOption } from '@system.file';
 ```
 
 ## complete

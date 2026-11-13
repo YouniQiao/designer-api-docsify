@@ -17,7 +17,6 @@ export interface FileCopyOption
 ## 导入模块
 
 ```TypeScript
-import { FileCopyOption } from '@system.file';
 ```
 
 ## complete

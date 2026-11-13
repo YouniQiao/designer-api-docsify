@@ -19,7 +19,6 @@ Provides the information about the suspension delay.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.backgroundTaskManager';
 ```
 
 ## actualDelayTime

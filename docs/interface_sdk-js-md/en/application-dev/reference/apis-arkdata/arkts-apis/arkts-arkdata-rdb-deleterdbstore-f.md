@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import { rdb } from '@ohos.data.rdb';
 ```
 
 ## deleteRdbStore

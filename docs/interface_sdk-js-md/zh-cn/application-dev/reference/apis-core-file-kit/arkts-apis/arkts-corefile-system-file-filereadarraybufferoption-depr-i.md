@@ -17,7 +17,6 @@ export interface FileReadArrayBufferOption
 ## 导入模块
 
 ```TypeScript
-import { FileReadArrayBufferOption } from '@system.file';
 ```
 
 ## complete

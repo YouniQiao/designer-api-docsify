@@ -23,7 +23,6 @@ declare namespace hiAppEvent
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiAppEvent';
 ```
 
 ## 汇总

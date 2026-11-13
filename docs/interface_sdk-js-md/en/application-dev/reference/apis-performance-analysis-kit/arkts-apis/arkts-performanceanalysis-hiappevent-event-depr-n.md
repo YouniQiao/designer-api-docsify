@@ -25,7 +25,6 @@ Provides constants that define the names of all predefined events.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiAppEvent';
 ```
 
 ## Summary

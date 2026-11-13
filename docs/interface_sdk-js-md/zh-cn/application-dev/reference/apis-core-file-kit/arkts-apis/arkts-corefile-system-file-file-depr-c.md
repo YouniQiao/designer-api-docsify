@@ -17,7 +17,6 @@ export default class File
 ## 导入模块
 
 ```TypeScript
-import { File } from '@system.file';
 ```
 
 ## access

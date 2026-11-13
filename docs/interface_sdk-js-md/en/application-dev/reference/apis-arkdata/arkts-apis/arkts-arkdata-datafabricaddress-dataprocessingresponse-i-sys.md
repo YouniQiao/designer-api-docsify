@@ -17,7 +17,6 @@ Indicates the data processing result.
 ## Modules to Import
 
 ```TypeScript
-import { dataFabricAddress } from '@ohos.data.dataFabricAddress';
 ```
 
 ## code
