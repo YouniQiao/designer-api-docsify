@@ -41,7 +41,7 @@ DEBUG级别的日志在正式发布版本中默认不被打印，只有在调试
 hilog.debug(0x0001, "testTag", "%{public}s World %{private}d", "hello", 3);
 ```
 
-字符串填入，整型数填入，输出日志：
+字符串`"hello"`填入`%{public}s`，整型数`3`填入`%{private}d`，输出日志：
 
 ```TypeScript
 08-05 12:21:47.579  2695-2703  A00001/testTag  com.example.hilogDemo  D     hello World <private>

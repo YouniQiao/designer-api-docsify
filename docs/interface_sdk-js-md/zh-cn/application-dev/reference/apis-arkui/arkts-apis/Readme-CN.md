@@ -629,7 +629,7 @@
   - [Theme](arkts-arkui-arkui-theme-theme-i.md)
   - [CustomColors](arkts-arkui-customcolors-t.md)
   - [CustomDarkColors](arkts-arkui-customdarkcolors-t.md)
-- [@ohos.arkui.UIContext](arkts-arkui-arkui-uicontext.md)
+- [@ohos.arkui.UIContext（UIContext实例）](arkts-arkui-arkui-uicontext.md)
   - [BackPressActionProposal](arkts-arkui-arkui-uicontext-backpressactionproposal-c.md)
   - [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
   - [ClickActionProposal](arkts-arkui-arkui-uicontext-clickactionproposal-c.md)

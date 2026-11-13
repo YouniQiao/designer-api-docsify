@@ -130,7 +130,7 @@ Common()
 | [BindOptions](arkts-arkui-common-comp-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
 | [BlurOptions](arkts-arkui-common-comp-bluroptions-i.md) | 灰阶模糊参数。 |
 | [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
-| [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | Border image option |
+| [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | 图片边框或者渐变色边框设置接口。 |
 | [Callback](arkts-arkui-common-comp-callback-i.md) | 定义基础的回调函数。 |
 | [CaretOffset](arkts-arkui-common-comp-caretoffset-i.md) | 光标相对输入框的位置信息。 |
 | [ClickEffect](arkts-arkui-common-comp-clickeffect-i.md) | 定义点击回弹效果。 |
@@ -204,6 +204,7 @@ Common()
 | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | nestedScroll属性参数对象。 |
 | [OverlayOffset](arkts-arkui-common-comp-overlayoffset-i.md) | 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。 |
 | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | 浮层的定位。 |
+| [PickerComponentTextStyle](arkts-arkui-common-comp-pickercomponenttextstyle-i.md) | 定义DatePickerComponent与UIPickerComponent共用的文本样式。 |
 | [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | 提供选择器按钮样式的接口。 |
 | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelRoundPolicy](arkts-arkui-common-comp-pixelroundpolicy-i.md) | 指定组件级像素取整的方向。 |
@@ -318,11 +319,11 @@ Common()
 | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | 当绑定该方法的组件判断是否需要键盘时，将触发此回调。前提条件：组件需可获焦，否则本接口不生效。 |
 | [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | 滚动组件滑动时触发的回调。 |
 | [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | 懒加载布局容器[LazyColumnLayout](arkts-arkui-lazycolumnlayout-comp-attribute.md#lazycolumnlayout)、[LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md)、[LazyVWaterFlowLayout](arkts-arkui-lazyvwaterflowlayout-comp.md#lazyvwaterflowlayout)所显示的子组件索引发生变化时的回调类型。 |
-| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
+| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | 滚动组件滑动前触发的回调。 |
 | [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | 滚动组件划动离手时触发的回调。 |
 | [Optional](arkts-arkui-common-comp-optional-t.md) | 定义可选类型，其值可以是undefined。 |
 | [PathShape](arkts-arkui-common-comp-pathshape-t.md) | 导入PathShape类型对象。 |
-| [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
+| [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | 图像像素类，用于读取或写入图像数据以及获取图像信息。 |
 | [PointerStyle](arkts-arkui-common-comp-pointerstyle-t.md) | 光标样式。 |
 | [PopupStateChangeCallback](arkts-arkui-common-comp-popupstatechangecallback-t.md) | 气泡状态变化事件回调。 |
 | [PromptActionDialogController](arkts-arkui-common-comp-promptactiondialogcontroller-t.md) | 从promptAction导入弹出框控制器类型 |

@@ -165,7 +165,7 @@ export default {
 static setImageCacheCount(value: number): void
 ```
 
-Set image cache capacity of decoded image count. if not set, the application will not cache any decoded image.
+设置内存中缓存解码后图片的数量上限，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。
 
 **起始版本：** 7
 
@@ -181,7 +181,7 @@ Set image cache capacity of decoded image count. if not set, the application wil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | capacity of decoded image count. |
+| value | number | 是 | 内存中解码后图片的缓存数量。 |
 
 **示例**
 
@@ -262,7 +262,7 @@ export default class OnC {
 static setImageRawDataCacheSize(value: number): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode. if not set, the application will not cache any raw image data.
+设置内存中缓存解码前图片数据的大小上限，单位为字节，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。
 
 **起始版本：** 7
 
@@ -278,7 +278,7 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | capacity of raw image data size in bytes. |
+| value | number | 是 | 内存中解码前图片数据的缓存大小，单位为字节。 |
 
 **示例**
 

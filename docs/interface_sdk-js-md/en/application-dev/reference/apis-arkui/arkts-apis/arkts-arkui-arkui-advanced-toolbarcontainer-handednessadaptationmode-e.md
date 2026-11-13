@@ -1,24 +1,24 @@
-# BarBackgroundVisibility
+# HandednessAdaptationMode
 
 ```TypeScript
-export declare enum BarBackgroundVisibility
+export enum HandednessAdaptationMode
 ```
 
-Defines the toolbar background visibility.
+定义工具栏接入智感握姿模式。
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export declare enum BarBackgroundVisibility--><!--Device-unnamed-export declare enum BarBackgroundVisibility-End-->
+<!--Device-unnamed-export enum HandednessAdaptationMode--><!--Device-unnamed-export enum HandednessAdaptationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## HIDDEN
+## DEFAULT
 
 ```TypeScript
-HIDDEN = 1
+DEFAULT = 1
 ```
 
-Hidden: the toolbar background is transparent.
+工具栏适配启用默认智感握姿适配。
 
 **Since:** 26.1.0
 
@@ -26,17 +26,17 @@ Hidden: the toolbar background is transparent.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-BarBackgroundVisibility-HIDDEN = 1--><!--Device-BarBackgroundVisibility-HIDDEN = 1-End-->
+<!--Device-HandednessAdaptationMode-DEFAULT = 1--><!--Device-HandednessAdaptationMode-DEFAULT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## VISIBLE
+## NONE
 
 ```TypeScript
-VISIBLE = 0
+NONE = 0
 ```
 
-Visible (default): the toolbar background is shown normally.
+工具栏不启用智感握姿。
 
 **Since:** 26.1.0
 
@@ -44,6 +44,6 @@ Visible (default): the toolbar background is shown normally.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-BarBackgroundVisibility-VISIBLE = 0--><!--Device-BarBackgroundVisibility-VISIBLE = 0-End-->
+<!--Device-HandednessAdaptationMode-NONE = 0--><!--Device-HandednessAdaptationMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

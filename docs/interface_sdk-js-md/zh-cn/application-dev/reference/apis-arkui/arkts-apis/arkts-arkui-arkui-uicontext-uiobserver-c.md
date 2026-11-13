@@ -326,7 +326,7 @@ Removes a callback function that was previously registered with `on()`.
 off(type: 'scrollEvent', options: observer.ObserverOptions, callback?: Callback<observer.ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+取消监听指定id的滚动组件滚动事件的开始和结束。
 
 **起始版本：** 12
 
@@ -342,9 +342,9 @@ Removes a callback function that was previously registered with `on()`.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | 是 | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
+| type | 'scrollEvent' | 是 | 监听事件，固定为'scrollEvent'，即滚动事件的开始和结束。 |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | Observer选项，包含指定监听的滚动组件的id。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 否 | 需要取消的滚动事件监听回调。当只需要取消 options 指定滚动组件上的指定回调时传入该参数；不传参数时，取消 options 指定滚动组件上的所有滚动事件监听回调。 |
 
 **示例**
 
@@ -356,7 +356,7 @@ Removes a callback function that was previously registered with `on()`.
 off(type: 'scrollEvent', callback?: Callback<observer.ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+取消监听所有滚动组件滚动事件的开始和结束。
 
 **起始版本：** 12
 
@@ -372,8 +372,8 @@ Removes a callback function that was previously registered with `on()`.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | 是 | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'scrollEvent' | 是 | 监听事件，固定为'scrollEvent'，即滚动事件的开始和结束。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 否 | 需要取消的滚动事件监听回调。当只需要取消指定回调时传入该参数；不传参数时，取消所有滚动事件的监听回调。 |
 
 **示例**
 
@@ -1457,7 +1457,7 @@ struct Index {
 on(type: 'scrollEvent', options: observer.ObserverOptions, callback: Callback<observer.ScrollEventInfo>): void
 ```
 
-Registers a callback function to be called when the scroll event start or stop.
+监听指定id的滚动组件滚动事件的开始和结束。
 
 **起始版本：** 12
 
@@ -1473,9 +1473,9 @@ Registers a callback function to be called when the scroll event start or stop.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | 是 | The type of event to listen for. Must be 'scrollEvent'. |
-| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 | The callback function to be called when the scroll event start or stop. |
+| type | 'scrollEvent' | 是 | 监听事件，固定为'scrollEvent'，即滚动事件的开始和结束。 |
+| options | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | Observer选项，包含指定监听的滚动组件的id。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 | 回调函数。返回滚动事件的信息。 |
 
 **示例**
 
@@ -1487,7 +1487,7 @@ Registers a callback function to be called when the scroll event start or stop.
 on(type: 'scrollEvent', callback: Callback<observer.ScrollEventInfo>): void
 ```
 
-Registers a callback function to be called when the scroll event start or stop.
+监听所有滚动组件滚动事件的开始和结束。
 
 **起始版本：** 12
 
@@ -1503,8 +1503,8 @@ Registers a callback function to be called when the scroll event start or stop.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | 是 | The type of event to listen for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 | The callback function to be called when the scroll event start or stop. |
+| type | 'scrollEvent' | 是 | 监听事件，固定为'scrollEvent'，即滚动事件的开始和结束。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 | 回调函数。返回滚动事件的信息。 |
 
 **示例**
 

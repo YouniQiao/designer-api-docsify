@@ -131,6 +131,7 @@ import { window } from '@kit.ArkUI';
 | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Describes the parameters for window size limits. Applications can obtain the current window size limits (in px) via [getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits). Starting from API version 22, they can also be obtained via [getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp) (in vp). |
 | [WindowPositionParams](arkts-arkui-window-windowpositionparams-i.md) | Describes the position of a main window to adjust its z-order. |
 | [WindowProperties](arkts-arkui-window-windowproperties-i.md) | Describes the window properties. |
+| [WindowShowParams](arkts-arkui-window-windowshowparams-i.md) | Describes the window parameters during application show. |
 | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | Configuration for window snapshot animation. |
 | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | Describes the configuration of the main window screenshot. |
 | [WindowStage](arkts-arkui-window-windowstage-i.md) | Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance. |

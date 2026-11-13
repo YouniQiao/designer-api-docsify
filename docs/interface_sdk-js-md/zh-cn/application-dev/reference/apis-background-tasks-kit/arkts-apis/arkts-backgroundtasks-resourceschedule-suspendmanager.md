@@ -19,6 +19,7 @@
 ## 导入模块
 
 ```TypeScript
+import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 ```
 
 ## 汇总

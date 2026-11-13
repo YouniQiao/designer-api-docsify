@@ -39,7 +39,7 @@ function error(domain: number, tag: string, format: string, ...args: any[]): voi
 hilog.error(0x0001, "testTag", "%{public}s World %{private}d", "hello", 3);
 ```
 
-字符串填入，整型数填入，输出日志：
+字符串`"hello"`填入`%{public}s`，整型数`3`填入`%{private}d`，输出日志：
 
 ```TypeScript
 08-05 12:21:47.579  2695-2703  A00001/testTag  com.example.hilogDemo  E     hello World <private>

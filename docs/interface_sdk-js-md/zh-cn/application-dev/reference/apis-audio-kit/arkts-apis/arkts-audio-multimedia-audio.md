@@ -128,6 +128,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | 空间化设备状态。 |
 | [AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md) | 监听设备空间音频开关状态。 |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i-sys.md) | 空间音频管理。在使用AudioSpatializationManager的接口前，需要使用[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。 |
+| [AudioStreamManager](arkts-audio-audio-audiostreammanager-i-sys.md) | AudioStreamManager是音频系统中的音频流管理模块。本模块提供音频流生命周期管理能力，包括音频渲染器和采集器的信息查询、状态监听、音效模式管理等。当开发者需要实时掌握音频流状态变化以优化音频应用用户体验时，使用本模块接口完成相关操作。在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。 |
 | [AudioSuiteDownloadManager](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md) | 提供音频编创特性下载管理能力，包括启动、暂停、取消下载、查询状态、卸载特性功能。 |
 | [AudioSuiteFeatureStatusInfo](arkts-audio-audio-audiosuitefeaturestatusinfo-i-sys.md) | 定义音频编创特性的状态信息。 |
 | [AudioSuiteFeatureVersionInfo](arkts-audio-audio-audiosuitefeatureversioninfo-i-sys.md) | 定义音频编创特性的版本信息。 |
