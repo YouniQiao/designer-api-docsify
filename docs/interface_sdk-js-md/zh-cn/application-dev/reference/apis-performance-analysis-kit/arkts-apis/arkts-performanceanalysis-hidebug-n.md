@@ -71,11 +71,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling-1) | 启动虚拟机Profiling方法跟踪，`startJsCpuProfiling(filename: string)`方法的调用需要与`stopJsCpuProfiling()`方法的调用一一对应，先开启后关闭，请避免重复开启或重复关闭的调用方式，否则会接口调用异常。 |
 | [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture-1) | 停止应用trace采集。调用前，需先调用'[startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md)'方法开始采集。关闭前未开启或重复关闭会导致接口异常。 |
 | [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md#stopjscpuprofiling-1) | 停止虚拟机Profiling方法跟踪，`stopJsCpuProfiling()`方法的调用需要与`startJsCpuProfiling(filename: string)`方法的调用一一对应，先开启后关闭，请避免重复开启或重复关闭的调用方式，否则会接口调用异常。 |
-| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md#dumpheapdata-1) |  |
+| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md#dumpheapdata-1) | 虚拟机堆数据转储，生成`filename.heapsnapshot`文件。 |
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-1) | 虚拟机堆数据转储。 |
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-2) | 虚拟机堆数据转储，支持清除nodeId缓存。 |
-| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md#startprofiling-1) |  |
-| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopprofiling-1) |  |
+| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md#startprofiling-1) | 启动虚拟机Profiling方法跟踪，`startProfiling(filename: string)`方法的调用需要与`stopProfiling()`方法的调用一一对应，先开启后关闭，请避免重复开启或重复关闭的调用方式，否则会接口调用异常。 |
+| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopprofiling-1) | 停止虚拟机Profiling方法跟踪，`stopProfiling()`方法的调用需要与`startProfiling(filename: string)`方法的调用一一对应，先开启后关闭，请避免重复开启或重复关闭的调用方式，否则会接口调用异常。 |
 
 ### 接口
 

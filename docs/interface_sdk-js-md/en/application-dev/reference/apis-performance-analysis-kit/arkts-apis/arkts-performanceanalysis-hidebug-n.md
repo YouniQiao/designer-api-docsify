@@ -24,16 +24,16 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [tags](arkts-performanceanalysis-hidebug-tags-n.md) | Provide trace tags |
+| [tags](arkts-performanceanalysis-hidebug-tags-n.md) | Enumerates the tags used in trace collection. You can use the [HiTrace](../../../dfx/hitrace.md) commands to capture the trace data of a specified tag. |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
 | [disableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-disablegwpasangrayscale-f.md#disablegwpasangrayscale-1) | Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md). |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-1) | Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-2) | Dumps the original heap snapshot of the VM for the current thread and clears the **nodeId** cache. The generated file is in the rawheap format. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-3) | Dumps the original heap snapshot of the VM for the current thread or the process to which the current thread belongs, clears the nodeId cache, and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-1) | Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using [rawheap-translator](../../../tools/rawheap-translator.md) for parsing. |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-2) | Dumps the original heap snapshot of the VM for the current thread and clears the **nodeId** cache. The generated file is in the rawheap format. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using [rawheap-translator](../../../tools/rawheap-translator.md) for parsing. |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-3) | Dumps the original heap snapshot of the VM for the current thread or the process to which the current thread belongs, clears the nodeId cache, and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using [rawheap-translator](../../../tools/rawheap-translator.md) for parsing. |
 | [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md#enablegwpasangrayscale-1) | Enables GWP-ASan to detect illegal behaviors in heap memory usage. |
 | [getAppMemoryLimit](arkts-performanceanalysis-hidebug-getappmemorylimit-f.md#getappmemorylimit-1) | Obtains the memory limit of an application process. |
 | [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md#getappnativememinfo-1) | Obtains the memory information of the application process. This API is implemented by reading data from the **\/proc/{pid}/smaps_rollup and /proc/{pid}/statm** node. |
@@ -59,8 +59,8 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md#getshareddirty-1) | Obtains the size of the shared dirty memory of a process. This API is implemented by reading the value of **Shared_Dirty** in the **\/proc/{pid}/smaps_rollup** node. |
 | [getSystemCpuUsage](arkts-performanceanalysis-hidebug-getsystemcpuusage-f.md#getsystemcpuusage-1) | Obtains the CPU usage of the system. |
 | [getSystemMemInfo](arkts-performanceanalysis-hidebug-getsystemmeminfo-f.md#getsystemmeminfo-1) | Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node. |
-| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md#getvmruntimestat-1) | Obtains the specified system GC statistics based on parameters. |
-| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md#getvmruntimestats-1) | Obtains the system GC statistics. |
+| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md#getvmruntimestat-1) | Obtains the specified system [GC](../../../arkts-utils/gc-introduction.md) statistics based on parameters. |
+| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md#getvmruntimestats-1) | Obtains the system [GC](../../../arkts-utils/gc-introduction.md) statistics. |
 | [getVss](arkts-performanceanalysis-hidebug-getvss-f.md#getvss-1) | Obtains the virtual set size used by the application process. This API is implemented by multiplying the value of **size** (number of memory pages) in the **\/proc/{pid}/statm** node by the page size (4 KB per page). |
 | [isDebugState](arkts-performanceanalysis-hidebug-isdebugstate-f.md#isdebugstate-1) | Obtains the debugging state of an application process. |
 | [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md#requesttrace-1) | Obtains the trace information of the current process, including the application tag, image window tag, CPU scheduling, and binder kernel information. This API uses a promise to return the result. |
@@ -75,7 +75,7 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-1) | Dumps VM heap data. |
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-2) | Dumps VM heap data and clears the nodeId cache. |
 | [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md#startprofiling-1) | Starts the VM profiling method. **startProfiling(filename: string)** and **stopProfiling()** are called in pairs. **startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
-| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopprofiling-1) | Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs. **startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
+| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopprofiling-1) | Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs. **startProfiling()** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
 
 ### Interfaces
 
@@ -95,7 +95,7 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. It contains the following key-value information: <br>**"ark.gc.gc-count"**: number of GC times of the current thread. <br>**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds. <br>**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes. <br>**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes. <br>**"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
 
 ### Enums
 

@@ -679,7 +679,7 @@
   - [TaskCallback](arkts-arkui-taskcallback-t.md)
   - [TypeDecorator](arkts-arkui-typedecorator-t.md)
   - [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md)
-- [@ohos.arkui.theme](arkts-arkui-arkui-theme.md)
+- [@ohos.arkui.theme(Theme)](arkts-arkui-arkui-theme.md)
   - [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md)
   - [Colors](arkts-arkui-arkui-theme-colors-i.md)
   - [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
