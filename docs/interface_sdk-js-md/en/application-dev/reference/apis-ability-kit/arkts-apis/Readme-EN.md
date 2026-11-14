@@ -684,6 +684,34 @@
   <!--Del-->
   - [getKioskStatus(system api)](arkts-ability-kioskmanager-getkioskstatus-f-sys.md)<!--DelEnd-->
   - [KioskStatus](arkts-ability-kioskmanager-kioskstatus-t.md)
+- [@ohos.app.ability.launchServiceManager](arkts-ability-app-ability-launchservicemanager.md)
+  - [connectService](arkts-ability-launchservicemanager-connectservice-f.md)
+  - [disconnectService](arkts-ability-launchservicemanager-disconnectservice-f.md)
+  <!--Del-->
+  - [getAllRegisteredInformation(system api)](arkts-ability-launchservicemanager-getallregisteredinformation-f-sys.md)<!--DelEnd-->
+  - [getInformation](arkts-ability-launchservicemanager-getinformation-f.md)
+  <!--Del-->
+  - [offLaunchServiceObserver(system api)](arkts-ability-launchservicemanager-offlaunchserviceobserver-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onLaunchServiceObserver(system api)](arkts-ability-launchservicemanager-onlaunchserviceobserver-f-sys.md)<!--DelEnd-->
+  - [register](arkts-ability-launchservicemanager-register-f.md)
+  <!--Del-->
+  - [setLaunchServicesEnabled(system api)](arkts-ability-launchservicemanager-setlaunchservicesenabled-f-sys.md)<!--DelEnd-->
+  - [start](arkts-ability-launchservicemanager-start-f.md)
+  - [stop](arkts-ability-launchservicemanager-stop-f.md)
+  - [unregister](arkts-ability-launchservicemanager-unregister-f.md)
+  - [LaunchServiceConnectCallback](arkts-ability-launchservicemanager-launchserviceconnectcallback-t.md)
+  - [LaunchServiceDescriptor](arkts-ability-launchservicemanager-launchservicedescriptor-t.md)
+  - [LaunchServiceInformation](arkts-ability-launchservicemanager-launchserviceinformation-t.md)
+  <!--Del-->
+  - [LaunchServiceObserver(system api)](arkts-ability-launchservicemanager-launchserviceobserver-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LaunchServiceProcessStateData(system api)](arkts-ability-launchservicemanager-launchserviceprocessstatedata-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LaunchServiceStateData(system api)](arkts-ability-launchservicemanager-launchservicestatedata-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LaunchServiceProcessState(system api)](arkts-ability-launchservicemanager-launchserviceprocessstate-e-sys.md)<!--DelEnd-->
+  - [LaunchServiceState](arkts-ability-launchservicemanager-launchservicestate-e.md)
 <!--Del-->
 - [@ohos.app.ability.missionManager(missionManager)](arkts-ability-app-ability-missionmanager.md)<!--DelEnd-->
   <!--Del-->
@@ -1925,6 +1953,24 @@
     - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
   - [KioskStatus(Kiosk Status)](arkts-ability-kioskstatus.md)
     - [KioskStatus](arkts-ability-kioskstatus-i.md)
+  - [LaunchServiceConnectCallback](arkts-ability-launchserviceconnectcallback.md)
+    - [LaunchServiceConnectCallback](arkts-ability-launchserviceconnectcallback-i.md)
+  - [LaunchServiceDescriptor](arkts-ability-launchservicedescriptor.md)
+    - [LaunchServiceDescriptor](arkts-ability-launchservicedescriptor-i.md)
+  - [LaunchServiceInformation](arkts-ability-launchserviceinformation.md)
+    - [LaunchServiceInformation](arkts-ability-launchserviceinformation-i.md)
+  <!--Del-->
+  - [LaunchServiceObserver](arkts-ability-launchserviceobserver.md)<!--DelEnd-->
+    <!--Del-->
+    - [LaunchServiceObserver(system api)](arkts-ability-launchserviceobserver-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LaunchServiceProcessStateData](arkts-ability-launchserviceprocessstatedata.md)<!--DelEnd-->
+    <!--Del-->
+    - [LaunchServiceProcessStateData(system api)](arkts-ability-launchserviceprocessstatedata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LaunchServiceStateData](arkts-ability-launchservicestatedata.md)<!--DelEnd-->
+    <!--Del-->
+    - [LaunchServiceStateData(system api)](arkts-ability-launchservicestatedata-i-sys.md)<!--DelEnd-->
   - [LoopObserver](arkts-ability-loopobserver.md)
     - [LoopObserver](arkts-ability-loopobserver-i.md)
   <!--Del-->

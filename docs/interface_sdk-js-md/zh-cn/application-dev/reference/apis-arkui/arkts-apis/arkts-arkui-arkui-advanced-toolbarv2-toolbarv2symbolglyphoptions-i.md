@@ -4,7 +4,7 @@
 export interface ToolBarV2SymbolGlyphOptions
 ```
 
-Declare the options of ToolBarV2SymbolGlyph
+声明ToolBarV2SymbolGlyph的选项。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activated?: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's activated symbol.
+ToolBarV2激活图标的修饰符。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -44,7 +44,7 @@ Modifier of toolbarV2's activated symbol.
 normal: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's normal symbol.
+ToolBarV2普通图标的修饰符。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

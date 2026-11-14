@@ -136,7 +136,7 @@ animateTo(value: AnimateParam, event: () => void): void
 > 
 > - 在组件出现和消失时，可以通过[组件内转场](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)添加动画效果。
 > 
-> - 组件内转场不支持的属性，可以参考[显式动画](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)中的[示例2](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)，使用animateTo实现动画执行结束后组件消失的效果。
+> - 组件内转场不支持的属性，可以参考[显式动画](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)中的[示例2](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用animateTo实现动画执行结束后组件消失的效果。
 > 
 > - 某些场景下，在[状态管理V2](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果，具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。
 > 
@@ -333,7 +333,7 @@ struct AnimateToImmediatelyExample {
 bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void
 ```
 
-Bind tabs to nested scrollable container components to automatically hide tab bar.
+将页签绑定到嵌套可滚动容器组件，自动隐藏页签栏。
 
 **起始版本：** 13
 
@@ -363,7 +363,7 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void
 ```
 
-Bind tabs to scrollable container component to automatically hide tab bar.
+将页签绑定到可滚动容器组件，自动隐藏页签栏。
 
 **起始版本：** 13
 
@@ -1054,7 +1054,7 @@ struct Index {
 enableSwipeBack(enabled: Optional<boolean>): void
 ```
 
-whether to enable or disable swipe to back event.
+设置是否支持应用内横向滑动返回上一级。
 
 **起始版本：** 18
 
@@ -1068,7 +1068,7 @@ whether to enable or disable swipe to back event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | enable or disable swipe to back event. |
+| enabled | [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | 是否支持应用内横向滑动返回，默认值为true。<br>当值为true时，支持应用内横向滑动返回。<br>当值为false时，不支持应用内横向滑动返回。 |
 
 **示例**
 
@@ -2256,7 +2256,9 @@ getMediaQuery(): MediaQuery
 getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 ```
 
-Get navigation information of the frameNode with uniqueId.
+通过组件的uniqueId获取该节点对应的Navigation页面信息。
+1. 当uniqueId对应的节点在Navigation节点中，返回其对应的Navigation信息；
+2. 当uniqueId对应的节点无对应的Navigation信息时，返回undefined。
 
 **起始版本：** 12
 
@@ -2272,13 +2274,13 @@ Get navigation information of the frameNode with uniqueId.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | The uniqueId of the target FrameNode. |
+| id | number | 是 | 节点对应的UniqueId。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-observer.md) &#124; undefined | 返回节点对应的Navigation信息。 |
 
 **示例**
 
@@ -2649,7 +2651,7 @@ get object PromptAction.
 getRouter(): Router
 ```
 
-Obtains a Router object.
+获取Router对象。
 
 **起始版本：** 10
 
@@ -2665,7 +2667,7 @@ Obtains a Router object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | 返回Router实例对象。 |
 
 **示例**
 
@@ -5054,7 +5056,7 @@ struct TimePickerDialogExample {
 unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void
 ```
 
-Unbind tabs from nested scrollable container components.
+将页签从嵌套可滚动容器组件解绑。
 
 **起始版本：** 13
 
@@ -5084,7 +5086,7 @@ Unbind tabs from nested scrollable container components.
 unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void
 ```
 
-Unbind tabs from scrollable container component.
+将页签从可滚动容器组件解绑。
 
 **起始版本：** 13
 

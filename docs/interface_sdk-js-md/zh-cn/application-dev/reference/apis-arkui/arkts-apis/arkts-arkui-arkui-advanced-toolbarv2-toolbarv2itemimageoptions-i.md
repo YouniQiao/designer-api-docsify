@@ -4,7 +4,7 @@
 export interface ToolBarV2ItemImageOptions
 ```
 
-Declare the options of ToolBarV2ItemImage
+声明ToolBarV2ItemImage的选项。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activatedColor?: ColorMetrics
 ```
 
-Icon fillColor when the item is activated.
+项被激活时的图标填充颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -44,7 +44,7 @@ Icon fillColor when the item is activated.
 color?: ColorMetrics
 ```
 
-Define icon fillColor.
+定义图标填充颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -64,7 +64,7 @@ Define icon fillColor.
 src: ResourceStr
 ```
 
-Define icon resource.
+定义图标资源。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

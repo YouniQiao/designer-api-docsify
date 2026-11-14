@@ -92,6 +92,7 @@
   - [getAllowedKioskApps](arkts-mdm-applicationmanager-getallowedkioskapps-f.md)
   - [getAllowedNotificationBundles](arkts-mdm-applicationmanager-getallowednotificationbundles-f.md)
   - [getAllowedRunningBundles](arkts-mdm-applicationmanager-getallowedrunningbundles-f.md)
+  - [getApplicationIconData](arkts-mdm-applicationmanager-getapplicationicondata-f.md)
   - [getApplicationWindowStates](arkts-mdm-applicationmanager-getapplicationwindowstates-f.md)
   - [getAutoStartApps](arkts-mdm-applicationmanager-getautostartapps-f.md)
   - [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md)

@@ -35,7 +35,7 @@ import { deviceSettings } from '@kit.MDMKit';
 | [setUnlockWallpaper](arkts-mdm-devicesettings-setunlockwallpaper-f.md#setunlockwallpaper-1) | 设置锁屏壁纸，使用Promise异步回调。企业设备管理应用可通过此接口统一设置企业设备的锁屏壁纸，用于企业形象展示或安全管控等场景。 |
 | [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue-1) | 设置设备策略。 |
 | [setValueForAccount](arkts-mdm-devicesettings-setvalueforaccount-f.md#setvalueforaccount-1) | 设置指定用户的设备设置策略。该接口可以设置指定用户在设置应用中的某个参数，比如设置用户100的设备名称等。 |
-| [setValueForAccount](arkts-mdm-devicesettings-setvalueforaccount-f.md#setvalueforaccount-2) | 设置指定用户的设备设置策略，无需传入管理员Want。 |
+| [setValueForAccount](arkts-mdm-devicesettings-setvalueforaccount-f.md#setvalueforaccount-2) | 设置指定用户的设备设置策略。该接口可以设置指定用户在设置应用中的某个参数，比如设置用户100的设备名称等。 |
 
 <!--Del-->
 ### 函数（系统接口）

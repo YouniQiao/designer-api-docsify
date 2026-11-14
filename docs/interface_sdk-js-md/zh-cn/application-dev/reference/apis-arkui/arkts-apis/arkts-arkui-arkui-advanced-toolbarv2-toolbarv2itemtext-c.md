@@ -4,7 +4,7 @@
 export declare class ToolBarV2ItemText
 ```
 
-Declare type ToolBarV2ItemText
+声明ToolBarV2ItemText类型。
 
 **起始版本：** 18
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options: ToolBarV2ItemTextOptions)
 ```
 
-The constructor used to create a ToolBarV2ItemText object.
+ToolBarV2ItemText的构造函数。
 
 **起始版本：** 18
 
@@ -50,7 +50,7 @@ The constructor used to create a ToolBarV2ItemText object.
 activatedColor?: ColorMetrics
 ```
 
-Text fontColor when the item is activated.
+项被激活时的文本字体颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -72,7 +72,7 @@ Text fontColor when the item is activated.
 color?: ColorMetrics
 ```
 
-Define text fontColor.
+定义文本字体颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -94,7 +94,7 @@ Define text fontColor.
 text: ResourceStr
 ```
 
-Define text content.
+定义文本内容。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

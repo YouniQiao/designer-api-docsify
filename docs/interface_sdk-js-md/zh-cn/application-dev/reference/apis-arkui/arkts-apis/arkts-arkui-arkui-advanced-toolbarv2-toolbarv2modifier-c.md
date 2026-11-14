@@ -4,7 +4,7 @@
 export declare class ToolBarV2Modifier
 ```
 
-Declare ToolBarV2Modifier used in ToolBar
+声明ToolBar中使用的ToolBarV2Modifier。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier
 ```
 
-Sets the backgroundColor of the toolBarV2.
+设置工具栏的背景色。
 
 **起始版本：** 18
 
@@ -54,7 +54,7 @@ Sets the backgroundColor of the toolBarV2.
 height(height: LengthMetrics): ToolBarV2Modifier
 ```
 
-Sets the height of the toolBarV2.
+设置工具栏的高度。
 
 **起始版本：** 18
 
@@ -84,7 +84,7 @@ Sets the height of the toolBarV2.
 padding(padding: LengthMetrics): ToolBarV2Modifier
 ```
 
-Sets the left and right padding of the toolbarV2.
+设置工具栏的左右内边距。
 
 **起始版本：** 18
 
@@ -114,7 +114,7 @@ Sets the left and right padding of the toolbarV2.
 stateEffect(stateEffect: boolean): ToolBarV2Modifier
 ```
 
-Sets whether or not to display the press status effect.
+设置是否显示按压态效果。
 
 **起始版本：** 18
 

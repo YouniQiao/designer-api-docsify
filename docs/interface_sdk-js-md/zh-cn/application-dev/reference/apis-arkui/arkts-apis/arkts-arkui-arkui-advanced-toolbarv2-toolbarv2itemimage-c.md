@@ -4,7 +4,7 @@
 export declare class ToolBarV2ItemImage
 ```
 
-Declare type ToolBarV2ItemImage
+声明ToolBarV2ItemImage类型。
 
 **起始版本：** 18
 
@@ -50,7 +50,7 @@ ToolBarV2ItemImage的构造函数。
 activatedColor?: ColorMetrics
 ```
 
-Icon fillColor when the item is activated.
+项被激活时的图标填充颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -72,7 +72,7 @@ Icon fillColor when the item is activated.
 color?: ColorMetrics
 ```
 
-Define icon fillColor.
+定义图标填充颜色。
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -94,7 +94,7 @@ Define icon fillColor.
 src: ResourceStr
 ```
 
-Define icon resource.
+定义图标资源。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

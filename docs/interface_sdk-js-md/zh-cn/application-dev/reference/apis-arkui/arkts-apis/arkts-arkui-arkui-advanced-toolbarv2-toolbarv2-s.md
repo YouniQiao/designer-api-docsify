@@ -40,7 +40,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activatedIndex?: number
 ```
 
-Define toolbarV2 activate item index, default is -1.
+定义ToolBarV2激活项的索引，默认值为-1。
 
 **类型：** number
 
@@ -60,7 +60,7 @@ Define toolbarV2 activate item index, default is -1.
 dividerModifier?: DividerModifier
 ```
 
-Define divider Modifier.
+定义分割线修饰符。
 
 **类型：** [DividerModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -80,7 +80,7 @@ Define divider Modifier.
 toolBarList: ToolBarV2Item[]
 ```
 
-Define toolbarV2 item list.
+定义ToolBarV2项列表。
 
 **类型：** [ToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
@@ -102,7 +102,7 @@ Define toolbarV2 item list.
 toolBarModifier?: ToolBarV2Modifier
 ```
 
-Define toolbarV2 modifier.
+定义ToolBarV2修饰符。
 
 **类型：** [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
 

@@ -4,7 +4,7 @@
 export class ToolBarV2SymbolGlyph
 ```
 
-Defines toolBarV2 symbolGlyph.
+定义ToolBarV2的SymbolGlyph。
 
 **起始版本：** 18
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options: ToolBarV2SymbolGlyphOptions)
 ```
 
-The constructor used to create a ToolBarV2SymbolGlyph object.
+用于创建ToolBarV2SymbolGlyph对象的构造函数。
 
 **起始版本：** 18
 
@@ -50,7 +50,7 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 activated?: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's activated symbol.
+ToolBarV2激活图标的修饰符。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -72,7 +72,7 @@ Modifier of toolbarV2's activated symbol.
 normal: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's normal symbol.
+ToolBarV2普通图标的修饰符。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
