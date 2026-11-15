@@ -788,6 +788,8 @@
   <!--Del-->
   - [Material(system api)](arkts-arkui-uimaterial-material-c-sys.md)<!--DelEnd-->
   - [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)
+  <!--Del-->
+  - [ImmersiveOptions(system api)](arkts-arkui-uimaterial-immersiveoptions-i-sys.md)<!--DelEnd-->
   - [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md)
   - [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md)
   <!--Del-->
@@ -795,6 +797,8 @@
   - [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
   <!--Del-->
   - [ImmersiveStyle(system api)](arkts-arkui-uimaterial-immersivestyle-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MaterialColorBlendMode(system api)](arkts-arkui-uimaterial-materialcolorblendmode-e-sys.md)<!--DelEnd-->
   - [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md)
   - [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)

@@ -120,7 +120,7 @@ Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi
 | -- | -- |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) *image | Pointer to an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | uint32_t componentType | Component type. The value is obtained using the [OH_ImageNative_GetComponentTypes](capi-image-native-h.md#oh_imagenative_getcomponenttypes) API. |
-| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) object. |
+| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) **nativeBuffer | Double pointer to the buffer, which is an [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) object. |
 
 **Returns**:
 
