@@ -1291,6 +1291,28 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+## onUsbDeviceAdded
+
+```TypeScript
+onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void
+```
+
+USB设备插入事件回调。当USB设备插入且系统已识别时触发此回调。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void--><!--Device-EnterpriseAdminExtensionAbility-onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| usbDeviceInfo | [common.UsbDeviceInfo](arkts-mdm-common-usbdeviceinfo-i.md) | 是 | USB设备信息，包括总线编号、设备地址、序列号、厂商ID、产品ID及其他设备属性。 |
+
 ## context
 
 ```TypeScript

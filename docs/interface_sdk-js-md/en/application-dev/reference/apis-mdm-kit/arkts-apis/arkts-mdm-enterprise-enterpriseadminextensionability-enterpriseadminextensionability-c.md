@@ -1284,6 +1284,28 @@ Callback for unmounting external storage devices. When an external storage devic
 | --- | --- | --- | --- |
 | deviceInfo | [common.ExternalStorageDeviceInfo](arkts-mdm-common-externalstoragedeviceinfo-i.md) | Yes | Device information of the external storage device that needs to be unmounted. |
 
+## onUsbDeviceAdded
+
+```TypeScript
+onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void
+```
+
+Callback for USB device added events. Called when a USB device is added to the device. This callback is triggered when a USB device is plugged in and the system has recognized it.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EnterpriseAdminExtensionAbility-onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void--><!--Device-EnterpriseAdminExtensionAbility-onUsbDeviceAdded(usbDeviceInfo: common.UsbDeviceInfo): void-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| usbDeviceInfo | [common.UsbDeviceInfo](arkts-mdm-common-usbdeviceinfo-i.md) | Yes | USB device information, including bus number, device address, serial number, vendor ID, product ID, and other device attributes. |
+
 ## context
 
 ```TypeScript
