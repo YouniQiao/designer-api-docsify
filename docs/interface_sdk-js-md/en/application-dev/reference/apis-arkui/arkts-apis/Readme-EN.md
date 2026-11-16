@@ -1253,6 +1253,7 @@
     <!--Del-->
     - [setWindowLayoutMode(system api)](arkts-arkui-window-setwindowlayoutmode-f-sys.md)<!--DelEnd-->
     - [AvoidArea](arkts-arkui-window-avoidarea-i.md)
+    - [AvoidAreaInsets](arkts-arkui-window-avoidareainsets-i.md)
     - [AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)
     - [Configuration](arkts-arkui-window-configuration-i.md)
     <!--Del-->

@@ -1417,6 +1417,7 @@
   - [UIMaterial](arkts-arkui-tabs-comp-uimaterial-t.md)
   - [AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md)
   - [BarMode](arkts-arkui-tabs-comp-barmode-e.md)
+  - [BarOverlapMode](arkts-arkui-tabs-comp-baroverlapmode-e.md)
   - [BarPosition](arkts-arkui-tabs-comp-barposition-e.md)
   - [LayoutStyle](arkts-arkui-tabs-comp-layoutstyle-e.md)
   - [TabBarDisplayMode](arkts-arkui-tabs-comp-tabbardisplaymode-e.md)

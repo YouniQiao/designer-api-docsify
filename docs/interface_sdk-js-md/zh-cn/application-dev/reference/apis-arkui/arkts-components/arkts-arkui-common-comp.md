@@ -114,7 +114,7 @@ Common()
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityHoverEvent](arkts-arkui-common-comp-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
+| [AccessibilityHoverEvent](arkts-arkui-common-comp-accessibilityhoverevent-i.md) | 无障碍悬浮事件对象，用于获取触发无障碍悬浮事件时的详细信息，包括无障碍悬浮动作类型（type）、手指相对于组件/窗口/屏幕的坐标（x、y、windowX、windowY、displayX、displayY、globalDisplayX、globalDisplayY）等属性。 |
 | [AlignRuleOption](arkts-arkui-common-comp-alignruleoption-i.md) | 相对布局组件中子组件的对齐规则。 |
 | [AnimatableArithmetic](arkts-arkui-common-comp-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\<T\>接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\<T\>接口的类型。 |
 | [AnimateParam](arkts-arkui-common-comp-animateparam-i.md) | 动画效果相关参数。 |
@@ -137,7 +137,7 @@ Common()
 | [ClickEvent](arkts-arkui-common-comp-clickevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
 | [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
 | [ComponentOptions](arkts-arkui-common-comp-componentoptions-i.md) | 自定义组件参数，用于配置是否支持组件冻结和全局复用池，适用于需要优化自定义组件性能表现和提升组件复用效率的场景。 |
-| [Configuration](arkts-arkui-common-comp-configuration-i.md) | Defines the data type of the interface restriction. |
+| [Configuration](arkts-arkui-common-comp-configuration-i.md) | 数据类型。用于设置颜色模式和字体缩放倍数。 |
 | [ContentCoverOptions](arkts-arkui-common-comp-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-arkui-common-comp-bindoptions-i.md)。 |
 | [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
 | [ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md) | 长按预览时显示的样式信息。 |
@@ -290,7 +290,7 @@ Common()
 | [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | `BuilderCallback`是全局`@Builder`函数的类型别名，作为`mutableBuilder`函数的入参类型，用于指定待封装的全局`@Builder`函数。 |
 | [CircleShape](arkts-arkui-common-comp-circleshape-t.md) | 导入CircleShape类型对象。 |
 | [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | 组件内容的实体封装。 |
-| [Context](arkts-arkui-common-comp-context-t.md) | Get context. |
+| [Context](arkts-arkui-common-comp-context-t.md) | 返回当前组件所在Ability的Context，Context的具体类型为当前Ability关联的Context对象。例如：在UIAbility窗口中的页面调用该接口，返回类型为UIAbilityContext。在ExtensionAbility窗口中的页面调用该接口，返回类型为ExtensionContext。 |
 | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 定义CustomBuilder类型。 |
 | [CustomBuilderT](arkts-arkui-common-comp-custombuildert-t.md) | 定义带参数的CustomBuilder类型 |
 | [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | 落入操作时使用的数据加载参数。 |

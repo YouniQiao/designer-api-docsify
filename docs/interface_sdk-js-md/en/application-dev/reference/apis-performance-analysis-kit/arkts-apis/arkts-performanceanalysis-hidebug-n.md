@@ -69,8 +69,10 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md#setprocdumpinsharedoom-1) | Changes the dump heap snapshot from the thread-level to the process-level. |
 | [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md#startapptracecapture-1) | Starts automatic trace collection in a specified scope. This API is a supplement to the HiTrace module. The performance consumption during trace collection increases with the collection scope. Therefore, before using this API, you are advised to run the **hitrace** command to capture trace logs and select the key scope of trace collection to improve the API performance. |
 | [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling-1) | Starts the VM profiling method. **startJsCpuProfiling(filename: string)** and **stopJsCpuProfiling()** are called in pairs. **startJsCpuProfiling(filename: string)** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
+| [startProfiler](arkts-performanceanalysis-hidebug-startprofiler-f.md#startprofiler-1) | Start the profiler to capture data. After starting, when the duration reaches the specified or default maximum value, or the size of the result file exceeds the limit, the system automatically stops capturing data and notifies the application through the callback function. |
 | [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture-1) | Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) to start collection before calling this API. If this API is called before trace collection or it is repeatedly called, an exception will occur. |
 | [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md#stopjscpuprofiling-1) | Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfiling(filename: string)** are called in pairs. **startJsCpuProfiling()** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
+| [stopProfiler](arkts-performanceanalysis-hidebug-stopprofiler-f.md#stopprofiler-1) | Stop the profiler that has already started. |
 | [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md#dumpheapdata-1) | Dumps the VM heap data and generates the **filename.heapsnapshot** file. |
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-1) | Dumps VM heap data. |
 | [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-2) | Dumps VM heap data and clears the nodeId cache. |
@@ -85,6 +87,8 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | Enumerates the GWP-ASan configuration items. You can configure whether to enable GWP-Asan, the sampling frequency, and the maximum number of allocated slots. |
 | [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Defines the memory limit of the application process. |
 | [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Describes memory information of the application process. |
+| [ProfilerConfig](arkts-performanceanalysis-hidebug-profilerconfig-i.md) | Profiler configuration. |
+| [ProfilerResult](arkts-performanceanalysis-hidebug-profilerresult-i.md) | Profiler result. |
 | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | Provides options of trace collection. |
 | [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Describes the physical memory information about an application process. |
 | [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | Describes the system memory information, including the total memory, free memory, and available memory. |
@@ -96,10 +100,12 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. It contains the following key-value information: <br>**"ark.gc.gc-count"**: number of GC times of the current thread. <br>**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds. <br>**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes. <br>**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes. <br>**"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
+| [ProfilerCallback](arkts-performanceanalysis-hidebug-profilercallback-t.md) | Profiler callback type |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Enumerates the trimming levels of the heap snapshot. |
+| [ProfilerResourceType](arkts-performanceanalysis-hidebug-profilerresourcetype-e.md) | Enumerates the profiler resource type. |
 | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Describes types of trace collection threads, including the main thread and all threads. |

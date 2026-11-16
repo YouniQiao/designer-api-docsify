@@ -935,20 +935,19 @@
   - [ExecOptions（系统接口）](arkts-ability-climanager-execoptions-i-sys.md)<!--DelEnd-->
   - [ExecResult](arkts-ability-climanager-execresult-i.md)
   - [SessionStatus](arkts-ability-climanager-sessionstatus-e.md)
-<!--Del-->
-- [@ohos.app.function.functionManager（Function管理）](arkts-ability-app-function-functionmanager.md)<!--DelEnd-->
+- [@ohos.app.function.functionManager（Function管理）](arkts-ability-app-function-functionmanager.md)
   <!--Del-->
   - [invokeFunction（系统接口）](arkts-ability-functionmanager-invokefunction-f-sys.md)<!--DelEnd-->
+  - [invokePublicFunction](arkts-ability-functionmanager-invokepublicfunction-f.md)
   <!--Del-->
   - [queryFunctions（系统接口）](arkts-ability-functionmanager-queryfunctions-f-sys.md)<!--DelEnd-->
+  - [queryPublicFunctions](arkts-ability-functionmanager-querypublicfunctions-f.md)
   <!--Del-->
   - [registerFunctionHook（系统接口）](arkts-ability-functionmanager-registerfunctionhook-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unregisterFunctionHook（系统接口）](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InvokeOptions（系统接口）](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InvokeResult（系统接口）](arkts-ability-functionmanager-invokeresult-i-sys.md)<!--DelEnd-->
+  - [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md)
+  - [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md)
 <!--Del-->
 - [@ohos.application.uriPermissionManager（URI权限管理）](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->
   <!--Del-->
@@ -1895,10 +1894,8 @@
     - [FunctionResultWrap（系统接口）](arkts-ability-functionhook-functionresultwrap-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [InvokeFunctionParam（系统接口）](arkts-ability-functionhook-invokefunctionparam-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FunctionInfo（Function信息）](arkts-ability-functioninfo.md)<!--DelEnd-->
-    <!--Del-->
-    - [FunctionInfo（系统接口）](arkts-ability-functioninfo-i-sys.md)<!--DelEnd-->
+  - [FunctionInfo（Function信息）](arkts-ability-functioninfo.md)
+    - [FunctionInfo](arkts-ability-functioninfo-i.md)
   - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor.md)
     - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md)
     - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
@@ -1989,8 +1986,7 @@
   - [ToolEventCallback（CLI工具事件回调）](arkts-ability-tooleventcallback.md)
     - [ToolEventCallback](arkts-ability-tooleventcallback-i.md)
     - [OnEventFn](arkts-ability-oneventfn-t.md)
-  <!--Del-->
-  - [ToolInfo（CLI工具信息）](arkts-ability-toolinfo.md)<!--DelEnd-->
+  - [ToolInfo（CLI工具信息）](arkts-ability-toolinfo.md)
     <!--Del-->
     - [SubCommandInfo（系统接口）](arkts-ability-toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->

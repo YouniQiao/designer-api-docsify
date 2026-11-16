@@ -963,20 +963,19 @@
   - [ExecOptions(system api)](arkts-ability-climanager-execoptions-i-sys.md)<!--DelEnd-->
   - [ExecResult](arkts-ability-climanager-execresult-i.md)
   - [SessionStatus](arkts-ability-climanager-sessionstatus-e.md)
-<!--Del-->
-- [@ohos.app.function.functionManager(Function Manager)](arkts-ability-app-function-functionmanager.md)<!--DelEnd-->
+- [@ohos.app.function.functionManager(Function Manager)](arkts-ability-app-function-functionmanager.md)
   <!--Del-->
   - [invokeFunction(system api)](arkts-ability-functionmanager-invokefunction-f-sys.md)<!--DelEnd-->
+  - [invokePublicFunction](arkts-ability-functionmanager-invokepublicfunction-f.md)
   <!--Del-->
   - [queryFunctions(system api)](arkts-ability-functionmanager-queryfunctions-f-sys.md)<!--DelEnd-->
+  - [queryPublicFunctions](arkts-ability-functionmanager-querypublicfunctions-f.md)
   <!--Del-->
   - [registerFunctionHook(system api)](arkts-ability-functionmanager-registerfunctionhook-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unregisterFunctionHook(system api)](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InvokeOptions(system api)](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InvokeResult(system api)](arkts-ability-functionmanager-invokeresult-i-sys.md)<!--DelEnd-->
+  - [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md)
+  - [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md)
 <!--Del-->
 - [@ohos.application.uriPermissionManager(URI Permission Manager)](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->
   <!--Del-->
@@ -1944,10 +1943,8 @@
     - [FunctionResultWrap(system api)](arkts-ability-functionhook-functionresultwrap-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [InvokeFunctionParam(system api)](arkts-ability-functionhook-invokefunctionparam-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FunctionInfo(Function Info)](arkts-ability-functioninfo.md)<!--DelEnd-->
-    <!--Del-->
-    - [FunctionInfo(system api)](arkts-ability-functioninfo-i-sys.md)<!--DelEnd-->
+  - [FunctionInfo(Function Info)](arkts-ability-functioninfo.md)
+    - [FunctionInfo](arkts-ability-functioninfo-i.md)
   - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor.md)
     - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md)
     - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
@@ -2040,8 +2037,7 @@
   - [ToolEventCallback(CLI Tool Event Callback)](arkts-ability-tooleventcallback.md)
     - [ToolEventCallback](arkts-ability-tooleventcallback-i.md)
     - [OnEventFn](arkts-ability-oneventfn-t.md)
-  <!--Del-->
-  - [ToolInfo(CLI Tool Information)](arkts-ability-toolinfo.md)<!--DelEnd-->
+  - [ToolInfo(CLI Tool Information)](arkts-ability-toolinfo.md)
     <!--Del-->
     - [SubCommandInfo(system api)](arkts-ability-toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->

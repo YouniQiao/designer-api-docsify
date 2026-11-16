@@ -1,4 +1,4 @@
-# FunctionInfo (System API)
+# FunctionInfo
 
 ```TypeScript
 export interface FunctionInfo
@@ -6,13 +6,11 @@ export interface FunctionInfo
 
 FunctionInfo describes the basic information of a [Function](arkts-ability-app-function-functionmanager.md), including the Function namespace, name, version, description, and input/output schema.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-export interface FunctionInfo--><!--Device-unnamed-export interface FunctionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## description
 
@@ -24,15 +22,13 @@ Functional description of the Function. The description should clearly explain t
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly description: string--><!--Device-FunctionInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## functionName
 
@@ -44,15 +40,13 @@ Name of the Function, used to uniquely identify a Function within the functionNa
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly functionName: string--><!--Device-FunctionInfo-readonly functionName: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## functionNamespace
 
@@ -64,15 +58,13 @@ Namespace of the Function, used to classify and manage Functions in the system. 
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly functionNamespace: string--><!--Device-FunctionInfo-readonly functionNamespace: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## inputSchema
 
@@ -84,15 +76,13 @@ Input parameter JSON Schema definition of the Function, describing the structure
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly inputSchema?: string--><!--Device-FunctionInfo-readonly inputSchema?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## outputSchema
 
@@ -104,15 +94,13 @@ Output result JSON Schema definition of the Function, describing the structure a
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly outputSchema?: string--><!--Device-FunctionInfo-readonly outputSchema?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## version
 
@@ -124,12 +112,10 @@ Version number of the Function. It follows semantic versioning (e.g., "1.0.0"), 
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FunctionInfo-readonly version: string--><!--Device-FunctionInfo-readonly version: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

@@ -91,6 +91,7 @@ import { window } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [AvoidArea](arkts-arkui-window-avoidarea-i.md) | Describes the area to avoid for window content. |
+| [AvoidAreaInsets](arkts-arkui-window-avoidareainsets-i.md) | Avoid area insets of the window. |
 | [AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md) | Describes the new area where the window cannot be displayed. The new area is returned when the corresponding event is triggered. |
 | [Configuration](arkts-arkui-window-configuration-i.md) | Defines the parameters for creating a child window or system window. |
 | [DecorButtonStyle](arkts-arkui-window-decorbuttonstyle-i.md) | Describes the button style of the system decoration bar. |

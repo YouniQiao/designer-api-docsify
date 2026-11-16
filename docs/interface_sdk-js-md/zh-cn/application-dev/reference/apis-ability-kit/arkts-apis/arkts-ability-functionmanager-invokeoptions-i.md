@@ -1,4 +1,4 @@
-# InvokeOptions（系统接口）
+# InvokeOptions
 
 ```TypeScript
 interface InvokeOptions
@@ -6,13 +6,11 @@ interface InvokeOptions
 
 Function调用的可选参数。包含Function调用时的应用上下文信息。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 <!--Device-functionManager-interface InvokeOptions--><!--Device-functionManager-interface InvokeOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -30,15 +28,13 @@ context?: Context
 
 **类型：** [Context](arkts-ability-context-c.md)
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InvokeOptions-context?: Context--><!--Device-InvokeOptions-context?: Context-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## dmSessionId
 
@@ -50,15 +46,13 @@ dmSessionId?: string
 
 **类型：** string
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InvokeOptions-dmSessionId?: string--><!--Device-InvokeOptions-dmSessionId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## toolCallId
 
@@ -70,12 +64,10 @@ toolCallId?: string
 
 **类型：** string
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InvokeOptions-toolCallId?: string--><!--Device-InvokeOptions-toolCallId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。

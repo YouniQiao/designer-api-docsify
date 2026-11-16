@@ -414,7 +414,7 @@ export default {
 static requestFullWindow(options?: RequestFullWindowOptions): void
 ```
 
-Requests the application to run in full window. In some scenarios, such as semi-modal FA, the FA runs in non-full window. In this case, you can call this API. This API is invalid for an application already in full-window mode.
+请求应用以全窗口运行，FA在某些场景下（如半模态FA）会以非全窗口运行，调用该接口会从非全窗口切换为全窗口运行，如果已经以全窗口运行则该接口调用无效。从API version 7开始，推荐使用@ohos.window (窗口)。
 
 **起始版本：** 3
 
@@ -430,7 +430,7 @@ Requests the application to run in full window. In some scenarios, such as semi-
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | 否 | Transition time from non-full window to full window, in milliseconds. By default, the value is in direct proportion to the distance between the non-full window and the full window. |
+| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | 否 | 请求全窗口时，设定非全窗口到全窗口的过渡时间，单位为毫秒，默认时间与非全窗口到全窗口的距离成正比。 |
 
 **示例**
 

@@ -131,7 +131,7 @@ static showToast(options: ShowToastOptions): void
 
 Displays the notification text.
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

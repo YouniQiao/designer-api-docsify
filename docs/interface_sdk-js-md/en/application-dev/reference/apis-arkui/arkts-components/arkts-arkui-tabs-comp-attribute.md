@@ -230,7 +230,7 @@ Sets the floating style of the tab bar.
 > **NOTE:** 
 > 
 > The floating style allows the tab bar to be displayed in a floating manner at the bottom of the **Tabs**. This
-> API takes effect only when [barOverlap](#baroverlap) is **true**,
+> API takes effect only when [barOverlap](#baroverlap-1) is **true**,
 > [vertical](#vertical) is **false**, and [barPosition](#barposition) is
 > **BarPosition.End**.
 
@@ -418,6 +418,30 @@ Sets whether the tab bar is blurred behind and overlaid on the **TabContent**. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the tab bar is blurred behind and overlaid on the TabContent. When barOverlap is set to true, the tab bar is blurred behind and overlaid on the TabContent, and the default blur material BlurStyle value of the tab bar is changed to 'BlurStyle.COMPONENT_THICK'. When barOverlap is set to false, there is no blur or overlay effect.<br>Default value: false |
+
+## barOverlap
+
+```TypeScript
+barOverlap(value: BarOverlapMode | boolean)
+```
+
+Sets the overlap mode of the tab bar and **TabContent** component.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-TabsAttribute-barOverlap(value: BarOverlapMode | boolean): TabsAttribute--><!--Device-TabsAttribute-barOverlap(value: BarOverlapMode | boolean): TabsAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [BarOverlapMode](arkts-arkui-tabs-comp-baroverlapmode-e.md) &#124; boolean | Yes | Overlap mode of the tab bar and **TabContent** component. **BarOverlapMode.STACK**: The tab bar overlaps the **TabContent** component with a blurred background effect, and the default blur style of the tab bar is set to **'BlurStyle.COMPONENT_THICK'**.<br> **BarOverlapMode.STANDARD**: There is no blur or overlap effect.<br> **BarOverlapMode.SAFE_AREA_PADDING**: The tab bar area becomes part of the safe area padding for the tab content, and the tab content can extend into the tab bar area. |
 
 ## barPosition
 

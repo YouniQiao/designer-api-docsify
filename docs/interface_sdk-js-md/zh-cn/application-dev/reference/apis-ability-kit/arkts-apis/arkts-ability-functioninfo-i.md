@@ -1,4 +1,4 @@
-# FunctionInfo（系统接口）
+# FunctionInfo
 
 ```TypeScript
 export interface FunctionInfo
@@ -6,13 +6,11 @@ export interface FunctionInfo
 
 FunctionInfo用于描述[Function](arkts-ability-app-function-functionmanager.md)的基本信息，包括Function命名空间、名称、版本、描述、输入输出模式等。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 <!--Device-unnamed-export interface FunctionInfo--><!--Device-unnamed-export interface FunctionInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## description
 
@@ -24,15 +22,13 @@ Function的功能描述。该描述应清晰说明Function的核心功能和用�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly description: string--><!--Device-FunctionInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## functionName
 
@@ -44,15 +40,13 @@ Function的名称，用于在functionNamespace内唯一标识一个Function。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly functionName: string--><!--Device-FunctionInfo-readonly functionName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## functionNamespace
 
@@ -64,15 +58,13 @@ Function的命名空间，用于在系统中对Function进行分类和管理。�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly functionNamespace: string--><!--Device-FunctionInfo-readonly functionNamespace: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## inputSchema
 
@@ -84,15 +76,13 @@ Function的输入参数JSON Schema定义，描述Function接受的输入参数�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly inputSchema?: string--><!--Device-FunctionInfo-readonly inputSchema?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## outputSchema
 
@@ -104,15 +94,13 @@ Function的输出结果JSON Schema定义，描述Function返回值的结构和�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly outputSchema?: string--><!--Device-FunctionInfo-readonly outputSchema?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## version
 
@@ -124,12 +112,10 @@ Function的版本号。遵循语义化版本规范（如"1.0.0"），格式由�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FunctionInfo-readonly version: string--><!--Device-FunctionInfo-readonly version: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。

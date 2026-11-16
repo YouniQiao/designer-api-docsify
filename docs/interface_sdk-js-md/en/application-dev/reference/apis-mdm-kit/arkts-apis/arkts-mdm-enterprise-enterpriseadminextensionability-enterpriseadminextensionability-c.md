@@ -1105,8 +1105,8 @@ Callback for the password authentication failure event. This callback is trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cumulativeFailedCount | number | Yes | Cumulative number of failed password attempts. |
-| accountId | number | Yes | ID of the user whose password authentication failed. |
+| cumulativeFailedCount | number | Yes | Total number of failed password attempts. |
+| accountId | number | Yes | ID of the account whose password authentication failed. |
 
 ## onSmsReceived
 

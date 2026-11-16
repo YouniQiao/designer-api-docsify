@@ -1100,7 +1100,7 @@ onPasswordFailed(cumulativeFailedCount: number, accountId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cumulativeFailedCount | number | 是 | 密码认证失败的累计次数。 |
+| cumulativeFailedCount | number | 是 | 密码失败的累计尝试次数。 |
 | accountId | number | 是 | 发生密码认证失败的用户ID。 |
 
 ## onSmsReceived

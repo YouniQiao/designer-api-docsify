@@ -1,4 +1,4 @@
-# InvokeResult (System API)
+# InvokeResult
 
 ```TypeScript
 interface InvokeResult
@@ -6,13 +6,11 @@ interface InvokeResult
 
 Encapsulates the success or failure status of function invocation.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-functionManager-interface InvokeResult--><!--Device-functionManager-interface InvokeResult-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -30,15 +28,13 @@ The returned data on success. The type can be any JSON value. Only present when 
 
 **Type:** any
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-data?: any--><!--Device-InvokeResult-data?: any-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## errorCode
 
@@ -50,15 +46,13 @@ The error code on failure (numeric). Only present when [success](#success) is fa
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-errorCode?: number--><!--Device-InvokeResult-errorCode?: number-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## errorMsg
 
@@ -70,15 +64,13 @@ The error description on failure. Only present when [success](#success) is false
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-errorMsg?: string--><!--Device-InvokeResult-errorMsg?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## success
 
@@ -90,12 +82,10 @@ Indicates whether the invocation was successful (at business logic level). true:
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-success: boolean--><!--Device-InvokeResult-success: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

@@ -1,4 +1,4 @@
-# InvokeOptions (System API)
+# InvokeOptions
 
 ```TypeScript
 interface InvokeOptions
@@ -6,13 +6,11 @@ interface InvokeOptions
 
 Optional parameters for Function invocation. Contains the application context information for the Function invocation.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-functionManager-interface InvokeOptions--><!--Device-functionManager-interface InvokeOptions-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -30,15 +28,13 @@ Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability
 
 **Type:** [Context](arkts-ability-context-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeOptions-context?: Context--><!--Device-InvokeOptions-context?: Context-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## dmSessionId
 
@@ -50,15 +46,13 @@ Indicates the session ID of the dialog manager (DM), which uniquely identifies t
 
 **Type:** string
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeOptions-dmSessionId?: string--><!--Device-InvokeOptions-dmSessionId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## toolCallId
 
@@ -70,12 +64,10 @@ Indicates the unique identifier assigned to a tool call by the agent. The value 
 
 **Type:** string
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeOptions-toolCallId?: string--><!--Device-InvokeOptions-toolCallId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
