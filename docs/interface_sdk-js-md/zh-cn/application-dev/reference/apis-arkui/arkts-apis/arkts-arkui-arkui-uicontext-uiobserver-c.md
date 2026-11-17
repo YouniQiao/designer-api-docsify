@@ -978,7 +978,7 @@ off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderSt
 off(type: 'textChange', callback?: Callback<observer.TextChangeEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+取消输入框文本变化的全局监听。
 
 **起始版本：** 22
 
@@ -994,8 +994,8 @@ Removes a callback function that was previously registered with `on()`.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'textChange' | 是 | The type of event to remove the listener for. Must be 'textChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'textChange' | 是 | 监听事件，固定为'textChange'，表示文本输入的变化。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 否 | 需要被注销的回调函数。不传参数时，取消输入框文本变化的所有全局监听。 |
 
 **示例**
 
@@ -1007,7 +1007,7 @@ Removes a callback function that was previously registered with `on()`.
 off(type: 'textChange', identity: observer.ObserverOptions, callback?: Callback<observer.TextChangeEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+取消指定ID对应输入框文本变化的局部监听。
 
 **起始版本：** 22
 
@@ -1023,9 +1023,9 @@ Removes a callback function that was previously registered with `on()`.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'textChange' | 是 | The type of event to remove the listener for. Must be 'textChange'. |
-| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'textChange' | 是 | 监听事件，固定为'textChange'，表示文本输入的变化。 |
+| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | 指定监听的文本输入组件的id。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 否 | 需要被注销的回调函数。不传参数时，取消指定ID输入框文本变化的所有局部监听。 |
 
 **示例**
 
@@ -3061,7 +3061,7 @@ struct Index {
 on(type: 'textChange', callback: Callback<observer.TextChangeEventInfo>): void
 ```
 
-Registers a callback function to be called when text field's content is changed.
+全局监听输入框文本变化。
 
 **起始版本：** 22
 
@@ -3077,8 +3077,8 @@ Registers a callback function to be called when text field's content is changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'textChange' | 是 | The type of event to listen for. Must be 'textChange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 是 | The callback function to be called when text field's content is changed. |
+| type | 'textChange' | 是 | 监听事件，固定为'textChange'，表示文本输入的变化。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 是 | 回调函数，返回文本变化的信息。 |
 
 **示例**
 
@@ -3174,7 +3174,7 @@ struct TextUiObserver {
 on(type: 'textChange', identity: observer.ObserverOptions, callback: Callback<observer.TextChangeEventInfo>): void
 ```
 
-Registers a callback function to be called when text field's content is changed.
+指定id的输入框文本变化的局部监听。
 
 **起始版本：** 22
 
@@ -3190,9 +3190,9 @@ Registers a callback function to be called when text field's content is changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'textChange' | 是 | The type of event to listen for. Must be 'textChange'. |
-| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 是 | The callback function to be called when the text field's content is changed. |
+| type | 'textChange' | 是 | 监听事件，固定为'textChange'，表示文本输入的变化。 |
+| identity | [observer.ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | 指定监听的文本输入组件的id。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[observer.TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md)&gt; | 是 | 回调函数，返回文本变化的信息。 |
 
 **示例**
 

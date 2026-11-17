@@ -3219,6 +3219,36 @@ HTML file to be loaded:
 </html>
 ```
 
+## getLastPostMessageUrl
+
+```TypeScript
+getLastPostMessageUrl(): string
+```
+
+Obtains the URL of the frame that last sent a postMessage to the application.
+
+This API returns the frame URL of the sender of the most recent postMessage received through [onMessageEvent](arkts-arkweb-webview-webmessageport-i.md#onmessageevent) or [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext). If no postMessage has been received, an empty string is returned.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-getLastPostMessageUrl(): string--><!--Device-WebviewController-getLastPostMessageUrl(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | URL of the frame that last sent a postMessage. If no postMessage has been received, an empty string is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. Ensure that the WebviewController is associated with a Web component before calling this method. |
+
 ## getMediaPlaybackState
 
 ```TypeScript

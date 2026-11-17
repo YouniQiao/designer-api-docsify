@@ -1466,7 +1466,7 @@ Get object context menu controller.
 getCursorController(): CursorController
 ```
 
-Get object cursor controller.
+获取CursorController对象，可通过该对象控制光标。
 
 **起始版本：** 12
 
@@ -1482,7 +1482,7 @@ Get object cursor controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | 获取CursorController对象。 |
 
 **示例**
 
@@ -2158,7 +2158,7 @@ getMagnifier(): Magnifier
 getMaxFontScale(): number
 ```
 
-Get the max font scale.
+获取当前UI上下文最大字体倍率。
 
 **起始版本：** 13
 
@@ -2174,7 +2174,7 @@ Get the max font scale.
 
 | 类型 | 说明 |
 | --- | --- |
-| number | The max font scale. |
+| number | 当前UI上下文最大字体倍率。 |
 
 **示例**
 
