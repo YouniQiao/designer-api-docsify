@@ -44,7 +44,7 @@ mechId: number
 status: RotationAxesStatus
 ```
 
-Rotate axis status.
+旋转轴状态
 
 **类型：** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 

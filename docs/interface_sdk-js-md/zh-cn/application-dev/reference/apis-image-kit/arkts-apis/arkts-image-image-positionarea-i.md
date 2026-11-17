@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 offset: number
 ```
 
-偏移量。单位：字节（Byte）。
+`pixels`缓冲区内第一个像素的字节偏移量，即区域像素数据在缓冲区中的起始位置。<br>读写区域数据时，从`pixels[offset]`处开始读取或写入。<br>单位：字节（Byte）。
 
 **类型：** number
 
@@ -44,7 +44,7 @@ offset: number
 pixels: ArrayBuffer
 ```
 
-像素数据缓冲区。
+区域像素数据缓冲区。
 
 **类型：** ArrayBuffer
 
@@ -64,7 +64,7 @@ pixels: ArrayBuffer
 region: Region
 ```
 
-区域信息，用于按区域进行图像数据的读写。指定的区域宽度加X坐标不能大于原图的宽度，指定的区域高度加Y坐标不能大于原图的高度。
+区域信息，用于按区域进行图像数据的读写。<br>指定区域的宽度加X坐标不能大于原图的宽度。<br>指定区域的高度加Y坐标不能大于原图的高度。
 
 **类型：** [Region](arkts-image-image-region-i.md)
 
@@ -84,7 +84,7 @@ region: Region
 stride: number
 ```
 
-跨距，内存中每行像素所占的空间。单位：字节（Byte）。
+跨距，内存中每行像素（含行末填充字节）所占的空间。单位：字节（Byte）。
 
 **类型：** number
 

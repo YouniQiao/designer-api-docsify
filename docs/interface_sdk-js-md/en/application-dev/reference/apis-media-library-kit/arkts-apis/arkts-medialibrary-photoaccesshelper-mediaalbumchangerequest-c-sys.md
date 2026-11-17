@@ -1070,7 +1070,7 @@ set album name by filemanger.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Album name to set. <br>Value range:1-255 <br>Album name parameter specifications: The album name contains 1 to 255 characters. Invalid English characters, including: \ /: *? "'`&lt; &gt; &#124; {} []It is not allowed to name only. or.. English characters are case insensitive. The album name must be unique. |
+| name | string | Yes | Album name to set. <br>Value range:1-255 <br>Album name parameter specifications: The album name contains 1 to 255 characters. It must not contain the following invalid characters: \ /: *? "'`&lt; &gt; &#124; {} []It is not allowed to name only. or.. English characters are case insensitive. The album name must be unique. |
 
 **Error codes:**
 

@@ -4,7 +4,7 @@
 interface IntervalInfo
 ```
 
-You can obtain the timestamp information from the event callback, including the timestamp when the current frame arrives and the timestamp when the next frame is expected to arrive.
+Developers can obtain the timestamp information of frame drawing from the callback function, including the timestamp when the current frame arrives and the targetTimestamp when the next frame is expected to arrive.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { displaySync } from '@kit.ArkGraphics2D';
 targetTimestamp: number
 ```
 
-Expected arrival time of the next frame, in nanoseconds.
+Expected arrival time of the next frame (in nanoseconds). Monotonically increasing time since system startup. The value must be greater than timestamp.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ Expected arrival time of the next frame, in nanoseconds.
 timestamp: number
 ```
 
-Time when the current frame arrives, in nanoseconds.
+Time when the current frame arrives (in nanoseconds). Monotonically increasing time since system startup.
 
 **Type:** number
 

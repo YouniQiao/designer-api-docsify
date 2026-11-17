@@ -18,7 +18,7 @@ export enum MechDeviceType
 GIMBAL_DEVICE = 0
 ```
 
-云台设备类型
+便携式云台设备
 
 **起始版本：** 20
 

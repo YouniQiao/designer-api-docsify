@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function getCurrentAngles(mechId: number): EulerAngles
 ```
 
-获取机械设备的当前角度
+获取指定机械体设备相对于初始位置的当前旋转角度
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ function getCurrentAngles(mechId: number): EulerAngles
 
 | 类型 | 说明 |
 | --- | --- |
-| [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | 返回当前角度 |
+| [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | 机械体设备的当前旋转角度 |
 
 **错误码：**
 

@@ -26,9 +26,9 @@ function rotate(mechId: number, angles: RotationAngles, duration: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | ID of the mechanical device. |
-| angles | [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | 是 | Relative angles. |
-| duration | number | 是 | Rotation duration. Unit: millisecond. |
+| mechId | number | 是 | 机械体设备ID |
+| angles | [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | 是 | 相对当前位置的旋转角度 |
+| duration | number | 是 | 旋转持续时间，单位：ms |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # @ohos.graphics.displaySync(Variable Frame Rate)
 
-The displaySync module allows your application to draw its custom UI content at a specified frame rate.
+Variable frame rate support allows developers to run UI services at a specified frame rate. It is generally used in scenarios where developers draw the UI themselves and have specific requirements for the frame rate. The system adjusts the drawing frequency based on the set expected frame rate, minimum frame rate, and maximum frame rate to meet the requirements of different scenarios.
 
 **Since:** 11
 
@@ -20,11 +20,11 @@ import { displaySync } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-arkgraphics2d-displaysync-create-f.md#create-1) | Creates a **DisplaySync** object, through which you can set the frame rate of the custom UI content. |
+| [create](arkts-arkgraphics2d-displaysync-create-f.md#create-1) | Creates a DisplaySync object, through which you can set the frame rate of the custom UI content. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md) to create a **DisplaySync** instance. |
-| [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md) | You can obtain the timestamp information from the event callback, including the timestamp when the current frame arrives and the timestamp when the next frame is expected to arrive. |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | An instance for setting the expected frame rate and callback function. It is used to set the expected frame rate range, register the frame callback function, and start and stop the frame callback. Before calling any of the following APIs, you must use displaySync.create() to create a DisplaySync instance and then call the corresponding method through this instance. |
+| [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md) | Developers can obtain the timestamp information of frame drawing from the callback function, including the timestamp when the current frame arrives and the targetTimestamp when the next frame is expected to arrive. |

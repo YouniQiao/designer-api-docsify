@@ -49,7 +49,7 @@ function updateDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): 
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
-| 18100002 | The specified shortcut to be updated is not found. |
+| [18100002](../errorcode-bundle.md#18100002-更新的快捷方式不存在) | The specified shortcut to be updated is not found. |
 
 <!--Del-->
 **示例**

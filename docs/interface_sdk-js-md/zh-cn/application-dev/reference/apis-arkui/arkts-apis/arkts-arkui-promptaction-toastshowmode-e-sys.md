@@ -18,7 +18,7 @@ export enum ToastShowMode
 SYSTEM_TOP_MOST = 2
 ```
 
-Toast shows in SYSTEM_TOAST window.
+Toast显示在系统Toast窗。
 
 **起始版本：** 12
 

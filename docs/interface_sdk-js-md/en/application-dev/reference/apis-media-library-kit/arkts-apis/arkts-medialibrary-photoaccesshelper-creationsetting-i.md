@@ -69,7 +69,9 @@ Title of the image or video.
 If this parameter is not passed, the system generates a value. The parameter specifications are as follows:
 
 - It must not contain a file name extension.  
-- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- Invalid English characters that are not allowed.  
+- API version 26.1.0 and later versions. Invalid characters include: \ / : * ? " ' ` &lt; &gt; | { } [ ]; A period (.) is allowed, but a period (.) cannot be used as the first character.  
+- Before API26.1.0, illegal characters include: . \ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - The file name consists of the title and file name extension. The file name string length ranges from 1 to 255.  
 Therefore, the title length cannot be too long.
 

@@ -273,7 +273,7 @@ Sets whether to support scroll gestures.
 enableScrollWithKeyboard(enabled: boolean | undefined): T
 ```
 
-Sets whether to enable scrolling with keyboard arrow keys. When enabled, the component will scroll in response to arrow key presses when focused but not in active focus state.
+Sets whether the scrolling component supports scrolling by arrow keys. After this function is enabled, the scrolling component responds to the arrow keys on the keyboard when the focus is obtained and the focus is not activated. If this parameter is not set, scrolling by arrow keys is not supported by default.
 
 **Since:** 26.1.0
 
@@ -289,7 +289,7 @@ Sets whether to enable scrolling with keyboard arrow keys. When enabled, the com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean &#124; undefined | Yes | Whether to enable scrolling with keyboard arrow keys. <br>Default value: true. |
+| enabled | boolean &#124; undefined | Yes | Indicates whether to support scrolling by arrow keys on the keyboard. <br>true: scrolling is supported. <br>false: scrolling is not supported. <br>undefined: scrolling is not supported. |
 
 **Return value:**
 

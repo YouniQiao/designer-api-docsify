@@ -145,7 +145,7 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。<br>**注意：** <br>传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。<br>文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。<br>**注意：** <br>传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。<br>文件名中不允许出现非法英文字符。<br>API版本26.1.0开始，非法字符包括：\ / : * ? " ' ` &lt; &gt; &#124; { } [ ]；允许包含英文句点（.），但不允许以英文句点（.）作为首字符。<br>API版本26.1.0之前，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
 **错误码：**

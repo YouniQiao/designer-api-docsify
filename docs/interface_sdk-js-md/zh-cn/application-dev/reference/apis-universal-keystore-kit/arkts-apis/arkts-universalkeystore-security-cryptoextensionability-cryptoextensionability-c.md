@@ -968,7 +968,7 @@ CryptoExtensionAbility不支持以下模块的引用。
 | DRM Kit | [@ohos.multimedia.drm](../../apis-drm-kit/arkts-apis/arkts-drm-multimedia-drm.md) |
 | Image Kit | [@ohos.multimedia.image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) |
 | Media Kit | [@ohos.multimedia.media](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media.md) |
-| Media Library Kit | [multimedia.movingphotoview](../../apis-media-library-kit/arkts-apis/arkts-multimedia-movingphotoview.md) |
+| Media Library Kit | [@ohos.multimedia.movingphotoview](../../apis-media-library-kit/arkts-components/arkts-medialibrary-multimedia-movingphotoview.md) |
 | Image Kit | [@ohos.multimedia.sendableImage](../../apis-image-kit/arkts-apis/arkts-image-multimedia-sendableimage.md) |
 | Audio Kit | [@ohos.multimedia.systemSoundManager](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-systemsoundmanager.md) |
 | Image Kit | [@ohos.multimedia.videoProcessingEngine](../../apis-image-kit/arkts-apis/arkts-image-multimedia-videoprocessingengine.md) |

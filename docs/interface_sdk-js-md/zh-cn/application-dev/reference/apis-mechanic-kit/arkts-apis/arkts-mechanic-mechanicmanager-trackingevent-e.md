@@ -18,7 +18,7 @@ export enum TrackingEvent
 CAMERA_TRACKING_LAYOUT_CHANGED = 2
 ```
 
-Camera tracking layout changed. You can call getCameraTrackingLayout to obtain the new layout.
+摄像头跟踪构图变更。
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ Camera tracking layout changed. You can call getCameraTrackingLayout to obtain t
 CAMERA_TRACKING_USER_DISABLED = 1
 ```
 
-用户操作相机跟踪关闭
+用户禁用了摄像头跟踪。
 
 **起始版本：** 20
 
@@ -46,7 +46,7 @@ CAMERA_TRACKING_USER_DISABLED = 1
 CAMERA_TRACKING_USER_ENABLED = 0
 ```
 
-用户操作相机跟踪使能
+用户启用了摄像头跟踪。
 
 **起始版本：** 20
 

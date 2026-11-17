@@ -321,6 +321,40 @@ try {
 
 <!--DelEnd-->
 
+## cleanInvalidData
+
+```TypeScript
+cleanInvalidData(validSubscribers: Array<string>): Promise<void>
+```
+
+Uses the valid subscriber IDs to clean up the data of invalid subscriber IDs.
+
+Templates whose subscriber ID is not in the valid subscriber ID list will be removed from the server. Only silent access is supported.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-cleanInvalidData(validSubscribers: Array<string>): Promise<void>--><!--Device-DataShareHelper-cleanInvalidData(validSubscribers: Array<string>): Promise<void>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| validSubscribers | Array&lt;string&gt; | Yes | Valid subscriber IDs used to clean up the data of invalid subscriber IDs. <br>The maximum length is 50 and the array must not be empty. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| 15700016 | Parameter error.Possible causes: <br>1. The array parameter exceeds the allowed length. <br>2. The array parameter is empty. |
+
 ## close
 
 ```TypeScript

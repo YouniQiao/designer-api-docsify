@@ -937,7 +937,7 @@ export default class EntryAbility extends UIAbility {
 dispatchKeyEvent(node: number | string, event: KeyEvent): boolean
 ```
 
-Dispach keyboard event to the frameNode with inspector key.
+按键事件应分发给指定的组件。为了确保行为的可预测性，目标组件必须位于分发组件的子树中。
 
 **起始版本：** 15
 
@@ -953,14 +953,14 @@ Dispach keyboard event to the frameNode with inspector key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | number &#124; string | 是 | The uniqueId or inspector key of the target FrameNode. |
-| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | The keyboard event. |
+| node | number &#124; string | 是 | 组件的id或者节点UniqueID。 |
+| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | KeyEvent对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Returns whether the key event is consumed. |
+| boolean | 按键事件是否成功分发给指定的组件。true表示分发成功，false表示分发失败。 |
 
 **示例**
 
@@ -1442,7 +1442,7 @@ get object ComponentUtils.
 getContextMenuController(): ContextMenuController
 ```
 
-Get object context menu controller.
+获取上下文菜单控制器对象。
 
 **起始版本：** 12
 
@@ -1458,7 +1458,7 @@ Get object context menu controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | 返回上下文菜单控制器对象。 |
 
 ## getCursorController
 
@@ -2292,7 +2292,7 @@ getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 getOverlayManager(): OverlayManager
 ```
 
-Obtains the OverlayManager object.
+获取OverlayManager对象。
 
 **起始版本：** 12
 
@@ -2308,7 +2308,7 @@ Obtains the OverlayManager object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | 返回OverlayManager实例对象。 |
 
 **示例**
 
@@ -2320,7 +2320,7 @@ Obtains the OverlayManager object.
 getOverlayManagerOptions(): OverlayManagerOptions
 ```
 
-Get object OverlayManagerOptions.
+获取OverlayManagerOptions对象。
 
 **起始版本：** 15
 
@@ -2336,7 +2336,7 @@ Get object OverlayManagerOptions.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 返回OverlayManagerOptions对象。 |
 
 **示例**
 
@@ -4479,7 +4479,7 @@ export default class EntryAbility extends UIAbility{
 setOverlayManagerOptions(options: OverlayManagerOptions): boolean
 ```
 
-Init OverlayManager.
+初始化OverlayManager。
 
 **起始版本：** 15
 
@@ -4495,13 +4495,13 @@ Init OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | 选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Returns true if it is called first and before getting an OverlayManager instance; returns false otherwise. |
+| boolean | 在首次调用且在获取OverlayManager实例之前调用时返回true；否则返回false。 |
 
 **示例**
 
@@ -4803,7 +4803,7 @@ struct Index {
 showDatePickerDialog(options: DatePickerDialogOptions): void
 ```
 
-datePickerDialog display.
+定义日期滑动选择器弹窗并弹出。
 
 **起始版本：** 10
 
@@ -4819,7 +4819,7 @@ datePickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) | 是 | Options. |
+| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) | 是 | 配置日期滑动选择器弹窗的参数。 |
 
 **示例**
 
@@ -4880,7 +4880,7 @@ struct DatePickerDialogExample {
 showTextPickerDialog(options: TextPickerDialogOptions): void
 ```
 
-textPickerDialog display.
+定义文本滑动选择器弹窗并弹出。
 
 **起始版本：** 10
 
@@ -4896,7 +4896,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) | 是 | Options. |
+| options | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) | 是 | 配置文本滑动选择器弹窗的参数。 |
 
 **示例**
 
@@ -4959,7 +4959,7 @@ struct TextPickerDialogExample {
 showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void
 ```
 
-textPickerDialog display.
+定义文本滑动选择器弹窗并弹出，相比API version 11，新增了TextPickerDialogOptionsExt参数支持。
 
 **起始版本：** 20
 
@@ -4975,7 +4975,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) &#124; [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptionsext-i.md) | 是 | Dialog style. |
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) &#124; [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpicker-comp-textpickerdialogoptionsext-i.md) | 是 | 配置文本滑动选择器弹窗的参数。 |
 
 **示例**
 
@@ -4987,7 +4987,7 @@ textPickerDialog display.
 showTimePickerDialog(options: TimePickerDialogOptions): void
 ```
 
-timePickerDialog display.
+定义时间滑动选择器弹窗并弹出。
 
 **起始版本：** 10
 
@@ -5003,7 +5003,7 @@ timePickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepicker-comp-timepickerdialogoptions-i.md) | 是 | Options. |
+| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepicker-comp-timepickerdialogoptions-i.md) | 是 | 配置时间滑动选择器弹窗的参数。 |
 
 **示例**
 

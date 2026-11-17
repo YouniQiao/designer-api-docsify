@@ -26,8 +26,8 @@ function off(type: 'rotationAxesStatusChange', callback?: Callback<RotationAxesS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'rotationAxesStatusChange' | 是 | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md)&gt; | 否 | Rotate axis state changes callback. |
+| type | 'rotationAxesStatusChange' | 是 | 取消注册监听事件的类型。取值为：'rotationAxesStatusChange' |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md)&gt; | 否 | 不填时默认取消所有注册的回调函数 |
 
 **错误码：**
 

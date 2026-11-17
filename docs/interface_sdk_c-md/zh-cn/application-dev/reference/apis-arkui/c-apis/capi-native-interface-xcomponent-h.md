@@ -135,6 +135,7 @@
 | [void OH_ArkUI_XComponentSurfaceConfig_Dispose(ArkUI_XComponentSurfaceConfig* config)](#oh_arkui_xcomponentsurfaceconfig_dispose) | 销毁[ArkUI_XComponentSurfaceConfig](capi-oh-nativexcomponent-native-xcomponent-arkui-xcomponentsurfaceconfig.md)对象。 |
 | [void OH_ArkUI_XComponentSurfaceConfig_SetIsOpaque(ArkUI_XComponentSurfaceConfig* config, bool isOpaque)](#oh_arkui_xcomponentsurfaceconfig_setisopaque) | 设置XComponent组件持有的Surface在渲染时是否被视为不透明，无论该Surface是否存在半透明像素。 |
 | [int32_t OH_ArkUI_SurfaceHolder_SetSurfaceConfig(OH_ArkUI_SurfaceHolder *surfaceHolder, ArkUI_XComponentSurfaceConfig *config)](#oh_arkui_surfaceholder_setsurfaceconfig) | 为[OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md)实例设置Surface选项。 |
+| [int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)](#oh_arkui_xcomponent_enablesurfacevisibilitylifecycle) | 为XComponent启用表面可见性生命周期。 仅支持UI线程调用。 |
 
 ### 变量
 
@@ -2440,6 +2441,35 @@ int32_t OH_ArkUI_SurfaceHolder_SetSurfaceConfig(OH_ArkUI_SurfaceHolder *surfaceH
 | -- | -- |
 | [OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md) *surfaceHolder | 表示指向[OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md)实例的指针。 |
 | [ArkUI_XComponentSurfaceConfig](capi-oh-nativexcomponent-native-xcomponent-arkui-xcomponentsurfaceconfig.md) *config | 表示指向[ArkUI_XComponentSurfaceConfig](capi-oh-nativexcomponent-native-xcomponent-arkui-xcomponentsurfaceconfig.md)实例的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int32_t | 返回执行结果。返回 ARKUI_ERROR_CODE_NO_ERROR - 执行成功。返回 ARKUI_ERROR_CODE_PARAM_INVALID - 传入参数异常。 |
+
+### OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle()
+
+```c
+int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)
+```
+
+**描述：**
+
+为XComponent启用表面可见性生命周期。 仅支持UI线程调用。
+
+<!--Device-int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)--><!--Device-int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md) *component | 表示指向[OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)实例的指针。 |
+| bool isVisibilityLifecycle | 表示是否启用surface可见性生命周期。 |
 
 **返回值：**
 

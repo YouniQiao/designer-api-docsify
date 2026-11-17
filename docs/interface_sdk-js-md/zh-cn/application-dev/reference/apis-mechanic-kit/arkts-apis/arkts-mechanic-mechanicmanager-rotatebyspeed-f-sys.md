@@ -27,8 +27,8 @@ function rotateBySpeed(mechId: number, speed: RotationSpeed, duration: number): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mechId | number | 是 | 机械设备ID |
-| speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | 是 | 旋转速度 |
-| duration | number | 是 | 执行时间 |
+| speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | 是 | 指定旋转速度。最大旋转速度不超过getMaxRotationSpeed的返回值大小，如果超过最大速度，默认取最大值 |
+| duration | number | 是 | 旋转持续时间，单位：ms。最大时间不超过getMaxRotationTime的返回值大小，如果超过最大时间，默认取最大值 |
 
 **返回值：**
 

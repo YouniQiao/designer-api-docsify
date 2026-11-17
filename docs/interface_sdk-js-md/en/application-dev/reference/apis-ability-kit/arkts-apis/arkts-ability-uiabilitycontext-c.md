@@ -2281,6 +2281,46 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## showAbility
+
+```TypeScript
+showAbility(params: ShowParams): Promise<void>
+```
+
+Shows this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. Before calling this API, ensure that the application has been added to the status bar. This API can be properly called only on PC/2-in-1 devices and tablets. On other devices, it returns the error code 801. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-showAbility(params: ShowParams): Promise<void>--><!--Device-UIAbilityContext-showAbility(params: ShowParams): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | [ShowParams](../../apis-default/arkts-apis/arkts-app-ability-showparams-showparams-c.md) | Yes | Parameters used for showing the UIAbility. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
+| [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) | The StartOptions check failed. |
+
+**Examples**
+
+See [showAbility](#showability)
+
 ## startAbility
 
 ```TypeScript

@@ -34,7 +34,7 @@ function turnBySpeed(mechId: number, angleSpeed: number, duration: number): Prom
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | 202 - 非系统应用 |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise对象，返回旋转执行结果 |
 
 **错误码：**
 

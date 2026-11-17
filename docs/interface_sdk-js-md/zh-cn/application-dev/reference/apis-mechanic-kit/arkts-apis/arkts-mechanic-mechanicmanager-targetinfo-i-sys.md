@@ -26,7 +26,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 targetType: TargetType
 ```
 
-Target type.
+搜索目标的相关信息
 
 **类型：** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 

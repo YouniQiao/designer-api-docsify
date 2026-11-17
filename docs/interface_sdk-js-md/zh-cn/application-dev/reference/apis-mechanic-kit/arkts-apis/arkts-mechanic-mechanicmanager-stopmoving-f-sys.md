@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function stopMoving(mechId: number): Promise<void>
 ```
 
-停止转动
+停止机械体设备的移动。使用Promise异步回调
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ function stopMoving(mechId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回操作结果 |
+| Promise&lt;void&gt; | Promise对象，无返回结果 |
 
 **错误码：**
 

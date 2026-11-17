@@ -1420,7 +1420,7 @@ set title by filemanger.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | asset name to set. <br> Should not contain extensions. The file name contains 1 to 255 characters. Invalid English characters, including:. \ /: *? "'`&lt; &gt; &#124; {} []Name-only is not allowed. Or.. |
+| name | string | Yes | asset name to set. <br> Should not contain extensions. The file name contains 1 to 255 characters. Invalid English characters, including: \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] can contain a period(.), but cannot start with a period(.).The name of the document management directory must be unique. |
 
 **Error codes:**
 

@@ -198,7 +198,7 @@ LiveFormExtensionAbility不支持以下模块的引用。
 | Media Library Kit | [@ohos.file.AlbumPickerComponent](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent.md) |
 | Media Library Kit | [@ohos.file.PhotoPickerComponent](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent.md) |
 | Media Library Kit | [@ohos.file.RecentPhotoComponent](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent.md) |
-| Media Library Kit | [multimedia.movingphotoview](../../apis-media-library-kit/arkts-apis/arkts-multimedia-movingphotoview.md) |
+| Media Library Kit | [@ohos.multimedia.movingphotoview](../../apis-media-library-kit/arkts-components/arkts-medialibrary-multimedia-movingphotoview.md) |
 | Camera Kit | [@ohos.multimedia.cameraPicker](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camerapicker.md) |
 | Basic Services Kit | [@ohos.pasteboard](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard.md) |
 | Calendar Kit | [@ohos.calendarManager](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager.md) |

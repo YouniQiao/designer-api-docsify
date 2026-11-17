@@ -63,7 +63,7 @@ Creates a **Scroll** component.
 
 | Name | Description |
 | --- | --- |
-| [FastScrollMode](arkts-arkui-scroll-comp-fastscrollmode-e.md) | Enumerates the fast scroll modes for scrolling to a specified index. |
+| [FastScrollMode](arkts-arkui-scroll-comp-fastscrollmode-e.md) | Enumerates the fast scroll modes for scrolling to a specified index, used with the `fastScroll` field of `ScrollToIndexOptions`. |
 | [ScrollAlign](arkts-arkui-scroll-comp-scrollalign-e.md) | Enumerates alignment modes. |
 | [ScrollDirection](arkts-arkui-scroll-comp-scrolldirection-e.md) | Enumerates the scrolling directions. |
 

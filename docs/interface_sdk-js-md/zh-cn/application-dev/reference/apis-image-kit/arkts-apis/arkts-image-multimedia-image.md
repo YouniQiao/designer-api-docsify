@@ -167,7 +167,7 @@ import { image } from '@kit.ImageKit';
 | [Picture](arkts-image-image-picture-i.md) | Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md)创建一个Picture实例。 |
 | [PixelMap](arkts-image-image-pixelmap-i.md) | 图像像素类，用于读取或写入图像数据以及获取图像信息，同时支持图像变换（缩放、平移、旋转、翻转、裁剪）、设置不透明度、提取Alpha通道、色彩空间设置等操作，适用于图像处理、图像编辑、图像显示等需要进行像素级数据操作的场景。在调用PixelMap的方法前，需要先通过[image.createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md)或[image.createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)系列接口传入像素数据创建一个PixelMap对象，也可以通过[ImageSource](arkts-image-image-imagesource-i.md)进行图片解码创建PixelMap对象。目前PixelMap序列化大小最大为128MiB，超过会渲染失败。PixelMap大小的计算方式为：宽 \* 高 \* 每像素占用字节数（详情请参考[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)）。 |
 | [PositionArea](arkts-image-image-positionarea-i.md) | 表示图片指定区域内的数据。 |
-| [Region](arkts-image-image-region-i.md) | 表示区域信息。 |
+| [Region](arkts-image-image-region-i.md) | 表示区域信息。区域坐标以图像左上角像素为原点（即(0, 0)），X轴正方向向右，Y轴正方向向下。 |
 | [Size](arkts-image-image-size-i.md) | 表示图像尺寸。 |
 | [SourceOptions](arkts-image-image-sourceoptions-i.md) | ImageSource的初始化选项。 |
 | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | 表示XMP枚举选项。 |

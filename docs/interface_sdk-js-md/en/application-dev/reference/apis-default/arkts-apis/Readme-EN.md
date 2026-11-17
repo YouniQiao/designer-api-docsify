@@ -1,5 +1,7 @@
 # ArkTS API
 
+- [@ohos.app.ability.ShowParams](arkts-app-ability-showparams.md)
+  - [ShowParams](arkts-app-ability-showparams-showparams-c.md)
 - [index](arkts-index.md)
 - [lib.es2015](arkts-lib-es2015.md)
 - [lib.es2015.collection](arkts-lib-es2015-collection.md)

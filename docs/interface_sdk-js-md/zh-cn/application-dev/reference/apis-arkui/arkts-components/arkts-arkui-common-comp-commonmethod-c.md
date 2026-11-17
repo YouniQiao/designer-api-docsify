@@ -1820,13 +1820,13 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
+将上下文菜单绑定到此组件，当用户长按或右键单击该组件时显示。仅支持自定义菜单项。
 
-> **NOTE:** 
+> **说明：** 
 > 
-> - **bindContextMenu** (implemented in subwindows by default) is not supported in input method windows.
-> - This API cannot be called within [attributeModifier](#attributemodifier).
-> - Long pressing with a mouse device is not supported when **responseType** is **ResponseType.RightClick**.
+> - **bindContextMenu**（默认在子窗口中实现）在输入法窗口中不支持。
+> - 该接口不能在[attributeModifier](#attributemodifier)中调用。
+> - 当**responseType**为**ResponseType.RightClick**时，不支持鼠标设备长按。
 
 **起始版本：** 8
 
@@ -1840,9 +1840,9 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the content of context menu. |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | 是 | Indicates response type of context menu, Long pressing with a mouse device is not supported. |
-| options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 表示上下文菜单的内容。 |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | 是 | 表示上下文菜单的响应类型，用鼠标设备长按不支持。 |
+| options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 否 | 表示上下文菜单的选项。 |
 
 **返回值：**
 
@@ -1856,7 +1856,12 @@ Binds a context menu to this component, which is displayed when the user long-pr
 bindContextMenu(isShown: boolean, content: CustomBuilder, options?: ContextMenuOptions): T
 ```
 
-ContextMenu control
+为组件绑定上下文菜单，其可见性受isShown设置约束。
+
+> **说明：** 
+> 
+> - **bindContextMenu**（默认在子窗口中实现）在输入法窗口中不支持。
+> - 该接口不能在[attributeModifier](#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -1872,9 +1877,9 @@ ContextMenu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShown | boolean | 是 | true means display content, false means hide content. |
-| content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the content of context menu. |
-| options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| isShown | boolean | 是 | true表示显示内容，false表示隐藏内容，默认值为false。<p><strong>注意</strong>：<br>只有在相关页面构建完成后，菜单才能正常显示。如果在构建完成前将该参数设置为true，可能会出现显示异常，如位置偏移、变形或无法弹出等问题。不支持通过长按触发拖拽。</p> |
+| content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 表示上下文菜单的内容。 |
+| options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 否 | 表示上下文菜单的选项。 |
 
 **返回值：**
 
@@ -2016,13 +2021,13 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 ```
 
-Menu control
+菜单组件。
 
-> **NOTE:** 
+> **说明：** 
 > 
-> - This API can be called within [attributeModifier](#attributemodifier) since API version 20only if the input parameter type of **content** is Array&lt;MenuElement&gt;.
-> - Multi-level menus cannot be displayed using **bindMenu** in **CustomBuilder**. Use the Menu component instead.
-> - **bindMenu** can be configured to display in subwindows by setting the **showInSubWindow** property in MenuOptions.
+> - 从API version 20开始，仅当**content**的入参类型为Array&lt;MenuElement&gt;时，才可在[attributeModifier](#attributemodifier)中调用此接口。
+> - 使用**CustomBuilder**方式的**bindMenu**不支持显示多级菜单，请改用Menu组件。
+> - 可通过设置MenuOptions中的**showInSubWindow**属性，将**bindMenu**配置为在子窗口中显示。
 
 **起始版本：** 7
 
@@ -2036,8 +2041,8 @@ Menu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the content of menu.<br>**适用版本：** 11 |
-| options | [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 否 | Indicates the options of menu. |
+| content | Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 表示菜单的内容。<br>**适用版本：** 11 |
+| options | [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 否 | 表示菜单的选项。 |
 
 **返回值：**
 
@@ -2051,7 +2056,7 @@ Menu control
 bindMenu(isShow: boolean, content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 ```
 
-Menu control
+菜单组件。
 
 **起始版本：** 11
 
@@ -2067,9 +2072,9 @@ Menu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | true means display menu, false means hide menu, default is false. |
-| content | Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the content of menu. |
-| options | [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 否 | Indicates the options of menu. |
+| isShow | boolean | 是 | true表示显示菜单，false表示隐藏菜单，默认值为false。 |
+| content | Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 表示菜单的内容。 |
+| options | [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 否 | 表示菜单的选项。 |
 
 **返回值：**
 

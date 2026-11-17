@@ -40,7 +40,7 @@ mechDeviceType: MechDeviceType
 mechId: number
 ```
 
-机械设备ID
+机械体设备ID，取值为大于等于0的整数。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ mechId: number
 mechName: string
 ```
 
-机械设备名称
+机械体设备名称，长度不超过64字符。
 
 **类型：** string
 

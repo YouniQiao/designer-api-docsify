@@ -466,7 +466,7 @@ set totalNodeCount(count: number)
 get totalNodeCount(): number
 ```
 
-Get the total number of node count.
+获取数据节点总数。
 
 **类型：** number
 

@@ -36,7 +36,7 @@ function disconnectDevice(mechId: number): Promise<Result>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise used to return the execution result. |
+| Promise&lt;[Result](arkts-mechanic-mechanicmanager-result-e-sys.md)&gt; | Promise对象，返回执行结果。 |
 
 **错误码：**
 

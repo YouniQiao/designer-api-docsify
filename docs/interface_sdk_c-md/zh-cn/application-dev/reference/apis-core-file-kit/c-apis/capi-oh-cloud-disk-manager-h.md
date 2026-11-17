@@ -31,7 +31,6 @@
 | [OH_CloudDisk_DataBuf](capi-clouddisk-oh-clouddisk-databuf.md) | OH_CloudDisk_DataBuf | 云盘数据缓冲区信息。 |
 | [OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) | OH_CloudDisk_CallbackReqHead | 云盘回调请求头信息。 |
 | [OH_CloudDisk_DehydrateInfo](capi-clouddisk-oh-clouddisk-dehydrateinfo.md) | OH_CloudDisk_DehydrateInfo | 脱水授权信息。 |
-| [OH_CloudDisk_FetchRangeDataRequest](capi-clouddisk-oh-clouddisk-fetchrangedatarequest.md) | OH_CloudDisk_FetchRangeDataRequest | 获取范围数据请求信息。 |
 | [OH_CloudDisk_FetchDataRequest](capi-clouddisk-oh-clouddisk-fetchdatarequest.md) | OH_CloudDisk_FetchDataRequest | 获取数据请求信息。 |
 | [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) | OH_CloudDisk_CallbackContext | 回调请求上下文信息联合体。 |
 | [OH_CloudDisk_FetchData](capi-clouddisk-oh-clouddisk-fetchdata.md) | OH_CloudDisk_FetchData | 云端文件数据获取结果。 |
@@ -207,7 +206,6 @@ enum OH_CloudDisk_CallbackType
 | OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | 获取云端文件数据，用于水合。<br>**起始版本：** 26.0.1 |
 | OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | 取消获取云端文件数据。<br>**起始版本：** 26.0.1 |
 | OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | 请求脱水授权。<br>**起始版本：** 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_RANGE_DATA = 3 | 获取指定范围数据，用于读取。<br>**起始版本：** 26.1.0 |
 
 ### OH_CloudDisk_HydratePriority
 

@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function getMaxRotationSpeed(mechId: number): RotationSpeed
 ```
 
-Obtains the maximum rotation speed of a mechanical device.
+获取机械体设备的最大旋转速度
 
 **起始版本：** 20
 

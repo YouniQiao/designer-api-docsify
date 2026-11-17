@@ -20,8 +20,11 @@ import { volumeManager } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
+| [getDiskPowerCycleCount](arkts-corefile-volumemanager-getdiskpowercyclecount-f.md#getdiskpowercyclecount-1) | Obtains the complete power cycle count of a specified disk since it was shipped. This API uses a promise to return the result. If the ioctl read fails (for example, the SATA HDD does not support it), **0** is returned. |
+| [getDiskPowerOnHours](arkts-corefile-volumemanager-getdiskpoweronhours-f.md#getdiskpoweronhours-1) | Obtains the total power-on hours of a specified disk since it was shipped. This API uses a promise to return the result. If the ioctl read fails (for example, the SATA HDD does not support it), **0** is returned. |
 | [getExternalDiskInfos](arkts-corefile-volumemanager-getexternaldiskinfos-f.md#getexternaldiskinfos-1) | Obtains information about all external storage physical disks. This API uses a promise to return the result. |
 | [getExternalVolumeInfos](arkts-corefile-volumemanager-getexternalvolumeinfos-f.md#getexternalvolumeinfos-1) | Obtains information about all external storage volumes. This API uses a promise to return the result. |
+| [getLocalDiskInfos](arkts-corefile-volumemanager-getlocaldiskinfos-f.md#getlocaldiskinfos-1) | Obtains hardware information about all local disks. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -64,6 +67,7 @@ import { volumeManager } from '@kit.CoreFileKit';
 | --- | --- |
 | [ExternalDiskInfo](arkts-corefile-volumemanager-externaldiskinfo-i.md) | External disk information. |
 | [ExternalVolumeInfo](arkts-corefile-volumemanager-externalvolumeinfo-i.md) | External volume information. |
+| [LocalDiskInfo](arkts-corefile-volumemanager-localdiskinfo-i.md) | Local disk hardware information. |
 
 <!--Del-->
 ### Interfaces(System API)

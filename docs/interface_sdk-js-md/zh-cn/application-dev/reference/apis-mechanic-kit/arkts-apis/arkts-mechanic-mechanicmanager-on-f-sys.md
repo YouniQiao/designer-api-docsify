@@ -26,8 +26,8 @@ function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'rotationAxesStatusChange' | 是 | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md)&gt; | 是 | Rotate axis state changes callback. |
+| type | 'rotationAxesStatusChange' | 是 | 注册监听事件的类型。取值为：'rotationAxesStatusChange' |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md)&gt; | 是 | 回调函数，返回机械体设备旋转轴状态变化信息 |
 
 **错误码：**
 

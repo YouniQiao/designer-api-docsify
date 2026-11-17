@@ -4,7 +4,7 @@
 interface DisplaySync
 ```
 
-An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md) to create a **DisplaySync** instance.
+An instance for setting the expected frame rate and callback function. It is used to set the expected frame rate range, register the frame callback function, and start and stop the frame callback. Before calling any of the following APIs, you must use displaySync.create() to create a DisplaySync instance and then call the corresponding method through this instance.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { displaySync } from '@kit.ArkGraphics2D';
 off(type: 'frame', callback?: Callback<IntervalInfo>): void
 ```
 
-Unsubscribes from change events of each frame.
+Unsubscribes from change events of each frame. This API is used together with on('frame'). After the unsubscription succeeds, the callback function will no longer be triggered.
 
 **Since:** 11
 
@@ -38,8 +38,8 @@ Unsubscribes from change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'frame' | Yes | Type of the callback to set (only 'frame' is supported). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback function registered when on('frame') is called, used to unsubscribe from the callback function. It must be used after the callback has been registered through on('frame'). |
 
 **Examples**
 
@@ -62,7 +62,7 @@ backDisplaySync?.off("frame", callback)
 on(type: 'frame', callback: Callback<IntervalInfo>): void
 ```
 
-Subscribes to change events of each frame.
+Subscribes to change events of each frame. After the callback function is registered, you must call start to start the DisplaySync object; only then will the system trigger the callback on each frame. This API is used together with off('frame') to unregister the callback function. The callback function is executed on the UI main thread. The callback frequency is affected by the frame rate range set by setExpectedFrameRateRange. If the callback takes too long to execute, frame freezing may occur. It is recommended that only lightweight business logic be performed in the callback.
 
 **Since:** 11
 
@@ -76,8 +76,8 @@ Subscribes to change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| type | 'frame' | Yes | Type of the callback to set (only 'frame' is supported). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback function for subscribing to frame changes. IntervalInfo contains two attributes: timestamp (the arrival time of the current frame) and targetTimestamp (the expected arrival time of the next frame), both in nanoseconds. |
 
 **Examples**
 
@@ -100,7 +100,7 @@ backDisplaySync?.start()
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 ```
 
-Sets the expected frame rate range.
+Sets the expected frame rate range. The expected frame rate range is used as a reference for system scheduling, and the system tries to adjust the drawing frame rate within this range. If this API is not called or ExpectedFrameRateRange(0, 0, 0) is passed in, the current frame rate of the application is followed. It is recommended to set the range before calling start so that it takes effect immediately. Setting the range after calling start also takes effect, but there may be a delay.
 
 **Since:** 11
 
@@ -114,13 +114,13 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | ExpectedFrameRateRange | Yes | Expected frame rate range. |
+| rateRange | ExpectedFrameRateRange | Yes | Sets the expected frame rate range of DisplaySync, which contains three fields: expected, min, and max, in frames per second (fps). The fields must be non-negative integers, with a value range of [0, the maximum frame rate of the device], and must satisfy min &lt;= expected &lt;= max. If the value is out of the valid range, error code 401 is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:                                                                 1. Mandatory parameters are left unspecified.                                                                 2. Incorrect parameter types.                                                                 3. Parameter verification failed. Or check if ExpectedFrameRateRange is valid. |
 
 **Examples**
 
@@ -145,7 +145,7 @@ backDisplaySync?.start()
 start(): void
 ```
 
-Starts callback for each frame.
+Makes the expected frame rate range set by setExpectedFrameRateRange take effect. If a callback function is registered through on('frame'), this API starts requesting VSync signals and triggers the registered callback once per frame. This API is used together with stop.
 
 **Since:** 11
 
@@ -215,7 +215,7 @@ struct Index {
 stop(): void
 ```
 
-Stops callback for each frame.
+Closes the expected frame rate range and stops the callback for each frame. This method must be called after start. After it is stopped, the DisplaySync configurations (such as the expected frame rate range and callback function) are retained and can be restarted at any time through start. The stop method disassociates DisplaySync from the UI context and window, and usually no specific UI context is required.
 
 **Since:** 11
 

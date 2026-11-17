@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function setUserOperation(operation: Operation, mac: string, params: string): void
 ```
 
-设置用户操作
+设置用户的连接或断开操作
 
 **起始版本：** 20
 
@@ -29,8 +29,8 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | operation | [Operation](arkts-mechanic-mechanicmanager-operation-e-sys.md) | 是 | 操作类型 |
-| mac | string | 是 | MAC address. |
-| params | string | 是 | Operation parameters. |
+| mac | string | 是 | 机械体设备MAC地址 |
+| params | string | 是 | 操作参数 |
 
 **错误码：**
 

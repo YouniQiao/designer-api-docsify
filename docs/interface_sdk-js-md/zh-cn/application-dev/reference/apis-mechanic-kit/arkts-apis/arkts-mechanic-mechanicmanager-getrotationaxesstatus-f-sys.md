@@ -32,7 +32,7 @@ function getRotationAxesStatus(mechId: number): RotationAxesStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) | Rotation axis status. |
+| [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) | 旋转轴状态 |
 
 **错误码：**
 

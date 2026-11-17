@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function getMaxRotationTime(mechId: number): number
 ```
 
-Obtains the maximum continuous rotation duration of a mechanical device.
+获取机械体设备的最大连续旋转持续时间
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ Obtains the maximum continuous rotation duration of a mechanical device.
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Maximum rotation duration. Unit: millisecond. |
+| number | 最大旋转持续时间，单位：ms。 |
 
 **错误码：**
 

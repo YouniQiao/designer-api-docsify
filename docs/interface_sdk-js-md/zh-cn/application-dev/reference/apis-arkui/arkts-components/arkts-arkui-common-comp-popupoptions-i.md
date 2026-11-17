@@ -728,14 +728,14 @@ popupColor?: Color | string | Resource | number
 ```TypeScript
 primaryButton?: {
     /**
-     * Button text value
+     * 气泡里主按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
      * @since 7
      */
     /**
-     * Button text value
+     * 气泡里主按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
@@ -743,7 +743,7 @@ primaryButton?: {
      * @since 10
      */
     /**
-     * Button text value
+     * 气泡里主按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
@@ -787,13 +787,13 @@ value：气泡里主按钮的文本。
 
 action：点击主按钮的回调函数。
 
-**类型：** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
+**类型：** {     /**      * 气泡里主按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * 气泡里主按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * 气泡里主按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
 
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
+<!--Device-PopupOptions-primaryButton?: {    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-primaryButton?: {    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * 气泡里主按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -828,14 +828,14 @@ radius?: Dimension
 ```TypeScript
 secondaryButton?: {
     /**
-     * Button text value
+     * 气泡里辅助按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
      * @since 7
      */
     /**
-     * Button text value
+     * 气泡里辅助按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
@@ -843,7 +843,7 @@ secondaryButton?: {
      * @since 10
      */
     /**
-     * Button text value
+     * 气泡里辅助按钮的文本。
      *
      * @type { string }
      * @syscap SystemCapability.ArkUI.ArkUI.Full
@@ -887,13 +887,13 @@ value：气泡里辅助按钮的文本。
 
 action：点击辅助按钮的回调函数。
 
-**类型：** {     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * Button text value      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
+**类型：** {     /**      * 气泡里辅助按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * 气泡里辅助按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * 气泡里辅助按钮的文本。      *      * @type { string }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     value: string;      /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @since 7      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @since 10      */     /**      * action      *      * @type { function }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @crossplatform      * @atomicservice      * @since 11      */     action: () =&gt; void;   }
 
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
+<!--Device-PopupOptions-secondaryButton?: {    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-secondaryButton?: {    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * 气泡里辅助按钮的文本。     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

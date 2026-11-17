@@ -32,7 +32,6 @@ This file defines the APIs for the cloud disk management module.
 | [OH_CloudDisk_DataBuf](capi-clouddisk-oh-clouddisk-databuf.md) | OH_CloudDisk_DataBuf | A struct that encapsulates the cloud disk data buffer. |
 | [OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) | OH_CloudDisk_CallbackReqHead | A struct that encapsulates the cloud disk callback request header. |
 | [OH_CloudDisk_DehydrateInfo](capi-clouddisk-oh-clouddisk-dehydrateinfo.md) | OH_CloudDisk_DehydrateInfo | A struct that encapsulates the dehydrate authorization information. |
-| [OH_CloudDisk_FetchRangeDataRequest](capi-clouddisk-oh-clouddisk-fetchrangedatarequest.md) | OH_CloudDisk_FetchRangeDataRequest | A struct that encapsulates the fetch range data request information. |
 | [OH_CloudDisk_FetchDataRequest](capi-clouddisk-oh-clouddisk-fetchdatarequest.md) | OH_CloudDisk_FetchDataRequest | A struct that encapsulates the fetch data request information. |
 | [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) | OH_CloudDisk_CallbackContext | A union that encapsulates callback request context information. |
 | [OH_CloudDisk_FetchData](capi-clouddisk-oh-clouddisk-fetchdata.md) | OH_CloudDisk_FetchData | A struct that encapsulates fetched cloud file data. |
@@ -236,7 +235,6 @@ Enumerates the cloud disk callback types.
 | OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | Fetch cloud file data for hydration.<br>**Since**: 26.0.1 |
 | OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | Cancel fetching cloud file data.<br>**Since**: 26.0.1 |
 | OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | Request authorization for dehydrate.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_RANGE_DATA = 3 | Fetch range data for read.<br>**Since**: 26.1.0 |
 
 ### OH_CloudDisk_HydratePriority
 

@@ -16,7 +16,7 @@ OH_AVCodec中所有异步回调函数指针的集合。将该结构体的实例�
 
 **废弃版本：** 11
 
-**替代接口：** [OH_AVCodecCallback](capi-codecbase-oh-avcodeccallback.md)
+**替代接口：** OH_AVCodecCallback
 
 **相关模块：** [CodecBase](capi-avcodec-kit-codecbase.md)
 

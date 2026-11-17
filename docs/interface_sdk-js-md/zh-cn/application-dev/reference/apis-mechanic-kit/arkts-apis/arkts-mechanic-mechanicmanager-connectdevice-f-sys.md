@@ -37,7 +37,7 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | Promise used to return the attach state change information. |
+| Promise&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | Promise对象，返回设备附加状态。 |
 
 **错误码：**
 

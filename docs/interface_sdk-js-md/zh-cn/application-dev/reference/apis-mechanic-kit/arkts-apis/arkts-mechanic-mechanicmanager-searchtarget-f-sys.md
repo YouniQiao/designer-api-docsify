@@ -26,14 +26,14 @@ function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchR
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [TargetInfo](arkts-mechanic-mechanicmanager-targetinfo-i-sys.md) | 是 | Target infomation. |
-| params | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | 是 | Parameters to use when searching. |
+| target | [TargetInfo](arkts-mechanic-mechanicmanager-targetinfo-i-sys.md) | 是 | 目标人脸信息 |
+| params | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | 是 | 搜索方向 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; | Promise that return the Search result. |
+| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; | Promise对象，返回搜索的结果 |
 
 **错误码：**
 

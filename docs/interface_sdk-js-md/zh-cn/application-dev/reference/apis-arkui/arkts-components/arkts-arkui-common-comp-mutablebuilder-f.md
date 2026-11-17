@@ -6,7 +6,7 @@
 declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>
 ```
 
-使用`mutableBuilder`封装全局[\@Builder](arkts-arkui-common-comp-builder-d.md#builder)，以支持在运行时根据不同条件动态切换全局`@Builder`内容（如根据状态切换不同的UI构建逻辑）。开发指南参考：[mutableBuilder：实现全局@Builder动态更新](../../../ui/state-management/arkts-mutableBuilder.md)。
+使用`mutableBuilder`封装全局[\@Builder](arkts-arkui-common-comp-con.md#builder)，以支持在运行时根据不同条件动态切换全局`@Builder`内容（如根据状态切换不同的UI构建逻辑）。开发指南参考：[mutableBuilder：实现全局@Builder动态更新](../../../ui/state-management/arkts-mutableBuilder.md)。
 
 `mutableBuilder`是一个泛型函数，它返回一个`MutableBuilder`对象，只接受一个全局的`@Builder`函数作为其参数。
 

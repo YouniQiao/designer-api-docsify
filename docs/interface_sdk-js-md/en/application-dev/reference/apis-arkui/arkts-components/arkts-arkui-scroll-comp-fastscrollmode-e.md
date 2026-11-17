@@ -4,7 +4,14 @@
 declare enum FastScrollMode
 ```
 
-Enumerates the fast scroll modes for scrolling to a specified index.
+Enumerates the fast scroll modes for scrolling to a specified index, used with the `fastScroll` field of `ScrollToIndexOptions`.
+
+> **NOTE:** 
+> 
+> - When the scroll distance is large and a jump is triggered, the component usually scrolls continuously for about 2 screens from the start position, then jumps to a position about 2 screens away from the final stop position and continues scrolling to the final position.One screen refers to the length of the visible area of the scrollable component in the scroll direction.
+> - Skipping creation or measurement applies only to the skipped scroll path. Child components required by the two continuous scrolling segments before and after the skip are still created and measured on demand. The actual range also depends on the alignment, extra offset, child component size, and other factors, and is not fixed at 4 screens.
+> - Fast scrolling does not guarantee that every child component along the scroll path is traversed and displayed.
+> - If `fastScroll` is set to a value not defined in this enum, it is handled as `FastScrollMode.NONE`, and fast scroll optimization is not enabled. The remaining scroll parameters still take effect according to the original rules.
 
 **Since:** 26.1.0
 
@@ -18,7 +25,7 @@ Enumerates the fast scroll modes for scrolling to a specified index.
 NONE = 0
 ```
 
-No fast scroll optimization. All intermediate items are created and measured before the animation starts.
+Uses the component's existing `scrollToIndex` behavior without fast scroll optimization.
 
 **Since:** 26.1.0
 
@@ -36,7 +43,7 @@ No fast scroll optimization. All intermediate items are created and measured bef
 SKIP_CREATE_AND_MEASURE = 2
 ```
 
-Fast scroll optimization with skipping intermediate item creation and measurement. Intermediate items are neither created nor measured. This mode provides maximum performance optimization. However, this mode is not suitable for the scenarios where the list has multiple columns and both ListItem and ListItemGroup exist. In this scenario, use SKIP_MEASURE.
+Skips creating and measuring intermediate items that displayed content and the target's actual layout do not require. For a multi-column `List` that contains both `ListItem` and `ListItemGroup`, use `SKIP_MEASURE`. For `WaterFlow`, this mode is recommended. In `SLIDING_WINDOW` layout mode, WaterFlow locates the target FlowItem without intermediate child components, while `SKIP_MEASURE` still creates intermediate child components along the path, causing extra creation overhead. For `Grid`, if the row or column spans of the target item or intermediate items are unknown, provide complete and accurate span information in advance through `GridLayoutOptions`.
 
 **Since:** 26.1.0
 
@@ -54,7 +61,7 @@ Fast scroll optimization with skipping intermediate item creation and measuremen
 SKIP_MEASURE = 1
 ```
 
-Fast scroll optimization with skipping intermediate item measurement. Intermediate items are created but not measured. This mode is suitable for scenarios where the list has multiple columns and both ListItem and ListItemGroup exist. In this case, ListItem occupies only one column in a row, but ListItemGroup occupies an entire row. Therefore, the List needs to create all intermediate items to obtain the types of these items and calculate the row position of the target index.
+Skips measuring intermediate items that displayed content and the target's actual layout do not require. The component may create intermediate items to determine which rows and columns they occupy. A multi-column `List` that contains both `ListItem` and `ListItemGroup` needs item types to determine rows. For `Grid`, intermediate `GridItem` components may be created to determine their row and column spans.
 
 **Since:** 26.1.0
 

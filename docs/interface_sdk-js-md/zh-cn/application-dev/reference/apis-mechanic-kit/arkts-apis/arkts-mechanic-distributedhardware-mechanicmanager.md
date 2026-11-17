@@ -25,7 +25,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout-1) | 获取当前摄像头跟踪布局 |
 | [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported-1) | 判断当前设备是否支持某类设备的具身控制 |
 | [off('attachStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) | 取消注册连接状态变化事件的回调监听。使用callback异步回调。 |
-| [off('trackingStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | 设置相机跟踪布局 |
+| [off('trackingStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | 取消注册跟踪状态变化事件的回调监听。使用callback异步回调。 |
 | [on('attachStateChange')](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) | 注册连接状态变化事件的回调监听，等待连接状态变化。使用callback异步回调。 |
 | [on('trackingStateChange')](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) | 注册跟踪状态变化事件的回调监听。使用callback异步回调。 |
 | [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled-1) | 启用或禁用摄像机跟踪 |
@@ -38,12 +38,12 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [connectDevice](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md#connectdevice-1) | 基于地址连接设备 |
 | [disconnectDevice](arkts-mechanic-mechanicmanager-disconnectdevice-f-sys.md#disconnectdevice-1) | 基于具身设备ID断开设备 |
 | [doAction](arkts-mechanic-mechanicmanager-doaction-f-sys.md#doaction-1) | 执行一个动作序列 |
-| [getCurrentAngles](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md#getcurrentangles-1) | 获取机械设备的当前角度 |
+| [getCurrentAngles](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md#getcurrentangles-1) | 获取指定机械体设备相对于初始位置的当前旋转角度 |
 | [getDeviceAdsorbState](arkts-mechanic-mechanicmanager-getdeviceadsorbstate-f-sys.md#getdeviceadsorbstate-1) | 获取对应的设备吸附状态 |
-| [getMaxRotationSpeed](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md#getmaxrotationspeed-1) | Obtains the maximum rotation speed of a mechanical device. |
-| [getMaxRotationTime](arkts-mechanic-mechanicmanager-getmaxrotationtime-f-sys.md#getmaxrotationtime-1) | Obtains the maximum continuous rotation duration of a mechanical device. |
+| [getMaxRotationSpeed](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md#getmaxrotationspeed-1) | 获取机械体设备的最大旋转速度 |
+| [getMaxRotationTime](arkts-mechanic-mechanicmanager-getmaxrotationtime-f-sys.md#getmaxrotationtime-1) | 获取机械体设备的最大连续旋转持续时间 |
 | [getRotationAxesStatus](arkts-mechanic-mechanicmanager-getrotationaxesstatus-f-sys.md#getrotationaxesstatus-1) | 获取当前转轴状态 |
-| [getRotationLimits](arkts-mechanic-mechanicmanager-getrotationlimits-f-sys.md#getrotationlimits-1) | Obtains the maximum rotation angles relative to the reference point for the specified mechanical device. |
+| [getRotationLimits](arkts-mechanic-mechanicmanager-getrotationlimits-f-sys.md#getrotationlimits-1) | 获取指定机械体设备相对于初始位置的最大旋转角度 |
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md#issupportaction-1) | 判断是否支持某个动作 |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md#move-1) | 以特定参数移动一个具身设备 |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md#movebyspeed-1) | 以特定速度移动一个具身设备 |
@@ -56,8 +56,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md#rotatetoeulerangles-1) | 将机械设备旋转到绝对角度 |
 | [searchTarget](arkts-mechanic-mechanicmanager-searchtarget-f-sys.md#searchtarget-1) | 旋转机械体一周搜索目标。使用Promise异步回调。 |
 | [setCameraTrackingLayout](arkts-mechanic-mechanicmanager-setcameratrackinglayout-f-sys.md#setcameratrackinglayout-1) | 设置相机跟踪布局 |
-| [setUserOperation](arkts-mechanic-mechanicmanager-setuseroperation-f-sys.md#setuseroperation-1) | 设置用户操作 |
-| [stopMoving](arkts-mechanic-mechanicmanager-stopmoving-f-sys.md#stopmoving-1) | 停止转动 |
+| [setUserOperation](arkts-mechanic-mechanicmanager-setuseroperation-f-sys.md#setuseroperation-1) | 设置用户的连接或断开操作 |
+| [stopMoving](arkts-mechanic-mechanicmanager-stopmoving-f-sys.md#stopmoving-1) | 停止机械体设备的移动。使用Promise异步回调 |
 | [subscribe](arkts-mechanic-mechanicmanager-subscribe-f-sys.md#subscribe-1) | 订阅具身设备事件回调 |
 | [turnBySpeed](arkts-mechanic-mechanicmanager-turnbyspeed-f-sys.md#turnbyspeed-1) | 以固定速度原地旋转 |
 | [unSubscribe](arkts-mechanic-mechanicmanager-unsubscribe-f-sys.md#unsubscribe-1) | 取消事件注册 |

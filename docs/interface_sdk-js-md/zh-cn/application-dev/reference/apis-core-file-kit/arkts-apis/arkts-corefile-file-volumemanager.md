@@ -20,8 +20,11 @@ import { volumeManager } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [getDiskPowerCycleCount](arkts-corefile-volumemanager-getdiskpowercyclecount-f.md#getdiskpowercyclecount-1) | 获取指定磁盘自出厂以来的完整启停次数，使用Promise异步回调。如果ioctl读取失败（如SATA HDD不支持），返回0。 |
+| [getDiskPowerOnHours](arkts-corefile-volumemanager-getdiskpoweronhours-f.md#getdiskpoweronhours-1) | 获取指定磁盘自出厂以来的总通电时长，使用Promise异步回调。如果ioctl读取失败（如SATA HDD不支持），返回0。 |
 | [getExternalDiskInfos](arkts-corefile-volumemanager-getexternaldiskinfos-f.md#getexternaldiskinfos-1) | 获取所有外置存储物理磁盘信息，使用Promise异步回调。 |
 | [getExternalVolumeInfos](arkts-corefile-volumemanager-getexternalvolumeinfos-f.md#getexternalvolumeinfos-1) | 获取所有外置存储卷设备信息，使用Promise异步回调。 |
+| [getLocalDiskInfos](arkts-corefile-volumemanager-getlocaldiskinfos-f.md#getlocaldiskinfos-1) | 获取所有本地磁盘的硬件信息，使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -64,6 +67,7 @@ import { volumeManager } from '@kit.CoreFileKit';
 | --- | --- |
 | [ExternalDiskInfo](arkts-corefile-volumemanager-externaldiskinfo-i.md) | 外置磁盘信息。 |
 | [ExternalVolumeInfo](arkts-corefile-volumemanager-externalvolumeinfo-i.md) | 外置卷设备信息。 |
+| [LocalDiskInfo](arkts-corefile-volumemanager-localdiskinfo-i.md) | 本地磁盘硬件信息。 |
 
 <!--Del-->
 ### 接口（系统接口）

@@ -4,7 +4,19 @@
 export class OverlayManager
 ```
 
-class OverlayManager
+提供绘制浮层的能力。
+
+> **说明：** 
+> 
+> - 该类的初始API从API version 12开始支持。
+> 
+> - 在以下API示例中，必须先在**UIContext**中使用[getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)获取**OverlayManager**实例，然后使用该实例调用API。
+> 
+> - **OverlayManager**上的节点位于页面层级之上，但在**Dialog**、**Popup**、**Menu**、**BindSheet**、**BindContentCover**和**Toast**等组件之下。
+> 
+> - **OverlayManager**上节点在安全区内外的绘制方式与页面一致，键盘避让方式也与页面相同。
+> 
+> - 对于与**OverlayManager**相关的属性，建议使用AppStorage在应用内进行全局存储，以避免切换页面时属性值发生变化导致业务错误。
 
 **起始版本：** 12
 
@@ -27,7 +39,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 addComponentContent(content: ComponentContent, index?: number): void
 ```
 
-Adds a specified ComponentContent node to the OverlayManager.
+向OverlayManager添加指定的ComponentContent节点。
 
 **起始版本：** 12
 
@@ -43,7 +55,7 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to add to the target node on the **OverlayManager**.<br> **NOTE:** <br> By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | 添加到**OverlayManager**目标节点上的内容。<br> **注意**<br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 |
 | index | number | 否 |  |
 
 **示例**
@@ -146,7 +158,7 @@ struct OverlayExample {
 addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Creates a floating layer node with the specified display order. This API allows you to define the stacking order of the nodes when they are created.
+创建具有指定显示顺序的浮层节点。该接口允许在创建节点时定义节点的堆叠顺序。
 
 **起始版本：** 18
 
@@ -162,7 +174,7 @@ Creates a floating layer node with the specified display order. This API allows 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to add to the target node on the **OverlayManager**. <br>**NOTE:** <br> By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | 添加到**OverlayManager**目标节点上的内容。<br>**注意**<br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
 **示例**
@@ -252,7 +264,7 @@ struct Index {
 hideAllComponentContents(): void
 ```
 
-Hide all ComponentContents on the OverlayManager.
+隐藏OverlayManager上的所有ComponentContent。
 
 **起始版本：** 12
 
@@ -274,7 +286,7 @@ Hide all ComponentContents on the OverlayManager.
 hideComponentContent(content: ComponentContent): void
 ```
 
-Hide the ComponentContent.
+隐藏ComponentContent。
 
 **起始版本：** 12
 
@@ -290,7 +302,7 @@ Hide the ComponentContent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to hide on the **OverlayManager**. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | 要在**OverlayManager**上隐藏的内容。 |
 
 **示例**
 
@@ -398,7 +410,7 @@ struct OverlayExample {
 removeComponentContent(content: ComponentContent): void
 ```
 
-Removes a specified ComponentContent node from the OverlayManager
+从OverlayManager移除指定的ComponentContent节点。
 
 **起始版本：** 12
 
@@ -414,7 +426,7 @@ Removes a specified ComponentContent node from the OverlayManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to remove from the **OverlayManager**. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | 要从**OverlayManager**中移除的内容。 |
 
 **示例**
 
@@ -426,7 +438,7 @@ Removes a specified ComponentContent node from the OverlayManager
 showAllComponentContents(): void
 ```
 
-Show all ComponentContents on the OverlayManager.
+显示OverlayManager上的所有ComponentContent。
 
 **起始版本：** 12
 
@@ -448,7 +460,7 @@ Show all ComponentContents on the OverlayManager.
 showComponentContent(content: ComponentContent): void
 ```
 
-Show the ComponentContent.
+显示ComponentContent。
 
 **起始版本：** 12
 
@@ -464,7 +476,7 @@ Show the ComponentContent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | Content to show on the **OverlayManager**. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 | 要在**OverlayManager**上显示的内容。 |
 
 **示例**
 

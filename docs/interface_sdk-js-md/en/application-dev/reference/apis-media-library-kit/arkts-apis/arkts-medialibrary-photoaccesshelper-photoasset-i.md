@@ -38,7 +38,7 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| title | string | Yes | Title of the cloned asset. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| title | string | Yes | Title of the cloned asset. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- Invalid English characters. <br>- API version 26.1.0 and later versions. Invalid characters include: \ / : * ? " ' ` &lt; &gt; &#124; { } [ ]; A period (.) is allowed,but a period (.) cannot be used as the first character. <br>- Before API26.1.0, invalid characters include: . \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **Return value:**
 
@@ -489,7 +489,7 @@ Sets a **PhotoAsset** member parameter.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | member | string | Yes | Name of the member parameter to set, for example, [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE. The string length ranges from 1 to 255. |
-| value | string | Yes | Value of the member parameter to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE can be changed. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| value | string | Yes | Value of the member parameter to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE can be changed. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- Invalid English characters. <br>- API version 26.1.0 and later versions. Invalid characters include: \ / : * ? " ' ` &lt; &gt; &#124; { } [ ]; A period (.) is allowed,but a period (.) cannot be used as the first character. <br>- Before API26.1.0, invalid characters include: . \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **Error codes:**
 

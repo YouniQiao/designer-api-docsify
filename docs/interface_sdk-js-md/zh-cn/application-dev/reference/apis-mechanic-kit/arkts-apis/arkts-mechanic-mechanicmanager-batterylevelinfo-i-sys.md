@@ -66,7 +66,7 @@ isCharging: boolean
 mechId: number
 ```
 
-ID of the mechanical device. ID of the mechanical device. ID of the mechanical device.设备ID。取值限定为整数。
+机械体设备ID。取值限定为整数。
 
 **类型：** number
 

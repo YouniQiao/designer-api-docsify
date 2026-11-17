@@ -45,6 +45,7 @@ import { call } from '@kit.TelephonyKit';
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall-3) | 跳转到拨号界面，并显示待拨出的号码。使用Promise异步回调。只支持在UIAbility中调用。 |
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall-4) | 跳转到拨号界面，并显示待拨出的号码。使用Promise异步回调。后台调用需要申请ohos.permission.START_ABILITIES_FROM_BACKGROUND权限。 |
 | [makeCallWithToken](arkts-telephony-call-makecallwithtoken-f.md#makecallwithtoken-1) | 跳转到拨号界面，并显示待拨出的号码。使用Promise异步回调。 |
+| [makeDirectCall](arkts-telephony-call-makedirectcall-f.md#makedirectcall-1) | 应用一键拨打电话。 |
 | [rejectCall](arkts-telephony-call-rejectcall-f.md#rejectcall-4) | 拒绝来电。使用callback异步回调。 |
 | [dial](arkts-telephony-call-dial-f.md#dial-1) | 拨打电话，可设置通话参数。使用callback异步回调。 |
 | [dial](arkts-telephony-call-dial-f.md#dial-2) | 拨打电话，可设置通话参数。使用Promise异步回调。 |

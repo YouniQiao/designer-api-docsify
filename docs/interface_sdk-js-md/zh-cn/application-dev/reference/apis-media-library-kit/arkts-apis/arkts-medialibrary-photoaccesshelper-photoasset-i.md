@@ -38,7 +38,7 @@ clone(title: string): Promise<PhotoAsset>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| title | string | 是 | 克隆后资产的标题。参数规格为：<br>- 不应包含扩展名。<br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。<br>- 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| title | string | 是 | 克隆后资产的标题。参数规格为：<br>- 不应包含扩展名。<br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。<br>- 不允许出现的非法英文字符。<br>- API版本26.1.0开始，非法字符包括：\ / : * ? " ' ` &lt; &gt; &#124; { } [ ]；允许包含英文句点（.），但不允许以英文句点（.）作为首字符。<br>- API版本26.1.0之前，非法字符包括：. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **返回值：**
 
@@ -496,7 +496,7 @@ set(member: string, value: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | member | string | 是 | 成员参数名称例如：[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE。字符串长度的取值范围为[1, 255]。 |
-| value | string | 是 | 设置成员参数名称，只能修改[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为：<br>- 不应包含扩展名。<br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。<br>- 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| value | string | 是 | 设置成员参数名称，只能修改[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为：<br>- 不应包含扩展名。<br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。<br>- 不允许出现的非法英文字符。<br>- API版本26.1.0开始，非法字符包括：\ / : * ? " ' ` &lt; &gt; &#124; { } [ ]；允许包含英文句点（.），但不允许以英文句点（.）作为首字符。<br>- API版本26.1.0之前，非法字符包括：. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **错误码：**
 

@@ -385,8 +385,11 @@
   - [getAllVolumes（系统接口）](arkts-corefile-volumemanager-getallvolumes-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDiskById（系统接口）](arkts-corefile-volumemanager-getdiskbyid-f-sys.md)<!--DelEnd-->
+  - [getDiskPowerCycleCount](arkts-corefile-volumemanager-getdiskpowercyclecount-f.md)
+  - [getDiskPowerOnHours](arkts-corefile-volumemanager-getdiskpoweronhours-f.md)
   - [getExternalDiskInfos](arkts-corefile-volumemanager-getexternaldiskinfos-f.md)
   - [getExternalVolumeInfos](arkts-corefile-volumemanager-getexternalvolumeinfos-f.md)
+  - [getLocalDiskInfos](arkts-corefile-volumemanager-getlocaldiskinfos-f.md)
   <!--Del-->
   - [getOpProcess（系统接口）](arkts-corefile-volumemanager-getopprocess-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -411,6 +414,7 @@
   - [ExternalVolumeInfo](arkts-corefile-volumemanager-externalvolumeinfo-i.md)
   <!--Del-->
   - [FormatParams（系统接口）](arkts-corefile-volumemanager-formatparams-i-sys.md)<!--DelEnd-->
+  - [LocalDiskInfo](arkts-corefile-volumemanager-localdiskinfo-i.md)
   <!--Del-->
   - [PartitionInfo（系统接口）](arkts-corefile-volumemanager-partitioninfo-i-sys.md)<!--DelEnd-->
   <!--Del-->

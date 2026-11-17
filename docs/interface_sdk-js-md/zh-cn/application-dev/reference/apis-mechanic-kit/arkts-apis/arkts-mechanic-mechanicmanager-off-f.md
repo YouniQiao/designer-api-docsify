@@ -24,8 +24,8 @@ function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'attachStateChange' | 是 | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | 否 | Callback used to return the state change. |
+| type | 'attachStateChange' | 是 | 取消注册监听事件的类型。取值为：'attachStateChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | 否 | 回调函数，返回机械体设备连接变化信息。 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ console.info('Succeeded in unregistering callback.');
 function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void
 ```
 
-设置相机跟踪布局
+取消注册跟踪状态变化事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -72,8 +72,8 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'trackingStateChange' | 是 | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | 否 | Callback used to return the tracking event information. |
+| type | 'trackingStateChange' | 是 | 取消注册的监听事件类型。取值为：'trackingStateChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | 否 | 回调函数，返回跟踪事件信息。 |
 
 **错误码：**
 

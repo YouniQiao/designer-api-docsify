@@ -4,7 +4,7 @@
 declare interface PickerTextStyle
 ```
 
-Provide an interface for the text style of picker
+选择器组件的文本样式，用于配置选择器中显示文本的外观属性。
 
 **起始版本：** 11
 

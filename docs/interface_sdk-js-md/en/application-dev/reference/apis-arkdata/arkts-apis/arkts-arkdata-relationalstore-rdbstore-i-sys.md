@@ -64,7 +64,7 @@ Cleans dirty data deleted in the cross-device sync. If a cursor is specified, da
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported;         3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
 
 ## cloudSync
 

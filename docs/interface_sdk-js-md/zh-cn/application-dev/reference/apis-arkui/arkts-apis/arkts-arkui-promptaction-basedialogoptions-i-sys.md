@@ -24,7 +24,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation Mode of the dialog.
+设置弹窗的扭曲动画模式。
 
 **类型：** [DistortionMode](../arkts-components/arkts-arkui-common-comp-distortionmode-e-sys.md)
 
@@ -46,7 +46,7 @@ Sets the distortion animation Mode of the dialog.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edgeLight animation Mode of the dialog.
+设置弹窗的流光动画模式。
 
 **类型：** [EdgeLightMode](../arkts-components/arkts-arkui-common-comp-edgelightmode-e-sys.md)
 

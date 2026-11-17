@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 alphaType?: AlphaType
 ```
 
-透明度类型。默认值为IMAGE_ALPHA_TYPE_PREMUL。
+透明度类型。默认值为AlphaType.PREMUL。
 
 **类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 

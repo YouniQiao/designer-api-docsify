@@ -18,7 +18,7 @@ export enum AttachState
 ATTACHED = 0
 ```
 
-设备挂载
+设备已连接。
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ ATTACHED = 0
 DETACHED = 1
 ```
 
-设备卸载
+设备已断开。
 
 **起始版本：** 20
 

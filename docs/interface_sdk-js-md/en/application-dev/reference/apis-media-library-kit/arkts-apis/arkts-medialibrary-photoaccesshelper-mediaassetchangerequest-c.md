@@ -208,7 +208,7 @@ Create an asset change request based on the file type and filename extension.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | photoType | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the image or video asset, for example, **{title: 'testPhoto'}**. <br>The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the image or video asset, for example, **{title: 'testPhoto'}**. <br>Invalid English characters. <br>API version 26.1.0 and later versions. Invalid characters include: \ / : * ? " ' ` &lt; &gt; &#124; { } [ ]; A period (.) is allowed,but a period (.) cannot be used as the first character. <br>Before API26.1.0, invalid characters include: . \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **Return value:**
 

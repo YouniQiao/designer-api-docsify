@@ -40,7 +40,15 @@ onStateChange?: PopupStateChangeCallback
 arrowHeight?: Dimension
 ```
 
-The height of the arrow.
+设置箭头高度。
+
+默认值：8
+
+单位：vp
+
+**说明：** 
+
+不支持设置百分比。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -96,7 +104,9 @@ Popup箭头在气泡处的偏移。
 arrowPointPosition?: ArrowPointPosition
 ```
 
-The position of the sharp corner of popup.
+气泡箭头相对于父组件显示位置，气泡箭头在垂直和水平方向上有Start、Center、End三个位置点可选。以上所有位置点均位于父组件区域的范围内，不会超出父组件的边界范围。
+
+默认值：ArrowPointPosition.CENTER
 
 **类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
@@ -116,7 +126,15 @@ The position of the sharp corner of popup.
 arrowWidth?: Dimension
 ```
 
-The width of the arrow.
+设置箭头宽度。若所设置的箭头宽度超过所在边的长度减去两倍的气泡圆角大小，则不绘制气泡箭头。
+
+默认值：16
+
+单位：vp
+
+**说明：** 
+
+不支持设置百分比。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -188,7 +206,9 @@ avoidTarget?: AvoidanceMode
 backgroundBlurStyle?: BlurStyle
 ```
 
-Defines popup background blur Style
+设置气泡模糊背景参数。
+
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
 **类型：** [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md)
 
@@ -646,7 +666,11 @@ popupColor?: ResourceColor
 radius?: Dimension
 ```
 
-The round corners of the popup.
+设置气泡圆角半径。
+
+默认值：20
+
+单位：vp
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -668,7 +692,9 @@ The round corners of the popup.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-The style of popup Shadow.
+设置气泡阴影。
+
+默认值：ShadowStyle.OUTER_DEFAULT_MD
 
 **类型：** [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md)
 
@@ -798,7 +824,9 @@ transition?: TransitionEffect
 width?: Dimension
 ```
 
-Set the width of the popup.
+气泡宽度，未设置或者异常值场景下，气泡自适应内容宽度。
+
+单位：vp
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

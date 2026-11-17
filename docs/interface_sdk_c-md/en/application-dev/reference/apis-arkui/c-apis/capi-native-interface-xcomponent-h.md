@@ -124,6 +124,7 @@ Declares APIs for accessing a Native XComponent.
 | [void OH_ArkUI_XComponentSurfaceConfig_Dispose(ArkUI_XComponentSurfaceConfig* config)](#oh_arkui_xcomponentsurfaceconfig_dispose) | Dispose of an <b>ArkUI_XComponentSurfaceConfig</b> object. |
 | [void OH_ArkUI_XComponentSurfaceConfig_SetIsOpaque(ArkUI_XComponentSurfaceConfig* config, bool isOpaque)](#oh_arkui_xcomponentsurfaceconfig_setisopaque) | Set whether the surface held by XComponent needs to be considered opaque, even if the surface has translucent pixel. |
 | [int32_t OH_ArkUI_SurfaceHolder_SetSurfaceConfig(OH_ArkUI_SurfaceHolder *surfaceHolder, ArkUI_XComponentSurfaceConfig *config)](#oh_arkui_surfaceholder_setsurfaceconfig) | Set surface config for this <b>OH_ArkUI_SurfaceHolder</b> instance. |
+| [int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)](#oh_arkui_xcomponent_enablesurfacevisibilitylifecycle) | Enables the surface visibility lifecycle for an XComponent. Only supports being called on the UI thread. |
 
 ### Variables
 
@@ -2422,5 +2423,34 @@ Set surface config for this <b>OH_ArkUI_SurfaceHolder</b> instance.
 | Type | Description |
 | -- | -- |
 | int32_t | Returns the status code of the execution. ARKUI_ERROR_CODE_NO_ERROR the execution is successful. ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. |
+
+### OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle()
+
+```c
+int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)
+```
+
+**Description**
+
+Enables the surface visibility lifecycle for an XComponent. Only supports being called on the UI thread.
+
+<!--Device-int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)--><!--Device-int32_t OH_ArkUI_XComponent_EnableSurfaceVisibilityLifecycle(OH_NativeXComponent *component, bool isVisibilityLifecycle)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md) *component | [in] Indicates the pointer to the XComponent. |
+| bool isVisibilityLifecycle | [in] Indicates whether to enable the surface visibility lifecycle. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | Returns the status code of the execution. <ul> <li>ARKUI_ERROR_CODE_NO_ERROR the execution is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs.</li> </ul> |
 
 

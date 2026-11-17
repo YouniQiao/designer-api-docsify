@@ -20,7 +20,7 @@ export enum RotationAxisLimited
 NEGATIVE_LIMITED = 1
 ```
 
-负限位
+负方向受限，可以向相反方向转动
 
 **起始版本：** 20
 
@@ -36,7 +36,7 @@ NEGATIVE_LIMITED = 1
 NOT_LIMITED = 0
 ```
 
-不限位
+无限制
 
 **起始版本：** 20
 
@@ -52,7 +52,7 @@ NOT_LIMITED = 0
 POSITIVE_LIMITED = 2
 ```
 
-Positive limited.
+正方向受限，可以向相反方向转动
 
 **起始版本：** 20
 

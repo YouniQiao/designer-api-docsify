@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function getRotationLimits(mechId: number): RotationLimits
 ```
 
-Obtains the maximum rotation angles relative to the reference point for the specified mechanical device.
+获取指定机械体设备相对于初始位置的最大旋转角度
 
 **起始版本：** 20
 
