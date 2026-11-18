@@ -851,7 +851,7 @@ console.info("values=" + font.isSubpixel());
 isThemeFontFollowed(): boolean
 ```
 
-Checks whether the font follows the theme font. By default, the font follows the theme font.
+Checks whether the font follows the theme font. By default, the theme font is not followed.
 
 **Since:** 15
 

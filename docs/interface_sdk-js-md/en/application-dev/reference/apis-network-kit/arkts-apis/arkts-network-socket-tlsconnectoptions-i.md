@@ -98,6 +98,24 @@ Whether to skip certificate authentication on the server. The default value is *
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## sslServerHostnameVerification
+
+```TypeScript
+sslServerHostnameVerification?: boolean
+```
+
+The host name required for SSL server host name verification. The default value of sslServerHostnameVerify is true. When sslServerHostnameVerify is set to false, domain name verification is disabled. In this scenario, the certificate domain name verification is ignored when the IP address is used for connection. Default value: true.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TLSConnectOptions-sslServerHostnameVerification?: boolean--><!--Device-TLSConnectOptions-sslServerHostnameVerification?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## timeout
 
 ```TypeScript

@@ -163,3 +163,22 @@ securityLevel: SecurityLevel
 <!--Device-Options-securityLevel: SecurityLevel--><!--Device-Options-securityLevel: SecurityLevel-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## walStartCheckpointSize
+
+```TypeScript
+walStartCheckpointSize?: number
+```
+
+启动checkpoint的大小阈值。当WAL文件大小达到这个值时，会触发将WAL内容合并回主数据库文件。单位：KB。取值范围：[16, 524288]。默认值：204800。注意：  
+- 较大的值会降低检查点频率，但会增加WAL文件大小和内存使用峰值。
+
+**类型：** number
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-walStartCheckpointSize?: int--><!--Device-Options-walStartCheckpointSize?: int-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

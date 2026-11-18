@@ -87,6 +87,8 @@ import { webview } from '@kit.ArkWeb';
 | [WebHeader](arkts-arkweb-webview-webheader-i.md) | Web组件返回的请求/响应头对象。 |
 | [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | cookie的相关字段。 |
 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) | WebMessagePort是Web组件中用于应用侧（ArkTS）与HTML5侧（JavaScript）之间双向通信的消息端口接口。通过createWebMessagePorts创建一对关联的端口，将一个端口发送到HTML5侧，另一个保留在应用侧，实现跨运行时消息传递。WebMessagePort支持两种消息协议：基础协议使用WebMessage作为消息载体（postMessageEvent/onMessageEvent），扩展协议使用WebMessageExt支持更丰富的数据类型（postMessageEventExt/onMessageEventExt）。 |
+| [WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md) | 传递给[setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback)或[setGlobalWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setglobalwebsiteconfigcallback)回调的参数。 |
+| [WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md) | [setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback)回调返回的结果。 |
 | [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md) | 提供Web SQL数据库的使用信息。 |
 
 ### 类型
@@ -95,6 +97,7 @@ import { webview } from '@kit.ArkWeb';
 | --- | --- |
 | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#oncreatenativemediaplayer)方法的参数。一个回调函数，在网页需要播放媒体时被调用，用于创建一个播放器接管网页中的媒体播放。通过接管机制，应用可以使用自定义播放器实现特殊功能或优化性能。 |
 | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 回调函数，在代理配置发生改变时被调用，回调成功表示代理设置成功。 |
+| [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | 由[setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback)或[setGlobalWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setglobalwebsiteconfigcallback)触发、用于获取网站配置的回调。实例级回调触发时，[WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md)的所有可选字段均会填充；静态全局回调触发时，仅填充`url`和`source`。 |
 | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | 用于描述[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)所支持的数据类型。 |
 
 ### 枚举
@@ -111,6 +114,7 @@ import { webview } from '@kit.ArkWeb';
 | [NavigationThrottleAction](arkts-arkweb-webview-navigationthrottleaction-e.md) | NavigationThrottle 回调可执行的动作枚举。 |
 | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | 播放器的网络状态。 |
 | [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)对象对应的本地离线资源的接口类型。 |
+| [PageTransition](arkts-arkweb-webview-pagetransition-e.md) | 页面跳转类型枚举。`PageTransition`值由两部分组成： |
 | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | [handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handlestatuschanged) 接口参数， 用于表示播放器的播放状态。 |
 | [Preload](arkts-arkweb-webview-preload-e.md) | 播放器预加载媒体数据。 |
 | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | 内存压力等级。在应用主动清理Web组件占用的缓存时，Web内核会根据内存压力等级，进行缓存释放。 |
@@ -133,4 +137,5 @@ import { webview } from '@kit.ArkWeb';
 | [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) | 控制cookie在跨站请求中的发送行为。 |
 | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口所支持的数据类型。 |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | 资源请求的资源类型。 |
+| [WebSiteSource](arkts-arkweb-webview-websitesource-e.md) | 网站配置查询触发来源枚举。 |
 | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Web软键盘自动控制模式。 |

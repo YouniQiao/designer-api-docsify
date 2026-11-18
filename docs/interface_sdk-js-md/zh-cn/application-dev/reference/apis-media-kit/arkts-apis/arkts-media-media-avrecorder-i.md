@@ -826,7 +826,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Operation time out. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Operation timeout. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
 | [5400107](../errorcode-media.md#5400107-音频焦点冲突) | Audio interrupted.<br>**适用版本：** 11+ |
@@ -1140,7 +1140,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by Promise. |
 
 **示例**
 

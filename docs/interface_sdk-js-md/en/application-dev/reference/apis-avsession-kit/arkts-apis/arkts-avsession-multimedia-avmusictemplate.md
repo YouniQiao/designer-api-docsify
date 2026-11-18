@@ -1,4 +1,4 @@
-# @ohos.multimedia.avMusicTemplate
+# @ohos.multimedia.avMusicTemplate(Audio Template)
 
 This module provides the capability to media enhancement
 

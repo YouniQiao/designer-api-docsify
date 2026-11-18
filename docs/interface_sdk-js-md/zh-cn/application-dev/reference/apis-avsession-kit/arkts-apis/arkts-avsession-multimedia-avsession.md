@@ -1,4 +1,4 @@
-# @ohos.multimedia.avsession
+# @ohos.multimedia.avsession(媒体会话管理)
 
 **起始版本：** 9
 

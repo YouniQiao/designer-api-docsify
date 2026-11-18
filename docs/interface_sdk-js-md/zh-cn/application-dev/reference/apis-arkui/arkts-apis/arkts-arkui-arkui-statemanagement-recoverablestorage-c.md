@@ -77,7 +77,7 @@ static connect<T extends object, S extends object>(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 140124 | Unsupported type or parameters. |
+| [140124](../errorcode-stateManagement.md#140124-recoverablestorage使用不支持的类型或参数) | Unsupported type or parameters. |
 
 ## keys
 

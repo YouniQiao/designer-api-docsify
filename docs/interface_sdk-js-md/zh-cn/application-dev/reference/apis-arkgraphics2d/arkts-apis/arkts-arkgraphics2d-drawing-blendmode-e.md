@@ -180,7 +180,7 @@ r = d + (1 - da) * s，在源像素上方绘制目标像素，考虑目标像素
 EXCLUSION = 23
 ```
 
-排除模式，rc = s + d - two(s * d), ra = s + (1 - sa) * d，类似于DIFFERENCE，但对比度较低。
+排除模式，rc = s + d - 2 * (s * d), ra = s + (1 - sa) * d，类似于DIFFERENCE，但对比度较低。
 
 **起始版本：** 11
 

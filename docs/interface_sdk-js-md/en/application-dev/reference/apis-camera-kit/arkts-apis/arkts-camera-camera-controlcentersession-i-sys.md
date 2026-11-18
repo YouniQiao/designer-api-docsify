@@ -141,6 +141,37 @@ Gets the current camera device.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 
+## getSwitchableCameras
+
+```TypeScript
+getSwitchableCameras(): Array<CameraDevice>
+```
+
+Obtains the list of cameras that can be switched to, including the local camera and supported distributed cameras.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ControlCenterSession-getSwitchableCameras(): Array<CameraDevice>--><!--Device-ControlCenterSession-getSwitchableCameras(): Array<CameraDevice>-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | List of cameras available for switching. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Operation not supported. |
+
 ## isAutoFramingSupported
 
 ```TypeScript
@@ -196,6 +227,38 @@ Release control center session object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## switchCamera
+
+```TypeScript
+switchCamera(device: CameraDevice): void
+```
+
+Switching between the local and distributed cameras.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ControlCenterSession-switchCamera(device: CameraDevice): void--><!--Device-ControlCenterSession-switchCamera(device: CameraDevice): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| device | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Target camera device to switch to. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Operation not supported. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## usedAsPosition
 

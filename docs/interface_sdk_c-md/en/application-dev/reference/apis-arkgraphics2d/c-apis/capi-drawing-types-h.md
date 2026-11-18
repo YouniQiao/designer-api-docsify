@@ -161,13 +161,13 @@ Defines an enum for blend modes. In blend mode, each operation generates a new c
 | BLEND_MODE_SCREEN | Screen mode. r = s + d - s * d.<br>**Since**: 11 |
 | BLEND_MODE_OVERLAY | Overlay mode.<br>**Since**: 11 |
 | BLEND_MODE_DARKEN | Darken mode. rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d.<br>**Since**: 11 |
-| BLEND_MODE_LIGHTEN | Lighten mode. rc = rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d.<br>**Since**: 11 |
+| BLEND_MODE_LIGHTEN | Lighten mode. rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d.<br>**Since**: 11 |
 | BLEND_MODE_COLOR_DODGE | Color dodge mode.<br>**Since**: 11 |
 | BLEND_MODE_COLOR_BURN | Color burn mode.<br>**Since**: 11 |
 | BLEND_MODE_HARD_LIGHT | Hard light mode.<br>**Since**: 11 |
 | BLEND_MODE_SOFT_LIGHT | Soft light mode.<br>**Since**: 11 |
 | BLEND_MODE_DIFFERENCE | Difference mode. rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d.<br>**Since**: 11 |
-| BLEND_MODE_EXCLUSION | Exclusion mode. rc = s + d - two(s * d), ra = s + (1 - sa) * d.<br>**Since**: 11 |
+| BLEND_MODE_EXCLUSION | Exclusion mode. rc = s + d - 2 * (s * d), ra = s + (1 - sa) * d.<br>**Since**: 11 |
 | BLEND_MODE_MULTIPLY | Multiply mode. r = s * (1 - da) + d * (1 - sa) + s * d.<br>**Since**: 11 |
 | BLEND_MODE_HUE | Hue mode.<br>**Since**: 11 |
 | BLEND_MODE_SATURATION | Saturation mode.<br>**Since**: 11 |

@@ -54,7 +54,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 | [deviceColor](arkts-basicservices-deviceinfo-con.md#devicecolor) | 当前设备颜色。如果无法获取，则返回空字符串 |
 | [deviceType](arkts-basicservices-deviceinfo-con.md#devicetype) | 设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。 |
 | [diskSN](arkts-basicservices-deviceinfo-con.md#disksn) | 硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 |
-| [displayVersion](arkts-basicservices-deviceinfo-con.md#displayversion) | 产品版本。 |
+| [displayVersion](arkts-basicservices-deviceinfo-con.md#displayversion) | 产品版本。<!--RP14-->可以使用版本号中的DEM字段来识别门店演示样机。<!--RP14End--> |
 | [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionosapiname) | 发行版系统API版本名称<!--Del-->，由发行方定义<!--DelEnd-->。 |
 | [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionosapiversion) | 发行版系统API版本<!--Del-->，由发行方定义<!--DelEnd-->。<!--RP15--><!--RP15End--> |
 | [distributionOSName](arkts-basicservices-deviceinfo-con.md#distributionosname) | 发行版系统名称<!--Del-->，由发行方定义<!--DelEnd-->。 |

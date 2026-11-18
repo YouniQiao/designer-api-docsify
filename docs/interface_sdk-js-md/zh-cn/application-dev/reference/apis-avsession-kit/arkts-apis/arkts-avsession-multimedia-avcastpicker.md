@@ -1,4 +1,4 @@
-# @ohos.multimedia.avCastPicker
+# @ohos.multimedia.avCastPicker(投播组件)
 
 ## 导入模块
 

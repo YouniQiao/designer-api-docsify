@@ -172,7 +172,7 @@ r = d + (1 - da) * s, draws the destination pixels over the source pixels, consi
 EXCLUSION = 23
 ```
 
-rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but with lower contrast.
+rc = s + d - 2 * (s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but with lower contrast.
 
 **Since:** 11
 

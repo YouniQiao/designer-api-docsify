@@ -80,8 +80,8 @@ Creates an **OH_Drawing_RoundRect** object. This API may return an error code. F
 | Parameter | Description |
 | -- | -- |
 | [const OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)* rect | Pointer to an **OH_Drawing_Rect** object. |
-| float xRad | Radius of the rounded corner on the X axis. A negative number is invalid. |
-| float yRad | Radius of the rounded corner on the Y axis. A negative number is invalid. |
+| float xRad | Corner radius on the X-axis. The value is invalid when it is less than or equal to 0. The unit is physical pixels (px). |
+| float yRad | Corner radius on the Y-axis. The value is invalid when it is less than or equal to 0. The unit is physical pixels (px). |
 
 **Returns**:
 

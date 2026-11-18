@@ -1,7 +1,4 @@
-# @ohos.multimedia.avInputCastPicker
-
-录音设备选择组件
-
+# @ohos.multimedia.avInputCastPicker(录音设备选择组件)
 
 ## 导入模块
 

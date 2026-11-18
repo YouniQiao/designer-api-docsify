@@ -87,6 +87,8 @@ import { webview } from '@kit.ArkWeb';
 | [WebHeader](arkts-arkweb-webview-webheader-i.md) | Describes the request/response header returned by the **Web** component. |
 | [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | Defines cookie-related fields. |
 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) | WebMessagePort is a message port interface in the Web component used for bidirectional communication between the app side (ArkTS) and the HTML5 side (JavaScript). A pair of associated ports is created through createWebMessagePorts, with one port sent to the HTML5 side and the other retained on the app side, enabling cross- runtime message passing. WebMessagePort supports two message protocols: the basic protocol uses WebMessage as the message carrier (postMessageEvent/onMessageEvent), and the extended protocol uses WebMessageExt to support richer data types (postMessageEventExt/onMessageEventExt). |
+| [WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md) | Represents the parameters passed to the website configuration query callback registered by [setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback) or [setGlobalWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setglobalwebsiteconfigcallback). |
+| [WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md) | Represents the result returned by the [setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback) callback. |
 | [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md) | Provides usage information of the Web SQL Database. |
 
 ### Types
@@ -95,6 +97,7 @@ import { webview } from '@kit.ArkWeb';
 | --- | --- |
 | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#oncreatenativemediaplayer) method. A callback invoked when the webpage needs to play media, used to create a player to take over media playback in the webpage. Through this takeover mechanism, the app can use a custom player to implement special features or optimize performance. |
 | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Callback invoked when the proxy configuration changes. A successful callback indicates that the proxy settings are applied successfully. |
+| [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | Represents the callback triggered by [setWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setwebsiteconfigcallback) or [setGlobalWebSiteConfigCallback](arkts-arkweb-webview-webviewcontroller-c.md#setglobalwebsiteconfigcallback) to obtain the website configuration. When invoked by the instance-level callback, all optional fields of [WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md) are populated; when invoked by the static global callback, only `url` and `source` are populated. |
 | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext). |
 
 ### Enums
@@ -111,6 +114,7 @@ import { webview } from '@kit.ArkWeb';
 | [NavigationThrottleAction](arkts-arkweb-webview-navigationthrottleaction-e.md) | NavigationThrottle callback action enumeration. |
 | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | Enumerates the network statuses of the player. |
 | [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) object. |
+| [PageTransition](arkts-arkweb-webview-pagetransition-e.md) | Enumerates the page transition types. The `PageTransition` value consists of two parts: |
 | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handlestatuschanged) API. |
 | [Preload](arkts-arkweb-webview-preload-e.md) | Enumerates how the player preloads media data. |
 | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. |
@@ -133,4 +137,5 @@ import { webview } from '@kit.ArkWeb';
 | [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) | Enumerates the policies for sending cookies in cross-site requests. |
 | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Enumerates the data types supported by the [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) API. |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Enumerates the types of requested resources. |
+| [WebSiteSource](arkts-arkweb-webview-websitesource-e.md) | Enumerates the sources that trigger the website configuration query. |
 | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Enumerates the behavior modes of the web soft keyboard. |

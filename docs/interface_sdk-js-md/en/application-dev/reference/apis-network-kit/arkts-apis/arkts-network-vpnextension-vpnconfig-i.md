@@ -136,6 +136,24 @@ Whether IPv6 is supported. The value **true** indicates support, and **false** i
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
+## isLocalNetworkRouted
+
+```TypeScript
+isLocalNetworkRouted?: boolean
+```
+
+Whether local network (LAN) traffic is routed through the VPN. When set to false, traffic to local network addresses (for example, 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16) bypasses the VPN and is sent directly over the physical network interface. The default value is false. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VpnConfig-isLocalNetworkRouted?: boolean--><!--Device-VpnConfig-isLocalNetworkRouted?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Vpn
+
 ## mtu
 
 ```TypeScript

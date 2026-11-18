@@ -130,7 +130,7 @@ Obtains a matrix value of a given index, which ranges from 0 to 8.
 
 | Type | Description |
 | --- | --- |
-| number | Value obtained, which is an integer. |
+| number | Value obtained, which is a floating point number. |
 
 **Error codes:**
 
@@ -525,7 +525,7 @@ console.info("matrix= "+matrix.getAll().toString());
 postScale(sx: number, sy: number, px: number, py: number): void
 ```
 
-Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
+Sets the matrix to the matrix obtained by right-multiplying the existing matrix by an identity matrix that has been scaled with the coefficients (sx, sy) at the scale point (px, py), that is, the new scaling transformation is applied after the transformation of the existing matrix. To apply the scaling transformation before the transformation of the existing matrix, use the preScale method.
 
 **Since:** 12
 
@@ -537,10 +537,10 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | number | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | number | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | number | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | number | Yes | Scale factor in the x-axis direction. A negative value indicates mirror flip about x = px before scaling. This parameter is a floating-point number. |
+| sy | number | Yes | Scale factor in the y-axis direction. A negative value indicates mirror flip about y = py before scaling. This parameter is a floating-point number. |
+| px | number | Yes | X-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
+| py | number | Yes | Y-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
 
 **Error codes:**
 
@@ -718,7 +718,7 @@ console.info("matrix= "+matrix.getAll().toString());
 preScale(sx: number, sy: number, px: number, py: number): void
 ```
 
-Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
+Sets the matrix to the matrix obtained by premultiplying this matrix by the identity matrix scaled with the coefficients sx and sy around the scale center point, that is, the new scaling transformation is applied before the transformation of the current matrix. If the scaling transformation needs to be applied after the transformation of the current matrix, use the postScale method.
 
 **Since:** 12
 
@@ -730,10 +730,10 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | number | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | number | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | number | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | number | Yes | Scale factor in the x-axis direction. When negative, it can be viewed as a mirror flip about x = px before scaling. This parameter is a floating-point number. |
+| sy | number | Yes | Scale factor in the y-axis direction. When negative, it can be viewed as a mirror flip about y = py before scaling. This parameter is a floating-point number. |
+| px | number | Yes | X-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
+| py | number | Yes | Y-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
 
 **Error codes:**
 
@@ -1121,7 +1121,7 @@ matrix.setRotation(90, 100, 100);
 setScale(sx: number, sy: number, px: number, py: number): void
 ```
 
-Sets this matrix as an identity matrix and scales it with the coefficients (sx, sy) at the scale point (px, py).
+Sets the matrix as an identity matrix and scales it by sx and sy around the scale center point (px, py).
 
 **Since:** 12
 
@@ -1133,10 +1133,10 @@ Sets this matrix as an identity matrix and scales it with the coefficients (sx, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | number | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | number | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | number | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| sx | number | Yes | Scale factor in the x-axis direction. When negative, it can be viewed as a mirror flip about x = px followed by scaling. This parameter is a floating-point number. |
+| sy | number | Yes | Scale factor in the y-axis direction. When negative, it can be viewed as a mirror flip about y = py followed by scaling. This parameter is a floating-point number. |
+| px | number | Yes | X-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
+| py | number | Yes | Y-axis coordinate of the scale center. This parameter is a floating-point number. The unit is physical pixel px. |
 
 **Error codes:**
 

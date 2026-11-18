@@ -10215,6 +10215,36 @@ struct WebComponent {
 </html>
 ```
 
+## setGlobalWebSiteConfigCallback
+
+```TypeScript
+static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void
+```
+
+Register the static global website configuration query callback. Mainly used in scenarios where specific Web components cannot be determined, such as ServiceWorker Request or independent download, etc. When ArkWeb performs such navigation, the callback is called synchronously to get the site configuration. Callback to receive a [WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md) Object. The [WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md) object must be returned.
+
+> **Description**
+> 
+> - The callback is invoked synchronously on the UI thread. Do not perform time-consuming operations in the callback.
+> - If the callback returns an empty userAgent, the default User-Agent of ArkWeb is used.
+> - If the viewportWidth returned by the callback is 0, the default viewport width is used.
+> - Only one callback is retained. Calling this API again replaces the previously registered callback. Transfer
+> **null** to clear the current callback.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void--><!--Device-WebviewController-static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | Yes | Global website configuration query callback. Pass **null** to clear the currently registered callback. |
+
 ## setHostIP
 
 ```TypeScript
@@ -11683,6 +11713,42 @@ struct WebComponent {
   }
 }
 ```
+
+## setWebSiteConfigCallback
+
+```TypeScript
+setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void
+```
+
+Register the instance-level website configuration query callback. It is mainly used in normal web page navigation scenarios. When ArkWeb performs this type of navigation, This callback is called synchronously to get the site configuration. Callback receives a [WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md) object, which must be returned. [WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md) object.
+
+> **Description**
+> 
+> - This callback is invoked synchronously by the UI thread. Do not perform time-consuming operations during the callback.
+> - When the userAgent returned by the callback is empty, the default User-Agent of ArkWeb is used.
+> - The default viewport width is used when the viewportWidth returned by the callback is 0.
+> - Only one callback is retained. Repeated calls will overwrite the previously registered callback. Pass
+> **null** to clear the current callback.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void--><!--Device-WebviewController-setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | Yes | Website configuration query callback. Pass **null** to clear the currently registered callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setZoomFactor
 

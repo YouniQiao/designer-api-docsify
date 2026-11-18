@@ -20,7 +20,7 @@ The file declares the functions related to the speaker layout during recording a
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.<br> Each channel is mapped to a variable of uint64_t. |
+| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.<br> A 64-bit integer represents a channel position. |
 | [OH_AmbAttributeSet](#oh_ambattributeset) | OH_AmbAttributeSet | Ambisonic attribute set.<br> A set of 64-bit integers indicate the ambisonic attributes. |
 | [OH_AudioChannelLayout](#oh_audiochannellayout) | OH_AudioChannelLayout | Enumerates the layouts of audio channels.<br> Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback. |
 
@@ -34,7 +34,7 @@ enum OH_AudioChannelSet
 
 **Description**
 
-Enumerates the audio channels.<br> Each channel is mapped to a variable of uint64_t.
+Enumerates the audio channels.<br> A 64-bit integer represents a channel position.
 
 <!--Device-OH_AudioChannelSet--><!--Device-OH_AudioChannelSet-End-->
 

@@ -1,4 +1,4 @@
-# @ohos.multimedia.avsession
+# @ohos.multimedia.avsession(AVSession Management)
 
 **Since:** 9
 

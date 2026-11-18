@@ -173,7 +173,7 @@ mimeType: string
 pageTransition: number
 ```
 
-页面跳转值，由PageTransition中定义的核心类型与修饰标志按位或得到。可使用掩码常量（`CORE_MASK`、`QUALIFIER_MASK`、`IS_REDIRECT_MASK`）进行拆解。
+页面跳转值，由[PageTransition](arkts-arkweb-webview-pagetransition-e.md)中定义的核心类型与修饰标志按位或得到。可使用掩码常量（`CORE_MASK`、`QUALIFIER_MASK`、`IS_REDIRECT_MASK`）进行拆解。
 
 **类型：** number
 

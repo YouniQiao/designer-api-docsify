@@ -1,4 +1,4 @@
-# @ohos.multimedia.avCastPickerParam
+# @ohos.multimedia.avCastPickerParam(AVCastPicker Parameters)
 
 ## Modules to Import
 

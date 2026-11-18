@@ -227,18 +227,18 @@ HDR编码，选择视频录制时选填。isHdr默认为false，对应编码格�
 ## sqrFactor
 
 ```TypeScript
-sqrFactor?: boolean
+sqrFactor?: number
 ```
 
 在StableQualityMode中设置质量参数。取值范围为【0,51】。数值越小，输出码率越高，质量越好。取值限定为整数。
 
-**类型：** boolean
+**类型：** number
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVRecorderProfile-sqrFactor?: boolean--><!--Device-AVRecorderProfile-sqrFactor?: boolean-End-->
+<!--Device-AVRecorderProfile-sqrFactor?: int--><!--Device-AVRecorderProfile-sqrFactor?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -286,6 +286,8 @@ videoFrameHeight?: number
 
 **起始版本：** 9
 
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
 <!--Device-AVRecorderProfile-videoFrameHeight?: int--><!--Device-AVRecorderProfile-videoFrameHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -317,6 +319,8 @@ videoFrameWidth?: number
 **类型：** number
 
 **起始版本：** 9
+
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVRecorderProfile-videoFrameWidth?: int--><!--Device-AVRecorderProfile-videoFrameWidth?: int-End-->
 

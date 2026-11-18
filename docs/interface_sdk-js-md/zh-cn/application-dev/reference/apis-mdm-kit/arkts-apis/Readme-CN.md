@@ -275,10 +275,12 @@
   - [PatchInfo](arkts-mdm-deviceinfo-patchinfo-i.md)
 - [@ohos.enterprise.deviceSettings（设备设置管理）](arkts-mdm-enterprise-devicesettings.md)
   - [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md)
+  - [getEnterpriseDisplayInfo](arkts-mdm-devicesettings-getenterprisedisplayinfo-f.md)
   - [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md)
   - [getValue](arkts-mdm-devicesettings-getvalue-f.md)
   - [getValueForAccount](arkts-mdm-devicesettings-getvalueforaccount-f.md)
   - [removeHiddenSettingsMenu](arkts-mdm-devicesettings-removehiddensettingsmenu-f.md)
+  - [setEnterpriseDisplayInfo](arkts-mdm-devicesettings-setenterprisedisplayinfo-f.md)
   - [setHomeWallpaper](arkts-mdm-devicesettings-sethomewallpaper-f.md)
   - [setSwitchStatus](arkts-mdm-devicesettings-setswitchstatus-f.md)
   - [setUnlockWallpaper](arkts-mdm-devicesettings-setunlockwallpaper-f.md)
@@ -296,6 +298,7 @@
   - [setScreenOffTime（系统接口）](arkts-mdm-devicesettings-setscreenofftime-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [uninstallUserCertificate（系统接口）](arkts-mdm-devicesettings-uninstallusercertificate-f-sys.md)<!--DelEnd-->
+  - [DisPlayInfo](arkts-mdm-devicesettings-displayinfo-i.md)
   <!--Del-->
   - [PowerPolicy（系统接口）](arkts-mdm-devicesettings-powerpolicy-i-sys.md)<!--DelEnd-->
   <!--Del-->

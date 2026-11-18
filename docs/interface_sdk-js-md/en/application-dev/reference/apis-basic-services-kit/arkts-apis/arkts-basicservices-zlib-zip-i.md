@@ -2266,7 +2266,7 @@ Resets the status of the specified decompression stream and updates the window s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream<sup>12+</sup>](arkts-basicservices-zlib-zstream-i.md). |
-| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [8, 15]<br>Gzip: [24, 31]<br>Raw Deflate: [-15, -8] |
 
 **Return value:**
 
@@ -2719,7 +2719,7 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | Yes | Destination buffer. |
 | source | ArrayBuffer | Yes | Source buffer. |
-| sourceLen | number | No | Length of the source data. The default value is **0**. |
+| sourceLen | number | No | Length of the source data, in bytes. Defaults to source.byteLength. |
 
 **Return value:**
 

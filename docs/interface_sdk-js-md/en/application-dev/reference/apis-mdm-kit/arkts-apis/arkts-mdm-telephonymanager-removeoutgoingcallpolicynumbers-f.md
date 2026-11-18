@@ -34,7 +34,7 @@ If the device's call capability has been disabled via the [setDisallowedPolicy](
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | policy | [adminManager.Policy](arkts-mdm-adminmanager-policy-e.md) | Yes | Policy for trustlist or blocklist. **BLOCK_LIST** indicates a blocklist, and **TRUST_LIST** indicates a trustlist. |
-| numbers | Array&lt;string&gt; | Yes | List of call numbers to remove. The total length of the array must not exceed 1, 000. |
+| numbers | Array&lt;string&gt; | Yes | List of call numbers to remove. In versions earlier than API 26.1.0, the total length of the array must not exceed 1000. The total length of the array in API 26.1.0 and later versions cannot exceed 10000. |
 
 **Error codes:**
 

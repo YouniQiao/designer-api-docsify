@@ -174,7 +174,7 @@ MIME(Multipurpose Internet Mail Extensions) type of the response. This parameter
 pageTransition: number
 ```
 
-Page redirection value, which is obtained by bitwise ORing the core type and modifier flag defined in PageTransition. The mask constants (`CORE_MASK`, `QUALATOR_MASK`, and `IS_REDIRECT_MASK`) can be used for disassembly.
+Page redirection value, which is obtained by bitwise ORing the core type and modifier flag defined in [PageTransition](arkts-arkweb-webview-pagetransition-e.md). The mask constants (`CORE_MASK`, `QUALATOR_MASK`, and `IS_REDIRECT_MASK`) can be used for disassembly.
 
 **Type:** number
 

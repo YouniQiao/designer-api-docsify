@@ -629,6 +629,24 @@ the length limit is exceeded or the value is an empty string, the setting does n
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## sslServerHostnameVerification
+
+```TypeScript
+sslServerHostnameVerification?: boolean
+```
+
+The host name required for SSL server host name verification. The default value of sslServerHostnameVerify is true. When sslServerHostnameVerify is set to false, domain name verification is disabled. In this scenario, the certificate domain name verification is ignored when the IP address is used for connection. Default value: true.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequestOptions-sslServerHostnameVerification?: boolean--><!--Device-HttpRequestOptions-sslServerHostnameVerification?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## sslType
 
 ```TypeScript

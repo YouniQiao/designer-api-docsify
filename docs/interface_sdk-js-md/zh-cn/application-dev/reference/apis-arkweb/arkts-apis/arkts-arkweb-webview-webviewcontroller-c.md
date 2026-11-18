@@ -10137,6 +10137,35 @@ struct WebComponent {
 </html>
 ```
 
+## setGlobalWebSiteConfigCallback
+
+```TypeScript
+static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void
+```
+
+注册静态全局网站配置查询回调。主要用于无法确定特定 Web 组件的场景，如 ServiceWorker请求或独立下载等。当 ArkWeb 执行此类导航时，会同步调用该回调以获取网站配置。回调接收一个[WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md)对象，必须返回[WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md)对象。
+
+> **说明：** 
+> 
+> - 回调在 UI 线程上同步调用，不要在回调中执行耗时操作。
+> - 若回调返回空的 userAgent，则使用 ArkWeb 默认的 User-Agent。
+> - 若回调返回的 viewportWidth 为 0，则使用默认视口宽度。
+> - 仅保留一个回调。再次调用本 API 会替换之前注册的回调。传入**null**清除当前回调。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void--><!--Device-WebviewController-static setGlobalWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | 是 | 全局网站配置查询回调。传入**null**清除当前已注册的回调。 |
+
 ## setHostIP
 
 ```TypeScript
@@ -11592,6 +11621,41 @@ struct WebComponent {
   }
 }
 ```
+
+## setWebSiteConfigCallback
+
+```TypeScript
+setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void
+```
+
+注册实例级网站配置查询回调。主要用于正常网页导航场景。当 ArkWeb 执行此类导航时，会同步调用此回调以获取网站配置。回调接收一个[WebSiteConfigParams](arkts-arkweb-webview-websiteconfigparams-i.md)对象，必须返回[WebSiteConfigResult](arkts-arkweb-webview-websiteconfigresult-i.md)对象。
+
+> **说明：** 
+> 
+> - 此回调在 UI 线程同步调用，回调中不要执行耗时操作。
+> - 回调返回的 userAgent 为空时，使用 ArkWeb 默认 User-Agent。
+> - 回调返回的 viewportWidth 为 0 时，使用默认视口宽度。
+> - 仅保留一个回调，重复调用会覆盖之前注册的回调。传入**null**可清除当前回调。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void--><!--Device-WebviewController-setWebSiteConfigCallback(callback: OnQueryWebSiteConfigCallback): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnQueryWebSiteConfigCallback](arkts-arkweb-webview-onquerywebsiteconfigcallback-t.md) | 是 | 网站配置查询回调。传入**null**清除当前已注册的回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setZoomFactor
 

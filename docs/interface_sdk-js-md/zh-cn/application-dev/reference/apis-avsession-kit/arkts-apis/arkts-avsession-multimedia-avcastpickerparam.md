@@ -1,7 +1,4 @@
-# @ohos.multimedia.avCastPickerParam
-
-投播组件参数
-
+# @ohos.multimedia.avCastPickerParam(投播组件参数)
 
 ## 导入模块
 

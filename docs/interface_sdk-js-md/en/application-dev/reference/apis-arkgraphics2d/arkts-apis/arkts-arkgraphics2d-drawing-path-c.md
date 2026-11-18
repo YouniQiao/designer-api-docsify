@@ -381,7 +381,7 @@ Draws an arc to this path using angle arc mode. This mode first defines a rectan
 | y1 | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. |
 | x2 | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. |
 | y2 | number | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. |
-| startDeg | number | Yes | Start angle. The start direction (0��) of the angle is the positive direction of the X axis. |
+| startDeg | number | Yes | Start angle. The start direction (0°) of the angle is the positive direction of the X axis. |
 | sweepDeg | number | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The actual swipe degree is the modulo operation result of the input parameter by 360. |
 
 **Error codes:**

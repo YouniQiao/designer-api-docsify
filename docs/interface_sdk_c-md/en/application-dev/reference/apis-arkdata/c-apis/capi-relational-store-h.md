@@ -2677,7 +2677,7 @@ Registers corrupted handler for the database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code. [RDB_OK](capi-relational-store-error-code-h.md#oh_rdb_errcode) if the execution is successful. [RDB_E_INVALID_ARGS](capi-relational-store-error-code-h.md#oh_rdb_errcode) - The error code for common invalid args. RDB_E_SUB_OVER_LIMIT - Indicates the number of subscriptions exceeds the limit. Specific error codes can be referenced [OH_Rdb_ErrCode](capi-relational-store-error-code-h.md#oh_rdb_errcode). |
+| int | Returns a specific error code. [RDB_OK](capi-relational-store-error-code-h.md#oh_rdb_errcode) if the execution is successful. [RDB_E_INVALID_ARGS](capi-relational-store-error-code-h.md#oh_rdb_errcode) - The error code for common invalid args. [RDB_E_SUB_LIMIT_REACHED](capi-relational-store-error-code-h.md#oh_rdb_errcode) - Indicates the number of subscriptions exceeds the limit. Specific error codes can be referenced [OH_Rdb_ErrCode](capi-relational-store-error-code-h.md#oh_rdb_errcode). |
 
 **Reference**:
 

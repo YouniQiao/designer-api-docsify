@@ -6,7 +6,7 @@ typedef struct OH_TrafficFilter_PortMatch {...} OH_TrafficFilter_PortMatch
 
 ## Overview
 
-Port match condition
+Defines the port match condition.
 
 <!--Device-struct OH_TrafficFilter_PortMatch {...}--><!--Device-struct OH_TrafficFilter_PortMatch {...}-End-->
 
@@ -24,9 +24,9 @@ Port match condition
 
 | Name | Description |
 | -- | -- |
-| [OH_TrafficFilter_PortMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_portmatchtype) type | Match type<br>**Since**: 26.0.0 |
-| bool invert | Whether to invert the match result<br>**Since**: 26.0.0 |
-| value | Match rule<br>**Since**: 26.0.0 |
+| [OH_TrafficFilter_PortMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_portmatchtype) type | Match type.<br>**Since**: 26.0.0 |
+| bool invert | Whether to invert the match result. The value true means to invert the match result, and false means the opposite.<br>**Since**: 26.0.0 |
+| value | Match rule. (uint16_t single, [OH_TrafficFilter_PortRange](capi-trafficfilter-oh-trafficfilter-portrange.md) range, [OH_TrafficFilter_PortMulti](capi-trafficfilter-oh-trafficfilter-portmulti.md) multi)<br>**Since**: 26.0.0 |
 | value.single | Single port, used when type is OH_TRAFFICFILTER_PORT_MATCH_SINGLE<br>**Since**: 26.0.0 |
 | value.range | Port range match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_RANGE<br>**Since**: 26.0.0 |
 | value.multi | Multi-port match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_MULTI<br>**Since**: 26.0.0 |

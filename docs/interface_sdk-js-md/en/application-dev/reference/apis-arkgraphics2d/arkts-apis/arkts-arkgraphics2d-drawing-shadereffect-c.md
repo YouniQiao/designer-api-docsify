@@ -308,7 +308,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the circle. |
-| radius | number | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
+| radius | number | Yes | Radius of the gradient. A non-positive number is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
@@ -343,7 +343,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
         matrix?: Matrix | null): ShaderEffect
 ```
 
-Creates a **ShaderEffect** object that generates a color sweep gradient around a given center point, either in a clockwise or counterclockwise direction.
+Creates a shader that generates a color sweep gradient with the given center point as the center of the circle, in a clockwise or counterclockwise direction between the start angle and the end angle.
 
 **Since:** 12
 
@@ -355,11 +355,11 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the circle. |
+| centerPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | Center of the gradient circle. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
-| startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
-| endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
+| startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset in the clockwise direction, and a negative number indicates an offset in the counterclockwise direction. The value is a floating point number. |
+| endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset in the clockwise direction, and a negative number indicates an offset in the counterclockwise direction. A value less than the start angle is invalid. The value is a floating point number. |
 | pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | **Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -367,7 +367,7 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | **ShaderEffect** object created. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a sweep gradient shader object. |
 
 **Error codes:**
 

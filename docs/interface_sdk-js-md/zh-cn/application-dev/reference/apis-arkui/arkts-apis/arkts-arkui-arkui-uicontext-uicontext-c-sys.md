@@ -284,7 +284,7 @@ struct Index {
 setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig): void
 ```
 
-在输入框绑定输入法前设置键盘样式配置
+设置键盘样式，包括模糊效果和流光效果，仅在沉浸式模式下生效，沉浸式定义可参见[KeyboardAppearance](arkts-arkui-keyboardappearance-e.md)。其中，流光效果依赖于模糊效果，若需启用流光效果，则需同时开启模糊效果，最终显示效果取决于输入法处理。
 
 **起始版本：** 20
 
@@ -300,8 +300,8 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uniqueId | number | 是 | The unique id of the input component. |
-| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 | The config of keyboard. |
+| uniqueId | number | 是 | 组件节点对应的UniqueId。取值范围大于等于0。 |
+| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 | 键盘样式配置参数。 |
 
 **错误码：**
 

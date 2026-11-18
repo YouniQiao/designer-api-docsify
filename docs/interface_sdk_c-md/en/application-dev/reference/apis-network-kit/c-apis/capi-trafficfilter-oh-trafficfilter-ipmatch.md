@@ -6,7 +6,7 @@ typedef struct OH_TrafficFilter_IPMatch {...} OH_TrafficFilter_IPMatch
 
 ## Overview
 
-IP match condition
+Defines the IP match condition.
 
 <!--Device-struct OH_TrafficFilter_IPMatch {...}--><!--Device-struct OH_TrafficFilter_IPMatch {...}-End-->
 
@@ -24,9 +24,9 @@ IP match condition
 
 | Name | Description |
 | -- | -- |
-| [OH_TrafficFilter_IPMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_ipmatchtype) type | Match type<br>**Since**: 26.0.0 |
-| bool invert | Whether to invert the match result<br>**Since**: 26.0.0 |
-| value | Match rule<br>**Since**: 26.0.0 |
+| [OH_TrafficFilter_IPMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_ipmatchtype) type | Match type.<br>**Since**: 26.0.0 |
+| bool invert | Whether to invert the match result.<br>**Since**: 26.0.0 |
+| value | Match rule. ([OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) single, [OH_TrafficFilter_IPCidr](capi-trafficfilter-oh-trafficfilter-ipcidr.md) cidr, [OH_TrafficFilter_IPRange](capi-trafficfilter-oh-trafficfilter-iprange.md) range, [OH_TrafficFilter_IPMulti](capi-trafficfilter-oh-trafficfilter-ipmulti.md) multi).<br>**Since**: 26.0.0 |
 | value.single | Single IP address, used when type is OH_TRAFFICFILTER_IP_MATCH_SINGLE<br>**Since**: 26.0.0 |
 | value.cidr | CIDR match value, used when type is OH_TRAFFICFILTER_IP_MATCH_CIDR<br>**Since**: 26.0.0 |
 | value.range | IP range match value, used when type is OH_TRAFFICFILTER_IP_MATCH_RANGE<br>**Since**: 26.0.0 |

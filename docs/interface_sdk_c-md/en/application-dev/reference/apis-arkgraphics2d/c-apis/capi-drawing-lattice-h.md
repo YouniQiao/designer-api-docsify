@@ -49,7 +49,7 @@ Enumerates the types of rectangles used to fill the lattices. It is applicable o
 | -- | -- |
 | DEFAULT | Draws an image into the rectangular lattice.<br>**Since**: 23 |
 | TRANSPARENT | Sets the rectangular lattice to be transparent.<br>**Since**: 23 |
-| FIXED_COLOR | Draws the colors from the **fColors** array of the rectangular lattice object into the lattice.<br>**Since**: 23 |
+| FIXED_COLOR | Draws the colors from the colors array of the rectangular lattice object into the lattice.<br>**Since**: 23 |
 
 
 ## Function description
