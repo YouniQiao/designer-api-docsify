@@ -466,7 +466,7 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | 是 | 配置视频转码的相关参数。 <!--RP1--><!--RP1End--> |
+| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | 是 | 配置视频转码的相关参数。 当config中设置的目标视频分辨率宽videoFrameWidth大于原视频的宽或目标视频分辨率高videoFrameHeight大于原视频的高时，会上报错误码401。 |
 
 **返回值：**
 

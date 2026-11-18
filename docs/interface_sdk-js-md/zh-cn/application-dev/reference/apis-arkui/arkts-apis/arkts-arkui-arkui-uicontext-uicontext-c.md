@@ -2623,7 +2623,7 @@ export default class EntryAbility extends UIAbility{
 getPromptAction(): PromptAction
 ```
 
-get object PromptAction.
+获取PromptAction对象。
 
 **起始版本：** 10
 
@@ -2639,7 +2639,7 @@ get object PromptAction.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | 返回PromptAction实例对象。 |
 
 **示例**
 
@@ -4664,7 +4664,7 @@ struct Index {
 showActionSheet(value: ActionSheetOptions): void
 ```
 
-Shows an action sheet in the given settings.
+定义列表弹窗并弹出。
 
 **起始版本：** 10
 
@@ -4680,7 +4680,7 @@ Shows an action sheet in the given settings.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 | Parameters of the action sheet. |
+| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 | 配置列表弹窗的参数。 |
 
 **示例**
 
@@ -4742,7 +4742,7 @@ struct Index {
 showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
 ```
 
-alertDialog display.
+显示警告弹窗组件，可设置文本内容与响应回调。
 
 **起始版本：** 10
 
@@ -4758,7 +4758,7 @@ alertDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) &#124; [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) &#124; [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | Shows an AlertDialog component in the given settings. |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) &#124; [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) &#124; [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | 定义并显示AlertDialog组件。 |
 
 **示例**
 

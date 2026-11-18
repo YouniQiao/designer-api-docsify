@@ -33,7 +33,7 @@
 - [Function Flow Runtime Kit (29)](interface_sdk_c-md/en/application-dev/reference/apis-function-flow-runtime-kit/c-apis/capi-function-flow-runtime-kit-ffrt.md)
 - [Game Controller Kit (15)](interface_sdk_c-md/en/application-dev/reference/apis-game-controller-kit/c-apis/capi-game-controller-kit-gamecontroller.md)
 - [Image Kit (231)](interface_sdk-js-md/en/application-dev/reference/apis-image-kit/arkts-apis/arkts-image-multimedia-image.md)
-- [Ime Kit (162)](interface_sdk-js-md/en/application-dev/reference/apis-ime-kit/arkts-apis/arkts-ime-inputmethod.md)
+- [Ime Kit (164)](interface_sdk-js-md/en/application-dev/reference/apis-ime-kit/arkts-apis/arkts-ime-inputmethod.md)
 - [Input Kit (198)](interface_sdk-js-md/en/application-dev/reference/apis-input-kit/arkts-apis/arkts-input-multimodalinput-gestureevent.md)
 - [Ipc Kit (36)](interface_sdk-js-md/en/application-dev/reference/apis-ipc-kit/arkts-apis/arkts-ipc-rpc.md)
 - [Kernel Enhance Kit (13)](interface_sdk-js-md/en/application-dev/reference/apis-kernel-enhance-kit/arkts-apis/arkts-kernelenhance-meminfo.md)

@@ -82,6 +82,26 @@ readonly appProvisionType: string
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
+## appUid
+
+```TypeScript
+readonly appUid?: number
+```
+
+应用的appUid。
+
+**类型：** number
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApplicationInfo-readonly appUid?: int--><!--Device-ApplicationInfo-readonly appUid?: int-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
 ## bundleType
 
 ```TypeScript

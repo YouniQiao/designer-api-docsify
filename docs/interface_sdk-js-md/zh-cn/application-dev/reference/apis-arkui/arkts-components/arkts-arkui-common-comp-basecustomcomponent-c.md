@@ -109,7 +109,7 @@ build()函数用于定义自定义组件的声明式UI描述，自定义组件�
 getDialogController(): PromptActionDialogController | undefined
 ```
 
-The dialog controller of the custom component.
+获取自定义组件的弹窗控制器。
 
 **起始版本：** 18
 
@@ -125,7 +125,7 @@ The dialog controller of the custom component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptActionDialogController](arkts-arkui-common-comp-promptactiondialogcontroller-t.md) &#124; undefined | The controller of dialog, or undefined if it is not available |
+| [PromptActionDialogController](arkts-arkui-common-comp-promptactiondialogcontroller-t.md) &#124; undefined | 返回PromptActionDialogController实例对象；如果不可用，则返回undefined。 |
 
 ## getUIContext
 

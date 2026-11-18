@@ -58,7 +58,7 @@ Brightness change rate. A higher rate means that brightness decreases more quick
 
 Default value: **0.0**
 
-Value range: (0.0, +∞)
+Value range: [0.0, +∞)
 
 **Type:** number
 

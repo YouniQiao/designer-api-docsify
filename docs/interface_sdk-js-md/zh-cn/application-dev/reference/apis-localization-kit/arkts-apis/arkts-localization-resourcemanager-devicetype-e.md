@@ -22,6 +22,8 @@ export enum DeviceType
 DEVICE_TYPE_2IN1 = 0x07
 ```
 
+2in1。
+
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
@@ -51,6 +53,8 @@ DEVICE_TYPE_CAR = 0x02
 ```TypeScript
 DEVICE_TYPE_PC = 0x03
 ```
+
+电脑。
 
 **起始版本：** 6
 

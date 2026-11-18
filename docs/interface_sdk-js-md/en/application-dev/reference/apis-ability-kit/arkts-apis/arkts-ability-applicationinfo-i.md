@@ -88,6 +88,26 @@ Type of the application signing certificate file, which is divided into 'debug' 
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## appUid
+
+```TypeScript
+readonly appUid?: number
+```
+
+Indicates the appUid of the application.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-ApplicationInfo-readonly appUid?: int--><!--Device-ApplicationInfo-readonly appUid?: int-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## bundleType
 
 ```TypeScript

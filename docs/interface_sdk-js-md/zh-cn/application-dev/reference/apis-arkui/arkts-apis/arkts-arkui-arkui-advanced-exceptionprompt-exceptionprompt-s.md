@@ -26,7 +26,7 @@ import { MarginType, PromptOptions, ExceptionPrompt } from '@kit.ArkUI';
 build(): void
 ```
 
-The build function is a member function that must return an ArkTS component type (Element) to represent the component to be rendered as a user interface.
+build函数是一个成员函数，必须返回一个ArkTS组件类型（Element），用于表示将要渲染为用户界面的组件。
 
 **起始版本：** 11
 

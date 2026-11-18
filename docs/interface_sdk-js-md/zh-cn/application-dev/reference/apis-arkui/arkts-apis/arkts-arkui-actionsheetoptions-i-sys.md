@@ -18,7 +18,7 @@ interface ActionSheetOptions
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation Mode of the dialog.
+设置系统材质下弹窗的非线性动画模式。
 
 **类型：** [DistortionMode](../arkts-components/arkts-arkui-common-comp-distortionmode-e-sys.md)
 
@@ -40,7 +40,7 @@ Sets the distortion animation Mode of the dialog.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edgeLight animation Mode of the dialog.
+设置系统材质下弹窗的流光动画模式。
 
 **类型：** [EdgeLightMode](../arkts-components/arkts-arkui-common-comp-edgelightmode-e-sys.md)
 

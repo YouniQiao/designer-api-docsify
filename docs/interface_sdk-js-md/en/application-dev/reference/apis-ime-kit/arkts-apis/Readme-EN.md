@@ -15,6 +15,8 @@
   - [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md)
   <!--Del-->
   - [getSystemInputMethodConfigAbility(system api)](arkts-ime-inputmethod-getsysteminputmethodconfigability-f-sys.md)<!--DelEnd-->
+  - [injectText](arkts-ime-inputmethod-injecttext-f.md)
+  - [injectTextSync](arkts-ime-inputmethod-injecttextsync-f.md)
   - [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md)
   - [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md)
   - [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md)
