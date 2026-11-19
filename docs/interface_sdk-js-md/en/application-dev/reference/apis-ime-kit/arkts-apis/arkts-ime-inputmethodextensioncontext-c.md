@@ -37,7 +37,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 destroy(callback: AsyncCallback<void>): void
 ```
 
-Destroys this input method. This API uses an asynchronous callback to return the result. <br> <br>- Meaning/Function: Destroys the current **InputMethodExtensionAbility** and terminates the running of the input method app. After the call, the system triggers the **InputMethodExtensionAbility.onDestroy()** lifecycle callback. <br>- Usage scenarios: Used when the input method app needs to actively terminate its own running. For example, the input method app actively exits after completing a specific task, or performs cleanup logic within the **onDestroy** callback to ensure resource release. <br>- Use effect: After the call succeeds, the current **InputMethodExtensionAbility** is destroyed, the system triggers the **onDestroy()** lifecycle callback, and the input method app process is terminated. Any subsequent context operations after the call will no longer take effect.
+Destroy the input method application. Use the callback asynchronous callback. <br> <br>- Meaning/Function: Destroys the current InputMethodExtensionAbility and terminates the running of the input method application. After this interface is invoked, the system triggers the `InputMethodExtensionAbility.onDestroy()` life cycle callback. <br>-Application scenario: This parameter is used when an input method application needs to proactively terminate its running. For example, an input method application exits after processing a specific task. <br>- Effect: If the call is successful, the termination request is accepted. It does not mean that the destruction or process exit is complete. The system completes life cycle processing asynchronously. After the context is destroyed, it is not used any more.
 
 **Since:** 9
 
@@ -51,7 +51,14 @@ Destroys this input method. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the input method app is destroyed successfully, err is undefined; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. When the termination request is successful, the value of err is undefined. Otherwise, it is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Ability management request failed. Possible causes include failure to connect to the system service or failure of the system service to communicate with a dependent module. |
 
 **Examples**
 
@@ -83,7 +90,7 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 destroy(): Promise<void>
 ```
 
-Destroys this input method. This API uses a promise to return the result. <br> <br>- Meaning/Function: Destroys the current **InputMethodExtensionAbility** and terminates the running of the input method app. After the call, the system triggers the **InputMethodExtensionAbility.onDestroy()** lifecycle callback. <br>- Usage scenarios: Used when the input method app needs to actively terminate its own running. It provides the same functionality and form as the callback and is suitable for scenarios that require promise chaining. <br>- Use effect: After the call succeeds, the current **InputMethodExtensionAbility** is destroyed, the system triggers the **onDestroy()** lifecycle callback, and the input method app process is terminated.
+Destroy the input method application. Use Promise asynchronous callbacks. <br> <br>- Meaning/Function: Destroys the current InputMethodExtensionAbility and terminates the running of the input method application. After this interface is invoked, the system triggers the `InputMethodExtensionAbility.onDestroy()` life cycle callback. <br>-Application scenario: This parameter is used when an input method application needs to proactively terminate its running. The function is the same as that of the callback form. It is applicable to scenarios where the Promise chain call is required. <br>- Effect: If the call is successful, the termination request is accepted. It does not mean that the destruction or process exit is complete. The system completes life cycle processing asynchronously. After the context is destroyed, it is not used any more.
 
 **Since:** 9
 
@@ -98,6 +105,13 @@ Destroys this input method. This API uses a promise to return the result. <br> <
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Ability management request failed. Possible causes include failure to connect to the system service or failure of the system service to communicate with a dependent module. |
 
 **Examples**
 

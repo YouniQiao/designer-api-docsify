@@ -90,7 +90,7 @@ destroy(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Ability management request failed. Possible causes include failure to connect to the system service or failure of the system service to communicate with a dependent module. |
 
 **示例**
 
@@ -143,7 +143,7 @@ destroy(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Ability management request failed. Possible causes include failure to connect to the system service or failure of the system service to communicate with a dependent module. |
 
 **示例**
 

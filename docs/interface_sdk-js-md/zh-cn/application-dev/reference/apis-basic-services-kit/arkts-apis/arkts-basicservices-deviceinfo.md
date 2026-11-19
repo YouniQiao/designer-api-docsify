@@ -64,11 +64,11 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 | [firstApiVersion](arkts-basicservices-deviceinfo-con.md#firstapiversion) | 首个版本系统软件API版本。 |
 | [hardwareModel](arkts-basicservices-deviceinfo-con.md#hardwaremodel) | 硬件版本号。 |
 | [incrementalVersion](arkts-basicservices-deviceinfo-con.md#incrementalversion) | 差异版本号，是编译时生成的ohos的版本号。 |
-| [installTime](arkts-basicservices-deviceinfo-con.md#installtime) | 获取系统安装UTC时间戳。例如：1790784000000。 |
+| [installTime](arkts-basicservices-deviceinfo-con.md#installtime) | 获取系统安装UTC时间戳。<!--RP18--><br> 例如：1790784000000。**模型约束**： 此接口仅可在Stage模型下使用。<br> **起始版本**：26.1.0<!--RP18End--> |
 | [kernelVersion](arkts-basicservices-deviceinfo-con.md#kernelversion) | 获取内核版本。示例: '产品内核1.0.0'。 |
 | [majorVersion](arkts-basicservices-deviceinfo-con.md#majorversion) | Major版本号，随主版本更新增加，值为osFullName中的第一位数值，建议直接使用deviceInfo.majorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 |
 | [manufacture](arkts-basicservices-deviceinfo-con.md#manufacture) | 设备厂家名称。 |
-| [marketName](arkts-basicservices-deviceinfo-con.md#marketname) | 外部产品系列。 |
+| [marketName](arkts-basicservices-deviceinfo-con.md#marketname) | <!--RP17-->外部产品系列。<!--RP17End--> |
 | [ODID](arkts-basicservices-deviceinfo-con.md#odid) | ODID（Open Developer Identifier，开发者匿名设备标识符）。 |
 | [osFullName](arkts-basicservices-deviceinfo-con.md#osfullname) | 系统版本，版本格式<!--RP12-->OpenHarmony-x.x.x.x，其中x表示数字占位符。<!--RP12End-->如需获取版本号各段数值，建议直接使用majorVersion、seniorVersion、featureVersion、buildVersion字段，可提升效率，不建议解析osFullName获取。 |
 | [osReleaseType](arkts-basicservices-deviceinfo-con.md#osreleasetype) | 系统的发布类型，取值为： |

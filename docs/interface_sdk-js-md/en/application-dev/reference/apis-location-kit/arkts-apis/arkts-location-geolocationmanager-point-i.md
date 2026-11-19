@@ -6,7 +6,7 @@ export interface Point
 
 Indicates a location point, including the longitude and latitude.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface Point--><!--Device-geoLocationManager-export interface Point-End-->
 
@@ -28,7 +28,7 @@ Indicates latitude.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Indicates longitude.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -21,9 +21,9 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 | Name | Description |
 | --- | --- |
 | [off('steadyStandingDetect')](arkts-multimodalawareness-devicestatus-off-f.md#offsteadystandingdetect) | Unsubscribes from the device steady standing state (stand mode) event. It is used in scenarios where the application exits a page or no longer needs to listen for stand mode changes. Related resources are released after the call. |
-| [offDropDetect](arkts-multimodalawareness-devicestatus-offdropdetect-f.md#offdropdetect-1) | Unsubscribes from drop detection events. |
+| [offDropDetect](arkts-multimodalawareness-devicestatus-offdropdetect-f.md#offdropdetect-1) | Unsubscribes from device drop detection events. |
 | [on('steadyStandingDetect')](arkts-multimodalawareness-devicestatus-on-f.md#onsteadystandingdetect) | Subscribes to the device steady standing state (stand mode) event. It is recommended to call off() to unsubscribe when it is no longer needed to release resources. |
-| [onDropDetect](arkts-multimodalawareness-devicestatus-ondropdetect-f.md#ondropdetect-1) | Subscribes to drop detection events. |
+| [onDropDetect](arkts-multimodalawareness-devicestatus-ondropdetect-f.md#ondropdetect-1) | Subscribes to device drop detection events. |
 
 <!--Del-->
 ### Functions(System API)
@@ -45,5 +45,5 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [DropDetectionStatus](arkts-multimodalawareness-devicestatus-dropdetectionstatus-e.md) | Defines the phone drop detection status. |
+| [DropDetectionStatus](arkts-multimodalawareness-devicestatus-dropdetectionstatus-e.md) | Defines the device drop detection status. |
 | [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md) | Defines the steady standing state (that is, stand mode). |

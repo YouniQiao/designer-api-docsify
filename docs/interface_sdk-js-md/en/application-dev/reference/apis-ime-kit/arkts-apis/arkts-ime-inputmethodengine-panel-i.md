@@ -24,18 +24,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. <br> <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size of the input method application. After the interface invoking is complete, the adjust request has been submitted to the input method framework, but the execution is not complete. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
-> state. <br>
+> This parameter is applicable only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. <br>
+> <br>&gt;This interface is a synchronous interface. If the interface returns a success message, the system receives the setting request, but does not indicate that the setting is complete. To detect exceptions during execution, you are advised to use <br>
+> [updatePanelRect](#updatepanelrect-1) or <br>
+> [updatePanelRectSync](#updatepanelrectsync-1). <br>
 > <br>
-> This API returns the result synchronously. The return only indicates that the system receives the setting <br>
-> request, not that the setting is complete. <br>
-> <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the <br>
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To <br>
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp.
 
 **Since:** 12
 
@@ -56,6 +53,7 @@ Adjusts the panel rectangle. After the API is called, the adjust request is subm
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable |
 
 **Examples**
 
@@ -92,22 +90,19 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size, position, custom avoidance area, and hot area of the input method application. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
-> state. This API is compatible with <br>
-> [adjustPanelRect](#adjustpanelrect-1). If the <br>
-> input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, <br>
-> [adjustPanelRect](#adjustpanelrect-1) is called by <br>
-> default. <br>
+> This parameter is applicable only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. This API is compatible with the invoking method of <br>
+> [adjustPanelRect](#adjustpanelrect-1). If only the landscapeRect and portraitRect attributes are set for the input parameter rect, <br>
+> [adjustPanelRect](#adjustpanelrect-1) is invoked by default. <br>
+> <br>&gt;This interface is a synchronous interface. If the interface returns a success message, the system receives the setting request but does not indicate that the setting is complete. To detect exceptions during execution, you are advised to use <br>
+> [updatePanelRect](#updatepanelrect-2) or <br>
+> [updatePanelRectSync](#updatepanelrectsync-2) <br> &gt;. <br>
 > <br>
-> This API returns the result synchronously. The return only indicates that the system receives the setting <br>
-> request, not that the setting is complete. <br>
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp. <br>
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the <br>
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To <br>
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> When the com.ohos.sceneboard process does not exist, the effective range of the input method hot zone is the same as that of the soft keyboard.
 
 **Since:** 15
 
@@ -129,6 +124,7 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -169,7 +165,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
+This command is used to change the panel status of the input method application to another [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) form. This command takes effect only for the [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md).
 
 **Since:** 10
 
@@ -188,6 +184,8 @@ Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md))
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -202,7 +200,7 @@ panel.changeFlag(panelFlag);
 getDisplayId(): Promise<number>
 ```
 
-Obtains the window ID. This API uses a promise to return the result.
+Obtain the displayId of the current window and use Promise asynchronous callback.
 
 **Since:** 15
 
@@ -241,7 +239,7 @@ panel.getDisplayId().then((result: number) => {
 getImmersiveMode(): ImmersiveMode
 ```
 
-Obtains the immersive mode of the input method application.
+Obtain the immersive mode of the input method application.
 
 **Since:** 15
 
@@ -255,6 +253,13 @@ Obtains the immersive mode of the input method application.
 | --- | --- |
 | [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Immersive mode. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | Failed to obtain panel execution order. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+
 **Examples**
 
 ```TypeScript
@@ -267,7 +272,7 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
+Obtain the offset area of the input method soft keyboard relative to the system panel in the current state(for example, collapsed or expanded) of the specified screen and in the current state(for example, floating or fixed) of the input method keyboard. Use Promise asynchronous callbacks.
 
 **Since:** 21
 
@@ -292,8 +297,9 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes:                 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -324,7 +330,7 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 hide(callback: AsyncCallback<void>): void
 ```
 
-Hides this panel. This API uses an asynchronous callback to return the result.
+Hide the current input method panel and use the callback asynchronous callback function.
 
 **Since:** 10
 
@@ -337,6 +343,13 @@ Hides this panel. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -358,7 +371,7 @@ panel.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-Hides this panel. This API uses a promise to return the result.
+Hide the current input method panel and use promise asynchronous callback.
 
 **Since:** 10
 
@@ -371,6 +384,13 @@ Hides this panel. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -390,7 +410,7 @@ panel.hide().then(() => {
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Move the panel position and use the callback asynchronous callback function. [Panel status] When [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is fixed, the actual movement effect is not generated.
 
 **Since:** 10
 
@@ -411,6 +431,8 @@ Moves this input method panel to the specified position. This API uses an asynch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -432,7 +454,7 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Move the panel position and use promise asynchronous callback. [Panel status] When [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is fixed, the actual movement effect is not generated.
 
 **Since:** 10
 
@@ -458,6 +480,8 @@ Moves this input method panel to the specified position. This API uses a promise
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -497,6 +521,7 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -530,6 +555,7 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -543,16 +569,18 @@ panel.off('hide');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based <br>
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain <br>
-> the actual panel size to refresh the panel layout. <br>
-> <br>
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-2) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
+> the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type.
+> 
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect-2) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -566,6 +594,12 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
 | callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -598,6 +632,12 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 | type | 'show' | Yes | Event type, which is **'show'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+
 **Examples**
 
 ```TypeScript
@@ -627,6 +667,12 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 | type | 'hide' | Yes | Event type, which is **'hide'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+
 **Examples**
 
 ```TypeScript
@@ -641,16 +687,18 @@ panel.on('hide', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based <br>
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain <br>
-> the actual panel size to refresh the panel layout. <br>
-> <br>
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-2) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
+> the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type.
+> 
+> - Since API version 15, after the [adjustPanelRect](#adjustpanelrect-2) API is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to the callback function of this API.
 
 **Since:** 12
 
@@ -664,6 +712,12 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
 | callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -686,15 +740,12 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-Resizes this input method panel. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
+Change the size of the current input method panel and use the callback asynchronous callback function. <br> <br>  
+> **Description** <br>
 > <br>
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen <br>
-> height. <br>
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times the screen height. <br>
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the <br>
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To <br>
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp.
 
 **Since:** 10
 
@@ -715,6 +766,8 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -736,15 +789,12 @@ panel.resize(500, 1000, (err: BusinessError) => {
 resize(width: number, height: number): Promise<void>
 ```
 
-Resizes this input method panel. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+Change the size of the current input method panel and use Promise asynchronous callback. <br> <br>  
+> **Description** <br>
 > <br>
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen <br>
-> height. <br>
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times the screen height. <br>
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the <br>
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To <br>
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp.
 
 **Since:** 10
 
@@ -770,6 +820,8 @@ Resizes this input method panel. This API uses a promise to return the result. <
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -789,7 +841,7 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br>- [adjustPanelRect](#adjustpanelrect-1) (available since API version 12) <br>- [adjustPanelRect](#adjustpanelrect-2) (available since API version 15) <br>- [resize](#resize) (available since API version 10)
+Set the immersive effect of the input method application. <br> <br>- Gradient mode and Streamlight mode can only be used when [Immersive mode is enabled] [setImmersiveMode](#setimmersivemode). <br>- Streamlight mode can only be used when gradient mode is enabled. <br>- When gradient mode is not enabled, the gradient height must be 0px. <br>- Only the system application can set the streamer mode. <br>-The current interface can be invoked only after any of the following interfaces is invoked: <br> - [adjustPanelRect](#adjustpanelrect-1)(supporting API version 12) <br> - [adjustPanelRect](#adjustpanelrect-2)(supporting API version 15) <br> - [resize](#resize)(supporting API version 10)
 
 **Since:** 20
 
@@ -807,10 +859,10 @@ Sets the immersive effect of the input method application. <br> <br>- Gradient m
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes:                 1. input method panel not created. 2. the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-immersive-effect-parameter-configuration-error) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-immersive-effect-parameter-configuration-error) | invalid immersive effect.                 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled.                 2. The fluid light mode can only be used when the gradient mode is enabled.                 3. When the gradient mode is not enabled, the gradient height can only be 0. |
 | [12800021](../errorcode-inputmethod-framework.md#12800021-incorrect-call-sequence) | this operation is allowed only after adjustPanelRect or resize is called. |
 
 **Examples**
@@ -829,7 +881,7 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
+Set the immersive mode of the input method application. It can only be set to not use immersion mode(NONE_:00 -20:00SIVE), light immersion mode(Light_:00-20:00SIVE), or dark immersion mode(DAK_:00-20:00SIVE).
 
 **Since:** 15
 
@@ -863,11 +915,13 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets to keep the screen always on. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off. <br><br>
-> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice <br>input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use <br>this API.
+Sets to keep the screen always on. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
+> 
+> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use this API.
 
 **Since:** 20
 
@@ -892,6 +946,7 @@ Sets to keep the screen always on. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -925,14 +980,16 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. <br> - **true**: privacy mode. <br> - **false**: non-privacy mode. |
+| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. <br>- **true**: privacy mode. <br>- **false**: non-privacy mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -947,7 +1004,7 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
+Set the color of the function keys on the current panel and the background color of the function keys. Use Promise asynchronous callbacks.
 
 **Since:** 22
 
@@ -967,6 +1024,13 @@ Sets the color of the function buttons and their background color on the current
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | Failed to obtain panel execution order. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 
@@ -993,7 +1057,7 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
+Load specific page content for the current input method panel and use callback asynchronous callback.
 
 **Since:** 10
 
@@ -1013,6 +1077,8 @@ Loads content from a page to this input method panel. This API uses an asynchron
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1034,7 +1100,7 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
 setUiContent(path: string): Promise<void>
 ```
 
-Loads content from a page to this input method panel. This API uses a promise to return the result.
+Load specific page content for the current input method panel, using Promise asynchronous callback.
 
 **Since:** 10
 
@@ -1059,6 +1125,8 @@ Loads content from a page to this input method panel. This API uses a promise to
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1078,7 +1146,7 @@ panel.setUiContent('pages/page2/page2').then(() => {
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
+Load the specific page content associated with LocalStorage for the current panel, using an asynchronous callback.
 
 **Since:** 10
 
@@ -1090,7 +1158,7 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page linked to LocalStorage. |
+| path | string | Yes | Path of the page from which the content will be loaded. |
 | storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -1099,6 +1167,8 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1122,7 +1192,7 @@ panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
 setUiContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
+Load the specific page content associated with LocalStorage for the current panel, using Promise asynchronous callback.
 
 **Since:** 10
 
@@ -1148,6 +1218,8 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1169,7 +1241,7 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 show(callback: AsyncCallback<void>): void
 ```
 
-Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
+Display the current input method panel. Use callback asynchronous callback. The input method application can be invoked after it is bound to the edit box.
 
 **Since:** 10
 
@@ -1182,6 +1254,14 @@ Shows this input method panel. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1203,7 +1283,7 @@ panel.show((err: BusinessError) => {
 show(): Promise<void>
 ```
 
-Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
+Display the current input method panel and use promise asynchronous callback. The input method application can be invoked after it is bound to the edit box.
 
 **Since:** 10
 
@@ -1216,6 +1296,14 @@ Shows this input method panel. This API uses a promise to return the result. It 
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
 
@@ -1264,12 +1352,15 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-Update the panel rectangle. This API uses a promise to return the result. <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size of the input method application. Use Promise asynchronous callbacks. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> This parameter is applicable only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. <br>
+> <br>&gt;This interface is an asynchronous interface. If the interface returns a response, it indicates that the system receives the setting request, but does not indicate that the
+
+setting is complete. <br>  
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp.
 
 **Since:** 26.0.0
 
@@ -1297,6 +1388,7 @@ Update the panel rectangle. This API uses a promise to return the result. <br>
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 ## updatePanelRect
 
@@ -1304,12 +1396,22 @@ Update the panel rectangle. This API uses a promise to return the result. <br>
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size, position, custom avoidance area, and hot area of the input method application. Use Promise asynchronous callbacks. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRect](#updatepanelrect-1). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRect](#updatepanelrect-1) is called by default. <br>
+> This parameter is applicable
+
+only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. This API is compatible with the invoking method of <br>  
+> [adjustPanelRect](#adjustpanelrect-1). If only the landscapeRect and portraitRect attributes are set for the input parameter rect, <br>
+> [adjustPanelRect](#adjustpanelrect-1) is invoked by
+
+default. <br>  
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> This interface is an asynchronous interface. The interface response indicates that the system receives the setting request, but does not indicate that the setting is complete. <br>
+> <br>
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp. <br>
+> <br>
+> When the com.ohos.sceneboard process does not exist, the effective range of the input method hot zone is the same as that of the soft keyboard.
 
 **Since:** 26.0.0
 
@@ -1338,6 +1440,7 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 ## updatePanelRectSync
 
@@ -1345,12 +1448,16 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Update the panel rectangle. <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size of the input method application. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
+> The synchronization interface blocks the main thread, which may affect UI interaction. Therefore, exercise caution when using this interface. You are advised to use the corresponding asynchronous interface <br>
+> [updatePanelRect](#updatepanelrect-1) first. <br>
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> applies only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. <br>
+> <br>&gt;This interface is a synchronous interface. The return of the interface indicates that the system receives the setting request and the setting is complete. <br>
+> <br>
+> If PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp.
 
 **Since:** 26.0.0
 
@@ -1372,6 +1479,7 @@ Update the panel rectangle. <br>
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 ## updatePanelRectSync
 
@@ -1379,12 +1487,22 @@ Update the panel rectangle. <br>
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. <br>  
-> **NOTE:** <br>
+Pre-set the landscape/portrait screen size, position, custom avoidance area, and hot area of the input method application. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRectSync](#updatepanelrectsync-1). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRectSync](#updatepanelrectsync-1) is called by default. <br>
+> The synchronization interface blocks the main thread, which may
+
+affect UI interaction. Therefore, exercise caution when using this interface. You are advised to use the corresponding asynchronous interface <br>  
+> [updatePanelRect](#updatepanelrect-1) first. <br>
 > <br>
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+> applies only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. This API is compatible with the invoking method of <br>
+> [adjustPanelRect](#adjustpanelrect-1). If only the landscapeRect and portraitRect attributes are set for the input parameter rect, <br>
+> [adjustPanelRect](#adjustpanelrect-1) is invoked by default. <br>
+> <br>&gt;This interface is a synchronous interface. The return of the interface indicates that the system receives the setting request and the setting is complete. <br>
+> <br>
+> When PanelFlag is set to FLG_FLOATED and the panel width ranges from 0 to 288 vp, the function keys at the bottom of the panel are dynamically adjusted based on the panel width. To ensure optimal user experience, it is recommended that the panel width be greater than or equal to 90 vp. <br>
+> <br>
+> When the com.ohos.sceneboard process does not exist, the effective range of the input method hot zone is the same as that of the soft keyboard.
 
 **Since:** 26.0.0
 
@@ -1407,6 +1525,7 @@ Update the panel rectangle, and customizes the avoid area and touch area. <br>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 ## updateRegion
 
@@ -1414,14 +1533,13 @@ Update the panel rectangle, and customizes the avoid area and touch area. <br>
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-Updates the hot zone on the input method panel in the current state. <br> <br>  
-> **NOTE:** <br>
+Update the hot zone in the input method panel in the current state. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
-> state. <br>
+> This parameter is applicable only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. <br>
+> <br>&gt;This interface is a synchronous interface. The return value indicates that the system receives the hot zone update request, but does not indicate that the hot zone update is complete. <br>
 > <br>
-> This API returns the result synchronously. The return only indicates that the system has received the request <br>
-> for updating the hot zone, not that the hot zone has been updated.
+> When the com.ohos.sceneboard process does not exist, the effective range of the input method hot zone is the same as that of the soft keyboard.
 
 **Since:** 15
 
@@ -1433,7 +1551,7 @@ Updates the hot zone on the input method panel in the current state. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events. <br> - The array size is limited to [1, 4]. <br> - The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events. <br>- The array size is limited to [1, 4]. <br>- The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 
@@ -1442,6 +1560,7 @@ Updates the hot zone on the input method panel in the current state. <br> <br>
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
 

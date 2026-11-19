@@ -24,7 +24,7 @@ The struct describes the subsample type.
 
 | Name | Description |
 | -- | -- |
-| uint32_t clearHeaderLen | Clear header len. |
-| uint32_t payLoadLen | Payload Len. |
+| uint32_t clearHeaderLen | Length of the clear header.<br>**Since**: 12 |
+| uint32_t payLoadLen | Length of the encrypted payload.<br>**Since**: 12 |
 
 

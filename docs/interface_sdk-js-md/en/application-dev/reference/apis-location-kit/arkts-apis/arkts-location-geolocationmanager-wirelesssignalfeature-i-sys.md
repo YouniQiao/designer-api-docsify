@@ -6,7 +6,7 @@ export interface WirelessSignalFeature
 
 Indicates wireless signal feature.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface WirelessSignalFeature--><!--Device-geoLocationManager-export interface WirelessSignalFeature-End-->
 
@@ -30,7 +30,7 @@ Indicates MAC array.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates average RSSI value. The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Indicates RSSI standard deviation.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

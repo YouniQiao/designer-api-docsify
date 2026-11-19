@@ -276,7 +276,7 @@ Assigns an unsigned int value to the key of an OH_AVFormat instance. This API ca
 
 | Type | Description |
 | -- | -- |
-| bool | **true** if the operation is successful; **false** otherwise. <br>The possible causes of an operation failure are as follows: <br>1. The value of **format** is nullptr. <br>2. The value of **format** fails parameter structure verification. <br>3. The value of **key** is nullptr. |
+| bool | **true** if the operation is successful; **false** otherwise. <br>The possible causes of an operation failure are as follows: <br>1. The value of **format** is nullptr. <br>2. The value of **format** fails parameter structure verification. <br>3. The value of **key** is nullptr. <br>4. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetLongValue()
 
@@ -487,7 +487,7 @@ Obtains the value of the unsigned int type from an OH_AVFormat instance using a 
 
 | Type | Description |
 | -- | -- |
-| bool | **true** if the operation is successful; **false** otherwise. <br>The possible causes of an operation failure are as follows: <br>1. The value of **format** is nullptr. <br>2. The value of **format** fails parameter structure verification. <br>3. The value of **key** is nullptr. <br>4. The value of **out** is nullptr. |
+| bool | **true** if the operation is successful; **false** otherwise. <br>The possible causes of an operation failure are as follows: <br>1. The value of **format** is nullptr. <br>2. The value of **format** fails parameter structure verification. <br>3. The value of **key** is nullptr. <br>4. The value of **out** is nullptr. <br>5. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_GetLongValue()
 

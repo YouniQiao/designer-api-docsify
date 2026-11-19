@@ -828,7 +828,7 @@ weight: FontWeight.Medium
 **Type:** [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)
 
 **Default:** 
-- API version 11+: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
+- API version 11+: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium }
 
 **Since:** 10
 

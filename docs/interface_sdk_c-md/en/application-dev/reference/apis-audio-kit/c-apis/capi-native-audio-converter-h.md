@@ -19,9 +19,6 @@ Declare underlying data structure.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md) | OH_AudioConverter_Format | Define the audio converter format info structure, used to describe basic audio format. |
-| [OH_AudioSuite_ConverterFormatEx](capi-ohaudiosuite-oh-audiosuite-converterformatex.md) | OH_AudioSuite_ConverterFormatEx | Defines the format information of the extended audio converter, which is used to describe the audio format that supports any sampling rate. |
-| [OH_AudioSuite_ConverterInputInfo](capi-ohaudiosuite-oh-audiosuite-converterinputinfo.md) | OH_AudioSuite_ConverterInputInfo | Defines the input data structure of the audio converter. |
-| [OH_AudioSuite_ConverterOutputInfo](capi-ohaudiosuite-oh-audiosuite-converteroutputinfo.md) | OH_AudioSuite_ConverterOutputInfo | Defines the output data structure of the audio converter, which is used to receive the converted audio data in direct processing mode. |
 | [OH_AudioConverterStruct](capi-ohaudiosuite-oh-audioconverterstruct.md) | OH_AudioConverter | Declare the audio converter. The handle of audio converter is used for audio converter related functions. |
 
 ### Enums

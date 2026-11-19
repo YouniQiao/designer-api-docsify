@@ -791,7 +791,7 @@ selectedTextStyle?: PickerTextStyle
 **类型：** [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)
 
 **默认值：** 
-- API版本11+：{ color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
+- API版本11+：{ color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium }
 
 **起始版本：** 10
 

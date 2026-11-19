@@ -1922,13 +1922,16 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+Send custom communication to the edit box application bound to the current input method application. Use Promise asynchronous callbacks. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the <br>
-> input method application is in full experience mode. <br>
+> This interface can be invoked only when the edit box is bound to the input method and the input method is in full experience mode. <br>
 > <br>
-> The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
+> The maximum size of msgId is 256 bytes, and the maximum size of msgParam is 128 KB. In the ArkTS dynamic call, if the operation queue is full or the queue times out, the message sending is aborted and BusinessError 12800003 is returned through Promise rejection. Wait until the operation is complete before initiating another request. If an asynchronous
+
+task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code
+
+is also used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously.
 
 **Since:** 15
 
@@ -1953,8 +1956,9 @@ Sends the custom communication to the edit box application attached to the input
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:                 1. Incorrect parameter types. 2. Incorrect parameter length. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800014](../errorcode-inputmethod-framework.md#12800014-non-full-access-mode-of-the-input-method-application) | the input method is in basic mode. |
 | [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |

@@ -1,4 +1,4 @@
-# OH_AudioSuite_ConverterInputInfo
+# OH_AudioSuite_ConverterInputInfo(System API)
 
 ```c
 typedef struct OH_AudioSuite_ConverterInputInfo {...} OH_AudioSuite_ConverterInputInfo
@@ -14,9 +14,11 @@ Defines the input data structure of the audio converter.
 
 **Since**: 26.1.0
 
+**System API:** This is a system API.
+
 **Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
-**Header file**: [native_audio_converter.h](capi-native-audio-converter-h.md)
+**Header file**: [native_audio_converter.h(System API)](capi-native-audio-converter-h-sys.md)
 
 ## Summary
 

@@ -37,7 +37,7 @@ Declare the Native API used for querying encoding and decoding capabilities.
 | [OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)](#oh_avcodec_getcapabilitybycategory) | Get a codec's capability within the specified category. By specifying the category, the matched codec is limited to either hardware codecs or software codecs. |
 | [OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)](#oh_avcodec_getcapabilitylist) | Obtains a list of codec capabilities for a specified codec type.<br> This function retrieves all matching codec capabilities based on the provided codec type. |
 | [bool OH_AVCapability_IsHardware(OH_AVCapability *capability)](#oh_avcapability_ishardware) | Check if the capability instance is describing a hardware codec. |
-| [bool OH_AVCapability_IsSecure(OH_AVCapability *capability)](#oh_avcapability_issecure) | Check if the capability instance is describing a secure codec. |
+| [bool OH_AVCapability_IsSecure(OH_AVCapability *capability)](#oh_avcapability_issecure) | Checks whether the capability instance describes a DRM decoder. |
 | [const char *OH_AVCapability_GetName(OH_AVCapability *capability)](#oh_avcapability_getname) | Get the codec name. |
 | [const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)](#oh_avcapability_getmimetype) | Get the codec mime type. |
 | [bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)](#oh_avcapability_checkmimetype) | Check if the mime type of the codec of the capability matches the specified mime type. |
@@ -60,7 +60,7 @@ Declare the Native API used for querying encoding and decoding capabilities.
 | [OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)](#oh_avcapability_getvideoframeraterangeforsize) | Get the Video codec's supported video frame rate range for a specified video size. |
 | [bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)](#oh_avcapability_arevideosizeandframeratesupported) | Check if the video codec supports the specific combination of video size and frame rate. |
 | [OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)](#oh_avcapability_getvideosupportedpixelformats) | Get the video codec's supported video pixel format. |
-| [OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)](#oh_avcapability_getvideosupportednativebufferformats) | Get the native buffer formats supported by the video codec.<br> This function provides information about the native buffer formats that the video codec can handle. |
+| [OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)](#oh_avcapability_getvideosupportednativebufferformats) | Obtains the OH_NativeBuffer formats supported by a video codec. This function provides the OH_NativeBuffer formats that can be processed by a video codec. For details, see OH_NativeBuffer_Format. |
 | [OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)](#oh_avcapability_getsupportedprofiles) | Get the codec's supported profiles. |
 | [OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)](#oh_avcapability_getsupportedlevelsforprofile) | Get codec's supported levels for a specific profile. |
 | [bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)](#oh_avcapability_areprofileandlevelsupported) | Check if the codec supports the specific combination of the profile and level. |
@@ -87,8 +87,8 @@ The codec category
 
 | Enum item | Description |
 | -- | -- |
-| HARDWARE = 0 |  |
-| SOFTWARE |  |
+| HARDWARE = 0 | Hardware codec.<br>**Since**: 10 |
+| SOFTWARE | Software codec.<br>**Since**: 10 |
 
 ### OH_AVCodecType
 
@@ -131,9 +131,9 @@ The enum of optional features that can be used in specific codec seenarios.
 
 | Enum item | Description |
 | -- | -- |
-| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | Feature for codec supports temporal scalability. It is only used in video encoder. |
-| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | Feature for codec supports long-term reference. It is only used in video encoder. |
-| VIDEO_LOW_LATENCY = 2 | Feature for codec supports low latency. It is only used in video decoder. |
+| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | Feature for codec supports temporal scalability. It is only used in video encoder.<br>**Since**: 12 |
+| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | Feature for codec supports long-term reference. It is only used in video encoder.<br>**Since**: 12 |
+| VIDEO_LOW_LATENCY = 2 | Feature for codec supports low latency. It is only used in video decoder.<br>**Since**: 12 |
 | VIDEO_ENCODER_B_FRAME = 7 | Feature for codec supports B-frame encoding. It is only used in video encoder.<br>**Since**: 20 |
 | VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | Feature for codec supports decoding sequence output. It is only used in video decoder.<br>**Since**: 26.0.0 |
 | VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | Feature for codec supports downsampling preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0 |
@@ -162,7 +162,7 @@ Get a system-recommended codec's capability.
 
 | Parameter | Description |
 | -- | -- |
-| const char *mime | Mime type |
+| const char *mime | Pointer to a string that describes the MIME type. For details, see AVCODEC_MIME_TYPE. |
 | bool isEncoder | True for encoder, false for decoder |
 
 **Returns**:
@@ -191,7 +191,7 @@ Get a codec's capability within the specified category. By specifying the catego
 
 | Parameter | Description |
 | -- | -- |
-| const char *mime | Mime type |
+| const char *mime | Pointer to a string that describes the MIME type. For details, see AVCODEC_MIME_TYPE. |
 | bool isEncoder | True for encoder, false for decoder |
 | [OH_AVCodecCategory](capi-native-avcapability-h.md#oh_avcodeccategory) category | The codec category |
 
@@ -270,7 +270,7 @@ bool OH_AVCapability_IsSecure(OH_AVCapability *capability)
 
 **Description**
 
-Check if the capability instance is describing a secure codec.
+Checks whether the capability instance describes a DRM decoder.
 
 <!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)--><!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)-End-->
 
@@ -288,7 +288,7 @@ Check if the capability instance is describing a secure codec.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the capability instance is describing a secure codec, false if the capability instance is describing a non-secure codec |
+| bool | Returns true if the capability instance describes a DRM decoder, false if the capability instance does not describe a DRM decoder |
 
 ### OH_AVCapability_GetName()
 
@@ -943,7 +943,7 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapabilit
 
 **Description**
 
-Get the native buffer formats supported by the video codec.<br> This function provides information about the native buffer formats that the video codec can handle.
+Obtains the OH_NativeBuffer formats supported by a video codec. This function provides the OH_NativeBuffer formats that can be processed by a video codec. For details, see OH_NativeBuffer_Format.
 
 <!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)-End-->
 

@@ -24,20 +24,16 @@ import { inputMethodEngine } from '@kit.IMEKit';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
+This interface is used to create an input method panel. The input method can be invoked only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. Use the callback asynchronous callback. <br> <br> Pairing call: <br> <br> - After calling createPanel() to create a panel, you must call [destroyPanel](#destroypanel-1) to destroy the panel after using it to release resources. <br>- If destroyPanel() is not invoked, panel resources are leaked, affecting the use of system resources. <br>- A single input method application allows only one soft keyboard type and one status bar type panel to be created. <br> <br>  
+> **Note:** <br>
 > <br>
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one <br>
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br> <br>
-> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such <br>
-> as <br>
-> [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), <br>
+> Only one panel of [soft keyboard type] [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) and [status bar type] [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) can be created for a single input method application. <br>&gt;You are not allowed to create panels of the same type repeatedly. You must reuse existing panels or destroy existing panels before creating panels of the same type. <br> &gt;When a panel fails to be created, the historical error code 1 is used for dynamic implementation, and the error code 12800004 is used for static implementation. Locate the failure cause based on the error information and native logs. <br>
 > <br>
-> [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1), <br>
-> and [CustomDialog](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md). You are advised to adopt <br>
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog.md) or <br>
-> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindmenu-1), or <br>
-> set **showInSubwindow** to **false**.
+> The input method panel does not support creating sub-windows. For example, the window.createWindow [Setting Application Subwindow](../../../windowmanager/application-window-fa.md# Setting Application Subwindow), <br>
+> [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1) <br> &gt;, and [CustomDialog](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller.md#custom_dialog_controllercustomdialog) interfaces cannot be used to create subwindow pop-up windows. You are advised to use a non-subwindow alternative, for example, <br>
+> [pop-up] [Dialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog.md), <br>
+> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindmenu-1), or set <br>
+> showInSubwindow to false.
 
 **Since:** 10
 
@@ -95,20 +91,18 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+This interface is used to create an input method panel. This interface can be invoked only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. Use the promise asynchronous callback. <br> <br>  
+> **Note:** <br>
 > <br>
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one <br>
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br> <br>
-> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such <br>
-> as <br>
-> [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), <br>
+> Only one panel of [soft keyboard type] [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) and [status bar type] [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) can be created for a single input method application. <br>&gt;You are not allowed to create panels of the same type repeatedly. You must reuse existing panels or destroy existing panels before creating panels of the same type. <br>&gt;When a panel fails to be created, the historical error code 1 is used for dynamic implementation, and the error code 12800004 is used for static implementation. Locate the failure cause based on the error information and native logs. <br>
 > <br>
-> [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1), <br>
-> and [CustomDialog](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md). You are advised to adopt <br>
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog.md) or <br>
-> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindmenu-1), or <br>
-> set **showInSubwindow** to **false**.
+> The input method panel does not support creating sub-windows. For example, the window.createWindow
+
+[Setting Application Subwindow](../../../windowmanager/application-window-fa.md# Setting Application Subwindow), <br>  
+> [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1) <br> &gt;, and [CustomDialog](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller.md#custom_dialog_controllercustomdialog) interface cannot be used to create subwindow pop-up windows. You are advised to use a non-subwindow alternative, for example, <br>
+> [pop-up] [Dialog](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog.md), <br>
+> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindmenu-1), or set <br>
+> showInSubwindow to false.
 
 **Since:** 10
 
@@ -169,7 +163,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 ```
 
-Destroys the specified input method panel. This API uses an asynchronous callback to return the result.
+Destroy the input method panel. This interface must be invoked before creating a panel by calling [createPanel] _[createPanel](#createpanel-1)_. Use the callback asynchronous callback. <br> <br> Pair Call: <br> <br> - Must be used with the [createPanel](#createpanel-1) method to destroy the input method panel created by createPanel(). <br>- The panel to be destroyed must be a panel object that has been successfully created. <br>- If the panel is not destroyed correctly, resource leakage may occur. You are advised to call destroyPanel() to release resources after the panel is used. After being destroyed, the panel instance becomes invalid and cannot be reused. Destroying the old instance does not remove the registration information of the new panel of the same type. When the native layer fails to be destroyed, the encapsulation object that is still valid is not invalidated, and the registration information of the encapsulation object is not removed. You can handle the error and then try again. If the window fails to be destroyed, the error code mapping of the existing panel operation is used. Error code 1 is returned.
 
 **Since:** 10
 
@@ -189,6 +183,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
 
 **Examples**
 
@@ -230,7 +225,7 @@ if (inputPanel) {
 destroyPanel(panel: Panel): Promise<void>
 ```
 
-Destroys the specified input method panel. This API uses a promise to return the result.
+Destroy the input method panel. Use the promise asynchronous callback. <br> <br> Pairing call: <br> <br> - Must be used with the [createPanel]_[createPanel](#createpanel-1) method to destroy the input method panel created by createPanel(). <br>- The destroyed panel must be a successfully created panel object. <br>- If the panel is not destroyed correctly, resource leakage may occur. You are advised to call destroyPanel() to release resources after the panel is used. After being destroyed, the panel instance becomes invalid and cannot be reused. Destroying the old instance does not remove the registration information of the new panel of the same type. When the native layer fails to be destroyed, the encapsulation object that is still valid is not invalidated, and its registration information is not removed. You can handle the error and try again. If the window fails to be destroyed, the error code mapping of the existing panel operation is used. Error code 1 is returned.
 
 **Since:** 10
 
@@ -255,6 +250,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
 
 **Examples**
 

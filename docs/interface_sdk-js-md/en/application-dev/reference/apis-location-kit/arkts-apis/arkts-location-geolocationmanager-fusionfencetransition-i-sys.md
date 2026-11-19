@@ -6,7 +6,7 @@ export interface FusionFenceTransition
 
 Indicates fusion fence transition information.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface FusionFenceTransition--><!--Device-geoLocationManager-export interface FusionFenceTransition-End-->
 
@@ -30,7 +30,7 @@ Identifier of the fusion fence.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates fusion fence scene.
 
 **Type:** [FusionFenceScene](arkts-location-geolocationmanager-fusionfencescene-e-sys.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Indicates the fence transition event.
 
 **Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -21,9 +21,9 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 | 名称 | 说明 |
 | --- | --- |
 | [off('steadyStandingDetect')](arkts-multimodalawareness-devicestatus-off-f.md#offsteadystandingdetect) | 取消订阅设备静止姿态感知（支架态）事件，用于应用在退出页面或不再需要监听支架态变化的场景。调用后释放相关资源。 |
-| [offDropDetect](arkts-multimodalawareness-devicestatus-offdropdetect-f.md#offdropdetect-1) | 取消订阅跌落检测事件。 |
+| [offDropDetect](arkts-multimodalawareness-devicestatus-offdropdetect-f.md#offdropdetect-1) | 取消订阅设备跌落检测事件。用于应用在退出页面或不再需要监听跌落事件的场景。调用后释放相关资源。若未调用onDropDetect()就调用offDropDetect()，该方法会抛出异常。 |
 | [on('steadyStandingDetect')](arkts-multimodalawareness-devicestatus-on-f.md#onsteadystandingdetect) | 订阅设备静止姿态感知（支架态）事件。建议在不需要时调用off()取消订阅，释放资源。 |
-| [onDropDetect](arkts-multimodalawareness-devicestatus-ondropdetect-f.md#ondropdetect-1) | 订阅跌落检测事件。 |
+| [onDropDetect](arkts-multimodalawareness-devicestatus-ondropdetect-f.md#ondropdetect-1) | 订阅设备跌落检测事件。当应用需要检测设备是否发生跌落时使用。调用onDropDetect订阅后，系统开始监听加速度传感器数据。当检测到符合跌落特征的加速度变化时，触发STATUS_DROPPED回调。同一回调实例不可重复订阅，需先调用offDropDetect取消后再订阅。建议在不需要监听时调用offDropDetect()取消订阅，释放资源。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -45,5 +45,5 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DropDetectionStatus](arkts-multimodalawareness-devicestatus-dropdetectionstatus-e.md) | 定义手机跌落检测状态。 |
+| [DropDetectionStatus](arkts-multimodalawareness-devicestatus-dropdetectionstatus-e.md) | 定义设备的跌落检测状态。 |
 | [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md) | 设备静止姿态感知状态（支架态）。 |

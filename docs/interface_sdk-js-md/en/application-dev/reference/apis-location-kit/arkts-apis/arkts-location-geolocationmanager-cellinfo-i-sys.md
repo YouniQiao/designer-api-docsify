@@ -210,7 +210,7 @@ Indicates tracking area code (TAC). The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

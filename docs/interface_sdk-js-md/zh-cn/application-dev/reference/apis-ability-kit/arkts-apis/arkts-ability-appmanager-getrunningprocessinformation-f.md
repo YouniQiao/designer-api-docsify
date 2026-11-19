@@ -12,13 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-获取当前应用运行进程的相关信息。使用Promise异步回调。
+获取应用运行进程的相关信息。使用Promise异步回调。
 
 > **说明：** 
 > 
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO，可查询全量应用的运行进程信息。
 > 
-> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+> - 从API version 11开始，默认仅返回调用方自身的运行进程信息；若拥有ohos.permission.GET_RUNNING_INFO权限，则可查询全量应用的运行进程信息。
 
 **起始版本：** 9
 
@@ -64,13 +64,13 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-获取当前应用运行进程的相关信息。使用callback异步回调。
+获取应用运行进程的相关信息。使用callback异步回调。
 
 > **说明：** 
 > 
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO，可查询全量应用的运行进程信息。
 > 
-> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+> - 从API version 11开始，默认仅返回调用方自身的运行进程信息；若拥有ohos.permission.GET_RUNNING_INFO权限，则可查询全量应用的运行进程信息。
 
 **起始版本：** 9
 

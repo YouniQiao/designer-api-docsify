@@ -36,7 +36,7 @@ hideYear?: boolean
 DisplayMode.DATE_TIME，且[mode](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)为DateMode.DATE或DateMode.YEAR_AND_MONTH时生效。
 2. 该属性为true时，用户仍可滚动选择具体年份，"----"选项与具体年份可自由切换。
 3. 该属性支持运行时动态切换，属性值变化时年份列随之更新。
-默认值：禁用。
+默认值：false。
 
 **类型：** boolean
 

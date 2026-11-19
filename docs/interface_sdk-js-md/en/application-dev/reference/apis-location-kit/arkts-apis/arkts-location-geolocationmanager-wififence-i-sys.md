@@ -6,7 +6,7 @@ export interface WifiFence
 
 Indicates Wi-Fi fence information.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface WifiFence--><!--Device-geoLocationManager-export interface WifiFence-End-->
 
@@ -30,7 +30,7 @@ Indicates Wi-Fi fingerprint type.
 
 **Type:** [WifiFingerprintType](arkts-location-geolocationmanager-wififingerprinttype-e-sys.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates Wi-Fi features.
 
 **Type:** Array&lt;[WirelessSignalFeature](arkts-location-geolocationmanager-wirelesssignalfeature-i-sys.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

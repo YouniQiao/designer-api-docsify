@@ -14,7 +14,7 @@ function addFusionFence(fenceRequestParams: FusionFenceRequestParams): Promise<v
 
 Add a fusion fence.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.LOCATION
 

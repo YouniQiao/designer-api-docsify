@@ -22,8 +22,8 @@ import { appManager } from '@kit.AbilityKit';
 | --- | --- |
 | [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize-1) | 获取当前应用程序可以使用的最大内存（RAM）值。使用Promise异步回调。 |
 | [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize-2) | 获取当前应用程序可以使用的最大内存（RAM）值。使用callback异步回调。 |
-| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1) | 获取当前应用运行进程的相关信息。使用Promise异步回调。 |
-| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-2) | 获取当前应用运行进程的相关信息。使用callback异步回调。 |
+| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1) | 获取应用运行进程的相关信息。使用Promise异步回调。 |
+| [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-2) | 获取应用运行进程的相关信息。使用callback异步回调。 |
 | [isAppRunning](arkts-ability-appmanager-isapprunning-f.md#isapprunning-1) | 判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice-1) | 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。 |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice-2) | 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用callback异步回调。 |

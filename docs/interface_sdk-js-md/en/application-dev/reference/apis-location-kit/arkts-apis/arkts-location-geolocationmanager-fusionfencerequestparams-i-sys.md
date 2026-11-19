@@ -6,7 +6,7 @@ export interface FusionFenceRequestParams
 
 Indicates fusion fence request params.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface FusionFenceRequestParams--><!--Device-geoLocationManager-export interface FusionFenceRequestParams-End-->
 
@@ -30,7 +30,7 @@ Indicates CELL fence array.
 
 **Type:** Array&lt;[CellFence](arkts-location-geolocationmanager-cellfence-i-sys.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates expiration of the circular fence.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Indicates the callback for reporting the fence transition status.
 
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +90,7 @@ Indicates fusion fence type. This field is in bitmap format. Multiple types of f
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +110,7 @@ Indicates GNSS fence array.
 
 **Type:** Array&lt;[GnssFence](arkts-location-geolocationmanager-gnssfence-i-sys.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,7 +130,7 @@ Identifier of the fusion fence. The string format should be a valid unique ident
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,7 +150,7 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,7 +170,7 @@ Indicates geofence transition status monitored. This field is in bitmap format. 
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,7 +190,7 @@ Indicates the location of POI.
 
 **Type:** [Point](arkts-location-geolocationmanager-point-i.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,7 +210,7 @@ Indicates the type of POI.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,7 +230,7 @@ Indicates fusion fence scene.
 
 **Type:** [FusionFenceScene](arkts-location-geolocationmanager-fusionfencescene-e-sys.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,7 +250,7 @@ Indicates Wi-Fi fence array.
 
 **Type:** Array&lt;[WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

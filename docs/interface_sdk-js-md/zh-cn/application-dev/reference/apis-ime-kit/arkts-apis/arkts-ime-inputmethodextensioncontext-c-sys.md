@@ -97,7 +97,7 @@ connectAbility(want: Want, options: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 连接标识，用于后续断开连接。获取到标识并不代表连接成功，应通过options.onConnect或options.onFailed判断连接结果；本地调度或连接失败时上报错误码1。 |
+| number | 连接的数字标识，用于后续断开连接时传入。 |
 
 **错误码：**
 
@@ -202,7 +202,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 连接标识，用于后续断开连接。获取到标识并不代表连接成功，应通过options.onConnect或options.onFailed判断连接结果；本地调度或连接失败时上报错误码1。 |
+| number | 连接的数字标识，用于后续断开连接时传入。 |
 
 **错误码：**
 
@@ -493,7 +493,7 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-销毁输入法ExtensionAbility。使用callback异步回调。调用成功仅表示终止请求已被接受，生命周期处理将异步完成。
+销毁输入法ExtensionAbility。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -515,20 +515,13 @@ terminateSelf(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当销毁输入法应用成功时，err为undefined；否则为错误对象。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-
 ## terminateSelf
 
 ```TypeScript
 terminateSelf(): Promise<void>
 ```
 
-销毁输入法ExtensionAbility。使用Promise异步回调。调用成功仅表示终止请求已被接受，生命周期处理将异步完成。
+销毁输入法ExtensionAbility。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -549,10 +542,3 @@ terminateSelf(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |

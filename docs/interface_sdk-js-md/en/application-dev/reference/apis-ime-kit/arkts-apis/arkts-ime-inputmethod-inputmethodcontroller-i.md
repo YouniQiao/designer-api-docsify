@@ -4,11 +4,10 @@
 interface InputMethodController
 ```
 
-In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance. <br> <br>**InputMethodController** is the input method client controller, which provides foreground applications with core capabilities for interacting with the input method. After obtaining an instance through `inputMethod.getController()`, you can perform the following operations: <br> <br>- Attachment management: Use [attach](#attach-1) to establish attachment to the input method, and use [detach](#detach-1) to perform detachment. **attach** and **detach** must be used in pairs. <br>- Keyboard control: Use [showTextInput](#showtextinput-1) to start the soft keyboard and enter the editing state, and use [hideTextInput](#hidetextinput-1) to hide the soft keyboard and exit the editing state. **showTextInput** and **hideTextInput** must be used in pairs. <br>- Edit box state synchronization: Use APIs such as [updateCursor](#updatecursor-1), <br> <br>[changeSelection](#changeselection), and [updateAttribute](#updateattribute-1) to synchronize edit box state information such as the cursor, selection, and attributes with the input method. <br>- Event subscription: Use APIs such as **on('insertText')** and **on('deleteLeft')** to subscribe to text operation events sent by the input method application. <br> <br>Typical call sequence: `getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>  
-> **NOTE:** <br>
+In the following API examples, you need to use [getController]_[getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain the InputMethodController instance and then invoke the corresponding method through the instance. <br> <br>InputMethodController is an input method client controller that provides core capabilities for foreground applications to interact with input methods. After obtaining an instance through `inputMethod.getController()`, you can perform the following operations: <br> <br>- Binding management: Create a binding with the input method through [attach]_[attach](#attach-1). Run the [detach](#detach-1) command to unbind the user. The attach and detach functions must be used in pairs. <br>-Keyboard control: Press [showTextInput](#showtextinput-1) to start the soft keyboard and enter the editing state. Press [hideTextInput](#hidetextinput-1) to hide the soft keyboard and exit the editing state. showTextInput and hideTextInput must be used in pairs. <br>-Synchronize the editing box status: The [updateCursor](#updatecursor-1), [changeSelection](#changeselection) _, and [updateAttribute](#updateattribute-1) interfaces are used to synchronize the editing box status information such as the cursor, selection area, and attribute to the input method. <br>-Event subscription: The on('insertText') and on('deleteLeft') interfaces are used to subscribe to the text operation events sent by the input method application. <br> <br> Typical invoking sequence: `getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>  
+> ** Note: ** <br>
 > <br>
-> **attach** and **detach** must be used in pairs, and **showTextInput** and **hideTextInput** must be used in <br>
-> pairs. Otherwise, resource leaks or inconsistent states may occur.
+> attach and detach must be used together, and showTextInput and hideTextInput must be used together. Otherwise, resource leakage or status inconsistency may occur. In ArkTS dynamic calls, BusinessError 401 is thrown when an invalid event type or callback function is passed in on/off. When registering a listener, callback must be a function. When listening is canceled, if callback is not transferred or null or undefined is transferred, all callbacks of the event are removed. If other values are transferred, the event must be a function.
 
 **Since:** 6
 
@@ -28,19 +27,13 @@ import { inputMethod } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-Attaches a self-drawn component to the input method. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Establishes attachment between a self-drawn control and the input method application. This is the prerequisite for a self-drawn control to use input method features. <br> <br>Usage scenarios: When a self-drawn control (not a system native edit box) needs to interact with the input method, this API must be called first to establish attachment. When a native edit box gains focus, the system performs attachment automatically, and there is no need to call this API. <br> <br>Use effect: After the attachment succeeds, the self-drawn control can call **showTextInput**\/**hideTextInput** to control the keyboard visibility, and call **updateCursor**\/**changeSelection** to synchronize the edit box state, subscribe to input method events, and implement more features. <br> <br>Preconditions: The window where the self-drawn control resides must be in the focused state; otherwise, the attachment fails. <br> <br>Usage with related APIs: **attach** must be used in pairs with **detach**. Only after **attach** is called can APIs such as **showTextInput**, **hideTextInput**, and **updateCursor** be called. <br> <br>Differences between similar APIs and selection principles: <br> <br>- **attach**: does not require passing in a UIContext, and is applicable to self-drawn control attachment scenarios of API version 10 and later. <br>- **attachWithUIContext**: requires passing in a UIContext, and is applicable to stage model scenarios of API version 23 and later, supporting more attachment options. <br>- Selection principle: For stage model applications of API version 23 and later, use **attachWithUIContext** first to obtain more complete attachment option support. <br> <br>  
-> **NOTE:** <br>
+The self-drawn control is bound to the input method. Use the callback asynchronous callback. <br> <br> Meaning/Function: Establishing the binding relationship between the self-drawn control and the input method application is the prerequisite for the self-drawn control to use the input method function. <br> <br>Application scenario: When a self-drawn control(non-native edit box) needs to interact with the input method, this API must be called to bind the control. When the native editing box is focused, the system automatically binds the editing box. You do not need to call this interface. <br> <br>After the binding is successful, the self-drawn control can call showTextInput/hideTextInput to control the keyboard display and hiding, call updateCursor/changeSelection to synchronize the edit box status, and subscribe to input method events. <br> <br>Prerequisites/Pre-operations: The window where the self-drawn control is located must be in the focus state. Otherwise, the binding will fail. <br> <br>Cooperation/restriction relationship between related interfaces: attach and detach must be used together. Interfaces such as showTextInput, hideTextInput, and updateCursor can be called only after attach is called. <br> <br> Differences and selection principles of similar interfaces: <br> <br>- attach: UIContext does not need to be transferred, which is applicable to the scenario of binding self-drawn controls of API version 10 or later. <br>- attachWithUIContext: UIContext needs to be transferred, which is applicable to the stage model scenario of API version 23 and later and supports more binding options. <br>-Selection principle: For stage model applications of API version 23 and later, attachWithUIContext is preferred to obtain more complete binding options. <br> <br>  
+> **Note:** <br>
 > <br>
-> An input method can use the following features only when it has a self-drawn component attached to it: showing <br>
-> or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving <br>
-> the configuration information, and listening for and processing information or commands sent by the input <br>
-> method. <br>
+> You need to invoke this interface to bind the self-drawn control to the input method before using the following functions: Display/hide the keyboard, update the cursor information, change the selection range of the edit box, save the configuration information, listen to and process the information or commands sent by the input method application, and the like. <br>
 > <br>
-> If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2), <br>
-> the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
-> If you want to draw an input box in a non-focusable window, refer to <br>
-> [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> When the window where the self-drawing control is located is set to a non-focus window through <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2) <br> &gt;, the system cannot ensure that the self-drawing input control interacts with the input method properly. If you want to draw a text box in a non-focus window, see(../../../inputmethod/use-inputmethod-in-not-focusable-window.md). In the ArkTS dynamic call, when the operation queue is full or the queue times out, the binding is aborted and BusinessError 12800006 is returned through the error parameter of callback. Wait until the operation is complete before initiating another request. If an asynchronous task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code is also used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously. When a native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. When a native task cannot enter the queue or waits for execution times out, the session status is not changed.
 
 **Since:** 10
 
@@ -52,9 +45,9 @@ Attaches a self-drawn component to the input method. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound. <br> - true: show the keyboard. <br> - false: do not show the keyboard. |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the input method is bound successfully, err is undefined; otherwise, err is an error object. |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of attach. |
 
 **Error codes:**
 
@@ -62,6 +55,7 @@ Attaches a self-drawn component to the input method. This API uses an asynchrono
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | Input method controller error: the operation queue is full or the queue wait timed out (ArkTS dynamic only). |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -89,19 +83,14 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-Attaches a self-drawn component to the input method. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+The self-drawn control is bound to the input method. Use the promise asynchronous callback. <br> <br>  
+> **Note:** <br>
 > <br>
-> An input method can use the following features only when it has a self-drawn component attached to it: showing <br>
-> or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving <br>
-> the configuration information, and listening for and processing information or commands sent by the input <br>
-> method. <br>
+> You need to invoke this interface to bind the self-drawn control to the input method before using the following functions: Display/hide the keyboard, update the cursor information, change the selection range of the edit box, save configuration information, listen to and process information or commands sent by the input method application, and the like. <br>
 > <br>
-> If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2), <br>
-> the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
-> If you want to draw an input box in a non-focusable window, refer to <br>
-> [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> When the window where the self-drawing control is located is set to a non-focus window through <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2) <br> &gt;, the system cannot ensure that the self-drawing input control interacts with the input method properly. If you want to draw a text box in a non-focus window, see <br>
+> [Guide to Interaction Between Text Boxes and Input Methods in Non-focus Window](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). In ArkTS dynamic calls, when the action queue is full or the queue times out, the binding is aborted and BusinessError 12800006 is returned via Promise Reject. Wait until the operation is complete before initiating another request. If an asynchronous task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code is used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously. When a native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. If a native task cannot enter the queue or wait for execution times out, the session status is not changed.
 
 **Since:** 10
 
@@ -113,14 +102,14 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully. <br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -128,6 +117,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | Input method controller error: the operation queue is full or the queue wait timed out (ArkTS dynamic only). |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -153,19 +143,14 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-Attaches a self-drawn component to the input method. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+The self-drawn control is bound to the input method. Use the promise asynchronous callback. <br> <br>  
+> **Note:** <br>
 > <br>
-> An input method can use the following features only when it has a self-drawn component attached to it: showing <br>
-> or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving <br>
-> the configuration information, and listening for and processing information or commands sent by the input <br>
-> method. <br>
+> You need to invoke this interface to bind the self-drawn control to the input method before using the following functions: Display/hide the keyboard, update the cursor information, change the selection range of the edit box, save configuration information, listen to and process information or commands sent by the input method application, and the like. <br>
 > <br>
-> If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2), <br>
-> the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
-> If you want to draw an input box in a non-focusable window, refer to <br>
-> [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> When the window where the self-drawing control is located is set to a non-focus window through <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-2) <br> &gt;, the system cannot ensure that the self-drawing input control interacts with the input method properly. If you want to draw a text box in a non-focus window, see <br>
+> [Guide to Interaction Between Text Boxes and Input Methods in Non-focus Window](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). In ArkTS dynamic calls, when the action queue is full or the queue times out, the binding is aborted and BusinessError 12800006 is returned via Promise Reject. Wait until the operation is complete before initiating another request. If an asynchronous task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code is used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously. When a native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. If a native task cannot enter the queue or wait for execution times out, the session status is not changed.
 
 **Since:** 15
 
@@ -177,15 +162,15 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully. <br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
-| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting keyboard input. |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | requestKeyboardReason of show the keyboard . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -193,6 +178,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | Input method controller error: the operation queue is full or the queue wait timed out (ArkTS dynamic only). |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -220,13 +206,10 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-Attaches a self-drawn component to the input method. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+The self-drawn control is bound to the input method. Use the promise asynchronous callback. <br> <br>  
+> **Note:** <br>
 > <br>
-> An input method can use the following features only when it has a self-drawn component attached to it: showing <br>
-> or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving <br>
-> the configuration information, and listening for and processing the information or commands sent by the input <br>
-> method.
+> You need to invoke this interface to bind the self-drawn control to the input method before using the following functions: Display/hide the keyboard, update the cursor information, change the selection range of the edit box, save configuration information, listen to and process information or commands sent by the input method application, and the like. In ArkTS dynamic calls, when the action queue is full or the queue times out, the binding is aborted and BusinessError 12800006 is returned via Promise Reject. Wait until the operation is complete before initiating another request. If an asynchronous task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code is used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously. When a native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. If a native task cannot enter the queue or wait for execution times out, the session status is not changed.
 
 **Since:** 23
 
@@ -240,21 +223,22 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext instance. |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
-| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | Additional options for attaching. |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | indicates the ui context where the attachment will be performed. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | indicates the attach options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | Input method controller error: the operation queue is full or the queue wait timed out (ArkTS dynamic only). |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -283,11 +267,7 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 changeSelection(text: string, start: number, end: number, callback: AsyncCallback<void>): void
 ```
 
-Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to update the text selection information only after the edit box is attached to the <br>
-> input method.
+Notify the input method the selected text and the selection range of the current application text has changed.
 
 **Since:** 10
 
@@ -299,10 +279,10 @@ Updates the information about the selected text in this edit box, to notify the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Entire input text. |
-| start | number | Yes | Start position of the selected text. This parameter must be an integer greater than or equal to 0. |
-| end | number | Yes | End position of the selected text. This parameter must be an integer greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the text information is updated successfully, err is undefined; otherwise, it is an error object. |
+| text | string | Yes | the whole input text. |
+| start | number | Yes | start position of selected text. |
+| end | number | Yes | end position of selected text. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of changeSelection. |
 
 **Error codes:**
 
@@ -312,6 +292,7 @@ Updates the information about the selected text in this edit box, to notify the 
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -333,11 +314,7 @@ inputMethod.getController().changeSelection('text', 0, 5, (err: BusinessError) =
 changeSelection(text: string, start: number, end: number): Promise<void>
 ```
 
-Updates the information about the selected text in this edit box, to notify the input method when the selected text content or text range changes. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to update the text selection information only after the edit box is attached to the <br>
-> input method.
+Notify the input method the selected text and the selection range of the current application text has changed.
 
 **Since:** 10
 
@@ -349,15 +326,15 @@ Updates the information about the selected text in this edit box, to notify the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Entire input text. |
-| start | number | Yes | Start position of the selected text. This parameter must be an integer greater than or equal to 0. |
-| end | number | Yes | End position of the selected text. This parameter must be an integer greater than or equal to 0. |
+| text | string | Yes | the selected text. |
+| start | number | Yes | start position of selected text. |
+| end | number | Yes | end position of selected text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -367,6 +344,7 @@ Updates the information about the selected text in this edit box, to notify the 
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -386,7 +364,7 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 detach(callback: AsyncCallback<void>): void
 ```
 
-Detaches the self-drawn component from the input method. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Detaches the self-drawn control from the input method application and releases related resources. <br> <br>Usage scenarios: Called when the self-drawn control no longer needs to interact with the input method (for example, page switching, edit box destruction, etc.). <br> <br>Use effect: After detachment, APIs that require the attached state, such as **showTextInput**, **hideTextInput**, and **updateCursor**, can no longer be called. The input method soft keyboard will be hidden. <br> <br>Usage with related APIs: **detach** must be used in pairs with **attach**. It is recommended that you call **detach** after **hideTextInput**. The complete flow is: **attach** → **showTextInput** → **hideTextInput** → **detach**.
+Unbind the self-drawn control from the input method. Use callback asynchronous callback. <br> <br> Meaning/Function: Unbinds the self-drawn control from the input method application and releases related resources. <br> <br>Application scenario: The self-drawn control is invoked when it does not need to interact with the input method(for example, the page is switched or the edit box is destroyed). <br> <br> Effect: After the binding is unbound, interfaces that require the binding status, such as showTextInput, hideTextInput, and updateCursor, cannot be invoked. The IME soft keyboard will be hidden. <br> <br>Cooperation/restriction relationship between related interfaces: detach must be used with attach. You are advised to invoke detach after hideTextInput. The complete process is attach → showTextInput → hideTextInput → detach. When the native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. If a native task fails to enter the queue or waits for execution times out, the session status is not changed.
 
 **Since:** 10
 
@@ -398,7 +376,7 @@ Detaches the self-drawn component from the input method. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. When the input method is unbound successfully, err is undefined; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of detach. |
 
 **Error codes:**
 
@@ -427,7 +405,7 @@ inputMethod.getController().detach((err: BusinessError) => {
 detach(): Promise<void>
 ```
 
-Detaches the self-drawn component from the input method. This API uses a promise to return the result. <br> <br>Meaning/Function: Detaches the self-drawn control from the input method application and releases related resources. <br> <br>Usage scenarios: Called when the self-drawn control no longer needs to interact with the input method. <br> <br>Use effect: After detachment, APIs that require the attached state can no longer be called. The input method soft keyboard will be hidden. <br> <br>Usage with related APIs: **detach** must be used in pairs with **attach**.
+Unbind the self-drawn control from the input method. Use the promise asynchronous callback. <br> <br> Meaning/Function: Unbinds the self-drawn control from the input method application and releases related resources. <br> <br> Usage scenario: The self-drawn control is invoked when it does not need to interact with the input method. <br> <br> Effect: After the binding is unbound, the interface that needs to be bound cannot be invoked. The IME soft keyboard will be hidden. <br> <br>Cooperation/restriction relationship between related interfaces: detach must be used with attach. When a native layer bind or unbind operation cannot be performed in sequence, the operation is aborted and BusinessError 12800003 is returned. When a native task cannot enter the queue or waits for execution times out, the session status is not changed.
 
 **Since:** 10
 
@@ -439,7 +417,7 @@ Detaches the self-drawn component from the input method. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -1908,13 +1886,12 @@ Requests system input capability. This API uses a promise to return the result. 
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
+Send a custom communication to an IME application. Use Promise asynchronous callbacks. <br> <br>  
+> **Note:** <br>
 > <br>
-> This API can be called only when the edit box is attached to the input method and enters the edit mode, and the <br>
-> input method application is in full experience mode. <br>
+> This interface can be invoked only when the edit box is bound to the input method and the input method is in full experience mode. <br>
 > <br>
-> The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
+> The maximum size of msgId is 256 bytes, and the maximum size of msgParam is 128 KB. In the ArkTS dynamic call, if the operation queue is full or the queue times out, the message sending is aborted and BusinessError 12800003 is returned through Promise rejection. Wait until the operation is complete before initiating another request. If an asynchronous task fails to be created or a framework report fails to be submitted, use BusinessError 12800008. This error code is also used when an operation is canceled if there is no dedicated error code for the operation. If the asynchronous input or result return channel cannot be prepared and there are no pending exceptions, the BusinessError 12800008 is thrown synchronously.
 
 **Since:** 15
 
@@ -1926,21 +1903,22 @@ Sends the custom communication to the input method application. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | Identifier of the custom data to be sent to the input method application. |
-| msgParam | ArrayBuffer | No | Message body of the custom data to be sent to the input method application. |
+| msgId | string | Yes | the identifier of the message. Max size is 256B. |
+| msgParam | ArrayBuffer | No | the param of the custom message. Max size is 128KB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:                 1. Incorrect parameter types. 2. Incorrect parameter length. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800014](../errorcode-inputmethod-framework.md#12800014-non-full-access-mode-of-the-input-method-application) | the input method is in basic mode. |
 | [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
@@ -1966,14 +1944,7 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to set the window that avoids the soft keyboard only after the edit box is attached to <br>
-> the input method. <br>
-> <br>
-> Pass in the window ID of the application attached to the input method. This window can avoid the input method <br>
-> window.
+Inform the system of the window ID of the application currently bound to the input method. After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
 
@@ -1985,8 +1956,8 @@ Sets the window to be avoided by the input method. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID of the application attached to the input method. This parameter must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the setting is successful, err is undefined; otherwise, it is an error object. |
+| windowId | number | Yes | the window ID of the application currently bound to the input method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCallingWindow. |
 
 **Error codes:**
 
@@ -1996,6 +1967,7 @@ Sets the window to be avoided by the input method. This API uses an asynchronous
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -2018,11 +1990,7 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 setCallingWindow(windowId: number): Promise<void>
 ```
 
-Sets the window to avoid the soft keyboard. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> After the window ID of the application bound to the input method is passed in the API, the input method window <br>
-> will not cover the window holding the application.
+Inform the system of the window ID of the application currently bound to the input method. After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
 
@@ -2034,13 +2002,13 @@ Sets the window to avoid the soft keyboard. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | ID of the window holding the application bound to the input method application. The value must be an integer. |
+| windowId | number | Yes | the window ID of the application currently bound to the input method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2050,6 +2018,7 @@ Sets the window to avoid the soft keyboard. This API uses a promise to return th
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -2402,7 +2371,7 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 ```
 
-Updates the attribute information of this edit box. This API uses an asynchronous callback to return the result.
+Update InputAttribute information of input text.
 
 **Since:** 10
 
@@ -2414,8 +2383,8 @@ Updates the attribute information of this edit box. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | Text box attribute object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. When the text box attribute information is updated successfully, err is undefined; otherwise, it is an error object. |
+| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | the InputAttribute object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateAttribute. |
 
 **Error codes:**
 
@@ -2425,6 +2394,7 @@ Updates the attribute information of this edit box. This API uses an asynchronou
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -2447,11 +2417,7 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
 updateAttribute(attribute: InputAttribute): Promise<void>
 ```
 
-Updates the attribute information of this edit box. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to update the text box attribute information only after the text box is attached to the <br>
-> input method.
+Update InputAttribute information of input text.
 
 **Since:** 10
 
@@ -2463,13 +2429,13 @@ Updates the attribute information of this edit box. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | Text box attribute object. |
+| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | the InputAttribute object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2479,6 +2445,7 @@ Updates the attribute information of this edit box. This API uses a promise to r
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -2499,11 +2466,7 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
 updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 ```
 
-Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to update the cursor information only after the edit box is attached to the input <br>
-> method.
+Update Cursor and notify the input method that the current application cursor has changed.
 
 **Since:** 10
 
@@ -2515,8 +2478,8 @@ Updates the cursor information in this edit box. This API can be called to notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | Cursor information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the cursor information is updated successfully, err is undefined; otherwise, it is an error object. |
+| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | the CursorInfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateCursor. |
 
 **Error codes:**
 
@@ -2526,6 +2489,7 @@ Updates the cursor information in this edit box. This API can be called to notif
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 
@@ -2553,11 +2517,7 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
 updateCursor(cursorInfo: CursorInfo): Promise<void>
 ```
 
-Updates the cursor information in this edit box. This API can be called to notify the input method of the cursor changes. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called to update the cursor information only after the edit box is attached to the input <br>
-> method.
+Update Cursor and notify the input method that the current application cursor has changed.
 
 **Since:** 10
 
@@ -2569,13 +2529,13 @@ Updates the cursor information in this edit box. This API can be called to notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | Cursor information. |
+| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | the CursorInfo object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2585,6 +2545,7 @@ Updates the cursor information in this edit box. This API can be called to notif
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 
 **Examples**
 

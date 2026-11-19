@@ -45,7 +45,7 @@ Enumerates the error codes used by the media framework.
 | AV_ERR_OPERATE_NOT_PERMIT = 2 | operation not permitted.<br>**Since**: 9 |
 | AV_ERR_INVALID_VAL = 3 | invalid argument.<br>**Since**: 9 |
 | AV_ERR_IO = 4 | IO error.<br>**Since**: 9 |
-| AV_ERR_TIMEOUT = 5 | network timeout.<br>**Since**: 9 |
+| AV_ERR_TIMEOUT = 5 | timeout.<br>**Since**: 9 |
 | AV_ERR_UNKNOWN = 6 | unknown error.<br>**Since**: 9 |
 | AV_ERR_SERVICE_DIED = 7 | media service died.<br>**Since**: 9 |
 | AV_ERR_INVALID_STATE = 8 | the state is not support this operation.<br>**Since**: 9 |
@@ -72,6 +72,6 @@ Enumerates the error codes used by the media framework.
 | AV_ERR_STREAM_CHANGED = 5410005 | Signals a stream format change in synchronous mode. Required follow-up actions: - For video encoders: Call [OH_VideoEncoder_GetOutputDescription](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_getoutputdescription) - For video decoders: Call [OH_VideoDecoder_GetOutputDescription](capi-native-avcodec-videodecoder-h.md#oh_videodecoder_getoutputdescription) - For audio decoders : Call [OH_AudioCodec_GetOutputDescription](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_getoutputdescription) to retrieve updated stream configuration.<br>**Since**: 20 |
 | AV_ERR_TRY_AGAIN_LATER = 5410006 | Indicates temporary buffer query failure in synchronous mode, it's recommended to wait and retry the operation after a short interval.<br>**Since**: 20 |
 | AV_ERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003 | Super-resolution unsupported.<br>**Since**: 23 |
-| AV_ERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004 | No PlaybackStrategy set to enable super-resolution feature.<br>**Since**: 23 |
+| AV_ERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004 | Super resolution is not enabled.<br>**Since**: 23 |
 
 

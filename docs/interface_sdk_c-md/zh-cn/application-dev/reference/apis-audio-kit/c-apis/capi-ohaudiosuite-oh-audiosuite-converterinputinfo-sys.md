@@ -1,4 +1,4 @@
-# OH_AudioSuite_ConverterInputInfo
+# OH_AudioSuite_ConverterInputInfo（系统接口）
 
 ```c
 typedef struct OH_AudioSuite_ConverterInputInfo {...} OH_AudioSuite_ConverterInputInfo
@@ -14,9 +14,11 @@ typedef struct OH_AudioSuite_ConverterInputInfo {...} OH_AudioSuite_ConverterInp
 
 **起始版本：** 26.1.0
 
+**系统接口：** 此接口为系统接口。
+
 **相关模块：** [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
-**所在头文件：** [native_audio_converter.h](capi-native-audio-converter-h.md)
+**所在头文件：** [native_audio_converter.h（系统接口）](capi-native-audio-converter-h-sys.md)
 
 ## 汇总
 

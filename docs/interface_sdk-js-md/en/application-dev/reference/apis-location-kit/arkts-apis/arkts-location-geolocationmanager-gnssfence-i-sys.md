@@ -6,7 +6,7 @@ export interface GnssFence
 
 Indicates GNSS fence information.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export interface GnssFence--><!--Device-geoLocationManager-export interface GnssFence-End-->
 
@@ -30,7 +30,7 @@ Indicates circular fence.
 
 **Type:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates GNSS fence type. The value range of this field is as follows: [GnssFen
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Indicates polygonal fence.
 
 **Type:** Array&lt;[Point](arkts-location-geolocationmanager-point-i.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

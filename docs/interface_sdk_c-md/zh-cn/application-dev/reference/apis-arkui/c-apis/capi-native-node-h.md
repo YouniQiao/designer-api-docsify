@@ -185,8 +185,8 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Set the subnode mounting policy of the target node. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | 获取目标节点当前的子节点挂载策略。目标节点的默认子节点挂载策略为OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE。 |
 | [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | 设置UI Dvsync开关。开启后系统会更及时地响应Vsync请求，更频繁执行渲染任务。通常在自渲染框架中动效开始时使能，结束后关闭，以确保动画效果更加流畅，同时避免频繁的Vsync影响其他业务。在非UI线程上调用此函数将导致应用退出。 |
-| [int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_NodeHandle child, OH_ArkUI_AdoptPolicy policy)](#oh_arkui_nativemodule_adoptchildwithpolicy) | - | 当前节点接纳目标节点为附属节点。被接纳的节点不能已有父节点。调用该接口实际上不会将其添加为子节点。 而是仅允许其接收对应子节点的生命周期回调。通过策略配置被接纳节点的浮层节点渲染位置。 |
-| [int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_NodeHandle adoptedChild, const ArkUI_PointF* compensationOffset, const ArkUI_Matrix4* compensationTransform)](#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation) | - | 设置从被接纳的子节点到接纳其的父节点件的位置补偿。此补偿代表了它们之间的纯渲染节点树的总体影响。首先通过 compensationOffset平移 然后通过CompensationTransform 进行变换。补偿只有当子节点已通过以下策略被接纳时才生效： [OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN](capi-native-node-h.md#oh_arkui_adoptpolicy)。 |
+| [int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_NodeHandle child, OH_ArkUI_AdoptPolicy policy)](#oh_arkui_nativemodule_adoptchildwithpolicy) | - | 当前节点接纳目标节点为附属节点。被接纳的节点不能已有父节点。调用该接口实际上不会将其添加为子节点， 而是仅允许其接收对应子节点的生命周期回调。通过策略配置被接纳节点的浮层节点渲染位置。 |
+| [int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_NodeHandle adoptedChild, const ArkUI_PointF* compensationOffset, const ArkUI_Matrix4* compensationTransform)](#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation) | - | 设置从被接纳的子节点到接纳其的父节点间的位置补偿。此补偿代表了它们之间的纯渲染节点树的总体影响。 compensationOffset是纯渲染节点的累计偏移量补偿，只包含每个节点的偏移。compensationTransform是纯渲染节点的累计变换补偿矩阵， 包含每个节点的偏移、旋转和缩放等变换。补偿只有当子节点已通过以下策略被接纳时才生效： [OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN](capi-native-node-h.md#oh_arkui_adoptpolicy)。 |
 
 ## 枚举类型说明
 
@@ -386,7 +386,7 @@ enum OH_ArkUI_AdoptPolicy
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0 | 被接纳节点的浮层节点基于接纳此节点的寄养父节点链计算显示位置，并在每个接纳边距应用开发者提供的补偿。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0 | 被接纳节点的浮层节点基于接纳此节点的寄养父节点链计算显示位置，并在每个接纳边界应用开发者调用 [OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation](capi-native-node-h.md#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation)接口提供的补偿。<br>**起始版本：** 26.1.0 |
 
 
 ## 函数说明
@@ -3982,7 +3982,7 @@ int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_
 
 **描述：**
 
-当前节点接纳目标节点为附属节点。被接纳的节点不能已有父节点。调用该接口实际上不会将其添加为子节点。 而是仅允许其接收对应子节点的生命周期回调。通过策略配置被接纳节点的浮层节点渲染位置。
+当前节点接纳目标节点为附属节点。被接纳的节点不能已有父节点。调用该接口实际上不会将其添加为子节点， 而是仅允许其接收对应子节点的生命周期回调。通过策略配置被接纳节点的浮层节点渲染位置。
 
 <!--Device-int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_NodeHandle child, OH_ArkUI_AdoptPolicy policy)--><!--Device-int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_NodeHandle child, OH_ArkUI_AdoptPolicy policy)-End-->
 
@@ -3994,15 +3994,15 @@ int32_t OH_ArkUI_NativeModule_AdoptChildWithPolicy(ArkUI_NodeHandle node, ArkUI_
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | [in] ArkUI_NodeHandle指针, 指定待接纳节点的父节点。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | [in] ArkUI_NodeHandle指针, 指定被接纳的子节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | [in] ArkUI_NodeHandle指针，指定待接纳节点的父节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | [in] ArkUI_NodeHandle指针，指定待被接纳的子节点。 |
 | [OH_ArkUI_AdoptPolicy](capi-native-node-h.md#oh_arkui_adoptpolicy) policy | [in] 被接纳节点的浮层节点渲染位置策略。有效值对应[OH_ArkUI_AdoptPolicy](capi-native-node-h.md#oh_arkui_adoptpolicy)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回值. <ul><li>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果CAPI初始化失败，返回[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果被接纳的节点已有父节点，返回[ARKUI_ERROR_CODE_NODE_HAS_PARENT](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点无法被接纳为附属节点，返回[ARKUI_ERROR_CODE_NODE_CAN_NOT_BE_ADOPTED](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点无法接纳其他附属节点，返回[ARKUI_ERROR_CODE_NODE_CAN_NOT_ADOPT_TO](capi-error-code-h.md#arkui_errorcode)。</li></ul> |
+| int32_t | 返回值。<ul><li>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果CAPI初始化失败，返回[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果被接纳的节点已有父节点，返回[ARKUI_ERROR_CODE_NODE_HAS_PARENT](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点无法被接纳为附属节点，返回[ARKUI_ERROR_CODE_NODE_CAN_NOT_BE_ADOPTED](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点无法接纳其他附属节点，返回[ARKUI_ERROR_CODE_NODE_CAN_NOT_ADOPT_TO](capi-error-code-h.md#arkui_errorcode)。</li></ul> |
 
 ### OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation()
 
@@ -4012,7 +4012,7 @@ int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_N
 
 **描述：**
 
-设置从被接纳的子节点到接纳其的父节点件的位置补偿。此补偿代表了它们之间的纯渲染节点树的总体影响。首先通过 compensationOffset平移 然后通过CompensationTransform 进行变换。补偿只有当子节点已通过以下策略被接纳时才生效： [OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN](capi-native-node-h.md#oh_arkui_adoptpolicy)。
+设置从被接纳的子节点到接纳其的父节点间的位置补偿。此补偿代表了它们之间的纯渲染节点树的总体影响。 compensationOffset是纯渲染节点的累计偏移量补偿，只包含每个节点的偏移。compensationTransform是纯渲染节点的累计变换补偿矩阵， 包含每个节点的偏移、旋转和缩放等变换。补偿只有当子节点已通过以下策略被接纳时才生效： [OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN](capi-native-node-h.md#oh_arkui_adoptpolicy)。
 
 <!--Device-int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_NodeHandle adoptedChild, const ArkUI_PointF* compensationOffset, const ArkUI_Matrix4* compensationTransform)--><!--Device-int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_NodeHandle adoptedChild, const ArkUI_PointF* compensationOffset, const ArkUI_Matrix4* compensationTransform)-End-->
 
@@ -4024,14 +4024,14 @@ int32_t OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation(ArkUI_N
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) adoptedChild | [in] 需要进行位置补偿的被接纳节点. |
-| const ArkUI_PointF* compensationOffset | [in] x/y 偏移量补偿（以像素为单位）. |
-| const ArkUI_Matrix4* compensationTransform | [in] 聚合变换补偿. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) adoptedChild | [in] 需要进行位置补偿的被接纳节点。 |
+| const ArkUI_PointF* compensationOffset | [in] x/y 补偿偏移量（以像素为单位）。 |
+| const ArkUI_Matrix4* compensationTransform | [in] 聚合变换补偿矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回值. <ul><li>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果CAPI初始化失败，返回[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果参数异常，返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点没有按要求的策略被接纳，返回 [ARKUI_ERROR_CODE_NODE_IS_NOT_IN_ADOPTED_CHILDREN](capi-error-code-h.md#arkui_errorcode)。</li></ul> |
+| int32_t | 返回值。<ul><li>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果CAPI初始化失败，返回[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果参数异常，返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果节点没有按要求的策略被接纳，返回 [ARKUI_ERROR_CODE_NODE_IS_NOT_IN_ADOPTED_CHILDREN](capi-error-code-h.md#arkui_errorcode)。</li></ul> |
 
 

@@ -6,7 +6,7 @@ export enum WifiFingerprintType
 
 Enum for Wi-Fi fingerprint type.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-geoLocationManager-export enum WifiFingerprintType--><!--Device-geoLocationManager-export enum WifiFingerprintType-End-->
 
@@ -22,7 +22,7 @@ LOCATION = 2
 
 Indicates the Wi-Fi fingerprint corresponding to a location.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ SEMANTIC = 1
 
 Indicates the Wi-Fi fingerprint of semantic information.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

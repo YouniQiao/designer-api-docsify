@@ -531,7 +531,7 @@ off(
     ): void
 ```
 
-Disables listening for the input method and subtype change event. This API uses an asynchronous callback to return the result.
+Unsubscribe from input method and subtype change listening events. Use the callback asynchronous callback. If the remote cleanup fails, the removed local callback will not be recovered.
 
 **Since:** 9
 
@@ -543,8 +543,14 @@ Disables listening for the input method and subtype change event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | Set the listening type. The value is fixed to 'imeChange'. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback used to return the unsubscribed input method attribute object and subtype object. |
+| type | 'imeChange' | Yes | Indicates the event type. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | the callback of 'imeChange', when subscriber unsubscribes all callback functions of event 'imeChange', this parameter can be left blank. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
 
@@ -561,7 +567,7 @@ on(
     ): void
 ```
 
-Enables listening for the input method and subtype change event. This API uses an asynchronous callback to return the result.
+Subscribe input method or subtype change.
 
 **Since:** 9
 
@@ -573,8 +579,14 @@ Enables listening for the input method and subtype change event. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | Type of the listener to set. The value is fixed at 'imeChange'. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method attribute object and subtype object. |
+| type | 'imeChange' | Yes | Indicates the event type. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | the callback of 'imeChange' |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
 
