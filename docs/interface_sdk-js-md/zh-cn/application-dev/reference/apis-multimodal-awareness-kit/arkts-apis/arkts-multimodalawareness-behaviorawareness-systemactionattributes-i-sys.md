@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 adjustment?: AdjustmentDirection
 ```
 
-调节方向（brightness/volume 增量调节时用）。
+调节方向（brightness/volume 增量调节时用）。默认值：空。
 
 **类型：** [AdjustmentDirection](arkts-multimodalawareness-behaviorawareness-adjustmentdirection-e-sys.md)
 
@@ -106,7 +106,7 @@ operation: Operation
 packageName?: string
 ```
 
-应用包名。
+应用包名。默认值：空。
 
 **类型：** string
 
@@ -126,7 +126,7 @@ packageName?: string
 soundMode?: SoundMode
 ```
 
-声音模式。
+声音模式。默认值：空。
 
 **类型：** [SoundMode](arkts-multimodalawareness-behaviorawareness-soundmode-e-sys.md)
 
@@ -146,7 +146,7 @@ soundMode?: SoundMode
 value?: number
 ```
 
-绝对值表示亮度或音量的固定值。单位为：占比。取值应为[0,100]内的整数。默认值：默认值为0。
+绝对值表示亮度或音量的固定值。单位：%。取值应为[0,100]内的整数。默认值：空。
 
 **类型：** number
 

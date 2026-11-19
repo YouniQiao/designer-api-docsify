@@ -327,7 +327,7 @@ Reads the top proportion colors from the image, with the number specified by col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorCount | number | Yes | Number of colors to extract, rounded down. Before OpenHarmony 6.1, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since OpenHarmony 6.1, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
+| colorCount | number | Yes | Number of colors to extract, rounded down. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
 
 **Return value:**
 

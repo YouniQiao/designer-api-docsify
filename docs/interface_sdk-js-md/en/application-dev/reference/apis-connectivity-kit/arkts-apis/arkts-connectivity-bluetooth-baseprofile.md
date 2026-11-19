@@ -1,4 +1,4 @@
-# @ohos.bluetooth.baseProfile
+# @ohos.bluetooth.baseProfile(Bluetooth baseProfile module)
 
 Provides basic profile methods.
 

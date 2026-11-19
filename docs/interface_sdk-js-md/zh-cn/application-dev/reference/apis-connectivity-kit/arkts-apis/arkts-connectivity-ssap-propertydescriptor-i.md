@@ -44,7 +44,7 @@ descriptorType: PropertyDescriptorType
 isWriteable?: boolean
 ```
 
-表示描述符是否是可写的。true：可写，false：不可写。默认值为true。
+表示描述符是否可写。true：可写，false：不可写。默认值为true。
 
 **类型：** boolean
 
@@ -84,7 +84,7 @@ propertyUuid: string
 serviceUuid: string
 ```
 
-星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。
+星闪服务UUID，36个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。
 
 **类型：** string
 

@@ -44,8 +44,8 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -88,8 +88,8 @@ client端主动发起和server蓝牙设备的GATT协议连接。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -132,8 +132,8 @@ client可通过订阅[on('BLEConnectionStateChange')](#onbleconnectionstatechang
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -178,8 +178,8 @@ getConnectedState(): ProfileConnectionState
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -228,9 +228,8 @@ client获取server端设备名称。使用Callback异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
@@ -290,9 +289,8 @@ client获取server端设备名称。使用Promise异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter.Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
@@ -352,9 +350,8 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20 - 21 |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established.<br>**适用版本：** 20+ |
@@ -408,9 +405,8 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20 - 21 |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established.<br>**适用版本：** 20+ |
@@ -440,17 +436,17 @@ client获取server端支持的所有服务能力，即服务发现流程。使�
 
 需先调用[connect](arkts-connectivity-ble-gattserver-i.md#connect)方法，等GATT profile连接成功后才能使用。应用调用该方法后，才能调用其他读写特征值、描述符等其他方法，且需确保server支持的服务能力中包含需要操作的特征值或描述符。包含接口如下所示：
 
-readCharacteristicValue
+[readCharacteristicValue](#readcharacteristicvalue-1)
 
 [readDescriptorValue](#readdescriptorvalue-1)
 
-writeCharacteristicValue
+[writeCharacteristicValue](#writecharacteristicvalue-1)
 
 [writeDescriptorValue](#writedescriptorvalue-1)
 
-setCharacteristicChangeNotification
+[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)
 
-setCharacteristicChangeIndication
+[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)
 
 **起始版本：** 10
 
@@ -474,9 +470,8 @@ setCharacteristicChangeIndication
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
@@ -545,9 +540,8 @@ client端获取server端支持的所有服务能力，即服务发现流程。�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
@@ -605,9 +599,8 @@ client端取消订阅server端特征值变化事件。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -652,9 +645,8 @@ client端取消订阅GATT profile协议的连接状态变化事件。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -699,9 +691,8 @@ client端取消订阅MTU（最大传输单元）大小变更事件。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -746,8 +737,8 @@ client端设备取消订阅server端设备服务变化的通知事件。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -788,14 +779,14 @@ offBlePhyUpdate(callback?: Callback<PhyValue>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与[onBlePhyUpdate](arkts-connectivity-ble-gattserver-i.md#onblephyupdate)中的回调函数一致，若无传参，则取消订阅所有物理通道类型变更的回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与[onBlePhyUpdate](arkts-connectivity-ble-gattserver-i.md#onblephyupdate)中的回调函数一致。若无传参，则取消订阅所有物理通道类型变更的回调函数通知。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -811,6 +802,37 @@ try {
 }
 ```
 
+## offCongestionChange
+
+```TypeScript
+offCongestionChange(callback?: Callback<CongestionChangeState>): void
+```
+
+去订阅GATT流控拥塞状态改变事件。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-offCongestionChange(callback?: Callback<CongestionChangeState>): void--><!--Device-GattClientDevice-offCongestionChange(callback?: Callback<CongestionChangeState>): void-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md)&gt; | 否 | 用于监听拥塞状态的回调更改事件。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
+
 ## on('BLECharacteristicChange')
 
 ```TypeScript
@@ -819,7 +841,7 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 
 client端订阅server端特征值变化事件。使用Callback异步回调。
 
-需调用setCharacteristicChangeNotification或者setCharacteristicChangeIndication，且启用通知或者指示能力后，才能接收到server端的特征值内容变更通知或者指示。
+需调用[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)或者[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)，且启用通知或者指示能力后，才能接收到server端的特征值内容变更通知或者指示。
 
 **起始版本：** 10
 
@@ -844,9 +866,8 @@ client端订阅server端特征值变化事件。使用Callback异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -896,9 +917,8 @@ client端订阅GATT profile协议的连接状态变化事件。使用Callback异
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -947,9 +967,8 @@ client端订阅MTU（最大传输单元）大小变更事件。使用Callback异
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -996,8 +1015,8 @@ client端设备订阅server端设备服务变化的通知事件，使用Callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -1038,14 +1057,14 @@ onBlePhyUpdate(callback: Callback<PhyValue>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | 是 | 指定订阅的回调函数，会携带变更后最新的物理通道类型。当本端server调用[setPhy](arkts-connectivity-ble-gattserver-i.md#setphy)或对端变更当前物理通道类型后，如订阅此事件，均会收到携带最新物理通道类型的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | 是 | 指定订阅的回调函数，会携带变更后最新的物理通道类型。当本端client调用[setPhy](arkts-connectivity-ble-gattserver-i.md#setphy)或对端变更当前物理通道类型后，如订阅此事件，均会收到携带最新物理通道类型的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 
 **示例**
 
@@ -1061,6 +1080,39 @@ try {
 }
 ```
 
+## onCongestionChange
+
+```TypeScript
+onCongestionChange(callback: Callback<CongestionChangeState>): void
+```
+
+订阅GATT流控拥塞状态改变事件。
+
+当该设备的GATT连接进入或退出拥塞状态时，会调用该回调。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-onCongestionChange(callback: Callback<CongestionChangeState>): void--><!--Device-GattClientDevice-onCongestionChange(callback: Callback<CongestionChangeState>): void-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md)&gt; | 是 | 用于监听拥塞状态的回调更改事件。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1069,7 +1121,7 @@ readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallba
 
 client端从指定的server端特征值读取数据。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。读取特征值过程中，需确保[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)入参特征值的serviceUuid、characteristicUuid准确。characteristicValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的特征值数据内容。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。读取特征值过程中，需确保[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)入参特征值的serviceUuid、characteristicUuid准确。characteristicValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的特征值数据内容。
 
 **起始版本：** 10
 
@@ -1094,9 +1146,9 @@ client端从指定的server端特征值读取数据。使用Callback异步回调
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1152,7 +1204,7 @@ readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacter
 
 client端从指定的server端特征值读取数据。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。读取特征值过程中，需确保[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)入参特征值的serviceUuid、characteristicUuid准确。characteristicValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的特征值数据内容。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。读取特征值过程中，需确保[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)入参特征值的serviceUuid、characteristicUuid准确。characteristicValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的特征值数据内容。
 
 **起始版本：** 10
 
@@ -1180,9 +1232,9 @@ client端从指定的server端特征值读取数据。使用Promise异步回调�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1229,7 +1281,7 @@ readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescri
 
 client端从指定的server端描述符读取数据。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。读取描述符过程中，需确保[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)入参描述符的serviceUuid、characteristicUuid、descriptorUuid准确。descriptorValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的描述符数据内容。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。读取描述符过程中，需确保[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)入参描述符的serviceUuid、characteristicUuid、descriptorUuid准确。descriptorValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的描述符数据内容。
 
 **起始版本：** 10
 
@@ -1252,9 +1304,9 @@ client端从指定的server端描述符读取数据。使用Callback异步回调
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1303,7 +1355,7 @@ readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
 
 client端从指定的server端描述符读取数据。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。读取描述符过程中，需确保[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)入参描述符的serviceUuid、characteristicUuid、descriptorUuid准确。descriptorValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的描述符数据内容。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会读取失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。读取描述符过程中，需确保[BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)入参描述符的serviceUuid、characteristicUuid、descriptorUuid准确。descriptorValue表示的数据内容长度可由用户任意指定，不会影响实际读取到的描述符数据内容。
 
 **起始版本：** 10
 
@@ -1331,9 +1383,9 @@ client端从指定的server端描述符读取数据。使用Promise异步回调�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1395,8 +1447,8 @@ readPhy(): Promise<PhyValue>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established. |
@@ -1411,6 +1463,71 @@ try {
     });
 } catch (err) {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+## refreshServices
+
+```TypeScript
+refreshServices(): Promise<void>
+```
+
+刷新已连接的BLE外围设备的服务缓存。
+
+对端设备缓存的业务被清除，刷新后重新发现。承诺是当刷新请求被传递到服务时，重新发现将异步进行。调用getServices获取刷新后的服务列表。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-refreshServices(): Promise<void>--><!--Device-GattClientDevice-refreshServices(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
+| [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
+| [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let device: ble.GattClientDevice = ble.createGattClientDevice('11:22:33:44:55:66');
+// 订阅连接状态：GATT连接成功后刷新服务信息，并获取刷新后的服务列表
+let connectStateChanged = (state: ble.BLEConnectionChangeState) => {
+    if (state.state === constant.ProfileConnectionState.STATE_CONNECTED) {
+        device.refreshServices().then(() => {
+            console.info('Succeeded in refreshing services.');
+            device.getServices().then((services: Array<ble.GattService>) => {
+                console.info(`Succeeded in getting services, services is ${JSON.stringify(services)}`);
+            }).catch((err: BusinessError) => {
+                console.error(`Failed to get services. Code is ${err.code}, message is ${err.message}`);
+            });
+        }).catch((err: BusinessError) => {
+            console.error(`Failed to refresh services. Code is ${err.code}, message is ${err.message}`);
+        });
+    }
+};
+device.on('BLEConnectionStateChange', connectStateChanged);
+try {
+    device.connect();
+} catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to connect. Code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -1452,8 +1569,8 @@ client端同server端协商MTU（最大传输单元）大小。与[setBLEMtuSize
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established. |
@@ -1503,9 +1620,8 @@ client端同server端协商MTU（最大传输单元）大小。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
@@ -1533,7 +1649,7 @@ setCharacteristicChangeIndication(
 
 client端启用或者禁用接收server端特征值内容变更指示的能力。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。
 
 **起始版本：** 10
 
@@ -1559,9 +1675,9 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1605,7 +1721,7 @@ setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boo
 
 client端启用或者禁用接收server端特征值内容变更指示的能力。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。
 
 **起始版本：** 10
 
@@ -1636,9 +1752,9 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1680,7 +1796,7 @@ setCharacteristicChangeNotification(
 
 client端启用或者禁用接收server端特征值内容变更通知的能力。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。
 
 **起始版本：** 10
 
@@ -1706,9 +1822,9 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1752,7 +1868,7 @@ setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: b
 
 client端启用或者禁用接收server端特征值内容变更通知的能力。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。
 
 **起始版本：** 10
 
@@ -1783,9 +1899,9 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1851,8 +1967,8 @@ client端设置连接链路的物理通道类型。使用Promise异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established. |
@@ -1908,8 +2024,8 @@ updateConnectionParam(param: ConnectionParam): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -1939,7 +2055,7 @@ writeCharacteristicValue(
 
 client端向指定的server端特征值写入数据。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。应用单次可写入的特征值数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的特征值数据长度。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。应用单次可写入的特征值数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的特征值数据长度。
 
 **起始版本：** 10
 
@@ -1957,7 +2073,7 @@ client端向指定的server端特征值写入数据。使用Callback异步回调
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 需要写入的特征值，包含写入的数据内容。 |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | 是 | 写入特征值的方式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
@@ -1965,9 +2081,9 @@ client端向指定的server端特征值写入数据。使用Callback异步回调
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -2019,7 +2135,7 @@ writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWrite
 
 client端向指定的server端特征值写入数据。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。应用单次可写入的特征值数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的特征值数据长度。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参特征值UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。应用单次可写入的特征值数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的特征值数据长度。
 
 **起始版本：** 10
 
@@ -2050,9 +2166,9 @@ client端向指定的server端特征值写入数据。使用Promise异步回调�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -2090,6 +2206,118 @@ try {
 }
 ```
 
+## writeCharacteristicValue
+
+```TypeScript
+writeCharacteristicValue(
+      characteristic: BLECharacteristic,
+      writeType: GattWriteType,
+      isCongestionReportEnabled: boolean
+    ): Promise<void>
+```
+
+写入BLE外围设备的特征。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      isCongestionReportEnabled: boolean    ): Promise<void>--><!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      isCongestionReportEnabled: boolean    ): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) | 是 | 指示要写入的特征。 |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | 是 | 特征的写入类型。 |
+| isCongestionReportEnabled | boolean | 是 | Whether to report the congestion state of the connection through the result of this call. The value `true` indicates that report is enabled. If the connection is congested when this method is called, the API fails with error code 2901004 and the data is not sent. And the value `false` indicates that report is disabled. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
+| [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
+| [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete. |
+| [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
+| [2901001](../errorcode-bluetoothManager.md#2901001-禁止写操作) | Write forbidden. |
+| [2901003](../errorcode-bluetoothManager.md#2901003-gatt未连接) | The connection is not established. |
+| [2901004](../errorcode-bluetoothManager.md#2901004-gatt传输拥塞) | The connection is congested. |
+| [2901005](../errorcode-bluetoothManager.md#2901005-gatt未加密) | The connection is not encrypted. |
+| [2901006](../errorcode-bluetoothManager.md#2901006-gatt未认证) | The connection is not authenticated. |
+| [2901007](../errorcode-bluetoothManager.md#2901007-gatt未授权) | The connection is not authorized. |
+
+**示例**
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  characteristicValue: bufferCCC, descriptors:descriptors};
+function writeCharacteristicValueCallBack(code: BusinessError) {
+    if (code != null) {
+        return;
+    }
+    console.info('bluetooth writeCharacteristicValue success');
+}
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE, writeCharacteristicValueCallBack);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor>  = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  characteristicValue: bufferCCC, descriptors:descriptors};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## writeDescriptorValue
 
 ```TypeScript
@@ -2098,7 +2326,7 @@ writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): 
 
 client端向指定的server端描述符写入数据。使用Callback异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。应用单次可写入的描述符数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的描述符数据长度。Client Characteristic Configuration描述符（UUID：00002902-0000-1000-8000-00805f9b34fb）和 Server Characteristic Configuration描述符（UUID：00002903-0000-1000-8000-00805f9b34fb）较为特殊，蓝牙标准协议规定内容长度为2字节，写入内容长度应设置为2字节。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。应用单次可写入的描述符数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的描述符数据长度。Client Characteristic Configuration描述符（UUID：00002902-0000-1000-8000-00805f9b34fb）和 Server Characteristic Configuration描述符（UUID：00002903-0000-1000-8000-00805f9b34fb）较为特殊，蓝牙标准协议规定内容长度为2字节，写入内容长度应设置为2字节。
 
 **起始版本：** 10
 
@@ -2123,9 +2351,9 @@ client端向指定的server端描述符写入数据。使用Callback异步回调
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
@@ -2171,7 +2399,7 @@ writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>
 
 client端向指定的server端描述符写入数据。使用Promise异步回调。
 
-需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue-1)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue-1)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。应用单次可写入的描述符数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的描述符数据长度。Client Characteristic Configuration描述符（UUID：00002902-0000-1000-8000-00805f9b34fb）和 Server Characteristic Configuration描述符（UUID：00002903-0000-1000-8000-00805f9b34fb）较为特殊，蓝牙标准协议规定内容长度为2字节，写入内容长度应设置为2字节。
+需要先调用[getServices](#getservices-1)，获取到server端所有支持的能力，且包含指定的入参描述符UUID；否则会写入失败。异步回调结果返回后，才能调用下一次读取或者写入操作，如[readCharacteristicValue](#readcharacteristicvalue-1)、[readDescriptorValue](#readdescriptorvalue-1)、[writeCharacteristicValue](#writecharacteristicvalue-1)、[writeDescriptorValue](#writedescriptorvalue-1)、[setCharacteristicChangeNotification](#setcharacteristicchangenotification-1)和[setCharacteristicChangeIndication](#setcharacteristicchangeindication-1)。应用单次可写入的描述符数据长度限制为（MTU-3）字节。调用方可根据实际需要通过[setBLEMtuSize](#setblemtusize)接口指定MTU大小，进而修改单次可写入的描述符数据长度。Client Characteristic Configuration描述符（UUID：00002902-0000-1000-8000-00805f9b34fb）和 Server Characteristic Configuration描述符（UUID：00002903-0000-1000-8000-00805f9b34fb）较为特殊，蓝牙标准协议规定内容长度为2字节，写入内容长度应设置为2字节。
 
 **起始版本：** 10
 
@@ -2201,9 +2429,9 @@ client端向指定的server端描述符写入数据。使用Promise异步回调�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900011](../errorcode-bluetoothManager.md#2900011-操作频繁) | The operation is busy. The last operation is not complete.<br>**适用版本：** 20+ |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |

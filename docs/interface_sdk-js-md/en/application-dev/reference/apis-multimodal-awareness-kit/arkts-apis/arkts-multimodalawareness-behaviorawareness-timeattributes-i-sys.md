@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 dayOfMonth?: number
 ```
 
-Day of the month. Unit: day. The value must be an integer within [1,31]. Default value: The default value is 0.
+Day of the month. The value must be an integer within [1,31]. Default value: Empty.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ Day of the month. Unit: day. The value must be an integer within [1,31]. Default
 dayOfWeek?: number
 ```
 
-Day of the week. The value must be an integer within [1,7]. Default value: The default value is 0.
+Day of the week. Value range: [1,7]. The value must be an integer within [1,7]. Default value: Empty.
 
 **Type:** number
 

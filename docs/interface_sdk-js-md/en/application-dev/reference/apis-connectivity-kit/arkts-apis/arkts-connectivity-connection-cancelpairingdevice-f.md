@@ -14,7 +14,7 @@ function cancelPairingDevice(deviceId: string): Promise<void>
 
 Remove a pairing remote device.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -40,14 +40,13 @@ Remove a pairing remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
-| 2900018 | The pairing is initiated by another application and cannot be cancelled.<br>**Applicable version:** 26.2.0 and later |
-| 2900019 | The device is not in the pairing state.<br>**Applicable version:** 26.2.0 and later |
+| 2900018 | The pairing is initiated by another application and cannot be cancelled.<br>**Applicable version:** 26.1.0 and later |
+| 2900019 | The device is not in the pairing state.<br>**Applicable version:** 26.1.0 and later |
 | 2900099 | Operation failed. |
 
 **Examples**

@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 feedbackTime: number
 ```
 
-Feedback timestamp . Unit: milliseconds.
+Feedback timestamp . Unit: ms.
 
 **Type:** number
 

@@ -26,7 +26,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 darkenWeight?: number
 ```
 
-Foreground darken weight, which controls the direction and strength of brightening/darkening. When set to 0, the foreground is brightened, the foreground tends to be brighter than the background to ensure readability; when set to 1, the foreground is darkened, the foreground tends to be darker than the background; values between 0 and 1 are a transition between brightening and darkening. The default value is 1. The value range is [0, 1], and values outside the range will be clamped during implementation.
+Foreground darken weight, which controls the direction and strength of brightening/darkening. When set to 0, the foreground is brightened, the foreground tends to be brighter than the background to ensure readability; when set to 1, the foreground is darkened, the foreground tends to be darker than the background; values between 0 and 1 are a transition between brightening and darkening. The default value is 1. Value range [0, 1], and values outside the range will be clamped.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Whether to actively enable HDR. When set to true, HDR is actively enabled and th
 lumaDiff?: number
 ```
 
-Luma difference threshold to ensure readability, used to constrain the luma difference between the foreground and background to maintain sufficient contrast. When set to 0, no additional luma difference is enforced, the weakest readability constraint; the larger the value, the larger the enforced luma difference and the stronger the contrast; when set to 1, the maximum luma difference is enforced. The default value is 0. The value range is [0, 1], and values outside the range will be clamped during implementation.
+Luma difference threshold to ensure readability, used to constrain the luma difference between the foreground and background to maintain sufficient contrast. When set to 0, no additional luma difference is enforced, the weakest readability constraint; the larger the value, the larger the enforced luma difference and the stronger the contrast; when set to 1, the maximum luma difference is enforced. The default value is 0. Value range [0, 1], and values outside the range will be clamped.
 
 **Type:** number
 
@@ -98,7 +98,7 @@ Luma difference threshold to ensure readability, used to constrain the luma diff
 tintedColorPercent?: number
 ```
 
-Input color influence, which controls the degree to which the input color participates in the brightening/darkening calculation. When set to 1, the input color fully participates in the calculation and the output result retains the color tendency of the input color; when set to 0, the input color does not participate in the calculation and the output result is not affected by the input color, performing brightening/darkening directly based on the background color; values between 0 and 1 are an interpolation transition between the two. The default value is 1. The value range is [0, 1], and values outside the range will be clamped during implementation.
+Input color influence, which controls the degree to which the input color participates in the brightening/darkening calculation. When set to 1, the input color fully participates in the calculation and the output result retains the color tendency of the input color; when set to 0, the input color does not participate in the calculation and the output result is not affected by the input color, performing brightening/darkening directly based on the background color; values between 0 and 1 are an interpolation transition between the two. The default value is 1. Value range [0, 1], and values outside the range will be clamped.
 
 **Type:** number
 
@@ -122,7 +122,7 @@ Input color influence, which controls the degree to which the input color partic
 vibrancyStrength?: number
 ```
 
-Color enhancement strength, which controls the degree of saturation enhancement for the foreground. When set to 0, no additional saturation is enhanced and the foreground retains its original saturation; the larger the value, the more obvious the saturation enhancement. When set to 1, the enhancement reaches its maximum and the colors are most vivid. The default value is 0. The value range is [0, 1], and values outside the range will be clamped during implementation.
+Color enhancement strength, which controls the degree of saturation enhancement for the foreground. When set to 0, no additional saturation is enhanced and the foreground retains its original saturation; the larger the value, the more obvious the saturation enhancement. When set to 1, the enhancement reaches its maximum and the colors are most vivid. The default value is 0. Value range [0, 1], and values outside the range will be clamped.
 
 **Type:** number
 

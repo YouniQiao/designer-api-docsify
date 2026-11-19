@@ -26,7 +26,7 @@ function onPairingStateChange(callback: Callback<PairingStateParam>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offpairingstatechange-1) Unsubscribes from the pairing status change event.
+**参见：** [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offpairingstatechange-1) 取消订阅配对状态变化事件。
 
 **参数：**
 

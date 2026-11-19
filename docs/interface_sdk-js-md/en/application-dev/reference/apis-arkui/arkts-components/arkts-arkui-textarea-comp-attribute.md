@@ -2082,7 +2082,7 @@ Sets the width of the text stroke. When both the strokeWidth attribute and [shad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Width of the text stroke. When the unit attribute of the LengthMetrics object is LengthUnit.PERCENT, this setting does not take effect and the default value is used. <br>If the value is less than 0, solid text is displayed; if the value is greater than 0, hollow text is displayed. |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Width of the text stroke. <br>If the value is less than 0, solid text is displayed; if the value is greater than 0, hollow text is displayed. |
 
 ## style
 

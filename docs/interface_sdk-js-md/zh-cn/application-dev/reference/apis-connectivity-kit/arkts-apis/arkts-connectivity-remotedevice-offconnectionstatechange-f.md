@@ -24,7 +24,7 @@ function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): vo
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) Subscribes to the connection status change event.
+**参见：** [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) 订阅连接状态变化事件。
 
 **参数：**
 

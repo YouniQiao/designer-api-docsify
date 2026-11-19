@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 confidence: number
 ```
 
-置信度，0表示无置信度，100表示置信度完全置信。单位为：百分比。取值应为[0,100]内的整数。
+置信度，0表示无置信度，100表示置信度完全置信。单位：%。取值应为[0,100]内的整数。
 
 **类型：** number
 
@@ -66,7 +66,7 @@ domain: PerceptionDomain
 generateTime: number
 ```
 
-生成时间戳。单位为：毫秒。
+生成时间戳。单位：ms。
 
 **类型：** number
 

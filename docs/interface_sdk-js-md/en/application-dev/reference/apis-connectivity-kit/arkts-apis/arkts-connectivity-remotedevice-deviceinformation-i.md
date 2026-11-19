@@ -24,7 +24,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 manufacturerData: string
 ```
 
-The manufacturer data of the remote device. The maximum length is 255.
+Manufacturer data of the remote device. The data is in binary encoding format and can be parsed using buffer.from(manufacturerData,'binary'). The value contains a maximum of 255 characters.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ The manufacturer data of the remote device. The maximum length is 255.
 modelData: string
 ```
 
-The model data of the remote device. The maximum length is 255.
+Model data of the remote device. The data is in binary encoding format and can be parsed using buffer.from(modelData,'binary'). The value contains a maximum of 255 characters.
 
 **Type:** string
 

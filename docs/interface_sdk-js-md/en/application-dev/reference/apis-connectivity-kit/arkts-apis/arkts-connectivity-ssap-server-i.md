@@ -374,7 +374,7 @@ Removes a service from the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceUuid | string | Yes | NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID. |
+| serviceUuid | string | Yes | UUID of the Sparkle service. The value is a string of 36 characters consisting of 32 hexadecimal digits and four hyphens(-). For example: FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. Starblink standard UUIDs are not allowed. |
 
 **Error codes:**
 

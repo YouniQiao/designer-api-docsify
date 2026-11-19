@@ -174,7 +174,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [onConnectionStateChange](#onconnectionstatechange) Subscribes to the connection status change event.
+**参见：** [onConnectionStateChange](#onconnectionstatechange) 订阅连接状态变化事件。
 
 **参数：**
 
@@ -254,7 +254,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [offConnectionStateChange](#offconnectionstatechange) Unsubscribes from the connection status change event.
+**参见：** [offConnectionStateChange](#offconnectionstatechange) 取消订阅连接状态变化事件。
 
 **参数：**
 
@@ -384,7 +384,7 @@ requestMtuSize(mtu: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mtu | number | 是 | MTU参数，取值范围[22, 1024]，单位：字节。默认值251。<br>单位为：字节。 |
+| mtu | number | 是 | MTU参数，取值范围[22, 1024]，单位：字节。默认值251。 |
 
 **返回值：**
 

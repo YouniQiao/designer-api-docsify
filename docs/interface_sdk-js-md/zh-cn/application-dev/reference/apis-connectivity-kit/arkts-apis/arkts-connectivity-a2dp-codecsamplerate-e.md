@@ -18,7 +18,7 @@ enum CodecSampleRate
 CODEC_SAMPLE_RATE_176400 = 5
 ```
 
-176.4kHz
+Codec sample rate 176.4k.
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ CODEC_SAMPLE_RATE_176400 = 5
 CODEC_SAMPLE_RATE_192000 = 6
 ```
 
-192kHz
+Codec sample rate 192k.
 
 **起始版本：** 11
 
@@ -46,7 +46,7 @@ CODEC_SAMPLE_RATE_192000 = 6
 CODEC_SAMPLE_RATE_44100 = 1
 ```
 
-44.1kHz
+Codec sample rate 44.1k.
 
 **起始版本：** 11
 
@@ -60,7 +60,7 @@ CODEC_SAMPLE_RATE_44100 = 1
 CODEC_SAMPLE_RATE_48000 = 2
 ```
 
-48kHz
+Codec sample rate 48k.
 
 **起始版本：** 11
 
@@ -74,7 +74,7 @@ CODEC_SAMPLE_RATE_48000 = 2
 CODEC_SAMPLE_RATE_88200 = 3
 ```
 
-88.2kHz
+Codec sample rate 88.2k.
 
 **起始版本：** 11
 
@@ -88,7 +88,7 @@ CODEC_SAMPLE_RATE_88200 = 3
 CODEC_SAMPLE_RATE_96000 = 4
 ```
 
-96kHz
+Codec sample rate 96k.
 
 **起始版本：** 11
 

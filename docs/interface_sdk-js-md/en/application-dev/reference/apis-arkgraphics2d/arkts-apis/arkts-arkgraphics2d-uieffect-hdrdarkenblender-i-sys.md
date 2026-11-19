@@ -48,7 +48,7 @@ Converts RGB colors to grayscale values. The weights of the grayscale conversion
 hdrBrightnessRatio: number
 ```
 
-HDR brightness ratio. The value range is [1.0, the maximum brightness ratio supported by the current device]. Values less than 1.0 are treated as 1.0; when the value is equal to 1.0, it represents the original brightness of the component; values exceeding the maximum supported brightness ratio are treated as the maximum ratio. The maximum supported brightness ratio = device maximum brightness / device default brightness. Device maximum brightness can be obtained via hdc command: hdc shell param get const.display.brightness.max Device default brightness can be obtained via hdc command: hdc shell param get const.display.brightness.default
+HDR brightness ratio. Value range [1.0, the maximum brightness ratio supported by the current device], and values outside the range will be automatically clamped. When the value is equal to 1.0, it represents the original brightness of the component. The maximum brightness ratio supported by the current device = device maximum brightness / device default brightness. Device maximum brightness can be obtained via hdc command: hdc shell param get const.display.brightness.max Device default brightness can be obtained via hdc command: hdc shell param get const.display.brightness.default
 
 **Type:** number
 

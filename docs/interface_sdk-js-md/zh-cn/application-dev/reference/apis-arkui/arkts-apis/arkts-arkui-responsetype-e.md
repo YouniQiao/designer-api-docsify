@@ -15,7 +15,7 @@ declare enum ResponseType
 ## LongPress
 
 ```TypeScript
-LongPress = 1
+LongPress
 ```
 
 通过长按触发菜单弹出。
@@ -26,14 +26,14 @@ LongPress = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ResponseType-LongPress = 1--><!--Device-ResponseType-LongPress = 1-End-->
+<!--Device-ResponseType-LongPress--><!--Device-ResponseType-LongPress-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightClick
 
 ```TypeScript
-RightClick = 0
+RightClick
 ```
 
 通过鼠标右键点击触发菜单弹出。
@@ -44,6 +44,6 @@ RightClick = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ResponseType-RightClick = 0--><!--Device-ResponseType-RightClick = 0-End-->
+<!--Device-ResponseType-RightClick--><!--Device-ResponseType-RightClick-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

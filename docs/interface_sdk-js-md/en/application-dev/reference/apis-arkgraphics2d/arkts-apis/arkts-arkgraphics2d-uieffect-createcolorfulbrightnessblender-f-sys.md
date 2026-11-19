@@ -32,7 +32,7 @@ Creates a ColorfulBrightnessBlender instance to add a hue-preserving brightening
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightnessBlenderParam | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | Regular parameters for brightening and darkening, used to configure basic properties such as brightness mapping and saturation curves. |
-| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | No | Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch. |
+| options | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | No | Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch. If this parameter is not specified, the default values of the fields in ColorfulBrightnessBlenderOptions are used. |
 
 **Return value:**
 

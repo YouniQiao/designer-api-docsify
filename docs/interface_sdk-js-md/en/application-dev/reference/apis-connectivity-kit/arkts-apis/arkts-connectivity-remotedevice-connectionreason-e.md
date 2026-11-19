@@ -18,7 +18,7 @@ Enum for the connection reason.
 CONNECTION_FAIL_ACB_CONNECTION = 4
 ```
 
-Connection failed: ACB connection failed. The remote device may be powered off or out of range.
+Connection failure: The ACB fails to be connected.
 
 **Since:** 26.0.0
 

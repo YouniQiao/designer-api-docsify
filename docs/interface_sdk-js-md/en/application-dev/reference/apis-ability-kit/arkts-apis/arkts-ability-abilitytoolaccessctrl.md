@@ -1,4 +1,4 @@
-# @ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)
+# @ohos.abilityToolAccessCtrl(Tool Access Control Management)
 
 This module provides permission management capabilities for tools (CLI commands and APIs), including permission query, user authorization, and remote authorization. Permission query is used to check the permission status of tools, user authorization grants permissions to tools based on user decisions, and remote authorization enables cross-device permission management through a ticket mechanism.
 
@@ -23,8 +23,10 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [queryControlAppStatus](arkts-ability-abilitytoolaccessctrl-querycontrolappstatus-f.md#querycontrolappstatus-1) | This API is used to query the control permission status of a specified application. This function checks whether each application in the input list is allowed or denied Controlled by external tools. The result list corresponds to the input order. |
+| [registerControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-registercontrolcomponentresultcallback-f.md#registercontrolcomponentresultcallback-1) | Registers the control component to simulate the click result callback. After registration, the result of each simulated click of the control component is returned through this callback. Only one callback can be registered in a process. Repeated registration overwrites the previously registered callback. |
 | [requestControlAppPermissionFromUser](arkts-ability-abilitytoolaccessctrl-requestcontrolapppermissionfromuser-f.md#requestcontrolapppermissionfromuser-1) | Request the control permission of a specified application from a user. This function pops up a user dialog box to obtain the control authorization decision for each application. The returned result reflects the user's decision to allow or deny each application. |
 | [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket-1) | Obtain the execution authentication ticket for CLI tools. This function retrieves the execution authentication ticket for CLI tools and their subcommands. If the user has not yet authorized the permissions required by CLI tools, a list of permissions requiring authorization along with their status will be returned. If all permissions required by CLI tools have been authorized by the user, the authenticated ticket will be returned. |
+| [unregisterControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-unregistercontrolcomponentresultcallback-f.md#unregistercontrolcomponentresultcallback-1) | Callback of the simulated click result of the deregistration control component. Releases callback resources when a service ends. |
 
 <!--Del-->
 ### Functions(System API)
@@ -51,6 +53,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md) | Information about an application. |
 | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) | CLI command information. |
 | [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md) | Control permission status result of the application. |
+| [ControlComponentClickResult](arkts-ability-abilitytoolaccessctrl-controlcomponentclickresult-i.md) | Simulates the operation result. |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md) | Permission information. |
 | [TicketParams](arkts-ability-abilitytoolaccessctrl-ticketparams-i.md) | Parameters for the ticket. |
 | [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md) | Ticket query result. |
@@ -75,6 +78,12 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md) | Ticket information. |
 | [UserAuthResult](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md) | User authorization result. |
 <!--DelEnd-->
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ResultCallback](arkts-ability-abilitytoolaccessctrl-resultcallback-t.md) | Callback function type used to receive the result of each simulated click operation. |
 
 ### Enums
 

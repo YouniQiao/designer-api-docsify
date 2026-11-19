@@ -42,6 +42,32 @@ false：达到设置的采样次数时停止采样。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## enableEventHandlerDump
+
+```TypeScript
+enableEventHandlerDump?: boolean
+```
+
+主线程超时发生时，是否采集EventHandler任务队列信息。
+
+true：使能采集EventHandler任务队列信息。
+
+false：不使能采集EventHandler任务队列信息。
+
+默认值：false。
+
+**类型：** boolean
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-enableEventHandlerDump?: boolean--><!--Device-MainThreadJankPolicy-enableEventHandlerDump?: boolean-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
 ## ignoreStartupTime
 
 ```TypeScript

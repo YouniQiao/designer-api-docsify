@@ -96,6 +96,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 定义节点标识类型。对于string类型，代表指定组件id，该id通过通用属性[id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id)设置。对于number类型，代表系统分配的唯一标识的节点UniqueID，可通过getUniqueId获取。 |
 | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | 定义了用于在UIObserver中监控某个特定节点渲染状态的回调类型。 |
 | [NodeSensitiveInputCallback](arkts-arkui-nodesensitiveinputcallback-t.md) | 定义监听指定节点输入事件的回调类型。 |
+| [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md) | 定义拦截Overlay侧滑返回事件的回调类型。 |
 | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Pan手势事件监听函数类型。 |
 | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 光标样式。 |
 

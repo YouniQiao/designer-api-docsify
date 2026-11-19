@@ -177,6 +177,8 @@
     <!--Del-->
     - [createHdrDarkenBlender（系统接口）](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md)<!--DelEnd-->
     <!--Del-->
+    - [BlenderBase（系统接口）](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md)<!--DelEnd-->
+    <!--Del-->
     - [Mask（系统接口）](arkts-arkgraphics2d-uieffect-mask-c-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BlurBubblesRiseEffectParam（系统接口）](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md)<!--DelEnd-->

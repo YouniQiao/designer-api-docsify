@@ -4,6 +4,8 @@
 type AccessAuthorization = constant.AccessAuthorization
 ```
 
+Indicate the phone book access authorization.
+
 **类型：** [constant.AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md)
 
 **起始版本：** 11

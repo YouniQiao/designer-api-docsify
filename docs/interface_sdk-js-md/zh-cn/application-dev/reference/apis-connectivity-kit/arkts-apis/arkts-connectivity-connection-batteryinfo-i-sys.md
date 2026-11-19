@@ -26,7 +26,7 @@ import { connection } from '@kit.ConnectivityKit';
 deviceId: string
 ```
 
-表示远端设备的MAC地址。&lt;br/
+表示远端设备的MAC地址。
 
 **类型：** string
 

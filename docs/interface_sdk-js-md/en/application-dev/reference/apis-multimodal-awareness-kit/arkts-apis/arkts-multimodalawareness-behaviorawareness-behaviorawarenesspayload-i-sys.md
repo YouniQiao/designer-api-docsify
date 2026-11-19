@@ -4,7 +4,7 @@
 export interface BehaviorAwarenessPayload
 ```
 
-Habit-aware domain payload. Specific data in the HABIT_Awareness domain.
+Habit-aware domain payload. Specific data in the HABIT_AWARENESS domain.
 
 **Since:** 26.1.0
 

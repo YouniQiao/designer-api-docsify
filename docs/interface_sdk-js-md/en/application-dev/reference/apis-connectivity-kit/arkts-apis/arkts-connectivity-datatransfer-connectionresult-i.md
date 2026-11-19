@@ -4,7 +4,7 @@
 interface ConnectionResult
 ```
 
-Represents the result of port connection parameter negotiation with a remote device.
+Negotiation result of the port connection parameters with the remote device.
 
 **Since:** 26.0.0
 

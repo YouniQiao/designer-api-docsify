@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 actionId: string
 ```
 
-动作 ID（特定前缀格式）。
+动作 ID。取值为 onPerception 回调入参中 PerceptionEvent 的 perceptionEventId，调用 submitFeedback 时需传入该值。前缀为 habitAwareness_。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ actionType: ActionType
 attributes?: SystemActionAttributes
 ```
 
-场景属性。
+场景属性。默认值：空。
 
 **类型：** [SystemActionAttributes](arkts-multimodalawareness-behaviorawareness-systemactionattributes-i-sys.md)
 
@@ -106,7 +106,7 @@ name: string
 params?: Record<string, string | number | boolean>
 ```
 
-附加参数。默认值：不带附加参数。
+附加参数。默认值：空。
 
 **类型：** Record&lt;string, string &#124; number &#124; boolean&gt;
 

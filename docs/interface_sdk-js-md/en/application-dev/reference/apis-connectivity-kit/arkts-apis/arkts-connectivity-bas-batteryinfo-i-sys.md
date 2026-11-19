@@ -26,7 +26,7 @@ import { bas } from '@kit.ConnectivityKit';
 batteryLevel: number
 ```
 
-battery value of the device. `-1` means no power information.
+Battery value of the device. `-1` means no power information.
 
 **Type:** number
 

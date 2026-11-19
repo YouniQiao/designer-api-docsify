@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 attributes?: TimeAttributes | LocationAttributes | SystemEventAttributes
 ```
 
-场景属性。
+场景属性。默认值：空。
 
 **类型：** [TimeAttributes](arkts-multimodalawareness-behaviorawareness-timeattributes-i-sys.md) &#124; [LocationAttributes](arkts-multimodalawareness-behaviorawareness-locationattributes-i-sys.md) &#124; [SystemEventAttributes](arkts-multimodalawareness-behaviorawareness-systemeventattributes-i-sys.md)
 
@@ -106,7 +106,7 @@ name: string
 params?: Record<string, string | number | boolean>
 ```
 
-附加参数。默认值：不带附加参数。
+附加参数。默认值：空。
 
 **类型：** Record&lt;string, string &#124; number &#124; boolean&gt;
 
@@ -126,7 +126,7 @@ params?: Record<string, string | number | boolean>
 timestamp: number
 ```
 
-发生时间戳。单位为：毫秒。
+发生时间戳。单位：ms。
 
 **类型：** number
 

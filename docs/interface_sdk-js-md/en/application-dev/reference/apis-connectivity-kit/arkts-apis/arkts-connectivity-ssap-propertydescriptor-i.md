@@ -44,7 +44,7 @@ Descriptor type of a property.
 isWriteable?: boolean
 ```
 
-Whether a descriptor is writable. The value **true** indicates the descriptor is writable, and the value **false** indicates the opposite. The default value is **true**.
+The asterisk(*) indicates whether the descriptor is writable. true: writable; false: not writable. The default value is true.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Property UUID, in the same format as **serviceUuid**.
 serviceUuid: string
 ```
 
-NearLink service UUID, which is a string of 36 characters. The value consists of 32 hexadecimal digits and four hyphens (-), for example, **FFFFFFFF-1234-5678-ABCD-000000001234**, which indicates a 128-bit ID. The value cannot be set to a standard NearLink UUID.
+Indicates the UUID of the Sparkling service. The value is a string of 36 characters consisting of 32 hexadecimal digits and four hyphens(-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicates a 128-bit identifier. Starblink standard UUIDs are not allowed.
 
 **Type:** string
 

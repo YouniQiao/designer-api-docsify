@@ -42,6 +42,26 @@ The default value is **false**.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## enableEventHandlerDump
+
+```TypeScript
+enableEventHandlerDump?: boolean
+```
+
+Indicates whether to collect the EventHandler task queue information when the main thread times out. true: The function of collecting the queue information of the EventHandler task is enabled. false: The function of collecting queue information about the EventHandler task is disabled. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-MainThreadJankPolicy-enableEventHandlerDump?: boolean--><!--Device-MainThreadJankPolicy-enableEventHandlerDump?: boolean-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
 ## ignoreStartupTime
 
 ```TypeScript

@@ -34,11 +34,11 @@ Asynchronous interface for enables Bluetooth on a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900001 | Service stopped. |
-| 2900013 | The user does not respond. |
-| 2900014 | User refuse the action. |
+| 2900013 | The user did not respond. |
+| 2900014 | The user refused the action. |
 | 2900099 | Operation failed. |
 
 **Examples**

@@ -26,7 +26,7 @@ function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) Unsubscribes from the connection state change event of the port channel.
+**参见：** [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) 取消订阅端口通道连接状态变更事件。
 
 **参数：**
 

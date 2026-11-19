@@ -31,14 +31,14 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to [connection.on('bluetoothDeviceFind')] [on](arkts-connectivity-connection-on-f.md#onbluetoothdevicefind) The callback functions in * are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -82,14 +82,14 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryResult' | Yes | Type of the discovering event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md)&gt;&gt; | No | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md)&gt;&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to [connection.on('discoveryResult')](arkts-connectivity-connection-on-f.md#ondiscoveryresult) The callback functions in * are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -131,15 +131,14 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)&gt; | No | Callback used to listen for the bond state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to [connection.on('bondStateChange')] [on](arkts-connectivity-connection-on-f.md#onbondstatechange) The callback functions in * are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -181,15 +180,14 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to in [connection.on('pinRequired')](arkts-connectivity-connection-on-f.md#onpinrequired) The callback functions of * are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900099 | Operation failed. |
 
 **Examples**
@@ -231,13 +229,13 @@ Unsubscribe the event of battery state changed from a remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'batteryChange' | Yes | Type of the battery event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to in [connection.on('batteryChange')](arkts-connectivity-connection-on-f.md#onbatterychange) The callback functions are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | 2900099 | Operation failed. |
 
 **Examples**

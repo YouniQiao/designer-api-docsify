@@ -527,6 +527,35 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getAvoidAreaInsets
+
+```TypeScript
+getAvoidAreaInsets(): AvoidAreaInsets
+```
+
+获取当前窗口的避让区边衬。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-getAvoidAreaInsets(): AvoidAreaInsets--><!--Device-Window-getAvoidAreaInsets(): AvoidAreaInsets-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [AvoidAreaInsets](arkts-arkui-window-avoidareainsets-i.md) | 避让区边衬。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
+
 ## getDecorButtonStyle
 
 ```TypeScript
@@ -5140,6 +5169,35 @@ windowClass.off('systemAvoidAreaChange', callback);
 windowClass.off('systemAvoidAreaChange');
 ```
 
+## offAvoidAreaInsetsChange
+
+```TypeScript
+offAvoidAreaInsetsChange(callback?: Callback<void>): void
+```
+
+取消订阅窗口避让区边衬的变化。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-offAvoidAreaInsetsChange(callback?: Callback<void>): void--><!--Device-Window-offAvoidAreaInsetsChange(callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 | 回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭该窗口所有避让区边衬变化的监听。默认值：undefined。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
+
 ## offWindowFocusStateChange
 
 ```TypeScript
@@ -6684,6 +6742,43 @@ windowClass.on('systemAvoidAreaChange', (data) => {
   console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
 });
 ```
+
+## onAvoidAreaInsetsChange
+
+```TypeScript
+onAvoidAreaInsetsChange(callback: Callback<void>): void
+```
+
+订阅窗口避让区边衬的变化。
+
+当窗口的避让区发生变化时，会触发回调。在同一次变化中，如果多个避让区发生变化，相关的避让区信息更新后，只会触发一次回调。
+
+> **说明：** 
+> 可以在回调中使用[getAvoidAreaInsets](#getavoidareainsets)来获取窗口最新的避让区边衬，或使用
+> [getWindowAvoidArea](#getwindowavoidarea)获取指定类型的避让区。
+> 
+> [TYPE_KEYBOARD](arkts-arkui-window-avoidareatype-e.md)类型的避让区变化不会触发回调。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-onAvoidAreaInsetsChange(callback: Callback<void>): void--><!--Device-Window-onAvoidAreaInsetsChange(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
 
 ## onWindowFocusStateChange
 

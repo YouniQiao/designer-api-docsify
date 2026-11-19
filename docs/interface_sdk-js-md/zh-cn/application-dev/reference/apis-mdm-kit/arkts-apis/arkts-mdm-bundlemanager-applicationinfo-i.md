@@ -90,6 +90,24 @@ readonly appProvisionType: string
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## appUid
+
+```TypeScript
+readonly appUid: number
+```
+
+应用的 UID.
+
+**类型：** number
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationInfo-readonly appUid: number--><!--Device-ApplicationInfo-readonly appUid: number-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## codePath
 
 ```TypeScript

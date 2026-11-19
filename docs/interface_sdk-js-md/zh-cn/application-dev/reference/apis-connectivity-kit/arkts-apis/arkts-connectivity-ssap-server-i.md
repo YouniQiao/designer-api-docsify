@@ -150,7 +150,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [onConnectionStateChange](#onconnectionstatechange) Subscribes to the connection status change event.
+**参见：** [onConnectionStateChange](#onconnectionstatechange) 订阅连接状态变化事件。
 
 **参数：**
 
@@ -256,7 +256,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-**参见：** [offConnectionStateChange](#offconnectionstatechange) Unsubscribes from the connection status change event.
+**参见：** [offConnectionStateChange](#offconnectionstatechange) 取消订阅连接状态变化事件。
 
 **参数：**
 
@@ -374,7 +374,7 @@ removeService(serviceUuid: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serviceUuid | string | 是 | 星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。 |
+| serviceUuid | string | 是 | 星闪服务UUID，36个字符，由32个十六进制数字和4个连字符（-）组成，例如：FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。 |
 
 **错误码：**
 

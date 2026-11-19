@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-connectivitykit-->
 
-- [@ohos.bluetooth.a2dp](arkts-connectivity-bluetooth-a2dp.md)
+- [@ohos.bluetooth.a2dp(Bluetooth a2dp module)](arkts-connectivity-bluetooth-a2dp.md)
   - [createA2dpSnkProfile](arkts-connectivity-a2dp-createa2dpsnkprofile-f.md)
   - [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md)
   <!--Del-->
@@ -40,6 +40,8 @@
   - [on](arkts-connectivity-access-on-f.md)
   <!--Del-->
   - [restrictBluetooth(system api)](arkts-connectivity-access-restrictbluetooth-f-sys.md)<!--DelEnd-->
+  - [startSnoopCapture](arkts-connectivity-access-startsnoopcapture-f.md)
+  - [stopSnoopCapture](arkts-connectivity-access-stopsnoopcapture-f.md)
   <!--Del-->
   - [NotifyDialogResultParams(system api)](arkts-connectivity-access-notifydialogresultparams-i-sys.md)<!--DelEnd-->
   - [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)
@@ -59,7 +61,7 @@
   - [BatteryInfo(system api)](arkts-connectivity-bas-batteryinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BluetoothAddress(system api)](arkts-connectivity-bas-bluetoothaddress-t-sys.md)<!--DelEnd-->
-- [@ohos.bluetooth.baseProfile](arkts-connectivity-bluetooth-baseprofile.md)
+- [@ohos.bluetooth.baseProfile(Bluetooth baseProfile module)](arkts-connectivity-bluetooth-baseprofile.md)
   - [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
   <!--Del-->
   - [BaseProfile(system api)](arkts-connectivity-baseprofile-baseprofile-i-sys.md)<!--DelEnd-->
@@ -69,7 +71,7 @@
   - [ConnectionStrategy(system api)](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)<!--DelEnd-->
   - [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md)
   - [PanRole](arkts-connectivity-baseprofile-panrole-e.md)
-- [@ohos.bluetooth.ble](arkts-connectivity-bluetooth-ble.md)
+- [@ohos.bluetooth.ble(Bluetooth ble module)](arkts-connectivity-bluetooth-ble.md)
   - [createBleScanner](arkts-connectivity-ble-createblescanner-f.md)
   - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
   - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
@@ -94,6 +96,7 @@
   - [BleScanner](arkts-connectivity-ble-blescanner-i.md)
   - [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)
   - [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)
+  - [CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md)
   - [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)
   - [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
   - [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md)
@@ -349,7 +352,7 @@
   - [SppOptions](arkts-connectivity-socket-sppoptions-i.md)
   - [SppType](arkts-connectivity-socket-spptype-e.md)
 <!--Del-->
-- [@ohos.bluetooth.wearDetection](arkts-connectivity-bluetooth-weardetection.md)<!--DelEnd-->
+- [@ohos.bluetooth.wearDetection(Bluetooth wear detection module)](arkts-connectivity-bluetooth-weardetection.md)<!--DelEnd-->
   <!--Del-->
   - [disableWearDetection(system api)](arkts-connectivity-weardetection-disableweardetection-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -436,7 +439,7 @@
   - [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
   - [FrameType](arkts-connectivity-nearlinkconstant-frametype-e.md)
   - [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
-- [@ohos.nearlink.dataTransfer(NearLink Data Transfer Capability)](arkts-connectivity-nearlink-datatransfer.md)
+- [@ohos.nearlink.dataTransfer](arkts-connectivity-nearlink-datatransfer.md)
   - [connect](arkts-connectivity-datatransfer-connect-f.md)
   - [createPort](arkts-connectivity-datatransfer-createport-f.md)
   - [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)

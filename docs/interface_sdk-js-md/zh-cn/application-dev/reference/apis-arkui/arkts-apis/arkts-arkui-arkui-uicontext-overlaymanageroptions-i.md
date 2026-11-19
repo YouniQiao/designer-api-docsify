@@ -21,6 +21,26 @@ import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
 import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
+## onBackPress
+
+```TypeScript
+onBackPress?: OnOverlayBackPressCallback
+```
+
+拦截Overlay侧滑返回事件的回调。说明：
+1. 注册该回调且enableBackPressedEvent设置为true时，侧滑返回事件不会自动关闭Overlay，而是调用该回调决定事件是否向下层组件传递。
+2. 返回true表示拦截该事件（事件被消费，不会向下层传递）；返回false表示不拦截，事件将向下层组件透传。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## enableBackPressedEvent
 
 ```TypeScript
@@ -40,28 +60,6 @@ enableBackPressedEvent?: boolean
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean--><!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onBackPress
-
-```TypeScript
-onBackPress?: OnOverlayBackPressCallback
-```
-
-拦截Overlay侧滑返回事件的回调。说明：
-1. 注册该回调且enableBackPressedEvent设置为true时，侧滑返回事件不会自动关闭Overlay，而是调用该回调决定事件是否向下层组件传递。
-2. 返回true表示拦截该事件（事件被消费，不会向下层传递）；返回false表示不拦截，事件将向下层组件透传。
-
-**类型：** OnOverlayBackPressCallback
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

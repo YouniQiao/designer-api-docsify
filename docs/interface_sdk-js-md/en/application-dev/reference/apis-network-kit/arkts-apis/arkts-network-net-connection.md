@@ -71,6 +71,7 @@ import { connection } from '@kit.NetworkKit';
 | [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshglobalhttpproxy-1) | Notifies the system that global proxy re-authentication is required. Upon receiving the notification, the system will reprocess the global proxy's authentication status. |
 | [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule-1) | Removes the custom DNS rules of the specified host from the current application. This API uses an asynchronous callback to return the result. |
 | [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule-2) | Removes the custom DNS rules of the specified host from the current application. This API uses a promise to return the result. |
+| [renewDhcp](arkts-network-connection-renewdhcp-f.md#renewdhcp-1) | Renew ip address. |
 | [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected-1) | Reports the network availability to the network management module. This API uses an asynchronous callback to return the result. |
 | [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected-2) | Reports that the network is available to the network management module. This API uses a promise to return the result. |
 | [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected-1) | Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result. |

@@ -306,6 +306,7 @@ Common()
 | [FractionStop](arkts-arkui-common-comp-fractionstop-t.md) | 定义模糊段。 |
 | [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | 定义在[onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept)中使用的回调类型。 |
 | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | 自定义手势识别器判定回调类型。 |
+| [HandednessFollowMode](arkts-arkui-common-comp-handednessfollowmode-t.md) | 握持习惯跟随模式的枚举。 |
 | [HoverCallback](arkts-arkui-common-comp-hovercallback-t.md) | hover事件的回调类型。 |
 | [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) | ImageModifier |
 | [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) | 输入事件监听器回调函数类型。 |

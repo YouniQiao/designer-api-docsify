@@ -170,7 +170,7 @@ serviceUuid: string
 transId: number
 ```
 
-client端写请求的标识符，server端回复时需填写相同的transId。
+client端写请求的标识符，server端回复时需填写相同的transId。取值限定为整数。
 
 **类型：** number
 
@@ -190,7 +190,7 @@ client端写请求的标识符，server端回复时需填写相同的transId。
 value: ArrayBuffer
 ```
 
-client端需要给特征值写入的数据。
+client端需要给描述符写入的数据。
 
 **类型：** ArrayBuffer
 

@@ -1,6 +1,6 @@
 # @ohos.nearlink.remoteDevice(星闪远端设备连接能力)
 
-本模块提供了星闪远端设备的连接与管理能力，包括连接与断开远端设备、可信配对与确认、调整连接间隔、订阅配对请求等。
+本模块提供了星闪远端设备的连接与管理能力，包括创建远端设备实例、连接与断开远端设备、查询远端设备信息及订阅设备状态变化事件等。
 
 **起始版本：** 26.0.0
 
@@ -36,7 +36,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offpairingrequest-1) | 取消订阅来自远端星闪设备的配对请求事件。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest-1) | 订阅来自远程NearLink设备的配对请求事件。如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址 |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest-1) | 订阅来自远程NearLink设备的配对请求事件。 |
 <!--DelEnd-->
 
 ### 接口

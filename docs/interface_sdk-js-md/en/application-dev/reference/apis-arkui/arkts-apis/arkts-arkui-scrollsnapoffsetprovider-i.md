@@ -4,7 +4,7 @@
 declare interface ScrollSnapOffsetProvider
 ```
 
-Provides offsets for a two-stage scroll snap of a scrollable component.
+Provides custom offsets for two-stage scroll snapping with scrollSnapStrategy in Grid and WaterFlow.
 
 Offsets are in vp and velocity is in vp/s. Callbacks are invoked synchronously on the UI thread and must be pure calculations. No layout snapshot is provided; a provider must maintain or derive item geometry itself. velocity is the time derivative of the logical content scroll offset, positive toward the content end. The component normalizes reversed layouts and RTL directions. decayOffset is the non-negative magnitude of the natural friction decay distance.
 
@@ -20,9 +20,9 @@ Offsets are in vp and velocity is in vp/s. Callbacks are invoked synchronously o
 calculateApproachOffset(velocity: number, decayOffset: number): number
 ```
 
-Called once during a fling to determine the approach offset.
+Called once at the start of a fling to determine how far the content scrolls before snapping.
 
-The return value is a non-negative finite distance magnitude and may be greater than or equal to decayOffset. A non-finite return value, a negative return value, or a callback exception falls back to the natural decay offset.
+The return value is a non-negative finite distance magnitude and may be greater than or equal to decayOffset. A non-finite return value, a negative return value, or a callback exception uses the predicted fling distance instead. The snap phase still follows.
 
 **Since:** 26.1.0
 
@@ -38,14 +38,14 @@ The return value is a non-negative finite distance magnitude and may be greater 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | Current fling velocity, positive toward the content end, in vp/s. |
-| decayOffset | number | Yes | Non-negative natural friction decay distance magnitude, in vp. |
+| velocity | number | Yes | Initial fling velocity, positive toward the content end, in vp/s. |
+| decayOffset | number | Yes | Predicted distance of the default fling, in vp. Always non-negative. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Approach offset magnitude, in vp. |
+| number | Distance to scroll during the fling, in vp. |
 
 ## calculateSnapOffset
 
@@ -55,7 +55,7 @@ calculateSnapOffset(velocity: number): number
 
 Called once when the approach motion hands off to the final snap animation.
 
-The return value is an absolute content scroll target; 0 is valid. A finite target outside the legal scroll range is clamped to that range. A non-finite return value or a callback exception uses the component fallback target. A Grid custom strategy stays at the approach endpoint without returning to the gesture start position.
+Return a finite target offset on the logical scroll axis. Zero is the content start; offsets are positive toward the content end and negative in the opposite direction. A target outside the scrollable range is clamped to the nearest boundary. If the target exceeds the current offset, the component scrolls toward the content end; if smaller, toward the start. Equal offsets cause no scrolling. If the callback returns a non-finite value or throws an exception, the component stops at its current position.
 
 **Since:** 26.1.0
 

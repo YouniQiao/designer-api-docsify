@@ -18,7 +18,7 @@ enum CodecType
 CODEC_TYPE_AAC = 1
 ```
 
-AAC
+AAC - Advanced Audio Coding.
 
 **起始版本：** 11
 
@@ -46,7 +46,7 @@ CODEC_TYPE_INVALID = -1
 CODEC_TYPE_L2HC = 2
 ```
 
-L2HC
+L2HC.
 
 **起始版本：** 11
 
@@ -60,7 +60,7 @@ L2HC
 CODEC_TYPE_L2HCST = 3
 ```
 
-L2HCST
+L2HCST.
 
 **起始版本：** 13
 
@@ -74,7 +74,7 @@ L2HCST
 CODEC_TYPE_LDAC = 4
 ```
 
-LDAC
+LDAC.
 
 **起始版本：** 13
 
@@ -88,7 +88,7 @@ LDAC
 CODEC_TYPE_SBC = 0
 ```
 
-SBC
+SBC - Sub-band coding.
 
 **起始版本：** 11
 

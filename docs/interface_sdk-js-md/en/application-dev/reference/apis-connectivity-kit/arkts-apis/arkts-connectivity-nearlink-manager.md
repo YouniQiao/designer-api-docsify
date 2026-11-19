@@ -1,6 +1,6 @@
 # @ohos.nearlink.manager(Basic NearLink Management Capability)
 
-This module provides basic NearLink management capabilities, including enabling or disabling NearLink, obtaining the MAC address of the local device, and setting the connection mode.
+This module provides basic management capabilities for star blinking, including querying whether star blinking is supported, enabling/disabling star blinking, subscribing to star blinking status change events, and querying paired devices.
 
 **Since:** 26.0.0
 

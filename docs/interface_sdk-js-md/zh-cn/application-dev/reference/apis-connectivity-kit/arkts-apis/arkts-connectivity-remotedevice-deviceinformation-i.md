@@ -24,7 +24,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 manufacturerData: string
 ```
 
-远端设备的制造商数据最大长度为255。
+远端设备的制造商数据。数据为二进制编码格式，可通过buffer.from(manufacturerData, 'binary')等方式解析。最大长度为255。
 
 **类型：** string
 
@@ -44,7 +44,7 @@ manufacturerData: string
 modelData: string
 ```
 
-远程设备的模型数据。最大长度为255。
+远端设备的模型数据。数据为二进制编码格式，可通过buffer.from(modelData, 'binary')等方式解析。最大长度为255。
 
 **类型：** string
 

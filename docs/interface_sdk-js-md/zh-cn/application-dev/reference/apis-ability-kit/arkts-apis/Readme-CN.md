@@ -80,7 +80,7 @@
     - [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
-- [@ohos.abilityToolAccessCtrl（This module provides the capabilities of tools access control）](arkts-ability-abilitytoolaccessctrl.md)
+- [@ohos.abilityToolAccessCtrl（Tool Access Control Management）](arkts-ability-abilitytoolaccessctrl.md)
   <!--Del-->
   - [generateControlledDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -94,12 +94,14 @@
   <!--Del-->
   - [grantToolPermissionsByUser（系统接口）](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   - [queryControlAppStatus](arkts-ability-abilitytoolaccessctrl-querycontrolappstatus-f.md)
+  - [registerControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-registercontrolcomponentresultcallback-f.md)
   - [requestControlAppPermissionFromUser](arkts-ability-abilitytoolaccessctrl-requestcontrolapppermissionfromuser-f.md)
   <!--Del-->
   - [requestToolPermissions（系统接口）](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
   - [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md)
   <!--Del-->
   - [revokeTaskIdentity（系统接口）](arkts-ability-abilitytoolaccessctrl-revoketaskidentity-f-sys.md)<!--DelEnd-->
+  - [unregisterControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-unregistercontrolcomponentresultcallback-f.md)
   <!--Del-->
   - [updateRemoteGrantStatus（系统接口）](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -111,6 +113,7 @@
   - [AuthStatusInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
   - [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)
   - [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md)
+  - [ControlComponentClickResult](arkts-ability-abilitytoolaccessctrl-controlcomponentclickresult-i.md)
   <!--Del-->
   - [OperationInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)<!--DelEnd-->
   - [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)
@@ -140,6 +143,7 @@
   - [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)
   <!--Del-->
   - [UserAuthResult（系统接口）](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
+  - [ResultCallback](arkts-ability-abilitytoolaccessctrl-resultcallback-t.md)
   <!--Del-->
   - [AuthStatus（系统接口）](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)<!--DelEnd-->
   - [ControlAppStatus](arkts-ability-abilitytoolaccessctrl-controlappstatus-e.md)
@@ -778,6 +782,8 @@
   - [ServiceExtensionAbility（系统接口）](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.ShareExtensionAbility（支持分享详情页接入的ExtensionAbility组件）](arkts-ability-app-ability-shareextensionability.md)
   - [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)
+- [@ohos.app.ability.ShowParams](arkts-ability-app-ability-showparams.md)
+  - [ShowParams](arkts-ability-app-ability-showparams-showparams-c.md)
 - [@ohos.app.ability.StartOptions（startAbility的可选参数）](arkts-ability-app-ability-startoptions.md)
   - [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
   <!--Del-->

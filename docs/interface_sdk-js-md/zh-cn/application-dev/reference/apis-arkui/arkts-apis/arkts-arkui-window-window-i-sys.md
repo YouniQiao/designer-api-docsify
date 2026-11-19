@@ -574,7 +574,7 @@ getRotationLocked(): boolean
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Function getRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
+| [1300029](../errorcode-window.md#1300029-窗口类型无效) | This window type is invalid. Possible cause: A non-system window calls this API. |
 
 <!--Del-->
 **示例**
@@ -2288,7 +2288,7 @@ setRotationLocked(locked: boolean): Promise<void>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed;         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. |
+| [1300029](../errorcode-window.md#1300029-窗口类型无效) | This window type is invalid. |
 
 <!--Del-->
 **示例**

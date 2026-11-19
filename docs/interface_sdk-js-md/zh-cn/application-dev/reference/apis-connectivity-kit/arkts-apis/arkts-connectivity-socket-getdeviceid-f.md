@@ -32,12 +32,6 @@ function getDeviceId(clientSocket: number): string
 | --- | --- |
 | string | 返回对端设备地址。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址是否仍被其他应用使用来决定变更时机：若其他应用正在使用该地址，则不会立即变更；当无应用使用时，地址将被回收并在下次获取时分配新的虚拟地址。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
 **示例**
 
 ```TypeScript

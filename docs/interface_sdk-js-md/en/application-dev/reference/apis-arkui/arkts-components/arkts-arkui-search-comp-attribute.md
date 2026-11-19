@@ -1633,7 +1633,7 @@ Sets the width of the text stroke. If this API is not called, the default value 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Width of the text stroke. When the unit attribute of the LengthMetrics object is LengthUnit.PERCENT, the current setting does not take effect and the default value is used. <br>If the value is less than 0, solid characters are displayed; if the value is greater than 0, hollow characters are displayed. <br>**Note:** <br>When both strokeWidth and [shaderStyle](#shaderstyle) are set, shaderStyle does not take effect. <br>[strokeJoinStyle](#strokejoinstyle) takes effect only when strokeWidth is used to set the text stroke. |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Width of the text stroke. <br>If the value is less than 0, solid characters are displayed; if the value is greater than 0, hollow characters are displayed. <br>**Note:** <br>When both strokeWidth and [shaderStyle](#shaderstyle) are set, shaderStyle does not take effect. <br>[strokeJoinStyle](#strokejoinstyle) takes effect only when strokeWidth is used to set the text stroke. |
 
 ## textAlign
 

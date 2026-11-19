@@ -33,6 +33,8 @@ import { access } from '@kit.ConnectivityKit';
 | [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md#isvalidrandomdeviceid-1) | Determine whether the randomized device address application can still be used. |
 | [off('stateChange')](arkts-connectivity-access-off-f.md#offstatechange) | Unsubscribe the event reported when the Bluetooth state changes. |
 | [on('stateChange')](arkts-connectivity-access-on-f.md#onstatechange) | Subscribe the event reported when the Bluetooth state changes. |
+| [startSnoopCapture](arkts-connectivity-access-startsnoopcapture-f.md#startsnoopcapture-1) | Start capturing HCI packet and returns a socket file descriptor carrying the real-time HCI data stream. |
+| [stopSnoopCapture](arkts-connectivity-access-stopsnoopcapture-f.md#stopsnoopcapture-1) | Stop capturing HCI packet. |
 
 <!--Del-->
 ### Functions(System API)

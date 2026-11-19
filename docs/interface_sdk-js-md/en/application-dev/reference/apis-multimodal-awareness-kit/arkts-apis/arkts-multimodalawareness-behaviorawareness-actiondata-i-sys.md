@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 actionId: string
 ```
 
-Action ID (specific prefix format).
+Action ID. The value is the perceptionEventId of PerceptionEvent from the onPerception callback. This value must be passed when calling submitFeedback. The prefix is habitAwareness_.
 
 **Type:** string
 
@@ -66,7 +66,7 @@ Action Type.
 attributes?: SystemActionAttributes
 ```
 
-Scenario Attributes.
+Scenario Attributes. Default value: Empty.
 
 **Type:** [SystemActionAttributes](arkts-multimodalawareness-behaviorawareness-systemactionattributes-i-sys.md)
 
@@ -106,7 +106,7 @@ Action Name.
 params?: Record<string, string | number | boolean>
 ```
 
-Additional Parameters. Default value: Default behavior: no additional parameters.
+Additional Parameters. Default value: Empty.
 
 **Type:** Record&lt;string, string &#124; number &#124; boolean&gt;
 

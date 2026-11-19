@@ -64,7 +64,7 @@ pairingType: PairingType
 passkey: string
 ```
 
-设备配对的密钥。
+设备配对的通行码，显示给用户确认。长度固定为6，字符串内容为数字。仅在pairingType为PAIRING_TYPE_PASSCODE或PAIRING_TYPE_NUMBER_COMPARE时该字段生效。
 
 **类型：** string
 

@@ -46,6 +46,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
+| [BlenderBase](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md) | Blender base type, providing the unified creation entry for various blending effects. It is recommended to use the methods of this type to create blenders. |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc. |
 <!--DelEnd-->
 

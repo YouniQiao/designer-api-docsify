@@ -6,4 +6,4 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ScrollSnapOffsetProvider](arkts-arkui-scrollsnapoffsetprovider-i.md) | 提供可滚动组件两阶段滚动限位偏移量。 |
+| [ScrollSnapOffsetProvider](arkts-arkui-scrollsnapoffsetprovider-i.md) | 为Grid和WaterFlow的scrollSnapStrategy属性提供两阶段限位滚动的自定义偏移量。 |

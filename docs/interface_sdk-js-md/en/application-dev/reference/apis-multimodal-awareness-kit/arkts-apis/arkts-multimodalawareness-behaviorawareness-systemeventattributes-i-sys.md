@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 appId?: string
 ```
 
-Application ID (for app-related events).
+Application ID (for app-related events). Default value: Empty.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ Application ID (for app-related events).
 appName?: string
 ```
 
-Application name.
+Application name. Default value: Empty.
 
 **Type:** string
 
@@ -66,7 +66,7 @@ Application name.
 batteryThreshold?: number
 ```
 
-Battery threshold. Unit: Percentage. The value must be an integer within [0,100]. Default value: The default value is 0.
+Battery threshold. Unit: %. The value must be an integer within [0,100]. Default value: Empty.
 
 **Type:** number
 
@@ -86,7 +86,7 @@ Battery threshold. Unit: Percentage. The value must be an integer within [0,100]
 bluetoothDeviceName?: string
 ```
 
-Bluetooth device name.
+Bluetooth device name. Default value: Empty.
 
 **Type:** string
 
@@ -106,7 +106,7 @@ Bluetooth device name.
 bluetoothDeviceType?: BluetoothDeviceType
 ```
 
-Bluetooth device type. Default value: The default value is 0.
+Bluetooth device type. Default value: Empty.
 
 **Type:** [BluetoothDeviceType](arkts-multimodalawareness-behaviorawareness-bluetoothdevicetype-e-sys.md)
 
@@ -126,7 +126,7 @@ Bluetooth device type. Default value: The default value is 0.
 dailyDurationThreshold?: number
 ```
 
-Daily usage duration threshold. Unit: Minute. The value must be an integer within [0,1440]. Default value: The default value is 0.
+Daily usage duration threshold. Unit: min. The value must be an integer within [0,1440]. Default value: Empty.
 
 **Type:** number
 
@@ -146,7 +146,7 @@ Daily usage duration threshold. Unit: Minute. The value must be an integer withi
 durationThreshold?: number
 ```
 
-Single-use duration threshold. Unit: Minute. The value should be an integer. Default value: The default value is 0.
+Single-use duration threshold. Unit: min. The value should be an integer. Default value: Empty.
 
 **Type:** number
 
@@ -186,7 +186,7 @@ Discriminator field, fixed as 'systemEvent'.
 level?: number
 ```
 
-Battery percentage. Unit: Percentage. The value must be an integer within [0,100]. Default value: The default value is 0.
+Battery percentage. Unit: %. The value must be an integer within [0,100]. Default value: Empty.
 
 **Type:** number
 
@@ -206,7 +206,7 @@ Battery percentage. Unit: Percentage. The value must be an integer within [0,100
 packageName?: string
 ```
 
-Application package name.
+Application package name. Default value: Empty.
 
 **Type:** string
 

@@ -26,6 +26,38 @@ Downloading. The application is uninstalled.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## CONTENT_NOT_FOUND
+
+```TypeScript
+CONTENT_NOT_FOUND = 7
+```
+
+During the download, the download stops due to missing content.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DownloadStopReason-CONTENT_NOT_FOUND = 7--><!--Device-DownloadStopReason-CONTENT_NOT_FOUND = 7-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## FREQUENT_USER_REQUESTS
+
+```TypeScript
+FREQUENT_USER_REQUESTS = 8
+```
+
+During the download process, the download is stopped due to frequent user requests.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DownloadStopReason-FREQUENT_USER_REQUESTS = 8--><!--Device-DownloadStopReason-FREQUENT_USER_REQUESTS = 8-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
 ## LOCAL_STORAGE_FULL
 
 ```TypeScript
@@ -37,6 +69,22 @@ Downloading. The device storage is full.
 **Since:** 20
 
 <!--Device-DownloadStopReason-LOCAL_STORAGE_FULL = 2--><!--Device-DownloadStopReason-LOCAL_STORAGE_FULL = 2-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## LOW_BATTERY
+
+```TypeScript
+LOW_BATTERY = 9
+```
+
+Download stopped due to low battery during download.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DownloadStopReason-LOW_BATTERY = 9--><!--Device-DownloadStopReason-LOW_BATTERY = 9-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

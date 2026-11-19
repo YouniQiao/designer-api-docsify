@@ -18,7 +18,7 @@ enum ConnectionReason
 CONNECTION_FAIL_ACB_CONNECTION = 4
 ```
 
-连接失败：超过ACB连接限制。
+连接失败：ACB连接失败。
 
 **起始版本：** 26.0.0
 

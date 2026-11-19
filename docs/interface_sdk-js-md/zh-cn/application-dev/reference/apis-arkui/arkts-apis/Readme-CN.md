@@ -692,6 +692,7 @@
   - [NodeIdentity](arkts-arkui-nodeidentity-t.md)
   - [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md)
   - [NodeSensitiveInputCallback](arkts-arkui-nodesensitiveinputcallback-t.md)
+  - [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md)
   - [PanListenerCallback](arkts-arkui-panlistenercallback-t.md)
   - [PointerStyle](arkts-arkui-pointerstyle-t.md)
   - [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md)
@@ -1195,6 +1196,7 @@
     <!--Del-->
     - [setWindowLayoutMode（系统接口）](arkts-arkui-window-setwindowlayoutmode-f-sys.md)<!--DelEnd-->
     - [AvoidArea](arkts-arkui-window-avoidarea-i.md)
+    - [AvoidAreaInsets](arkts-arkui-window-avoidareainsets-i.md)
     - [AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)
     - [Configuration](arkts-arkui-window-configuration-i.md)
     <!--Del-->

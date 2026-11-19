@@ -177,6 +177,8 @@
     <!--Del-->
     - [createHdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md)<!--DelEnd-->
     <!--Del-->
+    - [BlenderBase(system api)](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md)<!--DelEnd-->
+    <!--Del-->
     - [Mask(system api)](arkts-arkgraphics2d-uieffect-mask-c-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BlurBubblesRiseEffectParam(system api)](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md)<!--DelEnd-->

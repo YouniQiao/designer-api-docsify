@@ -48,7 +48,7 @@ grayscaleFactor?: [number, number, number]
 hdrBrightnessRatio: number
 ```
 
-HDR的提亮倍数。取值范围为[1.0, 设备当前支持最大提亮倍数]。设置小于1.0的值时，按值为1.0处理；当值等于1.0时，为组件原本亮度；设置大于设备当前支持最大提亮倍数的值时，按值为设备当前支持最大提亮倍数处理，支持最大提亮倍数 = 设备最大亮度 / 设备默认亮度。设备最大亮度通过hdc命令获取：hdc shell param get const.display.brightness.max设备默认亮度通过hdc命令获取：hdc shell param get const.display.brightness.default
+HDR的提亮倍数。取值范围为[1.0, 设备当前支持最大提亮倍数]，超出边界时会自动截断。当取值等于1.0时，为组件原本亮度。设备当前支持最大提亮倍数 = 设备最大亮度 / 设备默认亮度。设备最大亮度通过hdc命令获取：hdc shell param get const.display.brightness.max设备默认亮度通过hdc命令获取：hdc shell param get const.display.brightness.default
 
 **类型：** number
 

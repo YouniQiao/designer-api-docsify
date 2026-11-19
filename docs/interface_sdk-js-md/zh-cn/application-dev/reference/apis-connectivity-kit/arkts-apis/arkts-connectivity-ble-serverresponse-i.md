@@ -84,7 +84,7 @@ status: number
 transId: number
 ```
 
-client端写请求的标识符，server端回复时需填写相同的transId。
+收到client端请求的标识符，与订阅client端读或者写请求事件携带的transId保持一致。
 
 **类型：** number
 

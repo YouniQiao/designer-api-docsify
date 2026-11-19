@@ -24,7 +24,7 @@ import { scan } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Address of the device discovered. The address format is **11:22:33:AA:BB:FF**.
+The asterisk (*) indicates the address of the scanned device. The address format is 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ Radio frame type of the received advertising packet. If this field is not return
 isConnectable: boolean
 ```
 
-Whether the discovered device is connectable. The value **true** indicates that the discovered device is connectable, and the value **false** indicates the opposite.
+The asterisk (*) indicates whether the scanned broadcast can be connected. true: yes; false: no.
 
 **Type:** boolean
 

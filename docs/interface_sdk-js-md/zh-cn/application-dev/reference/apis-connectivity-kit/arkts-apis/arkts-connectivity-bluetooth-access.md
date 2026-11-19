@@ -21,7 +21,7 @@ import { access } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md#addpersistentdeviceid-1) | 持久化存储蓝牙设备的虚拟MAC地址。使用Promise异步回调。 |
-| [convertUuid](arkts-connectivity-access-convertuuid-f.md#convertuuid-1) | 将指定格式的的UUID转换为128bit的UUID。 |
+| [convertUuid](arkts-connectivity-access-convertuuid-f.md#convertuuid-1) | 将指定格式的UUID转换为128bit的UUID。 |
 | [deletePersistentDeviceId](arkts-connectivity-access-deletepersistentdeviceid-f.md#deletepersistentdeviceid-1) | 删除已持久化存储的蓝牙虚拟MAC地址。使用Promise异步回调。 |
 | [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disablebluetooth-1) | 关闭蓝牙。 |
 | [disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md#disablebluetoothasync-1) | 关闭蓝牙。使用Promise异步回调。 |
@@ -33,6 +33,8 @@ import { access } from '@kit.ConnectivityKit';
 | [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md#isvalidrandomdeviceid-1) | 判断对端蓝牙设备的虚拟MAC地址是否有效。 |
 | [off('stateChange')](arkts-connectivity-access-off-f.md#offstatechange) | 取消订阅本端蓝牙开关状态变化事件。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
 | [on('stateChange')](arkts-connectivity-access-on-f.md#onstatechange) | 订阅本端蓝牙开关状态变化事件。使用Callback异步回调。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
+| [startSnoopCapture](arkts-connectivity-access-startsnoopcapture-f.md#startsnoopcapture-1) | 启动HCI报文嗅探，返回携带实时HCI数据流的socket文件描述符。 |
+| [stopSnoopCapture](arkts-connectivity-access-stopsnoopcapture-f.md#stopsnoopcapture-1) | 停止HCI报文嗅探。 |
 
 <!--Del-->
 ### 函数（系统接口）

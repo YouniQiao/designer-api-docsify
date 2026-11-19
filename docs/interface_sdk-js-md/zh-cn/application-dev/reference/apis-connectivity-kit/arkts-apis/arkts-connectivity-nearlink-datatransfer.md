@@ -38,7 +38,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | 发起端口连接的参数。 |
-| [ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md) | 与远端设备端口连接参数的协商结果 |
+| [ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md) | 与远端设备端口连接参数的协商结果。 |
 | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | 获取端口通道连接状态所需参数。 |
 | [DataParams](arkts-connectivity-datatransfer-dataparams-i.md) | 端口数据发送和接收的参数。 |
 

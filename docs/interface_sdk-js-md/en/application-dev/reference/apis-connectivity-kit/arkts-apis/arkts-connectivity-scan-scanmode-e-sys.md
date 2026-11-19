@@ -18,7 +18,7 @@ Enumerates the scan modes.
 SCAN_MODE_LOW_LATENCY = 2
 ```
 
-High-power scan mode. The scan frequency is high, and the power consumption is high.
+The asterisk (*) indicates the low-delay scanning mode with high scanning frequency and high power consumption.
 
 **Since:** 26.0.0
 

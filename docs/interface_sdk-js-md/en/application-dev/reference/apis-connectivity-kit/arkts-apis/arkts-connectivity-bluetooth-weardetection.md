@@ -1,4 +1,4 @@
-# @ohos.bluetooth.wearDetection
+# @ohos.bluetooth.wearDetection(Bluetooth wear detection module)
 
 Provides methods to manage the wearing detection function.
 

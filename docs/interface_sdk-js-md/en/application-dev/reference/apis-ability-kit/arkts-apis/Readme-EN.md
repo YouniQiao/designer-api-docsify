@@ -80,7 +80,7 @@
     - [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
-- [@ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)](arkts-ability-abilitytoolaccessctrl.md)
+- [@ohos.abilityToolAccessCtrl(Tool Access Control Management)](arkts-ability-abilitytoolaccessctrl.md)
   <!--Del-->
   - [generateControlledDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -94,12 +94,14 @@
   <!--Del-->
   - [grantToolPermissionsByUser(system api)](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   - [queryControlAppStatus](arkts-ability-abilitytoolaccessctrl-querycontrolappstatus-f.md)
+  - [registerControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-registercontrolcomponentresultcallback-f.md)
   - [requestControlAppPermissionFromUser](arkts-ability-abilitytoolaccessctrl-requestcontrolapppermissionfromuser-f.md)
   <!--Del-->
   - [requestToolPermissions(system api)](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
   - [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md)
   <!--Del-->
   - [revokeTaskIdentity(system api)](arkts-ability-abilitytoolaccessctrl-revoketaskidentity-f-sys.md)<!--DelEnd-->
+  - [unregisterControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-unregistercontrolcomponentresultcallback-f.md)
   <!--Del-->
   - [updateRemoteGrantStatus(system api)](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -111,6 +113,7 @@
   - [AuthStatusInfo(system api)](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
   - [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)
   - [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md)
+  - [ControlComponentClickResult](arkts-ability-abilitytoolaccessctrl-controlcomponentclickresult-i.md)
   <!--Del-->
   - [OperationInfo(system api)](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)<!--DelEnd-->
   - [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)
@@ -140,6 +143,7 @@
   - [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)
   <!--Del-->
   - [UserAuthResult(system api)](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
+  - [ResultCallback](arkts-ability-abilitytoolaccessctrl-resultcallback-t.md)
   <!--Del-->
   - [AuthStatus(system api)](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)<!--DelEnd-->
   - [ControlAppStatus](arkts-ability-abilitytoolaccessctrl-controlappstatus-e.md)

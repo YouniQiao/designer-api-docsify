@@ -1108,9 +1108,9 @@ GridItem and replaces the placeholder, keeping the scroll anchor.
 scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
 ```
 
-Sets the two-stage scroll snap strategy of the Grid.
+Sets how the Grid aligns an item or snaps to a custom position when scrolling ends.
 
-START, CENTER, and END align items with the start, center, and end of the viewport along the scrolling axis. A custom provider calculates the approach distance and final target through its two callbacks. NONE or undefined clears the strategy and restores the default scrolling behavior. Snapping is disabled for unsupported layouts. Targets are constrained to the legal scroll range.
+START, CENTER, and END align items with the start, center, and end of the viewport along the scrolling axis. A custom provider uses calculateApproachOffset to set the fling distance and calculateSnapOffset to set the final snap position. If the strategy is omitted, ScrollSnapAlign.NONE, or undefined, the Grid coasts to a stop without snapping. Layouts with GridItems that span multiple columns do not support snapping. When snapping is enabled, ending a drag or a mouse box selection also triggers snapping. The final snap position stays within the scrollable range.
 
 **Since:** 26.1.0
 

@@ -1,4 +1,4 @@
-# @ohos.bluetooth.a2dp
+# @ohos.bluetooth.a2dp(Bluetooth a2dp module)
 
 Provides methods to accessing bluetooth audio related capabilities.
 

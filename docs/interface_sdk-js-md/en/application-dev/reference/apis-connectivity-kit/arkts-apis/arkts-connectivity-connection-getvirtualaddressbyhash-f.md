@@ -41,8 +41,8 @@ Obtain the virtual address of the corresponding device based on the hash value o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900003 | Bluetooth disabled. |
 | [2900015](../errorcode-bluetoothManager.md#2900015-parameter-format-inconsistent-with-specifications) | Parameter format mismatch with specification. |
 | [2900016](../errorcode-bluetoothManager.md#2900016-device-not-paired) | Device unpaired. |

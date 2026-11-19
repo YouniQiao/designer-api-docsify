@@ -90,6 +90,24 @@ Type of the application signing certificate file. The options are **debug** and 
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## appUid
+
+```TypeScript
+readonly appUid: number
+```
+
+Application UID.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationInfo-readonly appUid: number--><!--Device-ApplicationInfo-readonly appUid: number-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## codePath
 
 ```TypeScript

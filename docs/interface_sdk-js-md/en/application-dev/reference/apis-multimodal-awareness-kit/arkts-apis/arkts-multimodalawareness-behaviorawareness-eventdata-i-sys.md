@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 attributes?: TimeAttributes | LocationAttributes | SystemEventAttributes
 ```
 
-Scenario Attributes.
+Scenario Attributes. Default value: Empty.
 
 **Type:** [TimeAttributes](arkts-multimodalawareness-behaviorawareness-timeattributes-i-sys.md) &#124; [LocationAttributes](arkts-multimodalawareness-behaviorawareness-locationattributes-i-sys.md) &#124; [SystemEventAttributes](arkts-multimodalawareness-behaviorawareness-systemeventattributes-i-sys.md)
 
@@ -106,7 +106,7 @@ Event Name.
 params?: Record<string, string | number | boolean>
 ```
 
-Additional Parameters. Default value: Default behavior without additional parameters.
+Additional Parameters. Default value: Empty.
 
 **Type:** Record&lt;string, string &#124; number &#124; boolean&gt;
 
@@ -126,7 +126,7 @@ Additional Parameters. Default value: Default behavior without additional parame
 timestamp: number
 ```
 
-Occurrence timestamp. Unit: milliseconds.
+Occurrence timestamp. Unit: ms.
 
 **Type:** number
 

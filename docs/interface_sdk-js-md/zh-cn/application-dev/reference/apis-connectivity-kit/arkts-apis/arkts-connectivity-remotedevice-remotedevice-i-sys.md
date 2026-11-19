@@ -337,7 +337,7 @@ setDeviceAlias(alias: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alias | string | 是 | 远端设备别名。个字符，不能为空。<br>最大长度为64。 |
+| alias | string | 是 | 远端设备别名。最大长度为64个字符，不能为空。 |
 
 **错误码：**
 

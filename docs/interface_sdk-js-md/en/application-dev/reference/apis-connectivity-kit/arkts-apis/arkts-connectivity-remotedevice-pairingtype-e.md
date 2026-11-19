@@ -18,7 +18,7 @@ Enumerates the NearLink pairing types.
 NO_PASSKEY_CONFIRMATION = 0
 ```
 
-Pairing type that does not require a passkey. Users do not need to check the pairing code.
+indicates that the pairing mode does not require a passcode, and the user does not need to check the pairing code.
 
 **Since:** 26.0.0
 

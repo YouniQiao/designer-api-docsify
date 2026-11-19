@@ -321,7 +321,7 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 改写服务端的描述符。使用Promise异步回调。
 
-此接口不支持写入客户端属性配置描述符（CLIENT_PROPERTY_CONFIG），如需配置客户端属性通知或指示，请使用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](#setpropertyindication)
+此接口不支持写入客户端属性配置描述符（CLIENT_PROPERTY_CONFIG），如需配置客户端属性通知或指示，请使用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](#setpropertyindication)。
 
 **起始版本：** 26.0.0
 

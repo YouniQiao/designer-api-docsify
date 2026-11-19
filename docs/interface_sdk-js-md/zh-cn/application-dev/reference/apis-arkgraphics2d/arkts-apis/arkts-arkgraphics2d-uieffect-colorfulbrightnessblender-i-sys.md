@@ -48,7 +48,7 @@ brightnessBlenderParam: BrightnessBlenderParam
 options?: ColorfulBrightnessBlenderOptions
 ```
 
-提亮压暗的增强参数，用于控制提亮压暗方向、色彩增强强度、可读性阈值及HDR开关。
+提亮压暗的增强参数，用于控制提亮压暗方向、色彩增强强度、可读性阈值及HDR开关。此参数不填时，使用ColorfulBrightnessBlenderOptions各字段的默认值。
 
 **类型：** [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md)
 

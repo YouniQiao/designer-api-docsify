@@ -1,6 +1,6 @@
-# @ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)
+# @ohos.abilityToolAccessCtrl(Tool Access Control Management)
 
-abilityToolAccessCtrl的命名空间
+本模块提供提供工具（CLI命令）的执行认证凭据获取能力，以及应用控制权限的查询与请求能力。
 
 **起始版本：** 26.0.0
 
@@ -23,8 +23,10 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [queryControlAppStatus](arkts-ability-abilitytoolaccessctrl-querycontrolappstatus-f.md#querycontrolappstatus-1) | 查询指定应用的控制权限状态。该函数检查输入列表中的每个应用程序是否被允许或拒绝被外部工具控制。结果列表与输入顺序相对应。 |
+| [registerControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-registercontrolcomponentresultcallback-f.md#registercontrolcomponentresultcallback-1) | 注册控制组件模拟点击结果回调。注册后，控制组件每次模拟点击的结果通过该回调返回。同一进程内仅支持注册一个回调，重复注册将覆盖先前注册的回调。 |
 | [requestControlAppPermissionFromUser](arkts-ability-abilitytoolaccessctrl-requestcontrolapppermissionfromuser-f.md#requestcontrolapppermissionfromuser-1) | 向用户请求指定应用的控制权限。该函数会弹出一个用户对话框，获取对每个应用的控制授权决策。返回结果反映用户对每个应用的允许或拒绝决策。 |
 | [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket-1) | 获取CLI工具的执行认证票据。该函数用于获取CLI工具及子命令的执行认证票据。如果CLI工具所需权限用户尚未授权，会返回需要授权的权限列表及权限状态。如果CLI工具所需权限用户均授权，会返回授权的票据。 |
+| [unregisterControlComponentResultCallback](arkts-ability-abilitytoolaccessctrl-unregistercontrolcomponentresultcallback-f.md#unregistercontrolcomponentresultcallback-1) | 注销控制组件模拟点击结果回调。用于在业务结束时释放回调资源。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -51,6 +53,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md) | 应用的相关信息。 |
 | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) | CLI命令信息。 |
 | [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md) | 应用的控制权限状态结果。 |
+| [ControlComponentClickResult](arkts-ability-abilitytoolaccessctrl-controlcomponentclickresult-i.md) | 模拟点击操作结果。 |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md) | 权限信息。 |
 | [TicketParams](arkts-ability-abilitytoolaccessctrl-ticketparams-i.md) | 生成票据的可选参数 |
 | [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md) | 票据查询结果。 |
@@ -75,6 +78,12 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 | [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md) | 凭据信息。 |
 | [UserAuthResult](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md) | 用户授权结果。 |
 <!--DelEnd-->
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [ResultCallback](arkts-ability-abilitytoolaccessctrl-resultcallback-t.md) | 用于接收每次模拟点击操作结果的回调函数类型。 |
 
 ### 枚举
 

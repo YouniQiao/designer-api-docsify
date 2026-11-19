@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 coordinates: Coordinates
 ```
 
-经纬度坐标。纬度取值范围：-90~90；经度取值范围：-180~180。
+经纬度坐标。纬度取值范围：[-90,90]；经度取值范围：[-180,180]。
 
 **类型：** [Coordinates](arkts-multimodalawareness-behaviorawareness-coordinates-i-sys.md)
 
@@ -66,7 +66,7 @@ kind: 'location'
 locationName?: string
 ```
 
-位置名称。
+位置名称。默认值：空。
 
 **类型：** string
 
@@ -86,7 +86,7 @@ locationName?: string
 locationType?: LocationType
 ```
 
-位置类型（预定义位置，可选）。
+位置类型（预定义位置，可选）。默认值：空。
 
 **类型：** [LocationType](arkts-multimodalawareness-behaviorawareness-locationtype-e-sys.md)
 

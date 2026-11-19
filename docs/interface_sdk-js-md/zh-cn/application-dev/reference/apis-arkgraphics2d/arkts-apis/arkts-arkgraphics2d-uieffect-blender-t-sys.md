@@ -1,7 +1,7 @@
 # Blender（系统接口）
 
 ```TypeScript
-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender
+type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase
 ```
 
 混合器类型，用于描述混合效果。
@@ -10,7 +10,7 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | Col
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender--><!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender-End-->
+<!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase--><!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -22,3 +22,4 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | Col
 | [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | 支持HDR的提亮混合器<br>**起始版本：** 20 |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器<br>**起始版本：** 26.0.0 |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 具有提亮压暗效果的混合器（保持色相）<br>**起始版本：** 26.1.0 |
+| [BlenderBase](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md) | 混合器基础类型<br>**起始版本：** 26.1.0 |

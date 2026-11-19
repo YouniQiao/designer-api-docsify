@@ -24,7 +24,7 @@ import { scan } from '@kit.ConnectivityKit';
 address: string
 ```
 
-表示扫描到设备地址。地址格式参考：11:22:33:AA:BB:FF。
+表示扫描到的设备地址。地址格式参考：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -124,7 +124,7 @@ frameType?: nearlinkConstant.FrameType
 isConnectable: boolean
 ```
 
-表示扫描到的广播是否可连接。true：可连接，false：不可连接
+表示扫描到的广播是否可连接。true：可连接，false：不可连接。
 
 **类型：** boolean
 

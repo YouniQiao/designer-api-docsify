@@ -18,7 +18,7 @@ enum PairingType
 NO_PASSKEY_CONFIRMATION = 0
 ```
 
-表示不需要passkey的配对方式，用户无需检查配对码。
+表示不需要通行码的配对方式，用户无需检查配对码。
 
 **起始版本：** 26.0.0
 

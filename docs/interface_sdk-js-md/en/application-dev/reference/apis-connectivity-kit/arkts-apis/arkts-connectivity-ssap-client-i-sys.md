@@ -319,9 +319,7 @@ Enables or disables indication for property value change. When the property valu
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-Rewrites the server descriptor. This API uses a promise to return the result.
-
-This API does not support writing the client property configuration descriptor (**CLIENT_PROPERTY_CONFIG**). To configure the client property notification or indication, use [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication)
+Rewrite the descriptor on the server. Use Promise asynchronous callbacks. This interface does not support writing the client attribute configuration descriptor(CLIENT_PROPERTY_CONFIG). To configure the client attribute notification or indication, use [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication).
 
 **Since:** 26.0.0
 

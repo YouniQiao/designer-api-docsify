@@ -1209,6 +1209,34 @@ Sets the speed of the snap animation for list item scrolling. This parameter tak
 | --- | --- | --- | --- |
 | speed | [ScrollSnapAnimationSpeed](arkts-arkui-list-comp-scrollsnapanimationspeed-e.md) | Yes | Speed of the snap animation for listing scrolling.<br>Default value: **ScrollSnapAnimationSpeed.NORMAL** |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+Sets a two-stage scroll snap strategy for the List.
+
+**ScrollSnapAlign.START**, **ScrollSnapAlign.CENTER**, and **ScrollSnapAlign.END** select built-in strategies. **ScrollSnapAlign.NONE** is invalid and throws exception 401. A custom provider requires **calculateSnapOffset** to be a function. Passing **undefined** or no argument clears the strategy.
+
+This attribute and **scrollSnapAlign** use last-set-wins semantics. The final snap uses the List spring animation and follows **scrollSnapAnimationSpeed**.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-ListAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): ListAttribute--><!--Device-ListAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): ListAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Built-in alignment or custom provider. |
+
 ## stackFromEnd
 
 ```TypeScript

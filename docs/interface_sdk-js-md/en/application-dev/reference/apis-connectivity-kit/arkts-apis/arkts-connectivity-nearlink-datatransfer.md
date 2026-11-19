@@ -1,4 +1,4 @@
-# @ohos.nearlink.dataTransfer(NearLink Data Transfer Capability)
+# @ohos.nearlink.dataTransfer
 
 This module provides the NearLink data transfer capability, including port channel management, connection management, data sending and receiving, and connection status query and subscription.
 
@@ -38,7 +38,7 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Defines the parameters for initiating a port connection. |
-| [ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md) | Represents the result of port connection parameter negotiation with a remote device. |
+| [ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md) | Negotiation result of the port connection parameters with the remote device. |
 | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | Defines the parameters for obtaining the port channel connection state. |
 | [DataParams](arkts-connectivity-datatransfer-dataparams-i.md) | Defines the parameters for port data sending and receiving. |
 

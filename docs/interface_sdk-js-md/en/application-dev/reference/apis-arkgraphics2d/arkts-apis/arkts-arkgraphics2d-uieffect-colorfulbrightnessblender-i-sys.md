@@ -48,7 +48,7 @@ Regular parameters for brightening and darkening, used to configure basic proper
 options?: ColorfulBrightnessBlenderOptions
 ```
 
-Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch.
+Enhanced parameters for brightening and darkening, used to control the brightening/darkening direction, color enhancement strength, readability threshold, and HDR switch. If this parameter is not specified, the default values of the fields in ColorfulBrightnessBlenderOptions are used.
 
 **Type:** [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md)
 

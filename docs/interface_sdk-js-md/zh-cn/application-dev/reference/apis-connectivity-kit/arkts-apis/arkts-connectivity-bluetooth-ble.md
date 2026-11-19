@@ -63,6 +63,7 @@ import { ble } from '@kit.ConnectivityKit';
 | [BleScanner](arkts-connectivity-ble-blescanner-i.md) | BLE扫描类，提供了扫描相关的操作方法。 |
 | [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md) | 描述server端订阅client端读特征值请求事件后，接收到的事件参数结构。 |
 | [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md) | 描述server端订阅client端写特征值请求事件后，接收到的事件参数结构。 |
+| [CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md) | 描述GATT连接的GATT流控拥塞状态。 |
 | [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md) | 描述server端订阅client端读描述符请求事件后，接收到的事件参数结构。 |
 | [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md) | 描述server端订阅client端写描述符请求事件后，接收到的事件参数结构。 |
 | [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md) | GATT客户端类，提供了和服务端进行连接和数据传输等操作方法。 |
@@ -88,7 +89,7 @@ import { ble } from '@kit.ConnectivityKit';
 | --- | --- |
 | [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i-sys.md) | GATT客户端类，提供了和服务端进行连接和数据传输等操作方法。 |
 | [GattRspContext](arkts-connectivity-ble-gattrspcontext-i-sys.md) | client端调用[writeCharacteristicValueWithContext](arkts-connectivity-ble-gattclientdevice-i-sys.md#writecharacteristicvaluewithcontext)等接口并接收到server端的回复消息后，蓝牙子系统上报给应用的信息。 |
-| [ScanEnhanceMode](arkts-connectivity-ble-scanenhancemode-i-sys.md) | The enum of gatt characteristic write type |
+| [ScanEnhanceMode](arkts-connectivity-ble-scanenhancemode-i-sys.md) | Describes the configuration of scan enhance mode. |
 | [ScanFilter](arkts-connectivity-ble-scanfilter-i-sys.md) | 扫描BLE广播的过滤条件，只有符合该条件的广播报文才会上报。 |
 | [ScanOptions](arkts-connectivity-ble-scanoptions-i-sys.md) | BLE扫描的配置参数。 |
 <!--DelEnd-->

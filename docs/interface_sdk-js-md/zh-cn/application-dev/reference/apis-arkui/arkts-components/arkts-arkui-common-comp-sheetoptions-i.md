@@ -68,7 +68,7 @@ adaptToHandedness?: HandednessFollowMode
 
 该属性仅在preferType设置为SheetType.CENTER（居中弹窗）时生效，其他弹窗样式下该属性不生效。
 
-**类型：** [HandednessFollowMode](../arkts-apis/arkts-arkui-arkui-dialog-handednessfollowmode-e.md)
+**类型：** [HandednessFollowMode](arkts-arkui-common-comp-handednessfollowmode-t.md)
 
 **起始版本：** 26.1.0
 

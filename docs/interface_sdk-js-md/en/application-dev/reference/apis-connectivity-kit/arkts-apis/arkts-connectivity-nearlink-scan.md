@@ -1,6 +1,6 @@
 # @ohos.nearlink.scan(NearLink Scanning Capability)
 
-This module provides the definition of the NearLink scanning mode.
+This module provides functions related to star flash scanning, including initiating/stopping scanning and subscribing to scanning results.
 
 **Since:** 26.0.0
 

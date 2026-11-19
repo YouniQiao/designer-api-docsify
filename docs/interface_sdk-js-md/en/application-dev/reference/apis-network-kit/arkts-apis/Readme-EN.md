@@ -56,6 +56,7 @@
   - [queryTraceRoute](arkts-network-connection-querytraceroute-f.md)
   - [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md)
   - [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md)
+  - [renewDhcp](arkts-network-connection-renewdhcp-f.md)
   - [reportNetConnected](arkts-network-connection-reportnetconnected-f.md)
   - [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md)
   - [setAppHttpProxy](arkts-network-connection-setapphttpproxy-f.md)

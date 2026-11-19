@@ -1,4 +1,4 @@
-# @ohos.bluetooth.ble
+# @ohos.bluetooth.ble(Bluetooth ble module)
 
 Provides methods to operate or manage Bluetooth.
 
@@ -61,6 +61,7 @@ import { ble } from '@kit.ConnectivityKit';
 | [BleScanner](arkts-connectivity-ble-blescanner-i.md) | Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md) to create an BleScanner instance. |
 | [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md) | Describes the parameters of the Gatt client's characteristic read request. |
 | [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md) | Describes the parameters of the Gatt client's characteristic write request. |
+| [CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md) | Describes the GATT flow control congestion state of a GATT connection. |
 | [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md) | Describes the parameters of the Gatt client's descriptor read request. |
 | [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md) | Describes the parameters of the Gatt client's descriptor write request. |
 | [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md) to create an GattClientDevice instance. |

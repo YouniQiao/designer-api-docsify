@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 coordinates: Coordinates
 ```
 
-Geographic coordinates.
+Geographic coordinates. Latitude value range: [-90,90]; longitude value range: [-180,180].
 
 **Type:** [Coordinates](arkts-multimodalawareness-behaviorawareness-coordinates-i-sys.md)
 
@@ -66,7 +66,7 @@ Discriminator field, fixed as 'location'.
 locationName?: string
 ```
 
-Location name.
+Location name. Default value: Empty.
 
 **Type:** string
 
@@ -86,7 +86,7 @@ Location name.
 locationType?: LocationType
 ```
 
-Location type.
+Location type. Default value: Empty.
 
 **Type:** [LocationType](arkts-multimodalawareness-behaviorawareness-locationtype-e-sys.md)
 

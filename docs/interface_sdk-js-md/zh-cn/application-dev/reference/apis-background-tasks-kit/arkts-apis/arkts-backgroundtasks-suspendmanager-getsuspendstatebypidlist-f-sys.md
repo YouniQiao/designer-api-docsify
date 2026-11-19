@@ -44,5 +44,5 @@ function getSuspendStateByPidList(pidList: Array<number>): Array<FreezeState>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| 31800005 | Parameter error. |
-| 31800006 | Failed to get suspend manager service. |
+| [31800005](../errorcode-suspendManager.md#31800005-参数错误) | Parameter error. |
+| [31800006](../errorcode-suspendManager.md#31800006-获取冻结管理服务失败) | Failed to get suspend manager service. |

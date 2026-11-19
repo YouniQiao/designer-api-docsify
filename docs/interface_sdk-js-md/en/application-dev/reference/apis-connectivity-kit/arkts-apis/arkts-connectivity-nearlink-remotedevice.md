@@ -1,6 +1,6 @@
 # @ohos.nearlink.remoteDevice(NearLink Remote Device Connection Capability)
 
-This module provides the capabilities of connecting to and managing NearLink remote devices, including connecting to and disconnecting from remote devices, pairing with a trusted device and confirmation, adjusting the connection interval, and subscribing to pairing requests.
+This module provides the connection and management capabilities of remote devices, including creating remote device instances, connecting to and disconnecting remote devices, querying remote device information, and subscribing to device status change events.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offpairingrequest-1) | Unsubscribes from pairing request events from remote NearLink devices. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest-1) | Subscribes to pairing request events from remote NearLink devices. |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest-1) | Subscribe to pairing request events from remote NearLink devices. Only system applications granted ohos.permission.ACCESS_NEARLINK permission can access this event. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, The real device address is returned. Otherwise, the random device address is returned. Before calling this MPI, you can call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports star blinking. |
 <!--DelEnd-->
 
 ### Interfaces

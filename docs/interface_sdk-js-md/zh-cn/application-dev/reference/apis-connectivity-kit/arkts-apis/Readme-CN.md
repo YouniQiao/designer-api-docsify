@@ -40,6 +40,8 @@
   - [on](arkts-connectivity-access-on-f.md)
   <!--Del-->
   - [restrictBluetooth（系统接口）](arkts-connectivity-access-restrictbluetooth-f-sys.md)<!--DelEnd-->
+  - [startSnoopCapture](arkts-connectivity-access-startsnoopcapture-f.md)
+  - [stopSnoopCapture](arkts-connectivity-access-stopsnoopcapture-f.md)
   <!--Del-->
   - [NotifyDialogResultParams（系统接口）](arkts-connectivity-access-notifydialogresultparams-i-sys.md)<!--DelEnd-->
   - [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)
@@ -94,6 +96,7 @@
   - [BleScanner](arkts-connectivity-ble-blescanner-i.md)
   - [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)
   - [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)
+  - [CongestionChangeState](arkts-connectivity-ble-congestionchangestate-i.md)
   - [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)
   - [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
   - [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md)

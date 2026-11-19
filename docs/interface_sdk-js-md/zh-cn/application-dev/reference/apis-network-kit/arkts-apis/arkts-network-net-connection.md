@@ -71,6 +71,7 @@ import { connection } from '@kit.NetworkKit';
 | [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshglobalhttpproxy-1) | 通知系统重新认证全局代理。 |
 | [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule-1) | 删除当前应用程序中对应host的自定义DNS规则。使用callback异步回调。 |
 | [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule-2) | 删除当前应用程序中对应host的自定义DNS规则。使用Promise异步回调。 |
+| [renewDhcp](arkts-network-connection-renewdhcp-f.md#renewdhcp-1) | 更新ip地址。 |
 | [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected-1) | 向网络管理上报网络处于可用状态。使用callback方式异步回调。 |
 | [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected-2) | 向网络管理报告网络处于可用状态。使用Promise异步回调。 |
 | [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected-1) | 向网络管理上报网络处于不可用状态。使用callback异步回调。 |

@@ -44,9 +44,9 @@ This API is used to identify the BR entry and the BLE entry of the same dual-mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | 2900003 | Bluetooth disabled. |
 | [2900016](../errorcode-bluetoothManager.md#2900016-device-not-paired) | Device unpaired. |
 | [2900017](../errorcode-bluetoothManager.md#2900017-no-ble-address-associated-with-the-input-br-address) | No BLE address is associated with the input BR address. |

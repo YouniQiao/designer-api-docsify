@@ -42,11 +42,7 @@ deviceClass: DeviceClass
 deviceId: string
 ```
 
-扫描到的设备地址。
-
-基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。
-
-已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)方法。
+扫描到的设备地址。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)方法。
 
 **类型：** string
 
@@ -91,5 +87,23 @@ rssi: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DiscoveryResult-rssi: int--><!--Device-DiscoveryResult-rssi: int-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## transport
+
+```TypeScript
+transport?: BluetoothTransport
+```
+
+发现设备的传输方式。
+
+**类型：** [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DiscoveryResult-transport?: BluetoothTransport--><!--Device-DiscoveryResult-transport?: BluetoothTransport-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

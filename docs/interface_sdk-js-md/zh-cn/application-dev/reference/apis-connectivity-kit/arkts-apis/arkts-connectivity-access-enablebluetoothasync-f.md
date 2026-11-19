@@ -36,11 +36,11 @@ function enableBluetoothAsync(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
-| [2900013](../errorcode-bluetoothManager.md#2900013-前置操作超时) | The user does not respond. |
-| [2900014](../errorcode-bluetoothManager.md#2900014-用户拒绝此操作) | User refuse the action. |
+| [2900013](../errorcode-bluetoothManager.md#2900013-前置操作超时) | The user did not respond. |
+| [2900014](../errorcode-bluetoothManager.md#2900014-用户拒绝此操作) | The user refused the action. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
 **示例**

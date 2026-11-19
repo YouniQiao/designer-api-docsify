@@ -41,5 +41,5 @@ import { map } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) |  |
+| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) | Indicate the phone book access authorization. |
 <!--DelEnd-->

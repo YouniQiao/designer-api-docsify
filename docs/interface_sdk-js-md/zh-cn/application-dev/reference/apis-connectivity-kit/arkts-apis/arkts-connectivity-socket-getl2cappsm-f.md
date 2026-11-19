@@ -14,6 +14,8 @@ function getL2capPsm(serverSocket: number): number
 
 获取服务端L2CAP链路类型套接字的协议/服务多路复用器值（Protocol/Service Multiplexer, PSM），该值用于标识特定的服务数据传输通道。
 
+**说明：** 
+
 需要在服务端调用完[socket.sppListen](arkts-connectivity-socket-spplisten-f.md)后调用该接口，且传入的链路类型[SppType](arkts-connectivity-socket-spptype-e.md)需是SPP_L2CAP或SPP_L2CAP_BLE。
 
 **起始版本：** 20

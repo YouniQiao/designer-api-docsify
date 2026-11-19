@@ -411,3 +411,34 @@ export default class MyVpnExtAbility  extends VpnExtensionAbility {
   }
 }
 ```
+
+## protectSync
+
+```TypeScript
+protectSync(socketFd: number): void
+```
+
+Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API returns the result synchronously.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VpnConnection-protectSync(socketFd: int): void--><!--Device-VpnConnection-protectSync(socketFd: int): void-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Vpn
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| socketFd | number | Yes | Socket file descriptor. It can be obtained through [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd). <br>The value should be an integer. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |

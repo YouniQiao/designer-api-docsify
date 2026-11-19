@@ -64,7 +64,7 @@ Indicates the pairing type.
 passkey: string
 ```
 
-Key for the device pairing.
+Pass code for device pairing, which is displayed to the user for confirmation. The value is a string of six digits. This parameter is valid only when pairingType is set to PAIRING_TYPE_PASSCODE or PAIRING_TYPE_NUMBER_COMPARE.
 
 **Type:** string
 

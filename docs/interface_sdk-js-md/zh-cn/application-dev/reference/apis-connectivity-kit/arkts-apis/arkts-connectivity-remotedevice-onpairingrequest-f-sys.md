@@ -12,9 +12,9 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onPairingRequest(callback: Callback<PairingRequestParam>): void
 ```
 
-订阅来自远程NearLink设备的配对请求事件。如果用户被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址
+订阅来自远程NearLink设备的配对请求事件。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。
+只有授予了ohos.permission.ACCESS_NEARLINK权限的系统应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。
 
 **起始版本：** 26.0.0
 

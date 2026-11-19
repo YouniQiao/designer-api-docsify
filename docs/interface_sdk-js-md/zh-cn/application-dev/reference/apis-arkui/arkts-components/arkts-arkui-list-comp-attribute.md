@@ -1159,6 +1159,36 @@ scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed)
 | --- | --- | --- | --- |
 | speed | [ScrollSnapAnimationSpeed](arkts-arkui-list-comp-scrollsnapanimationspeed-e.md) | 是 | 列表滚动限位动画速度。<br>默认值：ScrollSnapAnimationSpeed.NORMAL |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+为List设置两阶段滚动捕捉策略。
+
+**ScrollSnapAlign.START**、**ScrollSnapAlign.CENTER**和**ScrollSnapAlign.END**选择内置策略。**ScrollSnapAlign.NONE**无效，会抛出401异常。自定义提供程序要求**ComputingSnapOffset**为函数。传递**undefined**或没有参数将清除策略。
+
+> **说明：** 
+> 该属性和**scrollSnapAlign**使用last-set-wins语义。最后的快照使用
+> 列表弹簧动画并遵循**scrollSnapAnimationSpeed**。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ListAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): ListAttribute--><!--Device-ListAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): ListAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | 否 | 内置对齐或自定义提供程序。 |
+
 ## stackFromEnd
 
 ```TypeScript

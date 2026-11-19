@@ -2317,6 +2317,46 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## showAbility
+
+```TypeScript
+showAbility(params: ShowParams): Promise<void>
+```
+
+显示了这种UIAability。该接口使用promise返回结果。它只能在主线程上调用。调用该接口前，请确保应用已添加到状态栏中。该接口只能在PC二合一设备和平板电脑上正常调用。在其他设备上，它返回错误代码801.。**系统能力**:SystemCapability.Ability.AbilityRuntime.Core
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-showAbility(params: ShowParams): Promise<void>--><!--Device-UIAbilityContext-showAbility(params: ShowParams): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| params | [ShowParams](arkts-ability-app-ability-showparams-showparams-c.md) | 是 | Parameters used for showing the UIAbility. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
+| [16000067](../errorcode-ability.md#16000067-ability启动参数校验失败) | The StartOptions check failed. |
+
+**示例**
+
+参见 [showAbility](#showability)
+
 ## startAbility
 
 ```TypeScript

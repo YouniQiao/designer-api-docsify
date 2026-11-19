@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 adjustment?: AdjustmentDirection
 ```
 
-Adjustment direction.
+Adjustment direction. Default value: Empty.
 
 **Type:** [AdjustmentDirection](arkts-multimodalawareness-behaviorawareness-adjustmentdirection-e-sys.md)
 
@@ -46,7 +46,7 @@ Adjustment direction.
 appName?: string
 ```
 
-Application name.
+Application name. Default value: Empty.
 
 **Type:** string
 
@@ -106,7 +106,7 @@ Operation target (on/off/toggle).
 packageName?: string
 ```
 
-Application package name.
+Application package name. Default value: Empty.
 
 **Type:** string
 
@@ -126,7 +126,7 @@ Application package name.
 soundMode?: SoundMode
 ```
 
-Sound mode.
+Sound mode. Default value: Empty.
 
 **Type:** [SoundMode](arkts-multimodalawareness-behaviorawareness-soundmode-e-sys.md)
 
@@ -146,7 +146,7 @@ Sound mode.
 value?: number
 ```
 
-Absolute value indicates the fixed value of the brightness or volume. Unit: Percentage. The value must be an integer within [0,100]. Default value: The default value is 0.
+Absolute value indicates the fixed value of the brightness or volume. Unit: %. The value must be an integer within [0,100]. Default value: Empty.
 
 **Type:** number
 

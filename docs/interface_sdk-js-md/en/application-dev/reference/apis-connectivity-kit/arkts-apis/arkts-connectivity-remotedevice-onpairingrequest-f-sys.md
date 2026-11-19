@@ -12,9 +12,7 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onPairingRequest(callback: Callback<PairingRequestParam>): void
 ```
 
-Subscribes to pairing request events from remote NearLink devices.
-
-This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink.
+Subscribe to pairing request events from remote NearLink devices. Only system applications granted ohos.permission.ACCESS_NEARLINK permission can access this event. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, The real device address is returned. Otherwise, the random device address is returned. Before calling this MPI, you can call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports star blinking.
 
 **Since:** 26.0.0
 
@@ -40,5 +38,5 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability;         2. The chip does not support the capability;         3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:                 1. The hardware does not support the capability;                 2. The chip does not support the capability;                 3. A dependent service feature is not supported. |
 | [36100099](../errorcode-nearlink-service.md#36100099-operation-failed) | Operation failed. |

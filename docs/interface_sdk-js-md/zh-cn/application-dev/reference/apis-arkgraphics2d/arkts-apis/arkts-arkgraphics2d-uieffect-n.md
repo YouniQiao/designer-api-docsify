@@ -46,6 +46,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
+| [BlenderBase](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md) | 混合器基础类型，提供各类混合效果的统一创建入口。推荐统一使用本类型的方法创建混合器。 |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的Mask提供不同的灰度分布模式，如波环遮罩、径向渐变、像素图遮罩等。 |
 <!--DelEnd-->
 

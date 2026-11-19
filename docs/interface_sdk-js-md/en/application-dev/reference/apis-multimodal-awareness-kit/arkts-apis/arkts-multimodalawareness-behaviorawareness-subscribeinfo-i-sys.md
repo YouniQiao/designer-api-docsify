@@ -46,7 +46,7 @@ Perception domain type.
 patternTypes?: PatternType[]
 ```
 
-Subtype Filtering (Optional. If this parameter is not specified, all modes in the domain are subscribed.). Default value: Subscribe to all subtypes in the domain without filtering.
+Subtype Filtering (Optional. If this parameter is not specified, all modes in the domain are subscribed.). Default value: Empty.
 
 **Type:** [PatternType](arkts-multimodalawareness-behaviorawareness-patterntype-e-sys.md)[]
 

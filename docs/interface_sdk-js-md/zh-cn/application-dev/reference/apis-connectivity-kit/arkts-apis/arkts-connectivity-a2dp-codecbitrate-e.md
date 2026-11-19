@@ -18,7 +18,7 @@ enum CodecBitRate
 CODEC_BIT_RATE_128000 = 1
 ```
 
-128kbps
+Codec bit rate 128k.
 
 **起始版本：** 19
 
@@ -32,7 +32,7 @@ CODEC_BIT_RATE_128000 = 1
 CODEC_BIT_RATE_1500000 = 9
 ```
 
-1500kbps
+Codec bit rate 1.5M.
 
 **起始版本：** 21
 
@@ -46,7 +46,7 @@ CODEC_BIT_RATE_1500000 = 9
 CODEC_BIT_RATE_192000 = 2
 ```
 
-192kbps
+Codec bit rate 192k.
 
 **起始版本：** 19
 
@@ -60,7 +60,7 @@ CODEC_BIT_RATE_192000 = 2
 CODEC_BIT_RATE_2300000 = 10
 ```
 
-2300kbps
+Codec bit rate 2.3M.
 
 **起始版本：** 21
 
@@ -74,7 +74,7 @@ CODEC_BIT_RATE_2300000 = 10
 CODEC_BIT_RATE_256000 = 3
 ```
 
-256kbps
+Codec bit rate 256k.
 
 **起始版本：** 19
 
@@ -88,7 +88,7 @@ CODEC_BIT_RATE_256000 = 3
 CODEC_BIT_RATE_320000 = 4
 ```
 
-320kbps
+Codec bit rate 320k.
 
 **起始版本：** 19
 
@@ -102,7 +102,7 @@ CODEC_BIT_RATE_320000 = 4
 CODEC_BIT_RATE_480000 = 5
 ```
 
-480kbps
+Codec bit rate 480k.
 
 **起始版本：** 19
 
@@ -116,7 +116,7 @@ CODEC_BIT_RATE_480000 = 5
 CODEC_BIT_RATE_640000 = 6
 ```
 
-640kbps
+Codec bit rate 640k.
 
 **起始版本：** 19
 
@@ -130,7 +130,7 @@ CODEC_BIT_RATE_640000 = 6
 CODEC_BIT_RATE_96000 = 0
 ```
 
-96kbps
+Codec bit rate 96k.
 
 **起始版本：** 19
 
@@ -144,7 +144,7 @@ CODEC_BIT_RATE_96000 = 0
 CODEC_BIT_RATE_960000 = 7
 ```
 
-960kbps
+Codec bit rate 960k.
 
 **起始版本：** 19
 

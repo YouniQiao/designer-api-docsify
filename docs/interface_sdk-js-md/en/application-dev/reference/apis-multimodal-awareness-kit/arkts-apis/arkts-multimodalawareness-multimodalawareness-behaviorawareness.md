@@ -36,7 +36,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 | Name | Description |
 | --- | --- |
 | [ActionData](arkts-multimodalawareness-behaviorawareness-actiondata-i-sys.md) | Operation action data. |
-| [BehaviorAwarenessPayload](arkts-multimodalawareness-behaviorawareness-behaviorawarenesspayload-i-sys.md) | Habit-aware domain payload. Specific data in the HABIT_Awareness domain. |
+| [BehaviorAwarenessPayload](arkts-multimodalawareness-behaviorawareness-behaviorawarenesspayload-i-sys.md) | Habit-aware domain payload. Specific data in the HABIT_AWARENESS domain. |
 | [Coordinates](arkts-multimodalawareness-behaviorawareness-coordinates-i-sys.md) | Geographic coordinates. |
 | [EventData](arkts-multimodalawareness-behaviorawareness-eventdata-i-sys.md) | Event event data. |
 | [FeedbackData](arkts-multimodalawareness-behaviorawareness-feedbackdata-i-sys.md) | Feedback data. |

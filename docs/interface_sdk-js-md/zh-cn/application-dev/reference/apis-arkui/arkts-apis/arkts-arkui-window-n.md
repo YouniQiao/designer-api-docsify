@@ -89,6 +89,7 @@ import { window } from '@kit.ArkUI';
 | 名称 | 说明 |
 | --- | --- |
 | [AvoidArea](arkts-arkui-window-avoidarea-i.md) | 窗口内容的避让区域。 |
+| [AvoidAreaInsets](arkts-arkui-window-avoidareainsets-i.md) | 窗口的避让区边衬。 |
 | [AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md) | 系统避让区变化后返回当前避让区域以及避让区域类型。 |
 | [Configuration](arkts-arkui-window-configuration-i.md) | 创建子窗口或系统窗口时的参数。 |
 | [DecorButtonStyle](arkts-arkui-window-decorbuttonstyle-i.md) | 系统装饰栏按钮样式。 |

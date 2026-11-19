@@ -4,7 +4,7 @@
 interface ScanEnhanceMode
 ```
 
-The enum of gatt characteristic write type
+Describes the configuration of scan enhance mode.
 
 **起始版本：** 26.0.0
 

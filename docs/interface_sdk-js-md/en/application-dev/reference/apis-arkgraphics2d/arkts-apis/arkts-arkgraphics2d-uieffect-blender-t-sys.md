@@ -1,7 +1,7 @@
 # Blender (System API)
 
 ```TypeScript
-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender
+type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase
 ```
 
 Blender type, used to describe the blending effect.
@@ -10,7 +10,7 @@ Blender type, used to describe the blending effect.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender--><!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender-End-->
+<!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase--><!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender | BlenderBase-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,3 +22,4 @@ Blender type, used to describe the blending effect.
 | [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | HDR-enabled brightness blender<br>**Since:** 20 |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | HDR-adaptive darken blender<br>**Since:** 26.0.0 |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Hue-preserving brightening and darkening blender<br>**Since:** 26.1.0 |
+| [BlenderBase](arkts-arkgraphics2d-uieffect-blenderbase-c-sys.md) | Blender base type<br>**Since:** 26.1.0 |

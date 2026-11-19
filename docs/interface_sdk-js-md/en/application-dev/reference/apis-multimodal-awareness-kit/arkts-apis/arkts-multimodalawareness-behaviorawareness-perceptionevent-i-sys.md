@@ -26,7 +26,7 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 confidence: number
 ```
 
-Confidence.The value 0 indicates no confidence, and the value 100 indicates complete confidence. Unit: Percentage. The value must be an integer within [0,100].
+Confidence.The value 0 indicates no confidence, and the value 100 indicates complete confidence. Unit: %. The value must be an integer within [0,100].
 
 **Type:** number
 
@@ -66,7 +66,7 @@ Perceived domain type.
 generateTime: number
 ```
 
-Generate the timestamp. Unit: milliseconds.
+Generate the timestamp. Unit: ms.
 
 **Type:** number
 
