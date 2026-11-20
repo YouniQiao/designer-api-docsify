@@ -11,7 +11,7 @@
 export declare function sendEventByKey(id: string, action: number, params: string): boolean
 ```
 
-Sends an event to the component with the specified ID.
+给指定id的组件发送事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。
 
 **起始版本：** 11
 
@@ -27,12 +27,12 @@ Sends an event to the component with the specified ID.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | ID of the component for which the event is to be sent. |
-| action | number | 是 | Type of the event to be sent. The options are as follows: Click event: 10 LongClick: 11. |
-| params | string | 是 | Event parameters. If there is no parameter, pass an empty string "". |
+| id | string | 是 | 要触发事件的组件的id。 |
+| action | number | 是 | 要触发的事件类型，目前支持取值：<br>- 点击事件Click: 10。<br>- 长按事件LongClick: 11。 |
+| params | string | 是 | 事件参数。当前支持的事件类型（Click和LongClick）均无需额外参数，请传空字符串 ""。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  |
+| boolean | 找不到指定id的组件时返回false，其余情况返回true。 |

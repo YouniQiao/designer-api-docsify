@@ -1,6 +1,6 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(934)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(942)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.account.appAccount(Application Account Management) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-account-appaccount.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
@@ -336,6 +336,10 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-createwantdata-f.md">createWantData</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-createwantrecord-f.md">createWantRecord</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progresssignal-c.md">ProgressSignal</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualbaseitem-c.md">VirtualBaseItem</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualdiritem-c.md">VirtualDirItem</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualfileinfo-c.md">VirtualFileInfo</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualfileitem-c.md">VirtualFileItem</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-getdataparams-i.md">GetDataParams</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-pastedata-i.md">PasteData</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-pastedataproperty-i.md">PasteDataProperty</a></li>
@@ -345,10 +349,14 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progresslistener-t.md">ProgressListener</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-updatecallback-t.md">UpdateCallback</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md">ValueType</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualfileoncancel-t.md">VirtualFileOnCancel</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualfileonread-t.md">VirtualFileOnRead</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualfileonstat-t.md">VirtualFileOnStat</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-fileconflictoptions-e.md">FileConflictOptions</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-pattern-e.md">Pattern</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progressindicator-e.md">ProgressIndicator</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-shareoption-e.md">ShareOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-virtualitemtype-e.md">VirtualItemType</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-con.md">Constants</a></li>
 </ul>
 </details></li>
@@ -1249,13 +1257,14 @@
 </div>
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">C API <span class="tree-count">(56)</span></summary>
+    <summary class="tree-section-label">C API <span class="tree-count">(58)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>Module</summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-pasteboard.md">Pasteboard</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-initsync.md">InitSync</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-boardinfo.md">BoardInfo</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-syscapndk.md">SyscapNdk</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-deviceinfo.md">DeviceInfo</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-basic-services-kit-osaccount.md">OsAccount</a></li>
@@ -1273,6 +1282,7 @@
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-oh-pasteboard-err-code-h.md">oh_pasteboard_err_code.h</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-oh-pasteboard-h.md">oh_pasteboard.h</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-init-sync-h.md">init_sync.h</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-boardinfo-h.md">boardinfo.h</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-syscap-ndk-h.md">syscap_ndk.h</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-deviceinfo-h.md">deviceinfo.h</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-os-account-h.md">os_account.h</a></li>

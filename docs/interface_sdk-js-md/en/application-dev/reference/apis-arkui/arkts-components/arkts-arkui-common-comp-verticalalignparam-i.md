@@ -4,7 +4,7 @@
 declare interface VerticalAlignParam
 ```
 
-Defines the vertical align rule of relative container.
+Defines the alignment rule for child components in a relative layout component in the vertical direction.
 
 **Since:** 23
 
@@ -18,17 +18,17 @@ Defines the vertical align rule of relative container.
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
+Vertical alignment mode relative to the anchor component.
 
 Anonymous Object Rectification
 
 **Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
-**Since:** 23
+**Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-VerticalAlignParam-align: VerticalAlign--><!--Device-VerticalAlignParam-align: VerticalAlign-End-->
 
@@ -40,17 +40,17 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
+ID of the component that serves as the anchor.
 
 Anonymous Object Rectification
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-VerticalAlignParam-anchor: string--><!--Device-VerticalAlignParam-anchor: string-End-->
 

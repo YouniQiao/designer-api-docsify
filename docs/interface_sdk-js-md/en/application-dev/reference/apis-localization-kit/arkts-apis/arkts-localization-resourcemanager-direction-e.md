@@ -18,7 +18,7 @@ Enumerates the screen directions.
 DIRECTION_HORIZONTAL = 1
 ```
 
-Landscape
+Landscape.
 
 **Since:** 6
 
@@ -34,7 +34,7 @@ Landscape
 DIRECTION_VERTICAL = 0
 ```
 
-Portrait
+Portrait.
 
 **Since:** 6
 

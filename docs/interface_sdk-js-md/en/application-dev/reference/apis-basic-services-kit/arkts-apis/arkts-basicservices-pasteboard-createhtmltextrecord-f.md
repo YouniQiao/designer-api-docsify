@@ -28,7 +28,7 @@ Creates a **PasteDataRecord** object of the HTML text type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| htmlText | string | Yes | HTML content. |
+| htmlText | string | Yes | HTML text. The value must comply with the standard HTML format. |
 
 **Return value:**
 

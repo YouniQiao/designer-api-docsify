@@ -6,7 +6,9 @@ The **Text** component is used to display text content. It supports the configur
 > 
 > - This component is supported since API version 7. Newly added APIs will be marked with a superscript to indicate their
 > 
-> - To set whether to clear the text selection and handle when the user touches outside the text component, use the [setTextSelectionClearPolicy](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#settextselectionclearpolicy) API. &gt;
+> - To set whether to clear the text selection and handle when the user touches outside the text component, use the [setTextSelectionClearPolicy](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#settextselectionclearpolicy) API.
+> 
+> <!--RP3--><!--RP3End-->
 
 ## Child Components
 

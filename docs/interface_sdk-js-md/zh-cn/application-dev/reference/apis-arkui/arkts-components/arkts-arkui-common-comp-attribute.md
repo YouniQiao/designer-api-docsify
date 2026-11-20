@@ -4,7 +4,7 @@
 declare class CommonAttribute extends CommonMethod<CommonAttribute>
 ```
 
-CommonAttribute for ide.
+IDE使用的CommonAttribute
 
 **继承/实现关系：** CommonAttribute extends CommonMethod&lt;CommonAttribute&gt;
 

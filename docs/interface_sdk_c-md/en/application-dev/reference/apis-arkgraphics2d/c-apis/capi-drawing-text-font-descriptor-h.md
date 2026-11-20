@@ -4,6 +4,8 @@
 
 Defines APIs related to font information, such as obtaining font information, finding and matching specified fonts, reading font descriptor properties, and obtaining Unicode codes and font counts.
 
+**File to Include**: <native_drawing/drawing_text_font_descriptor.h>
+
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing

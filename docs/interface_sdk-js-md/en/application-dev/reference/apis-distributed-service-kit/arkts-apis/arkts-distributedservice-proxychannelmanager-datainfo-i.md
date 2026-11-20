@@ -42,7 +42,7 @@ Proxy channel ID. The value ranges from 1 to 2147483647.
 data: ArrayBuffer
 ```
 
-Received data, in bytes. The maximum value is **4096**.
+Received data, in bytes. The maximum value is **4194304**.
 
 **Type:** ArrayBuffer
 

@@ -4,6 +4,8 @@
 
 Defines functions related to font collections in the drawing module, which are used to manage font resources required for text typography. It supports creating independent or shareable font collection objects to meet text typography requirements in different scenarios. Through font collection objects, you can implement custom font loading, system font management, font cache cleanup, and other functions.
 
+**File to Include**: <native_drawing/drawing_font_collection.h>
+
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing

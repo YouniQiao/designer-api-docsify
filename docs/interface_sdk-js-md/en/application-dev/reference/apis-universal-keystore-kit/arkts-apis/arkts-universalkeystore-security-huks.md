@@ -134,6 +134,7 @@ import { huks } from '@kit.UniversalKeystoreKit';
 | [HuksKeySize](arkts-universalkeystore-huks-hukskeysize-e.md) | Enumerates the key sizes. |
 | [HuksKeyStorageType](arkts-universalkeystore-huks-hukskeystoragetype-e.md) | Enumerates the key storage modes. |
 | [HuksKeyWrapType](arkts-universalkeystore-huks-hukskeywraptype-e.md) | Enumerates the key encryption types (exporting or importing keys). |
+| [HuksPQCSigMode](arkts-universalkeystore-huks-hukspqcsigmode-e.md) | Enumeration of signature modes for Post-Quantum Cryptography (PQC) algorithms. |
 | [HuksRsaPssSaltLenType](arkts-universalkeystore-huks-huksrsapsssaltlentype-e.md) | Enumerates the **salt_len** types to set when PSS padding is used in RSA signing or signature verification. |
 | [HuksSecureSignType](arkts-universalkeystore-huks-hukssecuresigntype-e.md) | Enumerates the signature types of the key generated or imported. |
 | [HuksSendType](arkts-universalkeystore-huks-hukssendtype-e.md) | Enumerates the tag transfer modes. |

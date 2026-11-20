@@ -78,6 +78,24 @@ IO error.
 
 **System API:** This is a system API.
 
+## ERROR_IO_ERROR
+
+```TypeScript
+ERROR_IO_ERROR = 20700008
+```
+
+I/O error.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemSoundError-ERROR_IO_ERROR = 20700008--><!--Device-SystemSoundError-ERROR_IO_ERROR = 20700008-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
 ## ERROR_OK
 
 ```TypeScript

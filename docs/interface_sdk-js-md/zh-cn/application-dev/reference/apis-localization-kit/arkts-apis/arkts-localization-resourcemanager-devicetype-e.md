@@ -6,10 +6,6 @@ export enum DeviceType
 
 用于表示当前设备类型。
 
-<!--RP1-->
-
-<!--RP1End-->
-
 **起始版本：** 6
 
 <!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
@@ -118,7 +114,7 @@ DEVICE_TYPE_TV = 0x04
 DEVICE_TYPE_WEARABLE = 0x06
 ```
 
-智能手表。
+智能穿戴。
 
 **起始版本：** 6
 

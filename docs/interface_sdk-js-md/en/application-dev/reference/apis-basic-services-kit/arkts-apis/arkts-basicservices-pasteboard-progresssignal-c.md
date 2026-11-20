@@ -4,13 +4,13 @@
 export class ProgressSignal
 ```
 
-Defines a function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
+Defines a function for canceling the progress indicator. The task can be canceled during pasting. The pasteboard progress indicator is valid only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
 
 **Since:** 15
 
 <!--Device-pasteboard-export class ProgressSignal--><!--Device-pasteboard-export class ProgressSignal-End-->
 
-**System capability:** SystemCapability.MiscServices.Pasteboard @class ProgressSignal
+**System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
 
@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 cancel(): void
 ```
 
-Cancels an ongoing paste task.
+Cancels an ongoing copy-and-paste task.
 
 **Since:** 15
 

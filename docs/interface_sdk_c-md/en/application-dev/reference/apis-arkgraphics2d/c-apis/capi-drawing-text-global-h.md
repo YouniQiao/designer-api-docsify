@@ -4,6 +4,8 @@
 
 Provides APIs for global text information, such as setting the text rendering high contrast mode and the presentation mode of undefined glyphs.
 
+**File to Include**: <native_drawing/drawing_text_global.h>
+
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing

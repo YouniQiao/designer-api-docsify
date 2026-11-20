@@ -2375,3 +2375,38 @@ avCastController.start(playItem).then(() => {
   console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## update
+
+```TypeScript
+update(item: AVQueueItem): Promise<void>
+```
+
+更新投播媒体信息
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVCastController-update(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-update(item: AVQueueItem): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | 是 | 播放列表中单项的相关属性。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 通过promise回调成功。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |

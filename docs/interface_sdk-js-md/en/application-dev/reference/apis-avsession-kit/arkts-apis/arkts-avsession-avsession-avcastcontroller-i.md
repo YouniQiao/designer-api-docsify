@@ -2325,3 +2325,38 @@ avCastController.start(playItem).then(() => {
   console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## update
+
+```TypeScript
+update(item: AVQueueItem): Promise<void>
+```
+
+Update media info for current item. It is used to update title or media image for sink player or media center, if you need to refresh media url, use { @link prepare } and { @link start } instead.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVCastController-update(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-update(item: AVQueueItem): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |

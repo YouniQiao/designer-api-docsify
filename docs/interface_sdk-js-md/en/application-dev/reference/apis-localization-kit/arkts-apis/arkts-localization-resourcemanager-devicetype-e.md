@@ -6,10 +6,6 @@ export enum DeviceType
 
 Enumerates the device types.
 
-<!--RP1-->
-
-<!--RP1End-->
-
 **Since:** 6
 
 <!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
@@ -22,7 +18,7 @@ Enumerates the device types.
 DEVICE_TYPE_2IN1 = 0x07
 ```
 
-PC/2-in-1 device
+2-in-1 device.
 
 **Since:** 11
 
@@ -38,7 +34,7 @@ PC/2-in-1 device
 DEVICE_TYPE_CAR = 0x02
 ```
 
-Head unit
+Head unit.
 
 **Since:** 6
 
@@ -54,7 +50,7 @@ Head unit
 DEVICE_TYPE_PC = 0x03
 ```
 
-Indicates a PC.
+PC.
 
 **Since:** 6
 
@@ -70,7 +66,7 @@ Indicates a PC.
 DEVICE_TYPE_PHONE = 0x00
 ```
 
-Phone
+Phone.
 
 **Since:** 6
 
@@ -86,7 +82,7 @@ Phone
 DEVICE_TYPE_TABLET = 0x01
 ```
 
-Tablet
+Tablet.
 
 **Since:** 6
 
@@ -102,7 +98,7 @@ Tablet
 DEVICE_TYPE_TV = 0x04
 ```
 
-Smart TV
+Smart TV.
 
 **Since:** 6
 
@@ -118,7 +114,7 @@ Smart TV
 DEVICE_TYPE_WEARABLE = 0x06
 ```
 
-Wearable
+Wearable.
 
 **Since:** 6
 

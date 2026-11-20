@@ -327,6 +327,64 @@ struct AnimateToImmediatelyExample {
 }
 ```
 
+## applyDefaultImmersiveStrategy
+
+```TypeScript
+applyDefaultImmersiveStrategy(...types: ImmersiveStrategy[]): void
+```
+
+在EntryAbility或应用首页中应用安全区域沉浸式策略。适用于全屏或沉浸式应用等场景。在应用首次布局前可以统一配置安全区域沉浸式策略。策略应用后，页面处理安全区域的方式会根据指定的策略进行调整。
+
+> **说明：** 
+> 
+> 不支持动态更新。该接口仅在应用首次布局流程开始前调用才生效。如果在页面进入首次布局流程后调用，则应用的策略不变，此接口不生效。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-applyDefaultImmersiveStrategy(...types: ImmersiveStrategy[]): void--><!--Device-UIContext-applyDefaultImmersiveStrategy(...types: ImmersiveStrategy[]): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| types | [ImmersiveStrategy](arkts-arkui-immersivestrategy-e.md)[] | 是 | 应用的沉浸式策略。空数组将清除所有已应用的沉浸式策略。<br>设置异常值undefined、null、NaN、Infinity时按空数组处理。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIContext } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+
+    windowStage.loadContent('pages/Index', (err, data) => {
+      let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
+      uiContext.applyDefaultImmersiveStrategy(ImmersiveStrategy.AVOID_CUTOUT,
+        ImmersiveStrategy.AVOID_FLOAT_NAV);
+    });
+  }
+}
+
+// Index.ets
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+    }.width(LayoutPolicy.matchParent)
+    .height(LayoutPolicy.matchParent)
+    .backgroundColor(Color.Gray)
+  }
+}
+```
+
 ## bindTabsToNestedScrollable
 
 ```TypeScript
@@ -1414,7 +1472,7 @@ getComponentSnapshot(): ComponentSnapshot
 getComponentUtils(): ComponentUtils
 ```
 
-get object ComponentUtils.
+获取ComponentUtils对象。
 
 **起始版本：** 10
 
@@ -1430,7 +1488,7 @@ get object ComponentUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | 返回ComponentUtils实例对象。 |
 
 **示例**
 

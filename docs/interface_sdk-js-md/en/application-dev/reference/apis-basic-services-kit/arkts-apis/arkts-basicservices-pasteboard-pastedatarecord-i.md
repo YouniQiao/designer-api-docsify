@@ -4,7 +4,7 @@
 interface PasteDataRecord
 ```
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord. If you need to refresh the attribute value of the PasteDataRecord, please use [addEntry](#addentry).
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content on the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. The default data type of a **PasteDataRecord** cannot be changed after the record is created. You must specify the correct default data type when creating a **PasteDataRecord**. To update the attributes of a **PasteDataRecord**, use [addEntry](#addentry).
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](#getdata) API to read the corresponding data.
+Adds data of an extra type to **PasteDataRecord**. The MIME type added using this method is not the default type of **Record**. You can only use the [getData](#getdata) API to read the corresponding data. On API 26.1.0 and above, it can also support adding URI-type data with a value of [VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md).
 
 **Since:** 14
 
@@ -36,8 +36,8 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
+| type | string | Yes | MIME type of custom data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and pixel map, or a custom MIME type. The value of **mimeType** cannot exceed 1024 bytes. |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of custom data. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 getData(type: string): Promise<ValueType>
 ```
 
-Obtains data of the specified type from **PasteDataRecord**.
+Obtains custom data of the specified MIME type from **PasteDataRecord**. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -76,13 +76,13 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | type of PasteData, which cannot exceed 1024 bytes. |
+| type | string | Yes | MIME type. The value contains a maximum of 1024 bytes. If the value is out of range, error code 401 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ValueType](arkts-basicservices-pasteboard-valuetype-t.md)&gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
+| Promise&lt;[ValueType](arkts-basicservices-pasteboard-valuetype-t.md)&gt; | Promise used to return the custom data of the specified MIME type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple MIME types, the non-**PasteDataRecord** data of the default MIME type can be obtained only through this API. |
 
 **Error codes:**
 
@@ -119,7 +119,7 @@ record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) 
 getValidTypes(types: Array<string>): Array<string>
 ```
 
-Obtains the intersection of the input types and the types of the PasteData.
+Obtains the intersection of the input MIME type and the MIME type of the pasteboard data. Before pasting, check whether the pasteboard data formats include the formats supported by the app. For example, if the app supports only plain text and HTML, you can call this API to check whether the pasteboard data formats include these formats and determine whether to perform the paste operation based on the returned result.
 
 **Since:** 14
 
@@ -131,13 +131,13 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;string&gt; | Yes | List of the types. |
+| types | Array&lt;string&gt; | Yes | MIME types. The value can be compared with the MIME types of the pasteboard data, and the matched MIME types are returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Intersection of the input types and the types of the PasteData obtained. |
+| Array&lt;string&gt; | Intersection of the input MIME type and the MIME type of the pasteboard data obtained. |
 
 **Error codes:**
 
@@ -167,7 +167,7 @@ let types: string[] = record.getValidTypes([
 toPlainText(): string
 ```
 
-Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the plain text.
+Forcibly converts HTML, plain, and URI content in **PasteDataRecord** to the plain text. If **PasteDataRecord** contains other data types (such as PixelMap and Want), the conversion result is an empty string.
 
 **Since:** 9
 
@@ -213,7 +213,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the text obtained from the conversion. Otherwise, **err** is error information. |
 
 **Error codes:**
 
@@ -279,7 +279,7 @@ record.convertToText().then((data: string) => {
 data: Record<string, ArrayBuffer>
 ```
 
-Content of custom data. Modifications to this attribute are ineffective.
+Content of custom data. Modifications to this attribute are invalid.
 
 **Type:** Record&lt;string, ArrayBuffer&gt;
 
@@ -297,7 +297,7 @@ Content of custom data. Modifications to this attribute are ineffective.
 htmlText: string
 ```
 
-HTML content, must conform to standard HTML format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
+HTML text. The value must comply with the standard HTML format. Modifications to this attribute are invalid. To update the attribute value, use [addEntry](#addentry).
 
 **Type:** string
 
@@ -315,7 +315,7 @@ HTML content, must conform to standard HTML format. Modifications to this attrib
 mimeType: string
 ```
 
-Default type of PasteDataRecord. Modifications to this attribute are ineffective.
+Default data type. Modifications to this attribute are invalid.
 
 **Type:** string
 
@@ -333,7 +333,7 @@ Default type of PasteDataRecord. Modifications to this attribute are ineffective
 pixelMap: image.PixelMap
 ```
 
-PixelMap content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
+Pixel map. Modifications to this attribute are invalid. To update the attribute value, use [addEntry](#addentry).
 
 **Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -351,7 +351,7 @@ PixelMap content. Modifications to this attribute are ineffective. To refresh th
 plainText: string
 ```
 
-Plain text. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
+Plain text. Modifications to this attribute are invalid. To update the attribute value, use [addEntry](#addentry).
 
 **Type:** string
 
@@ -369,7 +369,7 @@ Plain text. Modifications to this attribute are ineffective. To refresh the attr
 uri: string
 ```
 
-URI content, must conform to standard URI format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
+URI text. The value must comply with the standard URI format. Modifications to this attribute are invalid. To update the attribute value, use [addEntry](#addentry).
 
 **Type:** string
 
@@ -387,7 +387,7 @@ URI content, must conform to standard URI format. Modifications to this attribut
 want: Want
 ```
 
-Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
+Want content. Modifications to this attribute are invalid. To update the attribute value, use [addEntry](#addentry).
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

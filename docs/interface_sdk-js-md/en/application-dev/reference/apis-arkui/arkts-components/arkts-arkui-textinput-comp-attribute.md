@@ -2341,6 +2341,13 @@ Sets the input box type.
 
 Different InputType values bring up the corresponding keyboard type and restrict input. When not set through this interface, the default value is InputType.Normal.
 
+> **NOTE:** 
+> 
+> The password autofill service requires password-related [text box types](arkts-arkui-textinput-comp-inputtype-e.md) (such as **InputType.Password**, **InputType.NUMBER_PASSWORD**, **InputType.NEW_PASSWORD**, and **InputType.USER_NAME**).<!--RP2--><!--RP2End-->
+> 
+> When a [password mode](../../../ui/arkts-common-components-text-input.md#password-mode) is set, [decoration](#decoration), [showUnderline](#showunderline),
+> [lineHeight](#lineheight), and [fontFeature](#fontfeature) do not take effect.
+
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

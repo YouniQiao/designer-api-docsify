@@ -1,4 +1,4 @@
-# @ohos.pasteboard(剪贴板)
+# @ohos.pasteboard(Pasteboard)
 
 本模块提供管理系统剪贴板的能力，支持系统复制、粘贴功能。系统剪贴板支持对文本、HTML、URI、Want、PixelMap等内容的操作。
 
@@ -20,9 +20,9 @@ import { pasteboard } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1) | 构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。 |
+| [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1) | 构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。从API 26.1.0开始，支持创建值为[VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md)的URI类型剪贴板内容对象。 |
 | [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-2) | 构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取。应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。 |
-| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord-1) | 创建一条指定类型的数据内容条目，将数据内容封装为PasteDataRecord对象。调用此方法后，系统将根据MIME类型封装数据内容，返回可添加到PasteData中的条目对象。参数mimeType长度不能超过1024字节，value类型需与mimeType对应（如mimeType为MIMETYPE_TEXT_PLAIN，则value类型必须是string），参数不能为空。 |
+| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord-1) | 创建一条指定类型的数据内容条目，将数据内容封装为PasteDataRecord对象。调用此方法后，系统将根据MIME类型封装数据内容，返回可添加到PasteData中的条目对象。参数mimeType长度不能超过1024字节，value类型需与mimeType对应（如mimeType为MIMETYPE_TEXT_PLAIN，则value类型必须是string），参数不能为空。从API 26.1.0开始，支持创建值为[VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md)的URI类型数据内容条目。 |
 | [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard-1) | 获取系统剪贴板对象，返回剪贴板服务的单例实例。调用此方法后，返回的系统剪贴板对象可用于访问剪贴板的读写、监听等功能。每次调用返回同一实例，调用前剪贴板系统服务需要正常运行。在进行任何剪贴板读写操作前，都需要先调用此方法获取系统剪贴板对象。 |
 | [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md#createhtmldata-1) | 构建一个HTML剪贴板内容对象。 |
 | [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md#createhtmltextrecord-1) | 创建一条HTML内容的条目。 |
@@ -38,6 +38,10 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ProgressSignal](arkts-basicservices-pasteboard-progresssignal-c.md) | 定义进度取消的函数，在粘贴过程中可选择取消任务，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时此参数才生效。 |
+| [VirtualBaseItem](arkts-basicservices-pasteboard-virtualbaseitem-c.md) | 虚拟文件和文件夹的基础类型。 |
+| [VirtualDirItem](arkts-basicservices-pasteboard-virtualdiritem-c.md) | 虚拟文件夹的元数据。 |
+| [VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md) | 虚拟文件信息。 |
+| [VirtualFileItem](arkts-basicservices-pasteboard-virtualfileitem-c.md) | 虚拟文件的元数据。 |
 
 ### 接口
 
@@ -56,7 +60,10 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | --- | --- |
 | [ProgressListener](arkts-basicservices-pasteboard-progresslistener-t.md) | 定义进度数据变化的订阅函数，当选择不使用系统默认进度显示时，可设置该项获取粘贴过程的进度。 |
 | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | 表示剪贴板内容变更的回调。 |
-| [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | 用于表示允许的数据字段类型。 |
+| [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | 用于表示允许的数据字段类型。从API 26.1.0开始，支持在[createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)、[createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord-1)和[addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)中，使用[VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md)类型。 |
+| [VirtualFileOnCancel](arkts-basicservices-pasteboard-virtualfileoncancel-t.md) | 用于取消指定虚拟文件的操作。 |
+| [VirtualFileOnRead](arkts-basicservices-pasteboard-virtualfileonread-t.md) | 用于查询指定虚拟文件的文件内容。 |
+| [VirtualFileOnStat](arkts-basicservices-pasteboard-virtualfileonstat-t.md) | 用于查询指定虚拟文件的元数据。 |
 
 ### 枚举
 
@@ -66,6 +73,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | [Pattern](arkts-basicservices-pasteboard-pattern-e.md) | 剪贴板支持检测的模式类型。 |
 | [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) | 定义进度条指示选项，可选择是否采用系统默认进度显示。 |
 | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | 可粘贴数据的范围类型枚举。 |
+| [VirtualItemType](arkts-basicservices-pasteboard-virtualitemtype-e.md) | 支持的虚拟文件类型枚举。 |
 
 ### 常量
 

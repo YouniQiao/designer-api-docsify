@@ -110,7 +110,7 @@ TapGesture(event: (event: GestureEvent) => void)
 
 | 名称 | 说明 |
 | --- | --- |
-| [GestureType](arkts-arkui-tapgesture-comp-gesturetype-t.md) | Defines the Gesture Type. |
+| [GestureType](arkts-arkui-tapgesture-comp-gesturetype-t.md) | 定义手势类型。 |
 
 ### 枚举
 

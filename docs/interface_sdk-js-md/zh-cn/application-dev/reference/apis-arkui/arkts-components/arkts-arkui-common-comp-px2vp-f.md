@@ -6,7 +6,7 @@
 declare function px2vp(value: number): number
 ```
 
-Converts a number in units of px to a number in units of vp. By default, the virtual pixel ratio of the screen where the current UI instance is located is used for conversion. If no UI instance is available, the virtual pixel ratio of the default screen is used instead.
+将px单位的数值转换为以vp为单位的数值。默认使用当前UI实例所在屏幕的虚拟像素比进行转换，UI实例不明确时，使用默认屏幕的虚拟像素比进行转换。
 
 **起始版本：** 11
 
@@ -26,10 +26,10 @@ Converts a number in units of px to a number in units of vp. By default, the vir
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | Value range of value: (-∞, +∞). |
+| value | number | 是 | 将px单位的数值转换为以vp为单位的数值。<br>取值范围：(-∞, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Value range of the return value: (-∞, +∞). |
+| number | 转换后的数值，单位：vp。<br>取值范围：(-∞, +∞) |

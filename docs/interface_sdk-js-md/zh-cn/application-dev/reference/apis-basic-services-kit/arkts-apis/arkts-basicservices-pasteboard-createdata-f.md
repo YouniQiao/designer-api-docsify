@@ -12,7 +12,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 function createData(mimeType: string, value: ValueType): PasteData
 ```
 
-构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。
+构建一个指定类型的剪贴板内容对象，根据传入的MIME类型和数据内容创建PasteData实例。调用此方法后，系统将验证MIME类型有效性，封装数据内容，并返回可用于后续剪贴板操作的PasteData对象。参数mimeType长度不能超过1024字节，value类型需与mimeType匹配。当需要将单一类型的数据（如纯文本、HTML、图片等）放入剪贴板时使用此方法。mimeType优先使用已定义的常量类型（如MIMETYPE_TEXT_PLAIN），若需要传递自定义格式数据，可使用自定义MIME类型。从API 26.1.0开始，支持创建值为[VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md)的URI类型剪贴板内容对象。
 
 **起始版本：** 9
 

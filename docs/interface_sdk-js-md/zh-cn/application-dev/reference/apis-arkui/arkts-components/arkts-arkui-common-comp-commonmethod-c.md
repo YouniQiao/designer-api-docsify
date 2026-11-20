@@ -7983,7 +7983,7 @@ responseRegionList(regions: Array<ResponseRegion>): T
 restoreId(value: number): T
 ```
 
-id for distribute identification.
+标记支持分布式迁移的组件Id，系统通过该Id匹配两端设备上的对应组件，并据此恢复组件的特定状态。不同组件的迁移效果和限制有所不同：Grid的ScrollBar位置无法迁移；Scroll在两端设备显示规格不同或布局参数差异导致布局不一致时会影响迁移效果；WaterFlow还会迁移顶部FlowItem相对WaterFlow的主轴偏移值（单位为vp）。
 
 **起始版本：** 11
 
@@ -7997,13 +7997,13 @@ id for distribute identification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 |  |
+| value | number | 是 | 标记支持分布式迁移的组件Id，用于两端设备组件的配对。取值为整数，具体范围以接口实现约束为准。同一个应用中各个支持分布式迁移组件的Id必须不同；否则可能导致两端设备组件无法正确配对，影响分布式迁移时的状态恢复。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
+| T | 返回当前组件。 |
 
 ## reuse
 
@@ -9542,7 +9542,7 @@ gridOffset(value: number): T
 
 默认偏移列数。
 
-**起始版本：** 11
+**起始版本：** 7
 
 **废弃版本：** 14
 
@@ -9574,7 +9574,7 @@ gridSpan(value: number): T
 
 默认占用列数。
 
-**起始版本：** 11
+**起始版本：** 7
 
 **废弃版本：** 14
 

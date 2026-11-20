@@ -78,7 +78,7 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-Sets the gradient breakpoint value, including the offset and color. Colors in RGB or ARGB format are supported. P3 wide color gamut color values can be set by passing in the ColorMetrics type. Since API version 26.0.0, BT2020 wide color gamut and HDR brightening are also supported.
+Sets the gradient breakpoint value, including the offset and color. Colors in RGB or ARGB format are supported. P3 wide color gamut color values can be set by passing in the ColorMetrics type. <!--Del-->Since API version 26.0.0, BT2020 wide color gamut and HDR brightening are also supported.<!--DelEnd-->
 
 > **NOTE:** 
 > 

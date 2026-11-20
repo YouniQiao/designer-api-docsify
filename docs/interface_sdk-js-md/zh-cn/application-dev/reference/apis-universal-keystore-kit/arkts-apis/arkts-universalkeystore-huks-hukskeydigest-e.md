@@ -154,6 +154,42 @@ HUKS_DIGEST_SHA512 = 14
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
 
+## HUKS_DIGEST_SHAKE128
+
+```TypeScript
+HUKS_DIGEST_SHAKE128 = 15
+```
+
+摘要算法：SHAKE128可扩展输出函数（XOF）。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE128 = 15--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE128 = 15-End-->
+
+**系统能力：** SystemCapability.Security.Huks.Core
+
+## HUKS_DIGEST_SHAKE256
+
+```TypeScript
+HUKS_DIGEST_SHAKE256 = 16
+```
+
+摘要算法：SHAKE256可扩展输出函数（XOF）。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE256 = 16--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE256 = 16-End-->
+
+**系统能力：** SystemCapability.Security.Huks.Core
+
 ## HUKS_DIGEST_SM3
 
 ```TypeScript

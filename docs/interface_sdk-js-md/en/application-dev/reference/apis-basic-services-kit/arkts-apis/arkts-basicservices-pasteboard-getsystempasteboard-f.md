@@ -12,7 +12,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 function getSystemPasteboard(): SystemPasteboard
 ```
 
-Obtains **SystemPasteboard** object.
+Obtains a **SystemPasteboard** object and returns a singleton instance of the pasteboard service. After this API is called, the **SystemPasteboard** object can be used to access the read, write, and listening functions of the pasteboard. The same instance is returned each time this API is called. Before calling this API, ensure that the pasteboard service is running properly. Before performing any read or write operation on the pasteboard, you need to call this API to obtain the **SystemPasteboard** object.
 
 **Since:** 6
 

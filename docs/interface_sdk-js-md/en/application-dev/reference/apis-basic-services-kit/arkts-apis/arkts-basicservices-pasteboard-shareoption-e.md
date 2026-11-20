@@ -4,7 +4,7 @@
 enum ShareOption
 ```
 
-Enumerates the pasteable ranges of PasteData.
+Enumerates the pasteable ranges of pasteboard data.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Only intra-application pasting is allowed.
 LOCALDEVICE = 1
 ```
 
-Paste is allowed in any application.
+Indicates that paste is allowed within any application. <!--RP1--><!--RP1End-->
 
 **Since:** 9
 
@@ -50,9 +50,7 @@ Paste is allowed in any application.
 CROSSDEVICE = 2
 ```
 
-Paste is allowed in any application.
-
-This API is deprecated since API version 12 without any alternative API or method.
+Indicates that pasting is allowed within any application. Discarded in API version 12 and later versions. There is no substitute interface or alternative method. <!--RP2--><!--RP2End-->
 
 **Since:** 9
 

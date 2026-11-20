@@ -166,7 +166,7 @@ Constructor
 | [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
 | [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | **GestureModifier** is used to encapsulate the logic for dynamically setting component gestures. Developers need to customize a class to implement the **GestureModifier** interface and set or switch the gestures bound to a component in **applyGesture** as required. |
 | [HistoricalPoint](arkts-arkui-common-comp-historicalpoint-i.md) | Provides historical touch point information. |
-| [HorizontalAlignParam](arkts-arkui-common-comp-horizontalalignparam-i.md) | Defines the horizontal align rule of relative container. |
+| [HorizontalAlignParam](arkts-arkui-common-comp-horizontalalignparam-i.md) | Defines the alignment rule for child components in a relative layout component in the horizontal direction. |
 | [HoverEvent](arkts-arkui-common-comp-hoverevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [ICurve](arkts-arkui-common-comp-icurve-i.md) | Interface for curve object. |
 | [IMonitor](arkts-arkui-common-comp-imonitor-i.md) | When the monitored state variable changes, the state management framework will call the registered function and pass the change information of the **IMonitor** type. |
@@ -248,7 +248,7 @@ Constructor
 | [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | Used to set the gestures bound to a component. It supports dynamically adding normal gestures or parallel gestures to a component, and removing or clearing bound gestures by gesture tag. This is suitable for scenarios where component gesture interactions are adjusted at runtime. |
 | [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | Configures scroll event callbacks. |
 | [VersionCondition](arkts-arkui-common-comp-versioncondition-i.md) | Defines VersionCondition interface |
-| [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
+| [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | Defines the alignment rule for child components in a relative layout component in the vertical direction. |
 | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Parameters related to the visible area change. |
 | [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | Provides the border information of the child component. |
 | [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | Provides the child component layout information. |

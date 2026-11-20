@@ -1533,13 +1533,14 @@ affect UI interaction. Therefore, exercise caution when using this interface. Yo
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-Update the hot zone in the input method panel in the current state. <br> <br>  
-> **Note:** <br>
+Updates the hot zone on the input method panel in the current state. <br> <br>  
+> **NOTE:** <br>
 > <br>
-> This parameter is applicable only to panels of the SOFT_KEYBOARD type and the status is FLG_FIXED or FLG_FLOING. <br>
-> <br>&gt;This interface is a synchronous interface. The return value indicates that the system receives the hot zone update request, but does not indicate that the hot zone update is complete. <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED**, **FLG_FLOATING**, <br>
+> or **FLAG_DETACHED** state. <br>
 > <br>
-> When the com.ohos.sceneboard process does not exist, the effective range of the input method hot zone is the same as that of the soft keyboard.
+> This API returns the result synchronously. The return only indicates that the system has received the request <br>
+> for updating the hot zone, not that the hot zone has been updated.
 
 **Since:** 15
 

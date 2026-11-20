@@ -10,7 +10,8 @@ Enumerates the state types of the input method panel. <br>
 | ------------ | -- | ------------------ |  
 | FLG_FIXED | 0 | Fixed state type.|  
 | FLG_FLOATING | 1 | Floating state type.|  
-| FLAG_CANDIDATE<sup>15+</sup> | 2 | Candidate state type.|
+| FLAG_CANDIDATE<sup>15+</sup> | 2 | Candidate state type.|  
+| FLAG_DETACHED<sup>26.1.0+</sup> | 3 | Detached state type.|
 
 **Since:** 10
 
@@ -29,6 +30,22 @@ Candidate style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBO
 **Since:** 15
 
 <!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## FLAG_DETACHED
+
+```TypeScript
+FLAG_DETACHED
+```
+
+Type of the panel in the detached state. <br> <br><p>Provided for panels of the SOFT_KEYBOARD type. The width of the panel is equal to the width of the screen. The panel can only be moved vertically. </p>
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelFlag-FLAG_DETACHED--><!--Device-PanelFlag-FLAG_DETACHED-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

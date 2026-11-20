@@ -32,7 +32,9 @@ enable(enable: boolean): Promise<boolean>
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.MICROPHONE
+**需要权限：** 
+- API版本27+：N/A
+- API版本20-26：ohos.permission.MICROPHONE
 
 <!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>--><!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>-End-->
 
@@ -54,7 +56,7 @@ enable(enable: boolean): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied.<br>**适用版本：** 20 - 26.0.1 |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## getEqualizerPreset

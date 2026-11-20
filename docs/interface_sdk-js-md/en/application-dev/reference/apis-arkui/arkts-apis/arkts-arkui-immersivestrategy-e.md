@@ -42,7 +42,7 @@ Avoid the cutout area.
 AVOID_FLOAT_NAV = 1
 ```
 
-Avoid the three-button navigation bar area on the phone.
+Avoid the three-button navigation bar area.
 
 **Since:** 26.1.0
 

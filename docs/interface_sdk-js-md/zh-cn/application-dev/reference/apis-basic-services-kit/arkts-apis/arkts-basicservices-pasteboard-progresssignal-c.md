@@ -10,7 +10,7 @@ export class ProgressSignal
 
 <!--Device-pasteboard-export class ProgressSignal--><!--Device-pasteboard-export class ProgressSignal-End-->
 
-**系统能力：** SystemCapability.MiscServices.Pasteboard @class ProgressSignal
+**系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
 

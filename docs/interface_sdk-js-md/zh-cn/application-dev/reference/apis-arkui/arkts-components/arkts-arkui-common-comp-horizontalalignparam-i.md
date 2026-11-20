@@ -18,7 +18,9 @@ declare interface HorizontalAlignParam
 align: HorizontalAlign
 ```
 
-设置相对于锚点组件的水平对齐方式。Anonymous Object Rectification
+设置相对于锚点组件的水平对齐方式。
+
+Anonymous Object Rectification
 
 **类型：** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
@@ -38,7 +40,9 @@ align: HorizontalAlign
 anchor: string
 ```
 
-设置作为锚点的组件的id值。Anonymous Object Rectification
+设置作为锚点的组件的id值。
+
+Anonymous Object Rectification
 
 **类型：** string
 

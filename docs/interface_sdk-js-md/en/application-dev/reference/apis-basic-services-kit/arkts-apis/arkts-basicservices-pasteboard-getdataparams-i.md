@@ -4,7 +4,7 @@
 interface GetDataParams
 ```
 
-Defines parameters when an application obtains the Data from the pasteboard, including the destination path, file conflict options, and progress indicator types.
+Obtains parameters when an application uses the file copy capability provided by the pasteboard, including the destination path, file conflict options, and progress indicator types. Before calling this API, ensure that no other copy or paste operation is in progress.
 
 **Since:** 15
 
@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 progressListener?: ProgressListener
 ```
 
-Defines a listener for progress data changes. If the default progress indicator is not used, you can set this type to obtain the paste progress. This parameter is left empty by default.
+Listener for progress data changes, which is used to obtain the pasting progress. This parameter is valid only when **progressIndicator** is set to **NONE**. When **progressIndicator** is set to **DEFAULT**, this parameter is invalid. By default, this parameter is left empty (the progress is not listened to).
 
 **Since:** 15
 
@@ -40,7 +40,7 @@ Defines a listener for progress data changes. If the default progress indicator 
 destUri?: string
 ```
 
-Destination path for copying files. If file processing is not supported, this parameter is not required. If the application involves complex file processing policies or needs to distinguish file multipathing storage, you are advised not to set this parameter but let the application copy files by itself. This parameter is left empty by default.
+URI of the destination directory for the file copied. If file processing is not supported, this parameter is not required. If the application involves complex file processing policies or needs to distinguish file multipathing storage, you are advised not to set this parameter but let the application copy files by itself. This parameter is left empty by default.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ Destination path for copying files. If file processing is not supported, this pa
 fileConflictOptions?: FileConflictOptions
 ```
 
-File conflict options for a paste task. The default value is **OVERWRITE**.
+Options used to resolve file copy conflicts. Set this parameter to **OVERWRITE** when the latest file content must be used in the destination URI. Set this parameter to **SKIP** when the original file in the destination URI needs to be retained to prevent accidental overwriting. The default value is **OVERWRITE**.
 
 **Type:** [FileConflictOptions](arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
@@ -80,7 +80,7 @@ File conflict options for a paste task. The default value is **OVERWRITE**.
 progressIndicator: ProgressIndicator
 ```
 
-Progress indicator options. You can choose whether to use the default progress indicator.
+Progress indicator options. You can use the default progress indicator as required. If this parameter is set to **DEFAULT**, the default system progress indicator is used. If this parameter is set to **NONE**, the app progress indicator is used. Only in the second case, the **progressListener** and **progressSignal** parameters are valid.
 
 **Type:** [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
 

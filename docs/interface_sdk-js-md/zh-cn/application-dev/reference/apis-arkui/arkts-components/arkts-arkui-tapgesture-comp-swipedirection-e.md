@@ -18,7 +18,7 @@ declare enum SwipeDirection
 All
 ```
 
-Sliding in all directions.
+所有方向。
 
 **起始版本：** 8
 
@@ -34,7 +34,7 @@ Sliding in all directions.
 Horizontal
 ```
 
-Sliding horizontally.
+水平方向，手指滑动方向与x轴夹角小于45度时触发。
 
 **起始版本：** 8
 

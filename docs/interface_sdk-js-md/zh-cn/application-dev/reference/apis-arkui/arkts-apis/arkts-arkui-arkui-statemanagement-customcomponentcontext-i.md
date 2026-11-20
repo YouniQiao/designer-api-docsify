@@ -18,6 +18,44 @@ export declare interface CustomComponentContext
 import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IDefaultReusePool, IReusableInfo, StorageDefaultCreator, TypeConstructorWithArgs, PersistenceErrorCallback, TypeConstructor, TypeDecorator, MonitorCallback, MonitorOptions, GetterCallback, SetterCallback, ObservedResult, DecoratorInfo, ElementInfo, RecoverableStorage, RecoverableConnectOptions, RecoverableStorageError, NotifyOnErrorCallback } from '@kit.ArkUI';
 ```
 
+## enableAsyncLoad
+
+```TypeScript
+enableAsyncLoad(options?: CustomComponentAsyncLoadOptions): void
+```
+
+将当前自定义组件置为异步加载。组件实际内容由框架在异步任务中加载，不再阻塞页面转场主线程。
+
+当开发者需要在页面转场等对帧率敏感的场景下，避免自定义组件同步加载导致丢帧卡顿时，使用本方法。调用成功后，该自定义组件进入由组件上下文管理的异步加载状态。加载未完成期间，显示已注册的占位组件（已配置且可找到时）或不显示；加载完成后，占位组件自动替换为实际内容，并由框架自动触发渲染更新。
+
+与[IReusePool.preRender()](arkts-arkui-arkui-statemanagement-ireusepool-i.md#prerender)（预渲染可复用组件实例）不同，本方法延后的是组件实例的加载时机；本方法为配置型接口，返回**void**。
+
+> **说明：** 
+> 
+> 1、本方法仅对当前自定义组件实例生效；未调用本方法的组件保持既有同步加载行为。
+> 2、占位模板须先通过
+> getPlaceholderRegister()注册，且builder须为全局
+> 无参**\@Builder({ isPlaceholder: true })** 函数。
+> 3、**timeout**取值（正数、**0**、负数）的语义请参考
+> [CustomComponentAsyncLoadOptions.timeout](arkts-arkui-arkui-statemanagement-customcomponentasyncloadoptions-i.md#timeout)。
+> 4、本期不处理异步加载失败场景，由超时强制加载机制兜底。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CustomComponentContext-enableAsyncLoad(options?: CustomComponentAsyncLoadOptions): void--><!--Device-CustomComponentContext-enableAsyncLoad(options?: CustomComponentAsyncLoadOptions): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [CustomComponentAsyncLoadOptions](arkts-arkui-arkui-statemanagement-customcomponentasyncloadoptions-i.md) | 否 | 异步加载配置。默认值**undefined**表示加载完成前不显示占位组件，并使用缺省超时阈值（**1000** ms）。 |
+
 ## getDefaultReusePool
 
 ```TypeScript

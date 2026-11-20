@@ -20,7 +20,7 @@ The [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [unive
 fill(value: ResourceColor | ColorMetrics)
 ```
 
-Sets the color of the fill area. ColorMetrics can be used to describe the color for HDR brightening. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier). If this attribute is not set, the default fill color is Color.Black. Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. When this attribute is set together with the universal attribute **foregroundColor**, the one set later takes effect.
+Sets the color of the fill area. ColorMetrics can be<!--Del--> used to describe the color for HDR brightening. This attribute can be<!--DelEnd--> dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier). If this attribute is not set, the default fill color is Color.Black. Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. When this attribute is set together with the universal attribute **foregroundColor**, the one set later takes effect.
 
 **Since:** 26.0.0
 

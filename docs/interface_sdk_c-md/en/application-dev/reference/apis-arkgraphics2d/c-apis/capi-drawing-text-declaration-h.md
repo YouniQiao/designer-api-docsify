@@ -4,6 +4,8 @@
 
 Provides declarations of data structures related to 2D text drawing.
 
+**File to Include**: <native_drawing/drawing_text_declaration.h>
+
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing

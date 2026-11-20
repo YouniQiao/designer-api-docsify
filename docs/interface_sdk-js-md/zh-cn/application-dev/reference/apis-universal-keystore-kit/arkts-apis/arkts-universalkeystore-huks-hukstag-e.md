@@ -1026,6 +1026,24 @@ HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## HUKS_TAG_PQC_SIG_MODE
+
+```TypeScript
+HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530
+```
+
+后量子密码（PQC）签名模式，用于签名和验签操作。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksTag-HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530--><!--Device-HuksTag-HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530-End-->
+
+**系统能力：** SystemCapability.Security.Huks.Core
+
 ## HUKS_TAG_PURPOSE
 
 ```TypeScript

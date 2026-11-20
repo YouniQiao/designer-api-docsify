@@ -11,7 +11,7 @@
 export declare function sendKeyEvent(event: KeyEvent): boolean
 ```
 
-Send key event.
+发送按键事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。
 
 **起始版本：** 11
 
@@ -27,10 +27,10 @@ Send key event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | KeyEvent to be sent. |
+| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | 按键事件，event参数见KeyEvent介绍。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  |
+| boolean | 事件发送失败时返回false，其余情况返回true。 |

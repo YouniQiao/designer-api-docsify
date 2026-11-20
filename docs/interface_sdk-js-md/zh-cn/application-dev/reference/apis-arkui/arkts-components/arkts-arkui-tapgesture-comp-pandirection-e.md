@@ -18,7 +18,7 @@ declare enum PanDirection
 All
 ```
 
-Sliding in all directions.
+所有方向。
 
 **起始版本：** 7
 
@@ -50,7 +50,7 @@ Sliding Down.
 Horizontal
 ```
 
-Sliding horizontally.
+水平方向。
 
 **起始版本：** 7
 
@@ -66,7 +66,7 @@ Sliding horizontally.
 Left
 ```
 
-Sliding left.
+向左滑动。
 
 **起始版本：** 7
 
@@ -98,7 +98,7 @@ None
 Right
 ```
 
-Sliding right.
+向右滑动。
 
 **起始版本：** 7
 

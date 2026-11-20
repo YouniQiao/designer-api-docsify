@@ -1018,6 +1018,24 @@ Padding mode.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
+## HUKS_TAG_PQC_SIG_MODE
+
+```TypeScript
+HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530
+```
+
+Post-Quantum Cryptography (PQC) signature mode used for signing and verification operations.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-HuksTag-HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530--><!--Device-HuksTag-HUKS_TAG_PQC_SIG_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 530-End-->
+
+**System capability:** SystemCapability.Security.Huks.Core
+
 ## HUKS_TAG_PURPOSE
 
 ```TypeScript

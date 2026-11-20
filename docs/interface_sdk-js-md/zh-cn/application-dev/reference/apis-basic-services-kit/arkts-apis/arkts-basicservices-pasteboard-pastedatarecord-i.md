@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addEntry(type: string, value: ValueType): void
 ```
 
-往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData](#getdata)接口读取对应数据。
+往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData](#getdata)接口读取对应数据。从API 26.1.0开始，支持添加值为[VirtualFileInfo](arkts-basicservices-pasteboard-virtualfileinfo-c.md)的URI类型数据。
 
 **起始版本：** 14
 

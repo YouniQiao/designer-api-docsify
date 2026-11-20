@@ -2356,6 +2356,13 @@ type(value: InputType)
 
 不同的InputType会拉起对应类型的键盘，同时限制输入。未通过该接口设置时，默认为InputType.Normal。
 
+> **说明：** 
+> 
+> 密码填充服务需要密码相关的[输入框类型](arkts-arkui-textinput-comp-inputtype-e.md)(如InputType.Password、InputType.NUMBER_PASSWORD、InputType.NEW_PASSWORD、InputType.USER_NAME)。<!--RP2--><!--RP2End-->
+> 
+> 设置[密码模式](../../../ui/arkts-common-components-text-input.md#密码模式)时，[decoration](#decoration)、[showUnderline](#showunderline)、
+> [lineHeight](#lineheight)、[fontFeature](#fontfeature)不生效。
+
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。

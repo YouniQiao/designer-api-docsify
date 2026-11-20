@@ -1168,6 +1168,8 @@
   <!--Del-->
   - [getSpecifiedDistributionType(system api)](arkts-ability-bundlemanager-getspecifieddistributiontype-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getThemeRefreshTime(system api)](arkts-ability-bundlemanager-getthemerefreshtime-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [isAbilityEnabled(system api)](arkts-ability-bundlemanager-isabilityenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isAbilityEnabledSync(system api)](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md)<!--DelEnd-->

@@ -65,7 +65,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | 名称 | 说明 |
 | --- | --- |
 | [ApplicationShortcutCallbackInfo](arkts-arkui-arkui-uicontext-applicationshortcutcallbackinfo-i.md) | 应用级快捷键触发时的回调信息。 |
-| [AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md) | interface AtomicServiceBar |
+| [AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md) | AtomicServiceBar提供对原子化服务menuBar的属性设置能力，支持设置menuBar的可见性、背景颜色、标题内容、标题字体样式、图标颜色，以及获取menuBar的布局信息和监听布局变化。适用于需要在原子化服务中自定义menuBar外观和行为的场景。 |
 | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | 该参数用于指定需要监听的手势回调阶段（传入空数组时不监听任何手势回调阶段），仅当手势触发指定阶段时才会发送通知。 |
 | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | 特定手势回调函数触发时的信息。 |
 | [NodeSensitiveInputInfo](arkts-arkui-arkui-uicontext-nodesensitiveinputinfo-i.md) | 定义输入事件分发到**nodeIdentity**指定节点时上报的信息。 |

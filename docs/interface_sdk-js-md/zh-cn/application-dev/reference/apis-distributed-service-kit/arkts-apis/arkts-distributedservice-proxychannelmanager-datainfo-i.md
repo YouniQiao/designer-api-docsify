@@ -42,7 +42,7 @@ channelId: number
 data: ArrayBuffer
 ```
 
-接收到的字节数据，长度最大为4096字节。
+接收到的字节数据，长度最大为4194304字节。
 
 **类型：** ArrayBuffer
 

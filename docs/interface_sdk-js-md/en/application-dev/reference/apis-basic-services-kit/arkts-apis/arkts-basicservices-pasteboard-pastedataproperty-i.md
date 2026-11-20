@@ -4,7 +4,7 @@
 interface PasteDataProperty
 ```
 
-Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range, and additional data. The defined properties can be applied to the pasteboard only with the [setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty) method.
+Defines the properties of all data records on the pasteboard, including the timestamp, data type, pasteable range, and additional data. The defined properties can be applied to the pasteboard only with the [setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty) method.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 additions: Record<string, object>
 ```
 
-Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re- assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
+Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re-assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
 
 **Type:** Record&lt;string, object&gt;
 
@@ -42,7 +42,7 @@ Additional property data. It does not allow for dynamic adding of properties. Pr
 localOnly: boolean
 ```
 
-Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) attribute instead.
+Whether the pasteboard content is for local access only. The value **true** indicates that content is for local access only, and the value **false** indicates that cross-device data transfer is allowed. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) attribute instead.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ Whether the pasteboard content is for local access only. The default value is **
 readonly mimeTypes: Array<string>
 ```
 
-Data types of all records in PasteData.
+Non-repeating data types of the data records on the pasteboard.
 
 **Type:** Array&lt;string&gt;
 
@@ -78,7 +78,7 @@ Data types of all records in PasteData.
 shareOption: ShareOption
 ```
 
-Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
+Pasteable ranges of pasteboard data. The default value is **CROSSDEVICE**. This parameter is mutually exclusive with **localOnly**. Setting **shareOption** affects the actual value of **localOnly**.
 
 **Type:** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 

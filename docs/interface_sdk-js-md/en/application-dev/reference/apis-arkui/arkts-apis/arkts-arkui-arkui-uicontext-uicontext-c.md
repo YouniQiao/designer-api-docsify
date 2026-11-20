@@ -413,7 +413,7 @@ Applies the default safe area immersive strategy on the current page. This API a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | [ImmersiveStrategy](arkts-arkui-immersivestrategy-e.md)[] | Yes | Immersive strategies to apply. An empty array clears all applied immersive strategies. |
+| types | [ImmersiveStrategy](arkts-arkui-immersivestrategy-e.md)[] | Yes | Immersive policy to apply. An empty array clears all applied immersive policies. <br>Abnormal values such as **undefined**, **null**, **NaN**, and **Infinity** are treated as an empty array. |
 
 ## bindTabsToNestedScrollable
 

@@ -28,7 +28,7 @@ Creates a **PasteData** object of the URI type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI content. |
+| uri | string | Yes | URI text. The value must comply with the standard URI format. |
 
 **Return value:**
 

@@ -232,6 +232,47 @@ systemSoundManagerInstance.close(fd).then(() => {
 
 <!--DelEnd-->
 
+## factoryReset
+
+```TypeScript
+factoryReset(): Promise<void>
+```
+
+Restores all ringtones and vibration settings to their factory defaults with one click, and deletes custom audio ringtones(video ringtones are retained).
+
+The restoration scope includes the incoming call ringtone, SMS/notification ringtone, selected URI of the alarm tone, and vibration settings. After the restoration, all items are restored to their factory defaults. In addition, custom audio ringtones added using [addCustomizedTone](#addcustomizedtone) in the ringtone library are deleted, but video ringtones are retained.
+
+> **NOTE:** 
+> The restoration process is executed atomically on the server. If any step fails, the modified items will be
+> rolled back and an error code will be returned.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.WRITE_RINGTONE
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemSoundManager-factoryReset(): Promise<void>--><!--Device-SystemSoundManager-factoryReset(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permisson verification failed. A non-system application calls a system API. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| 20700008 | I/O error. |
+
 ## getAlarmToneAttrList
 
 ```TypeScript

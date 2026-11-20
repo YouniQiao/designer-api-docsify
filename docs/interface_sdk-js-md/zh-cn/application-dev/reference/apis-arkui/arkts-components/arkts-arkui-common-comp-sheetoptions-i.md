@@ -1087,7 +1087,7 @@ titleBarHoverMode?: SheetTitleBarHoverMode
 - STANDARD：标题栏与内容上下排布，无重叠。  
 - STACK：标题栏悬浮于内容之上。开发者需要在内容顶部添加padding以避免遮挡。  
 - SAFE_AREA_PADDING：标题栏放置在安全区域padding区域。内容扩展到安全区域，  
-滚动内容裁剪到安全区域。默认值为**SheetTitleBarHoverMode.STANDARD**。通过applyDefaultImmersiveStrategy成功设置[BIND_SHEET_EXPAND_SAFE_AREA](../arkts-apis/arkts-arkui-immersivestrategy-e.md#bind_sheet_expand_safe_area)后，默认值为**SheetTitleBarHoverMode.SAFE_AREA_PADDING**。
+滚动内容裁剪到安全区域。默认值为**SheetTitleBarHoverMode.STANDARD**。通过[applyDefaultImmersiveStrategy](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#applydefaultimmersivestrategy)成功设置[BIND_SHEET_EXPAND_SAFE_AREA](../arkts-apis/arkts-arkui-immersivestrategy-e.md#bind_sheet_expand_safe_area)后，默认值为**SheetTitleBarHoverMode.SAFE_AREA_PADDING**。
 
 **类型：** [SheetTitleBarHoverMode](arkts-arkui-common-comp-sheettitlebarhovermode-e.md)
 

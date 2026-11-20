@@ -154,6 +154,42 @@ SHA-512
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
+## HUKS_DIGEST_SHAKE128
+
+```TypeScript
+HUKS_DIGEST_SHAKE128 = 15
+```
+
+Digest algorithm: SHAKE128 extendable-output function (XOF).
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE128 = 15--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE128 = 15-End-->
+
+**System capability:** SystemCapability.Security.Huks.Core
+
+## HUKS_DIGEST_SHAKE256
+
+```TypeScript
+HUKS_DIGEST_SHAKE256 = 16
+```
+
+Digest algorithm: SHAKE256 extendable-output function (XOF).
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE256 = 16--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHAKE256 = 16-End-->
+
+**System capability:** SystemCapability.Security.Huks.Core
+
 ## HUKS_DIGEST_SM3
 
 ```TypeScript

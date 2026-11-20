@@ -86,6 +86,7 @@
   - [HuksKeySize](arkts-universalkeystore-huks-hukskeysize-e.md)
   - [HuksKeyStorageType](arkts-universalkeystore-huks-hukskeystoragetype-e.md)
   - [HuksKeyWrapType](arkts-universalkeystore-huks-hukskeywraptype-e.md)
+  - [HuksPQCSigMode](arkts-universalkeystore-huks-hukspqcsigmode-e.md)
   - [HuksRsaPssSaltLenType](arkts-universalkeystore-huks-huksrsapsssaltlentype-e.md)
   - [HuksSecureSignType](arkts-universalkeystore-huks-hukssecuresigntype-e.md)
   - [HuksSendType](arkts-universalkeystore-huks-hukssendtype-e.md)

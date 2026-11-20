@@ -4,7 +4,7 @@
 enum FileConflictOptions
 ```
 
-Enumerates options for file copy conflicts.
+Enumerates the options used to resolve file copy conflicts.
 
 **Since:** 15
 

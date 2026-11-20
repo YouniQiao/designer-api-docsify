@@ -78,7 +78,7 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-设置渐变断点值，包括偏移和颜色。支持设置rgb或argb格式颜色。支持通过传入[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型设置P3广色域颜色值，从API版本26.0.0开始，新增支持BT2020广色域和HDR提亮。
+设置渐变断点值，包括偏移和颜色。支持设置rgb或argb格式颜色。支持通过传入[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型设置P3广色域颜色值<!--Del-->，从API版本26.0.0开始，新增支持BT2020广色域和HDR提亮<!--DelEnd-->。
 
 **起始版本：** 20
 

@@ -50,7 +50,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. Possible causes: <br>1. Child processes cannot be started from within a child process; <br>2. The device does not support the capability. |
 | [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 **Examples**
@@ -127,7 +127,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. Possible causes: <br>1. Child processes cannot be started from within a child process; <br>2. The device does not support the capability. |
 | [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 **Examples**

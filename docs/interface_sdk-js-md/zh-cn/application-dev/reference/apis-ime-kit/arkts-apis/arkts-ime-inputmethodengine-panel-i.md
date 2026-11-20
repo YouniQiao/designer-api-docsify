@@ -27,7 +27,7 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。<br>
 > <br>
 > 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用<br>
 > [updatePanelRect](#updatepanelrect-1)或<br>
@@ -97,7 +97,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。此接口兼容<br>
 > [adjustPanelRect](#adjustpanelrect-1)的调用方法，若入参rect <br>
 > 仅填写属性landscapeRect和portraitRect，则默认调用<br>
 > [adjustPanelRect](#adjustpanelrect-1)。<br>
@@ -586,7 +586,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 取消监听当前面板大小变化，使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
 > <br>
 > - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br><br>
@@ -700,7 +700,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 监听当前面板大小变化，使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
 > <br>
 > - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br><br>
@@ -1368,7 +1368,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 预设置输入法应用横竖屏大小。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。<br>
 > <br>
 > 此接口为异步接口，接口返回仅代表系统侧收到设置的请求，不代表已完成设置。<br>
 > <br>
@@ -1440,7 +1440,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。此接口兼容<br>
 > [adjustPanelRect](#adjustpanelrect-1)的调用方法，若入参rect <br>
 > 仅填写属性landscapeRect和portraitRect，则默认调用<br>
 > [adjustPanelRect](#adjustpanelrect-1)。<br>
@@ -1525,7 +1525,7 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
 > [updatePanelRect](#updatepanelrect-1)。<br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。<br>
 > <br>
 > 此接口为同步接口，接口返回代表系统侧收到设置的请求，并已完成设置。<br>
 > <br>
@@ -1594,7 +1594,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
 > [updatePanelRect](#updatepanelrect-1)。<br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。此接口兼容<br>
 > [adjustPanelRect](#adjustpanelrect-1)的调用方法，若入参rect <br>
 > 仅填写属性landscapeRect和portraitRect，则默认调用<br>
 > [adjustPanelRect](#adjustpanelrect-1)。<br>
@@ -1670,7 +1670,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 更新当前状态下输入法面板内的热区。<br> <br>  
 > **说明：** <br>
 > <br>
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED、FLG_FLOATING或FLAG_DETACHED的面板。<br>
 > <br>
 > 此接口为同步接口，接口返回仅代表系统侧收到更新热区的请求，不代表已完成热区更新。<br>
 > <br>

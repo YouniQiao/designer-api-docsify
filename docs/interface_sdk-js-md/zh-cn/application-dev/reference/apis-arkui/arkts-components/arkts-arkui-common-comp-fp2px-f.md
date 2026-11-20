@@ -6,7 +6,7 @@
 declare function fp2px(value: number): number
 ```
 
-Converts a number in fp units to a number in px.
+将fp单位的数值转换为以px为单位的数值。
 
 **起始版本：** 11
 
@@ -26,10 +26,10 @@ Converts a number in fp units to a number in px.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | Value range of value: (-∞, +∞). |
+| value | number | 是 | 将fp单位的数值转换为以px为单位的数值。<br>取值范围：(-∞, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Value range of the return value: (-∞, +∞). |
+| number | 转换后的数值，单位：px。<br>取值范围：(-∞, +∞) |

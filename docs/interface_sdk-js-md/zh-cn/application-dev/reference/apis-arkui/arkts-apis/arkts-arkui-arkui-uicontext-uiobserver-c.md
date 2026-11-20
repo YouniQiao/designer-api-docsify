@@ -569,7 +569,7 @@ off(
 off(type: 'willClick', callback?: ClickEventListenerCallback): void
 ```
 
-Removes a callback function to be called before clickEvent is called.
+取消监听on('willClick')中的点击事件指令下发情况。从API version 20开始，支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -585,8 +585,8 @@ Removes a callback function to be called before clickEvent is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'willClick' | 是 | The type of event to remove the listener for. |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'willClick' | 是 | 监听事件，固定为'willClick'，即点击事件指令下发情况。 |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的点击事件指令下发监听回调。 |
 
 **示例**
 
@@ -598,7 +598,7 @@ Removes a callback function to be called before clickEvent is called.
 off(type: 'didClick', callback?: ClickEventListenerCallback): void
 ```
 
-Removes a callback function to be called after clickEvent is called.
+取消监听on('didClick')中的点击事件指令下发情况。从API version 20开始，支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -614,8 +614,8 @@ Removes a callback function to be called after clickEvent is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'didClick' | 是 | The type of event to remove the listener for. |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'didClick' | 是 | 监听事件，固定为'didClick'，即点击事件指令下发情况。 |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的点击事件指令下发监听回调。 |
 
 **示例**
 
@@ -627,7 +627,7 @@ Removes a callback function to be called after clickEvent is called.
 off(type: 'willClick', callback?: GestureEventListenerCallback): void
 ```
 
-Removes a callback function to be called before tapGesture is called.
+取消监听on('willClick')中的点击事件指令下发情况。从API version 20开始，支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -643,8 +643,8 @@ Removes a callback function to be called before tapGesture is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'willClick' | 是 | The type of event to remove the listener for. |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'willClick' | 是 | 监听事件，固定为'willClick'，即点击事件指令下发情况。 |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的点击事件指令下发监听回调。 |
 
 **示例**
 
@@ -656,7 +656,7 @@ Removes a callback function to be called before tapGesture is called.
 off(type: 'didClick', callback?: GestureEventListenerCallback): void
 ```
 
-Removes a callback function to be called after tapGesture is called.
+取消监听on('didClick')中的点击事件指令下发情况。从API version 20开始，支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -672,8 +672,8 @@ Removes a callback function to be called after tapGesture is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'didClick' | 是 | The type of event to remove the listener for. |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'didClick' | 是 | 监听事件，固定为'didClick'，即点击事件指令下发情况。 |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的点击事件指令下发监听回调。 |
 
 **示例**
 
@@ -2033,7 +2033,7 @@ struct Index {
 on(type: 'willClick', callback: ClickEventListenerCallback): void
 ```
 
-Registers a callback function to be called before clickEvent is called.
+监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。回调类型为[ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md)。从API version 20开始支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -2049,8 +2049,8 @@ Registers a callback function to be called before clickEvent is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'willClick' | 是 | The type of event to listen for. |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 是 | The callback function to be called when the clickEvent will be trigger or after. |
+| type | 'willClick' | 是 | 监听事件，固定为'willClick'，用于监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。 |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 是 | 回调函数。可以获得点击事件的[ClickEvent](../arkts-components/arkts-arkui-common-comp-clickevent-i.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
@@ -2062,7 +2062,7 @@ Registers a callback function to be called before clickEvent is called.
 on(type: 'didClick', callback: ClickEventListenerCallback): void
 ```
 
-Registers a callback function to be called after clickEvent is called.
+监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。回调类型为[ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md)。从API version 20开始支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -2078,8 +2078,8 @@ Registers a callback function to be called after clickEvent is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'didClick' | 是 | The type of event to listen for. |
-| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 是 | The callback function to be called when the clickEvent will be trigger or after. |
+| type | 'didClick' | 是 | 监听事件，固定为'didClick'，用于监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。 |
+| callback | [ClickEventListenerCallback](arkts-arkui-clickeventlistenercallback-t.md) | 是 | 回调函数。可以获得点击事件的[ClickEvent](../arkts-components/arkts-arkui-common-comp-clickevent-i.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
@@ -2091,7 +2091,7 @@ Registers a callback function to be called after clickEvent is called.
 on(type: 'willClick', callback: GestureEventListenerCallback): void
 ```
 
-Registers a callback function to be called before tapGesture is called.
+监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。回调类型为[GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md)。从API version 20开始支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -2107,8 +2107,8 @@ Registers a callback function to be called before tapGesture is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'willClick' | 是 | The type of event to listen for. |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 是 | The callback function to be called when the clickEvent will be trigger or after. |
+| type | 'willClick' | 是 | 监听事件，固定为'willClick'，用于监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。 |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 是 | 回调函数。可以获得点击事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
@@ -2204,7 +2204,7 @@ struct ClickExample {
 on(type: 'didClick', callback: GestureEventListenerCallback): void
 ```
 
-Registers a callback function to be called after tapGesture is called.
+监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。回调类型为[GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md)。从API version 20开始支持屏幕朗读触控模式。
 
 **起始版本：** 12
 
@@ -2220,8 +2220,8 @@ Registers a callback function to be called after tapGesture is called.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'didClick' | 是 | The type of event to listen for. |
-| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 是 | The callback function to be called when the clickEvent will be trigger or after. |
+| type | 'didClick' | 是 | 监听事件，固定为'didClick'，用于监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。 |
+| callback | [GestureEventListenerCallback](arkts-arkui-gestureeventlistenercallback-t.md) | 是 | 回调函数。可以获得点击事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 

@@ -4,7 +4,7 @@
 export interface AtomicServiceBar
 ```
 
-interface AtomicServiceBar
+AtomicServiceBar提供对原子化服务menuBar的属性设置能力，支持设置menuBar的可见性、背景颜色、标题内容、标题字体样式、图标颜色，以及获取menuBar的布局信息和监听布局变化。适用于需要在原子化服务中自定义menuBar外观和行为的场景。
 
 **起始版本：** 11
 

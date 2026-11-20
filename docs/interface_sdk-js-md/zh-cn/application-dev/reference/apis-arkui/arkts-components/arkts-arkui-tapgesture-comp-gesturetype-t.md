@@ -4,7 +4,7 @@
 declare type GestureType =TapGestureInterface | LongPressGestureInterface | PanGestureInterface | PinchGestureInterface | SwipeGestureInterface | RotationGestureInterface | GestureGroupInterface
 ```
 
-Defines the Gesture Type.
+定义手势类型。
 
 **起始版本：** 7
 

@@ -10,7 +10,8 @@ export enum PanelFlag
 | ------------ | -- | ------------------ |  
 | FLG_FIXED | 0 | 固定态面板类型。 |  
 | FLG_FLOATING | 1 | 悬浮态面板类型。 |  
-| FLAG_CANDIDATE<sup>15+</sup> | 2 | 候选词态面板类型。 |
+| FLAG_CANDIDATE<sup>15+</sup> | 2 | 候选词态面板类型。 |  
+| FLAG_DETACHED<sup>26.1.0+</sup> | 3 | 分离态面板类型。 |
 
 **起始版本：** 10
 
@@ -29,6 +30,20 @@ FLAG_CANDIDATE
 **起始版本：** 15
 
 <!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## FLAG_DETACHED
+
+```TypeScript
+FLAG_DETACHED
+```
+
+分离态面板类型。<br> <br><p>提供给 SOFT_KEYBOARD 类型的面板。面板宽度等于屏幕宽度，面板仅可纵向移动。</p>
+
+**起始版本：** 26.1.0
+
+<!--Device-PanelFlag-FLAG_DETACHED--><!--Device-PanelFlag-FLAG_DETACHED-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

@@ -50,7 +50,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. Possible causes: <br>1. Child processes cannot be started from within a child process; <br>2. The device does not support the capability. |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
 
 **示例**
@@ -127,7 +127,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. Possible causes: <br>1. Child processes cannot be started from within a child process; <br>2. The device does not support the capability. |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
 
 **示例**

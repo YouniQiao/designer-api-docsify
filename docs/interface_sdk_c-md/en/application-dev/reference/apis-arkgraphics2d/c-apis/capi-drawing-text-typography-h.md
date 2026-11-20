@@ -4,6 +4,8 @@
 
 This file declares the functions related to typography in the drawing module.
 
+**File to Include**: <native_drawing/drawing_text_typography.h>
+
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing

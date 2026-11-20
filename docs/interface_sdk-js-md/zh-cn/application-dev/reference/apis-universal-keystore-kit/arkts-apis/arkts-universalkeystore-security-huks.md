@@ -134,6 +134,7 @@ import { huks } from '@kit.UniversalKeystoreKit';
 | [HuksKeySize](arkts-universalkeystore-huks-hukskeysize-e.md) | 表示密钥长度。 |
 | [HuksKeyStorageType](arkts-universalkeystore-huks-hukskeystoragetype-e.md) | 表示密钥存储方式。 |
 | [HuksKeyWrapType](arkts-universalkeystore-huks-hukskeywraptype-e.md) | 表示密钥加密类型（加密导出或导入密钥）的枚举。 |
+| [HuksPQCSigMode](arkts-universalkeystore-huks-hukspqcsigmode-e.md) | 后量子密码（PQC）算法签名模式枚举。 |
 | [HuksRsaPssSaltLenType](arkts-universalkeystore-huks-huksrsapsssaltlentype-e.md) | 表示Rsa在签名验签、padding为pss时需指定的salt_len类型。 |
 | [HuksSecureSignType](arkts-universalkeystore-huks-hukssecuresigntype-e.md) | 表示生成或导入密钥时，指定该密钥的签名类型。 |
 | [HuksSendType](arkts-universalkeystore-huks-hukssendtype-e.md) | 表示发送TAG的方式。 |

@@ -17,10 +17,10 @@
 | [getInspectorByKey](arkts-arkui-global-getinspectorbykey-f.md#getinspectorbykey-1) | 根据id获取组件的所有属性。 |
 | [getInspectorTree](arkts-arkui-global-getinspectortree-f.md#getinspectortree-1) | 获取当前组件树。 |
 | [loadNativeModule](arkts-arkui-global-loadnativemodule-f.md#loadnativemodule-1) | 同步动态加载native模块，目的是按需加载所需要的模块。使用该接口会增加so文件的加载时间，使用前需评估其对应用性能和功能的影响。 |
-| [sendEventByKey](arkts-arkui-global-sendeventbykey-f.md#sendeventbykey-1) | Sends an event to the component with the specified ID. |
-| [sendKeyEvent](arkts-arkui-global-sendkeyevent-f.md#sendkeyevent-1) | Send key event. |
-| [sendMouseEvent](arkts-arkui-global-sendmouseevent-f.md#sendmouseevent-1) | Send mouse event. |
-| [sendTouchEvent](arkts-arkui-global-sendtouchevent-f.md#sendtouchevent-1) | Send touch event. |
+| [sendEventByKey](arkts-arkui-global-sendeventbykey-f.md#sendeventbykey-1) | 给指定id的组件发送事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。 |
+| [sendKeyEvent](arkts-arkui-global-sendkeyevent-f.md#sendkeyevent-1) | 发送按键事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。 |
+| [sendMouseEvent](arkts-arkui-global-sendmouseevent-f.md#sendmouseevent-1) | 发送鼠标事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。 |
+| [sendTouchEvent](arkts-arkui-global-sendtouchevent-f.md#sendtouchevent-1) | 发送触摸事件。此接口仅用于对应用的测试，使用时建议等应用启动且布局完成后再调用此接口。由于耗时长，不建议使用。 |
 | [setInterval](arkts-arkui-global-setinterval-f.md#setinterval-1) | 重复调用一个函数，在每次调用之间具有固定的时间延迟。删除该定时器需手动调用clearInterval()接口。 |
 | [setTimeout](arkts-arkui-global-settimeout-f.md#settimeout-1) | 设置一个定时器，该定时器在定时器到期后执行一个函数。该定时器在回调被执行后自动删除，或使用clearTimeout()接口手动删除。 |
 

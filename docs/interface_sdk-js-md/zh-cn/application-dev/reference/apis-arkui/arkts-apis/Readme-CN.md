@@ -598,6 +598,7 @@
   - [RecoverableConnectOptions](arkts-arkui-arkui-statemanagement-recoverableconnectoptions-c.md)
   - [RecoverableStorage](arkts-arkui-arkui-statemanagement-recoverablestorage-c.md)
   - [UIUtils](arkts-arkui-arkui-statemanagement-uiutils-c.md)
+  - [CustomComponentAsyncLoadOptions](arkts-arkui-arkui-statemanagement-customcomponentasyncloadoptions-i.md)
   - [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md)
   - [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md)
   - [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md)

@@ -31,6 +31,22 @@ Candidate-word state panel type. <br> <br>‑ When the input panel is in candida
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## FLAG_DETACHED
+
+```TypeScript
+FLAG_DETACHED
+```
+
+Separated panel type. <br> <br>- The width of the panel is equal to the width of the screen. The panel can only be moved vertically.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelFlag-FLAG_DETACHED--><!--Device-PanelFlag-FLAG_DETACHED-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
 ## FLAG_FIXED
 
 ```TypeScript

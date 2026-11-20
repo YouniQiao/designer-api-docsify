@@ -42,15 +42,15 @@ enum PASTEBOARD_ErrCode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ERR_OK = 0 | &nbsp;执行成功。 |
-| ERR_PERMISSION_ERROR = 201 | &nbsp;权限校验失败。 |
-| ERR_INVALID_PARAMETER = 401 | &nbsp;非法参数。 |
-| ERR_DEVICE_NOT_SUPPORTED = 801 | &nbsp;设备能力不支持。 |
-| ERR_INNER_ERROR = 12900000 | &nbsp;内部错误。 |
-| ERR_BUSY = 12900003 | &nbsp;系统忙。 |
-| ERR_PASTEBOARD_COPY_FILE_ERROR = 12900007 | &nbsp;文件拷贝失败。<br>**起始版本：** 15 |
-| ERR_PASTEBOARD_PROGRESS_START_ERROR = 12900008 | &nbsp;拉起进度显示失败。<br>**起始版本：** 15 |
-| ERR_PASTEBOARD_PROGRESS_ABNORMAL = 12900009 | &nbsp;进度显示异常。<br>**起始版本：** 15 |
-| ERR_PASTEBOARD_GET_DATA_FAILED = 12900010 | &nbsp;获取剪贴板数据失败。<br>**起始版本：** 15 |
+| ERR_OK = 0 | 执行成功。 |
+| ERR_PERMISSION_ERROR = 201 | 权限校验失败。 |
+| ERR_INVALID_PARAMETER = 401 | 非法参数。 |
+| ERR_DEVICE_NOT_SUPPORTED = 801 | 设备能力不支持。 |
+| ERR_INNER_ERROR = 12900000 | 内部错误。 |
+| ERR_BUSY = 12900003 | 系统忙。 |
+| ERR_PASTEBOARD_COPY_FILE_ERROR = 12900007 | 文件拷贝失败。<br>**起始版本：** 15 |
+| ERR_PASTEBOARD_PROGRESS_START_ERROR = 12900008 | 拉起进度显示失败。<br>**起始版本：** 15 |
+| ERR_PASTEBOARD_PROGRESS_ABNORMAL = 12900009 | 进度显示异常。<br>**起始版本：** 15 |
+| ERR_PASTEBOARD_GET_DATA_FAILED = 12900010 | 获取剪贴板数据失败。<br>**起始版本：** 15 |
 
 

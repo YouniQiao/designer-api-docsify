@@ -4,7 +4,7 @@
 enum ProgressIndicator
 ```
 
-Enumerates options for the progress indicator. You can choose whether to use the default progress indicator.
+Enumerates the progress indicator options. You can use the default progress indicator as required.
 
 **Since:** 15
 
@@ -18,7 +18,7 @@ Enumerates options for the progress indicator. You can choose whether to use the
 DEFAULT = 1
 ```
 
-Getting data with system default progress indicator.
+The default progress indicator is used.
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ Getting data with system default progress indicator.
 NONE = 0
 ```
 
-Getting data without system default progress indicator.
+The default progress indicator is not used.
 
 **Since:** 15
 

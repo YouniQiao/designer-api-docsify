@@ -4,7 +4,9 @@
 interface SystemPasteboard
 ```
 
-Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md).
+Provides **SystemPasteboard** APIs.
+
+Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md).
 
 **Since:** 6
 
@@ -24,7 +26,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 clearData(callback: AsyncCallback<void>): void
 ```
 
-Clears the system pasteboard. This API uses an asynchronous callback to return the result.
+Clears the system pasteboard. This API uses an asynchronous callback to return the result. After this API is called, the system deletes all data from the pasteboard and triggers the registered listener callback **'update'**. After the pasteboard is cleared, it will contain no data, and **false** will be returned for **hasData**. This API can be used to clear the pasteboard asynchronously without blocking the main thread, such as the interaction process that requires the UI response. Unlike the synchronous API [clearDataSync](#cleardatasync), this API does not block the UI thread and is more suitable for UI interactions.
 
 **Since:** 9
 
@@ -38,7 +40,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -102,7 +104,7 @@ systemPasteboard.clearData().then((data: void) => {
 clearDataSync(): void
 ```
 
-Clears the system pasteboard. This API returns the result synchronously.
+Clears data in the system pasteboard. This API returns the result synchronously. This API is used to clear the pasteboard data synchronously in a key service process or confirm the clearing result immediately.
 
 **Since:** 11
 
@@ -136,7 +138,7 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pasteboard. This API uses a promise to return the result.
+Detects [patterns](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#pattern13) on the local pasteboard. This API uses a promise to return the result. The local pasteboard data refers to the pasteboard data on the current device, excluding the pasteboard data transferred across devices. This API can be used to check whether the pasteboard contains specific types of data (such as URLs, email addresses, and phone numbers) before pasting, so that the app can perform corresponding processing or provide intelligent prompts.
 
 **Since:** 13
 
@@ -148,13 +150,13 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| patterns | Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt; | Yes | Pattern to be detected in the system pasteboard. |
+| patterns | Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt; | Yes | Patterns to be detected in the pasteboard, which is used to check whether the pasteboard data complies with a specific format. The options are **URL**, **NUMBER**, and **EMAIL_ADDRESS**. The number of elements in the array is not limited, and the element value must be an enumerated value of **Pattern**. If an invalid value is passed, error code 401 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt;&gt; | Promise used to return the detected patterns. |
+| Promise&lt;Array&lt;[Pattern](arkts-basicservices-pasteboard-pattern-e.md)&gt;&gt; | Promise used to return the detected pattern. |
 
 **Error codes:**
 
@@ -191,7 +193,13 @@ systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>)
 getChangeCount(): number
 ```
 
-Obtains the number of pasteboard content changes. Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise. Even though the PasteData expires, or the data becomes empty because of the called [clearDataSync](#cleardatasync) API, the number of data changes remains. When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
+Obtains the number of pasteboard content changes.
+
+Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise.
+
+Even though the pasteboard data expires, or the data becomes empty because of the called [clearDataSync](#cleardatasync) API, the number of data changes remains.
+
+When the system is restarted, or the pasteboard service is restarted due to an exception, the number of pasteboard data changes counts from 0. If the same data is copied repeatedly, multiple changes will be recorded.
 
 **Since:** 18
 
@@ -227,9 +235,9 @@ try {
 getData(callback: AsyncCallback<PasteData>): void
 ```
 
-Obtains a **PasteData** object from the pasteboard. This API uses an asynchronous callback to return the result.
+Obtains a **PasteData** object from the pasteboard. This API uses an asynchronous callback to return the result. After this API is called, the system reads the current content from the pasteboard service and returns a **PasteData** object using a callback. After the data is read successfully, the app can obtain the specific data content (such as text, HTML, and URI) using the **PasteData** object. This API can be used to read data from the pasteboard asynchronously, such as when the UI response is required or the main thread should not be blocked. Compared with [getDataSync](#getdatasync), **getData** does not block the UI thread and is suitable for processing a large amount of data or remote data.
 
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 9
 
@@ -247,7 +255,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the system pasteboard data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -281,9 +289,9 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 getData(): Promise<PasteData>
 ```
 
-Obtains a **PasteData** object from the pasteboard. This API uses a promise to return the result.
+Obtains data from the system pasteboard and encapsulates the data into a **PasteData** object. This API uses a promise to return the result. This API can be used to read data from the pasteboard asynchronously, such as when the UI response is required or the main thread should not be blocked.
 
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 9
 
@@ -301,7 +309,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system pasteboard data. |
 
 **Error codes:**
 
@@ -332,7 +340,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
 getDataSource(): string
 ```
 
-Obtains the name of the application that provides data.
+Obtains the name of the app that provides the pasteboard data. This method is applicable to scenarios such as security audit, data tracking, and notifying users of the data source.
 
 **Since:** 11
 
@@ -372,11 +380,9 @@ try {
 getDataSync(): PasteData
 ```
 
-Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously. This API is used to obtain pasteboard data synchronously in key service processes or process pasteboard data immediately.
+Reads data in the system pasteboard. This API returns the result synchronously. This API is used to obtain pasteboard data synchronously in key service processes or process pasteboard data immediately. Do not call this API on the UI thread to prevent blocking the UI. Use the asynchronous API [getData](#getdata-1) to process a large amount of data or remote data.
 
-Do not call this API in the UI thread to prevent blocking the UI. Use the asynchronous API [getData](#getdata-1) to process a large amount of data or remote data.
-
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 11
 
@@ -421,9 +427,9 @@ try {
 getDataWithProgress(params: GetDataParams): Promise<PasteData>
 ```
 
-Obtains the PasteData from the system pasteboard with system progress. This API uses a promise to return the result. Folders cannot be copied.
+Obtains the pasteboard data and progress. This API uses a promise to return the result. Folders cannot be copied. For the copy operation of large files, you are advised to register a listener to track the copy progress and prevent long waiting time on the UI thread. You are also advised to set a proper destination path to ensure sufficient storage space. This method is applicable to the large file pasting scenario. In this scenario, you can use this callback to display the copy progress or monitor the copy process to cancel the operation when necessary.
 
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 15
 
@@ -439,13 +445,13 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
+| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | Yes | Parameters required when an application uses the file copy capability provided by the pasteboard, including the destination path, file conflict options, and progress indicator types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system pasteboard data. |
 
 **Error codes:**
 
@@ -507,7 +513,7 @@ struct PasteboardTest {
 getMimeTypes(): Promise<Array<string>>
 ```
 
-Obtains the types of PasteData in the system pasteboard. This API uses a promise to return the result.
+Obtains the MIME type from the pasteboard. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -521,7 +527,7 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the types. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the read MIME type. |
 
 **Examples**
 
@@ -542,9 +548,9 @@ systemPasteboard.getMimeTypes().then((data: Array<string>) => {
 getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 ```
 
-Obtains a **PasteData** object from the system pasteboard. This API uses a promise to return the result.
+Obtains a **PasteData** object from the pasteboard. This API uses a promise to return the result. This API is used for cross-app data exchange using [UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md). This API can be used to share data with other apps that support **UnifiedData** or process complex data of multiple types. Compared with [getData](#getdata-1), **getUnifiedData** provides more standard data formats.
 
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 12
 
@@ -560,7 +566,7 @@ While most applications must [request permissions to access the pasteboard](../.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)&gt; | Promise used to return the system pasteboard data. |
 
 **Error codes:**
 
@@ -595,9 +601,9 @@ systemPasteboard.getUnifiedData().then((data) => {
 getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 ```
 
-Obtains a **UnifiedData** object from the system pasteboard. This API returns the result synchronously.
+Reads data in the system pasteboard. This API returns the result synchronously. This API is used for cross-app data exchange using **UnifiedData**. This API can be used to immediately obtain data from the pasteboard in key service processes and share the data with other apps that support **UnifiedData**. The delay in obtaining data from the pasteboard is affected by the data volume and network environment. Therefore, calling this API may take a long time. You are advised to call this API in non-UI threads.
 
-While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+To use the custom control to access the pasteboard content, you must [request the permission to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md). Those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 12
 
@@ -642,7 +648,7 @@ try {
 hasData(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the system pasteboard contains data. This API uses an asynchronous callback to return the result.
+Checks whether the system pasteboard contains data. This API uses an asynchronous callback to return the result. This API can be used to check whether the pasteboard contains data asynchronously without blocking the main thread, such as the interaction process that requires the UI response. Unlike the synchronous API [hasDataSync](#hasdatasync), this API does not block the UI thread and is more suitable for UI interactions.
 
 **Since:** 9
 
@@ -656,7 +662,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result of whether pasteboard contains data. Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -774,13 +780,13 @@ Checks whether the pasteboard contains data of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | Data type. |
+| mimeType | string | Yes | Data type, which is used to check whether specific data of this type exists in the pasteboard. The length of **mimeType** cannot exceed 1024 bytes. If the length exceeds 1024 bytes, error code 401 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the pasteboard contains data of the specified type; returns **false** otherwise. |
+| boolean | Checks whether the pasteboard contains data of the specified type. The value **true** indicates the pasteboard contains data of the specified type; the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -807,7 +813,7 @@ try {
 hasRemoteData(): boolean
 ```
 
-Checks whether the PasteData is on a remote device. Transferring data across devices takes time. If the PasteData is in a remote device, do not check for custom data types or read the PasteData on the UI thread.
+Checks whether the pasteboard data is on a remote device. Transferring data across devices takes time. If the pasteboard data is on a remote device, do not check for custom data types or read the pasteboard data on the UI thread.
 
 **Since:** 24
 
@@ -821,7 +827,7 @@ Checks whether the PasteData is on a remote device. Transferring data across dev
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns the check result. The value **true** indicates that the PasteData is in a remote device, and **false** indicates the opposite. Default value: **false**. |
+| boolean | Returns the check result. The value **true** indicates that the pasteboard data is on a remote device, and **false** indicates the opposite. Default value: **false**. |
 
 **Examples**
 
@@ -838,7 +844,7 @@ console.info(`Succeeded in checking the remote data. Result: ${result}`);
 isRemoteData(): boolean
 ```
 
-Checks whether the data in the pasteboard is from another device.
+Checks whether the data in the pasteboard is from another device. Transferring data across devices takes time. If the pasteboard data is on a remote device, do not check for custom data types or read the pasteboard data on the UI thread.
 
 **Since:** 11
 
@@ -852,7 +858,7 @@ Checks whether the data in the pasteboard is from another device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the data in the pasteboard is from another device; returns **false** otherwise. |
+| boolean | Checks whether the data in the pasteboard is from another device. The value **true** indicates the data in the pasteboard is from another device; the value **false** indicates the data is from the local device. |
 
 **Error codes:**
 
@@ -878,7 +884,12 @@ try {
 off(type: 'update', callback?: () => void): void
 ```
 
-Unsubscribes the content change event of the system pasteboard.
+Unsubscribes from the system pasteboard content change event.
+
+- This API is used to unsubscribe from the event subscribed to by **on('update')**.  
+- This API can be called only after an event has been subscribed to.  
+- If the **callback** parameter is not specified, listening will be disabled for all callbacks registered by the  
+current application.
 
 **Since:** 7
 
@@ -891,7 +902,7 @@ Unsubscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () =&gt; void | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
+| callback | () =&gt; void | No | Callback invoked when the pasteboard content changes. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -918,7 +929,7 @@ systemPasteboard.off('update', listener);
 offRemoteUpdate(callback?: UpdateCallback): void
 ```
 
-Remove a callback invoked when remote pasteboard content changes.
+Unsubscribes from the content change events of the pasteboard on a remote device.
 
 **Since:** 22
 
@@ -930,7 +941,7 @@ Remove a callback invoked when remote pasteboard content changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
+| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | allback to be invoked when the pasteboard content on the remote device changes. If this parameter is not specified, remote listening will be disabled for all callbacks registered by the current application. |
 
 **Examples**
 
@@ -948,7 +959,13 @@ systemPasteboard.offRemoteUpdate(listener);
 on(type: 'update', callback: () => void): void
 ```
 
-Subscribes the content change event of the system pasteboard.
+Subscribes to the content change event of the system pasteboard. After this method is called, the system registers a listener in the pasteboard service. The callback is triggered when content is written, cleared, or modified in the pasteboard. Multiple listeners can be registered. You need to call **off('update')** to unsubscribe from the content change event at a proper time to release resources. This API is called when an app needs to respond to pasteboard content changes in real time, for example, to automatically detect data in a specific format or to implement intelligent paste suggestions.
+
+- Call [off('update')](#offupdate) to  
+unsubscribe from the content change event of the system pasteboard when it is no longer needed.  
+- If the event is not unsubscribed from, the callback function will continuously listen for pasteboard changes,  
+which may cause memory leaks or the callback being triggered from multiple times.  
+- You are advised to unsubscribe from the event when the component or page is destroyed.
 
 **Since:** 7
 
@@ -960,7 +977,7 @@ Subscribes the content change event of the system pasteboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
+| type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. Other values are invalid. |
 | callback | () =&gt; void | Yes | Callback invoked when the pasteboard content changes. |
 
 **Error codes:**
@@ -988,7 +1005,12 @@ systemPasteboard.on('update', listener);
 onRemoteUpdate(callback: UpdateCallback): void
 ```
 
-Add a callback invoked when remote pasteboard content changes.
+Subscribes to the content change events of the pasteboard on a remote device. This callback is triggered when the pasteboard content on the remote device changes.
+
+- Call [offRemoteUpdate](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#offremoteupdatecallback-updatecallback22) to unsubscribe from the content change event of the pasteboard when it is no longer needed.  
+- If the event is not unsubscribed from, the callback function will continuously listen for remote changes, which  
+may cause memory leaks.  
+- You are advised to unsubscribe from the event when the component or page is destroyed.
 
 **Since:** 22
 
@@ -1000,7 +1022,7 @@ Add a callback invoked when remote pasteboard content changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | Yes | the callback to add. |
+| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | Yes | Callback invoked when the pasteboard content changes. The listener parameters are not specified. The callback is used to listen for cross-device pasteboard data update events, which is triggered when the pasteboard data on a remote device changes. |
 
 **Examples**
 
@@ -1018,7 +1040,11 @@ systemPasteboard.onRemoteUpdate(listener);
 removeAppShareOptions(): void
 ```
 
-Deletes the global pasteable range of the application.
+Deletes the global pasteable range of the application. This API can be used to delete the previously set pasteable scope and restore the default pasteable scope for pasteboard data.
+
+- This API must be used together with **setAppShareOptions()**.  
+- The sharing scope set by **setAppShareOptions()** is deleted.  
+- This API can be called only after the sharing scope has been set.
 
 **Since:** 14
 
@@ -1054,7 +1080,10 @@ try {
 setAppShareOptions(shareOptions: ShareOption): void
 ```
 
-Sets pasteable range of PasteData for application.
+Sets pasteable range of pasteboard data for applications. This API can be used to globally restrict the pasteable scope of pasteboard data generated by the app. For example, a financial app needs to protect sensitive user information.
+
+- This API is used together with **removeAppShareOptions()**.  
+- To delete the configured sharing scope, call **removeAppShareOptions()**.
 
 **Since:** 14
 
@@ -1070,7 +1099,7 @@ Sets pasteable range of PasteData for application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shareOptions | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | Yes | Pasteable range. Only **pasteboard.ShareOption.INAPP** is allowed. |
+| shareOptions | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | Yes | Pasteable range. Only the enumeration values ​​defined in **pasteboard.ShareOption** are allowed. If other values are passed, error code 401 is returned. |
 
 **Error codes:**
 
@@ -1098,7 +1127,7 @@ try {
 setData(data: PasteData, callback: AsyncCallback<void>): void
 ```
 
-Writes a **PasteData** object to the pasteboard. This API uses an asynchronous callback to return the result.
+Writes a **PasteData** object to the pasteboard. This API uses an asynchronous callback to return the result. After this API is called, the system writes the data of the **PasteData** object to the pasteboard. After the data is written successfully, other apps can read the data from the pasteboard. The written data will replace the existing data in the pasteboard. This API can be used to write data to the pasteboard asynchronously, such as when the UI response is required or the main thread should not be blocked. Unlike [setDataSync](#setdatasync), **setData** does not block the UI thread.
 
 **Since:** 9
 
@@ -1112,8 +1141,8 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. After this parameter is set, the data is written to the system pasteboard for the app to read and paste. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1146,7 +1175,7 @@ systemPasteboard.setData(pasteData, (err, data) => {
 setData(data: PasteData): Promise<void>
 ```
 
-Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
+Writes a **PasteData** object to the pasteboard. This API uses a promise to return the result. This API can be used to write data to the pasteboard asynchronously without blocking the main thread, such as the interaction process that requires the UI response. Unlike the synchronous API [setDataSync](#setdatasync), this API does not block the UI thread and is more suitable for UI interactions.
 
 **Since:** 9
 
@@ -1160,7 +1189,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. Before calling this API, ensure that no other copy or paste operation is in progress. |
 
 **Return value:**
 
@@ -1199,7 +1228,7 @@ systemPasteboard.setData(pasteData).then((data: void) => {
 setDataSync(data: PasteData): void
 ```
 
-Writes data to the system system pasteboard. This API returns the result synchronously.
+Writes data to the system pasteboard. This API returns the result synchronously. This API can be used to write data to the pasteboard synchronously in key service processes or confirm the write result immediately.
 
 **Since:** 11
 
@@ -1241,7 +1270,7 @@ try {
 setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 ```
 
-Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
+Writes a **PasteData** object to the pasteboard. This API uses a promise to return the result. This API can be used to write data to the pasteboard asynchronously without blocking the main thread, such as the interaction process that requires the UI response. Unlike the synchronous API [setUnifiedDataSync](#setunifieddatasync), this API does not block the UI thread and is more suitable for UI interactions.
 
 **Since:** 12
 
@@ -1255,7 +1284,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. Before calling this API, ensure that no other copy or paste operation is in progress. |
 
 **Return value:**
 
@@ -1304,7 +1333,7 @@ systemPasteboard.setUnifiedData(data).then((data: void) => {
 setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 ```
 
-Writes data to the system pasteboard. This API returns the result synchronously.
+Writes data to the system pasteboard. This API returns the result synchronously. This API is used for cross-app data exchange using **UnifiedData**. This API can be used to immediately write data to the pasteboard in key service processes and share the data with other apps that support [UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md).
 
 **Since:** 12
 
@@ -1318,7 +1347,7 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. |
+| data | [unifiedDataChannel.UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Yes | Data to be written to the pasteboard. Cross-app data exchange is supported. Other apps can read the data using **unifiedDataChannel**. |
 
 **Error codes:**
 
@@ -1379,7 +1408,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1459,7 +1488,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the system pasteboard data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1507,7 +1536,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system PasteData. |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system pasteboard data. |
 
 **Examples**
 
@@ -1613,7 +1642,7 @@ systemPasteboard.hasPasteData().then((data: boolean) => {
 setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 ```
 
-Writes a **PasteData** object to the system pasteboard. This API uses an asynchronous callback to return the result.
+Writes a **PasteData** object to the pasteboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -1630,7 +1659,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1658,7 +1687,7 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
 setPasteData(data: PasteData): Promise<void>
 ```
 
-Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
+Writes a **PasteData** object to the pasteboard. This API uses a promise to return the result.
 
 **Since:** 6
 

@@ -24,7 +24,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 progress: number
 ```
 
-If the progress indicator provided by the system is not used, the system reports the progress percentage of the paste task.
+If the progress indicator provided by the system is not used, the system reports the progress percentage of the copy-and-paste task.
 
 **Type:** number
 
