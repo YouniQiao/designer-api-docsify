@@ -35,4 +35,5 @@ Provides declarations of data structures related to 2D text drawing.
 | [OH_Drawing_FontFullDescriptor](capi-drawing-oh-drawing-fontfulldescriptor.md) | OH_Drawing_FontFullDescriptor | Describes the detailed information about a font. |
 | [OH_Drawing_FontVariationAxis](capi-drawing-oh-drawing-fontvariationaxis.md) | OH_Drawing_FontVariationAxis | Describes the variable axis of the font. |
 | [OH_Drawing_FontVariationInstance](capi-drawing-oh-drawing-fontvariationinstance.md) | OH_Drawing_FontVariationInstance | Describes a variable font instance and stores the preset variable font style information. |
+| [OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) | OH_Drawing_FontFamilyMapping | Describes the font family mapping. |
 

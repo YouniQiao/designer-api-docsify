@@ -63,6 +63,11 @@ Defines APIs related to font information, such as obtaining font information, fi
 | [uint32_t OH_Drawing_GetFontCountFromFile(const char* fontSrc)](#oh_drawing_getfontcountfromfile) | Obtains the number of fonts contained in a font file. |
 | [uint32_t OH_Drawing_GetFontCountFromBuffer(uint8_t* fontBuffer, size_t length)](#oh_drawing_getfontcountfrombuffer) | Obtains the number of fonts contained in a font buffer. |
 | [OH_Drawing_String* OH_Drawing_GetFontPathsByType(OH_Drawing_SystemFontType fontType, size_t* pathCount)](#oh_drawing_getfontpathsbytype) | Obtains all font file paths of the specified font type. |
+| [OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)](#oh_drawing_copyfontfamilymappings) | Copies the content of the font family mapping table. |
+| [void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)](#oh_drawing_freefontfamilymappings) | Releases a font family mapping table. |
+| [OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)](#oh_drawing_getsourcefamilyfrommapping) | Obtains the source font family name from a specified font family mapping object. |
+| [OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)](#oh_drawing_gettargetcountfrommapping) | Obtains the number of target font families contained in a specified font family mapping object. |
+| [OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)](#oh_drawing_gettargetfamilyfrommapping) | Obtains the target font family name from a specified font family mapping object based on the index. |
 
 ## Enum type description
 
@@ -1030,5 +1035,146 @@ Obtains all font file paths of the specified font type.
 | Type | Description |
 | -- | -- |
 | OH_Drawing_String* | List of font paths returned. When no longer needed, use free to release the pointer to this object and the pointer held internally by each OH_Drawing_String object. |
+
+### OH_Drawing_CopyFontFamilyMappings()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)
+```
+
+**Description**
+
+Copies the content of the font family mapping table.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Resource release**: [OH_Drawing_FreeFontFamilyMappings](#oh_drawing_freefontfamilymappings)
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) ***outCopiedMappings | [out] Content of the font family mapping table, populated on success. Call [OH_Drawing_FreeFontFamilyMappings](capi-drawing-text-font-descriptor-h.md#oh_drawing_freefontfamilymappings) to free the memory after use. |
+| uint32_t *outBorrowedCount | [out] Number of entries in the font family mapping table, populated on success. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the operation is successful. </li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the **outCopiedMappings** or **outBorrowedCount** parameter is a null pointer. </li> </ul> |
+
+### OH_Drawing_FreeFontFamilyMappings()
+
+```c
+void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)
+```
+
+**Description**
+
+Releases a font family mapping table.
+
+<!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)--><!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) **mappings | [in] Pointer to the font family mapping table. |
+
+### OH_Drawing_GetSourceFamilyFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)
+```
+
+**Description**
+
+Obtains the source font family name from a specified font family mapping object.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] Pointer to a single font family mapping object. The pointer cannot be null and must remain valid during the call. The callee does not retain this reference, so the caller does not need to release it after the call. |
+| const char **outBorrowedSourceFamily | [out] Source font family name encoded in UTF-8, populated on success. The value of this parameter remains unchanged if the call fails. This parameter cannot be left empty and does not need to be initialized before the call. The string is owned by the **mapping** object and must not be released by the caller. It becomes invalid after the **mapping** object is modified or destroyed. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the operation is successful. </li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the **mapping** or **outBorrowedSourceFamily** parameter is a null pointer. </li> </ul> |
+
+### OH_Drawing_GetTargetCountFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)
+```
+
+**Description**
+
+Obtains the number of target font families contained in a specified font family mapping object.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] Pointer to a single font family mapping object. The pointer cannot be null and must remain valid during the call. The callee does not retain this reference, so the caller does not need to release it after the call. |
+| uint32_t *outBorrowedTargetCount | [out] Number of target font family names, populated on success. The value of this parameter remains unchanged if the call fails. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the operation is successful. </li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the **mapping** or **outBorrowedTargetCount** parameter is a null pointer. </li> </ul> |
+
+### OH_Drawing_GetTargetFamilyFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)
+```
+
+**Description**
+
+Obtains the target font family name from a specified font family mapping object based on the index.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] Pointer to a single font family mapping object. The pointer cannot be null and must remain valid during the call. The callee does not retain this reference, so the caller does not need to release it after the call. |
+| uint32_t index | [in] Index of the target font family name. The value range is [0, **targetCount** – 1]. You can obtain **targetCount** by calling [OH_Drawing_GetTargetCountFromMapping](capi-drawing-text-font-descriptor-h.md#oh_drawing_gettargetcountfrommapping). |
+| const char **outBorrowedTargetFamily | [out] Target font family name encoded in UTF-8, populated on success. The value of this parameter remains unchanged if the call fails. This parameter cannot be left empty and does not need to be initialized before the call. The string is owned by the **mapping** object and must not be released by the caller. It becomes invalid after the **mapping** object is modified or destroyed. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the operation is successful. </li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the **mapping** or **outBorrowedTargetFamily** parameter is a null pointer. </li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned if the value of **index** is out of range. </li> </ul> |
 
 

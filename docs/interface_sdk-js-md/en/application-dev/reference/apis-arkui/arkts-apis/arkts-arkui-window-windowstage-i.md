@@ -1391,7 +1391,7 @@ Window stage close callback on.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageClose' | Yes | The value is fixed at 'windowStageClose', indicating the window stage close event. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback function requires a boolean return value to determine whether to close the current main window. |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the window stage close event occurs. |
 
 **Error codes:**
 
@@ -1445,7 +1445,7 @@ Release the content of this window in the current project. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value, indicating successful completion. Throws exception if window state is abnormal. |
+| Promise&lt;void&gt; | Promise that returns no value, indicating successful completion. |
 
 **Error codes:**
 

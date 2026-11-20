@@ -11,6 +11,10 @@
   <!--Del-->
   - [Filter(system api)](arkts-arkgraphics2d-effectkit-filter-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [HalftoneParam(system api)](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShadowOptions(system api)](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [EllipticalMaskCenter(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EllipticalMaskRadius(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md)<!--DelEnd-->

@@ -144,6 +144,24 @@ HTTP version used in the [request](arkts-network-http-httprequest-i.md#request-1
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## receivedTotalBytes
+
+```TypeScript
+receivedTotalBytes?: number
+```
+
+Total number of bytes actually received over the HTTP request link, including the status line, response header, and response body. The unit is byte. Unit: Byte... The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-receivedTotalBytes?: int--><!--Device-ConnectionExtraInfo-receivedTotalBytes?: int-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## redirectCount
 
 ```TypeScript
@@ -195,6 +213,24 @@ Port number of the server in the request process. The value ranges from 1 to 655
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-remotePort: int--><!--Device-ConnectionExtraInfo-remotePort: int-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## sentTotalBytes
+
+```TypeScript
+sentTotalBytes?: number
+```
+
+Total number of bytes actually sent over the HTTP request link, including the request line, request header, and request body. The unit is byte. Unit: Byte... The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-sentTotalBytes?: int--><!--Device-ConnectionExtraInfo-sentTotalBytes?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

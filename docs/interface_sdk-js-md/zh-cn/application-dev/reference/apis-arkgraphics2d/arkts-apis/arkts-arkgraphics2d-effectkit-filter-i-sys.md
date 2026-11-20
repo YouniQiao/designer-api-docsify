@@ -138,3 +138,76 @@ struct Index {
 ```
 
 <!--DelEnd-->
+
+## halftone
+
+```TypeScript
+halftone(halftoneParam: HalftoneParam, outlineWidth?: number, shadowOptions?: ShadowOptions): Filter
+```
+
+将网点效果、描边和阴影效果添加至效果链表，并返回链表头节点。该效果将原图划分为规则网格，根据各网格中心的采样颜色及其亮度生成网点。每个网格以白色为背景，网点由黑色内圈和彩色圆环组成。
+
+> **说明：** 
+> 
+> 输入图像应为仅包含单个主体、轮廓清晰的抠图图像，主体部分完全不透明，背景区域完全透明，不符合该标准的输入图像可能产生异常效果。
+> 输入PixelMap的像素格式应为RGBA_8888、BGRA_8888、RGBA_F16或RGBA_1010102，不符合该标准的像素格式会导致输出异常。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-halftone(halftoneParam: HalftoneParam, outlineWidth?: double, shadowOptions?: ShadowOptions): Filter--><!--Device-Filter-halftone(halftoneParam: HalftoneParam, outlineWidth?: double, shadowOptions?: ShadowOptions): Filter-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| halftoneParam | [HalftoneParam](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md) | 是 | 网点配置参数。 |
+| outlineWidth | number | 否 | 可选参数，描边宽度，单位为px。主体向外扩展出宽度为outlineWidth的白色边缘，超过作用图像范围自动截断。取值范围为[0, +∞)，超出取值范围时按边界值截断。默认值为0.0。 |
+| shadowOptions | [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | 否 | 可选参数，阴影配置参数，不传时使用默认阴影配置。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+
+## outline
+
+```TypeScript
+outline(outlineWidth: number, shadowOptions?: ShadowOptions): Filter
+```
+
+将描边和阴影效果添加至效果链表，并返回链表的头节点。该效果提取图像中非透明区域的轮廓生成描边，并根据阴影配置生成投影。
+
+> **说明：** 
+> 
+> 输入图像应为仅包含单个主体、轮廓清晰的抠图图像，主体部分完全不透明，背景区域完全透明，不符合该标准的输入图像可能产生异常效果。
+> 输入PixelMap的像素格式应为RGBA_8888、BGRA_8888、RGBA_F16或RGBA_1010102，不符合该标准的像素格式会导致输出异常。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-outline(outlineWidth: double, shadowOptions?: ShadowOptions): Filter--><!--Device-Filter-outline(outlineWidth: double, shadowOptions?: ShadowOptions): Filter-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| outlineWidth | number | 是 | 描边宽度，单位为px。主体向外扩展出宽度为outlineWidth的白色边缘，超过作用图像范围自动截断。取值范围为[0, +∞)，超出取值范围时按边界值截断。 |
+| shadowOptions | [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | 否 | 可选参数，阴影配置参数，不传时使用默认阴影配置。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |

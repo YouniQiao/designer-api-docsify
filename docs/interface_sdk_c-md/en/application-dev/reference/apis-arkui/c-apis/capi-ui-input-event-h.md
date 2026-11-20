@@ -32,6 +32,7 @@ Provides input event definitions for ArkUI on the native side, including touch, 
 | [anonymous0](#anonymous0) | - | Enumerates the action types of the input event. |
 | [anonymous1](#anonymous1) | - | Enumerates the tool types of the input event. |
 | [anonymous2](#anonymous2) | - | Enumerates the source types of the input event. |
+| [OH_ArkUI_TouchPadEventPhase](#oh_arkui_touchpadeventphase) | OH_ArkUI_TouchPadEventPhase | Enumerates the phases of a touchpad event. |
 | [HitTestMode](#hittestmode) | HitTestMode | Enumerates the hit test modes. |
 | [anonymous3](#anonymous3) | - | Enumerates the action types of the mouse event. |
 | [anonymous4](#anonymous4) | - | Enumerates the button types of the mouse event. |
@@ -198,6 +199,12 @@ Provides input event definitions for ArkUI on the native side, including touch, 
 | [ArkUI_ErrorCode OH_ArkUI_ClonedEvent_SetRawDeltaY(const ArkUI_UIInputEvent* event, float rawDeltaY)](#oh_arkui_clonedevent_setrawdeltay) | Sets the movement delta of the mouse along the y-axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world. This API applies to mouse events. This API can be used only for the **ArkUI_UIInputEvent** objects created by [OH_ArkUI_PointerEvent_CreateClonedPointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createclonedpointerevent) and [OH_ArkUI_PointerEvent_CreatePointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createpointerevent). |
 | [ArkUI_ErrorCode OH_ArkUI_ClonedEvent_SetPressedButtons(const ArkUI_UIInputEvent* event, const int32_t* pressedButtons, int32_t length)](#oh_arkui_clonedevent_setpressedbuttons) | Sets the pressed keys in a cloned event. This API applies to mouse events. This API can be used only for the *<br>*ArkUI_UIInputEvent** objects created by [OH_ArkUI_PointerEvent_CreateClonedPointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createclonedpointerevent) and [OH_ArkUI_PointerEvent_CreatePointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createpointerevent). |
 | [ArkUI_ErrorCode OH_ArkUI_PointerEvent_PostClonedEventWithStrategy(ArkUI_NodeHandle node, const ArkUI_UIInputEvent* event, ArkUI_CompetitionStrategy strategy)](#oh_arkui_pointerevent_postclonedeventwithstrategy) | Posts a cloned event to a specific node using a specified competition policy. This API is applicable to the scenario where a cloned event is injected to a target node and whether the injected event competes with the existing gestures on the target node needs to be controlled. This API can be used only for the **ArkUI_UIInputEvent** objects created by [OH_ArkUI_PointerEvent_CreateClonedPointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createclonedpointerevent) and [OH_ArkUI_PointerEvent_CreatePointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createpointerevent). |
+| [int32_t OH_ArkUI_TouchPadEvent_GetIdByIndex(const ArkUI_UIInputEvent* event, uint32_t index)](#oh_arkui_touchpadevent_getidbyindex) | Obtains the ID of a contact by index from a touchpad event. |
+| [int32_t OH_ArkUI_TouchPadEvent_GetPhaseByIndex(const ArkUI_UIInputEvent* event, uint32_t index)](#oh_arkui_touchpadevent_getphasebyindex) | Obtains the phase of a contact by index from a touchpad event. |
+| [double OH_ArkUI_TouchPadEvent_GetNormalizedPositionXByIndex(const ArkUI_UIInputEvent* event, uint32_t index)](#oh_arkui_touchpadevent_getnormalizedpositionxbyindex) | Obtains the normalized X position of a contact by index from a touchpad event. |
+| [double OH_ArkUI_TouchPadEvent_GetNormalizedPositionYByIndex(const ArkUI_UIInputEvent* event, uint32_t index)](#oh_arkui_touchpadevent_getnormalizedpositionybyindex) | Obtains the normalized Y position of a contact by index from a touchpad event. |
+| [double OH_ArkUI_TouchPadEvent_GetDeviceWidth(const ArkUI_UIInputEvent* event)](#oh_arkui_touchpadevent_getdevicewidth) | obtaining the width of the touchpad according to the touchpad event. |
+| [double OH_ArkUI_TouchPadEvent_GetDeviceHeight(const ArkUI_UIInputEvent* event)](#oh_arkui_touchpadevent_getdeviceheight) | obtaining the height of the touchpad according to the touchpad event. |
 
 ### Variables
 
@@ -232,6 +239,7 @@ Enumerates the UI input event types.
 | ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3 | Mouse event. |
 | ARKUI_UIINPUTEVENT_TYPE_KEY = 4 | Key event.<br>**Since**: 20 |
 | ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5 | Crown event.<br>**Since**: 24 |
+| ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6 | Touchpad event.<br>**Since**: 26.1.0 |
 
 ### anonymous0
 
@@ -304,6 +312,30 @@ Enumerates the source types of the input event.
 | UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2 | Touchscreen. |
 | UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4 | Key.<br>**Since**: 22 |
 | UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5 | Joystick.<br>**Since**: 22 |
+| UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6 | Raw contact input from a touchpad.<br>**Since**: 26.1.0 |
+
+### OH_ArkUI_TouchPadEventPhase
+
+```c
+enum OH_ArkUI_TouchPadEventPhase
+```
+
+**Description**
+
+Enumerates the phases of a touchpad event.
+
+<!--Device-OH_ArkUI_TouchPadEventPhase--><!--Device-OH_ArkUI_TouchPadEventPhase-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0 | A contact begins.<br>**Since**: 26.1.0 |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1 | A contact moves.<br>**Since**: 26.1.0 |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2 | A contact ends.<br>**Since**: 26.1.0 |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3 | A contact is canceled.<br>**Since**: 26.1.0 |
 
 ### HitTestMode
 
@@ -4918,5 +4950,177 @@ Posts a cloned event to a specific node using a specified competition policy. Th
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if an input parameter is incorrect, for example, the **node**, **event**, or **strategy** parameter is invalid. Check and pass a valid node, event pointer, and policy. <br>Returns ARKUI_ERROR_CODE_NOT_CLONED_POINTER_EVENT if the input event pointer is not a cloned event pointer. <br>Returns ARKUI_ERROR_CODE_POST_CLONED_COMPONENT_STATUS_ABNORMAL if the component status is abnormal. <br>Returns ARKUI_ERROR_CODE_POST_CLONED_NO_COMPONENT_HIT_TO_RESPOND_TO_THE_EVENT if no component is hit to respond to the event. |
+
+### OH_ArkUI_TouchPadEvent_GetIdByIndex()
+
+```c
+int32_t OH_ArkUI_TouchPadEvent_GetIdByIndex(const ArkUI_UIInputEvent* event, uint32_t index)
+```
+
+**Description**
+
+Obtains the ID of a contact by index from a touchpad event.
+
+<!--Device-int32_t OH_ArkUI_TouchPadEvent_GetIdByIndex(const ArkUI_UIInputEvent* event, uint32_t index)--><!--Device-int32_t OH_ArkUI_TouchPadEvent_GetIdByIndex(const ArkUI_UIInputEvent* event, uint32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event. The value must not be <b>nullptr</b>. |
+| uint32_t index | [in] Index of the contact in the contact list. The value range is [0, [OH_ArkUI_PointerEvent_GetPointerCount()](capi-ui-input-event-h.md#oh_arkui_pointerevent_getpointercount()) - 1]. If the value is out of range, <b>-1</b> is returned. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | ID of the contact. <ul> <li>Contact ID, if the operation is successful.</li> <li><b>-1</b>, if a parameter error occurs, the index is out of range, or the event is not a touchpad event.</li> </ul> |
+
+### OH_ArkUI_TouchPadEvent_GetPhaseByIndex()
+
+```c
+int32_t OH_ArkUI_TouchPadEvent_GetPhaseByIndex(const ArkUI_UIInputEvent* event, uint32_t index)
+```
+
+**Description**
+
+Obtains the phase of a contact by index from a touchpad event.
+
+<!--Device-int32_t OH_ArkUI_TouchPadEvent_GetPhaseByIndex(const ArkUI_UIInputEvent* event, uint32_t index)--><!--Device-int32_t OH_ArkUI_TouchPadEvent_GetPhaseByIndex(const ArkUI_UIInputEvent* event, uint32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event. The value must not be <b>nullptr</b>. |
+| uint32_t index | [in] Index of the contact in the contact list. The value range is [0, [OH_ArkUI_PointerEvent_GetPointerCount()](capi-ui-input-event-h.md#oh_arkui_pointerevent_getpointercount()) - 1]. If the value is out of range, <b>-1</b> is returned. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | Phase of the contact. <ul> <li>Phase of the contact. The value is defined by [OH_ArkUI_TouchPadEventPhase](capi-ui-input-event-h.md#oh_arkui_touchpadeventphase).</li> <li><b>-1</b>, if a parameter error occurs, the index is out of range, or the event is not a touchpad event.</li> </ul> |
+
+### OH_ArkUI_TouchPadEvent_GetNormalizedPositionXByIndex()
+
+```c
+double OH_ArkUI_TouchPadEvent_GetNormalizedPositionXByIndex(const ArkUI_UIInputEvent* event, uint32_t index)
+```
+
+**Description**
+
+Obtains the normalized X position of a contact by index from a touchpad event.
+
+<!--Device-double OH_ArkUI_TouchPadEvent_GetNormalizedPositionXByIndex(const ArkUI_UIInputEvent* event, uint32_t index)--><!--Device-double OH_ArkUI_TouchPadEvent_GetNormalizedPositionXByIndex(const ArkUI_UIInputEvent* event, uint32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event. The value must not be <b>nullptr</b>. |
+| uint32_t index | [in] Index of the contact in the contact list. The value range is [0, [OH_ArkUI_PointerEvent_GetPointerCount()](capi-ui-input-event-h.md#oh_arkui_pointerevent_getpointercount()) - 1]. If the value is out of range, <b>0.0</b> is returned. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| double | Normalized X position of the contact. <ul> <li>Normalized X position of the contact. The value range is [0, 1].</li> <li><b>0.0</b>, if a parameter error occurs, the index is out of range, or the event is not a touchpad event.</li> </ul> |
+
+### OH_ArkUI_TouchPadEvent_GetNormalizedPositionYByIndex()
+
+```c
+double OH_ArkUI_TouchPadEvent_GetNormalizedPositionYByIndex(const ArkUI_UIInputEvent* event, uint32_t index)
+```
+
+**Description**
+
+Obtains the normalized Y position of a contact by index from a touchpad event.
+
+<!--Device-double OH_ArkUI_TouchPadEvent_GetNormalizedPositionYByIndex(const ArkUI_UIInputEvent* event, uint32_t index)--><!--Device-double OH_ArkUI_TouchPadEvent_GetNormalizedPositionYByIndex(const ArkUI_UIInputEvent* event, uint32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event. The value must not be <b>nullptr</b>. |
+| uint32_t index | [in] Index of the contact in the contact list. The value range is [0, [OH_ArkUI_PointerEvent_GetPointerCount()](capi-ui-input-event-h.md#oh_arkui_pointerevent_getpointercount()) - 1]. If the value is out of range, <b>0.0</b> is returned. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| double | Normalized Y position of the contact. <ul> <li>Normalized Y position of the contact. The value range is [0, 1].</li> <li><b>0.0</b>, if a parameter error occurs, the index is out of range, or the event is not a touchpad event.</li> </ul> |
+
+### OH_ArkUI_TouchPadEvent_GetDeviceWidth()
+
+```c
+double OH_ArkUI_TouchPadEvent_GetDeviceWidth(const ArkUI_UIInputEvent* event)
+```
+
+**Description**
+
+obtaining the width of the touchpad according to the touchpad event.
+
+<!--Device-double OH_ArkUI_TouchPadEvent_GetDeviceWidth(const ArkUI_UIInputEvent* event)--><!--Device-double OH_ArkUI_TouchPadEvent_GetDeviceWidth(const ArkUI_UIInputEvent* event)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event, which cannot be null. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| double | Width of the touchpad, in mm. If the parameter is abnormal or the event is not a touchpad event, 0.0 is returned. |
+
+### OH_ArkUI_TouchPadEvent_GetDeviceHeight()
+
+```c
+double OH_ArkUI_TouchPadEvent_GetDeviceHeight(const ArkUI_UIInputEvent* event)
+```
+
+**Description**
+
+obtaining the height of the touchpad according to the touchpad event.
+
+<!--Device-double OH_ArkUI_TouchPadEvent_GetDeviceHeight(const ArkUI_UIInputEvent* event)--><!--Device-double OH_ArkUI_TouchPadEvent_GetDeviceHeight(const ArkUI_UIInputEvent* event)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | [in] Pointer to the UI input event, which cannot be null. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| double | Height of the touchpad, in mm. If the parameter is abnormal or the event is not a touchpad event, 0.0 is returned. |
 
 

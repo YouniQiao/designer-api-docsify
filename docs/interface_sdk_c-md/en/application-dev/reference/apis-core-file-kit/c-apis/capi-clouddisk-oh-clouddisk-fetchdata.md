@@ -26,7 +26,7 @@ A struct that encapsulates fetched cloud file data.
 | -- | -- |
 | uint64_t offset | Start offset of the fetched data, in bytes.<br>**Since**: 26.0.1 |
 | uint64_t size | Size of the fetched data, in bytes.<br>**Since**: 26.0.1 |
-| uint64_t totalSize | Total size of the cloud file, in bytes.<br>**Since**: 26.0.1 |
+| uint64_t totalSize | Total size of the cloud file, in bytes. It is determined when **OH_CloudDisk_Execute()** is called for the first time. The size must be the same for subsequent calls.<br>**Since**: 26.0.1 |
 | [OH_CloudDisk_DataBuf](capi-clouddisk-oh-clouddisk-databuf.md) data | File data buffer.<br>**Since**: 26.0.1 |
 | bool isComplete | Whether the fetched data is the last data block.<br>**Since**: 26.0.1 |
 

@@ -18,11 +18,11 @@ The file declares the common enums and definitions of the window manager.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [WindowManager_Rect](capi-windowmanager-windowmanager-rect.md) | WindowManager_Rect | The struct describes the window rectangle, including the window position, width, and height. |
+| [WindowManager_Rect](capi-windowmanager-windowmanager-rect.md) | WindowManager_Rect | 定义窗口矩形结构体，包含窗口位置和宽高信息。 |
 | [WindowManager_WindowSnapshotConfig](capi-windowmanager-windowmanager-windowsnapshotconfig.md) | WindowManager_WindowSnapshotConfig | Describes the configuration of the main window screenshot. |
 | [WindowManager_MainWindowInfo](capi-windowmanager-windowmanager-mainwindowinfo.md) | WindowManager_MainWindowInfo | The struct describes the main window information. |
 | [WindowManager_WindowProperties](capi-windowmanager-windowmanager-windowproperties.md) | WindowManager_WindowProperties | The struct describes the window properties. |
-| [WindowManager_AvoidArea](capi-windowmanager-windowmanager-avoidarea.md) | WindowManager_AvoidArea | The struct describes the avoid area. |
+| [WindowManager_AvoidArea](capi-windowmanager-windowmanager-avoidarea.md) | WindowManager_AvoidArea | 定义避让区域结构体。 |
 | [OH_PixelmapNative](capi-windowmanager-oh-pixelmapnative.md) | OH_PixelmapNative | Describes the pixel image information. |
 | [OH_WindowManager_FrameMetrics](capi-windowmanager-oh-windowmanager-framemetrics.md) | OH_WindowManager_FrameMetrics | 帧率指标数据对象。 |
 | [OH_WindowManager_DensityInfo](capi-windowmanager-oh-windowmanager-densityinfo.md) | OH_WindowManager_DensityInfo | Window density information, including the system display size scaling factor, system default display size scaling factor, and custom display size scaling factor of the screen where the window is located. |

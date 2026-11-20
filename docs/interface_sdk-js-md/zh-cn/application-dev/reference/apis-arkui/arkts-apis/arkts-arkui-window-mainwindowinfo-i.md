@@ -24,7 +24,7 @@ import { window } from '@kit.ArkUI';
 displayId: number
 ```
 
-ID of the display to which the main window belongs.
+主窗口所在的屏幕ID。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ label: string
 showing: boolean
 ```
 
-Foreground/Background status of the main window. **true** if the main window is in the foreground, **false** otherwise.
+主窗口的前后台状态。true表示主窗口在前台，false表示主窗口不在前台。
 
 **类型：** boolean
 
@@ -72,7 +72,7 @@ Foreground/Background status of the main window. **true** if the main window is 
 windowId: number
 ```
 
-ID of the main window.
+主窗口ID。
 
 **类型：** number
 

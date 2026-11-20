@@ -34,8 +34,8 @@ Obtains information about the stream with the highest specification among stream
 
 > **NOTE:** 
 > The returned format is the format of the path actually selected after system routing, which may differ from the
-> format requested when creating stream. If **uid** is not specified, streams from all applications are
-> queried. if no playback stream is routed to the specified device, **null** is returned. This may occur if the
+> format requested when creating the stream. If **uid** is not specified, streams of all applications are
+> queried. If no playback stream is routed to the specified device, **null** is returned. This may occur if the
 > application has not created an **AudioRenderer** or the output device of the created **AudioRenderer** is not
 > the passed device.
 
@@ -54,7 +54,7 @@ Obtains information about the stream with the highest specification among stream
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor. |
-| uid | number | No | ID of the application to query. This parameter is optional. The value must be an integer. If **uid** id not specified, stream information of all applications is queried. |
+| uid | number | No | ID of the application to query. This parameter is optional. The value must be an integer. If **uid** is not specified, stream information of all applications is queried. |
 
 **Return value:**
 
@@ -67,5 +67,5 @@ Obtains information about the stream with the highest specification among stream
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Eusure that the specified AudioDeviceDescriptor is valid and the device exists. Ensure that the specified uid is valid. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Ensure that the specified AudioDeviceDescriptor is valid and the device exists. Ensure that the specified uid is valid. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. An unexpected error occurred in audio system. |

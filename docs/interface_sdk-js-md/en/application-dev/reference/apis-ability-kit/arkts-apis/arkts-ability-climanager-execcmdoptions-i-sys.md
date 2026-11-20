@@ -82,6 +82,26 @@ Indicates whether the command is executed as a shell command.
 
 **System API:** This is a system API.
 
+## subjectId
+
+```TypeScript
+subjectId?: string
+```
+
+The unique identifier of the entity on whose behalf the agent acts.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecCmdOptions-subjectId?: string--><!--Device-ExecCmdOptions-subjectId?: string-End-->
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
 ## taskId
 
 ```TypeScript

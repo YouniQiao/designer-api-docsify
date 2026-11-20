@@ -322,4 +322,28 @@ This callback is invoked when the events and gestures on this node and higher-pr
 
 **Since**: 26.0.0
 
+### NODE_ON_TOUCH_PAD_EVENT
+
+```c
+NODE_ON_TOUCH_PAD_EVENT = 38
+```
+
+**Description**
+
+Defines the event triggered when a raw touchpad event is reported.<br> When the event callback occurs, the [ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md) object can be obtained from the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object through [OH_ArkUI_NodeEvent_GetInputEvent](capi-native-node-h.md#oh_arkui_nodeevent_getinputevent). The input event type is [ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD](capi-ui-input-event-h.md#arkui_uiinputevent_type).
+
+**Since**: 26.1.0
+
+### NODE_ON_TOUCH_PAD_EVENT_INTERCEPT
+
+```c
+NODE_ON_TOUCH_PAD_EVENT_INTERCEPT = 39
+```
+
+**Description**
+
+Defines the interception event for touchpad event hit testing.<br> When the event callback occurs, the [ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md) object can be obtained from the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object through [OH_ArkUI_NodeEvent_GetInputEvent](capi-native-node-h.md#oh_arkui_nodeevent_getinputevent). The input event type is [ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD](capi-ui-input-event-h.md#arkui_uiinputevent_type). Call [OH_ArkUI_PointerEvent_SetInterceptHitTestMode](capi-ui-input-event-h.md#oh_arkui_pointerevent_setintercepthittestmode) with the obtained input event to set the hit test mode. The specified mode determines the hit test behavior of the component for the current touchpad event chain and does not affect touch, mouse, axis, or system gesture event chains.
+
+**Since**: 26.1.0
+
 

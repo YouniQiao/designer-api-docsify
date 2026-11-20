@@ -64,7 +64,7 @@ cleanDeviceDirtyData(table: string, cursor?: number): Promise<void>
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported;         3. This is a read-only database. |
+| [14800043](../errorcode-data-rdb.md#14800043-数据库不支持该场景) | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported;         3. This is a read-only database. |
 
 ## cloudSync
 
@@ -1028,7 +1028,7 @@ requestFullDataDonation(tables: Array<string>): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Parameter out of range or empty table list. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| 14800043 | The database does not support this scenario. |
+| [14800043](../errorcode-data-rdb.md#14800043-数据库不支持该场景) | The database does not support this scenario. |
 
 ## restore
 
@@ -1161,8 +1161,8 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| 14800042 | The database does not exist. Possible causes: 1. The database is deleted; <br>2. The database is not created. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
+| [14800042](../errorcode-data-rdb.md#14800042-数据库不存在) | The database does not exist. Possible causes: 1. The database is deleted; <br>2. The database is not created. |
+| [14800043](../errorcode-data-rdb.md#14800043-数据库不支持该场景) | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
 
 ## unlockCloudContainer
 
@@ -1682,4 +1682,4 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
+| [14800043](../errorcode-data-rdb.md#14800043-数据库不支持该场景) | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |

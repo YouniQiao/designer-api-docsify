@@ -163,7 +163,7 @@ static loadSingleFileMovingPhoto(singleFileMovingPhotoUri: string): MovingPhoto
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. The singleFileMovingPhotoUri is empty or can not open. <br>2. The singleFileMovingPhotoUri is belonging to MediaLibrary. |
-| 23800109 | Incorrect file format. |
+| [23800109](../errorcode-medialibrary.md#23800109-文件格式不正确) | Incorrect file format. |
 
 ## quickRequestImage
 

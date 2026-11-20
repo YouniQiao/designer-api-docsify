@@ -63,6 +63,11 @@
 | [uint32_t OH_Drawing_GetFontCountFromFile(const char* fontSrc)](#oh_drawing_getfontcountfromfile) | 获取字体文件中包含的字体数量。 |
 | [uint32_t OH_Drawing_GetFontCountFromBuffer(uint8_t* fontBuffer, size_t length)](#oh_drawing_getfontcountfrombuffer) | 获取字体缓存数据中包含的字体数量。 |
 | [OH_Drawing_String* OH_Drawing_GetFontPathsByType(OH_Drawing_SystemFontType fontType, size_t* pathCount)](#oh_drawing_getfontpathsbytype) | 获取指定字体类型的所有字体文件路径。 |
+| [OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)](#oh_drawing_copyfontfamilymappings) | 复制字体家族映射表的内容。 |
+| [void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)](#oh_drawing_freefontfamilymappings) | 发布字体映射表 |
+| [OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)](#oh_drawing_getsourcefamilyfrommapping) | 从指定的字体家族映射对象中获取源字体家族名。 |
+| [OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)](#oh_drawing_gettargetcountfrommapping) | 获取指定字体家族映射对象中包含的目标字体家族的数量。 |
+| [OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)](#oh_drawing_gettargetfamilyfrommapping) | 根据索引从指定的字体家族映射对象中获取对应的目标字体家族名。 |
 
 ## 枚举类型说明
 
@@ -1030,5 +1035,146 @@ OH_Drawing_String* OH_Drawing_GetFontPathsByType(OH_Drawing_SystemFontType fontT
 | 类型 | 说明 |
 | -- | -- |
 | OH_Drawing_String* | 返回字体路径列表。不再需要时，请使用free释放该对象指针以及每个OH_Drawing_String对象内部持有的指针。 |
+
+### OH_Drawing_CopyFontFamilyMappings()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)
+```
+
+**描述：**
+
+复制字体家族映射表的内容。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**起始版本：** 26.1.0
+
+**资源释放：** [OH_Drawing_FreeFontFamilyMappings](#oh_drawing_freefontfamilymappings)
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) ***outCopiedMappings | [out] 成功时返回字体家族映射表的内容。 使用完毕后需通过[OH_Drawing_FreeFontFamilyMappings](capi-drawing-text-font-descriptor-h.md#oh_drawing_freefontfamilymappings)释放内存。 |
+| uint32_t *outBorrowedCount | [out] 成功时返回字体家族映射表中的条目数量。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示执行成功。</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示参数outCopiedMappings或者outBorrowedCount为空指针。</li> </ul> |
+
+### OH_Drawing_FreeFontFamilyMappings()
+
+```c
+void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)
+```
+
+**描述：**
+
+发布字体映射表
+
+<!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)--><!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) **mappings | 【入参】 指向字体映射表的指针。 |
+
+### OH_Drawing_GetSourceFamilyFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)
+```
+
+**描述：**
+
+从指定的字体家族映射对象中获取源字体家族名。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] 指向单个字体家族映射对象的指针。不得为空，调用期间必须保持有效，被调用方不保留该引用，调用方无需释放。 |
+| const char **outBorrowedSourceFamily | [out] 成功时返回源字体家族名，编码为UTF-8。失败时该参数内容保持不变。 不得为空，调用前无需初始化。该字符串由mapping持有，调用方不得释放，在mapping被修改或销毁后失效。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示执行成功。</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示参数mapping或者outBorrowedSourceFamily为空指针。</li> </ul> |
+
+### OH_Drawing_GetTargetCountFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)
+```
+
+**描述：**
+
+获取指定字体家族映射对象中包含的目标字体家族的数量。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] 指向单个字体家族映射对象的指针。不得为空，调用期间必须保持有效，被调用方不保留该引用，调用方无需释放。 |
+| uint32_t *outBorrowedTargetCount | [out] 成功时返回目标字体家族名个数。失败时该参数内容保持不变。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示执行成功。</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示参数mapping或者outBorrowedTargetCount为空指针。</li> </ul> |
+
+### OH_Drawing_GetTargetFamilyFromMapping()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)
+```
+
+**描述：**
+
+根据索引从指定的字体家族映射对象中获取对应的目标字体家族名。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) *mapping | [in] 指向单个字体家族映射对象的指针。不得为空，调用期间必须保持有效，被调用方不保留该引用，调用方无需释放。 |
+| uint32_t index | [in] 目标字体家族名的位置索引，取值范围[0, targetCount - 1]。 可通过[OH_Drawing_GetTargetCountFromMapping](capi-drawing-text-font-descriptor-h.md#oh_drawing_gettargetcountfrommapping)获取targetCount。 |
+| const char **outBorrowedTargetFamily | [out] 成功时返回目标字体家族名，编码为UTF-8。失败时该参数内容保持不变。 不得为空，调用前无需初始化。该字符串由mapping持有，调用方不得释放，在mapping被修改或销毁后失效。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| OH_Drawing_ErrorCode | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示执行成功。</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示参数mapping或者outBorrowedTargetFamily为空指针。</li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode)表示参数index超出范围。</li> </ul> |
 
 

@@ -126,3 +126,82 @@ struct Index {
 ```
 
 <!--DelEnd-->
+
+## halftone
+
+```TypeScript
+halftone(halftoneParam: HalftoneParam, outlineWidth?: number, shadowOptions?: ShadowOptions): Filter
+```
+
+Adds the halftone, outline, and shadow effects to the effect chain and returns the head node of the chain. This effect divides the original image into a regular grid and generates halftone dots based on the sampled color and its brightness at the center of each grid. Each grid has a white background, and the dots consist of a black inner circle and a colored ring.
+
+> **NOTE:** 
+> 
+> The input image should be a cutout image containing only a single subject with a clear contour, where the
+> subject area is fully opaque and the background area is fully transparent. Input images that do not meet
+> this standard may produce abnormal effects.
+> The pixel format of the input PixelMap should be RGBA_8888, BGRA_8888, RGBA_F16, or RGBA_1010102. Pixel
+> formats that do not meet this standard will cause abnormal output.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-halftone(halftoneParam: HalftoneParam, outlineWidth?: double, shadowOptions?: ShadowOptions): Filter--><!--Device-Filter-halftone(halftoneParam: HalftoneParam, outlineWidth?: double, shadowOptions?: ShadowOptions): Filter-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| halftoneParam | [HalftoneParam](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md) | Yes | Halftone configuration parameters. |
+| outlineWidth | number | No | Optional. Outline width, in px. The subject extends outward with a white edge of the width specified by outlineWidth, which is automatically truncated beyond the image range. Value range: [0, +∞). Values outside the value range are clamped to the boundary value. Default value: 0.0. |
+| shadowOptions | [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | No | Optional. Shadow configuration parameters. When not specified, the default shadow configuration is used. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+
+## outline
+
+```TypeScript
+outline(outlineWidth: number, shadowOptions?: ShadowOptions): Filter
+```
+
+Adds the outline and shadow effects to the effect chain and returns the head node of the chain. This effect extracts the contour of non-transparent areas in the image to generate an outline, and generates a projection based on the shadow configuration.
+
+> **NOTE:** 
+> 
+> The input image should be a cutout image containing only a single subject with a clear contour, where the
+> subject area is fully opaque and the background area is fully transparent. Input images that do not meet
+> this standard may produce abnormal effects.
+> The pixel format of the input PixelMap should be RGBA_8888, BGRA_8888, RGBA_F16, or RGBA_1010102. Pixel
+> formats that do not meet this standard will cause abnormal output.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-outline(outlineWidth: double, shadowOptions?: ShadowOptions): Filter--><!--Device-Filter-outline(outlineWidth: double, shadowOptions?: ShadowOptions): Filter-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outlineWidth | number | Yes | Outline width, in px. The subject extends outward with a white edge of the width specified by outlineWidth, which is automatically truncated beyond the image range. Value range: [0, +∞). Values outside the value range are clamped to the boundary value. |
+| shadowOptions | [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | No | Optional. Shadow configuration parameters. When not specified, the default shadow configuration is used. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |

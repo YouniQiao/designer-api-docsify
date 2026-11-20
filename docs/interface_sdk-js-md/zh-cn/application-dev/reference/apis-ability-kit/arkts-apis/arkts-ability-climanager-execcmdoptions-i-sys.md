@@ -84,6 +84,26 @@ isShellCommand?: boolean
 
 **系统接口：** 此接口为系统接口。
 
+## subjectId
+
+```TypeScript
+subjectId?: string
+```
+
+代理所代表的实体的唯一标识符。
+
+**类型：** string
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-subjectId?: string--><!--Device-ExecCmdOptions-subjectId?: string-End-->
+
+**系统能力：** SystemCapability.Ability.AgentRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## taskId
 
 ```TypeScript

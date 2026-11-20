@@ -17829,7 +17829,7 @@ struct OnHoverMoveEventExample {
 
 ### Example 1: Creating Outlines
 
-This example demonstrates how to create component outlines using [outline](arkts-arkui-common-comp-commonmethod-c.md#outline).
+This example demonstrates how to create component outlines using [outline](#outline).
 
 
 
@@ -17876,7 +17876,7 @@ struct OutlineExample {
 
 ### Example 2: Using the LocalizedEdgeColors Type
 
-This example demonstrates how to set the color attribute of the [outline](arkts-arkui-common-comp-commonmethod-c.md#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
+This example demonstrates how to set the color attribute of the [outline](#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
 
 ```TypeScript
 // xxx.ets

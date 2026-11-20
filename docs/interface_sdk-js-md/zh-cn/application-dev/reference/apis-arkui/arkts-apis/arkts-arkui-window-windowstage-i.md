@@ -194,7 +194,7 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the subwindow. |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise对象。返回当前Window下创建的子窗口对象。 |
 
 **错误码：**
 
@@ -814,7 +814,11 @@ export default class EntryAbility extends UIAbility {
 loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads content by named router
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 11
 
@@ -830,9 +834,9 @@ Loads content by named router
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | name of the page to which the content will be loaded. |
-| storage | LocalStorage | 是 | The data object shared within the content instance loaded by the window. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| name | string | 是 | 命名路由页面的名称。 |
+| storage | LocalStorage | 是 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -922,8 +926,8 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | name of the page to which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| name | string | 是 | 命名路由页面的名称。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -989,7 +993,7 @@ export struct Index {
 loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 ```
 
-Loads content by named router
+根据命名路由加载内容。
 
 **起始版本：** 11
 
@@ -1005,14 +1009,14 @@ Loads content by named router
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | name of the page to which the content will be loaded. |
-| storage | LocalStorage | 否 | The data object shared within the content instance loaded by the window. |
+| name | string | 是 | 命名路由页面的名称。 |
+| storage | LocalStorage | 否 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1420,8 +1424,8 @@ on(eventType: 'windowStageClose', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | 'windowStageClose' | 是 | The value is fixed at 'windowStageClose', indicating the window stage close event. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | Callback function requires a boolean return value to determine whether to close the current main window. |
+| eventType | 'windowStageClose' | 是 | 固定为'windowStageClose'，即主窗口标题栏关闭按钮的点击事件。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 回调函数。当窗口stage关闭事件发生时触发该回调。 |
 
 **错误码：**
 
@@ -1462,7 +1466,7 @@ export default class EntryAbility extends UIAbility {
 releaseUIContent(): Promise<void>
 ```
 
-释放
+销毁WindowStage的主窗口页面内容，使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -1476,7 +1480,7 @@ releaseUIContent(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value, indicating successful completion. Throws exception if window state is abnormal. |
+| Promise&lt;void&gt; | Promise对象，无返回结果，表示成功完成。 |
 
 **错误码：**
 
@@ -1969,7 +1973,7 @@ export default class EntryAbility extends UIAbility {
 setWindowModal(isModal: boolean): Promise<void>
 ```
 
-Set the application modality of the windowStage.
+设置主窗口的模态属性是否启用。
 
 **起始版本：** 14
 
@@ -1985,13 +1989,13 @@ Set the application modality of the windowStage.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isModal | boolean | 是 | Enable the window modal if true, otherwise means the opposite. |
+| isModal | boolean | 是 | 设置主窗口模态属性是否启用，true为启用，false为不启用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

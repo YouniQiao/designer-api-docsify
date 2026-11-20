@@ -4,6 +4,8 @@
 
 定义画中画功能的相关接口，包含创建、删除画中画控制器，以及启动、停止画中画等。主要用于视频播放、直播、视频通话或视频会议场景下，以小窗（画中画）模式呈现内容。
 
+**引用文件：** <window_manager/oh_window_pip.h>
+
 **库：** libnative_window_manager.so
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -18,7 +20,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [PictureInPicture_PipConfig](capi-windowmanager-pictureinpicture-pipconfig.md) | PictureInPicture_PipConfig | Picture in picture config. |
+| [PictureInPicture_PipConfig](capi-windowmanager-pictureinpicture-pipconfig.md) | PictureInPicture_PipConfig | 画中画参数配置器。 |
 
 ### 枚举
 
@@ -40,7 +42,7 @@
 | [typedef void (\*WebPipResizeCallback)(uint32_t controllerId, uint32_t width, uint32_t height, double scale)](#webpipresizecallback) | WebPipResizeCallback | 定义画中画窗口的尺寸变化回调函数。 |
 | [int32_t OH_PictureInPicture_CreatePipConfig(PictureInPicture_PipConfig* pipConfig)](#oh_pictureinpicture_createpipconfig) | - | 创建画中画参数配置器。 |
 | [int32_t OH_PictureInPicture_DestroyPipConfig(PictureInPicture_PipConfig* pipConfig)](#oh_pictureinpicture_destroypipconfig) | - | 销毁画中画参数配置器。 |
-| [int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipConfig, uint32_t mainWindowId)](#oh_pictureinpicture_setpipmainwindowid) | - | Sets the 拉起画中画的主窗口Id。 |
+| [int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipConfig, uint32_t mainWindowId)](#oh_pictureinpicture_setpipmainwindowid) | - | 设置拉起画中画的主窗口Id。 |
 | [int32_t OH_PictureInPicture_SetPipTemplateType(PictureInPicture_PipConfig pipConfig, PictureInPicture_PipTemplateType pipTemplateType)](#oh_pictureinpicture_setpiptemplatetype) | - | 设置画中画模板类型，默认为视频播放。 |
 | [int32_t OH_PictureInPicture_SetPipRect(PictureInPicture_PipConfig pipConfig, uint32_t width, uint32_t height)](#oh_pictureinpicture_setpiprect) | - | 设置画中画窗口大小，用于计算尺寸比例。 |
 | [int32_t OH_PictureInPicture_SetPipControlGroup(PictureInPicture_PipConfig pipConfig, PictureInPicture_PipControlGroup* controlGroup, uint8_t controlGroupLength)](#oh_pictureinpicture_setpipcontrolgroup) | - | 设置画中画控件组，需保证控件组与模板类型匹配。 |
@@ -55,9 +57,9 @@
 | [int32_t OH_PictureInPicture_SetParentWindowId(uint32_t controllerId, uint32_t windowId)](#oh_pictureinpicture_setparentwindowid) | - | 设置画中画主窗口ID。 |
 | [int32_t OH_PictureInPicture_SetPipInitialSurfaceRect(uint32_t controllerId, int32_t positionX, int32_t positionY, uint32_t width, uint32_t height)](#oh_pictureinpicture_setpipinitialsurfacerect) | - | 设置画中画拉起动效开始时的位置和大小，可用于实现一镜到底效果。 |
 | [int32_t OH_PictureInPicture_UnsetPipInitialSurfaceRect(uint32_t controllerId)](#oh_pictureinpicture_unsetpipinitialsurfacerect) | - | 取消已设置的画中画拉起动效的起始位置和大小。 |
-| [int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)](#oh_pictureinpicture_registerstartpipcallback) | - | 开启画中画窗口创建完成的监听。 |
-| [int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)](#oh_pictureinpicture_unregisterstartpipcallback) | - | 关闭画中画窗口创建完成的监听。 |
-| [int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId)](#oh_pictureinpicture_unregisterallstartpipcallbacks) | - | 关闭所有画中画窗口创建完成的监听。 |
+| [int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)](#oh_pictureinpicture_registerstartpipcallback) | - | 开启画中画surface创建完成的监听。 |
+| [int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)](#oh_pictureinpicture_unregisterstartpipcallback) | - | 关闭画中画surface创建完成的监听。 |
+| [int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId)](#oh_pictureinpicture_unregisterallstartpipcallbacks) | - | 关闭所有画中画surface创建完成的监听。 |
 | [int32_t OH_PictureInPicture_RegisterLifecycleListener(uint32_t controllerId, WebPipLifecycleCallback callback)](#oh_pictureinpicture_registerlifecyclelistener) | - | 开启画中画生命周期状态的监听。 |
 | [int32_t OH_PictureInPicture_UnregisterLifecycleListener(uint32_t controllerId, WebPipLifecycleCallback callback)](#oh_pictureinpicture_unregisterlifecyclelistener) | - | 关闭画中画生命周期状态的监听。 |
 | [int32_t OH_PictureInPicture_UnregisterAllLifecycleListeners(uint32_t controllerId)](#oh_pictureinpicture_unregisteralllifecyclelisteners) | - | 关闭所有画中画生命周期状态的监听。 |
@@ -67,13 +69,13 @@
 | [int32_t OH_PictureInPicture_RegisterResizeListener(uint32_t controllerId, WebPipResizeCallback callback)](#oh_pictureinpicture_registerresizelistener) | - | 开启画中画窗口尺寸变化事件的监听。 |
 | [int32_t OH_PictureInPicture_UnregisterResizeListener(uint32_t controllerId, WebPipResizeCallback callback)](#oh_pictureinpicture_unregisterresizelistener) | - | 关闭画中画窗口尺寸变化事件的监听。 |
 | [int32_t OH_PictureInPicture_UnregisterAllResizeListeners(uint32_t controllerId)](#oh_pictureinpicture_unregisterallresizelisteners) | - | 关闭所有画中画窗口尺寸变化事件的监听。 |
-| [int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enabled)](#oh_pictureinpicture_setautostartenabled) | - | 设置是否在返回桌面时自动启动画中画，默认不自动拉起。 |
+| [int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enabled)](#oh_pictureinpicture_setautostartenabled) | - | 设置在拉起画中画的应用主窗退后台时是否自动启动画中画，默认不自动拉起。 在开启自动拉起的情况下，当应用主窗为智慧多窗悬浮窗状态且被收入侧边栏时，应用主窗虽退后台，但不会自动拉起画中画。 |
 
 ### 变量
 
 | 名称 | 描述 |
 | -- | -- |
-| void* PictureInPicture_PipConfig | Picture in picture config.<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
+| void* PictureInPicture_PipConfig | 画中画参数配置器。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Window.SessionManager |
 
 ## 枚举类型说明
 
@@ -371,7 +373,7 @@ int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipCon
 
 **描述：**
 
-Sets the 拉起画中画的主窗口Id。
+设置拉起画中画的主窗口Id。
 
 <!--Device-int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipConfig, uint32_t mainWindowId)--><!--Device-int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipConfig, uint32_t mainWindowId)-End-->
 
@@ -810,7 +812,7 @@ int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebP
 
 **描述：**
 
-开启画中画窗口创建完成的监听。
+开启画中画surface创建完成的监听。
 
 <!--Device-int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)--><!--Device-int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)-End-->
 
@@ -839,7 +841,7 @@ int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, We
 
 **描述：**
 
-关闭画中画窗口创建完成的监听。
+关闭画中画surface创建完成的监听。
 
 <!--Device-int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)--><!--Device-int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, WebPipStartPipCallback callback)-End-->
 
@@ -852,7 +854,7 @@ int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, We
 | 参数项 | 描述 |
 | -- | -- |
 | uint32_t controllerId | 画中画控制器Id，为非负整数。 |
-| [WebPipStartPipCallback](capi-oh-window-pip-h.md#webpipstartpipcallback) callback | 画中画窗口创建完成的回调函数。 |
+| [WebPipStartPipCallback](capi-oh-window-pip-h.md#webpipstartpipcallback) callback | 画中画surface创建完成的回调函数。 |
 
 **返回值：**
 
@@ -868,7 +870,7 @@ int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId
 
 **描述：**
 
-关闭所有画中画窗口创建完成的监听。
+关闭所有画中画surface创建完成的监听。
 
 <!--Device-int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId)--><!--Device-int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId)-End-->
 
@@ -1154,7 +1156,7 @@ int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enab
 
 **描述：**
 
-设置是否在返回桌面时自动启动画中画，默认不自动拉起。
+设置在拉起画中画的应用主窗退后台时是否自动启动画中画，默认不自动拉起。 在开启自动拉起的情况下，当应用主窗为智慧多窗悬浮窗状态且被收入侧边栏时，应用主窗虽退后台，但不会自动拉起画中画。
 
 <!--Device-int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enabled)--><!--Device-int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enabled)-End-->
 

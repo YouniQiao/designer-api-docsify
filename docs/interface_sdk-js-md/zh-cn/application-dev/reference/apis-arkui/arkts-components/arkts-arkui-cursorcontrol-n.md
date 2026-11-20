@@ -1706,7 +1706,7 @@ struct AreaExample {
 
 ### 示例1（使用外描边属性）
 
-该示例主要演示如何通过[outline](arkts-arkui-common-comp-commonmethod-c.md#outline)来实现组件外描边。
+该示例主要演示如何通过[outline](#outline)来实现组件外描边。
 
 
 
@@ -1753,7 +1753,7 @@ struct OutlineExample {
 
 ### 示例2（使用LocalizedEdgeColors类型）
 
-该示例将[outline](arkts-arkui-common-comp-commonmethod-c.md#outline)属性中的color属性值设置为[LocalizedEdgeColors](ts-types.md#localizededgecolors12)类型。
+该示例将[outline](#outline)属性中的color属性值设置为[LocalizedEdgeColors](ts-types.md#localizededgecolors12)类型。
 
 ```TypeScript
 // xxx.ets

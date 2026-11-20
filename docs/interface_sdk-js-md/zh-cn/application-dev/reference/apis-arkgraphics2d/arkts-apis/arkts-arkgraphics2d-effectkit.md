@@ -49,6 +49,8 @@ import { effectKit } from '@kit.ArkGraphics2D';
 | --- | --- |
 | [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md) | 取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-1)创建一个ColorPicker实例。 |
 | [Filter](arkts-arkgraphics2d-effectkit-filter-i-sys.md) | 图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
+| [HalftoneParam](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md) | 网点配置参数。 |
+| [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | 阴影配置参数。 |
 <!--DelEnd-->
 
 <!--Del-->

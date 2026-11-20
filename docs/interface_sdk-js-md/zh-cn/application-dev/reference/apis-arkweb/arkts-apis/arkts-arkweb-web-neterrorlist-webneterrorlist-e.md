@@ -4,7 +4,7 @@
 export declare enum WebNetErrorList
 ```
 
-ArkWeb的网络协议栈错误列表。
+ArkWeb的网络协议栈错误列表，错误码直接映射Chromium错误码<!--RP1-->net_error_list.h<!--RP1End-->，可在网络请求异常时基于标准化错误码快速定位问题、统一错误处理，提升排查效率。
 
 **起始版本：** 12
 

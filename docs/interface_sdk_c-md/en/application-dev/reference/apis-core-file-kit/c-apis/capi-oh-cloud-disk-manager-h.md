@@ -70,7 +70,7 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_ErrorCode OH_CloudDisk_DeactiveSyncFolder(const CloudDisk_SyncFolderPath syncFolderPath)](#oh_clouddisk_deactivesyncfolder) | Deactivates the sync root. |
 | [CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolders(CloudDisk_SyncFolder **syncFolders, size_t *count)](#oh_clouddisk_getsyncfolders) | Obtains all sync roots. |
 | [CloudDisk_ErrorCode OH_CloudDisk_UpdateCustomAlias(const CloudDisk_SyncFolderPath syncFolderPath, const char *customAlias, size_t customAliasLength)](#oh_clouddisk_updatecustomalias) | Updates the sync root alias. |
-| [CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo, const OH_CloudDisk_PlaceholderCustomInfo *customInfo)](#oh_clouddisk_createplaceholder) | Creates a placeholder in a registered sync folder. |
+| [CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo, const OH_CloudDisk_PlaceholderCustomInfo *customInfo)](#oh_clouddisk_createplaceholder) | Creates a placeholder file in the registered sync root path. When the placeholder file is created, the system sets the local file size to the value of **logicalSize** in **placeholderInfo**. The system does not guarantee the consistency between the size of the local placeholder file and that of the cloud file. The app needs to ensure the consistency between the metadata of the local placeholder file and that of the cloud file using **OH_CloudDisk_UpdatePlaceholder()**. |
 | [CloudDisk_ErrorCode OH_CloudDisk_IsPlaceholderFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, bool *isPlaceholder)](#oh_clouddisk_isplaceholderfile) | Checks whether a file in a sync folder is a placeholder file. |
 | [CloudDisk_ErrorCode OH_CloudDisk_GetPlaceholderState(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, OH_CloudDisk_PlaceholderState *state)](#oh_clouddisk_getplaceholderstate) | Gets the placeholder state of a file in a registered sync folder. |
 | [CloudDisk_ErrorCode OH_CloudDisk_ConvertPlaceholderToFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo)](#oh_clouddisk_convertplaceholdertofile) | Converts a placeholder file to a 0-byte normal file. |
@@ -80,7 +80,7 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_ErrorCode OH_CloudDisk_GetPlaceholderCustomInfo(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, uint8_t *dataBuf, size_t *inOutDataLength)](#oh_clouddisk_getplaceholdercustominfo) | Gets opaque custom information associated with a placeholder. |
 | [CloudDisk_ErrorCode OH_CloudDisk_RegisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath, void (\*callback)(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext))](#oh_clouddisk_registercallbacktable) | Registers a callback table for hydration and dehydrate requests. |
 | [CloudDisk_ErrorCode OH_CloudDisk_UnregisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath)](#oh_clouddisk_unregistercallbacktable) | Unregisters the callback table for hydration and dehydrate requests. |
-| [CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)](#oh_clouddisk_execute) | Responds to a callback request. |
+| [CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)](#oh_clouddisk_execute) | Responds to a callback request and writes the obtained data block to the active placeholder hydration task. The size of a single data block cannot exceed 128 KiB. Before returning a result, the function copies all input fields and data. The total amount of data to be hydrated is subject to the **fetchData.totalSize** returned for the first time. The size must be the same for subsequent calls. |
 | [CloudDisk_ErrorCode OH_CloudDisk_HydratePlaceholder(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath, OH_CloudDisk_CallbackType type, OH_CloudDisk_HydratePriority priority)](#oh_clouddisk_hydrateplaceholder) | Actively hydrates a placeholder file or cancels hydration. |
 | [CloudDisk_ErrorCode OH_CloudDisk_DehydrateFile(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath)](#oh_clouddisk_dehydratefile) | Dehydrates a fully hydrated placeholder file. |
 | [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFolderEx *syncFolder)](#oh_clouddisk_registersyncfolderex) | Registers a sync folder with placeholder support info. |
@@ -592,7 +592,7 @@ CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPat
 
 **Description**
 
-Creates a placeholder in a registered sync folder.
+Creates a placeholder file in the registered sync root path. When the placeholder file is created, the system sets the local file size to the value of **logicalSize** in **placeholderInfo**. The system does not guarantee the consistency between the size of the local placeholder file and that of the cloud file. The app needs to ensure the consistency between the metadata of the local placeholder file and that of the cloud file using **OH_CloudDisk_UpdatePlaceholder()**.
 
 <!--Device-CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo, const OH_CloudDisk_PlaceholderCustomInfo *customInfo)--><!--Device-CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo, const OH_CloudDisk_PlaceholderCustomInfo *customInfo)-End-->
 
@@ -604,16 +604,16 @@ Creates a placeholder in a registered sync folder.
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | [in] Indicates the registered sync folder path. |
-| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | [in] Indicates the relative path in the sync folder. |
-| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | [in] Indicates the placeholder metadata information. |
-| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | [in] Indicates optional opaque custom information. NULL means it is not provided. |
+| const CloudDisk_SyncFolderPath syncFolderPath | Registered sync root path. |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | Relative path in the sync root. |
+| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | Placeholder metadata information. |
+| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | Optional opaque custom information. **NULL** indicates that the information is not provided. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | _DISK_OK is returned if the operation is successful. <br>[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) is returned otherwise. |
 
 ### OH_CloudDisk_IsPlaceholderFile()
 
@@ -894,7 +894,7 @@ CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqH
 
 **Description**
 
-Responds to a callback request.
+Responds to a callback request and writes the obtained data block to the active placeholder hydration task. The size of a single data block cannot exceed 128 KiB. Before returning a result, the function copies all input fields and data. The total amount of data to be hydrated is subject to the **fetchData.totalSize** returned for the first time. The size must be the same for subsequent calls.
 
 <!--Device-CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)--><!--Device-CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)-End-->
 
@@ -906,15 +906,15 @@ Responds to a callback request.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) reqHead | [in] Callback request header. |
-| [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) reqContext | [in] Callback request context. |
-| [OH_CloudDisk_CallbackResponse](capi-clouddisk-oh-clouddisk-callbackresponse.md) rsp | [in] Callback response. |
+| [const OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) reqHead | Callback request header. |
+| [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) reqContext | Callback request context. |
+| [OH_CloudDisk_CallbackResponse](capi-clouddisk-oh-clouddisk-callbackresponse.md) rsp | Callback response. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | _DISK_OK is returned if the operation is successful. <br>[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) is returned otherwise. |
 
 ### OH_CloudDisk_HydratePlaceholder()
 

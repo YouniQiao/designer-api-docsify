@@ -11715,7 +11715,7 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTouchable | boolean | Yes | is touchable if true, or not if false. |
+| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
 
 **Return value:**
 
@@ -11769,7 +11769,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTouchable | boolean | Yes | is touchable if true, or not if false. |
+| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

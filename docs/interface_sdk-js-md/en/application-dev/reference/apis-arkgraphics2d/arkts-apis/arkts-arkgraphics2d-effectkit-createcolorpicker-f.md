@@ -206,7 +206,8 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 ## createColorPicker
 
 ```TypeScript
-function createColorPicker(source: image.PixelMap, region: Array<number>, callback: AsyncCallback<ColorPicker>): void
+function createColorPicker(source: image.PixelMap, region: Array<number>,
+    callback: AsyncCallback<ColorPicker>): void
 ```
 
 Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result.
@@ -217,7 +218,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void-End-->
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>,    callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>,    callback: AsyncCallback<ColorPicker>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

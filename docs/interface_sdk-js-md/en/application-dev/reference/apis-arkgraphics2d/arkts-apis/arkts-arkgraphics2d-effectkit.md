@@ -50,6 +50,8 @@ import { effectKit } from '@kit.ArkGraphics2D';
 | --- | --- |
 | [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md) | A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker. |
 | [Filter](arkts-arkgraphics2d-effectkit-filter-i-sys.md) | An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects, you need to call getEffectPixelMap to obtain the processed image. |
+| [HalftoneParam](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md) | Halftone configuration parameters. |
+| [ShadowOptions](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md) | Shadow configuration parameters. |
 <!--DelEnd-->
 
 <!--Del-->

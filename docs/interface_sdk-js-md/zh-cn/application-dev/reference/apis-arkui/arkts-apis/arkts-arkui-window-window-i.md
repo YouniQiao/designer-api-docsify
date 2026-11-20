@@ -281,7 +281,7 @@ destroyWindow(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3750,7 +3750,7 @@ try {
 off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void
 ```
 
-关闭窗口内uiextension安全限制变化事件的监听。
+关闭窗口内UIExtension安全限制变化事件的监听。
 
 **起始版本：** 20
 
@@ -3764,7 +3764,7 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | 'uiExtensionSecureLimitChange' | 是 | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内uiExtension安全限制变化事件。 |
+| eventType | 'uiExtensionSecureLimitChange' | 是 | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内UIExtension安全限制变化事件。 |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口安全限制变化的监听。 |
 
 **错误码：**
@@ -5407,7 +5407,7 @@ export default class EntryAbility extends UIAbility {
 on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 ```
 
-开启窗口内uiExtension安全限制变化事件的监听, 建议在窗口创建后立即监听。
+开启窗口内UIExtension安全限制变化事件的监听, 建议在窗口创建后立即监听。
 
 **起始版本：** 20
 
@@ -5421,8 +5421,8 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | 'uiExtensionSecureLimitChange' | 是 | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内uiExtension安全限制变化事件。 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。当窗口内uiExtension安全限制变化时触发回调。当返回参数为true表示窗口内uiExtension开启了隐藏不安全窗口；当返回参数为false表示窗口内uiExtension关闭了隐藏不安全窗口。若窗口内存在多个uiExtension，当返回参数为true表示窗口内至少一个uiExtension开启了隐藏不安全窗口；当返回参数为false表示窗口内所有uiExtension关闭了隐藏不安全窗口。 |
+| eventType | 'uiExtensionSecureLimitChange' | 是 | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内UIExtension安全限制变化事件。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。当窗口内UIExtension安全限制变化时触发回调。当返回参数为true表示窗口内至少一个UIExtension开启了隐藏不安全窗口；当返回参数为false表示窗口内所有UIExtension关闭了隐藏不安全窗口。 |
 
 **错误码：**
 
@@ -9763,7 +9763,7 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value.<br>**适用版本：** 26.0.0 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。<br>**适用版本：** 26.0.0 |
 
 **错误码：**
 
@@ -12163,9 +12163,9 @@ struct Index {
 setWindowTouchable(isTouchable: boolean): Promise<void>
 ```
 
-设置窗口是否为可点击状态，使用Promise异步回调。
+设置窗口是否为可触摸状态，使用Promise异步回调。
 
-当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
+当窗口处于可触摸状态时，若用户触摸命中该窗口，事件将发送给该窗口处理。当窗口处于不可触摸状态时，透传触摸事件，传递给下层窗口。
 
 **起始版本：** 9
 
@@ -12179,7 +12179,7 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTouchable | boolean | 是 | is touchable if true, or not if false. |
+| isTouchable | boolean | 是 | 窗口是否为可触摸状态。true表示可触摸；false表示不可触摸。 |
 
 **返回值：**
 
@@ -12220,9 +12220,9 @@ try {
 setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置窗口是否为可点击状态，使用callback异步回调。
+设置窗口是否为可触摸状态，使用callback异步回调。
 
-当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
+当窗口处于可触摸状态时，若用户触摸命中该窗口，事件将发送给该窗口处理。当窗口处于不可触摸状态时，透传触摸事件，传递给下层窗口。
 
 **起始版本：** 9
 
@@ -12236,8 +12236,8 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTouchable | boolean | 是 | is touchable if true, or not if false. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| isTouchable | boolean | 是 | 窗口是否为可触摸状态。true表示可触摸；false表示不可触摸。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -12380,7 +12380,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -12537,7 +12537,7 @@ showWindow(options: ShowWindowOptions): Promise<void>
 
 > **说明：** 
 > 
-> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> 调用该接口前，建议优先通过[loadContent](#loadcontent-1)方法或者
 > [setUIContent](#setuicontent-2)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 

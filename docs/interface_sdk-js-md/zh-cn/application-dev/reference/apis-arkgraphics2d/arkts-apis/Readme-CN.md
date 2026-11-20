@@ -11,6 +11,10 @@
   <!--Del-->
   - [Filter（系统接口）](arkts-arkgraphics2d-effectkit-filter-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [HalftoneParam（系统接口）](arkts-arkgraphics2d-effectkit-halftoneparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShadowOptions（系统接口）](arkts-arkgraphics2d-effectkit-shadowoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [EllipticalMaskCenter（系统接口）](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EllipticalMaskRadius（系统接口）](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md)<!--DelEnd-->
