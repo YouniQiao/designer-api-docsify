@@ -112,6 +112,7 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 | [16000201](../errorcode-ability.md#16000201-目标服务还未启动) | The target service has not been started yet. |
 
 **示例**
@@ -209,6 +210,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI.<br>**适用版本：** 10+ |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -303,6 +305,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
 **示例**
 
@@ -3375,6 +3378,7 @@ startAppServiceExtensionAbility(want: Want): Promise<void>
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 | [16000200](../errorcode-ability.md#16000200-不允许该调用方启动应用后台服务) | The caller is not in the appIdentifierAllowList of the target application. |
 
 **示例**
@@ -3696,6 +3700,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
 **示例**
@@ -3784,6 +3789,7 @@ stopAppServiceExtensionAbility(want: Want): Promise<void>
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 | [16000200](../errorcode-ability.md#16000200-不允许该调用方启动应用后台服务) | The caller is not in the appIdentifierAllowList of the target application. |
 
 **示例**

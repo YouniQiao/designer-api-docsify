@@ -16,6 +16,30 @@ In addition to the [universal events](arkts-arkui-common-comp.md), the following
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## keepAlive
+
+```TypeScript
+keepAlive(keepAlive: Optional<boolean>)
+```
+
+Mark this TabContent as non-recyclable. When configuring Tabs.cachedMaxCount, if *keepAlive* of tabContent is set to true, tabContent will not be destroyed by the cache mechanism even if it is outside the cache range.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-TabContentAttribute-keepAlive(keepAlive: Optional<boolean>): TabContentAttribute--><!--Device-TabContentAttribute-keepAlive(keepAlive: Optional<boolean>): TabContentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keepAlive | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to keep this TabContent alive and not recyclable.<br>Passing **undefined** resets this property to its default value (**false**). <br>Default value: **false**. |
+
 ## onWillHide
 
 ```TypeScript
