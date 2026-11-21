@@ -24,7 +24,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. <br>Default value:false.
+Whether to enable [minidump](../../../dfx/performance-analysis-kit-terminology.md#minidump). The default value is false. <!--RP5-->true: [params field description] The maximum size of the generated and existing fault log files determined by the log_over_limit field in the ../../../dfx/hiappevent-watcher-crash-events.md#params field is changed to 35 MB. <!--RP5End--> false: The maximum size of the generated and existing fault log files is restored to 5 MB. **Note:**  This configuration item is a persistent configuration item. Before the application is reset, the value remains unchanged.
 
 **Type:** boolean
 

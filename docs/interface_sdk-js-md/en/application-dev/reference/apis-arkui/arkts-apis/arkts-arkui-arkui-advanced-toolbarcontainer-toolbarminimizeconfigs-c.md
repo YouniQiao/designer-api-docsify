@@ -4,7 +4,7 @@
 export class ToolBarMinimizeConfigs
 ```
 
-最小化悬浮球的可观察配置存储，与[ToolBarMinimizeOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeoptions-i.md)对应。
+Observable configuration store for the minimized floating ball, corresponding to [ToolBarMinimizeOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeoptions-i.md).
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 constructor(options?: ToolBarMinimizeOptions)
 ```
 
-ToolBarMinimizeConfigs的构造函数。当options省略时，所有字段使用各自的默认值。
+Constructor of ToolBarMinimizeConfigs. When options is omitted, all fields use their respective default values.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ ToolBarMinimizeConfigs的构造函数。当options省略时，所有字段使用
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarMinimizeOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeoptions-i.md) | No | 最小化悬浮球选项。 |
+| options | [ToolBarMinimizeOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeoptions-i.md) | No | Options for the minimized floating ball. |
 
 ## builder
 
@@ -50,7 +50,7 @@ ToolBarMinimizeConfigs的构造函数。当options省略时，所有字段使用
 builder?: CustomBuilder
 ```
 
-自定义构建器。默认值为undefined，无自定义内容。
+Custom builder. Default value: undefined, indicating that there is no custom content.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
@@ -72,7 +72,7 @@ builder?: CustomBuilder
 buoySize?: LengthMetrics
 ```
 
-最小化悬浮球的直径。
+Diameter of the minimized floating ball.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -94,7 +94,7 @@ buoySize?: LengthMetrics
 icon?: ResourceStr | SymbolGlyphModifier
 ```
 
-图标。默认值为undefined，表示无图标内容。
+Icon. Default value: undefined, indicating that there is no icon content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -116,7 +116,7 @@ icon?: ResourceStr | SymbolGlyphModifier
 iconColor?: ColorMetrics
 ```
 
-图标颜色。默认值为$r('sys.color.icon_primary')。
+Icon color. Default value: $r('sys.color.icon_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -138,7 +138,7 @@ iconColor?: ColorMetrics
 iconSize?: LengthMetrics
 ```
 
-图标尺寸。
+Icon size.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -160,7 +160,7 @@ iconSize?: LengthMetrics
 text?: ResourceStr
 ```
 
-文本标签。默认值为undefined，表示无文本内容。
+Text label. Default value: undefined, indicating that there is no text content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -182,7 +182,7 @@ text?: ResourceStr
 textColor?: ColorMetrics
 ```
 
-文本颜色。默认值为$r('sys.color.font_primary')。
+Text color. Default value: $r('sys.color.font_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

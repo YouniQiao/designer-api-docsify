@@ -37,7 +37,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor-1) | 添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。 |
-| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig-1) | 添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。 |
+| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig-1) | <!--RP1-->添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。<!--RP1End--> |
 | [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher-1) | 添加事件观察者。可通过事件观察者的回调函数监听事件。 |
 | [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#cleardata-1) | 应用事件打点数据清理方法，将当前应用存储在本地的打点数据进行清除。 |
 | [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy-1) | 系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。 |

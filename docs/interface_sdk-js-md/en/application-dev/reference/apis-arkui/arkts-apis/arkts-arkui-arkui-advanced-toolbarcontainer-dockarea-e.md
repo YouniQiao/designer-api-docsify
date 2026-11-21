@@ -4,7 +4,7 @@
 export enum DockArea
 ```
 
-定义浮动工具栏可停靠的区域。
+Defines the areas where the floating toolbar can dock.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export enum DockArea
 BOTTOM = 1
 ```
 
-停靠在底部边缘。
+The toolbar is docked to the bottom edge.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ BOTTOM = 1
 BOTTOM_LEFT = 6
 ```
 
-停靠在左下角。
+The toolbar is docked to the lower left corner.
 
 **Since:** 26.1.0
 
@@ -54,7 +54,7 @@ BOTTOM_LEFT = 6
 BOTTOM_RIGHT = 7
 ```
 
-停靠在右下角。
+The toolbar is docked to the lower right corner.
 
 **Since:** 26.1.0
 
@@ -72,7 +72,7 @@ BOTTOM_RIGHT = 7
 LEFT = 2
 ```
 
-停靠在左侧边缘。
+The toolbar is docked to the left edge.
 
 **Since:** 26.1.0
 
@@ -90,7 +90,7 @@ LEFT = 2
 RIGHT = 3
 ```
 
-停靠在右侧边缘。
+The toolbar is docked to the right edge.
 
 **Since:** 26.1.0
 
@@ -108,7 +108,7 @@ RIGHT = 3
 TOP = 0
 ```
 
-停靠在顶部边缘。
+The toolbar is docked to the top edge.
 
 **Since:** 26.1.0
 
@@ -126,7 +126,7 @@ TOP = 0
 TOP_LEFT = 4
 ```
 
-停靠在左上角。
+The toolbar is docked to the upper left corner.
 
 **Since:** 26.1.0
 
@@ -144,7 +144,7 @@ TOP_LEFT = 4
 TOP_RIGHT = 5
 ```
 
-停靠在右上角。
+The toolbar is docked to the upper right corner.
 
 **Since:** 26.1.0
 

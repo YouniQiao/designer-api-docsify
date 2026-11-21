@@ -4,7 +4,7 @@
 export class ToolBarConfigs
 ```
 
-工具栏的可观察配置存储，与[ToolBarParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarparams-i.md)对应。
+Observable configuration store for the toolbar, corresponding to [ToolBarParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarparams-i.md).
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 constructor(params: ToolBarParams)
 ```
 
-工具栏配置ToolBarConfigs的构造函数。
+Constructor of the toolbar configuration class ToolBarConfigs.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ constructor(params: ToolBarParams)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ToolBarParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarparams-i.md) | Yes | 工具栏构造参数。 |
+| params | [ToolBarParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarparams-i.md) | Yes | Parameters for constructing the toolbar. |
 
 ## advancedToolBarModifier
 
@@ -50,7 +50,7 @@ constructor(params: ToolBarParams)
 advancedToolBarModifier: AdvancedToolBarV2Modifier
 ```
 
-高级工具栏的修改器。
+Modifier of the advanced toolbar.
 
 **Type:** [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md)
 
@@ -72,7 +72,7 @@ advancedToolBarModifier: AdvancedToolBarV2Modifier
 callbacks?: ToolBarCallbacks
 ```
 
-工具栏回调合集。
+Collection of toolbar callbacks.
 
 **Type:** [ToolBarCallbacks](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcallbacks-c.md)
 
@@ -94,7 +94,7 @@ callbacks?: ToolBarCallbacks
 controller?: ToolBarController
 ```
 
-工具栏控制器。
+Toolbar controller.
 
 **Type:** [ToolBarController](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontroller-c.md)
 
@@ -114,7 +114,7 @@ controller?: ToolBarController
 floatingConfigs?: ToolBarFloatingConfigs
 ```
 
-高级工具栏的浮动配置。
+Floating configuration of the advanced toolbar.
 
 **Type:** [ToolBarFloatingConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingconfigs-c.md)
 
@@ -136,7 +136,7 @@ floatingConfigs?: ToolBarFloatingConfigs
 initialParams: ToolBarInitialParams
 ```
 
-高级工具栏的初始位置。
+Initial position of the advanced toolbar.
 
 **Type:** [ToolBarInitialParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarinitialparams-i.md)
 
@@ -156,7 +156,7 @@ initialParams: ToolBarInitialParams
 toolBarList: AdvancedToolBarV2Item[]
 ```
 
-要显示的高级工具栏项列表。
+List of advanced toolbar items to display.
 
 **Type:** [AdvancedToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2item-c.md)[]
 

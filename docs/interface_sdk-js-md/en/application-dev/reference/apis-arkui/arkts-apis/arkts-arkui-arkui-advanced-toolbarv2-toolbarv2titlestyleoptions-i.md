@@ -4,7 +4,7 @@
 export interface ToolBarV2TitleStyleOptions
 ```
 
-定义ToolBarV2TitleStyle的构造函数选项。
+Defines the constructor options for ToolBarV2TitleStyle.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 fontColor?: ColorMetrics
 ```
 
-标题文本颜色。
+Title text color. Default value: $r('sys.color.font_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -44,7 +44,7 @@ fontColor?: ColorMetrics
 fontSize?: LengthMetrics
 ```
 
-标题文本的字体大小。
+Font size of the title text. Default value: 20fp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -64,7 +64,7 @@ fontSize?: LengthMetrics
 fontWeight?: FontWeight
 ```
 
-标题文本字重。
+Font weight of the title text. Default value: FontWeight.Bold.
 
 **Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
@@ -84,7 +84,7 @@ fontWeight?: FontWeight
 minLength?: LengthMetrics
 ```
 
-标题最小长度。
+Minimum width of the title. Default value: 48vp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

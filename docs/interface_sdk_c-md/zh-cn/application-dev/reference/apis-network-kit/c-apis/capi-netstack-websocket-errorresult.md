@@ -6,7 +6,7 @@ struct WebSocket_ErrorResult {...}
 
 ## 概述
 
-websocket客户端来自服务端连接错误的参数。
+WebSocket客户端来自服务端连接错误的参数。
 
 <!--Device-struct WebSocket_ErrorResult {...}--><!--Device-struct WebSocket_ErrorResult {...}-End-->
 

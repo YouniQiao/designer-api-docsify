@@ -4,7 +4,7 @@
 export class ToolBarController
 ```
 
-用于命令式操作工具栏停靠、固定和最小化状态控制器。
+Defines a controller for imperatively managing toolbar docking, pinning, and minimization states.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 getDirection(): Axis
 ```
 
-获取浮动工具栏的停靠方向。
+Obtains the docking direction of the floating toolbar.
 
 **Since:** 26.1.0
 
@@ -40,7 +40,7 @@ getDirection(): Axis
 
 | Type | Description |
 | --- | --- |
-| [Axis](arkts-arkui-axis-e.md) | 浮动工具栏的停靠方向。 |
+| [Axis](arkts-arkui-axis-e.md) | Docking direction of the floating toolbar. |
 
 ## getDockArea
 
@@ -48,7 +48,7 @@ getDirection(): Axis
 getDockArea(): DockArea
 ```
 
-获取浮动工具栏当前停靠的区域。
+Obtains the area where the floating toolbar is currently docked.
 
 **Since:** 26.1.0
 
@@ -64,7 +64,7 @@ getDockArea(): DockArea
 
 | Type | Description |
 | --- | --- |
-| [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | 工具栏当前停靠的区域。 |
+| [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | Area where the toolbar is currently docked. |
 
 ## getState
 
@@ -72,7 +72,7 @@ getDockArea(): DockArea
 getState(): ToolBarState
 ```
 
-获取当前工具栏状态。
+Obtains the current toolbar state.
 
 **Since:** 26.1.0
 
@@ -88,7 +88,7 @@ getState(): ToolBarState
 
 | Type | Description |
 | --- | --- |
-| [ToolBarState](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md) | 当前工具栏状态。 |
+| [ToolBarState](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md) | Current toolbar state. |
 
 ## minimize
 
@@ -96,7 +96,7 @@ getState(): ToolBarState
 minimize(): void
 ```
 
-将浮动工具栏最小化为悬浮球，从FLOATING切换为MINIMIZED。
+Minimizes the floating toolbar to a floating ball, switching it from FLOATING to MINIMIZED.
 
 **Since:** 26.1.0
 
@@ -114,7 +114,7 @@ minimize(): void
 pin(): void
 ```
 
-将工具栏固定为FIXED状态。
+Pins the toolbar in the FIXED state.
 
 **Since:** 26.1.0
 
@@ -132,7 +132,7 @@ pin(): void
 restore(): void
 ```
 
-将最小化悬浮球恢复为浮动工具栏，从MINIMIZED切换为FLOATING。
+Restores the minimized floating ball to a floating toolbar, switching it from MINIMIZED to FLOATING.
 
 **Since:** 26.1.0
 
@@ -150,7 +150,7 @@ restore(): void
 setDock(area: DockArea, direction?: Axis): void
 ```
 
-将浮动工具栏停靠到指定区域，可指定停靠方向。
+Docks the floating toolbar to the specified area, with an optional docking direction.
 
 **Since:** 26.1.0
 
@@ -166,8 +166,8 @@ setDock(area: DockArea, direction?: Axis): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | Yes | 要设置的停靠区域。 |
-| direction | [Axis](arkts-arkui-axis-e.md) | No | 停靠方向。停靠方向默认为当前浮动工具栏的排列方向。 |
+| area | [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | Yes | Docking area to set. |
+| direction | [Axis](arkts-arkui-axis-e.md) | No | Docking direction. By default, the docking direction is the arrangement direction of the current floating toolbar. |
 
 ## unpin
 
@@ -175,7 +175,7 @@ setDock(area: DockArea, direction?: Axis): void
 unpin(): void
 ```
 
-取消固定工具栏，从FIXED状态切换为FLOATING状态。
+Unpins the toolbar, switching it from FIXED to FLOATING.
 
 **Since:** 26.1.0
 

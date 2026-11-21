@@ -4,7 +4,7 @@
 export class ToolBarFloatingConfigs
 ```
 
-浮动工具栏行为的可观察配置存储，与[ToolBarFloatingOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingoptions-i.md)对应。
+Observable configuration store for floating toolbar behavior, corresponding to [ToolBarFloatingOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingoptions-i.md).
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 constructor(options?: ToolBarFloatingOptions)
 ```
 
-ToolBarFloatingConfigs的构造函数。当options省略时，所有字段使用各自的默认值。
+Constructor of ToolBarFloatingConfigs. When options is omitted, all fields use their respective default values.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ ToolBarFloatingConfigs的构造函数。当options省略时，所有字段使用
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarFloatingOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingoptions-i.md) | No | 浮动行为选项。 |
+| options | [ToolBarFloatingOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingoptions-i.md) | No | Floating behavior options. |
 
 ## cornerMode
 
@@ -50,7 +50,7 @@ ToolBarFloatingConfigs的构造函数。当options省略时，所有字段使用
 cornerMode?: DockCornerMode
 ```
 
-角落吸附模式。MINIMIZE（默认）表示吸附到角落并跟随所在边缘；EXPAND表示保持拖拽方向。
+Corner snapping mode. MINIMIZE (default) indicates that the toolbar snaps to a corner and follows the edge where it is located; EXPAND indicates that the drag direction is retained.
 
 **Type:** [DockCornerMode](arkts-arkui-arkui-advanced-toolbarcontainer-dockcornermode-e.md)
 
@@ -72,7 +72,7 @@ cornerMode?: DockCornerMode
 dockAreas?: DockArea[]
 ```
 
-浮动工具栏允许停靠的区域。默认支持所有可吸附位置。
+Areas where the floating toolbar is allowed to dock. All snapping positions are supported by default.
 
 **Type:** [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md)[]
 
@@ -94,7 +94,7 @@ dockAreas?: DockArea[]
 draggable?: boolean
 ```
 
-浮动工具栏是否可拖拽。默认值：true。true表示支持拖拽，false表示禁止拖拽。
+Whether the floating toolbar can be dragged. Default value: true. The value true indicates that dragging is supported, and false indicates that dragging is prohibited.
 
 **Type:** boolean
 
@@ -116,7 +116,7 @@ draggable?: boolean
 minimizeConfigs?: ToolBarMinimizeConfigs
 ```
 
-最小化配置。
+Minimization configuration.
 
 **Type:** [ToolBarMinimizeConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeconfigs-c.md)
 

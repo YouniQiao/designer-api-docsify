@@ -48,6 +48,24 @@ Session ID of the AssertFault.
 
 **System API:** This is a system API.
 
+## BACKGROUND_PROCESS_PROMOTE_PRIORITY
+
+```TypeScript
+BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'
+```
+
+Indicates the priority promotion flag when starting or connecting a service extension ability. When this parameter is set, the system will promote the priority of the target service extension process. The caller must have the ohos.permission.PROMOTE_BACKGROUND_PROCESS_PRIORITY permission, otherwise this parameter will be ignored.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Params-BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'--><!--Device-Params-BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+**System API:** This is a system API.
+
 ## DLP_PARAMS_ABILITY_NAME
 
 ```TypeScript

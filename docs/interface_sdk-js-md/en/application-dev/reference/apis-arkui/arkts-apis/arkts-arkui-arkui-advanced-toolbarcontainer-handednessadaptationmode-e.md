@@ -4,7 +4,7 @@
 export enum HandednessAdaptationMode
 ```
 
-定义工具栏接入智感握姿模式。
+Defines the handedness adaptation mode for the toolbar.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export enum HandednessAdaptationMode
 DEFAULT = 1
 ```
 
-工具栏适配启用默认智感握姿适配。
+The toolbar uses the default handedness adaptation.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ DEFAULT = 1
 NONE = 0
 ```
 
-工具栏不启用智感握姿。
+Handedness adaptation is disabled for the toolbar.
 
 **Since:** 26.1.0
 

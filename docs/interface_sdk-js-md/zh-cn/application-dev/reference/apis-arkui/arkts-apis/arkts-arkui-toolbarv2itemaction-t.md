@@ -20,4 +20,4 @@ export type ToolBarV2ItemAction = (index: number) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 |  |
+| index | number | 是 | 触发点击事件的工具栏子项索引。 |

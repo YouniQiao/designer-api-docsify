@@ -4,7 +4,7 @@
 export interface ToolBarV2SymbolGlyphOptions
 ```
 
-ToolBarV2SymbolGlyphOptions定义Symbol图标的属性。
+Defines the attributes of the symbol icon.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activated?: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's activated symbol.
+Modifier of ToolBarV2's activated symbol.
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -44,7 +44,7 @@ Modifier of toolbarV2's activated symbol.
 normal: SymbolGlyphModifier
 ```
 
-Modifier of toolbarV2's normal symbol.
+Modifier of ToolBarV2's normal symbol.
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

@@ -44,4 +44,4 @@ Queries the icons of apps whose switch is turned on in the list of obtained loca
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. Possible cause: 1.IPC communication failed. 2.Memory operation error. 3.Failed to obtain or decode the application icon. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invaild. Possible cause: 1.The application is not in the list. 2.The application is disabled. |
+| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. Possible cause: 1.The application is not in the list. 2.The application is disabled. |

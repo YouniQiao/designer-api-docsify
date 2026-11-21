@@ -4,7 +4,7 @@
 export interface ToolBarDockOffsetOptions
 ```
 
-配置浮动工具栏各边停靠偏移量的选项。
+Defines options for configuring the docking offsets of the floating toolbar on each edge.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 bottom?: LengthMetrics
 ```
 
-底部停靠偏移量。
+Bottom docking offset.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -44,7 +44,7 @@ bottom?: LengthMetrics
 left?: LengthMetrics
 ```
 
-左侧停靠偏移量。
+Left docking offset.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -64,7 +64,7 @@ left?: LengthMetrics
 right?: LengthMetrics
 ```
 
-右侧停靠偏移量。
+Right docking offset.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -84,7 +84,7 @@ right?: LengthMetrics
 top?: LengthMetrics
 ```
 
-顶部停靠偏移量。
+Top docking offset.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

@@ -4,7 +4,7 @@
 export declare type ToolBarDragStateCallback = () => void
 ```
 
-工具栏的拖拽状态改变回调，拖拽开始或结束时触发。
+Defines the callback invoked when the drag state of the toolbar changes, specifically when dragging starts or ends.
 
 **Since:** 26.1.0
 

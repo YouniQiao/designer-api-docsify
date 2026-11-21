@@ -16,7 +16,8 @@ Creates a mouse controller for simulating mouse operations. This API uses a prom
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 

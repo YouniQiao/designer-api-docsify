@@ -4,7 +4,7 @@
 export declare type ToolBarStateCallback = (state: ToolBarState) => void
 ```
 
-工具栏状态变化时的回调。
+Defines the callback invoked when the toolbar state changes.
 
 **Since:** 26.1.0
 
@@ -20,4 +20,4 @@ export declare type ToolBarStateCallback = (state: ToolBarState) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [ToolBarState](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md) | Yes | 当前工具栏状态。 |
+| state | [ToolBarState](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md) | Yes | Current toolbar state. |

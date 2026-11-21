@@ -4,7 +4,7 @@
 export declare class ToolBarV2ItemText
 ```
 
-定义工具栏子项的文本。
+Defines the text of a toolbar item.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options: ToolBarV2ItemTextOptions)
 ```
 
-ToolBarV2ItemText的构造函数。
+A constructor used to create a **ToolBarV2ItemText** instance.
 
 **Since:** 18
 
@@ -50,9 +50,11 @@ ToolBarV2ItemText的构造函数。
 activatedColor?: ColorMetrics
 ```
 
-工具栏子项在激活态下文本的颜色。
+Font color of the toolbar item in the activated state.
 
-</div>默认值：$r('sys.color.font_emphasize')
+</div>Default value: **$r('sys.color.font_emphasize')**.
+
+Decorator: @Trace
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -74,9 +76,11 @@ activatedColor?: ColorMetrics
 color?: ColorMetrics
 ```
 
-工具栏子项的文本的颜色。
+Font color of the toolbar item.
 
-默认值：$r('sys.color.font_primary')
+Default value: **$r('sys.color.font_primary')**.
+
+Decorator: @Trace
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -98,7 +102,9 @@ color?: ColorMetrics
 text: ResourceStr
 ```
 
-工具栏子项的文本。
+Text of the toolbar item.
+
+Decorator: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

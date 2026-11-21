@@ -44,4 +44,4 @@ Disables the switch status of a specified app in the list of obtained local noti
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability. <br>2. The chip does not support the capability. <br>3. A dependent service feature is not supported. |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. Possible cause: 1.IPC communication failed. 2.Memory operation error. 3.Database operation failed. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invaild. |
+| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |

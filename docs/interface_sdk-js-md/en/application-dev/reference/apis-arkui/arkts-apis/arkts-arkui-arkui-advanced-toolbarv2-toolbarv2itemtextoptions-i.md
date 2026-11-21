@@ -4,7 +4,7 @@
 export interface ToolBarV2ItemTextOptions
 ```
 
-用于构建ToolBarV2ItemText对象。
+Defines the options for initializing a **ToolBarV2ItemText** object.
 
 **Since:** 18
 
@@ -24,9 +24,9 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activatedColor?: ColorMetrics
 ```
 
-工具栏子项在激活态下文本的颜色。
+Font color of the toolbar item in the activated state.
 
-默认值：$r('sys.color.font_emphasize')
+Default value: **$r('sys.color.font_emphasize')**.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -46,9 +46,9 @@ activatedColor?: ColorMetrics
 color?: ColorMetrics
 ```
 
-工具栏子项的文本的颜色。
+Font color of the toolbar item.
 
-默认值：$r('sys.color.font_primary')
+Default value: **$r('sys.color.font_primary')**.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -68,7 +68,7 @@ color?: ColorMetrics
 text: ResourceStr
 ```
 
-工具栏子项的文本。
+Text of the toolbar item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

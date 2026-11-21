@@ -26,6 +26,8 @@ activatedColor?: ColorMetrics
 
 项被激活时的文本字体颜色。
 
+默认值：$r('sys.color.font_emphasize')
+
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
@@ -45,6 +47,8 @@ color?: ColorMetrics
 ```
 
 定义文本字体颜色。
+
+默认值：$r('sys.color.font_primary')
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

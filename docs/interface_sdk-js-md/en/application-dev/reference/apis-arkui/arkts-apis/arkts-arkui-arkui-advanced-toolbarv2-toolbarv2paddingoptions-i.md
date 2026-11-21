@@ -4,7 +4,7 @@
 export interface ToolBarV2PaddingOptions
 ```
 
-ToolBar沿主轴的padding配置。
+Toolbar padding configuration along the main axis.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 mainAxisEnd?: LengthMetrics
 ```
 
-主轴末端的Padding。水平时：右填充。垂直时：底部填充。
+Padding at the end of the main axis. When horizontal: right padding. When vertical: bottom padding.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -44,7 +44,7 @@ mainAxisEnd?: LengthMetrics
 mainAxisStart?: LengthMetrics
 ```
 
-主轴起点的Padding。水平时：左填充。垂直时：顶部填充。
+Padding at the start of the main axis. When horizontal: left padding. When vertical: top padding.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

@@ -4,7 +4,7 @@
 export enum DockCornerMode
 ```
 
-定义浮动工具栏拖拽到角落时的吸附模式。
+Defines the snapping mode used when the floating toolbar is dragged to a corner.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export enum DockCornerMode
 EXPAND = 1
 ```
 
-保持拖拽方向，不进行最小化。
+Retains the drag direction without minimizing the toolbar.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ EXPAND = 1
 MINIMIZE = 0
 ```
 
-吸附到角落并最小化；点击角落后跟随所在边缘。
+Snaps the toolbar to a corner and minimizes it; after the corner is clicked, the toolbar follows the edge where it is located.
 
 **Since:** 26.1.0
 

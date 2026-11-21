@@ -34,7 +34,8 @@ Starts an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +111,8 @@ Ends an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,7 +154,8 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,7 +224,8 @@ Presses a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -292,7 +296,8 @@ Release a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,7 +339,8 @@ Updates an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 

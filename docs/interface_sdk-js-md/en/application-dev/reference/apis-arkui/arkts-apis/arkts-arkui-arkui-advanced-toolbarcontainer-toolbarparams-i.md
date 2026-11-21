@@ -4,7 +4,7 @@
 export interface ToolBarParams
 ```
 
-构造工具栏的参数，包括项列表、修改器、浮动配置和回调。
+Parameters for constructing a toolbar, including the item list, modifier, floating configuration, and callbacks.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 advancedToolBarModifier?: AdvancedToolBarV2Modifier
 ```
 
-高级工具栏的修改器。
+Modifier of the advanced toolbar.
 
 **Type:** [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md)
 
@@ -44,7 +44,7 @@ advancedToolBarModifier?: AdvancedToolBarV2Modifier
 callbacks?: ToolBarCallbacks
 ```
 
-工具栏回调合集。
+Collection of toolbar callbacks.
 
 **Type:** [ToolBarCallbacks](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcallbacks-c.md)
 
@@ -64,7 +64,7 @@ callbacks?: ToolBarCallbacks
 controller?: ToolBarController
 ```
 
-工具栏控制器。
+Toolbar controller.
 
 **Type:** [ToolBarController](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontroller-c.md)
 
@@ -84,7 +84,7 @@ controller?: ToolBarController
 floatingConfigs?: ToolBarFloatingConfigs
 ```
 
-工具栏浮动行为配置。默认值：按[ToolBarFloatingConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingconfigs-c.md)各字段默认值。
+Floating behavior configuration of the toolbar. Default value: the respective default values of the fields in [ToolBarFloatingConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingconfigs-c.md).
 
 **Type:** [ToolBarFloatingConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarfloatingconfigs-c.md)
 
@@ -104,7 +104,7 @@ floatingConfigs?: ToolBarFloatingConfigs
 initialParams: ToolBarInitialParams
 ```
 
-初始位置。
+Initial position.
 
 **Type:** [ToolBarInitialParams](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarinitialparams-i.md)
 
@@ -124,7 +124,7 @@ initialParams: ToolBarInitialParams
 toolBarList: AdvancedToolBarV2Item[]
 ```
 
-要显示的高级工具栏项的列表。
+List of advanced toolbar items to display.
 
 **Type:** [AdvancedToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2item-c.md)[]
 

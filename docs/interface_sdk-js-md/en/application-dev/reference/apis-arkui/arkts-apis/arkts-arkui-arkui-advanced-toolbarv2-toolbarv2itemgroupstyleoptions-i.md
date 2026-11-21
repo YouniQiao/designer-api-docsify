@@ -4,7 +4,7 @@
 export interface ToolBarV2ItemGroupStyleOptions
 ```
 
-定义ToolBarV2ItemGroupStyle的构造函数选项。
+Defines the constructor options for ToolBarV2ItemGroupStyle.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 backgroundColor?: ColorMetrics
 ```
 
-组容器的背景颜色。
+Background color of the group container. Default value: $r('sys.color.comp_background_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -44,7 +44,7 @@ backgroundColor?: ColorMetrics
 borderColor?: ColorMetrics
 ```
 
-组容器的圆角颜色。
+Border color of the group container. Default value: undefined.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -64,7 +64,7 @@ borderColor?: ColorMetrics
 borderRadius?: LengthMetrics
 ```
 
-组容器的边界边框圆角半径。
+Border radius of the group container. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -84,7 +84,7 @@ borderRadius?: LengthMetrics
 borderWidth?: LengthMetrics
 ```
 
-组容器的边框宽度。
+Border width of the group container. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -104,7 +104,7 @@ borderWidth?: LengthMetrics
 padding?: ToolBarV2PaddingOptions
 ```
 
-group容器的Padding。
+Padding of the group container. Default value: undefined.
 
 **Type:** [ToolBarV2PaddingOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2paddingoptions-i.md)
 
@@ -124,7 +124,7 @@ group容器的Padding。
 placement?: ToolBarV2ItemPlacement
 ```
 
-组在工具栏中的放置位置。组放置优先于组中单个项目的放置。
+Placement position of the group within the toolbar. The group placement takes precedence over the placement of individual items within the group. Default value: ToolBarV2ItemPlacement.MAIN.
 
 **Type:** [ToolBarV2ItemPlacement](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemplacement-e.md)
 
@@ -144,7 +144,7 @@ placement?: ToolBarV2ItemPlacement
 space?: LengthMetrics
 ```
 
-组内项目之间的间距。默认值：0vp。
+Spacing between items within the group. Default value: 0vp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -164,7 +164,7 @@ space?: LengthMetrics
 stateEffect?: boolean
 ```
 
-是否显示组内项目的按压状态效果。
+Whether to show the press-state effect for items within the group. Default value: true.
 
 **Type:** boolean
 

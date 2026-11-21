@@ -4,13 +4,13 @@
 export declare enum ToolBarV2ItemState
 ```
 
-工具栏子项状态枚举。
+Enumerates the states of the toolbar item.
 
-| 名称 | 值 | 说明 |  
+| Name | Value| Description |  
 | -------- | - | --------------- |  
-| ENABLE | 1 | 工具栏子项为正常可点击状态。 |  
-| DISABLE | 2 | 工具栏子项为不可点击状态。 |  
-| ACTIVATE | 3 | 工具栏子项为激活状态，可点击。 |
+| ENABLE | 1 | The toolbar item is enabled. |  
+| DISABLE | 2 | The toolbar item is disabled. |  
+| ACTIVATE | 3 | The toolbar item is activated.|
 
 **Since:** 18
 

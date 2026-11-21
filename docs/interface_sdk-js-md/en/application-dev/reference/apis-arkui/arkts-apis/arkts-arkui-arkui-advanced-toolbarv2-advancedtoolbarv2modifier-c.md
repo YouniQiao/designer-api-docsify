@@ -4,9 +4,9 @@
 export declare class AdvancedToolBarV2Modifier
 ```
 
-ToolBarV2的高级修饰符。合并布局属性、样式配置、和溢出菜单样式到单个修饰符类中。
+Advanced modifier for ToolBarV2. Merges layout attributes, style configs, and overflow menu style into a single modifier class.
 
-使用可链接的setter方法，这些方法接受原始配置对象。
+Uses chainable setter methods that accept original config objects.
 
 **Since:** 26.1.0
 
@@ -28,9 +28,9 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 crossAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 ```
 
-设置工具栏垂直于布局方向的宽度。
+Sets the breadth of the toolbar perpendicular to the layout direction.
 
-水平：控制高度。垂直：控制宽度。默认值：undefined。值为undefined或未设置时，值为56vp。
+Horizontal: controls height. Vertical: controls width. When not set, the cross-axis is auto-sized by content.
 
 **Since:** 26.1.0
 
@@ -46,13 +46,13 @@ crossAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | 垂直于布局方向的宽度值。 |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | The breadth value perpendicular to the layout direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | 返回用于链接的此修饰符。 |
+| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | Returns this modifier for chaining. |
 
 ## direction
 
@@ -60,9 +60,9 @@ crossAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 direction(value: Axis): AdvancedToolBarV2Modifier
 ```
 
-设置工具栏的布局方向。
+Sets the layout direction of the toolbar.
 
-默认值：undefined。值为undefined或未设置时，水平排列。
+HORIZONTAL: items arranged in a row (default). VERTICAL: items arranged in a column.
 
 **Since:** 26.1.0
 
@@ -78,13 +78,13 @@ direction(value: Axis): AdvancedToolBarV2Modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Axis](arkts-arkui-axis-e.md) | Yes | 方向值。 |
+| value | [Axis](arkts-arkui-axis-e.md) | Yes | The direction value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | 返回用于链接的此修饰符。 |
+| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | Returns this modifier for chaining. |
 
 ## mainAxisLength
 
@@ -92,9 +92,9 @@ direction(value: Axis): AdvancedToolBarV2Modifier
 mainAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 ```
 
-设置工具栏沿布局方向的长度。
+Sets the length of the toolbar along the layout direction.
 
-水平：控制宽度。垂直：控制高度。默认值：undefined。值为undefined或不设置时，默认占满。
+Horizontal: controls width. Vertical: controls height. Default value: '100%'.
 
 **Since:** 26.1.0
 
@@ -110,13 +110,13 @@ mainAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | 沿布局方向的长度值。 |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | The length value along the layout direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | 返回用于链接的此修饰符。 |
+| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | Returns this modifier for chaining. |
 
 ## overflowMenuStyle
 
@@ -124,7 +124,7 @@ mainAxisLength(value: LengthMetrics): AdvancedToolBarV2Modifier
 overflowMenuStyle(menuStyle: ToolBarV2OverflowMenuStyle): AdvancedToolBarV2Modifier
 ```
 
-设置溢出菜单弹出窗口的样式配置。
+Sets the style configuration for the overflow menu popup.
 
 **Since:** 26.1.0
 
@@ -140,13 +140,13 @@ overflowMenuStyle(menuStyle: ToolBarV2OverflowMenuStyle): AdvancedToolBarV2Modif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuStyle | [ToolBarV2OverflowMenuStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2overflowmenustyle-i.md) | Yes | 溢出菜单样式配置对象。 |
+| menuStyle | [ToolBarV2OverflowMenuStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2overflowmenustyle-i.md) | Yes | The overflow menu style configuration object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | 返回用于链接的此修饰符。 |
+| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | Returns this modifier for chaining. |
 
 ## style
 
@@ -154,9 +154,9 @@ overflowMenuStyle(menuStyle: ToolBarV2OverflowMenuStyle): AdvancedToolBarV2Modif
 style(styleConfigs: ToolBarV2StyleConfigs): AdvancedToolBarV2Modifier
 ```
 
-设置工具栏样式配置。
+Sets the toolbar style configuration.
 
-控制背景、填充、groupSpace、边框和项目活动/禁用的颜色。
+Controls background, padding, groupSpace, border, and item active/disabled colors.
 
 **Since:** 26.1.0
 
@@ -172,10 +172,10 @@ style(styleConfigs: ToolBarV2StyleConfigs): AdvancedToolBarV2Modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styleConfigs | [ToolBarV2StyleConfigs](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2styleconfigs-c.md) | Yes | 样式配置对象。 |
+| styleConfigs | [ToolBarV2StyleConfigs](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2styleconfigs-c.md) | Yes | The style configuration object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | 返回用于链接的此修饰符。 |
+| [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md) | Returns this modifier for chaining. |

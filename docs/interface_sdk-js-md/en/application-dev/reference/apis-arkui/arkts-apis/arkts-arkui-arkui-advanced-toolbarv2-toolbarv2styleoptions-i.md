@@ -4,7 +4,7 @@
 export interface ToolBarV2StyleOptions
 ```
 
-定义ToolBarV2StyleConfigs的构造函数选项。
+Defines the constructor options for ToolBarV2StyleConfigs.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 backgroundBlurStyle?: BlurStyle
 ```
 
-工具栏背景模糊样式。默认值：undefined。不设置时，无模糊效果。
+Background blur style of the toolbar.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
@@ -44,7 +44,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ColorMetrics
 ```
 
-工具栏背景颜色。默认值：undefined。不设置时，默认为$r('sys.color.comp_background_primary')。
+Background color of the toolbar. Default value: $r('sys.color.comp_background_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -64,7 +64,7 @@ backgroundColor?: ColorMetrics
 borderColor?: ColorMetrics
 ```
 
-工具栏的边框颜色。默认值：undefined。值为undefined或不设置时，无颜色。
+Border color of the toolbar. Default value: undefined.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -84,7 +84,7 @@ borderColor?: ColorMetrics
 borderRadius?: LengthMetrics
 ```
 
-工具栏的边框圆角半径。默认值：undefined。值为undefined或不设置时，圆角半径为工具栏交叉轴长度的一半。
+Border radius of the toolbar. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -104,7 +104,7 @@ borderRadius?: LengthMetrics
 borderWidth?: LengthMetrics
 ```
 
-工具栏的边框宽度。默认值：undefined。值为undefined或不设置时，无宽度。
+Border width of the toolbar. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -124,7 +124,7 @@ borderWidth?: LengthMetrics
 fontSize?: LengthMetrics
 ```
 
-工具栏项里的文本的默认字体大小。默认值：undefined。值为undefined或不设置时，字体大小为$r('sys.float.ohos_id_text_size_caption')。
+Font size of the toolbar item text. Default value: $r('sys.float.ohos_id_text_size_caption').
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -144,7 +144,7 @@ fontSize?: LengthMetrics
 groupSpace?: LengthMetrics
 ```
 
-工具栏的组间距。工具栏分组与分组之间、分组与独立项之间的间距。默认值: undefined。值为undefined或不设置时，默认间距为12vp，取值范围在[8vp, 20vp]。
+Spacing between item groups. Default value: 12vp, value range [8vp, 20vp], clamped to the boundary when out of range.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -164,7 +164,7 @@ groupSpace?: LengthMetrics
 itemSize?: Size
 ```
 
-工具栏的项的大小。默认值：undefined。值为undefined或不设置时，主轴长56vp，交叉轴长48vp。
+Item size of the toolbar items. Default value: mainAxis 56vp x crossAxis 48vp. When horizontal: 56vp(width) x 48vp(height). When vertical: 48vp(width) x 56vp(height).
 
 **Type:** Size
 
@@ -184,7 +184,7 @@ itemSize?: Size
 padding?: ToolBarV2PaddingOptions
 ```
 
-工具栏内边距。
+Toolbar padding. Each edge can be set independently. Default value: undefined.
 
 **Type:** [ToolBarV2PaddingOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2paddingoptions-i.md)
 
@@ -204,7 +204,7 @@ padding?: ToolBarV2PaddingOptions
 stateEffect?: boolean
 ```
 
-是否使能按压效果。默认值：true。
+Whether to enable the state effect. Default value: true.
 
 **Type:** boolean
 

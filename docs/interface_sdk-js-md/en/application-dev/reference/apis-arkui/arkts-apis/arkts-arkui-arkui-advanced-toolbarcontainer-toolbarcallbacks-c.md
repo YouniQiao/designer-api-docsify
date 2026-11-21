@@ -4,7 +4,7 @@
 export class ToolBarCallbacks
 ```
 
-用于工具栏拖拽、吸附以及状态回调的合集。
+Defines a collection of callbacks for toolbar dragging, snapping, and state changes.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 onDock?: ToolBarDockCallback
 ```
 
-工具栏停靠到新区域时的回调。
+Callback invoked when the toolbar docks to a new area.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ onDock?: ToolBarDockCallback
 onDrag?: ToolBarDragOffsetCallback
 ```
 
-拖拽过程中的回调，返回X/Y轴偏移量，单位为vp。
+Callback invoked during dragging, which returns the X-axis and Y-axis offsets in vp.
 
 **Since:** 26.1.0
 
@@ -60,7 +60,7 @@ onDrag?: ToolBarDragOffsetCallback
 onDragEnd?: ToolBarDragStateCallback
 ```
 
-用户结束拖拽时的回调。
+Callback invoked when the user finishes dragging the toolbar.
 
 **Since:** 26.1.0
 
@@ -78,7 +78,7 @@ onDragEnd?: ToolBarDragStateCallback
 onDragStart?: ToolBarDragStateCallback
 ```
 
-用户开始拖拽工具栏时的回调。
+Callback invoked when the user starts dragging the toolbar.
 
 **Since:** 26.1.0
 
@@ -96,7 +96,7 @@ onDragStart?: ToolBarDragStateCallback
 onStateChange?: ToolBarStateCallback
 ```
 
-工具栏状态变化时的回调。
+Callback invoked when the toolbar state changes.
 
 **Since:** 26.1.0
 

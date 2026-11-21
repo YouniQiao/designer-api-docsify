@@ -42,7 +42,7 @@ constructor(options: ToolBarV2SymbolGlyphOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarV2SymbolGlyphOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | symbol info. |
+| options | [ToolBarV2SymbolGlyphOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2symbolglyphoptions-i.md) | 是 | Symbol图标信息。 |
 
 ## activated
 
@@ -51,6 +51,8 @@ activated?: SymbolGlyphModifier
 ```
 
 ToolBarV2激活图标的修饰符。
+
+默认值：fontColor：$r('sys.color.icon_emphasize')，fontSize：24vp。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

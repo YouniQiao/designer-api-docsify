@@ -84,7 +84,7 @@ Configuration ID for data processor. The input value must be greater than or equ
 configName?: string
 ```
 
-Name of the data processor configuration, which can be loaded from the configuration file. By default, this parameter is left empty. It can contain only letters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256 characters.
+<!--RP4-->Configuration name of the data processor. The corresponding configuration can be loaded from the configuration file. The default value is null. The value can contain only uppercase letters, lowercase letters, digits, underscores(_), and dollar sign($), and cannot start with a digit. The value cannot be empty and cannot exceed 256 characters. <!--RP4End-->
 
 **Atomic service API**: This parameter can be used in atomic services since API version 20.
 

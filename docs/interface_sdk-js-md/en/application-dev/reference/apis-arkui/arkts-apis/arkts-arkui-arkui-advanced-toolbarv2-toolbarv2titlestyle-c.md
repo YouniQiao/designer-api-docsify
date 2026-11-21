@@ -4,7 +4,7 @@
 export declare class ToolBarV2TitleStyle
 ```
 
-标题文本样式配置。
+Title text style configuration.
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options?: ToolBarV2TitleStyleOptions)
 ```
 
-构造ToolBarV2TitleStyle实例。
+Constructs a ToolBarV2TitleStyle instance.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ constructor(options?: ToolBarV2TitleStyleOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarV2TitleStyleOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2titlestyleoptions-i.md) | No | 构造函数选项。 |
+| options | [ToolBarV2TitleStyleOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2titlestyleoptions-i.md) | No | Constructor options. |
 
 ## fontColor
 
@@ -50,7 +50,7 @@ constructor(options?: ToolBarV2TitleStyleOptions)
 fontColor?: ColorMetrics
 ```
 
-标题文本颜色。默认值：undefined。值为undefined或不设置时，标题文本的默认颜色为$r('sys.color.font_primary')，副标题文本的默认颜色为$r('sys.color.font_secondary')。
+Title text color. Default value: $r('sys.color.font_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -72,7 +72,7 @@ fontColor?: ColorMetrics
 fontSize?: LengthMetrics
 ```
 
-标题文本的字体大小。默认值为：undefined。值为undefined或不设置时，标题文本的默认颜色字体大小为20fp，副标题文本的默认颜色字体大小为14fp。
+Font size of the title text. Default value: 20fp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -94,7 +94,7 @@ fontSize?: LengthMetrics
 fontWeight?: FontWeight
 ```
 
-标题文本字重。默认值：undefined。值为undefined或不设置时，标题文本的默认颜色字重为FontWeight.Bold，副标题文本的默认颜色字重为FontWeight.Regular。
+Font weight of the title text. Default value: FontWeight.Bold.
 
 **Type:** [FontWeight](arkts-arkui-fontweight-e.md)
 
@@ -116,7 +116,7 @@ fontWeight?: FontWeight
 minLength?: LengthMetrics
 ```
 
-标题最小长度。默认值：undefined。值为undefined或不设置时默认为48vp。
+Minimum width of the title. Default value: 48vp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

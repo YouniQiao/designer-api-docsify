@@ -4,7 +4,7 @@
 export declare class ToolBarV2StyleConfigs
 ```
 
-定义工具栏的样式配置。
+Defines the style configuration for the toolbar.
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 systemBackgroundMaterial?: uiMaterial.Material
 ```
 
-工具栏的系统材质效果。默认值：undefined。不设置时，不系统材质。
+Background material of the toolbar. Sets a system-styled material effect that influences the backgroundColor, border, shadow, and other visual attributes of the toolbar. Default value: undefined.
 
 **Type:** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
@@ -48,7 +48,7 @@ systemBackgroundMaterial?: uiMaterial.Material
 systemMaterialStyle?: ToolBarV2MaterialStyle
 ```
 
-工具栏的简化材质样式。如果两者systemBackgroundMaterial和systemMaterialStyle都设置了，systemBackgroundMaterial优先生效。默认值：undefined。不设置时，默认为ToolBarV2MaterialStyle.NONE效果。
+Simplified material style of the toolbar. If both systemBackgroundMaterial and systemMaterialStyle are set, systemBackgroundMaterial takes precedence. Default value: undefined. If this parameter is not set, ToolBarV2MaterialStyle.NONE is used.
 
 **Type:** [ToolBarV2MaterialStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2materialstyle-e-sys.md)
 

@@ -6,6 +6,12 @@ export declare enum ToolBarV2ItemState
 
 声明ToolBarV2ItemState枚举。
 
+| 名称 | 值 | 说明 |  
+| -------- | - | --------------- |  
+| ENABLE | 1 | 工具栏子项为正常可点击状态。 |  
+| DISABLE | 2 | 工具栏子项为不可点击状态。 |  
+| ACTIVATE | 3 | 工具栏子项为激活状态，可点击。 |
+
 **起始版本：** 18
 
 <!--Device-unnamed-export declare enum ToolBarV2ItemState--><!--Device-unnamed-export declare enum ToolBarV2ItemState-End-->

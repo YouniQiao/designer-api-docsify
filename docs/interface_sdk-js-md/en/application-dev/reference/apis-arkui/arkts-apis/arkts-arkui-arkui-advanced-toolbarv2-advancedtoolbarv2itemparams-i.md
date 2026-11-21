@@ -4,9 +4,9 @@
 export interface AdvancedToolBarV2ItemParams extends ToolBarV2ItemOptions
 ```
 
-声明AdvancedToolBarV2Item的选项。
+Declare the options of AdvancedToolBarV2Item.
 
-使用高级字段扩展[ToolBarV2ItemOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md)。内容是作为必填字段继承；在项上使用isShowText来控制文本是否被渲染。
+Extends [ToolBarV2ItemOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md) with advanced fields. `content` is inherited as a required field; use `isShowText` on the item to control whether the text is rendered.
 
 **Inheritance/Implementation:** AdvancedToolBarV2ItemParams extends [ToolBarV2ItemOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md)
 
@@ -28,7 +28,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activatedBackgroundColor?: ColorMetrics
 ```
 
-处于ACTIVATE状态的项目背景色（激活的背景色）。仅适用于仅有图标的项目，图标+文本项目不能设置背景颜色。建议使用$r('sys.color.comp_background_emphasize')。默认值：undefined，表示无颜色。
+Item background color in `ACTIVATE` status (activated background color). Only applies to icon-only items; icon+text items cannot set a background color. Defaults to transparent when not specified. Recommend using `$r('sys.color.comp_background_emphasize')`. Default value: Color.Transparent.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -48,7 +48,7 @@ activatedBackgroundColor?: ColorMetrics
 builder?: CustomBuilder
 ```
 
-工具栏项的自定义内容生成器。设置时，内容和图标将被忽略。
+Custom content builder for the toolbar item. When set, content and icon are ignored. Default value: undefined.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
@@ -68,7 +68,7 @@ builder?: CustomBuilder
 displayPriority?: number
 ```
 
-布局容器中工具栏项的显示优先级。值越高，显示优先级越高。取值范围[0, 10]。默认值：1。
+Display priority of the toolbar item in the layout container. Higher values indicate higher display priority. The value range is [0, 10]. Default value: 1.
 
 **Type:** number
 
@@ -88,7 +88,7 @@ displayPriority?: number
 groupID?: string
 ```
 
-组标识。相同非空groupID的项作为一个视觉群体。同一groupID的第一个项决定组的位置。默认值：undefined，表示没有groupID。
+Group identifier. Items sharing the same non-empty `groupID` are rendered as a visual group. Default value: undefined.
 
 **Type:** string
 
@@ -108,7 +108,7 @@ groupID?: string
 groupStyle?: ToolBarV2ItemGroupStyle
 ```
 
-此项目所属组的样式配置。相同groupID下第一个设置了groupStyle的样式配置生效；具有相同groupID的后续项上的值将被忽略。
+Style configuration for the group that this item belongs to. Only the value on the first item (in array order) carrying a given `groupID` takes effect; values on subsequent items with the same `groupID` are ignored. Default value: undefined.
 
 **Type:** [ToolBarV2ItemGroupStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemgroupstyle-c.md)
 
@@ -128,7 +128,7 @@ groupStyle?: ToolBarV2ItemGroupStyle
 id?: string
 ```
 
-工具栏项的唯一标识符。默认值：undefined，表示未设置id。
+Unique identifier for the toolbar item. Default value: undefined.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ id?: string
 isShowOverflowMenu?: boolean
 ```
 
-此项中是否显示为工具栏的溢出菜单。默认值：undefined。值为undefined或不设置时默认为false。
+Whether to display the overflowMenu of the toolbar in this item. Default value: false.
 
 **Type:** boolean
 
@@ -168,7 +168,7 @@ isShowOverflowMenu?: boolean
 isShowSeparator?: boolean
 ```
 
-是否在该项后显示分隔符。如果为true，则在该项之后呈现分隔符（而不是在工具栏中的最后一项之后）。默认值：false，表示不显示分隔符。
+Whether to show a separator after this item. When true, a separator is rendered after this item (not after the last item in the toolbar). Default value: false.
 
 **Type:** boolean
 
@@ -188,7 +188,7 @@ isShowSeparator?: boolean
 isShowText?: boolean
 ```
 
-是否显示工具栏项的文本内容。当设置为false时，由content指定的文本不会在工具栏中呈现。针对项中仅需图标显示的场景使用。默认值：undefined。值为undefined或不设置时默认为true，表示同时存在图标和文本时文本可显示。
+Whether to display the text content of the toolbar item. When set to false, the text specified by `content` is not rendered in the toolbar, but `content` is still used for accessibility and overflow menu identification. This is useful when an icon-only item still needs text identification in the overflow menu. Default value: true.
 
 **Type:** boolean
 
@@ -208,7 +208,7 @@ isShowText?: boolean
 itemSize?: Size
 ```
 
-工具栏项的项大小（宽×高）。
+Item size (width × height) for the toolbar item. Default value: mainAxis 56vp x crossAxis 48vp. When horizontal: 56vp(width) x 48vp(height). When vertical: 48vp(width) x 56vp(height).
 
 **Type:** Size
 
@@ -228,7 +228,7 @@ itemSize?: Size
 placement?: ToolBarV2ItemPlacement
 ```
 
-工具栏项的放置位置。默认值：ToolBarV2ItemPlacement.MAIN。
+Placement position of the toolbar item. Default value: ToolBarV2ItemPlacement.MAIN.
 
 **Type:** [ToolBarV2ItemPlacement](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemplacement-e.md)
 
@@ -248,7 +248,7 @@ placement?: ToolBarV2ItemPlacement
 titleConfigs?: ToolBarV2TitleConfigs
 ```
 
-定义高级工具栏V2标题设置。如果不提供，则不显示标题。
+Define advanced ToolBarV2 title settings. When not provided, no title is rendered.
 
 **Type:** [ToolBarV2TitleConfigs](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2titleconfigs-c.md)
 

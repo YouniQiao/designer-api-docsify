@@ -4,7 +4,7 @@
 export struct ToolBarContainer
 ```
 
-ToolBarContainer组件，用于承载一个或多个浮动工具栏，支持停靠、安全区避让和握姿适配。
+The ToolBarContainer component hosts one or more floating toolbars, and supports docking, safe area avoidance, and handedness adaptation.
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 containerConfigs?: ToolBarContainerConfigs
 ```
 
-容器级配置，包括停靠偏移量、安全区避让和握姿适配。
+Container-level configuration, including docking offsets, safe area avoidance, and handedness adaptation.
 
 **Type:** [ToolBarContainerConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontainerconfigs-c.md)
 
@@ -46,7 +46,7 @@ containerConfigs?: ToolBarContainerConfigs
 content: Callback<void>
 ```
 
-组件中显示的内容。
+Content displayed in the component.
 
 **Type:** Callback&lt;void&gt;
 
@@ -68,7 +68,7 @@ content: Callback<void>
 toolbars: ToolBarConfigs[]
 ```
 
-工具栏配置列表。最多支持4个工具栏，超出部分不生效。
+List of toolbar configurations. A maximum of four toolbars is supported; any additional toolbars do not take effect.
 
 **Type:** [ToolBarConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarconfigs-c.md)[]
 

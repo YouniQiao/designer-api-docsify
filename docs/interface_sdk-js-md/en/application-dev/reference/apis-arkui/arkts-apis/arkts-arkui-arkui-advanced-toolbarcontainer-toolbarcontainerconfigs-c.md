@@ -4,7 +4,7 @@
 export class ToolBarContainerConfigs
 ```
 
-工具栏容器的可观察配置存储，与[ToolBarContainerOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontaineroptions-i.md)对应。
+Observable configuration store for the toolbar container, corresponding to [ToolBarContainerOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontaineroptions-i.md).
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 constructor(options?: ToolBarContainerOptions)
 ```
 
-构造函数。当options省略时，所有字段使用各自的默认值。
+Constructor. When options is omitted, all fields use their respective default values.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ constructor(options?: ToolBarContainerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarContainerOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontaineroptions-i.md) | No | 容器选项。 |
+| options | [ToolBarContainerOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarcontaineroptions-i.md) | No | Container options. |
 
 ## adaptToHandedness
 
@@ -50,7 +50,7 @@ constructor(options?: ToolBarContainerOptions)
 adaptToHandedness?: HandednessAdaptationMode
 ```
 
-接入智感握姿模式。默认值：HandednessAdaptationMode.NONE。
+Handedness adaptation mode. Default value: HandednessAdaptationMode.NONE.
 
 **Type:** [HandednessAdaptationMode](arkts-arkui-arkui-advanced-toolbarcontainer-handednessadaptationmode-e.md)
 
@@ -72,7 +72,7 @@ adaptToHandedness?: HandednessAdaptationMode
 dockOffset?: ToolBarDockOffsetOptions
 ```
 
-停靠偏移量，单位为vp。默认值：各边为16vp。
+Docking offsets, in vp. Default value: 16 vp for each edge.
 
 **Type:** [ToolBarDockOffsetOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbardockoffsetoptions-i.md)
 
@@ -94,7 +94,7 @@ dockOffset?: ToolBarDockOffsetOptions
 gutter?: LengthMetrics
 ```
 
-工具栏之间的间隔。
+Spacing between toolbars.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -116,7 +116,7 @@ gutter?: LengthMetrics
 safeArea?: ToolBarSafeAreaOptions
 ```
 
-安全区模式。默认值：各边为ToolBarSafeAreaMode.NONE。
+Safe area mode. Default value: ToolBarSafeAreaMode.NONE for each edge.
 
 **Type:** [ToolBarSafeAreaOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareaoptions-i.md)
 

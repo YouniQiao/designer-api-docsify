@@ -145,7 +145,7 @@ enum Http_ResponseCode
 | OH_HTTP_OK = 200 | 请求成功。 |
 | OH_HTTP_CREATED = 201 | 成功请求并创建新资源。 |
 | OH_HTTP_ACCEPTED = 202 | 请求已被接受但尚未完全处理。 |
-| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | 请求成功。但是有未授权信息。 |
+| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | 请求成功，但是有未授权信息。 |
 | OH_HTTP_NO_CONTENT = 204 | 服务器处理成功，但未返回内容。 |
 | OH_HTTP_RESET = 205 | 重置内容。 |
 | OH_HTTP_PARTIAL = 206 | 服务器成功处理了部分GET请求。 |
@@ -292,7 +292,7 @@ typedef void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t e
 | 参数项 | 描述 |
 | -- | -- |
 | [struct Http_Response](capi-netstack-http-response.md) *response | HTTP响应结构体，指向Http_Response的指针，参考[Http_Response](capi-netstack-http-response.md)。 |
-| uint32_t errCode | 响应码。 |
+| uint32_t errCode | HTTP请求错误码。 |
 
 ### Http_OnDataReceiveCallback()
 

@@ -52,6 +52,8 @@ activatedColor?: ColorMetrics
 
 项被激活时的图标填充颜色。
 
+默认值：$r('sys.color.icon_emphasize')
+
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
@@ -73,6 +75,8 @@ color?: ColorMetrics
 ```
 
 定义图标填充颜色。
+
+默认值：$r('sys.color.icon_primary')
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

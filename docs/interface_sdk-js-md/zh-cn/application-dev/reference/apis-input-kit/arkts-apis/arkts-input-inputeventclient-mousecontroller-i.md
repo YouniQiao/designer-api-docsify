@@ -29,7 +29,8 @@ beginAxis(axis: Axis, value: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,7 +106,8 @@ endAxis(axis: Axis): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,7 +149,8 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,7 +219,8 @@ pressButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,7 +291,8 @@ releaseButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -329,7 +334,8 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

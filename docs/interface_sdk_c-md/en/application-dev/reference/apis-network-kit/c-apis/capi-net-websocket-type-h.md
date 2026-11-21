@@ -24,22 +24,22 @@ Defines the data structure for the C APIs of the WebSocket client module.
 | [WebSocket_OpenResult](capi-netstack-websocket-openresult.md) | Defines the parameters for the connection success received by the WebSocket client. |
 | [WebSocket_Header](capi-netstack-websocket-header.md) | Defines the header linked list added to the WebSocket client. |
 | [WebSocket_RequestOptions](capi-netstack-websocket-requestoptions.md) | Defines the parameters for the connection between the WebSocket client and server. |
-| [WebSocket](capi-netstack-websocket.md) | Defines the parameters for the connection closure received by the WebSocket client. |
+| [WebSocket](capi-netstack-websocket.md) | Defines the struct of the WebSocket client. |
 
 ### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [WebSocket_ErrCode](#websocket_errcode) | WebSocket_ErrCode | Defines the parameters for the connection closure received by the WebSocket client. |
+| [WebSocket_ErrCode](#websocket_errcode) | WebSocket_ErrCode | Defines the error codes of WebSocket requests. |
 
 ### Functions
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_OpenResult openResult)](#websocket_onopencallback) | WebSocket_OnOpenCallback | Callback invoked when the WebSocket client receives an **Open** message. |
-| [typedef void (\*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data, uint32_t length)](#websocket_onmessagecallback) | WebSocket_OnMessageCallback | Callback invoked when the WebSocket client receives a **Message** message. |
-| [typedef void (\*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult)](#websocket_onerrorcallback) | WebSocket_OnErrorCallback | Callback invoked when the WebSocket client receives an **Error** message. |
-| [typedef void (\*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult)](#websocket_onclosecallback) | WebSocket_OnCloseCallback | Callback invoked when the WebSocket client receives a **Close** message. |
+| [typedef void (\*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_OpenResult openResult)](#websocket_onopencallback) | WebSocket_OnOpenCallback | Defines a callback invoked when the WebSocket client receives an open message. |
+| [typedef void (\*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data, uint32_t length)](#websocket_onmessagecallback) | WebSocket_OnMessageCallback | Defines a callback invoked when the WebSocket client receives data. |
+| [typedef void (\*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult)](#websocket_onerrorcallback) | WebSocket_OnErrorCallback | Defines a callback invoked when the WebSocket client receives an error message. |
+| [typedef void (\*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult)](#websocket_onclosecallback) | WebSocket_OnCloseCallback | Defines a callback invoked when the WebSocket client receives a close message. |
 
 ## Enum type description
 
@@ -51,7 +51,7 @@ enum WebSocket_ErrCode
 
 **Description**
 
-Defines the parameters for the connection closure received by the WebSocket client.
+Defines the error codes of WebSocket requests.
 
 <!--Device-WebSocket_ErrCode--><!--Device-WebSocket_ErrCode-End-->
 
@@ -92,7 +92,7 @@ typedef void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_Ope
 
 **Description**
 
-Callback invoked when the WebSocket client receives an **Open** message.
+Defines a callback invoked when the WebSocket client receives an open message.
 
 <!--Device-typedef void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_OpenResult openResult)--><!--Device-typedef void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_OpenResult openResult)-End-->
 
@@ -104,8 +104,8 @@ Callback invoked when the WebSocket client receives an **Open** message.
 
 | Parameter | Description |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | WebSocket client. |
-| [WebSocket_OpenResult](capi-netstack-websocket-openresult.md) openResult | Content of the **Open** message sent from the WebSocket server to client. |
+| [struct WebSocket](capi-netstack-websocket.md) *client | Pointer to the WebSocket client. |
+| [WebSocket_OpenResult](capi-netstack-websocket-openresult.md) openResult | Content of the connection establishment message received by the WebSocket client. |
 
 ### WebSocket_OnMessageCallback()
 
@@ -115,7 +115,7 @@ typedef void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data
 
 **Description**
 
-Callback invoked when the WebSocket client receives a **Message** message.
+Defines a callback invoked when the WebSocket client receives data.
 
 <!--Device-typedef void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data, uint32_t length)--><!--Device-typedef void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data, uint32_t length)-End-->
 
@@ -139,7 +139,7 @@ typedef void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_Er
 
 **Description**
 
-Callback invoked when the WebSocket client receives an **Error** message.
+Defines a callback invoked when the WebSocket client receives an error message.
 
 <!--Device-typedef void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult)--><!--Device-typedef void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_ErrorResult errorResult)-End-->
 
@@ -151,8 +151,8 @@ Callback invoked when the WebSocket client receives an **Error** message.
 
 | Parameter | Description |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | WebSocket client. |
-| [WebSocket_ErrorResult](capi-netstack-websocket-errorresult.md) errorResult | Content of the **Error** message sent from the WebSocket server to client. |
+| [struct WebSocket](capi-netstack-websocket.md) *client | Pointer to the WebSocket client. |
+| [WebSocket_ErrorResult](capi-netstack-websocket-errorresult.md) errorResult | Content of the connection error message received by the WebSocket client. |
 
 ### WebSocket_OnCloseCallback()
 
@@ -162,7 +162,7 @@ typedef void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_Cl
 
 **Description**
 
-Callback invoked when the WebSocket client receives a **Close** message.
+Defines a callback invoked when the WebSocket client receives a close message.
 
 <!--Device-typedef void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult)--><!--Device-typedef void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_CloseResult closeResult)-End-->
 
@@ -175,6 +175,6 @@ Callback invoked when the WebSocket client receives a **Close** message.
 | Parameter | Description |
 | -- | -- |
 | [struct WebSocket](capi-netstack-websocket.md) *client | WebSocket client. |
-| [WebSocket_CloseResult](capi-netstack-websocket-closeresult.md) closeResult | Content of the **Close** message sent from the WebSocket server to client. |
+| [WebSocket_CloseResult](capi-netstack-websocket-closeresult.md) closeResult | Content of the close message received by the WebSocket client. |
 
 

@@ -32,7 +32,8 @@ Presses down a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,7 +125,8 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +168,8 @@ Releases a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.CONTROL_DEVICE
+**Required permissions:** 
+- API version 26 and later: ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
 

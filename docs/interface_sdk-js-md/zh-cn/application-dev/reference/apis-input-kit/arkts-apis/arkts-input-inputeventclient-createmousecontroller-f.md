@@ -16,7 +16,8 @@ function createMouseController(): Promise<MouseController>
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.CONTROL_DEVICE
+**需要权限：** 
+- API版本26+：ohos.permission.CONTROL_DEVICE or ohos.permission.ENTERPRISE_CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

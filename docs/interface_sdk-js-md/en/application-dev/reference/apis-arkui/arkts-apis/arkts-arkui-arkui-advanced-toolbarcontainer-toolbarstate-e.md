@@ -4,7 +4,7 @@
 export enum ToolBarState
 ```
 
-定义工具栏状态。
+Defines the toolbar states.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export enum ToolBarState
 FIXED = 0
 ```
 
-工具栏固定在当前位置。
+The toolbar is fixed at its current position.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ FIXED = 0
 FLOATING = 1
 ```
 
-工具栏处于浮动状态，可被拖拽。
+The toolbar is floating and can be dragged.
 
 **Since:** 26.1.0
 
@@ -54,7 +54,7 @@ FLOATING = 1
 MINIMIZED = 2
 ```
 
-工具栏被最小化为悬浮球。
+The toolbar is minimized to a floating ball.
 
 **Since:** 26.1.0
 

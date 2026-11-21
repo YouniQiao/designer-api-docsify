@@ -24,7 +24,7 @@ typedef struct Http_Proxy {...} Http_Proxy
 
 | 名称 | 描述 |
 | -- | -- |
-| [Http_ProxyType](capi-net-http-type-h.md#http_proxytype) proxyType | Proxy configuration type. For details, see [Http_ProxyType](capi-net-http-type-h.md#http_proxytype). |
-| [Http_CustomProxy](capi-netstack-http-customproxy.md) customProxy | Custom proxy configuration. For details, see [Http_CustomProxy](capi-netstack-http-customproxy.md). |
+| [Http_ProxyType](capi-net-http-type-h.md#http_proxytype) proxyType | 代理配置类型，参考[Http_ProxyType](capi-net-http-type-h.md#http_proxytype)。 |
+| [Http_CustomProxy](capi-netstack-http-customproxy.md) customProxy | 自定义代理配置信息，参考[Http_CustomProxy](capi-netstack-http-customproxy.md)。 |
 
 

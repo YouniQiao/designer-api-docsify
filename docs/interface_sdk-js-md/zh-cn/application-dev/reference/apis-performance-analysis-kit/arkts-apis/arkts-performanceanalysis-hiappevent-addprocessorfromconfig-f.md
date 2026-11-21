@@ -12,7 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessorFromConfig(processorName: string, configName?: string): Promise<number>
 ```
 
-添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。
+<!--RP1-->添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。<!--RP1End-->
 
 **起始版本：** 20
 
@@ -26,8 +26,8 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processorName | string | 是 | 数据处理者的名称。名称只能包含大小写字母、数字、下划线和$，不能以数字开头，长度非空且不超过256个字符。 |
-| configName | string | 否 | 数据处理者的配置名称，支持从配置文件中加载对应配置，默认为“SDK_OCG”。只能包含大小写字母、数字、下划线和$，不能以数字开头，长度非空且不超过256个字符。 |
+| processorName | string | 是 | <!--RP2-->数据处理者的名称。名称只能包含大小写字母、数字、下划线和$，不能以数字开头，长度非空且不超过256个字符。<!--RP2End--> |
+| configName | string | 否 | <!--RP3-->数据处理者的配置名称，支持从配置文件中加载对应配置，默认为“SDK_OCG”。只能包含大小写字母、数字、下划线和$，不能以数字开头，长度非空且不超过256个字符。<!--RP3End--> |
 
 **返回值：**
 

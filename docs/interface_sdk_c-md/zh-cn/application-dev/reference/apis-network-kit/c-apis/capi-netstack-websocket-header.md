@@ -6,7 +6,7 @@ struct WebSocket_Header {...}
 
 ## 概述
 
-websocket客户端增加header的链表节点。
+WebSocket客户端增加header的链表节点。
 
 <!--Device-struct WebSocket_Header {...}--><!--Device-struct WebSocket_Header {...}-End-->
 

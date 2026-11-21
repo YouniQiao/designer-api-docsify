@@ -4,7 +4,7 @@
 export declare enum ToolBarV2MaterialStyle
 ```
 
-工具栏的系统材质样式。
+System material styles of the toolbar.
 
 **Since:** 26.1.0
 
@@ -20,7 +20,7 @@ export declare enum ToolBarV2MaterialStyle
 DEFAULT = 1
 ```
 
-默认材质样式。
+Default material style.
 
 **Since:** 26.1.0
 
@@ -38,7 +38,7 @@ DEFAULT = 1
 NONE = 0
 ```
 
-无系统材质效果。
+No system material effect.
 
 **Since:** 26.1.0
 

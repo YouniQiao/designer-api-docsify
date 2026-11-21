@@ -6,7 +6,7 @@ struct WebSocket_CloseOption {...}
 
 ## 概述
 
-websocket客户端主动关闭的参数。
+WebSocket客户端主动关闭的参数。
 
 <!--Device-struct WebSocket_CloseOption {...}--><!--Device-struct WebSocket_CloseOption {...}-End-->
 

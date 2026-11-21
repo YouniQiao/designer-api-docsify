@@ -4,7 +4,7 @@
 export interface ToolBarContainerOptions
 ```
 
-配置工具栏容器的布局、安全区避让和握姿适配的选项。
+Defines options for configuring the layout, safe area avoidance, and handedness adaptation of the toolbar container.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 adaptToHandedness?: HandednessAdaptationMode
 ```
 
-接入智感握姿模式。默认值：HandednessAdaptationMode.NONE。仅在单工具栏时生效。
+Handedness adaptation mode. Default value: HandednessAdaptationMode.NONE. This parameter takes effect only when there is a single toolbar.
 
 **Type:** [HandednessAdaptationMode](arkts-arkui-arkui-advanced-toolbarcontainer-handednessadaptationmode-e.md)
 
@@ -44,7 +44,7 @@ adaptToHandedness?: HandednessAdaptationMode
 dockOffset?: ToolBarDockOffsetOptions
 ```
 
-浮动工具栏的停靠偏移量。
+Docking offsets of the floating toolbar.
 
 **Type:** [ToolBarDockOffsetOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbardockoffsetoptions-i.md)
 
@@ -64,7 +64,7 @@ dockOffset?: ToolBarDockOffsetOptions
 gutter?: LengthMetrics
 ```
 
-工具栏超长溢出时的避让间隔。
+Avoidance spacing used when the toolbar is too long and overflows.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -84,7 +84,7 @@ gutter?: LengthMetrics
 safeArea?: ToolBarSafeAreaOptions
 ```
 
-安全区避让模式。默认值：各边为[NONE](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md#none)。
+Safe area avoidance mode. Default value: [NONE](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md#none) for each edge.
 
 **Type:** [ToolBarSafeAreaOptions](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareaoptions-i.md)
 

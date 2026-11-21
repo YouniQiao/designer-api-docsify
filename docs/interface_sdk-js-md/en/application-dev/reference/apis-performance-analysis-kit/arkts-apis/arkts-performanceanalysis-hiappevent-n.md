@@ -37,7 +37,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor-1) | Adds the configuration information of the data processor, such as the event name received by it. |
-| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig-1) | Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result. |
+| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig-1) | <!--RP1-->Add the configuration information of the data processor and configure the information such as the event name received by the processor through the configuration file. After the event occurs, the processor can receive the event and use Promise asynchronous callback. <!--RP1End--> |
 | [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher-1) | Adds an event watcher. You can use the callback of the event watcher to subscribe to events. |
 | [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#cleardata-1) | Clears local logging data of the application. |
 | [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy-1) | Sets a system event configuration policy. This API uses a promise to return the result. |

@@ -92,7 +92,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-项的无障碍重要性级别。
+项的无障碍重要性级别。默认值："自动"。
 
 **类型：** string
 

@@ -6,7 +6,7 @@ struct WebSocket {...}
 
 ## Overview
 
-Defines the parameters for the connection closure received by the WebSocket client.
+Defines the struct of the WebSocket client.
 
 <!--Device-struct WebSocket {...}--><!--Device-struct WebSocket {...}-End-->
 

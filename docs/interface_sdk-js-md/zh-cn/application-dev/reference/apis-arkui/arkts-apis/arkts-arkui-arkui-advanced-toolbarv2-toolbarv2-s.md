@@ -4,7 +4,7 @@
 export declare struct ToolBarV2
 ```
 
-工具栏用于展示针对当前界面内容的操作选项，在界面底部显示，适用于需要为用户提供快速操作入口的场景。底部最多显示5个入口，超过则收纳入“更多”子项中，在最右侧显示。适用于需要对当前页面内容进行快捷操作的场景，可帮助用户快速访问常用功能，提升操作效率。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制工具栏的数据和状态，实现更高效的用户界面刷新。
+工具栏用于展示针对当前界面内容的操作选项，在界面底部显示，适用于需要为用户提供快速操作入口的场景。底部最多显示5个入口，超过则收纳入“更多”子项中，在最右侧显示。适用于需要对当前页面内容进行快捷操作的场景，可帮助用户快速访问常用功能，提升操作效率。ToolBarV2支持通过AdvancedToolBarV2Item（继承自ToolBarV2Item）配置高级工具栏项。配置了高级项的工具栏更加灵活，可以自定义标题、溢出菜单、条目分组等。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制工具栏的数据和状态，实现更高效的用户界面刷新。
 
 > **说明：** 
 > 
@@ -40,7 +40,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activatedIndex?: number
 ```
 
-定义ToolBarV2激活项的索引，默认值为-1。
+定义ToolBarV2激活项的索引，默认值为-1。仅用于ToolBarV2Item组成的普通工具栏。
 
 **类型：** number
 
@@ -54,13 +54,33 @@ activatedIndex?: number
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## advancedToolBarModifier
+
+```TypeScript
+advancedToolBarModifier?: AdvancedToolBarV2Modifier
+```
+
+定义高级工具栏V2修饰符。合并布局属性、样式配置、和溢出菜单样式到单个修改器中。
+
+**类型：** [AdvancedToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-advancedtoolbarv2modifier-c.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ToolBarV2-advancedToolBarModifier?: AdvancedToolBarV2Modifier--><!--Device-ToolBarV2-advancedToolBarModifier?: AdvancedToolBarV2Modifier-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## dividerModifier
 
 ```TypeScript
 dividerModifier?: DividerModifier
 ```
 
-定义分割线修饰符。
+定义分割线修饰符。仅用于ToolBarV2Item组成的普通工具栏。
 
 **类型：** [DividerModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -80,7 +100,7 @@ dividerModifier?: DividerModifier
 toolBarList: ToolBarV2Item[]
 ```
 
-定义ToolBarV2项列表。
+定义ToolBarV2项列表。使用ToolBarV2Item可构建普通工具栏。AdvancedToolBarV2Item（继承自ToolBarV2Item）可用于更高级的布局场景，比如标题、溢出菜单以及项目分组。
 
 **类型：** [ToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
@@ -102,7 +122,7 @@ toolBarList: ToolBarV2Item[]
 toolBarModifier?: ToolBarV2Modifier
 ```
 
-定义ToolBarV2修饰符。
+定义ToolBarV2修饰符。仅用于ToolBarV2Item组成的普通工具栏。
 
 **类型：** [ToolBarV2Modifier](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2modifier-c.md)
 

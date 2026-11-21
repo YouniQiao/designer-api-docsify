@@ -4,7 +4,7 @@
 export declare class ToolBarV2ItemImage
 ```
 
-定义工具栏子项的普通图标。
+Defines the icon content of a toolbar item.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options: ToolBarV2ItemImageOptions)
 ```
 
-ToolBarV2ItemImage的构造函数。
+A constructor used to create a **ToolBarV2ItemImage** instance.
 
 **Since:** 18
 
@@ -50,9 +50,11 @@ ToolBarV2ItemImage的构造函数。
 activatedColor?: ColorMetrics
 ```
 
-工具栏子项在激活态下图标的颜色。
+Color of the icon when the toolbar item is activated.
 
-默认值：$r('sys.color.icon_emphasize')
+Default value: **$r('sys.color.icon_emphasize')**.
+
+Decorator: @Trace
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -74,9 +76,11 @@ activatedColor?: ColorMetrics
 color?: ColorMetrics
 ```
 
-工具栏子项的图标的颜色。
+Color of the icon.
 
-默认值：$r('sys.color.icon_primary')
+Default value: **$r('sys.color.icon_primary')**.
+
+Decorator: @Trace
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -98,7 +102,9 @@ color?: ColorMetrics
 src: ResourceStr
 ```
 
-工具栏子项的图标。
+Icon of the toolbar item.
+
+Decorator: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

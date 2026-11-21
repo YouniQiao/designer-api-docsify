@@ -48,6 +48,24 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 
 **系统接口：** 此接口为系统接口。
 
+## BACKGROUND_PROCESS_PROMOTE_PRIORITY
+
+```TypeScript
+BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'
+```
+
+启动或连接业务扩展能力时，优先提升标志位。设置该参数后，系统将提升目标业务扩展流程的优先级。调用方必须具有ohos.permission.PROMOTE_SERVICE_EXTENSION_PRIORITY权限，否则这参数将被忽略。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Params-BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'--><!--Device-Params-BACKGROUND_PROCESS_PROMOTE_PRIORITY = 'ohos.param.promoteBackgroundProcessPriority'-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityBase
+
+**系统接口：** 此接口为系统接口。
+
 ## DLP_PARAMS_ABILITY_NAME
 
 ```TypeScript

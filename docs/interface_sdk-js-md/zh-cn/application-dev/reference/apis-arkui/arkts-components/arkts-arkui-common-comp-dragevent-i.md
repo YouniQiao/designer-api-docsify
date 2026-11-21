@@ -511,6 +511,30 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 | --- | --- | --- | --- |
 | dataLoadParams | [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | 是 | 落入操作时使用的数据加载参数。 |
 
+## setDragWindowVisible
+
+```TypeScript
+setDragWindowVisible(visible: boolean): void
+```
+
+设置拖拽背板是否可见。在[onDragStart](arkts-arkui-common-comp-commonmethod-c.md#ondragstart)、[onDragEnter](arkts-arkui-common-comp-commonmethod-c.md#ondragenter)、[onDragMove](arkts-arkui-common-comp-commonmethod-c.md#ondragmove)回调中调用。调用接口设为false后，拖拽背板立即隐藏，不影响事件分发和数据传输。离开目标组件区域或者拖拽结束时拖拽背板自动恢复显示。当开发者未调用该接口设置是否可见时，系统默认会显示拖拽背板。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragEvent-setDragWindowVisible(visible: boolean): void--><!--Device-DragEvent-setDragWindowVisible(visible: boolean): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 设置拖拽背板是否可见。true：显示拖拽背板；false：隐藏拖拽背板。 |
+
 ## setResult
 
 ```TypeScript

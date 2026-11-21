@@ -4,7 +4,7 @@
 export declare type ToolBarDockCallback = (area: DockArea, direction: Axis) => void
 ```
 
-工具栏停靠到指定区域和方向时的回调。
+Defines the callback invoked when the toolbar docks to the specified area and direction.
 
 **Since:** 26.1.0
 
@@ -20,5 +20,5 @@ export declare type ToolBarDockCallback = (area: DockArea, direction: Axis) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | Yes | 工具栏停靠的区域。 |
-| direction | [Axis](arkts-arkui-axis-e.md) | Yes | 停靠方向。 |
+| area | [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md) | Yes | Area where the toolbar is docked. |
+| direction | [Axis](arkts-arkui-axis-e.md) | Yes | Docking direction. |

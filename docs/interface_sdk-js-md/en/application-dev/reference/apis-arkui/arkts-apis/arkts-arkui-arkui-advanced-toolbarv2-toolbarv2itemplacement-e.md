@@ -4,7 +4,7 @@
 export declare enum ToolBarV2ItemPlacement
 ```
 
-定义工具栏项在工具栏中的放置位置。
+Defines the placement position of a toolbar item within the toolbar.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export declare enum ToolBarV2ItemPlacement
 LEADING = 1
 ```
 
-前半区。适合于导航或放置在主要内容之前的主要操作。
+Leading half-area. Suitable for primary actions placed before the main content.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ LEADING = 1
 MAIN = 0
 ```
 
-中心区域。适用于主内容区域中显示的主要工具栏操作。一般项的默认位置。
+Center area (default). Suitable for primary toolbar actions displayed in the main content region.
 
 **Since:** 26.1.0
 
@@ -54,7 +54,7 @@ MAIN = 0
 TRAILING = 2
 ```
 
-后半区。适用于放置在主要内容之后的次要或溢出操作。
+Trailing half-area. Suitable for secondary or overflow actions placed after the main content.
 
 **Since:** 26.1.0
 

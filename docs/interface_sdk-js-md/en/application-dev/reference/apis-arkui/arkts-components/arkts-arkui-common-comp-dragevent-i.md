@@ -511,6 +511,30 @@ Sets the parameters for deferred data loading from the drag source. This API pro
 | --- | --- | --- | --- |
 | dataLoadParams | [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | Yes | Data loading parameters used when the drag initiator provides data with a delay, used to provide the loading method of the actual drag data to the system when the user drops on the target application. |
 
+## setDragWindowVisible
+
+```TypeScript
+setDragWindowVisible(visible: boolean): void
+```
+
+Sets whether the drag backplane is visible. Invoked in the [onDragStart](arkts-arkui-common-comp-commonmethod-c.md#ondragstart), [onDragEnter](arkts-arkui-common-comp-commonmethod-c.md#ondragenter), and [onDragMove](arkts-arkui-common-comp-commonmethod-c.md#ondragmove) callbacks. If this parameter is set to false, the backplane is hidden immediately after being dragged. Event distribution and data transmission are not affected. When you leave the target component area or drag the backplane, the backplane is automatically displayed. If you do not call this API to set whether to be visible, the system displays the drag backplane by default.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DragEvent-setDragWindowVisible(visible: boolean): void--><!--Device-DragEvent-setDragWindowVisible(visible: boolean): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| visible | boolean | Yes | Sets whether the drag backplane is visible. true: The drag backplane is displayed. false: The drag backplane is hidden. |
+
 ## setResult
 
 ```TypeScript

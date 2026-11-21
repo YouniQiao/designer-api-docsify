@@ -4,7 +4,7 @@
 export declare class ToolBarV2ItemGroupStyle
 ```
 
-定义工具栏项组的样式配置。
+Defines the style configuration for toolbar item group.
 
 **Since:** 26.1.0
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options?: ToolBarV2ItemGroupStyleOptions)
 ```
 
-构造ToolBarV2ItemGroupStyle实例。
+Constructs a ToolBarV2ItemGroupStyle instance.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ constructor(options?: ToolBarV2ItemGroupStyleOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarV2ItemGroupStyleOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemgroupstyleoptions-i.md) | No | 构造函数选项。 |
+| options | [ToolBarV2ItemGroupStyleOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemgroupstyleoptions-i.md) | No | Constructor options. |
 
 ## backgroundColor
 
@@ -50,7 +50,7 @@ constructor(options?: ToolBarV2ItemGroupStyleOptions)
 backgroundColor?: ColorMetrics
 ```
 
-组容器的背景颜色。默认值：undefined。值为undefined或不设置时，值为$r('sys.color.comp_background_primary').
+Background color of the group container. Default value: $r('sys.color.comp_background_primary').
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -72,7 +72,7 @@ backgroundColor?: ColorMetrics
 borderColor?: ColorMetrics
 ```
 
-组容器的圆角颜色。默认值：undefined。值为undefined或不设置时，默认无颜色。
+Border color of the group container. Default value: undefined.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -94,7 +94,7 @@ borderColor?: ColorMetrics
 borderRadius?: LengthMetrics
 ```
 
-组容器的边界边框圆角半径。默认值：undefined。值为undefined或不设置时，默认值为工具栏交叉轴长度的一半。
+Border radius of the group container. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -116,7 +116,7 @@ borderRadius?: LengthMetrics
 borderWidth?: LengthMetrics
 ```
 
-组容器的边框宽度。默认值：undefined。值为undefined或不设置时，默认无宽度。
+Border width of the group container. Default value: undefined.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -138,7 +138,7 @@ borderWidth?: LengthMetrics
 padding?: ToolBarV2PaddingOptions
 ```
 
-group容器的Padding。默认值：undefined。值为undefined或不设置时，默认值为12vp。
+Padding of the group container. Default value: undefined.
 
 **Type:** [ToolBarV2PaddingOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2paddingoptions-i.md)
 
@@ -160,7 +160,7 @@ group容器的Padding。默认值：undefined。值为undefined或不设置时�
 placement?: ToolBarV2ItemPlacement
 ```
 
-组在工具栏中的放置位置。组放置优先于组中单个项目的放置。默认值：ToolBarV2ItemPlacement.MAIN。
+Placement position of the group within the toolbar. The group placement takes precedence over the placement of individual items within the group. Default value: ToolBarV2ItemPlacement.MAIN.
 
 **Type:** [ToolBarV2ItemPlacement](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemplacement-e.md)
 
@@ -182,7 +182,7 @@ placement?: ToolBarV2ItemPlacement
 space?: LengthMetrics
 ```
 
-组内项目之间的间距。默认值：0vp。
+Spacing between items within the group. Default value: 0vp.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -204,7 +204,7 @@ space?: LengthMetrics
 stateEffect?: boolean
 ```
 
-是否显示组内项目的按压状态效果。默认值：true。
+Whether to show the press-state effect for items within the group. Default value: true.
 
 **Type:** boolean
 

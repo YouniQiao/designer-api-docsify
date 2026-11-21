@@ -4,7 +4,7 @@
 export enum ToolBarSafeAreaMode
 ```
 
-定义工具栏的安全区内边距模式。
+Defines the safe area padding mode of the toolbar.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@ export enum ToolBarSafeAreaMode
 NONE = 0
 ```
 
-不应用安全区内边距。
+Does not apply safe area padding.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ NONE = 0
 PADDING = 1
 ```
 
-应用等于安全区内边距。
+Applies padding equal to the safe area insets.
 
 **Since:** 26.1.0
 
@@ -54,7 +54,7 @@ PADDING = 1
 SAFEAREA_PADDING = 2
 ```
 
-同时应用安全区内边距和额外的内边距。
+Applies both safe area padding and additional padding.
 
 **Since:** 26.1.0
 

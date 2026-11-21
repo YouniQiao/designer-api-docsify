@@ -4,7 +4,7 @@
 export interface ToolBarInitialParams
 ```
 
-工具栏初始位置参数，指定创建时的停靠区域、方向和状态。
+Initial position parameters of the toolbar, specifying the docking area, direction, and state at creation.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 direction?: Axis
 ```
 
-工具栏初始停靠方向。默认与吸附的边保持方向一致。
+Initial docking direction of the toolbar. By default, the direction is aligned with the edge to which the toolbar is snapped.
 
 **Type:** [Axis](arkts-arkui-axis-e.md)
 
@@ -44,7 +44,7 @@ direction?: Axis
 dockArea: DockArea
 ```
 
-工具栏初始停靠的区域。
+Initial area where the toolbar is docked.
 
 **Type:** [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md)
 
@@ -64,7 +64,7 @@ dockArea: DockArea
 state?: ToolBarState
 ```
 
-工具栏初始状态。默认值：[FLOATING](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md#floating)。
+Initial state of the toolbar. Default value: [FLOATING](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md#floating).
 
 **Type:** [ToolBarState](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarstate-e.md)
 

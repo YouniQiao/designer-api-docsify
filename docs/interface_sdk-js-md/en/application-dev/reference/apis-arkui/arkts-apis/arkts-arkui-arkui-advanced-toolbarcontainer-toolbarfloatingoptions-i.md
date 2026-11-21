@@ -4,7 +4,7 @@
 export interface ToolBarFloatingOptions
 ```
 
-配置工具栏浮动行为的选项。
+Defines options for configuring the floating behavior of the toolbar.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 cornerMode?: DockCornerMode
 ```
 
-角落吸附模式。MINIMIZE（默认）表示吸附到角落并跟随所在边缘；EXPAND表示保持拖拽方向。
+Corner snapping mode. MINIMIZE (default) indicates that the toolbar snaps to a corner and follows the edge where it is located; EXPAND indicates that the drag direction is retained.
 
 **Type:** [DockCornerMode](arkts-arkui-arkui-advanced-toolbarcontainer-dockcornermode-e.md)
 
@@ -44,7 +44,7 @@ cornerMode?: DockCornerMode
 dockAreas?: DockArea[]
 ```
 
-浮动工具栏允许停靠的区域。默认值：全部8个区域。
+Areas where the floating toolbar is allowed to dock. Default value: all eight areas.
 
 **Type:** [DockArea](arkts-arkui-arkui-advanced-toolbarcontainer-dockarea-e.md)[]
 
@@ -64,7 +64,7 @@ dockAreas?: DockArea[]
 draggable?: boolean
 ```
 
-浮动工具栏是否可拖拽。默认值：true。true表示支持拖拽，false表示禁止拖拽。
+Whether the floating toolbar can be dragged. Default value: true. The value true indicates that dragging is supported, and false indicates that dragging is prohibited.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ draggable?: boolean
 minimizeConfigs?: ToolBarMinimizeConfigs
 ```
 
-浮动工具栏悬浮球的最小化配置。
+Minimization configuration for the floating ball of the floating toolbar.
 
 **Type:** [ToolBarMinimizeConfigs](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarminimizeconfigs-c.md)
 

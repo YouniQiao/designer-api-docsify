@@ -4,7 +4,7 @@
 export interface ToolBarV2TitleOptions
 ```
 
-定义ToolBarV2TitleConfigs的构造函数选项。
+Defines the constructor options for ToolBarV2TitleConfigs.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 content?: ResourceStr
 ```
 
-标题文本内容。
+Title text content. Required when constructing ToolBarV2TitleConfigs. Default value: undefined.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -44,7 +44,7 @@ content?: ResourceStr
 placement?: ToolBarV2ItemPlacement
 ```
 
-标题位置。
+Placement position of the title within the toolbar. Reuses `ToolBarV2ItemPlacement` — the title is arranged in the same area as items with the same placement. Default value: ToolBarV2ItemPlacement.LEADING.
 
 **Type:** [ToolBarV2ItemPlacement](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemplacement-e.md)
 
@@ -64,7 +64,7 @@ placement?: ToolBarV2ItemPlacement
 style?: ToolBarV2TitleStyle
 ```
 
-标题文字样式。
+Title text style.
 
 **Type:** [ToolBarV2TitleStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2titlestyle-c.md)
 
@@ -84,7 +84,7 @@ style?: ToolBarV2TitleStyle
 subTitleContent?: ResourceStr
 ```
 
-副标题文本内容。
+Subtitle text content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -104,7 +104,7 @@ subTitleContent?: ResourceStr
 subTitleStyle?: ToolBarV2TitleStyle
 ```
 
-副标题文字样式。
+Subtitle text style.
 
 **Type:** [ToolBarV2TitleStyle](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2titlestyle-c.md)
 
@@ -124,7 +124,7 @@ subTitleStyle?: ToolBarV2TitleStyle
 visible?: boolean
 ```
 
-标题是否可见。
+Whether the title is visible. Default value: true.
 
 **Type:** boolean
 

@@ -4,7 +4,7 @@
 export declare class ToolBarV2Item
 ```
 
-定义工具栏子项。
+Defines an item in the toolbar.
 
 **Since:** 18
 
@@ -46,7 +46,7 @@ Define the action event.
 constructor(options: ToolBarV2ItemOptions)
 ```
 
-ToolBarV2Item的构造函数。
+A constructor used to create a **ToolBarV2Item** instance.
 
 **Since:** 18
 
@@ -92,7 +92,7 @@ The accessibilityDescription of item.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of item.默认值："自动"。
+The accessibilityLevel of item.
 
 **Type:** string
 

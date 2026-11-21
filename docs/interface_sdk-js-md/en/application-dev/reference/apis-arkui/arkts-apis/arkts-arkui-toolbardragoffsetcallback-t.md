@@ -4,7 +4,7 @@
 export declare type ToolBarDragOffsetCallback = (x: number, y: number) => void
 ```
 
-相对于ToolBarContainer容器的拖拽偏移量回调。
+Defines the callback for the drag offset relative to the ToolBarContainer container.
 
 **Since:** 26.1.0
 
@@ -20,5 +20,5 @@ export declare type ToolBarDragOffsetCallback = (x: number, y: number) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X轴偏移量，单位为vp。 |
-| y | number | Yes | Y轴偏移量，单位为vp。 |
+| x | number | Yes | Offset along the X-axis, in vp. |
+| y | number | Yes | Offset along the Y-axis, in vp. |

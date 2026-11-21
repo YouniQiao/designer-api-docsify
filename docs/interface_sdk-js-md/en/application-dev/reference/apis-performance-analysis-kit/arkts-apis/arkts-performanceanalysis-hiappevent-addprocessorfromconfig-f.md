@@ -12,7 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessorFromConfig(processorName: string, configName?: string): Promise<number>
 ```
 
-Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result.
+<!--RP1-->Add the configuration information of the data processor and configure the information such as the event name received by the processor through the configuration file. After the event occurs, the processor can receive the event and use Promise asynchronous callback. <!--RP1End-->
 
 **Since:** 20
 
@@ -26,8 +26,8 @@ Adds the configuration information of the data processor. The configuration file
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processorName | string | Yes | Name of a data processor. It can contain only letters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256 characters. |
-| configName | string | No | Name of the data processor configuration. The corresponding configuration can be loaded from the configuration file. The default value is **SDK_OCG**. It can contain only letters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256 characters. |
+| processorName | string | Yes | <!--RP2-->Name of the data processor. The name can contain only uppercase letters, lowercase letters, digits, underscores(_), and dollar sign($), and cannot start with a digit. The length cannot exceed 256 characters. <!--RP2End--> |
+| configName | string | No | <!--RP3-->Configuration name of the data processor. The corresponding configuration can be loaded from the configuration file. The default value is SDK_OCG. The value can contain only uppercase letters, lowercase letters, digits, underscores(_), and dollar sign($), and cannot start with a digit. The value cannot be empty and cannot exceed 256 characters. <!--RP3End--> |
 
 **Return value:**
 

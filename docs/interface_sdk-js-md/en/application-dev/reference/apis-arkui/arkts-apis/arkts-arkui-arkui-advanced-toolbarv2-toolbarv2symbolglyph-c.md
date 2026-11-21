@@ -4,7 +4,7 @@
 export class ToolBarV2SymbolGlyph
 ```
 
-ToolBarV2SymbolGlyph定义Symbol图标的属性。
+Defines the icon symbol options.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 constructor(options: ToolBarV2SymbolGlyphOptions)
 ```
 
-ToolBarV2SymbolGlyph的构造函数。
+A constructor used to create a **ToolBarV2SymbolGlyph** object.
 
 **Since:** 18
 
@@ -50,9 +50,13 @@ ToolBarV2SymbolGlyph的构造函数。
 activated?: SymbolGlyphModifier
 ```
 
-工具栏symbol图标激活态样式。
+Icon symbol of the toolbar item in activated state.
 
-默认值：fontColor：$r('sys.color.icon_emphasize')，fontSize：24vp。
+Default value:
+
+**fontColor**: **$r('sys.color.icon_emphasize')**, **fontSize**: **24vp**
+
+Decorator: @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -74,7 +78,9 @@ activated?: SymbolGlyphModifier
 normal: SymbolGlyphModifier
 ```
 
-工具栏symbol图标普通态样式。
+Icon symbol of the toolbar item in normal state.
+
+Decorator: @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

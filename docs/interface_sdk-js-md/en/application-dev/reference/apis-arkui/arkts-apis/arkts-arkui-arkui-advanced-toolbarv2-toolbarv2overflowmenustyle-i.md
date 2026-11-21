@@ -4,7 +4,7 @@
 export interface ToolBarV2OverflowMenuStyle
 ```
 
-溢出菜单弹出窗口的样式配置。
+Style configuration for the overflow menu popup.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 font?: Font
 ```
 
-溢出菜单项的字体配置。
+Font configuration for overflow menu items. Default value: undefined.
 
 **Type:** Font
 
@@ -44,7 +44,7 @@ font?: Font
 fontColor?: ColorMetrics
 ```
 
-溢出菜单项的字体颜色。
+Font color of overflow menu items. Default value: undefined.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -64,7 +64,7 @@ fontColor?: ColorMetrics
 menuItemDivider?: DividerStyleOptions
 ```
 
-单个溢出菜单项之间的分隔线样式。
+Divider style between individual overflow menu items. Default value: undefined.
 
 **Type:** [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md)
 
@@ -84,7 +84,7 @@ menuItemDivider?: DividerStyleOptions
 menuItemGroupDivider?: DividerStyleOptions
 ```
 
-溢出菜单项组之间的分隔线样式。
+Divider style between overflow menu item groups. Default value: undefined.
 
 **Type:** [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md)
 
@@ -104,7 +104,7 @@ menuItemGroupDivider?: DividerStyleOptions
 radius?: Dimension | BorderRadiuses
 ```
 
-溢出菜单圆角半径。
+Overflow menu corner radius. Default value: undefined.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 

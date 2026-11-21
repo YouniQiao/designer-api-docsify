@@ -4,7 +4,7 @@
 export interface ToolBarSafeAreaOptions
 ```
 
-配置工具栏各边安全区避让模式的选项。
+Defines options for configuring the safe area avoidance mode of the toolbar on each edge.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { ToolBarState, DockArea, DockCornerMode, ToolBarSafeAreaMode, Handedness
 bottom?: ToolBarSafeAreaMode
 ```
 
-底部边缘的安全区避让模式。
+Safe area avoidance mode for the bottom edge.
 
 **Type:** [ToolBarSafeAreaMode](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md)
 
@@ -44,7 +44,7 @@ bottom?: ToolBarSafeAreaMode
 left?: ToolBarSafeAreaMode
 ```
 
-左侧边缘的安全区避让模式。
+Safe area avoidance mode for the left edge.
 
 **Type:** [ToolBarSafeAreaMode](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md)
 
@@ -64,7 +64,7 @@ left?: ToolBarSafeAreaMode
 right?: ToolBarSafeAreaMode
 ```
 
-右侧边缘的安全区避让模式。
+Safe area avoidance mode for the right edge.
 
 **Type:** [ToolBarSafeAreaMode](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md)
 
@@ -84,7 +84,7 @@ right?: ToolBarSafeAreaMode
 top?: ToolBarSafeAreaMode
 ```
 
-顶部边缘的安全区避让模式。
+Safe area avoidance mode for the top edge.
 
 **Type:** [ToolBarSafeAreaMode](arkts-arkui-arkui-advanced-toolbarcontainer-toolbarsafeareamode-e.md)
 

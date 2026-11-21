@@ -26,7 +26,7 @@ collectMinidump?: boolean
 
 是否使能[minidump](../../../dfx/performance-analysis-kit-terminology.md#minidump)，默认值为false。
 
-true：[params字段说明](../../../dfx/hiappevent-watcher-crash-events.md#params字段说明)中log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限调整为35MB。
+<!--RP5-->true：[params字段说明](../../../dfx/hiappevent-watcher-crash-events.md#params字段说明)中log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限调整为35MB。<!--RP5End-->
 
 false：log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限恢复为5MB。
 
