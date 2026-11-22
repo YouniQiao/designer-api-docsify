@@ -1174,6 +1174,8 @@
   <!--Del-->
   - [isAbilityEnabledSync(system api)](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [isAlternateModuleEnabled(system api)](arkts-ability-bundlemanager-isalternatemoduleenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [isApplicationDisableForbidden(system api)](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isApplicationEnabled(system api)](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md)<!--DelEnd-->
@@ -1204,6 +1206,8 @@
   <!--Del-->
   - [setAdditionalInfoByIndex(system api)](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
+  <!--Del-->
+  - [setAlternateModuleEnabled(system api)](arkts-ability-bundlemanager-setalternatemoduleenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setAppClonePreference(system api)](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->
   <!--Del-->

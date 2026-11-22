@@ -1140,6 +1140,8 @@
   <!--Del-->
   - [isAbilityEnabledSync（系统接口）](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [isAlternateModuleEnabled（系统接口）](arkts-ability-bundlemanager-isalternatemoduleenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [isApplicationDisableForbidden（系统接口）](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isApplicationEnabled（系统接口）](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md)<!--DelEnd-->
@@ -1170,6 +1172,8 @@
   <!--Del-->
   - [setAdditionalInfoByIndex（系统接口）](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
+  <!--Del-->
+  - [setAlternateModuleEnabled（系统接口）](arkts-ability-bundlemanager-setalternatemoduleenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setAppClonePreference（系统接口）](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->
   <!--Del-->

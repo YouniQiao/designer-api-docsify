@@ -128,6 +128,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled-2) | Checks whether an ability is enabled. This API uses an asynchronous callback to return the result. |
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled-3) | Checks whether an ability is enabled. This API uses a promise to return the result. |
 | [isAbilityEnabledSync](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md#isabilityenabledsync-1) | Checks whether an ability is enabled. This API returns the result synchronously. |
+| [isAlternateModuleEnabled](arkts-ability-bundlemanager-isalternatemoduleenabled-f-sys.md#isalternatemoduleenabled-1) | Query the enable status of the standby module. |
 | [isApplicationDisableForbidden](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md#isapplicationdisableforbidden-1) | Synchronously queries whether a specified application or application clone of a specified user is set to forbid being disabled. |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled-1) | Checks whether an application or an application clone is enabled. This API uses a promise to return the result. |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled-2) | Checks whether an application is enabled. This API uses an asynchronous callback to return the result. |
@@ -154,6 +155,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [setAbilityFileTypesForSelf](arkts-ability-bundlemanager-setabilityfiletypesforself-f-sys.md#setabilityfiletypesforself-1) | Sets the file types that can be opened by the current application. |
 | [setAdditionalInfo](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md#setadditionalinfo-1) | Sets additional information for an application. This API can be called only by AppGallery. |
 | [setAdditionalInfoByIndex](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md#setadditionalinfobyindex-1) | Sets additional information for a specified application instance. This API can be called only by AppGallery. |
+| [setAlternateModuleEnabled](arkts-ability-bundlemanager-setalternatemoduleenabled-f-sys.md#setalternatemoduleenabled-1) | Enables or disables the standby module. |
 | [setAppClonePreference](arkts-ability-bundlemanager-setappclonepreference-f-sys.md#setappclonepreference-1) | Sets the app clone preference based on the given bundle name. This API uses a promise to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled-1) | Enables or disables an application or an application clone. This API uses a promise to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled-2) | Sets the enabled or disabled state of a specified application or application clone, and controls whether to exit the application process when the application is disabled. This API uses a promise to return the result. |

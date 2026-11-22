@@ -127,6 +127,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled-2) | 获取指定组件的禁用或使能状态。使用callback异步回调。 |
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled-3) | 获取指定组件的禁用或使能状态。使用Promise异步回调。 |
 | [isAbilityEnabledSync](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md#isabilityenabledsync-1) | 以同步方法获取指定组件的禁用或使能状态。 |
+| [isAlternateModuleEnabled](arkts-ability-bundlemanager-isalternatemoduleenabled-f-sys.md#isalternatemoduleenabled-1) | 查询备用模块使能状态。 |
 | [isApplicationDisableForbidden](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md#isapplicationdisableforbidden-1) | 以同步方法查询指定用户下指定应用或分身应用是否被设置禁止停用。 |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled-1) | 获取指定应用或分身应用的禁用或使能状态。使用Promise异步回调。 |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled-2) | 获取指定应用的禁用或使能状态。使用callback异步回调。 |
@@ -153,6 +154,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [setAbilityFileTypesForSelf](arkts-ability-bundlemanager-setabilityfiletypesforself-f-sys.md#setabilityfiletypesforself-1) | 设置当前应用支持打开的文件类型。 |
 | [setAdditionalInfo](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md#setadditionalinfo-1) | 设置指定应用的额外信息。此接口仅供应用市场调用。 |
 | [setAdditionalInfoByIndex](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md#setadditionalinfobyindex-1) | 设置指定应用实例的附加信息。该接口仅支持应用市场调用。 |
+| [setAlternateModuleEnabled](arkts-ability-bundlemanager-setalternatemoduleenabled-f-sys.md#setalternatemoduleenabled-1) | 启用或禁用备用模块。 |
 | [setAppClonePreference](arkts-ability-bundlemanager-setappclonepreference-f-sys.md#setappclonepreference-1) | 根据给定的bundleName设置应用分身偏好设置。使用Promise异步回调。 |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled-1) | 设置指定应用或分身应用的禁用或使能状态。使用Promise异步回调。 |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled-2) | 设置指定应用或分身应用的启用或禁用状态，并控制禁用时是否退出应用进程。使用Promise异步回调。 |
