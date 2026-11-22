@@ -6916,6 +6916,66 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+## onTouchPadEvent
+
+```TypeScript
+onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T
+```
+
+上报原始触控板事件时触发。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonMethod-onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T--><!--Device-CommonMethod-onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md)&gt; &#124; undefined | 是 | Callback used to return ${TouchPadEvent}. Passing **undefined** unregisters the callback. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
+## onTouchPadEventIntercept
+
+```TypeScript
+onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T
+```
+
+绑定触控板事件命中测试的拦截回调。返回的[HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)决定组件在当前触控板事件链中的命中测试行为，不影响触摸、鼠标、轴事件或系统手势事件链。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonMethod-onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T--><!--Device-CommonMethod-onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; &#124; undefined | 是 | 回调函数，返回${TouchPadEvent}。传入**undefined**表示取消注册回调。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
 ## onTouchTestDone
 
 ```TypeScript

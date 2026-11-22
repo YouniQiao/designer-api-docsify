@@ -6954,6 +6954,66 @@ Provides components with a custom event interception capability. The callback ca
 | --- | --- |
 | T | Current component. |
 
+## onTouchPadEvent
+
+```TypeScript
+onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T
+```
+
+Invoked when a raw touchpad event is reported.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T--><!--Device-CommonMethod-onTouchPadEvent(event: Callback<TouchPadEvent> | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md)&gt; &#124; undefined | Yes | Callback used to return ${TouchPadEvent}. Passing **undefined** unregisters the callback. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
+## onTouchPadEventIntercept
+
+```TypeScript
+onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T
+```
+
+Binds an interception callback for touchpad event hit testing. The returned [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md) determines the hit test behavior of the component for the current touchpad event chain and does not affect touch, mouse, axis, or system gesture event chains.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T--><!--Device-CommonMethod-onTouchPadEventIntercept(callback: Callback<TouchPadEvent, HitTestMode> | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; &#124; undefined | Yes | Callback used to return ${TouchPadEvent}. Passing **undefined** unregisters the callback. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## onTouchTestDone
 
 ```TypeScript

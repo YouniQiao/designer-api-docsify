@@ -1562,6 +1562,7 @@
   - [TextSelectableMode](arkts-arkui-textselectablemode-e.md)
   - [TipsAnchorType](arkts-arkui-tipsanchortype-e.md)
   - [TitleHeight](arkts-arkui-titleheight-e.md)
+  - [TouchPadEventPhase](arkts-arkui-touchpadeventphase-e.md)
   - [TouchType](arkts-arkui-touchtype-e.md)
   - [TransitionType](arkts-arkui-transitiontype-e.md)
   - [VerticalAlign](arkts-arkui-verticalalign-e.md)

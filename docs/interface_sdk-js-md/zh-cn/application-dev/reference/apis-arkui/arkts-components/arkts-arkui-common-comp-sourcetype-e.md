@@ -64,6 +64,24 @@ Mouse
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## TOUCHPAD_TOUCH
+
+```TypeScript
+TOUCHPAD_TOUCH = 6
+```
+
+来自触摸板的原始触摸输入。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SourceType-TOUCHPAD_TOUCH = 6--><!--Device-SourceType-TOUCHPAD_TOUCH = 6-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## TouchScreen
 
 ```TypeScript

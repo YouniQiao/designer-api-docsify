@@ -251,6 +251,7 @@
   - [TextContentControllerBase](arkts-arkui-common-comp-textcontentcontrollerbase-c.md)
   <!--Del-->
   - [TextContentControllerBase（系统接口）](arkts-arkui-common-comp-textcontentcontrollerbase-c-sys.md)<!--DelEnd-->
+  - [TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md)
   - [TouchResult](arkts-arkui-common-comp-touchresult-c.md)
   - [TouchTestInfo](arkts-arkui-common-comp-touchtestinfo-c.md)
   - [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md)
@@ -426,6 +427,7 @@
   - [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md)
   - [TouchEvent](arkts-arkui-common-comp-touchevent-i.md)
   - [TouchObject](arkts-arkui-common-comp-touchobject-i.md)
+  - [TouchPadEventContact](arkts-arkui-common-comp-touchpadeventcontact-i.md)
   - [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md)
   - [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md)
   - [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md)

@@ -1149,6 +1149,30 @@ struct Index {
 }
 ```
 
+## enableTouchPadEvent
+
+```TypeScript
+static enableTouchPadEvent(enabled: boolean): void
+```
+
+设置应用级是否上报原始触控板事件。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-static enableTouchPadEvent(enabled: boolean): void--><!--Device-UIContext-static enableTouchPadEvent(enabled: boolean): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enabled | boolean | 是 | 是否使能应用级原始触控板事件上报。true表示使能，false表示禁用。<br>默认值：false。 |
+
 ## fp2px
 
 ```TypeScript

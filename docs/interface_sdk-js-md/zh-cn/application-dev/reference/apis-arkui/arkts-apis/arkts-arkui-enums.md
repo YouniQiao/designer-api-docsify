@@ -110,6 +110,7 @@
 | [TextSelectableMode](arkts-arkui-textselectablemode-e.md) | 文本可选择、可获焦状态。 |
 | [TipsAnchorType](arkts-arkui-tipsanchortype-e.md) | 指定Tips跟随类型。 |
 | [TitleHeight](arkts-arkui-titleheight-e.md) | 设置标题栏的推荐高度。 |
+| [TouchPadEventPhase](arkts-arkui-touchpadeventphase-e.md) | 定义触控板事件的阶段。 |
 | [TouchType](arkts-arkui-touchtype-e.md) | 定义触摸操作的触发状态类型。 |
 | [TransitionType](arkts-arkui-transitiontype-e.md) | 指定该转场样式生效的场景。 |
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | 定义子组件在垂直方向上的对齐格式。 |

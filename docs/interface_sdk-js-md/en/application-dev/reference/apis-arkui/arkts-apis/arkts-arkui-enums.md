@@ -110,6 +110,7 @@
 | [TextSelectableMode](arkts-arkui-textselectablemode-e.md) | Sets whether text can be selected and focused on. |
 | [TipsAnchorType](arkts-arkui-tipsanchortype-e.md) | Enumerates anchor types of the tooltip. |
 | [TitleHeight](arkts-arkui-titleheight-e.md) | Sets the recommended height of the title bar. |
+| [TouchPadEventPhase](arkts-arkui-touchpadeventphase-e.md) | Enumerates the phases of a touchpad event. |
 | [TouchType](arkts-arkui-touchtype-e.md) | Sets the trigger status type of a touch operation. |
 | [TransitionType](arkts-arkui-transitiontype-e.md) | Sets the transition type. |
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | Sets the vertical alignment mode of child components. |

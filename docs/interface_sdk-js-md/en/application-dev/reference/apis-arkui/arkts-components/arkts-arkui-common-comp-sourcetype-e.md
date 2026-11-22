@@ -64,6 +64,24 @@ Mouse.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## TOUCHPAD_TOUCH
+
+```TypeScript
+TOUCHPAD_TOUCH = 6
+```
+
+Raw contact input from a touchpad.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-SourceType-TOUCHPAD_TOUCH = 6--><!--Device-SourceType-TOUCHPAD_TOUCH = 6-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## TouchScreen
 
 ```TypeScript

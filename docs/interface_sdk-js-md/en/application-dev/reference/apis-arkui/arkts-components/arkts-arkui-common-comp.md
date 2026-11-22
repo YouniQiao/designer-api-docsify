@@ -93,6 +93,7 @@ Constructor
 | [ScrollResult](arkts-arkui-common-comp-scrollresult-c.md) | Implements a return value object of the [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) callback. |
 | [SystemEnvKey](arkts-arkui-common-comp-systemenvkey-c.md) | Defines the type corresponding to the system environment variable key. |
 | [TextContentControllerBase](arkts-arkui-common-comp-textcontentcontrollerbase-c.md) | Represents the base controller for **TextInput**, **TextArea**, and **Search** components. |
+| [TouchPadEvent](arkts-arkui-common-comp-touchpadevent-c.md) | Describes a raw touchpad event. The event is independent of touch, mouse, axis, and system gesture events. |
 | [TouchResult](arkts-arkui-common-comp-touchresult-c.md) | Defines the custom event dispatch result. You can influence event dispatch by returning specific results. |
 | [TouchTestInfo](arkts-arkui-common-comp-touchtestinfo-c.md) | Provides information about the coordinate system, ID, and size of the component where the current touch point is located. |
 | [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md) | Defines the transition effect by using the provided APIs, as listed below. |
@@ -243,6 +244,7 @@ Constructor
 | [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | Defines the parameters of the tooltip. |
 | [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**. |
 | [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | Type of the touch event. |
+| [TouchPadEventContact](arkts-arkui-common-comp-touchpadeventcontact-i.md) | Describes a contact in a raw touchpad event. |
 | [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | Defines the options of translate. |
 | [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | Used to set the basic event callbacks of a component, covering events such as click, touch, show/hide, key, focus, floating, component area change, and visible area change. When the input parameter is undefined, the corresponding event callback is reset. This is suitable for scenarios where the basic event processing logic of a component is configured and cleared in a centralized manner. |
 | [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | Used to set the gestures bound to a component. It supports dynamically adding normal gestures or parallel gestures to a component, and removing or clearing bound gestures by gesture tag. This is suitable for scenarios where component gesture interactions are adjusted at runtime. |

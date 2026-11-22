@@ -4,15 +4,9 @@
 declare interface AxisEvent extends BaseEvent
 ```
 
-轴事件的对象说明，继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。
-
 **继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-common-comp-baseevent-i.md)
 
-**起始版本：** 17
-
 <!--Device-unnamed-declare interface AxisEvent extends BaseEvent--><!--Device-unnamed-declare interface AxisEvent extends BaseEvent-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
 
