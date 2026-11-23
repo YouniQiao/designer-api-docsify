@@ -253,7 +253,7 @@ enum Input_KeyStateAction
 
 Provides the enum values of the key status.
 
-<!--Device-Input_KeyStateAction--><!--Device-Input_KeyStateAction-End-->
+<!--Device-enum Input_KeyStateAction--><!--Device-enum Input_KeyStateAction-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -261,11 +261,11 @@ Provides the enum values of the key status.
 
 | Enum item | Description |
 | -- | -- |
-| KEY_DEFAULT = -1 | Default state. |
-| KEY_PRESSED = 0 | Key press. |
-| KEY_RELEASED = 1 | Key release. |
-| KEY_SWITCH_ON = 2 | Key switch enabled. |
-| KEY_SWITCH_OFF = 3 | Key switch disabled. |
+| KEY_DEFAULT = -1 | Default state.<br><!--Device-KEY_DEFAULT = -1--><!--Device-KEY_DEFAULT = -1-End--> |
+| KEY_PRESSED = 0 | Key press.<br><!--Device-KEY_PRESSED = 0--><!--Device-KEY_PRESSED = 0-End--> |
+| KEY_RELEASED = 1 | Key release.<br><!--Device-KEY_RELEASED = 1--><!--Device-KEY_RELEASED = 1-End--> |
+| KEY_SWITCH_ON = 2 | Key switch enabled.<br><!--Device-KEY_SWITCH_ON = 2--><!--Device-KEY_SWITCH_ON = 2-End--> |
+| KEY_SWITCH_OFF = 3 | Key switch disabled.<br><!--Device-KEY_SWITCH_OFF = 3--><!--Device-KEY_SWITCH_OFF = 3-End--> |
 
 ### Input_KeyEventAction
 
@@ -277,7 +277,7 @@ enum Input_KeyEventAction
 
 Provides the enum values of the key event type.
 
-<!--Device-Input_KeyEventAction--><!--Device-Input_KeyEventAction-End-->
+<!--Device-enum Input_KeyEventAction--><!--Device-enum Input_KeyEventAction-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -285,9 +285,9 @@ Provides the enum values of the key event type.
 
 | Enum item | Description |
 | -- | -- |
-| KEY_ACTION_CANCEL = 0 | Key action canceled.<br>**Since**: 12 |
-| KEY_ACTION_DOWN = 1 | Key press.<br>**Since**: 12 |
-| KEY_ACTION_UP = 2 | Key release.<br>**Since**: 12 |
+| KEY_ACTION_CANCEL = 0 | Key action canceled.<br>**Since**: 12<br><!--Device-KEY_ACTION_CANCEL = 0--><!--Device-KEY_ACTION_CANCEL = 0-End--> |
+| KEY_ACTION_DOWN = 1 | Key press.<br>**Since**: 12<br><!--Device-KEY_ACTION_DOWN = 1--><!--Device-KEY_ACTION_DOWN = 1-End--> |
+| KEY_ACTION_UP = 2 | Key release.<br>**Since**: 12<br><!--Device-KEY_ACTION_UP = 2--><!--Device-KEY_ACTION_UP = 2-End--> |
 
 ### Input_MouseEventAction
 
@@ -299,7 +299,7 @@ enum Input_MouseEventAction
 
 Provides the enum values of mouse actions.
 
-<!--Device-Input_MouseEventAction--><!--Device-Input_MouseEventAction-End-->
+<!--Device-enum Input_MouseEventAction--><!--Device-enum Input_MouseEventAction-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -307,13 +307,13 @@ Provides the enum values of mouse actions.
 
 | Enum item | Description |
 | -- | -- |
-| MOUSE_ACTION_CANCEL = 0 | Cancellation of the mouse action.<br>**Since**: 12 |
-| MOUSE_ACTION_MOVE = 1 | Moving of the mouse pointer.<br>**Since**: 12 |
-| MOUSE_ACTION_BUTTON_DOWN = 2 | Pressing of the mouse button.<br>**Since**: 12 |
-| MOUSE_ACTION_BUTTON_UP = 3 | Release of the mouse button.<br>**Since**: 12 |
-| MOUSE_ACTION_AXIS_BEGIN = 4 | Beginning of the mouse axis event.<br>**Since**: 12 |
-| MOUSE_ACTION_AXIS_UPDATE = 5 | Updating of the mouse axis event.<br>**Since**: 12 |
-| MOUSE_ACTION_AXIS_END = 6 | End of the mouse axis event.<br>**Since**: 12 |
+| MOUSE_ACTION_CANCEL = 0 | Cancellation of the mouse action.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_CANCEL = 0--><!--Device-MOUSE_ACTION_CANCEL = 0-End--> |
+| MOUSE_ACTION_MOVE = 1 | Moving of the mouse pointer.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_MOVE = 1--><!--Device-MOUSE_ACTION_MOVE = 1-End--> |
+| MOUSE_ACTION_BUTTON_DOWN = 2 | Pressing of the mouse button.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_BUTTON_DOWN = 2--><!--Device-MOUSE_ACTION_BUTTON_DOWN = 2-End--> |
+| MOUSE_ACTION_BUTTON_UP = 3 | Release of the mouse button.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_BUTTON_UP = 3--><!--Device-MOUSE_ACTION_BUTTON_UP = 3-End--> |
+| MOUSE_ACTION_AXIS_BEGIN = 4 | Beginning of the mouse axis event.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_AXIS_BEGIN = 4--><!--Device-MOUSE_ACTION_AXIS_BEGIN = 4-End--> |
+| MOUSE_ACTION_AXIS_UPDATE = 5 | Updating of the mouse axis event.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_AXIS_UPDATE = 5--><!--Device-MOUSE_ACTION_AXIS_UPDATE = 5-End--> |
+| MOUSE_ACTION_AXIS_END = 6 | End of the mouse axis event.<br>**Since**: 12<br><!--Device-MOUSE_ACTION_AXIS_END = 6--><!--Device-MOUSE_ACTION_AXIS_END = 6-End--> |
 
 ### InputEvent_MouseAxis
 
@@ -325,7 +325,7 @@ enum InputEvent_MouseAxis
 
 Provides the enum values of mouse axis event types.
 
-<!--Device-InputEvent_MouseAxis--><!--Device-InputEvent_MouseAxis-End-->
+<!--Device-enum InputEvent_MouseAxis--><!--Device-enum InputEvent_MouseAxis-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -333,8 +333,8 @@ Provides the enum values of mouse axis event types.
 
 | Enum item | Description |
 | -- | -- |
-| MOUSE_AXIS_SCROLL_VERTICAL = 0 | Vertical scroll axis. |
-| MOUSE_AXIS_SCROLL_HORIZONTAL = 1 | Horizontal scroll axis. |
+| MOUSE_AXIS_SCROLL_VERTICAL = 0 | Vertical scroll axis.<br><!--Device-MOUSE_AXIS_SCROLL_VERTICAL = 0--><!--Device-MOUSE_AXIS_SCROLL_VERTICAL = 0-End--> |
+| MOUSE_AXIS_SCROLL_HORIZONTAL = 1 | Horizontal scroll axis.<br><!--Device-MOUSE_AXIS_SCROLL_HORIZONTAL = 1--><!--Device-MOUSE_AXIS_SCROLL_HORIZONTAL = 1-End--> |
 
 ### Input_MouseEventButton
 
@@ -346,7 +346,7 @@ enum Input_MouseEventButton
 
 Provides the enum values of mouse buttons.
 
-<!--Device-Input_MouseEventButton--><!--Device-Input_MouseEventButton-End-->
+<!--Device-enum Input_MouseEventButton--><!--Device-enum Input_MouseEventButton-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -354,12 +354,12 @@ Provides the enum values of mouse buttons.
 
 | Enum item | Description |
 | -- | -- |
-| MOUSE_BUTTON_NONE = -1 | Invalid button. |
-| MOUSE_BUTTON_LEFT = 0 | Left button. |
-| MOUSE_BUTTON_MIDDLE = 1 | Middle button. |
-| MOUSE_BUTTON_RIGHT = 2 | Right button. |
-| MOUSE_BUTTON_FORWARD = 3 | Forward button. |
-| MOUSE_BUTTON_BACK = 4 | Back button. |
+| MOUSE_BUTTON_NONE = -1 | Invalid button.<br><!--Device-MOUSE_BUTTON_NONE = -1--><!--Device-MOUSE_BUTTON_NONE = -1-End--> |
+| MOUSE_BUTTON_LEFT = 0 | Left button.<br><!--Device-MOUSE_BUTTON_LEFT = 0--><!--Device-MOUSE_BUTTON_LEFT = 0-End--> |
+| MOUSE_BUTTON_MIDDLE = 1 | Middle button.<br><!--Device-MOUSE_BUTTON_MIDDLE = 1--><!--Device-MOUSE_BUTTON_MIDDLE = 1-End--> |
+| MOUSE_BUTTON_RIGHT = 2 | Right button.<br><!--Device-MOUSE_BUTTON_RIGHT = 2--><!--Device-MOUSE_BUTTON_RIGHT = 2-End--> |
+| MOUSE_BUTTON_FORWARD = 3 | Forward button.<br><!--Device-MOUSE_BUTTON_FORWARD = 3--><!--Device-MOUSE_BUTTON_FORWARD = 3-End--> |
+| MOUSE_BUTTON_BACK = 4 | Back button.<br><!--Device-MOUSE_BUTTON_BACK = 4--><!--Device-MOUSE_BUTTON_BACK = 4-End--> |
 
 ### Input_TouchEventAction
 
@@ -371,7 +371,7 @@ enum Input_TouchEventAction
 
 Provides the enum values of touch actions.
 
-<!--Device-Input_TouchEventAction--><!--Device-Input_TouchEventAction-End-->
+<!--Device-enum Input_TouchEventAction--><!--Device-enum Input_TouchEventAction-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -379,10 +379,10 @@ Provides the enum values of touch actions.
 
 | Enum item | Description |
 | -- | -- |
-| TOUCH_ACTION_CANCEL = 0 | Touch cancellation. |
-| TOUCH_ACTION_DOWN = 1 | Touch press. |
-| TOUCH_ACTION_MOVE = 2 | Touch moving. |
-| TOUCH_ACTION_UP = 3 | Touch release. |
+| TOUCH_ACTION_CANCEL = 0 | Touch cancellation.<br><!--Device-TOUCH_ACTION_CANCEL = 0--><!--Device-TOUCH_ACTION_CANCEL = 0-End--> |
+| TOUCH_ACTION_DOWN = 1 | Touch press.<br><!--Device-TOUCH_ACTION_DOWN = 1--><!--Device-TOUCH_ACTION_DOWN = 1-End--> |
+| TOUCH_ACTION_MOVE = 2 | Touch moving.<br><!--Device-TOUCH_ACTION_MOVE = 2--><!--Device-TOUCH_ACTION_MOVE = 2-End--> |
+| TOUCH_ACTION_UP = 3 | Touch release.<br><!--Device-TOUCH_ACTION_UP = 3--><!--Device-TOUCH_ACTION_UP = 3-End--> |
 
 ### Input_KeyboardType
 
@@ -394,7 +394,7 @@ enum Input_KeyboardType
 
 Provides the enum values of keyboard types of the input device.
 
-<!--Device-Input_KeyboardType--><!--Device-Input_KeyboardType-End-->
+<!--Device-enum Input_KeyboardType--><!--Device-enum Input_KeyboardType-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -402,12 +402,12 @@ Provides the enum values of keyboard types of the input device.
 
 | Enum item | Description |
 | -- | -- |
-| KEYBOARD_TYPE_NONE = 0 | No keyboard.<br>**Since**: 13 |
-| KEYBOARD_TYPE_UNKNOWN = 1 | Unknown keyboard.<br>**Since**: 13 |
-| KEYBOARD_TYPE_ALPHABETIC = 2 | Full keyboard. |
-| KEYBOARD_TYPE_DIGITAL = 3 | Numeric keypad. |
-| KEYBOARD_TYPE_STYLUS = 4 | Stylus. |
-| KEYBOARD_TYPE_REMOTE_CONTROL = 5 | Remote control. |
+| KEYBOARD_TYPE_NONE = 0 | No keyboard.<br>**Since**: 13<br><!--Device-KEYBOARD_TYPE_NONE = 0--><!--Device-KEYBOARD_TYPE_NONE = 0-End--> |
+| KEYBOARD_TYPE_UNKNOWN = 1 | Unknown keyboard.<br>**Since**: 13<br><!--Device-KEYBOARD_TYPE_UNKNOWN = 1--><!--Device-KEYBOARD_TYPE_UNKNOWN = 1-End--> |
+| KEYBOARD_TYPE_ALPHABETIC = 2 | Full keyboard.<br><!--Device-KEYBOARD_TYPE_ALPHABETIC = 2--><!--Device-KEYBOARD_TYPE_ALPHABETIC = 2-End--> |
+| KEYBOARD_TYPE_DIGITAL = 3 | Numeric keypad.<br><!--Device-KEYBOARD_TYPE_DIGITAL = 3--><!--Device-KEYBOARD_TYPE_DIGITAL = 3-End--> |
+| KEYBOARD_TYPE_STYLUS = 4 | Stylus.<br><!--Device-KEYBOARD_TYPE_STYLUS = 4--><!--Device-KEYBOARD_TYPE_STYLUS = 4-End--> |
+| KEYBOARD_TYPE_REMOTE_CONTROL = 5 | Remote control.<br><!--Device-KEYBOARD_TYPE_REMOTE_CONTROL = 5--><!--Device-KEYBOARD_TYPE_REMOTE_CONTROL = 5-End--> |
 
 ### Input_InjectionStatus
 
@@ -419,7 +419,7 @@ enum Input_InjectionStatus
 
 Provides the enum values of injection permission states.
 
-<!--Device-Input_InjectionStatus--><!--Device-Input_InjectionStatus-End-->
+<!--Device-enum Input_InjectionStatus--><!--Device-enum Input_InjectionStatus-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -427,9 +427,9 @@ Provides the enum values of injection permission states.
 
 | Enum item | Description |
 | -- | -- |
-| UNAUTHORIZED = 0 | Permission not granted.<br>**Since**: 20 |
-| AUTHORIZING = 1 | Permission being granted.<br>**Since**: 20 |
-| AUTHORIZED = 2 | Permission granted.<br>**Since**: 20 |
+| UNAUTHORIZED = 0 | Permission not granted.<br>**Since**: 20<br><!--Device-UNAUTHORIZED = 0--><!--Device-UNAUTHORIZED = 0-End--> |
+| AUTHORIZING = 1 | Permission being granted.<br>**Since**: 20<br><!--Device-AUTHORIZING = 1--><!--Device-AUTHORIZING = 1-End--> |
+| AUTHORIZED = 2 | Permission granted.<br>**Since**: 20<br><!--Device-AUTHORIZED = 2--><!--Device-AUTHORIZED = 2-End--> |
 
 ### InputEvent_SourceType
 
@@ -441,7 +441,7 @@ enum InputEvent_SourceType
 
 Provides the enum values of event source types.
 
-<!--Device-InputEvent_SourceType--><!--Device-InputEvent_SourceType-End-->
+<!--Device-enum InputEvent_SourceType--><!--Device-enum InputEvent_SourceType-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -449,9 +449,9 @@ Provides the enum values of event source types.
 
 | Enum item | Description |
 | -- | -- |
-| SOURCE_TYPE_MOUSE = 1 | Source that generates events similar to mouse pointer movement, button press and release, and wheel scrolling.<br>**Since**: 12 |
-| SOURCE_TYPE_TOUCHSCREEN = 2 | Source that generates a touchscreen multi-touch event.<br>**Since**: 12 |
-| SOURCE_TYPE_TOUCHPAD = 3 | Source that generates a touchpad multi-touch event.<br>**Since**: 12 |
+| SOURCE_TYPE_MOUSE = 1 | Source that generates events similar to mouse pointer movement, button press and release, and wheel scrolling.<br>**Since**: 12<br><!--Device-SOURCE_TYPE_MOUSE = 1--><!--Device-SOURCE_TYPE_MOUSE = 1-End--> |
+| SOURCE_TYPE_TOUCHSCREEN = 2 | Source that generates a touchscreen multi-touch event.<br>**Since**: 12<br><!--Device-SOURCE_TYPE_TOUCHSCREEN = 2--><!--Device-SOURCE_TYPE_TOUCHSCREEN = 2-End--> |
+| SOURCE_TYPE_TOUCHPAD = 3 | Source that generates a touchpad multi-touch event.<br>**Since**: 12<br><!--Device-SOURCE_TYPE_TOUCHPAD = 3--><!--Device-SOURCE_TYPE_TOUCHPAD = 3-End--> |
 
 ### Input_Result
 
@@ -463,7 +463,7 @@ enum Input_Result
 
 Provides return value enumerations.
 
-<!--Device-Input_Result--><!--Device-Input_Result-End-->
+<!--Device-enum Input_Result--><!--Device-enum Input_Result-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -471,23 +471,23 @@ Provides return value enumerations.
 
 | Enum item | Description |
 | -- | -- |
-| INPUT_SUCCESS = 0 | Operation succeeded. |
-| INPUT_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| INPUT_NOT_SYSTEM_APPLICATION = 202 | Permission verification failed. A non-system application calls a system API. |
-| INPUT_PARAMETER_ERROR = 401 | Parameter check fails. |
-| INPUT_DEVICE_NOT_SUPPORTED = 801 | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
-| INPUT_SERVICE_EXCEPTION = 3800001 | Service error. |
-| INPUT_REPEAT_INTERCEPTOR = 4200001 | Interceptor repeatedly created. |
-| INPUT_OCCUPIED_BY_SYSTEM = 4200002 | Occupied by a system app.<br>**Since**: 14 |
-| INPUT_OCCUPIED_BY_OTHER = 4200003 | Occupied by another app.<br>**Since**: 14 |
-| INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002 | No keyboard device is connected.<br>**Since**: 15 |
-| INPUT_INJECTION_AUTHORIZING = 3900005 | Authorization is in progress.<br>**Since**: 20 |
-| INPUT_INJECTION_OPERATION_FREQUENT = 3900006 | Repeated request.<br>**Since**: 20 |
-| INPUT_INJECTION_AUTHORIZED = 3900007 | The current app has been authorized.<br>**Since**: 20 |
-| INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008 | Other apps have been authorized.<br>**Since**: 20 |
-| INPUT_APP_NOT_FOCUSED = 3900009 | The current app is not the focused app.<br>**Since**: 20 |
-| INPUT_DEVICE_NO_POINTER = 3900010 | No mouse-type input peripheral is available.<br>**Since**: 20 |
-| INPUT_INVALID_WINDOWID = 26500001 | Invalid window ID.<br>**Since**: 22 |
+| INPUT_SUCCESS = 0 | Operation succeeded.<br><!--Device-INPUT_SUCCESS = 0--><!--Device-INPUT_SUCCESS = 0-End--> |
+| INPUT_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API.<br><!--Device-INPUT_PERMISSION_DENIED = 201--><!--Device-INPUT_PERMISSION_DENIED = 201-End--> |
+| INPUT_NOT_SYSTEM_APPLICATION = 202 | Permission verification failed. A non-system application calls a system API.<br><!--Device-INPUT_NOT_SYSTEM_APPLICATION = 202--><!--Device-INPUT_NOT_SYSTEM_APPLICATION = 202-End--> |
+| INPUT_PARAMETER_ERROR = 401 | Parameter check fails.<br><!--Device-INPUT_PARAMETER_ERROR = 401--><!--Device-INPUT_PARAMETER_ERROR = 401-End--> |
+| INPUT_DEVICE_NOT_SUPPORTED = 801 | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported.<br><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801--><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801-End--> |
+| INPUT_SERVICE_EXCEPTION = 3800001 | Service error.<br><!--Device-INPUT_SERVICE_EXCEPTION = 3800001--><!--Device-INPUT_SERVICE_EXCEPTION = 3800001-End--> |
+| INPUT_REPEAT_INTERCEPTOR = 4200001 | Interceptor repeatedly created.<br><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001--><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001-End--> |
+| INPUT_OCCUPIED_BY_SYSTEM = 4200002 | Occupied by a system app.<br>**Since**: 14<br><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002--><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002-End--> |
+| INPUT_OCCUPIED_BY_OTHER = 4200003 | Occupied by another app.<br>**Since**: 14<br><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003--><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003-End--> |
+| INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002 | No keyboard device is connected.<br>**Since**: 15<br><!--Device-INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002--><!--Device-INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002-End--> |
+| INPUT_INJECTION_AUTHORIZING = 3900005 | Authorization is in progress.<br>**Since**: 20<br><!--Device-INPUT_INJECTION_AUTHORIZING = 3900005--><!--Device-INPUT_INJECTION_AUTHORIZING = 3900005-End--> |
+| INPUT_INJECTION_OPERATION_FREQUENT = 3900006 | Repeated request.<br>**Since**: 20<br><!--Device-INPUT_INJECTION_OPERATION_FREQUENT = 3900006--><!--Device-INPUT_INJECTION_OPERATION_FREQUENT = 3900006-End--> |
+| INPUT_INJECTION_AUTHORIZED = 3900007 | The current app has been authorized.<br>**Since**: 20<br><!--Device-INPUT_INJECTION_AUTHORIZED = 3900007--><!--Device-INPUT_INJECTION_AUTHORIZED = 3900007-End--> |
+| INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008 | Other apps have been authorized.<br>**Since**: 20<br><!--Device-INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008--><!--Device-INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008-End--> |
+| INPUT_APP_NOT_FOCUSED = 3900009 | The current app is not the focused app.<br>**Since**: 20<br><!--Device-INPUT_APP_NOT_FOCUSED = 3900009--><!--Device-INPUT_APP_NOT_FOCUSED = 3900009-End--> |
+| INPUT_DEVICE_NO_POINTER = 3900010 | No mouse-type input peripheral is available.<br>**Since**: 20<br><!--Device-INPUT_DEVICE_NO_POINTER = 3900010--><!--Device-INPUT_DEVICE_NO_POINTER = 3900010-End--> |
+| INPUT_INVALID_WINDOWID = 26500001 | Invalid window ID.<br>**Since**: 22<br><!--Device-INPUT_INVALID_WINDOWID = 26500001--><!--Device-INPUT_INVALID_WINDOWID = 26500001-End--> |
 
 ### Input_TouchEventToolType
 
@@ -499,7 +499,7 @@ enum Input_TouchEventToolType
 
 Enumerates touch tool types of an input device.
 
-<!--Device-Input_TouchEventToolType--><!--Device-Input_TouchEventToolType-End-->
+<!--Device-enum Input_TouchEventToolType--><!--Device-enum Input_TouchEventToolType-End-->
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -507,14 +507,14 @@ Enumerates touch tool types of an input device.
 
 | Enum item | Description |
 | -- | -- |
-| TOOL_TYPE_FINGER = 0 | Finger.<br>**Since**: 24 |
-| TOOL_TYPE_PEN = 1 | Stylus.<br>**Since**: 24 |
-| TOOL_TYPE_RUBBER = 2 | Eraser-type device.<br>**Since**: 24 |
-| TOOL_TYPE_BRUSH = 3 | Brush device.<br>**Since**: 24 |
-| TOOL_TYPE_PENCIL = 4 | Pencil device.<br>**Since**: 24 |
-| TOOL_TYPE_AIRBRUSH = 5 | Airbrush device.<br>**Since**: 24 |
-| TOOL_TYPE_MOUSE = 6 | Mouse device.<br>**Since**: 24 |
-| TOOL_TYPE_LENS = 7 | Lens device.<br>**Since**: 24 |
+| TOOL_TYPE_FINGER = 0 | Finger.<br>**Since**: 24<br><!--Device-TOOL_TYPE_FINGER = 0--><!--Device-TOOL_TYPE_FINGER = 0-End--> |
+| TOOL_TYPE_PEN = 1 | Stylus.<br>**Since**: 24<br><!--Device-TOOL_TYPE_PEN = 1--><!--Device-TOOL_TYPE_PEN = 1-End--> |
+| TOOL_TYPE_RUBBER = 2 | Eraser-type device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_RUBBER = 2--><!--Device-TOOL_TYPE_RUBBER = 2-End--> |
+| TOOL_TYPE_BRUSH = 3 | Brush device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_BRUSH = 3--><!--Device-TOOL_TYPE_BRUSH = 3-End--> |
+| TOOL_TYPE_PENCIL = 4 | Pencil device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_PENCIL = 4--><!--Device-TOOL_TYPE_PENCIL = 4-End--> |
+| TOOL_TYPE_AIRBRUSH = 5 | Airbrush device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_AIRBRUSH = 5--><!--Device-TOOL_TYPE_AIRBRUSH = 5-End--> |
+| TOOL_TYPE_MOUSE = 6 | Mouse device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_MOUSE = 6--><!--Device-TOOL_TYPE_MOUSE = 6-End--> |
+| TOOL_TYPE_LENS = 7 | Lens device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_LENS = 7--><!--Device-TOOL_TYPE_LENS = 7-End--> |
 
 
 ## Function description

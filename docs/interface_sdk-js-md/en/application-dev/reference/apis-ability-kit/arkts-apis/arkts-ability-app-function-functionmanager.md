@@ -44,3 +44,11 @@ import { functionManager, FunctionHook, InvokeFunctionParam, FunctionResultWrap 
 | --- | --- |
 | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md) | Optional parameters for Function invocation. Contains the application context information for the Function invocation. |
 | [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md) | Encapsulates the success or failure status of function invocation. |
+
+<!--Del-->
+### Interfaces(System API)
+
+| Name | Description |
+| --- | --- |
+| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Optional parameters for Function invocation. Contains the application context information for the Function invocation. |
+<!--DelEnd-->

@@ -69,7 +69,7 @@ enum OH_AVPixelFormat
 
 视频像素格式的枚举类。
 
-<!--Device-OH_AVPixelFormat--><!--Device-OH_AVPixelFormat-End-->
+<!--Device-enum OH_AVPixelFormat--><!--Device-enum OH_AVPixelFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -77,12 +77,12 @@ enum OH_AVPixelFormat
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AV_PIXEL_FORMAT_YUVI420 = 1 | yuv 420 planar。<br>**起始版本：** 9 |
-| AV_PIXEL_FORMAT_NV12 = 2 | NV12. yuv 420 semiplanar。<br>**起始版本：** 9 |
-| AV_PIXEL_FORMAT_NV21 = 3 | NV21. yvu 420 semiplanar。<br>**起始版本：** 9 |
-| AV_PIXEL_FORMAT_SURFACE_FORMAT = 4 | 像素格式从surface获取。只作用于Surface模式，Buffer模式不生效。<br>**起始版本：** 9 |
-| AV_PIXEL_FORMAT_RGBA = 5 | RGBA8888。<br>**起始版本：** 9 |
-| AV_PIXEL_FORMAT_RGBA1010102 = 6 | RGBA1010102。<br>**起始版本：** 20 |
+| AV_PIXEL_FORMAT_YUVI420 = 1 | yuv 420 planar。<br>**起始版本：** 9<br><!--Device-AV_PIXEL_FORMAT_YUVI420 = 1--><!--Device-AV_PIXEL_FORMAT_YUVI420 = 1-End--> |
+| AV_PIXEL_FORMAT_NV12 = 2 | NV12. yuv 420 semiplanar。<br>**起始版本：** 9<br><!--Device-AV_PIXEL_FORMAT_NV12 = 2--><!--Device-AV_PIXEL_FORMAT_NV12 = 2-End--> |
+| AV_PIXEL_FORMAT_NV21 = 3 | NV21. yvu 420 semiplanar。<br>**起始版本：** 9<br><!--Device-AV_PIXEL_FORMAT_NV21 = 3--><!--Device-AV_PIXEL_FORMAT_NV21 = 3-End--> |
+| AV_PIXEL_FORMAT_SURFACE_FORMAT = 4 | 像素格式从surface获取。只作用于Surface模式，Buffer模式不生效。<br>**起始版本：** 9<br><!--Device-AV_PIXEL_FORMAT_SURFACE_FORMAT = 4--><!--Device-AV_PIXEL_FORMAT_SURFACE_FORMAT = 4-End--> |
+| AV_PIXEL_FORMAT_RGBA = 5 | RGBA8888。<br>**起始版本：** 9<br><!--Device-AV_PIXEL_FORMAT_RGBA = 5--><!--Device-AV_PIXEL_FORMAT_RGBA = 5-End--> |
+| AV_PIXEL_FORMAT_RGBA1010102 = 6 | RGBA1010102。<br>**起始版本：** 20<br><!--Device-AV_PIXEL_FORMAT_RGBA1010102 = 6--><!--Device-AV_PIXEL_FORMAT_RGBA1010102 = 6-End--> |
 
 
 ## 函数说明

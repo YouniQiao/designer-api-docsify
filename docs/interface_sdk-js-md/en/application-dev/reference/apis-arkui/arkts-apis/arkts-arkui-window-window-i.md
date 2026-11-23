@@ -7191,7 +7191,7 @@ Restores the main window of the current window to the foreground. If the main wi
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:         1. The window is not created or destroyed.         2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause:         1. The window is not float window.         2. The window is not at foreground or has never been clicked.         3. The window cannot find main window. |
-| [1300007](../errorcode-window.md#1300007-application-startup-failure-by-windowextensionability) | Restore parent main window failed. Possible cause:         1. The main window is in PAUSED lifecycle state.         2. The main window is in background during recent. |
+| [1300007](../errorcode-window.md#1300007-failed-to-restore-the-main-window-of-the-current-window-to-the-foreground) | Restore parent main window failed. Possible cause:         1. The main window is in PAUSED lifecycle state.         2. The main window is in background during recent. |
 
 **Examples**
 

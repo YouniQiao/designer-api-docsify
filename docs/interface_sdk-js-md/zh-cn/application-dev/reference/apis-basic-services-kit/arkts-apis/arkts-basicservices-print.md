@@ -70,8 +70,8 @@ import { print } from '@kit.BasicServicesKit';
 | [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md#getprinterdefaultpreferences-1) | 按打印机ID获取默认首选项，使用Promise异步回调。 |
 | [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md#getprinterinfobyid-1) | 根据打印机ID获取打印机信息，使用Promise异步回调。 |
 | [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md#getsharedhosts-1) | 获取所有可用的共享主机，使用Promise异步回调。 |
-| notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started') | 将打印预览界面关闭信息通知打印服务，使用callback异步回调。用于在打印预览界面关闭后，让打印服务进行清理、退出等操作。 |
-| notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started') | 将打印预览界面关闭信息通知打印服务，使用Promise异步回调。用于在打印预览界面关闭后，让打印服务进行清理、退出等操作。 |
+| notifyPrintService('spooler_closed_for_cancelled' &#124; 'spooler_closed_for_started') | 将打印预览界面关闭信息通知打印服务，使用callback异步回调。用于在打印预览界面关闭后，让打印服务进行清理、退出等操作。 |
+| notifyPrintService('spooler_closed_for_cancelled' &#124; 'spooler_closed_for_started') | 将打印预览界面关闭信息通知打印服务，使用Promise异步回调。用于在打印预览界面关闭后，让打印服务进行清理、退出等操作。 |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent-1) | 将打印应用相关事件通知打印服务，使用Promise异步回调。用于在打印应用创建、销毁等生命周期事件发生时通知打印服务进行相应处理。 |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent-2) | 将打印应用相关事件通知打印服务，使用Promise异步回调。用于在打印应用创建、销毁等生命周期事件发生时，携带打印任务ID通知打印服务进行相应处理。 |
 | [off('printerStateChange')](arkts-basicservices-print-off-f-sys.md#offprinterstatechange) | 取消注册打印机状态变化事件回调，使用callback回调。 |

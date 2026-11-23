@@ -24,7 +24,7 @@ Defines an IP address in binary form, supporting both IPv4 and IPv6.
 
 | Name | Description |
 | -- | -- |
-| [OH_TrafficFilter_IPFamily](capi-net-trafficfilter-type-h.md#oh_trafficfilter_ipfamily) family | Address family. If **OH_TRAFFICFILTER_IP_FAMILY_UNSPEC** is specified, IPv4 is used by default.<br>**Since**: 26.0.0 |
-| uint8_t addr[OH_TRAFFICFILTER_IP_ADDRLEN] | IP address bytes. The bytes must be stored in network byte order. For IPv4, addr[0] to addr[3] store the IPv4 address, and addr[4] to addr[15] must be set to **0**. For IPv6, addr[0] to addr[15] store the IPv6 address. If the bytes do not match the address layout required by [family](capi-trafficfilter-oh-trafficfilter-ipaddress.md), the interface that uses this struct returns [OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode).<br>**Since**: 26.0.0 |
+| [OH_TrafficFilter_IPFamily](capi-net-trafficfilter-type-h.md#oh_trafficfilter_ipfamily) family | Address family. If **OH_TRAFFICFILTER_IP_FAMILY_UNSPEC** is specified, IPv4 is used by default.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_IPFamily family--><!--Device-OH_TrafficFilter_IPFamily family-End--> |
+| uint8_t addr[OH_TRAFFICFILTER_IP_ADDRLEN] | IP address bytes. The bytes must be stored in network byte order. For IPv4, addr[0] to addr[3] store the IPv4 address, and addr[4] to addr[15] must be set to **0**. For IPv6, addr[0] to addr[15] store the IPv6 address. If the bytes do not match the address layout required by [family](capi-trafficfilter-oh-trafficfilter-ipaddress.md), the interface that uses this struct returns [OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode).<br>**Since**: 26.0.0<br><!--Device-uint8_t addr[OH_TRAFFICFILTER_IP_ADDRLEN]--><!--Device-uint8_t addr[OH_TRAFFICFILTER_IP_ADDRLEN]-End--> |
 
 

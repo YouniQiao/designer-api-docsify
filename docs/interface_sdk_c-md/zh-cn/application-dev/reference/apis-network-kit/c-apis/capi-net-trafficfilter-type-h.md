@@ -93,7 +93,7 @@ enum OH_TrafficFilter_ErrCode
 
 流量过滤与重定向错误码。
 
-<!--Device-OH_TrafficFilter_ErrCode--><!--Device-OH_TrafficFilter_ErrCode-End-->
+<!--Device-enum OH_TrafficFilter_ErrCode--><!--Device-enum OH_TrafficFilter_ErrCode-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -101,14 +101,14 @@ enum OH_TrafficFilter_ErrCode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_OK = 0 | 操作成功。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_E_BASE = 29410000 | 错误码基值。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201 | 缺少权限。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101) | 参数错误（无效的优先级、IP地址、端口或Group ID）。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102) | 资源未找到（规则、目标、进程或Group ID未找到）。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103) | 规则数量过多。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104) | Group ID已被占用。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105) | NFQueue错误（初始化失败或无可用队列）。<br>**起始版本：** 26.0.0 |
+| OH_TRAFFICFILTER_OK = 0 | 操作成功。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_OK = 0--><!--Device-OH_TRAFFICFILTER_OK = 0-End--> |
+| OH_TRAFFICFILTER_E_BASE = 29410000 | 错误码基值。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_E_BASE = 29410000--><!--Device-OH_TRAFFICFILTER_E_BASE = 29410000-End--> |
+| OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201 | 缺少权限。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201--><!--Device-OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201-End--> |
+| OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101) | 参数错误（无效的优先级、IP地址、端口或Group ID）。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101)--><!--Device-OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101)-End--> |
+| OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102) | 资源未找到（规则、目标、进程或Group ID未找到）。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102)--><!--Device-OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102)-End--> |
+| OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103) | 规则数量过多。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103)--><!--Device-OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103)-End--> |
+| OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104) | Group ID已被占用。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104)--><!--Device-OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104)-End--> |
+| OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105) | NFQueue错误（初始化失败或无可用队列）。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105)--><!--Device-OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105)-End--> |
 
 ### OH_TrafficFilter_IPMatchType
 
@@ -120,7 +120,7 @@ enum OH_TrafficFilter_IPMatchType
 
 IP匹配类型。
 
-<!--Device-OH_TrafficFilter_IPMatchType--><!--Device-OH_TrafficFilter_IPMatchType-End-->
+<!--Device-enum OH_TrafficFilter_IPMatchType--><!--Device-enum OH_TrafficFilter_IPMatchType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -128,11 +128,11 @@ IP匹配类型。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_IP_MATCH_ANY = 0 | 任意IP。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_SINGLE | 单个IP。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_CIDR | CIDR格式（如192.168.1.0/24，表示匹配该子网内的所有IP）。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_RANGE | IP范围。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_MULTI | 多个IP。<br>**起始版本：** 26.0.0 |
+| OH_TRAFFICFILTER_IP_MATCH_ANY = 0 | 任意IP。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_ANY = 0--><!--Device-OH_TRAFFICFILTER_IP_MATCH_ANY = 0-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_SINGLE | 单个IP。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_SINGLE--><!--Device-OH_TRAFFICFILTER_IP_MATCH_SINGLE-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_CIDR | CIDR格式（如192.168.1.0/24，表示匹配该子网内的所有IP）。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_CIDR--><!--Device-OH_TRAFFICFILTER_IP_MATCH_CIDR-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_RANGE | IP范围。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_RANGE--><!--Device-OH_TRAFFICFILTER_IP_MATCH_RANGE-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_MULTI | 多个IP。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_MULTI--><!--Device-OH_TRAFFICFILTER_IP_MATCH_MULTI-End--> |
 
 ### OH_TrafficFilter_IPFamily
 
@@ -144,7 +144,7 @@ enum OH_TrafficFilter_IPFamily
 
 IP地址族。
 
-<!--Device-OH_TrafficFilter_IPFamily--><!--Device-OH_TrafficFilter_IPFamily-End-->
+<!--Device-enum OH_TrafficFilter_IPFamily--><!--Device-enum OH_TrafficFilter_IPFamily-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -152,9 +152,9 @@ IP地址族。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0 | 未指定的IP地址族。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_FAMILY_V4 = 1 | IPv4地址族。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_IP_FAMILY_V6 = 2 | IPv6地址族。<br>**起始版本：** 26.0.0 |
+| OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0 | 未指定的IP地址族。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0-End--> |
+| OH_TRAFFICFILTER_IP_FAMILY_V4 = 1 | IPv4地址族。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V4 = 1--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V4 = 1-End--> |
+| OH_TRAFFICFILTER_IP_FAMILY_V6 = 2 | IPv6地址族。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V6 = 2--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V6 = 2-End--> |
 
 ### OH_TrafficFilter_PortMatchType
 
@@ -166,7 +166,7 @@ enum OH_TrafficFilter_PortMatchType
 
 端口匹配类型。
 
-<!--Device-OH_TrafficFilter_PortMatchType--><!--Device-OH_TrafficFilter_PortMatchType-End-->
+<!--Device-enum OH_TrafficFilter_PortMatchType--><!--Device-enum OH_TrafficFilter_PortMatchType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -174,10 +174,10 @@ enum OH_TrafficFilter_PortMatchType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_PORT_MATCH_ANY = 0 | 任意端口。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_SINGLE | 单个端口。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_RANGE | 端口范围。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_MULTI | 多个端口。<br>**起始版本：** 26.0.0 |
+| OH_TRAFFICFILTER_PORT_MATCH_ANY = 0 | 任意端口。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_ANY = 0--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_ANY = 0-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_SINGLE | 单个端口。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_SINGLE--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_SINGLE-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_RANGE | 端口范围。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_RANGE--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_RANGE-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_MULTI | 多个端口。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_MULTI--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_MULTI-End--> |
 
 ### OH_TrafficFilter_HookPoint
 
@@ -189,7 +189,7 @@ enum OH_TrafficFilter_HookPoint
 
 钩子点类型，指定规则在网络协议栈中生效的位置。 报文经过内核网络协议栈时会在不同阶段触发钩子点，规则在对应钩子点处对报文进行拦截。 例如INPUT链处理进入本机的报文，OUTPUT链处理本机发出的报文。
 
-<!--Device-OH_TrafficFilter_HookPoint--><!--Device-OH_TrafficFilter_HookPoint-End-->
+<!--Device-enum OH_TrafficFilter_HookPoint--><!--Device-enum OH_TrafficFilter_HookPoint-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -197,11 +197,11 @@ enum OH_TrafficFilter_HookPoint
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_HOOK_INPUT = 0 | INPUT链，处理进入本机的报文。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_OUTPUT | OUTPUT链，处理本机发出的报文。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_FORWARD | FORWARD链，处理本机转发的报文。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_PREROUTING | PREROUTING链，处理刚到达网卡、尚未路由的报文。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_POSTROUTING | POSTROUTING链，处理即将从网卡发出的报文。<br>**起始版本：** 26.0.0 |
+| OH_TRAFFICFILTER_HOOK_INPUT = 0 | INPUT链，处理进入本机的报文。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_INPUT = 0--><!--Device-OH_TRAFFICFILTER_HOOK_INPUT = 0-End--> |
+| OH_TRAFFICFILTER_HOOK_OUTPUT | OUTPUT链，处理本机发出的报文。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_OUTPUT--><!--Device-OH_TRAFFICFILTER_HOOK_OUTPUT-End--> |
+| OH_TRAFFICFILTER_HOOK_FORWARD | FORWARD链，处理本机转发的报文。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_FORWARD--><!--Device-OH_TRAFFICFILTER_HOOK_FORWARD-End--> |
+| OH_TRAFFICFILTER_HOOK_PREROUTING | PREROUTING链，处理刚到达网卡、尚未路由的报文。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_PREROUTING--><!--Device-OH_TRAFFICFILTER_HOOK_PREROUTING-End--> |
+| OH_TRAFFICFILTER_HOOK_POSTROUTING | POSTROUTING链，处理即将从网卡发出的报文。<br>**起始版本：** 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_POSTROUTING--><!--Device-OH_TRAFFICFILTER_HOOK_POSTROUTING-End--> |
 
 ### OH_TrafficFilter_PacketDecision
 
@@ -213,7 +213,7 @@ enum OH_TrafficFilter_PacketDecision
 
 报文处理决策类型。
 
-<!--Device-OH_TrafficFilter_PacketDecision--><!--Device-OH_TrafficFilter_PacketDecision-End-->
+<!--Device-enum OH_TrafficFilter_PacketDecision--><!--Device-enum OH_TrafficFilter_PacketDecision-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -221,8 +221,8 @@ enum OH_TrafficFilter_PacketDecision
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | 接收报文。<br>**起始版本：** 26.0.1 |
-| OH_TRAFFICFILTER_DECISION_DROP | 丢弃报文。<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | 接收报文。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_DECISION_ACCEPT = 0--><!--Device-OH_TRAFFICFILTER_DECISION_ACCEPT = 0-End--> |
+| OH_TRAFFICFILTER_DECISION_DROP | 丢弃报文。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_DECISION_DROP--><!--Device-OH_TRAFFICFILTER_DECISION_DROP-End--> |
 
 ### OH_TrafficFilter_PacketCopyMode
 
@@ -234,7 +234,7 @@ enum OH_TrafficFilter_PacketCopyMode
 
 报文拷贝模式枚举。
 
-<!--Device-OH_TrafficFilter_PacketCopyMode--><!--Device-OH_TrafficFilter_PacketCopyMode-End-->
+<!--Device-enum OH_TrafficFilter_PacketCopyMode--><!--Device-enum OH_TrafficFilter_PacketCopyMode-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -242,10 +242,10 @@ enum OH_TrafficFilter_PacketCopyMode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_COPY_MODE_META = 0 | 仅拷贝元数据（不拷贝报文数据）。<br>**起始版本：** 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | 仅拷贝报文头（由packetCopyLen指定）。<br>**起始版本：** 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | 拷贝整个报文。<br>**起始版本：** 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | 按指定最大长度拷贝报文。<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_META = 0 | 仅拷贝元数据（不拷贝报文数据）。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_META = 0--><!--Device-OH_TRAFFICFILTER_COPY_MODE_META = 0-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | 仅拷贝报文头（由packetCopyLen指定）。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_HEADER = 1--><!--Device-OH_TRAFFICFILTER_COPY_MODE_HEADER = 1-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | 拷贝整个报文。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_FULL = 2--><!--Device-OH_TRAFFICFILTER_COPY_MODE_FULL = 2-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | 按指定最大长度拷贝报文。<br>**起始版本：** 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3--><!--Device-OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3-End--> |
 
 
 ## 函数说明

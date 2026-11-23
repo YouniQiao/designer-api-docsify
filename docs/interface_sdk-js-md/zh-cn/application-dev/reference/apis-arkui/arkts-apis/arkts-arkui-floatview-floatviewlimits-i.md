@@ -4,7 +4,7 @@
 interface FloatViewLimits
 ```
 
-标准悬浮窗窗口的限制。
+闪控窗窗口的限制。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 maxSize: window.Size
 ```
 
-标准悬浮窗的最大尺寸。
+闪控窗的最大尺寸。
 
 **类型：** [window.Size](arkts-arkui-window-size-i.md)
 
@@ -42,7 +42,7 @@ maxSize: window.Size
 minSize: window.Size
 ```
 
-标准悬浮窗的最小尺寸。
+闪控窗的最小尺寸。
 
 **类型：** [window.Size](arkts-arkui-window-size-i.md)
 
@@ -60,7 +60,7 @@ minSize: window.Size
 ratioLimits: Array<RatioLimit>
 ```
 
-标准悬浮窗的宽高比限制范围。
+闪控窗的宽高比限制范围，数组中的每个元素包含minRatio（最小宽高比）和maxRatio（最大宽高比）。
 
 **类型：** Array&lt;[RatioLimit](arkts-arkui-floatview-ratiolimit-i.md)&gt;
 

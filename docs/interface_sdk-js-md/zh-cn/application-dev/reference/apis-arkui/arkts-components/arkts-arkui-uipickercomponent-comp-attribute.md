@@ -114,7 +114,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | 是 | 选项高度。<br>单位：与LengthMetrics一致。<br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。<br>当height的值为undefined时，使用默认值40vp。<br>不支持“百分比”类型。 |
+| height | Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | 是 | 选项高度。<br>单位：与[LengthMetrics一致。<br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。<br>当height的值为undefined时，使用默认值40vp。<br>不支持“百分比”类型。 |
 
 ## onChange
 

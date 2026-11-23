@@ -22,7 +22,7 @@ Defines a pointer to a training configuration object.
 
 | Name | Description |
 | -- | -- |
-| size_t handle_num |  |
-| OH_AI_TensorHandle *handle_list |  |
+| size_t handle_num | <!--Device-size_t handle_num--><!--Device-size_t handle_num-End--> |
+| OH_AI_TensorHandle *handle_list | <!--Device-OH_AI_TensorHandle *handle_list--><!--Device-OH_AI_TensorHandle *handle_list-End--> |
 
 

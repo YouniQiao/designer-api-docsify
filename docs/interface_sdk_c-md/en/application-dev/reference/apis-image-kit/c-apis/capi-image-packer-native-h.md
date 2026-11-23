@@ -77,7 +77,7 @@ enum IMAGE_PACKER_DYNAMIC_RANGE
 
 Enumerates the dynamic range for encoding.
 
-<!--Device-IMAGE_PACKER_DYNAMIC_RANGE--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE-End-->
+<!--Device-enum IMAGE_PACKER_DYNAMIC_RANGE--><!--Device-enum IMAGE_PACKER_DYNAMIC_RANGE-End-->
 
 **System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
@@ -85,8 +85,8 @@ Enumerates the dynamic range for encoding.
 
 | Enum item | Description |
 | -- | -- |
-| IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0 | Packing according to the content of the image. |
-| IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1 | Packing to standard dynamic range. |
+| IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0 | Packing according to the content of the image.<br><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0-End--> |
+| IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1 | Packing to standard dynamic range.<br><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1-End--> |
 
 
 ## Function description

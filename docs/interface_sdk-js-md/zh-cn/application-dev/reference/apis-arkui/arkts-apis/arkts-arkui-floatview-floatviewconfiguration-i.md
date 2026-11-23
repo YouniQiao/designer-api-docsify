@@ -4,7 +4,7 @@
 interface FloatViewConfiguration
 ```
 
-创建标准悬浮窗控制器时需要提供的参数配置。
+创建闪控窗控制器时需要提供的参数配置。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 context: BaseContext
 ```
 
-表示上下文环境。
+表示上下文环境，用于创建闪控窗控制器时关联的应用主窗口。必须传入有效的UIAbilityContext实例。
 
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
@@ -42,7 +42,7 @@ context: BaseContext
 isConfirmOnClose?: boolean
 ```
 
-控制关闭窗口时是否弹出确认对话框.如果为 true，则点击关闭按钮时需要用户确认；如果为 false，则不需要确认，直接关闭。默认值： 默认值为false。
+点击关闭按钮时是否需要用户确认。true表示点击关闭按钮时需要用户确认，否则不需要确认。默认值为false。
 
 **类型：** boolean
 
@@ -60,7 +60,7 @@ isConfirmOnClose?: boolean
 templateType: FloatViewTemplateType
 ```
 
-标准悬浮窗的模板类型。
+闪控窗的模板类型。
 
 **类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 

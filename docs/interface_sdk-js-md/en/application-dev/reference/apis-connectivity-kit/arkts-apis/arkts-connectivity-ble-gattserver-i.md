@@ -877,7 +877,7 @@ Unsubscribe mtu changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEMtuChange' | Yes | Type of the mtu changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Specifies the callback function notification for unsubscription. If parameters are transferred, the callback function in on('BLEMtuChange') must be used. Consistent. If there is no input parameter, all callback function notifications corresponding to the type are unsubscribed from. |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Specifies the callback function notification for unsubscription. If parameters are transferred, the callback function in [on('BLEMtuChange') must be used. Consistent. If there is no input parameter, all callback function notifications corresponding to the type are unsubscribed from. |
 
 **Error codes:**
 

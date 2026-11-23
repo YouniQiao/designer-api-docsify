@@ -34,7 +34,7 @@ onConnect(want: Want): rpc.RemoteObject
 
 应用需要在该接口中返回一个RemoteObject对象，用于客户端和服务端进行通信。当AppServiceExtensionAbility实例处于连接状态时，如果调用方发起新的连接，系统会返回缓存的RemoteObject对象，而不会重复回调onConnect()接口。
 
-**设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
+**设备行为差异**：该接口支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不执行回调。
 
 **起始版本：** 20
 
@@ -95,7 +95,7 @@ onCreate(want: Want): void
 > 
 > 如果AppServiceExtensionAbility实例已创建，再次启动或连接该实例时不会触发onCreate()回调。
 
-**设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
+**设备行为差异**：该接口支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不执行回调。
 
 **起始版本：** 20
 
@@ -134,7 +134,7 @@ onDestroy(): void
 
 在AppServiceExtensionAbility实例销毁时，系统会触发该回调。应用可以在该接口中执行资源清理等操作，如注销监听等。
 
-**设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
+**设备行为差异**：该接口支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不执行回调。
 
 **起始版本：** 20
 
@@ -167,7 +167,7 @@ onDisconnect(want: Want): void
 
 当所有连接方断开与AppServiceExtensionAbility实例的连接时，系统会触发该回调。
 
-**设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
+**设备行为差异**：该接口支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不执行回调。
 
 **起始版本：** 20
 
@@ -206,7 +206,7 @@ onRequest(want: Want, startId: number): void
 
 调用方每次使用[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability)拉起AppServiceExtensionAbility实例时，系统都会触发该回调。
 
-**设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
+**设备行为差异**：该接口支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不执行回调。
 
 **起始版本：** 20
 
@@ -245,6 +245,8 @@ context: AppServiceExtensionContext
 ```
 
 AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
+
+**设备行为差异**：该属性支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。在不支持该能力的设备上不生效。
 
 **类型：** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 

@@ -24,7 +24,7 @@ import { floatingBall } from '@kit.ArkUI';
 context: BaseContext
 ```
 
-表示上下文环境。
+表示上下文环境，用于创建闪控球控制器时关联的应用主窗口。该参数不能为空，通常传入UIAbilityContext对象。
 
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 

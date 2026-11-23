@@ -43,5 +43,5 @@ function start(descriptor: LaunchServiceDescriptor): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability. <br>2. The chip does not support the capability. <br>3. A dependent service feature is not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | System service connection failed. |
-| 16000211 | The specified service is not found. |
-| 16000213 | The specified service is disabled. |
+| [16000211](../errorcode-ability.md#16000211-指定的launchservice不存在) | The specified service is not found. |
+| [16000213](../errorcode-ability.md#16000213-指定的launchservice已禁用) | The specified service is disabled. |

@@ -44,3 +44,11 @@ import { functionManager, FunctionHook, InvokeFunctionParam, FunctionResultWrap 
 | --- | --- |
 | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md) | Function调用的可选参数。包含Function调用时的应用上下文信息。 |
 | [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md) | Function调用的结果。包含Function调用成功时返回的数据，调用失败时的错误码和错误信息。 |
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Function调用的可选参数。包含Function调用时的应用上下文信息。 |
+<!--DelEnd-->

@@ -4,7 +4,7 @@
 interface FloatViewRectChangeInfo
 ```
 
-标准悬浮窗矩形区域变化信息。
+闪控窗矩形区域变化信息。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 reason: string
 ```
 
-标准悬浮窗矩形区域变化的原因。原因和对应含义如下：
+闪控窗矩形区域变化的原因。原因和对应含义如下：
 
 "POSITION_CHANGE"：位置变化
 
@@ -48,7 +48,7 @@ reason: string
 windowRect: window.Rect
 ```
 
-标准悬浮窗窗口矩形区域。
+闪控窗窗口矩形区域。
 
 **类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
@@ -66,7 +66,7 @@ windowRect: window.Rect
 windowScale: number
 ```
 
-标准悬浮窗窗口缩放比例。
+闪控窗窗口缩放比例。
 
 **类型：** number
 

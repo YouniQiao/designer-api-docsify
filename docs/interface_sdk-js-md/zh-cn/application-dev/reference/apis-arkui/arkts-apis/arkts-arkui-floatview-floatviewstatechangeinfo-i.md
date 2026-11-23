@@ -4,7 +4,7 @@
 interface FloatViewStateChangeInfo
 ```
 
-标准悬浮窗状态变化信息。
+闪控窗状态变化信息。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 state: FloatViewState
 ```
 
-标准悬浮窗的状态。
+闪控窗的状态。
 
 **类型：** [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md)
 
@@ -42,7 +42,7 @@ state: FloatViewState
 stopReason: string
 ```
 
-标准悬浮窗停止的原因。该参数仅在状态为FloatViewState.STOPPED时有效，在其他状态下默认为空字符串。停止原因和对应含义如下：
+闪控窗停止的原因。该参数仅在状态为FloatViewState.STOPPED时有效，在其他状态下默认为空字符串。停止原因和对应含义如下：
 
 "APP_STOP"：应用主动停止
 
@@ -52,7 +52,7 @@ stopReason: string
 
 "DUMPSTER_STOP"：拖入垃圾桶停止
 
-"REPLACE_STOP"：被其他标准悬浮窗挤占
+"REPLACE_STOP"：被其他闪控窗挤占
 
 "FLOATING_BALL_STOP"：绑定状态下跟随闪控球停止
 

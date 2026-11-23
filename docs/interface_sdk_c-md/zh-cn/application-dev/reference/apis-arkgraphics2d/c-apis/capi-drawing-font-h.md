@@ -95,7 +95,7 @@ enum OH_Drawing_FontHinting
 
 字型轮廓效果类型枚举。
 
-<!--Device-OH_Drawing_FontHinting--><!--Device-OH_Drawing_FontHinting-End-->
+<!--Device-enum OH_Drawing_FontHinting--><!--Device-enum OH_Drawing_FontHinting-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -103,10 +103,10 @@ enum OH_Drawing_FontHinting
 
 | 枚举项 | 描述 |
 | -- | -- |
-| FONT_HINTING_NONE | 不修改字型轮廓。<br>**起始版本：** 12 |
-| FONT_HINTING_SLIGHT | 最小限度修改字型轮廓以改善对比度。<br>**起始版本：** 12 |
-| FONT_HINTING_NORMAL | 修改字型轮廓以提高对比度。<br>**起始版本：** 12 |
-| FONT_HINTING_FULL | 修改字型轮廓以获得最大对比度。<br>**起始版本：** 12 |
+| FONT_HINTING_NONE | 不修改字型轮廓。<br>**起始版本：** 12<br><!--Device-FONT_HINTING_NONE--><!--Device-FONT_HINTING_NONE-End--> |
+| FONT_HINTING_SLIGHT | 最小限度修改字型轮廓以改善对比度。<br>**起始版本：** 12<br><!--Device-FONT_HINTING_SLIGHT--><!--Device-FONT_HINTING_SLIGHT-End--> |
+| FONT_HINTING_NORMAL | 修改字型轮廓以提高对比度。<br>**起始版本：** 12<br><!--Device-FONT_HINTING_NORMAL--><!--Device-FONT_HINTING_NORMAL-End--> |
+| FONT_HINTING_FULL | 修改字型轮廓以获得最大对比度。<br>**起始版本：** 12<br><!--Device-FONT_HINTING_FULL--><!--Device-FONT_HINTING_FULL-End--> |
 
 ### OH_Drawing_FontEdging
 
@@ -118,7 +118,7 @@ enum OH_Drawing_FontEdging
 
 字型边缘效果类型枚举。
 
-<!--Device-OH_Drawing_FontEdging--><!--Device-OH_Drawing_FontEdging-End-->
+<!--Device-enum OH_Drawing_FontEdging--><!--Device-enum OH_Drawing_FontEdging-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -126,9 +126,9 @@ enum OH_Drawing_FontEdging
 
 | 枚举项 | 描述 |
 | -- | -- |
-| FONT_EDGING_ALIAS | 无抗锯齿处理。<br>**起始版本：** 12 |
-| FONT_EDGING_ANTI_ALIAS | 使用抗锯齿来平滑字型边缘。<br>**起始版本：** 12 |
-| FONT_EDGING_SUBPIXEL_ANTI_ALIAS | 使用次像素级别的抗锯齿来平滑字型边缘，可以获得更加平滑的字型渲染效果。<br>**起始版本：** 12 |
+| FONT_EDGING_ALIAS | 无抗锯齿处理。<br>**起始版本：** 12<br><!--Device-FONT_EDGING_ALIAS--><!--Device-FONT_EDGING_ALIAS-End--> |
+| FONT_EDGING_ANTI_ALIAS | 使用抗锯齿来平滑字型边缘。<br>**起始版本：** 12<br><!--Device-FONT_EDGING_ANTI_ALIAS--><!--Device-FONT_EDGING_ANTI_ALIAS-End--> |
+| FONT_EDGING_SUBPIXEL_ANTI_ALIAS | 使用次像素级别的抗锯齿来平滑字型边缘，可以获得更加平滑的字型渲染效果。<br>**起始版本：** 12<br><!--Device-FONT_EDGING_SUBPIXEL_ANTI_ALIAS--><!--Device-FONT_EDGING_SUBPIXEL_ANTI_ALIAS-End--> |
 
 
 ## 函数说明

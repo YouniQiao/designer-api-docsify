@@ -11,10 +11,11 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 ## 约束限制
 
-- 当前仅支持PC/2in1设备。
+- 支持PC/2in1设备；从API version 26.1.0开始，支持手机和平板设备，具体支持情况由产品配置决定。
 
-- 应用集成AppServiceExtensionAbility的组件需要申请ACL权限（ohos.permission.SUPPORT_APP_SERVICE_EXTENSION）。该ACL权限当前只对企业普通应用开放申请，申请方
- 式参考权限申请指导。
+- 集成AppServiceExtensionAbility组件的应用需要获授ACL权限：手机和平板设备使用
+ ohos.permission.SUPPORT_APP_SERVICE_EXTENSION_ADVANCED，仅向MDM应用开放；PC/2in1设备可使用该权限或
+ ohos.permission.SUPPORT_APP_SERVICE_EXTENSION（仅向企业普通应用开放），满足一项即可。申请方式参考权限申请指导。
 
 - 为保障系统安全性和稳定性，防止AppServiceExtensionAbility滥用系统资源，系统对其能力进行管控，不支持@ohos.window (窗口)。
 

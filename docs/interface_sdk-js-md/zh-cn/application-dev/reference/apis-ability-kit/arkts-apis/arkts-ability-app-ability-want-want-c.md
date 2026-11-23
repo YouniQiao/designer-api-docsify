@@ -207,7 +207,7 @@ parameters?: Record<string, Object>
 
 want的Params操作的常量的具体信息请参考[wantConstant](arkts-ability-app-ability-wantconstant.md)。
 
-需注意，WantParams支持传输的最大数据量遵循Want约束限制。当数据量超过该限制时，请使用WriteRawDataBuffer或[uri](../../apis-arkts/arkts-apis/arkts-arkts-uri.md)的方式进行数据传输。
+需注意，WantParams支持传输的最大数据量遵循Want约束限制](#约束限制)。当数据量超过该限制时，请使用[WriteRawDataBuffer或[uri](../../apis-arkts/arkts-apis/arkts-arkts-uri.md)的方式进行数据传输。
 
 parameters的Value值仅支持基本数据类型：String、Number、Boolean、Object、undefined和null，不支持传递Object内部的function。
 

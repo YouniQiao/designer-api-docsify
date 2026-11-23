@@ -2035,7 +2035,7 @@ Unsubscribes from the cross-device data sync completion events. You must call on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. Note that if multiple ArkTS instances (obtained through the getKVStore API) of the same database all register the callback used to listen for the sync completion event, and one of the instances calls **off('syncComplete')** without passing the **syncCallback** parameter (that is, all callbacks of this instance are unregistered), then the callbacks of the other instances are also unregistered. |
+| syncCallback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. Note that if multiple ArkTS instances (obtained through the [getKVStore API) of the same database all register the callback used to listen for the sync completion event, and one of the instances calls **off('syncComplete')** without passing the **syncCallback** parameter (that is, all callbacks of this instance are unregistered), then the callbacks of the other instances are also unregistered. |
 
 **Error codes:**
 

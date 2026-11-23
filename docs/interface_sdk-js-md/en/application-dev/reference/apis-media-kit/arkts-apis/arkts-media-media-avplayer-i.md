@@ -577,7 +577,7 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-media-mediatype-e.md) | Yes | specified media Type, see MediaType. |
+| trackType | MediaType](arkts-media-media-mediatype-e.md) | Yes | specified media Type, see [MediaType. |
 
 **Return value:**
 

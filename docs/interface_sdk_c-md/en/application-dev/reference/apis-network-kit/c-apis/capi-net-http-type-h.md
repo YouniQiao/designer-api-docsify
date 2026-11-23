@@ -80,7 +80,7 @@ enum Http_ErrCode
 
 Enumerates the error codes of an HTTP request.
 
-<!--Device-Http_ErrCode--><!--Device-Http_ErrCode-End-->
+<!--Device-enum Http_ErrCode--><!--Device-enum Http_ErrCode-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -88,41 +88,41 @@ Enumerates the error codes of an HTTP request.
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_RESULT_OK = 0 | The request succeeded. |
-| OH_HTTP_PARAMETER_ERROR = 401 | Invalid parameter. |
-| OH_HTTP_PERMISSION_DENIED = 201 | Permission denied. |
-| OH_HTTP_NETSTACK_E_BASE = 2300000 | Base error code offset. |
-| OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1) | Unsupported protocol. |
-| OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3) | Invalid URL format. |
-| OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5) | Failed to resolve the proxy server domain name. |
-| OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6) | Failed to resolve the domain name. |
-| OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7) | Failed to connect to the server. |
-| OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8) | The server returned invalid data. |
-| OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9) | Access to the remote resource is denied. |
-| OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16) | An error occurred in the HTTP/2 framing layer. |
-| OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18) | Part of the file was transferred. |
-| OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23) | Failed to write the received data to the disk or application. |
-| OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25) | Upload failed. |
-| OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26) | Failed to open or read local data from the file or application. |
-| OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27) | Insufficient memory. |
-| OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28) | Operation timed out. |
-| OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47) | The number of redirections has reached the maximum allowed. |
-| OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52) | The server returned nothing (no header or data). |
-| OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55) | Failed to send data. |
-| OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56) | Failed to receive data. |
-| OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58) | Local SSL certificate error. |
-| OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59) | The specified cipher suite is unavailable. |
-| OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60) | Invalid SSL peer certificate or SSH remote key. |
-| OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61) | Invalid HTTP encoding format. |
-| OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63) | The maximum file size is exceeded. |
-| OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70) | The remote disk is full. |
-| OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73) | The remote file already exists. |
-| OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77) | The SSL CA certificate does not exist or is inaccessible. |
-| OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78) | The remote file was not found. |
-| OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94) | Authentication error. |
-| OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996) | The request was intercepted by the HTTP global interceptor.<br>**Since**: 26.0.0 |
-| OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998) | Access to the domain is not allowed. |
-| OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999) | Unknown error. |
+| OH_HTTP_RESULT_OK = 0 | The request succeeded.<br><!--Device-OH_HTTP_RESULT_OK = 0--><!--Device-OH_HTTP_RESULT_OK = 0-End--> |
+| OH_HTTP_PARAMETER_ERROR = 401 | Invalid parameter.<br><!--Device-OH_HTTP_PARAMETER_ERROR = 401--><!--Device-OH_HTTP_PARAMETER_ERROR = 401-End--> |
+| OH_HTTP_PERMISSION_DENIED = 201 | Permission denied.<br><!--Device-OH_HTTP_PERMISSION_DENIED = 201--><!--Device-OH_HTTP_PERMISSION_DENIED = 201-End--> |
+| OH_HTTP_NETSTACK_E_BASE = 2300000 | Base error code offset.<br><!--Device-OH_HTTP_NETSTACK_E_BASE = 2300000--><!--Device-OH_HTTP_NETSTACK_E_BASE = 2300000-End--> |
+| OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1) | Unsupported protocol.<br><!--Device-OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1)--><!--Device-OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1)-End--> |
+| OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3) | Invalid URL format.<br><!--Device-OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3)--><!--Device-OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3)-End--> |
+| OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5) | Failed to resolve the proxy server domain name.<br><!--Device-OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5)--><!--Device-OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5)-End--> |
+| OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6) | Failed to resolve the domain name.<br><!--Device-OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6)--><!--Device-OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6)-End--> |
+| OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7) | Failed to connect to the server.<br><!--Device-OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7)--><!--Device-OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7)-End--> |
+| OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8) | The server returned invalid data.<br><!--Device-OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8)--><!--Device-OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8)-End--> |
+| OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9) | Access to the remote resource is denied.<br><!--Device-OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9)--><!--Device-OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9)-End--> |
+| OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16) | An error occurred in the HTTP/2 framing layer.<br><!--Device-OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16)--><!--Device-OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16)-End--> |
+| OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18) | Part of the file was transferred.<br><!--Device-OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18)--><!--Device-OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18)-End--> |
+| OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23) | Failed to write the received data to the disk or application.<br><!--Device-OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23)--><!--Device-OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23)-End--> |
+| OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25) | Upload failed.<br><!--Device-OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25)--><!--Device-OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25)-End--> |
+| OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26) | Failed to open or read local data from the file or application.<br><!--Device-OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26)--><!--Device-OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26)-End--> |
+| OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27) | Insufficient memory.<br><!--Device-OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27)--><!--Device-OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27)-End--> |
+| OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28) | Operation timed out.<br><!--Device-OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28)--><!--Device-OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28)-End--> |
+| OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47) | The number of redirections has reached the maximum allowed.<br><!--Device-OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47)--><!--Device-OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47)-End--> |
+| OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52) | The server returned nothing (no header or data).<br><!--Device-OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52)--><!--Device-OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52)-End--> |
+| OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55) | Failed to send data.<br><!--Device-OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55)--><!--Device-OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55)-End--> |
+| OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56) | Failed to receive data.<br><!--Device-OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56)--><!--Device-OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56)-End--> |
+| OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58) | Local SSL certificate error.<br><!--Device-OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58)--><!--Device-OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58)-End--> |
+| OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59) | The specified cipher suite is unavailable.<br><!--Device-OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59)--><!--Device-OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59)-End--> |
+| OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60) | Invalid SSL peer certificate or SSH remote key.<br><!--Device-OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60)--><!--Device-OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60)-End--> |
+| OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61) | Invalid HTTP encoding format.<br><!--Device-OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61)--><!--Device-OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61)-End--> |
+| OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63) | The maximum file size is exceeded.<br><!--Device-OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63)--><!--Device-OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63)-End--> |
+| OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70) | The remote disk is full.<br><!--Device-OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70)--><!--Device-OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70)-End--> |
+| OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73) | The remote file already exists.<br><!--Device-OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73)--><!--Device-OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73)-End--> |
+| OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77) | The SSL CA certificate does not exist or is inaccessible.<br><!--Device-OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77)--><!--Device-OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77)-End--> |
+| OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78) | The remote file was not found.<br><!--Device-OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78)--><!--Device-OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78)-End--> |
+| OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94) | Authentication error.<br><!--Device-OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94)--><!--Device-OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94)-End--> |
+| OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996) | The request was intercepted by the HTTP global interceptor.<br>**Since**: 26.0.0<br><!--Device-OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996)--><!--Device-OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996)-End--> |
+| OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998) | Access to the domain is not allowed.<br><!--Device-OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998)--><!--Device-OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998)-End--> |
+| OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999) | Unknown error.<br><!--Device-OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999)--><!--Device-OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999)-End--> |
 
 ### Http_ResponseCode
 
@@ -134,7 +134,7 @@ enum Http_ResponseCode
 
 Enumerates the result codes of an HTTP response.
 
-<!--Device-Http_ResponseCode--><!--Device-Http_ResponseCode-End-->
+<!--Device-enum Http_ResponseCode--><!--Device-enum Http_ResponseCode-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -142,42 +142,42 @@ Enumerates the result codes of an HTTP response.
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_OK = 200 | Request succeeded. |
-| OH_HTTP_CREATED = 201 | "Created." The request has been successfully sent and a new resource is created. |
-| OH_HTTP_ACCEPTED = 202 | "Accepted." The request has been accepted for processing, but the processing has not been completed. |
-| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | "Non-Authoritative Information." The request was successfully processed, but the returned response body contains non-authoritative information. |
-| OH_HTTP_NO_CONTENT = 204 | "No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body. |
-| OH_HTTP_RESET = 205 | "Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content. |
-| OH_HTTP_PARTIAL = 206 | "Partial Content." The server has successfully fulfilled the partial GET request for a given resource. |
-| OH_HTTP_MULTI_CHOICE = 300 | "Multiple Choices." The requested resource corresponds to any one of a set of representations. |
-| OH_HTTP_MOVED_PERM = 301 | "Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI. |
-| OH_HTTP_MOVED_TEMP = 302 | "Moved Temporarily." The requested resource is moved temporarily to a different URI. |
-| OH_HTTP_SEE_OTHER = 303 | "See Other." The response to the request can be found under a different URI. |
-| OH_HTTP_NOT_MODIFIED = 304 | "Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified. |
-| OH_HTTP_USE_PROXY = 305 | "Use Proxy." The requested resource can only be accessed through the proxy. |
-| OH_HTTP_BAD_REQUEST = 400 | "Bad Request." The request could not be understood by the server due to incorrect syntax. |
-| OH_HTTP_UNAUTHORIZED = 401 | "Unauthorized." The request requires user authentication. |
-| OH_HTTP_PAYMENT_REQUIRED = 402 | "Payment Required." This code is reserved for future use. |
-| OH_HTTP_FORBIDDEN = 403 | "Forbidden." The server understands the request but refuses to process it. |
-| OH_HTTP_NOT_FOUND = 404 | "Not Found." The server does not find anything matching the Request-URI. |
-| OH_HTTP_BAD_METHOD = 405 | "Method Not Allowed." The method specified in the request is not allowed for the resource identified by the Request-URI. |
-| OH_HTTP_NOT_ACCEPTABLE = 406 | "Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request. |
-| OH_HTTP_PROXY_AUTH = 407 | "Proxy Authentication Required." The request requires user authentication with the proxy. |
-| OH_HTTP_CLIENT_TIMEOUT = 408 | "Request Timeout." The client fails to generate a request within the timeout period. |
-| OH_HTTP_CONFLICT = 409 | "Conflict." The request cannot be fulfilled due to a conflict with the current state of the resource. Conflicts are most likely to occur in response to a PUT request. |
-| OH_HTTP_GONE = 410 | "Gone." The requested resource has been deleted permanently and is no longer available. |
-| OH_HTTP_LENGTH_REQUIRED = 411 | "Length Required." The server refuses to process the request without a defined Content-Length. |
-| OH_HTTP_PRECON_FAILED = 412 | "Precondition Failed." The precondition in the request is incorrect. |
-| OH_HTTP_ENTITY_TOO_LARGE = 413 | "Request Entity Too Large." The server refuses to process a request because the request entity is larger than the server is able to process. |
-| OH_HTTP_REQUEST_TOO_LONG = 414 | "Request-URI Too Long." The Request-URI is too long for the server to process. |
-| OH_HTTP_UNSUPPORTED_TYPE = 415 | "Unsupported Media Type." The server is unable to process the media format in the request. |
-| OH_HTTP_RANGE_NOT_MET = 416 | "Range Not Satisfiable." The server cannot serve the requested ranges. |
-| OH_HTTP_INTERNAL_ERROR = 500 | "Internal Server Error." The server encounters an unexpected error that prevents it from fulfilling the request. |
-| OH_HTTP_NOT_IMPLEMENTED = 501 | "Not Implemented." The server does not support the function required to fulfill the request. |
-| OH_HTTP_BAD_GATEWAY = 502 | "Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server. |
-| OH_HTTP_UNAVAILABLE = 503 | "Service Unavailable." The server is currently unable to process the request due to a temporary overload or system maintenance. |
-| OH_HTTP_GATEWAY_TIMEOUT = 504 | "Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period. |
-| OH_HTTP_VERSION = 505 | "HTTP Version Not Supported." The server does not support the HTTP protocol version used in the request. |
+| OH_HTTP_OK = 200 | Request succeeded.<br><!--Device-OH_HTTP_OK = 200--><!--Device-OH_HTTP_OK = 200-End--> |
+| OH_HTTP_CREATED = 201 | "Created." The request has been successfully sent and a new resource is created.<br><!--Device-OH_HTTP_CREATED = 201--><!--Device-OH_HTTP_CREATED = 201-End--> |
+| OH_HTTP_ACCEPTED = 202 | "Accepted." The request has been accepted for processing, but the processing has not been completed.<br><!--Device-OH_HTTP_ACCEPTED = 202--><!--Device-OH_HTTP_ACCEPTED = 202-End--> |
+| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | "Non-Authoritative Information." The request was successfully processed, but the returned response body contains non-authoritative information.<br><!--Device-OH_HTTP_NON_AUTHORITATIVE_INFO = 203--><!--Device-OH_HTTP_NON_AUTHORITATIVE_INFO = 203-End--> |
+| OH_HTTP_NO_CONTENT = 204 | "No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.<br><!--Device-OH_HTTP_NO_CONTENT = 204--><!--Device-OH_HTTP_NO_CONTENT = 204-End--> |
+| OH_HTTP_RESET = 205 | "Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content.<br><!--Device-OH_HTTP_RESET = 205--><!--Device-OH_HTTP_RESET = 205-End--> |
+| OH_HTTP_PARTIAL = 206 | "Partial Content." The server has successfully fulfilled the partial GET request for a given resource.<br><!--Device-OH_HTTP_PARTIAL = 206--><!--Device-OH_HTTP_PARTIAL = 206-End--> |
+| OH_HTTP_MULTI_CHOICE = 300 | "Multiple Choices." The requested resource corresponds to any one of a set of representations.<br><!--Device-OH_HTTP_MULTI_CHOICE = 300--><!--Device-OH_HTTP_MULTI_CHOICE = 300-End--> |
+| OH_HTTP_MOVED_PERM = 301 | "Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.<br><!--Device-OH_HTTP_MOVED_PERM = 301--><!--Device-OH_HTTP_MOVED_PERM = 301-End--> |
+| OH_HTTP_MOVED_TEMP = 302 | "Moved Temporarily." The requested resource is moved temporarily to a different URI.<br><!--Device-OH_HTTP_MOVED_TEMP = 302--><!--Device-OH_HTTP_MOVED_TEMP = 302-End--> |
+| OH_HTTP_SEE_OTHER = 303 | "See Other." The response to the request can be found under a different URI.<br><!--Device-OH_HTTP_SEE_OTHER = 303--><!--Device-OH_HTTP_SEE_OTHER = 303-End--> |
+| OH_HTTP_NOT_MODIFIED = 304 | "Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified.<br><!--Device-OH_HTTP_NOT_MODIFIED = 304--><!--Device-OH_HTTP_NOT_MODIFIED = 304-End--> |
+| OH_HTTP_USE_PROXY = 305 | "Use Proxy." The requested resource can only be accessed through the proxy.<br><!--Device-OH_HTTP_USE_PROXY = 305--><!--Device-OH_HTTP_USE_PROXY = 305-End--> |
+| OH_HTTP_BAD_REQUEST = 400 | "Bad Request." The request could not be understood by the server due to incorrect syntax.<br><!--Device-OH_HTTP_BAD_REQUEST = 400--><!--Device-OH_HTTP_BAD_REQUEST = 400-End--> |
+| OH_HTTP_UNAUTHORIZED = 401 | "Unauthorized." The request requires user authentication.<br><!--Device-OH_HTTP_UNAUTHORIZED = 401--><!--Device-OH_HTTP_UNAUTHORIZED = 401-End--> |
+| OH_HTTP_PAYMENT_REQUIRED = 402 | "Payment Required." This code is reserved for future use.<br><!--Device-OH_HTTP_PAYMENT_REQUIRED = 402--><!--Device-OH_HTTP_PAYMENT_REQUIRED = 402-End--> |
+| OH_HTTP_FORBIDDEN = 403 | "Forbidden." The server understands the request but refuses to process it.<br><!--Device-OH_HTTP_FORBIDDEN = 403--><!--Device-OH_HTTP_FORBIDDEN = 403-End--> |
+| OH_HTTP_NOT_FOUND = 404 | "Not Found." The server does not find anything matching the Request-URI.<br><!--Device-OH_HTTP_NOT_FOUND = 404--><!--Device-OH_HTTP_NOT_FOUND = 404-End--> |
+| OH_HTTP_BAD_METHOD = 405 | "Method Not Allowed." The method specified in the request is not allowed for the resource identified by the Request-URI.<br><!--Device-OH_HTTP_BAD_METHOD = 405--><!--Device-OH_HTTP_BAD_METHOD = 405-End--> |
+| OH_HTTP_NOT_ACCEPTABLE = 406 | "Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request.<br><!--Device-OH_HTTP_NOT_ACCEPTABLE = 406--><!--Device-OH_HTTP_NOT_ACCEPTABLE = 406-End--> |
+| OH_HTTP_PROXY_AUTH = 407 | "Proxy Authentication Required." The request requires user authentication with the proxy.<br><!--Device-OH_HTTP_PROXY_AUTH = 407--><!--Device-OH_HTTP_PROXY_AUTH = 407-End--> |
+| OH_HTTP_CLIENT_TIMEOUT = 408 | "Request Timeout." The client fails to generate a request within the timeout period.<br><!--Device-OH_HTTP_CLIENT_TIMEOUT = 408--><!--Device-OH_HTTP_CLIENT_TIMEOUT = 408-End--> |
+| OH_HTTP_CONFLICT = 409 | "Conflict." The request cannot be fulfilled due to a conflict with the current state of the resource. Conflicts are most likely to occur in response to a PUT request.<br><!--Device-OH_HTTP_CONFLICT = 409--><!--Device-OH_HTTP_CONFLICT = 409-End--> |
+| OH_HTTP_GONE = 410 | "Gone." The requested resource has been deleted permanently and is no longer available.<br><!--Device-OH_HTTP_GONE = 410--><!--Device-OH_HTTP_GONE = 410-End--> |
+| OH_HTTP_LENGTH_REQUIRED = 411 | "Length Required." The server refuses to process the request without a defined Content-Length.<br><!--Device-OH_HTTP_LENGTH_REQUIRED = 411--><!--Device-OH_HTTP_LENGTH_REQUIRED = 411-End--> |
+| OH_HTTP_PRECON_FAILED = 412 | "Precondition Failed." The precondition in the request is incorrect.<br><!--Device-OH_HTTP_PRECON_FAILED = 412--><!--Device-OH_HTTP_PRECON_FAILED = 412-End--> |
+| OH_HTTP_ENTITY_TOO_LARGE = 413 | "Request Entity Too Large." The server refuses to process a request because the request entity is larger than the server is able to process.<br><!--Device-OH_HTTP_ENTITY_TOO_LARGE = 413--><!--Device-OH_HTTP_ENTITY_TOO_LARGE = 413-End--> |
+| OH_HTTP_REQUEST_TOO_LONG = 414 | "Request-URI Too Long." The Request-URI is too long for the server to process.<br><!--Device-OH_HTTP_REQUEST_TOO_LONG = 414--><!--Device-OH_HTTP_REQUEST_TOO_LONG = 414-End--> |
+| OH_HTTP_UNSUPPORTED_TYPE = 415 | "Unsupported Media Type." The server is unable to process the media format in the request.<br><!--Device-OH_HTTP_UNSUPPORTED_TYPE = 415--><!--Device-OH_HTTP_UNSUPPORTED_TYPE = 415-End--> |
+| OH_HTTP_RANGE_NOT_MET = 416 | "Range Not Satisfiable." The server cannot serve the requested ranges.<br><!--Device-OH_HTTP_RANGE_NOT_MET = 416--><!--Device-OH_HTTP_RANGE_NOT_MET = 416-End--> |
+| OH_HTTP_INTERNAL_ERROR = 500 | "Internal Server Error." The server encounters an unexpected error that prevents it from fulfilling the request.<br><!--Device-OH_HTTP_INTERNAL_ERROR = 500--><!--Device-OH_HTTP_INTERNAL_ERROR = 500-End--> |
+| OH_HTTP_NOT_IMPLEMENTED = 501 | "Not Implemented." The server does not support the function required to fulfill the request.<br><!--Device-OH_HTTP_NOT_IMPLEMENTED = 501--><!--Device-OH_HTTP_NOT_IMPLEMENTED = 501-End--> |
+| OH_HTTP_BAD_GATEWAY = 502 | "Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server.<br><!--Device-OH_HTTP_BAD_GATEWAY = 502--><!--Device-OH_HTTP_BAD_GATEWAY = 502-End--> |
+| OH_HTTP_UNAVAILABLE = 503 | "Service Unavailable." The server is currently unable to process the request due to a temporary overload or system maintenance.<br><!--Device-OH_HTTP_UNAVAILABLE = 503--><!--Device-OH_HTTP_UNAVAILABLE = 503-End--> |
+| OH_HTTP_GATEWAY_TIMEOUT = 504 | "Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period.<br><!--Device-OH_HTTP_GATEWAY_TIMEOUT = 504--><!--Device-OH_HTTP_GATEWAY_TIMEOUT = 504-End--> |
+| OH_HTTP_VERSION = 505 | "HTTP Version Not Supported." The server does not support the HTTP protocol version used in the request.<br><!--Device-OH_HTTP_VERSION = 505--><!--Device-OH_HTTP_VERSION = 505-End--> |
 
 ### Http_AddressFamilyType
 
@@ -189,7 +189,7 @@ enum Http_AddressFamilyType
 
 Enumerates the IP address family of the target domain name.
 
-<!--Device-Http_AddressFamilyType--><!--Device-Http_AddressFamilyType-End-->
+<!--Device-enum Http_AddressFamilyType--><!--Device-enum Http_AddressFamilyType-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -197,9 +197,9 @@ Enumerates the IP address family of the target domain name.
 
 | Enum item | Description |
 | -- | -- |
-| HTTP_ADDRESS_FAMILY_DEFAULT = 0 | Default value. The system determines whether to use the IPv4 or IPv6 address of the target domain name. |
-| HTTP_ADDRESS_FAMILY_ONLY_V4 = 1 | The system resolves only the IPv4 address of the target domain name and ignores the IPv6 address. |
-| HTTP_ADDRESS_FAMILY_ONLY_V6 = 2 | The system resolves only the IPv6 address of the target domain name and ignores the IPv4 address. |
+| HTTP_ADDRESS_FAMILY_DEFAULT = 0 | Default value. The system determines whether to use the IPv4 or IPv6 address of the target domain name.<br><!--Device-HTTP_ADDRESS_FAMILY_DEFAULT = 0--><!--Device-HTTP_ADDRESS_FAMILY_DEFAULT = 0-End--> |
+| HTTP_ADDRESS_FAMILY_ONLY_V4 = 1 | The system resolves only the IPv4 address of the target domain name and ignores the IPv6 address.<br><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V4 = 1--><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V4 = 1-End--> |
+| HTTP_ADDRESS_FAMILY_ONLY_V6 = 2 | The system resolves only the IPv6 address of the target domain name and ignores the IPv4 address.<br><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V6 = 2--><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V6 = 2-End--> |
 
 ### Http_HttpProtocol
 
@@ -211,7 +211,7 @@ enum Http_HttpProtocol
 
 Enumerates HTTP protocol versions.
 
-<!--Device-Http_HttpProtocol--><!--Device-Http_HttpProtocol-End-->
+<!--Device-enum Http_HttpProtocol--><!--Device-enum Http_HttpProtocol-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -219,10 +219,10 @@ Enumerates HTTP protocol versions.
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_NONE = 0 | Protocol version complies with cURL. |
-| OH_HTTP1_1 | HTTP 1.1 version. |
-| OH_HTTP2 | HTTP 2 version. |
-| OH_HTTP3 | HTTP 3 version. |
+| OH_HTTP_NONE = 0 | Protocol version complies with cURL.<br><!--Device-OH_HTTP_NONE = 0--><!--Device-OH_HTTP_NONE = 0-End--> |
+| OH_HTTP1_1 | HTTP 1.1 version.<br><!--Device-OH_HTTP1_1--><!--Device-OH_HTTP1_1-End--> |
+| OH_HTTP2 | HTTP 2 version.<br><!--Device-OH_HTTP2--><!--Device-OH_HTTP2-End--> |
+| OH_HTTP3 | HTTP 3 version.<br><!--Device-OH_HTTP3--><!--Device-OH_HTTP3-End--> |
 
 ### Http_CertType
 
@@ -234,7 +234,7 @@ enum Http_CertType
 
 Enumerates certificate types.
 
-<!--Device-Http_CertType--><!--Device-Http_CertType-End-->
+<!--Device-enum Http_CertType--><!--Device-enum Http_CertType-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -242,9 +242,9 @@ Enumerates certificate types.
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_PEM = 0 | PEM certificate. |
-| OH_HTTP_DER = 1 | DER certificate. |
-| OH_HTTP_P12 = 2 | P12 certificate. |
+| OH_HTTP_PEM = 0 | PEM certificate.<br><!--Device-OH_HTTP_PEM = 0--><!--Device-OH_HTTP_PEM = 0-End--> |
+| OH_HTTP_DER = 1 | DER certificate.<br><!--Device-OH_HTTP_DER = 1--><!--Device-OH_HTTP_DER = 1-End--> |
+| OH_HTTP_P12 = 2 | P12 certificate.<br><!--Device-OH_HTTP_P12 = 2--><!--Device-OH_HTTP_P12 = 2-End--> |
 
 ### Http_ProxyType
 
@@ -256,7 +256,7 @@ enum Http_ProxyType
 
 Enumerates proxy types.
 
-<!--Device-Http_ProxyType--><!--Device-Http_ProxyType-End-->
+<!--Device-enum Http_ProxyType--><!--Device-enum Http_ProxyType-End-->
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -264,9 +264,9 @@ Enumerates proxy types.
 
 | Enum item | Description |
 | -- | -- |
-| HTTP_PROXY_NOT_USE | No proxy. |
-| HTTP_PROXY_SYSTEM | The system proxy is used. |
-| HTTP_PROXY_CUSTOM | The custom proxy is used. |
+| HTTP_PROXY_NOT_USE | No proxy.<br><!--Device-HTTP_PROXY_NOT_USE--><!--Device-HTTP_PROXY_NOT_USE-End--> |
+| HTTP_PROXY_SYSTEM | The system proxy is used.<br><!--Device-HTTP_PROXY_SYSTEM--><!--Device-HTTP_PROXY_SYSTEM-End--> |
+| HTTP_PROXY_CUSTOM | The custom proxy is used.<br><!--Device-HTTP_PROXY_CUSTOM--><!--Device-HTTP_PROXY_CUSTOM-End--> |
 
 
 ## Function description

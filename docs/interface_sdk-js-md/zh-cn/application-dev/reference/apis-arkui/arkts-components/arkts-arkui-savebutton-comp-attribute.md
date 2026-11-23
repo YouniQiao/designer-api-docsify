@@ -198,7 +198,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontWeight | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 设置保存控件Symbol图标粗细。<br>支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。<br>支持string类型：可传入number类型的数字字符串（如"400"），或FontWeight的枚举值的小写字符串（如"normal"）。<br>默认值：FontWeight.Normal（对应数值400）。<br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| fontWeight | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 设置保存控件Symbol图标粗细。<br>支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。<br>支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight的枚举值的小写字符串（如"normal"）。<br>默认值：FontWeight.Normal（对应数值400）。<br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## symbolIconColor
 

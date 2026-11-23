@@ -85,7 +85,7 @@ The framework validates the restricted-builder mark carried in the compile produ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100031 | Registration rejected: the builder is not marked with **@Builder({ isPlaceholder: true })**. The ID is not registered. |
+| [100031](../errorcode-scroll.md#100031-placeholder-template-registration-rejected) | Registration rejected: the builder is not marked with **@Builder({ isPlaceholder: true })**. The ID is not registered. |
 
 ## unregister
 

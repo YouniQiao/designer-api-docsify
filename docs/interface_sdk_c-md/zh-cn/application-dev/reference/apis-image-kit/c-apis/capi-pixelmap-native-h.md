@@ -151,7 +151,7 @@ enum PIXELMAP_ALPHA_TYPE
 
 Pixelmap透明度类型。
 
-<!--Device-PIXELMAP_ALPHA_TYPE--><!--Device-PIXELMAP_ALPHA_TYPE-End-->
+<!--Device-enum PIXELMAP_ALPHA_TYPE--><!--Device-enum PIXELMAP_ALPHA_TYPE-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -159,10 +159,10 @@ Pixelmap透明度类型。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| PIXELMAP_ALPHA_TYPE_UNKNOWN = 0 | 未知格式。 |
-| PIXELMAP_ALPHA_TYPE_OPAQUE = 1 | 不透明的格式。 |
-| PIXELMAP_ALPHA_TYPE_PREMULTIPLIED = 2 | 预乘透明度格式。 |
-| PIXELMAP_ALPHA_TYPE_UNPREMULTIPLIED = 3 | 非预乘透明度格式。 |
+| PIXELMAP_ALPHA_TYPE_UNKNOWN = 0 | 未知格式。<br><!--Device-PIXELMAP_ALPHA_TYPE_UNKNOWN = 0--><!--Device-PIXELMAP_ALPHA_TYPE_UNKNOWN = 0-End--> |
+| PIXELMAP_ALPHA_TYPE_OPAQUE = 1 | 不透明的格式。<br><!--Device-PIXELMAP_ALPHA_TYPE_OPAQUE = 1--><!--Device-PIXELMAP_ALPHA_TYPE_OPAQUE = 1-End--> |
+| PIXELMAP_ALPHA_TYPE_PREMULTIPLIED = 2 | 预乘透明度格式。<br><!--Device-PIXELMAP_ALPHA_TYPE_PREMULTIPLIED = 2--><!--Device-PIXELMAP_ALPHA_TYPE_PREMULTIPLIED = 2-End--> |
+| PIXELMAP_ALPHA_TYPE_UNPREMULTIPLIED = 3 | 非预乘透明度格式。<br><!--Device-PIXELMAP_ALPHA_TYPE_UNPREMULTIPLIED = 3--><!--Device-PIXELMAP_ALPHA_TYPE_UNPREMULTIPLIED = 3-End--> |
 
 ### PIXEL_FORMAT
 
@@ -174,7 +174,7 @@ enum PIXEL_FORMAT
 
 图像的像素格式，包含像素数据的颜色通道排列和位深信息。
 
-<!--Device-PIXEL_FORMAT--><!--Device-PIXEL_FORMAT-End-->
+<!--Device-enum PIXEL_FORMAT--><!--Device-enum PIXEL_FORMAT-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -182,20 +182,20 @@ enum PIXEL_FORMAT
 
 | 枚举项 | 描述 |
 | -- | -- |
-| PIXEL_FORMAT_UNKNOWN = 0 | 未知格式。 |
-| PIXEL_FORMAT_RGB_565 = 2 | RGB_565格式。 |
-| PIXEL_FORMAT_RGBA_8888 = 3 | RGBA_8888格式。 |
-| PIXEL_FORMAT_BGRA_8888 = 4 | BGRA_8888格式。 |
-| PIXEL_FORMAT_RGB_888 = 5 | RGB_888格式。 |
-| PIXEL_FORMAT_ALPHA_8 = 6 | ALPHA_8格式。 |
-| PIXEL_FORMAT_RGBA_F16 = 7 | RGBA_F16格式。 |
-| PIXEL_FORMAT_NV21 = 8 | NV21格式。 |
-| PIXEL_FORMAT_NV12 = 9 | NV12格式。 |
-| PIXEL_FORMAT_RGBA_1010102 = 10 | RGBA_1010102格式。 |
-| PIXEL_FORMAT_YCBCR_P010 = 11 | YCBCR_P010格式。 |
-| PIXEL_FORMAT_YCRCB_P010 = 12 | YCRCB_P010格式。 |
-| PIXEL_FORMAT_ALPHA_U8 = 15 | ALPHA_U8格式。<br>**起始版本：** 26.0.0 |
-| PIXEL_FORMAT_ALPHA_F16 = 16 | ALPHA_F16格式。<br>**起始版本：** 26.0.0 |
+| PIXEL_FORMAT_UNKNOWN = 0 | 未知格式。<br><!--Device-PIXEL_FORMAT_UNKNOWN = 0--><!--Device-PIXEL_FORMAT_UNKNOWN = 0-End--> |
+| PIXEL_FORMAT_RGB_565 = 2 | RGB_565格式。<br><!--Device-PIXEL_FORMAT_RGB_565 = 2--><!--Device-PIXEL_FORMAT_RGB_565 = 2-End--> |
+| PIXEL_FORMAT_RGBA_8888 = 3 | RGBA_8888格式。<br><!--Device-PIXEL_FORMAT_RGBA_8888 = 3--><!--Device-PIXEL_FORMAT_RGBA_8888 = 3-End--> |
+| PIXEL_FORMAT_BGRA_8888 = 4 | BGRA_8888格式。<br><!--Device-PIXEL_FORMAT_BGRA_8888 = 4--><!--Device-PIXEL_FORMAT_BGRA_8888 = 4-End--> |
+| PIXEL_FORMAT_RGB_888 = 5 | RGB_888格式。<br><!--Device-PIXEL_FORMAT_RGB_888 = 5--><!--Device-PIXEL_FORMAT_RGB_888 = 5-End--> |
+| PIXEL_FORMAT_ALPHA_8 = 6 | ALPHA_8格式。<br><!--Device-PIXEL_FORMAT_ALPHA_8 = 6--><!--Device-PIXEL_FORMAT_ALPHA_8 = 6-End--> |
+| PIXEL_FORMAT_RGBA_F16 = 7 | RGBA_F16格式。<br><!--Device-PIXEL_FORMAT_RGBA_F16 = 7--><!--Device-PIXEL_FORMAT_RGBA_F16 = 7-End--> |
+| PIXEL_FORMAT_NV21 = 8 | NV21格式。<br><!--Device-PIXEL_FORMAT_NV21 = 8--><!--Device-PIXEL_FORMAT_NV21 = 8-End--> |
+| PIXEL_FORMAT_NV12 = 9 | NV12格式。<br><!--Device-PIXEL_FORMAT_NV12 = 9--><!--Device-PIXEL_FORMAT_NV12 = 9-End--> |
+| PIXEL_FORMAT_RGBA_1010102 = 10 | RGBA_1010102格式。<br><!--Device-PIXEL_FORMAT_RGBA_1010102 = 10--><!--Device-PIXEL_FORMAT_RGBA_1010102 = 10-End--> |
+| PIXEL_FORMAT_YCBCR_P010 = 11 | YCBCR_P010格式。<br><!--Device-PIXEL_FORMAT_YCBCR_P010 = 11--><!--Device-PIXEL_FORMAT_YCBCR_P010 = 11-End--> |
+| PIXEL_FORMAT_YCRCB_P010 = 12 | YCRCB_P010格式。<br><!--Device-PIXEL_FORMAT_YCRCB_P010 = 12--><!--Device-PIXEL_FORMAT_YCRCB_P010 = 12-End--> |
+| PIXEL_FORMAT_ALPHA_U8 = 15 | ALPHA_U8格式。<br>**起始版本：** 26.0.0<br><!--Device-PIXEL_FORMAT_ALPHA_U8 = 15--><!--Device-PIXEL_FORMAT_ALPHA_U8 = 15-End--> |
+| PIXEL_FORMAT_ALPHA_F16 = 16 | ALPHA_F16格式。<br>**起始版本：** 26.0.0<br><!--Device-PIXEL_FORMAT_ALPHA_F16 = 16--><!--Device-PIXEL_FORMAT_ALPHA_F16 = 16-End--> |
 
 ### OH_PixelmapNative_AntiAliasingLevel
 
@@ -207,7 +207,7 @@ enum OH_PixelmapNative_AntiAliasingLevel
 
 Pixelmap缩放时采用的缩放算法。
 
-<!--Device-OH_PixelmapNative_AntiAliasingLevel--><!--Device-OH_PixelmapNative_AntiAliasingLevel-End-->
+<!--Device-enum OH_PixelmapNative_AntiAliasingLevel--><!--Device-enum OH_PixelmapNative_AntiAliasingLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -215,10 +215,10 @@ Pixelmap缩放时采用的缩放算法。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_PixelmapNative_AntiAliasing_NONE = 0 | 最近邻插值算法。 <br>速度最快，放大时会有明显的马赛克/锯齿感，适合对性能要求高、对画质要求低的快速缩放场景。 |
-| OH_PixelmapNative_AntiAliasing_LOW = 1 | 双线性插值算法。 <br>适合一般缩放场景。 |
-| OH_PixelmapNative_AntiAliasing_MEDIUM = 2 | 双线性插值算法，同时开启Mipmap。 <br>适合缩小图片的场景，能极好地消除大幅缩小时的混叠与纹理闪烁。 |
-| OH_PixelmapNative_AntiAliasing_HIGH = 3 | 三次卷积插值算法。 <br>适合对画质要求较高的放大场景。 |
+| OH_PixelmapNative_AntiAliasing_NONE = 0 | 最近邻插值算法。 <br>速度最快，放大时会有明显的马赛克/锯齿感，适合对性能要求高、对画质要求低的快速缩放场景。<br><!--Device-OH_PixelmapNative_AntiAliasing_NONE = 0--><!--Device-OH_PixelmapNative_AntiAliasing_NONE = 0-End--> |
+| OH_PixelmapNative_AntiAliasing_LOW = 1 | 双线性插值算法。 <br>适合一般缩放场景。<br><!--Device-OH_PixelmapNative_AntiAliasing_LOW = 1--><!--Device-OH_PixelmapNative_AntiAliasing_LOW = 1-End--> |
+| OH_PixelmapNative_AntiAliasing_MEDIUM = 2 | 双线性插值算法，同时开启Mipmap。 <br>适合缩小图片的场景，能极好地消除大幅缩小时的混叠与纹理闪烁。<br><!--Device-OH_PixelmapNative_AntiAliasing_MEDIUM = 2--><!--Device-OH_PixelmapNative_AntiAliasing_MEDIUM = 2-End--> |
+| OH_PixelmapNative_AntiAliasing_HIGH = 3 | 三次卷积插值算法。 <br>适合对画质要求较高的放大场景。<br><!--Device-OH_PixelmapNative_AntiAliasing_HIGH = 3--><!--Device-OH_PixelmapNative_AntiAliasing_HIGH = 3-End--> |
 
 ### OH_Pixelmap_HdrMetadataKey
 
@@ -230,7 +230,7 @@ enum OH_Pixelmap_HdrMetadataKey
 
 Pixelmap使用的HDR相关元数据信息的关键字，用于[OH_PixelmapNative_SetMetadata](capi-pixelmap-native-h.md#oh_pixelmapnative_setmetadata)及[OH_PixelmapNative_GetMetadata](capi-pixelmap-native-h.md#oh_pixelmapnative_getmetadata)。
 
-<!--Device-OH_Pixelmap_HdrMetadataKey--><!--Device-OH_Pixelmap_HdrMetadataKey-End-->
+<!--Device-enum OH_Pixelmap_HdrMetadataKey--><!--Device-enum OH_Pixelmap_HdrMetadataKey-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -238,10 +238,10 @@ Pixelmap使用的HDR相关元数据信息的关键字，用于[OH_PixelmapNative
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HDR_METADATA_TYPE = 0 | Pixelmap使用的元数据类型。 |
-| HDR_STATIC_METADATA = 1 | 静态元数据。 |
-| HDR_DYNAMIC_METADATA = 2 | 动态元数据。 |
-| HDR_GAINMAP_METADATA = 3 | 增益图使用的元数据。 |
+| HDR_METADATA_TYPE = 0 | Pixelmap使用的元数据类型。<br><!--Device-HDR_METADATA_TYPE = 0--><!--Device-HDR_METADATA_TYPE = 0-End--> |
+| HDR_STATIC_METADATA = 1 | 静态元数据。<br><!--Device-HDR_STATIC_METADATA = 1--><!--Device-HDR_STATIC_METADATA = 1-End--> |
+| HDR_DYNAMIC_METADATA = 2 | 动态元数据。<br><!--Device-HDR_DYNAMIC_METADATA = 2--><!--Device-HDR_DYNAMIC_METADATA = 2-End--> |
+| HDR_GAINMAP_METADATA = 3 | 增益图使用的元数据。<br><!--Device-HDR_GAINMAP_METADATA = 3--><!--Device-HDR_GAINMAP_METADATA = 3-End--> |
 
 ### OH_Pixelmap_HdrMetadataType
 
@@ -253,7 +253,7 @@ enum OH_Pixelmap_HdrMetadataType
 
 HDR_METADATA_TYPE关键字对应的值。
 
-<!--Device-OH_Pixelmap_HdrMetadataType--><!--Device-OH_Pixelmap_HdrMetadataType-End-->
+<!--Device-enum OH_Pixelmap_HdrMetadataType--><!--Device-enum OH_Pixelmap_HdrMetadataType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -261,10 +261,10 @@ HDR_METADATA_TYPE关键字对应的值。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HDR_METADATA_TYPE_NONE = 0 | 无元数据内容。 |
-| HDR_METADATA_TYPE_BASE = 1 | 表示用于基础图的元数据。 |
-| HDR_METADATA_TYPE_GAINMAP = 2 | 表示用于Gainmap图的元数据。 |
-| HDR_METADATA_TYPE_ALTERNATE = 3 | 表示用于合成后HDR图的元数据。 |
+| HDR_METADATA_TYPE_NONE = 0 | 无元数据内容。<br><!--Device-HDR_METADATA_TYPE_NONE = 0--><!--Device-HDR_METADATA_TYPE_NONE = 0-End--> |
+| HDR_METADATA_TYPE_BASE = 1 | 表示用于基础图的元数据。<br><!--Device-HDR_METADATA_TYPE_BASE = 1--><!--Device-HDR_METADATA_TYPE_BASE = 1-End--> |
+| HDR_METADATA_TYPE_GAINMAP = 2 | 表示用于Gainmap图的元数据。<br><!--Device-HDR_METADATA_TYPE_GAINMAP = 2--><!--Device-HDR_METADATA_TYPE_GAINMAP = 2-End--> |
+| HDR_METADATA_TYPE_ALTERNATE = 3 | 表示用于合成后HDR图的元数据。<br><!--Device-HDR_METADATA_TYPE_ALTERNATE = 3--><!--Device-HDR_METADATA_TYPE_ALTERNATE = 3-End--> |
 
 
 ## 函数说明

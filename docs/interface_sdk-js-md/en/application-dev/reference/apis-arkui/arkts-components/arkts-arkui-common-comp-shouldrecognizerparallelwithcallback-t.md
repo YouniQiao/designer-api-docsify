@@ -20,7 +20,7 @@ Represents the callback used to set the parallel relationship between gestures o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | [GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
+| current | GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the [GestureType.PAN_GESTURE type is supported. |
 | others | Array&lt;[GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same [GestureType](arkts-arkui-tapgesture-comp-gesturetype-e.md) from other components with higher priority in the response chain. |
 
 **Return value:**

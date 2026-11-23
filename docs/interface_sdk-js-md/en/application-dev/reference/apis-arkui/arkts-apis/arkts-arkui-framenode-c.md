@@ -142,7 +142,7 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to add.<br> The node cannot be a non-modifiable FrameNode (for example, a declarative component node obtained through APIs such as **getFrameNodeById**). Only the FrameNode obtained through the **getFrameNode** API of BuilderNode can be added as a declarative child node. If the child node does not meet the specifications, an exception is thrown.<br> The node cannot have a parent node; otherwise, an exception is thrown. |
+| node | FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to add.<br> The node cannot be a non-modifiable FrameNode (for example, a declarative component node obtained through APIs such as **getFrameNodeById**). Only the FrameNode obtained through the **getFrameNode** API of [BuilderNode can be added as a declarative child node. If the child node does not meet the specifications, an exception is thrown.<br> The node cannot have a parent node; otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -2675,7 +2675,7 @@ Adds a new child node after the specified child node of this FrameNode. If the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to add.<br>The child node cannot be a non-modifiable FrameNode (for example, a declarative component node obtained through APIs such as **getFrameNodeById**). Only the FrameNode obtained by BuilderNode through the **getFrameNode** API can be added as a declarative child node. If the child node does not meet the specifications, an exception is thrown.<br>The child node cannot have a parent node; otherwise, an exception is thrown. |
+| child | FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to add.<br>The child node cannot be a non-modifiable FrameNode (for example, a declarative component node obtained through APIs such as **getFrameNodeById**). Only the FrameNode obtained by [BuilderNode through the **getFrameNode** API can be added as a declarative child node. If the child node does not meet the specifications, an exception is thrown.<br>The child node cannot have a parent node; otherwise, an exception is thrown. |
 | sibling | [FrameNode](arkts-arkui-framenode-c.md) &#124; null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**

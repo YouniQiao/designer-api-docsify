@@ -201,7 +201,7 @@ enum ArkUI_NodeType
 
 Enumerates the component types that can be created by ArkUI on the native side.
 
-<!--Device-ArkUI_NodeType--><!--Device-ArkUI_NodeType-End-->
+<!--Device-enum ArkUI_NodeType--><!--Device-enum ArkUI_NodeType-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,53 +209,53 @@ Enumerates the component types that can be created by ArkUI on the native side.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_NODE_CUSTOM = 0 | Custom node. |
-| ARKUI_NODE_TEXT = 1 | Text. |
-| ARKUI_NODE_SPAN = 2 | Text span. |
-| ARKUI_NODE_IMAGE_SPAN = 3 | Image span. |
-| ARKUI_NODE_IMAGE = 4 | Image. |
-| ARKUI_NODE_TOGGLE = 5 | Toggle. |
-| ARKUI_NODE_LOADING_PROGRESS = 6 | Loading icon. |
-| ARKUI_NODE_TEXT_INPUT = 7 | Single-line text input. |
-| ARKUI_NODE_TEXT_AREA = 8 | Multi-line text input. |
-| ARKUI_NODE_BUTTON = 9 | Icon. |
-| ARKUI_NODE_PROGRESS = 10 | Progress indicator. |
-| ARKUI_NODE_CHECKBOX = 11 | Check box. |
-| ARKUI_NODE_XCOMPONENT = 12 | XComponent of the SURFACE type. |
-| ARKUI_NODE_DATE_PICKER = 13 | Date picker. |
-| ARKUI_NODE_TIME_PICKER = 14 | Time picker. |
-| ARKUI_NODE_TEXT_PICKER = 15 | Text picker. |
-| ARKUI_NODE_CALENDAR_PICKER = 16 | Calendar picker. |
-| ARKUI_NODE_SLIDER = 17 | Slider. |
-| ARKUI_NODE_RADIO = 18 | Radio button. |
-| ARKUI_NODE_IMAGE_ANIMATOR = 19 | Frame animation component. |
-| ARKUI_NODE_XCOMPONENT_TEXTURE | XComponent of the TEXTURE type. @since 18<br>**Since**: 18 |
-| ARKUI_NODE_CHECKBOX_GROUP = 21 | Check box group. @since 15<br>**Since**: 15 |
-| ARKUI_NODE_TEXT_EDITOR = 22 | Text editor.<br>**Since**: 24 |
-| ARKUI_NODE_ARC_ALPHABET_INDEXER = 23 | Arc alphabet index component.<br>**Since**: 26.0.1 |
-| ARKUI_NODE_STACK = MAX_NODE_SCOPE_NUM | Stack container. |
-| ARKUI_NODE_SWIPER | Swiper. |
-| ARKUI_NODE_SCROLL | Scrollable container. |
-| ARKUI_NODE_LIST | List. |
-| ARKUI_NODE_LIST_ITEM | List item. |
-| ARKUI_NODE_LIST_ITEM_GROUP | List item group. |
-| ARKUI_NODE_COLUMN | Column container. |
-| ARKUI_NODE_ROW | Row container. |
-| ARKUI_NODE_FLEX | Flex container. |
-| ARKUI_NODE_REFRESH | Refresh component. |
-| ARKUI_NODE_WATER_FLOW | Water flow container. |
-| ARKUI_NODE_FLOW_ITEM | Water flow item. |
-| ARKUI_NODE_RELATIVE_CONTAINER | Relative layout component. |
-| ARKUI_NODE_GRID | Grid. |
-| ARKUI_NODE_GRID_ITEM | Grid item. |
-| ARKUI_NODE_CUSTOM_SPAN | Custom span. Common attributes cannot be set or obtained. You can use [OH_ArkUI_NodeCustomEvent_GetCustomSpanMeasureInfo](capi-native-node-h.md#oh_arkui_nodecustomevent_getcustomspanmeasureinfo), [OH_ArkUI_NodeCustomEvent_SetCustomSpanMetrics](capi-native-node-h.md#oh_arkui_nodecustomevent_setcustomspanmetrics), and [OH_ArkUI_NodeCustomEvent_GetCustomSpanDrawInfo](capi-native-node-h.md#oh_arkui_nodecustomevent_getcustomspandrawinfo) to obtain and set the node information of components of this type. For details about the usage, see text_capi_sample. |
-| ARKUI_NODE_EMBEDDED_COMPONENT | In-application embedded component.<br>**Since**: 20 |
-| ARKUI_NODE_UNDEFINED | Undefined component type. It specifies all component types in the color inversion API.<br>**Since**: 20 |
-| ARKUI_NODE_PICKER = 1018 | **Picker** component, which is used to implement user selection operations.<br>**Since**: 23 |
-| ARKUI_NODE_ARC_LIST = 1019 | Arc list.<br>**Since**: 26.0.0 |
-| ARKUI_NODE_ARC_LIST_ITEM = 1020 | Arc list item.<br>**Since**: 26.0.0 |
-| ARKUI_NODE_ARC_SCROLL_BAR = 1021 | Arc scrollbar.<br>**Since**: 26.0.0 |
-| ARKUI_NODE_ARC_SWIPER = 1022 | Arc swipe container.<br>**Since**: 26.0.1 |
+| ARKUI_NODE_CUSTOM = 0 | Custom node.<br><!--Device-ARKUI_NODE_CUSTOM = 0--><!--Device-ARKUI_NODE_CUSTOM = 0-End--> |
+| ARKUI_NODE_TEXT = 1 | Text.<br><!--Device-ARKUI_NODE_TEXT = 1--><!--Device-ARKUI_NODE_TEXT = 1-End--> |
+| ARKUI_NODE_SPAN = 2 | Text span.<br><!--Device-ARKUI_NODE_SPAN = 2--><!--Device-ARKUI_NODE_SPAN = 2-End--> |
+| ARKUI_NODE_IMAGE_SPAN = 3 | Image span.<br><!--Device-ARKUI_NODE_IMAGE_SPAN = 3--><!--Device-ARKUI_NODE_IMAGE_SPAN = 3-End--> |
+| ARKUI_NODE_IMAGE = 4 | Image.<br><!--Device-ARKUI_NODE_IMAGE = 4--><!--Device-ARKUI_NODE_IMAGE = 4-End--> |
+| ARKUI_NODE_TOGGLE = 5 | Toggle.<br><!--Device-ARKUI_NODE_TOGGLE = 5--><!--Device-ARKUI_NODE_TOGGLE = 5-End--> |
+| ARKUI_NODE_LOADING_PROGRESS = 6 | Loading icon.<br><!--Device-ARKUI_NODE_LOADING_PROGRESS = 6--><!--Device-ARKUI_NODE_LOADING_PROGRESS = 6-End--> |
+| ARKUI_NODE_TEXT_INPUT = 7 | Single-line text input.<br><!--Device-ARKUI_NODE_TEXT_INPUT = 7--><!--Device-ARKUI_NODE_TEXT_INPUT = 7-End--> |
+| ARKUI_NODE_TEXT_AREA = 8 | Multi-line text input.<br><!--Device-ARKUI_NODE_TEXT_AREA = 8--><!--Device-ARKUI_NODE_TEXT_AREA = 8-End--> |
+| ARKUI_NODE_BUTTON = 9 | Icon.<br><!--Device-ARKUI_NODE_BUTTON = 9--><!--Device-ARKUI_NODE_BUTTON = 9-End--> |
+| ARKUI_NODE_PROGRESS = 10 | Progress indicator.<br><!--Device-ARKUI_NODE_PROGRESS = 10--><!--Device-ARKUI_NODE_PROGRESS = 10-End--> |
+| ARKUI_NODE_CHECKBOX = 11 | Check box.<br><!--Device-ARKUI_NODE_CHECKBOX = 11--><!--Device-ARKUI_NODE_CHECKBOX = 11-End--> |
+| ARKUI_NODE_XCOMPONENT = 12 | XComponent of the SURFACE type.<br><!--Device-ARKUI_NODE_XCOMPONENT = 12--><!--Device-ARKUI_NODE_XCOMPONENT = 12-End--> |
+| ARKUI_NODE_DATE_PICKER = 13 | Date picker.<br><!--Device-ARKUI_NODE_DATE_PICKER = 13--><!--Device-ARKUI_NODE_DATE_PICKER = 13-End--> |
+| ARKUI_NODE_TIME_PICKER = 14 | Time picker.<br><!--Device-ARKUI_NODE_TIME_PICKER = 14--><!--Device-ARKUI_NODE_TIME_PICKER = 14-End--> |
+| ARKUI_NODE_TEXT_PICKER = 15 | Text picker.<br><!--Device-ARKUI_NODE_TEXT_PICKER = 15--><!--Device-ARKUI_NODE_TEXT_PICKER = 15-End--> |
+| ARKUI_NODE_CALENDAR_PICKER = 16 | Calendar picker.<br><!--Device-ARKUI_NODE_CALENDAR_PICKER = 16--><!--Device-ARKUI_NODE_CALENDAR_PICKER = 16-End--> |
+| ARKUI_NODE_SLIDER = 17 | Slider.<br><!--Device-ARKUI_NODE_SLIDER = 17--><!--Device-ARKUI_NODE_SLIDER = 17-End--> |
+| ARKUI_NODE_RADIO = 18 | Radio button.<br><!--Device-ARKUI_NODE_RADIO = 18--><!--Device-ARKUI_NODE_RADIO = 18-End--> |
+| ARKUI_NODE_IMAGE_ANIMATOR = 19 | Frame animation component.<br><!--Device-ARKUI_NODE_IMAGE_ANIMATOR = 19--><!--Device-ARKUI_NODE_IMAGE_ANIMATOR = 19-End--> |
+| ARKUI_NODE_XCOMPONENT_TEXTURE | XComponent of the TEXTURE type. @since 18<br>**Since**: 18<br><!--Device-ARKUI_NODE_XCOMPONENT_TEXTURE--><!--Device-ARKUI_NODE_XCOMPONENT_TEXTURE-End--> |
+| ARKUI_NODE_CHECKBOX_GROUP = 21 | Check box group. @since 15<br>**Since**: 15<br><!--Device-ARKUI_NODE_CHECKBOX_GROUP = 21--><!--Device-ARKUI_NODE_CHECKBOX_GROUP = 21-End--> |
+| ARKUI_NODE_TEXT_EDITOR = 22 | Text editor.<br>**Since**: 24<br><!--Device-ARKUI_NODE_TEXT_EDITOR = 22--><!--Device-ARKUI_NODE_TEXT_EDITOR = 22-End--> |
+| ARKUI_NODE_ARC_ALPHABET_INDEXER = 23 | Arc alphabet index component.<br>**Since**: 26.0.1<br><!--Device-ARKUI_NODE_ARC_ALPHABET_INDEXER = 23--><!--Device-ARKUI_NODE_ARC_ALPHABET_INDEXER = 23-End--> |
+| ARKUI_NODE_STACK = MAX_NODE_SCOPE_NUM | Stack container.<br><!--Device-ARKUI_NODE_STACK = MAX_NODE_SCOPE_NUM--><!--Device-ARKUI_NODE_STACK = MAX_NODE_SCOPE_NUM-End--> |
+| ARKUI_NODE_SWIPER | Swiper.<br><!--Device-ARKUI_NODE_SWIPER--><!--Device-ARKUI_NODE_SWIPER-End--> |
+| ARKUI_NODE_SCROLL | Scrollable container.<br><!--Device-ARKUI_NODE_SCROLL--><!--Device-ARKUI_NODE_SCROLL-End--> |
+| ARKUI_NODE_LIST | List.<br><!--Device-ARKUI_NODE_LIST--><!--Device-ARKUI_NODE_LIST-End--> |
+| ARKUI_NODE_LIST_ITEM | List item.<br><!--Device-ARKUI_NODE_LIST_ITEM--><!--Device-ARKUI_NODE_LIST_ITEM-End--> |
+| ARKUI_NODE_LIST_ITEM_GROUP | List item group.<br><!--Device-ARKUI_NODE_LIST_ITEM_GROUP--><!--Device-ARKUI_NODE_LIST_ITEM_GROUP-End--> |
+| ARKUI_NODE_COLUMN | Column container.<br><!--Device-ARKUI_NODE_COLUMN--><!--Device-ARKUI_NODE_COLUMN-End--> |
+| ARKUI_NODE_ROW | Row container.<br><!--Device-ARKUI_NODE_ROW--><!--Device-ARKUI_NODE_ROW-End--> |
+| ARKUI_NODE_FLEX | Flex container.<br><!--Device-ARKUI_NODE_FLEX--><!--Device-ARKUI_NODE_FLEX-End--> |
+| ARKUI_NODE_REFRESH | Refresh component.<br><!--Device-ARKUI_NODE_REFRESH--><!--Device-ARKUI_NODE_REFRESH-End--> |
+| ARKUI_NODE_WATER_FLOW | Water flow container.<br><!--Device-ARKUI_NODE_WATER_FLOW--><!--Device-ARKUI_NODE_WATER_FLOW-End--> |
+| ARKUI_NODE_FLOW_ITEM | Water flow item.<br><!--Device-ARKUI_NODE_FLOW_ITEM--><!--Device-ARKUI_NODE_FLOW_ITEM-End--> |
+| ARKUI_NODE_RELATIVE_CONTAINER | Relative layout component.<br><!--Device-ARKUI_NODE_RELATIVE_CONTAINER--><!--Device-ARKUI_NODE_RELATIVE_CONTAINER-End--> |
+| ARKUI_NODE_GRID | Grid.<br><!--Device-ARKUI_NODE_GRID--><!--Device-ARKUI_NODE_GRID-End--> |
+| ARKUI_NODE_GRID_ITEM | Grid item.<br><!--Device-ARKUI_NODE_GRID_ITEM--><!--Device-ARKUI_NODE_GRID_ITEM-End--> |
+| ARKUI_NODE_CUSTOM_SPAN | Custom span. Common attributes cannot be set or obtained. You can use [OH_ArkUI_NodeCustomEvent_GetCustomSpanMeasureInfo](capi-native-node-h.md#oh_arkui_nodecustomevent_getcustomspanmeasureinfo), [OH_ArkUI_NodeCustomEvent_SetCustomSpanMetrics](capi-native-node-h.md#oh_arkui_nodecustomevent_setcustomspanmetrics), and [OH_ArkUI_NodeCustomEvent_GetCustomSpanDrawInfo](capi-native-node-h.md#oh_arkui_nodecustomevent_getcustomspandrawinfo) to obtain and set the node information of components of this type. For details about the usage, see text_capi_sample.<br><!--Device-ARKUI_NODE_CUSTOM_SPAN--><!--Device-ARKUI_NODE_CUSTOM_SPAN-End--> |
+| ARKUI_NODE_EMBEDDED_COMPONENT | In-application embedded component.<br>**Since**: 20<br><!--Device-ARKUI_NODE_EMBEDDED_COMPONENT--><!--Device-ARKUI_NODE_EMBEDDED_COMPONENT-End--> |
+| ARKUI_NODE_UNDEFINED | Undefined component type. It specifies all component types in the color inversion API.<br>**Since**: 20<br><!--Device-ARKUI_NODE_UNDEFINED--><!--Device-ARKUI_NODE_UNDEFINED-End--> |
+| ARKUI_NODE_PICKER = 1018 | **Picker** component, which is used to implement user selection operations.<br>**Since**: 23<br><!--Device-ARKUI_NODE_PICKER = 1018--><!--Device-ARKUI_NODE_PICKER = 1018-End--> |
+| ARKUI_NODE_ARC_LIST = 1019 | Arc list.<br>**Since**: 26.0.0<br><!--Device-ARKUI_NODE_ARC_LIST = 1019--><!--Device-ARKUI_NODE_ARC_LIST = 1019-End--> |
+| ARKUI_NODE_ARC_LIST_ITEM = 1020 | Arc list item.<br>**Since**: 26.0.0<br><!--Device-ARKUI_NODE_ARC_LIST_ITEM = 1020--><!--Device-ARKUI_NODE_ARC_LIST_ITEM = 1020-End--> |
+| ARKUI_NODE_ARC_SCROLL_BAR = 1021 | Arc scrollbar.<br>**Since**: 26.0.0<br><!--Device-ARKUI_NODE_ARC_SCROLL_BAR = 1021--><!--Device-ARKUI_NODE_ARC_SCROLL_BAR = 1021-End--> |
+| ARKUI_NODE_ARC_SWIPER = 1022 | Arc swipe container.<br>**Since**: 26.0.1<br><!--Device-ARKUI_NODE_ARC_SWIPER = 1022--><!--Device-ARKUI_NODE_ARC_SWIPER = 1022-End--> |
 
 ### ArkUI_NodeDirtyFlag
 
@@ -267,7 +267,7 @@ enum ArkUI_NodeDirtyFlag
 
 Enumerates the flags passed to indicate the need to re-execute measurement, layout, or rendering when a custom component calls the <b>::markDirty</b> API.
 
-<!--Device-ArkUI_NodeDirtyFlag--><!--Device-ArkUI_NodeDirtyFlag-End-->
+<!--Device-enum ArkUI_NodeDirtyFlag--><!--Device-enum ArkUI_NodeDirtyFlag-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -275,9 +275,9 @@ Enumerates the flags passed to indicate the need to re-execute measurement, layo
 
 | Enum item | Description |
 | -- | -- |
-| NODE_NEED_MEASURE = 1 | Remeasure.<br> When this type of flag is specified, re-layout is triggered by default. |
-| NODE_NEED_LAYOUT | Re-layout. |
-| NODE_NEED_RENDER | Re-rendering. |
+| NODE_NEED_MEASURE = 1 | Remeasure.<br> When this type of flag is specified, re-layout is triggered by default.<br><!--Device-NODE_NEED_MEASURE = 1--><!--Device-NODE_NEED_MEASURE = 1-End--> |
+| NODE_NEED_LAYOUT | Re-layout.<br><!--Device-NODE_NEED_LAYOUT--><!--Device-NODE_NEED_LAYOUT-End--> |
+| NODE_NEED_RENDER | Re-rendering.<br><!--Device-NODE_NEED_RENDER--><!--Device-NODE_NEED_RENDER-End--> |
 
 ### ArkUI_NodeAdapterEventType
 
@@ -289,7 +289,7 @@ enum ArkUI_NodeAdapterEventType
 
 Enumerates node adapter event types.
 
-<!--Device-ArkUI_NodeAdapterEventType--><!--Device-ArkUI_NodeAdapterEventType-End-->
+<!--Device-enum ArkUI_NodeAdapterEventType--><!--Device-enum ArkUI_NodeAdapterEventType-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -297,11 +297,11 @@ Enumerates node adapter event types.
 
 | Enum item | Description |
 | -- | -- |
-| NODE_ADAPTER_EVENT_WILL_ATTACH_TO_NODE = 1 | This event occurs when the component is attached to the adapter. |
-| NODE_ADAPTER_EVENT_WILL_DETACH_FROM_NODE = 2 | This event occurs when the component is detached from the adapter. |
-| NODE_ADAPTER_EVENT_ON_GET_NODE_ID = 3 | This event occurs when the adapter obtains the unique ID of the new element to add. |
-| NODE_ADAPTER_EVENT_ON_ADD_NODE_TO_ADAPTER = 4 | This event occurs when the adapter obtains the content of the new element to add. |
-| NODE_ADAPTER_EVENT_ON_REMOVE_NODE_FROM_ADAPTER = 5 | This event occurs when the adapter removes an element. |
+| NODE_ADAPTER_EVENT_WILL_ATTACH_TO_NODE = 1 | This event occurs when the component is attached to the adapter.<br><!--Device-NODE_ADAPTER_EVENT_WILL_ATTACH_TO_NODE = 1--><!--Device-NODE_ADAPTER_EVENT_WILL_ATTACH_TO_NODE = 1-End--> |
+| NODE_ADAPTER_EVENT_WILL_DETACH_FROM_NODE = 2 | This event occurs when the component is detached from the adapter.<br><!--Device-NODE_ADAPTER_EVENT_WILL_DETACH_FROM_NODE = 2--><!--Device-NODE_ADAPTER_EVENT_WILL_DETACH_FROM_NODE = 2-End--> |
+| NODE_ADAPTER_EVENT_ON_GET_NODE_ID = 3 | This event occurs when the adapter obtains the unique ID of the new element to add.<br><!--Device-NODE_ADAPTER_EVENT_ON_GET_NODE_ID = 3--><!--Device-NODE_ADAPTER_EVENT_ON_GET_NODE_ID = 3-End--> |
+| NODE_ADAPTER_EVENT_ON_ADD_NODE_TO_ADAPTER = 4 | This event occurs when the adapter obtains the content of the new element to add.<br><!--Device-NODE_ADAPTER_EVENT_ON_ADD_NODE_TO_ADAPTER = 4--><!--Device-NODE_ADAPTER_EVENT_ON_ADD_NODE_TO_ADAPTER = 4-End--> |
+| NODE_ADAPTER_EVENT_ON_REMOVE_NODE_FROM_ADAPTER = 5 | This event occurs when the adapter removes an element.<br><!--Device-NODE_ADAPTER_EVENT_ON_REMOVE_NODE_FROM_ADAPTER = 5--><!--Device-NODE_ADAPTER_EVENT_ON_REMOVE_NODE_FROM_ADAPTER = 5-End--> |
 
 ### ArkUI_NodeContentEventType
 
@@ -313,7 +313,7 @@ enum ArkUI_NodeContentEventType
 
 Enumerates the event types of NodeContent.
 
-<!--Device-ArkUI_NodeContentEventType--><!--Device-ArkUI_NodeContentEventType-End-->
+<!--Device-enum ArkUI_NodeContentEventType--><!--Device-enum ArkUI_NodeContentEventType-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -321,8 +321,8 @@ Enumerates the event types of NodeContent.
 
 | Enum item | Description |
 | -- | -- |
-| NODE_CONTENT_EVENT_ON_ATTACH_TO_WINDOW = 0 | Attach event. |
-| NODE_CONTENT_EVENT_ON_DETACH_FROM_WINDOW = 1 | Detach event. |
+| NODE_CONTENT_EVENT_ON_ATTACH_TO_WINDOW = 0 | Attach event.<br><!--Device-NODE_CONTENT_EVENT_ON_ATTACH_TO_WINDOW = 0--><!--Device-NODE_CONTENT_EVENT_ON_ATTACH_TO_WINDOW = 0-End--> |
+| NODE_CONTENT_EVENT_ON_DETACH_FROM_WINDOW = 1 | Detach event.<br><!--Device-NODE_CONTENT_EVENT_ON_DETACH_FROM_WINDOW = 1--><!--Device-NODE_CONTENT_EVENT_ON_DETACH_FROM_WINDOW = 1-End--> |
 
 ### ArkUI_InspectorErrorCode
 
@@ -334,7 +334,7 @@ enum ArkUI_InspectorErrorCode
 
 Enumerates inspector error codes.
 
-<!--Device-ArkUI_InspectorErrorCode--><!--Device-ArkUI_InspectorErrorCode-End-->
+<!--Device-enum ArkUI_InspectorErrorCode--><!--Device-enum ArkUI_InspectorErrorCode-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -342,8 +342,8 @@ Enumerates inspector error codes.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_INSPECTOR_NATIVE_RESULT_SUCCESSFUL = 0 | &nbsp;Operation successful. |
-| ARKUI_INSPECTOR_NATIVE_RESULT_BAD_PARAMETER = -1 | &nbsp;Parameter error. |
+| ARKUI_INSPECTOR_NATIVE_RESULT_SUCCESSFUL = 0 | &nbsp;Operation successful.<br><!--Device-ARKUI_INSPECTOR_NATIVE_RESULT_SUCCESSFUL = 0--><!--Device-ARKUI_INSPECTOR_NATIVE_RESULT_SUCCESSFUL = 0-End--> |
+| ARKUI_INSPECTOR_NATIVE_RESULT_BAD_PARAMETER = -1 | &nbsp;Parameter error.<br><!--Device-ARKUI_INSPECTOR_NATIVE_RESULT_BAD_PARAMETER = -1--><!--Device-ARKUI_INSPECTOR_NATIVE_RESULT_BAD_PARAMETER = -1-End--> |
 
 ### OH_ArkUI_AdoptPolicy
 
@@ -355,7 +355,7 @@ enum OH_ArkUI_AdoptPolicy
 
 Enumerates the policy for adopting a child node.
 
-<!--Device-OH_ArkUI_AdoptPolicy--><!--Device-OH_ArkUI_AdoptPolicy-End-->
+<!--Device-enum OH_ArkUI_AdoptPolicy--><!--Device-enum OH_ArkUI_AdoptPolicy-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -363,7 +363,7 @@ Enumerates the policy for adopting a child node.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0 | The floating layer node of the admitted node calculates the display position based on the chain of foster parent nodes that admitted the node, and applies the compensation provided by the developer calling the [OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation](capi-native-node-h.md#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation) interface at each admission boundary.<br>**Since**: 26.1.0 |
+| OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0 | The floating layer node of the admitted node calculates the display position based on the chain of foster parent nodes that admitted the node, and applies the compensation provided by the developer calling the [OH_ArkUI_NativeModule_SetAdoptedChildOverlayPositionCompensation](capi-native-node-h.md#oh_arkui_nativemodule_setadoptedchildoverlaypositioncompensation) interface at each admission boundary.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0--><!--Device-OH_ARKUI_NATIVE_MODULE_ADOPT_POLICY_OVERLAY_POSITION_FOLLOWS_ADOPT_PARENT_CHAIN = 0-End--> |
 
 
 ## Function description

@@ -80,7 +80,7 @@ enum IMAGE_PACKER_DYNAMIC_RANGE
 
 编码指定动态范围。
 
-<!--Device-IMAGE_PACKER_DYNAMIC_RANGE--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE-End-->
+<!--Device-enum IMAGE_PACKER_DYNAMIC_RANGE--><!--Device-enum IMAGE_PACKER_DYNAMIC_RANGE-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -88,8 +88,8 @@ enum IMAGE_PACKER_DYNAMIC_RANGE
 
 | 枚举项 | 描述 |
 | -- | -- |
-| IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0 | 编码动态范围根据图像信息自适应。 |
-| IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1 | 编码图片为标准动态范围。 |
+| IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0 | 编码动态范围根据图像信息自适应。<br><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_AUTO = 0-End--> |
+| IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1 | 编码图片为标准动态范围。<br><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1--><!--Device-IMAGE_PACKER_DYNAMIC_RANGE_SDR = 1-End--> |
 
 
 ## 函数说明

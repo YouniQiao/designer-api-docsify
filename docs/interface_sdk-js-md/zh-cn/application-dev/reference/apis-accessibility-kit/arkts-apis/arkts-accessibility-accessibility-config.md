@@ -102,6 +102,6 @@ import { config } from '@kit.AccessibilityKit';
 | [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) | 表示色彩校正功能启用状态。配合daltonizationColorFilter使用。true表示已启用色彩校正功能，false表示未启用色彩校正功能，默认值为false。 |
 | [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) | 表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。 |
 | [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) | 表示忽略重复点击的时间间隔配置。配合ignoreRepeatClick使用，仅当ignoreRepeatClick设置为true时，此配置生效。默认值为Shortest，表示最短间隔。 |
-| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) | 表示屏幕放大功能启用状态。 |
+| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) | 表示屏幕放大功能启用状态。true表示已启用屏幕放大功能，false表示未启用屏幕放大功能，默认值为false。 |
 | [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) | 表示辅助扩展快捷键的多目标列表配置。取值为辅助扩展应用的名称，格式为：['bundleName/abilityName']。格式不正确或名称无效时，设置不生效。 |
 <!--DelEnd-->

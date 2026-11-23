@@ -4,7 +4,7 @@
 interface TemplateProperty
 ```
 
-切换悬浮窗模板并修改窗口尺寸时需要提供的参数配置。
+切换闪控窗模板并修改窗口尺寸时需要提供的参数配置。
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ size: window.Size
 templateType: FloatViewTemplateType
 ```
 
-标准悬浮窗的模板类型。
+闪控窗的模板类型。
 
 **类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 

@@ -114,7 +114,7 @@ const repeatClickInterval: Config<RepeatClickInterval>
 const screenMagnification: Config<boolean>
 ```
 
-表示屏幕放大功能启用状态。
+表示屏幕放大功能启用状态。true表示已启用屏幕放大功能，false表示未启用屏幕放大功能，默认值为false。
 
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 

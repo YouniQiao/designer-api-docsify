@@ -16,7 +16,7 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 
 | Name | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | **FrameNode** represents an entity node in the component tree, supporting capabilities such as node tree operations, custom drawing and layout, position query, and animation. It can be used by a NodeController to mount a BuilderNode (that holds the FrameNode) to a [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-attribute.md#nodecontainerattribute) or mount a RenderNode to another FrameNode. It is suitable for scenarios where component node trees need to be dynamically created and managed through code, enabling flexible UI composition and custom rendering requirements that cannot be directly met by declarative components. |
+| FrameNode](arkts-arkui-framenode-c.md) | **FrameNode** represents an entity node in the component tree, supporting capabilities such as node tree operations, custom drawing and layout, position query, and animation. It can be used by a [NodeController to mount a BuilderNode (that holds the FrameNode) to a [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-attribute.md#nodecontainerattribute) or mount a RenderNode to another FrameNode. It is suitable for scenarios where component node trees need to be dynamically created and managed through code, enabling flexible UI composition and custom rendering requirements that cannot be directly met by declarative components. |
 | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing API functionality through [LazyForEach](../arkts-components/arkts-arkui-lazyforeach-comp.md). It is suitable for scenarios such as long lists where node data needs to be loaded on demand, improving rendering performance and reducing memory usage. |
 
 ### Interfaces
@@ -26,7 +26,7 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Provides options for configuring or querying the cross-language access permissions for a FrameNode. For example, for nodes created using ArkTS, this API can control whether non-ArkTS languages are allowed to access or modify the attributes of these nodes. |
 | [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Describes the binding state of interaction events on components. When querying reveals an interaction event bound to the current node, this object provides detailed event binding information. |
 | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Describes the layout constraints of the component. |
-| [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | Extends FrameNode to define a FrameNode with specific type constraints. It supports various component types such as **Text**, **Image**, **Button**, and **Column**, and is suitable for scenarios where component nodes of specific types need to be dynamically created through code. |
+| TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | Extends [FrameNode to define a FrameNode with specific type constraints. It supports various component types such as **Text**, **Image**, **Button**, and **Column**, and is suitable for scenarios where component nodes of specific types need to be dynamically created through code. |
 
 ### Types
 

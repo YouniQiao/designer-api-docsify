@@ -80,7 +80,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| ArkUI_KeyIntension OH_ArkUI_KeyIntention | 按键事件意图类型的正确拼写别名。<br> 原类型名 [ArkUI_KeyIntension](capi-native-key-event-h.md#arkui_keyintension) 将保留以兼容已有接口。<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
+| ArkUI_KeyIntension OH_ArkUI_KeyIntention | 按键事件意图类型的正确拼写别名。<br> 原类型名 [ArkUI_KeyIntension](capi-native-key-event-h.md#arkui_keyintension) 将保留以兼容已有接口。<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full<br><!--Device-ArkUI_KeyIntension OH_ArkUI_KeyIntention--><!--Device-ArkUI_KeyIntension OH_ArkUI_KeyIntention-End--> |
 
 ## 枚举类型说明
 
@@ -94,7 +94,7 @@ enum ArkUI_KeyCode
 
 按键事件的键码。
 
-<!--Device-ArkUI_KeyCode--><!--Device-ArkUI_KeyCode-End-->
+<!--Device-enum ArkUI_KeyCode--><!--Device-enum ArkUI_KeyCode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,152 +102,152 @@ enum ArkUI_KeyCode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_KEYCODE_UNKNOWN = -1 | 未知按键。 |
-| ARKUI_KEYCODE_FN = 0 | 功能（Fn）键。 |
-| ARKUI_KEYCODE_VOLUME_UP = 16 | 音量增加键。 |
-| ARKUI_KEYCODE_VOLUME_DOWN = 17 | 音量减小键。 |
-| ARKUI_KEYCODE_POWER = 18 | 电源键。 |
-| ARKUI_KEYCODE_CAMERA = 19 | 拍照键。 |
-| ARKUI_KEYCODE_VOLUME_MUTE = 22 | 扬声器静音键。 |
-| ARKUI_KEYCODE_MUTE = 23 | 话筒静音键。 |
-| ARKUI_KEYCODE_BRIGHTNESS_UP = 40 | 亮度调节按键，调亮。 |
-| ARKUI_KEYCODE_BRIGHTNESS_DOWN = 41 | 亮度调节按键，调暗。 |
-| ARKUI_KEYCODE_0 = 2000 | 按键'0'。 |
-| ARKUI_KEYCODE_1 = 2001 | 按键'1'。 |
-| ARKUI_KEYCODE_2 = 2002 | 按键'2'。 |
-| ARKUI_KEYCODE_3 = 2003 | 按键'3'。 |
-| ARKUI_KEYCODE_4 = 2004 | 按键'4'。 |
-| ARKUI_KEYCODE_5 = 2005 | 按键'5'。 |
-| ARKUI_KEYCODE_6 = 2006 | 按键'6'。 |
-| ARKUI_KEYCODE_7 = 2007 | 按键'7'。 |
-| ARKUI_KEYCODE_8 = 2008 | 按键'8'。 |
-| ARKUI_KEYCODE_9 = 2009 | 按键'9'。 |
-| ARKUI_KEYCODE_STAR = 2010 | 按键'+'。 |
-| ARKUI_KEYCODE_POUND = 2011 | 按键'#'。 |
-| ARKUI_KEYCODE_DPAD_UP = 2012 | 导航键，向上。 |
-| ARKUI_KEYCODE_DPAD_DOWN = 2013 | 导航键，向下。 |
-| ARKUI_KEYCODE_DPAD_LEFT = 2014 | 导航键，向左。 |
-| ARKUI_KEYCODE_DPAD_RIGHT = 2015 | 导航键，向右。 |
-| ARKUI_KEYCODE_DPAD_CENTER = 2016 | 导航键，确定键。 |
-| ARKUI_KEYCODE_A = 2017 | 按键'A'。 |
-| ARKUI_KEYCODE_B = 2018 | 按键'B'。 |
-| ARKUI_KEYCODE_C = 2019 | 按键'C'。 |
-| ARKUI_KEYCODE_D = 2020 | 按键'D'。 |
-| ARKUI_KEYCODE_E = 2021 | 按键'E'。 |
-| ARKUI_KEYCODE_F = 2022 | 按键'F'。 |
-| ARKUI_KEYCODE_G = 2023 | 按键'G'。 |
-| ARKUI_KEYCODE_H = 2024 | 按键'H'。 |
-| ARKUI_KEYCODE_I = 2025 | 按键'I'。 |
-| ARKUI_KEYCODE_J = 2026 | 按键'J'。 |
-| ARKUI_KEYCODE_K = 2027 | 按键'K'。 |
-| ARKUI_KEYCODE_L = 2028 | 按键'L'。 |
-| ARKUI_KEYCODE_M = 2029 | 按键'M'。 |
-| ARKUI_KEYCODE_N = 2030 | 按键'N'。 |
-| ARKUI_KEYCODE_O = 2031 | 按键'O'。 |
-| ARKUI_KEYCODE_P = 2032 | 按键'P'。 |
-| ARKUI_KEYCODE_Q = 2033 | 按键'Q'。 |
-| ARKUI_KEYCODE_R = 2034 | 按键'R'。 |
-| ARKUI_KEYCODE_S = 2035 | 按键'S'。 |
-| ARKUI_KEYCODE_T = 2036 | 按键'T'。 |
-| ARKUI_KEYCODE_U = 2037 | 按键'U'。 |
-| ARKUI_KEYCODE_V = 2038 | 按键'V'。 |
-| ARKUI_KEYCODE_W = 2039 | 按键'W'。 |
-| ARKUI_KEYCODE_X = 2040 | 按键'X'。 |
-| ARKUI_KEYCODE_Y = 2041 | 按键'Y'。 |
-| ARKUI_KEYCODE_Z = 2042 | 按键'Z'。 |
-| ARKUI_KEYCODE_COMMA = 2043 | 按键','。 |
-| ARKUI_KEYCODE_PERIOD = 2044 | 按键'.'。 |
-| ARKUI_KEYCODE_ALT_LEFT = 2045 | 左Alt键。 |
-| ARKUI_KEYCODE_ALT_RIGHT = 2046 | 右Alt键。 |
-| ARKUI_KEYCODE_SHIFT_LEFT = 2047 | 左Shift键。 |
-| ARKUI_KEYCODE_SHIFT_RIGHT = 2048 | 右Shift键。 |
-| ARKUI_KEYCODE_TAB = 2049 | Tab键。 |
-| ARKUI_KEYCODE_SPACE = 2050 | 空格键。 |
-| ARKUI_KEYCODE_SYM = 2051 | 符号修改器按键。 |
-| ARKUI_KEYCODE_EXPLORER = 2052 | 浏览器功能键，此键用于启动浏览器应用程序。 |
-| ARKUI_KEYCODE_ENVELOPE = 2053 | 电子邮件功能键，此键用于启动电子邮件应用程序。 |
-| ARKUI_KEYCODE_ENTER = 2054 | 回车键。 |
-| ARKUI_KEYCODE_DEL = 2055 | 退格键。 |
-| ARKUI_KEYCODE_GRAVE = 2056 | 按键'`'。 |
-| ARKUI_KEYCODE_MINUS = 2057 | 按键'-'。 |
-| ARKUI_KEYCODE_EQUALS = 2058 | 按键'='。 |
-| ARKUI_KEYCODE_LEFT_BRACKET = 2059 | 按键'['。 |
-| ARKUI_KEYCODE_RIGHT_BRACKET = 2060 | 按键']'。 |
-| ARKUI_KEYCODE_BACKSLASH = 2061 | 按键'\'。 |
-| ARKUI_KEYCODE_SEMICOLON = 2062 | 按键';'。 |
-| ARKUI_KEYCODE_APOSTROPHE = 2063 | 按键''' (单引号)。 |
-| ARKUI_KEYCODE_SLASH = 2064 | 按键'/'。 |
-| ARKUI_KEYCODE_AT = 2065 | 按键 '@'。 |
-| ARKUI_KEYCODE_PLUS = 2066 | 按键'+'。 |
-| ARKUI_KEYCODE_MENU = 2067 | 菜单键。 |
-| ARKUI_KEYCODE_PAGE_UP = 2068 | 向上翻页键。 |
-| ARKUI_KEYCODE_PAGE_DOWN = 2069 | 向下翻页键。 |
-| ARKUI_KEYCODE_ESCAPE = 2070 | ESC键。 |
-| ARKUI_KEYCODE_FORWARD_DEL = 2071 | 删除键。 |
-| ARKUI_KEYCODE_CTRL_LEFT = 2072 | 左Ctrl键。 |
-| ARKUI_KEYCODE_CTRL_RIGHT = 2073 | 右Ctrl键。 |
-| ARKUI_KEYCODE_CAPS_LOCK = 2074 | 大写锁定键。 |
-| ARKUI_KEYCODE_SCROLL_LOCK = 2075 | 滚动锁定键。 |
-| ARKUI_KEYCODE_META_LEFT = 2076 | 左元修改器键。 |
-| ARKUI_KEYCODE_META_RIGHT = 2077 | 右元修改器键。 |
-| ARKUI_KEYCODE_FUNCTION = 2078 | 功能键。 |
-| ARKUI_KEYCODE_SYSRQ = 2079 | 系统请求/打印屏幕键。 |
-| ARKUI_KEYCODE_BREAK = 2080 | Break/Pause键。 |
-| ARKUI_KEYCODE_MOVE_HOME = 2081 | 光标移动到开始键。 |
-| ARKUI_KEYCODE_MOVE_END = 2082 | 光标移动到末尾键。 |
-| ARKUI_KEYCODE_INSERT = 2083 | 插入键。 |
-| ARKUI_KEYCODE_FORWARD = 2084 | 前进键。 |
-| ARKUI_KEYCODE_MEDIA_PLAY = 2085 | 多媒体键，播放。 |
-| ARKUI_KEYCODE_MEDIA_PAUSE = 2086 | 多媒体键，暂停。 |
-| ARKUI_KEYCODE_MEDIA_CLOSE = 2087 | 多媒体键，关闭。 |
-| ARKUI_KEYCODE_MEDIA_EJECT = 2088 | 多媒体键，弹出。 |
-| ARKUI_KEYCODE_MEDIA_RECORD = 2089 | 多媒体键，录音。 |
-| ARKUI_KEYCODE_F1 = 2090 | 按键'F1'。 |
-| ARKUI_KEYCODE_F2 = 2091 | 按键'F2'。 |
-| ARKUI_KEYCODE_F3 = 2092 | 按键'F3'。 |
-| ARKUI_KEYCODE_F4 = 2093 | 按键'F4'。 |
-| ARKUI_KEYCODE_F5 = 2094 | 按键'F5'。 |
-| ARKUI_KEYCODE_F6 = 2095 | 按键'F6'。 |
-| ARKUI_KEYCODE_F7 = 2096 | 按键'F7'。 |
-| ARKUI_KEYCODE_F8 = 2097 | 按键'F8'。 |
-| ARKUI_KEYCODE_F9 = 2098 | 按键'F9'。 |
-| ARKUI_KEYCODE_F10 = 2099 | 按键'F10'。 |
-| ARKUI_KEYCODE_F11 = 2100 | 按键'F11'。 |
-| ARKUI_KEYCODE_F12 = 2101 | 按键'F12'。 |
-| ARKUI_KEYCODE_NUM_LOCK = 2102 | 小键盘锁。 |
-| ARKUI_KEYCODE_NUMPAD_0 = 2103 | 小键盘按键'0'。 |
-| ARKUI_KEYCODE_NUMPAD_1 = 2104 | 小键盘按键'1'。 |
-| ARKUI_KEYCODE_NUMPAD_2 = 2105 | 小键盘按键'2'。 |
-| ARKUI_KEYCODE_NUMPAD_3 = 2106 | 小键盘按键'3'。 |
-| ARKUI_KEYCODE_NUMPAD_4 = 2107 | 小键盘按键'4'。 |
-| ARKUI_KEYCODE_NUMPAD_5 = 2108 | 小键盘按键'5'。 |
-| ARKUI_KEYCODE_NUMPAD_6 = 2109 | 小键盘按键'6'。 |
-| ARKUI_KEYCODE_NUMPAD_7 = 2110 | 小键盘按键'7'。 |
-| ARKUI_KEYCODE_NUMPAD_8 = 2111 | 小键盘按键'8'。 |
-| ARKUI_KEYCODE_NUMPAD_9 = 2112 | 小键盘按键'9'。 |
-| ARKUI_KEYCODE_NUMPAD_DIVIDE = 2113 | 小键盘按键'/'。 |
-| ARKUI_KEYCODE_NUMPAD_MULTIPLY = 2114 | 小键盘按键'*'。 |
-| ARKUI_KEYCODE_NUMPAD_SUBTRACT = 2115 | 小键盘按键'-'。 |
-| ARKUI_KEYCODE_NUMPAD_ADD = 2116 | 小键盘按键'+'。 |
-| ARKUI_KEYCODE_NUMPAD_DOT = 2117 | 小键盘按键'.'。 |
-| ARKUI_KEYCODE_NUMPAD_COMMA = 2118 | 小键盘按键','。 |
-| ARKUI_KEYCODE_NUMPAD_ENTER = 2119 | 小键盘按键回车。 |
-| ARKUI_KEYCODE_NUMPAD_EQUALS = 2120 | 小键盘按键'='。 |
-| ARKUI_KEYCODE_NUMPAD_LEFT_PAREN = 2121 | 小键盘按键'('。 |
-| ARKUI_KEYCODE_NUMPAD_RIGHT_PAREN = 2122 | 小键盘按键')'。 |
-| ARKUI_KEYCODE_BUTTON_A = 2301 | 游戏手柄按键'A'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_B = 2302 | 游戏手柄按键'B'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_X = 2304 | 游戏手柄按键'X'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_Y = 2305 | 游戏手柄按键'Y'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_L1 = 2307 | 游戏手柄按键'L1'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_R1 = 2308 | 游戏手柄按键'R1'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_L2 = 2309 | 游戏手柄按键'L2'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_R2 = 2310 | 游戏手柄按键'R2'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_SELECT = 2311 | 游戏手柄按键'Select'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_START = 2312 | 游戏手柄按键'Start'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_MODE = 2313 | 游戏手柄按键'Mode'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_THUMBL = 2314 | 游戏手柄按键'THUMBL'。<br>**起始版本：** 15 |
-| ARKUI_KEYCODE_BUTTON_THUMBR = 2315 | 游戏手柄按键'THUMBR'。<br>**起始版本：** 15 |
+| ARKUI_KEYCODE_UNKNOWN = -1 | 未知按键。<br><!--Device-ARKUI_KEYCODE_UNKNOWN = -1--><!--Device-ARKUI_KEYCODE_UNKNOWN = -1-End--> |
+| ARKUI_KEYCODE_FN = 0 | 功能（Fn）键。<br><!--Device-ARKUI_KEYCODE_FN = 0--><!--Device-ARKUI_KEYCODE_FN = 0-End--> |
+| ARKUI_KEYCODE_VOLUME_UP = 16 | 音量增加键。<br><!--Device-ARKUI_KEYCODE_VOLUME_UP = 16--><!--Device-ARKUI_KEYCODE_VOLUME_UP = 16-End--> |
+| ARKUI_KEYCODE_VOLUME_DOWN = 17 | 音量减小键。<br><!--Device-ARKUI_KEYCODE_VOLUME_DOWN = 17--><!--Device-ARKUI_KEYCODE_VOLUME_DOWN = 17-End--> |
+| ARKUI_KEYCODE_POWER = 18 | 电源键。<br><!--Device-ARKUI_KEYCODE_POWER = 18--><!--Device-ARKUI_KEYCODE_POWER = 18-End--> |
+| ARKUI_KEYCODE_CAMERA = 19 | 拍照键。<br><!--Device-ARKUI_KEYCODE_CAMERA = 19--><!--Device-ARKUI_KEYCODE_CAMERA = 19-End--> |
+| ARKUI_KEYCODE_VOLUME_MUTE = 22 | 扬声器静音键。<br><!--Device-ARKUI_KEYCODE_VOLUME_MUTE = 22--><!--Device-ARKUI_KEYCODE_VOLUME_MUTE = 22-End--> |
+| ARKUI_KEYCODE_MUTE = 23 | 话筒静音键。<br><!--Device-ARKUI_KEYCODE_MUTE = 23--><!--Device-ARKUI_KEYCODE_MUTE = 23-End--> |
+| ARKUI_KEYCODE_BRIGHTNESS_UP = 40 | 亮度调节按键，调亮。<br><!--Device-ARKUI_KEYCODE_BRIGHTNESS_UP = 40--><!--Device-ARKUI_KEYCODE_BRIGHTNESS_UP = 40-End--> |
+| ARKUI_KEYCODE_BRIGHTNESS_DOWN = 41 | 亮度调节按键，调暗。<br><!--Device-ARKUI_KEYCODE_BRIGHTNESS_DOWN = 41--><!--Device-ARKUI_KEYCODE_BRIGHTNESS_DOWN = 41-End--> |
+| ARKUI_KEYCODE_0 = 2000 | 按键'0'。<br><!--Device-ARKUI_KEYCODE_0 = 2000--><!--Device-ARKUI_KEYCODE_0 = 2000-End--> |
+| ARKUI_KEYCODE_1 = 2001 | 按键'1'。<br><!--Device-ARKUI_KEYCODE_1 = 2001--><!--Device-ARKUI_KEYCODE_1 = 2001-End--> |
+| ARKUI_KEYCODE_2 = 2002 | 按键'2'。<br><!--Device-ARKUI_KEYCODE_2 = 2002--><!--Device-ARKUI_KEYCODE_2 = 2002-End--> |
+| ARKUI_KEYCODE_3 = 2003 | 按键'3'。<br><!--Device-ARKUI_KEYCODE_3 = 2003--><!--Device-ARKUI_KEYCODE_3 = 2003-End--> |
+| ARKUI_KEYCODE_4 = 2004 | 按键'4'。<br><!--Device-ARKUI_KEYCODE_4 = 2004--><!--Device-ARKUI_KEYCODE_4 = 2004-End--> |
+| ARKUI_KEYCODE_5 = 2005 | 按键'5'。<br><!--Device-ARKUI_KEYCODE_5 = 2005--><!--Device-ARKUI_KEYCODE_5 = 2005-End--> |
+| ARKUI_KEYCODE_6 = 2006 | 按键'6'。<br><!--Device-ARKUI_KEYCODE_6 = 2006--><!--Device-ARKUI_KEYCODE_6 = 2006-End--> |
+| ARKUI_KEYCODE_7 = 2007 | 按键'7'。<br><!--Device-ARKUI_KEYCODE_7 = 2007--><!--Device-ARKUI_KEYCODE_7 = 2007-End--> |
+| ARKUI_KEYCODE_8 = 2008 | 按键'8'。<br><!--Device-ARKUI_KEYCODE_8 = 2008--><!--Device-ARKUI_KEYCODE_8 = 2008-End--> |
+| ARKUI_KEYCODE_9 = 2009 | 按键'9'。<br><!--Device-ARKUI_KEYCODE_9 = 2009--><!--Device-ARKUI_KEYCODE_9 = 2009-End--> |
+| ARKUI_KEYCODE_STAR = 2010 | 按键'+'。<br><!--Device-ARKUI_KEYCODE_STAR = 2010--><!--Device-ARKUI_KEYCODE_STAR = 2010-End--> |
+| ARKUI_KEYCODE_POUND = 2011 | 按键'#'。<br><!--Device-ARKUI_KEYCODE_POUND = 2011--><!--Device-ARKUI_KEYCODE_POUND = 2011-End--> |
+| ARKUI_KEYCODE_DPAD_UP = 2012 | 导航键，向上。<br><!--Device-ARKUI_KEYCODE_DPAD_UP = 2012--><!--Device-ARKUI_KEYCODE_DPAD_UP = 2012-End--> |
+| ARKUI_KEYCODE_DPAD_DOWN = 2013 | 导航键，向下。<br><!--Device-ARKUI_KEYCODE_DPAD_DOWN = 2013--><!--Device-ARKUI_KEYCODE_DPAD_DOWN = 2013-End--> |
+| ARKUI_KEYCODE_DPAD_LEFT = 2014 | 导航键，向左。<br><!--Device-ARKUI_KEYCODE_DPAD_LEFT = 2014--><!--Device-ARKUI_KEYCODE_DPAD_LEFT = 2014-End--> |
+| ARKUI_KEYCODE_DPAD_RIGHT = 2015 | 导航键，向右。<br><!--Device-ARKUI_KEYCODE_DPAD_RIGHT = 2015--><!--Device-ARKUI_KEYCODE_DPAD_RIGHT = 2015-End--> |
+| ARKUI_KEYCODE_DPAD_CENTER = 2016 | 导航键，确定键。<br><!--Device-ARKUI_KEYCODE_DPAD_CENTER = 2016--><!--Device-ARKUI_KEYCODE_DPAD_CENTER = 2016-End--> |
+| ARKUI_KEYCODE_A = 2017 | 按键'A'。<br><!--Device-ARKUI_KEYCODE_A = 2017--><!--Device-ARKUI_KEYCODE_A = 2017-End--> |
+| ARKUI_KEYCODE_B = 2018 | 按键'B'。<br><!--Device-ARKUI_KEYCODE_B = 2018--><!--Device-ARKUI_KEYCODE_B = 2018-End--> |
+| ARKUI_KEYCODE_C = 2019 | 按键'C'。<br><!--Device-ARKUI_KEYCODE_C = 2019--><!--Device-ARKUI_KEYCODE_C = 2019-End--> |
+| ARKUI_KEYCODE_D = 2020 | 按键'D'。<br><!--Device-ARKUI_KEYCODE_D = 2020--><!--Device-ARKUI_KEYCODE_D = 2020-End--> |
+| ARKUI_KEYCODE_E = 2021 | 按键'E'。<br><!--Device-ARKUI_KEYCODE_E = 2021--><!--Device-ARKUI_KEYCODE_E = 2021-End--> |
+| ARKUI_KEYCODE_F = 2022 | 按键'F'。<br><!--Device-ARKUI_KEYCODE_F = 2022--><!--Device-ARKUI_KEYCODE_F = 2022-End--> |
+| ARKUI_KEYCODE_G = 2023 | 按键'G'。<br><!--Device-ARKUI_KEYCODE_G = 2023--><!--Device-ARKUI_KEYCODE_G = 2023-End--> |
+| ARKUI_KEYCODE_H = 2024 | 按键'H'。<br><!--Device-ARKUI_KEYCODE_H = 2024--><!--Device-ARKUI_KEYCODE_H = 2024-End--> |
+| ARKUI_KEYCODE_I = 2025 | 按键'I'。<br><!--Device-ARKUI_KEYCODE_I = 2025--><!--Device-ARKUI_KEYCODE_I = 2025-End--> |
+| ARKUI_KEYCODE_J = 2026 | 按键'J'。<br><!--Device-ARKUI_KEYCODE_J = 2026--><!--Device-ARKUI_KEYCODE_J = 2026-End--> |
+| ARKUI_KEYCODE_K = 2027 | 按键'K'。<br><!--Device-ARKUI_KEYCODE_K = 2027--><!--Device-ARKUI_KEYCODE_K = 2027-End--> |
+| ARKUI_KEYCODE_L = 2028 | 按键'L'。<br><!--Device-ARKUI_KEYCODE_L = 2028--><!--Device-ARKUI_KEYCODE_L = 2028-End--> |
+| ARKUI_KEYCODE_M = 2029 | 按键'M'。<br><!--Device-ARKUI_KEYCODE_M = 2029--><!--Device-ARKUI_KEYCODE_M = 2029-End--> |
+| ARKUI_KEYCODE_N = 2030 | 按键'N'。<br><!--Device-ARKUI_KEYCODE_N = 2030--><!--Device-ARKUI_KEYCODE_N = 2030-End--> |
+| ARKUI_KEYCODE_O = 2031 | 按键'O'。<br><!--Device-ARKUI_KEYCODE_O = 2031--><!--Device-ARKUI_KEYCODE_O = 2031-End--> |
+| ARKUI_KEYCODE_P = 2032 | 按键'P'。<br><!--Device-ARKUI_KEYCODE_P = 2032--><!--Device-ARKUI_KEYCODE_P = 2032-End--> |
+| ARKUI_KEYCODE_Q = 2033 | 按键'Q'。<br><!--Device-ARKUI_KEYCODE_Q = 2033--><!--Device-ARKUI_KEYCODE_Q = 2033-End--> |
+| ARKUI_KEYCODE_R = 2034 | 按键'R'。<br><!--Device-ARKUI_KEYCODE_R = 2034--><!--Device-ARKUI_KEYCODE_R = 2034-End--> |
+| ARKUI_KEYCODE_S = 2035 | 按键'S'。<br><!--Device-ARKUI_KEYCODE_S = 2035--><!--Device-ARKUI_KEYCODE_S = 2035-End--> |
+| ARKUI_KEYCODE_T = 2036 | 按键'T'。<br><!--Device-ARKUI_KEYCODE_T = 2036--><!--Device-ARKUI_KEYCODE_T = 2036-End--> |
+| ARKUI_KEYCODE_U = 2037 | 按键'U'。<br><!--Device-ARKUI_KEYCODE_U = 2037--><!--Device-ARKUI_KEYCODE_U = 2037-End--> |
+| ARKUI_KEYCODE_V = 2038 | 按键'V'。<br><!--Device-ARKUI_KEYCODE_V = 2038--><!--Device-ARKUI_KEYCODE_V = 2038-End--> |
+| ARKUI_KEYCODE_W = 2039 | 按键'W'。<br><!--Device-ARKUI_KEYCODE_W = 2039--><!--Device-ARKUI_KEYCODE_W = 2039-End--> |
+| ARKUI_KEYCODE_X = 2040 | 按键'X'。<br><!--Device-ARKUI_KEYCODE_X = 2040--><!--Device-ARKUI_KEYCODE_X = 2040-End--> |
+| ARKUI_KEYCODE_Y = 2041 | 按键'Y'。<br><!--Device-ARKUI_KEYCODE_Y = 2041--><!--Device-ARKUI_KEYCODE_Y = 2041-End--> |
+| ARKUI_KEYCODE_Z = 2042 | 按键'Z'。<br><!--Device-ARKUI_KEYCODE_Z = 2042--><!--Device-ARKUI_KEYCODE_Z = 2042-End--> |
+| ARKUI_KEYCODE_COMMA = 2043 | 按键','。<br><!--Device-ARKUI_KEYCODE_COMMA = 2043--><!--Device-ARKUI_KEYCODE_COMMA = 2043-End--> |
+| ARKUI_KEYCODE_PERIOD = 2044 | 按键'.'。<br><!--Device-ARKUI_KEYCODE_PERIOD = 2044--><!--Device-ARKUI_KEYCODE_PERIOD = 2044-End--> |
+| ARKUI_KEYCODE_ALT_LEFT = 2045 | 左Alt键。<br><!--Device-ARKUI_KEYCODE_ALT_LEFT = 2045--><!--Device-ARKUI_KEYCODE_ALT_LEFT = 2045-End--> |
+| ARKUI_KEYCODE_ALT_RIGHT = 2046 | 右Alt键。<br><!--Device-ARKUI_KEYCODE_ALT_RIGHT = 2046--><!--Device-ARKUI_KEYCODE_ALT_RIGHT = 2046-End--> |
+| ARKUI_KEYCODE_SHIFT_LEFT = 2047 | 左Shift键。<br><!--Device-ARKUI_KEYCODE_SHIFT_LEFT = 2047--><!--Device-ARKUI_KEYCODE_SHIFT_LEFT = 2047-End--> |
+| ARKUI_KEYCODE_SHIFT_RIGHT = 2048 | 右Shift键。<br><!--Device-ARKUI_KEYCODE_SHIFT_RIGHT = 2048--><!--Device-ARKUI_KEYCODE_SHIFT_RIGHT = 2048-End--> |
+| ARKUI_KEYCODE_TAB = 2049 | Tab键。<br><!--Device-ARKUI_KEYCODE_TAB = 2049--><!--Device-ARKUI_KEYCODE_TAB = 2049-End--> |
+| ARKUI_KEYCODE_SPACE = 2050 | 空格键。<br><!--Device-ARKUI_KEYCODE_SPACE = 2050--><!--Device-ARKUI_KEYCODE_SPACE = 2050-End--> |
+| ARKUI_KEYCODE_SYM = 2051 | 符号修改器按键。<br><!--Device-ARKUI_KEYCODE_SYM = 2051--><!--Device-ARKUI_KEYCODE_SYM = 2051-End--> |
+| ARKUI_KEYCODE_EXPLORER = 2052 | 浏览器功能键，此键用于启动浏览器应用程序。<br><!--Device-ARKUI_KEYCODE_EXPLORER = 2052--><!--Device-ARKUI_KEYCODE_EXPLORER = 2052-End--> |
+| ARKUI_KEYCODE_ENVELOPE = 2053 | 电子邮件功能键，此键用于启动电子邮件应用程序。<br><!--Device-ARKUI_KEYCODE_ENVELOPE = 2053--><!--Device-ARKUI_KEYCODE_ENVELOPE = 2053-End--> |
+| ARKUI_KEYCODE_ENTER = 2054 | 回车键。<br><!--Device-ARKUI_KEYCODE_ENTER = 2054--><!--Device-ARKUI_KEYCODE_ENTER = 2054-End--> |
+| ARKUI_KEYCODE_DEL = 2055 | 退格键。<br><!--Device-ARKUI_KEYCODE_DEL = 2055--><!--Device-ARKUI_KEYCODE_DEL = 2055-End--> |
+| ARKUI_KEYCODE_GRAVE = 2056 | 按键'`'。<br><!--Device-ARKUI_KEYCODE_GRAVE = 2056--><!--Device-ARKUI_KEYCODE_GRAVE = 2056-End--> |
+| ARKUI_KEYCODE_MINUS = 2057 | 按键'-'。<br><!--Device-ARKUI_KEYCODE_MINUS = 2057--><!--Device-ARKUI_KEYCODE_MINUS = 2057-End--> |
+| ARKUI_KEYCODE_EQUALS = 2058 | 按键'='。<br><!--Device-ARKUI_KEYCODE_EQUALS = 2058--><!--Device-ARKUI_KEYCODE_EQUALS = 2058-End--> |
+| ARKUI_KEYCODE_LEFT_BRACKET = 2059 | 按键'['。<br><!--Device-ARKUI_KEYCODE_LEFT_BRACKET = 2059--><!--Device-ARKUI_KEYCODE_LEFT_BRACKET = 2059-End--> |
+| ARKUI_KEYCODE_RIGHT_BRACKET = 2060 | 按键']'。<br><!--Device-ARKUI_KEYCODE_RIGHT_BRACKET = 2060--><!--Device-ARKUI_KEYCODE_RIGHT_BRACKET = 2060-End--> |
+| ARKUI_KEYCODE_BACKSLASH = 2061 | 按键'\'。<br><!--Device-ARKUI_KEYCODE_BACKSLASH = 2061--><!--Device-ARKUI_KEYCODE_BACKSLASH = 2061-End--> |
+| ARKUI_KEYCODE_SEMICOLON = 2062 | 按键';'。<br><!--Device-ARKUI_KEYCODE_SEMICOLON = 2062--><!--Device-ARKUI_KEYCODE_SEMICOLON = 2062-End--> |
+| ARKUI_KEYCODE_APOSTROPHE = 2063 | 按键''' (单引号)。<br><!--Device-ARKUI_KEYCODE_APOSTROPHE = 2063--><!--Device-ARKUI_KEYCODE_APOSTROPHE = 2063-End--> |
+| ARKUI_KEYCODE_SLASH = 2064 | 按键'/'。<br><!--Device-ARKUI_KEYCODE_SLASH = 2064--><!--Device-ARKUI_KEYCODE_SLASH = 2064-End--> |
+| ARKUI_KEYCODE_AT = 2065 | 按键 '@'。<br><!--Device-ARKUI_KEYCODE_AT = 2065--><!--Device-ARKUI_KEYCODE_AT = 2065-End--> |
+| ARKUI_KEYCODE_PLUS = 2066 | 按键'+'。<br><!--Device-ARKUI_KEYCODE_PLUS = 2066--><!--Device-ARKUI_KEYCODE_PLUS = 2066-End--> |
+| ARKUI_KEYCODE_MENU = 2067 | 菜单键。<br><!--Device-ARKUI_KEYCODE_MENU = 2067--><!--Device-ARKUI_KEYCODE_MENU = 2067-End--> |
+| ARKUI_KEYCODE_PAGE_UP = 2068 | 向上翻页键。<br><!--Device-ARKUI_KEYCODE_PAGE_UP = 2068--><!--Device-ARKUI_KEYCODE_PAGE_UP = 2068-End--> |
+| ARKUI_KEYCODE_PAGE_DOWN = 2069 | 向下翻页键。<br><!--Device-ARKUI_KEYCODE_PAGE_DOWN = 2069--><!--Device-ARKUI_KEYCODE_PAGE_DOWN = 2069-End--> |
+| ARKUI_KEYCODE_ESCAPE = 2070 | ESC键。<br><!--Device-ARKUI_KEYCODE_ESCAPE = 2070--><!--Device-ARKUI_KEYCODE_ESCAPE = 2070-End--> |
+| ARKUI_KEYCODE_FORWARD_DEL = 2071 | 删除键。<br><!--Device-ARKUI_KEYCODE_FORWARD_DEL = 2071--><!--Device-ARKUI_KEYCODE_FORWARD_DEL = 2071-End--> |
+| ARKUI_KEYCODE_CTRL_LEFT = 2072 | 左Ctrl键。<br><!--Device-ARKUI_KEYCODE_CTRL_LEFT = 2072--><!--Device-ARKUI_KEYCODE_CTRL_LEFT = 2072-End--> |
+| ARKUI_KEYCODE_CTRL_RIGHT = 2073 | 右Ctrl键。<br><!--Device-ARKUI_KEYCODE_CTRL_RIGHT = 2073--><!--Device-ARKUI_KEYCODE_CTRL_RIGHT = 2073-End--> |
+| ARKUI_KEYCODE_CAPS_LOCK = 2074 | 大写锁定键。<br><!--Device-ARKUI_KEYCODE_CAPS_LOCK = 2074--><!--Device-ARKUI_KEYCODE_CAPS_LOCK = 2074-End--> |
+| ARKUI_KEYCODE_SCROLL_LOCK = 2075 | 滚动锁定键。<br><!--Device-ARKUI_KEYCODE_SCROLL_LOCK = 2075--><!--Device-ARKUI_KEYCODE_SCROLL_LOCK = 2075-End--> |
+| ARKUI_KEYCODE_META_LEFT = 2076 | 左元修改器键。<br><!--Device-ARKUI_KEYCODE_META_LEFT = 2076--><!--Device-ARKUI_KEYCODE_META_LEFT = 2076-End--> |
+| ARKUI_KEYCODE_META_RIGHT = 2077 | 右元修改器键。<br><!--Device-ARKUI_KEYCODE_META_RIGHT = 2077--><!--Device-ARKUI_KEYCODE_META_RIGHT = 2077-End--> |
+| ARKUI_KEYCODE_FUNCTION = 2078 | 功能键。<br><!--Device-ARKUI_KEYCODE_FUNCTION = 2078--><!--Device-ARKUI_KEYCODE_FUNCTION = 2078-End--> |
+| ARKUI_KEYCODE_SYSRQ = 2079 | 系统请求/打印屏幕键。<br><!--Device-ARKUI_KEYCODE_SYSRQ = 2079--><!--Device-ARKUI_KEYCODE_SYSRQ = 2079-End--> |
+| ARKUI_KEYCODE_BREAK = 2080 | Break/Pause键。<br><!--Device-ARKUI_KEYCODE_BREAK = 2080--><!--Device-ARKUI_KEYCODE_BREAK = 2080-End--> |
+| ARKUI_KEYCODE_MOVE_HOME = 2081 | 光标移动到开始键。<br><!--Device-ARKUI_KEYCODE_MOVE_HOME = 2081--><!--Device-ARKUI_KEYCODE_MOVE_HOME = 2081-End--> |
+| ARKUI_KEYCODE_MOVE_END = 2082 | 光标移动到末尾键。<br><!--Device-ARKUI_KEYCODE_MOVE_END = 2082--><!--Device-ARKUI_KEYCODE_MOVE_END = 2082-End--> |
+| ARKUI_KEYCODE_INSERT = 2083 | 插入键。<br><!--Device-ARKUI_KEYCODE_INSERT = 2083--><!--Device-ARKUI_KEYCODE_INSERT = 2083-End--> |
+| ARKUI_KEYCODE_FORWARD = 2084 | 前进键。<br><!--Device-ARKUI_KEYCODE_FORWARD = 2084--><!--Device-ARKUI_KEYCODE_FORWARD = 2084-End--> |
+| ARKUI_KEYCODE_MEDIA_PLAY = 2085 | 多媒体键，播放。<br><!--Device-ARKUI_KEYCODE_MEDIA_PLAY = 2085--><!--Device-ARKUI_KEYCODE_MEDIA_PLAY = 2085-End--> |
+| ARKUI_KEYCODE_MEDIA_PAUSE = 2086 | 多媒体键，暂停。<br><!--Device-ARKUI_KEYCODE_MEDIA_PAUSE = 2086--><!--Device-ARKUI_KEYCODE_MEDIA_PAUSE = 2086-End--> |
+| ARKUI_KEYCODE_MEDIA_CLOSE = 2087 | 多媒体键，关闭。<br><!--Device-ARKUI_KEYCODE_MEDIA_CLOSE = 2087--><!--Device-ARKUI_KEYCODE_MEDIA_CLOSE = 2087-End--> |
+| ARKUI_KEYCODE_MEDIA_EJECT = 2088 | 多媒体键，弹出。<br><!--Device-ARKUI_KEYCODE_MEDIA_EJECT = 2088--><!--Device-ARKUI_KEYCODE_MEDIA_EJECT = 2088-End--> |
+| ARKUI_KEYCODE_MEDIA_RECORD = 2089 | 多媒体键，录音。<br><!--Device-ARKUI_KEYCODE_MEDIA_RECORD = 2089--><!--Device-ARKUI_KEYCODE_MEDIA_RECORD = 2089-End--> |
+| ARKUI_KEYCODE_F1 = 2090 | 按键'F1'。<br><!--Device-ARKUI_KEYCODE_F1 = 2090--><!--Device-ARKUI_KEYCODE_F1 = 2090-End--> |
+| ARKUI_KEYCODE_F2 = 2091 | 按键'F2'。<br><!--Device-ARKUI_KEYCODE_F2 = 2091--><!--Device-ARKUI_KEYCODE_F2 = 2091-End--> |
+| ARKUI_KEYCODE_F3 = 2092 | 按键'F3'。<br><!--Device-ARKUI_KEYCODE_F3 = 2092--><!--Device-ARKUI_KEYCODE_F3 = 2092-End--> |
+| ARKUI_KEYCODE_F4 = 2093 | 按键'F4'。<br><!--Device-ARKUI_KEYCODE_F4 = 2093--><!--Device-ARKUI_KEYCODE_F4 = 2093-End--> |
+| ARKUI_KEYCODE_F5 = 2094 | 按键'F5'。<br><!--Device-ARKUI_KEYCODE_F5 = 2094--><!--Device-ARKUI_KEYCODE_F5 = 2094-End--> |
+| ARKUI_KEYCODE_F6 = 2095 | 按键'F6'。<br><!--Device-ARKUI_KEYCODE_F6 = 2095--><!--Device-ARKUI_KEYCODE_F6 = 2095-End--> |
+| ARKUI_KEYCODE_F7 = 2096 | 按键'F7'。<br><!--Device-ARKUI_KEYCODE_F7 = 2096--><!--Device-ARKUI_KEYCODE_F7 = 2096-End--> |
+| ARKUI_KEYCODE_F8 = 2097 | 按键'F8'。<br><!--Device-ARKUI_KEYCODE_F8 = 2097--><!--Device-ARKUI_KEYCODE_F8 = 2097-End--> |
+| ARKUI_KEYCODE_F9 = 2098 | 按键'F9'。<br><!--Device-ARKUI_KEYCODE_F9 = 2098--><!--Device-ARKUI_KEYCODE_F9 = 2098-End--> |
+| ARKUI_KEYCODE_F10 = 2099 | 按键'F10'。<br><!--Device-ARKUI_KEYCODE_F10 = 2099--><!--Device-ARKUI_KEYCODE_F10 = 2099-End--> |
+| ARKUI_KEYCODE_F11 = 2100 | 按键'F11'。<br><!--Device-ARKUI_KEYCODE_F11 = 2100--><!--Device-ARKUI_KEYCODE_F11 = 2100-End--> |
+| ARKUI_KEYCODE_F12 = 2101 | 按键'F12'。<br><!--Device-ARKUI_KEYCODE_F12 = 2101--><!--Device-ARKUI_KEYCODE_F12 = 2101-End--> |
+| ARKUI_KEYCODE_NUM_LOCK = 2102 | 小键盘锁。<br><!--Device-ARKUI_KEYCODE_NUM_LOCK = 2102--><!--Device-ARKUI_KEYCODE_NUM_LOCK = 2102-End--> |
+| ARKUI_KEYCODE_NUMPAD_0 = 2103 | 小键盘按键'0'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_0 = 2103--><!--Device-ARKUI_KEYCODE_NUMPAD_0 = 2103-End--> |
+| ARKUI_KEYCODE_NUMPAD_1 = 2104 | 小键盘按键'1'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_1 = 2104--><!--Device-ARKUI_KEYCODE_NUMPAD_1 = 2104-End--> |
+| ARKUI_KEYCODE_NUMPAD_2 = 2105 | 小键盘按键'2'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_2 = 2105--><!--Device-ARKUI_KEYCODE_NUMPAD_2 = 2105-End--> |
+| ARKUI_KEYCODE_NUMPAD_3 = 2106 | 小键盘按键'3'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_3 = 2106--><!--Device-ARKUI_KEYCODE_NUMPAD_3 = 2106-End--> |
+| ARKUI_KEYCODE_NUMPAD_4 = 2107 | 小键盘按键'4'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_4 = 2107--><!--Device-ARKUI_KEYCODE_NUMPAD_4 = 2107-End--> |
+| ARKUI_KEYCODE_NUMPAD_5 = 2108 | 小键盘按键'5'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_5 = 2108--><!--Device-ARKUI_KEYCODE_NUMPAD_5 = 2108-End--> |
+| ARKUI_KEYCODE_NUMPAD_6 = 2109 | 小键盘按键'6'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_6 = 2109--><!--Device-ARKUI_KEYCODE_NUMPAD_6 = 2109-End--> |
+| ARKUI_KEYCODE_NUMPAD_7 = 2110 | 小键盘按键'7'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_7 = 2110--><!--Device-ARKUI_KEYCODE_NUMPAD_7 = 2110-End--> |
+| ARKUI_KEYCODE_NUMPAD_8 = 2111 | 小键盘按键'8'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_8 = 2111--><!--Device-ARKUI_KEYCODE_NUMPAD_8 = 2111-End--> |
+| ARKUI_KEYCODE_NUMPAD_9 = 2112 | 小键盘按键'9'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_9 = 2112--><!--Device-ARKUI_KEYCODE_NUMPAD_9 = 2112-End--> |
+| ARKUI_KEYCODE_NUMPAD_DIVIDE = 2113 | 小键盘按键'/'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_DIVIDE = 2113--><!--Device-ARKUI_KEYCODE_NUMPAD_DIVIDE = 2113-End--> |
+| ARKUI_KEYCODE_NUMPAD_MULTIPLY = 2114 | 小键盘按键'*'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_MULTIPLY = 2114--><!--Device-ARKUI_KEYCODE_NUMPAD_MULTIPLY = 2114-End--> |
+| ARKUI_KEYCODE_NUMPAD_SUBTRACT = 2115 | 小键盘按键'-'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_SUBTRACT = 2115--><!--Device-ARKUI_KEYCODE_NUMPAD_SUBTRACT = 2115-End--> |
+| ARKUI_KEYCODE_NUMPAD_ADD = 2116 | 小键盘按键'+'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_ADD = 2116--><!--Device-ARKUI_KEYCODE_NUMPAD_ADD = 2116-End--> |
+| ARKUI_KEYCODE_NUMPAD_DOT = 2117 | 小键盘按键'.'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_DOT = 2117--><!--Device-ARKUI_KEYCODE_NUMPAD_DOT = 2117-End--> |
+| ARKUI_KEYCODE_NUMPAD_COMMA = 2118 | 小键盘按键','。<br><!--Device-ARKUI_KEYCODE_NUMPAD_COMMA = 2118--><!--Device-ARKUI_KEYCODE_NUMPAD_COMMA = 2118-End--> |
+| ARKUI_KEYCODE_NUMPAD_ENTER = 2119 | 小键盘按键回车。<br><!--Device-ARKUI_KEYCODE_NUMPAD_ENTER = 2119--><!--Device-ARKUI_KEYCODE_NUMPAD_ENTER = 2119-End--> |
+| ARKUI_KEYCODE_NUMPAD_EQUALS = 2120 | 小键盘按键'='。<br><!--Device-ARKUI_KEYCODE_NUMPAD_EQUALS = 2120--><!--Device-ARKUI_KEYCODE_NUMPAD_EQUALS = 2120-End--> |
+| ARKUI_KEYCODE_NUMPAD_LEFT_PAREN = 2121 | 小键盘按键'('。<br><!--Device-ARKUI_KEYCODE_NUMPAD_LEFT_PAREN = 2121--><!--Device-ARKUI_KEYCODE_NUMPAD_LEFT_PAREN = 2121-End--> |
+| ARKUI_KEYCODE_NUMPAD_RIGHT_PAREN = 2122 | 小键盘按键')'。<br><!--Device-ARKUI_KEYCODE_NUMPAD_RIGHT_PAREN = 2122--><!--Device-ARKUI_KEYCODE_NUMPAD_RIGHT_PAREN = 2122-End--> |
+| ARKUI_KEYCODE_BUTTON_A = 2301 | 游戏手柄按键'A'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_A = 2301--><!--Device-ARKUI_KEYCODE_BUTTON_A = 2301-End--> |
+| ARKUI_KEYCODE_BUTTON_B = 2302 | 游戏手柄按键'B'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_B = 2302--><!--Device-ARKUI_KEYCODE_BUTTON_B = 2302-End--> |
+| ARKUI_KEYCODE_BUTTON_X = 2304 | 游戏手柄按键'X'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_X = 2304--><!--Device-ARKUI_KEYCODE_BUTTON_X = 2304-End--> |
+| ARKUI_KEYCODE_BUTTON_Y = 2305 | 游戏手柄按键'Y'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_Y = 2305--><!--Device-ARKUI_KEYCODE_BUTTON_Y = 2305-End--> |
+| ARKUI_KEYCODE_BUTTON_L1 = 2307 | 游戏手柄按键'L1'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_L1 = 2307--><!--Device-ARKUI_KEYCODE_BUTTON_L1 = 2307-End--> |
+| ARKUI_KEYCODE_BUTTON_R1 = 2308 | 游戏手柄按键'R1'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_R1 = 2308--><!--Device-ARKUI_KEYCODE_BUTTON_R1 = 2308-End--> |
+| ARKUI_KEYCODE_BUTTON_L2 = 2309 | 游戏手柄按键'L2'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_L2 = 2309--><!--Device-ARKUI_KEYCODE_BUTTON_L2 = 2309-End--> |
+| ARKUI_KEYCODE_BUTTON_R2 = 2310 | 游戏手柄按键'R2'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_R2 = 2310--><!--Device-ARKUI_KEYCODE_BUTTON_R2 = 2310-End--> |
+| ARKUI_KEYCODE_BUTTON_SELECT = 2311 | 游戏手柄按键'Select'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_SELECT = 2311--><!--Device-ARKUI_KEYCODE_BUTTON_SELECT = 2311-End--> |
+| ARKUI_KEYCODE_BUTTON_START = 2312 | 游戏手柄按键'Start'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_START = 2312--><!--Device-ARKUI_KEYCODE_BUTTON_START = 2312-End--> |
+| ARKUI_KEYCODE_BUTTON_MODE = 2313 | 游戏手柄按键'Mode'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_MODE = 2313--><!--Device-ARKUI_KEYCODE_BUTTON_MODE = 2313-End--> |
+| ARKUI_KEYCODE_BUTTON_THUMBL = 2314 | 游戏手柄按键'THUMBL'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_THUMBL = 2314--><!--Device-ARKUI_KEYCODE_BUTTON_THUMBL = 2314-End--> |
+| ARKUI_KEYCODE_BUTTON_THUMBR = 2315 | 游戏手柄按键'THUMBR'。<br>**起始版本：** 15<br><!--Device-ARKUI_KEYCODE_BUTTON_THUMBR = 2315--><!--Device-ARKUI_KEYCODE_BUTTON_THUMBR = 2315-End--> |
 
 ### ArkUI_KeyEventType
 
@@ -259,7 +259,7 @@ enum ArkUI_KeyEventType
 
 按键的类型。
 
-<!--Device-ArkUI_KeyEventType--><!--Device-ArkUI_KeyEventType-End-->
+<!--Device-enum ArkUI_KeyEventType--><!--Device-enum ArkUI_KeyEventType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -267,11 +267,11 @@ enum ArkUI_KeyEventType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_KEY_EVENT_UNKNOWN = -1 | 未知类型。 |
-| ARKUI_KEY_EVENT_DOWN = 0 | 按键按下。 |
-| ARKUI_KEY_EVENT_UP = 1 | 按键松开。 |
-| ARKUI_KEY_EVENT_LONG_PRESS = 2 | 按键长按。 |
-| ARKUI_KEY_EVENT_CLICK = 3 | 按键点击。 |
+| ARKUI_KEY_EVENT_UNKNOWN = -1 | 未知类型。<br><!--Device-ARKUI_KEY_EVENT_UNKNOWN = -1--><!--Device-ARKUI_KEY_EVENT_UNKNOWN = -1-End--> |
+| ARKUI_KEY_EVENT_DOWN = 0 | 按键按下。<br><!--Device-ARKUI_KEY_EVENT_DOWN = 0--><!--Device-ARKUI_KEY_EVENT_DOWN = 0-End--> |
+| ARKUI_KEY_EVENT_UP = 1 | 按键松开。<br><!--Device-ARKUI_KEY_EVENT_UP = 1--><!--Device-ARKUI_KEY_EVENT_UP = 1-End--> |
+| ARKUI_KEY_EVENT_LONG_PRESS = 2 | 按键长按。<br><!--Device-ARKUI_KEY_EVENT_LONG_PRESS = 2--><!--Device-ARKUI_KEY_EVENT_LONG_PRESS = 2-End--> |
+| ARKUI_KEY_EVENT_CLICK = 3 | 按键点击。<br><!--Device-ARKUI_KEY_EVENT_CLICK = 3--><!--Device-ARKUI_KEY_EVENT_CLICK = 3-End--> |
 
 ### ArkUI_KeySourceType
 
@@ -283,7 +283,7 @@ enum ArkUI_KeySourceType
 
 触发当前按键的输入设备类型。
 
-<!--Device-ArkUI_KeySourceType--><!--Device-ArkUI_KeySourceType-End-->
+<!--Device-enum ArkUI_KeySourceType--><!--Device-enum ArkUI_KeySourceType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,10 +291,10 @@ enum ArkUI_KeySourceType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_KEY_SOURCE_UNKNOWN = 0 | 未知类型。 |
-| ARKUI_KEY_SOURCE_TYPE_MOUSE = 1 | 鼠标。 |
-| ARKUI_KEY_SOURCE_TYPE_KEYBOARD = 4 | 键盘。 |
-| ARKUI_KEY_SOURCE_TYPE_JOYSTICK = 5 | 游戏手柄。<br>**起始版本：** 15 |
+| ARKUI_KEY_SOURCE_UNKNOWN = 0 | 未知类型。<br><!--Device-ARKUI_KEY_SOURCE_UNKNOWN = 0--><!--Device-ARKUI_KEY_SOURCE_UNKNOWN = 0-End--> |
+| ARKUI_KEY_SOURCE_TYPE_MOUSE = 1 | 鼠标。<br><!--Device-ARKUI_KEY_SOURCE_TYPE_MOUSE = 1--><!--Device-ARKUI_KEY_SOURCE_TYPE_MOUSE = 1-End--> |
+| ARKUI_KEY_SOURCE_TYPE_KEYBOARD = 4 | 键盘。<br><!--Device-ARKUI_KEY_SOURCE_TYPE_KEYBOARD = 4--><!--Device-ARKUI_KEY_SOURCE_TYPE_KEYBOARD = 4-End--> |
+| ARKUI_KEY_SOURCE_TYPE_JOYSTICK = 5 | 游戏手柄。<br>**起始版本：** 15<br><!--Device-ARKUI_KEY_SOURCE_TYPE_JOYSTICK = 5--><!--Device-ARKUI_KEY_SOURCE_TYPE_JOYSTICK = 5-End--> |
 
 ### ArkUI_KeyIntension
 
@@ -306,7 +306,7 @@ enum ArkUI_KeyIntension
 
 按键对应的意图。
 
-<!--Device-ArkUI_KeyIntension--><!--Device-ArkUI_KeyIntension-End-->
+<!--Device-enum ArkUI_KeyIntension--><!--Device-enum ArkUI_KeyIntension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,31 +314,31 @@ enum ArkUI_KeyIntension
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_KEY_INTENSION_UNKNOWN = -1 | 未知意图。 |
-| ARKUI_KEY_INTENSION_UP = 1 | 向上。 |
-| ARKUI_KEY_INTENSION_DOWN = 2 | 向下。 |
-| ARKUI_KEY_INTENSION_LEFT = 3 | 向左。 |
-| ARKUI_KEY_INTENSION_RIGHT = 4 | 向右。 |
-| ARKUI_KEY_INTENSION_SELECT = 5 | 选中。 |
-| ARKUI_KEY_INTENSION_ESCAPE = 6 | 返回。 |
-| ARKUI_KEY_INTENSION_BACK = 7 | 后退。 |
-| ARKUI_KEY_INTENSION_FORWARD = 8 | 前进。 |
-| ARKUI_KEY_INTENSION_MENU = 9 | 菜单。 |
-| ARKUI_KEY_INTENSION_HOME = 10 | 主页。 |
-| ARKUI_KEY_INTENSION_PAGE_UP = 11 | 上一页。 |
-| ARKUI_KEY_INTENSION_PAGE_DOWN = 12 | 下一页。 |
-| ARKUI_KEY_INTENSION_ZOOM_OUT = 13 | 缩小。 |
-| ARKUI_KEY_INTENSION_ZOOM_IN = 14 | 放大。 |
-| ARKUI_KEY_INTENTION_MEDIA_PLAY_PAUSE = 100 | 播放/暂停。 |
-| ARKUI_KEY_INTENTION_MEDIA_FAST_FORWARD = 101 | 快进。 |
-| ARKUI_KEY_INTENTION_MEDIA_FAST_PLAYBACK = 103 | 快速播放。 |
-| ARKUI_KEY_INTENTION_MEDIA_NEXT = 104 | 下一首。 |
-| ARKUI_KEY_INTENTION_MEDIA_PREVIOUS = 105 | 上一首。 |
-| ARKUI_KEY_INTENTION_MEDIA_MUTE = 106 | 静音。 |
-| ARKUI_KEY_INTENTION_VOLUME_UP = 107 | 音量增加。 |
-| ARKUI_KEY_INTENTION_VOLUME_DOWN = 108 | 音量降低。 |
-| ARKUI_KEY_INTENTION_CALL = 200 | 接听电话。 |
-| ARKUI_KEY_INTENTION_CAMERA = 300 | 拍照。 |
+| ARKUI_KEY_INTENSION_UNKNOWN = -1 | 未知意图。<br><!--Device-ARKUI_KEY_INTENSION_UNKNOWN = -1--><!--Device-ARKUI_KEY_INTENSION_UNKNOWN = -1-End--> |
+| ARKUI_KEY_INTENSION_UP = 1 | 向上。<br><!--Device-ARKUI_KEY_INTENSION_UP = 1--><!--Device-ARKUI_KEY_INTENSION_UP = 1-End--> |
+| ARKUI_KEY_INTENSION_DOWN = 2 | 向下。<br><!--Device-ARKUI_KEY_INTENSION_DOWN = 2--><!--Device-ARKUI_KEY_INTENSION_DOWN = 2-End--> |
+| ARKUI_KEY_INTENSION_LEFT = 3 | 向左。<br><!--Device-ARKUI_KEY_INTENSION_LEFT = 3--><!--Device-ARKUI_KEY_INTENSION_LEFT = 3-End--> |
+| ARKUI_KEY_INTENSION_RIGHT = 4 | 向右。<br><!--Device-ARKUI_KEY_INTENSION_RIGHT = 4--><!--Device-ARKUI_KEY_INTENSION_RIGHT = 4-End--> |
+| ARKUI_KEY_INTENSION_SELECT = 5 | 选中。<br><!--Device-ARKUI_KEY_INTENSION_SELECT = 5--><!--Device-ARKUI_KEY_INTENSION_SELECT = 5-End--> |
+| ARKUI_KEY_INTENSION_ESCAPE = 6 | 返回。<br><!--Device-ARKUI_KEY_INTENSION_ESCAPE = 6--><!--Device-ARKUI_KEY_INTENSION_ESCAPE = 6-End--> |
+| ARKUI_KEY_INTENSION_BACK = 7 | 后退。<br><!--Device-ARKUI_KEY_INTENSION_BACK = 7--><!--Device-ARKUI_KEY_INTENSION_BACK = 7-End--> |
+| ARKUI_KEY_INTENSION_FORWARD = 8 | 前进。<br><!--Device-ARKUI_KEY_INTENSION_FORWARD = 8--><!--Device-ARKUI_KEY_INTENSION_FORWARD = 8-End--> |
+| ARKUI_KEY_INTENSION_MENU = 9 | 菜单。<br><!--Device-ARKUI_KEY_INTENSION_MENU = 9--><!--Device-ARKUI_KEY_INTENSION_MENU = 9-End--> |
+| ARKUI_KEY_INTENSION_HOME = 10 | 主页。<br><!--Device-ARKUI_KEY_INTENSION_HOME = 10--><!--Device-ARKUI_KEY_INTENSION_HOME = 10-End--> |
+| ARKUI_KEY_INTENSION_PAGE_UP = 11 | 上一页。<br><!--Device-ARKUI_KEY_INTENSION_PAGE_UP = 11--><!--Device-ARKUI_KEY_INTENSION_PAGE_UP = 11-End--> |
+| ARKUI_KEY_INTENSION_PAGE_DOWN = 12 | 下一页。<br><!--Device-ARKUI_KEY_INTENSION_PAGE_DOWN = 12--><!--Device-ARKUI_KEY_INTENSION_PAGE_DOWN = 12-End--> |
+| ARKUI_KEY_INTENSION_ZOOM_OUT = 13 | 缩小。<br><!--Device-ARKUI_KEY_INTENSION_ZOOM_OUT = 13--><!--Device-ARKUI_KEY_INTENSION_ZOOM_OUT = 13-End--> |
+| ARKUI_KEY_INTENSION_ZOOM_IN = 14 | 放大。<br><!--Device-ARKUI_KEY_INTENSION_ZOOM_IN = 14--><!--Device-ARKUI_KEY_INTENSION_ZOOM_IN = 14-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_PLAY_PAUSE = 100 | 播放/暂停。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_PLAY_PAUSE = 100--><!--Device-ARKUI_KEY_INTENTION_MEDIA_PLAY_PAUSE = 100-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_FAST_FORWARD = 101 | 快进。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_FAST_FORWARD = 101--><!--Device-ARKUI_KEY_INTENTION_MEDIA_FAST_FORWARD = 101-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_FAST_PLAYBACK = 103 | 快速播放。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_FAST_PLAYBACK = 103--><!--Device-ARKUI_KEY_INTENTION_MEDIA_FAST_PLAYBACK = 103-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_NEXT = 104 | 下一首。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_NEXT = 104--><!--Device-ARKUI_KEY_INTENTION_MEDIA_NEXT = 104-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_PREVIOUS = 105 | 上一首。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_PREVIOUS = 105--><!--Device-ARKUI_KEY_INTENTION_MEDIA_PREVIOUS = 105-End--> |
+| ARKUI_KEY_INTENTION_MEDIA_MUTE = 106 | 静音。<br><!--Device-ARKUI_KEY_INTENTION_MEDIA_MUTE = 106--><!--Device-ARKUI_KEY_INTENTION_MEDIA_MUTE = 106-End--> |
+| ARKUI_KEY_INTENTION_VOLUME_UP = 107 | 音量增加。<br><!--Device-ARKUI_KEY_INTENTION_VOLUME_UP = 107--><!--Device-ARKUI_KEY_INTENTION_VOLUME_UP = 107-End--> |
+| ARKUI_KEY_INTENTION_VOLUME_DOWN = 108 | 音量降低。<br><!--Device-ARKUI_KEY_INTENTION_VOLUME_DOWN = 108--><!--Device-ARKUI_KEY_INTENTION_VOLUME_DOWN = 108-End--> |
+| ARKUI_KEY_INTENTION_CALL = 200 | 接听电话。<br><!--Device-ARKUI_KEY_INTENTION_CALL = 200--><!--Device-ARKUI_KEY_INTENTION_CALL = 200-End--> |
+| ARKUI_KEY_INTENTION_CAMERA = 300 | 拍照。<br><!--Device-ARKUI_KEY_INTENTION_CAMERA = 300--><!--Device-ARKUI_KEY_INTENTION_CAMERA = 300-End--> |
 
 ### OH_ArkUI_KeyboardShortcutModifierKey
 
@@ -350,7 +350,7 @@ enum OH_ArkUI_KeyboardShortcutModifierKey
 
 枚举键盘快捷键支持的修饰键。<br> 枚举值为位标志，可以使用按位或运算符进行组合。
 
-<!--Device-OH_ArkUI_KeyboardShortcutModifierKey--><!--Device-OH_ArkUI_KeyboardShortcutModifierKey-End-->
+<!--Device-enum OH_ArkUI_KeyboardShortcutModifierKey--><!--Device-enum OH_ArkUI_KeyboardShortcutModifierKey-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -358,10 +358,10 @@ enum OH_ArkUI_KeyboardShortcutModifierKey
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE = 0 | 不使用修饰键。该值仅可与功能键一起使用。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_CTRL = 1 | Ctrl键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_SHIFT = 2 | Shift键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_ALT = 4 | Alt键。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE = 0 | 不使用修饰键。该值仅可与功能键一起使用。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE = 0--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE = 0-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_CTRL = 1 | Ctrl键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_CTRL = 1--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_CTRL = 1-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_SHIFT = 2 | Shift键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_SHIFT = 2--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_SHIFT = 2-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_ALT = 4 | Alt键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_ALT = 4--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_ALT = 4-End--> |
 
 ### OH_ArkUI_KeyboardShortcutFunctionKey
 
@@ -373,7 +373,7 @@ enum OH_ArkUI_KeyboardShortcutFunctionKey
 
 枚举键盘快捷键支持的功能键。
 
-<!--Device-OH_ArkUI_KeyboardShortcutFunctionKey--><!--Device-OH_ArkUI_KeyboardShortcutFunctionKey-End-->
+<!--Device-enum OH_ArkUI_KeyboardShortcutFunctionKey--><!--Device-enum OH_ArkUI_KeyboardShortcutFunctionKey-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -381,38 +381,38 @@ enum OH_ArkUI_KeyboardShortcutFunctionKey
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ESC = 0 | Esc键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F1 = 1 | F1键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F2 = 2 | F2键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F3 = 3 | F3键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F4 = 4 | F4键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F5 = 5 | F5键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F6 = 6 | F6键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F7 = 7 | F7键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F8 = 8 | F8键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F9 = 9 | F9键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F10 = 10 | F10键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F11 = 11 | F11键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F12 = 12 | F12键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_TAB = 13 | Tab键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_UP = 14 | 向上方向键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_DOWN = 15 | 向下方向键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16 | 向左方向键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17 | 向右方向键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18 | CapsLock键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19 | PrintScreen键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20 | ScrollLock键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21 | Pause/Break键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22 | NumLock键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23 | Insert键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24 | Delete键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25 | Home键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26 | End键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27 | Page Up键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28 | Page Down键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29 | Enter键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30 | Backspace键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31 | Space键。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ESC = 0 | Esc键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ESC = 0--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ESC = 0-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F1 = 1 | F1键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F1 = 1--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F1 = 1-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F2 = 2 | F2键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F2 = 2--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F2 = 2-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F3 = 3 | F3键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F3 = 3--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F3 = 3-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F4 = 4 | F4键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F4 = 4--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F4 = 4-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F5 = 5 | F5键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F5 = 5--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F5 = 5-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F6 = 6 | F6键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F6 = 6--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F6 = 6-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F7 = 7 | F7键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F7 = 7--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F7 = 7-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F8 = 8 | F8键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F8 = 8--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F8 = 8-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F9 = 9 | F9键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F9 = 9--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F9 = 9-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F10 = 10 | F10键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F10 = 10--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F10 = 10-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F11 = 11 | F11键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F11 = 11--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F11 = 11-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F12 = 12 | F12键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F12 = 12--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_F12 = 12-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_TAB = 13 | Tab键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_TAB = 13--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_TAB = 13-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_UP = 14 | 向上方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_UP = 14--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_UP = 14-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_DOWN = 15 | 向下方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_DOWN = 15--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_DOWN = 15-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16 | 向左方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17 | 向右方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18 | CapsLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19 | PrintScreen键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20 | ScrollLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21 | Pause/Break键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22 | NumLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23 | Insert键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24 | Delete键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25 | Home键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26 | End键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27 | Page Up键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28 | Page Down键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29 | Enter键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30 | Backspace键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31 | Space键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31-End--> |
 
 ### OH_ArkUI_KeyboardShortcutKeyType
 
@@ -424,7 +424,7 @@ enum OH_ArkUI_KeyboardShortcutKeyType
 
 枚举键盘快捷键支持的按键类型。
 
-<!--Device-OH_ArkUI_KeyboardShortcutKeyType--><!--Device-OH_ArkUI_KeyboardShortcutKeyType-End-->
+<!--Device-enum OH_ArkUI_KeyboardShortcutKeyType--><!--Device-enum OH_ArkUI_KeyboardShortcutKeyType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -432,8 +432,8 @@ enum OH_ArkUI_KeyboardShortcutKeyType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_CHARACTER = 0 | 字符键。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_FUNCTION_KEY = 1 | 功能键。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_CHARACTER = 0 | 字符键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_CHARACTER = 0--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_CHARACTER = 0-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_FUNCTION_KEY = 1 | 功能键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_FUNCTION_KEY = 1--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_KEY_TYPE_FUNCTION_KEY = 1-End--> |
 
 
 ## 函数说明

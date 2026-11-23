@@ -24,7 +24,7 @@ Defines the connection tracking match condition.
 
 | Name | Description |
 | -- | -- |
-| bool enable | Whether to enable connection tracking match. The value **true** means to enable connection tracking match, and **false** means not to enable it.<br>**Since**: 26.0.1 |
-| uint8_t stateMask | Connection state.<br>**Since**: 26.0.1 |
+| bool enable | Whether to enable connection tracking match. The value **true** means to enable connection tracking match, and **false** means not to enable it.<br>**Since**: 26.0.1<br><!--Device-bool enable--><!--Device-bool enable-End--> |
+| uint8_t stateMask | Connection state.<br>**Since**: 26.0.1<br><!--Device-uint8_t stateMask--><!--Device-uint8_t stateMask-End--> |
 
 

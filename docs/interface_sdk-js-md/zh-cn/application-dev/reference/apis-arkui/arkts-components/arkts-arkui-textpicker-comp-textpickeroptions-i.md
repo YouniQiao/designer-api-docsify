@@ -53,7 +53,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 > **说明：** 
 > 
-> 1. 单列数据选择器使用string[]，Resource，[TextPickerRangeContent](arkts-arkui-textpicker-comp-textpickerrangecontent-i.md)[]类型。
+> 1. 单列数据选择器使用string]，[Resource，[TextPickerRangeContent](arkts-arkui-textpicker-comp-textpickerrangecontent-i.md)[]类型。
 > 2. 多列非联动数据选择器使用string[][]类型。
 > 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textpicker-comp-textcascadepickerrangecontent-i.md)[]类型。
 > 4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。

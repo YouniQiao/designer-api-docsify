@@ -44,7 +44,7 @@ import { securityManager } from '@kit.MDMKit';
 | [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md#getpasswordlastchangedtime-1) | 根据账号ID获取最近一次修改密码时间。同步返回时间。企业可以通过该接口查询最近一次修改密码时间，用于密码策略审计和合规性检查。 |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md#getpasswordpolicy-1) | 获取设备锁屏口令策略。企业可通过此接口查询当前配置的口令策略，用于策略审计、合规性检查等场景，确保设备口令策略符合企业安全规范。 |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md#getpasswordpolicy-2) | 获取设备锁屏口令策略。企业可通过此接口查询当前配置的口令策略，用于策略审计、合规性检查等场景，确保设备口令策略符合企业安全规范。 |
-| [getPermissionManagedState](arkts-mdm-securitymanager-getpermissionmanagedstate-f.md#getpermissionmanagedstate-1) | 获取指定应用的指定user_grant权限的管理策略。 |
+| getPermissionManagedState](arkts-mdm-securitymanager-getpermissionmanagedstate-f.md#getpermissionmanagedstate-1) | 获取指定应用的指定[user_grant权限的管理策略。 |
 | [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md#getsecuritystatus-1) | 获取当前设备安全策略信息。适用于设备合规性检查、安全状态审计、策略执行效果验证等场景，帮助企业管理员确认设备是否符合安全要求。企业可通过此接口实时监控设备的安全补丁状态和文件加密状态，及时发现设备安全风险并采取相应措施，保障企业设备和数据安全。 |
 | [getUnlockPolicy](arkts-mdm-securitymanager-getunlockpolicy-f.md#getunlockpolicy-1) | 查询解锁策略 |
 | [getUserCertificates](arkts-mdm-securitymanager-getusercertificates-f.md#getusercertificates-1) | 获取指定系统账户下的用户证书信息。企业可通过此接口查询设备上已安装的用户证书列表，用于证书审计、证书有效期管理等场景，确保证书管理的可追溯性。 |
@@ -65,7 +65,7 @@ import { securityManager } from '@kit.MDMKit';
 | [setEnterpriseResetPolicy](arkts-mdm-securitymanager-setenterpriseresetpolicy-f.md#setenterpriseresetpolicy-1) | 设置企业复位策略。 |
 | [setExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-setexternalsourceextensionspolicy-f.md#setexternalsourceextensionspolicy-1) | 设置外部来源扩展程序的管控策略。策略设置后，系统将按照设置的策略控制外部来源扩展程序的运行行为。适用于企业安全管控场景，如防止员工安装非授权浏览器扩展程序，或强制开启企业批准的扩展程序功能，保障企业终端安全。 |
 | [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy-1) | 设置设备锁屏口令策略。策略设置后，当用户设置锁屏口令时，如果设置的锁屏口令不符合要求，会有安全提示重新设置锁屏口令。适用于企业安全合规场景，如强制要求员工使用强密码、定期更换密码等，降低企业数据泄露风险。 |
-| [setPermissionManagedState](arkts-mdm-securitymanager-setpermissionmanagedstate-f.md#setpermissionmanagedstate-1) | 设置指定应用的user_grant权限的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。 |
+| setPermissionManagedState](arkts-mdm-securitymanager-setpermissionmanagedstate-f.md#setpermissionmanagedstate-1) | 设置指定应用的[user_grant权限的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。 |
 | [setScreenLockDisabledForAccount](arkts-mdm-securitymanager-setscreenlockdisabledforaccount-f.md#setscreenlockdisabledforaccount-1) | 禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。适用于企业设备管理场景，如在特定安全环境下禁用滑动解锁简化操作，或在通用场景下启用滑动解锁作为基础安全措施。 |
 | [setScreenWatermarkImage](arkts-mdm-securitymanager-setscreenwatermarkimage-f.md#setscreenwatermarkimage-1) | 设置屏幕水印策略，对所有用户生效。 |
 | [setUnlockPolicy](arkts-mdm-securitymanager-setunlockpolicy-f.md#setunlockpolicy-1) | 设置解锁策略 |

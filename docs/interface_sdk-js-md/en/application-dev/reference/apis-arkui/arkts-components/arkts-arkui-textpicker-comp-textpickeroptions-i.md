@@ -58,7 +58,7 @@ Data selection list of the picker. It cannot be set to an empty array. If it is 
 
 **Note:** 
 
-1. A single-column data picker uses the string[], Resource, or
+1. A single-column data picker uses the string], [Resource, or
 [TextPickerRangeContent](arkts-arkui-textpicker-comp-textpickerrangecontent-i.md)[] type.
 2. A multi-column non-linked data picker uses the string[][] type.
 3. A multi-column linkage data picker uses the

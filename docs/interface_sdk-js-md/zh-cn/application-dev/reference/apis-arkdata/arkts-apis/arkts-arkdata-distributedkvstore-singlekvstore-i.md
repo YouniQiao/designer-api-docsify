@@ -2037,7 +2037,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的同步完成回调函数。如果该参数不填，则取消所有已订阅的同步完成回调函数。需要注意的是：如果同一个数据库存在多个ArkTS实例（通过getKVStore接口获取），且这些实例分别注册了同步完成事件回调，那么当任意一个实例调用off('syncComplete')且不传入syncCallback参数（即取消该实例的所有回调）时，其他实例已订阅的同步完成回调函数也会被一并取消。 |
+| syncCallback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的同步完成回调函数。如果该参数不填，则取消所有已订阅的同步完成回调函数。需要注意的是：如果同一个数据库存在多个ArkTS实例（通过[getKVStore接口获取），且这些实例分别注册了同步完成事件回调，那么当任意一个实例调用off('syncComplete')且不传入syncCallback参数（即取消该实例的所有回调）时，其他实例已订阅的同步完成回调函数也会被一并取消。 |
 
 **错误码：**
 

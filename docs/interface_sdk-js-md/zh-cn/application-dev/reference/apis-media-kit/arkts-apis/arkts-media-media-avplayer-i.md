@@ -579,7 +579,7 @@ getCurrentTrack(trackType: MediaType): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-media-mediatype-e.md) | 是 | 指定的媒体类型，见MediaType. |
+| trackType | MediaType](arkts-media-media-mediatype-e.md) | 是 | 指定的媒体类型，见[MediaType. |
 
 **返回值：**
 

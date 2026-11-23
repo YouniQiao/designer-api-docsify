@@ -4,7 +4,7 @@
 interface FloatViewProperties
 ```
 
-标准悬浮窗窗口的属性。
+闪控窗窗口的属性。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 avoidArea: window.AvoidArea
 ```
 
-标准悬浮窗内容的避让区域。
+闪控窗内容的避让区域。
 
 **注意：**
 
@@ -46,7 +46,7 @@ avoidArea: window.AvoidArea
 displayId: number
 ```
 
-标准悬浮窗所在屏幕ID。取值限定为整数。
+闪控窗所在屏幕ID。取值限定为整数。
 
 **类型：** number
 
@@ -64,7 +64,7 @@ displayId: number
 inSidebar: boolean
 ```
 
-标准悬浮窗是否在侧边栏中。true为在侧边栏中，false为不在侧边栏中。
+闪控窗是否在侧边栏中。true为在侧边栏中，false为不在侧边栏中。
 
 **类型：** boolean
 
@@ -82,7 +82,7 @@ inSidebar: boolean
 templateType: FloatViewTemplateType
 ```
 
-标准悬浮窗的模板类型。
+闪控窗的模板类型。
 
 **类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
@@ -100,7 +100,7 @@ templateType: FloatViewTemplateType
 windowId: number
 ```
 
-标准悬浮窗窗口ID。取值限定为整数。
+闪控窗窗口ID。取值限定为整数。
 
 **类型：** number
 
@@ -118,7 +118,7 @@ windowId: number
 windowRect: window.Rect
 ```
 
-标准悬浮窗窗口矩形区域。
+闪控窗窗口矩形区域。
 
 **类型：** [window.Rect](arkts-arkui-window-rect-i.md)
 
@@ -136,7 +136,7 @@ windowRect: window.Rect
 windowScale: number
 ```
 
-标准悬浮窗窗口缩放比例。
+闪控窗窗口缩放比例。
 
 **类型：** number
 

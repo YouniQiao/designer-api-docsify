@@ -161,7 +161,7 @@ Sets the font size. If this API is not used, the default font size is 16fp, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font size. When fontSize is of the number type, the unit fp is used. The string type supports the string form of a number type value, which can carry a unit, for example, "10" or "10fp". Percentage strings are not supported.<br>Since API version 20, the Resource type is supported. |
+| value | number &#124; string &#124; Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font size. When fontSize is of the number type, the unit fp is used. The string type supports the string form of a number type value, which can carry a unit, for example, "10" or "10fp". Percentage strings are not supported.<br>Since API version 20, the [Resource type is supported. |
 
 ## fontStyle
 
@@ -240,7 +240,7 @@ Sets the font weight of the text. If the value is too large, the text may be cli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. <br>For the number type, the value ranges from [100, 900], at an interval of 100. A larger value indicates a heavier font. For the string type, only the string form of the number type value is supported, for example, "400", as well as "bold", "bolder", "lighter", "regular", and "medium", which correspond to the respective enumvalues in FontWeight. If the value is set too large, the font may be truncated under different fonts. If a value outside the value range or not meeting the interval requirement is passed in, the default value is used. <br>Since API version 20, the Resource type is supported.<br>**Since:** 20 |
+| value | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. <br>For the number type, the value ranges from [100, 900], at an interval of 100. A larger value indicates a heavier font. For the string type, only the string form of the number type value is supported, for example, "400", as well as "bold", "bolder", "lighter", "regular", and "medium", which correspond to the respective enumvalues in FontWeight. If the value is set too large, the font may be truncated under different fonts. If a value outside the value range or not meeting the interval requirement is passed in, the default value is used. <br>Since API version 20, the [Resource type is supported.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -295,7 +295,7 @@ Sets the text character spacing. If the value is less than 0, the characters gat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text character spacing. <br>Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units) <br>Since API version 20, the Resource type is supported.<br>**Since:** 20 |
+| value | number &#124; ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text character spacing. <br>Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units) <br>Since API version 20, the [Resource type is supported.<br>**Since:** 20 |
 
 ## lineHeight
 

@@ -24,20 +24,20 @@ typedef struct OH_TrafficFilter_FilterRule {...} OH_TrafficFilter_FilterRule
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.1 |
-| uint32_t priority | 优先级（数值越小优先级越高）。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_HookPoint](capi-net-trafficfilter-type-h.md#oh_trafficfilter_hookpoint) hookPoint | 钩子点（添加规则到不同钩子点的链上）。<br>**起始版本：** 26.0.1 |
-| uint8_t protocol | 协议类型（0=不限制，6=TCP，17=UDP）。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_IPMatch](capi-trafficfilter-oh-trafficfilter-ipmatch.md) srcIp | 源IP匹配条件。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_PortMatch](capi-trafficfilter-oh-trafficfilter-portmatch.md) srcPort | 源端口匹配条件。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_IPMatch](capi-trafficfilter-oh-trafficfilter-ipmatch.md) dstIp | 目的IP匹配条件。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_PortMatch](capi-trafficfilter-oh-trafficfilter-portmatch.md) dstPort | 目的端口匹配条件。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_InterfaceMatch](capi-trafficfilter-oh-trafficfilter-interfacematch.md) inInterface | 入接口匹配条件。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_InterfaceMatch](capi-trafficfilter-oh-trafficfilter-interfacematch.md) outInterface | 出接口匹配条件。<br>**起始版本：** 26.0.1 |
-| uint32_t uidStart | 应用UID范围起始值（UINT32_MAX表示任意UID）。<br>**起始版本：** 26.0.1 |
-| uint32_t uidEnd | 应用UID范围结束值（UINT32_MAX表示任意UID）。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_MACMatch](capi-trafficfilter-oh-trafficfilter-macmatch.md) macMatch | MAC地址匹配条件（仅源MAC地址）。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_TCPFlagsMatch](capi-trafficfilter-oh-trafficfilter-tcpflagsmatch.md) tcpFlagsMatch | TCP标志位匹配条件（仅对TCP协议有效）。<br>**起始版本：** 26.0.1 |
-| [OH_TrafficFilter_ConntrackMatch](capi-trafficfilter-oh-trafficfilter-conntrackmatch.md) conntrackMatch | 连接跟踪匹配条件。<br>**起始版本：** 26.0.1 |
+| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint32_t priority | 优先级（数值越小优先级越高）。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t priority--><!--Device-uint32_t priority-End--> |
+| [OH_TrafficFilter_HookPoint](capi-net-trafficfilter-type-h.md#oh_trafficfilter_hookpoint) hookPoint | 钩子点（添加规则到不同钩子点的链上）。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_HookPoint hookPoint--><!--Device-OH_TrafficFilter_HookPoint hookPoint-End--> |
+| uint8_t protocol | 协议类型（0=不限制，6=TCP，17=UDP）。<br>**起始版本：** 26.0.1<br><!--Device-uint8_t protocol--><!--Device-uint8_t protocol-End--> |
+| [OH_TrafficFilter_IPMatch](capi-trafficfilter-oh-trafficfilter-ipmatch.md) srcIp | 源IP匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_IPMatch srcIp--><!--Device-OH_TrafficFilter_IPMatch srcIp-End--> |
+| [OH_TrafficFilter_PortMatch](capi-trafficfilter-oh-trafficfilter-portmatch.md) srcPort | 源端口匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_PortMatch srcPort--><!--Device-OH_TrafficFilter_PortMatch srcPort-End--> |
+| [OH_TrafficFilter_IPMatch](capi-trafficfilter-oh-trafficfilter-ipmatch.md) dstIp | 目的IP匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_IPMatch dstIp--><!--Device-OH_TrafficFilter_IPMatch dstIp-End--> |
+| [OH_TrafficFilter_PortMatch](capi-trafficfilter-oh-trafficfilter-portmatch.md) dstPort | 目的端口匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_PortMatch dstPort--><!--Device-OH_TrafficFilter_PortMatch dstPort-End--> |
+| [OH_TrafficFilter_InterfaceMatch](capi-trafficfilter-oh-trafficfilter-interfacematch.md) inInterface | 入接口匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_InterfaceMatch inInterface--><!--Device-OH_TrafficFilter_InterfaceMatch inInterface-End--> |
+| [OH_TrafficFilter_InterfaceMatch](capi-trafficfilter-oh-trafficfilter-interfacematch.md) outInterface | 出接口匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_InterfaceMatch outInterface--><!--Device-OH_TrafficFilter_InterfaceMatch outInterface-End--> |
+| uint32_t uidStart | 应用UID范围起始值（UINT32_MAX表示任意UID）。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t uidStart--><!--Device-uint32_t uidStart-End--> |
+| uint32_t uidEnd | 应用UID范围结束值（UINT32_MAX表示任意UID）。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t uidEnd--><!--Device-uint32_t uidEnd-End--> |
+| [OH_TrafficFilter_MACMatch](capi-trafficfilter-oh-trafficfilter-macmatch.md) macMatch | MAC地址匹配条件（仅源MAC地址）。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_MACMatch macMatch--><!--Device-OH_TrafficFilter_MACMatch macMatch-End--> |
+| [OH_TrafficFilter_TCPFlagsMatch](capi-trafficfilter-oh-trafficfilter-tcpflagsmatch.md) tcpFlagsMatch | TCP标志位匹配条件（仅对TCP协议有效）。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_TCPFlagsMatch tcpFlagsMatch--><!--Device-OH_TrafficFilter_TCPFlagsMatch tcpFlagsMatch-End--> |
+| [OH_TrafficFilter_ConntrackMatch](capi-trafficfilter-oh-trafficfilter-conntrackmatch.md) conntrackMatch | 连接跟踪匹配条件。<br>**起始版本：** 26.0.1<br><!--Device-OH_TrafficFilter_ConntrackMatch conntrackMatch--><!--Device-OH_TrafficFilter_ConntrackMatch conntrackMatch-End--> |
 
 

@@ -84,8 +84,8 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| CloudDisk_PathInfo CloudDisk_FileIdInfo | 定义的文件ID。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.FileManagement.CloudDiskManager |
-| CloudDisk_PathInfo CloudDisk_SyncFolderPath | 定义的同步根路径。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.FileManagement.CloudDiskManager |
+| CloudDisk_PathInfo CloudDisk_FileIdInfo | 定义的文件ID。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.FileManagement.CloudDiskManager<br><!--Device-CloudDisk_PathInfo CloudDisk_FileIdInfo--><!--Device-CloudDisk_PathInfo CloudDisk_FileIdInfo-End--> |
+| CloudDisk_PathInfo CloudDisk_SyncFolderPath | 定义的同步根路径。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.FileManagement.CloudDiskManager<br><!--Device-CloudDisk_PathInfo CloudDisk_SyncFolderPath--><!--Device-CloudDisk_PathInfo CloudDisk_SyncFolderPath-End--> |
 
 ## 枚举类型说明
 
@@ -99,7 +99,7 @@ enum CloudDisk_SyncState
 
 文件同步状态的枚举值。
 
-<!--Device-CloudDisk_SyncState--><!--Device-CloudDisk_SyncState-End-->
+<!--Device-enum CloudDisk_SyncState--><!--Device-enum CloudDisk_SyncState-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -107,12 +107,12 @@ enum CloudDisk_SyncState
 
 | 枚举项 | 描述 |
 | -- | -- |
-| IDLE = 0 | 目前处于空闲状态，未执行任何同步操作。<br>**起始版本：** 21 |
-| SYNCING = 1 | 文件正在同步。<br>**起始版本：** 21 |
-| SYNC_SUCCEEDED = 2 | 文件同步成功。<br>**起始版本：** 21 |
-| SYNC_FAILED = 3 | 文件同步失败。<br>**起始版本：** 21 |
-| SYNC_CANCELED = 4 | 文件同步取消。<br>**起始版本：** 21 |
-| SYNC_CONFLICTED = 5 | 文件同步冲突。<br>**起始版本：** 21 |
+| IDLE = 0 | 目前处于空闲状态，未执行任何同步操作。<br>**起始版本：** 21<br><!--Device-IDLE = 0--><!--Device-IDLE = 0-End--> |
+| SYNCING = 1 | 文件正在同步。<br>**起始版本：** 21<br><!--Device-SYNCING = 1--><!--Device-SYNCING = 1-End--> |
+| SYNC_SUCCEEDED = 2 | 文件同步成功。<br>**起始版本：** 21<br><!--Device-SYNC_SUCCEEDED = 2--><!--Device-SYNC_SUCCEEDED = 2-End--> |
+| SYNC_FAILED = 3 | 文件同步失败。<br>**起始版本：** 21<br><!--Device-SYNC_FAILED = 3--><!--Device-SYNC_FAILED = 3-End--> |
+| SYNC_CANCELED = 4 | 文件同步取消。<br>**起始版本：** 21<br><!--Device-SYNC_CANCELED = 4--><!--Device-SYNC_CANCELED = 4-End--> |
+| SYNC_CONFLICTED = 5 | 文件同步冲突。<br>**起始版本：** 21<br><!--Device-SYNC_CONFLICTED = 5--><!--Device-SYNC_CONFLICTED = 5-End--> |
 
 ### CloudDisk_OperationType
 
@@ -124,7 +124,7 @@ enum CloudDisk_OperationType
 
 文件变更类型枚举值。
 
-<!--Device-CloudDisk_OperationType--><!--Device-CloudDisk_OperationType-End-->
+<!--Device-enum CloudDisk_OperationType--><!--Device-enum CloudDisk_OperationType-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -132,13 +132,13 @@ enum CloudDisk_OperationType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CREATE = 0 | 创建文件或目录。<br>**起始版本：** 21 |
-| DELETE = 1 | 删除文件或目录。<br>**起始版本：** 21 |
-| MOVE_FROM = 2 | 移动此文件或目录。<br>**起始版本：** 21 |
-| MOVE_TO = 3 | 移动到此文件或目录。<br>**起始版本：** 21 |
-| CLOSE_WRITE = 4 | 在写入操作后关闭文件。<br>**起始版本：** 21 |
-| SYNC_FOLDER_INVALID = 5 | 同步根路径无效。<br>**起始版本：** 21 |
-| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | 修改内容后关闭文件。<br>**起始版本：** 26.0.1 |
+| CREATE = 0 | 创建文件或目录。<br>**起始版本：** 21<br><!--Device-CREATE = 0--><!--Device-CREATE = 0-End--> |
+| DELETE = 1 | 删除文件或目录。<br>**起始版本：** 21<br><!--Device-DELETE = 1--><!--Device-DELETE = 1-End--> |
+| MOVE_FROM = 2 | 移动此文件或目录。<br>**起始版本：** 21<br><!--Device-MOVE_FROM = 2--><!--Device-MOVE_FROM = 2-End--> |
+| MOVE_TO = 3 | 移动到此文件或目录。<br>**起始版本：** 21<br><!--Device-MOVE_TO = 3--><!--Device-MOVE_TO = 3-End--> |
+| CLOSE_WRITE = 4 | 在写入操作后关闭文件。<br>**起始版本：** 21<br><!--Device-CLOSE_WRITE = 4--><!--Device-CLOSE_WRITE = 4-End--> |
+| SYNC_FOLDER_INVALID = 5 | 同步根路径无效。<br>**起始版本：** 21<br><!--Device-SYNC_FOLDER_INVALID = 5--><!--Device-SYNC_FOLDER_INVALID = 5-End--> |
+| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | 修改内容后关闭文件。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6--><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6-End--> |
 
 ### CloudDisk_ErrorReason
 
@@ -150,7 +150,7 @@ enum CloudDisk_ErrorReason
 
 文件同步失败原因的枚举值。
 
-<!--Device-CloudDisk_ErrorReason--><!--Device-CloudDisk_ErrorReason-End-->
+<!--Device-enum CloudDisk_ErrorReason--><!--Device-enum CloudDisk_ErrorReason-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -158,11 +158,11 @@ enum CloudDisk_ErrorReason
 
 | 枚举项 | 描述 |
 | -- | -- |
-| INVALID_ARGUMENT = 0 | 输入的参数无效。<br>**起始版本：** 21 |
-| NO_SUCH_FILE = 1 | 操作的文件或目录不存在。<br>**起始版本：** 21 |
-| NO_SPACE_LEFT = 2 | 设备上的剩余空间不足。<br>**起始版本：** 21 |
-| OUT_OF_RANGE = 3 | 超出有效范围。<br>**起始版本：** 21 |
-| NO_SYNC_STATE = 4 | 同步状态未设置。<br>**起始版本：** 21 |
+| INVALID_ARGUMENT = 0 | 输入的参数无效。<br>**起始版本：** 21<br><!--Device-INVALID_ARGUMENT = 0--><!--Device-INVALID_ARGUMENT = 0-End--> |
+| NO_SUCH_FILE = 1 | 操作的文件或目录不存在。<br>**起始版本：** 21<br><!--Device-NO_SUCH_FILE = 1--><!--Device-NO_SUCH_FILE = 1-End--> |
+| NO_SPACE_LEFT = 2 | 设备上的剩余空间不足。<br>**起始版本：** 21<br><!--Device-NO_SPACE_LEFT = 2--><!--Device-NO_SPACE_LEFT = 2-End--> |
+| OUT_OF_RANGE = 3 | 超出有效范围。<br>**起始版本：** 21<br><!--Device-OUT_OF_RANGE = 3--><!--Device-OUT_OF_RANGE = 3-End--> |
+| NO_SYNC_STATE = 4 | 同步状态未设置。<br>**起始版本：** 21<br><!--Device-NO_SYNC_STATE = 4--><!--Device-NO_SYNC_STATE = 4-End--> |
 
 ### CloudDisk_SyncFolderState
 
@@ -174,7 +174,7 @@ enum CloudDisk_SyncFolderState
 
 同步根路径状态的枚举值。
 
-<!--Device-CloudDisk_SyncFolderState--><!--Device-CloudDisk_SyncFolderState-End-->
+<!--Device-enum CloudDisk_SyncFolderState--><!--Device-enum CloudDisk_SyncFolderState-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -182,8 +182,8 @@ enum CloudDisk_SyncFolderState
 
 | 枚举项 | 描述 |
 | -- | -- |
-| INACTIVE = 0 | 表示同步根路径的状态是未激活的。<br>**起始版本：** 21 |
-| ACTIVE = 1 | 表示同步根路径的状态是激活的。<br>**起始版本：** 21 |
+| INACTIVE = 0 | 表示同步根路径的状态是未激活的。<br>**起始版本：** 21<br><!--Device-INACTIVE = 0--><!--Device-INACTIVE = 0-End--> |
+| ACTIVE = 1 | 表示同步根路径的状态是激活的。<br>**起始版本：** 21<br><!--Device-ACTIVE = 1--><!--Device-ACTIVE = 1-End--> |
 
 ### OH_CloudDisk_CallbackType
 
@@ -195,7 +195,7 @@ enum OH_CloudDisk_CallbackType
 
 云盘回调类型枚举值。
 
-<!--Device-OH_CloudDisk_CallbackType--><!--Device-OH_CloudDisk_CallbackType-End-->
+<!--Device-enum OH_CloudDisk_CallbackType--><!--Device-enum OH_CloudDisk_CallbackType-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -203,9 +203,9 @@ enum OH_CloudDisk_CallbackType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | 获取云端文件数据，用于水合。<br>**起始版本：** 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | 取消获取云端文件数据。<br>**起始版本：** 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | 请求脱水授权。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | 获取云端文件数据，用于水合。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0-End--> |
+| OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | 取消获取云端文件数据。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1-End--> |
+| OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | 请求脱水授权。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2-End--> |
 
 ### OH_CloudDisk_HydratePriority
 
@@ -217,7 +217,7 @@ enum OH_CloudDisk_HydratePriority
 
 水合优先级枚举值。
 
-<!--Device-OH_CloudDisk_HydratePriority--><!--Device-OH_CloudDisk_HydratePriority-End-->
+<!--Device-enum OH_CloudDisk_HydratePriority--><!--Device-enum OH_CloudDisk_HydratePriority-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -225,9 +225,9 @@ enum OH_CloudDisk_HydratePriority
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0 | 低优先级。<br>**起始版本：** 26.0.1 |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1 | 常规优先级。<br>**起始版本：** 26.0.1 |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2 | 高优先级。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0 | 低优先级。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0-End--> |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1 | 常规优先级。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1-End--> |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2 | 高优先级。<br>**起始版本：** 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2-End--> |
 
 
 ## 函数说明

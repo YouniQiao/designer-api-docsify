@@ -18,7 +18,7 @@ typedef struct OH_AI_CallBackParam {...} OH_AI_CallBackParam
 
 | Name | Description |
 | -- | -- |
-| char *node_name |  |
-| char *node_type |  |
+| char *node_name | <!--Device-char *node_name--><!--Device-char *node_name-End--> |
+| char *node_type | <!--Device-char *node_type--><!--Device-char *node_type-End--> |
 
 

@@ -202,7 +202,7 @@ style icon resource (i.e., **$r('sys.symbol.*xxx*')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Symbol icon font weight of the save button. <br>For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. <br>For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). <br>Default value: **FontWeight.Normal** (the corresponding value is **400**) <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Symbol icon font weight of the save button. <br>For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. <br>For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight (for example, **"normal"**). <br>Default value: **FontWeight.Normal** (the corresponding value is **400**) <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 

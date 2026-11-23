@@ -38,7 +38,7 @@ baselineOffset(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。<br>单位：fp <br>从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number &#124; ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。<br>单位：fp <br>从API version 20开始，支持[Resource类型。<br>**适用版本：** 20 |
 
 ## bindSelectionMenu
 
@@ -773,7 +773,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。<br>从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。<br>从API version 20开始，支持[Resource类型。<br>**适用版本：** 20 |
 
 ## fontWeight
 
@@ -801,7 +801,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。<br>传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。<br>从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| weight | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。<br>传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。<br>从API version 20开始，支持[Resource类型。<br>**适用版本：** 20 |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。<br>enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变字重调节，weight取任意整数时字重为weight。 |
 
 ## halfLeading
@@ -952,7 +952,7 @@ letterSpacing(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本字符间距。<br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+| value | number &#124; ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本字符间距。<br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持[Resource类型。<br>**适用版本：** 20 |
 
 ## lineBreakStrategy
 

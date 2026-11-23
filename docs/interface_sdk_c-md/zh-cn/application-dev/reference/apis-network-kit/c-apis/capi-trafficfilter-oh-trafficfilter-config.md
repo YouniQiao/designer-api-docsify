@@ -24,10 +24,10 @@ NFQueue（Netfilter 框架里的一个“数据包排队通道”）配置结构
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.1 |
-| uint32_t packetCopyMode | 报文拷贝模式，请参考[OH_TrafficFilter_PacketCopyMode](capi-net-trafficfilter-type-h.md#oh_trafficfilter_packetcopymode)。默认值为2。<br>**起始版本：** 26.0.1 |
-| uint32_t packetCopyLen | NFQueue报文拷贝长度（字节），取值范围为[0, 0xFFFF]，0xFFFF表示复制整个报文，其他值复制指定长度的报文头部。默认值为0xFFFF。<br>**起始版本：** 26.0.1 |
-| uint32_t nfqueueMaxlen | NFQueue最大队列长度（报文数量），0表示使用系统默认值（1024）。<br>**起始版本：** 26.0.1 |
-| uint32_t nfqueueFlags | NFQueue队列标志，参见[OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN](capi-net-trafficfilter-type-h.md#宏定义)。默认值为0x1。<br>**起始版本：** 26.0.1 |
+| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint32_t packetCopyMode | 报文拷贝模式，请参考[OH_TrafficFilter_PacketCopyMode](capi-net-trafficfilter-type-h.md#oh_trafficfilter_packetcopymode)。默认值为2。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t packetCopyMode--><!--Device-uint32_t packetCopyMode-End--> |
+| uint32_t packetCopyLen | NFQueue报文拷贝长度（字节），取值范围为[0, 0xFFFF]，0xFFFF表示复制整个报文，其他值复制指定长度的报文头部。默认值为0xFFFF。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t packetCopyLen--><!--Device-uint32_t packetCopyLen-End--> |
+| uint32_t nfqueueMaxlen | NFQueue最大队列长度（报文数量），0表示使用系统默认值（1024）。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t nfqueueMaxlen--><!--Device-uint32_t nfqueueMaxlen-End--> |
+| uint32_t nfqueueFlags | NFQueue队列标志，参见[OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN](capi-net-trafficfilter-type-h.md#宏定义)。默认值为0x1。<br>**起始版本：** 26.0.1<br><!--Device-uint32_t nfqueueFlags--><!--Device-uint32_t nfqueueFlags-End--> |
 
 

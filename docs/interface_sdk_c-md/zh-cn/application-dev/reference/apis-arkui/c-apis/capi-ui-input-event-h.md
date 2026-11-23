@@ -210,8 +210,8 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle | 定义触摸测试信息项句柄。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
-| ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray | 定义触摸测试信息项句柄数组。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
+| ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle | 定义触摸测试信息项句柄。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full<br><!--Device-ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle--><!--Device-ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle-End--> |
+| ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray | 定义触摸测试信息项句柄数组。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full<br><!--Device-ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray--><!--Device-ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray-End--> |
 
 ## 枚举类型说明
 
@@ -225,7 +225,7 @@ enum ArkUI_UIInputEvent_Type
 
 UI输入事件类型定义。
 
-<!--Device-ArkUI_UIInputEvent_Type--><!--Device-ArkUI_UIInputEvent_Type-End-->
+<!--Device-enum ArkUI_UIInputEvent_Type--><!--Device-enum ArkUI_UIInputEvent_Type-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -233,13 +233,13 @@ UI输入事件类型定义。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0 |  |
-| ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1 |  |
-| ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3 | 鼠标事件。 |
-| ARKUI_UIINPUTEVENT_TYPE_AXIS = 2 |  |
-| ARKUI_UIINPUTEVENT_TYPE_KEY = 4 | 按键事件。<br>**起始版本：** 20 |
-| ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5 | 表冠事件。<br>**起始版本：** 24 |
-| ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6 | 触控板事件。<br>**起始版本：** 26.1.0 |
+| ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0 | <!--Device-ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0--><!--Device-ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1 | <!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1--><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3 | 鼠标事件。<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3--><!--Device-ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_AXIS = 2 | <!--Device-ARKUI_UIINPUTEVENT_TYPE_AXIS = 2--><!--Device-ARKUI_UIINPUTEVENT_TYPE_AXIS = 2-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_KEY = 4 | 按键事件。<br>**起始版本：** 20<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_KEY = 4--><!--Device-ARKUI_UIINPUTEVENT_TYPE_KEY = 4-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5 | 表冠事件。<br>**起始版本：** 24<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5--><!--Device-ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6 | 触控板事件。<br>**起始版本：** 26.1.0<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6--><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6-End--> |
 
 ### ArkUI_CrownEvent_Action
 
@@ -251,7 +251,7 @@ enum ArkUI_CrownEvent_Action
 
 定义表冠事件的阶段。
 
-<!--Device-ArkUI_CrownEvent_Action--><!--Device-ArkUI_CrownEvent_Action-End-->
+<!--Device-enum ArkUI_CrownEvent_Action--><!--Device-enum ArkUI_CrownEvent_Action-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,9 +259,9 @@ enum ArkUI_CrownEvent_Action
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0 | 未知的表冠事件阶段。 |
-| ARKUI_CROWNEVENT_ACTION_UPDATE = 1 | 表冠事件更新。 |
-| ARKUI_CROWNEVENT_ACTION_END = 2 | 表冠事件结束。 |
+| ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0 | 未知的表冠事件阶段。<br><!--Device-ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0--><!--Device-ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0-End--> |
+| ARKUI_CROWNEVENT_ACTION_UPDATE = 1 | 表冠事件更新。<br><!--Device-ARKUI_CROWNEVENT_ACTION_UPDATE = 1--><!--Device-ARKUI_CROWNEVENT_ACTION_UPDATE = 1-End--> |
+| ARKUI_CROWNEVENT_ACTION_END = 2 | 表冠事件结束。<br><!--Device-ARKUI_CROWNEVENT_ACTION_END = 2--><!--Device-ARKUI_CROWNEVENT_ACTION_END = 2-End--> |
 
 ### ArkUI_CoastingAxisEventPhase
 
@@ -273,7 +273,7 @@ enum ArkUI_CoastingAxisEventPhase
 
 定义惯性滚动轴事件的阶段。
 
-<!--Device-ArkUI_CoastingAxisEventPhase--><!--Device-ArkUI_CoastingAxisEventPhase-End-->
+<!--Device-enum ArkUI_CoastingAxisEventPhase--><!--Device-enum ArkUI_CoastingAxisEventPhase-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,10 +281,10 @@ enum ArkUI_CoastingAxisEventPhase
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0 | 非惯性轴事件阶段，异常默认值，可以通过检查惯性轴阶段值不为该值来判断当前惯性轴事件是有效的。 |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1 | 惯性滚动轴事件开始，此为惯性阶段的第一个事件。 |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2 | 惯性滚动轴事件更新，此阶段可以获取惯性轴值增量来处理滚动偏移。 |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3 | 惯性滚动轴事件结束，此值在惯性被刹停（惯性滚动阶段用户重新触摸触控板或通过鼠标及触屏与组件产生交互等）或惯性衰减至自然停止时发送，到达此阶段时，应立即停止惯性滚动效果。 |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0 | 非惯性轴事件阶段，异常默认值，可以通过检查惯性轴阶段值不为该值来判断当前惯性轴事件是有效的。<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1 | 惯性滚动轴事件开始，此为惯性阶段的第一个事件。<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2 | 惯性滚动轴事件更新，此阶段可以获取惯性轴值增量来处理滚动偏移。<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3 | 惯性滚动轴事件结束，此值在惯性被刹停（惯性滚动阶段用户重新触摸触控板或通过鼠标及触屏与组件产生交互等）或惯性衰减至自然停止时发送，到达此阶段时，应立即停止惯性滚动效果。<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3-End--> |
 
 ### ArkUI_CompetitionStrategy
 
@@ -296,7 +296,7 @@ enum ArkUI_CompetitionStrategy
 
 事件的注入方和被注入方间手势识别结果是否为竞争场景的策略。该策略决定了事件的注入方如何与被注入方的手势处理逻辑交互，非竞争场景会同时触发手势，竞争场景只触发其中一个。
 
-<!--Device-ArkUI_CompetitionStrategy--><!--Device-ArkUI_CompetitionStrategy-End-->
+<!--Device-enum ArkUI_CompetitionStrategy--><!--Device-enum ArkUI_CompetitionStrategy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -304,8 +304,8 @@ enum ArkUI_CompetitionStrategy
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_COMPETITION_STRATEGY_DEFAULT = 0 | 无竞争策略。注入的事件不与任何现有手势竞争。注入的事件和现有手势可以独立并行处理。 |
-| ARKUI_COMPETITION_STRATEGY_COMPETITION = 1 | 竞争策略。事件注入方和被注入方间的手势为竞争关系，只能处理其中一方的手势。 |
+| ARKUI_COMPETITION_STRATEGY_DEFAULT = 0 | 无竞争策略。注入的事件不与任何现有手势竞争。注入的事件和现有手势可以独立并行处理。<br><!--Device-ARKUI_COMPETITION_STRATEGY_DEFAULT = 0--><!--Device-ARKUI_COMPETITION_STRATEGY_DEFAULT = 0-End--> |
+| ARKUI_COMPETITION_STRATEGY_COMPETITION = 1 | 竞争策略。事件注入方和被注入方间的手势为竞争关系，只能处理其中一方的手势。<br><!--Device-ARKUI_COMPETITION_STRATEGY_COMPETITION = 1--><!--Device-ARKUI_COMPETITION_STRATEGY_COMPETITION = 1-End--> |
 
 ### anonymous0
 
@@ -317,7 +317,7 @@ enum anonymous0
 
 定义输入事件的行为类型。
 
-<!--Device-anonymous0--><!--Device-anonymous0-End-->
+<!--Device-enum anonymous0--><!--Device-enum anonymous0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -325,10 +325,10 @@ enum anonymous0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_TOUCH_EVENT_ACTION_CANCEL = 0 | 触摸取消。 |
-| UI_TOUCH_EVENT_ACTION_DOWN = 1 | 触摸按下。 |
-| UI_TOUCH_EVENT_ACTION_MOVE = 2 | 触摸移动。 |
-| UI_TOUCH_EVENT_ACTION_UP = 3 | 触摸抬起。 |
+| UI_TOUCH_EVENT_ACTION_CANCEL = 0 | 触摸取消。<br><!--Device-UI_TOUCH_EVENT_ACTION_CANCEL = 0--><!--Device-UI_TOUCH_EVENT_ACTION_CANCEL = 0-End--> |
+| UI_TOUCH_EVENT_ACTION_DOWN = 1 | 触摸按下。<br><!--Device-UI_TOUCH_EVENT_ACTION_DOWN = 1--><!--Device-UI_TOUCH_EVENT_ACTION_DOWN = 1-End--> |
+| UI_TOUCH_EVENT_ACTION_MOVE = 2 | 触摸移动。<br><!--Device-UI_TOUCH_EVENT_ACTION_MOVE = 2--><!--Device-UI_TOUCH_EVENT_ACTION_MOVE = 2-End--> |
+| UI_TOUCH_EVENT_ACTION_UP = 3 | 触摸抬起。<br><!--Device-UI_TOUCH_EVENT_ACTION_UP = 3--><!--Device-UI_TOUCH_EVENT_ACTION_UP = 3-End--> |
 
 ### anonymous1
 
@@ -340,7 +340,7 @@ enum anonymous1
 
 产生输入事件的工具类型定义。
 
-<!--Device-anonymous1--><!--Device-anonymous1-End-->
+<!--Device-enum anonymous1--><!--Device-enum anonymous1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -348,12 +348,12 @@ enum anonymous1
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0 | 不支持的工具类型。 |
-| UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1 | 手指。 |
-| UI_INPUT_EVENT_TOOL_TYPE_PEN = 2 | 触控笔。 |
-| UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3 | 鼠标。 |
-| UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4 | 触控板。 |
-| UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5 | 操纵杆。 |
+| UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0 | 不支持的工具类型。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1 | 手指。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_PEN = 2 | 触控笔。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_PEN = 2--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_PEN = 2-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3 | 鼠标。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4 | 触控板。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5 | 操纵杆。<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5-End--> |
 
 ### anonymous2
 
@@ -365,7 +365,7 @@ enum anonymous2
 
 产生输入事件的来源类型定义。
 
-<!--Device-anonymous2--><!--Device-anonymous2-End-->
+<!--Device-enum anonymous2--><!--Device-enum anonymous2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -373,12 +373,12 @@ enum anonymous2
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0 | 未知输入源。 |
-| UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1 | 鼠标。 |
-| UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2 | 触摸屏。 |
-| UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4 | 按键。<br>**起始版本：** 22 |
-| UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5 | 手柄。<br>**起始版本：** 22 |
-| UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6 | 触控板原始触点输入。<br>**起始版本：** 26.1.0 |
+| UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0 | 未知输入源。<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1 | 鼠标。<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2 | 触摸屏。<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4 | 按键。<br>**起始版本：** 22<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5 | 手柄。<br>**起始版本：** 22<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6 | 触控板原始触点输入。<br>**起始版本：** 26.1.0<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6-End--> |
 
 ### OH_ArkUI_TouchPadEventPhase
 
@@ -390,7 +390,7 @@ enum OH_ArkUI_TouchPadEventPhase
 
 定义触控板事件的阶段。
 
-<!--Device-OH_ArkUI_TouchPadEventPhase--><!--Device-OH_ArkUI_TouchPadEventPhase-End-->
+<!--Device-enum OH_ArkUI_TouchPadEventPhase--><!--Device-enum OH_ArkUI_TouchPadEventPhase-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -398,10 +398,10 @@ enum OH_ArkUI_TouchPadEventPhase
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0 | 触点开始接触。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1 | 触点移动。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2 | 触点结束接触。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3 | 触点事件取消。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0 | 触点开始接触。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1 | 触点移动。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2 | 触点结束接触。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3 | 触点事件取消。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3-End--> |
 
 ### HitTestMode
 
@@ -413,7 +413,7 @@ enum HitTestMode
 
 定义触摸测试类型的枚举值。
 
-<!--Device-HitTestMode--><!--Device-HitTestMode-End-->
+<!--Device-enum HitTestMode--><!--Device-enum HitTestMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -421,12 +421,12 @@ enum HitTestMode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HTM_DEFAULT = 0 | 默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。 |
-| HTM_BLOCK | 自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。 |
-| HTM_TRANSPARENT | 自身和子节点都响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。 |
-| HTM_NONE | 自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。 |
-| HTM_BLOCK_HIERARCHY | 自身和子节点响应触摸测试，阻止所有优先级较低的兄弟节点和父节点参与触摸测试。<br>**起始版本：** 20 |
-| HTM_BLOCK_DESCENDANTS | 自身不响应触摸测试，并且所有的后代（孩子，孙子等）也不响应触摸测试，不会影响祖先节点的触摸测试。<br>**起始版本：** 20 |
+| HTM_DEFAULT = 0 | 默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。<br><!--Device-HTM_DEFAULT = 0--><!--Device-HTM_DEFAULT = 0-End--> |
+| HTM_BLOCK | 自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。<br><!--Device-HTM_BLOCK--><!--Device-HTM_BLOCK-End--> |
+| HTM_TRANSPARENT | 自身和子节点都响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。<br><!--Device-HTM_TRANSPARENT--><!--Device-HTM_TRANSPARENT-End--> |
+| HTM_NONE | 自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。<br><!--Device-HTM_NONE--><!--Device-HTM_NONE-End--> |
+| HTM_BLOCK_HIERARCHY | 自身和子节点响应触摸测试，阻止所有优先级较低的兄弟节点和父节点参与触摸测试。<br>**起始版本：** 20<br><!--Device-HTM_BLOCK_HIERARCHY--><!--Device-HTM_BLOCK_HIERARCHY-End--> |
+| HTM_BLOCK_DESCENDANTS | 自身不响应触摸测试，并且所有的后代（孩子，孙子等）也不响应触摸测试，不会影响祖先节点的触摸测试。<br>**起始版本：** 20<br><!--Device-HTM_BLOCK_DESCENDANTS--><!--Device-HTM_BLOCK_DESCENDANTS-End--> |
 
 ### anonymous3
 
@@ -438,7 +438,7 @@ enum anonymous3
 
 定义鼠标事件的行为类型。
 
-<!--Device-anonymous3--><!--Device-anonymous3-End-->
+<!--Device-enum anonymous3--><!--Device-enum anonymous3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,11 +446,11 @@ enum anonymous3
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_MOUSE_EVENT_ACTION_UNKNOWN = 0 | 无效行为。 |
-| UI_MOUSE_EVENT_ACTION_PRESS = 1 | 鼠标按键按下。 |
-| UI_MOUSE_EVENT_ACTION_RELEASE = 2 | 鼠标按键松开。 |
-| UI_MOUSE_EVENT_ACTION_MOVE = 3 | 鼠标移动。 |
-| UI_MOUSE_EVENT_ACTION_CANCEL = 13 | 鼠标按键被取消。<br>**起始版本：** 18 |
+| UI_MOUSE_EVENT_ACTION_UNKNOWN = 0 | 无效行为。<br><!--Device-UI_MOUSE_EVENT_ACTION_UNKNOWN = 0--><!--Device-UI_MOUSE_EVENT_ACTION_UNKNOWN = 0-End--> |
+| UI_MOUSE_EVENT_ACTION_PRESS = 1 | 鼠标按键按下。<br><!--Device-UI_MOUSE_EVENT_ACTION_PRESS = 1--><!--Device-UI_MOUSE_EVENT_ACTION_PRESS = 1-End--> |
+| UI_MOUSE_EVENT_ACTION_RELEASE = 2 | 鼠标按键松开。<br><!--Device-UI_MOUSE_EVENT_ACTION_RELEASE = 2--><!--Device-UI_MOUSE_EVENT_ACTION_RELEASE = 2-End--> |
+| UI_MOUSE_EVENT_ACTION_MOVE = 3 | 鼠标移动。<br><!--Device-UI_MOUSE_EVENT_ACTION_MOVE = 3--><!--Device-UI_MOUSE_EVENT_ACTION_MOVE = 3-End--> |
+| UI_MOUSE_EVENT_ACTION_CANCEL = 13 | 鼠标按键被取消。<br>**起始版本：** 18<br><!--Device-UI_MOUSE_EVENT_ACTION_CANCEL = 13--><!--Device-UI_MOUSE_EVENT_ACTION_CANCEL = 13-End--> |
 
 ### anonymous4
 
@@ -462,7 +462,7 @@ enum anonymous4
 
 定义鼠标事件的按键类型。
 
-<!--Device-anonymous4--><!--Device-anonymous4-End-->
+<!--Device-enum anonymous4--><!--Device-enum anonymous4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -470,12 +470,12 @@ enum anonymous4
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_MOUSE_EVENT_BUTTON_NONE = 0 | 无按键。 |
-| UI_MOUSE_EVENT_BUTTON_LEFT = 1 | 鼠标左键。 |
-| UI_MOUSE_EVENT_BUTTON_RIGHT = 2 | 鼠标右键。 |
-| UI_MOUSE_EVENT_BUTTON_MIDDLE = 3 | 鼠标中键。 |
-| UI_MOUSE_EVENT_BUTTON_BACK = 4 | 鼠标左侧后退键。 |
-| UI_MOUSE_EVENT_BUTTON_FORWARD = 5 | 鼠标左侧前进键。 |
+| UI_MOUSE_EVENT_BUTTON_NONE = 0 | 无按键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_NONE = 0--><!--Device-UI_MOUSE_EVENT_BUTTON_NONE = 0-End--> |
+| UI_MOUSE_EVENT_BUTTON_LEFT = 1 | 鼠标左键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_LEFT = 1--><!--Device-UI_MOUSE_EVENT_BUTTON_LEFT = 1-End--> |
+| UI_MOUSE_EVENT_BUTTON_RIGHT = 2 | 鼠标右键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_RIGHT = 2--><!--Device-UI_MOUSE_EVENT_BUTTON_RIGHT = 2-End--> |
+| UI_MOUSE_EVENT_BUTTON_MIDDLE = 3 | 鼠标中键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_MIDDLE = 3--><!--Device-UI_MOUSE_EVENT_BUTTON_MIDDLE = 3-End--> |
+| UI_MOUSE_EVENT_BUTTON_BACK = 4 | 鼠标左侧后退键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_BACK = 4--><!--Device-UI_MOUSE_EVENT_BUTTON_BACK = 4-End--> |
+| UI_MOUSE_EVENT_BUTTON_FORWARD = 5 | 鼠标左侧前进键。<br><!--Device-UI_MOUSE_EVENT_BUTTON_FORWARD = 5--><!--Device-UI_MOUSE_EVENT_BUTTON_FORWARD = 5-End--> |
 
 ### ArkUI_ModifierKeyName
 
@@ -487,7 +487,7 @@ enum ArkUI_ModifierKeyName
 
 定义modifier按键。
 
-<!--Device-ArkUI_ModifierKeyName--><!--Device-ArkUI_ModifierKeyName-End-->
+<!--Device-enum ArkUI_ModifierKeyName--><!--Device-enum ArkUI_ModifierKeyName-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -495,10 +495,10 @@ enum ArkUI_ModifierKeyName
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_MODIFIER_KEY_CTRL = 1 << 0 | Ctrl. |
-| ARKUI_MODIFIER_KEY_SHIFT = 1 << 1 | Shift. |
-| ARKUI_MODIFIER_KEY_ALT = 1 << 2 | Alt. |
-| ARKUI_MODIFIER_KEY_FN = 1 << 3 | Fn（仅调试使用，通常不上报Fn状态）. |
+| ARKUI_MODIFIER_KEY_CTRL = 1 << 0 | Ctrl.<br><!--Device-ARKUI_MODIFIER_KEY_CTRL = 1 << 0--><!--Device-ARKUI_MODIFIER_KEY_CTRL = 1 << 0-End--> |
+| ARKUI_MODIFIER_KEY_SHIFT = 1 << 1 | Shift.<br><!--Device-ARKUI_MODIFIER_KEY_SHIFT = 1 << 1--><!--Device-ARKUI_MODIFIER_KEY_SHIFT = 1 << 1-End--> |
+| ARKUI_MODIFIER_KEY_ALT = 1 << 2 | Alt.<br><!--Device-ARKUI_MODIFIER_KEY_ALT = 1 << 2--><!--Device-ARKUI_MODIFIER_KEY_ALT = 1 << 2-End--> |
+| ARKUI_MODIFIER_KEY_FN = 1 << 3 | Fn（仅调试使用，通常不上报Fn状态）.<br><!--Device-ARKUI_MODIFIER_KEY_FN = 1 << 3--><!--Device-ARKUI_MODIFIER_KEY_FN = 1 << 3-End--> |
 
 ### anonymous5
 
@@ -510,7 +510,7 @@ enum anonymous5
 
 定义焦点轴事件的轴类型。
 
-<!--Device-anonymous5--><!--Device-anonymous5-End-->
+<!--Device-enum anonymous5--><!--Device-enum anonymous5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -518,25 +518,25 @@ enum anonymous5
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_FOCUS_AXIS_EVENT_ABS_X = 0 | 游戏手柄X轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_Y = 1 | 游戏手柄Y轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_Z = 2 | 游戏手柄Z轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_RZ = 3 | 游戏手柄RZ轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_GAS = 4 | 游戏手柄GAS轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5 | 游戏手柄BRAKE轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6 | 游戏手柄HAT0X轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7 | 游戏手柄HAT0Y轴。 |
-| UI_FOCUS_AXIS_EVENT_ABS_RX = 8 | 游戏手柄RX轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_RY = 9 | 游戏手柄RY轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10 | 游戏手柄THROTTLE轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11 | 游戏手柄RUDDER轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12 | 游戏手柄WHEEL轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13 | 游戏手柄HAT1X轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14 | 游戏手柄HAT1Y轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15 | 游戏手柄HAT2X轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16 | 游戏手柄HAT2Y轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17 | 游戏手柄HAT3X轴。<br>**起始版本：** 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18 | 游戏手柄HAT3Y轴。<br>**起始版本：** 23 |
+| UI_FOCUS_AXIS_EVENT_ABS_X = 0 | 游戏手柄X轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_X = 0--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_X = 0-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_Y = 1 | 游戏手柄Y轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Y = 1--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Y = 1-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_Z = 2 | 游戏手柄Z轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Z = 2--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Z = 2-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RZ = 3 | 游戏手柄RZ轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RZ = 3--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RZ = 3-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_GAS = 4 | 游戏手柄GAS轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_GAS = 4--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_GAS = 4-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5 | 游戏手柄BRAKE轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6 | 游戏手柄HAT0X轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7 | 游戏手柄HAT0Y轴。<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RX = 8 | 游戏手柄RX轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RX = 8--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RX = 8-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RY = 9 | 游戏手柄RY轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RY = 9--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RY = 9-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10 | 游戏手柄THROTTLE轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11 | 游戏手柄RUDDER轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12 | 游戏手柄WHEEL轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13 | 游戏手柄HAT1X轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14 | 游戏手柄HAT1Y轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15 | 游戏手柄HAT2X轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16 | 游戏手柄HAT2Y轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17 | 游戏手柄HAT3X轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18 | 游戏手柄HAT3Y轴。<br>**起始版本：** 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18-End--> |
 
 ### anonymous6
 
@@ -548,7 +548,7 @@ enum anonymous6
 
 定义轴事件的轴类型。
 
-<!--Device-anonymous6--><!--Device-anonymous6-End-->
+<!--Device-enum anonymous6--><!--Device-enum anonymous6-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -556,9 +556,9 @@ enum anonymous6
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_AXIS_TYPE_VERTICAL_AXIS = 0 | 垂直滚动轴。 |
-| UI_AXIS_TYPE_HORIZONTAL_AXIS = 1 | 水平滚动轴。 |
-| UI_AXIS_TYPE_PINCH_AXIS = 2 | 捏合轴。 |
+| UI_AXIS_TYPE_VERTICAL_AXIS = 0 | 垂直滚动轴。<br><!--Device-UI_AXIS_TYPE_VERTICAL_AXIS = 0--><!--Device-UI_AXIS_TYPE_VERTICAL_AXIS = 0-End--> |
+| UI_AXIS_TYPE_HORIZONTAL_AXIS = 1 | 水平滚动轴。<br><!--Device-UI_AXIS_TYPE_HORIZONTAL_AXIS = 1--><!--Device-UI_AXIS_TYPE_HORIZONTAL_AXIS = 1-End--> |
+| UI_AXIS_TYPE_PINCH_AXIS = 2 | 捏合轴。<br><!--Device-UI_AXIS_TYPE_PINCH_AXIS = 2--><!--Device-UI_AXIS_TYPE_PINCH_AXIS = 2-End--> |
 
 ### ArkUI_InteractionHand
 
@@ -570,7 +570,7 @@ enum ArkUI_InteractionHand
 
 定义触摸事件是左手还是右手。
 
-<!--Device-ArkUI_InteractionHand--><!--Device-ArkUI_InteractionHand-End-->
+<!--Device-enum ArkUI_InteractionHand--><!--Device-enum ArkUI_InteractionHand-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -578,9 +578,9 @@ enum ArkUI_InteractionHand
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_EVENT_HAND_NONE = 0 | 未知。 |
-| ARKUI_EVENT_HAND_LEFT = 1 | 左手。 |
-| ARKUI_EVENT_HAND_RIGHT = 2 | 右手。 |
+| ARKUI_EVENT_HAND_NONE = 0 | 未知。<br><!--Device-ARKUI_EVENT_HAND_NONE = 0--><!--Device-ARKUI_EVENT_HAND_NONE = 0-End--> |
+| ARKUI_EVENT_HAND_LEFT = 1 | 左手。<br><!--Device-ARKUI_EVENT_HAND_LEFT = 1--><!--Device-ARKUI_EVENT_HAND_LEFT = 1-End--> |
+| ARKUI_EVENT_HAND_RIGHT = 2 | 右手。<br><!--Device-ARKUI_EVENT_HAND_RIGHT = 2--><!--Device-ARKUI_EVENT_HAND_RIGHT = 2-End--> |
 
 ### anonymous7
 
@@ -592,7 +592,7 @@ enum anonymous7
 
 定义轴事件的操作类型。
 
-<!--Device-anonymous7--><!--Device-anonymous7-End-->
+<!--Device-enum anonymous7--><!--Device-enum anonymous7-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -600,11 +600,11 @@ enum anonymous7
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_AXIS_EVENT_ACTION_NONE = 0 | 轴事件异常。 |
-| UI_AXIS_EVENT_ACTION_BEGIN = 1 | 轴事件开始。 |
-| UI_AXIS_EVENT_ACTION_UPDATE = 2 | 轴事件更新。 |
-| UI_AXIS_EVENT_ACTION_END = 3 | 轴事件结束。 |
-| UI_AXIS_EVENT_ACTION_CANCEL = 4 | 轴事件取消。 |
+| UI_AXIS_EVENT_ACTION_NONE = 0 | 轴事件异常。<br><!--Device-UI_AXIS_EVENT_ACTION_NONE = 0--><!--Device-UI_AXIS_EVENT_ACTION_NONE = 0-End--> |
+| UI_AXIS_EVENT_ACTION_BEGIN = 1 | 轴事件开始。<br><!--Device-UI_AXIS_EVENT_ACTION_BEGIN = 1--><!--Device-UI_AXIS_EVENT_ACTION_BEGIN = 1-End--> |
+| UI_AXIS_EVENT_ACTION_UPDATE = 2 | 轴事件更新。<br><!--Device-UI_AXIS_EVENT_ACTION_UPDATE = 2--><!--Device-UI_AXIS_EVENT_ACTION_UPDATE = 2-End--> |
+| UI_AXIS_EVENT_ACTION_END = 3 | 轴事件结束。<br><!--Device-UI_AXIS_EVENT_ACTION_END = 3--><!--Device-UI_AXIS_EVENT_ACTION_END = 3-End--> |
+| UI_AXIS_EVENT_ACTION_CANCEL = 4 | 轴事件取消。<br><!--Device-UI_AXIS_EVENT_ACTION_CANCEL = 4--><!--Device-UI_AXIS_EVENT_ACTION_CANCEL = 4-End--> |
 
 ### ArkUI_TouchTestStrategy
 
@@ -616,7 +616,7 @@ enum ArkUI_TouchTestStrategy
 
 定义触摸测试策略。
 
-<!--Device-ArkUI_TouchTestStrategy--><!--Device-ArkUI_TouchTestStrategy-End-->
+<!--Device-enum ArkUI_TouchTestStrategy--><!--Device-enum ArkUI_TouchTestStrategy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -624,9 +624,9 @@ enum ArkUI_TouchTestStrategy
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0 | 自定义分发不产生影响，系统按当前节点命中状态分发事件。 |
-| ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1 | 应用指定分发事件到某个子节点，其他兄弟节点是否分发事件交由系统决定。 |
-| ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2 | 应用指定分发事件到某个子节点，系统不再分发事件到其他兄弟节点。 |
+| ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0 | 自定义分发不产生影响，系统按当前节点命中状态分发事件。<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0-End--> |
+| ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1 | 应用指定分发事件到某个子节点，其他兄弟节点是否分发事件交由系统决定。<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1-End--> |
+| ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2 | 应用指定分发事件到某个子节点，系统不再分发事件到其他兄弟节点。<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2-End--> |
 
 
 ## 函数说明

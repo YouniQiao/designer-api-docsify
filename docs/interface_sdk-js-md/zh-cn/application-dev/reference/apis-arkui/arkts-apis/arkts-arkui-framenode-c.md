@@ -14,7 +14,7 @@ FrameNode表示组件树的实体节点，支持节点树操作、自定义绘�
 > 
 > - FrameNode对象不支持使用JSON序列化。
 > 
-> - 在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的场景中调用FrameNode对象的接口时，建议使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)的[runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)接口明确UI 上下文，参考[执行绑定UI实例的闭包](../../../ui/arkts-global-interface.md#执行绑定ui实例的闭包)示例。
+> - 在UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的场景中调用[FrameNode对象的接口时，建议使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)的[runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)接口明确UI 上下文，参考[执行绑定UI实例的闭包](../../../ui/arkts-global-interface.md#执行绑定ui实例的闭包)示例。
 > 
 > - FrameNode的接口中，仅[Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)类型的必选参数支持传入null或undefined。
 
@@ -142,7 +142,7 @@ appendChild(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的FrameNode。<br> node节点不可以为不可修改的FrameNode（例如通过getFrameNodeById等接口获取的声明式组件节点）。仅BuilderNode通过getFrameNode接口获取的FrameNode可作为声明式子节点添加。若子节点不符合规格，则抛出异常信息。<br> node节点不可以拥有父节点，否则抛出异常信息。 |
+| node | FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的FrameNode。<br> node节点不可以为不可修改的FrameNode（例如通过getFrameNodeById等接口获取的声明式组件节点）。仅[BuilderNode通过getFrameNode接口获取的FrameNode可作为声明式子节点添加。若子节点不符合规格，则抛出异常信息。<br> node节点不可以拥有父节点，否则抛出异常信息。 |
 
 **错误码：**
 
@@ -2682,7 +2682,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的子节点。<br>child节点不可以为不可修改的FrameNode（例如通过getFrameNodeById等接口获取的声明式组件节点）。仅BuilderNode通过getFrameNode接口获取的FrameNode可作为声明式子节点添加。若子节点不符合规格，则抛出异常信息。<br> child节点不可以拥有父节点，否则抛出异常信息。 |
+| child | FrameNode](arkts-arkui-framenode-c.md) | 是 | 需要添加的子节点。<br>child节点不可以为不可修改的FrameNode（例如通过getFrameNodeById等接口获取的声明式组件节点）。仅[BuilderNode通过getFrameNode接口获取的FrameNode可作为声明式子节点添加。若子节点不符合规格，则抛出异常信息。<br> child节点不可以拥有父节点，否则抛出异常信息。 |
 | sibling | [FrameNode](arkts-arkui-framenode-c.md) &#124; null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**

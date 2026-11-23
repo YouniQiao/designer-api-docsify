@@ -12,7 +12,7 @@ import { floatView } from '@kit.ArkUI';
 function create(config: FloatViewConfiguration): Promise<FloatViewController>
 ```
 
-创建标准悬浮窗控制器。使用Promise异步回调。
+创建闪控窗控制器。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -26,13 +26,13 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [FloatViewConfiguration](arkts-arkui-floatview-floatviewconfiguration-i.md) | 是 | 创建标准悬浮窗控制器的参数。该参数以及构造该参数的context不能为null或者undefined，否则抛出401。其他参数异常情况抛出1300016。 |
+| config | [FloatViewConfiguration](arkts-arkui-floatview-floatviewconfiguration-i.md) | 是 | 创建闪控窗控制器的参数。该参数及其context字段不能为null或者undefined，否则抛出401。其他参数异常情况抛出1300016。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md)&gt; | Promise对象。返回当前创建的标准悬浮窗控制器。 |
+| Promise&lt;[FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md)&gt; | Promise对象。返回当前创建的闪控窗控制器。 |
 
 **错误码：**
 

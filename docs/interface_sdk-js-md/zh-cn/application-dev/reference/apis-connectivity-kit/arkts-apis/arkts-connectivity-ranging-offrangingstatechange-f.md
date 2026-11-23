@@ -30,7 +30,7 @@ function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RangingStateChangeInfo](arkts-connectivity-ranging-rangingstatechangeinfo-i.md)&gt; | 否 | 测距状态回调。传入此参数时仅取消通过onRangingStateChange接口使用相同入参已注册的回调，如果传入的callback未注册过，该接口不会处理；不传入此参数时接口会取消所有通过onRangingStateChange接口已注册过的回调。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RangingStateChangeInfo](arkts-connectivity-ranging-rangingstatechangeinfo-i.md)&gt; | 否 | 测距状态回调。传入此参数时仅取消通过[onRangingStateChange接口使用相同入参已注册的回调，如果传入的callback未注册过，该接口不会处理；不传入此参数时接口会取消所有通过onRangingStateChange接口已注册过的回调。 |
 
 **错误码：**
 

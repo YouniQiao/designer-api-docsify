@@ -117,7 +117,7 @@ chipGroupSpace?: ChipGroupSpaceOptions
 items: ChipGroupItemOptions[]
 ```
 
-每个Chip的特定属性，参考[ChipGroupItemOptions[]][ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)类型。
+每个Chip的特定属性，参考[ChipGroupItemOptions[]](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)类型。
 
 若为undefined时，ChipGroup默认为空。
 

@@ -38,7 +38,7 @@ A positive value moves the content upwards, while a negative value moves it down
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Offset of the text baseline. If the value is set to a percentage, the value is displayed as 0. <br>Unit: fp. <br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number &#124; ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Offset of the text baseline. If the value is set to a percentage, the value is displayed as 0. <br>Unit: fp. <br>The [Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## bindSelectionMenu
 
@@ -781,7 +781,7 @@ It is only effective for the **Text** component, not for its child components.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. <br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. If the value is too large, truncation may occur in different fonts. If the input value exceeds the value range or does not meet the interval requirements, the default value is used. <br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight of the text. <br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. If the value is too large, truncation may occur in different fonts. If the input value exceeds the value range or does not meet the interval requirements, the default value is used. <br>The [Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -809,7 +809,7 @@ It is only effective for the **Text** component, not for its child components.<!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weight | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. <br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. If the value is too large, truncation may occur in different fonts. <br>If the input value exceeds the value range, the default value is used. If the input value does not meet the interval requirements, and **enableVariableFontWeight** of **fontWeightConfigs** is set to **true**, the input value is used. If **enableVariableFontWeight** is set to **false**, the default value is used. <br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+| weight | number &#124; FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. <br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**. If the value is too large, truncation may occur in different fonts. <br>If the input value exceeds the value range, the default value is used. If the input value does not meet the interval requirements, and **enableVariableFontWeight** of **fontWeightConfigs** is set to **true**, the input value is used. If **enableVariableFontWeight** is set to **false**, the default value is used. <br>The [Resource type is supported since API version 20.<br>**Since:** 20 |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No | Font configuration options, which are used to enable the variable font weight adjustment feature. This parameter is required (set **enableVariableFontWeight** to **true**) when the font weight attribute of a variable font needs to be fine-tuned. If this parameter is not passed, the default font configuration is used (variable font weight adjustment is disabled, and only font weights that are multiples of 100 are supported). <br>If **enableVariableFontWeight** is set to **false**, variable font weight adjustment is disabled: If the value of **weight** is a multiple of 100, the font weight is the value of **weight**. If the value of **weight** is not a multiple of 100, the font weight is 400. If **enableVariableFontWeight** is set to **true**, variable font weight adjustment is enabled: The font weight is the value of **weight** when **weight** is set to any integer. |
 
 ## halfLeading
@@ -952,7 +952,7 @@ This setting applies to every character, including those at line endings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Letter spacing. <br>Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units) <br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number &#124; ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Letter spacing. <br>Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units) <br>The [Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## lineBreakStrategy
 

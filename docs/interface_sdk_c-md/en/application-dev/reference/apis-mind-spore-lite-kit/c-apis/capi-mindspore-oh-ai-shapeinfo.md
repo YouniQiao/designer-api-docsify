@@ -18,7 +18,7 @@ typedef struct OH_AI_ShapeInfo {...} OH_AI_ShapeInfo
 
 | Name | Description |
 | -- | -- |
-| size_t shape_num |  |
-| int64_t shape[OH_AI_MAX_SHAPE_NUM] |  |
+| size_t shape_num | <!--Device-size_t shape_num--><!--Device-size_t shape_num-End--> |
+| int64_t shape[OH_AI_MAX_SHAPE_NUM] | <!--Device-int64_t shape[OH_AI_MAX_SHAPE_NUM]--><!--Device-int64_t shape[OH_AI_MAX_SHAPE_NUM]-End--> |
 
 

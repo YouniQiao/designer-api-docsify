@@ -27,7 +27,7 @@ export declare function sendMouseEvent(event: MouseEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [MouseEvent](../arkts-components/arkts-arkui-common-comp-mouseevent-i.md) | 是 | 鼠标事件，event参数见MouseEvent介绍。 |
+| event | MouseEvent](../arkts-components/arkts-arkui-common-comp-mouseevent-i.md) | 是 | 鼠标事件，event参数见[MouseEvent介绍。 |
 
 **返回值：**
 

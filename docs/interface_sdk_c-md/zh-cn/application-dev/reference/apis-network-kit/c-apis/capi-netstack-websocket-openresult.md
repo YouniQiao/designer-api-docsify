@@ -24,7 +24,7 @@ WebSocket客户端来自服务端连接成功的参数。
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t code | WebSocket客户端连接成功码。 |
-| const char *reason | WebSocket客户端连接成功原因。 |
+| uint32_t code | WebSocket客户端连接成功码。<br><!--Device-uint32_t code--><!--Device-uint32_t code-End--> |
+| const char *reason | WebSocket客户端连接成功原因。<br><!--Device-const char *reason--><!--Device-const char *reason-End--> |
 
 

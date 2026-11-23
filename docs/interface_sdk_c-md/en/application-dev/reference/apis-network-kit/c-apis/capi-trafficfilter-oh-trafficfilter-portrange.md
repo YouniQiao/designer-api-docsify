@@ -24,7 +24,7 @@ Defines the port matching value for range matching.
 
 | Name | Description |
 | -- | -- |
-| uint16_t startPort | Start port of the range.<br>**Since**: 26.0.0 |
-| uint16_t endPort | End port of the range.<br>**Since**: 26.0.0 |
+| uint16_t startPort | Start port of the range.<br>**Since**: 26.0.0<br><!--Device-uint16_t startPort--><!--Device-uint16_t startPort-End--> |
+| uint16_t endPort | End port of the range.<br>**Since**: 26.0.0<br><!--Device-uint16_t endPort--><!--Device-uint16_t endPort-End--> |
 
 

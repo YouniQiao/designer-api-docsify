@@ -75,7 +75,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md#getallapplicationinfo-2) | 根据给定的appFlags和userId获取系统中所有的ApplicationInfo。使用callback异步回调。 |
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md#getallapplicationinfo-3) | 根据给定的appFlags和userId获取系统中所有的ApplicationInfo。使用Promise异步回调。 |
 | [getAllAppProvisionInfo](arkts-ability-bundlemanager-getallappprovisioninfo-f-sys.md#getallappprovisioninfo-1) | 根据userId获取指定用户下所有应用的[Provision](arkts-ability-appprovisioninfo-i-sys.md)配置文件信息。使用Promise异步回调。 |
-| [getAllAppProvisionInfoInDevice](arkts-ability-bundlemanager-getallappprovisioninfoindevice-f-sys.md#getallappprovisioninfoindevice-1) | 获取所有应用的provision配置文件信息基于设备中给定的用户ID。该接口使用promise返回结果。 |
+| getAllAppProvisionInfoInDevice](arkts-ability-bundlemanager-getallappprovisioninfoindevice-f-sys.md#getallappprovisioninfoindevice-1) | 获取所有应用的[provision配置文件信息基于设备中给定的用户ID。该接口使用promise返回结果。 |
 | [getAllBundleCacheSize](arkts-ability-bundlemanager-getallbundlecachesize-f-sys.md#getallbundlecachesize-1) | 获取全局缓存大小，单位：字节。使用Promise异步回调。 |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo-1) | 根据给定的bundleFlags获取系统中所有的BundleInfo。使用callback异步回调。 |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo-2) | 根据给定的bundleFlags和userId获取系统中所有的BundleInfo。使用callback异步回调。 |

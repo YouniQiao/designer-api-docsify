@@ -210,8 +210,8 @@ Provides input event definitions for ArkUI on the native side, including touch, 
 
 | Name | Description |
 | -- | -- |
-| ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle | Defines a touch test information item handle, which represents information such as the coordinates, region, and component ID of a child component during a touch test. For details about the touch test APIs, see ui_input_event.h.<br>**Since**: 22<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
-| ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray | Defines a handle array of touch test information items, which aggregates the information item handles generated during touch hit testing for batch access to touch test information. For details about the APIs, see native_gesture.h.<br>**Since**: 22<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
+| ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle | Defines a touch test information item handle, which represents information such as the coordinates, region, and component ID of a child component during a touch test. For details about the touch test APIs, see ui_input_event.h.<br>**Since**: 22<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full<br><!--Device-ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle--><!--Device-ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle-End--> |
+| ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray | Defines a handle array of touch test information items, which aggregates the information item handles generated during touch hit testing for batch access to touch test information. For details about the APIs, see native_gesture.h.<br>**Since**: 22<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full<br><!--Device-ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray--><!--Device-ArkUI_TouchTestInfoItemHandle* ArkUI_TouchTestInfoItemArray-End--> |
 
 ## Enum type description
 
@@ -225,7 +225,7 @@ enum ArkUI_UIInputEvent_Type
 
 Enumerates the UI input event types.
 
-<!--Device-ArkUI_UIInputEvent_Type--><!--Device-ArkUI_UIInputEvent_Type-End-->
+<!--Device-enum ArkUI_UIInputEvent_Type--><!--Device-enum ArkUI_UIInputEvent_Type-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -233,13 +233,13 @@ Enumerates the UI input event types.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0 | Unknown. |
-| ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1 | Touch event. |
-| ARKUI_UIINPUTEVENT_TYPE_AXIS = 2 | Axis event. |
-| ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3 | Mouse event. |
-| ARKUI_UIINPUTEVENT_TYPE_KEY = 4 | Key event.<br>**Since**: 20 |
-| ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5 | Crown event.<br>**Since**: 24 |
-| ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6 | Touchpad event.<br>**Since**: 26.1.0 |
+| ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0 | Unknown.<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0--><!--Device-ARKUI_UIINPUTEVENT_TYPE_UNKNOWN = 0-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1 | Touch event.<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1--><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCH = 1-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_AXIS = 2 | Axis event.<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_AXIS = 2--><!--Device-ARKUI_UIINPUTEVENT_TYPE_AXIS = 2-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3 | Mouse event.<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3--><!--Device-ARKUI_UIINPUTEVENT_TYPE_MOUSE = 3-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_KEY = 4 | Key event.<br>**Since**: 20<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_KEY = 4--><!--Device-ARKUI_UIINPUTEVENT_TYPE_KEY = 4-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5 | Crown event.<br>**Since**: 24<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5--><!--Device-ARKUI_UIINPUTEVENT_TYPE_DIGITAL_CROWN = 5-End--> |
+| ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6 | Touchpad event.<br>**Since**: 26.1.0<br><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6--><!--Device-ARKUI_UIINPUTEVENT_TYPE_TOUCHPAD = 6-End--> |
 
 ### anonymous0
 
@@ -251,7 +251,7 @@ enum anonymous0
 
 Enumerates the action types of the input event.
 
-<!--Device-anonymous0--><!--Device-anonymous0-End-->
+<!--Device-enum anonymous0--><!--Device-enum anonymous0-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,10 +259,10 @@ Enumerates the action types of the input event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_TOUCH_EVENT_ACTION_CANCEL = 0 | Cancellation of touch. |
-| UI_TOUCH_EVENT_ACTION_DOWN = 1 | Pressing of touch. |
-| UI_TOUCH_EVENT_ACTION_MOVE = 2 | Moving of touch. |
-| UI_TOUCH_EVENT_ACTION_UP = 3 | Lifting of touch. |
+| UI_TOUCH_EVENT_ACTION_CANCEL = 0 | Cancellation of touch.<br><!--Device-UI_TOUCH_EVENT_ACTION_CANCEL = 0--><!--Device-UI_TOUCH_EVENT_ACTION_CANCEL = 0-End--> |
+| UI_TOUCH_EVENT_ACTION_DOWN = 1 | Pressing of touch.<br><!--Device-UI_TOUCH_EVENT_ACTION_DOWN = 1--><!--Device-UI_TOUCH_EVENT_ACTION_DOWN = 1-End--> |
+| UI_TOUCH_EVENT_ACTION_MOVE = 2 | Moving of touch.<br><!--Device-UI_TOUCH_EVENT_ACTION_MOVE = 2--><!--Device-UI_TOUCH_EVENT_ACTION_MOVE = 2-End--> |
+| UI_TOUCH_EVENT_ACTION_UP = 3 | Lifting of touch.<br><!--Device-UI_TOUCH_EVENT_ACTION_UP = 3--><!--Device-UI_TOUCH_EVENT_ACTION_UP = 3-End--> |
 
 ### anonymous1
 
@@ -274,7 +274,7 @@ enum anonymous1
 
 Enumerates the tool types of the input event.
 
-<!--Device-anonymous1--><!--Device-anonymous1-End-->
+<!--Device-enum anonymous1--><!--Device-enum anonymous1-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -282,12 +282,12 @@ Enumerates the tool types of the input event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0 | Unknown tool type. |
-| UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1 | Finger. |
-| UI_INPUT_EVENT_TOOL_TYPE_PEN = 2 | Stylus. |
-| UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3 | Mouse. |
-| UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4 | Touchpad. |
-| UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5 | Joystick. |
+| UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0 | Unknown tool type.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN = 0-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1 | Finger.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_FINGER = 1-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_PEN = 2 | Stylus.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_PEN = 2--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_PEN = 2-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3 | Mouse.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_MOUSE = 3-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4 | Touchpad.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_TOUCHPAD = 4-End--> |
+| UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5 | Joystick.<br><!--Device-UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5--><!--Device-UI_INPUT_EVENT_TOOL_TYPE_JOYSTICK = 5-End--> |
 
 ### anonymous2
 
@@ -299,7 +299,7 @@ enum anonymous2
 
 Enumerates the source types of the input event.
 
-<!--Device-anonymous2--><!--Device-anonymous2-End-->
+<!--Device-enum anonymous2--><!--Device-enum anonymous2-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -307,12 +307,12 @@ Enumerates the source types of the input event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0 | Unknown input source. |
-| UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1 | Mouse. |
-| UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2 | Touchscreen. |
-| UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4 | Key.<br>**Since**: 22 |
-| UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5 | Joystick.<br>**Since**: 22 |
-| UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6 | Raw contact input from a touchpad.<br>**Since**: 26.1.0 |
+| UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0 | Unknown input source.<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_UNKNOWN = 0-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1 | Mouse.<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_MOUSE = 1-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2 | Touchscreen.<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCH_SCREEN = 2-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4 | Key.<br>**Since**: 22<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_KEY = 4-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5 | Joystick.<br>**Since**: 22<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_JOYSTICK = 5-End--> |
+| UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6 | Raw contact input from a touchpad.<br>**Since**: 26.1.0<br><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6--><!--Device-UI_INPUT_EVENT_SOURCE_TYPE_TOUCHPAD_TOUCH = 6-End--> |
 
 ### OH_ArkUI_TouchPadEventPhase
 
@@ -324,7 +324,7 @@ enum OH_ArkUI_TouchPadEventPhase
 
 Enumerates the phases of a touchpad event.
 
-<!--Device-OH_ArkUI_TouchPadEventPhase--><!--Device-OH_ArkUI_TouchPadEventPhase-End-->
+<!--Device-enum OH_ArkUI_TouchPadEventPhase--><!--Device-enum OH_ArkUI_TouchPadEventPhase-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -332,10 +332,10 @@ Enumerates the phases of a touchpad event.
 
 | Enum item | Description |
 | -- | -- |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0 | A contact begins.<br>**Since**: 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1 | A contact moves.<br>**Since**: 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2 | A contact ends.<br>**Since**: 26.1.0 |
-| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3 | A contact is canceled.<br>**Since**: 26.1.0 |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0 | A contact begins.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_BEGIN = 0-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1 | A contact moves.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_MOVE = 1-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2 | A contact ends.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_END = 2-End--> |
+| OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3 | A contact is canceled.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3--><!--Device-OH_ARKUI_TOUCH_PAD_EVENT_PHASE_CANCEL = 3-End--> |
 
 ### HitTestMode
 
@@ -347,7 +347,7 @@ enum HitTestMode
 
 Enumerates the hit test modes.
 
-<!--Device-HitTestMode--><!--Device-HitTestMode-End-->
+<!--Device-enum HitTestMode--><!--Device-enum HitTestMode-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -355,12 +355,12 @@ Enumerates the hit test modes.
 
 | Enum item | Description |
 | -- | -- |
-| HTM_DEFAULT = 0 | Default hit test mode. The node itself and its child nodes respond to the hit test, but block the hit test of sibling nodes. It does not affect the hit test of ancestor nodes. |
-| HTM_BLOCK | The node itself responds to the hit test and blocks the hit test of child nodes, sibling nodes, and ancestor nodes. |
-| HTM_TRANSPARENT | Both the node itself and its child nodes respond to the hit test and do not block the hit test of sibling nodes and ancestor nodes. |
-| HTM_NONE | The node itself does not respond to the hit test and does not block the hit test of child nodes, sibling nodes, and ancestor nodes. |
-| HTM_BLOCK_HIERARCHY | The node itself and its child nodes respond to the hit test, preventing all sibling nodes and parent nodes with lower priority from participating in the hit test.<br>**Since**: 20 |
-| HTM_BLOCK_DESCENDANTS | The node itself does not respond to the hit test, and all its descendants (children, grandchildren, and more) also do not respond to the hit test. It does not affect the hit test of ancestor nodes.<br>**Since**: 20 |
+| HTM_DEFAULT = 0 | Default hit test mode. The node itself and its child nodes respond to the hit test, but block the hit test of sibling nodes. It does not affect the hit test of ancestor nodes.<br><!--Device-HTM_DEFAULT = 0--><!--Device-HTM_DEFAULT = 0-End--> |
+| HTM_BLOCK | The node itself responds to the hit test and blocks the hit test of child nodes, sibling nodes, and ancestor nodes.<br><!--Device-HTM_BLOCK--><!--Device-HTM_BLOCK-End--> |
+| HTM_TRANSPARENT | Both the node itself and its child nodes respond to the hit test and do not block the hit test of sibling nodes and ancestor nodes.<br><!--Device-HTM_TRANSPARENT--><!--Device-HTM_TRANSPARENT-End--> |
+| HTM_NONE | The node itself does not respond to the hit test and does not block the hit test of child nodes, sibling nodes, and ancestor nodes.<br><!--Device-HTM_NONE--><!--Device-HTM_NONE-End--> |
+| HTM_BLOCK_HIERARCHY | The node itself and its child nodes respond to the hit test, preventing all sibling nodes and parent nodes with lower priority from participating in the hit test.<br>**Since**: 20<br><!--Device-HTM_BLOCK_HIERARCHY--><!--Device-HTM_BLOCK_HIERARCHY-End--> |
+| HTM_BLOCK_DESCENDANTS | The node itself does not respond to the hit test, and all its descendants (children, grandchildren, and more) also do not respond to the hit test. It does not affect the hit test of ancestor nodes.<br>**Since**: 20<br><!--Device-HTM_BLOCK_DESCENDANTS--><!--Device-HTM_BLOCK_DESCENDANTS-End--> |
 
 ### anonymous3
 
@@ -372,7 +372,7 @@ enum anonymous3
 
 Enumerates the action types of the mouse event.
 
-<!--Device-anonymous3--><!--Device-anonymous3-End-->
+<!--Device-enum anonymous3--><!--Device-enum anonymous3-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -380,11 +380,11 @@ Enumerates the action types of the mouse event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_MOUSE_EVENT_ACTION_UNKNOWN = 0 | Unknown action.<br> Note: This action is processed by the system. You do not need to focus on it. |
-| UI_MOUSE_EVENT_ACTION_PRESS = 1 | The mouse button is pressed. |
-| UI_MOUSE_EVENT_ACTION_RELEASE = 2 | The mouse button is released. |
-| UI_MOUSE_EVENT_ACTION_MOVE = 3 | The mouse cursor moves. |
-| UI_MOUSE_EVENT_ACTION_CANCEL = 13 | The mouse button action is canceled.<br>**Since**: 18 |
+| UI_MOUSE_EVENT_ACTION_UNKNOWN = 0 | Unknown action. * Note: This action is processed by the system. You do not need to focus on it.<br><!--Device-UI_MOUSE_EVENT_ACTION_UNKNOWN = 0--><!--Device-UI_MOUSE_EVENT_ACTION_UNKNOWN = 0-End--> |
+| UI_MOUSE_EVENT_ACTION_PRESS = 1 | The mouse button is pressed.<br><!--Device-UI_MOUSE_EVENT_ACTION_PRESS = 1--><!--Device-UI_MOUSE_EVENT_ACTION_PRESS = 1-End--> |
+| UI_MOUSE_EVENT_ACTION_RELEASE = 2 | The mouse button is released.<br><!--Device-UI_MOUSE_EVENT_ACTION_RELEASE = 2--><!--Device-UI_MOUSE_EVENT_ACTION_RELEASE = 2-End--> |
+| UI_MOUSE_EVENT_ACTION_MOVE = 3 | The mouse cursor moves.<br><!--Device-UI_MOUSE_EVENT_ACTION_MOVE = 3--><!--Device-UI_MOUSE_EVENT_ACTION_MOVE = 3-End--> |
+| UI_MOUSE_EVENT_ACTION_CANCEL = 13 | The mouse button action is canceled.<br>**Since**: 18<br><!--Device-UI_MOUSE_EVENT_ACTION_CANCEL = 13--><!--Device-UI_MOUSE_EVENT_ACTION_CANCEL = 13-End--> |
 
 ### anonymous4
 
@@ -396,7 +396,7 @@ enum anonymous4
 
 Enumerates the button types of the mouse event.
 
-<!--Device-anonymous4--><!--Device-anonymous4-End-->
+<!--Device-enum anonymous4--><!--Device-enum anonymous4-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -404,12 +404,12 @@ Enumerates the button types of the mouse event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_MOUSE_EVENT_BUTTON_NONE = 0 | No button. |
-| UI_MOUSE_EVENT_BUTTON_LEFT = 1 | Left button. |
-| UI_MOUSE_EVENT_BUTTON_RIGHT = 2 | Right button. |
-| UI_MOUSE_EVENT_BUTTON_MIDDLE = 3 | Middle button. |
-| UI_MOUSE_EVENT_BUTTON_BACK = 4 | Back button on the left of the mouse. |
-| UI_MOUSE_EVENT_BUTTON_FORWARD = 5 | Forward button on the left of the mouse. |
+| UI_MOUSE_EVENT_BUTTON_NONE = 0 | No button.<br><!--Device-UI_MOUSE_EVENT_BUTTON_NONE = 0--><!--Device-UI_MOUSE_EVENT_BUTTON_NONE = 0-End--> |
+| UI_MOUSE_EVENT_BUTTON_LEFT = 1 | Left button.<br><!--Device-UI_MOUSE_EVENT_BUTTON_LEFT = 1--><!--Device-UI_MOUSE_EVENT_BUTTON_LEFT = 1-End--> |
+| UI_MOUSE_EVENT_BUTTON_RIGHT = 2 | Right button.<br><!--Device-UI_MOUSE_EVENT_BUTTON_RIGHT = 2--><!--Device-UI_MOUSE_EVENT_BUTTON_RIGHT = 2-End--> |
+| UI_MOUSE_EVENT_BUTTON_MIDDLE = 3 | Middle button.<br><!--Device-UI_MOUSE_EVENT_BUTTON_MIDDLE = 3--><!--Device-UI_MOUSE_EVENT_BUTTON_MIDDLE = 3-End--> |
+| UI_MOUSE_EVENT_BUTTON_BACK = 4 | Back button on the left of the mouse.<br><!--Device-UI_MOUSE_EVENT_BUTTON_BACK = 4--><!--Device-UI_MOUSE_EVENT_BUTTON_BACK = 4-End--> |
+| UI_MOUSE_EVENT_BUTTON_FORWARD = 5 | Forward button on the left of the mouse.<br><!--Device-UI_MOUSE_EVENT_BUTTON_FORWARD = 5--><!--Device-UI_MOUSE_EVENT_BUTTON_FORWARD = 5-End--> |
 
 ### ArkUI_ModifierKeyName
 
@@ -421,7 +421,7 @@ enum ArkUI_ModifierKeyName
 
 Enumerates the modifier keys.
 
-<!--Device-ArkUI_ModifierKeyName--><!--Device-ArkUI_ModifierKeyName-End-->
+<!--Device-enum ArkUI_ModifierKeyName--><!--Device-enum ArkUI_ModifierKeyName-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -429,10 +429,10 @@ Enumerates the modifier keys.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_MODIFIER_KEY_CTRL = 1 << 0 | Ctrl. |
-| ARKUI_MODIFIER_KEY_SHIFT = 1 << 1 | Shift. |
-| ARKUI_MODIFIER_KEY_ALT = 1 << 2 | Alt. |
-| ARKUI_MODIFIER_KEY_FN = 1 << 3 | Fn (for debugging purposes only; typically, the Fn key state is not reported) |
+| ARKUI_MODIFIER_KEY_CTRL = 1 << 0 | Ctrl.<br><!--Device-ARKUI_MODIFIER_KEY_CTRL = 1 << 0--><!--Device-ARKUI_MODIFIER_KEY_CTRL = 1 << 0-End--> |
+| ARKUI_MODIFIER_KEY_SHIFT = 1 << 1 | Shift.<br><!--Device-ARKUI_MODIFIER_KEY_SHIFT = 1 << 1--><!--Device-ARKUI_MODIFIER_KEY_SHIFT = 1 << 1-End--> |
+| ARKUI_MODIFIER_KEY_ALT = 1 << 2 | Alt.<br><!--Device-ARKUI_MODIFIER_KEY_ALT = 1 << 2--><!--Device-ARKUI_MODIFIER_KEY_ALT = 1 << 2-End--> |
+| ARKUI_MODIFIER_KEY_FN = 1 << 3 | Fn (for debugging purposes only; typically, the Fn key state is not reported)<br><!--Device-ARKUI_MODIFIER_KEY_FN = 1 << 3--><!--Device-ARKUI_MODIFIER_KEY_FN = 1 << 3-End--> |
 
 ### anonymous5
 
@@ -444,7 +444,7 @@ enum anonymous5
 
 Defines the axis types of the focus axis event.
 
-<!--Device-anonymous5--><!--Device-anonymous5-End-->
+<!--Device-enum anonymous5--><!--Device-enum anonymous5-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -452,25 +452,25 @@ Defines the axis types of the focus axis event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_FOCUS_AXIS_EVENT_ABS_X = 0 | Game controller X-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_Y = 1 | Game controller Y-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_Z = 2 | Game controller Z-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_RZ = 3 | Game controller RZ-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_GAS = 4 | Game controller GAS-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5 | Game controller BRAKE-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6 | Game controller HAT0X-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7 | Game controller HAT0Y-axis. |
-| UI_FOCUS_AXIS_EVENT_ABS_RX = 8 | Game controller RX-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_RY = 9 | Game controller RY-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10 | Game controller THROTTLE-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11 | Game controller RUDDER-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12 | Game controller WHEEL-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13 | Game controller HAT1X-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14 | Game controller HAT1Y-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15 | Game controller HAT2X-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16 | Game controller HAT2Y-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17 | Game controller HAT3X-axis.<br>**Since**: 23 |
-| UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18 | Game controller HAT3Y-axis.<br>**Since**: 23 |
+| UI_FOCUS_AXIS_EVENT_ABS_X = 0 | Game controller X-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_X = 0--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_X = 0-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_Y = 1 | Game controller Y-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Y = 1--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Y = 1-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_Z = 2 | Game controller Z-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Z = 2--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_Z = 2-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RZ = 3 | Game controller RZ-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RZ = 3--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RZ = 3-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_GAS = 4 | Game controller GAS-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_GAS = 4--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_GAS = 4-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5 | Game controller BRAKE-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_BRAKE = 5-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6 | Game controller HAT0X-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0X = 6-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7 | Game controller HAT0Y-axis.<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT0Y = 7-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RX = 8 | Game controller RX-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RX = 8--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RX = 8-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RY = 9 | Game controller RY-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RY = 9--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RY = 9-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10 | Game controller THROTTLE-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_THROTTLE = 10-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11 | Game controller RUDDER-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_RUDDER = 11-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12 | Game controller WHEEL-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_WHEEL = 12-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13 | Game controller HAT1X-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1X = 13-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14 | Game controller HAT1Y-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT1Y = 14-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15 | Game controller HAT2X-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2X = 15-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16 | Game controller HAT2Y-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT2Y = 16-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17 | Game controller HAT3X-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3X = 17-End--> |
+| UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18 | Game controller HAT3Y-axis.<br>**Since**: 23<br><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18--><!--Device-UI_FOCUS_AXIS_EVENT_ABS_HAT3Y = 18-End--> |
 
 ### anonymous6
 
@@ -482,7 +482,7 @@ enum anonymous6
 
 Enumerates the axis types for axis events.
 
-<!--Device-anonymous6--><!--Device-anonymous6-End-->
+<!--Device-enum anonymous6--><!--Device-enum anonymous6-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -490,9 +490,9 @@ Enumerates the axis types for axis events.
 
 | Enum item | Description |
 | -- | -- |
-| UI_AXIS_TYPE_VERTICAL_AXIS = 0 | Vertical axis. |
-| UI_AXIS_TYPE_HORIZONTAL_AXIS = 1 | Horizontal axis. |
-| UI_AXIS_TYPE_PINCH_AXIS = 2 | Pinch axis. |
+| UI_AXIS_TYPE_VERTICAL_AXIS = 0 | Vertical axis.<br><!--Device-UI_AXIS_TYPE_VERTICAL_AXIS = 0--><!--Device-UI_AXIS_TYPE_VERTICAL_AXIS = 0-End--> |
+| UI_AXIS_TYPE_HORIZONTAL_AXIS = 1 | Horizontal axis.<br><!--Device-UI_AXIS_TYPE_HORIZONTAL_AXIS = 1--><!--Device-UI_AXIS_TYPE_HORIZONTAL_AXIS = 1-End--> |
+| UI_AXIS_TYPE_PINCH_AXIS = 2 | Pinch axis.<br><!--Device-UI_AXIS_TYPE_PINCH_AXIS = 2--><!--Device-UI_AXIS_TYPE_PINCH_AXIS = 2-End--> |
 
 ### ArkUI_CrownEvent_Action
 
@@ -504,7 +504,7 @@ enum ArkUI_CrownEvent_Action
 
 Defines the phases of a crown event.
 
-<!--Device-ArkUI_CrownEvent_Action--><!--Device-ArkUI_CrownEvent_Action-End-->
+<!--Device-enum ArkUI_CrownEvent_Action--><!--Device-enum ArkUI_CrownEvent_Action-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -512,9 +512,9 @@ Defines the phases of a crown event.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0 | Unknown phase of the crown event. |
-| ARKUI_CROWNEVENT_ACTION_UPDATE = 1 | The crown event is updated. |
-| ARKUI_CROWNEVENT_ACTION_END = 2 | The crown event ends. |
+| ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0 | Unknown phase of the crown event.<br><!--Device-ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0--><!--Device-ARKUI_CROWNEVENT_ACTION_UNKNOWN = 0-End--> |
+| ARKUI_CROWNEVENT_ACTION_UPDATE = 1 | The crown event is updated.<br><!--Device-ARKUI_CROWNEVENT_ACTION_UPDATE = 1--><!--Device-ARKUI_CROWNEVENT_ACTION_UPDATE = 1-End--> |
+| ARKUI_CROWNEVENT_ACTION_END = 2 | The crown event ends.<br><!--Device-ARKUI_CROWNEVENT_ACTION_END = 2--><!--Device-ARKUI_CROWNEVENT_ACTION_END = 2-End--> |
 
 ### ArkUI_InteractionHand
 
@@ -526,7 +526,7 @@ enum ArkUI_InteractionHand
 
 Defines whether the touch event is from the left or right hand.
 
-<!--Device-ArkUI_InteractionHand--><!--Device-ArkUI_InteractionHand-End-->
+<!--Device-enum ArkUI_InteractionHand--><!--Device-enum ArkUI_InteractionHand-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -534,9 +534,9 @@ Defines whether the touch event is from the left or right hand.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_EVENT_HAND_NONE = 0 | Unknown. |
-| ARKUI_EVENT_HAND_LEFT = 1 | Left hand. |
-| ARKUI_EVENT_HAND_RIGHT = 2 | Right hand. |
+| ARKUI_EVENT_HAND_NONE = 0 | Unknown.<br><!--Device-ARKUI_EVENT_HAND_NONE = 0--><!--Device-ARKUI_EVENT_HAND_NONE = 0-End--> |
+| ARKUI_EVENT_HAND_LEFT = 1 | Left hand.<br><!--Device-ARKUI_EVENT_HAND_LEFT = 1--><!--Device-ARKUI_EVENT_HAND_LEFT = 1-End--> |
+| ARKUI_EVENT_HAND_RIGHT = 2 | Right hand.<br><!--Device-ARKUI_EVENT_HAND_RIGHT = 2--><!--Device-ARKUI_EVENT_HAND_RIGHT = 2-End--> |
 
 ### anonymous7
 
@@ -548,7 +548,7 @@ enum anonymous7
 
 Defines the action types of the axis event.
 
-<!--Device-anonymous7--><!--Device-anonymous7-End-->
+<!--Device-enum anonymous7--><!--Device-enum anonymous7-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -556,11 +556,11 @@ Defines the action types of the axis event.
 
 | Enum item | Description |
 | -- | -- |
-| UI_AXIS_EVENT_ACTION_NONE = 0 | The axis event is abnormal. |
-| UI_AXIS_EVENT_ACTION_BEGIN = 1 | The axis event begins. |
-| UI_AXIS_EVENT_ACTION_UPDATE = 2 | The axis event is updated. |
-| UI_AXIS_EVENT_ACTION_END = 3 | The axis event ends. |
-| UI_AXIS_EVENT_ACTION_CANCEL = 4 | The axis event is canceled. |
+| UI_AXIS_EVENT_ACTION_NONE = 0 | The axis event is abnormal.<br><!--Device-UI_AXIS_EVENT_ACTION_NONE = 0--><!--Device-UI_AXIS_EVENT_ACTION_NONE = 0-End--> |
+| UI_AXIS_EVENT_ACTION_BEGIN = 1 | The axis event begins.<br><!--Device-UI_AXIS_EVENT_ACTION_BEGIN = 1--><!--Device-UI_AXIS_EVENT_ACTION_BEGIN = 1-End--> |
+| UI_AXIS_EVENT_ACTION_UPDATE = 2 | The axis event is updated.<br><!--Device-UI_AXIS_EVENT_ACTION_UPDATE = 2--><!--Device-UI_AXIS_EVENT_ACTION_UPDATE = 2-End--> |
+| UI_AXIS_EVENT_ACTION_END = 3 | The axis event ends.<br><!--Device-UI_AXIS_EVENT_ACTION_END = 3--><!--Device-UI_AXIS_EVENT_ACTION_END = 3-End--> |
+| UI_AXIS_EVENT_ACTION_CANCEL = 4 | The axis event is canceled.<br><!--Device-UI_AXIS_EVENT_ACTION_CANCEL = 4--><!--Device-UI_AXIS_EVENT_ACTION_CANCEL = 4-End--> |
 
 ### ArkUI_CoastingAxisEventPhase
 
@@ -572,7 +572,7 @@ enum ArkUI_CoastingAxisEventPhase
 
 Enumerates the phases of coasting axis events.
 
-<!--Device-ArkUI_CoastingAxisEventPhase--><!--Device-ArkUI_CoastingAxisEventPhase-End-->
+<!--Device-enum ArkUI_CoastingAxisEventPhase--><!--Device-enum ArkUI_CoastingAxisEventPhase-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -580,10 +580,10 @@ Enumerates the phases of coasting axis events.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0 | Invalid coasting axis event phase, serving as an abnormal default value. You can verify that the coasting axis phase is not this value to confirm event validity. |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1 | The coasting axis event begins. This is the initial event in the coasting phase. |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2 | The coasting axis event updates. In this phase, you can obtain the coasting axis delta value to handle scroll offset calculations. |
-| ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3 | The coasting axis event ends. This phase is triggered when coasting stops due to braking (for example, the user re-engages the touchpad during coasting, or interacts via a mouse or touchscreen) or natural decay to rest. Upon reaching this phase, immediately terminate the coasting scroll effect. |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0 | Invalid coasting axis event phase, serving as an abnormal default value. You can verify that the coasting axis phase is not this value to confirm event validity.<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_NONE = 0-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1 | The coasting axis event begins. This is the initial event in the coasting phase.<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_BEGIN = 1-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2 | The coasting axis event updates. In this phase, you can obtain the coasting axis delta value to handle scroll offset calculations.<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_UPDATE = 2-End--> |
+| ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3 | The coasting axis event ends. This phase is triggered when coasting stops due to braking (for example, the user re-engages the touchpad during coasting, or interacts via a mouse or touchscreen) or natural decay to rest. Upon reaching this phase, immediately terminate the coasting scroll effect.<br><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3--><!--Device-ARKUI_COASTING_AXIS_EVENT_PHASE_END = 3-End--> |
 
 ### ArkUI_TouchTestStrategy
 
@@ -595,7 +595,7 @@ enum ArkUI_TouchTestStrategy
 
 Defines the touch test policy.
 
-<!--Device-ArkUI_TouchTestStrategy--><!--Device-ArkUI_TouchTestStrategy-End-->
+<!--Device-enum ArkUI_TouchTestStrategy--><!--Device-enum ArkUI_TouchTestStrategy-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -603,9 +603,9 @@ Defines the touch test policy.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0 | Custom dispatch has no effect. The system dispatches events based on the hit status of the current node. |
-| ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1 | The event is dispatched to a specified child node, and the system determines whether to dispatch events to other sibling nodes. |
-| ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2 | The event is dispatched to a specified child node, and the system will not dispatch events to other sibling nodes. |
+| ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0 | Custom dispatch has no effect. The system dispatches events based on the hit status of the current node.<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_DEFAULT = 0-End--> |
+| ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1 | The event is dispatched to a specified child node, and the system determines whether to dispatch events to other sibling nodes.<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD_COMPETITION = 1-End--> |
+| ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2 | The event is dispatched to a specified child node, and the system will not dispatch events to other sibling nodes.<br><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2--><!--Device-ARKUI_TOUCH_TEST_STRATEGY_FORWARD = 2-End--> |
 
 ### ArkUI_CompetitionStrategy
 
@@ -617,7 +617,7 @@ enum ArkUI_CompetitionStrategy
 
 Strategy that determines whether the gesture identification result between the event injector and the injected end is in a competition scenario. This strategy determines how the event injector interacts with the gesture processing logic of the injected end. In non-competition scenarios, the gestures of the two parties are triggered simultaneously. In competition scenarios, only the gesture of one party is triggered.
 
-<!--Device-ArkUI_CompetitionStrategy--><!--Device-ArkUI_CompetitionStrategy-End-->
+<!--Device-enum ArkUI_CompetitionStrategy--><!--Device-enum ArkUI_CompetitionStrategy-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
@@ -625,8 +625,8 @@ Strategy that determines whether the gesture identification result between the e
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_COMPETITION_STRATEGY_DEFAULT = 0 | Non-competition strategy. The injected event does not compete with any existing gesture. The injected event and existing gestures can be processed independently and concurrently. |
-| ARKUI_COMPETITION_STRATEGY_COMPETITION = 1 | Competition strategy The gestures between the event injector and the injected end are in competition, and only the gestures of one party can be processed. |
+| ARKUI_COMPETITION_STRATEGY_DEFAULT = 0 | Non-competition strategy. The injected event does not compete with any existing gesture. The injected event and existing gestures can be processed independently and concurrently.<br><!--Device-ARKUI_COMPETITION_STRATEGY_DEFAULT = 0--><!--Device-ARKUI_COMPETITION_STRATEGY_DEFAULT = 0-End--> |
+| ARKUI_COMPETITION_STRATEGY_COMPETITION = 1 | Competition strategy The gestures between the event injector and the injected end are in competition, and only the gestures of one party can be processed.<br><!--Device-ARKUI_COMPETITION_STRATEGY_COMPETITION = 1--><!--Device-ARKUI_COMPETITION_STRATEGY_COMPETITION = 1-End--> |
 
 
 ## Function description

@@ -24,8 +24,8 @@ Defines the process information struct. Stores the process information returned 
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.0 |
-| uint32_t pid | Process ID.<br>**Since**: 26.0.0 |
-| uint32_t uid | App UID.<br>**Since**: 26.0.0 |
+| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.0<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint32_t pid | Process ID.<br>**Since**: 26.0.0<br><!--Device-uint32_t pid--><!--Device-uint32_t pid-End--> |
+| uint32_t uid | App UID.<br>**Since**: 26.0.0<br><!--Device-uint32_t uid--><!--Device-uint32_t uid-End--> |
 
 

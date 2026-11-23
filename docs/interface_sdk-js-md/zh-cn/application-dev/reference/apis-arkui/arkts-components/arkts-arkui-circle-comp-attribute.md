@@ -20,7 +20,7 @@ declare class CircleAttribute extends CommonShapeMethod<CircleAttribute>
 fill(value: ResourceColor | ColorMetrics)
 ```
 
-设置填充区域的颜色，，相较于图形绘制通用属性中的[fill](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md#fill)接口，本接口新增支持使用ColorMetrics描述颜色<!--Del-->，可进行HDR提亮<!--DelEnd-->。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性。不设置时，默认填充颜色为Color.Black。异常值undefined、null、NaN和Infinity按照默认值处理。与通用属性foregroundColor同时设置时，后设置的属性生效。
+设置填充区域的颜色，，相较于图形绘制通用属性中的fill](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md#fill)接口，本接口新增支持使用[ColorMetrics描述颜色<!--Del-->，可进行HDR提亮<!--DelEnd-->。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性。不设置时，默认填充颜色为Color.Black。异常值undefined、null、NaN和Infinity按照默认值处理。与通用属性foregroundColor同时设置时，后设置的属性生效。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ fill(value: ResourceColor | ColorMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; ColorMetrics | 是 | 填充区域颜色。<br>默认值：Color.Black <br>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; ColorMetrics | 是 | 填充区域颜色。<br>默认值：[Color.Black <br>异常值undefined、null、NaN和Infinity按照默认值处理。 |
 
 ## stroke
 
@@ -46,7 +46,7 @@ fill(value: ResourceColor | ColorMetrics)
 stroke(value: ResourceColor | ColorMetrics)
 ```
 
-设置边框颜色，相较于图形绘制通用属性中的[stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md#stroke)接口，本接口新增支持使用ColorMetrics描述颜色<!--Del-->，可进行HDR提亮<!--DelEnd-->。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性。不设置时，默认边框颜色为Color.Transparent，即没有边框。异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。
+设置边框颜色，相较于图形绘制通用属性中的stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md#stroke)接口，本接口新增支持使用[ColorMetrics描述颜色<!--Del-->，可进行HDR提亮<!--DelEnd-->。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性。不设置时，默认边框颜色为Color.Transparent，即没有边框。异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。
 
 **起始版本：** 26.0.0
 
@@ -64,4 +64,4 @@ stroke(value: ResourceColor | ColorMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; ColorMetrics | 是 | 边框颜色。<br>默认值：Color.Transparent <br>异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; ColorMetrics | 是 | 边框颜色。<br>默认值：[Color.Transparent <br>异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |

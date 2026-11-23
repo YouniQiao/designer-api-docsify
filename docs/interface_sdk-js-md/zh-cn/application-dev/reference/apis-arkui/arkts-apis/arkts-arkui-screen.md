@@ -38,12 +38,8 @@ import { screen } from '@kit.ArkUI';
 | [makeMirrorWithRegion](arkts-arkui-screen-makemirrorwithregion-f-sys.md#makemirrorwithregion-1) | 将屏幕的某一矩形区域设置为镜像模式，使用Promise异步回调。调用该接口后，不建议再进行屏幕的旋转/折叠，否则可能导致镜像内容异常。 |
 | [makeUnique](arkts-arkui-screen-makeunique-f-sys.md#makeunique-1) | 将屏幕设置为异源模式，使用Promise异步回调。 |
 | [off](arkts-arkui-screen-off-f-sys.md#off1) | 关闭屏幕状态变化的监听。 |
-| [off](arkts-arkui-screen-off-f-sys.md#off2) | 关闭屏幕状态变化的监听。 |
-| [off](arkts-arkui-screen-off-f-sys.md#off3) | 关闭屏幕状态变化的监听。 |
 | [offDisconnectWithInfo](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md#offdisconnectwithinfo-1) | 关闭屏幕断连事件的监听。 |
 | [on](arkts-arkui-screen-on-f-sys.md#on1) | 开启屏幕状态变化的监听。 |
-| [on](arkts-arkui-screen-on-f-sys.md#on2) | 开启屏幕状态变化的监听。 |
-| [on](arkts-arkui-screen-on-f-sys.md#on3) | 开启屏幕状态变化的监听。 |
 | [onDisconnectWithInfo](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md#ondisconnectwithinfo-1) | 开启屏幕断连事件的监听。屏幕断连时，调用回调函数返回断连信息。 |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md#resizevirtualscreen-1) | 修改指定虚拟屏的尺寸，使用Promise异步回调。 |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md#setmultiscreenmode-1) | 设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。 |

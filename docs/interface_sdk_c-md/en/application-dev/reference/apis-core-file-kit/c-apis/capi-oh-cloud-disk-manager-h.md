@@ -90,8 +90,8 @@ This file defines the APIs for the cloud disk management module.
 
 | Name | Description |
 | -- | -- |
-| CloudDisk_PathInfo CloudDisk_FileIdInfo | a struct that encapsulates the file ID.<br>**Since**: 21<br>**System capability**: SystemCapability.FileManagement.CloudDiskManager |
-| CloudDisk_PathInfo CloudDisk_SyncFolderPath | a struct that encapsulates the sync root path.<br>**Since**: 21<br>**System capability**: SystemCapability.FileManagement.CloudDiskManager |
+| CloudDisk_PathInfo CloudDisk_FileIdInfo | a struct that encapsulates the file ID.<br>**Since**: 21<br>**System capability**: SystemCapability.FileManagement.CloudDiskManager<br><!--Device-CloudDisk_PathInfo CloudDisk_FileIdInfo--><!--Device-CloudDisk_PathInfo CloudDisk_FileIdInfo-End--> |
+| CloudDisk_PathInfo CloudDisk_SyncFolderPath | a struct that encapsulates the sync root path.<br>**Since**: 21<br>**System capability**: SystemCapability.FileManagement.CloudDiskManager<br><!--Device-CloudDisk_PathInfo CloudDisk_SyncFolderPath--><!--Device-CloudDisk_PathInfo CloudDisk_SyncFolderPath-End--> |
 
 ## Enum type description
 
@@ -105,7 +105,7 @@ enum CloudDisk_SyncState
 
 Enumerates the file sync states.
 
-<!--Device-CloudDisk_SyncState--><!--Device-CloudDisk_SyncState-End-->
+<!--Device-enum CloudDisk_SyncState--><!--Device-enum CloudDisk_SyncState-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -113,12 +113,12 @@ Enumerates the file sync states.
 
 | Enum item | Description |
 | -- | -- |
-| IDLE = 0 | The file is idle, and no sync operation is performed.<br>**Since**: 21 |
-| SYNCING = 1 | The file is being synced.<br>**Since**: 21 |
-| SYNC_SUCCEEDED = 2 | The file is synced successfully.<br>**Since**: 21 |
-| SYNC_FAILED = 3 | The file fails to be synced.<br>**Since**: 21 |
-| SYNC_CANCELED = 4 | The file sync is canceled.<br>**Since**: 21 |
-| SYNC_CONFLICTED = 5 | The file sync conflicts.<br>**Since**: 21 |
+| IDLE = 0 | The file is idle, and no sync operation is performed.<br>**Since**: 21<br><!--Device-IDLE = 0--><!--Device-IDLE = 0-End--> |
+| SYNCING = 1 | The file is being synced.<br>**Since**: 21<br><!--Device-SYNCING = 1--><!--Device-SYNCING = 1-End--> |
+| SYNC_SUCCEEDED = 2 | The file is synced successfully.<br>**Since**: 21<br><!--Device-SYNC_SUCCEEDED = 2--><!--Device-SYNC_SUCCEEDED = 2-End--> |
+| SYNC_FAILED = 3 | The file fails to be synced.<br>**Since**: 21<br><!--Device-SYNC_FAILED = 3--><!--Device-SYNC_FAILED = 3-End--> |
+| SYNC_CANCELED = 4 | The file sync is canceled.<br>**Since**: 21<br><!--Device-SYNC_CANCELED = 4--><!--Device-SYNC_CANCELED = 4-End--> |
+| SYNC_CONFLICTED = 5 | The file sync conflicts.<br>**Since**: 21<br><!--Device-SYNC_CONFLICTED = 5--><!--Device-SYNC_CONFLICTED = 5-End--> |
 
 ### CloudDisk_OperationType
 
@@ -130,7 +130,7 @@ enum CloudDisk_OperationType
 
 Enumerates the file change types.
 
-<!--Device-CloudDisk_OperationType--><!--Device-CloudDisk_OperationType-End-->
+<!--Device-enum CloudDisk_OperationType--><!--Device-enum CloudDisk_OperationType-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -138,13 +138,13 @@ Enumerates the file change types.
 
 | Enum item | Description |
 | -- | -- |
-| CREATE = 0 | Create a file or directory.<br>**Since**: 21 |
-| DELETE = 1 | Delete a file or directory.<br>**Since**: 21 |
-| MOVE_FROM = 2 | Move this file or directory.<br>**Since**: 21 |
-| MOVE_TO = 3 | Move to this file or directory.<br>**Since**: 21 |
-| CLOSE_WRITE = 4 | Close the file after the write operation.<br>**Since**: 21 |
-| SYNC_FOLDER_INVALID = 5 | Invalid sync root path.<br>**Since**: 21 |
-| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | Close a file after modifying content.<br>**Since**: 26.0.1 |
+| CREATE = 0 | Create a file or directory.<br>**Since**: 21<br><!--Device-CREATE = 0--><!--Device-CREATE = 0-End--> |
+| DELETE = 1 | Delete a file or directory.<br>**Since**: 21<br><!--Device-DELETE = 1--><!--Device-DELETE = 1-End--> |
+| MOVE_FROM = 2 | Move this file or directory.<br>**Since**: 21<br><!--Device-MOVE_FROM = 2--><!--Device-MOVE_FROM = 2-End--> |
+| MOVE_TO = 3 | Move to this file or directory.<br>**Since**: 21<br><!--Device-MOVE_TO = 3--><!--Device-MOVE_TO = 3-End--> |
+| CLOSE_WRITE = 4 | Close the file after the write operation.<br>**Since**: 21<br><!--Device-CLOSE_WRITE = 4--><!--Device-CLOSE_WRITE = 4-End--> |
+| SYNC_FOLDER_INVALID = 5 | Invalid sync root path.<br>**Since**: 21<br><!--Device-SYNC_FOLDER_INVALID = 5--><!--Device-SYNC_FOLDER_INVALID = 5-End--> |
+| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | Close a file after modifying content.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6--><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6-End--> |
 
 ### CloudDisk_ErrorReason
 
@@ -156,7 +156,7 @@ enum CloudDisk_ErrorReason
 
 Enumerates the file sync failure causes.
 
-<!--Device-CloudDisk_ErrorReason--><!--Device-CloudDisk_ErrorReason-End-->
+<!--Device-enum CloudDisk_ErrorReason--><!--Device-enum CloudDisk_ErrorReason-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -164,11 +164,11 @@ Enumerates the file sync failure causes.
 
 | Enum item | Description |
 | -- | -- |
-| INVALID_ARGUMENT = 0 | The input parameter is invalid.<br>**Since**: 21 |
-| NO_SUCH_FILE = 1 | The file or directory does not exist.<br>**Since**: 21 |
-| NO_SPACE_LEFT = 2 | The remaining space on the device is insufficient.<br>**Since**: 21 |
-| OUT_OF_RANGE = 3 | The file is not in the sync root path.<br>**Since**: 21 |
-| NO_SYNC_STATE = 4 | The sync state is not set.<br>**Since**: 21 |
+| INVALID_ARGUMENT = 0 | The input parameter is invalid.<br>**Since**: 21<br><!--Device-INVALID_ARGUMENT = 0--><!--Device-INVALID_ARGUMENT = 0-End--> |
+| NO_SUCH_FILE = 1 | The file or directory does not exist.<br>**Since**: 21<br><!--Device-NO_SUCH_FILE = 1--><!--Device-NO_SUCH_FILE = 1-End--> |
+| NO_SPACE_LEFT = 2 | The remaining space on the device is insufficient.<br>**Since**: 21<br><!--Device-NO_SPACE_LEFT = 2--><!--Device-NO_SPACE_LEFT = 2-End--> |
+| OUT_OF_RANGE = 3 | The file is not in the sync root path.<br>**Since**: 21<br><!--Device-OUT_OF_RANGE = 3--><!--Device-OUT_OF_RANGE = 3-End--> |
+| NO_SYNC_STATE = 4 | The sync state is not set.<br>**Since**: 21<br><!--Device-NO_SYNC_STATE = 4--><!--Device-NO_SYNC_STATE = 4-End--> |
 
 ### CloudDisk_SyncFolderState
 
@@ -180,7 +180,7 @@ enum CloudDisk_SyncFolderState
 
 Enumerates the sync root path states.
 
-<!--Device-CloudDisk_SyncFolderState--><!--Device-CloudDisk_SyncFolderState-End-->
+<!--Device-enum CloudDisk_SyncFolderState--><!--Device-enum CloudDisk_SyncFolderState-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -188,8 +188,8 @@ Enumerates the sync root path states.
 
 | Enum item | Description |
 | -- | -- |
-| INACTIVE = 0 | The sync root path is inactive.<br>**Since**: 21 |
-| ACTIVE = 1 | The sync root path is active.<br>**Since**: 21 |
+| INACTIVE = 0 | The sync root path is inactive.<br>**Since**: 21<br><!--Device-INACTIVE = 0--><!--Device-INACTIVE = 0-End--> |
+| ACTIVE = 1 | The sync root path is active.<br>**Since**: 21<br><!--Device-ACTIVE = 1--><!--Device-ACTIVE = 1-End--> |
 
 ### OH_CloudDisk_PlaceholderState
 
@@ -201,7 +201,7 @@ enum OH_CloudDisk_PlaceholderState
 
 Enumerates the placeholder states.
 
-<!--Device-OH_CloudDisk_PlaceholderState--><!--Device-OH_CloudDisk_PlaceholderState-End-->
+<!--Device-enum OH_CloudDisk_PlaceholderState--><!--Device-enum OH_CloudDisk_PlaceholderState-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -209,10 +209,10 @@ Enumerates the placeholder states.
 
 | Enum item | Description |
 | -- | -- |
-| OH_CLOUD_DISK_PLACEHOLDER_STATE_NONE = 0 | The file is not a placeholder.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_PLACEHOLDER_STATE_UNHYDRATED = 1 | The placeholder has no local data.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_PLACEHOLDER_STATE_PARTIALLY_HYDRATED = 2 | The placeholder has partial local data.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_PLACEHOLDER_STATE_FULLY_HYDRATED = 3 | The placeholder has complete local data.<br>**Since**: 26.0.1 |
+| OH_CLOUD_DISK_PLACEHOLDER_STATE_NONE = 0 | The file is not a placeholder.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_NONE = 0--><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_NONE = 0-End--> |
+| OH_CLOUD_DISK_PLACEHOLDER_STATE_UNHYDRATED = 1 | The placeholder has no local data.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_UNHYDRATED = 1--><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_UNHYDRATED = 1-End--> |
+| OH_CLOUD_DISK_PLACEHOLDER_STATE_PARTIALLY_HYDRATED = 2 | The placeholder has partial local data.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_PARTIALLY_HYDRATED = 2--><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_PARTIALLY_HYDRATED = 2-End--> |
+| OH_CLOUD_DISK_PLACEHOLDER_STATE_FULLY_HYDRATED = 3 | The placeholder has complete local data.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_FULLY_HYDRATED = 3--><!--Device-OH_CLOUD_DISK_PLACEHOLDER_STATE_FULLY_HYDRATED = 3-End--> |
 
 ### OH_CloudDisk_CallbackType
 
@@ -224,7 +224,7 @@ enum OH_CloudDisk_CallbackType
 
 Enumerates the cloud disk callback types.
 
-<!--Device-OH_CloudDisk_CallbackType--><!--Device-OH_CloudDisk_CallbackType-End-->
+<!--Device-enum OH_CloudDisk_CallbackType--><!--Device-enum OH_CloudDisk_CallbackType-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -232,9 +232,9 @@ Enumerates the cloud disk callback types.
 
 | Enum item | Description |
 | -- | -- |
-| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | Fetch cloud file data for hydration.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | Cancel fetching cloud file data.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | Request authorization for dehydrate.<br>**Since**: 26.0.1 |
+| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | Fetch cloud file data for hydration.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0-End--> |
+| OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | Cancel fetching cloud file data.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1-End--> |
+| OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | Request authorization for dehydrate.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2--><!--Device-OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2-End--> |
 
 ### OH_CloudDisk_HydratePriority
 
@@ -246,7 +246,7 @@ enum OH_CloudDisk_HydratePriority
 
 Enumerates the hydrate priorities.
 
-<!--Device-OH_CloudDisk_HydratePriority--><!--Device-OH_CloudDisk_HydratePriority-End-->
+<!--Device-enum OH_CloudDisk_HydratePriority--><!--Device-enum OH_CloudDisk_HydratePriority-End-->
 
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
@@ -254,9 +254,9 @@ Enumerates the hydrate priorities.
 
 | Enum item | Description |
 | -- | -- |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0 | Low priority.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1 | Normal priority.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2 | High priority.<br>**Since**: 26.0.1 |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0 | Low priority.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0-End--> |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1 | Normal priority.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1-End--> |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2 | High priority.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2--><!--Device-OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2-End--> |
 
 
 ## Function description

@@ -56,7 +56,7 @@ PageUpdateType：页面更新类型。
 
 **起始版本：** 9
 
-<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
+<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType | TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType | TouchGuideType | GestureType | PageUpdateType-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

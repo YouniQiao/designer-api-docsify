@@ -13,7 +13,7 @@ function unbind(floatViewController: FloatViewController,
     floatingBallController: floatingBall.FloatingBallController): Promise<void>
 ```
 
-解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。
+解绑闪控窗和闪控球。需要在[闪控窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -27,8 +27,8 @@ function unbind(floatViewController: FloatViewController,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 | 标准悬浮窗控制器。 |
-| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | 是 | 闪控球控制器。 |
+| floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 | 闪控窗控制器，用于管理闪控窗的启动、停止和状态监听等操作。 |
+| floatingBallController | [floatingBall.FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | 是 | 闪控球控制器，用于管理闪控球的启动、停止和状态监听等操作。 |
 
 **返回值：**
 

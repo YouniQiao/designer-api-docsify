@@ -12,7 +12,7 @@ import { floatView } from '@kit.ArkUI';
 function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits
 ```
 
-根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。
+根据传入的模板类型获取对应闪控窗窗口的限制，单位为px。
 
 **起始版本：** 26.0.0
 
@@ -26,13 +26,13 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateType | [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | 是 | 标准悬浮窗模板类型。 |
+| templateType | [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | 是 | 闪控窗模板类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
+| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | 返回闪控窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
 
 **错误码：**
 

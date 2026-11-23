@@ -953,6 +953,8 @@
   <!--Del-->
   - [unregisterFunctionHook（系统接口）](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
   - [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md)
+  <!--Del-->
+  - [InvokeOptions（系统接口）](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
   - [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md)
 <!--Del-->
 - [@ohos.application.uriPermissionManager（URI权限管理）](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->

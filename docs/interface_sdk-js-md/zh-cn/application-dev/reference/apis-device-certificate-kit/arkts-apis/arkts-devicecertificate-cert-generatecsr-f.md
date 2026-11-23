@@ -43,7 +43,7 @@ function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): stri
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
-| [19030008](../errorcode-cert.md#19030008-私钥密码错误) | Maybe wrong password. |
+| [19030008](../errorcode-cert.md#19030008-私钥密码可能不正确) | Maybe wrong password. |
 
 **示例**
 

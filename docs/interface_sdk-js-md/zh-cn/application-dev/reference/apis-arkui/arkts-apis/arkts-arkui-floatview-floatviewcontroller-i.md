@@ -4,9 +4,9 @@
 interface FloatViewController
 ```
 
-标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。
+闪控窗控制器实例。用于启动、停止闪控窗以及注册回调等操作。
 
-下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
+下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md)方法获取到闪控窗控制器实例（即floatViewController），再通过此实例调用对应方法。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { floatView } from '@kit.ArkUI';
 getWindowProperties(): FloatViewProperties
 ```
 
-获取标准悬浮窗窗口的属性。
+获取闪控窗窗口的属性。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ getWindowProperties(): FloatViewProperties
 
 | 类型 | 说明 |
 | --- | --- |
-| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | 返回标准悬浮窗窗口的属性。 |
+| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | 返回闪控窗窗口的属性。 |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ try {
 offLimitsChange(callback?: Callback<FloatViewLimits>): void
 ```
 
-取消标准悬浮窗限制变化的监听事件。
+取消闪控窗限制变化的监听事件。
 
 **起始版本：** 26.0.0
 
@@ -81,7 +81,7 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的闪控窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有闪控窗限制变化的监听。 |
 
 **错误码：**
 
@@ -110,7 +110,7 @@ try {
 offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 ```
 
-取消标准悬浮窗矩形区域变化的监听事件。
+取消闪控窗矩形区域变化的监听事件。
 
 **起始版本：** 26.0.0
 
@@ -124,7 +124,7 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩形区域变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的闪控窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有闪控窗矩形区域变化的监听。 |
 
 **错误码：**
 
@@ -153,7 +153,7 @@ try {
 offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 ```
 
-取消标准悬浮窗状态变化的监听事件。
+取消闪控窗状态变化的监听事件。
 
 **起始版本：** 26.0.0
 
@@ -167,7 +167,7 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的闪控窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有闪控窗状态变化的监听。 |
 
 **错误码：**
 
@@ -196,7 +196,7 @@ try {
 onLimitsChange(callback: Callback<FloatViewLimits>): void
 ```
 
-注册标准悬浮窗限制变化的监听事件，当限制规格变化时触发回调，例如设备折叠或者展开。不再使用时，取消监听以避免内存泄漏。
+注册闪控窗限制变化的监听事件，当限制规格变化时触发回调（例如折叠展开导致屏幕宽度变化或切换模板），触发回调并返回当前窗口模板类型的限制信息。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
 
@@ -210,7 +210,7 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的闪控窗限制变化信息。 |
 
 **错误码：**
 
@@ -240,7 +240,7 @@ try {
 onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 ```
 
-注册标准悬浮窗矩形区域（位置和大小）变化的监听事件。不再使用时，取消监听以避免内存泄漏。
+注册闪控窗矩形区域（位置和大小）变化的监听事件。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
 
@@ -254,7 +254,7 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的闪控窗矩形区域变化信息。 |
 
 **错误码：**
 
@@ -284,7 +284,7 @@ try {
 onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 ```
 
-注册标准悬浮窗状态变化的监听事件。不再使用时，取消监听以避免内存泄漏。
+注册闪控窗状态变化的监听事件。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
 
@@ -298,7 +298,7 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的闪控窗状态变化信息。 |
 
 **错误码：**
 
@@ -328,7 +328,7 @@ try {
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-恢复标准悬浮窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口只能在标准悬浮窗窗口被点击后使用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise异步回调。
+恢复闪控窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口要求闪控窗处于STARTED状态，且只能在用户点击后调用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -342,7 +342,7 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParameters | Record&lt;string, Object&gt; | 否 | 恢复标准悬浮窗的主窗口时会给主窗口传递的自定义参数，主窗口会在触发onNewWant回调时收到。默认值为空，代表不向主窗传入任何自定义参数。 |
+| wantParameters | Record&lt;string, Object&gt; | 否 | 恢复闪控窗的主窗口时会给主窗口传递的自定义参数，主窗口会在触发onNewWant回调时收到。默认值为空，代表不向主窗口传入任何自定义参数。 |
 
 **返回值：**
 
@@ -388,9 +388,9 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。
+设置应用在前台时闪控窗窗口是否可见。使用Promise异步回调。
 
-创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
+创建闪控窗后未调用此接口前，默认其在应用处于前台时为可见状态。
 
 **起始版本：** 26.0.0
 
@@ -404,7 +404,7 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isVisible | boolean | 是 | 应用在前台时标准悬浮窗是否可见，true表示可见，false表示不可见。 |
+| isVisible | boolean | 是 | 应用在前台时闪控窗是否可见，true表示可见，false表示不可见。 |
 
 **返回值：**
 
@@ -443,7 +443,11 @@ try {
 setUIContext(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据当前工程中指定的页面路径为标准悬浮窗加载具体页面内容，通过LocalStorage传递状态属性至加载页面。使用Promise异步回调。
+根据当前工程中指定的页面路径为闪控窗加载具体页面内容，通过LocalStorage传递状态属性至加载页面。使用Promise异步回调。
+
+建议在闪控窗启动前使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+本接口不支持加载跨包页面，若有需要请使用[setUIContextByName()](#setuicontextbyname)接口。
 
 **起始版本：** 26.0.0
 
@@ -457,7 +461,7 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
+| path | string | 是 | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。若路劲无效或不满足上述要求，将抛出错误码1300016。 |
 | storage | LocalStorage | 否 | 页面级UI状态存储单元，用于为加载到窗口的页面内容传递状态属性。默认值为空。 |
 
 **返回值：**
@@ -498,7 +502,7 @@ try {
 setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用Promise异步回调。
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用Promise异步回调。建议在闪控窗启动前使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
 
 **起始版本：** 26.0.0
 
@@ -512,7 +516,7 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 命名路由页面的名称。 |
+| name | string | 是 | 命名路由页面的名称，用于加载指定的命名路由页面内容。需与@Entyry装饰器中的routeName参数指定的名称一致。 |
 | storage | LocalStorage | 否 | 页面级UI状态存储单元，用于为加载到窗口的页面内容传递状态属性。默认值为空。 |
 
 **返回值：**
@@ -582,7 +586,7 @@ export struct Hello {
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](#onrectchange)接口监听。使用Promise异步回调。
+设置闪控窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](#onrectchange)接口监听。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -596,7 +600,7 @@ setWindowSize(size: window.Size): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [window.Size](arkts-arkui-window-size-i.md) | 是 | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
+| size | [window.Size](arkts-arkui-window-size-i.md) | 是 | 表示窗口的大小，单位为px，宽度和高度必须大于0，超出有效范围抛出错误码1300016。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
 
 **返回值：**
 
@@ -641,7 +645,7 @@ try {
 start(): Promise<void>
 ```
 
-启动标准悬浮窗窗口。接口返回不表示start流程结束，需要通过[onStateChange](#onstatechange)接口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](#setuicontext)或[setUIContextByName()](#setuicontextbyname)后调用start()。使用Promise异步回调。
+启动闪控窗窗口。接口返回不表示start流程结束，需要通过[onStateChange](#onstatechange)接口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](#setuicontext)或[setUIContextByName()](#setuicontextbyname)后调用start()。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -695,7 +699,7 @@ try {
 stop(): Promise<void>
 ```
 
-停止标准悬浮窗窗口。接口返回不表示stop流程结束，需要通过[onStateChange](#onstatechange)接口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
+停止闪控窗窗口。接口返回不表示stop流程结束，需要通过[onStateChange](#onstatechange)接口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -744,7 +748,7 @@ try {
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](#onrectchange)接口监听。使用Promise异步回调。
+切换闪控窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](#onrectchange)接口监听。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -758,7 +762,7 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | 是 | 表示需要切换的窗口模板类型及大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | 是 | 表示需要切换的窗口模板类型及大小。size中的宽度和高度必须大于0，超出有效范围抛出错误码1300016。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
 
 **返回值：**
 

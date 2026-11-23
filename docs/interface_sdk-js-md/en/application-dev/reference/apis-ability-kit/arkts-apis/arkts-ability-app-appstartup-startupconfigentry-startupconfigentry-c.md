@@ -79,7 +79,7 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onRequestCustomMatchRule(want: Want): string
 ```
 
-Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after StartupConfigEntry.onConfig but before [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
+Called if the HAP of the AbilityStage has defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after [StartupConfigEntry.onConfig but before [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
 
 You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in **matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see [Adding Task Matching Rules](../../../application-models/app-startup.md#adding-task-matching-rules).
 

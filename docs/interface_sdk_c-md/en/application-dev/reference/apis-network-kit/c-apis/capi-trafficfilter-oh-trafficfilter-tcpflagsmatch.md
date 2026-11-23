@@ -24,8 +24,8 @@ Defines the TCP flag matching condition. It is valid only for the TCP protocol.
 
 | Name | Description |
 | -- | -- |
-| bool enable | Whether to enable TCP flag matching. The value **true** means to enable TCP flag matching, and **false** means not to enable TCP flag matching.<br>**Since**: 26.0.1 |
-| uint8_t flagMask | Flag mask (specifies the flags to check).<br>**Since**: 26.0.1 |
-| uint8_t flagComp | Flag comparison value (value to compare against the flags).<br>**Since**: 26.0.1 |
+| bool enable | Whether to enable TCP flag matching. The value **true** means to enable TCP flag matching, and **false** means not to enable TCP flag matching.<br>**Since**: 26.0.1<br><!--Device-bool enable--><!--Device-bool enable-End--> |
+| uint8_t flagMask | Flag mask (specifies the flags to check).<br>**Since**: 26.0.1<br><!--Device-uint8_t flagMask--><!--Device-uint8_t flagMask-End--> |
+| uint8_t flagComp | Flag comparison value (value to compare against the flags).<br>**Since**: 26.0.1<br><!--Device-uint8_t flagComp--><!--Device-uint8_t flagComp-End--> |
 
 

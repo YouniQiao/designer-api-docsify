@@ -81,7 +81,7 @@ enum OH_Drawing_SystemFontType
 
 字体类型的枚举。
 
-<!--Device-OH_Drawing_SystemFontType--><!--Device-OH_Drawing_SystemFontType-End-->
+<!--Device-enum OH_Drawing_SystemFontType--><!--Device-enum OH_Drawing_SystemFontType-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -89,11 +89,11 @@ enum OH_Drawing_SystemFontType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ALL = 1 << 0 | 所有字体类型。 |
-| GENERIC = 1 << 1 | 系统字体类型。 |
-| STYLISH = 1 << 2 | 风格字体类型。 |
-| INSTALLED = 1 << 3 | 用户已安装字体类型。 |
-| CUSTOMIZED = 1 << 4 | 自定义字体类型。<br>**起始版本：** 18 |
+| ALL = 1 << 0 | 所有字体类型。<br><!--Device-ALL = 1 << 0--><!--Device-ALL = 1 << 0-End--> |
+| GENERIC = 1 << 1 | 系统字体类型。<br><!--Device-GENERIC = 1 << 1--><!--Device-GENERIC = 1 << 1-End--> |
+| STYLISH = 1 << 2 | 风格字体类型。<br><!--Device-STYLISH = 1 << 2--><!--Device-STYLISH = 1 << 2-End--> |
+| INSTALLED = 1 << 3 | 用户已安装字体类型。<br><!--Device-INSTALLED = 1 << 3--><!--Device-INSTALLED = 1 << 3-End--> |
+| CUSTOMIZED = 1 << 4 | 自定义字体类型。<br>**起始版本：** 18<br><!--Device-CUSTOMIZED = 1 << 4--><!--Device-CUSTOMIZED = 1 << 4-End--> |
 
 ### OH_Drawing_FontFullDescriptorAttributeId
 
@@ -105,7 +105,7 @@ enum OH_Drawing_FontFullDescriptorAttributeId
 
 字体描述符属性的枚举。不同类型的字体描述符属性，请使用对应类型的接口获取属性。如字体描述符属性FULL_DESCRIPTOR_ATTR_I_WEIGHT为int类型，需使用 [OH_Drawing_GetFontFullDescriptorAttributeInt](capi-drawing-text-font-descriptor-h.md#oh_drawing_getfontfulldescriptorattributeint)接口获取其属性值。
 
-<!--Device-OH_Drawing_FontFullDescriptorAttributeId--><!--Device-OH_Drawing_FontFullDescriptorAttributeId-End-->
+<!--Device-enum OH_Drawing_FontFullDescriptorAttributeId--><!--Device-enum OH_Drawing_FontFullDescriptorAttributeId-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -113,28 +113,28 @@ enum OH_Drawing_FontFullDescriptorAttributeId
 
 | 枚举项 | 描述 |
 | -- | -- |
-| FULL_DESCRIPTOR_ATTR_S_PATH = 0 | 字体文件的路径，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。 |
-| FULL_DESCRIPTOR_ATTR_S_POSTSCRIPT_NAME = 1 | 唯一标识字体的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。 |
-| FULL_DESCRIPTOR_ATTR_S_FULL_NAME = 2 | 字体的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。 |
-| FULL_DESCRIPTOR_ATTR_S_FAMILY_NAME = 3 | 字体家族的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。 |
-| FULL_DESCRIPTOR_ATTR_S_SUB_FAMILY_NAME = 4 | 子字体家族的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。 |
-| FULL_DESCRIPTOR_ATTR_I_WEIGHT = 5 | 字体的字重，int类型。 |
-| FULL_DESCRIPTOR_ATTR_I_WIDTH = 6 | 字体的宽窄风格属性，int类型。 |
-| FULL_DESCRIPTOR_ATTR_I_ITALIC = 7 | 字体是否倾斜，int类型。1表示字体倾斜，0表示字体非倾斜。 |
-| FULL_DESCRIPTOR_ATTR_B_MONO = 8 | 字体是否等宽，bool类型。true表示字体等宽，false表示字体非等宽。 |
-| FULL_DESCRIPTOR_ATTR_B_SYMBOLIC = 9 | 字体是否支持符号字体，bool类型。true表示支持符号字体，false表示不支持符号字体。 |
-| FULL_DESCRIPTOR_ATTR_S_LOCAL_POSTSCRIPT_NAME = 10 | 根据系统语言配置提取字体唯一标识的名称。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_LOCAL_FULL_NAME = 11 | 根据系统语言配置提取字体全名。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_LOCAL_FAMILY_NAME = 12 | 根据系统语言配置提取字体家族名称。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_LOCAL_SUB_FAMILY_NAME = 13 | 根据系统语言配置提取子字体家族名称。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_VERSION = 14 | 字体版本。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_MANUFACTURE = 15 | 字体制造商信息。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_COPYRIGHT = 16 | 字体版权信息。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_TRADEMARK = 17 | 字体商标信息。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_S_LICENSE = 18 | 字体许可证信息。<br>**起始版本：** 23 |
-| FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS = 19 | 字体可变轴数组。<br>**起始版本：** 24 |
-| FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE = 20 | 字体可变实例数组。<br>**起始版本：** 24 |
-| FULL_DESCRIPTOR_ATTR_I_INDEX = 21 | 字体索引。<br>**起始版本：** 23 |
+| FULL_DESCRIPTOR_ATTR_S_PATH = 0 | 字体文件的路径，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_S_PATH = 0--><!--Device-FULL_DESCRIPTOR_ATTR_S_PATH = 0-End--> |
+| FULL_DESCRIPTOR_ATTR_S_POSTSCRIPT_NAME = 1 | 唯一标识字体的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_S_POSTSCRIPT_NAME = 1--><!--Device-FULL_DESCRIPTOR_ATTR_S_POSTSCRIPT_NAME = 1-End--> |
+| FULL_DESCRIPTOR_ATTR_S_FULL_NAME = 2 | 字体的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_S_FULL_NAME = 2--><!--Device-FULL_DESCRIPTOR_ATTR_S_FULL_NAME = 2-End--> |
+| FULL_DESCRIPTOR_ATTR_S_FAMILY_NAME = 3 | 字体家族的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_S_FAMILY_NAME = 3--><!--Device-FULL_DESCRIPTOR_ATTR_S_FAMILY_NAME = 3-End--> |
+| FULL_DESCRIPTOR_ATTR_S_SUB_FAMILY_NAME = 4 | 子字体家族的名称，[OH_Drawing_String](capi-drawing-oh-drawing-string.md)类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_S_SUB_FAMILY_NAME = 4--><!--Device-FULL_DESCRIPTOR_ATTR_S_SUB_FAMILY_NAME = 4-End--> |
+| FULL_DESCRIPTOR_ATTR_I_WEIGHT = 5 | 字体的字重，int类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_I_WEIGHT = 5--><!--Device-FULL_DESCRIPTOR_ATTR_I_WEIGHT = 5-End--> |
+| FULL_DESCRIPTOR_ATTR_I_WIDTH = 6 | 字体的宽窄风格属性，int类型。<br><!--Device-FULL_DESCRIPTOR_ATTR_I_WIDTH = 6--><!--Device-FULL_DESCRIPTOR_ATTR_I_WIDTH = 6-End--> |
+| FULL_DESCRIPTOR_ATTR_I_ITALIC = 7 | 字体是否倾斜，int类型。1表示字体倾斜，0表示字体非倾斜。<br><!--Device-FULL_DESCRIPTOR_ATTR_I_ITALIC = 7--><!--Device-FULL_DESCRIPTOR_ATTR_I_ITALIC = 7-End--> |
+| FULL_DESCRIPTOR_ATTR_B_MONO = 8 | 字体是否等宽，bool类型。true表示字体等宽，false表示字体非等宽。<br><!--Device-FULL_DESCRIPTOR_ATTR_B_MONO = 8--><!--Device-FULL_DESCRIPTOR_ATTR_B_MONO = 8-End--> |
+| FULL_DESCRIPTOR_ATTR_B_SYMBOLIC = 9 | 字体是否支持符号字体，bool类型。true表示支持符号字体，false表示不支持符号字体。<br><!--Device-FULL_DESCRIPTOR_ATTR_B_SYMBOLIC = 9--><!--Device-FULL_DESCRIPTOR_ATTR_B_SYMBOLIC = 9-End--> |
+| FULL_DESCRIPTOR_ATTR_S_LOCAL_POSTSCRIPT_NAME = 10 | 根据系统语言配置提取字体唯一标识的名称。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_POSTSCRIPT_NAME = 10--><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_POSTSCRIPT_NAME = 10-End--> |
+| FULL_DESCRIPTOR_ATTR_S_LOCAL_FULL_NAME = 11 | 根据系统语言配置提取字体全名。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_FULL_NAME = 11--><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_FULL_NAME = 11-End--> |
+| FULL_DESCRIPTOR_ATTR_S_LOCAL_FAMILY_NAME = 12 | 根据系统语言配置提取字体家族名称。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_FAMILY_NAME = 12--><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_FAMILY_NAME = 12-End--> |
+| FULL_DESCRIPTOR_ATTR_S_LOCAL_SUB_FAMILY_NAME = 13 | 根据系统语言配置提取子字体家族名称。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_SUB_FAMILY_NAME = 13--><!--Device-FULL_DESCRIPTOR_ATTR_S_LOCAL_SUB_FAMILY_NAME = 13-End--> |
+| FULL_DESCRIPTOR_ATTR_S_VERSION = 14 | 字体版本。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_VERSION = 14--><!--Device-FULL_DESCRIPTOR_ATTR_S_VERSION = 14-End--> |
+| FULL_DESCRIPTOR_ATTR_S_MANUFACTURE = 15 | 字体制造商信息。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_MANUFACTURE = 15--><!--Device-FULL_DESCRIPTOR_ATTR_S_MANUFACTURE = 15-End--> |
+| FULL_DESCRIPTOR_ATTR_S_COPYRIGHT = 16 | 字体版权信息。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_COPYRIGHT = 16--><!--Device-FULL_DESCRIPTOR_ATTR_S_COPYRIGHT = 16-End--> |
+| FULL_DESCRIPTOR_ATTR_S_TRADEMARK = 17 | 字体商标信息。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_TRADEMARK = 17--><!--Device-FULL_DESCRIPTOR_ATTR_S_TRADEMARK = 17-End--> |
+| FULL_DESCRIPTOR_ATTR_S_LICENSE = 18 | 字体许可证信息。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_S_LICENSE = 18--><!--Device-FULL_DESCRIPTOR_ATTR_S_LICENSE = 18-End--> |
+| FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS = 19 | 字体可变轴数组。<br>**起始版本：** 24<br><!--Device-FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS = 19--><!--Device-FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS = 19-End--> |
+| FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE = 20 | 字体可变实例数组。<br>**起始版本：** 24<br><!--Device-FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE = 20--><!--Device-FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE = 20-End--> |
+| FULL_DESCRIPTOR_ATTR_I_INDEX = 21 | 字体索引。<br>**起始版本：** 23<br><!--Device-FULL_DESCRIPTOR_ATTR_I_INDEX = 21--><!--Device-FULL_DESCRIPTOR_ATTR_I_INDEX = 21-End--> |
 
 ### OH_Drawing_FontVariationAxisAttributeId
 
@@ -146,7 +146,7 @@ enum OH_Drawing_FontVariationAxisAttributeId
 
 字体可变轴属性的枚举。
 
-<!--Device-OH_Drawing_FontVariationAxisAttributeId--><!--Device-OH_Drawing_FontVariationAxisAttributeId-End-->
+<!--Device-enum OH_Drawing_FontVariationAxisAttributeId--><!--Device-enum OH_Drawing_FontVariationAxisAttributeId-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -154,13 +154,13 @@ enum OH_Drawing_FontVariationAxisAttributeId
 
 | 枚举项 | 描述 |
 | -- | -- |
-| FONT_VARIATION_AXIS_ATTR_S_KEY = 0 | 字体可变轴的关键字标识。 |
-| FONT_VARIATION_AXIS_ATTR_D_MIN_VALUE = 1 | 字体可变轴的最小值。 |
-| FONT_VARIATION_AXIS_ATTR_D_MAX_VALUE = 2 | 字体可变轴的最大值。 |
-| FONT_VARIATION_AXIS_ATTR_D_DEFAULT_VALUE = 3 | 字体可变轴的默认值。 |
-| FONT_VARIATION_AXIS_ATTR_I_FLAGS = 4 | 字体可变轴的标志位。值为0时表示该轴对用户可见，值为1时表示该轴应隐藏。 |
-| FONT_VARIATION_AXIS_ATTR_S_NAME = 5 | 字体可变轴的英文名称。 |
-| FONT_VARIATION_AXIS_ATTR_S_LOCAL_NAME = 6 | 字体可变轴的本地化名称。 |
+| FONT_VARIATION_AXIS_ATTR_S_KEY = 0 | 字体可变轴的关键字标识。<br><!--Device-FONT_VARIATION_AXIS_ATTR_S_KEY = 0--><!--Device-FONT_VARIATION_AXIS_ATTR_S_KEY = 0-End--> |
+| FONT_VARIATION_AXIS_ATTR_D_MIN_VALUE = 1 | 字体可变轴的最小值。<br><!--Device-FONT_VARIATION_AXIS_ATTR_D_MIN_VALUE = 1--><!--Device-FONT_VARIATION_AXIS_ATTR_D_MIN_VALUE = 1-End--> |
+| FONT_VARIATION_AXIS_ATTR_D_MAX_VALUE = 2 | 字体可变轴的最大值。<br><!--Device-FONT_VARIATION_AXIS_ATTR_D_MAX_VALUE = 2--><!--Device-FONT_VARIATION_AXIS_ATTR_D_MAX_VALUE = 2-End--> |
+| FONT_VARIATION_AXIS_ATTR_D_DEFAULT_VALUE = 3 | 字体可变轴的默认值。<br><!--Device-FONT_VARIATION_AXIS_ATTR_D_DEFAULT_VALUE = 3--><!--Device-FONT_VARIATION_AXIS_ATTR_D_DEFAULT_VALUE = 3-End--> |
+| FONT_VARIATION_AXIS_ATTR_I_FLAGS = 4 | 字体可变轴的标志位。值为0时表示该轴对用户可见，值为1时表示该轴应隐藏。<br><!--Device-FONT_VARIATION_AXIS_ATTR_I_FLAGS = 4--><!--Device-FONT_VARIATION_AXIS_ATTR_I_FLAGS = 4-End--> |
+| FONT_VARIATION_AXIS_ATTR_S_NAME = 5 | 字体可变轴的英文名称。<br><!--Device-FONT_VARIATION_AXIS_ATTR_S_NAME = 5--><!--Device-FONT_VARIATION_AXIS_ATTR_S_NAME = 5-End--> |
+| FONT_VARIATION_AXIS_ATTR_S_LOCAL_NAME = 6 | 字体可变轴的本地化名称。<br><!--Device-FONT_VARIATION_AXIS_ATTR_S_LOCAL_NAME = 6--><!--Device-FONT_VARIATION_AXIS_ATTR_S_LOCAL_NAME = 6-End--> |
 
 ### OH_Drawing_FontVariationInstanceAttributeId
 
@@ -172,7 +172,7 @@ enum OH_Drawing_FontVariationInstanceAttributeId
 
 字体可变实例属性的枚举。
 
-<!--Device-OH_Drawing_FontVariationInstanceAttributeId--><!--Device-OH_Drawing_FontVariationInstanceAttributeId-End-->
+<!--Device-enum OH_Drawing_FontVariationInstanceAttributeId--><!--Device-enum OH_Drawing_FontVariationInstanceAttributeId-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -180,8 +180,8 @@ enum OH_Drawing_FontVariationInstanceAttributeId
 
 | 枚举项 | 描述 |
 | -- | -- |
-| FONT_VARIATION_INSTANCE_ATTR_S_NAME = 0 | 字体可变实例的英文名称。 |
-| FONT_VARIATION_INSTANCE_ATTR_S_LOCAL_NAME = 1 | 字体可变实例的本地化名称。 |
+| FONT_VARIATION_INSTANCE_ATTR_S_NAME = 0 | 字体可变实例的英文名称。<br><!--Device-FONT_VARIATION_INSTANCE_ATTR_S_NAME = 0--><!--Device-FONT_VARIATION_INSTANCE_ATTR_S_NAME = 0-End--> |
+| FONT_VARIATION_INSTANCE_ATTR_S_LOCAL_NAME = 1 | 字体可变实例的本地化名称。<br><!--Device-FONT_VARIATION_INSTANCE_ATTR_S_LOCAL_NAME = 1--><!--Device-FONT_VARIATION_INSTANCE_ATTR_S_LOCAL_NAME = 1-End--> |
 
 
 ## 函数说明

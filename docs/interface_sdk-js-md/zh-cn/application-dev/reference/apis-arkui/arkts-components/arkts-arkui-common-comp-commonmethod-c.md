@@ -740,7 +740,7 @@ align(value: Alignment): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 | 设置当前组件绘制区域内的子组件的对齐方式。<br>只在Stack, [FolderStack](arkts-arkui-folderstack-comp.md), [Shape](arkts-arkui-shape-comp.md), Button, Marquee, [StepperItem](arkts-arkui-stepperitem-comp.md), Text, TextArea, TextInput, [RichEditor](arkts-arkui-richeditor-comp.md), Hyperlink, SymbolGlyph, ListItem, GridItem, Scroll, FlowItem, [ImageAnimator](arkts-arkui-imageanimator-comp.md), LoadingProgress, [PatternLock](arkts-arkui-patternlock-comp.md), Progress, QRCode, TextClock, TextTimer, MenuItem, Toggle, Checkbox, and [NodeContainer](arkts-arkui-nodecontainer-comp-attribute.md#nodecontainer)中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic- components-text.md#textalign)。<br>不支持textAlign属性的组件则无法设置水平方向的文字对齐。<br>默认值：Alignment.Center<br>**说明：** <br>该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。<br>在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对齐方式。 |
+| value | Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 | 设置当前组件绘制区域内的子组件的对齐方式。<br>只在[Stack, [FolderStack](arkts-arkui-folderstack-comp.md), [Shape](arkts-arkui-shape-comp.md), Button, Marquee, [StepperItem](arkts-arkui-stepperitem-comp.md), Text, TextArea, TextInput, [RichEditor](arkts-arkui-richeditor-comp.md), Hyperlink, SymbolGlyph, ListItem, GridItem, Scroll, FlowItem, [ImageAnimator](arkts-arkui-imageanimator-comp.md), LoadingProgress, [PatternLock](arkts-arkui-patternlock-comp.md), Progress, QRCode, TextClock, TextTimer, MenuItem, Toggle, Checkbox, and [NodeContainer](arkts-arkui-nodecontainer-comp-attribute.md#nodecontainer)中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic- components-text.md#textalign)。<br>不支持textAlign属性的组件则无法设置水平方向的文字对齐。<br>默认值：Alignment.Center<br>**说明：** <br>该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。<br>在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对齐方式。 |
 
 **返回值：**
 
@@ -3450,7 +3450,7 @@ drawModifier(modifier: DrawModifier | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | 是 | 自定义绘制修改器，其中定义了自定义绘制的逻辑。<br>默认值：undefined，未设置自定义绘制修改器时，组件使用原有默认绘制行为，不进行自定义绘制。<br>**说明：** <br>每个自定义绘制修改器只对当前绑定组件的FrameNode生效，对其子节点不生效。每个DrawModifier实例只能设置到一个组件上，禁止重复设置。 |
+| modifier | DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | 是 | 自定义绘制修改器，其中定义了自定义绘制的逻辑。<br>默认值：undefined，未设置自定义绘制修改器时，组件使用原有默认绘制行为，不进行自定义绘制。<br>**说明：** <br>每个自定义绘制修改器只对当前绑定组件的[FrameNode生效，对其子节点不生效。每个DrawModifier实例只能设置到一个组件上，禁止重复设置。 |
 
 **返回值：**
 
@@ -5054,7 +5054,7 @@ margin(value: Margin | Length | LocalizedMargin): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | 是 | 设置组件的外边距。<br>参数为Length类型时，四个方向外边距同时生效。<br>默认值：0 <br>单位：vp <br>margin设置百分比时，上下左右外边距均以父容器的width作为基础值。在Row、Column、[Flex](arkts-arkui-flex-comp.md)交叉轴上布局时，子组件在交叉轴方向占用的空间包含子组件本身尺寸和margin值。<br>例如Column容器宽100，其中子组件宽50，margin left为10，right为20，子组件宽度与左右margin之和为50+10+20=80，小于容器宽度100，子组件在交叉轴方向居中对齐，此时水平方向左侧和右侧各有(100-80)/2=10的空白区域。<br>**适用版本：** 12 |
+| value | Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | 是 | 设置组件的外边距。<br>参数为Length类型时，四个方向外边距同时生效。<br>默认值：0 <br>单位：vp <br>margin设置百分比时，上下左右外边距均以父容器的width作为基础值。在[Row、Column、[Flex](arkts-arkui-flex-comp.md)交叉轴上布局时，子组件在交叉轴方向占用的空间包含子组件本身尺寸和margin值。<br>例如Column容器宽100，其中子组件宽50，margin left为10，right为20，子组件宽度与左右margin之和为50+10+20=80，小于容器宽度100，子组件在交叉轴方向居中对齐，此时水平方向左侧和右侧各有(100-80)/2=10的空白区域。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -5528,7 +5528,7 @@ obscured(reasons: Array<ObscuredReasons>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：[]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在Image组件、[Text](arkts-arkui-text-comp.md)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md)组件<sup>12+</sup><!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styledstring-c.md)时，不支持隐私遮罩。 |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在[Image组件、[Text](arkts-arkui-text-comp.md)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md)组件<sup>12+</sup><!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styledstring-c.md)时，不支持隐私遮罩。 |
 
 **返回值：**
 

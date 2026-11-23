@@ -24,7 +24,7 @@ WebSocket客户端接收到服务端关闭的参数。
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t code | 错误码。 |
-| const char *reason | 错误原因。 |
+| uint32_t code | 错误码。<br><!--Device-uint32_t code--><!--Device-uint32_t code-End--> |
+| const char *reason | 错误原因。<br><!--Device-const char *reason--><!--Device-const char *reason-End--> |
 
 

@@ -24,10 +24,10 @@ Defines the configuration struct of an NFQueue (a packet queuing channel in the 
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.1 |
-| uint32_t packetCopyMode | Packet copy mode. For details, see [OH_TrafficFilter_PacketCopyMode](capi-net-trafficfilter-type-h.md#oh_trafficfilter_packetcopymode). The default value is **2**.<br>**Since**: 26.0.1 |
-| uint32_t packetCopyLen | Length (in bytes) of the packet copied by the NFQueue. The value ranges from 0 to 0xFFFF. 0xFFFF means copying the entire packet, and other values mean copying the packet header of the specified length. The default value is 0xFFFF.<br>**Since**: 26.0.1 |
-| uint32_t nfqueueMaxlen | Maximum queue length (number of packets) of the NFQueue. **0** means using the system default value (1024).<br>**Since**: 26.0.1 |
-| uint32_t nfqueueFlags | NFQueue queue flag. For details, see [OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN](capi-net-trafficfilter-type-h.md#macros). The default value is **0x1**.<br>**Since**: 26.0.1 |
+| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.1<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint32_t packetCopyMode | Packet copy mode. For details, see [OH_TrafficFilter_PacketCopyMode](capi-net-trafficfilter-type-h.md#oh_trafficfilter_packetcopymode). The default value is **2**.<br>**Since**: 26.0.1<br><!--Device-uint32_t packetCopyMode--><!--Device-uint32_t packetCopyMode-End--> |
+| uint32_t packetCopyLen | Length (in bytes) of the packet copied by the NFQueue. The value ranges from 0 to 0xFFFF. 0xFFFF means copying the entire packet, and other values mean copying the packet header of the specified length. The default value is 0xFFFF.<br>**Since**: 26.0.1<br><!--Device-uint32_t packetCopyLen--><!--Device-uint32_t packetCopyLen-End--> |
+| uint32_t nfqueueMaxlen | Maximum queue length (number of packets) of the NFQueue. **0** means using the system default value (1024).<br>**Since**: 26.0.1<br><!--Device-uint32_t nfqueueMaxlen--><!--Device-uint32_t nfqueueMaxlen-End--> |
+| uint32_t nfqueueFlags | NFQueue queue flag. For details, see [OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN](capi-net-trafficfilter-type-h.md#macros). The default value is **0x1**.<br>**Since**: 26.0.1<br><!--Device-uint32_t nfqueueFlags--><!--Device-uint32_t nfqueueFlags-End--> |
 
 

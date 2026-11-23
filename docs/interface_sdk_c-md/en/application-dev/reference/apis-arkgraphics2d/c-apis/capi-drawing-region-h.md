@@ -53,7 +53,7 @@ enum OH_Drawing_RegionOpMode
 
 Enumerates the operation modes available for a region.
 
-<!--Device-OH_Drawing_RegionOpMode--><!--Device-OH_Drawing_RegionOpMode-End-->
+<!--Device-enum OH_Drawing_RegionOpMode--><!--Device-enum OH_Drawing_RegionOpMode-End-->
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -61,12 +61,12 @@ Enumerates the operation modes available for a region.
 
 | Enum item | Description |
 | -- | -- |
-| REGION_OP_MODE_DIFFERENCE | Difference operation. |
-| REGION_OP_MODE_INTERSECT | Intersection operation. |
-| REGION_OP_MODE_UNION | Union operation. |
-| REGION_OP_MODE_XOR | XOR operation. |
-| REGION_OP_MODE_REVERSE_DIFFERENCE | Reverse difference operation. |
-| REGION_OP_MODE_REPLACE | Replacement operation. |
+| REGION_OP_MODE_DIFFERENCE | Difference operation.<br><!--Device-REGION_OP_MODE_DIFFERENCE--><!--Device-REGION_OP_MODE_DIFFERENCE-End--> |
+| REGION_OP_MODE_INTERSECT | Intersection operation.<br><!--Device-REGION_OP_MODE_INTERSECT--><!--Device-REGION_OP_MODE_INTERSECT-End--> |
+| REGION_OP_MODE_UNION | Union operation.<br><!--Device-REGION_OP_MODE_UNION--><!--Device-REGION_OP_MODE_UNION-End--> |
+| REGION_OP_MODE_XOR | XOR operation.<br><!--Device-REGION_OP_MODE_XOR--><!--Device-REGION_OP_MODE_XOR-End--> |
+| REGION_OP_MODE_REVERSE_DIFFERENCE | Reverse difference operation.<br><!--Device-REGION_OP_MODE_REVERSE_DIFFERENCE--><!--Device-REGION_OP_MODE_REVERSE_DIFFERENCE-End--> |
+| REGION_OP_MODE_REPLACE | Replacement operation.<br><!--Device-REGION_OP_MODE_REPLACE--><!--Device-REGION_OP_MODE_REPLACE-End--> |
 
 
 ## Function description

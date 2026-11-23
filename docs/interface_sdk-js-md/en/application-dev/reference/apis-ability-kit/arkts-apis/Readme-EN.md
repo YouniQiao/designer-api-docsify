@@ -979,6 +979,8 @@
   <!--Del-->
   - [unregisterFunctionHook(system api)](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
   - [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i.md)
+  <!--Del-->
+  - [InvokeOptions(system api)](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
   - [InvokeResult](arkts-ability-functionmanager-invokeresult-i.md)
 <!--Del-->
 - [@ohos.application.uriPermissionManager(URI Permission Manager)](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->

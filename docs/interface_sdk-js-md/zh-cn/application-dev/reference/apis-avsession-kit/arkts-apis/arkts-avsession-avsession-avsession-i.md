@@ -2543,7 +2543,7 @@ on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Obje
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'commonCommand' | 是 | 事件回调类型，支持事件`'commonCommand'`：当自定义控制命令变化时，触发该事件。 |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | 是 | 回调函数，command为变化的自定义控制命令名，args为自定义控制命令的参数，参数内容与sendCommonCommand)}方法设置的参数内容完全一致。 |
+| callback | (command: string, args: {key: string]: Object}) =&gt; void | 是 | 回调函数，command为变化的自定义控制命令名，args为自定义控制命令的参数，参数内容与[sendCommonCommand)}方法设置的参数内容完全一致。 |
 
 **错误码：**
 

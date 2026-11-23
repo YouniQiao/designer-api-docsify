@@ -93,7 +93,7 @@ enum OH_TrafficFilter_ErrCode
 
 Defines the error codes for traffic filtering and redirection.
 
-<!--Device-OH_TrafficFilter_ErrCode--><!--Device-OH_TrafficFilter_ErrCode-End-->
+<!--Device-enum OH_TrafficFilter_ErrCode--><!--Device-enum OH_TrafficFilter_ErrCode-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -101,14 +101,14 @@ Defines the error codes for traffic filtering and redirection.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_OK = 0 | Operation succeeded.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_E_BASE = 29410000 | Base value for the error code.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201 | Permission denied.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101) | Parameter error (invalid priority, IP address, port, or group ID).<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102) | Resource not found (rule, target, process, or group ID not found).<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103) | Too many rules.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104) | Group ID already in use.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105) | NFQueue error (initialization failed or no available queue).<br>**Since**: 26.0.0 |
+| OH_TRAFFICFILTER_OK = 0 | Operation succeeded.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_OK = 0--><!--Device-OH_TRAFFICFILTER_OK = 0-End--> |
+| OH_TRAFFICFILTER_E_BASE = 29410000 | Base value for the error code.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_E_BASE = 29410000--><!--Device-OH_TRAFFICFILTER_E_BASE = 29410000-End--> |
+| OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201 | Permission denied.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201--><!--Device-OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED = 201-End--> |
+| OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101) | Parameter error (invalid priority, IP address, port, or group ID).<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101)--><!--Device-OH_TRAFFICFILTER_ERROR_INVALID_PARAM = (OH_TRAFFICFILTER_E_BASE + 101)-End--> |
+| OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102) | Resource not found (rule, target, process, or group ID not found).<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102)--><!--Device-OH_TRAFFICFILTER_ERROR_NOT_FOUND = (OH_TRAFFICFILTER_E_BASE + 102)-End--> |
+| OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103) | Too many rules.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103)--><!--Device-OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES = (OH_TRAFFICFILTER_E_BASE + 103)-End--> |
+| OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104) | Group ID already in use.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104)--><!--Device-OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE = (OH_TRAFFICFILTER_E_BASE + 104)-End--> |
+| OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105) | NFQueue error (initialization failed or no available queue).<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105)--><!--Device-OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR = (OH_TRAFFICFILTER_E_BASE + 105)-End--> |
 
 ### OH_TrafficFilter_IPMatchType
 
@@ -120,7 +120,7 @@ enum OH_TrafficFilter_IPMatchType
 
 Defines an IP match type.
 
-<!--Device-OH_TrafficFilter_IPMatchType--><!--Device-OH_TrafficFilter_IPMatchType-End-->
+<!--Device-enum OH_TrafficFilter_IPMatchType--><!--Device-enum OH_TrafficFilter_IPMatchType-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -128,11 +128,11 @@ Defines an IP match type.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_IP_MATCH_ANY = 0 | Any IP address.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_SINGLE | Single IP address.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_CIDR | CIDR (for example, **192.168.1.0/24**, which matches all IP addresses in the subnet).<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_RANGE | IP address range.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_MATCH_MULTI | Multiple IP addresses.<br>**Since**: 26.0.0 |
+| OH_TRAFFICFILTER_IP_MATCH_ANY = 0 | Any IP address.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_ANY = 0--><!--Device-OH_TRAFFICFILTER_IP_MATCH_ANY = 0-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_SINGLE | Single IP address.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_SINGLE--><!--Device-OH_TRAFFICFILTER_IP_MATCH_SINGLE-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_CIDR | CIDR (for example, **192.168.1.0/24**, which matches all IP addresses in the subnet).<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_CIDR--><!--Device-OH_TRAFFICFILTER_IP_MATCH_CIDR-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_RANGE | IP address range.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_RANGE--><!--Device-OH_TRAFFICFILTER_IP_MATCH_RANGE-End--> |
+| OH_TRAFFICFILTER_IP_MATCH_MULTI | Multiple IP addresses.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_MATCH_MULTI--><!--Device-OH_TRAFFICFILTER_IP_MATCH_MULTI-End--> |
 
 ### OH_TrafficFilter_IPFamily
 
@@ -144,7 +144,7 @@ enum OH_TrafficFilter_IPFamily
 
 Defines an IP address family.
 
-<!--Device-OH_TrafficFilter_IPFamily--><!--Device-OH_TrafficFilter_IPFamily-End-->
+<!--Device-enum OH_TrafficFilter_IPFamily--><!--Device-enum OH_TrafficFilter_IPFamily-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -152,9 +152,9 @@ Defines an IP address family.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0 | Unspecified IP address family.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_FAMILY_V4 = 1 | IPv4 address family.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_IP_FAMILY_V6 = 2 | IPv6 address family.<br>**Since**: 26.0.0 |
+| OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0 | Unspecified IP address family.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_UNSPEC = 0-End--> |
+| OH_TRAFFICFILTER_IP_FAMILY_V4 = 1 | IPv4 address family.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V4 = 1--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V4 = 1-End--> |
+| OH_TRAFFICFILTER_IP_FAMILY_V6 = 2 | IPv6 address family.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V6 = 2--><!--Device-OH_TRAFFICFILTER_IP_FAMILY_V6 = 2-End--> |
 
 ### OH_TrafficFilter_PortMatchType
 
@@ -166,7 +166,7 @@ enum OH_TrafficFilter_PortMatchType
 
 Defines a port match type.
 
-<!--Device-OH_TrafficFilter_PortMatchType--><!--Device-OH_TrafficFilter_PortMatchType-End-->
+<!--Device-enum OH_TrafficFilter_PortMatchType--><!--Device-enum OH_TrafficFilter_PortMatchType-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -174,10 +174,10 @@ Defines a port match type.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_PORT_MATCH_ANY = 0 | Any port.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_SINGLE | Single port.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_RANGE | Port range.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_PORT_MATCH_MULTI | Multiple ports.<br>**Since**: 26.0.0 |
+| OH_TRAFFICFILTER_PORT_MATCH_ANY = 0 | Any port.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_ANY = 0--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_ANY = 0-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_SINGLE | Single port.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_SINGLE--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_SINGLE-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_RANGE | Port range.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_RANGE--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_RANGE-End--> |
+| OH_TRAFFICFILTER_PORT_MATCH_MULTI | Multiple ports.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_PORT_MATCH_MULTI--><!--Device-OH_TRAFFICFILTER_PORT_MATCH_MULTI-End--> |
 
 ### OH_TrafficFilter_HookPoint
 
@@ -189,7 +189,7 @@ enum OH_TrafficFilter_HookPoint
 
 Enumerates the hook points, specifying where the rule takes effect in the network protocol stack. As packets pass through the kernel network protocol stack, hook points are triggered at different stages, and the rule intercepts packets at the corresponding hook points. For example, the INPUT chain processes packets entering the local device, and the OUTPUT chain processes packets sent from the local device.
 
-<!--Device-OH_TrafficFilter_HookPoint--><!--Device-OH_TrafficFilter_HookPoint-End-->
+<!--Device-enum OH_TrafficFilter_HookPoint--><!--Device-enum OH_TrafficFilter_HookPoint-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -197,11 +197,11 @@ Enumerates the hook points, specifying where the rule takes effect in the networ
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_HOOK_INPUT = 0 | INPUT chain that processes packets received by the local host.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_OUTPUT | OUTPUT chain that processes packets sent from the local host.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_FORWARD | FORWARD chain that processes packets forwarded by the local host.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_PREROUTING | PREROUTING chain that processes packets that have arrived at the NIC but not been routed.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_HOOK_POSTROUTING | POSTROUTING chain that processes packets about to be sent from the NIC.<br>**Since**: 26.0.0 |
+| OH_TRAFFICFILTER_HOOK_INPUT = 0 | INPUT chain that processes packets received by the local host.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_INPUT = 0--><!--Device-OH_TRAFFICFILTER_HOOK_INPUT = 0-End--> |
+| OH_TRAFFICFILTER_HOOK_OUTPUT | OUTPUT chain that processes packets sent from the local host.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_OUTPUT--><!--Device-OH_TRAFFICFILTER_HOOK_OUTPUT-End--> |
+| OH_TRAFFICFILTER_HOOK_FORWARD | FORWARD chain that processes packets forwarded by the local host.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_FORWARD--><!--Device-OH_TRAFFICFILTER_HOOK_FORWARD-End--> |
+| OH_TRAFFICFILTER_HOOK_PREROUTING | PREROUTING chain that processes packets that have arrived at the NIC but not been routed.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_PREROUTING--><!--Device-OH_TRAFFICFILTER_HOOK_PREROUTING-End--> |
+| OH_TRAFFICFILTER_HOOK_POSTROUTING | POSTROUTING chain that processes packets about to be sent from the NIC.<br>**Since**: 26.0.0<br><!--Device-OH_TRAFFICFILTER_HOOK_POSTROUTING--><!--Device-OH_TRAFFICFILTER_HOOK_POSTROUTING-End--> |
 
 ### OH_TrafficFilter_PacketDecision
 
@@ -213,7 +213,7 @@ enum OH_TrafficFilter_PacketDecision
 
 Enumerates the packet processing decision types.
 
-<!--Device-OH_TrafficFilter_PacketDecision--><!--Device-OH_TrafficFilter_PacketDecision-End-->
+<!--Device-enum OH_TrafficFilter_PacketDecision--><!--Device-enum OH_TrafficFilter_PacketDecision-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -221,8 +221,8 @@ Enumerates the packet processing decision types.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | Accepts the packet.<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_DECISION_DROP | Drops the packet.<br>**Since**: 26.0.1 |
+| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | Accepts the packet.<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_DECISION_ACCEPT = 0--><!--Device-OH_TRAFFICFILTER_DECISION_ACCEPT = 0-End--> |
+| OH_TRAFFICFILTER_DECISION_DROP | Drops the packet.<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_DECISION_DROP--><!--Device-OH_TRAFFICFILTER_DECISION_DROP-End--> |
 
 ### OH_TrafficFilter_PacketCopyMode
 
@@ -234,7 +234,7 @@ enum OH_TrafficFilter_PacketCopyMode
 
 Enumerates the packet copy modes.
 
-<!--Device-OH_TrafficFilter_PacketCopyMode--><!--Device-OH_TrafficFilter_PacketCopyMode-End-->
+<!--Device-enum OH_TrafficFilter_PacketCopyMode--><!--Device-enum OH_TrafficFilter_PacketCopyMode-End-->
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
@@ -242,10 +242,10 @@ Enumerates the packet copy modes.
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_COPY_MODE_META = 0 | Copies only the metadata (without copying the packet data).<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | Copies only the packet header (specified by **packetCopyLen**).<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | Copies the entire packet.<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | Copies the packet of the specified maximum length.<br>**Since**: 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_META = 0 | Copies only the metadata (without copying the packet data).<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_META = 0--><!--Device-OH_TRAFFICFILTER_COPY_MODE_META = 0-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | Copies only the packet header (specified by **packetCopyLen**).<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_HEADER = 1--><!--Device-OH_TRAFFICFILTER_COPY_MODE_HEADER = 1-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | Copies the entire packet.<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_FULL = 2--><!--Device-OH_TRAFFICFILTER_COPY_MODE_FULL = 2-End--> |
+| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | Copies the packet of the specified maximum length.<br>**Since**: 26.0.1<br><!--Device-OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3--><!--Device-OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3-End--> |
 
 
 ## Function description

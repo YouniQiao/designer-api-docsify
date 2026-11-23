@@ -81,7 +81,7 @@ enum OH_AVCodecCategory
 
 编解码器类别。
 
-<!--Device-OH_AVCodecCategory--><!--Device-OH_AVCodecCategory-End-->
+<!--Device-enum OH_AVCodecCategory--><!--Device-enum OH_AVCodecCategory-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
@@ -89,8 +89,8 @@ enum OH_AVCodecCategory
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HARDWARE = 0 | 硬件编解码。<br>**起始版本：** 10 |
-| SOFTWARE | 软件编解码。<br>**起始版本：** 10 |
+| HARDWARE = 0 | 硬件编解码。<br>**起始版本：** 10<br><!--Device-HARDWARE = 0--><!--Device-HARDWARE = 0-End--> |
+| SOFTWARE | 软件编解码。<br>**起始版本：** 10<br><!--Device-SOFTWARE--><!--Device-SOFTWARE-End--> |
 
 ### OH_AVCodecType
 
@@ -102,7 +102,7 @@ enum OH_AVCodecType
 
 编解码器类型。
 
-<!--Device-OH_AVCodecType--><!--Device-OH_AVCodecType-End-->
+<!--Device-enum OH_AVCodecType--><!--Device-enum OH_AVCodecType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
@@ -110,10 +110,10 @@ enum OH_AVCodecType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | 表示视频编码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | 表示视频解码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | 表示音频编码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | 表示音频解码器。<br>**起始版本：** 24 |
+| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | 表示视频编码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0--><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0-End--> |
+| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | 表示视频解码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1--><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1-End--> |
+| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | 表示音频编码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2--><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2-End--> |
+| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | 表示音频解码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3--><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3-End--> |
 
 ### OH_AVCapabilityFeature
 
@@ -125,7 +125,7 @@ enum OH_AVCapabilityFeature
 
 可以在特定编解码器场景中使用的可选特性。
 
-<!--Device-OH_AVCapabilityFeature--><!--Device-OH_AVCapabilityFeature-End-->
+<!--Device-enum OH_AVCapabilityFeature--><!--Device-enum OH_AVCapabilityFeature-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
@@ -133,13 +133,13 @@ enum OH_AVCapabilityFeature
 
 | 枚举项 | 描述 |
 | -- | -- |
-| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | 编解码器支持时域可分层特性，只用于视频编码场景。<br>**起始版本：** 12 |
-| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | 编解码器支持长期参考帧特性，只用于视频编码场景。<br>**起始版本：** 12 |
-| VIDEO_LOW_LATENCY = 2 | 编解码器支持低时延特性，只用于视频解码场景。<br>**起始版本：** 12 |
-| VIDEO_ENCODER_B_FRAME = 7 | 编解码器支持B帧特性，只用于视频编码场景。<br>**起始版本：** 20 |
-| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | 解码器支持按解码顺序输出帧特性，只用于视频解码场景。<br>**起始版本：** 26.0.0 |
-| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | 编码器支持视频编码前处理降采样特性，该能力仅适用于视频编码器。<br>**起始版本：** 26.0.0 |
-| VIDEO_ENCODER_PREPROC_CROP = 10 | 编码器支持视频编码前处理裁剪特性，该特性仅适用于视频编码器。<br>**起始版本：** 26.0.0 |
+| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | 编解码器支持时域可分层特性，只用于视频编码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0--><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0-End--> |
+| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | 编解码器支持长期参考帧特性，只用于视频编码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1--><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1-End--> |
+| VIDEO_LOW_LATENCY = 2 | 编解码器支持低时延特性，只用于视频解码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_LOW_LATENCY = 2--><!--Device-VIDEO_LOW_LATENCY = 2-End--> |
+| VIDEO_ENCODER_B_FRAME = 7 | 编解码器支持B帧特性，只用于视频编码场景。<br>**起始版本：** 20<br><!--Device-VIDEO_ENCODER_B_FRAME = 7--><!--Device-VIDEO_ENCODER_B_FRAME = 7-End--> |
+| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | 解码器支持按解码顺序输出帧特性，只用于视频解码场景。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8--><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8-End--> |
+| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | 编码器支持视频编码前处理降采样特性，该能力仅适用于视频编码器。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9--><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9-End--> |
+| VIDEO_ENCODER_PREPROC_CROP = 10 | 编码器支持视频编码前处理裁剪特性，该特性仅适用于视频编码器。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10--><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10-End--> |
 
 
 ## 函数说明

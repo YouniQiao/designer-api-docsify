@@ -444,7 +444,7 @@ off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'appVolumeChange' | 是 | 事件回调类型，支持的事件为'appVolumeChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('appVolumeChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('appVolumeChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -487,7 +487,7 @@ off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'streamVolumeChange' | 是 | 事件回调类型，支持的事件为'streamVolumeChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('streamVolumeChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('streamVolumeChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 

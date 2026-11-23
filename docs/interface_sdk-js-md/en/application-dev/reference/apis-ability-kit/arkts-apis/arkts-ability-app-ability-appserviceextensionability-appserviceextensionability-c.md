@@ -16,9 +16,10 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 
 ## Constraints
 
-- Currently, only 2-in-1 devices are supported.  
-- To integrate an AppServiceExtensionAbility, applications must request the ACL permission  
-(ohos.permission.SUPPORT_APP_SERVICE_EXTENSION). This ACL permission is available only for enterprise applications.
+- AppServiceExtensionAbility is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported  
+on phones and tablets, subject to product configuration.  
+- To integrate an AppServiceExtensionAbility, the application must be granted an ACL permission. On phones and  
+tablets, ohos.permission.SUPPORT_APP_SERVICE_EXTENSION_ADVANCED is required and is available only for MDM applications. On PC/2-in-1 devices, either this permission or ohos.permission.SUPPORT_APP_SERVICE_EXTENSION (available only for enterprise applications) is required.
 
 ## Lifecycle
 
@@ -44,7 +45,7 @@ onConnect(want: Want): rpc.RemoteObject
 
 Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability).
 
-**Device Behavior Differences:** This API executes the callback normally only on PC/2-in-1 devices. On other devices, the callback is not executed.
+**Device Behavior Differences:** This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the callback is not invoked.
 
 **Since:** 20
 
@@ -106,7 +107,7 @@ Called when an AppServiceExtensionAbility instance is created. Applications can 
 > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked
 > again when the instance is started or connected.
 
-**Device Behavior Differences:** This API executes the callback normally only on PC/2-in-1 devices and does not execute the callback on other devices.
+**Device Behavior Differences:** This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the callback is not invoked.
 
 **Since:** 20
 
@@ -145,7 +146,7 @@ onDestroy(): void
 
 Called when an AppServiceExtensionAbility instance is destroyed. Applications can perform resource cleanup operations, such as unregistering listeners, in this callback.
 
-**Device Behavior Differences:** This API executes the callback normally only on PC/2-in-1 devices and does not execute the callback on other devices.
+**Device Behavior Differences:** This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the callback is not invoked.
 
 **Since:** 20
 
@@ -178,7 +179,7 @@ onDisconnect(want: Want): void
 
 Called when all connections to an AppServiceExtensionAbility instance are interrupted.
 
-**Device Behavior Differences:** This API executes the callback normally only on PC/2-in-1 devices. On other devices, the callback is not executed.
+**Device Behavior Differences:** This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the callback is not invoked.
 
 **Since:** 20
 
@@ -217,7 +218,7 @@ onRequest(want: Want, startId: number): void
 
 Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability).
 
-**Device Behavior Differences:** This API executes the callback normally only on PC/2-in-1 devices and does not execute the callback on other devices.
+**Device Behavior Differences:** This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the callback is not invoked.
 
 **Since:** 20
 
@@ -257,7 +258,7 @@ context: AppServiceExtensionContext
 
 Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
-**Device Behavior Differences:** This attribute can be called normally only on PC/2-in-1 devices and does not take effect on other devices.
+**Device Behavior Differences:** This attribute is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, the attribute does not take effect.
 
 **Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 

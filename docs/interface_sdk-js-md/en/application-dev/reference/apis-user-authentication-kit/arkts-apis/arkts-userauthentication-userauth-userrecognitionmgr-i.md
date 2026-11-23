@@ -95,7 +95,7 @@ Unsubscribes from the user recognition result change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | No | Callback to be canceled. Only the callback subscribed through onUserRecognitionChange of this instance can be canceled. If this parameter is not specified, all callbacks registered under this instance are canceled. |
+| callback | UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | No | Callback to be canceled. Only the callback subscribed through [onUserRecognitionChange of this instance can be canceled. If this parameter is not specified, all callbacks registered under this instance are canceled. |
 
 **Error codes:**
 

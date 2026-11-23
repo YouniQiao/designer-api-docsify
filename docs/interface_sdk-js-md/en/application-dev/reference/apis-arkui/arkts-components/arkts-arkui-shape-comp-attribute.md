@@ -64,7 +64,7 @@ Sets the color of the fill area. This attribute can be dynamically set using [at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area.<br>Default value: Color.Black<br>The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area.<br>Default value: [Color.Black<br>The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
 
 ## fillOpacity
 
@@ -154,7 +154,7 @@ Sets the stroke color. This attribute can be dynamically set using [attributeMod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color.<br>Default value: Color.Transparent<br>Invalid values **undefined** and **null** values are treated as the default value, and invalid values **NaN** and **Infinity** are treated as Color.Black. |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color.<br>Default value: [Color.Transparent<br>Invalid values **undefined** and **null** values are treated as the default value, and invalid values **NaN** and **Infinity** are treated as Color.Black. |
 
 ## strokeDashArray
 

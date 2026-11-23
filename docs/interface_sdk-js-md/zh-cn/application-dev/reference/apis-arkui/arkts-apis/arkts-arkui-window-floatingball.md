@@ -3,8 +3,10 @@
 该模块提供闪控球的基础功能，包括判断设备是否支持闪控球功能，以及创建闪控球控制器来启动、更新或停止闪控球。适用于跨应用的题目搜索、账单记录、商品比价、抢单、翻译场景，以及金融类应用的实时盯盘场景，以小窗模式呈现内容。闪控球以悬浮小组件形式显示在其他应用之上，即时呈现应用的关键信息。
 
 > **说明：** 
-> 
+> - 在OpenHarmony 7.0.0之前，支持在 Tablet 设备的非电脑模式、Phone 设备使用闪控球功能，其他设备不可用；从 OpenHarmony 7.0.0开始，支持在 Phone、PC/2in1、Tablet设备使用闪控球功能，其他设备不可用。
 > - 针对系统能力SystemCapability.Window.SessionManager，请先使用[canIUse()](arkts-arkui-global-caniuse-f.md)接口判断当前设备是否支持此syscap及对应接口。
+
+**与闪控窗联动：**本模块可与[@ohos.window.floatView](arkts-arkui-window-floatview.md)（闪控窗）联合使用。通过[floatView.bind](arkts-arkui-floatview-bind-f.md)接口将闪控窗与闪控球控制器绑定后，用户点击闪控球可展开为闪控窗，点击闪控窗左上角的缩小按钮可收起为闪控球，实现两种窗口形态的相互切换。
 
 **起始版本：** 20
 

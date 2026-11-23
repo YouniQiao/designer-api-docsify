@@ -177,7 +177,7 @@ readonly accessibilityScrollable?: boolean
 
 true表示元素可滚动，false表示元素不可滚动。
 
-默认值：false。
+默认值：true。
 
 **类型：** boolean
 
@@ -309,7 +309,7 @@ readonly componentId?: number
 
 元素所属组件的ID。
 
-默认值：-1。
+默认值为-1。-1表示的是一个非法的组件ID。
 
 **类型：** number
 
@@ -601,7 +601,7 @@ readonly pageId?: number
 
 页面ID。
 
-默认值：-1。
+默认值为-1。-1表示非法的页面ID。
 
 **类型：** number
 
@@ -619,7 +619,7 @@ readonly pageId?: number
 readonly parentId?: number
 ```
 
-组件的父元素ID。默认值：-1。
+组件的父元素ID。-1表示当前组件没有父元素。默认值为-1。
 
 **类型：** number
 
@@ -713,7 +713,7 @@ readonly text?: string
 readonly textLengthLimit?: number
 ```
 
-元素的最大文本长度。默认值：0。
+元素的最大文本长度。默认值为0，单位为字节（Byte）。
 
 **类型：** number
 

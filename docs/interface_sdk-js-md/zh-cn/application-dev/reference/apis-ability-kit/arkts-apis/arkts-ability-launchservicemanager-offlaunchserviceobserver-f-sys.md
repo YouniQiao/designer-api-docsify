@@ -46,4 +46,4 @@ function offLaunchServiceObserver(observerId: number): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability. <br>2. The chip does not support the capability. <br>3. A dependent service feature is not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | System service connection failed. |
-| 16000216 | The specified id is invalid. |
+| [16000216](../errorcode-ability.md#16000216-指定的观察者id无效) | The specified id is invalid. |

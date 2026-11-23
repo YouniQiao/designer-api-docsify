@@ -94,7 +94,7 @@ offUserRecognitionChange(callback?: UserRecognitionResultCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | 否 | 要取消的回调。仅可取消通过本实例onUserRecognitionChange订阅的回调；不指定则取消本实例下所有已注册的回调。 |
+| callback | UserRecognitionResultCallback](arkts-userauthentication-userauth-userrecognitionresultcallback-t.md) | 否 | 要取消的回调。仅可取消通过本实例[onUserRecognitionChange订阅的回调；不指定则取消本实例下所有已注册的回调。 |
 
 **错误码：**
 

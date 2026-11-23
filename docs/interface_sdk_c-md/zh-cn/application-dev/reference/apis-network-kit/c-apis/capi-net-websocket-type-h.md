@@ -53,7 +53,7 @@ enum WebSocket_ErrCode
 
 定义WebSocket请求的错误码。
 
-<!--Device-WebSocket_ErrCode--><!--Device-WebSocket_ErrCode-End-->
+<!--Device-enum WebSocket_ErrCode--><!--Device-enum WebSocket_ErrCode-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -61,25 +61,25 @@ enum WebSocket_ErrCode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| WEBSOCKET_OK = 0 | 操作成功。 |
-| E_BASE = 1000 | 错误码基准值。 |
-| WEBSOCKET_CLIENT_NULL = (E_BASE + 1) | WebSocket客户端为空。 |
-| WEBSOCKET_CLIENT_NOT_CREATED = (E_BASE + 2) | WebSocket客户端未创建。 |
-| WEBSOCKET_CONNECTION_ERROR = (E_BASE + 3) | 建立WebSocket连接时发生错误。 |
-| WEBSOCKET_CONNECTION_PARSE_URL_ERROR = (E_BASE + 5) | 解析WebSocket连接参数时出错。 |
-| WEBSOCKET_CONNECTION_NO_MEMORY = (E_BASE + 6) | WebSocket客户端建立连接过程中内存不足。 |
-| WEBSOCKET_CONNECTION_CLOSED_BY_PEER = (E_BASE + 7) | WebSocket连接被对端关闭。 |
-| WEBSOCKET_DESTROYED = (E_BASE + 8) | WebSocket连接断开。 |
-| WEBSOCKET_PROTOCOL_ERROR = (E_BASE + 9) | 协议错误。 |
-| WEBSOCKET_SEND_NO_MEMORY = (E_BASE + 10) | WebSocket客户端发送数据时系统内存不足。 |
-| WEBSOCKET_SEND_DATA_NULL = (E_BASE + 11) | 发送数据为空。 |
-| WEBSOCKET_DATA_LENGTH_EXCEEDED = (E_BASE + 12) | 发送数据长度超出限制。 |
-| WEBSOCKET_QUEUE_LENGTH_EXCEEDED = (E_BASE + 13) | 发送数据队列长度超出限制。 |
-| WEBSOCKET_NO_CLIENT_CONTEXT = (E_BASE + 14) | WebSocket客户端的上下文为空。 |
-| WEBSOCKET_NO_HEADER_CONTEXT = (E_BASE + 15) | WebSocket客户端协议头为空。 |
-| WEBSOCKET_HEADER_EXCEEDED = (E_BASE + 16) | WebSocket客户端协议头超出限制。 |
-| WEBSOCKET_NO_CONNECTION = (E_BASE + 17) | WebSocket客户端未连接。 |
-| WEBSOCKET_NO_CONNECTION_CONTEXT = (E_BASE + 18) | 释放WebSocket连接上下文时无相应上下文。 |
+| WEBSOCKET_OK = 0 | 操作成功。<br><!--Device-WEBSOCKET_OK = 0--><!--Device-WEBSOCKET_OK = 0-End--> |
+| E_BASE = 1000 | 错误码基准值。<br><!--Device-E_BASE = 1000--><!--Device-E_BASE = 1000-End--> |
+| WEBSOCKET_CLIENT_NULL = (E_BASE + 1) | WebSocket客户端为空。<br><!--Device-WEBSOCKET_CLIENT_NULL = (E_BASE + 1)--><!--Device-WEBSOCKET_CLIENT_NULL = (E_BASE + 1)-End--> |
+| WEBSOCKET_CLIENT_NOT_CREATED = (E_BASE + 2) | WebSocket客户端未创建。<br><!--Device-WEBSOCKET_CLIENT_NOT_CREATED = (E_BASE + 2)--><!--Device-WEBSOCKET_CLIENT_NOT_CREATED = (E_BASE + 2)-End--> |
+| WEBSOCKET_CONNECTION_ERROR = (E_BASE + 3) | 建立WebSocket连接时发生错误。<br><!--Device-WEBSOCKET_CONNECTION_ERROR = (E_BASE + 3)--><!--Device-WEBSOCKET_CONNECTION_ERROR = (E_BASE + 3)-End--> |
+| WEBSOCKET_CONNECTION_PARSE_URL_ERROR = (E_BASE + 5) | 解析WebSocket连接参数时出错。<br><!--Device-WEBSOCKET_CONNECTION_PARSE_URL_ERROR = (E_BASE + 5)--><!--Device-WEBSOCKET_CONNECTION_PARSE_URL_ERROR = (E_BASE + 5)-End--> |
+| WEBSOCKET_CONNECTION_NO_MEMORY = (E_BASE + 6) | WebSocket客户端建立连接过程中内存不足。<br><!--Device-WEBSOCKET_CONNECTION_NO_MEMORY = (E_BASE + 6)--><!--Device-WEBSOCKET_CONNECTION_NO_MEMORY = (E_BASE + 6)-End--> |
+| WEBSOCKET_CONNECTION_CLOSED_BY_PEER = (E_BASE + 7) | WebSocket连接被对端关闭。<br><!--Device-WEBSOCKET_CONNECTION_CLOSED_BY_PEER = (E_BASE + 7)--><!--Device-WEBSOCKET_CONNECTION_CLOSED_BY_PEER = (E_BASE + 7)-End--> |
+| WEBSOCKET_DESTROYED = (E_BASE + 8) | WebSocket连接断开。<br><!--Device-WEBSOCKET_DESTROYED = (E_BASE + 8)--><!--Device-WEBSOCKET_DESTROYED = (E_BASE + 8)-End--> |
+| WEBSOCKET_PROTOCOL_ERROR = (E_BASE + 9) | 协议错误。<br><!--Device-WEBSOCKET_PROTOCOL_ERROR = (E_BASE + 9)--><!--Device-WEBSOCKET_PROTOCOL_ERROR = (E_BASE + 9)-End--> |
+| WEBSOCKET_SEND_NO_MEMORY = (E_BASE + 10) | WebSocket客户端发送数据时系统内存不足。<br><!--Device-WEBSOCKET_SEND_NO_MEMORY = (E_BASE + 10)--><!--Device-WEBSOCKET_SEND_NO_MEMORY = (E_BASE + 10)-End--> |
+| WEBSOCKET_SEND_DATA_NULL = (E_BASE + 11) | 发送数据为空。<br><!--Device-WEBSOCKET_SEND_DATA_NULL = (E_BASE + 11)--><!--Device-WEBSOCKET_SEND_DATA_NULL = (E_BASE + 11)-End--> |
+| WEBSOCKET_DATA_LENGTH_EXCEEDED = (E_BASE + 12) | 发送数据长度超出限制。<br><!--Device-WEBSOCKET_DATA_LENGTH_EXCEEDED = (E_BASE + 12)--><!--Device-WEBSOCKET_DATA_LENGTH_EXCEEDED = (E_BASE + 12)-End--> |
+| WEBSOCKET_QUEUE_LENGTH_EXCEEDED = (E_BASE + 13) | 发送数据队列长度超出限制。<br><!--Device-WEBSOCKET_QUEUE_LENGTH_EXCEEDED = (E_BASE + 13)--><!--Device-WEBSOCKET_QUEUE_LENGTH_EXCEEDED = (E_BASE + 13)-End--> |
+| WEBSOCKET_NO_CLIENT_CONTEXT = (E_BASE + 14) | WebSocket客户端的上下文为空。<br><!--Device-WEBSOCKET_NO_CLIENT_CONTEXT = (E_BASE + 14)--><!--Device-WEBSOCKET_NO_CLIENT_CONTEXT = (E_BASE + 14)-End--> |
+| WEBSOCKET_NO_HEADER_CONTEXT = (E_BASE + 15) | WebSocket客户端协议头为空。<br><!--Device-WEBSOCKET_NO_HEADER_CONTEXT = (E_BASE + 15)--><!--Device-WEBSOCKET_NO_HEADER_CONTEXT = (E_BASE + 15)-End--> |
+| WEBSOCKET_HEADER_EXCEEDED = (E_BASE + 16) | WebSocket客户端协议头超出限制。<br><!--Device-WEBSOCKET_HEADER_EXCEEDED = (E_BASE + 16)--><!--Device-WEBSOCKET_HEADER_EXCEEDED = (E_BASE + 16)-End--> |
+| WEBSOCKET_NO_CONNECTION = (E_BASE + 17) | WebSocket客户端未连接。<br><!--Device-WEBSOCKET_NO_CONNECTION = (E_BASE + 17)--><!--Device-WEBSOCKET_NO_CONNECTION = (E_BASE + 17)-End--> |
+| WEBSOCKET_NO_CONNECTION_CONTEXT = (E_BASE + 18) | 释放WebSocket连接上下文时无相应上下文。<br><!--Device-WEBSOCKET_NO_CONNECTION_CONTEXT = (E_BASE + 18)--><!--Device-WEBSOCKET_NO_CONNECTION_CONTEXT = (E_BASE + 18)-End--> |
 
 
 ## 函数说明

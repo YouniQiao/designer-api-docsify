@@ -38,12 +38,8 @@ import { screen } from '@kit.ArkUI';
 | [makeMirrorWithRegion](arkts-arkui-screen-makemirrorwithregion-f-sys.md#makemirrorwithregion-1) | Sets a rectangle on the screen to mirror mode. This API uses a promise to return the result. After this API is called, you are advised not to rotate or fold the screen further. Otherwise, the mirrored content may be abnormal. |
 | [makeUnique](arkts-arkui-screen-makeunique-f-sys.md#makeunique-1) | Sets the screen to independent display mode. This API uses a promise to return the result. |
 | [off](arkts-arkui-screen-off-f-sys.md#off1) | Unsubscribes from events related to the screen state. |
-| [off](arkts-arkui-screen-off-f-sys.md#off2) | Unsubscribes from events related to the screen state. |
-| [off](arkts-arkui-screen-off-f-sys.md#off3) | Unsubscribes from events related to the screen state. |
 | [offDisconnectWithInfo](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md#offdisconnectwithinfo-1) | Unsubscribes from screen disconnect events. |
 | [on](arkts-arkui-screen-on-f-sys.md#on1) | Subscribes to events related to the screen state. |
-| [on](arkts-arkui-screen-on-f-sys.md#on2) | Subscribes to events related to the screen state. |
-| [on](arkts-arkui-screen-on-f-sys.md#on3) | Subscribes to events related to the screen state. |
 | [onDisconnectWithInfo](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md#ondisconnectwithinfo-1) | Subscribes to screen disconnect events, When a screen is disconnected, the callback is invoked to return the disconnection information. |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md#resizevirtualscreen-1) | Resizes the virtual screen. This API uses a promise to return the result. |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md#setmultiscreenmode-1) | Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen. |

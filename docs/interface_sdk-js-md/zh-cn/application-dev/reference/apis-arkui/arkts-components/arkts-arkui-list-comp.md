@@ -90,7 +90,7 @@ List(options?: ListOptions)
 | [ListBackPressBehavior](arkts-arkui-list-comp-listbackpressbehavior-i.md) | 定义List组件的系统返回键行为。 |
 | [ListDividerOptions](arkts-arkui-list-comp-listdivideroptions-i.md) | 用于设置List或ListItemGroup组件的分割线样式。 |
 | [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | 用于设置List组件参数。 |
-| [UIListEvent](arkts-arkui-list-comp-uilistevent-i.md) | frameNode中getEvent('List')方法的返回值，可用于给List节点设置滚动事件。 |
+| UIListEvent](arkts-arkui-list-comp-uilistevent-i.md#uilistevent) | frameNode中[getEvent('List')方法的返回值，可用于给List节点设置滚动事件。 |
 | [VisibleListContentInfo](arkts-arkui-list-comp-visiblelistcontentinfo-i.md) | 用于表示List可见内容区子组件的详细信息。 |
 
 <!--Del-->

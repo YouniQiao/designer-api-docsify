@@ -24,11 +24,10 @@ Defines the port match condition.
 
 | Name | Description |
 | -- | -- |
-| [OH_TrafficFilter_PortMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_portmatchtype) type | Match type.<br>**Since**: 26.0.0 |
-| bool invert | Whether to invert the match result. The value true means to invert the match result, and false means the opposite.<br>**Since**: 26.0.0 |
-| value | Match rule. (uint16_t single, [OH_TrafficFilter_PortRange](capi-trafficfilter-oh-trafficfilter-portrange.md) range, [OH_TrafficFilter_PortMulti](capi-trafficfilter-oh-trafficfilter-portmulti.md) multi)<br>**Since**: 26.0.0 |
-| value.single | Single port, used when type is OH_TRAFFICFILTER_PORT_MATCH_SINGLE<br>**Since**: 26.0.0 |
-| value.range | Port range match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_RANGE<br>**Since**: 26.0.0 |
-| value.multi | Multi-port match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_MULTI<br>**Since**: 26.0.0 |
+| [OH_TrafficFilter_PortMatchType](capi-net-trafficfilter-type-h.md#oh_trafficfilter_portmatchtype) type | Match type.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_PortMatchType type--><!--Device-OH_TrafficFilter_PortMatchType type-End--> |
+| bool invert | Whether to invert the match result. The value true means to invert the match result, and false means the opposite.<br>**Since**: 26.0.0<br><!--Device-bool invert--><!--Device-bool invert-End--> |
+| value.single | Single port, used when type is OH_TRAFFICFILTER_PORT_MATCH_SINGLE<br>**Since**: 26.0.0<br><!--Device-value.single--><!--Device-value.single-End--> |
+| value.range | Port range match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_RANGE<br>**Since**: 26.0.0<br><!--Device-value.range--><!--Device-value.range-End--> |
+| value.multi | Multi-port match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_MULTI<br>**Since**: 26.0.0<br><!--Device-value.multi--><!--Device-value.multi-End--> |
 
 

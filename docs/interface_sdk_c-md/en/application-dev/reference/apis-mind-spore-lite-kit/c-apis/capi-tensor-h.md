@@ -46,8 +46,8 @@ Provides APIs for creating and modifying tensor information.
 
 | Name | Description |
 | -- | -- |
-| void *OH_AI_TensorHandle | Tensor object handle.<br>**Since**: 12 |
-| void *OH_AI_AllocatorHandle | Tensor allocator handle.<br>**Since**: 12 |
+| void *OH_AI_TensorHandle | Tensor object handle.<br>**Since**: 12<br><!--Device-void *OH_AI_TensorHandle--><!--Device-void *OH_AI_TensorHandle-End--> |
+| void *OH_AI_AllocatorHandle | Tensor allocator handle.<br>**Since**: 12<br><!--Device-void *OH_AI_AllocatorHandle--><!--Device-void *OH_AI_AllocatorHandle-End--> |
 
 ## Function description
 

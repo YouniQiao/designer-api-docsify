@@ -43,7 +43,7 @@ enum OH_Drawing_CornerPos
 
 Defines an enum for the corner positions of a rounded rectangle.
 
-<!--Device-OH_Drawing_CornerPos--><!--Device-OH_Drawing_CornerPos-End-->
+<!--Device-enum OH_Drawing_CornerPos--><!--Device-enum OH_Drawing_CornerPos-End-->
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -51,10 +51,10 @@ Defines an enum for the corner positions of a rounded rectangle.
 
 | Enum item | Description |
 | -- | -- |
-| CORNER_POS_TOP_LEFT | Top left corner of the rounded rectangle. |
-| CORNER_POS_TOP_RIGHT | Top right corner of the rounded rectangle. |
-| CORNER_POS_BOTTOM_RIGHT | Bottom right corner of the rounded rectangle. |
-| CORNER_POS_BOTTOM_LEFT | Bottom left corner of the rounded rectangle. |
+| CORNER_POS_TOP_LEFT | Top left corner of the rounded rectangle.<br><!--Device-CORNER_POS_TOP_LEFT--><!--Device-CORNER_POS_TOP_LEFT-End--> |
+| CORNER_POS_TOP_RIGHT | Top right corner of the rounded rectangle.<br><!--Device-CORNER_POS_TOP_RIGHT--><!--Device-CORNER_POS_TOP_RIGHT-End--> |
+| CORNER_POS_BOTTOM_RIGHT | Bottom right corner of the rounded rectangle.<br><!--Device-CORNER_POS_BOTTOM_RIGHT--><!--Device-CORNER_POS_BOTTOM_RIGHT-End--> |
+| CORNER_POS_BOTTOM_LEFT | Bottom left corner of the rounded rectangle.<br><!--Device-CORNER_POS_BOTTOM_LEFT--><!--Device-CORNER_POS_BOTTOM_LEFT-End--> |
 
 
 ## Function description

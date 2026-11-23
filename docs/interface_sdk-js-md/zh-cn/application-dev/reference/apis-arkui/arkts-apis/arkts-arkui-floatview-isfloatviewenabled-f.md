@@ -12,7 +12,7 @@ import { floatView } from '@kit.ArkUI';
 function isFloatViewEnabled(): boolean
 ```
 
-判断当前设备是否支持标准悬浮窗功能。
+判断当前设备是否支持闪控窗功能。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ function isFloatViewEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 当前设备是否支持标准悬浮窗功能。true表示支持，false则表示不支持。 |
+| boolean | 当前设备是否支持闪控窗功能。true表示支持，false则表示不支持。 |
 
 **示例**
 

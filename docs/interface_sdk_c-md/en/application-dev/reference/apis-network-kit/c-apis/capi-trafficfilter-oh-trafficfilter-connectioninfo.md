@@ -24,11 +24,11 @@ Defines the connection information struct. It describes the five-tuple informati
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.0 |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) srcIp | Source IP address, which supports IPv4 and IPv6.<br>**Since**: 26.0.0 |
-| uint16_t srcPort | Source port. 0 indicates any source port.<br>**Since**: 26.0.0 |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) dstIp | Destination IP address, which supports IPv4 and IPv6. It must be in the same address family as the source IP address.<br>**Since**: 26.0.0 |
-| uint16_t dstPort | Destination port. **0** indicates any destination port.<br>**Since**: 26.0.0 |
-| uint8_t protocol | Protocol type. Supported values: - OH_TRAFFICFILTER_PROTO_TCP (6) - OH_TRAFFICFILTER_PROTO_UDP (17)<br>**Since**: 26.0.0 |
+| uint32_t size | Actual size of the struct allocated by the caller.<br>**Since**: 26.0.0<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) srcIp | Source IP address, which supports IPv4 and IPv6.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress srcIp--><!--Device-OH_TrafficFilter_IPAddress srcIp-End--> |
+| uint16_t srcPort | Source port. 0 indicates any source port.<br>**Since**: 26.0.0<br><!--Device-uint16_t srcPort--><!--Device-uint16_t srcPort-End--> |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) dstIp | Destination IP address, which supports IPv4 and IPv6. It must be in the same address family as the source IP address.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress dstIp--><!--Device-OH_TrafficFilter_IPAddress dstIp-End--> |
+| uint16_t dstPort | Destination port. **0** indicates any destination port.<br>**Since**: 26.0.0<br><!--Device-uint16_t dstPort--><!--Device-uint16_t dstPort-End--> |
+| uint8_t protocol | Protocol type. Supported values: - OH_TRAFFICFILTER_PROTO_TCP (6) - OH_TRAFFICFILTER_PROTO_UDP (17)<br>**Since**: 26.0.0<br><!--Device-uint8_t protocol--><!--Device-uint8_t protocol-End--> |
 
 

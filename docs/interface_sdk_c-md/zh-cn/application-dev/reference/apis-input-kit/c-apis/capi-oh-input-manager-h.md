@@ -253,7 +253,7 @@ enum Input_KeyStateAction
 
 按键状态的枚举值。
 
-<!--Device-Input_KeyStateAction--><!--Device-Input_KeyStateAction-End-->
+<!--Device-enum Input_KeyStateAction--><!--Device-enum Input_KeyStateAction-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -261,11 +261,11 @@ enum Input_KeyStateAction
 
 | 枚举项 | 描述 |
 | -- | -- |
-| KEY_DEFAULT = -1 | 默认状态。 |
-| KEY_PRESSED = 0 | 按键按下。 |
-| KEY_RELEASED = 1 | 按键抬起。 |
-| KEY_SWITCH_ON = 2 | 按键开关使能。 |
-| KEY_SWITCH_OFF = 3 | 按键开关去使能。 |
+| KEY_DEFAULT = -1 | 默认状态。<br><!--Device-KEY_DEFAULT = -1--><!--Device-KEY_DEFAULT = -1-End--> |
+| KEY_PRESSED = 0 | 按键按下。<br><!--Device-KEY_PRESSED = 0--><!--Device-KEY_PRESSED = 0-End--> |
+| KEY_RELEASED = 1 | 按键抬起。<br><!--Device-KEY_RELEASED = 1--><!--Device-KEY_RELEASED = 1-End--> |
+| KEY_SWITCH_ON = 2 | 按键开关使能。<br><!--Device-KEY_SWITCH_ON = 2--><!--Device-KEY_SWITCH_ON = 2-End--> |
+| KEY_SWITCH_OFF = 3 | 按键开关去使能。<br><!--Device-KEY_SWITCH_OFF = 3--><!--Device-KEY_SWITCH_OFF = 3-End--> |
 
 ### Input_KeyEventAction
 
@@ -277,7 +277,7 @@ enum Input_KeyEventAction
 
 按键事件类型的枚举值。
 
-<!--Device-Input_KeyEventAction--><!--Device-Input_KeyEventAction-End-->
+<!--Device-enum Input_KeyEventAction--><!--Device-enum Input_KeyEventAction-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -285,9 +285,9 @@ enum Input_KeyEventAction
 
 | 枚举项 | 描述 |
 | -- | -- |
-| KEY_ACTION_CANCEL = 0 | 按键动作取消。<br>**起始版本：** 12 |
-| KEY_ACTION_DOWN = 1 | 按键按下。<br>**起始版本：** 12 |
-| KEY_ACTION_UP = 2 | 按键抬起。<br>**起始版本：** 12 |
+| KEY_ACTION_CANCEL = 0 | 按键动作取消。<br>**起始版本：** 12<br><!--Device-KEY_ACTION_CANCEL = 0--><!--Device-KEY_ACTION_CANCEL = 0-End--> |
+| KEY_ACTION_DOWN = 1 | 按键按下。<br>**起始版本：** 12<br><!--Device-KEY_ACTION_DOWN = 1--><!--Device-KEY_ACTION_DOWN = 1-End--> |
+| KEY_ACTION_UP = 2 | 按键抬起。<br>**起始版本：** 12<br><!--Device-KEY_ACTION_UP = 2--><!--Device-KEY_ACTION_UP = 2-End--> |
 
 ### Input_MouseEventAction
 
@@ -299,7 +299,7 @@ enum Input_MouseEventAction
 
 鼠标动作的枚举值。
 
-<!--Device-Input_MouseEventAction--><!--Device-Input_MouseEventAction-End-->
+<!--Device-enum Input_MouseEventAction--><!--Device-enum Input_MouseEventAction-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -307,13 +307,13 @@ enum Input_MouseEventAction
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MOUSE_ACTION_CANCEL = 0 | 取消鼠标动作。<br>**起始版本：** 12 |
-| MOUSE_ACTION_MOVE = 1 | 移动鼠标。<br>**起始版本：** 12 |
-| MOUSE_ACTION_BUTTON_DOWN = 2 | 按下鼠标。<br>**起始版本：** 12 |
-| MOUSE_ACTION_BUTTON_UP = 3 | 抬起鼠标按键。<br>**起始版本：** 12 |
-| MOUSE_ACTION_AXIS_BEGIN = 4 | 鼠标轴事件开始。<br>**起始版本：** 12 |
-| MOUSE_ACTION_AXIS_UPDATE = 5 | 更新鼠标轴事件。<br>**起始版本：** 12 |
-| MOUSE_ACTION_AXIS_END = 6 | 鼠标轴事件结束。<br>**起始版本：** 12 |
+| MOUSE_ACTION_CANCEL = 0 | 取消鼠标动作。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_CANCEL = 0--><!--Device-MOUSE_ACTION_CANCEL = 0-End--> |
+| MOUSE_ACTION_MOVE = 1 | 移动鼠标。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_MOVE = 1--><!--Device-MOUSE_ACTION_MOVE = 1-End--> |
+| MOUSE_ACTION_BUTTON_DOWN = 2 | 按下鼠标。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_BUTTON_DOWN = 2--><!--Device-MOUSE_ACTION_BUTTON_DOWN = 2-End--> |
+| MOUSE_ACTION_BUTTON_UP = 3 | 抬起鼠标按键。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_BUTTON_UP = 3--><!--Device-MOUSE_ACTION_BUTTON_UP = 3-End--> |
+| MOUSE_ACTION_AXIS_BEGIN = 4 | 鼠标轴事件开始。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_AXIS_BEGIN = 4--><!--Device-MOUSE_ACTION_AXIS_BEGIN = 4-End--> |
+| MOUSE_ACTION_AXIS_UPDATE = 5 | 更新鼠标轴事件。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_AXIS_UPDATE = 5--><!--Device-MOUSE_ACTION_AXIS_UPDATE = 5-End--> |
+| MOUSE_ACTION_AXIS_END = 6 | 鼠标轴事件结束。<br>**起始版本：** 12<br><!--Device-MOUSE_ACTION_AXIS_END = 6--><!--Device-MOUSE_ACTION_AXIS_END = 6-End--> |
 
 ### InputEvent_MouseAxis
 
@@ -325,7 +325,7 @@ enum InputEvent_MouseAxis
 
 鼠标轴事件类型。
 
-<!--Device-InputEvent_MouseAxis--><!--Device-InputEvent_MouseAxis-End-->
+<!--Device-enum InputEvent_MouseAxis--><!--Device-enum InputEvent_MouseAxis-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -333,8 +333,8 @@ enum InputEvent_MouseAxis
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MOUSE_AXIS_SCROLL_VERTICAL = 0 | 垂直滚动轴。 |
-| MOUSE_AXIS_SCROLL_HORIZONTAL = 1 | 水平滚动轴。 |
+| MOUSE_AXIS_SCROLL_VERTICAL = 0 | 垂直滚动轴。<br><!--Device-MOUSE_AXIS_SCROLL_VERTICAL = 0--><!--Device-MOUSE_AXIS_SCROLL_VERTICAL = 0-End--> |
+| MOUSE_AXIS_SCROLL_HORIZONTAL = 1 | 水平滚动轴。<br><!--Device-MOUSE_AXIS_SCROLL_HORIZONTAL = 1--><!--Device-MOUSE_AXIS_SCROLL_HORIZONTAL = 1-End--> |
 
 ### Input_MouseEventButton
 
@@ -346,7 +346,7 @@ enum Input_MouseEventButton
 
 鼠标按键的枚举值。
 
-<!--Device-Input_MouseEventButton--><!--Device-Input_MouseEventButton-End-->
+<!--Device-enum Input_MouseEventButton--><!--Device-enum Input_MouseEventButton-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -354,12 +354,12 @@ enum Input_MouseEventButton
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MOUSE_BUTTON_NONE = -1 | 无效按键。 |
-| MOUSE_BUTTON_LEFT = 0 | 鼠标左键。 |
-| MOUSE_BUTTON_MIDDLE = 1 | 鼠标中间键。 |
-| MOUSE_BUTTON_RIGHT = 2 | 鼠标右键。 |
-| MOUSE_BUTTON_FORWARD = 3 | 鼠标前进键。 |
-| MOUSE_BUTTON_BACK = 4 | 鼠标返回键。 |
+| MOUSE_BUTTON_NONE = -1 | 无效按键。<br><!--Device-MOUSE_BUTTON_NONE = -1--><!--Device-MOUSE_BUTTON_NONE = -1-End--> |
+| MOUSE_BUTTON_LEFT = 0 | 鼠标左键。<br><!--Device-MOUSE_BUTTON_LEFT = 0--><!--Device-MOUSE_BUTTON_LEFT = 0-End--> |
+| MOUSE_BUTTON_MIDDLE = 1 | 鼠标中间键。<br><!--Device-MOUSE_BUTTON_MIDDLE = 1--><!--Device-MOUSE_BUTTON_MIDDLE = 1-End--> |
+| MOUSE_BUTTON_RIGHT = 2 | 鼠标右键。<br><!--Device-MOUSE_BUTTON_RIGHT = 2--><!--Device-MOUSE_BUTTON_RIGHT = 2-End--> |
+| MOUSE_BUTTON_FORWARD = 3 | 鼠标前进键。<br><!--Device-MOUSE_BUTTON_FORWARD = 3--><!--Device-MOUSE_BUTTON_FORWARD = 3-End--> |
+| MOUSE_BUTTON_BACK = 4 | 鼠标返回键。<br><!--Device-MOUSE_BUTTON_BACK = 4--><!--Device-MOUSE_BUTTON_BACK = 4-End--> |
 
 ### Input_TouchEventAction
 
@@ -371,7 +371,7 @@ enum Input_TouchEventAction
 
 触屏动作的枚举值。
 
-<!--Device-Input_TouchEventAction--><!--Device-Input_TouchEventAction-End-->
+<!--Device-enum Input_TouchEventAction--><!--Device-enum Input_TouchEventAction-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -379,10 +379,10 @@ enum Input_TouchEventAction
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TOUCH_ACTION_CANCEL = 0 | 触屏取消。 |
-| TOUCH_ACTION_DOWN = 1 | 触屏按下。 |
-| TOUCH_ACTION_MOVE = 2 | 触屏移动。 |
-| TOUCH_ACTION_UP = 3 | 触屏抬起。 |
+| TOUCH_ACTION_CANCEL = 0 | 触屏取消。<br><!--Device-TOUCH_ACTION_CANCEL = 0--><!--Device-TOUCH_ACTION_CANCEL = 0-End--> |
+| TOUCH_ACTION_DOWN = 1 | 触屏按下。<br><!--Device-TOUCH_ACTION_DOWN = 1--><!--Device-TOUCH_ACTION_DOWN = 1-End--> |
+| TOUCH_ACTION_MOVE = 2 | 触屏移动。<br><!--Device-TOUCH_ACTION_MOVE = 2--><!--Device-TOUCH_ACTION_MOVE = 2-End--> |
+| TOUCH_ACTION_UP = 3 | 触屏抬起。<br><!--Device-TOUCH_ACTION_UP = 3--><!--Device-TOUCH_ACTION_UP = 3-End--> |
 
 ### Input_KeyboardType
 
@@ -394,7 +394,7 @@ enum Input_KeyboardType
 
 输入设备的键盘类型。
 
-<!--Device-Input_KeyboardType--><!--Device-Input_KeyboardType-End-->
+<!--Device-enum Input_KeyboardType--><!--Device-enum Input_KeyboardType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -402,12 +402,12 @@ enum Input_KeyboardType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| KEYBOARD_TYPE_NONE = 0 | 表示无按键设备。<br>**起始版本：** 13 |
-| KEYBOARD_TYPE_UNKNOWN = 1 | 表示未知按键设备。<br>**起始版本：** 13 |
-| KEYBOARD_TYPE_ALPHABETIC = 2 | 表示全键盘设备。 |
-| KEYBOARD_TYPE_DIGITAL = 3 | 表示数字键盘设备。 |
-| KEYBOARD_TYPE_STYLUS = 4 | 表示手写笔设备。 |
-| KEYBOARD_TYPE_REMOTE_CONTROL = 5 | 表示遥控器设备。 |
+| KEYBOARD_TYPE_NONE = 0 | 表示无按键设备。<br>**起始版本：** 13<br><!--Device-KEYBOARD_TYPE_NONE = 0--><!--Device-KEYBOARD_TYPE_NONE = 0-End--> |
+| KEYBOARD_TYPE_UNKNOWN = 1 | 表示未知按键设备。<br>**起始版本：** 13<br><!--Device-KEYBOARD_TYPE_UNKNOWN = 1--><!--Device-KEYBOARD_TYPE_UNKNOWN = 1-End--> |
+| KEYBOARD_TYPE_ALPHABETIC = 2 | 表示全键盘设备。<br><!--Device-KEYBOARD_TYPE_ALPHABETIC = 2--><!--Device-KEYBOARD_TYPE_ALPHABETIC = 2-End--> |
+| KEYBOARD_TYPE_DIGITAL = 3 | 表示数字键盘设备。<br><!--Device-KEYBOARD_TYPE_DIGITAL = 3--><!--Device-KEYBOARD_TYPE_DIGITAL = 3-End--> |
+| KEYBOARD_TYPE_STYLUS = 4 | 表示手写笔设备。<br><!--Device-KEYBOARD_TYPE_STYLUS = 4--><!--Device-KEYBOARD_TYPE_STYLUS = 4-End--> |
+| KEYBOARD_TYPE_REMOTE_CONTROL = 5 | 表示遥控器设备。<br><!--Device-KEYBOARD_TYPE_REMOTE_CONTROL = 5--><!--Device-KEYBOARD_TYPE_REMOTE_CONTROL = 5-End--> |
 
 ### Input_InjectionStatus
 
@@ -419,7 +419,7 @@ enum Input_InjectionStatus
 
 注入权限状态枚举值。
 
-<!--Device-Input_InjectionStatus--><!--Device-Input_InjectionStatus-End-->
+<!--Device-enum Input_InjectionStatus--><!--Device-enum Input_InjectionStatus-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -427,9 +427,9 @@ enum Input_InjectionStatus
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UNAUTHORIZED = 0 | 未授权。<br>**起始版本：** 20 |
-| AUTHORIZING = 1 | 授权中。<br>**起始版本：** 20 |
-| AUTHORIZED = 2 | 已授权。<br>**起始版本：** 20 |
+| UNAUTHORIZED = 0 | 未授权。<br>**起始版本：** 20<br><!--Device-UNAUTHORIZED = 0--><!--Device-UNAUTHORIZED = 0-End--> |
+| AUTHORIZING = 1 | 授权中。<br>**起始版本：** 20<br><!--Device-AUTHORIZING = 1--><!--Device-AUTHORIZING = 1-End--> |
+| AUTHORIZED = 2 | 已授权。<br>**起始版本：** 20<br><!--Device-AUTHORIZED = 2--><!--Device-AUTHORIZED = 2-End--> |
 
 ### InputEvent_SourceType
 
@@ -441,7 +441,7 @@ enum InputEvent_SourceType
 
 输入事件源类型。
 
-<!--Device-InputEvent_SourceType--><!--Device-InputEvent_SourceType-End-->
+<!--Device-enum InputEvent_SourceType--><!--Device-enum InputEvent_SourceType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -449,9 +449,9 @@ enum InputEvent_SourceType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| SOURCE_TYPE_MOUSE = 1 | 表示输入源生成鼠标光标移动、按键按下和释放以及滚轮滚动的事件。<br>**起始版本：** 12 |
-| SOURCE_TYPE_TOUCHSCREEN = 2 | 表示输入源产生触摸屏多点触屏输入事件。<br>**起始版本：** 12 |
-| SOURCE_TYPE_TOUCHPAD = 3 | 表示输入源产生触控板多点触屏输入事件。<br>**起始版本：** 12 |
+| SOURCE_TYPE_MOUSE = 1 | 表示输入源生成鼠标光标移动、按键按下和释放以及滚轮滚动的事件。<br>**起始版本：** 12<br><!--Device-SOURCE_TYPE_MOUSE = 1--><!--Device-SOURCE_TYPE_MOUSE = 1-End--> |
+| SOURCE_TYPE_TOUCHSCREEN = 2 | 表示输入源产生触摸屏多点触屏输入事件。<br>**起始版本：** 12<br><!--Device-SOURCE_TYPE_TOUCHSCREEN = 2--><!--Device-SOURCE_TYPE_TOUCHSCREEN = 2-End--> |
+| SOURCE_TYPE_TOUCHPAD = 3 | 表示输入源产生触控板多点触屏输入事件。<br>**起始版本：** 12<br><!--Device-SOURCE_TYPE_TOUCHPAD = 3--><!--Device-SOURCE_TYPE_TOUCHPAD = 3-End--> |
 
 ### Input_Result
 
@@ -463,7 +463,7 @@ enum Input_Result
 
 返回值枚举值。
 
-<!--Device-Input_Result--><!--Device-Input_Result-End-->
+<!--Device-enum Input_Result--><!--Device-enum Input_Result-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -471,23 +471,23 @@ enum Input_Result
 
 | 枚举项 | 描述 |
 | -- | -- |
-| INPUT_SUCCESS = 0 | 操作成功。 |
-| INPUT_PERMISSION_DENIED = 201 | 权限验证失败。 |
-| INPUT_NOT_SYSTEM_APPLICATION = 202 | 非系统应用。 |
-| INPUT_PARAMETER_ERROR = 401 | 参数检查失败。 |
-| INPUT_DEVICE_NOT_SUPPORTED = 801 | 表示不支持该功能。 |
-| INPUT_SERVICE_EXCEPTION = 3800001 | 服务异常。 |
-| INPUT_REPEAT_INTERCEPTOR = 4200001 | 应用创建拦截后，再次执行创建拦截的操作。 |
-| INPUT_OCCUPIED_BY_SYSTEM = 4200002 | 已经被系统应用占用。<br>**起始版本：** 14 |
-| INPUT_OCCUPIED_BY_OTHER = 4200003 | 已经被其他应用占用。<br>**起始版本：** 14 |
-| INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002 | 未连接键盘设备。<br>**起始版本：** 15 |
-| INPUT_INJECTION_AUTHORIZING = 3900005 | 正在授权中。<br>**起始版本：** 20 |
-| INPUT_INJECTION_OPERATION_FREQUENT = 3900006 | 重复请求。<br>**起始版本：** 20 |
-| INPUT_INJECTION_AUTHORIZED = 3900007 | 当前应用已经授权。<br>**起始版本：** 20 |
-| INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008 | 其他应用已经授权。<br>**起始版本：** 20 |
-| INPUT_APP_NOT_FOCUSED = 3900009 | 当前应用不是焦点应用。<br>**起始版本：** 20 |
-| INPUT_DEVICE_NO_POINTER = 3900010 | 无鼠标类输入外设。<br>**起始版本：** 20 |
-| INPUT_INVALID_WINDOWID = 26500001 | 无效的窗口ID。<br>**起始版本：** 22 |
+| INPUT_SUCCESS = 0 | 操作成功。<br><!--Device-INPUT_SUCCESS = 0--><!--Device-INPUT_SUCCESS = 0-End--> |
+| INPUT_PERMISSION_DENIED = 201 | 权限验证失败。<br><!--Device-INPUT_PERMISSION_DENIED = 201--><!--Device-INPUT_PERMISSION_DENIED = 201-End--> |
+| INPUT_NOT_SYSTEM_APPLICATION = 202 | 非系统应用。<br><!--Device-INPUT_NOT_SYSTEM_APPLICATION = 202--><!--Device-INPUT_NOT_SYSTEM_APPLICATION = 202-End--> |
+| INPUT_PARAMETER_ERROR = 401 | 参数检查失败。<br><!--Device-INPUT_PARAMETER_ERROR = 401--><!--Device-INPUT_PARAMETER_ERROR = 401-End--> |
+| INPUT_DEVICE_NOT_SUPPORTED = 801 | 表示不支持该功能。<br><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801--><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801-End--> |
+| INPUT_SERVICE_EXCEPTION = 3800001 | 服务异常。<br><!--Device-INPUT_SERVICE_EXCEPTION = 3800001--><!--Device-INPUT_SERVICE_EXCEPTION = 3800001-End--> |
+| INPUT_REPEAT_INTERCEPTOR = 4200001 | 应用创建拦截后，再次执行创建拦截的操作。<br><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001--><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001-End--> |
+| INPUT_OCCUPIED_BY_SYSTEM = 4200002 | 已经被系统应用占用。<br>**起始版本：** 14<br><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002--><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002-End--> |
+| INPUT_OCCUPIED_BY_OTHER = 4200003 | 已经被其他应用占用。<br>**起始版本：** 14<br><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003--><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003-End--> |
+| INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002 | 未连接键盘设备。<br>**起始版本：** 15<br><!--Device-INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002--><!--Device-INPUT_KEYBOARD_DEVICE_NOT_EXIST = 3900002-End--> |
+| INPUT_INJECTION_AUTHORIZING = 3900005 | 正在授权中。<br>**起始版本：** 20<br><!--Device-INPUT_INJECTION_AUTHORIZING = 3900005--><!--Device-INPUT_INJECTION_AUTHORIZING = 3900005-End--> |
+| INPUT_INJECTION_OPERATION_FREQUENT = 3900006 | 重复请求。<br>**起始版本：** 20<br><!--Device-INPUT_INJECTION_OPERATION_FREQUENT = 3900006--><!--Device-INPUT_INJECTION_OPERATION_FREQUENT = 3900006-End--> |
+| INPUT_INJECTION_AUTHORIZED = 3900007 | 当前应用已经授权。<br>**起始版本：** 20<br><!--Device-INPUT_INJECTION_AUTHORIZED = 3900007--><!--Device-INPUT_INJECTION_AUTHORIZED = 3900007-End--> |
+| INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008 | 其他应用已经授权。<br>**起始版本：** 20<br><!--Device-INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008--><!--Device-INPUT_INJECTION_AUTHORIZED_OTHERS = 3900008-End--> |
+| INPUT_APP_NOT_FOCUSED = 3900009 | 当前应用不是焦点应用。<br>**起始版本：** 20<br><!--Device-INPUT_APP_NOT_FOCUSED = 3900009--><!--Device-INPUT_APP_NOT_FOCUSED = 3900009-End--> |
+| INPUT_DEVICE_NO_POINTER = 3900010 | 无鼠标类输入外设。<br>**起始版本：** 20<br><!--Device-INPUT_DEVICE_NO_POINTER = 3900010--><!--Device-INPUT_DEVICE_NO_POINTER = 3900010-End--> |
+| INPUT_INVALID_WINDOWID = 26500001 | 无效的窗口ID。<br>**起始版本：** 22<br><!--Device-INPUT_INVALID_WINDOWID = 26500001--><!--Device-INPUT_INVALID_WINDOWID = 26500001-End--> |
 
 ### Input_TouchEventToolType
 
@@ -499,7 +499,7 @@ enum Input_TouchEventToolType
 
 输入设备的触屏事件工具类型。
 
-<!--Device-Input_TouchEventToolType--><!--Device-Input_TouchEventToolType-End-->
+<!--Device-enum Input_TouchEventToolType--><!--Device-enum Input_TouchEventToolType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -507,14 +507,14 @@ enum Input_TouchEventToolType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TOOL_TYPE_FINGER = 0 | 表示手指。<br>**起始版本：** 24 |
-| TOOL_TYPE_PEN = 1 | 表示手写笔设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_RUBBER = 2 | 表示橡皮擦类设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_BRUSH = 3 | 表示画笔类设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_PENCIL = 4 | 表示铅笔类设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_AIRBRUSH = 5 | 表示喷枪类设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_MOUSE = 6 | 表示鼠标设备。<br>**起始版本：** 24 |
-| TOOL_TYPE_LENS = 7 | 表示透镜类设备。<br>**起始版本：** 24 |
+| TOOL_TYPE_FINGER = 0 | 表示手指。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_FINGER = 0--><!--Device-TOOL_TYPE_FINGER = 0-End--> |
+| TOOL_TYPE_PEN = 1 | 表示手写笔设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_PEN = 1--><!--Device-TOOL_TYPE_PEN = 1-End--> |
+| TOOL_TYPE_RUBBER = 2 | 表示橡皮擦类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_RUBBER = 2--><!--Device-TOOL_TYPE_RUBBER = 2-End--> |
+| TOOL_TYPE_BRUSH = 3 | 表示画笔类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_BRUSH = 3--><!--Device-TOOL_TYPE_BRUSH = 3-End--> |
+| TOOL_TYPE_PENCIL = 4 | 表示铅笔类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_PENCIL = 4--><!--Device-TOOL_TYPE_PENCIL = 4-End--> |
+| TOOL_TYPE_AIRBRUSH = 5 | 表示喷枪类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_AIRBRUSH = 5--><!--Device-TOOL_TYPE_AIRBRUSH = 5-End--> |
+| TOOL_TYPE_MOUSE = 6 | 表示鼠标设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_MOUSE = 6--><!--Device-TOOL_TYPE_MOUSE = 6-End--> |
+| TOOL_TYPE_LENS = 7 | 表示透镜类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_LENS = 7--><!--Device-TOOL_TYPE_LENS = 7-End--> |
 
 
 ## 函数说明

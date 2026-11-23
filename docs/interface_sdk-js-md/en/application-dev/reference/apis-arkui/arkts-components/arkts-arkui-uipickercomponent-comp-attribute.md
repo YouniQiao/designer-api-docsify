@@ -112,7 +112,7 @@ Sets the height of each option in the **UIPickerComponent** container. If this A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Height of an option. <br>Unit: same as that of LengthMetrics. <br>Value range: [40vp, 64vp] <br>If the value is less than 40 vp or greater than 64 vp, the default value 40 vp is used. <br>If the value of height is undefined, the default value 40 vp is used. <br>The "percentage" type is not supported. |
+| height | Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Height of an option. <br>Unit: same as that of [LengthMetrics. <br>Value range: [40vp, 64vp] <br>If the value is less than 40 vp or greater than 64 vp, the default value 40 vp is used. <br>If the value of height is undefined, the default value 40 vp is used. <br>The "percentage" type is not supported. |
 
 ## onChange
 

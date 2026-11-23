@@ -24,8 +24,8 @@ typedef struct OH_TrafficFilter_ProcessInfo {...} OH_TrafficFilter_ProcessInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.0 |
-| uint32_t pid | 进程ID。<br>**起始版本：** 26.0.0 |
-| uint32_t uid | 应用UID。<br>**起始版本：** 26.0.0 |
+| uint32_t size | 调用者分配的结构体实际大小。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint32_t pid | 进程ID。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t pid--><!--Device-uint32_t pid-End--> |
+| uint32_t uid | 应用UID。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t uid--><!--Device-uint32_t uid-End--> |
 
 

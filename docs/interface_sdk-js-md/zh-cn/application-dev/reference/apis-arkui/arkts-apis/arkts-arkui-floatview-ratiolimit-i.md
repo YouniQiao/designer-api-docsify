@@ -4,7 +4,7 @@
 interface RatioLimit
 ```
 
-标准悬浮窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。
+闪控窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from '@kit.ArkUI';
 maxRatio: number
 ```
 
-标准悬浮窗的宽高比最大值。
+闪控窗的宽高比最大值。
 
 **类型：** number
 
@@ -42,7 +42,7 @@ maxRatio: number
 minRatio: number
 ```
 
-标准悬浮窗的宽高比最小值。
+闪控窗的宽高比最小值。
 
 **类型：** number
 

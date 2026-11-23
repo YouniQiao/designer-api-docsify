@@ -64,7 +64,7 @@ fill(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 填充区域颜色。<br>默认值：Color.Black <br>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 填充区域颜色。<br>默认值：[Color.Black <br>异常值undefined、null、NaN和Infinity按照默认值处理。 |
 
 ## fillOpacity
 
@@ -152,7 +152,7 @@ stroke(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 边框颜色。<br>默认值：Color.Transparent<br>异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |
+| value | ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 边框颜色。<br>默认值：[Color.Transparent<br>异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |
 
 ## strokeDashArray
 

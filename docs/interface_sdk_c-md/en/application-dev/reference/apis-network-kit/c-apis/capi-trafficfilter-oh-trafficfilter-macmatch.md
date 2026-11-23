@@ -24,8 +24,8 @@ Defines the MAC address matching condition.
 
 | Name | Description |
 | -- | -- |
-| bool enable | Whether to enable MAC address matching. The value **true** means to enable MAC address matching, and **false** means the opposite.<br>**Since**: 26.0.1 |
-| bool invert | Whether to invert the matching result. The value **true** means to invert the matching result, and **false** means the opposite.<br>**Since**: 26.0.1 |
-| char srcMac[OH_TRAFFICFILTER_MAC_ADDRSTRLEN] | Source MAC address (in the XX:XX:XX:XX:XX:XX format).<br>**Since**: 26.0.1 |
+| bool enable | Whether to enable MAC address matching. The value **true** means to enable MAC address matching, and **false** means the opposite.<br>**Since**: 26.0.1<br><!--Device-bool enable--><!--Device-bool enable-End--> |
+| bool invert | Whether to invert the matching result. The value **true** means to invert the matching result, and **false** means the opposite.<br>**Since**: 26.0.1<br><!--Device-bool invert--><!--Device-bool invert-End--> |
+| char srcMac[OH_TRAFFICFILTER_MAC_ADDRSTRLEN] | Source MAC address (in the XX:XX:XX:XX:XX:XX format).<br>**Since**: 26.0.1<br><!--Device-char srcMac[OH_TRAFFICFILTER_MAC_ADDRSTRLEN]--><!--Device-char srcMac[OH_TRAFFICFILTER_MAC_ADDRSTRLEN]-End--> |
 
 

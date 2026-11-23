@@ -4,7 +4,7 @@
 enum FloatViewState
 ```
 
-标准悬浮窗状态的枚举。
+闪控窗状态的枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ enum FloatViewState
 ERROR = 6
 ```
 
-标准悬浮窗发生异常。
+闪控窗发生异常。
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,7 @@ ERROR = 6
 HIDDEN = 2
 ```
 
-标准悬浮窗已隐藏。上滑进入多任务界面时触发、使用[setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp)接口设置了应用在前台时隐藏标准悬浮窗且应用处于前台时触发。
+闪控窗已隐藏。上滑进入多任务界面时触发；或使用[setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp)接口设置了应用在前台时隐藏闪控窗后，应用处于前台时触发。
 
 **起始版本：** 26.0.0
 
@@ -50,7 +50,7 @@ HIDDEN = 2
 IN_FLOATING_BALL = 5
 ```
 
-标准悬浮窗切换为闪控球。
+闪控窗切换为闪控球。
 
 **起始版本：** 26.0.0
 
@@ -66,7 +66,7 @@ IN_FLOATING_BALL = 5
 IN_SIDEBAR = 4
 ```
 
-标准悬浮窗在侧边栏中。
+闪控窗在侧边栏中。
 
 **起始版本：** 26.0.0
 
@@ -82,7 +82,7 @@ IN_SIDEBAR = 4
 STARTED = 1
 ```
 
-标准悬浮窗已启动并显示。
+闪控窗已启动并显示。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ STARTED = 1
 STOPPED = 3
 ```
 
-标准悬浮窗已停止。
+闪控窗已停止。
 
 **起始版本：** 26.0.0
 

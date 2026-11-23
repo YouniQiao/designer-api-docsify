@@ -27,7 +27,7 @@ export declare function sendKeyEvent(event: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | 按键事件，event参数见KeyEvent介绍。 |
+| event | KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | 按键事件，event参数见[KeyEvent介绍。 |
 
 **返回值：**
 

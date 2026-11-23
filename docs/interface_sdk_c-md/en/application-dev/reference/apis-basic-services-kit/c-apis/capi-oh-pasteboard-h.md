@@ -90,7 +90,7 @@ enum Pasteboard_NotifyType
 
 Enumerates the data change types of the pasteboard. This enum is used to determine whether the pasteboard data change is from the local device or a remote device.
 
-<!--Device-Pasteboard_NotifyType--><!--Device-Pasteboard_NotifyType-End-->
+<!--Device-enum Pasteboard_NotifyType--><!--Device-enum Pasteboard_NotifyType-End-->
 
 **System capability**: SystemCapability.MiscServices.Pasteboard
 
@@ -98,8 +98,8 @@ Enumerates the data change types of the pasteboard. This enum is used to determi
 
 | Enum item | Description |
 | -- | -- |
-| NOTIFY_LOCAL_DATA_CHANGE = 1 | The pasteboard data of the local device is changed. |
-| NOTIFY_REMOTE_DATA_CHANGE = 2 | The pasteboard data of a non-local device on the network is changed. |
+| NOTIFY_LOCAL_DATA_CHANGE = 1 | The pasteboard data of the local device is changed.<br><!--Device-NOTIFY_LOCAL_DATA_CHANGE = 1--><!--Device-NOTIFY_LOCAL_DATA_CHANGE = 1-End--> |
+| NOTIFY_REMOTE_DATA_CHANGE = 2 | The pasteboard data of a non-local device on the network is changed.<br><!--Device-NOTIFY_REMOTE_DATA_CHANGE = 2--><!--Device-NOTIFY_REMOTE_DATA_CHANGE = 2-End--> |
 
 ### Pasteboard_FileConflictOptions
 
@@ -111,7 +111,7 @@ enum Pasteboard_FileConflictOptions
 
 Enumerates the options used to resolve file copy conflicts. When a file with the same name already exists in the destination directory, the pasteboard handles the conflict based on the specified policy.
 
-<!--Device-Pasteboard_FileConflictOptions--><!--Device-Pasteboard_FileConflictOptions-End-->
+<!--Device-enum Pasteboard_FileConflictOptions--><!--Device-enum Pasteboard_FileConflictOptions-End-->
 
 **System capability**: SystemCapability.MiscServices.Pasteboard
 
@@ -119,8 +119,8 @@ Enumerates the options used to resolve file copy conflicts. When a file with the
 
 | Enum item | Description |
 | -- | -- |
-| PASTEBOARD_OVERWRITE = 0 | Overwrites the file with the same name in the destination directory. |
-| PASTEBOARD_SKIP = 1 | Skips the file if there is a file with the same name in the destination directory. |
+| PASTEBOARD_OVERWRITE = 0 | Overwrites the file with the same name in the destination directory.<br><!--Device-PASTEBOARD_OVERWRITE = 0--><!--Device-PASTEBOARD_OVERWRITE = 0-End--> |
+| PASTEBOARD_SKIP = 1 | Skips the file if there is a file with the same name in the destination directory.<br><!--Device-PASTEBOARD_SKIP = 1--><!--Device-PASTEBOARD_SKIP = 1-End--> |
 
 ### Pasteboard_ProgressIndicator
 
@@ -132,7 +132,7 @@ enum Pasteboard_ProgressIndicator
 
 Enumerates the progress indicator options. You can use the default progress indicator as required.
 
-<!--Device-Pasteboard_ProgressIndicator--><!--Device-Pasteboard_ProgressIndicator-End-->
+<!--Device-enum Pasteboard_ProgressIndicator--><!--Device-enum Pasteboard_ProgressIndicator-End-->
 
 **System capability**: SystemCapability.MiscServices.Pasteboard
 
@@ -140,8 +140,8 @@ Enumerates the progress indicator options. You can use the default progress indi
 
 | Enum item | Description |
 | -- | -- |
-| PASTEBOARD_NONE = 0 | The default progress indicator is not used. |
-| PASTEBOARD_DEFAULT = 1 | The default progress indicator is used. |
+| PASTEBOARD_NONE = 0 | The default progress indicator is not used.<br><!--Device-PASTEBOARD_NONE = 0--><!--Device-PASTEBOARD_NONE = 0-End--> |
+| PASTEBOARD_DEFAULT = 1 | The default progress indicator is used.<br><!--Device-PASTEBOARD_DEFAULT = 1--><!--Device-PASTEBOARD_DEFAULT = 1-End--> |
 
 
 ## Function description

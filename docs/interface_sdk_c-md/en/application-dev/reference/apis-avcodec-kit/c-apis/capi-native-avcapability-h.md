@@ -79,7 +79,7 @@ enum OH_AVCodecCategory
 
 The codec category
 
-<!--Device-OH_AVCodecCategory--><!--Device-OH_AVCodecCategory-End-->
+<!--Device-enum OH_AVCodecCategory--><!--Device-enum OH_AVCodecCategory-End-->
 
 **System capability**: SystemCapability.Multimedia.Media.CodecBase
 
@@ -87,8 +87,8 @@ The codec category
 
 | Enum item | Description |
 | -- | -- |
-| HARDWARE = 0 | Hardware codec.<br>**Since**: 10 |
-| SOFTWARE | Software codec.<br>**Since**: 10 |
+| HARDWARE = 0 | Hardware codec.<br>**Since**: 10<br><!--Device-HARDWARE = 0--><!--Device-HARDWARE = 0-End--> |
+| SOFTWARE | Software codec.<br>**Since**: 10<br><!--Device-SOFTWARE--><!--Device-SOFTWARE-End--> |
 
 ### OH_AVCodecType
 
@@ -100,7 +100,7 @@ enum OH_AVCodecType
 
 The codec type
 
-<!--Device-OH_AVCodecType--><!--Device-OH_AVCodecType-End-->
+<!--Device-enum OH_AVCodecType--><!--Device-enum OH_AVCodecType-End-->
 
 **System capability**: SystemCapability.Multimedia.Media.CodecBase
 
@@ -108,10 +108,10 @@ The codec type
 
 | Enum item | Description |
 | -- | -- |
-| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | Indicates video encoder.<br>**Since**: 24 |
-| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | Indicates video decoder.<br>**Since**: 24 |
-| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | Indicates audio encoder<br>**Since**: 24 |
-| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | Indicates audio decoder<br>**Since**: 24 |
+| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | Indicates video encoder.<br>**Since**: 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0--><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0-End--> |
+| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | Indicates video decoder.<br>**Since**: 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1--><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1-End--> |
+| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | Indicates audio encoder<br>**Since**: 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2--><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2-End--> |
+| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | Indicates audio decoder<br>**Since**: 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3--><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3-End--> |
 
 ### OH_AVCapabilityFeature
 
@@ -123,7 +123,7 @@ enum OH_AVCapabilityFeature
 
 The enum of optional features that can be used in specific codec seenarios.
 
-<!--Device-OH_AVCapabilityFeature--><!--Device-OH_AVCapabilityFeature-End-->
+<!--Device-enum OH_AVCapabilityFeature--><!--Device-enum OH_AVCapabilityFeature-End-->
 
 **System capability**: SystemCapability.Multimedia.Media.CodecBase
 
@@ -131,13 +131,13 @@ The enum of optional features that can be used in specific codec seenarios.
 
 | Enum item | Description |
 | -- | -- |
-| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | Feature for codec supports temporal scalability. It is only used in video encoder.<br>**Since**: 12 |
-| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | Feature for codec supports long-term reference. It is only used in video encoder.<br>**Since**: 12 |
-| VIDEO_LOW_LATENCY = 2 | Feature for codec supports low latency. It is only used in video decoder.<br>**Since**: 12 |
-| VIDEO_ENCODER_B_FRAME = 7 | Feature for codec supports B-frame encoding. It is only used in video encoder.<br>**Since**: 20 |
-| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | Feature for codec supports decoding sequence output. It is only used in video decoder.<br>**Since**: 26.0.0 |
-| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | Feature for codec supports downsampling preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0 |
-| VIDEO_ENCODER_PREPROC_CROP = 10 | Feature for codec supports Crop preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0 |
+| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | Feature for codec supports temporal scalability. It is only used in video encoder.<br>**Since**: 12<br><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0--><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0-End--> |
+| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | Feature for codec supports long-term reference. It is only used in video encoder.<br>**Since**: 12<br><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1--><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1-End--> |
+| VIDEO_LOW_LATENCY = 2 | Feature for codec supports low latency. It is only used in video decoder.<br>**Since**: 12<br><!--Device-VIDEO_LOW_LATENCY = 2--><!--Device-VIDEO_LOW_LATENCY = 2-End--> |
+| VIDEO_ENCODER_B_FRAME = 7 | Feature for codec supports B-frame encoding. It is only used in video encoder.<br>**Since**: 20<br><!--Device-VIDEO_ENCODER_B_FRAME = 7--><!--Device-VIDEO_ENCODER_B_FRAME = 7-End--> |
+| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | Feature for codec supports decoding sequence output. It is only used in video decoder.<br>**Since**: 26.0.0<br><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8--><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8-End--> |
+| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | Feature for codec supports downsampling preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9--><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9-End--> |
+| VIDEO_ENCODER_PREPROC_CROP = 10 | Feature for codec supports Crop preprocessing. It is only used in video encoder.<br>**Since**: 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10--><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10-End--> |
 
 
 ## Function description

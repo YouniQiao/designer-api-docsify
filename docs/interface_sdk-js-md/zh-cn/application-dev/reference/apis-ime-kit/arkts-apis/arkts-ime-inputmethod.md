@@ -42,8 +42,8 @@ import { inputMethod } from '@kit.IMEKit';
 | [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getdefaultinputmethod-1) | 获取默认输入法。 |
 | [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting-1) | 获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。<br> <br>含义/功能：获取输入法设置实例，用于查询输入法列表、订阅输入法变化事件、查询面板可见性等配置管理操作。<br> <br>使用场景：当应用需要查询已安装/已激活输入法列表、订阅输入法切换事件、或显示输入法选择对话框时，必须先通过此接口获取InputMethodSetting实例。<br> <br>使用后效果：返回一个InputMethodSetting实例，后续可通过该实例调用getInputMethods、listInputMethodSubtype、on('imeChange')等接口。 |
 | [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getsysteminputmethodconfigability-1) | 获取系统输入法设置界面Ability信息。 |
-| [injectText](arkts-ime-inputmethod-injecttext-f.md#injecttext-1) | 异步向当前获焦、与输入法应用绑定且处于编辑状态的编辑框发送文本。适用于PC Stage应用集成跨应用文本输入，支持密码框。与injectTextSync不同，本接口通过Promise报告发送结果，不等待目标完成编辑。目标由当前输入焦点确定，无默认文本，不支持调用方指定目标。仅支持PC，不支持跨平台应用、元服务或卡片。空字符串同样经过权限及目标检查后下传，不新增编码合法性校验。参数错误通过Promise拒绝返回BusinessError 401。应处理拒绝结果，禁止记录敏感文本。 |
-| [injectTextSync](arkts-ime-inputmethod-injecttextsync-f.md#injecttextsync-1) | 同步向当前获焦、与输入法应用绑定且处于编辑状态的编辑框发送文本。适用于PC Stage应用需要在当前调用中取得发送结果的场景，支持密码框。与injectText不同，本接口发送成功时正常返回，失败时抛出BusinessError。本同步接口阻塞调用线程，在主线程调用容易影响UI交互，需谨慎使用。目标由当前输入焦点确定，无默认文本，不支持调用方指定目标。仅支持PC，不支持跨平台应用、元服务或卡片。空字符串同样经过权限及目标检查后下传，不新增编码合法性校验。参数错误抛BusinessError 401。正常返回不代表目标完成编辑，也不读取目标文本。应处理异常，禁止记录敏感文本。 |
+| [injectText](arkts-ime-inputmethod-injecttext-f.md#injecttext-1) | 将文本注入到前台应用程序的当前焦点编辑框中。该接口使用promise返回的结果。<br> <br>  > **注意** <br> <br> > 此接口仅在PC设备上支持。 |
+| [injectTextSync](arkts-ime-inputmethod-injecttextsync-f.md#injecttextsync-1) | 将文本注入到前台应用程序的当前焦点编辑框中。<br> <br>  > **注意** <br> <br> > 此接口仅在PC设备上支持。 |
 | [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md#offattachmentdidfail-1) | 取消订阅绑定失败事件。使用callback异步回调。 |
 | [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md#onattachmentdidfail-1) | 订阅绑定失败事件。使用callback异步回调。 |
 | [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md#setsimplekeyboardenabled-1) | 编辑框应用设置简单键盘标志。 |

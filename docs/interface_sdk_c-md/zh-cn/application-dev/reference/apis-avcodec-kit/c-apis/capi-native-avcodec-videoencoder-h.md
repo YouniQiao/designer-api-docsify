@@ -89,7 +89,7 @@ enum OH_VideoEncodeBitrateMode
 
 视频编码器的码率控制模式。
 
-<!--Device-OH_VideoEncodeBitrateMode--><!--Device-OH_VideoEncodeBitrateMode-End-->
+<!--Device-enum OH_VideoEncodeBitrateMode--><!--Device-enum OH_VideoEncodeBitrateMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoEncoder
 
@@ -101,9 +101,9 @@ enum OH_VideoEncodeBitrateMode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CBR = 0 | 恒定码率模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_CBR |
-| VBR = 1 | 可变码率模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_VBR |
-| CQ = 2 | 恒定QP模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_CQ |
+| CBR = 0 | 恒定码率模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_CBR<br><!--Device-CBR = 0--><!--Device-CBR = 0-End--> |
+| VBR = 1 | 可变码率模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_VBR<br><!--Device-VBR = 1--><!--Device-VBR = 1-End--> |
+| CQ = 2 | 恒定QP模式。<br>**起始版本：** 9<br>**废弃版本：** 14<br>**替代接口：** BITRATE_MODE_CQ<br><!--Device-CQ = 2--><!--Device-CQ = 2-End--> |
 
 
 ## 函数说明

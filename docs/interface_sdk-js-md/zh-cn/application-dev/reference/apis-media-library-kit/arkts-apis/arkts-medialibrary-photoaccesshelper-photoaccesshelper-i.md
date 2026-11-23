@@ -1776,7 +1776,7 @@ onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | asset | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 是 | 注册单个监听的媒体资产。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息PhotoAssetChangeInfos。<br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息[PhotoAssetChangeInfos。<br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 

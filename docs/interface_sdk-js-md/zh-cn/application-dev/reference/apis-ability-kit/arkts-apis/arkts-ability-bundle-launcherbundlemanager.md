@@ -29,8 +29,8 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 | --- | --- |
 | [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo-1) | 查询指定用户下所有应用的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。使用callback异步回调。 |
 | [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo-2) | 查询指定用户下所有应用的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。使用Promise异步回调。 |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1) | 查询指定bundleName及用户的LauncherAbilityInfo。使用callback异步回调。 |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-2) | 查询指定bundleName及用户的LauncherAbilityInfo。使用Promise异步回调。 |
+| getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1) | 查询指定bundleName及用户的[LauncherAbilityInfo。使用callback异步回调。 |
+| getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-2) | 查询指定bundleName及用户的[LauncherAbilityInfo。使用Promise异步回调。 |
 | [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo-1) | 查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。使用callback异步回调。 |
 | [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo-2) | 查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。使用Promise异步回调。 |
 | [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1) | 查询当前用户下指定分身应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md)。 |
@@ -44,7 +44,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) | 桌面应用Ability的基础信息，包含应用标识、图标、名称等核心属性。详细信息请参见LauncherAbilityInfo。 |
+| LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) | 桌面应用Ability的基础信息，包含应用标识、图标、名称等核心属性。详细信息请参见[LauncherAbilityInfo。 |
 | [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t.md) | 快捷方式配置信息中的自定义数据。 |
 | [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md) | 应用[module.json5配置文件](../../../quick-start/module-configuration-file.md#shortcuts标签)中定义的快捷方式信息。 |
 | [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t.md) | 快捷方式内定义的目标[wants](../../../quick-start/module-configuration-file.md#wants标签)信息集合。 |

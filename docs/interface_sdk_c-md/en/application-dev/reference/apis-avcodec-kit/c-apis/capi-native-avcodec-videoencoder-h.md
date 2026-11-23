@@ -87,7 +87,7 @@ enum OH_VideoEncodeBitrateMode
 
 Enumerates the bit rate modes of a video encoder.
 
-<!--Device-OH_VideoEncodeBitrateMode--><!--Device-OH_VideoEncodeBitrateMode-End-->
+<!--Device-enum OH_VideoEncodeBitrateMode--><!--Device-enum OH_VideoEncodeBitrateMode-End-->
 
 **System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
@@ -99,9 +99,9 @@ Enumerates the bit rate modes of a video encoder.
 
 | Enum item | Description |
 | -- | -- |
-| CBR = 0 | constant bit rate mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_CBR |
-| VBR = 1 | variable bit rate mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_VBR |
-| CQ = 2 | constant quality mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_CQ |
+| CBR = 0 | constant bit rate mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_CBR<br><!--Device-CBR = 0--><!--Device-CBR = 0-End--> |
+| VBR = 1 | variable bit rate mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_VBR<br><!--Device-VBR = 1--><!--Device-VBR = 1-End--> |
+| CQ = 2 | constant quality mode.<br>**Since**: 9<br>**Deprecated**: 14<br>**Replaced by**: BITRATE_MODE_CQ<br><!--Device-CQ = 2--><!--Device-CQ = 2-End--> |
 
 
 ## Function description

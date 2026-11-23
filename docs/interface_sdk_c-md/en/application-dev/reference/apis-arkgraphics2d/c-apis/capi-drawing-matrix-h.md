@@ -69,7 +69,7 @@ enum OH_Drawing_ScaleToFit
 
 Defines an enum for the matrix scaling modes.
 
-<!--Device-OH_Drawing_ScaleToFit--><!--Device-OH_Drawing_ScaleToFit-End-->
+<!--Device-enum OH_Drawing_ScaleToFit--><!--Device-enum OH_Drawing_ScaleToFit-End-->
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -77,10 +77,10 @@ Defines an enum for the matrix scaling modes.
 
 | Enum item | Description |
 | -- | -- |
-| SCALE_TO_FIT_FILL | Scales the source rectangle both horizontally and vertically to exactly match the destination rectangle. |
-| SCALE_TO_FIT_START | Scales the source rectangle and aligns it to the left and top edges of the destination rectangle. |
-| SCALE_TO_FIT_CENTER | Scales the source rectangle and aligns it to the center of the destination rectangle. |
-| SCALE_TO_FIT_END | Scales the source rectangle and aligns it to the right and bottom edges of the destination rectangle. |
+| SCALE_TO_FIT_FILL | Scales the source rectangle both horizontally and vertically to exactly match the destination rectangle.<br><!--Device-SCALE_TO_FIT_FILL--><!--Device-SCALE_TO_FIT_FILL-End--> |
+| SCALE_TO_FIT_START | Scales the source rectangle and aligns it to the left and top edges of the destination rectangle.<br><!--Device-SCALE_TO_FIT_START--><!--Device-SCALE_TO_FIT_START-End--> |
+| SCALE_TO_FIT_CENTER | Scales the source rectangle and aligns it to the center of the destination rectangle.<br><!--Device-SCALE_TO_FIT_CENTER--><!--Device-SCALE_TO_FIT_CENTER-End--> |
+| SCALE_TO_FIT_END | Scales the source rectangle and aligns it to the right and bottom edges of the destination rectangle.<br><!--Device-SCALE_TO_FIT_END--><!--Device-SCALE_TO_FIT_END-End--> |
 
 
 ## Function description

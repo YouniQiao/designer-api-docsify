@@ -68,7 +68,7 @@ Returns the startup result to the caller of [startAbilityForResult](#startabilit
 connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 ```
 
-Connects this UIAbility to an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Connects this UIAbility to an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, error code 801 is returned.
 
 > **NOTE:** 
 > 
@@ -378,7 +378,7 @@ struct UIServiceExtensionAbility {
 disconnectAppServiceExtensionAbility(connection: number): Promise<void>
 ```
 
-Disconnects from an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It can be called only on the main thread. This API uses a promise to return the result. Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Disconnects from an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It can be called only on the main thread. This API uses a promise to return the result. Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid. This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since:** 20
 
@@ -3302,7 +3302,7 @@ export default class EntryAbility extends UIAbility {
 startAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Starts an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, error code 801 is returned.
 
 > **NOTE:** 
 > 
@@ -3705,7 +3705,7 @@ struct Index {
 stopAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Stops an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Stops an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API is supported on PC/2-in-1 devices. Since API version 26.1.0, it is also supported on phones and tablets, subject to product configuration. On unsupported devices, error code 801 is returned.
 
 > **NOTE:** 
 > 

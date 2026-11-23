@@ -66,7 +66,7 @@ Provides model-related APIs for model creation and inference.
 
 | Name | Description |
 | -- | -- |
-| void *OH_AI_TrainCfgHandle | Defines a pointer to a training configuration object.<br>**Since**: 11 |
+| void *OH_AI_TrainCfgHandle | Defines a pointer to a training configuration object.<br>**Since**: 11<br><!--Device-void *OH_AI_TrainCfgHandle--><!--Device-void *OH_AI_TrainCfgHandle-End--> |
 
 ## Function description
 

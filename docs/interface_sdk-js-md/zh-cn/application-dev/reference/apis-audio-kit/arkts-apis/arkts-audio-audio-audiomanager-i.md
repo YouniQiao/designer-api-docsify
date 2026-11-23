@@ -355,7 +355,7 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('audioSceneChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('audioSceneChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -401,7 +401,7 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('deviceChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('deviceChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -449,7 +449,7 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 | --- | --- | --- | --- |
 | type | 'interrupt' | 是 | 事件回调类型，支持的事件为'interrupt'。 |
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 | 音频打断事件类型的参数。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('interrupt')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('interrupt')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 

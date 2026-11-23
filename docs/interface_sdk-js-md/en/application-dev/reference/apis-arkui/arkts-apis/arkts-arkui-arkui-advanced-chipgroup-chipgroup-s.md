@@ -119,7 +119,7 @@ If **undefined**, the default value is used.
 items: ChipGroupItemOptions[]
 ```
 
-Specific properties of each chip. For details, see [ChipGroupItemOptions[]][ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).
+Specific properties of each chip. For details, see [ChipGroupItemOptions[]](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).
 
 If **undefined**, ChipGroup is empty by default.
 
