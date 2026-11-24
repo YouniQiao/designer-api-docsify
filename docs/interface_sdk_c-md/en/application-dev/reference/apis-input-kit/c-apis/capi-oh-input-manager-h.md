@@ -34,6 +34,8 @@ Provides functions such as input event injection, key state query, device hot sw
 | [Input_CursorConfig](capi-input-input-cursorconfig.md) | Input_CursorConfig | Defines custom mouse cursor configuration, which is used to define and manage the display style and interaction behavior of the mouse cursor in an application. It supports different cursor styles (such as default, hand, and text input), providing users with more intuitive operation feedback and enhancing user experience. |
 | [Input_InterceptorOptions](capi-input-input-interceptoroptions.md) | Input_InterceptorOptions | Event interceptor options, which are used to configure parameters and rules for input event interception. Interception control for key events, mouse events, touchscreen events, and axis events are supported. |
 | [OH_PixelmapNative](capi-input-oh-pixelmapnative.md) | OH_PixelmapNative | Defines the PixelMap, used to represent and manipulate pixel image data, supporting operations such as image creation, reading, modification, and rendering. |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) | OH_Input_EventHandler | Defines the input event handler object. |
+| [OH_Input_Event](capi-input-oh-input-event.md) | OH_Input_Event | Defines the unified input event object received by the handler. The object is read-only in the current version. |
 
 ### Enums
 
@@ -50,6 +52,16 @@ Provides functions such as input event injection, key state query, device hot sw
 | [InputEvent_SourceType](#inputevent_sourcetype) | InputEvent_SourceType | Provides the enum values of event source types. |
 | [Input_Result](#input_result) | Input_Result | Provides return value enumerations. |
 | [Input_TouchEventToolType](#input_toucheventtooltype) | Input_TouchEventToolType | Enumerates touch tool types of an input device. |
+| [OH_Input_EventType](#oh_input_eventtype) | OH_Input_EventType | the input event types received by the handler. |
+
+### Macros
+
+| Name | Description |
+| -- | -- |
+| OH_INPUT_EVENT_TYPE_MASK_KEY   (1ULL << OH_INPUT_EVENT_KEY) | Bit mask for key event.<br>**Since**: 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_MOUSE (1ULL << OH_INPUT_EVENT_MOUSE) | Bit mask for mouse events.<br>**Since**: 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_TOUCH (1ULL << OH_INPUT_EVENT_TOUCH) | Bit mask for touch events.<br>**Since**: 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_AXIS  (1ULL << OH_INPUT_EVENT_AXIS) | Bit mask for axis events.<br>**Since**: 26.1.0 |
 
 ### Functions
 
@@ -240,6 +252,24 @@ Provides functions such as input event injection, key state query, device hot sw
 | [Input_Result OH_Input_CursorConfig_IsFollowSystem(Input_CursorConfig *cursorConfig, bool *followSystem)](#oh_input_cursorconfig_isfollowsystem) | - | Queries whether the custom mouse pointer configuration follows the system setting to adjust the pointer size. |
 | [Input_Result OH_Input_SetCustomCursor(int32_t windowId, Input_CustomCursor* customCursor, Input_CursorConfig* cursorConfig)](#oh_input_setcustomcursor) | - | Sets the custom mouse pointer style. <br>The cursor may revert to the system style in the following scenarios: application window layout changes, hotspot switching, page navigation, the cursor leaving and re-entering the window, or the cursor moving between different areas of the window. In these cases, the developer needs to set the cursor style again. This API only supports setting the custom mouse cursor style for windows within the current application process. |
 | [Input_Result OH_Input_BindInputDeviceToDisplay(int32_t inputDeviceId, int32_t displayId)](#oh_input_bindinputdevicetodisplay) | - | Binds a specified input device to a specified screen. |
+| [typedef const OH_Input_Event* (\*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)](#oh_input_eventhandler_oneventfunc) | OH_Input_EventHandler_OnEventFunc | Defines the function invoked when the handler receives an input event. |
+| [typedef void (\*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)](#oh_input_eventhandler_ondisabledfunc) | OH_Input_EventHandler_OnDisabledFunc | Defines the function invoked when the handler is disabled. When this function is invoked, the handler has already been disabled and input events are no longer intercepted. |
+| [Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)](#oh_input_eventhandler_create) | - | Creates an input event handler. |
+| [void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)](#oh_input_eventhandler_destroy) | - | Destroys an input event handler and releases resources. |
+| [Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)](#oh_input_eventhandler_enable) | - | Enables or disables an input event handler. Only one handler is allowed per process. |
+| [Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)](#oh_input_eventhandler_isenabled) | - | Queries whether an input event handler is enabled. |
+| [Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)](#oh_input_eventhandler_getmask) | - | Queries the event type mask of an input event handler. |
+| [Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)](#oh_input_event_gettype) | - | Obtains the type of an input event. |
+| [Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)](#oh_input_event_askeyevent) | - | Obtains a read-only [Input_KeyEvent](capi-input-input-keyevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype). The returned keyEvent is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do not free it with [OH_Input_DestroyKeyEvent](capi-oh-input-manager-h.md#oh_input_destroykeyevent); do not call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetKeyEventKeyCode](capi-oh-input-manager-h.md#oh_input_getkeyeventkeycode)) to read key event fields. |
+| [Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)](#oh_input_event_asmouseevent) | - | Obtains a read-only [Input_MouseEvent](capi-input-input-mouseevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyMouseEvent](capi-oh-input-manager-h.md#oh_input_destroymouseevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetMouseEventAction](capi-oh-input-manager-h.md#oh_input_getmouseeventaction)) to read mouse event fields. |
+| [Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)](#oh_input_event_astouchevent) | - | Obtains a read-only [Input_TouchEvent](capi-input-input-touchevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyTouchEvent](capi-oh-input-manager-h.md#oh_input_destroytouchevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetTouchEventAction](capi-oh-input-manager-h.md#oh_input_gettoucheventaction)) to read touch event fields. |
+| [Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)](#oh_input_event_asaxisevent) | - | Obtains a read-only [Input_AxisEvent](capi-input-input-axisevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyAxisEvent](capi-oh-input-manager-h.md#oh_input_destroyaxisevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetAxisEventAction](capi-oh-input-manager-h.md#oh_input_getaxiseventaction)) to read axis event fields. |
+
+### Variables
+
+| Name | Description |
+| -- | -- |
+| uint64_t OH_Input_EventTypeMask | Defines the bit mask that specifies the set of input event types to be observed by the handler.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.MultimodalInput.Input.Core<br><!--Device-uint64_t OH_Input_EventTypeMask--><!--Device-uint64_t OH_Input_EventTypeMask-End--> |
 
 ## Enum type description
 
@@ -477,6 +507,7 @@ Provides return value enumerations.
 | INPUT_PARAMETER_ERROR = 401 | Parameter check fails.<br><!--Device-INPUT_PARAMETER_ERROR = 401--><!--Device-INPUT_PARAMETER_ERROR = 401-End--> |
 | INPUT_DEVICE_NOT_SUPPORTED = 801 | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported.<br><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801--><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801-End--> |
 | INPUT_SERVICE_EXCEPTION = 3800001 | Service error.<br><!--Device-INPUT_SERVICE_EXCEPTION = 3800001--><!--Device-INPUT_SERVICE_EXCEPTION = 3800001-End--> |
+| INPUT_REPEAT_HANDLER = 3800002 | A handler already exists in this process.<br>**Since**: 26.1.0<br><!--Device-INPUT_REPEAT_HANDLER = 3800002--><!--Device-INPUT_REPEAT_HANDLER = 3800002-End--> |
 | INPUT_REPEAT_INTERCEPTOR = 4200001 | Interceptor repeatedly created.<br><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001--><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001-End--> |
 | INPUT_OCCUPIED_BY_SYSTEM = 4200002 | Occupied by a system app.<br>**Since**: 14<br><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002--><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002-End--> |
 | INPUT_OCCUPIED_BY_OTHER = 4200003 | Occupied by another app.<br>**Since**: 14<br><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003--><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003-End--> |
@@ -515,6 +546,29 @@ Enumerates touch tool types of an input device.
 | TOOL_TYPE_AIRBRUSH = 5 | Airbrush device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_AIRBRUSH = 5--><!--Device-TOOL_TYPE_AIRBRUSH = 5-End--> |
 | TOOL_TYPE_MOUSE = 6 | Mouse device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_MOUSE = 6--><!--Device-TOOL_TYPE_MOUSE = 6-End--> |
 | TOOL_TYPE_LENS = 7 | Lens device.<br>**Since**: 24<br><!--Device-TOOL_TYPE_LENS = 7--><!--Device-TOOL_TYPE_LENS = 7-End--> |
+
+### OH_Input_EventType
+
+```c
+enum OH_Input_EventType
+```
+
+**Description**
+
+the input event types received by the handler.
+
+<!--Device-enum OH_Input_EventType--><!--Device-enum OH_Input_EventType-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_INPUT_EVENT_KEY = 0 | Key event.<br>**Since**: 26.1.0<br><!--Device-OH_INPUT_EVENT_KEY = 0--><!--Device-OH_INPUT_EVENT_KEY = 0-End--> |
+| OH_INPUT_EVENT_MOUSE = 1 | Mouse event.<br>**Since**: 26.1.0<br><!--Device-OH_INPUT_EVENT_MOUSE = 1--><!--Device-OH_INPUT_EVENT_MOUSE = 1-End--> |
+| OH_INPUT_EVENT_TOUCH = 2 | Touch event.<br>**Since**: 26.1.0<br><!--Device-OH_INPUT_EVENT_TOUCH = 2--><!--Device-OH_INPUT_EVENT_TOUCH = 2-End--> |
+| OH_INPUT_EVENT_AXIS = 3 | Axis events.<br>**Since**: 26.1.0<br><!--Device-OH_INPUT_EVENT_AXIS = 3--><!--Device-OH_INPUT_EVENT_AXIS = 3-End--> |
 
 
 ## Function description
@@ -5467,5 +5521,347 @@ Binds a specified input device to a specified screen.
 | Type | Description |
 | -- | -- |
 | [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of OH_Input_BindInputDeviceToDisplay: <ul> <li>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) indicates that the operation is successful.</li> <li>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result) indicates that permission verification failed.</li> <li>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) indicates that parameter check failed (the input device does not exist, the display device does not exist, or the input device is not a stylus device).</li> <li>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) indicates a service exception. Try again.</li> </ul> |
+
+### OH_Input_EventHandler_OnEventFunc()
+
+```c
+typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)
+```
+
+**Description**
+
+Defines the function invoked when the handler receives an input event.
+
+<!--Device-typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)--><!--Device-typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The handler object that receives the event. |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The incoming event. Always non-NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [const OH_Input_Event*](capi-input-oh-input-event.md) | Returns the event to pass it through, or NULL to delete it. |
+
+### OH_Input_EventHandler_OnDisabledFunc()
+
+```c
+typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)
+```
+
+**Description**
+
+Defines the function invoked when the handler is disabled. When this function is invoked, the handler has already been disabled and input events are no longer intercepted.
+
+<!--Device-typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)--><!--Device-typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The handler object that was disabled. |
+
+### OH_Input_EventHandler_Create()
+
+```c
+Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)
+```
+
+**Description**
+
+Creates an input event handler.
+
+<!--Device-Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)--><!--Device-Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Required permission**: ohos.permission.HOOK_INPUT_EVENT
+
+**Since**: 26.1.0
+
+**Resource release**: [OH_Input_EventHandler_Destroy](#oh_input_eventhandler_destroy)
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| OH_Input_EventTypeMask mask | [in] Bit mask that specifies the set of input event types to be observed. See OH_Input_EventTypeMask. |
+| [OH_Input_EventHandler_OnEventFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_oneventfunc) onEventFunc | [in] Function invoked when an observed event is received. See [OH_Input_EventHandler_OnEventFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_oneventfunc). |
+| [OH_Input_EventHandler_OnDisabledFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_ondisabledfunc) onDisabledFunc | [in] Function invoked when the handler is disabled due to timeout. See [OH_Input_EventHandler_OnDisabledFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_ondisabledfunc). |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)** handler | [out] Pointer to the [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) object. On success, handler points to the newly created handler. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of the OH_Input_EventHandler_Create function. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result)Creating the handler succeeded. <br>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result)Permission verification failed. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result)Parameter check failed. Cause: The mask is 0. OnEventFunc is NULL, onDisabledFunc is NULL, and handler is NULL, or mask contains unsupported bits. The <br>[INPUT_DEVICE_NOT_SUPPORTED](capi-oh-input-manager-h.md#input_result) function is not supported. <br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result)The input service is abnormal. Please try again. |
+
+### OH_Input_EventHandler_Destroy()
+
+```c
+void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)
+```
+
+**Description**
+
+Destroys an input event handler and releases resources.
+
+<!--Device-void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)--><!--Device-void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) object to destroy. Passing in NULL does not perform any operation. |
+
+### OH_Input_EventHandler_Enable()
+
+```c
+Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)
+```
+
+**Description**
+
+Enables or disables an input event handler. Only one handler is allowed per process.
+
+<!--Device-Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)--><!--Device-Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Required permission**: ohos.permission.HOOK_INPUT_EVENT
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) object. |
+| bool enable | [in] Whether to enable the handler. The value true means to enable the handler, and false means to disable it. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_Enable function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: handler is NULL. <br>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result) Permission verification failed. <br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) Input service exception, please try again. <br>[INPUT_REPEAT_HANDLER](capi-oh-input-manager-h.md#input_result) A handler already exists in this process. |
+
+### OH_Input_EventHandler_IsEnabled()
+
+```c
+Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)
+```
+
+**Description**
+
+Queries whether an input event handler is enabled.
+
+<!--Device-Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)--><!--Device-Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) object. |
+| bool* enabled | [out] Pointer to the enabled state. The value true means the handler is enabled, and false means the handler is disabled. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_IsEnabled function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: handler is NULL or enabled is NULL. <br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) Input service exception, please try again. |
+
+### OH_Input_EventHandler_GetMask()
+
+```c
+Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)
+```
+
+**Description**
+
+Queries the event type mask of an input event handler.
+
+<!--Device-Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)--><!--Device-Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] The [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) object. |
+| OH_Input_EventTypeMask* mask | [out] Pointer to the event type mask. On success, Its value is the value passed to [OH_Input_EventHandler_Create](capi-oh-input-manager-h.md#oh_input_eventhandler_create). See OH_Input_EventTypeMask. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_GetMask function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: handler is NULL or mask is NULL. |
+
+### OH_Input_Event_GetType()
+
+```c
+Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)
+```
+
+**Description**
+
+Obtains the type of an input event.
+
+<!--Device-Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)--><!--Device-Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The [OH_Input_Event](capi-input-oh-input-event.md) object. |
+| [OH_Input_EventType](capi-oh-input-manager-h.md#oh_input_eventtype)* type | [out] Pointer to the event type. See [OH_Input_EventType](capi-oh-input-manager-h.md#oh_input_eventtype). |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_GetType function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: event is NULL or type is NULL. |
+
+### OH_Input_Event_AsKeyEvent()
+
+```c
+Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)
+```
+
+**Description**
+
+Obtains a read-only [Input_KeyEvent](capi-input-input-keyevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype). The returned keyEvent is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do not free it with [OH_Input_DestroyKeyEvent](capi-oh-input-manager-h.md#oh_input_destroykeyevent); do not call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetKeyEventKeyCode](capi-oh-input-manager-h.md#oh_input_getkeyeventkeycode)) to read key event fields.
+
+<!--Device-Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)--><!--Device-Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The [OH_Input_Event](capi-input-oh-input-event.md) object obtained in the handler function. |
+| [const Input_KeyEvent](capi-input-input-keyevent.md)** keyEvent | [out] Pointer to the borrowed [Input_KeyEvent](capi-input-input-keyevent.md) view. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsKeyEvent function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: event is NULL, keyEvent is NULL, or the event type is not [OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype). |
+
+### OH_Input_Event_AsMouseEvent()
+
+```c
+Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)
+```
+
+**Description**
+
+Obtains a read-only [Input_MouseEvent](capi-input-input-mouseevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyMouseEvent](capi-oh-input-manager-h.md#oh_input_destroymouseevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetMouseEventAction](capi-oh-input-manager-h.md#oh_input_getmouseeventaction)) to read mouse event fields.
+
+<!--Device-Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)--><!--Device-Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The [OH_Input_Event](capi-input-oh-input-event.md) object obtained in the handler function. |
+| [const Input_MouseEvent](capi-input-input-mouseevent.md)** mouseEvent | [out] Pointer to the borrowed [Input_MouseEvent](capi-input-input-mouseevent.md) view. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsMouseEvent function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: event is NULL, mouseEvent is NULL, or the event type is not [OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype). |
+
+### OH_Input_Event_AsTouchEvent()
+
+```c
+Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)
+```
+
+**Description**
+
+Obtains a read-only [Input_TouchEvent](capi-input-input-touchevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyTouchEvent](capi-oh-input-manager-h.md#oh_input_destroytouchevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetTouchEventAction](capi-oh-input-manager-h.md#oh_input_gettoucheventaction)) to read touch event fields.
+
+<!--Device-Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)--><!--Device-Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The [OH_Input_Event](capi-input-oh-input-event.md) object obtained in the handler function. |
+| [const Input_TouchEvent](capi-input-input-touchevent.md)** touchEvent | [out] Pointer to the borrowed [Input_TouchEvent](capi-input-input-touchevent.md) view. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsTouchEvent function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: event is NULL, touchEvent is NULL, or the event type is not [OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype). |
+
+### OH_Input_Event_AsAxisEvent()
+
+```c
+Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)
+```
+
+**Description**
+
+Obtains a read-only [Input_AxisEvent](capi-input-input-axisevent.md) view from a unified input event. Only valid when the event type is [OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype). The returned pointer is a non-owning, read-only view borrowed from event. It is valid only during the current invocation (while event is alive). Do NOT free it with [OH_Input_DestroyAxisEvent](capi-oh-input-manager-h.md#oh_input_destroyaxisevent); do NOT call Set* functions on it. Use the existing Get* accessors (for example, [OH_Input_GetAxisEventAction](capi-oh-input-manager-h.md#oh_input_getaxiseventaction)) to read axis event fields.
+
+<!--Device-Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)--><!--Device-Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] The [OH_Input_Event](capi-input-oh-input-event.md) object obtained in the handler function. |
+| [const Input_AxisEvent](capi-input-input-axisevent.md)** axisEvent | [out] Pointer to the borrowed [Input_AxisEvent](capi-input-input-axisevent.md) view. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsAxisEvent function result code. <br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) Operation successful. <br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) Parameter check failed. Reason: event is NULL, axisEvent is NULL, or the event type is not [OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype). |
 
 

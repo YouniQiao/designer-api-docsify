@@ -24,9 +24,9 @@ Provides the model file types and device types supported by MindSpore Lite.
 | -- | -- | -- |
 | [OH_AI_ModelType](#oh_ai_modeltype) | OH_AI_ModelType | model file type. |
 | [OH_AI_DeviceType](#oh_ai_devicetype) | OH_AI_DeviceType | device type information. |
-| [OH_AI_NNRTDeviceType](#oh_ai_nnrtdevicetype) | OH_AI_NNRTDeviceType | the hard deivce type managed by NNRT. |
-| [OH_AI_PerformanceMode](#oh_ai_performancemode) | OH_AI_PerformanceMode | performance mode of the NNRT hard deivce. |
-| [OH_AI_Priority](#oh_ai_priority) | OH_AI_Priority | NNRT reasoning task priority. |
+| [OH_AI_NNRTDeviceType](#oh_ai_nnrtdevicetype) | OH_AI_NNRTDeviceType | the hard device type managed by NNRT. |
+| [OH_AI_PerformanceMode](#oh_ai_performancemode) | OH_AI_PerformanceMode | performance mode of the NNRT hard device. |
+| [OH_AI_Priority](#oh_ai_priority) | OH_AI_Priority | NNRT inference task priority. |
 | [OH_AI_OptimizationLevel](#oh_ai_optimizationlevel) | OH_AI_OptimizationLevel | optimization level for train model. |
 | [OH_AI_QuantizationType](#oh_ai_quantizationtype) | OH_AI_QuantizationType | quantization type |
 
@@ -55,7 +55,7 @@ model file type.
 | Enum item | Description |
 | -- | -- |
 | OH_AI_MODELTYPE_MINDIR = 0 | the model type is MindIR, and the corresponding model file extension is .ms.<br><!--Device-OH_AI_MODELTYPE_MINDIR = 0--><!--Device-OH_AI_MODELTYPE_MINDIR = 0-End--> |
-| OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF | invaild model type<br><!--Device-OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF--><!--Device-OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF-End--> |
+| OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF | invalid model type<br><!--Device-OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF--><!--Device-OH_AI_MODELTYPE_INVALID = 0xFFFFFFFF-End--> |
 
 ### OH_AI_DeviceType
 
@@ -87,7 +87,7 @@ enum OH_AI_NNRTDeviceType
 
 **Description**
 
-the hard deivce type managed by NNRT.
+the hard device type managed by NNRT.
 
 <!--Device-enum OH_AI_NNRTDeviceType--><!--Device-enum OH_AI_NNRTDeviceType-End-->
 
@@ -108,7 +108,7 @@ enum OH_AI_PerformanceMode
 
 **Description**
 
-performance mode of the NNRT hard deivce.
+performance mode of the NNRT hard device.
 
 <!--Device-enum OH_AI_PerformanceMode--><!--Device-enum OH_AI_PerformanceMode-End-->
 
@@ -130,7 +130,7 @@ enum OH_AI_Priority
 
 **Description**
 
-NNRT reasoning task priority.
+NNRT inference task priority.
 
 <!--Device-enum OH_AI_Priority--><!--Device-enum OH_AI_Priority-End-->
 
@@ -161,9 +161,9 @@ optimization level for train model.
 | -- | -- |
 | OH_AI_KO0 = 0 | Do not change<br><!--Device-OH_AI_KO0 = 0--><!--Device-OH_AI_KO0 = 0-End--> |
 | OH_AI_KO2 = 2 | Cast network to float16, keep batchnorm and loss in float32<br><!--Device-OH_AI_KO2 = 2--><!--Device-OH_AI_KO2 = 2-End--> |
-| OH_AI_KO3 = 3 | Cast network to float16, including bacthnorm<br><!--Device-OH_AI_KO3 = 3--><!--Device-OH_AI_KO3 = 3-End--> |
+| OH_AI_KO3 = 3 | Cast network to float16, including batchnorm<br><!--Device-OH_AI_KO3 = 3--><!--Device-OH_AI_KO3 = 3-End--> |
 | OH_AI_KAUTO = 4 | Choose optimization based on device<br><!--Device-OH_AI_KAUTO = 4--><!--Device-OH_AI_KAUTO = 4-End--> |
-| OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF | Invalid optimizatin level<br><!--Device-OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF--><!--Device-OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF-End--> |
+| OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF | Invalid optimization level<br><!--Device-OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF--><!--Device-OH_AI_KOPTIMIZATIONTYPE = 0xFFFFFFFF-End--> |
 
 ### OH_AI_QuantizationType
 

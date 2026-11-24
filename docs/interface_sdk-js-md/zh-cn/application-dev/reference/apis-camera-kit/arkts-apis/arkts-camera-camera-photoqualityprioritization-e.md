@@ -28,6 +28,24 @@ HIGH_QUALITY = 0
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## LOW_QUALITY
+
+```TypeScript
+LOW_QUALITY = 2
+```
+
+专注于低开销，在降低图像质量的情况下优先获得最短的捕获时间。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoQualityPrioritization-LOW_QUALITY = 2--><!--Device-PhotoQualityPrioritization-LOW_QUALITY = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 ## SPEED
 
 ```TypeScript

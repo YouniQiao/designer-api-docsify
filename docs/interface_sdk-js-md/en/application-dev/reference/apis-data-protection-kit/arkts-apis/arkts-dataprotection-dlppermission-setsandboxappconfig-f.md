@@ -26,7 +26,7 @@ This API sets the sandbox application configuration so that the application can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configInfo | string | Yes | Sandbox application configuration. The value contains a maximum of 4,194,304 bytes. If the value is out of range, error code 401 is thrown. |
+| configInfo | string | Yes | Sandbox application configuration. The value contains a maximum of 4,194,303 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 

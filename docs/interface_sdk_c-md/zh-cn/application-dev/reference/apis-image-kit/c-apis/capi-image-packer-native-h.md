@@ -267,7 +267,7 @@ Image_ErrorCode OH_PackingOptions_SetQuality(OH_PackingOptions *options, uint32_
 
 | 类型 | 说明 |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | IMAGE_SUCCESS：执行成功。<br>IMAGE_BAD_PARAMETER：参数错误。 |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | IMAGE_SUCCESS：执行成功。<br>IMAGE_BAD_PARAMETER：options或quality为空。 |
 
 ### OH_PackingOptions_GetNeedsPackProperties()
 

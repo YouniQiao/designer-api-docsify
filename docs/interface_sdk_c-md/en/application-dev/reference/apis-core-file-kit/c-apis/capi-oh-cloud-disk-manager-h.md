@@ -18,6 +18,7 @@ This file defines the APIs for the cloud disk management module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
+| [OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md) | OH_CloudDisk_OperationTypeArray | Array that stores the enumeration of file change types. |
 | [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) | CloudDisk_PathInfo | A struct that encapsulates the file path information. |
 | [CloudDisk_FileSyncState](capi-clouddisk-clouddisk-filesyncstate.md) | CloudDisk_FileSyncState | A struct that encapsulates the file sync state. |
 | [CloudDisk_ChangeData](capi-clouddisk-clouddisk-changedata.md) | CloudDisk_ChangeData | A struct that encapsulates the event data generated when a single file under the sync root path is changed. It includes the file's unique ID, the parent directory's unique ID, relative path, change type, file size, and timestamp. |
@@ -62,6 +63,8 @@ This file defines the APIs for the cloud disk management module.
 | [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChanges(const CloudDisk_SyncFolderPath syncFolderPath, void (\*callback)(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_ChangeData changeDatas[], size_t bufferLength))](#oh_clouddisk_registersyncfolderchanges) | Registers a callback to obtain file changes in the sync root path. |
 | [CloudDisk_ErrorCode OH_CloudDisk_UnregisterSyncFolderChanges(const CloudDisk_SyncFolderPath syncFolderPath)](#oh_clouddisk_unregistersyncfolderchanges) | Unregisters the callback for file changes in the sync root path. |
 | [CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChanges(const CloudDisk_SyncFolderPath syncFolderPath, uint64_t startUsn, size_t count, CloudDisk_ChangesResult **changesResult)](#oh_clouddisk_getsyncfolderchanges) | Obtains the change history in the sync root path. |
+| [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, const OH_CloudDisk_OperationTypeArray *operationTypes, void (\*callback)(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_ChangeData changeDatas[], size_t bufferLength))](#oh_clouddisk_registersyncfolderchangeswithevents) | Registers a callback function for listening for synchronization folder changes and filters events by the specified operation type. |
+| [CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, int64_t startUsn, int64_t count, const OH_CloudDisk_OperationTypeArray *operationTypes, CloudDisk_ChangesResult **changesResult)](#oh_clouddisk_getsyncfolderchangeswithevents) | This interface is used to obtain the change data filtered by operation type in a specified folder. |
 | [CloudDisk_ErrorCode OH_CloudDisk_SetFileSyncStates(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_FileSyncState fileSyncStates[], size_t bufferLength, CloudDisk_FailedList **failedLists, size_t *failedCount)](#oh_clouddisk_setfilesyncstates) | Sets the file sync state in the sync root path. |
 | [CloudDisk_ErrorCode OH_CloudDisk_GetFileSyncStates(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo paths[], size_t bufferLength, CloudDisk_ResultList **resultLists, size_t *resultCount)](#oh_clouddisk_getfilesyncstates) | Obtains the file sync state in the sync root path. |
 | [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolder(const CloudDisk_SyncFolder *syncFolder)](#oh_clouddisk_registersyncfolder) | Registers a sync root. |
@@ -145,6 +148,7 @@ Enumerates the file change types.
 | CLOSE_WRITE = 4 | Close the file after the write operation.<br>**Since**: 21<br><!--Device-CLOSE_WRITE = 4--><!--Device-CLOSE_WRITE = 4-End--> |
 | SYNC_FOLDER_INVALID = 5 | Invalid sync root path.<br>**Since**: 21<br><!--Device-SYNC_FOLDER_INVALID = 5--><!--Device-SYNC_FOLDER_INVALID = 5-End--> |
 | OH_CLOUD_DISK_CLOSE_MODIFY = 6 | Close a file after modifying content.<br>**Since**: 26.0.1<br><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6--><!--Device-OH_CLOUD_DISK_CLOSE_MODIFY = 6-End--> |
+| OH_CLOUD_DISK_FILE_OPEN = 7 | Open the file.<br>**Since**: 26.1.0<br><!--Device-OH_CLOUD_DISK_FILE_OPEN = 7--><!--Device-OH_CLOUD_DISK_FILE_OPEN = 7-End--> |
 
 ### CloudDisk_ErrorReason
 
@@ -348,6 +352,68 @@ Obtains the change history in the sync root path.
 | Type | Description |
 | -- | -- |
 | [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+
+### OH_CloudDisk_RegisterSyncFolderChangesWithEvents()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, const OH_CloudDisk_OperationTypeArray *operationTypes, void (*callback)(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_ChangeData changeDatas[], size_t bufferLength))
+```
+
+**Description**
+
+Registers a callback function for listening for synchronization folder changes and filters events by the specified operation type.
+
+<!--Device-CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, const OH_CloudDisk_OperationTypeArray *operationTypes, void (*callback)(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_ChangeData changeDatas[], size_t bufferLength))--><!--Device-CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, const OH_CloudDisk_OperationTypeArray *operationTypes, void (*callback)(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_ChangeData changeDatas[], size_t bufferLength))-End-->
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| onst CloudDisk_SyncFolderPath syncFolderPath | [in] indicates the synchronization root path. For details, see [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md). |
+| [const OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md) *operationTypes | [in] indicates the array used to filter file changes. For details, see [OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md). |
+| void (*callback)(const CloudDisk_SyncFolderPath syncFolderPath | [in] Registered callback function. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | If the callback function is successfully registered, [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) is returned. <br>Otherwise, the error code defined in [cloud_disk_error_code.h](capi-cloud-disk-error-code-h.md) is returned. |
+
+### OH_CloudDisk_GetSyncFolderChangesWithEvents()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, int64_t startUsn, int64_t count, const OH_CloudDisk_OperationTypeArray *operationTypes, CloudDisk_ChangesResult **changesResult)
+```
+
+**Description**
+
+This interface is used to obtain the change data filtered by operation type in a specified folder.
+
+<!--Device-CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, int64_t startUsn, int64_t count, const OH_CloudDisk_OperationTypeArray *operationTypes, CloudDisk_ChangesResult **changesResult)--><!--Device-CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChangesWithEvents(const CloudDisk_SyncFolderPath syncFolderPath, int64_t startUsn, int64_t count, const OH_CloudDisk_OperationTypeArray *operationTypes, CloudDisk_ChangesResult **changesResult)-End-->
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] indicates the synchronization root path. For details, see [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md). |
+| int64_t startUsn | [in] indicates the start update sequence number. |
+| int64_t count | [in] indicates the number of files. The value ranges from 1 to 100. |
+| [const OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md) *operationTypes | [in] indicates the array used to filter file changes. For details, see [OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md). |
+| [CloudDisk_ChangesResult](capi-clouddisk-clouddisk-changesresult.md) **changesResult | [in] indicates the file change query result. For details, see [CloudDisk_ChangesResult](capi-clouddisk-clouddisk-changesresult.md). |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | If the function is successfully executed, [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) is returned. <br>Otherwise, the error code defined in [cloud_disk_error_code.h](capi-cloud-disk-error-code-h.md) is returned. |
 
 ### OH_CloudDisk_SetFileSyncStates()
 

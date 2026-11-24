@@ -31,6 +31,7 @@
     - [ArchiveReadCtx](capi-archive-archivereadctx.md)
     - [ArchiveStreamWriteCtx](capi-archive-archivestreamwritectx.md)
     - [ArchiveStreamReadCtx](capi-archive-archivestreamreadctx.md)
+    - [OH_CloudDisk_OperationTypeArray](capi-clouddisk-oh-clouddisk-operationtypearray.md)
     - [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md)
     - [CloudDisk_FileSyncState](capi-clouddisk-clouddisk-filesyncstate.md)
     - [CloudDisk_ChangeData](capi-clouddisk-clouddisk-changedata.md)

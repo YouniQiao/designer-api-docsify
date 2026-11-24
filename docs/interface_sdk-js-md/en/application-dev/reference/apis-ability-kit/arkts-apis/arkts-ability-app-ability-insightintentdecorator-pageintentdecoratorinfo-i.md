@@ -46,7 +46,7 @@ Name of the [navDestination](../../apis-arkui/arkts-components/arkts-arkui-navig
 navigationId?: string
 ```
 
-ID of the [NavDestination组件](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp-attribute.md#navigationattribute) component bound to the intent.
+ID of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp-attribute.md#navigationattribute) component bound to the intent.
 
 **Type:** string
 

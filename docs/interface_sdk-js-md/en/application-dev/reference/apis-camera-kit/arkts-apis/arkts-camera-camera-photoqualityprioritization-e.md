@@ -28,6 +28,24 @@ Focuses on image quality, which may increase the time required for capturing pho
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## LOW_QUALITY
+
+```TypeScript
+LOW_QUALITY = 2
+```
+
+Focuses on low overhead, prioritizing the shortest capture time with reduced image quality.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-PhotoQualityPrioritization-LOW_QUALITY = 2--><!--Device-PhotoQualityPrioritization-LOW_QUALITY = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
 ## SPEED
 
 ```TypeScript

@@ -26,7 +26,7 @@ Open the input method detail page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext, UIExtensionContext, and InputMethodExtensionContext are supported. |
 | bundleName | string | Yes | bundle name of the input method. |
 | inputMethodId | string | Yes | id of the input method. |
 

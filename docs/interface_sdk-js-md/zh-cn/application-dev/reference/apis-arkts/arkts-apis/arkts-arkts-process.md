@@ -71,6 +71,7 @@ import { process } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
+| [appuid](arkts-arkts-process-con.md#appuid) | 返回进程的应用标识（AppUid，数值形式）。 |
 | [pid](arkts-arkts-process-con.md#pid) | 进程的 ID（PID）。 |
 | [tid](arkts-arkts-process-con.md#tid) | 当前线程的tid。 |
 | [uid](arkts-arkts-process-con.md#uid) | 进程的用户标识。 |

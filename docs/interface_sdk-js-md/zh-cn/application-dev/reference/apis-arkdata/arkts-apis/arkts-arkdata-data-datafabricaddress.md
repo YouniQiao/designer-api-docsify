@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataFabricAddress } from '@ohos.data.dataFabricAddress';
+import { dataFabricAddress } from '@kit.ArkData';
 ```
 
 ## 汇总

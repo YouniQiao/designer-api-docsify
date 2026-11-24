@@ -34,6 +34,8 @@
 | [Input_CursorConfig](capi-input-input-cursorconfig.md) | Input_CursorConfig | 自定义鼠标光标配置，用于定义和管理应用程序中鼠标光标的显示样式和交互行为。支持设置不同类型的光标样式（如默认、手形、文本输入等），为用户提供更直观的操作反馈，提升用户体验。 |
 | [Input_InterceptorOptions](capi-input-input-interceptoroptions.md) | Input_InterceptorOptions | 事件拦截选项，用于配置输入事件拦截的参数和规则，支持按键事件、鼠标事件、触屏事件和轴事件的拦截控制。 |
 | [OH_PixelmapNative](capi-input-oh-pixelmapnative.md) | OH_PixelmapNative | 像素图，用于表示和操作像素图像数据，支持图像的创建、读取、修改和渲染等操作。 |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md) | OH_Input_EventHandler | 定义输入事件处理的handler。 |
+| [OH_Input_Event](capi-input-oh-input-event.md) | OH_Input_Event | 定义handler接收的统一输入事件对象。 该对象在当前版本为只读。 |
 
 ### 枚举
 
@@ -50,6 +52,16 @@
 | [InputEvent_SourceType](#inputevent_sourcetype) | InputEvent_SourceType | 输入事件源类型。 |
 | [Input_Result](#input_result) | Input_Result | 返回值枚举值。 |
 | [Input_TouchEventToolType](#input_toucheventtooltype) | Input_TouchEventToolType | 输入设备的触屏事件工具类型。 |
+| [OH_Input_EventType](#oh_input_eventtype) | OH_Input_EventType | 处理handler接收的输入事件类型。 |
+
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| OH_INPUT_EVENT_TYPE_MASK_KEY   (1ULL << OH_INPUT_EVENT_KEY) | 按键事件的位掩码。<br>**起始版本：** 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_MOUSE (1ULL << OH_INPUT_EVENT_MOUSE) | 鼠标事件的位掩码。<br>**起始版本：** 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_TOUCH (1ULL << OH_INPUT_EVENT_TOUCH) | 触摸事件的位掩码。<br>**起始版本：** 26.1.0 |
+| OH_INPUT_EVENT_TYPE_MASK_AXIS  (1ULL << OH_INPUT_EVENT_AXIS) | 轴事件的位掩码。<br>**起始版本：** 26.1.0 |
 
 ### 函数
 
@@ -240,6 +252,24 @@
 | [Input_Result OH_Input_CursorConfig_IsFollowSystem(Input_CursorConfig *cursorConfig, bool *followSystem)](#oh_input_cursorconfig_isfollowsystem) | - | 查询自定义鼠标光标配置是否跟随系统设置调整光标大小。 |
 | [Input_Result OH_Input_SetCustomCursor(int32_t windowId, Input_CustomCursor* customCursor, Input_CursorConfig* cursorConfig)](#oh_input_setcustomcursor) | - | 设置自定义鼠标光标样式。 <br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。此接口仅支持设置本应用进程内窗口的自定义鼠标光标样式。 |
 | [Input_Result OH_Input_BindInputDeviceToDisplay(int32_t inputDeviceId, int32_t displayId)](#oh_input_bindinputdevicetodisplay) | - | 绑定指定输入设备到指定屏幕。 |
+| [typedef const OH_Input_Event* (\*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)](#oh_input_eventhandler_oneventfunc) | OH_Input_EventHandler_OnEventFunc | 定义handler接收到input事件时调用的函数。 |
+| [typedef void (\*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)](#oh_input_eventhandler_ondisabledfunc) | OH_Input_EventHandler_OnDisabledFunc | 定义handler禁用时调用的函数。当调用此函数时， handler已经被禁用，输入事件不再被拦截。 |
+| [Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)](#oh_input_eventhandler_create) | - | 创建输入事件handler。 |
+| [void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)](#oh_input_eventhandler_destroy) | - | 销毁输入事件的handler并释放资源。 |
+| [Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)](#oh_input_eventhandler_enable) | - | 启用或禁用输入事件handler。每个进程只允许有一个handler。 |
+| [Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)](#oh_input_eventhandler_isenabled) | - | 查询是否启用了handler。 |
+| [Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)](#oh_input_eventhandler_getmask) | - | 查询输入事件handler的事件类型掩码。 |
+| [Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)](#oh_input_event_gettype) | - | 获取输入事件的类型。 |
+| [Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)](#oh_input_event_askeyevent) | - | 从event事件中获取只读的[Input_KeyEvent](capi-input-input-keyevent.md)。 仅在事件类型为[OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyKeyEvent](capi-oh-input-manager-h.md#oh_input_destroykeyevent)释放该指针，请勿对其调用 Set* 类函数。 使用现有的Get*访问器（例如[OH_Input_GetKeyEventKeyCode](capi-oh-input-manager-h.md#oh_input_getkeyeventkeycode)）读取按键事件字段。 |
+| [Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)](#oh_input_event_asmouseevent) | - | 从event事件中获取只读的[Input_MouseEvent](capi-input-input-mouseevent.md)。 仅在事件类型为[OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyMouseEvent](capi-oh-input-manager-h.md#oh_input_destroymouseevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetMouseEventAction](capi-oh-input-manager-h.md#oh_input_getmouseeventaction)）读取鼠标事件字段。 |
+| [Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)](#oh_input_event_astouchevent) | - | 从event事件中获取只读的[Input_TouchEvent](capi-input-input-touchevent.md)。 仅当事件类型为[OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 它返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyTouchEvent](capi-oh-input-manager-h.md#oh_input_destroytouchevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetTouchEventAction](capi-oh-input-manager-h.md#oh_input_gettoucheventaction)）读取触摸事件字段。 |
+| [Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)](#oh_input_event_asaxisevent) | - | 从event事件中获取只读的[Input_AxisEvent](capi-input-input-axisevent.md)。 仅当事件类型为[OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 它仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyAxisEvent](capi-oh-input-manager-h.md#oh_input_destroyaxisevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetAxisEventAction](capi-oh-input-manager-h.md#oh_input_getaxiseventaction)）读取轴事件字段。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| uint64_t OH_Input_EventTypeMask | 定义位掩码，用于指定handler要处理的输入事件类型集。<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.MultimodalInput.Input.Core<br><!--Device-uint64_t OH_Input_EventTypeMask--><!--Device-uint64_t OH_Input_EventTypeMask-End--> |
 
 ## 枚举类型说明
 
@@ -477,6 +507,7 @@ enum Input_Result
 | INPUT_PARAMETER_ERROR = 401 | 参数检查失败。<br><!--Device-INPUT_PARAMETER_ERROR = 401--><!--Device-INPUT_PARAMETER_ERROR = 401-End--> |
 | INPUT_DEVICE_NOT_SUPPORTED = 801 | 表示不支持该功能。<br><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801--><!--Device-INPUT_DEVICE_NOT_SUPPORTED = 801-End--> |
 | INPUT_SERVICE_EXCEPTION = 3800001 | 服务异常。<br><!--Device-INPUT_SERVICE_EXCEPTION = 3800001--><!--Device-INPUT_SERVICE_EXCEPTION = 3800001-End--> |
+| INPUT_REPEAT_HANDLER = 3800002 | 此进程中已存在handler。<br>**起始版本：** 26.1.0<br><!--Device-INPUT_REPEAT_HANDLER = 3800002--><!--Device-INPUT_REPEAT_HANDLER = 3800002-End--> |
 | INPUT_REPEAT_INTERCEPTOR = 4200001 | 应用创建拦截后，再次执行创建拦截的操作。<br><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001--><!--Device-INPUT_REPEAT_INTERCEPTOR = 4200001-End--> |
 | INPUT_OCCUPIED_BY_SYSTEM = 4200002 | 已经被系统应用占用。<br>**起始版本：** 14<br><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002--><!--Device-INPUT_OCCUPIED_BY_SYSTEM = 4200002-End--> |
 | INPUT_OCCUPIED_BY_OTHER = 4200003 | 已经被其他应用占用。<br>**起始版本：** 14<br><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003--><!--Device-INPUT_OCCUPIED_BY_OTHER = 4200003-End--> |
@@ -515,6 +546,29 @@ enum Input_TouchEventToolType
 | TOOL_TYPE_AIRBRUSH = 5 | 表示喷枪类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_AIRBRUSH = 5--><!--Device-TOOL_TYPE_AIRBRUSH = 5-End--> |
 | TOOL_TYPE_MOUSE = 6 | 表示鼠标设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_MOUSE = 6--><!--Device-TOOL_TYPE_MOUSE = 6-End--> |
 | TOOL_TYPE_LENS = 7 | 表示透镜类设备。<br>**起始版本：** 24<br><!--Device-TOOL_TYPE_LENS = 7--><!--Device-TOOL_TYPE_LENS = 7-End--> |
+
+### OH_Input_EventType
+
+```c
+enum OH_Input_EventType
+```
+
+**描述：**
+
+处理handler接收的输入事件类型。
+
+<!--Device-enum OH_Input_EventType--><!--Device-enum OH_Input_EventType-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_INPUT_EVENT_KEY = 0 | 按键事件。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUT_EVENT_KEY = 0--><!--Device-OH_INPUT_EVENT_KEY = 0-End--> |
+| OH_INPUT_EVENT_MOUSE = 1 | 鼠标事件。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUT_EVENT_MOUSE = 1--><!--Device-OH_INPUT_EVENT_MOUSE = 1-End--> |
+| OH_INPUT_EVENT_TOUCH = 2 | 触摸事件。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUT_EVENT_TOUCH = 2--><!--Device-OH_INPUT_EVENT_TOUCH = 2-End--> |
+| OH_INPUT_EVENT_AXIS = 3 | 轴事件。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUT_EVENT_AXIS = 3--><!--Device-OH_INPUT_EVENT_AXIS = 3-End--> |
 
 
 ## 函数说明
@@ -5463,5 +5517,347 @@ Input_Result OH_Input_BindInputDeviceToDisplay(int32_t inputDeviceId, int32_t di
 | 类型 | 说明 |
 | -- | -- |
 | [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_BindInputDeviceToDisplay函数返回值：<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result)表示操作成功。<br>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result)表示权限校验失败。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result)表示参数检查失败（输入设备不存在，显示屏设备不存在，或者输入设备不是手写笔设备）。<br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result)表示服务异常，请重试。 |
+
+### OH_Input_EventHandler_OnEventFunc()
+
+```c
+typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)
+```
+
+**描述：**
+
+定义handler接收到input事件时调用的函数。
+
+<!--Device-typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)--><!--Device-typedef const OH_Input_Event* (*OH_Input_EventHandler_OnEventFunc)(OH_Input_EventHandler* handler, const OH_Input_Event* event)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] 接收事件的handler对象。 |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] 传入的事件，始终为非NULL。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [const OH_Input_Event*](capi-input-oh-input-event.md) | 返回该事件表示将其传递给后续处理，返回NULL表示删除该事件。 |
+
+### OH_Input_EventHandler_OnDisabledFunc()
+
+```c
+typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)
+```
+
+**描述：**
+
+定义handler禁用时调用的函数。当调用此函数时， handler已经被禁用，输入事件不再被拦截。
+
+<!--Device-typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)--><!--Device-typedef void (*OH_Input_EventHandler_OnDisabledFunc)(OH_Input_EventHandler* handler)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] 禁用的handler。 |
+
+### OH_Input_EventHandler_Create()
+
+```c
+Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)
+```
+
+**描述：**
+
+创建输入事件handler。
+
+<!--Device-Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)--><!--Device-Input_Result OH_Input_EventHandler_Create(OH_Input_EventTypeMask mask, OH_Input_EventHandler_OnEventFunc onEventFunc, OH_Input_EventHandler_OnDisabledFunc onDisabledFunc, OH_Input_EventHandler** handler)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**需要权限：** ohos.permission.HOOK_INPUT_EVENT
+
+**起始版本：** 26.1.0
+
+**资源释放：** [OH_Input_EventHandler_Destroy](#oh_input_eventhandler_destroy)
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| OH_Input_EventTypeMask mask | [in] 指定要观测的输入事件类型的位掩码。 请参见OH_Input_EventTypeMask。 |
+| [OH_Input_EventHandler_OnEventFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_oneventfunc) onEventFunc | [in] 接收到观测事件时调用的函数。 请参见[OH_Input_EventHandler_OnEventFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_oneventfunc)。 |
+| [OH_Input_EventHandler_OnDisabledFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_ondisabledfunc) onDisabledFunc | [in] 当handler因超时而被禁用时调用的函数， 请参见[OH_Input_EventHandler_OnDisabledFunc](capi-oh-input-manager-h.md#oh_input_eventhandler_ondisabledfunc)。 |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)** handler | [out] 指向[OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)对象的指针。在成功的时候， handler指向新创建的handler。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_Create 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 创建处理程序成功。<br>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result) 权限校验失败。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：mask为0、onEventFunc为NULL、onDisabledFunc为NULL、handler为NULL，或mask包含不支持的位。<br>[INPUT_DEVICE_NOT_SUPPORTED](capi-oh-input-manager-h.md#input_result) 功能不支持。<br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) 输入服务异常，请重试。 |
+
+### OH_Input_EventHandler_Destroy()
+
+```c
+void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)
+```
+
+**描述：**
+
+销毁输入事件的handler并释放资源。
+
+<!--Device-void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)--><!--Device-void OH_Input_EventHandler_Destroy(OH_Input_EventHandler* handler)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] 要销毁的[OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)对象。 传入NULL不执行任何操作。 |
+
+### OH_Input_EventHandler_Enable()
+
+```c
+Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)
+```
+
+**描述：**
+
+启用或禁用输入事件handler。每个进程只允许有一个handler。
+
+<!--Device-Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)--><!--Device-Input_Result OH_Input_EventHandler_Enable(OH_Input_EventHandler* handler, bool enable)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**需要权限：** ohos.permission.HOOK_INPUT_EVENT
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)对象。 |
+| bool enable | [in] 是否启用handler。true表示启用handler， false表示禁用handler。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_Enable 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：handler为NULL。<br>[INPUT_PERMISSION_DENIED](capi-oh-input-manager-h.md#input_result) 权限校验失败。<br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) 输入服务异常，请重试。<br>[INPUT_REPEAT_HANDLER](capi-oh-input-manager-h.md#input_result) 该进程内已存在handler。 |
+
+### OH_Input_EventHandler_IsEnabled()
+
+```c
+Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)
+```
+
+**描述：**
+
+查询是否启用了handler。
+
+<!--Device-Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)--><!--Device-Input_Result OH_Input_EventHandler_IsEnabled(const OH_Input_EventHandler* handler, bool* enabled)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)对象。 |
+| bool* enabled | [out] 指针类型，指向使能状态。true表示handler已启用， false表示handler已禁用。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_IsEnabled 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：handler为NULL或enabled为NULL。<br>[INPUT_SERVICE_EXCEPTION](capi-oh-input-manager-h.md#input_result) 输入服务异常，请重试。 |
+
+### OH_Input_EventHandler_GetMask()
+
+```c
+Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)
+```
+
+**描述：**
+
+查询输入事件handler的事件类型掩码。
+
+<!--Device-Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)--><!--Device-Input_Result OH_Input_EventHandler_GetMask(const OH_Input_EventHandler* handler, OH_Input_EventTypeMask* mask)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)* handler | [in] [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)对象。 |
+| OH_Input_EventTypeMask* mask | [out] 指向事件类型掩码的指针。成功时，其值为传入 [OH_Input_EventHandler_Create](capi-oh-input-manager-h.md#oh_input_eventhandler_create)的值，参考OH_Input_EventTypeMask。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_EventHandler_GetMask 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：handler为NULL或mask为NULL。 |
+
+### OH_Input_Event_GetType()
+
+```c
+Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)
+```
+
+**描述：**
+
+获取输入事件的类型。
+
+<!--Device-Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)--><!--Device-Input_Result OH_Input_Event_GetType(const OH_Input_Event* event, OH_Input_EventType* type)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] [OH_Input_Event](capi-input-oh-input-event.md)对象。 |
+| [OH_Input_EventType](capi-oh-input-manager-h.md#oh_input_eventtype)* type | [out] 指向事件类型的指针，参考[OH_Input_EventType](capi-oh-input-manager-h.md#oh_input_eventtype)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_GetType 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：event为NULL或type为NULL。 |
+
+### OH_Input_Event_AsKeyEvent()
+
+```c
+Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)
+```
+
+**描述：**
+
+从event事件中获取只读的[Input_KeyEvent](capi-input-input-keyevent.md)。 仅在事件类型为[OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyKeyEvent](capi-oh-input-manager-h.md#oh_input_destroykeyevent)释放该指针，请勿对其调用 Set* 类函数。 使用现有的Get*访问器（例如[OH_Input_GetKeyEventKeyCode](capi-oh-input-manager-h.md#oh_input_getkeyeventkeycode)）读取按键事件字段。
+
+<!--Device-Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)--><!--Device-Input_Result OH_Input_Event_AsKeyEvent(const OH_Input_Event* event, const Input_KeyEvent** keyEvent)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] 在handler函数中获取的[OH_Input_Event](capi-input-oh-input-event.md)对象。 |
+| [const Input_KeyEvent](capi-input-input-keyevent.md)** keyEvent | [out] 指向[Input_KeyEvent](capi-input-input-keyevent.md)的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsKeyEvent 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：event为NULL、keyEvent为NULL，或事件类型不是[OH_INPUT_EVENT_KEY](capi-oh-input-manager-h.md#oh_input_eventtype)。 |
+
+### OH_Input_Event_AsMouseEvent()
+
+```c
+Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)
+```
+
+**描述：**
+
+从event事件中获取只读的[Input_MouseEvent](capi-input-input-mouseevent.md)。 仅在事件类型为[OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyMouseEvent](capi-oh-input-manager-h.md#oh_input_destroymouseevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetMouseEventAction](capi-oh-input-manager-h.md#oh_input_getmouseeventaction)）读取鼠标事件字段。
+
+<!--Device-Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)--><!--Device-Input_Result OH_Input_Event_AsMouseEvent(const OH_Input_Event* event, const Input_MouseEvent** mouseEvent)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] 在handler函数中获取的[OH_Input_Event](capi-input-oh-input-event.md)对象。 |
+| [const Input_MouseEvent](capi-input-input-mouseevent.md)** mouseEvent | [out] 指向[Input_MouseEvent](capi-input-input-mouseevent.md)的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsMouseEvent 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：event为NULL、mouseEvent为NULL，或事件类型不是[OH_INPUT_EVENT_MOUSE](capi-oh-input-manager-h.md#oh_input_eventtype)。 |
+
+### OH_Input_Event_AsTouchEvent()
+
+```c
+Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)
+```
+
+**描述：**
+
+从event事件中获取只读的[Input_TouchEvent](capi-input-input-touchevent.md)。 仅当事件类型为[OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 它返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyTouchEvent](capi-oh-input-manager-h.md#oh_input_destroytouchevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetTouchEventAction](capi-oh-input-manager-h.md#oh_input_gettoucheventaction)）读取触摸事件字段。
+
+<!--Device-Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)--><!--Device-Input_Result OH_Input_Event_AsTouchEvent(const OH_Input_Event* event, const Input_TouchEvent** touchEvent)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] 在handler函数中获取的[OH_Input_Event](capi-input-oh-input-event.md)对象。 |
+| [const Input_TouchEvent](capi-input-input-touchevent.md)** touchEvent | [out] 指向[Input_TouchEvent](capi-input-input-touchevent.md)的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsTouchEvent 函数返回值。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：event为NULL、touchEvent为NULL，或事件类型不是[OH_INPUT_EVENT_TOUCH](capi-oh-input-manager-h.md#oh_input_eventtype)。 |
+
+### OH_Input_Event_AsAxisEvent()
+
+```c
+Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)
+```
+
+**描述：**
+
+从event事件中获取只读的[Input_AxisEvent](capi-input-input-axisevent.md)。 仅当事件类型为[OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype)时有效。 返回的指针是一个不拥有所有权的只读指针，其生命周期依附于 event。 它仅在当前调用期间（即 event有效期间）有效。 请勿使用[OH_Input_DestroyAxisEvent](capi-oh-input-manager-h.md#oh_input_destroyaxisevent)释放该指针，请勿对其调用 Set* 类函数。 请使用现有的Get*访问器（例如[OH_Input_GetAxisEventAction](capi-oh-input-manager-h.md#oh_input_getaxiseventaction)）读取轴事件字段。
+
+<!--Device-Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)--><!--Device-Input_Result OH_Input_Event_AsAxisEvent(const OH_Input_Event* event, const Input_AxisEvent** axisEvent)-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_Input_Event](capi-input-oh-input-event.md)* event | [in] 在handler函数中获取的[OH_Input_Event](capi-input-oh-input-event.md)对象。 |
+| [const Input_AxisEvent](capi-input-input-axisevent.md)** axisEvent | [out] 指向[Input_AxisEvent](capi-input-input-axisevent.md)的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | OH_Input_Event_AsAxisEvent 函数错误码。<br>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) 操作成功。<br>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) 参数检查失败。原因：event为NULL、axisEvent为NULL，或者事件类型不是[OH_INPUT_EVENT_AXIS](capi-oh-input-manager-h.md#oh_input_eventtype)。 |
 
 

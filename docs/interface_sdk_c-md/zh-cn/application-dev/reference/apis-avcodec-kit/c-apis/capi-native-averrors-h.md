@@ -54,6 +54,7 @@ enum OH_AVErrCode
 | AV_ERR_UNSUPPORT = 9 | 未支持的接口。<br>**起始版本：** 9<br><!--Device-AV_ERR_UNSUPPORT = 9--><!--Device-AV_ERR_UNSUPPORT = 9-End--> |
 | AV_ERR_INPUT_DATA_ERROR = 10 | 输入数据错误。<br>**起始版本：** 12<br><!--Device-AV_ERR_INPUT_DATA_ERROR = 10--><!--Device-AV_ERR_INPUT_DATA_ERROR = 10-End--> |
 | AV_ERR_UNSUPPORTED_FORMAT = 11 | 不支持的格式。<br>**起始版本：** 18<br><!--Device-AV_ERR_UNSUPPORTED_FORMAT = 11--><!--Device-AV_ERR_UNSUPPORTED_FORMAT = 11-End--> |
+| AV_ERR_RECLAIM = 13 | 实例已被系统回收。<br>**起始版本：** 26.1.0<br><!--Device-AV_ERR_RECLAIM = 13--><!--Device-AV_ERR_RECLAIM = 13-End--> |
 | AV_ERR_EXTEND_START = 100 | 扩展错误码初始值。<br>**起始版本：** 9<br><!--Device-AV_ERR_EXTEND_START = 100--><!--Device-AV_ERR_EXTEND_START = 100-End--> |
 | AV_ERR_DRM_BASE = 200 | DRM起始错误码。<br>**起始版本：** 12<br><!--Device-AV_ERR_DRM_BASE = 200--><!--Device-AV_ERR_DRM_BASE = 200-End--> |
 | AV_ERR_DRM_DECRYPT_FAILED = 201 | DRM解密失败。<br>**起始版本：** 12<br><!--Device-AV_ERR_DRM_DECRYPT_FAILED = 201--><!--Device-AV_ERR_DRM_DECRYPT_FAILED = 201-End--> |

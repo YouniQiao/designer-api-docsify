@@ -33,6 +33,6 @@ Defines the param names of all predefined events.<br> In addition to custom even
 | OH_APP_CRASH_PARAM_LOG_FILE_CUTOFF_SZ_BYTES "log_file_cutoff_sz_bytes" | Used to set the log specifications of the CPP_CRASH type in the APP_CRASH event, that is, truncate CPP_CRASH logs based on the configured parameter value.<br>**Since**: 24 |
 | OH_APP_CRASH_PARAM_SIMPLIFY_VMA_PRINTING "simplify_vma_printing" | Only print VMA within the stacktrace of the cppcrash log<br>**Since**: 24 |
 | OH_APP_CRASH_PARAM_MERGE_CPPCRASH_APP_LOG "merge_cppcrash_app_log" | Merge the app log into the system cppcrash log and return it via external_log in the APP_CRASH event<br>**Since**: 24 |
-| OH_APP_CRASH_PARAM_COLLECT_MINIDUMP "collect_minidump" | Enable minidump in the APP_CRASH event<br>**Since**: 26.0.0 |
+| OH_APP_CRASH_PARAM_COLLECT_MINIDUMP "collect_minidump" | <!--RP1-->Indicates whether to enable minidump for the APP_CRASH event. <!--RP1End--><br>**Since**: 26.0.0 |
 | OH_APP_CRASH_PARAM_PUBLISH_ON_NEXT_LAUNCH "publish_on_next_launch" | Publish the APP_CRASH event when the application starts next time.<br>**Since**: 26.1.0 |
 

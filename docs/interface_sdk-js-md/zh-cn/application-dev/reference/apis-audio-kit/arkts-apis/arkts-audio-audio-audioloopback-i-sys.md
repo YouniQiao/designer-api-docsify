@@ -50,7 +50,7 @@ getAvailableStatus(): AudioLoopbackAvailableStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## offAvailableStatusChange
 
@@ -80,7 +80,7 @@ offAvailableStatusChange(callback?: Callback<AudioLoopbackAvailableStatus>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## onAvailableStatusChange
 
@@ -110,4 +110,4 @@ onAvailableStatusChange(callback: Callback<AudioLoopbackAvailableStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |

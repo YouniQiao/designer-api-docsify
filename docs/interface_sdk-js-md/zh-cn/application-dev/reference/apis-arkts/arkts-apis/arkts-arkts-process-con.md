@@ -1,5 +1,25 @@
 # 常量
 
+## appuid
+
+```TypeScript
+const appuid: number
+```
+
+返回进程的应用标识（AppUid，数值形式）。
+
+**类型：** number
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-process-const appuid: number--><!--Device-process-const appuid: number-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
 ## pid
 
 ```TypeScript

@@ -32,6 +32,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [addAutoStartApps](arkts-mdm-applicationmanager-addautostartapps-f.md#addautostartapps-2) | 为指定用户添加开机自启动应用名单，并设置是否禁止该用户手动取消应用自启动。 |
 | [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync-1) | 添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前/指定用户下运行。从API version 21开始，如果应用运行允许名单[addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误码。 |
 | [addDockApp](arkts-mdm-applicationmanager-adddockapp-f.md#adddockapp-1) | 根据位置索引添加应用到PC/2in1设备的底部快捷栏，添加后用户可以通过点击快捷栏的应用图标直接启动应用，应用图标为应用在桌面上显示的默认图标。 |
+| [addEnabledNotificationBundles](arkts-mdm-applicationmanager-addenablednotificationbundles-f.md#addenablednotificationbundles-1) | 将应用加入启用通知的应用名单。 |
 | [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps-1) | 为指定用户添加后台防冻结应用名单，仅可对已安装应用设置该策略。若参数列表中存在未安装应用，则返回9200012错误码。若设置策略后，名单中有应用被卸载，则卸载的应用将从名单中移除。若添加已存在于名单中的应用，返回成功，但已设置策略名单中不会重复添加该应用。 |
 | [addHideLauncherIcon](arkts-mdm-applicationmanager-addhidelaunchericon-f.md#addhidelaunchericon-1) | 添加隐藏桌面应用图标名单。 |
 | [addKeepAliveApps](arkts-mdm-applicationmanager-addkeepaliveapps-f.md#addkeepaliveapps-1) | 添加保活应用名单，添加后将自动保活应用进程。在开机和应用被杀死后，由系统主动拉起应用进程。 |
@@ -55,6 +56,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync-1) | 获取当前/指定用户下的应用运行禁止名单。 |
 | [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync-2) | 获取当前/指定用户下的应用运行禁止名单。 |
 | [getDockApps](arkts-mdm-applicationmanager-getdockapps-f.md#getdockapps-1) | 获取当前快捷栏中应用信息的列表。 |
+| [getEnabledNotificationBundles](arkts-mdm-applicationmanager-getenablednotificationbundles-f.md#getenablednotificationbundles-1) | 获取启用通知的应用名单。 |
 | [getFreezeExemptedApps](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md#getfreezeexemptedapps-1) | 获取当前设备下所有用户后台防冻结应用名单。 |
 | [getFreezeExemptedApps](arkts-mdm-applicationmanager-getfreezeexemptedapps-f.md#getfreezeexemptedapps-2) | 获取当前设备下所有用户后台防冻结应用名单。 |
 | [getHideLauncherIcon](arkts-mdm-applicationmanager-gethidelaunchericon-f.md#gethidelaunchericon-1) | 查询当前用户下隐藏桌面应用图标名单。 |
@@ -80,6 +82,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [removeAutoStartApps](arkts-mdm-applicationmanager-removeautostartapps-f.md#removeautostartapps-2) | 删除指定用户的开机自启动应用名单中的指定应用。 |
 | [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync-1) | 将应用从当前/指定用户下的应用运行禁止名单中移除。移除后，该应用将允许在当前/指定用户下运行。 |
 | [removeDockApp](arkts-mdm-applicationmanager-removedockapp-f.md#removedockapp-1) | 从快捷栏中移除应用。 |
+| [removeEnabledNotificationBundles](arkts-mdm-applicationmanager-removeenablednotificationbundles-f.md#removeenablednotificationbundles-1) | 将应用从启用通知的应用名单中移除。 |
 | [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps-1) | 为指定用户删除后台防冻结应用名单。删除后，应用可以被系统冻结。执行删除策略时，若参数列表中包含未安装应用，删除操作仍能成功执行；已安装的应用将被删除，未安装的应用不影响删除操作。 |
 | [removeHideLauncherIcon](arkts-mdm-applicationmanager-removehidelaunchericon-f.md#removehidelaunchericon-1) | 取消隐藏桌面应用图标名单。 |
 | [removeKeepAliveApps](arkts-mdm-applicationmanager-removekeepaliveapps-f.md#removekeepaliveapps-1) | 移除保活应用名单中的指定应用。 |

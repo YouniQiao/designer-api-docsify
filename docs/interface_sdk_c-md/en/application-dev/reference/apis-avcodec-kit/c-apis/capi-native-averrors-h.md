@@ -52,6 +52,7 @@ Enumerates the error codes used by the media framework.
 | AV_ERR_UNSUPPORT = 9 | unsupport interface.<br>**Since**: 9<br><!--Device-AV_ERR_UNSUPPORT = 9--><!--Device-AV_ERR_UNSUPPORT = 9-End--> |
 | AV_ERR_INPUT_DATA_ERROR = 10 | input data error.<br>**Since**: 12<br><!--Device-AV_ERR_INPUT_DATA_ERROR = 10--><!--Device-AV_ERR_INPUT_DATA_ERROR = 10-End--> |
 | AV_ERR_UNSUPPORTED_FORMAT = 11 | unsupported format.<br>**Since**: 18<br><!--Device-AV_ERR_UNSUPPORTED_FORMAT = 11--><!--Device-AV_ERR_UNSUPPORTED_FORMAT = 11-End--> |
+| AV_ERR_RECLAIM = 13 | The instance has been reclaimed by the system.<br>**Since**: 26.1.0<br><!--Device-AV_ERR_RECLAIM = 13--><!--Device-AV_ERR_RECLAIM = 13-End--> |
 | AV_ERR_EXTEND_START = 100 | extend err start.<br>**Since**: 9<br><!--Device-AV_ERR_EXTEND_START = 100--><!--Device-AV_ERR_EXTEND_START = 100-End--> |
 | AV_ERR_DRM_BASE = 200 | drm error base.<br>**Since**: 12<br><!--Device-AV_ERR_DRM_BASE = 200--><!--Device-AV_ERR_DRM_BASE = 200-End--> |
 | AV_ERR_DRM_DECRYPT_FAILED = 201 | drm decrypt failed.<br>**Since**: 12<br><!--Device-AV_ERR_DRM_DECRYPT_FAILED = 201--><!--Device-AV_ERR_DRM_DECRYPT_FAILED = 201-End--> |

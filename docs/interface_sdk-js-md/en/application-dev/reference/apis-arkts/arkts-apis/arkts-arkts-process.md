@@ -71,6 +71,7 @@ import { process } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
+| [appuid](arkts-arkts-process-con.md#appuid) | Application identifier (AppUid) of the process. |
 | [pid](arkts-arkts-process-con.md#pid) | Process ID (PID) of the process. |
 | [tid](arkts-arkts-process-con.md#tid) | Thread ID (TID) of the thread. |
 | [uid](arkts-arkts-process-con.md#uid) | User identifier (UID) of the process. |

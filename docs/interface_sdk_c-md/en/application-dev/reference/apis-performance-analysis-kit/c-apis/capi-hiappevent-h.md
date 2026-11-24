@@ -1338,7 +1338,7 @@ Sets the configuration name of the processor.
 | Parameter | Description |
 | -- | -- |
 | [HiAppEvent_Processor](capi-hiappevent-hiappevent-processor.md)* processor | Pointer to the processor, that is, the pointer returned by [OH_HiAppEvent_CreateProcessor](capi-hiappevent-h.md#oh_hiappevent_createprocessor). |
-| const char* configName | Configuration name of the data processor, which can contain only letters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256 characters. |
+| const char* configName | <!--RP1-->Configuration name of the data processor. The value can contain only uppercase letters, lowercase letters, digits, underscores(_), and dollar sign($), and cannot start with a digit. The value cannot be empty and cannot exceed 256 characters. <!--RP1End--> |
 
 **Returns**:
 

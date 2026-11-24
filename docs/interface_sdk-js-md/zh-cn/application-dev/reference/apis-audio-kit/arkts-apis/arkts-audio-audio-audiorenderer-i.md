@@ -2802,7 +2802,7 @@ standby(on: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | 当前状态下不允许操作。 |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | The operation is not allowed in the current state. |
 
 ## start
 

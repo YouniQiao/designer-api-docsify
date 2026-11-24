@@ -97,7 +97,7 @@ getAudioSeparationEffectAvailableStatus(): AudioSeparationEffectAvailableStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## getAudioSeparationEffectEnabled
 
@@ -127,7 +127,7 @@ getAudioSeparationEffectEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## getSupportedAudioEffectProperty
 
@@ -252,7 +252,7 @@ offAudioSeparationEffectAvailableStatusChange(callback?: Callback<AudioSeparatio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## offAudioSeparationEffectEnabledChange
 
@@ -324,7 +324,7 @@ onAudioSeparationEffectAvailableStatusChange(callback: Callback<AudioSeparationE
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 调用方不是系统应用程序。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
 ## onAudioSeparationEffectEnabledChange
 

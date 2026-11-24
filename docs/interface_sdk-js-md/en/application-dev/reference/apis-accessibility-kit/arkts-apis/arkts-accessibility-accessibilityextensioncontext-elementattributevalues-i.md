@@ -24,6 +24,8 @@ Whether the element is in the accessibility focus state. The value **true** indi
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-accessibilityFocused: boolean--><!--Device-ElementAttributeValues-accessibilityFocused: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -39,6 +41,8 @@ ID of the next component to be focused. This attribute value set by the user on 
 **Type:** number
 
 **Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-accessibilityNextFocusId?: long--><!--Device-ElementAttributeValues-accessibilityNextFocusId?: long-End-->
 
@@ -56,6 +60,8 @@ ID of the previously focused component. This attribute value set by the user on 
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long--><!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -71,6 +77,8 @@ Whether the element is scrollable in accessibility mode. This attribute takes pr
 **Type:** boolean
 
 **Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-accessibilityScrollable?: boolean--><!--Device-ElementAttributeValues-accessibilityScrollable?: boolean-End-->
 
@@ -88,6 +96,8 @@ Accessibility text information of an element.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-accessibilityText: string--><!--Device-ElementAttributeValues-accessibilityText: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,6 +113,8 @@ Bundle name.
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-bundleName: string--><!--Device-ElementAttributeValues-bundleName: string-End-->
 
@@ -120,6 +132,8 @@ Whether the element is checkable. The value **true** indicates that the element 
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-checkable: boolean--><!--Device-ElementAttributeValues-checkable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -136,6 +150,8 @@ Whether the element is checked. The value **true** indicates that the element is
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-checked: boolean--><!--Device-ElementAttributeValues-checked: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -151,6 +167,8 @@ All child elements.
 **Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-children: Array<AccessibilityElement>--><!--Device-ElementAttributeValues-children: Array<AccessibilityElement>-End-->
 
@@ -170,6 +188,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-clickable: boolean--><!--Device-ElementAttributeValues-clickable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -188,6 +208,8 @@ Default value: **-1**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-componentId: long--><!--Device-ElementAttributeValues-componentId: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -203,6 +225,8 @@ Component type of the element, for example, 'Button' for the Button component an
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-componentType: string--><!--Device-ElementAttributeValues-componentType: string-End-->
 
@@ -220,6 +244,8 @@ List of contents. Set this parameter based on site requirements. No special rest
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-contents: Array<string>--><!--Device-ElementAttributeValues-contents: Array<string>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -235,6 +261,8 @@ Index of the current item. The value range is greater than or equal to 0. The de
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-currentIndex: int--><!--Device-ElementAttributeValues-currentIndex: int-End-->
 
@@ -252,6 +280,8 @@ Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-ark
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-customComponentType?: string--><!--Device-ElementAttributeValues-customComponentType?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -267,6 +297,8 @@ Description of the element. Set this parameter based on site requirements. No sp
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-description: string--><!--Device-ElementAttributeValues-description: string-End-->
 
@@ -286,6 +318,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-editable: boolean--><!--Device-ElementAttributeValues-editable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -302,6 +336,8 @@ List index of the last displayed item on the screen. The value range is greater 
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-endIndex: int--><!--Device-ElementAttributeValues-endIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -317,6 +353,8 @@ Error status.
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-error: string--><!--Device-ElementAttributeValues-error: string-End-->
 
@@ -355,6 +393,8 @@ for componentType.
 
 **Since:** 18
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-extraInfo?: string--><!--Device-ElementAttributeValues-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -373,6 +413,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-focusable: boolean--><!--Device-ElementAttributeValues-focusable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -388,6 +430,8 @@ Hint text.
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-hintText: string--><!--Device-ElementAttributeValues-hintText: string-End-->
 
@@ -405,6 +449,8 @@ Touchable area of an element.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-hotArea: Rect--><!--Device-ElementAttributeValues-hotArea: Rect-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -421,6 +467,8 @@ Type of the input text. Different values correspond to different input modes: **
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-inputType: int--><!--Device-ElementAttributeValues-inputType: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -436,6 +484,8 @@ Alias of the element.
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-inspectorKey: string--><!--Device-ElementAttributeValues-inspectorKey: string-End-->
 
@@ -455,6 +505,8 @@ Default value: **true**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-isActive: boolean--><!--Device-ElementAttributeValues-isActive: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -472,6 +524,8 @@ Default value: **false**.
 **Type:** boolean
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-isEnable: boolean--><!--Device-ElementAttributeValues-isEnable: boolean-End-->
 
@@ -491,6 +545,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-isFocused: boolean--><!--Device-ElementAttributeValues-isFocused: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -508,6 +564,8 @@ Default value: **false**.
 **Type:** boolean
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-isHint: boolean--><!--Device-ElementAttributeValues-isHint: boolean-End-->
 
@@ -527,6 +585,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-isPassword: boolean--><!--Device-ElementAttributeValues-isPassword: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -545,6 +605,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-isVisible: boolean--><!--Device-ElementAttributeValues-isVisible: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -560,6 +622,8 @@ Total number of items. The value range is greater than or equal to 0. The defaul
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-itemCount: int--><!--Device-ElementAttributeValues-itemCount: int-End-->
 
@@ -577,6 +641,8 @@ Content of the last item in a list or scrollable control.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-lastContent: string--><!--Device-ElementAttributeValues-lastContent: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -593,6 +659,8 @@ Display layer of the element. The value range is greater than or equal to 0. The
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-layer: int--><!--Device-ElementAttributeValues-layer: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -608,6 +676,8 @@ Whether the element is long-clickable. The value **true** indicates that the ele
 **Type:** boolean
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-longClickable: boolean--><!--Device-ElementAttributeValues-longClickable: boolean-End-->
 
@@ -627,6 +697,8 @@ Default value: **0**.
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-offset: double--><!--Device-ElementAttributeValues-offset: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -643,6 +715,8 @@ Page ID. The default value is **-1**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-pageId: int--><!--Device-ElementAttributeValues-pageId: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -658,6 +732,8 @@ Parent element of the element.
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-parent: AccessibilityElement--><!--Device-ElementAttributeValues-parent: AccessibilityElement-End-->
 
@@ -677,6 +753,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-pluralLineSupported: boolean--><!--Device-ElementAttributeValues-pluralLineSupported: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -692,6 +770,8 @@ Rectangular area of the element, including position and size information.
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-rect: Rect--><!--Device-ElementAttributeValues-rect: Rect-End-->
 
@@ -709,6 +789,8 @@ Resource name of the element.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-resourceName: string--><!--Device-ElementAttributeValues-resourceName: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -724,6 +806,8 @@ Root node element of the window element.
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-rootElement: AccessibilityElement--><!--Device-ElementAttributeValues-rootElement: AccessibilityElement-End-->
 
@@ -741,6 +825,8 @@ Display area of the element.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-screenRect: Rect--><!--Device-ElementAttributeValues-screenRect: Rect-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -756,6 +842,8 @@ Whether the element is scrollable. The value **true** indicates that the element
 **Type:** boolean
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-scrollable: boolean--><!--Device-ElementAttributeValues-scrollable: boolean-End-->
 
@@ -775,6 +863,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-selected: boolean--><!--Device-ElementAttributeValues-selected: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -790,6 +880,8 @@ List index of the first item on the screen. The value range is greater than or e
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-startIndex: int--><!--Device-ElementAttributeValues-startIndex: int-End-->
 
@@ -807,6 +899,8 @@ Text of the element.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-text: string--><!--Device-ElementAttributeValues-text: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -822,6 +916,8 @@ Maximum length limit of the element text. The value range is greater than or equ
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-textLengthLimit: int--><!--Device-ElementAttributeValues-textLengthLimit: int-End-->
 
@@ -839,6 +935,8 @@ Granularity of movement when the text is read.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit--><!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -854,6 +952,8 @@ Accessibility text type of an element, which is configured by the **accessibilit
 **Type:** string
 
 **Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-textType: string--><!--Device-ElementAttributeValues-textType: string-End-->
 
@@ -871,6 +971,8 @@ Action that triggers the element event.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-triggerAction: accessibility.Action--><!--Device-ElementAttributeValues-triggerAction: accessibility.Action-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -886,6 +988,8 @@ Window type of the element.
 **Type:** [WindowType](arkts-accessibility-windowtype-t.md)
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-type: WindowType--><!--Device-ElementAttributeValues-type: WindowType-End-->
 
@@ -905,6 +1009,8 @@ Default value: **0**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-valueMax: double--><!--Device-ElementAttributeValues-valueMax: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -922,6 +1028,8 @@ Default value: **0**.
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-valueMin: double--><!--Device-ElementAttributeValues-valueMin: double-End-->
 
@@ -941,6 +1049,8 @@ Default value: **0**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-ElementAttributeValues-valueNow: double--><!--Device-ElementAttributeValues-valueNow: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -958,6 +1068,8 @@ Default value: **-1**.
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-windowId: int--><!--Device-ElementAttributeValues-windowId: int-End-->
 

@@ -1134,7 +1134,7 @@ offNoiseReductionModeChanged(callback?: Callback<NoiseReductionModeChangeInfo>):
 
 Unsubscribe from the NR mode change event.
 
-Application scenario: This interface is invoked when the application no longer needs to detect the NR mode change. Constraint: If the callback parameter is transferred, only the registered callback that matches the callback instance is canceled. If the callback parameter is not transferred, all registered NR mode change callbacks are canceled.
+Use case: This interface is invoked when the application no longer needs to detect the NR mode change. Constraint: If the callback parameter is transferred, only the registered callback that matches the callback instance is canceled. If the callback parameter is not transferred, all registered NR mode change callbacks are canceled.
 
 **Since:** 26.1.0
 
@@ -1480,9 +1480,9 @@ audioCapturer.start((err: BusinessError) => {
 onNoiseReductionModeChanged(callback: Callback<NoiseReductionModeChangeInfo>): void
 ```
 
-Subscribes to the noise reduction mode change event, which is triggered when the noise reduction mode is changed for the audio capturer. The change may be triggered by the user through the system record controller panel, by the application calling [setNoiseReductionMode](#setnoisereductionmode), or by the system adjusting the mode due to device changes or stream concurrency. For details, see [NoiseReductionModeChangeReason](arkts-audio-audio-noisereductionmodechangereason-e.md).
+Subscribes to the noise reduction mode change event, which is triggered when the noise reduction mode of the audio capturer changes. The change may be triggered by the user switching the noise reduction mode through the system recording control panel, the application calling the [setNoiseReductionMode](#setnoisereductionmode) API, or system adjustments caused by device changes or concurrent recording stream conflicts. For details, see [NoiseReductionModeChangeReason](arkts-audio-audio-noisereductionmodechangereason-e.md).
 
-Application scenario: Applies to scenarios where applications need to detect noise reduction mode changes in real time, such as [SOURCE_TYPE_LIVE](arkts-audio-audio-sourcetype-e.md#source_type_live) live broadcast, [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#source_type_mic) recording, [SOURCE_TYPE_CAMCORDER](arkts-audio-audio-sourcetype-e.md#source_type_camcorder) recording, [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#source_type_voice_communication) VoIP, and [SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md#source_type_voice_message) voice messages. After detecting the noise reduction mode change, an application can determine whether to disable the noise reduction algorithm superimposed by the application based on the actual situation to achieve the best E2E overall noise reduction experience.
+Use case: This API is applicable to scenarios where the application needs to detect noise reduction mode changes in real time, such as live streaming([SOURCE_TYPE_LIVE](arkts-audio-audio-sourcetype-e.md#source_type_live)), microphone recording([SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#source_type_mic)), video recording([SOURCE_TYPE_CAMCORDER](arkts-audio-audio-sourcetype-e.md#source_type_camcorder)), VoIP([SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#source_type_voice_communication)), and voice messages([SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md#source_type_voice_message)). After detecting the change of the noise reduction mode, the application can determine whether to disable its own noise reduction algorithm based on the actual situation to achieve the optimal end-to-end noise reduction experience. Constraints: Multiple subscriptions with different callback objects are all retained, and callbacks are invoked sequentially in subscription order. Do not call **AudioCapturer** APIs in the callback.
 
 **Since:** 26.1.0
 
