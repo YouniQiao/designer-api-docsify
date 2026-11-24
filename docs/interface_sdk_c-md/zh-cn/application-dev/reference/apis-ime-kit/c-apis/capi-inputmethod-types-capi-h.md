@@ -213,7 +213,9 @@ enum InputMethod_ErrorCode
 | -- | -- |
 | IME_ERR_OK = 0 | 成功。表示操作正常完成，无需额外处理。所有输入法C API接口在正常执行后均返回此值。开发者无需对此错误码执行任何错误处 理逻辑。<br><!--Device-IME_ERR_OK = 0--><!--Device-IME_ERR_OK = 0-End--> |
 | IME_ERR_UNDEFINED = 1 | 未定义错误。可能是系统内部异常导致，建议检查系统日志并联系技术支持。该错误码表示输入法框架发生了无法归类到其他具体错 误码的内部异常。<br><!--Device-IME_ERR_UNDEFINED = 1--><!--Device-IME_ERR_UNDEFINED = 1-End--> |
+| OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201 | 权限校验失败。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201--><!--Device-OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201-End--> |
 | IME_ERR_PARAMCHECK = 401 | 参数检查失败。可能是参数类型、范围或格式不正确，请检查输入参数是否符合接口要求。该错误码在传入参数不符合接口规格（如 参数类型错误、字符串长度超出限制等）时返回。<br><!--Device-IME_ERR_PARAMCHECK = 401--><!--Device-IME_ERR_PARAMCHECK = 401-End--> |
+| OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801 | 当前设备不支持此接口。<br>**起始版本：** 26.1.0<br><!--Device-OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801--><!--Device-OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801-End--> |
 | IME_ERR_PACKAGEMANAGER = 12800001 | 包管理异常。可能是输入法应用未正确安装或包信息异常，请检查输入法应用状态并重新安装。该错误码在系统包管理服务无法正确 获取输入法应用信息时返回。<br><!--Device-IME_ERR_PACKAGEMANAGER = 12800001--><!--Device-IME_ERR_PACKAGEMANAGER = 12800001-End--> |
 | IME_ERR_IMENGINE = 12800002 | 输入法应用异常。可能是输入法应用崩溃或未运行，建议重启输入法应用或切换到其他输入法。该错误码在输入法引擎无法正常工作 时返回。<br><!--Device-IME_ERR_IMENGINE = 12800002--><!--Device-IME_ERR_IMENGINE = 12800002-End--> |
 | IME_ERR_IMCLIENT = 12800003 | 输入框客户端异常。可能是输入框与输入法服务连接异常，请检查应用是否正确绑定输入法服务。该错误码在编辑框客户端与输入法 服务之间的通信异常时返回。<br><!--Device-IME_ERR_IMCLIENT = 12800003--><!--Device-IME_ERR_IMCLIENT = 12800003-End--> |

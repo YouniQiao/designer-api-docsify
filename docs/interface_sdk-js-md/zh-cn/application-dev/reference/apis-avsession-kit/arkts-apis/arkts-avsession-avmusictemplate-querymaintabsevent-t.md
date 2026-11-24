@@ -13,3 +13,9 @@ type QueryMainTabsEvent = () => Promise<MediaTab[]>
 <!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>--><!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]&gt; | Promise对象，返回媒体标签页的集合。 |

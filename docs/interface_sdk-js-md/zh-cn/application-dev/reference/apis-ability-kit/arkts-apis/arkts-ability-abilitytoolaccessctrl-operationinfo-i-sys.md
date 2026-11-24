@@ -4,7 +4,7 @@
 interface OperationInfo
 ```
 
-操作信息。
+表示操作信息。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 info: CliCmdInfo | Permissions
 ```
 
-操作详细信息。
+操作具体信息。当operationType为CLI时，info为CliCmdInfo；当operationType为API时，info为权限名称。如果operationType和info的类型不匹配，会导致参数错误。
 
 **类型：** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) &#124; Permissions
 
@@ -46,7 +46,7 @@ info: CliCmdInfo | Permissions
 operationType: OperationType
 ```
 
-操作类型。
+操作类型，表示操作是CLI命令还是API接口。
 
 **类型：** OperationType
 

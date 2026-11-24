@@ -13,3 +13,9 @@ The query hot words event.
 <!--Device-avMusicTemplate-type QueryHotWordsEvent = () => Promise<string[]>--><!--Device-avMusicTemplate-type QueryHotWordsEvent = () => Promise<string[]>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string[]&gt; | (string[]) returned through promise |

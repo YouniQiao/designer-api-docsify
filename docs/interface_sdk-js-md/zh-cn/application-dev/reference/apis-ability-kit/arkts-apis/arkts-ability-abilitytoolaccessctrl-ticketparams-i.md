@@ -4,7 +4,7 @@
 interface TicketParams
 ```
 
-生成票据的可选参数
+表示生成ticket的参数。各字段均为可选，未传入的字段使用默认值。
 
 **起始版本：** 26.1.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 ticketExpireTimeMs?: number
 ```
 
-票证过期时间（毫秒）。单位为：毫秒。
+ticket过期时间，单位为毫秒。取值范围：1~60000（60秒）。默认值：10000
 
 **类型：** number
 

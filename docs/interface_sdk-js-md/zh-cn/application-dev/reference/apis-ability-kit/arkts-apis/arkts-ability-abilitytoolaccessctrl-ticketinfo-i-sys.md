@@ -4,7 +4,7 @@
 interface TicketInfo
 ```
 
-凭据信息。
+表示ticket信息。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 challenge: string
 ```
 
-挑战值。
+挑战值，用于验证ticket的合法性。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ challenge: string
 message: string
 ```
 
-凭据消息
+ticket消息，用于传递授权信息、提示信息和状态描述。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ message: string
 ticket: string
 ```
 
-凭据字符串
+ticket字符串，用于权限验证。
 
 **类型：** string
 

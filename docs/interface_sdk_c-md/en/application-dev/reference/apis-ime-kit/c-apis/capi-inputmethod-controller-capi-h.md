@@ -24,6 +24,7 @@ Provides methods for binding and unbinding input methods.
 | [InputMethod_ErrorCode OH_InputMethodController_AttachWithUIContext(ArkUI_ContextHandle context, InputMethod_TextEditorProxy *textEditorProxy, InputMethod_AttachOptions *options, InputMethod_InputMethodProxy **inputMethodProxy)](#oh_inputmethodcontroller_attachwithuicontext) | Bind the application to the IME service and carry the UI context information. Applies to the scenario where an input method needs to be associated with a specific UI page.(for example, in the multi-window scenario, specify the page to which the page is bound.) Different from OH_InputMethodController_Attach, this function accepts an additional ArkUI_ContextHandle parameter, which is used to specify the binding to a specific UI context in multi-window or multi-page scenarios. Enables the input method service to accurately associate with the current active page. <br> <br>Prerequisites:<br>1. The valid ArkUI_ContextHandle must be obtained by creating the UI context of the ArkUI module. <br>2. The InputMethod_TextEditorProxy instance must be created through OH_TextEditorProxy_Create, and necessary callbacks must be registered through OH_TextEditorProxy_SetXXXFunc series functions. <br>3. The InputMethod_AttachOptions instance must be created using OH_AttachOptions_Create or OH_AttachOptions_CreateWithRequestKeyboardReason. <br> <br> Pairing invoking: <br>- After OH_InputMethodController_AttachWithUIContext is called, OH_InputMethodController_Detach must be called to unbind the binding. <br>- If OH_InputMethodController_Detach is not invoked, input method resources may be leaked. <br><br>Invoking sequence:<br>1. Obtain ArkUI_ContextHandle <br>2. OH_TextEditorProxy_Create →, create TextEditorProxy <br>3. OH_TextEditorProxy_SetXXXFunc →, register the callback function <br>4. OH_AttachOptions_Create →, create AttachOptions <br>5. OH_InputMethodController_AttachWithUIContext →, bind the input method(carrying the UI context), and <br>6. OH_InputMethodProxy_ShowKeyboard / NotifyCursorUpdate. Use the input method function <br>7. OH_InputMethodController_Detach → to unbind the input method.<br>8. Destroy the created object.<br> Life cycle management: <br>- context: It is managed by the ArkUI module and must be valid during binding. <br>- textEditorProxy: managed by the invoker. If the OH_InputMethodController_AttachWithUIContext is successful, it cannot be released until the next OH_InputMethodController_AttachWithUIContext or OH_InputMethodController_Detach is complete. <br>- options: The OH_InputMethodController_AttachWithUIContext can be destroyed immediately after it is complete. <br>- inputMethodProxy: It is internally allocated by the AttachWithUIContext function and released after OH_InputMethodController_Detach. <br> <br>Application scenario: This application scenario is applicable to multi-window or multi-page application scenarios where the input method needs to be bound to a specific UI page. When an application has multiple UI contexts(for example, multiple windows), this function ensures that the input method is associated with the correct page and prevents the input method event from being sent to the wrong window. <br> <br> Thread-safe: It is not thread-safe. It is recommended that this interface be invoked in the main thread. <br>When a native session task fails to be admitted or the waiting times out, IME_ERR_IMCLIENT is returned and the task is not executed. |
 | [InputMethod_ErrorCode OH_InputMethodController_Detach(InputMethod_InputMethodProxy *inputMethodProxy)](#oh_inputmethodcontroller_detach) | Unbinds an application from the input method service. |
 | [InputMethod_ErrorCode OH_InputMethod_InputMethodController_GetCurrentInputMethod(char **bundleName, uint32_t *bundleNameLength, char **abilityName, uint32_t *abilityNameLength)](#oh_inputmethod_inputmethodcontroller_getcurrentinputmethod) | Obtains the current input method. |
+| [InputMethod_ErrorCode OH_InputMethodController_InjectText(const char *text, uint32_t textLen)](#oh_inputmethodcontroller_injecttext) | Sends text to the edit box that is currently in focus, bound to the input application, and in editing state. |
 
 ## Function description
 
@@ -146,5 +147,36 @@ Obtains the current input method.
 | Type | Description |
 | -- | -- |
 | InputMethod_ErrorCode | Returns a specific error code. <ul> <li>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Success.</li> <li>[IME_ERR_IMMS](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Input method management service error.</li> <li>[IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Unexpected null pointer.</li> <li>For details about the error code, see [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode).</li> </ul> |
+
+### OH_InputMethodController_InjectText()
+
+```c
+InputMethod_ErrorCode OH_InputMethodController_InjectText(const char *text, uint32_t textLen)
+```
+
+**Description**
+
+Sends text to the edit box that is currently in focus, bound to the input application, and in editing state.
+
+<!--Device-InputMethod_ErrorCode OH_InputMethodController_InjectText(const char *text, uint32_t textLen)--><!--Device-InputMethod_ErrorCode OH_InputMethodController_InjectText(const char *text, uint32_t textLen)-End-->
+
+**System capability**: SystemCapability.MiscServices.InputMethodFramework
+
+**Required permission**: ohos.permission.OPERATE_TEXT_ACROSS_APPLICATION or ohos.permission.CONTROL_DEVICE
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char *text | [in] Pointer to the injected text string. The value must be a NULL-terminated UTF-8 encoded string. The value cannot be nullptr. At least textLen bytes can be read. The buffer is managed by the caller and must remain valid at least until the function returns, after which it can be released. |
+| uint32_t textLen | [in] Length of the injected text string, in bytes. The value range is [0, 512], excluding the end terminator. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| InputMethod_ErrorCode | Returns a specific error code. <ul> <li>[IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - indicates success. The request is sent successfully. Do not confirm that the editing is complete. </li> <li>[IME_ERR_PARAMCHECK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Parameter error. The text pointer is null or the textLen is invalid. </li> <li>[OH_INPUTMETHOD_ERR_PERMISSION_DENIED](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Permission verification failed. This error code is returned when the permission required for text injection is missing. Apply for the permission and try again. </li> <li>[OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Indicates that the device does not support this function. </li> <li>[IME_ERR_IMCLIENT](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Indicates that the input method client is incorrect. There may be no valid focus and bound target, or the target is invalid. </li> <li>[OH_INPUTMETHOD_ERR_EDITABLE](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - indicates that the input method is not editable on the client. It may be a non-editable target client. </li> <li>[IME_ERR_IMMS](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Indicates that the input method service is incorrect. The server may be abnormal. </li> </ul> |
 
 

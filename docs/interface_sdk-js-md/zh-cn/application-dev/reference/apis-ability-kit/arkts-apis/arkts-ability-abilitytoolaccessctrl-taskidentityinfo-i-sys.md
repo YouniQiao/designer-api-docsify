@@ -4,7 +4,7 @@
 interface TaskIdentityInfo
 ```
 
-用于生成任务标识的任务标识输入信息。
+任务标识的输入参数，包含任务ID、过期时间、执行类型等信息，用于生成任务挑战值或任务标识。
 
 **起始版本：** 26.1.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 allowableDuration?: number
 ```
 
-可信持有物认证凭据的有效时长。单位为：毫秒。取值范围：(0,86400000]。
+可信持有物认证凭据的有效时长。单位为：毫秒。取值范围：(0,86400000]。默认值：600000。
 
 **类型：** number
 
@@ -66,7 +66,7 @@ allowScreenLockExecution: boolean
 authToken?: Uint8Array
 ```
 
-可信持有物的认证凭据。
+可信持有物的认证凭据。长度不超过4096字节。默认值：空。
 
 **类型：** Uint8Array
 
@@ -106,7 +106,7 @@ executeType: ExecuteType
 taskExpireTime: number
 ```
 
-任务过期时间。单位为：秒。
+任务过期时间。单位为：秒。取值范围：-1或正整数。-1表示无过期时间。
 
 **类型：** number
 

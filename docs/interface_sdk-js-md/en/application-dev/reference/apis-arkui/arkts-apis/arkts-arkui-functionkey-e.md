@@ -15,7 +15,7 @@ Enumerates the input method function keys.
 ## BACKSPACE
 
 ```TypeScript
-BACKSPACE = 30
+BACKSPACE = 29
 ```
 
 Backspace key on the keyboard.
@@ -26,7 +26,7 @@ Backspace key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-BACKSPACE = 30--><!--Device-FunctionKey-BACKSPACE = 30-End-->
+<!--Device-FunctionKey-BACKSPACE = 29--><!--Device-FunctionKey-BACKSPACE = 29-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,7 +51,7 @@ CapsLock key on the keyboard.
 ## DELETE
 
 ```TypeScript
-DELETE = 24
+DELETE = 23
 ```
 
 Delete key on the keyboard.
@@ -62,7 +62,7 @@ Delete key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-DELETE = 24--><!--Device-FunctionKey-DELETE = 24-End-->
+<!--Device-FunctionKey-DELETE = 23--><!--Device-FunctionKey-DELETE = 23-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,7 +141,7 @@ Up arrow key on the keyboard.
 ## END
 
 ```TypeScript
-END = 26
+END = 25
 ```
 
 End key on the keyboard.
@@ -152,14 +152,14 @@ End key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-END = 26--><!--Device-FunctionKey-END = 26-End-->
+<!--Device-FunctionKey-END = 25--><!--Device-FunctionKey-END = 25-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ENTER
 
 ```TypeScript
-ENTER = 29
+ENTER = 28
 ```
 
 Enter key on the keyboard.
@@ -170,7 +170,7 @@ Enter key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-ENTER = 29--><!--Device-FunctionKey-ENTER = 29-End-->
+<!--Device-FunctionKey-ENTER = 28--><!--Device-FunctionKey-ENTER = 28-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -411,7 +411,7 @@ F9 key on the keyboard.
 ## HOME
 
 ```TypeScript
-HOME = 25
+HOME = 24
 ```
 
 Home key on the keyboard.
@@ -422,14 +422,14 @@ Home key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-HOME = 25--><!--Device-FunctionKey-HOME = 25-End-->
+<!--Device-FunctionKey-HOME = 24--><!--Device-FunctionKey-HOME = 24-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INSERT
 
 ```TypeScript
-INSERT = 23
+INSERT = 22
 ```
 
 Insert key on the keyboard.
@@ -440,14 +440,14 @@ Insert key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-INSERT = 23--><!--Device-FunctionKey-INSERT = 23-End-->
+<!--Device-FunctionKey-INSERT = 22--><!--Device-FunctionKey-INSERT = 22-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUM_LOCK
 
 ```TypeScript
-NUM_LOCK = 22
+NUM_LOCK = 21
 ```
 
 NumLock key on the keyboard.
@@ -458,14 +458,14 @@ NumLock key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-NUM_LOCK = 22--><!--Device-FunctionKey-NUM_LOCK = 22-End-->
+<!--Device-FunctionKey-NUM_LOCK = 21--><!--Device-FunctionKey-NUM_LOCK = 21-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAGE_DOWN
 
 ```TypeScript
-PAGE_DOWN = 28
+PAGE_DOWN = 27
 ```
 
 Page Down key on the keyboard.
@@ -476,14 +476,14 @@ Page Down key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-PAGE_DOWN = 28--><!--Device-FunctionKey-PAGE_DOWN = 28-End-->
+<!--Device-FunctionKey-PAGE_DOWN = 27--><!--Device-FunctionKey-PAGE_DOWN = 27-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAGE_UP
 
 ```TypeScript
-PAGE_UP = 27
+PAGE_UP = 26
 ```
 
 Page Up key on the keyboard.
@@ -494,14 +494,14 @@ Page Up key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-PAGE_UP = 27--><!--Device-FunctionKey-PAGE_UP = 27-End-->
+<!--Device-FunctionKey-PAGE_UP = 26--><!--Device-FunctionKey-PAGE_UP = 26-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAUSE_BREAK
 
 ```TypeScript
-PAUSE_BREAK = 21
+PAUSE_BREAK = 20
 ```
 
 Pause/Break key on the keyboard.
@@ -512,14 +512,14 @@ Pause/Break key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-PAUSE_BREAK = 21--><!--Device-FunctionKey-PAUSE_BREAK = 21-End-->
+<!--Device-FunctionKey-PAUSE_BREAK = 20--><!--Device-FunctionKey-PAUSE_BREAK = 20-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SCROLL_LOCK
 
 ```TypeScript
-SCROLL_LOCK = 20
+SCROLL_LOCK = 19
 ```
 
 ScrollLock key on the keyboard.
@@ -530,7 +530,7 @@ ScrollLock key on the keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-FunctionKey-SCROLL_LOCK = 20--><!--Device-FunctionKey-SCROLL_LOCK = 20-End-->
+<!--Device-FunctionKey-SCROLL_LOCK = 19--><!--Device-FunctionKey-SCROLL_LOCK = 19-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

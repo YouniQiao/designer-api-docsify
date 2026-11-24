@@ -24,6 +24,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 13
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13--><!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -39,6 +41,8 @@ SOURCE_TYPE_INVALID = -1
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SourceType-SOURCE_TYPE_INVALID = -1--><!--Device-SourceType-SOURCE_TYPE_INVALID = -1-End-->
 
@@ -56,6 +60,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-SourceType-SOURCE_TYPE_LIVE = 17--><!--Device-SourceType-SOURCE_TYPE_LIVE = 17-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -71,6 +77,8 @@ Mic音频源。
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SourceType-SOURCE_TYPE_MIC = 0--><!--Device-SourceType-SOURCE_TYPE_MIC = 0-End-->
 
@@ -88,6 +96,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 14
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14--><!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -101,6 +111,8 @@ SOURCE_TYPE_VOICE_COMMUNICATION = 7
 语音通话场景的音频源。在API版本23之前，单独启动录制不会开启3A算法，需同时使用[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#stream_usage_voice_communication)或[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md#stream_usage_video_communication)类型播放才会触发开启3A算法。在API版本23及更高的版本中，单独启动此类型的录制，也会开启3A算法。SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
@@ -118,6 +130,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -133,6 +147,8 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 9
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1--><!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1-End-->
 

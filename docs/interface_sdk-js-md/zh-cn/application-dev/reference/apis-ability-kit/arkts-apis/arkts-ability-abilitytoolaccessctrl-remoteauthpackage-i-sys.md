@@ -4,7 +4,7 @@
 interface RemoteAuthPackage
 ```
 
-远程授权包。
+表示远程授权包。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 challenge: string
 ```
 
-挑战值。
+防重放挑战值，用于验证ticket的合法性。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ challenge: string
 remoteMessage: string
 ```
 
-远程消息。
+远程消息，用于传递远程授权信息。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ remoteMessage: string
 ticket: string
 ```
 
-凭据字符串。
+ticket字符串，用于权限验证。
 
 **类型：** string
 

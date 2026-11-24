@@ -4,7 +4,7 @@
 interface RemoteUserAuthItem
 ```
 
-远程用户授权项。
+表示远程用户授权项。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 authResult: string
 ```
 
-授权结果。
+授权结果，表示权限的授权状态。支持的取值包括"DENIED"（用户未授权）、"GRANTED"（已授权）、"NOT_DETERMINED"（未操作授权）、INVALID（无效权限）、RESTRICTED（限制授权）。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ authResult: string
 permission: string
 ```
 
-权限名称。
+权限名称，合法的权限名取值可在应用权限列表中查询。
 
 **类型：** string
 

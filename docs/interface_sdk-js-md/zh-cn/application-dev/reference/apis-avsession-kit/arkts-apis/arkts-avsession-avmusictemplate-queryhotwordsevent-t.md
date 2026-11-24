@@ -13,3 +13,9 @@ type QueryHotWordsEvent = () => Promise<string[]>
 <!--Device-avMusicTemplate-type QueryHotWordsEvent = () => Promise<string[]>--><!--Device-avMusicTemplate-type QueryHotWordsEvent = () => Promise<string[]>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string[]&gt; | Promise对象，返回热词的数组。 |

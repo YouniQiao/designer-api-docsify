@@ -4,7 +4,7 @@
 interface RemoteInfo
 ```
 
-远端设备信息。
+表示远端设备信息。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 domainId: string
 ```
 
-域ID。
+域标识。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ domainId: string
 remoteControlParams?: RemoteControlParams
 ```
 
-远程控制中的交互参数。
+远程控制中的交互参数，包含防重放挑战值、远程控制凭证等信息。
 
 **类型：** [RemoteControlParams](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)
 
@@ -66,7 +66,7 @@ remoteControlParams?: RemoteControlParams
 remoteId: string
 ```
 
-远端设备ID。
+远端设备ID，用于唯一标识远端设备。
 
 **类型：** string
 
@@ -86,7 +86,7 @@ remoteId: string
 role: Role
 ```
 
-设备角色。
+设备角色，表示设备是主控设备还是被控设备。
 
 **类型：** [Role](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 

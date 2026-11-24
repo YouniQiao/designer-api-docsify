@@ -22,6 +22,8 @@ CHANNEL_1 = 1
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_1 = 1--><!--Device-AudioChannel-CHANNEL_1 = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -35,6 +37,8 @@ CHANNEL_10 = 10
 十声道。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_10 = 10--><!--Device-AudioChannel-CHANNEL_10 = 10-End-->
 
@@ -50,6 +54,8 @@ CHANNEL_12 = 12
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_12 = 12--><!--Device-AudioChannel-CHANNEL_12 = 12-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -63,6 +69,8 @@ CHANNEL_14 = 14
 十四声道。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_14 = 14--><!--Device-AudioChannel-CHANNEL_14 = 14-End-->
 
@@ -78,6 +86,8 @@ CHANNEL_16 = 16
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_16 = 16--><!--Device-AudioChannel-CHANNEL_16 = 16-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -91,6 +101,8 @@ CHANNEL_2 = 2
 双声道。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_2 = 2--><!--Device-AudioChannel-CHANNEL_2 = 2-End-->
 
@@ -106,6 +118,8 @@ CHANNEL_3 = 3
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_3 = 3--><!--Device-AudioChannel-CHANNEL_3 = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -119,6 +133,8 @@ CHANNEL_4 = 4
 四声道。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_4 = 4--><!--Device-AudioChannel-CHANNEL_4 = 4-End-->
 
@@ -134,6 +150,8 @@ CHANNEL_5 = 5
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_5 = 5--><!--Device-AudioChannel-CHANNEL_5 = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -147,6 +165,8 @@ CHANNEL_6 = 6
 六声道。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_6 = 6--><!--Device-AudioChannel-CHANNEL_6 = 6-End-->
 
@@ -162,6 +182,8 @@ CHANNEL_7 = 7
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_7 = 7--><!--Device-AudioChannel-CHANNEL_7 = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -176,6 +198,8 @@ CHANNEL_8 = 8
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioChannel-CHANNEL_8 = 8--><!--Device-AudioChannel-CHANNEL_8 = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -189,6 +213,8 @@ CHANNEL_9 = 9
 九声道。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioChannel-CHANNEL_9 = 9--><!--Device-AudioChannel-CHANNEL_9 = 9-End-->
 

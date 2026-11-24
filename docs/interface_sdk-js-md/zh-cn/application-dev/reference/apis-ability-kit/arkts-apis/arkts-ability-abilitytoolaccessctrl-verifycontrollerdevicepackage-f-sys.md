@@ -13,7 +13,7 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
     Promise<boolean[]>
 ```
 
-验证来自主控设备的授权包。验证主控设备发送的远程授权包。验证票证和远程设备信息，以确保授权是合法的。
+验证主控设备发送的远程授权结果包，检查消息凭据和远程设备信息以确保授权结果合法。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -31,14 +31,14 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | 是 | 远程授权包列表 |
-| remoteInfo | [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md) | 是 | 远端设备信息 |
+| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | 是 | 远程授权结果包列表，包含远程消息、防重放挑战值和消息完整性凭据。 |
+| remoteInfo | [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md) | 是 | 远端设备信息，包含设备角色、设备ID、域标识等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean[]&gt; | Promise对象，返回${boolean[]}。 |
+| Promise&lt;boolean[]&gt; | Promise对象，返回true表示验证通过；返回false表示验证失败。 |
 
 **错误码：**
 

@@ -75,6 +75,9 @@
 | [ArkUI_ContextHandle OH_ArkUI_ApplicationShortcutCallbackInfo_GetUIContext(const OH_ArkUI_ApplicationShortcutCallbackInfo* info)](#oh_arkui_applicationshortcutcallbackinfo_getuicontext) | - | 获取触发应用级键盘快捷键的UI实例对应的UI上下文。 |
 | [ArkUI_ErrorCode OH_ArkUI_ApplicationShortcut_Register(const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys, void* userData, OH_ArkUI_ApplicationShortcutCallback callback, int32_t* registrationId)](#oh_arkui_applicationshortcut_register) | - | 注册应用级键盘快捷键。该快捷键在应用内全局生效。 如果存在匹配的组件级快捷键，则优先触发组件级快捷键。<br> 每次注册生成一个应用内唯一的正整数注册标识符，即使快捷键和回调相同，标识符也不同。 同一个快捷键的多次注册均被保留，仅最近一次未注销的注册生效。 注册标识符在应用运行期间不复用。 |
 | [ArkUI_ErrorCode OH_ArkUI_ApplicationShortcut_Unregister(int32_t registrationId)](#oh_arkui_applicationshortcut_unregister) | - | 注销指定注册标识符对应的应用级键盘快捷键绑定。<br> 仅移除该标识符对应的绑定，其他绑定不受影响。如果移除的是当前生效的绑定， 则最近一次仍未注销的同快捷键绑定恢复生效。标识符不存在或已注销时，不执行任何操作，仍返回成功。 |
+| [typedef void (\*OH_ArkUI_KeyboardShortcutCallback)(void* userData)](#oh_arkui_keyboardshortcutcallback) | OH_ArkUI_KeyboardShortcutCallback | 定义组件级键盘快捷键触发时调用的回调函数。 |
+| [ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys, void* userData, OH_ArkUI_KeyboardShortcutCallback callback)](#oh_arkui_nodekeyboardshortcut_register) | - | 为组件注册键盘快捷键。同一组件重复注册相同快捷键时，以最后一次注册为准。组件级快捷键的触发优先级 高于相同的应用级快捷键。 |
+| [ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys)](#oh_arkui_nodekeyboardshortcut_unregister) | - | 注销组件的键盘快捷键。如果没有注册匹配的快捷键，该操作仍然成功。 |
 
 ### 变量
 
@@ -400,19 +403,17 @@ enum OH_ArkUI_KeyboardShortcutFunctionKey
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16 | 向左方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16-End--> |
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17 | 向右方向键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17-End--> |
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18 | CapsLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19 | PrintScreen键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20 | ScrollLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21 | Pause/Break键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22 | NumLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23 | Insert键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24 | Delete键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25 | Home键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26 | End键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27 | Page Up键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28 | Page Down键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29 | Enter键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30 | Backspace键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31 | Space键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19 | ScrollLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20 | Pause/Break键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21 | NumLock键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22 | Insert键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23 | Delete键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24 | Home键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25 | End键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26 | Page Up键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27 | Page Down键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28 | Enter键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29 | Backspace键。<br>**起始版本：** 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29-End--> |
 
 ### OH_ArkUI_KeyboardShortcutKeyType
 
@@ -1478,5 +1479,89 @@ ArkUI_ErrorCode OH_ArkUI_ApplicationShortcut_Unregister(int32_t registrationId)
 | 类型 | 说明 |
 | -- | -- |
 | ArkUI_ErrorCode | 返回执行结果。<br>如果操作成功或注册标识符不存在，则返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。 |
+
+### OH_ArkUI_KeyboardShortcutCallback()
+
+```c
+typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void* userData)
+```
+
+**描述：**
+
+定义组件级键盘快捷键触发时调用的回调函数。
+
+<!--Device-typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void* userData)--><!--Device-typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void* userData)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| void* userData | 注册快捷键时传入的用户自定义数据。 |
+
+### OH_ArkUI_NodeKeyboardShortcut_Register()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys, void* userData, OH_ArkUI_KeyboardShortcutCallback callback)
+```
+
+**描述：**
+
+为组件注册键盘快捷键。同一组件重复注册相同快捷键时，以最后一次注册为准。组件级快捷键的触发优先级 高于相同的应用级快捷键。
+
+<!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys, void* userData, OH_ArkUI_KeyboardShortcutCallback callback)--><!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys, void* userData, OH_ArkUI_KeyboardShortcutCallback callback)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| ArkUI_NodeHandle node | [in] 目标组件节点。 |
+| [const OH_ArkUI_KeyboardShortcutKey](capi-arkui-nativemodule-oh-arkui-keyboardshortcutkey.md)* key | [in] 指向键盘快捷键按键对象的指针，不能为<b>nullptr</b>。该对象通过 [OH_ArkUI_KeyboardShortcutKey_Create](capi-native-key-event-h.md#oh_arkui_keyboardshortcutkey_create)创建。字符键通过 [OH_ArkUI_KeyboardShortcutKey_SetCharacter](capi-native-key-event-h.md#oh_arkui_keyboardshortcutkey_setcharacter)设置的字符必须为单个可通过键盘输入的字符。 |
+| uint32_t modifierKeys | [in] 修饰键位掩码。使用[OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey)中的值进行按位或组合。功能键可使用 [OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey)注册不带修饰键的快捷键，字符键至少需要指定一个修饰键。 仅接受[OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey)中定义的位，设置其他位时返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
+| void* userData | [in] 传递给回调函数的用户自定义数据，可以为<b>nullptr</b>。该值不会被复制， 在快捷键注销前必须保持有效。 |
+| [OH_ArkUI_KeyboardShortcutCallback](capi-native-key-event-h.md#oh_arkui_keyboardshortcutcallback) callback | [in] 快捷键触发时调用的回调函数。如果为<b>nullptr</b>，则触发组件的点击事件。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| ArkUI_ErrorCode | 返回执行结果。<ul> <li>如果操作成功，则返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果参数无效，则返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。</li> </ul> |
+
+### OH_ArkUI_NodeKeyboardShortcut_Unregister()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys)
+```
+
+**描述：**
+
+注销组件的键盘快捷键。如果没有注册匹配的快捷键，该操作仍然成功。
+
+<!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys)--><!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey* key, uint32_t modifierKeys)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| ArkUI_NodeHandle node | [in] 目标组件节点。 |
+| [const OH_ArkUI_KeyboardShortcutKey](capi-arkui-nativemodule-oh-arkui-keyboardshortcutkey.md)* key | [in] 指向注册时所用键盘快捷键按键对象的指针，不能为<b>nullptr</b>。 |
+| uint32_t modifierKeys | [in] 注册时使用的修饰键位掩码。仅接受[OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey) 中定义的位，设置其他位时返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| ArkUI_ErrorCode | 返回执行结果。<ul> <li>如果操作成功，则返回[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。</li> <li>如果参数无效，则返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。</li> </ul> |
 
 

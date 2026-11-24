@@ -112,7 +112,7 @@ enum Telephony_RadioTechnology
 | TEL_RADIO_TECHNOLOGY_HSPAP = 5 | Evolved High Speed Packet Access (HSPA+)<br><!--Device-TEL_RADIO_TECHNOLOGY_HSPAP = 5--><!--Device-TEL_RADIO_TECHNOLOGY_HSPAP = 5-End--> |
 | TEL_RADIO_TECHNOLOGY_TD_SCDMA = 6 | Time Division-Synchronous Code Division Multiple Access(TD-SCDMA)<br><!--Device-TEL_RADIO_TECHNOLOGY_TD_SCDMA = 6--><!--Device-TEL_RADIO_TECHNOLOGY_TD_SCDMA = 6-End--> |
 | TEL_RADIO_TECHNOLOGY_EVDO = 7 | Evolution-Data Optimized (EVDO)<br><!--Device-TEL_RADIO_TECHNOLOGY_EVDO = 7--><!--Device-TEL_RADIO_TECHNOLOGY_EVDO = 7-End--> |
-| TEL_RADIO_TECHNOLOGY_EHRPD = 8 | Evolved High Rate Package Data (EHRPD)<br><!--Device-TEL_RADIO_TECHNOLOGY_EHRPD = 8--><!--Device-TEL_RADIO_TECHNOLOGY_EHRPD = 8-End--> |
+| TEL_RADIO_TECHNOLOGY_EHRPD = 8 | Evolved High Rate Packet Data (EHRPD)<br><!--Device-TEL_RADIO_TECHNOLOGY_EHRPD = 8--><!--Device-TEL_RADIO_TECHNOLOGY_EHRPD = 8-End--> |
 | TEL_RADIO_TECHNOLOGY_LTE = 9 | Long Term Evolution (LTE)<br><!--Device-TEL_RADIO_TECHNOLOGY_LTE = 9--><!--Device-TEL_RADIO_TECHNOLOGY_LTE = 9-End--> |
 | TEL_RADIO_TECHNOLOGY_LTE_CA = 10 | Long Term Evolution_Carrier Aggregation (LTE_CA)<br><!--Device-TEL_RADIO_TECHNOLOGY_LTE_CA = 10--><!--Device-TEL_RADIO_TECHNOLOGY_LTE_CA = 10-End--> |
 | TEL_RADIO_TECHNOLOGY_IWLAN = 11 | Industrial Wireless LAN (IWLAN)<br><!--Device-TEL_RADIO_TECHNOLOGY_IWLAN = 11--><!--Device-TEL_RADIO_TECHNOLOGY_IWLAN = 11-End--> |

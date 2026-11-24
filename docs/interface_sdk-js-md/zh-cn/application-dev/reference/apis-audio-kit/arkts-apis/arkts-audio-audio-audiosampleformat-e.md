@@ -24,6 +24,8 @@ SAMPLE_FORMAT_F32LE = 4
 
 **起始版本：** 9
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -38,6 +40,8 @@ SAMPLE_FORMAT_INVALID = -1
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -51,6 +55,8 @@ SAMPLE_FORMAT_S16LE = 1
 带符号的16位整数，小尾数。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1-End-->
 
@@ -68,6 +74,8 @@ SAMPLE_FORMAT_S24LE = 2
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -84,6 +92,8 @@ SAMPLE_FORMAT_S32LE = 3
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -97,6 +107,8 @@ SAMPLE_FORMAT_U8 = 0
 无符号8位整数。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0-End-->
 

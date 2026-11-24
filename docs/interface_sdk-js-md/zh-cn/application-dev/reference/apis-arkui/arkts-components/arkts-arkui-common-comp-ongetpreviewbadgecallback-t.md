@@ -17,3 +17,9 @@ declare type OnGetPreviewBadgeCallback = () => boolean | number
 <!--Device-unnamed-declare type OnGetPreviewBadgeCallback = () => boolean | number--><!--Device-unnamed-declare type OnGetPreviewBadgeCallback = () => boolean | number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean &#124; number | 多选长按聚拢动画后菜单预览图是否显示选中数量角标，或需要显示的数量。 |

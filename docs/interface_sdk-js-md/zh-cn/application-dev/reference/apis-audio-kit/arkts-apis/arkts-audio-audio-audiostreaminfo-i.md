@@ -30,6 +30,8 @@ channelLayout?: AudioChannelLayout
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -45,6 +47,8 @@ channels: AudioChannel
 **类型：** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
@@ -62,6 +66,8 @@ encodingType: AudioEncodingType
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -77,6 +83,8 @@ sampleFormat: AudioSampleFormat
 **类型：** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
@@ -101,6 +109,8 @@ samplingRate: AudioSamplingRate | number
 
 **模型约束：** 
 - API版本26.0.0+：此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int--><!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int-End-->
 

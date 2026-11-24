@@ -380,7 +380,7 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 根据焦点方向查找元素。使用Promise异步回调。
 
-与[findElementsByCondition](#findelementsbycondition-1)相比，本方法主要用于查找Web组件；findElementsByCondition主要用于查找UI组件。
+与[findElementsByCondition](#findelementsbycondition-1)（从API版本23开始支持）相比，本方法用于查找Web组件；findElementsByCondition用于查找非Web组件。可通过组件的supportedActionNames属性是否包含'nextHtmlItem'或'previousHtmlItem'来判断组件是否为Web组件。
 
 **起始版本：** 20
 
@@ -478,6 +478,8 @@ findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Pro
 ```
 
 根据焦点方向和聚焦类型查找元素。使用Promise异步回调。
+
+与[findElementsByCondition](#findelementsbycondition-1)相比，本方法用于查找Web组件；findElementsByCondition用于查找非Web组件。可通过组件的supportedActionNames属性是否包含'nextHtmlItem'或'previousHtmlItem'来判断组件是否为Web组件。
 
 **起始版本：** 26.0.0
 
@@ -728,7 +730,7 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 查询满足条件的可聚焦节点。使用Promise异步回调。
 
-与[findElementByFocusDirection](#findelementbyfocusdirection-1)相比，本方法主要用于查找UI组件；findElementByFocusDirection主要用于查找Web组件。
+与[findElementByFocusDirection](#findelementbyfocusdirection-1)（从API版本20开始支持）相比，本方法用于查找非Web组件；findElementByFocusDirection用于查找Web组件。可通过组件的supportedActionNames属性是否包含'nextHtmlItem'或'previousHtmlItem'来判断组件是否为Web组件。
 
 **起始版本：** 23
 
@@ -800,6 +802,8 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusR
 ```
 
 根据规则和查询条件查找目标类型的可聚焦节点。使用Promise异步回调。
+
+与[findElementByFocusDirection](#findelementbyfocusdirection-1)相比，本方法用于查找非Web组件；findElementByFocusDirection用于查找Web组件。可通过组件的supportedActionNames属性是否包含'nextHtmlItem'或'previousHtmlItem'来判断组件是否为Web组件。
 
 **起始版本：** 26.0.0
 

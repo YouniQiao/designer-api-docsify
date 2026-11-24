@@ -32,6 +32,8 @@ capturerFlags: number
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -47,6 +49,8 @@ source: SourceType
 **类型：** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

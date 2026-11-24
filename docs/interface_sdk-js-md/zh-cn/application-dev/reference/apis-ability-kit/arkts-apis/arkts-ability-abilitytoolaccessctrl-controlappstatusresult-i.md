@@ -4,7 +4,7 @@
 interface ControlAppStatusResult
 ```
 
-应用的控制权限状态结果。
+表示应用控制权限状态查询结果。
 
 **起始版本：** 26.1.0
 

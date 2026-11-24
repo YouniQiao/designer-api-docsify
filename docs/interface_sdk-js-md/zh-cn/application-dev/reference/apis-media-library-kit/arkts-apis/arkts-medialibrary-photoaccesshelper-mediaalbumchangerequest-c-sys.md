@@ -454,7 +454,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 dismissAssets(assets: Array<PhotoAsset>): void
 ```
 
-从该人像相册或合影相册中移除指定图片。
+从该人像相册或合影相册中移除指定图片。API版本26.1.0开始，也支持从宠物相册及人和宠物合影相册、宠物和宠物合影相册中移除指定图片。
 
 **起始版本：** 11
 
@@ -524,7 +524,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 mergeAlbum(target: Album): void
 ```
 
-将两个人像相册合并。
+将两个人像相册合并。API版本26.1.0开始，也支持将两个宠物相册合并。
 
 **起始版本：** 11
 
@@ -1187,7 +1187,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setDisplayLevel(displayLevel: number): void
 ```
 
-设置人像相册的显示级别。
+设置人像相册的显示级别。API版本26.1.0开始，也支持设置宠物相册的显示级别。
 
 **起始版本：** 11
 
@@ -1201,7 +1201,7 @@ setDisplayLevel(displayLevel: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayLevel | number | 是 | 设置人像相册的显示级别，<br>0：取消该人像相册收藏；<br>1：设置人像相册为首届面；<br>2：设置人像相册为更多界面；<br>3：设置人像相册为收藏界面。 |
+| displayLevel | number | 是 | 设置人像相册或宠物相册的显示级别，<br>0：取消该相册收藏；<br>1：设置该相册为首届面；<br>2：设置该相册为更多界面；<br>3：设置该相册为收藏界面。 |
 
 **错误码：**
 

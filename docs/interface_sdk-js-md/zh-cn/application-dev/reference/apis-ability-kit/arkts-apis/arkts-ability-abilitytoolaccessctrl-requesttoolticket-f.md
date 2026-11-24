@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function requestToolTicket(cliCmdInfos: CliCmdInfo[], ticketParams: TicketParams): Promise<TicketQueryResult>
 ```
 
-获取CLI工具的执行认证票据。该函数用于获取CLI工具及子命令的执行认证票据。如果CLI工具所需权限用户尚未授权，会返回需要授权的权限列表及权限状态。如果CLI工具所需权限用户均授权，会返回授权的票据。
+获取CLI工具的执行认证ticket。传入CLI命令列表，如果用户尚未授权CLI工具所需的权限，返回需要授权的权限列表及其状态；如果用户已授权所有所需权限，返回已认证的ticket。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 
@@ -28,14 +28,14 @@ export function requestToolTicket(cliCmdInfos: CliCmdInfo[], ticketParams: Ticke
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cliCmdInfos | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)[] | 是 | CLI命令列表。 |
-| ticketParams | [TicketParams](arkts-ability-abilitytoolaccessctrl-ticketparams-i.md) | 是 | 用于生成凭据的参数。 |
+| cliCmdInfos | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)[] | 是 | CLI命令列表，指定需要获取执行认证ticket的CLI命令及其子命令。数组长度不超过300。 |
+| ticketParams | [TicketParams](arkts-ability-abilitytoolaccessctrl-ticketparams-i.md) | 是 | 生成ticket的可选参数，包含ticket过期时间等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)&gt; | Promise对象，返回${TicketQueryResult} |
+| Promise&lt;[TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)&gt; | Promise对象，返回ticket查询结果，包含权限状态信息和ticket字符串。 |
 
 **错误码：**
 

@@ -66,7 +66,7 @@ identity: string
 taskAttributes: string
 ```
 
-任务属性。
+任务属性。为JSON格式的字符串，包含taskId、taskExpireTime、executeType、allowScreenLockExecution等字段。
 
 **类型：** string
 

@@ -30,6 +30,8 @@ Audio capturer information.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -63,6 +65,8 @@ Audio stream information.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 

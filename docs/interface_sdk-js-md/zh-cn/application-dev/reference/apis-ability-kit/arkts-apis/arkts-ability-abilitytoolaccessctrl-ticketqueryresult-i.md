@@ -4,7 +4,7 @@
 interface TicketQueryResult
 ```
 
-票据查询结果。
+表示ticket查询结果。
 
 **起始版本：** 26.1.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 permissionResults: PermissionInfo[]
 ```
 
-权限结果列表。
+权限状态结果列表。当用户尚未授权CLI工具所需的权限时，返回需要授权的权限列表及其状态。
 
 **类型：** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)[]
 
@@ -42,7 +42,7 @@ permissionResults: PermissionInfo[]
 ticket: string
 ```
 
-票证信息。
+ticket字符串，用于权限验证。当用户已授权所有所需权限时，返回已认证的ticket；当用户尚未授权所有权限时，该项为空字符串。
 
 **类型：** string
 

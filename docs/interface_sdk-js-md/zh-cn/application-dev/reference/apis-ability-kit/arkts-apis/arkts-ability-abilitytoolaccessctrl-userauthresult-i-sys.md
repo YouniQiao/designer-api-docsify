@@ -4,7 +4,7 @@
 interface UserAuthResult
 ```
 
-用户授权结果。
+表示用户授权结果。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 permissionInfo: PermissionInfo[]
 ```
 
-权限信息列表。
+权限信息列表，包含权限名称和授权状态。
 
 **类型：** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)[]
 
@@ -46,7 +46,7 @@ permissionInfo: PermissionInfo[]
 permissionQuery: PermissionQuery
 ```
 
-权限查询信息。
+对应的权限查询信息。
 
 **类型：** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 

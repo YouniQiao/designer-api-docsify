@@ -4,7 +4,7 @@
 interface PermissionInfo
 ```
 
-权限信息。
+表示权限信息。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 authStatusInfo?: AuthStatusInfo
 ```
 
-授权状态信息。
+授权状态信息。该项作为出参；当PermissionInfo作为入参时，该项无需传入，若传入会被忽略。默认值：undefined。
 
 **类型：** [AuthStatusInfo](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)
 

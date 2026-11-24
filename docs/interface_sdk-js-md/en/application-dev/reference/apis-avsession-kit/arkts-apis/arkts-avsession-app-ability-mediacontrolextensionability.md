@@ -1,4 +1,4 @@
-# @ohos.app.ability.MediaControlExtensionAbility
+# @ohos.app.ability.MediaControlExtensionAbility(MediaControlExtensionAbility)
 
 ## Modules to Import
 

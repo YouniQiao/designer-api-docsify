@@ -64,6 +64,7 @@ import { distributedKVStore } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i-sys.md) | Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used. Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use [getKVStore to obtain a **DeviceKVStore** object. |
+| [Options](arkts-arkdata-distributedkvstore-options-i-sys.md) | Provides KV store configuration. |
 | SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i-sys.md) | Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events. Before calling any method in **SingleKVStore**, you must use [getKVStore to obtain a **SingleKVStore** instance. |
 <!--DelEnd-->
 

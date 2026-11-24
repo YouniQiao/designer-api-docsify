@@ -14,7 +14,7 @@ function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffe
 
 客户端和服务端均可使用，订阅套接字读请求事件。调用该接口后，当收到对端发送的数据会执行订阅的回调函数。
 
-若客户端使用，需在调用[socket.sppConnect](arkts-connectivity-socket-sppconnect-f.md)后，且连接成功后使用。若服务端使用，需在调用[socket.sppAccept](arkts-connectivity-socket-sppaccept-f.md)后，且连接成功后使用。不可以和API version 18开始支持的[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)接口混用，同一路套接字连接只能使用socket.on('sppRead')接口或者[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)接口。若开发者需感知传输过程中异常断连等错误，建议使用[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)。
+<br>若客户端使用，需在调用[socket.sppConnect](arkts-connectivity-socket-sppconnect-f.md)后，且连接成功后使用。<br>若服务端使用，需在调用[socket.sppAccept](arkts-connectivity-socket-sppaccept-f.md)后，且连接成功后使用。<br>不可以和API version 18开始支持的[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)接口混用，同一路套接字连接只能使用socket.on('sppRead')接口或者[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)接口。<br>若开发者需感知传输过程中异常断连等错误，建议使用[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)。<!--RP2--><!--RP2End-->
 
 **起始版本：** 10
 

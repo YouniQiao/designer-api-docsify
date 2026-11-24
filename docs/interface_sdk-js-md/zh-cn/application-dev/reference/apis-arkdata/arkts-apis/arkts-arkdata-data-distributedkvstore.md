@@ -62,6 +62,7 @@ import { distributedKVStore } from '@kit.ArkData';
 | 名称 | 说明 |
 | --- | --- |
 | [DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i-sys.md) | 设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。 |
+| [Options](arkts-arkdata-distributedkvstore-options-i-sys.md) | 用于提供创建数据库的配置信息。 |
 | [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i-sys.md) | SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。 |
 <!--DelEnd-->
 

@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function generateControlledDevicePackage(permissionQuery: PermissionQuery[]): Promise<RemoteAuthPackage[]>
 ```
 
-生成被控设备的授权包。根据权限查询列表生成远程授权包。生成的包可以发送到主控设备进行权限验证。
+在被控设备上，根据权限查询列表生成远程授权请求包。生成的包可以发送到主控设备上，完成完整性校验后，发起用户授权确认。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -30,13 +30,13 @@ export function generateControlledDevicePackage(permissionQuery: PermissionQuery
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionQuery | [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)[] | 是 | 权限查询列表。 |
+| permissionQuery | [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)[] | 是 | 权限查询列表，包含CLI和API操作信息、远程授权交互信息等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise对象，返回${RemoteAuthPackage[]}。 |
+| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise对象，返回远程授权请求包列表。 |
 
 **错误码：**
 

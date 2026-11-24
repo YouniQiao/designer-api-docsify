@@ -12,7 +12,7 @@ import { power } from '@kit.BasicServicesKit';
 function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void
 ```
 
-设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用callback异步回调。
+设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用callback异步回调。如需同时设置电源模式及其子模式，请使用[setPowerMode(mode, subMode)](#setpowermode-3)。
 
 **起始版本：** 9
 
@@ -138,7 +138,7 @@ function setPowerMode(mode: DevicePowerMode, subMode?: DevicePowerSubMode): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 是 | 电源模式。各模式含义请参见DevicePowerMode枚举说明。 |
-| subMode | [DevicePowerSubMode](arkts-basicservices-power-devicepowersubmode-e.md) | 否 | 电源模式子模式。各模式含义请参见DevicePowerSubMode枚举说明。 |
+| subMode | [DevicePowerSubMode](arkts-basicservices-power-devicepowersubmode-e.md) | 否 | 电源模式子模式。各模式含义请参见DevicePowerSubMode枚举说明。仅 MODE_EXTREME_POWER_SAVE（603）支持电源模式子模式，subMode 默认值为 SUB_MODE_EMERGENCY（603002）。<br>默认值：SUB_MODE_EMERGENCY。 |
 
 **返回值：**
 

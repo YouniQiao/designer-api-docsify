@@ -32,6 +32,8 @@ Set this parameter to **0**.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -47,6 +49,8 @@ Audio source type.
 **Type:** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

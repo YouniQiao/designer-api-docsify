@@ -15,7 +15,7 @@ declare enum FunctionKey
 ## BACKSPACE
 
 ```TypeScript
-BACKSPACE = 30
+BACKSPACE = 29
 ```
 
 表示键盘上的Backspace键。
@@ -26,7 +26,7 @@ BACKSPACE = 30
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-BACKSPACE = 30--><!--Device-FunctionKey-BACKSPACE = 30-End-->
+<!--Device-FunctionKey-BACKSPACE = 29--><!--Device-FunctionKey-BACKSPACE = 29-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,7 +51,7 @@ CAPS_LOCK = 18
 ## DELETE
 
 ```TypeScript
-DELETE = 24
+DELETE = 23
 ```
 
 表示键盘上的Delete键。
@@ -62,7 +62,7 @@ DELETE = 24
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-DELETE = 24--><!--Device-FunctionKey-DELETE = 24-End-->
+<!--Device-FunctionKey-DELETE = 23--><!--Device-FunctionKey-DELETE = 23-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,7 +141,7 @@ DPAD_UP
 ## END
 
 ```TypeScript
-END = 26
+END = 25
 ```
 
 表示键盘上的End键。
@@ -152,14 +152,14 @@ END = 26
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-END = 26--><!--Device-FunctionKey-END = 26-End-->
+<!--Device-FunctionKey-END = 25--><!--Device-FunctionKey-END = 25-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## ENTER
 
 ```TypeScript
-ENTER = 29
+ENTER = 28
 ```
 
 表示键盘上的Enter键。
@@ -170,7 +170,7 @@ ENTER = 29
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-ENTER = 29--><!--Device-FunctionKey-ENTER = 29-End-->
+<!--Device-FunctionKey-ENTER = 28--><!--Device-FunctionKey-ENTER = 28-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -411,7 +411,7 @@ F9
 ## HOME
 
 ```TypeScript
-HOME = 25
+HOME = 24
 ```
 
 表示键盘上的Home键。
@@ -422,14 +422,14 @@ HOME = 25
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-HOME = 25--><!--Device-FunctionKey-HOME = 25-End-->
+<!--Device-FunctionKey-HOME = 24--><!--Device-FunctionKey-HOME = 24-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## INSERT
 
 ```TypeScript
-INSERT = 23
+INSERT = 22
 ```
 
 表示键盘上的Insert键。
@@ -440,14 +440,14 @@ INSERT = 23
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-INSERT = 23--><!--Device-FunctionKey-INSERT = 23-End-->
+<!--Device-FunctionKey-INSERT = 22--><!--Device-FunctionKey-INSERT = 22-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUM_LOCK
 
 ```TypeScript
-NUM_LOCK = 22
+NUM_LOCK = 21
 ```
 
 表示键盘上的NumLock键。
@@ -458,14 +458,14 @@ NUM_LOCK = 22
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-NUM_LOCK = 22--><!--Device-FunctionKey-NUM_LOCK = 22-End-->
+<!--Device-FunctionKey-NUM_LOCK = 21--><!--Device-FunctionKey-NUM_LOCK = 21-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAGE_DOWN
 
 ```TypeScript
-PAGE_DOWN = 28
+PAGE_DOWN = 27
 ```
 
 表示键盘上的Page Down键。
@@ -476,14 +476,14 @@ PAGE_DOWN = 28
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-PAGE_DOWN = 28--><!--Device-FunctionKey-PAGE_DOWN = 28-End-->
+<!--Device-FunctionKey-PAGE_DOWN = 27--><!--Device-FunctionKey-PAGE_DOWN = 27-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAGE_UP
 
 ```TypeScript
-PAGE_UP = 27
+PAGE_UP = 26
 ```
 
 表示键盘上的Page Up键。
@@ -494,14 +494,14 @@ PAGE_UP = 27
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-PAGE_UP = 27--><!--Device-FunctionKey-PAGE_UP = 27-End-->
+<!--Device-FunctionKey-PAGE_UP = 26--><!--Device-FunctionKey-PAGE_UP = 26-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAUSE_BREAK
 
 ```TypeScript
-PAUSE_BREAK = 21
+PAUSE_BREAK = 20
 ```
 
 表示键盘上的Pause/Break键。
@@ -512,14 +512,14 @@ PAUSE_BREAK = 21
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-PAUSE_BREAK = 21--><!--Device-FunctionKey-PAUSE_BREAK = 21-End-->
+<!--Device-FunctionKey-PAUSE_BREAK = 20--><!--Device-FunctionKey-PAUSE_BREAK = 20-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SCROLL_LOCK
 
 ```TypeScript
-SCROLL_LOCK = 20
+SCROLL_LOCK = 19
 ```
 
 表示键盘上的ScrollLock键。
@@ -530,7 +530,7 @@ SCROLL_LOCK = 20
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-FunctionKey-SCROLL_LOCK = 20--><!--Device-FunctionKey-SCROLL_LOCK = 20-End-->
+<!--Device-FunctionKey-SCROLL_LOCK = 19--><!--Device-FunctionKey-SCROLL_LOCK = 19-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -13,3 +13,9 @@ The clear search history event.
 <!--Device-avMusicTemplate-type ClearSearchHistoryEvent = () => Promise<OperResult>--><!--Device-avMusicTemplate-type ClearSearchHistoryEvent = () => Promise<OperResult>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | (OperResult) returned through promise |

@@ -1,4 +1,4 @@
-# @ohos.file.backup(备份恢复能力)
+# @ohos.file.backup(备份恢复)
 
 提供备份和恢复能力的模块。
 

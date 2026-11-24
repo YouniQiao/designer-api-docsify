@@ -16,6 +16,12 @@ Obtains the default constructor.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Default constructor. |
+
 **Examples**
 
 ```TypeScript

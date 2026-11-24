@@ -156,6 +156,24 @@ Highlights suggestion album.
 
 **System API:** This is a system API.
 
+## HUMAN_PET_GROUP_PHOTO
+
+```TypeScript
+HUMAN_PET_GROUP_PHOTO = 4112
+```
+
+Human-pet group photo album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AlbumSubtype-HUMAN_PET_GROUP_PHOTO = 4112--><!--Device-AlbumSubtype-HUMAN_PET_GROUP_PHOTO = 4112-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## LIVEPHOTO_4D
 
 ```TypeScript
@@ -169,6 +187,42 @@ LIVEPHOTO_4D = 1033
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 <!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## PET
+
+```TypeScript
+PET = 4106
+```
+
+Pet album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AlbumSubtype-PET = 4106--><!--Device-AlbumSubtype-PET = 4106-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## PET_GROUP_PHOTO
+
+```TypeScript
+PET_GROUP_PHOTO = 4113
+```
+
+Pet group photo album.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AlbumSubtype-PET_GROUP_PHOTO = 4113--><!--Device-AlbumSubtype-PET_GROUP_PHOTO = 4113-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

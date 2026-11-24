@@ -110,7 +110,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getFaceId(): Promise<string>
 ```
 
-获取人像相册或合影相册的封面人脸标识。
+获取人像相册或合影相册的封面人脸标识。API版本26.1.0开始，也支持宠物相册及人和宠物合影相册、宠物和宠物合影相册，返回脸部标识。
 
 **起始版本：** 13
 
@@ -126,7 +126,7 @@ getFaceId(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，人像相册返回tag_id，合影相册返回group_tag，未找到返回空字符串。 |
+| Promise&lt;string&gt; | Promise对象，人像相册返回tag_id，合影相册返回group_tag，未找到返回空字符串。<br>API版本26.1.0开始，宠物相册返回tag_id，人和宠物合影相册、宠物和宠物合影相册返回group_tag。 |
 
 **错误码：**
 

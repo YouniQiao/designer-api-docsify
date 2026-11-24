@@ -213,7 +213,9 @@ Enumeration of error codes of the input method, which defines the error codes th
 | -- | -- |
 | IME_ERR_OK = 0 | &nbsp;Success.<br><!--Device-IME_ERR_OK = 0--><!--Device-IME_ERR_OK = 0-End--> |
 | IME_ERR_UNDEFINED = 1 | &nbsp;Undefined error.<br><!--Device-IME_ERR_UNDEFINED = 1--><!--Device-IME_ERR_UNDEFINED = 1-End--> |
+| OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201 | Permission verification failed.<br>**Since**: 26.1.0<br><!--Device-OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201--><!--Device-OH_INPUTMETHOD_ERR_PERMISSION_DENIED = 201-End--> |
 | IME_ERR_PARAMCHECK = 401 | &nbsp;Parameter check failed.<br><!--Device-IME_ERR_PARAMCHECK = 401--><!--Device-IME_ERR_PARAMCHECK = 401-End--> |
+| OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801 | The current device does not support this interface.<br>**Since**: 26.1.0<br><!--Device-OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801--><!--Device-OH_INPUTMETHOD_ERR_DEVICE_NOT_SUPPORTED = 801-End--> |
 | IME_ERR_PACKAGEMANAGER = 12800001 | &nbsp;Package management error.<br><!--Device-IME_ERR_PACKAGEMANAGER = 12800001--><!--Device-IME_ERR_PACKAGEMANAGER = 12800001-End--> |
 | IME_ERR_IMENGINE = 12800002 | &nbsp;Input method application error.<br><!--Device-IME_ERR_IMENGINE = 12800002--><!--Device-IME_ERR_IMENGINE = 12800002-End--> |
 | IME_ERR_IMCLIENT = 12800003 | &nbsp;Text box client error.<br><!--Device-IME_ERR_IMCLIENT = 12800003--><!--Device-IME_ERR_IMCLIENT = 12800003-End--> |

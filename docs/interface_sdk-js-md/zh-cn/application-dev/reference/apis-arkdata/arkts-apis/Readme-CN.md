@@ -241,6 +241,8 @@
   - [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md)
   - [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)
   - [Options](arkts-arkdata-distributedkvstore-options-i.md)
+  <!--Del-->
+  - [Options（系统接口）](arkts-arkdata-distributedkvstore-options-i-sys.md)<!--DelEnd-->
   - [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
   <!--Del-->
   - [SingleKVStore（系统接口）](arkts-arkdata-distributedkvstore-singlekvstore-i-sys.md)<!--DelEnd-->

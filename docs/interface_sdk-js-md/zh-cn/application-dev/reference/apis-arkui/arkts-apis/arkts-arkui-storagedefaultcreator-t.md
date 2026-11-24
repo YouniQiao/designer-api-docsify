@@ -16,6 +16,12 @@ export declare type StorageDefaultCreator<T> = () => T
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 默认构造器执行得到的返回值。 |
+
 **示例**
 
 ```TypeScript

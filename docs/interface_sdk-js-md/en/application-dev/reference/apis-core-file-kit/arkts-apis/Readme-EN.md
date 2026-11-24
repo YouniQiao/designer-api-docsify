@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-corefilekit-->
 
-- [@ohos.application.BackupExtensionAbility(Backup and restore extention ability)](arkts-corefile-application-backupextensionability.md)
+- [@ohos.application.BackupExtensionAbility(BackupExtensionAbility)](arkts-corefile-application-backupextensionability.md)
   - [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md)
   <!--Del-->
   - [BackupExtensionAbility(system api)](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md)<!--DelEnd-->
   - [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md)
 <!--Del-->
-- [@ohos.file.backup(backup and restore)](arkts-corefile-file-backup.md)<!--DelEnd-->
+- [@ohos.file.backup(Backup and Restore)](arkts-corefile-file-backup.md)<!--DelEnd-->
   <!--Del-->
   - [fileSystemServiceRequest(system api)](arkts-corefile-backup-filesystemservicerequest-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -51,7 +51,7 @@
   - [OnBackupSizeReport(system api)](arkts-corefile-backup-onbackupsizereport-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OnFileReadyBatch(system api)](arkts-corefile-backup-onfilereadybatch-t-sys.md)<!--DelEnd-->
-- [@ohos.file.BackupExtensionContext(Backup and restore extention context)](arkts-corefile-file-backupextensioncontext.md)
+- [@ohos.file.BackupExtensionContext(Backup and Restore Extension Capability)](arkts-corefile-file-backupextensioncontext.md)
   - [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 <!--Del-->
 - [@ohos.file.cloudDiskManager(Cloud Disk Management)](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
@@ -425,7 +425,7 @@
   - [Volume(system api)](arkts-corefile-volumemanager-volume-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DiskType(system api)](arkts-corefile-volumemanager-disktype-e-sys.md)<!--DelEnd-->
-- [@ohos.fileshare(File share)](arkts-corefile-fileshare.md)
+- [@ohos.fileshare(File Sharing)](arkts-corefile-fileshare.md)
   - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
   <!--Del-->
   - [checkPathPermission(system api)](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->

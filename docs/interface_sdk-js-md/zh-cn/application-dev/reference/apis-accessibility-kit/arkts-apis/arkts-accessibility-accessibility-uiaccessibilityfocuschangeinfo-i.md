@@ -25,7 +25,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 focusedElement?: UIAccessibilityElement
 ```
 
-本次焦点变化中获得焦点的无障碍元素。
+当前聚焦节点的信息。
 
 **类型：** [UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md)
 
@@ -43,7 +43,7 @@ focusedElement?: UIAccessibilityElement
 unfocusedElement?: UIAccessibilityElement
 ```
 
-本次焦点变化中失去焦点的无障碍元素。
+上一个聚焦节点的信息。
 
 **类型：** [UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md)
 

@@ -111,3 +111,23 @@ Whether to need start animation
 <!--Device-WindowCreateParams-needAnimation?: boolean--><!--Device-WindowCreateParams-needAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
+
+## positionZ
+
+```TypeScript
+positionZ?: WindowPosition
+```
+
+Position of the current window when it starts. Only supports WindowPosition.TOP and WindowPosition.BOTTOM. If WindowPosition.TOP, the current window will be at the top of all application main windows. If WindowPosition.BOTTOM, the current window will be at the bottom of all application main windows.
+
+**Type:** [WindowPosition](arkts-arkui-window-windowposition-e.md)
+
+**Default:** WindowPosition.TOP
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowCreateParams-positionZ?: WindowPosition--><!--Device-WindowCreateParams-positionZ?: WindowPosition-End-->
+
+**System capability:** SystemCapability.Window.SessionManager

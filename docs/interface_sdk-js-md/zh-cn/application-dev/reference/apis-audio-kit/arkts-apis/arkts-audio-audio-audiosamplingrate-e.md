@@ -22,6 +22,8 @@ SAMPLE_RATE_11025 = 11025
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_11025 = 11025--><!--Device-AudioSamplingRate-SAMPLE_RATE_11025 = 11025-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -35,6 +37,8 @@ SAMPLE_RATE_12000 = 12000
 采样率为12000。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_12000 = 12000--><!--Device-AudioSamplingRate-SAMPLE_RATE_12000 = 12000-End-->
 
@@ -50,6 +54,8 @@ SAMPLE_RATE_16000 = 16000
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_16000 = 16000--><!--Device-AudioSamplingRate-SAMPLE_RATE_16000 = 16000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -63,6 +69,8 @@ SAMPLE_RATE_176400 = 176400
 采样率为176400。单位为赫兹（Hz）。
 
 **起始版本：** 12
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_176400 = 176400--><!--Device-AudioSamplingRate-SAMPLE_RATE_176400 = 176400-End-->
 
@@ -78,6 +86,8 @@ SAMPLE_RATE_192000 = 192000
 
 **起始版本：** 12
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_192000 = 192000--><!--Device-AudioSamplingRate-SAMPLE_RATE_192000 = 192000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -91,6 +101,8 @@ SAMPLE_RATE_22050 = 22050
 采样率为22050。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_22050 = 22050--><!--Device-AudioSamplingRate-SAMPLE_RATE_22050 = 22050-End-->
 
@@ -106,6 +118,8 @@ SAMPLE_RATE_24000 = 24000
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_24000 = 24000--><!--Device-AudioSamplingRate-SAMPLE_RATE_24000 = 24000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -119,6 +133,8 @@ SAMPLE_RATE_32000 = 32000
 采样率为32000。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_32000 = 32000--><!--Device-AudioSamplingRate-SAMPLE_RATE_32000 = 32000-End-->
 
@@ -136,6 +152,8 @@ SAMPLE_RATE_384000 = 384000
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_384000 = 384000--><!--Device-AudioSamplingRate-SAMPLE_RATE_384000 = 384000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -149,6 +167,8 @@ SAMPLE_RATE_44100 = 44100
 采样率为44100。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_44100 = 44100--><!--Device-AudioSamplingRate-SAMPLE_RATE_44100 = 44100-End-->
 
@@ -164,6 +184,8 @@ SAMPLE_RATE_48000 = 48000
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_48000 = 48000--><!--Device-AudioSamplingRate-SAMPLE_RATE_48000 = 48000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -177,6 +199,8 @@ SAMPLE_RATE_64000 = 64000
 采样率为64000。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_64000 = 64000--><!--Device-AudioSamplingRate-SAMPLE_RATE_64000 = 64000-End-->
 
@@ -192,6 +216,8 @@ SAMPLE_RATE_8000 = 8000
 
 **起始版本：** 8
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_8000 = 8000--><!--Device-AudioSamplingRate-SAMPLE_RATE_8000 = 8000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -206,6 +232,8 @@ SAMPLE_RATE_88200 = 88200
 
 **起始版本：** 12
 
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-AudioSamplingRate-SAMPLE_RATE_88200 = 88200--><!--Device-AudioSamplingRate-SAMPLE_RATE_88200 = 88200-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -219,6 +247,8 @@ SAMPLE_RATE_96000 = 96000
 采样率为96000。单位为赫兹（Hz）。
 
 **起始版本：** 8
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioSamplingRate-SAMPLE_RATE_96000 = 96000--><!--Device-AudioSamplingRate-SAMPLE_RATE_96000 = 96000-End-->
 

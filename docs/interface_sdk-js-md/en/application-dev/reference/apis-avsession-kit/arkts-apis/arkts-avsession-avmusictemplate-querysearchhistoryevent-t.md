@@ -13,3 +13,9 @@ The query search history event.
 <!--Device-avMusicTemplate-type QuerySearchHistoryEvent = () => Promise<string[]>--><!--Device-avMusicTemplate-type QuerySearchHistoryEvent = () => Promise<string[]>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string[]&gt; | (string[]) returned through promise |

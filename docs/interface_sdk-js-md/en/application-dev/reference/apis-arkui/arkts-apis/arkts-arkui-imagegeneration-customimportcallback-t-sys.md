@@ -15,3 +15,9 @@ Async callback type for custom import operation.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[CustomImportResult](arkts-arkui-imagegeneration-customimportresult-i-sys.md)&gt; | Import images and text |

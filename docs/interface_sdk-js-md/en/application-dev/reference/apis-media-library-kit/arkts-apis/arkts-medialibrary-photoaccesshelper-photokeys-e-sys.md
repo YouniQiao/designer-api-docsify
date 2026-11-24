@@ -636,6 +636,24 @@ The photo visibility of photo asset.
 
 **System API:** This is a system API.
 
+## PHOTO_XT_STYLE_TEMPLATE_NUMBER
+
+```TypeScript
+PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'
+```
+
+Camera personalized color card shooting type.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-PhotoKeys-PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'--><!--Device-PhotoKeys-PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## SHARE_DATE_DAY
 
 ```TypeScript

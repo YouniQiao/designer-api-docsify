@@ -2,7 +2,7 @@
 - [Accessibility Kit (133)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-ads-advertising.md)
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-api10lessdeprecatedmodules-bytrace.md)
-- [Arkdata (489)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability.md)
+- [Arkdata (490)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability.md)
 - [Arkgraphics2D (373)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit.md)
 - [Arkgraphics3D (101)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-graphics-scene.md)
 - [Arkts (307)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkts/arkts-apis/arkts-arkts-collections.md)

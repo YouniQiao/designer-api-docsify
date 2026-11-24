@@ -15,3 +15,9 @@ declare type Initializer<T> = () => T
 <!--Device-unnamed-declare type Initializer<T> = () => T--><!--Device-unnamed-declare type Initializer<T> = () => T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件的属性实例。 |

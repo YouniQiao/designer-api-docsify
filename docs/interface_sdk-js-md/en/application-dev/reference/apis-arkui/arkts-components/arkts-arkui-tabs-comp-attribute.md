@@ -1100,6 +1100,30 @@ Sets whether the page can be switched by swiping the page. When used with custom
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the page can be switched by swiping the page.<br>Default value: **true**, the page can be switched by swiping the page. When set to **false**, the page cannot be switched by swiping. |
 
+## showBottomBarOnSidebarCollapse
+
+```TypeScript
+showBottomBarOnSidebarCollapse(value: Optional<boolean>)
+```
+
+Sets whether to display the bottom tab bar when the sidebar tab bar is collapsed. This attribute takes effect only when the tab bar is displayed as a sidebar. When this property is not set, the bottom tab bar is not displayed when the sidebar tab bar is folded.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-TabsAttribute-showBottomBarOnSidebarCollapse(value: Optional<boolean>): TabsAttribute--><!--Device-TabsAttribute-showBottomBarOnSidebarCollapse(value: Optional<boolean>): TabsAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Indicates whether to display the bottom tab bar when the sidebar tab bar is collapsed. If this parameter is set to true, the bottom tab bar is displayed when the sidebar tab bar is collapsed and hidden when the sidebar is expanded. If this parameter is set to false, the bottom tab bar is not displayed when the sidebar tab bar is collapsed or expanded. If this parameter is set to undefined, the default value false is used. |
+
 ## showSidebarControlButton
 
 ```TypeScript

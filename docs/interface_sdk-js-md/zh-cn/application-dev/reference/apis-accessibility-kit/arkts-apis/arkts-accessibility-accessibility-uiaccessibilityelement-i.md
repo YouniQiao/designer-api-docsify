@@ -4,7 +4,7 @@
 export declare interface UIAccessibilityElement
 ```
 
-无障碍节点元素。
+无障碍聚焦节点元素信息。
 
 通过[accessibility.getFocusedUIAccessibilityElement](arkts-accessibility-accessibility-getfocuseduiaccessibilityelement-f.md)获取UIAccessibilityElement实例。
 

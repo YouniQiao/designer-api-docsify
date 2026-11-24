@@ -4,7 +4,7 @@
 interface CliCmdInfo
 ```
 
-CLI命令信息。
+表示CLI（Command Line Interface，命令行界面）命令信息。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 cliCmdName: string
 ```
 
-CLI主命令名称。
+CLI命令名称，用于指定CLI命令。需传入系统支持的CLI命令名称，如'ohos-batteryManager'。长度不超过512字节，不能为空。
 
 **类型：** string
 
@@ -42,7 +42,7 @@ CLI主命令名称。
 subCliCmdName: string
 ```
 
-CLI子命令名。
+CLI子命令名称，用于指定CLI子命令。需传入指定CLI命令支持的子命令名称，如'total-energy'。长度不超过512字节，可为空字符串。
 
 **类型：** string
 

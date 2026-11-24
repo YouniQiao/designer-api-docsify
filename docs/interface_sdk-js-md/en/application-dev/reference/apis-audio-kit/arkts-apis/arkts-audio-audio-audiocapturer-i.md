@@ -1092,6 +1092,8 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -1418,6 +1420,8 @@ To eliminate power-on noise caused by the microphone hardware design, the first 
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -1508,6 +1512,8 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -1541,6 +1547,8 @@ release(): Promise<void>
 Releases this audio capturer. This API uses a promise to return the result.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioCapturer-release(): Promise<void>--><!--Device-AudioCapturer-release(): Promise<void>-End-->
 
@@ -1804,6 +1812,8 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -1837,6 +1847,8 @@ start(): Promise<void>
 Starts this audio capturer to start capturing audio data. This API uses a promise to return the result.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioCapturer-start(): Promise<void>--><!--Device-AudioCapturer-start(): Promise<void>-End-->
 
@@ -1873,6 +1885,8 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -1906,6 +1920,8 @@ stop(): Promise<void>
 Stops this audio capturer, ceasing the input audio stream. This API uses a promise to return the result.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioCapturer-stop(): Promise<void>--><!--Device-AudioCapturer-stop(): Promise<void>-End-->
 

@@ -42,7 +42,7 @@ import { power } from '@kit.BasicServicesKit';
 | [registerShutdownCallback](arkts-basicservices-power-registershutdowncallback-f-sys.md#registershutdowncallback-1) | 订阅电源关机或重启的回调提醒。使用callback异步回调。调用此方法订阅回调后，可在不再需要时调用power.unregisterShutdownCallback取消订阅，释放系统资源。 |
 | [setPowerConfig](arkts-basicservices-power-setpowerconfig-f-sys.md#setpowerconfig-1) | 根据场景名称设置电源配置值。例如，在系统电源管理应用中需要动态调整特定场景的电源配置参数时使用。 |
 | [setPowerKeyFilteringStrategy](arkts-basicservices-power-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy-1) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 |
-| [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-1) | 设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用callback异步回调。 |
+| [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-1) | 设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用callback异步回调。如需同时设置电源模式及其子模式，请使用[setPowerMode(mode, subMode)](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-3)。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-2) | 设置当前设备的电源模式，不同的电源模式会影响设备的性能与功耗策略。使用Promise异步回调。如需同时设置电源模式及其子模式，请使用[setPowerMode(mode, subMode)](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-3)。 |
 | [setPowerMode](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-3) | 设置当前设备的电源模式及其子模式。使用 Promise 异步回调。如仅需设置电源模式，请使用[setPowerMode(promise)][setPowerMode(promise)](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-2)或 [setPowerMode(callback)](arkts-basicservices-power-setpowermode-f-sys.md#setpowermode-1)。 |
 | [setScreenOffTime](arkts-basicservices-power-setscreenofftime-f-sys.md#setscreenofftime-1) | 设置灭屏超时时间。例如，在自助终端或展示设备场景下可设置较长的超时时间以保持屏幕常亮，在低电量场景下可设置较短的超时时间以节省电量。 |

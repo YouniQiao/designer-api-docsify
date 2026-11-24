@@ -75,6 +75,9 @@ Declares the APIs of **NativeKeyEvent** for obtaining the type, key code, key va
 | [ArkUI_ContextHandle OH_ArkUI_ApplicationShortcutCallbackInfo_GetUIContext(const OH_ArkUI_ApplicationShortcutCallbackInfo *info)](#oh_arkui_applicationshortcutcallbackinfo_getuicontext) | - | Obtains the UI context of the UI instance where an application-level keyboard shortcut is triggered. |
 | [ArkUI_ErrorCode OH_ArkUI_ApplicationShortcut_Register(const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys, void *userData, OH_ArkUI_ApplicationShortcutCallback callback, int32_t *registrationId)](#oh_arkui_applicationshortcut_register) | - | Registers an application-level keyboard shortcut. The shortcut takes effect globally in the application. A matching component-level shortcut is triggered before the application-level shortcut. This function must be called on the UI thread. This API does not support Form render and Dynamic render containers.<br> Each registration generates a positive integer registration ID unique within the application, even when the shortcut and callback are identical. Multiple registrations of the same shortcut are retained, and all matching registrations are invoked in increasing registration ID order when the shortcut is triggered. Registration IDs are not reused during the application lifetime. The registration ID is a positive int32 value; if the ID space is exhausted, 0 is returned to indicate failure. Callbacks already collected for the current event can still run after the corresponding registration is unregistered; <b>userData</b> must remain valid until the current event completes. |
 | [ArkUI_ErrorCode OH_ArkUI_ApplicationShortcut_Unregister(int32_t registrationId)](#oh_arkui_applicationshortcut_unregister) | - | Unregisters the application-level keyboard shortcut binding identified by the registration ID. This function must be called on the UI thread.<br> Only the specified binding is removed. Other bindings are unaffected. Callbacks already collected for the current event can still run. If the ID does not exist or has already been unregistered, this method does nothing and still succeeds. |
+| [typedef void (\*OH_ArkUI_KeyboardShortcutCallback)(void *userData)](#oh_arkui_keyboardshortcutcallback) | OH_ArkUI_KeyboardShortcutCallback | Defines the callback function that is invoked when a component-level keyboard shortcut is triggered. |
+| [ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys, void *userData, OH_ArkUI_KeyboardShortcutCallback callback)](#oh_arkui_nodekeyboardshortcut_register) | - | Registers a keyboard shortcut for a component. If the same shortcut is registered again for the same component, the latest registration takes effect. Component-level shortcuts take precedence over matching application-level shortcuts. |
+| [ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys)](#oh_arkui_nodekeyboardshortcut_unregister) | - | Unregisters a keyboard shortcut from a component. If no matching shortcut is registered, the operation still succeeds. |
 
 ### Variables
 
@@ -400,19 +403,17 @@ Enumerates the function keys supported by keyboard shortcuts.
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16 | Left arrow key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_LEFT = 16-End--> |
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17 | Right arrow key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DPAD_RIGHT = 17-End--> |
 | OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18 | CapsLock key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_CAPS_LOCK = 18-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19 | PrintScreen key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PRINT_SCREEN = 19-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20 | ScrollLock key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 20-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21 | Pause/Break key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 21-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22 | NumLock key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 22-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23 | Insert key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 23-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24 | Delete key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 24-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25 | Home key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 25-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26 | End key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 26-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27 | Page Up key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 27-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28 | Page Down key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 28-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29 | Enter key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 29-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30 | Backspace key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 30-End--> |
-| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31 | Space key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SPACE = 31-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19 | ScrollLock key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_SCROLL_LOCK = 19-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20 | Pause/Break key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAUSE_BREAK = 20-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21 | NumLock key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_NUM_LOCK = 21-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22 | Press the Insert key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_INSERT = 22-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23 | Press the Delete key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_DELETE = 23-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24 | Home key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_HOME = 24-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25 | End key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_END = 25-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26 | Page Up key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_UP = 26-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27 | Page Down key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_PAGE_DOWN = 27-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28 | Press Enter.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_ENTER = 28-End--> |
+| OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29 | Backspace key.<br>**Since**: 26.1.0<br><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29--><!--Device-OH_ARKUI_KEYBOARD_SHORTCUT_FUNCTION_KEY_BACKSPACE = 29-End--> |
 
 ### OH_ArkUI_KeyboardShortcutKeyType
 
@@ -1478,5 +1479,89 @@ Unregisters the application-level keyboard shortcut binding identified by the re
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation succeeds or the registration ID does not exist. |
+
+### OH_ArkUI_KeyboardShortcutCallback()
+
+```c
+typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void *userData)
+```
+
+**Description**
+
+Defines the callback function that is invoked when a component-level keyboard shortcut is triggered.
+
+<!--Device-typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void *userData)--><!--Device-typedef void (*OH_ArkUI_KeyboardShortcutCallback)(void *userData)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| void *userData | User-defined data transferred when a shortcut key is registered. |
+
+### OH_ArkUI_NodeKeyboardShortcut_Register()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys, void *userData, OH_ArkUI_KeyboardShortcutCallback callback)
+```
+
+**Description**
+
+Registers a keyboard shortcut for a component. If the same shortcut is registered again for the same component, the latest registration takes effect. Component-level shortcuts take precedence over matching application-level shortcuts.
+
+<!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys, void *userData, OH_ArkUI_KeyboardShortcutCallback callback)--><!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Register(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys, void *userData, OH_ArkUI_KeyboardShortcutCallback callback)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| ArkUI_NodeHandle node | [in] Target component node. |
+| [const OH_ArkUI_KeyboardShortcutKey](capi-arkui-nativemodule-oh-arkui-keyboardshortcutkey.md) *key | [in] Pointer to a keyboard shortcut key object created by [OH_ArkUI_KeyboardShortcutKey_Create](capi-native-key-event-h.md#oh_arkui_keyboardshortcutkey_create). The value must not be <b>nullptr</b>. For a character key, the character set through [OH_ArkUI_KeyboardShortcutKey_SetCharacter](capi-native-key-event-h.md#oh_arkui_keyboardshortcutkey_setcharacter) must be a single keyboard-input character. |
+| uint32_t modifierKeys | [in] Modifier key bitmask. Use a bitwise OR combination of values in [OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey). For a function key, use [OH_ARKUI_KEYBOARD_SHORTCUT_MODIFIER_NONE](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey) to register the shortcut without a modifier key. At least one modifier key must be specified for a character key. Only the bits defined in [OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey) are accepted; if any other bit is set, ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
+| void *userData | [in] User-defined data passed to the callback. The value can be <b>nullptr</b>. The value is not copied and must remain valid until the shortcut is unregistered. |
+| [OH_ArkUI_KeyboardShortcutCallback](capi-native-key-event-h.md#oh_arkui_keyboardshortcutcallback) callback | [in] Callback invoked when the shortcut is triggered. If <b>callback</b> is <b>nullptr</b>, the click event of the component is triggered. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Result code. <ul> <li>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter is invalid.</li> </ul> |
+
+### OH_ArkUI_NodeKeyboardShortcut_Unregister()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys)
+```
+
+**Description**
+
+Unregisters a keyboard shortcut from a component. If no matching shortcut is registered, the operation still succeeds.
+
+<!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys)--><!--Device-ArkUI_ErrorCode OH_ArkUI_NodeKeyboardShortcut_Unregister(ArkUI_NodeHandle node, const OH_ArkUI_KeyboardShortcutKey *key, uint32_t modifierKeys)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| ArkUI_NodeHandle node | [in] Target component node. |
+| [const OH_ArkUI_KeyboardShortcutKey](capi-arkui-nativemodule-oh-arkui-keyboardshortcutkey.md) *key | [in] Pointer to a keyboard shortcut key object used during registration. The value must not be <b>nullptr</b>. |
+| uint32_t modifierKeys | [in] Modifier key bitmask used during registration. Only the bits defined in [OH_ArkUI_KeyboardShortcutModifierKey](capi-native-key-event-h.md#oh_arkui_keyboardshortcutmodifierkey) are accepted; if any other bit is set, ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Result code. <ul> <li>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter is invalid.</li> </ul> |
 
 

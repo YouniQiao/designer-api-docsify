@@ -16,6 +16,8 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -71,6 +73,8 @@ function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCaptur
 Creates an AudioCapturer instance. This API uses a promise to return the result.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
 

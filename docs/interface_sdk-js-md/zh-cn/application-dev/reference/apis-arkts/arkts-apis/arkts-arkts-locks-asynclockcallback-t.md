@@ -13,3 +13,9 @@ type AsyncLockCallback<T> = () => T | Promise<T>
 <!--Device-locks-type AsyncLockCallback<T> = () => T | Promise<T>--><!--Device-locks-type AsyncLockCallback<T> = () => T | Promise<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T &#124; Promise&lt;T&gt; | - |

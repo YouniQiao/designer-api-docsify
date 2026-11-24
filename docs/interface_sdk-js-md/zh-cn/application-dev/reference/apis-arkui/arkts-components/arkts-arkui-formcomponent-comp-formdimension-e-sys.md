@@ -46,6 +46,24 @@ Dimension_1_2 = 0
 
 **系统接口：** 此接口为系统接口。
 
+## DIMENSION_2_1
+
+```TypeScript
+DIMENSION_2_1 = 10
+```
+
+2 x 1 卡片
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormDimension-DIMENSION_2_1 = 10--><!--Device-FormDimension-DIMENSION_2_1 = 10-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
 ## Dimension_2_2
 
 ```TypeScript
@@ -105,6 +123,24 @@ DIMENSION_3_3 = 9
 **起始版本：** 18
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+## DIMENSION_4_2
+
+```TypeScript
+DIMENSION_4_2 = 11
+```
+
+4 x 2 卡片
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormDimension-DIMENSION_4_2 = 11--><!--Device-FormDimension-DIMENSION_4_2 = 11-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

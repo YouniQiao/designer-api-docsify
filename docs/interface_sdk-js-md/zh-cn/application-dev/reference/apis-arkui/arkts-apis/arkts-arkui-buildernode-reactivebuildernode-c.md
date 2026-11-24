@@ -922,7 +922,9 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > 
 > postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEvent接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
-> 不建议同一个事件转发多次。
+> 不建议同一个事件转发多次。<!--Del-->
+> 
+> postInputEvent的参数不支持[UIExtensionComponent](../arkts-components/arkts-arkui-uiextensioncomponent-comp-sys.md)。<!--DelEnd-->
 
 **起始版本：** 22
 
@@ -978,7 +980,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEventWithStrategy接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
-> - 支持同一个事件转发多次。
+> - 支持同一个事件转发多次<!--Del-->，不支持[UIExtensionComponent](../arkts-components/arkts-arkui-uiextensioncomponent-comp-sys.md)调用本接口<!--DelEnd-->。
 
 **起始版本：** 24
 
@@ -1023,7 +1025,11 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 > 
 > 在[webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
-> 同一时间戳，postTouchEvent只能调用一次。
+> 同一时间戳，postTouchEvent只能调用一次。<!--Del-->
+> 
+> postTouchEvent的参数不支持[UIExtensionComponent](../arkts-components/arkts-arkui-uiextensioncomponent-comp-sys.md)。
+
+<!--DelEnd-->
 
 **起始版本：** 22
 

@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): Promise<boolean[]>
 ```
 
-对被控设备的授权包进行校验。对被控设备发送的远程授权包进行校验。验证票证以确保授权是合法的。
+验证被控设备发送的授权请求包，检查消息凭据以确保授权请求合法。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -30,13 +30,13 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | 是 | 远程授权包列表 |
+| ticketInfo | [RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[] | 是 | 远程授权请求包列表，包含远程消息、防重放挑战值和消息完整性凭据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean[]&gt; | Promise用于返回${boolean[]}。 |
+| Promise&lt;boolean[]&gt; | Promise对象，返回true表示验证通过；返回false表示验证失败。 |
 
 **错误码：**
 

@@ -15,3 +15,9 @@ type CustomImportCallback = () => Promise<CustomImportResult>
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[CustomImportResult](arkts-arkui-imagegeneration-customimportresult-i-sys.md)&gt; | Import images and text |

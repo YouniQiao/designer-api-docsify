@@ -1,7 +1,4 @@
-# MediaControlExtensionContext
-
-播控扩展能力上下文
-
+# MediaControlExtensionContext(播控扩展能力上下文)
 
 ## 汇总
 

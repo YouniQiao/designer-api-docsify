@@ -24,6 +24,8 @@ Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 9
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -38,6 +40,8 @@ Invalid format.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -51,6 +55,8 @@ SAMPLE_FORMAT_S16LE = 1
 Signed 16-bit integer, little endian.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1-End-->
 
@@ -68,6 +74,8 @@ Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -84,6 +92,8 @@ Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -97,6 +107,8 @@ SAMPLE_FORMAT_U8 = 0
 Unsigned 8-bit integer.
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0-End-->
 

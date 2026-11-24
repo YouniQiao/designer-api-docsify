@@ -4,7 +4,7 @@
 enum ControlAppStatus
 ```
 
-控制权限状态。
+表示应用控制权限状态枚举。
 
 **起始版本：** 26.1.0
 
@@ -18,7 +18,7 @@ enum ControlAppStatus
 ALLOW = 0x01
 ```
 
-允许控制权限。
+控制权限被授予。
 
 **起始版本：** 26.1.0
 

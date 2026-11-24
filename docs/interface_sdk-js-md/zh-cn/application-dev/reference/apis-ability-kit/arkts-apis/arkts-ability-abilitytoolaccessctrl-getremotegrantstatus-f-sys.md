@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 ```
 
-获取远程授权状态。该功能用于查询远程授权特性的使能状态。启用时，设备可以向远程设备授予权限；禁用时，不允许远程授权。
+查询远程授权开关的使能状态。启用时设备可以发起远程授权，禁用时不允许远程授权。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -30,7 +30,7 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise对象，返回${RemoteGrantStatus}。 |
+| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise对象，返回远程授权开关状态。 |
 
 **错误码：**
 

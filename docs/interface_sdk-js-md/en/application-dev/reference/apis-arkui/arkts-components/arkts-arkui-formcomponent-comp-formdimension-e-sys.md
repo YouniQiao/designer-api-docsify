@@ -46,6 +46,24 @@ Dimension_1_2 = 0
 
 **System API:** This is a system API.
 
+## DIMENSION_2_1
+
+```TypeScript
+DIMENSION_2_1 = 10
+```
+
+2 x 1 card
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormDimension-DIMENSION_2_1 = 10--><!--Device-FormDimension-DIMENSION_2_1 = 10-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## Dimension_2_2
 
 ```TypeScript
@@ -105,6 +123,24 @@ DIMENSION_3_3 = 9
 **Since:** 18
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## DIMENSION_4_2
+
+```TypeScript
+DIMENSION_4_2 = 11
+```
+
+4 x 2 cards
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormDimension-DIMENSION_4_2 = 11--><!--Device-FormDimension-DIMENSION_4_2 = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

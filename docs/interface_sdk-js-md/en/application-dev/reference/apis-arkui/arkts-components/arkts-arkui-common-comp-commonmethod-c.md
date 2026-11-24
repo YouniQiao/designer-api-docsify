@@ -1757,7 +1757,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isShow | boolean | Yes | Whether to display the full-screen modal. <br>- **true**: Display the modal. <br>- **false**: Hide the modal. <br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md). <br>Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
-| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the modal. The root node in **builder** must be unique. |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the modal. <!--RP1--><!--RP1End--> |
 | type | [ModalTransition](arkts-arkui-common-comp-modaltransition-e.md) | No | System transition mode of the modal. <br> Default value: **ModalTransition.DEFAULT**. <br>**NOTE:** <br> This property has no effect when it is set together with **transition**. |
 
 **Return value:**
@@ -1789,7 +1789,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isShow | boolean | Yes | Whether to display the full-screen modal. <br>- **true**: Display the modal. <br>- **false**: Hide the modal. <br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md). <br>Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
-| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the modal. |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the modal. <!--RP1--><!--RP1End--> |
 | options | [ContentCoverOptions](arkts-arkui-common-comp-contentcoveroptions-i.md) | No | Optional attributes of the modal. |
 
 **Return value:**
@@ -5683,7 +5683,7 @@ Triggered in accessibility mode when a single finger touches the bound component
 onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback): T
 ```
 
-This callback is triggered when a screen-reading accessibility application (such as a screen reader) is enabled, a finger touches the component area, and neither the component nor any of its child components is identified as focusable by the accessibility hover event. The callback parameter returns the **TouchEvent** corresponding to the touch event. Only single-finger touch is supported. Scenarios where the touch position is within the area of the following components are not supported, including UIExtension, Web, XComponent, and scenarios integrated with third-party UI frameworks. In the preceding scenarios, this callback API does not take effect. <br>This API is complementary to **onAccessibilityHover**. Only one of the two callbacks is triggered for the same component at a time. This API cannot be called in **attributeModifier**.
+This callback is triggered when a screen-reading accessibility application (such as a screen reader) is enabled, a finger touches the component area, and neither the component nor any of its child components is identified as focusable by the accessibility hover event. The callback parameter returns the **TouchEvent** corresponding to the touch event. Only single-finger touch is supported. Scenarios where the touch position is within the area of the following components are not supported, including UIExtension, [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md)<!--Del-->, [FormComponent](arkts-arkui-formcomponent-comp-sys.md)<!--DelEnd-->, [XComponent](arkts-arkui-xcomponent-comp.md), and scenarios integrated with third-party UI frameworks. In the preceding scenarios, this callback API does not take effect. <br>This API is complementary to **onAccessibilityHover**. Only one of the two callbacks is triggered for the same component at a time. This API cannot be called in **attributeModifier**.
 
 **Since:** 20
 

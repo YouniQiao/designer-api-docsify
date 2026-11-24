@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function generateTaskIdentity(taskIdentityInfo: TaskIdentityInfo): Promise<TaskIdentity>
 ```
 
-为代理命令生成基于任务的身份验证身份。该函数根据调用者身份和基本任务属性（例如任务 ID 和任务过期时间）生成认证标识。
+为智能体命令生成任务标识。该函数根据调用者身份和基本任务属性（例如任务ID和任务过期时间）生成该标识。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 
@@ -30,13 +30,13 @@ export function generateTaskIdentity(taskIdentityInfo: TaskIdentityInfo): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskIdentityInfo | [TaskIdentityInfo](arkts-ability-abilitytoolaccessctrl-taskidentityinfo-i-sys.md) | 是 | 要生成认证标识的任务信息。 |
+| taskIdentityInfo | [TaskIdentityInfo](arkts-ability-abilitytoolaccessctrl-taskidentityinfo-i-sys.md) | 是 | 要生成任务标识的任务信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[TaskIdentity](arkts-ability-abilitytoolaccessctrl-taskidentity-i-sys.md)&gt; | Promise对象，返回${TaskIdentity}。 |
+| Promise&lt;[TaskIdentity](arkts-ability-abilitytoolaccessctrl-taskidentity-i-sys.md)&gt; | Promise对象，返回生成的任务标识（TaskIdentity），包含任务属性、标识信息和挑战值。 |
 
 **错误码：**
 

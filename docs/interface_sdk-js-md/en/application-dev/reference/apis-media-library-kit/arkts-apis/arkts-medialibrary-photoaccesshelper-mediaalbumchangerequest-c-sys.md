@@ -452,7 +452,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 dismissAssets(assets: Array<PhotoAsset>): void
 ```
 
-Removes assets from this portrait album or group photo album.
+Removes assets from this portrait album or group photo album. Starting from API version 26.1.0, this API also supports removing images from pet albums, human-pet group photo albums, and pet group photo albums.
 
 **Since:** 11
 
@@ -522,7 +522,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 mergeAlbum(target: Album): void
 ```
 
-Merges two portrait albums.
+Merges two portrait albums. Starting from API version 26.1.0, this API also supports merging two pet albums.
 
 **Since:** 11
 
@@ -1185,7 +1185,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setDisplayLevel(displayLevel: number): void
 ```
 
-Sets the display level of the portrait album.
+Sets the display level of the portrait album. Starting from API version 26.1.0, this API also supports setting the display level of pet albums.
 
 **Since:** 11
 
@@ -1199,7 +1199,7 @@ Sets the display level of the portrait album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayLevel | number | Yes | Display level to set. The options are as follows: <br>**0**: unfavorite the portrait album. <br>**1**: set the portrait album as the first to display. <br>**2**: do not display the portrait album as the first one. <br>**3**: favorite the portrait album. |
+| displayLevel | number | Yes | Display level to set for a portrait album or pet album. The options are as follows: <br>**0**: unfavorite this album. <br>**1**: set this album to appear on the first screen. <br>**2**: set this album to appear on the More screen. <br>**3**: set this album to appear on the Favorites screen. |
 
 **Error codes:**
 

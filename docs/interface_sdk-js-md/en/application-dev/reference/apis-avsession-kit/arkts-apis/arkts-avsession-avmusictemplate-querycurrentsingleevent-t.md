@@ -13,3 +13,9 @@ The query current single event.
 <!--Device-avMusicTemplate-type QueryCurrentSingleEvent = () => Promise<Single>--><!--Device-avMusicTemplate-type QueryCurrentSingleEvent = () => Promise<Single>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | (Single) returned through promise |

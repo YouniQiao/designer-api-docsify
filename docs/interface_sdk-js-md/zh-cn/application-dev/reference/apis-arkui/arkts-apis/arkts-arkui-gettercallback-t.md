@@ -16,6 +16,12 @@ export declare type GetterCallback<T> = () => T
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 回调函数获取到的值。 |
+
 **示例**
 
 ```TypeScript

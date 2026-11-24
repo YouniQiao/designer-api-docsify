@@ -1,4 +1,4 @@
-# @ohos.application.BackupExtensionAbility(备份恢复拓展能力)
+# @ohos.application.BackupExtensionAbility(备份恢复扩展能力)
 
 ## 导入模块
 

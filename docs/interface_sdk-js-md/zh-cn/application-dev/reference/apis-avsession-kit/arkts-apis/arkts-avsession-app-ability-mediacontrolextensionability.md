@@ -1,7 +1,4 @@
-# @ohos.app.ability.MediaControlExtensionAbility
-
-播控扩展能力
-
+# @ohos.app.ability.MediaControlExtensionAbility(播控扩展能力)
 
 ## 导入模块
 

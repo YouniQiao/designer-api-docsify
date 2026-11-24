@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function generateTaskChallenge(taskIdentityInfo: TaskIdentityInfo): Promise<Uint8Array>
 ```
 
-为任务认证令牌生成挑战值。该函数基于任务身份信息生成挑战值。
+基于任务身份信息生成挑战值。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 
@@ -36,7 +36,7 @@ export function generateTaskChallenge(taskIdentityInfo: TaskIdentityInfo): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回${Uint8Array}格式的挑战值。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回Uint8Array格式的挑战值。 |
 
 **错误码：**
 

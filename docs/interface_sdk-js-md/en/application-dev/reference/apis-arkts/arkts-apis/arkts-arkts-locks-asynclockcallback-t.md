@@ -13,3 +13,9 @@ Type of callback for asyncLock operation.
 <!--Device-locks-type AsyncLockCallback<T> = () => T | Promise<T>--><!--Device-locks-type AsyncLockCallback<T> = () => T | Promise<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T &#124; Promise&lt;T&gt; | - |

@@ -156,6 +156,24 @@ HIGHLIGHT_SUGGESTIONS = 4105
 
 **系统接口：** 此接口为系统接口。
 
+## HUMAN_PET_GROUP_PHOTO
+
+```TypeScript
+HUMAN_PET_GROUP_PHOTO = 4112
+```
+
+人和宠物合影相册。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumSubtype-HUMAN_PET_GROUP_PHOTO = 4112--><!--Device-AlbumSubtype-HUMAN_PET_GROUP_PHOTO = 4112-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## LIVEPHOTO_4D
 
 ```TypeScript
@@ -169,6 +187,42 @@ LIVEPHOTO_4D = 1033
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 <!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+## PET
+
+```TypeScript
+PET = 4106
+```
+
+宠物相册。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumSubtype-PET = 4106--><!--Device-AlbumSubtype-PET = 4106-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+## PET_GROUP_PHOTO
+
+```TypeScript
+PET_GROUP_PHOTO = 4113
+```
+
+宠物和宠物合影相册。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumSubtype-PET_GROUP_PHOTO = 4113--><!--Device-AlbumSubtype-PET_GROUP_PHOTO = 4113-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

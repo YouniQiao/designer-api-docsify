@@ -29,4 +29,4 @@ declare type OnWillScrollCallback =
 
 | 类型 | 说明 |
 | --- | --- |
-| void &#124; [ScrollResult](arkts-arkui-common-comp-scrollresult-c.md) | 返回ScrollResult时按照开发者指定的相对上一帧的偏移量滑动；不返回时按回调参数scrollOffset滑动。<br>取值范围：(-∞, +∞) |
+| void &#124; [ScrollResult](arkts-arkui-common-comp-scrollresult-c.md) | 返回ScrollResult时按照开发者指定的相对上一帧的偏移量滑动；不返回时按回调参数scrollOffset滑动。<br>ScrollResult中offsetRemain的取值范围：(-∞, +∞) |

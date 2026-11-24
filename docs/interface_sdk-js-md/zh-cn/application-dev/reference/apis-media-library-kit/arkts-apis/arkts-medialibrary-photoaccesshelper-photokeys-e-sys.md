@@ -638,6 +638,24 @@ PHOTO_VISIBILITY = 'photo_visibility'
 
 **系统接口：** 此接口为系统接口。
 
+## PHOTO_XT_STYLE_TEMPLATE_NUMBER
+
+```TypeScript
+PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'
+```
+
+相机个性色卡拍照类型。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PhotoKeys-PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'--><!--Device-PhotoKeys-PHOTO_XT_STYLE_TEMPLATE_NUMBER = 'xt_style_template_number'-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## SHARE_DATE_DAY
 
 ```TypeScript

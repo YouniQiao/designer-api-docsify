@@ -13,3 +13,9 @@ The query recommend media entity list event.
 <!--Device-avMusicTemplate-type QueryRecommendMediaEntityListEvent = () => Promise<MediaEntity[]>--><!--Device-avMusicTemplate-type QueryRecommendMediaEntityListEvent = () => Promise<MediaEntity[]>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | (MediaEntity[]) returned through promise |

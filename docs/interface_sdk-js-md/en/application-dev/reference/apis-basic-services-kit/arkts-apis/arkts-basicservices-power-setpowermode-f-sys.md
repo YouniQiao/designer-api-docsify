@@ -12,7 +12,7 @@ import { power } from '@kit.BasicServicesKit';
 function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the power mode of a device. This API uses an asynchronous callback to return the result.
+Sets the power mode of a device. This API uses an asynchronous callback to return the result. To set both the power mode and the sub-mode, use [setPowerMode(mode, subMode)](#setpowermode-3).
 
 **Since:** 9
 
@@ -138,7 +138,7 @@ Sets the power mode and sub-mode of a device. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Yes | Power mode. The value must be an enum. |
-| subMode | [DevicePowerSubMode](arkts-basicservices-power-devicepowersubmode-e.md) | No | Power sub-mode. The value must be an enum. |
+| subMode | [DevicePowerSubMode](arkts-basicservices-power-devicepowersubmode-e.md) | No | Power sub-mode. The value must be an enum. Only MODE_EXTREME_POWER_SAVE (603) supports power sub-mode, and the default value is SUB_MODE_EMERGENCY (603002). <br>Default value: SUB_MODE_EMERGENCY. |
 
 **Return value:**
 

@@ -15,3 +15,9 @@ export declare type OnOverlayBackPressCallback = () => boolean
 <!--Device-unnamed-export declare type OnOverlayBackPressCallback = () => boolean--><!--Device-unnamed-export declare type OnOverlayBackPressCallback = () => boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | Whether to intercept the back-press event. If **true** is returned, the event is intercepted and is prevented from reaching the lower-layer component. If **false** is returned, the event is transparently transmitted to the lower-layer component. |

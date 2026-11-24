@@ -4,7 +4,7 @@
 interface PermissionQuery
 ```
 
-权限查询信息。
+表示权限查询信息。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 callerTokenId?: number
 ```
 
-主叫token标识。取值范围：(-∞,+∞)。
+调用方进程的tokenId。当需要为其他进程查询或授权时，可指定目标进程的tokenId。如果未传入该参数，默认获取调用方进程的tokenId。
 
 **类型：** number
 
@@ -46,7 +46,7 @@ callerTokenId?: number
 domainId?: string
 ```
 
-域ID。
+域标识。如果未传入该参数，则默认使用调用方当前的域标识。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ domainId?: string
 needTicket?: boolean
 ```
 
-是否需要ticket
+是否需要生成ticket用于本地或远程授权。true表示需要生成ticket，false表示不需要。当设置为true时，仅在本次查询结果通过的情况下才会返回ticket信息。默认值：false
 
 **类型：** boolean
 
@@ -86,7 +86,7 @@ needTicket?: boolean
 operationInfo: OperationInfo[]
 ```
 
-操作信息列表。
+操作信息列表，指定待查询的CLI命令或API接口。
 
 **类型：** [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)[]
 
@@ -106,7 +106,7 @@ operationInfo: OperationInfo[]
 remoteInfo?: RemoteInfo
 ```
 
-远端设备信息。
+远端设备信息，包含设备角色、设备ID、域标识等。用于远程授权场景。
 
 **类型：** [RemoteInfo](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md)
 
@@ -126,7 +126,7 @@ remoteInfo?: RemoteInfo
 taskIdentity?: TaskIdentity
 ```
 
-任务标识。
+任务标识，用于智能体命令的任务身份验证。可通过generateTaskIdentity获取。默认值：空。
 
 **类型：** [TaskIdentity](arkts-ability-abilitytoolaccessctrl-taskidentity-i-sys.md)
 
@@ -146,7 +146,7 @@ taskIdentity?: TaskIdentity
 ticketExpireTimeMs?: number
 ```
 
-凭据过期时间，单位为毫秒。取值必须大于0。取值约束：大于0。
+ticket过期时间，单位为毫秒。需配合needTicket参数使用，仅当needTicket为true时本参数生效。常规授权场景取值范围：1~60000（60秒），长时间远程授权场景取值范围：1~86400000（24小时），超过最大值将返回错误码24010000。默认值：10000
 
 **类型：** number
 

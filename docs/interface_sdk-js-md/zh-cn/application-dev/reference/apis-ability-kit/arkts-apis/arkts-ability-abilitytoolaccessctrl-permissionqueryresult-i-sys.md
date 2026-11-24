@@ -4,7 +4,7 @@
 interface PermissionQueryResult
 ```
 
-权限查询结果。
+表示权限查询结果。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 needDialog: boolean
 ```
 
-是否需要对话。
+是否需要弹窗。true表示需要弹窗请求用户授权，false表示不需要弹窗。
 
 **类型：** boolean
 
@@ -46,7 +46,7 @@ needDialog: boolean
 permissionResults: PermissionInfo[]
 ```
 
-权限结果列表。
+权限状态结果列表。
 
 **类型：** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)[]
 
@@ -66,7 +66,7 @@ permissionResults: PermissionInfo[]
 ticket?: TicketInfo
 ```
 
-票证信息。
+ticket信息。当入参permissionQuery.needTicket为true且本次查询结果通过时，返回ticket信息。
 
 **类型：** [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)
 

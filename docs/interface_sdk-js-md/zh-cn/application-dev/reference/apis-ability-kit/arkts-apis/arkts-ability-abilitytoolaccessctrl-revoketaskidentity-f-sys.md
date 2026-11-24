@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function revokeTaskIdentity(taskId: string[]): Promise<void>
 ```
 
-批量撤销代理命令的任务认证标识。该函数批量撤销任务鉴权标识，删除任务属性的本地缓存。
+批量撤销智能体命令的任务标识，并删除任务属性的本地缓存。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 

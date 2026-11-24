@@ -4,7 +4,7 @@
 interface PermissionInfo
 ```
 
-权限信息。
+表示权限信息。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 permission: string
 ```
 
-权限名称。
+权限名称，合法的权限名取值可在应用权限列表中查询。
 
 **类型：** string
 

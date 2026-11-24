@@ -46,6 +46,24 @@ Dimension_1_2 = 1
 
 **系统能力：** SystemCapability.Ability.Form
 
+## DIMENSION_2_1
+
+```TypeScript
+DIMENSION_2_1 = 10
+```
+
+2 x 1 卡片。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormDimension-DIMENSION_2_1 = 10--><!--Device-FormDimension-DIMENSION_2_1 = 10-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
 ## Dimension_2_2
 
 ```TypeScript
@@ -111,6 +129,24 @@ DIMENSION_3_3 = 9
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+## DIMENSION_4_2
+
+```TypeScript
+DIMENSION_4_2 = 11
+```
+
+4 x 2 卡片。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormDimension-DIMENSION_4_2 = 11--><!--Device-FormDimension-DIMENSION_4_2 = 11-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

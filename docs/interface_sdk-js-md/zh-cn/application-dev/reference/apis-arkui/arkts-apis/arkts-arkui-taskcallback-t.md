@@ -15,3 +15,9 @@ declare type TaskCallback = () => T
 <!--Device-unnamed-declare type TaskCallback = () => T--><!--Device-unnamed-declare type TaskCallback = () => T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 闭包函数执行得到的返回值。 |

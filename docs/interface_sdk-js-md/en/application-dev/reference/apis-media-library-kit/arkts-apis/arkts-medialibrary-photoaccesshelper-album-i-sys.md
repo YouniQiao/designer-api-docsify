@@ -110,7 +110,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getFaceId(): Promise<string>
 ```
 
-Obtains the face identifier on the cover of a portrait album or group photo album.
+Obtains the face identifier on the cover of a portrait album or group photo album. Starting from API version 26.1.0, this API also returns face identifiers for pet albums, human-pet group photo albums, and pet group photo albums.
 
 **Since:** 13
 
@@ -126,7 +126,7 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. |
+| Promise&lt;string&gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. <br>Starting from API version 26.1.0, pet albums return **tag_id**, and human-pet group photo albums and pet group photo albums return **group_tag**. |
 
 **Error codes:**
 

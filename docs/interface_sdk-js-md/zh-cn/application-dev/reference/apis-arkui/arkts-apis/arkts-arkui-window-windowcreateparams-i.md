@@ -115,3 +115,23 @@ needAnimation?: boolean
 <!--Device-WindowCreateParams-needAnimation?: boolean--><!--Device-WindowCreateParams-needAnimation?: boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
+
+## positionZ
+
+```TypeScript
+positionZ?: WindowPosition
+```
+
+当前窗口启动时的位置。如果WindowPosition.TOP，则当前窗口将位于所有应用程序主窗口的顶部。如果WindowPosition.BOTTOM，则当前窗口将位于所有应用程序主窗口的底部。
+
+**类型：** [WindowPosition](arkts-arkui-window-windowposition-e.md)
+
+**默认值：** WindowPosition.TOP
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowCreateParams-positionZ?: WindowPosition--><!--Device-WindowCreateParams-positionZ?: WindowPosition-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager

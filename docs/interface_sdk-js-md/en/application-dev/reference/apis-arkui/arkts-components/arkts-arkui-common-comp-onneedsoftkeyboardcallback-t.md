@@ -15,3 +15,9 @@ This callback is triggered when the component bound to this method determines wh
 <!--Device-unnamed-declare type OnNeedSoftkeyboardCallback = () => boolean--><!--Device-unnamed-declare type OnNeedSoftkeyboardCallback = () => boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether the component needs a keyboard. <br>If the return value of this callback is `true`, the component needs a keyboard; if the return value is `false`, the component does not need a keyboard. |

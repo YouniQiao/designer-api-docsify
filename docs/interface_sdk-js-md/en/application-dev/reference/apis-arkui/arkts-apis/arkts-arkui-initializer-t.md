@@ -15,3 +15,9 @@ Defines the type of the initialization function for component attributes, which 
 <!--Device-unnamed-declare type Initializer<T> = () => T--><!--Device-unnamed-declare type Initializer<T> = () => T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Attribute instance of the current component. |

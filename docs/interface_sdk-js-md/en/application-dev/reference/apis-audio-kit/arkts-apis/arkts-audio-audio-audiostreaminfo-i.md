@@ -30,6 +30,8 @@ Audio channel layout. The default value is **0x0**.
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -45,6 +47,8 @@ Number of audio channels.
 **Type:** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
@@ -62,6 +66,8 @@ Audio encoding type.
 
 **Since:** 8
 
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
 <!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -77,6 +83,8 @@ Audio sample format.
 **Type:** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
 **Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
@@ -96,6 +104,8 @@ Audio sampling rate.
 
 **Model restriction:** 
 - API version 26.0.0 and later: This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int--><!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int-End-->
 

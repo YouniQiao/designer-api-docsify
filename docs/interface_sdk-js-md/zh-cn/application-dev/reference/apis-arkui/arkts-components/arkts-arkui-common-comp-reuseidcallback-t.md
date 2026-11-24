@@ -15,3 +15,9 @@ declare type ReuseIdCallback = () => string
 <!--Device-unnamed-declare type ReuseIdCallback = () => string--><!--Device-unnamed-declare type ReuseIdCallback = () => string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 复用标识ID，由开发者指定。<br>未指定或使用空字符串`''`作为复用标识ID时，将默认使用自定义组件名。<br>在API版本26.0.0之前，当该回调不是显式返回字符串字面量时，实际复用标识ID将为自定义组件名，回调返回值不生效；在API版本26.0.0及以后，回调的实际返回结果将作为复用标识ID。 |

@@ -181,6 +181,32 @@ Sets whether to support the scrolling gesture.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-comp-scroller-c.md). <br>Default value: **true** |
 
+## footer
+
+```TypeScript
+footer(builder: CustomBuilder | ComponentContent | undefined)
+```
+
+Sets the footer of the **WaterFlow** component. The footer is displayed at the end of the main axis and participates in the total size, scrollable boundary, and index-based scrolling of the water flow. When the footer size changes, the total size and scrollable range are updated accordingly.
+
+This attribute is independent of the **footer** and **footerContent** in [WaterFlowOptions](arkts-arkui-waterflow-comp-waterflowoptions-i.md): the existing **footer**, **footerContent**, and **sections** capabilities and their priority are not affected by this attribute.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-WaterFlowAttribute-footer(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-footer(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; ComponentContent &#124; undefined | Yes | Footer of the **WaterFlow** component. <br>Default value: **undefined**. |
+
 ## friction
 
 ```TypeScript
@@ -204,6 +230,30 @@ Sets the friction coefficient. It takes effect when the scroll area is manually 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient. <br>Default value: **0.9** for wearable devices and **0.6** for non-wearable devices. <br>Since API version 11, the default value for non-wearable devices is **0.7**. <br>Since API version 12, the default value for non-wearable devices is **0.75**. <br>Value range: (0, +∞). <br>If the value is less than or equal to 0, the default value is used. |
+
+## header
+
+```TypeScript
+header(builder: CustomBuilder | ComponentContent | undefined)
+```
+
+Sets the header of the **WaterFlow** component. The header is displayed at the start of the main axis and participates in the total size, scrollable boundary, and index-based scrolling of the water flow. When the header size changes, the total size and scrollable range are updated accordingly.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-WaterFlowAttribute-header(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-header(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; ComponentContent &#124; undefined | Yes | Header of the **WaterFlow** component. <br>Default value: **undefined**. |
 
 ## itemConstraintSize
 
@@ -510,6 +560,30 @@ Supports top-down, segmented, and sliding-window layouts. START, CENTER, and END
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Built-in alignment or custom provider. |
+
+## sticky
+
+```TypeScript
+sticky(style: StickyStyle)
+```
+
+Sets whether the header set via [header](#header) is pinned to the start of the viewport and the footer set via [footer](#footer) is pinned to the end of the viewport during scrolling. This attribute takes effect only when the header or footer is set.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-WaterFlowAttribute-sticky(style: StickyStyle): WaterFlowAttribute--><!--Device-WaterFlowAttribute-sticky(style: StickyStyle): WaterFlowAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [StickyStyle](arkts-arkui-list-comp-stickystyle-e.md) | Yes | Sticky style of the header and footer. <br>Default value: **StickyStyle.None**. |
 
 ## supportEmptyBranchInLazyLoading
 

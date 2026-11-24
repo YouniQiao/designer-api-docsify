@@ -13,7 +13,7 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
     Promise<RemoteAuthPackage[]>
 ```
 
-生成主控设备的授权包。根据远程用户授权结果生成远程授权包。生成的包可以发送到被控设备进行权限验证。
+在主控设备上，生成远程授权结果包。生成的包可以发送到被控设备上，完成完整性校验后，执行权限授权。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -31,13 +31,13 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteUserAuthResult | [RemoteUserAuthResults](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)[] | 是 | 远程用户授权结果列表 |
+| remoteUserAuthResult | [RemoteUserAuthResults](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)[] | 是 | 用户远程授权结果列表，包含授权结果和权限信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise对象，返回${RemoteAuthPackage[]}。 |
+| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise对象，返回远程授权结果包列表。 |
 
 **错误码：**
 

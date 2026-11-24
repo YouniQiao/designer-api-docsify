@@ -13,3 +13,9 @@ type QuerySearchHistoryEvent = () => Promise<string[]>
 <!--Device-avMusicTemplate-type QuerySearchHistoryEvent = () => Promise<string[]>--><!--Device-avMusicTemplate-type QuerySearchHistoryEvent = () => Promise<string[]>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string[]&gt; | Promise对象，返回搜索历史的数组。 |

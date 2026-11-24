@@ -15,3 +15,9 @@ Defines the function type of the callback that returns the configuration strateg
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [ConfigurationStrategy](arkts-ability-app-ability-uiextensionability-configurationstrategy-i-sys.md) | The configuration strategy of the UIExtensionAbility. |

@@ -15,3 +15,9 @@ Defines a synchronous callback.
 <!--Device-unnamed-declare type TaskCallback = () => T--><!--Device-unnamed-declare type TaskCallback = () => T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Return value obtained by executing the closure function. |

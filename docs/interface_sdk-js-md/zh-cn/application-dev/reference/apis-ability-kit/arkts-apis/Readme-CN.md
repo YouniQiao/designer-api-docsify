@@ -80,7 +80,7 @@
     - [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
-- [@ohos.abilityToolAccessCtrl（Tool Access Control Management）](arkts-ability-abilitytoolaccessctrl.md)
+- [@ohos.abilityToolAccessCtrl（工具访问控制）](arkts-ability-abilitytoolaccessctrl.md)
   <!--Del-->
   - [generateControlledDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->

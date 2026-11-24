@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-avsessionkit-->
 
 <!--Del-->
-- [@ohos.app.ability.MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.MediaControlExtensionAbility（播控扩展能力）](arkts-avsession-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [MediaControlExtensionAbility（系统接口）](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.multimedia.avCastPicker（投播组件）](arkts-avsession-multimedia-avcastpicker.md)
@@ -259,6 +259,6 @@
   - [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 - application<!--arkts-avsessionkit-application-->
   <!--Del-->
-  - [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext.md)<!--DelEnd-->
+  - [MediaControlExtensionContext（播控扩展能力上下文）](arkts-avsession-mediacontrolextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [MediaControlExtensionContext（系统接口）](arkts-avsession-mediacontrolextensioncontext-c-sys.md)<!--DelEnd-->

@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>
 ```
 
-根据指定的操作查询工具权限。该函数用于检查权限查询中指定的CLI命令或API的权限状态。对于每个操作，它返回权限状态、授权状态以及是否需要用户对话框。当needTicket设置为true时，远程授权会生成一个凭据。
+根据指定操作查询工具权限。检查入参permissionQuery的operationInfo属性中指定的CLI命令或API接口的权限状态，返回每个操作的权限状态、授权状态以及是否需要用户弹窗。当permissionQuery.needTicket设置为true时，将生成用于远程授权的ticket。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -30,13 +30,13 @@ export function requestToolPermissions(permissionQuery: PermissionQuery): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionQuery | [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md) | 是 | 权限查询信息。 |
+| permissionQuery | [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md) | 是 | 权限查询信息，包含操作信息列表、是否需要生成ticket、远程设备信息等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise对象，返回${PermissionQueryResult}。 |
+| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise对象，返回权限查询结果，包含是否需要弹窗、权限状态信息和ticket信息。 |
 
 **错误码：**
 

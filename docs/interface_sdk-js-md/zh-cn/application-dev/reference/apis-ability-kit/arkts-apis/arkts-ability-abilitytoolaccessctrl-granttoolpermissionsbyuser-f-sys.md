@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>
 ```
 
-根据用户授权结果授予工具权限。该功能根据用户的授权决定授予工具（CLI命令或API）的权限。授权成功后，会生成凭据，用于权限验证。
+根据用户授权结果，为工具（CLI命令或API接口）授予权限。授权成功后，生成可用于权限验证的ticket。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -30,13 +30,13 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAuthResult | [UserAuthResult](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)[] | 是 | 用户授权结果列表 |
+| userAuthResult | [UserAuthResult](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)[] | 是 | 用户授权结果列表，包含权限信息和权限查询信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise对象，返回${TicketInfo[]}。 |
+| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise对象，返回授权成功后生成的ticket信息列表。 |
 
 **错误码：**
 

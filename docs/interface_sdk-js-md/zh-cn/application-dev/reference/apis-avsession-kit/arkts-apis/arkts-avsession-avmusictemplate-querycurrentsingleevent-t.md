@@ -13,3 +13,9 @@ type QueryCurrentSingleEvent = () => Promise<Single>
 <!--Device-avMusicTemplate-type QueryCurrentSingleEvent = () => Promise<Single>--><!--Device-avMusicTemplate-type QueryCurrentSingleEvent = () => Promise<Single>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[Single](arkts-avsession-avmusictemplate-single-i.md)&gt; | Promise对象，返回Single对象。 |

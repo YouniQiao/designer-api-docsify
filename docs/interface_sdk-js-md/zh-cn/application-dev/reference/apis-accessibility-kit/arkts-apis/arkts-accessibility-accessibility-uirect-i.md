@@ -4,7 +4,7 @@
 export interface UIRect
 ```
 
-表示矩形区域。
+表示矩形区域。仅在[UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md)中被使用，用于表示组件所在的矩形区域的范围。
 
 **起始版本：** 26.0.1
 

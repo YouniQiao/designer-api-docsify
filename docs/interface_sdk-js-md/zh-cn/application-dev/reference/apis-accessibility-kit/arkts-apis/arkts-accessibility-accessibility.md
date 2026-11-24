@@ -23,8 +23,8 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 
 | 名称 | 说明 |
 | --- | --- |
-| [UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md) | 无障碍节点元素。 |
-| [UIRect](arkts-accessibility-accessibility-uirect-i.md) | 表示矩形区域。 |
+| [UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md) | 无障碍聚焦节点元素信息。 |
+| [UIRect](arkts-accessibility-accessibility-uirect-i.md) | 表示矩形区域。仅在[UIAccessibilityElement](arkts-accessibility-accessibility-uiaccessibilityelement-i.md)中被使用，用于表示组件所在的矩形区域的范围。 |
 
 <!--Del-->
 ### 枚举（系统接口）

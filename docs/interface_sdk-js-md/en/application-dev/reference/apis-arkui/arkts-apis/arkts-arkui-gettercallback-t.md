@@ -16,6 +16,12 @@ Defines a callback used to obtain a value.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Value obtained by the callback function. |
+
 **Examples**
 
 ```TypeScript

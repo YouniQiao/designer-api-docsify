@@ -15,3 +15,9 @@ declare type SaveStateCallback = () => Record<string, Object> | null
 <!--Device-unnamed-declare type SaveStateCallback = () => Record<string, Object> | null--><!--Device-unnamed-declare type SaveStateCallback = () => Record<string, Object> | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Record&lt;string, Object&gt; &#124; null | Custom page state. |

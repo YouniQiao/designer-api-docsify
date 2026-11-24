@@ -4,7 +4,7 @@
 interface RemoteUserAuthResults
 ```
 
-远程用户授权结果。
+表示远程用户授权结果。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 permissionQuery: PermissionQuery
 ```
 
-权限查询信息。
+权限查询信息，用于关联授权结果与查询请求。
 
 **类型：** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
@@ -46,7 +46,7 @@ permissionQuery: PermissionQuery
 results: RemoteUserAuthItem[]
 ```
 
-授权结果列表。
+授权结果列表，包含权限名称和授权结果。
 
 **类型：** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 

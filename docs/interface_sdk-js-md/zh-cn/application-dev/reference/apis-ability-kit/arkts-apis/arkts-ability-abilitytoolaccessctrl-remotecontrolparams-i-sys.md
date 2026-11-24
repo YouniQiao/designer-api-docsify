@@ -4,7 +4,7 @@
 interface RemoteControlParams
 ```
 
-远程控制交互参数
+表示远程控制交互参数。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 challenge?: string
 ```
 
-防重放challenge。
+防重放挑战值，用于防止重放攻击。合法的挑战值由generateControlledDevicePackage接口获取。默认值：空字符串。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ challenge?: string
 controlledDeviceName?: string
 ```
 
-被控设备的设备名称。
+被控设备的设备名称。默认值：空字符串。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ controlledDeviceName?: string
 controllerDeviceName?: string
 ```
 
-主控设备的设备名称。
+主控设备的设备名称。默认值：空字符串。
 
 **类型：** string
 
@@ -86,7 +86,7 @@ controllerDeviceName?: string
 remoteControlTicket?: string
 ```
 
-可信设备的远程控制凭证。
+可信设备的远程控制凭证，用于远程控制场景同账号下可信设备的身份验证。默认值：空字符串。
 
 **类型：** string
 
@@ -106,7 +106,7 @@ remoteControlTicket?: string
 signVerifyMsg?: string
 ```
 
-签名认证需要的额外信息。
+签名认证需要的额外信息，如调用方包名、模块名等。默认值：空字符串。
 
 **类型：** string
 

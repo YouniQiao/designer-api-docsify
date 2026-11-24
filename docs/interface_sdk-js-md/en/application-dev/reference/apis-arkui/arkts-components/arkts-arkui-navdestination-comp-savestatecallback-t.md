@@ -15,3 +15,9 @@ Custom page state save callback.
 <!--Device-unnamed-declare type SaveStateCallback = () => Record<string, Object> | null--><!--Device-unnamed-declare type SaveStateCallback = () => Record<string, Object> | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Record&lt;string, Object&gt; &#124; null | Custom page state. |

@@ -13,3 +13,9 @@ type NoParamAsyncCallback = () => Promise<void>
 <!--Device-avMusicTemplate-type NoParamAsyncCallback = () => Promise<void>--><!--Device-avMusicTemplate-type NoParamAsyncCallback = () => Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |

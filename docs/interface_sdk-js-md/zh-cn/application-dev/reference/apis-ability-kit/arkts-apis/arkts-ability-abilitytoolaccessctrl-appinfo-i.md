@@ -4,7 +4,7 @@
 interface AppInfo
 ```
 
-应用的相关信息。
+表示应用信息。
 
 **起始版本：** 26.1.0
 
@@ -24,7 +24,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 bundleName: string
 ```
 
-应用的包名。
+应用包名，用于唯一标识一个应用。
 
 **类型：** string
 
@@ -42,7 +42,7 @@ bundleName: string
 index: number
 ```
 
-应用的分身索引。
+应用分身索引。0表示主应用，大于0表示对应的分身应用。
 
 **类型：** number
 

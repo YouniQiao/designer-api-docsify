@@ -12,7 +12,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): Promise<void>
 ```
 
-更新远程授权状态。该功能用于开启或关闭远程授权特性。启用时，设备可以向远程设备授予权限；禁用时，不允许远程授权。
+更新远程授权开关状态，开启或关闭远程授权使能开关。启用时设备可以发起远程授权，禁用时不允许远程授权。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -30,7 +30,7 @@ export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteGrantStatus | [RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md) | 是 | 要设置的远程授权状态 |
+| remoteGrantStatus | [RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md) | 是 | 要设置的远程授权状态。 |
 
 **返回值：**
 

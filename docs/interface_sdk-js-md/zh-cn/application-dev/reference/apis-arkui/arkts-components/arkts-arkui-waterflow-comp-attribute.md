@@ -181,6 +181,32 @@ enableScrollInteraction(value: boolean)
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroll-comp-scroller-c.md)的滚动接口。<br>默认值：true |
 
+## footer
+
+```TypeScript
+footer(builder: CustomBuilder | ComponentContent | undefined)
+```
+
+设置**WaterFlow**组件的尾部。尾部显示在主轴末尾位置，参与瀑布流的总大小、可滚动边界和基于索引的滚动。尾部大小变化时，总大小和可滚动范围会相应更新。
+
+本属性与[WaterFlowOptions](arkts-arkui-waterflow-comp-waterflowoptions-i.md)中的**footer**和**footerContent**相互独立：现有**footer**、**footerContent**和**sections**能力及其优先级不受本属性影响。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-footer(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-footer(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; ComponentContent &#124; undefined | 是 | **WaterFlow**组件的尾部。<br>默认值：**undefined**。 |
+
 ## friction
 
 ```TypeScript
@@ -204,6 +230,30 @@ friction(value: number | Resource)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 摩擦系数。<br>默认值：非可穿戴设备为0.6，可穿戴设备为0.9。<br>从API version 11开始，非可穿戴设备默认值为0.7。<br>从API version 12开始，非可穿戴设备默认值为0.75。<br>取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+
+## header
+
+```TypeScript
+header(builder: CustomBuilder | ComponentContent | undefined)
+```
+
+设置**WaterFlow**组件的头部。头部显示在主轴起始位置，参与瀑布流的总大小、可滚动边界和基于索引的滚动。头部大小变化时，总大小和可滚动范围会相应更新。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-header(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-header(builder: CustomBuilder | ComponentContent | undefined): WaterFlowAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; ComponentContent &#124; undefined | 是 | **WaterFlow**组件的头部。<br>默认值：**undefined**。 |
 
 ## itemConstraintSize
 
@@ -472,6 +522,30 @@ scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | 否 | 内置对齐策略或自定义提供方。 |
+
+## sticky
+
+```TypeScript
+sticky(style: StickyStyle)
+```
+
+设置滚动过程中，通过[header](#header)设置的头部是否固定在视口起始位置，以及通过[footer](#footer)设置的尾部是否固定在视口末尾位置。仅在已设置头部或尾部时，本属性才生效。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-sticky(style: StickyStyle): WaterFlowAttribute--><!--Device-WaterFlowAttribute-sticky(style: StickyStyle): WaterFlowAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | [StickyStyle](arkts-arkui-list-comp-stickystyle-e.md) | 是 | 头部和尾部组件的吸顶吸底样式。<br>默认值：**StickyStyle.None**。 |
 
 ## supportEmptyBranchInLazyLoading
 

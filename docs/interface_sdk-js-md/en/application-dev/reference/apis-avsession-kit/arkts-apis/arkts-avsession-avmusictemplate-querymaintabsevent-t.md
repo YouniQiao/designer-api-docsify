@@ -13,3 +13,9 @@ The query main tabs event.
 <!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>--><!--Device-avMusicTemplate-type QueryMainTabsEvent = () => Promise<MediaTab[]>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]&gt; | (MediaTab[]) returned through promise |
