@@ -182,6 +182,26 @@ For a bottom sheet, the bottom border width does not take effect. When the syste
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## colorFilterEffect
+
+```TypeScript
+colorFilterEffect?: ColorFilter
+```
+
+Applies a color filter effect to the component. The color filter effect applies a 4 x 5 color matrix to transform the component's pixel colors. This can be used to implement eye-care mode, color temperature adjustment, and other visual effects.
+
+**Type:** [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-SheetOptions-colorFilterEffect?: ColorFilter--><!--Device-SheetOptions-colorFilterEffect?: ColorFilter-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## detents
 
 ```TypeScript

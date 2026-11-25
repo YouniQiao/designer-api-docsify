@@ -32,7 +32,7 @@ The **UiTest** module provides UI automation test capabilities, such as componen
 
 > **NOTE**
  >
- > - The APIs of this module can be used only in [UITest](../../../application-test/uitest-guidelines.md).
+ > - The APIs of this module can be used only in <!--RP1-->[UITest](../../../application-test/uitest-guidelines.md)<!--RP1End-->.
  >
  > - The APIs of this module do not support concurrent calls.
 

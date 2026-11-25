@@ -6,7 +6,7 @@ export interface FrequencyInfo
 
 Execution frequency information.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 <!--Device-workScheduler-export interface FrequencyInfo--><!--Device-workScheduler-export interface FrequencyInfo-End-->
 
@@ -30,7 +30,7 @@ Set app exec interval, in milliseconds. Unit:ms.
 
 **Type:** number
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ App uid. The value should be an integer.
 
 **Type:** number
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ ID of the deferred task. The value should be an integer.
 
 **Type:** number
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

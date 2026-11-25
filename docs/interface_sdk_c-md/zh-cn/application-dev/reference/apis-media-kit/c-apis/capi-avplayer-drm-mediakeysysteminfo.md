@@ -13,7 +13,7 @@ DRM_MediaKeySystemInfo类型，DRM媒体密钥系统信息结构体，用于存�
 
 <!--Device-typedef struct DRM_MediaKeySystemInfo DRM_MediaKeySystemInfo--><!--Device-typedef struct DRM_MediaKeySystemInfo DRM_MediaKeySystemInfo-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 

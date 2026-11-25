@@ -10,7 +10,7 @@ AVPlayerCallback（AVPlayer回调）是AVPlayer（音视频播放器）的回调
 
 <!--Device-struct AVPlayerCallback {...}--><!--Device-struct AVPlayerCallback {...}-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 

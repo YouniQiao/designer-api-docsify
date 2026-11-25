@@ -1323,7 +1323,7 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 > **说明：** 
 > 
-> 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
+> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
 
@@ -1784,7 +1784,7 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 > **说明：** 
 > 
-> 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
+> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
 

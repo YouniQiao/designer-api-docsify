@@ -153,7 +153,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:**  If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:**  If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) to obtain all current **display** objects and use them to obtain the corresponding display IDs.<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -198,7 +198,7 @@ Specifies the checkable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Checkable status of the component. The value **true** indicates that the component is checkable, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Checkable status of the component. The value **true** indicates that the component is checkable, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -243,7 +243,7 @@ Specifies the checked attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Checked status of the component. The value **true** indicates that the component is checked, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Checked status of the component. The value **true** indicates that the component is checked, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -288,7 +288,7 @@ Specifies the clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -333,7 +333,7 @@ Specifies the description of the target component. Multiple match patterns are s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | string | Yes | Description of the component. |
+| val | string | Yes | Description of the component.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
@@ -379,7 +379,7 @@ Specifies the enabled attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -424,7 +424,7 @@ Specifies the focused attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -469,7 +469,7 @@ Specifies the hint text attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | string | Yes | The specified hint text of the component. |
+| val | string | Yes | The specified hint text of the component.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
@@ -515,7 +515,7 @@ Specifies the ID attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Component ID. |
+| id | string | Yes | Component ID.<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -560,7 +560,7 @@ Specifies the **id** attribute and match pattern of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Component ID. |
+| id | string | Yes | Component ID.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). |
 
 **Return value:**
@@ -606,7 +606,7 @@ Specifies that the target component is located within the given application wind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application window. |
+| bundleName | string | Yes | Bundle name of the application window.<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -651,7 +651,7 @@ Specifies that the target component is located after the given attribute compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component.<!--RP3--><!--RP3End--> |
 
 **Return value:**
 
@@ -697,7 +697,7 @@ Specifies that the target component is located before the given attribute compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component.<!--RP3--><!--RP3End--> |
 
 **Return value:**
 
@@ -743,7 +743,7 @@ Specifies the long-clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long -clickable, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long -clickable, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -795,7 +795,7 @@ Specifies the text content and text matching pattern of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Component text, used to match the target component. |
+| text | string | Yes | Component text, used to match the target component.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
@@ -841,7 +841,7 @@ Specifies the scrollable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -886,7 +886,7 @@ Specifies the selected attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true**<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -938,7 +938,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| txt | string | Yes | Component text, used to match the target component. |
+| txt | string | Yes | Component text, used to match the target component.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
@@ -984,7 +984,7 @@ Specifies the type attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tp | string | Yes | Component type. |
+| tp | string | Yes | Component type.<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -1029,7 +1029,7 @@ Specifies the **type** attribute and match pattern of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tp | string | Yes | Component type. |
+| tp | string | Yes | Component type.<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). |
 
 **Return value:**
@@ -1075,7 +1075,7 @@ Specifies that the target component is located within the given attribute compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Information about the attribute component.<!--RP3--><!--RP3End--> |
 
 **Return value:**
 

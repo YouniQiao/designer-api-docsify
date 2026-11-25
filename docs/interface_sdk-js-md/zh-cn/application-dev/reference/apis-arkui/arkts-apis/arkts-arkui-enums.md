@@ -129,4 +129,5 @@
 | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [EdgeLightPosition](arkts-arkui-edgelightposition-e-sys.md) | 边缘流光位置。 |
 | [IlluminatedType](arkts-arkui-illuminatedtype-e-sys.md) | 定义光照类型，用于指定组件是否可以被光源照亮以及被照亮的类型。 |
+| [VibrancyMode](arkts-arkui-vibrancymode-e-sys.md) | 定义提亮压暗模式，指定是否对内容使用提亮或压暗效果，以提升通透材质背景下的可读性。 |
 <!--DelEnd-->

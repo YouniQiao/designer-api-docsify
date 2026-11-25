@@ -1332,7 +1332,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 > **NOTE:** 
 > 
-> If the knuckle gesture is disabled on the device, 17000005 is returned.
+> If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 22
 
@@ -1793,7 +1793,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 > **NOTE:** 
 > 
-> If the knuckle gesture is disabled on the device, 17000005 is returned.
+> If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 22
 

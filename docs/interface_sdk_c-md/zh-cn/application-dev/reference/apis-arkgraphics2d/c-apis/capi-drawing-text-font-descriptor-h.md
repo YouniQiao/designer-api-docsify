@@ -64,7 +64,7 @@
 | [uint32_t OH_Drawing_GetFontCountFromBuffer(uint8_t* fontBuffer, size_t length)](#oh_drawing_getfontcountfrombuffer) | 获取字体缓存数据中包含的字体数量。 |
 | [OH_Drawing_String* OH_Drawing_GetFontPathsByType(OH_Drawing_SystemFontType fontType, size_t* pathCount)](#oh_drawing_getfontpathsbytype) | 获取指定字体类型的所有字体文件路径。 |
 | [OH_Drawing_ErrorCode OH_Drawing_CopyFontFamilyMappings(const OH_Drawing_FontFamilyMapping ***outCopiedMappings, uint32_t *outBorrowedCount)](#oh_drawing_copyfontfamilymappings) | 复制字体家族映射表的内容。 |
-| [void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)](#oh_drawing_freefontfamilymappings) | 发布字体映射表 |
+| [void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)](#oh_drawing_freefontfamilymappings) | 释放字体家族映射表。 |
 | [OH_Drawing_ErrorCode OH_Drawing_GetSourceFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, const char **outBorrowedSourceFamily)](#oh_drawing_getsourcefamilyfrommapping) | 从指定的字体家族映射对象中获取源字体家族名。 |
 | [OH_Drawing_ErrorCode OH_Drawing_GetTargetCountFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t *outBorrowedTargetCount)](#oh_drawing_gettargetcountfrommapping) | 获取指定字体家族映射对象中包含的目标字体家族的数量。 |
 | [OH_Drawing_ErrorCode OH_Drawing_GetTargetFamilyFromMapping(const OH_Drawing_FontFamilyMapping *mapping, uint32_t index, const char **outBorrowedTargetFamily)](#oh_drawing_gettargetfamilyfrommapping) | 根据索引从指定的字体家族映射对象中获取对应的目标字体家族名。 |
@@ -1075,7 +1075,7 @@ void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mapp
 
 **描述：**
 
-发布字体映射表
+释放字体家族映射表。
 
 <!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)--><!--Device-void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mappings)-End-->
 
@@ -1087,7 +1087,7 @@ void OH_Drawing_FreeFontFamilyMappings(const OH_Drawing_FontFamilyMapping **mapp
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) **mappings | 【入参】 指向字体映射表的指针。 |
+| [const OH_Drawing_FontFamilyMapping](capi-drawing-oh-drawing-fontfamilymapping.md) **mappings | [in] 指向字体家族映射表的指针。 |
 
 ### OH_Drawing_GetSourceFamilyFromMapping()
 

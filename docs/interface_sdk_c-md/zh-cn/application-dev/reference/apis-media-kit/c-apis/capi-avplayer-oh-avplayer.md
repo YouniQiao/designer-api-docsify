@@ -10,7 +10,7 @@ typedef struct OH_AVPlayer OH_AVPlayer
 
 <!--Device-typedef struct OH_AVPlayer OH_AVPlayer--><!--Device-typedef struct OH_AVPlayer OH_AVPlayer-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 

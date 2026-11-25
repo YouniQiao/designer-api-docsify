@@ -51,6 +51,40 @@ confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
 
+## factoryResetVolumeParameters
+
+```TypeScript
+factoryResetVolumeParameters(): Promise<void>
+```
+
+将所有音量设置恢复为出厂默认值。使用Promise异步回调。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-factoryResetVolumeParameters(): Promise<void>--><!--Device-AudioVolumeManager-factoryResetVolumeParameters(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
+
 ## forceVolumeKeyControlType
 
 ```TypeScript

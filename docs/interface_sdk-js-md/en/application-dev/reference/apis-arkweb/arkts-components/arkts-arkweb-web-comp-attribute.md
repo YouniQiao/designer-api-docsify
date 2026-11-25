@@ -20,6 +20,28 @@ Web component attributes are used to configure the web page loading behavior, se
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## adaptToHandedness
+
+```TypeScript
+adaptToHandedness(mode: WebHandednessFollowMode)
+```
+
+Set the grip adaptation mode of the web page pop-up box (time selector/file selector) in the web component. When this function is enabled, click the date/time/datetime-local/file type on the web page on a wide-screen device(the width of the application window is greater than 600 vp). Input element. The system pop-up dialog box is displayed near the clicked element. After this function is disabled, the current layout(center or bottom of the screen) of the dialog box is retained, which is the same as that when this attribute is not set.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-adaptToHandedness(mode: WebHandednessFollowMode): WebAttribute--><!--Device-WebAttribute-adaptToHandedness(mode: WebHandednessFollowMode): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [WebHandednessFollowMode](arkts-arkweb-web-comp-webhandednessfollowmode-e.md) | Yes | Grip adaptation mode. |
+
 ## aiSessionOptions
 
 ```TypeScript

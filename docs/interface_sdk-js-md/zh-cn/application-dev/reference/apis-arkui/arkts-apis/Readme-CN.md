@@ -1552,6 +1552,8 @@
   - [TouchType](arkts-arkui-touchtype-e.md)
   - [TransitionType](arkts-arkui-transitiontype-e.md)
   - [VerticalAlign](arkts-arkui-verticalalign-e.md)
+  <!--Del-->
+  - [VibrancyMode（系统接口）](arkts-arkui-vibrancymode-e-sys.md)<!--DelEnd-->
   - [Visibility](arkts-arkui-visibility-e.md)
   - [Week](arkts-arkui-week-e.md)
   - [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)

@@ -183,6 +183,7 @@
   - [WebContextMenuItemId](arkts-arkweb-web-comp-webcontextmenuitemid-e.md)
   - [WebDarkMode](arkts-arkweb-web-comp-webdarkmode-e.md)
   - [WebElementType](arkts-arkweb-web-comp-webelementtype-e.md)
+  - [WebHandednessFollowMode](arkts-arkweb-web-comp-webhandednessfollowmode-e.md)
   - [WebKeyboardAppearanceMode](arkts-arkweb-web-comp-webkeyboardappearancemode-e.md)
   - [WebKeyboardAvoidMode](arkts-arkweb-web-comp-webkeyboardavoidmode-e.md)
   - [WebLayoutMode](arkts-arkweb-web-comp-weblayoutmode-e.md)

@@ -129,4 +129,5 @@
 | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Enumerates color space types for specifying color rendering modes. |
 | [EdgeLightPosition](arkts-arkui-edgelightposition-e-sys.md) | Defines the edge light position. |
 | [IlluminatedType](arkts-arkui-illuminatedtype-e-sys.md) | Defines the illumination types, which specify whether a component can be illuminated by a light source and the type of illumination. |
+| [VibrancyMode](arkts-arkui-vibrancymode-e-sys.md) | Defines the vibrancy modes, which specify whether to apply a brighten or darken effect to the content to improve readability against translucent material backgrounds. |
 <!--DelEnd-->

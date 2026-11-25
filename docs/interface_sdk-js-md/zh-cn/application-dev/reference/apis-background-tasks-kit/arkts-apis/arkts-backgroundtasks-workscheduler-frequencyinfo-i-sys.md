@@ -6,7 +6,7 @@ export interface FrequencyInfo
 
 执行频率的具体信息，用于设置应用所在活跃分组的执行频率。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 <!--Device-workScheduler-export interface FrequencyInfo--><!--Device-workScheduler-export interface FrequencyInfo-End-->
 
@@ -30,7 +30,7 @@ interval: number
 
 **类型：** number
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +70,7 @@ workId: number
 
 **类型：** number
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

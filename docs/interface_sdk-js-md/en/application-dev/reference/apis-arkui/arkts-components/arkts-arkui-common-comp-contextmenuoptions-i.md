@@ -329,6 +329,26 @@ When the BorderRadiuses or LocalizedBorderRadiuses type is used: Invalid input v
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## colorFilterEffect
+
+```TypeScript
+colorFilterEffect?: ColorFilter
+```
+
+Applies a color filter effect to the component. The color filter effect applies a 4 x 5 color matrix to transform the component's pixel colors. This can be used to implement eye-care mode, color temperature adjustment, and other visual effects.
+
+**Type:** [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-ContextMenuOptions-colorFilterEffect?: ColorFilter--><!--Device-ContextMenuOptions-colorFilterEffect?: ColorFilter-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## colorMode
 
 ```TypeScript

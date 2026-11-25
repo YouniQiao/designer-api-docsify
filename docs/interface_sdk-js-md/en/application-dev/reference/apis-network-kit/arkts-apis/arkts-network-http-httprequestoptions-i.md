@@ -363,6 +363,42 @@ value 118s. This parameter does not take effect when **reuseConnections** is set
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## lowSpeedLimit
+
+```TypeScript
+lowSpeedLimit?: number
+```
+
+Low speed limit threshold in bytes per second. If the transfer speed is lower than this value for longer than lowSpeedTime, the transfer will be aborted. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequestOptions-lowSpeedLimit?: int--><!--Device-HttpRequestOptions-lowSpeedLimit?: int-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## lowSpeedTime
+
+```TypeScript
+lowSpeedTime?: number
+```
+
+Low speed duration threshold in milliseconds. If the transfer speed is lower than lowSpeedLimit for longer than this value, the transfer will be aborted. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequestOptions-lowSpeedTime?: int--><!--Device-HttpRequestOptions-lowSpeedTime?: int-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## maxLimit
 
 ```TypeScript

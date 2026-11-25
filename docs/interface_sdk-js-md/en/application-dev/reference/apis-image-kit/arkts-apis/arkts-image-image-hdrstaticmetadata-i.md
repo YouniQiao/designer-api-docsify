@@ -112,7 +112,7 @@ minLuminance: number
 
 Minimum luminance of the image's primary display.
 
-The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
+The value is measured in units of 0.0001, with a maximum allowed value of 6.5535.
 
 **Type:** number
 

@@ -153,7 +153,7 @@ belongingDisplay(displayId: number): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。可通过[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1)获取当前所有的display对象，并由display对象获取对应的屏幕ID。 |
+| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。可通过[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1)获取当前所有的display对象，并由display对象获取对应的屏幕ID。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -198,7 +198,7 @@ checkable(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件能否被勾选状态。true：能被勾选。false：不能被勾选。默认为true。 |
+| b | boolean | 否 | 指定控件能否被勾选状态。true：能被勾选。false：不能被勾选。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -243,7 +243,7 @@ checked(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件被勾选状态。true：被勾选。false：未被勾选。默认为true。 |
+| b | boolean | 否 | 指定控件被勾选状态。true：被勾选。false：未被勾选。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -288,7 +288,7 @@ clickable(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件可点击状态。true：可点击。false：不可点击。默认为true。 |
+| b | boolean | 否 | 指定控件可点击状态。true：可点击。false：不可点击。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -333,7 +333,7 @@ description(val: string, pattern?: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | string | 是 | 控件的描述属性。 |
+| val | string | 是 | 控件的描述属性。 <!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
 
 **返回值：**
@@ -379,7 +379,7 @@ enabled(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件使能状态。true：使能。false：未使能。默认为true。 |
+| b | boolean | 否 | 指定控件使能状态。true：使能。false：未使能。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -424,7 +424,7 @@ focused(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 控件获焦状态。true：获焦。false：未获焦。默认为true。 |
+| b | boolean | 否 | 控件获焦状态。true：获焦。false：未获焦。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -469,7 +469,7 @@ hint(val: string, pattern?: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | string | 是 | 指定控件提示文本。 |
+| val | string | 是 | 指定控件提示文本。 <!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
 
 **返回值：**
@@ -515,7 +515,7 @@ id(id: string): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 指定控件的id值。 |
+| id | string | 是 | 指定控件的id值。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -560,7 +560,7 @@ id(id: string, pattern: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 指定控件的id值。 |
+| id | string | 是 | 指定控件的id值。<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | 指定的文本匹配模式。 |
 
 **返回值：**
@@ -606,7 +606,7 @@ inWindow(bundleName: string): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 应用窗口的包名。 |
+| bundleName | string | 是 | 应用窗口的包名。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -651,7 +651,7 @@ isAfter(on: On): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 <!--RP3--><!--RP3End--> |
 
 **返回值：**
 
@@ -697,7 +697,7 @@ isBefore(on: On): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 <!--RP3--><!--RP3End--> |
 
 **返回值：**
 
@@ -743,7 +743,7 @@ longClickable(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件可长按点击状态。true：可长按点击。false：不可长按点击。默认为true。 |
+| b | boolean | 否 | 指定控件可长按点击状态。true：可长按点击。false：不可长按点击。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -794,7 +794,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 指定控件文本，用于匹配目标控件文本。 |
+| text | string | 是 | 指定控件文本，用于匹配目标控件文本。 <!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
 
 **返回值：**
@@ -840,7 +840,7 @@ scrollable(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 控件可滑动状态。true：可滑动。false：不可滑动。默认为true。 |
+| b | boolean | 否 | 控件可滑动状态。true：可滑动。false：不可滑动。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -885,7 +885,7 @@ selected(b?: boolean): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件被选中状态。true：被选中。false：未被选中。默认为true。 |
+| b | boolean | 否 | 指定控件被选中状态。true：被选中。false：未被选中。默认为true。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -936,7 +936,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| txt | string | 是 | 指定控件文本，用于匹配目标控件文本。 |
+| txt | string | 是 | 指定控件文本，用于匹配目标控件文本。<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
 
 **返回值：**
@@ -982,7 +982,7 @@ type(tp: string): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tp | string | 是 | 指定控件类型。 |
+| tp | string | 是 | 指定控件类型。<!--RP2--><!--RP2End--> |
 
 **返回值：**
 
@@ -1027,7 +1027,7 @@ type(tp: string, pattern: MatchPattern): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tp | string | 是 | 指定控件类型。 |
+| tp | string | 是 | 指定控件类型。<!--RP2--><!--RP2End--> |
 | pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | 指定的文本匹配模式。 |
 
 **返回值：**
@@ -1073,7 +1073,7 @@ within(on: On): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。<!--RP3--><!--RP3End--> |
 
 **返回值：**
 

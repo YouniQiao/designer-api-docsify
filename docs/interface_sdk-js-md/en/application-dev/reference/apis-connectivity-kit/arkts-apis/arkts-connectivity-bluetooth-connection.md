@@ -22,7 +22,8 @@ import { connection } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f.md#cancelpaireddevice-2) | Remove a paired remote device. |
+| [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f.md#cancelpaireddevice-1) | Delete the paired peer device. Use the Callback asynchronous callback. The API version is 26.1.0 or later. When an NA calls this API, a confirmation dialog box is displayed before the pairing is deleted. The pairing is removed only after the confirmation dialog box is displayed. |
+| [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f.md#cancelpaireddevice-2) | Delete the paired peer device. Use Promise asynchronous callbacks. The API version is 26.1.0 or later. When an NA calls this API, a confirmation dialog box is displayed before the pairing is deleted. The pairing is removed only after the confirmation dialog box is displayed. |
 | [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f.md#cancelpairingdevice-1) | This interface is used to cancel the pairing between the current application and the peer device. Use the Callback asynchronous callback. This API is used to cancel an ongoing pairing process. If the peer device is not pairing, calling this API fails. |
 | [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f.md#cancelpairingdevice-2) | This interface is used to cancel the pairing between the current application and the peer device. Use Promise asynchronous callback. This API is used to cancel an ongoing pairing process. If the peer device is not pairing, calling this API fails. |
 | [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md#connectallowedprofiles-1) | Connects all allowed bluetooth profiles between the local and remote device. |
@@ -74,7 +75,6 @@ import { connection } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f-sys.md#cancelpaireddevice-1) | Remove a paired remote device. |
 | [controlDeviceAction](arkts-connectivity-connection-controldeviceaction-f-sys.md#controldeviceaction-1) | Controls the actions of Bluetooth peripherals. |
 | [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md#disconnectallowedprofiles-1) | Disconnects all allowed bluetooth profiles between the local and remote device. |
 | [generateLocalOobData](arkts-connectivity-connection-generatelocaloobdata-f-sys.md#generatelocaloobdata-1) | Generate out-of-band data of the local device. |

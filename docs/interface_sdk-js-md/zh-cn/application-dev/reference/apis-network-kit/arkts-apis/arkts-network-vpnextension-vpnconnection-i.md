@@ -485,3 +485,40 @@ export default class MyVpnExtAbility  extends VpnExtensionAbility {
   }
 }
 ```
+
+## protectSync
+
+```TypeScript
+protectSync(socketFd: number): void
+```
+
+保护套接字不受VPN连接影响，通过该套接字发送的数据将直接基于物理网络收发，因此其流量不会通过VPN转发。使用同步方式返回。
+
+> **说明：** 
+> 
+> - 该接口为同步调用，会在当前线程完成服务校验等过程，不建议在UI主线程循环中对大量socketFd串行调用；批量场景可使用异步[protect](#protect)接口或分批处理。
+> - 本接口仅对传入的socketFD生效，需在socket连接建立后调用；由该socket派生的新连接需重新调用本接口。
+> - 接口抛2203004错误码时，表示fwmark（firewall mark，防火墙标记）设置失败，该socket的流量仍按VPN规则转发；请在确认socket有效后重试，或改用异步protect接口。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnConnection-protectSync(socketFd: int): void--><!--Device-VpnConnection-protectSync(socketFd: int): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Vpn
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| socketFd | number | 是 | 指定保护的socketfd，该文件描述符通过[getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取，<br>取值必须为整数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |

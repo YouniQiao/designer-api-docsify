@@ -10,7 +10,7 @@ typedef struct MediaKeySession MediaKeySession
 
 <!--Device-typedef struct MediaKeySession MediaKeySession--><!--Device-typedef struct MediaKeySession MediaKeySession-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 

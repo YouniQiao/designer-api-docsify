@@ -20,6 +20,28 @@ Web组件属性用于在ArkUI声明式语法下以链式调用的方式配置Web
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## adaptToHandedness
+
+```TypeScript
+adaptToHandedness(mode: WebHandednessFollowMode)
+```
+
+设置Web组件内网页弹框（时间选择器/文件选择器等）握姿适配模式。启用时，宽屏设备（应用窗口宽度大于600vp）上点击网页内date/time/datetime-local/file类型的input元素，系统弹框在被点击元素附近弹出。禁用后，弹框保持当前布局（屏幕中央或底部），与未设置该属性时一致。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-adaptToHandedness(mode: WebHandednessFollowMode): WebAttribute--><!--Device-WebAttribute-adaptToHandedness(mode: WebHandednessFollowMode): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [WebHandednessFollowMode](arkts-arkweb-web-comp-webhandednessfollowmode-e.md) | 是 | 握姿适配模式。 |
+
 ## aiSessionOptions
 
 ```TypeScript

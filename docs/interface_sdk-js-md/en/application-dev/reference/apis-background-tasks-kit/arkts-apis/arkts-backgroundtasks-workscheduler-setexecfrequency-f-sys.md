@@ -14,7 +14,7 @@ function setExecFrequency(info: FrequencyInfo): void
 
 Set the execution frequency.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.SET_WORK_SCHEDULER_PROPERTY
 

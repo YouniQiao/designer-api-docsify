@@ -142,8 +142,16 @@
   <!--Del-->
   - [notifyDataChange(system api)](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [offCheckTrigger(system api)](arkts-corefile-cloudsyncmanager-offchecktrigger-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCheckTrigger(system api)](arkts-corefile-cloudsyncmanager-onchecktrigger-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [triggerCloudCheck(system api)](arkts-corefile-cloudsyncmanager-triggercloudcheck-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [DowngradeDownload(system api)](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md)<!--DelEnd-->
   - [DownloadProgress](arkts-corefile-cloudsyncmanager-downloadprogress-c.md)
+  <!--Del-->
+  - [CheckTriggerInfo(system api)](arkts-corefile-cloudsyncmanager-checktriggerinfo-i-sys.md)<!--DelEnd-->
   - [CloudFileInfo](arkts-corefile-cloudsyncmanager-cloudfileinfo-i.md)
   <!--Del-->
   - [ExtraData(system api)](arkts-corefile-cloudsyncmanager-extradata-i-sys.md)<!--DelEnd-->
@@ -153,6 +161,8 @@
   - [TransferProgress(system api)](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Action(system api)](arkts-corefile-cloudsyncmanager-action-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CheckTriggerReason(system api)](arkts-corefile-cloudsyncmanager-checktriggerreason-e-sys.md)<!--DelEnd-->
   - [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e.md)
   <!--Del-->
   - [DownloadState(system api)](arkts-corefile-cloudsyncmanager-downloadstate-e-sys.md)<!--DelEnd-->

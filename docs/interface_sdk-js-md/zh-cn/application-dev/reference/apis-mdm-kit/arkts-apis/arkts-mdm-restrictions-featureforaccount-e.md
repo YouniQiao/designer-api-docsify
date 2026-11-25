@@ -12,6 +12,22 @@ enum FeatureForAccount
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## COLLABORATION_REMOTE_SHARE
+
+```TypeScript
+COLLABORATION_REMOTE_SHARE = 12
+```
+
+远程分享。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-COLLABORATION_REMOTE_SHARE = 12--><!--Device-FeatureForAccount-COLLABORATION_REMOTE_SHARE = 12-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## DISK_RECOVERY_KEY
 
 ```TypeScript
@@ -205,6 +221,22 @@ SUPER_HUB = 2
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SYSTEM_SHARING_PANEL
+
+```TypeScript
+SYSTEM_SHARING_PANEL = 11
+```
+
+系统分享面板。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-SYSTEM_SHARING_PANEL = 11--><!--Device-FeatureForAccount-SYSTEM_SHARING_PANEL = 11-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

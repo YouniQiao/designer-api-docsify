@@ -112,7 +112,7 @@ function getValueForAccount(item: SettingsItem, accountId: number): string
 | [9200006](../errorcode-enterpriseDeviceManager.md#9200006-指定的用户id非法) | The specified account ID is invalid. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
-| 9200020 | Cross-user configuration is not supported. |
+| [9200020](../errorcode-enterpriseDeviceManager.md#9200020-不支持跨用户配置) | Cross-user configuration is not supported. |
 
 **示例**
 

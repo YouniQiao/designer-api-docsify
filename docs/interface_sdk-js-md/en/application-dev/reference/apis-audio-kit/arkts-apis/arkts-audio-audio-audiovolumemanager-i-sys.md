@@ -57,6 +57,40 @@ Confirms the result of adjusting the volume that exceeds the volume protection t
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
+## factoryResetVolumeParameters
+
+```TypeScript
+factoryResetVolumeParameters(): Promise<void>
+```
+
+Restore all volume settings to factory defaults. Use Promise asynchronous callbacks.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioVolumeManager-factoryResetVolumeParameters(): Promise<void>--><!--Device-AudioVolumeManager-factoryResetVolumeParameters(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise object. No result is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+
 ## forceVolumeKeyControlType
 
 ```TypeScript

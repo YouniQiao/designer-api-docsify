@@ -248,6 +248,7 @@ Sets Value.
 | [WebContextMenuItemId](arkts-arkweb-web-comp-webcontextmenuitemid-e.md) | Enumerates the context menu item IDs. |
 | [WebDarkMode](arkts-arkweb-web-comp-webdarkmode-e.md) | Configures the web dark mode, which controls the dark theme display of web content and helps developers improve visual experience and readability based on user preferences and system themes. |
 | [WebElementType](arkts-arkweb-web-comp-webelementtype-e.md) | Enumerates the web element types. |
+| [WebHandednessFollowMode](arkts-arkweb-web-comp-webhandednessfollowmode-e.md) | Defines the grip adaptation mode of the web page pop-up box. |
 | [WebKeyboardAppearanceMode](arkts-arkweb-web-comp-webkeyboardappearancemode-e.md) | Defines the input method immersive mode in the WebView, which controls the display style of the soft keyboard and helps developers provide a consistent visual experience based on the app theme and user preferences. It supports the default appearance, system-following, light immersive, and dark immersive styles. |
 | [WebKeyboardAvoidMode](arkts-arkweb-web-comp-webkeyboardavoidmode-e.md) | Enumerates the soft keyboard avoidance modes. |
 | [WebLayoutMode](arkts-arkweb-web-comp-weblayoutmode-e.md) | Configures the web layout mode, which controls the page layout of web content and helps developers optimize web page adaptability and user experience based on screen size and display requirements. |

@@ -12,6 +12,22 @@ Enumerates the features that can be disabled or enabled for a specified user.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## COLLABORATION_REMOTE_SHARE
+
+```TypeScript
+COLLABORATION_REMOTE_SHARE = 12
+```
+
+Remote sharing.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-COLLABORATION_REMOTE_SHARE = 12--><!--Device-FeatureForAccount-COLLABORATION_REMOTE_SHARE = 12-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## DISK_RECOVERY_KEY
 
 ```TypeScript
@@ -206,6 +222,22 @@ SuperHub. Currently, this feature is available only on phones and tablets. Once 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SYSTEM_SHARING_PANEL
+
+```TypeScript
+SYSTEM_SHARING_PANEL = 11
+```
+
+System sharing panel.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-SYSTEM_SHARING_PANEL = 11--><!--Device-FeatureForAccount-SYSTEM_SHARING_PANEL = 11-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

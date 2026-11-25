@@ -123,3 +123,23 @@ Background blur effect of the title bar. Supports customizing blur parameters vi
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+## titleBarVibrancyMode
+
+```TypeScript
+titleBarVibrancyMode?: VibrancyMode
+```
+
+Vibrancy mode of the title bar. After this attribute is set, the title bar content (main title, subtitle, and close button) is brightened or darkened, improving readability against translucent material backgrounds. The main title and subtitle take effect only for system titles in the [SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md) form; they do not take effect for custom titles built with [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md). This attribute takes effect only on high-compute and medium-compute devices. The device compute level can be obtained through [uiMaterial.getGlobalMaterialLevel](../arkts-apis/arkts-arkui-uimaterial-getglobalmateriallevel-f.md). Default value: **undefined**, indicating that the vibrancy effect is not used.
+
+**Type:** [VibrancyMode](../arkts-apis/arkts-arkui-vibrancymode-e-sys.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SheetOptions-titleBarVibrancyMode?: VibrancyMode--><!--Device-SheetOptions-titleBarVibrancyMode?: VibrancyMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.

@@ -250,6 +250,7 @@ Sets Value.
 | [WebContextMenuItemId](arkts-arkweb-web-comp-webcontextmenuitemid-e.md) | 枚举上下文菜单项的ID。 |
 | [WebDarkMode](arkts-arkweb-web-comp-webdarkmode-e.md) | Web深色模式的配置，用于控制网页内容的深色主题显示，帮助开发者根据用户偏好和系统主题提升视觉体验和可读性。 |
 | [WebElementType](arkts-arkweb-web-comp-webelementtype-e.md) | 网页元素信息。 |
+| [WebHandednessFollowMode](arkts-arkweb-web-comp-webhandednessfollowmode-e.md) | 定义网页弹框的握姿适配模式。 |
 | [WebKeyboardAppearanceMode](arkts-arkweb-web-comp-webkeyboardappearancemode-e.md) | WebView中输入法沉浸模式，用于控制软键盘的显示风格，帮助开发者根据应用主题和用户偏好提供一致性的视觉体验，支持默认外观、系统跟随、浅色和深色沉浸式风格。 |
 | [WebKeyboardAvoidMode](arkts-arkweb-web-comp-webkeyboardavoidmode-e.md) | 软键盘避让的模式。 |
 | [WebLayoutMode](arkts-arkweb-web-comp-weblayoutmode-e.md) | Web布局模式的配置，用于控制Web内容的页面布局方式，帮助开发者根据屏幕尺寸和显示需求优化网页的适配性和用户体验。 |

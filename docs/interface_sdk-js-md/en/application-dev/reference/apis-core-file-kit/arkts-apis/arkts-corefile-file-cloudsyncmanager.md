@@ -35,6 +35,9 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-2) | Notifies the device-cloud service that the cloud data of a specific application under a specified account has been changed. This API uses an asynchronous callback to return the result. |
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-3) | Notifies the device-cloud service of the cloud data change information of a specified user. This API uses a promise to return the result. |
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-4) | Notifies the device-cloud service of the cloud data change information of a specified user. This API uses an asynchronous callback to return the result. |
+| [offCheckTrigger](arkts-corefile-cloudsyncmanager-offchecktrigger-f-sys.md#offchecktrigger-1) | 取消订阅云盘校验完成事件。 |
+| [onCheckTrigger](arkts-corefile-cloudsyncmanager-onchecktrigger-f-sys.md#onchecktrigger-1) | 订阅校验完成事件，使用callback异步回调。 |
+| [triggerCloudCheck](arkts-corefile-cloudsyncmanager-triggercloudcheck-f-sys.md#triggercloudcheck-1) | 触发指定应用的云文件校验。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### Classes
@@ -62,6 +65,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
+| [CheckTriggerInfo](arkts-corefile-cloudsyncmanager-checktriggerinfo-i-sys.md) | 表示已完成的云盘校验的触发者及触发原因。 |
 | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | Represents the cloud data change information. |
 | [LocalFilePresentStatus](arkts-corefile-cloudsyncmanager-localfilepresentstatus-i-sys.md) | Specifies a result object that contains the application bundle name and the status information about whether there are files that have not been uploaded to the cloud in the cloud storage space. |
 | [TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md) | Defines the TransferProgress data structure. |
@@ -80,6 +84,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | Name | Description |
 | --- | --- |
 | [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md) | Enumerates the actions that can be taken to clear local cloud data. |
+| [CheckTriggerReason](arkts-corefile-cloudsyncmanager-checktriggerreason-e-sys.md) | 云盘校验触发原因的枚举值。 |
 | [DownloadState](arkts-corefile-cloudsyncmanager-downloadstate-e-sys.md) | Enumerates the full download states. |
 | [TransferState](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md) | Describes the state type of transfer task. |
 | [TransferStopReason](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md) | Describes the state type of transfer stop reason. |

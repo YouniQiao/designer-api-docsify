@@ -10,7 +10,7 @@ typedef struct OH_AVPlayerVideoOutput OH_AVPlayerVideoOutput
 
 <!--Device-typedef struct OH_AVPlayerVideoOutput OH_AVPlayerVideoOutput--><!--Device-typedef struct OH_AVPlayerVideoOutput OH_AVPlayerVideoOutput-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 26.0.0
 

@@ -780,7 +780,7 @@ readPixels(area: image.PositionArea): Promise<void>
 | `stride` | 内存中每行像素（含行末填充字节）所占的字节数。 | `PositionArea.stride` |  
 | `width` | 读取区域的宽度，单位为像素（px）。 | `PositionArea.region.size.width` |  
 | `height` | 读取区域的高度，单位为像素（px）。 | `PositionArea.region.size.height` |  
-| 每像素字节数 | 各格式的每像素占用字节数见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
+| 每像素字节数 | 各格式的每像素占用字节数请参见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
 
 **起始版本：** 12
 
@@ -862,7 +862,7 @@ readPixelsSync(area: image.PositionArea): void
 | `stride` | 内存中每行像素（含行末填充字节）所占的字节数。 | `PositionArea.stride` |  
 | `width` | 读取区域的宽度，单位为像素（px）。 | `PositionArea.region.size.width` |  
 | `height` | 读取区域的高度，单位为像素（px）。 | `PositionArea.region.size.height` |  
-| 每像素字节数 | 各格式的每像素占用字节数见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
+| 每像素字节数 | 各格式的每像素占用字节数请参见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
 
 **起始版本：** 12
 
@@ -928,7 +928,7 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber()](#getpixelbytesnumber)接口获取。 |
 
 **返回值：**
 
@@ -971,7 +971,7 @@ readPixelsToBufferSync(dst: ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber()](#getpixelbytesnumber)接口获取。 |
 
 **错误码：**
 
@@ -1492,6 +1492,10 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 
 将缓冲区内的像素数据写入整个PixelMap。使用Promise异步回调。
 
+> **说明：** 
+> 
+> 如需写入指定区域的像素数据，或源数据具有自定义行跨距或偏移量，请使用[writePixels()](#writepixels)。
+
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
@@ -1504,7 +1508,7 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| src | ArrayBuffer | 是 | 源像素数据的缓冲区，其数据会被拷贝并覆盖写入整个PixelMap。<br>数据按PixelMap自身的像素格式紧密排列，不含行末填充字节。缓冲区大小必须大于等于整个PixelMap的像素字节数，即[getPixelBytesNumber()](#getpixelbytesnumber)接口的返回值，超出部分不会被写入。 |
 
 **返回值：**
 
@@ -1539,6 +1543,10 @@ writeBufferToPixelsSync(src: ArrayBuffer): void
 
 将缓冲区内的像素数据写入整个PixelMap。同步返回结果。
 
+> **说明：** 
+> 
+> 如需写入指定区域的像素数据，或源数据具有自定义行跨距或偏移量，请使用[writePixelsSync()](#writepixelssync)。
+
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
@@ -1551,7 +1559,7 @@ writeBufferToPixelsSync(src: ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| src | ArrayBuffer | 是 | 源像素数据的缓冲区，其数据会被拷贝并覆盖写入整个PixelMap。<br>数据按PixelMap自身的像素格式紧密排列，不含行末填充字节。缓冲区大小必须大于等于整个PixelMap的像素字节数，即[getPixelBytesNumber()](#getpixelbytesnumber)接口的返回值，超出部分不会被写入。 |
 
 **错误码：**
 
@@ -1604,7 +1612,7 @@ writePixels(area: image.PositionArea): Promise<void>
 | `stride` | 内存中每行像素（含行末填充字节）所占的字节数。 | `PositionArea.stride` |  
 | `width` | 写入区域的宽度，单位为像素（px）。 | `PositionArea.region.size.width` |  
 | `height` | 写入区域的高度，单位为像素（px）。 | `PositionArea.region.size.height` |  
-| 每像素字节数 | 各格式的每像素占用字节数见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
+| 每像素字节数 | 各格式的每像素占用字节数请参见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
 
 **起始版本：** 12
 
@@ -1692,7 +1700,7 @@ writePixelsSync(area: image.PositionArea): void
 | `stride` | 内存中每行像素（含行末填充字节）所占的字节数。 | `PositionArea.stride` |  
 | `width` | 写入区域的宽度，单位为像素（px）。 | `PositionArea.region.size.width` |  
 | `height` | 写入区域的高度，单位为像素（px）。 | `PositionArea.region.size.height` |  
-| 每像素字节数 | 各格式的每像素占用字节数见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
+| 每像素字节数 | 各格式的每像素占用字节数请参见[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)。 | - |
 
 **起始版本：** 12
 

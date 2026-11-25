@@ -4,7 +4,7 @@
 
 提供媒体源的播放能力接口。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 

@@ -190,6 +190,26 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## colorFilterEffect
+
+```TypeScript
+colorFilterEffect?: ColorFilter
+```
+
+为组件添加颜色滤镜效果。颜色滤镜通过4x5颜色矩阵对组件像素进行颜色变换，可用于实现护眼模式、色温调节等视觉效果。参数类型为ColorFilter对象。
+
+**类型：** [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SheetOptions-colorFilterEffect?: ColorFilter--><!--Device-SheetOptions-colorFilterEffect?: ColorFilter-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## detents
 
 ```TypeScript

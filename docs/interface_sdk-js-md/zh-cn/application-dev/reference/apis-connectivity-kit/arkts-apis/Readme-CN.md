@@ -147,8 +147,6 @@
   - [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
 - [@ohos.bluetooth.connection（蓝牙connection模块）](arkts-connectivity-bluetooth-connection.md)
   - [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f.md)
-  <!--Del-->
-  - [cancelPairedDevice（系统接口）](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
   - [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f.md)
   - [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md)
   <!--Del-->

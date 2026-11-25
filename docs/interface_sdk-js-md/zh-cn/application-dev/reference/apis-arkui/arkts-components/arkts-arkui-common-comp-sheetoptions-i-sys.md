@@ -149,3 +149,23 @@ titleBarBackgroundBlur?: SheetTitleBarBackgroundBlurOptions
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
+
+## titleBarVibrancyMode
+
+```TypeScript
+titleBarVibrancyMode?: VibrancyMode
+```
+
+标题栏提亮压暗模式。设置后标题栏内容（主标题、副标题、关闭按钮）提亮或压暗，以提升通透材质背景下的可读性。其中主标题、副标题仅对[SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md)形式的系统标题生效，对[CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)自定义标题不生效。仅对高算力和中算力设备生效，设备算力等级可通过[uiMaterial.getGlobalMaterialLevel](../arkts-apis/arkts-arkui-uimaterial-getglobalmateriallevel-f.md)接口获取。默认值：undefined，表示不使用提亮压暗效果。
+
+**类型：** [VibrancyMode](../arkts-apis/arkts-arkui-vibrancymode-e-sys.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SheetOptions-titleBarVibrancyMode?: VibrancyMode--><!--Device-SheetOptions-titleBarVibrancyMode?: VibrancyMode-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。

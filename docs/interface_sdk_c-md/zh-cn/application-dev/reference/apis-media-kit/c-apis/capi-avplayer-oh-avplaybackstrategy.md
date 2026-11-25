@@ -10,7 +10,7 @@ typedef struct OH_AVPlaybackStrategy OH_AVPlaybackStrategy
 
 <!--Device-typedef struct OH_AVPlaybackStrategy OH_AVPlaybackStrategy--><!--Device-typedef struct OH_AVPlaybackStrategy OH_AVPlaybackStrategy-End-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 

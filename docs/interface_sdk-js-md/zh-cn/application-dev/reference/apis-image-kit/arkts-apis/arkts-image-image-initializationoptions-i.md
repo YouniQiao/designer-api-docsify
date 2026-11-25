@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 alphaType?: AlphaType
 ```
 
-透明度类型。默认值为AlphaType.PREMUL。
+透明度类型。默认值为AlphaType.PREMUL。仅对[RGB](../../../media/image/image-glossary.md#rgb-pixel-formatrgb像素格式)格式的PixelMap生效，对[YUV](../../../media/image/image-glossary.md#yuv-pixel-formatyuv像素格式)格式不生效。
 
 **类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
@@ -64,7 +64,7 @@ editable?: boolean
 pixelFormat?: PixelMapFormat
 ```
 
-生成的PixelMap的像素格式。默认值为RGBA_8888。
+生成的PixelMap的像素格式。默认值为RGBA_8888。设为UNKNOWN时将使用默认值。
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
@@ -124,7 +124,7 @@ size: Size
 srcPixelFormat?: PixelMapFormat
 ```
 
-传入的缓冲区数据的像素格式。默认值为BGRA_8888。
+传入的缓冲区数据的像素格式。默认值为BGRA_8888。设为UNKNOWN时将使用默认值。
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 

@@ -37,7 +37,8 @@ This file declares the functions related to the canvas in the drawing module. By
 | [void OH_Drawing_CanvasAttachBrush(OH_Drawing_Canvas* canvas, const OH_Drawing_Brush* brush)](#oh_drawing_canvasattachbrush) | Attaches a brush to a canvas so that the canvas can use the style and color of the brush to fill in a shape. If the brush effect changes after this function is called, you must call the function again to use the new effect in the subsequent drawing. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasDetachBrush(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdetachbrush) | Detaches the brush from a canvas so that the canvas can no longer use the previously set brush to fill in a shape. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasSave(OH_Drawing_Canvas* canvas)](#oh_drawing_canvassave) | Saves the current canvas status (canvas matrix) to the top of the stack. This function works with [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)](#oh_drawing_canvassavelayer) | Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded, and the bitmap is drawn. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush)](#oh_drawing_canvassavelayer) | Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded, and the bitmap is drawn. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasSaveLayerWithFlag(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush, uint32_t saveLayerFlags)](#oh_drawing_canvassavelayerwithflag) | Saves the matrix and crop regions to allocate bitmaps for subsequent drawing. You can initialize the bitmap with existing content. After the recovery interface [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore) is called, the changes made to the matrix and crop region are discarded and the bitmap is drawn. |
 | [void OH_Drawing_CanvasRestore(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasrestore) | Restores the canvas status (canvas matrix) saved on the top of the stack. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [uint32_t OH_Drawing_CanvasGetSaveCount(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetsavecount) | Obtains the number of canvas statuses (canvas matrices) saved in the stack. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasRestoreToCount(OH_Drawing_Canvas* canvas, uint32_t saveCount)](#oh_drawing_canvasrestoretocount) | Restores to a given number of canvas statuses (canvas matrices). This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
@@ -423,14 +424,14 @@ Saves the current canvas status (canvas matrix) to the top of the stack. This fu
 ### OH_Drawing_CanvasSaveLayer()
 
 ```c
-void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)
+void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush)
 ```
 
 **Description**
 
 Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded, and the bitmap is drawn. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
-<!--Device-void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)--><!--Device-void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)-End-->
+<!--Device-void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush)--><!--Device-void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush)-End-->
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -440,9 +441,40 @@ Saves the matrix and cropping region, and allocates a bitmap for subsequent draw
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md)* canvas | Pointer to the [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) object. |
-| [const OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md)* rect | Pointer to the [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) object, which is used to limit the layer size. A null pointer means no limit. |
-| [const OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md)* brush | Pointer to an [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object. The alpha value, filter effect, and blend mode of the brush are applied when the bitmap is drawn. If NULL is passed in, no effect is applied. |
+| [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) *canvas | Pointer to the [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) object. |
+| [const OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) *rect | Pointer to the [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) object, which is used to limit the layer size. A null pointer means no limit. |
+| [const OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) *brush | Pointer to an [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object. The alpha value, filter effect, and blend mode of the brush are applied when the bitmap is drawn. If NULL is passed in, no effect is applied. |
+
+### OH_Drawing_CanvasSaveLayerWithFlag()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_CanvasSaveLayerWithFlag(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush, uint32_t saveLayerFlags)
+```
+
+**Description**
+
+Saves the matrix and crop regions to allocate bitmaps for subsequent drawing. You can initialize the bitmap with existing content. After the recovery interface [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore) is called, the changes made to the matrix and crop region are discarded and the bitmap is drawn.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_CanvasSaveLayerWithFlag(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush, uint32_t saveLayerFlags)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_CanvasSaveLayerWithFlag(OH_Drawing_Canvas *canvas, const OH_Drawing_Rect *rect, const OH_Drawing_Brush *brush, uint32_t saveLayerFlags)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) *canvas | [in] Pointer to canvas object [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md), which cannot be null. |
+| [const OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) *rect | [in] Pointer to the rectangular object [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md), which is used to limit the size of a layer. If the value is NULL, there is no limit. |
+| [const OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) *brush | [in] Pointer to the brush object [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md). When a bitmap is drawn, the transparency, filter effect, and blending mode of the brush object are applied. The value NULL indicates that no effect is applied. |
+| uint32_t saveLayerFlags | [in] Initialization mode of the newly allocated bitmap. The value 0 indicates that the bitmap is initialized by transparent pixels, which is equivalent to [OH_Drawing_CanvasSaveLayer](capi-drawing-canvas-h.md#oh_drawing_canvassavelayer). 2: The bitmap is initialized with the existing content on the canvas. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned when the operation is successful. </li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned when canvas is a null pointer. </li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) is returned when saveLayerFlags is not 0 or 2. </li> </ul> |
 
 ### OH_Drawing_CanvasRestore()
 
