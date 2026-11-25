@@ -97,6 +97,22 @@ Free window mode is an interaction method that supports users in performing mult
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## INSTALL_DEVICE_CERTIFICATE
+
+```TypeScript
+INSTALL_DEVICE_CERTIFICATE = 15
+```
+
+Device-level certificate.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-INSTALL_DEVICE_CERTIFICATE = 15--><!--Device-FeatureForAccount-INSTALL_DEVICE_CERTIFICATE = 15-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## MTP_CLIENT
 
 ```TypeScript

@@ -12,6 +12,22 @@ Enumerates device features.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## ADVANCED_MESSAGE
+
+```TypeScript
+ADVANCED_MESSAGE = 55
+```
+
+Enhanced information.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-ADVANCED_MESSAGE = 55--><!--Device-FeatureForDevice-ADVANCED_MESSAGE = 55-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## AIRPLANE_MODE
 
 ```TypeScript

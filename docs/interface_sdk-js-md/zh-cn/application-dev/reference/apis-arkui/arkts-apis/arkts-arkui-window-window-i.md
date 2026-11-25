@@ -1074,7 +1074,7 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | Type of the area |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区域类型。 |
 
 **返回值：**
 
@@ -1130,7 +1130,7 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | Type of the area. |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区域类型。不支持获取软键盘类型的避让区域，传入TYPE_KEYBOARD时，返回1300016错误码。 |
 
 **返回值：**
 
@@ -7299,7 +7299,7 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码401）。 |
 | height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码401）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -9137,9 +9137,9 @@ setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnim
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) | 是 | the set of system bar |
-| enable | boolean | 是 | Show specific system bar if true, or hide specific system bar if false. |
-| enableAnimation | boolean | 否 | Whether using animation during this setting, using animation if true or not using animation if false.<br>**适用版本：** 12 |
+| name | [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) | 是 | 设置窗口全屏模式时，显示或隐藏的系统栏类型。 |
+| enable | boolean | 是 | 设置窗口全屏模式时状态栏或工具栏或<!--RP15-->三键导航栏<!--RP15End-->是否显示。true表示显示，false表示隐藏。 |
+| enableAnimation | boolean | 否 | 设置状态栏或工具栏或<!--RP15-->三键导航栏<!--RP15End-->显示状态变化时是否使用动画。true表示使用，false表示不使用，默认值为false<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -9590,7 +9590,7 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | If true, the system window type can obtain avoid area. If false, the avoid area obtained by the system window type will always be empty. |
+| enabled | boolean | 是 | 是否可以获取到避让区。true表示可以获取避让区；false表示不可以获取避让区。默认值为false。 |
 
 **返回值：**
 
@@ -10906,7 +10906,7 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | The window can layout in full screen |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、工具栏或导航栏仍然显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
 
 **返回值：**
 
@@ -11577,7 +11577,7 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | The set of system bar |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏/最大化模式时状态栏、工具栏或<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 
 **返回值：**
 

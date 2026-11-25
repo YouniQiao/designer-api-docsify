@@ -89,7 +89,6 @@ import { networkManager } from '@kit.MDMKit';
 | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | 防火墙过滤规则。 |
 | [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md) | 以太网的网络接口配置。仅支持IPv4。 |
 | [PathSharedData](arkts-mdm-networkmanager-pathshareddata-i.md) | 共享路径数据。 |
-| [UserPathInfo](arkts-mdm-networkmanager-userpathinfo-i.md) | 共享路径的用户权限信息。 |
 
 <!--Del-->
 ### 接口（系统接口）

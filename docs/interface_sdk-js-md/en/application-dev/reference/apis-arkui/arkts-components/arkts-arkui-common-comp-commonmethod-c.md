@@ -3007,6 +3007,36 @@ Applies a color blend effect to the component. Compared with [colorBlend](#color
 | --- | --- |
 | T | Current component. |
 
+## colorFilterEffect
+
+```TypeScript
+colorFilterEffect(filter: ColorFilter | undefined): T
+```
+
+Adds a color filter effect to the component. The color filter transforms the component's pixels through a 4 x 5 color matrix. This can be used to implement eye-care mode, color temperature adjustment, and other visual effects.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-colorFilterEffect(filter: ColorFilter | undefined): T--><!--Device-CommonMethod-colorFilterEffect(filter: ColorFilter | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; undefined | Yes | Color filter applied to the component. The value is a [ColorFilter object constructed with a 4 x 5 color matrix (20 numbers). <br>**NOTE:** <br>When **filter** is a valid **ColorFilter** (not **undefined**), the color filter takes priority, and the following properties do not take effect: [grayscale](#grayscale-1), [brightness](#brightness-1), [contrast](#contrast-1), [saturate](#saturate-1), [sepia](#sepia-1), [invert](#invert), [hueRotate](#huerotate), and [colorBlend](#colorblend). <br>When **filter** is **undefined**, the color filter is cleared and the above properties resume effect. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## compositingFilter
 
 ```TypeScript

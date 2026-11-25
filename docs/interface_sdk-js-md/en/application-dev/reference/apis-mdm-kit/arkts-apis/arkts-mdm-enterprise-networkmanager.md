@@ -90,7 +90,6 @@ import { networkManager } from '@kit.MDMKit';
 | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | Represents a firewall rule. |
 | [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md) | Enumerates Ethernet network interface configurations. Only IPv4 is supported. |
 | [PathSharedData](arkts-mdm-networkmanager-pathshareddata-i.md) | Path shared data. |
-| [UserPathInfo](arkts-mdm-networkmanager-userpathinfo-i.md) | User permission information for the shared path. |
 
 <!--Del-->
 ### Interfaces(System API)

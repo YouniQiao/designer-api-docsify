@@ -38,5 +38,4 @@ Registers a callback to be invoked when the device enters or exits hibernation.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900400](../errorcode-power.md#4900400-invalid-input-parameter) | Parameter error. Possible causes: The callback object is missing onHibernate or onWakeup function members. |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |

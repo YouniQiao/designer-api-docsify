@@ -450,7 +450,7 @@ const incrementalVersion: string
 const installTime: string
 ```
 
-获取系统安装UTC时间戳。<!--RP18--><br> 例如：1790784000000。**模型约束**： 此接口仅可在Stage模型下使用。<br> **起始版本**：26.1.0<!--RP18End-->
+获取系统安装UTC时间戳。<!--RP18--><br> 默认值：1790784000000。**模型约束**： 此接口仅可在Stage模型下使用。<br> **起始版本**：26.1.0<!--RP18End-->
 
 **类型：** string
 

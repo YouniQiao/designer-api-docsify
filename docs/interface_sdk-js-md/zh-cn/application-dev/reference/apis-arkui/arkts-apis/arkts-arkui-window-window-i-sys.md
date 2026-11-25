@@ -30,6 +30,8 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 该相对位置通过子窗与主窗之间的锚点偏移量表示，子窗和主窗使用的窗口锚点相同。
 
+非独立子窗支持单独调用。独立子窗调用此接口时，将返回1300004错误码。
+
 > **说明：** 
 > 
 > - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。
@@ -472,6 +474,8 @@ detachLayoutToParentWindow(): Promise<void>
 ```
 
 解除一级子窗与主窗保持相对位置不变的协同关系。使用Promise异步回调。
+
+非独立子窗支持单独调用。独立子窗调用此接口时，将返回1300004错误码。
 
 > **说明：** 
 > 
@@ -3011,7 +3015,11 @@ promise.then(() => {
 startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>
 ```
 
-开始移动此窗口。只有在 `onTouch` 回调函数中调用此 API，且事件类型为 `TouchType.Down` 时，窗口才会随光标移动。
+开始移动此窗口，使用Promise异步回调。
+
+仅在onTouch事件（其中，事件类型必须为TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。
+
+在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 26.0.0
 
@@ -3033,7 +3041,7 @@ startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

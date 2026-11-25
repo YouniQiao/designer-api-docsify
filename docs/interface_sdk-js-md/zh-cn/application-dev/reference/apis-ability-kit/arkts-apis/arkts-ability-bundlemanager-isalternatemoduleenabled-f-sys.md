@@ -48,5 +48,5 @@ function isAlternateModuleEnabled(bundleName: string, moduleName: string, versio
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not existed. |
-| 17700096 | The specified version of the module is not found. |
+| [17700096](../errorcode-bundle.md#17700096-指定版本的模块不存在) | The specified version of the module is not found. |
 | [17700101](../errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service exception. |

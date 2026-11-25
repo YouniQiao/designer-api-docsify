@@ -16,6 +16,6 @@ type SpecificSystemBar = 'status' | 'navigation' | 'navigationIndicator'
 
 | 类型 | 说明 |
 | --- | --- |
-| 'status' | Status bar. |
-| 'navigation' | <!--RP13--><!--RP13End-->Three-button navigation bar. |
-| 'navigationIndicator' | Bottom navigation bar. <!--RP12-->OpenHarmony devices do not support this capability.<!--RP12End--> |
+| 'status' | 状态栏。 |
+| 'navigation' | <!--RP13--><!--RP13End-->三键导航栏或工具栏。当前工具栏仅Car设备支持。 |
+| 'navigationIndicator' | 底部导航。 <!--RP12-->OpenHarmony各设备不支持此能力。<!--RP12End--> |

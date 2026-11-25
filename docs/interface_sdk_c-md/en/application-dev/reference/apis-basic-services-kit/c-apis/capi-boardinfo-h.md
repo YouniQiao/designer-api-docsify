@@ -6,7 +6,7 @@ Declares the APIs for query hardware device information.
 
 **File to Include**: <boardinfo.h>
 
-**Library**: libboardinfo_ndk.z.so
+**Library**: libboardinfo.so
 
 **System capability**: SystemCapability.Startup.BoardInfo
 

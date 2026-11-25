@@ -18,7 +18,7 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: string, acco
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount-2)(admin: Want | null, feature: FeatureForAccount, accountId: number)
+**替代接口：** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount-3)(admin: Want | null, feature: FeatureForAccount, accountId: number)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -68,6 +68,91 @@ try {
   console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
 } catch (err) {
   console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+
+## getDisallowedPolicyForAccount
+
+```TypeScript
+function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean
+```
+
+获取指定用户的某特性状态。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean--><!--Device-restrictions-function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| feature | [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | 是 | 指定要查询的用户特性。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br>accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 否 | 查询的策略。<br>默认值：common.QueryPolicy.SELF。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示参数feature对应的特性被禁用，false表示参数feature对应的特性未被禁用。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200006](../errorcode-enterpriseDeviceManager.md#9200006-指定的用户id非法) | The specified account ID is invalid. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
+
+**示例**
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, 'fingerprint', 100);
+  console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
+} catch (err) {
+  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp,
+    restrictions.FeatureForAccount.SUPER_HUB, 100);
+  console.info(`Succeeded in querying whether the super hub is disabled: ${result}`);
+} catch (err) {
+  console.error(`Failed to get whether super hub is disabled. Code is ${err.code}, message is ${err.message}`);
 }
 ```
 

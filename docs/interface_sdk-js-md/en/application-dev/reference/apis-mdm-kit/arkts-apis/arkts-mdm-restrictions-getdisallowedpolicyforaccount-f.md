@@ -18,7 +18,7 @@ Obtains the status of a feature for a specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount-2)(admin: Want | null, feature: FeatureForAccount, accountId: number)
+**Substitutes:** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount-3)(admin: Want | null, feature: FeatureForAccount, accountId: number)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -68,6 +68,90 @@ try {
   console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
 } catch (err) {
   console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+
+## getDisallowedPolicyForAccount
+
+```TypeScript
+function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean
+```
+
+Obtain the status of a feature of a specified subscriber.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-restrictions-function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean--><!--Device-restrictions-function getDisallowedPolicyForAccount(feature: FeatureForAccount, accountId: number, queryPolicy?: common.QueryPolicy): boolean-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| feature | [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | Yes | Specifies the user attribute to be queried. |
+| accountId | number | Yes | User ID. The value is greater than or equal to 0. <br>The account ID can be obtained through interfaces such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | No | Indicates the policy to be queried. <br>Default value: common.QueryPolicy.SELF. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | If true is returned, the feature corresponding to the feature parameter is disabled. If false is returned, the feature corresponding to the feature parameter is not disabled. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200006](../errorcode-enterpriseDeviceManager.md#9200006-invalid-user-id) | The specified account ID is invalid. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
+
+**Examples**
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, 'fingerprint', 100);
+  console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
+} catch (err) {
+  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, 100);
+  console.info(`Succeeded in querying whether the super hub is disabled: ${result}`);
+} catch (err) {
+  console.error(`Failed to get whether super hub is disabled. Code is ${err.code}, message is ${err.message}`);
 }
 ```
 

@@ -18,7 +18,7 @@ Disallows a feature for a specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2)(admin: Want, feature: FeatureForAccount, disallow: boolean, accountId: number)
+**Substitutes:** [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-3)(admin: Want, feature: FeatureForAccount, disallow: boolean, accountId: number)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -64,6 +64,87 @@ try {
   console.info('Succeeded in setting fingerprint disabled');
 } catch (err) {
   console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+
+## setDisallowedPolicyForAccount
+
+```TypeScript
+function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void
+```
+
+Enable or disable a feature for a specified user.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-restrictions-function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void--><!--Device-restrictions-function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| feature | [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | Yes | The user attribute to disable or allow. <br>When feature is set to SUPER_HUB, if the transit station has been added to the list of applications that cannot be stopped under the current user through the [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md) interface and then this interface is invoked to disable the transit station, a policy conflict occurs and the error code 9200010 is reported. You can use the [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md) interface to remove the transit station from the list of applications that cannot be stopped under the current user to resolve the conflict. <br>When feature is set to DISTRIBUTED_TRANSITIC, if the distributed unidirectional data transmission capability between devices has been disabled by calling [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2), a policy conflict occurs and the 9200010 error code is reported. You can use the [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2) interface to undisable distributed unidirectional data transmission between devices to resolve conflicts. |
+| disallow | boolean | Yes | The value true indicates that the function is disabled, and the value false indicates that the function is enabled. |
+| accountId | number | Yes | User ID. The value is greater than or equal to 0. <br>The account ID can be obtained through interfaces such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). <br>When feature is set to SUPER_HUB, accountId can only be set to the ID of the current user. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability. <br>2. The chip does not support the capability. <br>3. A dependent service feature is not supported. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200006](../errorcode-enterpriseDeviceManager.md#9200006-invalid-user-id) | The specified account ID is invalid. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
+
+**Examples**
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  restrictions.setDisallowedPolicyForAccount(wantTemp, 'fingerprint', true, 100);
+  console.info('Succeeded in setting fingerprint disabled');
+} catch (err) {
+  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, true, 100);
+  console.info('Succeeded in setting super hub disabled');
+} catch (err) {
+  console.error(`Failed to set super hub disabled. Code is ${err.code}, message is ${err.message}`);
 }
 ```
 

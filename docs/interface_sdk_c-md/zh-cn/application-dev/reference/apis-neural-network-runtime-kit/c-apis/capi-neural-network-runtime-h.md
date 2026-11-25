@@ -37,12 +37,12 @@ Neural Network Runtime模块接口定义，AI推理框架使用Neural Network Ru
 | [OH_NN_ReturnCode OH_NNExecutor_SetInput(OH_NNExecutor *executor, uint32_t inputIndex, const OH_NN_Tensor *tensor, const void *dataBuffer, size_t length)](#oh_nnexecutor_setinput) | 设置模型单个输入的数据。<br> 该接口将dataBuffer中，长度为length个字节的数据，拷贝到底层硬件的共享内存。inputIndex指定设置的输入，tensor用于设置输入 张量的形状、数据类型、量化参数等信息。<br> 由于Neural Network Runtime支持动态输入形状的模型，在固定形状输入和动态形状输入的场景下，该接口采取不同的处理策略：<br> - 固定形状输入的场景：tensor各属性必须和构图阶段调用[OH_NNModel_AddTensor](capi-neural-network-runtime-h.md#oh_nnmodel_addtensor)添加的张量保持一致； - 动态形状输入的场景：在构图阶段，由于动态输入的形状不确定，调用该接口时，要求tensor.dimensions中的每个值必须大于0， 以确定执行计算阶段输入的形状。设置形状时，只允许调整数值为-1的维度。 假设在构图阶段，输入A的维度为[-1, 224, 224, 3]，调用该接口时，只能调整第一个维度的尺寸，如：[3, 224, 224, 3]。 调整其他维度将返回[OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode)。(已废弃) |
 | [OH_NN_ReturnCode OH_NNExecutor_SetOutput(OH_NNExecutor *executor, uint32_t outputIndex, void *dataBuffer, size_t length)](#oh_nnexecutor_setoutput) | 设置模型单个输出的内存。<br> 该接口将dataBuffer指向的内存与outputIndex指定的输出绑定，内存的长度由length指定。<br> 调用[OH_NNExecutor_Run](capi-neural-network-runtime-h.md#oh_nnexecutor_run)完成单次模型推理后，Neural Network Runtime将比对dataBuffer指向的内存与输出数据的长度， 根据不同情况，返回不同结果：<br> - 如果内存大小大于或等于数据长度：则推理后的结果将拷贝至内存，并返回[OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode)， 可以通过访问dataBuffer读取推理结果。 - 如果内存大小小于数据长度：则[OH_NNExecutor_Run](capi-neural-network-runtime-h.md#oh_nnexecutor_run)将返回[OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode)，并输出日志告知内存太小的信息。(已废弃) |
 | [OH_NN_ReturnCode OH_NNExecutor_Run(OH_NNExecutor *executor)](#oh_nnexecutor_run) | 执行推理。<br> 在执行器关联的硬件上，执行模型的端到端推理计算。(已废弃) |
-| [OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, size_t length)](#oh_nnexecutor_allocateinputmemory) | 在硬件上为单个输入申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输入索引值，该接口在单个输入关联的硬件上， 申请大小为length的共享内存，通过OH_NN_Memory实例返回。(已废弃) |
-| [OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, size_t length)](#oh_nnexecutor_allocateoutputmemory) | 在硬件上为单个输出申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输出索引值，该接口在单个输出关联的硬件上， 申请大小为length的共享内存，通过OH_NN_Memory实例返回。(已废弃) |
-| [void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, OH_NN_Memory **memory)](#oh_nnexecutor_destroyinputmemory) | 释放OH_NN_Memory实例指向的输入内存。<br> 调用[OH_NNExecutor_AllocateInputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateinputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 inputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。(已废弃) |
-| [void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, OH_NN_Memory **memory)](#oh_nnexecutor_destroyoutputmemory) | 释放OH_NN_Memory实例指向的输出内存。<br> 调用[OH_NNExecutor_AllocateOutputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateoutputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 outputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。(已废弃) |
-| [OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint32_t inputIndex, const OH_NN_Tensor *tensor, const OH_NN_Memory *memory)](#oh_nnexecutor_setinputwithmemory) | 将OH_NN_Memory实例指向的硬件共享内存，并指定为单个输入使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输入和OH_NN_Memory内存实例绑定。执行计算时， 底层硬件从内存实例指向的共享内存中读取输入数据。通过该接口，可以实现设置输入、执行计算、读取输出的并发执行，提升数据流的推理效率。(已废弃) |
-| [OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint32_t outputIndex, const OH_NN_Memory *memory)](#oh_nnexecutor_setoutputwithmemory) | 将OH_NN_Memory实例指向的硬件共享内存，并指定为单个输出使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输出和OH_NN_Memory内存实例绑定。执行计算时， 底层硬件将计算结果直接写入内存实例指向的共享内存。通过该接口，可以实现设置输入、 执行计算、读取输出的并发执行，提升数据流的推理效率。(已废弃) |
+| [OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, size_t length)](#oh_nnexecutor_allocateinputmemory) | 在硬件上为单个输入申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输入索引值，该接口在单个输入关联的硬件上， 申请大小为length的共享内存，通过[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例返回。(已废弃) |
+| [OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, size_t length)](#oh_nnexecutor_allocateoutputmemory) | 在硬件上为单个输出申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输出索引值，该接口在单个输出关联的硬件上， 申请大小为length的共享内存，通过[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例返回。(已废弃) |
+| [void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, OH_NN_Memory **memory)](#oh_nnexecutor_destroyinputmemory) | 释放[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的输入内存。<br> 调用[OH_NNExecutor_AllocateInputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateinputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 inputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。(已废弃) |
+| [void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, OH_NN_Memory **memory)](#oh_nnexecutor_destroyoutputmemory) | 释放[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的输出内存。<br> 调用[OH_NNExecutor_AllocateOutputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateoutputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 outputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。(已废弃) |
+| [OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint32_t inputIndex, const OH_NN_Tensor *tensor, const OH_NN_Memory *memory)](#oh_nnexecutor_setinputwithmemory) | 将[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的硬件共享内存，并指定为单个输入使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输入和[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)内存实例绑定。执行计算时， 底层硬件从内存实例指向的共享内存中读取输入数据。通过该接口，可以实现设置输入、执行计算、读取输出的并发执行，提升数据流的推理效率。(已废弃) |
+| [OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint32_t outputIndex, const OH_NN_Memory *memory)](#oh_nnexecutor_setoutputwithmemory) | 将[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的硬件共享内存，并指定为单个输出使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输出和[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)内存实例绑定。执行计算时， 底层硬件将计算结果直接写入内存实例指向的共享内存。通过该接口，可以实现设置输入、 执行计算、读取输出的并发执行，提升数据流的推理效率。(已废弃) |
 
 ## 函数说明
 
@@ -350,9 +350,9 @@ OH_NN_ReturnCode OH_NNModel_AddOperation(OH_NNModel *model, OH_NN_OperationType 
 | -- | -- |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) *model | 指向[OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md)实例的指针。 |
 | [OH_NN_OperationType](capi-neural-network-runtime-type-h.md#oh_nn_operationtype) op | 指定添加的算子类型，取值请参考[OH_NN_OperationType](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)的枚举值。 |
-| const OH_NN_UInt32Array *paramIndices | OH_NN_UInt32Array实例的指针，设置算子的参数张量索引。 |
-| const OH_NN_UInt32Array *inputIndices | OH_NN_UInt32Array实例的指针，指定算子的输入张量索引。 |
-| const OH_NN_UInt32Array *outputIndices | OH_NN_UInt32Array实例的指针，设置算子的输出张量索引。 |
+| [const OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) *paramIndices | OH_NN_UInt32Array实例的指针，设置算子的参数张量索引。 |
+| [const OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) *inputIndices | OH_NN_UInt32Array实例的指针，指定算子的输入张量索引。 |
+| [const OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) *outputIndices | OH_NN_UInt32Array实例的指针，设置算子的输出张量索引。 |
 
 **返回值：**
 
@@ -381,8 +381,8 @@ OH_NN_ReturnCode OH_NNModel_SpecifyInputsAndOutputs(OH_NNModel *model, const OH_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) *model | 指向[OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md)实例的指针。 |
-| const OH_NN_UInt32Array *inputIndices | OH_NN_UInt32Array实例的指针，指定算子的输入张量。 |
-| const OH_NN_UInt32Array *outputIndices | OH_NN_UInt32Array实例的指针，指定算子的输出张量。 |
+| [const OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) *inputIndices | OH_NN_UInt32Array实例的指针，指定算子的输入张量。 |
+| [const OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) *outputIndices | OH_NN_UInt32Array实例的指针，指定算子的输出张量。 |
 
 **返回值：**
 
@@ -496,7 +496,7 @@ OH_NN_ReturnCode OH_NNModel_AddTensor(OH_NNModel *model, const OH_NN_Tensor *ten
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) *model | 指向[OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md)实例的指针。 |
-| const OH_NN_Tensor *tensor | OH_NN_Tensor张量的指针，tensor指定了添加到模型实例中张量的属性。 |
+| [const OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) *tensor | [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md)张量的指针，tensor指定了添加到模型实例中张量的属性。 |
 
 **返回值：**
 
@@ -532,7 +532,7 @@ OH_NN_ReturnCode OH_NNExecutor_SetInput(OH_NNExecutor *executor, uint32_t inputI
 | -- | -- |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) *executor | 指向[OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md)实例的指针。 |
 | uint32_t inputIndex | 输入的索引值，与调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时输入数据的顺序一致。 假设调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时，inputIndices为{1, 5, 9}，则在设置输入的阶段， 三个输入的索引值分别为{0, 1, 2}。 |
-| const OH_NN_Tensor *tensor | 设置输入数据对应的张量。 |
+| [const OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) *tensor | 设置输入数据对应的张量。 |
 | const void *dataBuffer | 指向输入数据的指针。 |
 | size_t length | 数据内存的字节长度。 |
 
@@ -619,7 +619,7 @@ OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_
 
 **描述：**
 
-在硬件上为单个输入申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输入索引值，该接口在单个输入关联的硬件上， 申请大小为length的共享内存，通过OH_NN_Memory实例返回。
+在硬件上为单个输入申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输入索引值，该接口在单个输入关联的硬件上， 申请大小为length的共享内存，通过[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例返回。
 
 <!--Device-OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, size_t length)--><!--Device-OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, size_t length)-End-->
 
@@ -643,7 +643,7 @@ OH_NN_Memory *OH_NNExecutor_AllocateInputMemory(OH_NNExecutor *executor, uint32_
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_NN_Memory * | 指向OH_NN_Memory实例的指针，如果创建失败就返回NULL。 |
+| [OH_NN_Memory *](capi-neuralnetworkruntime-oh-nn-memory.md) | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例的指针，如果创建失败就返回NULL。 |
 
 ### OH_NNExecutor_AllocateOutputMemory()
 
@@ -653,7 +653,7 @@ OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32
 
 **描述：**
 
-在硬件上为单个输出申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输出索引值，该接口在单个输出关联的硬件上， 申请大小为length的共享内存，通过OH_NN_Memory实例返回。
+在硬件上为单个输出申请共享内存。<br> Neural Network Runtime 提供主动申请硬件共享内存的方法。通过指定执行器和输出索引值，该接口在单个输出关联的硬件上， 申请大小为length的共享内存，通过[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例返回。
 
 <!--Device-OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, size_t length)--><!--Device-OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, size_t length)-End-->
 
@@ -677,7 +677,7 @@ OH_NN_Memory *OH_NNExecutor_AllocateOutputMemory(OH_NNExecutor *executor, uint32
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_NN_Memory * | 指向OH_NN_Memory实例的指针，如果创建失败就返回NULL。 |
+| [OH_NN_Memory *](capi-neuralnetworkruntime-oh-nn-memory.md) | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例的指针，如果创建失败就返回NULL。 |
 
 ### OH_NNExecutor_DestroyInputMemory()
 
@@ -687,7 +687,7 @@ void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputInd
 
 **描述：**
 
-释放OH_NN_Memory实例指向的输入内存。<br> 调用[OH_NNExecutor_AllocateInputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateinputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 inputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。
+释放[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的输入内存。<br> 调用[OH_NNExecutor_AllocateInputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateinputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 inputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。
 
 <!--Device-void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, OH_NN_Memory **memory)--><!--Device-void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputIndex, OH_NN_Memory **memory)-End-->
 
@@ -705,7 +705,7 @@ void OH_NNExecutor_DestroyInputMemory(OH_NNExecutor *executor, uint32_t inputInd
 | -- | -- |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) *executor | 指向[OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md)实例的指针。 |
 | uint32_t inputIndex | 输入的索引值，与调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时输入数据的顺序一致。 假设调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时，inputIndices为{1, 5, 9}，则在释放输入内存时， 三个输入的索引值分别为{0, 1, 2}。 |
-| OH_NN_Memory **memory | 指向OH_NN_Memory实例的二级指针。共享内存释放后，该接口将*memory主动设置为空指针。 |
+| [OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) **memory | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例的二级指针。共享内存释放后，该接口将*memory主动设置为空指针。 |
 
 ### OH_NNExecutor_DestroyOutputMemory()
 
@@ -715,7 +715,7 @@ void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputI
 
 **描述：**
 
-释放OH_NN_Memory实例指向的输出内存。<br> 调用[OH_NNExecutor_AllocateOutputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateoutputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 outputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。
+释放[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的输出内存。<br> 调用[OH_NNExecutor_AllocateOutputMemory](capi-neural-network-runtime-h.md#oh_nnexecutor_allocateoutputmemory)创建的内存实例，需要主动调用该接口进行释放，否则将造成内存泄漏。 outputIndex和memory的对应关系需要和创建内存实例时保持一致。<br> 如果memory或*memory为空指针，该接口仅打印警告日志，不执行释放操作。
 
 <!--Device-void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, OH_NN_Memory **memory)--><!--Device-void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputIndex, OH_NN_Memory **memory)-End-->
 
@@ -733,7 +733,7 @@ void OH_NNExecutor_DestroyOutputMemory(OH_NNExecutor *executor, uint32_t outputI
 | -- | -- |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) *executor | 指向[OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md)实例的指针。 |
 | uint32_t outputIndex | 输出的索引值，与调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时输出数据的顺序一致。 假设调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时，outputIndices为{4, 6, 8}，则在释放输出内存时， 三个输出的索引值分别为{0, 1, 2}。 |
-| OH_NN_Memory **memory | 指向OH_NN_Memory实例的二级指针。共享内存释放后，该接口将*memory主动设置为空指针。 |
+| [OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) **memory | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例的二级指针。共享内存释放后，该接口将*memory主动设置为空指针。 |
 
 ### OH_NNExecutor_SetInputWithMemory()
 
@@ -743,7 +743,7 @@ OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint3
 
 **描述：**
 
-将OH_NN_Memory实例指向的硬件共享内存，并指定为单个输入使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输入和OH_NN_Memory内存实例绑定。执行计算时， 底层硬件从内存实例指向的共享内存中读取输入数据。通过该接口，可以实现设置输入、执行计算、读取输出的并发执行，提升数据流的推理效率。
+将[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的硬件共享内存，并指定为单个输入使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输入和[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)内存实例绑定。执行计算时， 底层硬件从内存实例指向的共享内存中读取输入数据。通过该接口，可以实现设置输入、执行计算、读取输出的并发执行，提升数据流的推理效率。
 
 <!--Device-OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint32_t inputIndex, const OH_NN_Tensor *tensor, const OH_NN_Memory *memory)--><!--Device-OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint32_t inputIndex, const OH_NN_Tensor *tensor, const OH_NN_Memory *memory)-End-->
 
@@ -761,8 +761,8 @@ OH_NN_ReturnCode OH_NNExecutor_SetInputWithMemory(OH_NNExecutor *executor, uint3
 | -- | -- |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) *executor | 指向[OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md)实例的指针。 |
 | uint32_t inputIndex | 输入的索引值，与调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时输入数据的顺序一致。 假设调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时，inputIndices为{1, 5, 9}，则在指定输入的共享内存时， 三个输入的索引值分别为{0, 1, 2}。 |
-| const OH_NN_Tensor *tensor | 指向OH_NN_Tensor的指针，设置单个输入所对应的张量。 |
-| const OH_NN_Memory *memory | 指向OH_NN_Memory的指针。 |
+| [const OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) *tensor | 指向[OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md)的指针，设置单个输入所对应的张量。 |
+| [const OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) *memory | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)的指针。 |
 
 **返回值：**
 
@@ -778,7 +778,7 @@ OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint
 
 **描述：**
 
-将OH_NN_Memory实例指向的硬件共享内存，并指定为单个输出使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输出和OH_NN_Memory内存实例绑定。执行计算时， 底层硬件将计算结果直接写入内存实例指向的共享内存。通过该接口，可以实现设置输入、 执行计算、读取输出的并发执行，提升数据流的推理效率。
+将[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)实例指向的硬件共享内存，并指定为单个输出使用的内存。<br> 在需要自行管理内存的场景下，该接口将执行输出和[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)内存实例绑定。执行计算时， 底层硬件将计算结果直接写入内存实例指向的共享内存。通过该接口，可以实现设置输入、 执行计算、读取输出的并发执行，提升数据流的推理效率。
 
 <!--Device-OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint32_t outputIndex, const OH_NN_Memory *memory)--><!--Device-OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint32_t outputIndex, const OH_NN_Memory *memory)-End-->
 
@@ -796,7 +796,7 @@ OH_NN_ReturnCode OH_NNExecutor_SetOutputWithMemory(OH_NNExecutor *executor, uint
 | -- | -- |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) *executor | 执行器。 |
 | uint32_t outputIndex | 输出的索引值，与调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时输出数据的顺序一致。 假设调用[OH_NNModel_SpecifyInputsAndOutputs](capi-neural-network-runtime-h.md#oh_nnmodel_specifyinputsandoutputs)时，outputIndices为{4, 6, 8}，则在指定输出的共享内存时， 三个输出的索引值分别为{0, 1, 2}。 |
-| const OH_NN_Memory *memory | 指向OH_NN_Memory的指针。 |
+| [const OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) *memory | 指向[OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md)的指针。 |
 
 **返回值：**
 

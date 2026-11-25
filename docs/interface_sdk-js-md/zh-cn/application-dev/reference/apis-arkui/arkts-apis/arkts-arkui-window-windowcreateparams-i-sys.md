@@ -24,7 +24,9 @@ import { window } from '@kit.ArkUI';
 isWindowLimitsForcible?: boolean
 ```
 
-是否覆盖系统窗口尺寸限制。如果为true，则当前主窗口可以设置超出系统限制的窗口尺寸限制。
+应用主窗口尺寸限制是否可突破系统默认限制。仅当被启动应用为系统应用时生效，否则不生效也不报错。  
+- true：运行突破系统默认限制。在窗口尺寸限制计算过程中，将忽略系统默认限制，最终生效结果仍按各来源取交集计算，且优先级保持不变。详细说明可参考[WindowLimits](arkts-arkui-window-windowlimits-i.md)  
+- false：不允许突破系统默认限，窗口尺寸限制按照默认规则计算（包含系统默认限制）。
 
 **类型：** boolean
 

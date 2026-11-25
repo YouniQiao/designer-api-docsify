@@ -12,6 +12,22 @@ enum FeatureForDevice
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## ADVANCED_MESSAGE
+
+```TypeScript
+ADVANCED_MESSAGE = 55
+```
+
+增强信息。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-ADVANCED_MESSAGE = 55--><!--Device-FeatureForDevice-ADVANCED_MESSAGE = 55-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## AIRPLANE_MODE
 
 ```TypeScript

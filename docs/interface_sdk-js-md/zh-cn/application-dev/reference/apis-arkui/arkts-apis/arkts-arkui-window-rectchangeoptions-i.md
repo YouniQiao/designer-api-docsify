@@ -42,7 +42,7 @@ reason: RectChangeReason
 rect: Rect
 ```
 
-New value of the window rectangle.
+窗口矩形变化后的值。
 
 **类型：** [Rect](arkts-arkui-window-rect-i.md)
 

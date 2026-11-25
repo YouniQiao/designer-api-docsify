@@ -130,7 +130,7 @@ id: number
 isFullScreen: boolean
 ```
 
-在满足isLayoutFullScreen为true的条件下如果隐藏了状态栏，返回值为true，其他情况下均返回false。
+窗口是否处于[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)并设置了状态栏隐藏。
 
 **类型：** boolean
 

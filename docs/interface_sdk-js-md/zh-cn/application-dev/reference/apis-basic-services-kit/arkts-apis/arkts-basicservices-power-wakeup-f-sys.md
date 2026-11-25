@@ -86,10 +86,10 @@ function wakeup(detail: string, mode?: InvokeMode): void | Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 权限校验失败。非系统应用调用系统API。 |
-| [4900101](../errorcode-power.md#4900101-连接服务失败) | 连接服务失败。 |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | 权限校验失败。应用程序没有调用此API需要的权限。 |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | 不支持的功能。该接口不能在汽车设备中使用。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. This API cannot work in car devices. |
 
 <!--Del-->
 **示例**

@@ -2,7 +2,7 @@
 
 ## 概述
 
-Provides abilities of windowManager on the native side, such as picture in picture window.
+提供应用窗口的管理能力。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -13,6 +13,6 @@ Provides abilities of windowManager on the native side, such as picture in pictu
 | 名称 | 描述 |
 | -- | -- |
 | [oh_window_pip.h](capi-oh-window-pip-h.md) | 定义画中画功能的相关接口，包含创建、删除画中画控制器，以及启动、停止画中画等。主要用于视频播放、直播、视频通话或视频会议场景下，以小窗（画中画）模式呈现内容。 |
-| [oh_window.h](capi-oh-window-h.md) | The file declares the window management APIs. You can use the APIs to set and obtain the properties of a window, and set its status bar style and navigation bar style. |
-| [oh_window_event_filter.h](capi-oh-window-event-filter-h.md) | The file declares the APIs for a window to filter multimodal key events. When a multimodal input event passes through the window, the window can interrupt the event to prevent it from being further distributed. |
-| [oh_window_comm.h](capi-oh-window-comm-h.md) | The file declares the common enums and definitions of the window manager. |
+| [oh_window.h](capi-oh-window-h.md) | 定义窗口管理的相关接口，主要用于设置和获取指定窗口的属性，以及设置指定窗口的状态栏样式、导航栏样式。 |
+| [oh_window_event_filter.h](capi-oh-window-event-filter-h.md) | 定义窗口管理事件过滤的接口。当多模输入的事件经过窗口时，可通过过滤接口拦截事件，阻止事件向下分发。 |
+| [oh_window_comm.h](capi-oh-window-comm-h.md) | 提供窗口的公共枚举，公共定义等。 |

@@ -18,7 +18,7 @@ function setDisallowedPolicyForAccount(admin: Want, feature: string, disallow: b
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2)(admin: Want, feature: FeatureForAccount, disallow: boolean, accountId: number)
+**替代接口：** [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-3)(admin: Want, feature: FeatureForAccount, disallow: boolean, accountId: number)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -64,6 +64,87 @@ try {
   console.info('Succeeded in setting fingerprint disabled');
 } catch (err) {
   console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+
+## setDisallowedPolicyForAccount
+
+```TypeScript
+function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void
+```
+
+设置禁用/启用指定用户的某特性。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void--><!--Device-restrictions-function setDisallowedPolicyForAccount(feature: FeatureForAccount, disallow: boolean, accountId: number): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| feature | [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | 是 | 要禁用或允许的用户特性。<br>当feature值为SUPER_HUB时，如果已经通过[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)接口将中转站添加到当前用户下不可关停的应用列表中，再调用本接口禁用中转站，会发生策略冲突，抛出9200010错误码。可以通过[removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)接口将中转站从当前用户下不可关停的应用列表中移除来解决冲突。<br>当feature值为DISTRIBUTED_TRANSMISSION时，如果已经通过[setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2)接口禁用设备间分布式单向传输数据的能力，再调用本接口禁用分布式管理服务，会发生策略冲突，抛出9200010错误码。可以通过[setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount-2)接口取消禁用设备间分布式单向传输数据来解决冲突。 |
+| disallow | boolean | 是 | true表示禁用，false表示启用。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br>accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。<br>当feature值为SUPER_HUB时，accountId仅支持传入当前用户的用户ID，不支持跨用户设置。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability. <br>2. The chip does not support the capability. <br>3. A dependent service feature is not supported. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200006](../errorcode-enterpriseDeviceManager.md#9200006-指定的用户id非法) | The specified account ID is invalid. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
+
+**示例**
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  restrictions.setDisallowedPolicyForAccount(wantTemp, 'fingerprint', true, 100);
+  console.info('Succeeded in setting fingerprint disabled');
+} catch (err) {
+  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, true, 100);
+  console.info('Succeeded in setting super hub disabled');
+} catch (err) {
+  console.error(`Failed to set super hub disabled. Code is ${err.code}, message is ${err.message}`);
 }
 ```
 

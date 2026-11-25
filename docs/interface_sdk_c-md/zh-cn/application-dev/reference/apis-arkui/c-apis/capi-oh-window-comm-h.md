@@ -2,7 +2,7 @@
 
 ## 概述
 
-The file declares the common enums and definitions of the window manager.
+提供窗口的公共枚举，公共定义等。
 
 **库：** libnative_window_manager.so
 

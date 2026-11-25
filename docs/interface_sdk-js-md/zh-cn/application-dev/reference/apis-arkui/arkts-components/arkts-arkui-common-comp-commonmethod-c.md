@@ -3000,6 +3000,36 @@ colorBlend(color: Optional<Color | string | Resource>): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+## colorFilterEffect
+
+```TypeScript
+colorFilterEffect(filter: ColorFilter | undefined): T
+```
+
+为组件添加颜色滤镜效果。颜色滤镜通过4x5颜色矩阵对组件像素进行颜色变换，可用于实现护眼模式、色温调节等视觉效果。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonMethod-colorFilterEffect(filter: ColorFilter | undefined): T--><!--Device-CommonMethod-colorFilterEffect(filter: ColorFilter | undefined): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; undefined | 是 | 应用于组件的颜色滤镜。取值为由4x5颜色矩阵（20个数值）构造的[ColorFilter对象。<br>**说明：** <br>当filter为有效的ColorFilter（非undefined）时，颜色滤镜优先生效，[grayscale](#grayscale-1)、[brightness](#brightness-1)、[contrast](#contrast-1)、[saturate](#saturate-1)、[sepia](#sepia-1)、[invert](#invert)、[hueRotate](#huerotate)、[colorBlend](#colorblend)属性均不生效。<br>当filter为undefined时，清除颜色滤镜，上述属性恢复生效。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件，用于链式调用。 |
+
 ## compositingFilter
 
 ```TypeScript

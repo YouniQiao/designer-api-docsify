@@ -36,6 +36,7 @@ import { securityManager } from '@kit.MDMKit';
 | [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md#getappclipboardpolicy-2) | 获取设备剪贴板策略。企业可通过此接口查询当前配置的剪贴板策略，用于策略审计和合规性检查，确保剪贴板管控策略符合企业安全要求。 |
 | [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md#getappclipboardpolicy-3) | 获取指定用户下指定应用的设备剪贴板策略。企业可通过此接口查询特定应用的剪贴板使用权限配置，用于策略审计和合规性检查。 |
 | [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md#getappclipboardpolicy-4) | 获取指定用户下指定应用的设备剪贴板策略。企业可通过此接口查询特定应用的剪贴板使用权限配置，用于策略审计和合规性检查。 |
+| [getCredentialId](arkts-mdm-securitymanager-getcredentialid-f.md#getcredentialid-1) | 根据认证Token获取凭证ID。该接口使用promise返回结果。企业可以通过该接口解析和查询用户凭证ID（如人脸、指纹ID等）。企业设备安全审计、身份认证等场景。 |
 | [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md#getdevicesecuritylevelpolicy-1) | 查询DSL切换策略 |
 | [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md#getdisallowedpermissions-1) | 获取指定用户下禁用的权限列表。 |
 | [getEnterpriseResetPolicy](arkts-mdm-securitymanager-getenterpriseresetpolicy-f.md#getenterpriseresetpolicy-1) | 获取企业复位策略。同步返回策略。 |

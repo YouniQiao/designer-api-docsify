@@ -96,6 +96,22 @@ FREE_WINDOW = 14
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## INSTALL_DEVICE_CERTIFICATE
+
+```TypeScript
+INSTALL_DEVICE_CERTIFICATE = 15
+```
+
+设备级证书。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-INSTALL_DEVICE_CERTIFICATE = 15--><!--Device-FeatureForAccount-INSTALL_DEVICE_CERTIFICATE = 15-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## MTP_CLIENT
 
 ```TypeScript

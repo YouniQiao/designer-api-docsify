@@ -86,11 +86,11 @@ function suspend(isImmediate?: boolean, mode?: InvokeMode): void | Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 权限校验失败。非系统应用调用系统API。 |
-| [4900101](../errorcode-power.md#4900101-连接服务失败) | 连接服务失败。 |
-| [4900701](../errorcode-power.md#4900701-设备灭屏失败) | 挂起设备失败。可能原因：1.考试过程中不允许熄屏。 |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | 权限校验失败。应用程序没有调用此API所需要的权限。 |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | 不支持的功能。该接口不能在汽车设备中使用。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| [4900701](../errorcode-power.md#4900701-设备灭屏失败) | Failed to suspend the device. Possible causes:         1. Not allowed to turn off the screen during the exam. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. This API cannot work in car devices. |
 
 <!--Del-->
 **示例**

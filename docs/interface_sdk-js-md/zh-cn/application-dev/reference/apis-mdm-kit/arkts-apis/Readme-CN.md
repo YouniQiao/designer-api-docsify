@@ -374,7 +374,6 @@
   - [PathSharedData](arkts-mdm-networkmanager-pathshareddata-i.md)
   <!--Del-->
   - [RemoveFilterRule（系统接口）](arkts-mdm-networkmanager-removefilterrule-i-sys.md)<!--DelEnd-->
-  - [UserPathInfo](arkts-mdm-networkmanager-userpathinfo-i.md)
   - [Action](arkts-mdm-networkmanager-action-e.md)
   <!--Del-->
   - [AddMethod（系统接口）](arkts-mdm-networkmanager-addmethod-e-sys.md)<!--DelEnd-->
@@ -422,6 +421,7 @@
   - [closeSession](arkts-mdm-securitymanager-closesession-f.md)
   - [getAllowedPermissionBundles](arkts-mdm-securitymanager-getallowedpermissionbundles-f.md)
   - [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md)
+  - [getCredentialId](arkts-mdm-securitymanager-getcredentialid-f.md)
   - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getEnterpriseResetPolicy](arkts-mdm-securitymanager-getenterpriseresetpolicy-f.md)

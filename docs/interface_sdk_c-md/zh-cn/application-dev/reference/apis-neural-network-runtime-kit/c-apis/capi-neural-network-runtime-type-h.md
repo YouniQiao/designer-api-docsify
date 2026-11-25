@@ -18,6 +18,10 @@ Neural Network Runtime定义的结构体和枚举值。<br> include "neural_netw
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
+| [OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) | OH_NN_UInt32Array | 该结构体用于存储32位无符号整型数组。 |
+| [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) | OH_NN_QuantParam | 量化信息。<br> 在量化的场景中，32位浮点型数据根据以下公式量化为定点数据： 其中s和z是量化参数，在[OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md)中通过scale和zeroPoint保存，r是浮点数，q是量化后的结果， q_min是量化结果的下界，q_max是量化结果的上界，计算方式如下： clamp函数定义如下： |
+| [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) | OH_NN_Tensor | 张量结构体。<br> 通常用于构造模型图中的数据节点和算子参数，在构造张量时需要明确数据类型、维数、维度信息和量化信息。 |
+| [OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) | OH_NN_Memory | 内存结构体。 |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) | OH_NNModel | 模型句柄。 |
 | [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) | OH_NNCompilation | 编译器句柄。 |
 | [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) | OH_NNExecutor | 执行器句柄。 |
@@ -30,14 +34,14 @@ Neural Network Runtime定义的结构体和枚举值。<br> include "neural_netw
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_NN_PerformanceMode](#oh_nn_performancemode) | OH_NN_PerformanceMode | 硬件的性能模式。 |
-| [OH_NN_Priority](#oh_nn_priority) | OH_NN_Priority | 模型推理任务优先级 |
-| [OH_NN_ReturnCode](#oh_nn_returncode) | OH_NN_ReturnCode | Neural Network Runtime 定义的错误码类型。 |
-| [OH_NN_FuseType](#oh_nn_fusetype) | OH_NN_FuseType | Neural Network Runtime 融合算子中激活函数的类型。 |
-| [OH_NN_Format](#oh_nn_format) | OH_NN_Format | ；张量数据的排布类型。 |
-| [OH_NN_DeviceType](#oh_nn_devicetype) | OH_NN_DeviceType | Neural Network Runtime 支持的设备类型 |
-| [OH_NN_DataType](#oh_nn_datatype) | OH_NN_DataType | Neural Network Runtime 支持的数据类型。 |
-| [OH_NN_OperationType](#oh_nn_operationtype) | OH_NN_OperationType | Neural Network Runtime 支持算子的类型。 |
-| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | 张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)； 当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将OH_NN_Tensor实例的type属性设置为 OH_NN_PAD。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。 |
+| [OH_NN_Priority](#oh_nn_priority) | OH_NN_Priority | 模型推理任务优先级。 |
+| [OH_NN_ReturnCode](#oh_nn_returncode) | OH_NN_ReturnCode | Neural Network Runtime定义的错误码类型。 |
+| [OH_NN_FuseType](#oh_nn_fusetype) | OH_NN_FuseType | Neural Network Runtime融合算子中激活函数的类型。 |
+| [OH_NN_Format](#oh_nn_format) | OH_NN_Format | 张量数据的排布类型。 |
+| [OH_NN_DeviceType](#oh_nn_devicetype) | OH_NN_DeviceType | Neural Network Runtime支持的设备类型 |
+| [OH_NN_DataType](#oh_nn_datatype) | OH_NN_DataType | Neural Network Runtime支持的数据类型。 |
+| [OH_NN_OperationType](#oh_nn_operationtype) | OH_NN_OperationType | Neural Network Runtime支持算子的类型。 |
+| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | 张量的类型。<br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)； 当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将[OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md)实例的type属性设置为 OH_NN_PAD。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。 |
 
 ### 函数
 
@@ -80,7 +84,7 @@ enum OH_NN_Priority
 
 **描述：**
 
-模型推理任务优先级
+模型推理任务优先级。
 
 <!--Device-enum OH_NN_Priority--><!--Device-enum OH_NN_Priority-End-->
 
@@ -103,7 +107,7 @@ enum OH_NN_ReturnCode
 
 **描述：**
 
-Neural Network Runtime 定义的错误码类型。
+Neural Network Runtime定义的错误码类型。
 
 <!--Device-enum OH_NN_ReturnCode--><!--Device-enum OH_NN_ReturnCode-End-->
 
@@ -116,11 +120,11 @@ Neural Network Runtime 定义的错误码类型。
 | OH_NN_SUCCESS = 0 | 操作成功。<br><!--Device-OH_NN_SUCCESS = 0--><!--Device-OH_NN_SUCCESS = 0-End--> |
 | OH_NN_FAILED = 1 | 操作失败。<br><!--Device-OH_NN_FAILED = 1--><!--Device-OH_NN_FAILED = 1-End--> |
 | OH_NN_INVALID_PARAMETER = 2 | 非法参数。<br><!--Device-OH_NN_INVALID_PARAMETER = 2--><!--Device-OH_NN_INVALID_PARAMETER = 2-End--> |
-| OH_NN_MEMORY_ERROR = 3 | 内存相关的错误，包括：内存不足、内存数据拷贝失败、内存申请失败等。<br><!--Device-OH_NN_MEMORY_ERROR = 3--><!--Device-OH_NN_MEMORY_ERROR = 3-End--> |
+| OH_NN_MEMORY_ERROR = 3 | 内存相关的错误，包括：内存不足、内存数据拷贝失败、内存申请失败等。<br>**起始版本：** 9<br><!--Device-OH_NN_MEMORY_ERROR = 3--><!--Device-OH_NN_MEMORY_ERROR = 3-End--> |
 | OH_NN_OPERATION_FORBIDDEN = 4 | 非法操作。<br><!--Device-OH_NN_OPERATION_FORBIDDEN = 4--><!--Device-OH_NN_OPERATION_FORBIDDEN = 4-End--> |
 | OH_NN_NULL_PTR = 5 | 空指针异常。<br><!--Device-OH_NN_NULL_PTR = 5--><!--Device-OH_NN_NULL_PTR = 5-End--> |
 | OH_NN_INVALID_FILE = 6 | 无效文件。<br><!--Device-OH_NN_INVALID_FILE = 6--><!--Device-OH_NN_INVALID_FILE = 6-End--> |
-| OH_NN_UNAVALIDABLE_DEVICE = 7 | 硬件发生错误，错误可能包含：HDL服务崩溃。<br>**废弃版本：** 11<br>**替代接口：** [OH_NN_UNAVAILABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) <br><!--Device-OH_NN_UNAVALIDABLE_DEVICE = 7--><!--Device-OH_NN_UNAVALIDABLE_DEVICE = 7-End--> |
+| OH_NN_UNAVALIDABLE_DEVICE = 7 | 硬件发生错误，错误可能包含：HDL服务崩溃。<br>**起始版本：** 9<br>**废弃版本：** 11<br>**替代接口：** [OH_NN_UNAVAILABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode)<br><!--Device-OH_NN_UNAVALIDABLE_DEVICE = 7--><!--Device-OH_NN_UNAVALIDABLE_DEVICE = 7-End--> |
 | OH_NN_INVALID_PATH = 8 | 非法路径。<br><!--Device-OH_NN_INVALID_PATH = 8--><!--Device-OH_NN_INVALID_PATH = 8-End--> |
 | OH_NN_TIMEOUT = 9 | 执行超时。<br>**起始版本：** 11<br><!--Device-OH_NN_TIMEOUT = 9--><!--Device-OH_NN_TIMEOUT = 9-End--> |
 | OH_NN_UNSUPPORTED = 10 | 未支持。<br>**起始版本：** 11<br><!--Device-OH_NN_UNSUPPORTED = 10--><!--Device-OH_NN_UNSUPPORTED = 10-End--> |
@@ -137,7 +141,7 @@ enum OH_NN_FuseType : int8_t
 
 **描述：**
 
-Neural Network Runtime 融合算子中激活函数的类型。
+Neural Network Runtime融合算子中激活函数的类型。
 
 <!--Device-enum OH_NN_FuseType : int8_t--><!--Device-enum OH_NN_FuseType : int8_t-End-->
 
@@ -159,7 +163,7 @@ enum OH_NN_Format
 
 **描述：**
 
-；张量数据的排布类型。
+张量数据的排布类型。
 
 <!--Device-enum OH_NN_Format--><!--Device-enum OH_NN_Format-End-->
 
@@ -182,7 +186,7 @@ enum OH_NN_DeviceType
 
 **描述：**
 
-Neural Network Runtime 支持的设备类型
+Neural Network Runtime支持的设备类型
 
 <!--Device-enum OH_NN_DeviceType--><!--Device-enum OH_NN_DeviceType-End-->
 
@@ -195,7 +199,7 @@ Neural Network Runtime 支持的设备类型
 | OH_NN_OTHERS = 0 | 不属于CPU、GPU、专用加速器的设备。<br><!--Device-OH_NN_OTHERS = 0--><!--Device-OH_NN_OTHERS = 0-End--> |
 | OH_NN_CPU = 1 | CPU设备。<br><!--Device-OH_NN_CPU = 1--><!--Device-OH_NN_CPU = 1-End--> |
 | OH_NN_GPU = 2 | GPU设备。<br><!--Device-OH_NN_GPU = 2--><!--Device-OH_NN_GPU = 2-End--> |
-| OH_NN_ACCELERATOR = 3， | 专用硬件加速器。<br><!--Device-OH_NN_ACCELERATOR = 3，--><!--Device-OH_NN_ACCELERATOR = 3，-End--> |
+| OH_NN_ACCELERATOR = 3 | 专用硬件加速器。<br><!--Device-OH_NN_ACCELERATOR = 3--><!--Device-OH_NN_ACCELERATOR = 3-End--> |
 
 ### OH_NN_DataType
 
@@ -205,7 +209,7 @@ enum OH_NN_DataType
 
 **描述：**
 
-Neural Network Runtime 支持的数据类型。
+Neural Network Runtime支持的数据类型。
 
 <!--Device-enum OH_NN_DataType--><!--Device-enum OH_NN_DataType-End-->
 
@@ -237,7 +241,7 @@ enum OH_NN_OperationType
 
 **描述：**
 
-Neural Network Runtime 支持算子的类型。
+Neural Network Runtime支持算子的类型。
 
 <!--Device-enum OH_NN_OperationType--><!--Device-enum OH_NN_OperationType-End-->
 
@@ -281,7 +285,7 @@ Neural Network Runtime 支持算子的类型。
 | OH_NN_OPS_SPLIT = 32 | Split 算子沿axis维度将input拆分成多个张量，张量数量由outputNum指定。 输入： input，n维张量。 参数： outputNum，输出张量的数量，outputNum类型为int。 sizeSplits，一维张量，指定 张量 沿 axis 轴拆分后，每个 张量 的大小，sizeSplits 类型为 int。 如果 sizeSplits 的数据为空，则 张量 被拆分成大小均等的 张量，此时要求 input.shape[axis] 可以被 outputNum 整除； 如果 sizeSplits 不为空，则要求 sizeSplits 所有元素之和等于 input.shape[axis]。 axis，指定拆分的维度，axis类型为int。 输出： outputs，一组n维张量，每一个张量类型和shape相同，每个张量的类型和input一致。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SPLIT = 32--><!--Device-OH_NN_OPS_SPLIT = 32-End--> |
 | OH_NN_OPS_SQRT = 33 | 给定一个张量，计算其平方根。 输入： input，一个n维张量。 输出： output，输入的平方根，一个n维张量，类型和shape和input一致。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SQRT = 33--><!--Device-OH_NN_OPS_SQRT = 33-End--> |
 | OH_NN_OPS_SQUARED_DIFFERENCE = 34 | 计算两个输入的差值并返回差值的平方。SquaredDifference算子支持张量和张量相减。 如果两个张量的TensorType不相同，算子会将低精度的张量转成更高精度的类型。 如果两个张量的shape不同，要求两个张量可以通过broadcast拓展成相同shape的张量。 输入： input1，被减数，input1是一个张量，张量的类型可以是OH_NN_FLOAT16、OH_NN_FLOAT32、OH_NN_INT32或OH_NN_BOOL。 input2，减数，input2是一个张量，张量的类型可以是OH_NN_FLOAT16、OH_NN_FLOAT32、OH_NN_INT32或OH_NN_BOOL。 输出： output，两个输入差值的平方。output的shape由input1和input2共同决定，input1和input2的shape相同时， output的shape和input1、input2相同；shape不同时，需要将input1或input2做broadcast操作后，相减得到output。 output的TensorType由两个输入中更高精度的TensorType决定。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SQUARED_DIFFERENCE = 34--><!--Device-OH_NN_OPS_SQUARED_DIFFERENCE = 34-End--> |
-| OH_NN_OPS_SQUEEZE = 35 | 去除axis中， 长度为1的维度。 支持int8量化输入假设input的shape为[2，1，1，2，2]， axis为[0,1]， 则output的shape为[2，1，2，2]。第0维到第一维之间，长度为0的维度被去除。 输入： input，n维张量。 参数： axis，指定删除的维度。axis可以是一个int64_t的整数或数组，整数的取值范围为[-n，n)。 输出： output，输出张量。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SQUEEZE = 35--><!--Device-OH_NN_OPS_SQUEEZE = 35-End--> |
+| OH_NN_OPS_SQUEEZE = 35 | 去除axis中，长度为1的维度。支持int8量化输入假设input的shape为[2，1，1，2，2]，axis为[0,1]， 则output的shape为[2，1，2，2]。第0维到第一维之间，长度为0的维度被去除。 输入： input，n维张量。 参数： axis，指定删除的维度。axis可以是一个int64_t的整数或数组，整数的取值范围为[-n，n)。 输出： output，输出张量。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SQUEEZE = 35--><!--Device-OH_NN_OPS_SQUEEZE = 35-End--> |
 | OH_NN_OPS_STACK = 36 | 将一组张量沿axis维度进行堆叠，堆叠前每个张量的维数为n，则堆叠后output维数为n+1。 输入： input，Stack支持传入多个输入n维张量，每个张量要求shape相同且类型相同。 参数： axis，一个整数，指定张量堆叠的维度。axis可以是负数，axis取值范围为[-(n+1)，(n+1))。 输出： output，将input沿axis维度堆叠的输出，n+1维张量，TensorType和input相同。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_STACK = 36--><!--Device-OH_NN_OPS_STACK = 36-End--> |
 | OH_NN_OPS_STRIDED_SLICE = 37 | 跨步截取张量。 输入： input，n维输入张量。 begin，一维张量，begin的长度等于n，begin[i]指定第i维上截取的起点。 end，一维张量，end的长度等于n，end[i]指定第i维上截取的终点。 strides，一维张量，strides的长度等于n，strides[i]指定第i维上截取的步长。 参数： beginMask，一个整数，用于解除begin的限制。将beginMask转成二进制表示，如果binary(beginMask)[i]==1， 则对于第i维，从第一个元素开始，以strides[i]为步长截取元素直到第end[i]-1个元素。 endMask，一个整数，用于解除end的限制。将endMask转成二进制表示，如果binary(endMask)[i]==1，则对于第i维， 从第begin[i]个元素起，以strides[i]为步长截取元素直到张量边界。 ellipsisMask，一个整数，用于解除begin和end的限制。将ellipsisMask转成二进制表示，如果binary(ellipsisMask)[i]==1， 则对于第i维，从第一个元素开始，以strides[i]为补偿，截取元素直到张量边界。binary(ellipsisMask)仅允许有一位不为0。 newAxisMask，一个整数，用于新增维度。将newAxisMask转成二进制表示，如果binary(newAxisMask)[i]==1， 则在第i维插入长度为1的新维度。 shrinkAxisMask，一个整数，用于压缩指定维度。将shrinkAxisMask转成二进制表示，如果binary(shrinkAxisMask)[i]==1， 则舍去第i维所有元素，第i维长度压缩至1。 输出： 堆叠运算后的张量，数据类型与input相同。输出维度rank(input[0])+1 维。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_STRIDED_SLICE = 37--><!--Device-OH_NN_OPS_STRIDED_SLICE = 37-End--> |
 | OH_NN_OPS_SUB = 38 | 计算两个输入的差值。 输入： input1，被减数，input1是一个张量。 input2，减数，input2是一个张量。 参数： activationType，是一个整型常量，且必须是OH_NN_FuseType中含有的值。 在输出之前调用指定的激活。 输出： output，两个输入相减的差。output的shape由input1和input2共同决定，当input1和input2的shape相同时， output的shape和input1、input2相同；shape不同时，需要将input1或input2做broadcast操作后， 相减得到output。output的TensorType由两个输入中更高精度的TensorType决定。<br>**起始版本：** 9<br><!--Device-OH_NN_OPS_SUB = 38--><!--Device-OH_NN_OPS_SUB = 38-End--> |
@@ -364,7 +368,7 @@ enum OH_NN_TensorType
 
 **描述：**
 
-张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)； 当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将OH_NN_Tensor实例的type属性设置为 OH_NN_PAD。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。
+张量的类型。<br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)； 当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将[OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md)实例的type属性设置为 OH_NN_PAD。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。
 
 <!--Device-enum OH_NN_TensorType--><!--Device-enum OH_NN_TensorType-End-->
 

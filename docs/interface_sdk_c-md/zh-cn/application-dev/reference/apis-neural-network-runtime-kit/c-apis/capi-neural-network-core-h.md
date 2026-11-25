@@ -2,7 +2,7 @@
 
 ## 概述
 
-Neural Network Core模块接口定义，AI推理框架使用Neural Network Core提供的Native接口， 完成模型编译，并在加速硬件上执行推理和计算。 部分接口定义从neural_network_runtime.h移动至此头文件统一呈现，对于此类接口， API version 11 版本之前即支持使用，各版本均可正常使用。 Neural Network Core的接口目前均不支持多线程并发调用。<br> include "neural_network_runtime/neural_network_core.h"
+Neural Network Core模块接口定义，AI推理框架使用Neural Network Core提供的Native接口， 完成模型编译，并在加速硬件上执行推理和计算。 部分接口定义从neural_network_runtime.h移动至此头文件统一呈现，对于此类接口， API version 11 版本之前即支持使用，各版本均可正常使用。 Neural Network Core的接口目前均不支持多线程并发调用。
 
 **库：** libneural_network_core.so
 
@@ -39,7 +39,7 @@ Neural Network Core模块接口定义，AI推理框架使用Neural Network Core�
 | [OH_NN_ReturnCode OH_NNTensorDesc_SetDataType(NN_TensorDesc *tensorDesc, OH_NN_DataType dataType)](#oh_nntensordesc_setdatatype) | 设置[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的数据类型。<br> [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例创建完成后，调用该接口设置张量数据类型。<br> 如果tensorDesc为空指针，则该接口将返回错误码。 |
 | [OH_NN_ReturnCode OH_NNTensorDesc_GetDataType(const NN_TensorDesc *tensorDesc, OH_NN_DataType *dataType)](#oh_nntensordesc_getdatatype) | 获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的数据类型。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的数据类型。<br> 如果tensorDesc或dataType为空指针，则该接口将返回错误码。 |
 | [OH_NN_ReturnCode OH_NNTensorDesc_SetShape(NN_TensorDesc *tensorDesc, const int32_t *shape, size_t shapeLength)](#oh_nntensordesc_setshape) | 设置[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的数据形状。<br> [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例创建完成后，调用该接口设置张量形状。<br> 如果tensorDesc或shape为空指针，或shapeLength为0，则该接口将返回错误码。 |
-| [OH_NN_ReturnCode OH_NNTensorDesc_GetShape(const NN_TensorDesc *tensorDesc, int32_t **shape, size_t *shapeLength)](#oh_nntensordesc_getshape) | 获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的形状。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的形状。<br> 如果tensorDesc、shape或shapeLength为空指针，则该接口将返回错误码。作为输出参数，*shape必须为空指针， 否则该接口将返回错误码。 例如您应该定义 int32_t* tensorShape = NULL，并传递&tensorShape作为shape的参数。<br> 您不需要释放shape的内存。当tensorDesc被销毁时，它会自动释放。 |
+| [OH_NN_ReturnCode OH_NNTensorDesc_GetShape(const NN_TensorDesc *tensorDesc, int32_t **shape, size_t *shapeLength)](#oh_nntensordesc_getshape) | 获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的形状。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的形状。<br> 如果tensorDesc、shape或shapeLength为空指针，则该接口将返回错误码。作为输出参数，*shape不能为空指针， 否则该接口将返回错误码。 例如您应该定义 int32_t* tensorShape = NULL，并传递&tensorShape作为shape的参数。<br> 您不需要释放shape的内存。当tensorDesc被销毁时，它会自动释放。 |
 | [OH_NN_ReturnCode OH_NNTensorDesc_SetFormat(NN_TensorDesc *tensorDesc, OH_NN_Format format)](#oh_nntensordesc_setformat) | 设置[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的数据布局。<br> [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例创建完成后，调用该接口设置张量的数据布局[OH_NN_Format](capi-neural-network-runtime-type-h.md#oh_nn_format)。<br> 如果tensorDesc为空指针，则该接口将返回错误码。 |
 | [OH_NN_ReturnCode OH_NNTensorDesc_GetFormat(const NN_TensorDesc *tensorDesc, OH_NN_Format *format)](#oh_nntensordesc_getformat) | 获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的数据布局。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的数据布局[OH_NN_Format](capi-neural-network-runtime-type-h.md#oh_nn_format)。<br> 如果tensorDesc或format为空指针，则该接口将返回错误码。 |
 | [OH_NN_ReturnCode OH_NNTensorDesc_GetElementCount(const NN_TensorDesc *tensorDesc, size_t *elementCount)](#oh_nntensordesc_getelementcount) | 获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的元素个数。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的元素个数。如果需要获取张量数据的字节大小， 请调用[OH_NNTensorDesc_GetByteSize](capi-neural-network-core-h.md#oh_nntensordesc_getbytesize)。<br> 如果张量形状是动态可变的，则该接口将返回错误码，elementCount将为0。<br> 如果tensorDesc或elementCount为空指针，则该接口将返回错误码。 |
@@ -676,7 +676,7 @@ OH_NN_ReturnCode OH_NNTensorDesc_GetShape(const NN_TensorDesc *tensorDesc, int32
 
 **描述：**
 
-获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的形状。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的形状。<br> 如果tensorDesc、shape或shapeLength为空指针，则该接口将返回错误码。作为输出参数，*shape必须为空指针， 否则该接口将返回错误码。 例如您应该定义 int32_t* tensorShape = NULL，并传递&tensorShape作为shape的参数。<br> 您不需要释放shape的内存。当tensorDesc被销毁时，它会自动释放。
+获取[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)的形状。<br> 调用该接口获取指定[NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)实例的形状。<br> 如果tensorDesc、shape或shapeLength为空指针，则该接口将返回错误码。作为输出参数，*shape不能为空指针， 否则该接口将返回错误码。 例如您应该定义 int32_t* tensorShape = NULL，并传递&tensorShape作为shape的参数。<br> 您不需要释放shape的内存。当tensorDesc被销毁时，它会自动释放。
 
 <!--Device-OH_NN_ReturnCode OH_NNTensorDesc_GetShape(const NN_TensorDesc *tensorDesc, int32_t **shape, size_t *shapeLength)--><!--Device-OH_NN_ReturnCode OH_NNTensorDesc_GetShape(const NN_TensorDesc *tensorDesc, int32_t **shape, size_t *shapeLength)-End-->
 
