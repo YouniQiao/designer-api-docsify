@@ -4,7 +4,7 @@
 interface ShadowOptions
 ```
 
-阴影配置参数。
+阴影的配置参数。
 
 > **说明：** 
 > 

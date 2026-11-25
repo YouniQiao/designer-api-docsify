@@ -6,7 +6,7 @@ interface WifiP2pServiceInfo
 
 Represents the P2P service information.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 <!--Device-wifiManager-interface WifiP2pServiceInfo--><!--Device-wifiManager-interface WifiP2pServiceInfo-End-->
 
@@ -28,7 +28,7 @@ Service protocol type.
 
 **Type:** [P2pServiceProtocolType](arkts-connectivity-wifimanager-p2pserviceprotocoltype-e.md)
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Query string list consumed by wpa_supplicant. The maximum size of a single data 
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ Service name. Refer to the [addDnsSdLocalP2pService](arkts-connectivity-wifimana
 
 **Type:** string
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -130,7 +130,7 @@ workDir?: string
 
 Indicates the working directory for the command.
 
-If not specified, the default working directory of the system service is used.
+If not specified, the root directory is used.
 
 **Type:** string
 

@@ -15,7 +15,7 @@ function addDnsSdLocalP2pService(instanceName: string, serviceType: string,
 
 Adds and registers the local P2P service description of DNS-SD (DNS service discovery) to be discovered by the peer device.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO_INTERNAL
 

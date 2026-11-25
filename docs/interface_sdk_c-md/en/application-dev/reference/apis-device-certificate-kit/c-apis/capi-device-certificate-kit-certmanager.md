@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the OpenHarmony Certificate Manager capabilities, including certificate and credential management operations, provided for applications.
+Provides certificate management capabilities, including querying and importing certificates and credentials for applications.
 
 **System capability**: SystemCapability.Security.CertificateManager
 
@@ -12,4 +12,4 @@ Describes the OpenHarmony Certificate Manager capabilities, including certificat
 
 | Name | Description |
 | -- | -- |
-| [cm_native_api.h](capi-cm-native-api-h.md) | Declares the APIs used to obtain details of specific certificates. |
+| [cm_native_api.h](capi-cm-native-api-h.md) | Defines APIs for querying the list and details of different types of certificates and credentials and importing USB key certificates. |

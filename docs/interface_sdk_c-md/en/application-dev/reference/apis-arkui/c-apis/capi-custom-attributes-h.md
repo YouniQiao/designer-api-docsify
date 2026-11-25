@@ -4,7 +4,7 @@
 
 Provides custom node event definitions for <b>NativeNode</b> APIs.
 
-**File to Include**: <arkui/custom_attributes.h>
+**File to Include**: <arkui/node_attributes/custom_attributes.h>
 
 **Library**: libace_ndk.z.so
 

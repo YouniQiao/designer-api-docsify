@@ -1,5 +1,23 @@
 # @ohos.multimedia.avInputCastPicker(AVInputCastPicker)
 
+The module provides the functionality to create an **AVInputCastPicker** component, which offers a unified entry for discovering and connecting recording devices.
+
+> **NOTE**
+ >
+ > - The Preview in DevEco Studio does not support actual recording device selection. To see the real effect, test on a real device. <!--Del-->
+ >
+ > - This component can only be used from the recording device selection screen, which needs to be implemented by OEM vendors.
+ >
+ > - In versions earlier than API version 26.0.0, this component can only be used on PCs and 2-in-1 devices. In API version 26.0.0 and later, this component can also be used on mobile phones and tablets. <!--DelEnd-->
+
+## Properties
+
+The [universal properties](../../apis-arkui/arkts-components/arkts-arkui-common-comp.md) are supported.
+
+## Events
+
+The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-comp.md) are supported.
+
 ## Modules to Import
 
 ```TypeScript

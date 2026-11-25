@@ -4,7 +4,7 @@
 interface HalftoneParam
 ```
 
-网点配置参数。
+网点的配置参数。
 
 **起始版本：** 26.1.0
 
