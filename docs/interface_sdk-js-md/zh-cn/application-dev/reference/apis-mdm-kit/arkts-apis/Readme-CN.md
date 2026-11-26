@@ -425,6 +425,7 @@
   - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getEnterpriseResetPolicy](arkts-mdm-securitymanager-getenterpriseresetpolicy-f.md)
+  - [getEnterpriseReSignatureCertificates](arkts-mdm-securitymanager-getenterpriseresignaturecertificates-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
   - [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md)
   - [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md)
@@ -468,6 +469,7 @@
   - [DeviceEncryptionStatus（系统接口）](arkts-mdm-securitymanager-deviceencryptionstatus-i-sys.md)<!--DelEnd-->
   - [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md)
   - [RemoveCredentialInfo](arkts-mdm-securitymanager-removecredentialinfo-i.md)
+  - [ReSignatureCertificateInfo](arkts-mdm-securitymanager-resignaturecertificateinfo-i.md)
   - [UserExtCredentialInfo](arkts-mdm-securitymanager-userextcredentialinfo-i.md)
   - [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md)
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)

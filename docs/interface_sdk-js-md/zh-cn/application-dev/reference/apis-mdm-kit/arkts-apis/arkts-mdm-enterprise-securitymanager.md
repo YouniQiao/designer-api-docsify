@@ -40,6 +40,7 @@ import { securityManager } from '@kit.MDMKit';
 | [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md#getdevicesecuritylevelpolicy-1) | 查询DSL切换策略 |
 | [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md#getdisallowedpermissions-1) | 获取指定用户下禁用的权限列表。 |
 | [getEnterpriseResetPolicy](arkts-mdm-securitymanager-getenterpriseresetpolicy-f.md#getenterpriseresetpolicy-1) | 获取企业复位策略。同步返回策略。 |
+| [getEnterpriseReSignatureCertificates](arkts-mdm-securitymanager-getenterpriseresignaturecertificates-f.md#getenterpriseresignaturecertificates-1) | 根据账号ID获取企业重签名证书信息。该接口返回信息同步，企业可通过该接口查询企业重签名证书详情的管理和有效性监控。 |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-1) | 获取外部来源扩展程序的管控策略。 |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-2) | 获取外部来源扩展程序的管控策略。 |
 | [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md#getpasswordlastchangedtime-1) | 根据账号ID获取最近一次修改密码时间。同步返回时间。企业可以通过该接口查询最近一次修改密码时间，用于密码策略审计和合规性检查。 |
@@ -95,6 +96,7 @@ import { securityManager } from '@kit.MDMKit';
 | [CertBlob](arkts-mdm-securitymanager-certblob-i.md) | 证书信息。 |
 | [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) | 设备锁屏口令策略。 |
 | [RemoveCredentialInfo](arkts-mdm-securitymanager-removecredentialinfo-i.md) | 移除凭证信息 |
+| [ReSignatureCertificateInfo](arkts-mdm-securitymanager-resignaturecertificateinfo-i.md) | 企业重签名证书信息。 |
 | [UserExtCredentialInfo](arkts-mdm-securitymanager-userextcredentialinfo-i.md) | 用户扩展凭据信息 |
 | [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md) | 水印属性。 |
 

@@ -862,6 +862,7 @@ Enumerates the photo quality prioritization strategies.
 | -- | -- |
 | CAMERA_PHOTO_QUALITY_PRIORITIZATION_HIGH_QUALITY = 0 | Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output.<br><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_HIGH_QUALITY = 0--><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_HIGH_QUALITY = 0-End--> |
 | CAMERA_PHOTO_QUALITY_PRIORITIZATION_SPEED = 1 | Focuses on performance, trading off image quality for faster capture times.<br><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_SPEED = 1--><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_SPEED = 1-End--> |
+| CAMERA_PHOTO_QUALITY_PRIORITIZATION_LOW_QUALITY = 2 | Low image quality first, targeting the shortest shooting time, while reducing image quality to minimize system overhead.<br>**Since**: 26.1.0<br><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_LOW_QUALITY = 2--><!--Device-CAMERA_PHOTO_QUALITY_PRIORITIZATION_LOW_QUALITY = 2-End--> |
 
 ### Camera_ControlCenterEffectType
 

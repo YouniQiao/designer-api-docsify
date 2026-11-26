@@ -1,4 +1,4 @@
-# @ohos.application.BackupExtensionAbility(BackupExtensionAbility)
+# @ohos.application.BackupExtensionAbility(Backup and Restore Extension Capability)
 
 ## Modules to Import
 

@@ -36,7 +36,7 @@
 - [Kernel Enhance Kit (13)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-kernel-enhance-kit/arkts-apis/arkts-kernelenhance-meminfo.md)
 - [Localization Kit (150)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-localization-kit/arkts-apis/arkts-localization-fontmanager.md)
 - [Location Kit (167)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability.md)
-- [Mdm Kit (530)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-accountmanager.md)
+- [Mdm Kit (532)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-accountmanager.md)
 - [Mechanic Kit (68)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-mechanic-distributedhardware-mechanicmanager.md)
 - [Media Kit (247)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)
 - [Media Library Kit (316)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent.md)

@@ -41,6 +41,7 @@ import { securityManager } from '@kit.MDMKit';
 | [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md#getdevicesecuritylevelpolicy-1) | Gets the device security level policy. |
 | [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md#getdisallowedpermissions-1) | Obtains the list of disabled permissions of a specified user. |
 | [getEnterpriseResetPolicy](arkts-mdm-securitymanager-getenterpriseresetpolicy-f.md#getenterpriseresetpolicy-1) | Obtains the enterprise reset policy. This API returns the policy synchronously. |
+| [getEnterpriseReSignatureCertificates](arkts-mdm-securitymanager-getenterpriseresignaturecertificates-f.md#getenterpriseresignaturecertificates-1) | Obtains enterprise re-signature certificate information based on the account ID. This API returns the information synchronously. Enterprises can use this API to query enterprise re-signature certificate details for certificate management and validity monitoring. |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-1) | Obtains the management policy for extensions from external sources. |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-2) | Obtains the management policy for extensions from external sources. |
 | [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md#getpasswordlastchangedtime-1) | Obtains the last password change time based on the account ID. This API returns the time synchronously. Enterprises can use this API to query the last password change time for password policy audit and compliance check. |
@@ -96,6 +97,7 @@ import { securityManager } from '@kit.MDMKit';
 | [CertBlob](arkts-mdm-securitymanager-certblob-i.md) | Represents the certificate information. |
 | [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) | Represents a device screen lock password policy. |
 | [RemoveCredentialInfo](arkts-mdm-securitymanager-removecredentialinfo-i.md) | Remove credential information. |
+| [ReSignatureCertificateInfo](arkts-mdm-securitymanager-resignaturecertificateinfo-i.md) | Indicates the enterprise re-signature certificate information. |
 | [UserExtCredentialInfo](arkts-mdm-securitymanager-userextcredentialinfo-i.md) | Use extended credential information. |
 | [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md) | Defines watermark properties. |
 

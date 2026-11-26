@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-corefilekit-->
 
-- [@ohos.application.BackupExtensionAbility(BackupExtensionAbility)](arkts-corefile-application-backupextensionability.md)
+- [@ohos.application.BackupExtensionAbility(Backup and Restore Extension Capability)](arkts-corefile-application-backupextensionability.md)
   - [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md)
   <!--Del-->
   - [BackupExtensionAbility(system api)](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md)<!--DelEnd-->

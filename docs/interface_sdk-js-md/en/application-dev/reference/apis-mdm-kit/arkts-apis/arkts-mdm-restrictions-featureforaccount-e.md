@@ -12,6 +12,22 @@ Enumerates the features that can be disabled or enabled for a specified user.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## APP_LOCK
+
+```TypeScript
+APP_LOCK = 16
+```
+
+App lock.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-APP_LOCK = 16--><!--Device-FeatureForAccount-APP_LOCK = 16-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## COLLABORATION_REMOTE_SHARE
 
 ```TypeScript

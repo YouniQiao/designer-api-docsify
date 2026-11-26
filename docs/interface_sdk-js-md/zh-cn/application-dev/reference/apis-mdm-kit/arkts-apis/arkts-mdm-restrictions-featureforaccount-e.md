@@ -12,6 +12,22 @@ enum FeatureForAccount
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## APP_LOCK
+
+```TypeScript
+APP_LOCK = 16
+```
+
+应用锁。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-APP_LOCK = 16--><!--Device-FeatureForAccount-APP_LOCK = 16-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## COLLABORATION_REMOTE_SHARE
 
 ```TypeScript
