@@ -6,9 +6,11 @@
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -50,12 +52,16 @@ enum ArkUI_GridItemAlignment
 
 GridItem对齐方式枚举。
 
+<!--Device-enum ArkUI_GridItemAlignment--><!--Device-enum ArkUI_GridItemAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| GRID_ITEM_ALIGNMENT_DEFAULT = 0 | Grid的默认对齐方式。 |
-| GRID_ITEM_ALIGNMENT_STRETCH = 1 | 以一行中的最高的GridItem作为其他GridItem的高度。 |
+| GRID_ITEM_ALIGNMENT_DEFAULT = 0 | Grid的默认对齐方式。<br><!--Device-GRID_ITEM_ALIGNMENT_DEFAULT = 0--><!--Device-GRID_ITEM_ALIGNMENT_DEFAULT = 0-End--> |
+| GRID_ITEM_ALIGNMENT_STRETCH = 1 | 以一行中的最高的GridItem作为其他GridItem的高度。<br><!--Device-GRID_ITEM_ALIGNMENT_STRETCH = 1--><!--Device-GRID_ITEM_ALIGNMENT_STRETCH = 1-End--> |
 
 ### ArkUI_GridItemStyle
 
@@ -67,12 +73,16 @@ enum ArkUI_GridItemStyle
 
 GridItem样式枚举。
 
+<!--Device-enum ArkUI_GridItemStyle--><!--Device-enum ArkUI_GridItemStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| GRID_ITEM_STYLE_NONE = 0 | 无样式。 |
-| GRID_ITEM_STYLE_PLAIN = 1 | 显示Hover、Press态样式。 |
+| GRID_ITEM_STYLE_NONE = 0 | 无样式。<br><!--Device-GRID_ITEM_STYLE_NONE = 0--><!--Device-GRID_ITEM_STYLE_NONE = 0-End--> |
+| GRID_ITEM_STYLE_PLAIN = 1 | 显示Hover、Press态样式。<br><!--Device-GRID_ITEM_STYLE_PLAIN = 1--><!--Device-GRID_ITEM_STYLE_PLAIN = 1-End--> |
 
 
 ## 函数说明
@@ -86,6 +96,10 @@ ArkUI_GridLayoutOptions* OH_ArkUI_GridLayoutOptions_Create()
 **描述：**
 
 创建Grid布局选项。使用完毕后调用OH_ArkUI_GridLayoutOptions_Dispose销毁。
+
+<!--Device-ArkUI_GridLayoutOptions* OH_ArkUI_GridLayoutOptions_Create()--><!--Device-ArkUI_GridLayoutOptions* OH_ArkUI_GridLayoutOptions_Create()-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -105,6 +119,10 @@ void OH_ArkUI_GridLayoutOptions_Dispose(ArkUI_GridLayoutOptions* option)
 
 销毁Grid布局选项并释放资源。
 
+<!--Device-void OH_ArkUI_GridLayoutOptions_Dispose(ArkUI_GridLayoutOptions* option)--><!--Device-void OH_ArkUI_GridLayoutOptions_Dispose(ArkUI_GridLayoutOptions* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -123,6 +141,10 @@ int32_t OH_ArkUI_GridLayoutOptions_SetIrregularIndexes(ArkUI_GridLayoutOptions* 
 
 设置Grid中不规则GridItem的索引数组。
 
+<!--Device-int32_t OH_ArkUI_GridLayoutOptions_SetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t size)--><!--Device-int32_t OH_ArkUI_GridLayoutOptions_SetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t size)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -137,7 +159,7 @@ int32_t OH_ArkUI_GridLayoutOptions_SetIrregularIndexes(ArkUI_GridLayoutOptions* 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)  函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)  函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_GridLayoutOptions_GetIrregularIndexes()
 
@@ -148,6 +170,10 @@ int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* 
 **描述：**
 
 获取Grid中不规则GridItem的索引数组。当不设置OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback时， irregularIndexes中GridItem的默认大小为垂直滚动Grid的一整行或水平滚动Grid的一整列。
+
+<!--Device-int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t* size)--><!--Device-int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t* size)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -163,7 +189,7 @@ int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-native-type-h.md#arkui_errorcode) 数组大小不够。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) 数组大小不够。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback()
 
@@ -174,6 +200,10 @@ void OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback(ArkUI_Gr
 **描述：**
 
 Grid布局选项通过GridItem索引获取指定Item占用的行列数。
+
+<!--Device-void OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemSize (*callback)(int32_t itemIndex, void* userData))--><!--Device-void OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemSize (*callback)(int32_t itemIndex, void* userData))-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -194,6 +224,10 @@ void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutO
 **描述：**
 
 Grid布局选项通过GridItem索引获取指定Item的起始行列和占用的行列数。
+
+<!--Device-void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemRect (*callback)(int32_t itemIndex, void* userData))--><!--Device-void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemRect (*callback)(int32_t itemIndex, void* userData))-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 

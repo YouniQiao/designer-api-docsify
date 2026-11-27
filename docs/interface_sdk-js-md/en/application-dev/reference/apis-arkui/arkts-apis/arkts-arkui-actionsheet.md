@@ -15,7 +15,7 @@
 | [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md) | Provides button style configuration for the dialog box. |
 | [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md) | Defines the offset of the dialog box relative to the position of **alignment**. |
 | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Provides **ActionSheet** configuration options. |
-| [DismissDialogAction](arkts-arkui-actionsheet-comp-dismissdialogaction-i.md) | Defines the information about the dialog box dismissal. |
+| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Defines the information about the dialog box dismissal. |
 | [SheetInfo](arkts-arkui-sheetinfo-i.md) | Defines the option content in the dialog box. You can configure the text, icon, and callback for each option. |
 
 <!--Del-->

@@ -13,7 +13,7 @@
 | Name | Description |
 | --- | --- |
 | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | Defines the style of the custom dialog box. |
-| [DismissDialogAction](arkts-arkui-customdialog-comp-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
+| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 
 <!--Del-->
 ### Interfaces(System API)

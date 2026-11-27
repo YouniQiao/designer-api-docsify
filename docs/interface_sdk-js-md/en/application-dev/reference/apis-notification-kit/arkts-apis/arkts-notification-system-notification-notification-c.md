@@ -10,7 +10,7 @@ Manages notifications.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification-notification-depr.md)
+**Substitutes:** [notification/notification](arkts-notification-notification.md)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -34,7 +34,7 @@ Displays a notification.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification-notification-depr.md)
+**Substitutes:** [notification/notification](arkts-notification-notification.md)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

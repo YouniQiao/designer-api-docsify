@@ -363,7 +363,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses | Yes | Border radius of the security component. <br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br>The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
+| radius | [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Yes | Border radius of the security component. <br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br>The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -1167,7 +1167,7 @@ Sets the padding of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md) | Yes | Padding of the security component. <br>Default value: 8 vp for the top and bottom and 16 vp for the left and right. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
+| value | Padding &#124; [Dimension](arkts-arkui-dimension-t.md) | Yes | Padding of the security component. <br>Default value: 8 vp for the top and bottom and 16 vp for the left and right. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
 
 **Return value:**
 

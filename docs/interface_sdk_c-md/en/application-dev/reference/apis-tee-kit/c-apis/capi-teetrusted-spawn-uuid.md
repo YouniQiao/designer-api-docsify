@@ -1,18 +1,20 @@
 # spawn_uuid
 
 ```c
-struct spawn_uuid {...}
+typedef struct spawn_uuid {...} spawn_uuid_t
 ```
 
 ## Overview
 
 Defines the type of spawn UUID.
 
+<!--Device-struct spawn_uuid {...}--><!--Device-struct spawn_uuid {...}-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -22,7 +24,7 @@ Defines the type of spawn UUID.
 
 | Name | Description |
 | -- | -- |
-| uint64_t uuid_valid | Indicates if the UUID is valid. |
-| TEE_UUID uuid | The spawn UUID. |
+| uint64_t uuid_valid | Indicates if the UUID is valid.<br><!--Device-uint64_t uuid_valid--><!--Device-uint64_t uuid_valid-End--> |
+| [TEE_UUID](capi-teetrusted-tee-uuid.md) uuid | The spawn UUID.<br><!--Device-TEE_UUID uuid--><!--Device-TEE_UUID uuid-End--> |
 
 

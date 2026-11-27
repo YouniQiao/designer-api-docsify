@@ -6,9 +6,11 @@
 
 **库：** libos_account_ndk.so
 
+**系统能力：** SystemCapability.Account.OsAccount
+
 **起始版本：** 12
 
-**相关模块：** [OsAccount](capi-osaccount.md)
+**相关模块：** [OsAccount](capi-basic-services-kit-osaccount.md)
 
 ## 汇总
 
@@ -30,6 +32,10 @@ OsAccount_ErrCode OH_OsAccount_GetName(char *buffer, size_t buffer_size)
 **描述：**
 
 获取调用方进程所属的系统账号的名称。
+
+<!--Device-OsAccount_ErrCode OH_OsAccount_GetName(char *buffer, size_t buffer_size)--><!--Device-OsAccount_ErrCode OH_OsAccount_GetName(char *buffer, size_t buffer_size)-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
 
 **起始版本：** 12
 
@@ -55,6 +61,10 @@ OsAccount_ErrCode OH_OsAccount_GetNameByLocalId(int32_t localId, char *name, siz
 **描述：**
 
 根据本地ID获取目标系统账号的名称。
+
+<!--Device-OsAccount_ErrCode OH_OsAccount_GetNameByLocalId(int32_t localId, char *name, size_t name_size)--><!--Device-OsAccount_ErrCode OH_OsAccount_GetNameByLocalId(int32_t localId, char *name, size_t name_size)-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 

@@ -315,7 +315,7 @@ When the Length type is used: Invalid input values will trigger a fallback to th
 
 When the BorderRadiuses or LocalizedBorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -824,7 +824,7 @@ Outline color of the menu border.
 
 Default value: **'#19ffffff'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md)
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **Default:** '#19ffffff'
 
@@ -852,7 +852,7 @@ Default value: **0vp**
 
 Percentage values are not supported. **outlineWidth** is mandatory for customizing an outline effect.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths
 
 **Default:** 0vp - Percentage values are not supported.
 

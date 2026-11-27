@@ -45,27 +45,17 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | 圆角类型，用于描述组件边框圆角半径。 |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | 定义混合颜色。 |
 | [Degree](arkts-arkui-degree-t.md) | 角度类型，用于描述以deg为单位的角度。 |
 | [Dimension](arkts-arkui-dimension-t.md) | 长度类型，用于描述尺寸单位。 |
-| [EdgeColors](arkts-arkui-edgecolors-t.md) | 边框颜色，用于描述组件边框四条边的颜色。 |
-| [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) | 引入该对象时，至少传入一个参数。 |
-| [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) | 引入该对象时，至少传入一个参数。 |
-| [EdgeStyles](arkts-arkui-edgestyles-t.md) | 边框样式，用于描述组件边框四条边的样式。 |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | 边框宽度类型，用于描述组件边框不同方向的宽度。 |
-| [EdgeWidths](arkts-arkui-edgewidths-t.md) | 边框宽度类型，用于描述组件边框不同方向的宽度。 |
 | [FP](arkts-arkui-fp-t.md) | 长度类型，用于描述以fp像素单位为单位的长度。 |
 | [Length](arkts-arkui-length-t.md) | 长度类型，用于描述尺寸单位。 |
-| [LengthConstrain](arkts-arkui-lengthconstrain-t.md) | 长度约束，用于对组件最大、最小长度做限制。 |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 定义长度属性。 |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 定义长度属性单位。 |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | 外边距类型，用于描述组件不同方向的外边距。 |
 | [LPX](arkts-arkui-lpx-t.md) | 长度类型，用于描述以lpx像素单位为单位的长度。 |
 | [Margin](arkts-arkui-margin-t.md) | 外边距类型，用于描述组件不同方向的外边距。 |
-| [Offset](arkts-arkui-offset-t.md) | 相对布局完成位置坐标偏移量。 |
-| [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) | 引入该对象时，至少传入一个参数。 |
-| [Padding](arkts-arkui-padding-t.md) | 内边距类型，用于描述组件不同方向的内边距。 |
 | [Percentage](arkts-arkui-percentage-t.md) | 长度类型，用于描述以百分比单位为单位的长度。 |
 | [PX](arkts-arkui-px-t.md) | 长度类型，用于描述以px像素单位为单位的长度。 |
 | [Resource](arkts-arkui-resource-t.md) | 资源引用类型，用于设置组件属性的值。各类资源文件，需要放入特定子目录中存储管理，资源目录的示例请参考[资源分类](../../../quick-start/resource-categories-and-access.md#资源分类)。 |

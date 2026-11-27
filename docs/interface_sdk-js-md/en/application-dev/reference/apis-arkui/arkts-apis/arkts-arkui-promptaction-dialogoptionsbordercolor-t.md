@@ -19,4 +19,4 @@ Defines the allowed data types for specifying the background border color of a d
 | Type | Description |
 | --- | --- |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) |  |
-| [EdgeColors](arkts-arkui-edgecolors-t.md) |  |
+| EdgeColors |  |

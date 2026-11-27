@@ -4,7 +4,7 @@
 interface GattServer
 ```
 
-Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-bluetooth-ble-creategattserver-f.md) to create an GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md) to create an GattServer instance.
 
 **Since:** 7
 

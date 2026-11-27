@@ -1,18 +1,20 @@
 # OH_AVCodecBufferAttr
 
 ```c
-struct OH_AVCodecBufferAttr {...}
+typedef struct OH_AVCodecBufferAttr {...} OH_AVCodecBufferAttr
 ```
 
 ## 概述
 
 定义OH_AVCodec的缓冲区描述信息。
 
+<!--Device-struct OH_AVCodecBufferAttr {...}--><!--Device-struct OH_AVCodecBufferAttr {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **起始版本：** 9
 
-**相关模块：** [Core](capi-core.md)
+**相关模块：** [Core](capi-avcodec-kit-core.md)
 
 **所在头文件：** [native_avbuffer_info.h](capi-native-avbuffer-info-h.md)
 
@@ -22,9 +24,9 @@ struct OH_AVCodecBufferAttr {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int64_t pts | 此缓冲区的显示时间戳（以微秒为单位）。<br>**起始版本：** 9 |
-| int32_t size | 缓冲区中包含的数据的大小（以字节为单位）。<br>**起始版本：** 9 |
-| int32_t offset | 此缓冲区中有效数据的起始偏移量。<br>**起始版本：** 9 |
-| uint32_t flags | 此缓冲区具有的标志，请参阅[OH_AVCodecBufferFlags](capi-native-avbuffer-info-h.md#oh_avcodecbufferflags)。<br>**起始版本：** 9 |
+| int64_t pts | 此缓冲区的显示时间戳（以微秒为单位）。<br>**起始版本：** 9<br><!--Device-int64_t pts--><!--Device-int64_t pts-End--> |
+| int32_t size | 缓冲区中包含的数据的大小（以字节为单位）。<br>**起始版本：** 9<br><!--Device-int32_t size--><!--Device-int32_t size-End--> |
+| int32_t offset | 此缓冲区中有效数据的起始偏移量。<br>**起始版本：** 9<br><!--Device-int32_t offset--><!--Device-int32_t offset-End--> |
+| uint32_t flags | 此缓冲区具有的标志，请参阅[OH_AVCodecBufferFlags](capi-native-avbuffer-info-h.md#oh_avcodecbufferflags)。<br>**起始版本：** 9<br><!--Device-uint32_t flags--><!--Device-uint32_t flags-End--> |
 
 

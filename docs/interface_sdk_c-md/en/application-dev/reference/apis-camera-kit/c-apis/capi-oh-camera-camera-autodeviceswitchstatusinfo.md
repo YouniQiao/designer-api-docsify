@@ -1,18 +1,20 @@
 # Camera_AutoDeviceSwitchStatusInfo
 
 ```c
-struct Camera_AutoDeviceSwitchStatusInfo {...}
+typedef struct Camera_AutoDeviceSwitchStatusInfo {...} Camera_AutoDeviceSwitchStatusInfo
 ```
 
 ## Overview
 
 Auto device switch status info.
 
+<!--Device-struct Camera_AutoDeviceSwitchStatusInfo {...}--><!--Device-struct Camera_AutoDeviceSwitchStatusInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 13
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ Auto device switch status info.
 
 | Name | Description |
 | -- | -- |
-| bool isDeviceSwitched | is device switched. |
-| bool isDeviceCapabilityChanged | is device capability changed. |
+| bool isDeviceSwitched | is device switched.<br><!--Device-bool isDeviceSwitched--><!--Device-bool isDeviceSwitched-End--> |
+| bool isDeviceCapabilityChanged | is device capability changed.<br><!--Device-bool isDeviceCapabilityChanged--><!--Device-bool isDeviceCapabilityChanged-End--> |
 
 

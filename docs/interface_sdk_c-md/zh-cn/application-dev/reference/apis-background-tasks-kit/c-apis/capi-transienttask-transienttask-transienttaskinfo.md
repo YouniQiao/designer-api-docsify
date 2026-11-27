@@ -1,18 +1,20 @@
 # TransientTask_TransientTaskInfo
 
 ```c
-struct TransientTask_TransientTaskInfo {...}
+typedef struct TransientTask_TransientTaskInfo {...} TransientTask_TransientTaskInfo
 ```
 
 ## 概述
 
 定义所有短时任务信息结构体。用于返回当日剩余总配额和已申请的所有短时任务信息。
 
+<!--Device-struct TransientTask_TransientTaskInfo {...}--><!--Device-struct TransientTask_TransientTaskInfo {...}-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **起始版本：** 20
 
-**相关模块：** [TransientTask](capi-transienttask.md)
+**相关模块：** [TransientTask](capi-background-tasks-kit-transienttask.md)
 
 **所在头文件：** [transient_task_type.h](capi-transient-task-type-h.md)
 
@@ -22,7 +24,7 @@ struct TransientTask_TransientTaskInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t remainingQuota | 当日剩余短时任务总时间配额。单位：ms。取值范围：[0, 600000]。<br>**起始版本：** 20 |
-| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] | 已申请的所有短时任务信息（同一时间最多3个）。包括短时任务请求ID、剩余时间（单位：ms）。<br>**起始版本：** 20 |
+| int32_t remainingQuota | 当日剩余短时任务总时间配额。单位：ms。取值范围：[0, 600000]。<br>**起始版本：** 20<br><!--Device-int32_t remainingQuota--><!--Device-int32_t remainingQuota-End--> |
+| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] | 已申请的所有短时任务信息（同一时间最多3个）。包括短时任务请求ID、剩余时间（单位：ms）。<br>**起始版本：** 20<br><!--Device-TransientTask_DelaySuspendInfo transientTasks[TRANSIENT_TASK_MAX_NUM]--><!--Device-TransientTask_DelaySuspendInfo transientTasks[TRANSIENT_TASK_MAX_NUM]-End--> |
 
 

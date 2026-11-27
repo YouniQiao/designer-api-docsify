@@ -1,18 +1,20 @@
 # NativeChildProcess_Args
 
 ```c
-struct NativeChildProcess_Args {...}
+typedef struct NativeChildProcess_Args {...} NativeChildProcess_Args
 ```
 
 ## 概述
 
 传递给子进程的参数。
 
+<!--Device-struct NativeChildProcess_Args {...}--><!--Device-struct NativeChildProcess_Args {...}-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 13
 
-**相关模块：** [ChildProcess](capi-childprocess.md)
+**相关模块：** [ChildProcess](capi-ability-kit-childprocess.md)
 
 **所在头文件：** [native_child_process.h](capi-native-child-process-h.md)
 
@@ -22,7 +24,7 @@ struct NativeChildProcess_Args {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| char* entryParams | 入口参数，大小不能超过150KB。 |
-| [struct NativeChildProcess_FdList](capi-childprocess-nativechildprocess-fdlist.md) fdList | 传递给子进程的文件描述符信息列表。 |
+| char* entryParams | 入口参数，大小不能超过150KB。<br><!--Device-char* entryParams--><!--Device-char* entryParams-End--> |
+| [struct NativeChildProcess_FdList](capi-childprocess-nativechildprocess-fdlist.md) fdList | 传递给子进程的文件描述符信息列表。<br><!--Device-struct NativeChildProcess_FdList fdList--><!--Device-struct NativeChildProcess_FdList fdList-End--> |
 
 

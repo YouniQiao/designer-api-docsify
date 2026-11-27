@@ -80,7 +80,7 @@ radius?: Dimension | BorderRadiuses
 
 Corner radius of the text background. No rounded corners by default.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; BorderRadiuses
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 

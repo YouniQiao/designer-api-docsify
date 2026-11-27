@@ -6,7 +6,7 @@ typedef struct InputMethod_PrivateCommand InputMethod_PrivateCommand
 
 ## 概述
 
-私有命令结构体，采用key-value机制，作为输入框与输入法应用之间传递私有数据的载体。可用于传递自定义指令、扩展能力参数和特 定场景数据，提升输入法功能的扩展性和兼容性。每个PrivateCommand实例包含一个key（标识符字符串）和一个value（布尔值、整数或字符 串，三种类型只能选择一种），value的数据类型由InputMethod_CommandValueType标识。 <br> <br>私有命令结构体，采用key-value机制，作为输入框与输入法应用之间传递私有数据的载体。可用于传递自定义指令、扩展能力参数和 特定场景数据，提升输入法功能的扩展性和兼容性。每个PrivateCommand实例包含一个key（标识符字符串）和一个value（布尔值、整数或字符 串，三种类型只能选择一种），value的数据类型由InputMethod_CommandValueType标识。 <br> <br>用途：在输入法应用与编辑框客户端之间传递私有数据，实现双方的自定义通信。输入法应用通过 OH_InputMethodProxy_SendPrivateCommand向编辑框客户端发送私有指令；编辑框客户端通过 OH_TextEditorProxy_ReceivePrivateCommandFunc回调接收来自输入法应用的私有指令。每个PrivateCommand实例携带一条key-value私有 数据，最多可同时发送5个实例，单次发送的所有私有数据与key值的大小总和限制为32KB。 <br> <br>使用场景： <br>- 输入法应用向编辑框发送私有指令：输入法应用创建PrivateCommand实例，设置key和value后，通过 [OH_InputMethodProxy_SendPrivateCommand](capi-inputmethod-inputmethod-proxy-capi-h. md#oh_inputmethodproxy_sendprivatecommand)发送给编辑框客户端。 <br>- 编辑框客户端接收私有指令：编辑框客户端在[OH_TextEditorProxy_ReceivePrivateCommandFunc] (capi-inputmethod-text-editor-proxy-capi-h.md#oh_texteditorproxy_receiveprivatecommandfunc)回调中接收PrivateCommand实 例数组，遍历数组解析每个实例的key和value。 <br> <br>相关函数：<br>
+私有命令结构体，采用key-value机制，作为输入框与输入法应用之间传递私有数据的载体。可用于传递自定义指令、扩展能力参数和特 定场景数据，提升输入法功能的扩展性和兼容性。每个PrivateCommand实例包含一个key（标识符字符串）和一个value（布尔值、整数或字符 串，三种类型只能选择一种），value的数据类型由InputMethod_CommandValueType标识。 <br> <br>用途：在输入法应用与编辑框客户端之间传递私有数据，实现双方的自定义通信。输入法应用通过 OH_InputMethodProxy_SendPrivateCommand向编辑框客户端发送私有指令；编辑框客户端通过 OH_TextEditorProxy_ReceivePrivateCommandFunc回调接收来自输入法应用的私有指令。每个PrivateCommand实例携带一条key-value私有 数据，最多可同时发送5个实例，单次发送的所有私有数据与key值的大小总和限制为32KB。 <br> <br>使用场景： <br>- 输入法应用向编辑框发送私有指令：输入法应用创建PrivateCommand实例，设置key和value后，通过 [OH_InputMethodProxy_SendPrivateCommand](capi-inputmethod-inputmethod-proxy-capi-h. md#oh_inputmethodproxy_sendprivatecommand)发送给编辑框客户端。 <br>- 编辑框客户端接收私有指令：编辑框客户端在[OH_TextEditorProxy_ReceivePrivateCommandFunc] (capi-inputmethod-text-editor-proxy-capi-h. md#oh_texteditorproxy_receiveprivatecommandfunc)回调中接收PrivateCommand实 例数组，遍历数组解析每个实例的key和value。 <br> <br>相关函数：<br>
 \| 函数 \| 说明 \|
 \| --- \| --- \|
 \| [OH_PrivateCommand_Create](capi-inputmethod-private-command-capi-h.md#oh_privatecommand_create) \| 创建 InputMethod_PrivateCommand实例。\|
@@ -26,13 +26,15 @@ typedef struct InputMethod_PrivateCommand InputMethod_PrivateCommand
 \| [OH_TextEditorProxy_ReceivePrivateCommandFunc](capi-inputmethod-text-editor-proxy-capi-h. md#oh_texteditorproxy_receiveprivatecommandfunc) \| 编辑框客户端接收私有指令的回调函数，PrivateCommand实例数组作为参数传 入。回调返回后实例内存被释放。 \| <br> <br>相关枚举：<br>
 \| 枚举 \| 说明 \|
 \| --- \| --- \|
-\| [InputMethod_CommandValueType](capi-inputmethod-types-capi-h.md# inputmethod_commandvaluetype) \| PrivateCommand中value的数据类型枚举（NONE/STRING/BOOL/INT32）。 \|
+\| [InputMethod_CommandValueType](capi-inputmethod-types-capi-h. md#inputmethod_commandvaluetype) \| PrivateCommand中value的数据类型枚举（NONE/STRING/BOOL/INT32）。 \| <br> <br>句柄与所有权：仅可使用本API创建的有效句柄或框架提供的借用句柄；仅可销毁独立创建的对象。 回调提供的对象和TextConfig的子对象视图均为借用对象。访问接口对未注册或已失效的句柄返回IME_ERR_PARAMCHECK， NULL参数仍按原有规则返回错误。 <br>保护边界：生命周期检查不保证对象成员的线程安全，也不能在地址复用后识别所有失效地址。 对象销毁后应将指针置空；不得在回调结束后保留回调对象。
+
+<!--Device-typedef struct InputMethod_PrivateCommand InputMethod_PrivateCommand--><!--Device-typedef struct InputMethod_PrivateCommand InputMethod_PrivateCommand-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
 
-**相关模块：** [InputMethod](capi-inputmethod.md)
+**相关模块：** [InputMethod](capi-ime-kit-inputmethod.md)
 
 **所在头文件：** [inputmethod_private_command_capi.h](capi-inputmethod-private-command-capi-h.md)
 

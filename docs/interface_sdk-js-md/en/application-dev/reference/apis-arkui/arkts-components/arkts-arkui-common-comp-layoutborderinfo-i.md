@@ -24,7 +24,7 @@ borderWidth: EdgeWidths
 
 Border width type, used to describe the width of the component border in different directions.<br>Unit: vp.
 
-**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md)
+**Type:** EdgeWidths
 
 **Since:** 9
 
@@ -68,7 +68,7 @@ padding: Padding
 
 Padding type, used to describe the padding of the component in different directions.<br>Unit: vp.
 
-**Type:** [Padding](../arkts-apis/arkts-arkui-padding-t.md)
+**Type:** Padding
 
 **Since:** 9
 

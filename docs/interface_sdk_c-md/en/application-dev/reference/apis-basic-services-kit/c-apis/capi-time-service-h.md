@@ -6,25 +6,21 @@ Declares the APIs for obtaining the time zone information.
 
 **Library**: libtime_service_ndk.so
 
+**System capability**: SystemCapability.MiscServices.Time
+
 **Since**: 12
 
-**Related module**: [TimeService](capi-timeservice.md)
+**Related module**: [TimeService](capi-basic-services-kit-timeservice.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [TimeService_ErrCode](#timeservice_errcode) | TimeService_ErrCode | Enumerates the error codes. |
 
-### Macro
-
-| Name | Description |
-| -- | -- |
-| TIME_SERVICE_H | Declares the APIs for obtaining the time zone information.<br>**Since**: 12<br>**System capability**: SystemCapability.MiscServices.Time |
-
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -42,13 +38,17 @@ enum TimeService_ErrCode
 
 Enumerates the error codes.
 
+<!--Device-enum TimeService_ErrCode--><!--Device-enum TimeService_ErrCode-End-->
+
+**System capability**: SystemCapability.MiscServices.Time
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| TIMESERVICE_ERR_OK = 0 | Operation successful. |
-| TIMESERVICE_ERR_INTERNAL_ERROR = 13000001 | Failed to obtain system parameters. |
-| TIMESERVICE_ERR_INVALID_PARAMETER = 13000002 | Invalid parameter. |
+| TIMESERVICE_ERR_OK = 0 | Operation successful.<br><!--Device-TIMESERVICE_ERR_OK = 0--><!--Device-TIMESERVICE_ERR_OK = 0-End--> |
+| TIMESERVICE_ERR_INTERNAL_ERROR = 13000001 | Failed to obtain system parameters.<br><!--Device-TIMESERVICE_ERR_INTERNAL_ERROR = 13000001--><!--Device-TIMESERVICE_ERR_INTERNAL_ERROR = 13000001-End--> |
+| TIMESERVICE_ERR_INVALID_PARAMETER = 13000002 | Invalid parameter.<br><!--Device-TIMESERVICE_ERR_INVALID_PARAMETER = 13000002--><!--Device-TIMESERVICE_ERR_INVALID_PARAMETER = 13000002-End--> |
 
 
 ## Function description
@@ -62,6 +62,10 @@ TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)
 **Description**
 
 Obtains the current system time zone.
+
+<!--Device-TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)--><!--Device-TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)-End-->
+
+**System capability**: SystemCapability.MiscServices.Time
 
 **Since**: 12
 

@@ -100,7 +100,6 @@ import { statistics } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Defines the historical traffic statistics of the specified application. |
 | [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | Defines the historical traffic statistics of all applications. |
 <!--DelEnd-->
 

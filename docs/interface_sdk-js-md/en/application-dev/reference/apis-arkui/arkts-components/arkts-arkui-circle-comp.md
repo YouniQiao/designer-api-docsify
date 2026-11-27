@@ -35,7 +35,7 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 ## Circle
 
 ```TypeScript
-new Circle(value?: CircleOptions)
+Circle(value?: CircleOptions)
 ```
 
 Creates a circle. After the call, a **Circle** object is created, and its width and height can be set.

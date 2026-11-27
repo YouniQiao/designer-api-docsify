@@ -8,11 +8,13 @@ typedef struct ffrt_rwlockattr_t {...} ffrt_rwlockattr_t
 
 Defines the rwlock attribute structure used to store rwlock attribute information.
 
+<!--Device-typedef struct ffrt_rwlockattr_t {...} ffrt_rwlockattr_t--><!--Device-typedef struct ffrt_rwlockattr_t {...} ffrt_rwlockattr_t-End-->
+
 **System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 
-**Related module**: [FFRT](capi-ffrt.md)
+**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 **Header file**: [type_def.h](capi-type-def-h.md)
 
@@ -22,6 +24,6 @@ Defines the rwlock attribute structure used to store rwlock attribute informatio
 
 | Name | Description |
 | -- | -- |
-| long storage | Internal storage backing the rwlock attribute. Do not access directly; direct access may cause the rwlock attribute to become invalid. |
+| long storage | Internal storage backing the rwlock attribute. Do not access directly; direct access may cause the rwlock attribute to become invalid.<br><!--Device-long storage--><!--Device-long storage-End--> |
 
 

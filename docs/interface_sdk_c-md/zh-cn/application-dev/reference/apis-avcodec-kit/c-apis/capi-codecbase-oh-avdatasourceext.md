@@ -1,18 +1,20 @@
 # OH_AVDataSourceExt
 
 ```c
-struct OH_AVDataSourceExt {...}
+typedef struct OH_AVDataSourceExt {...} OH_AVDataSourceExt
 ```
 
 ## 概述
 
 用户自定义数据源，回调支持通过userData传递用户自定义数据。
 
+<!--Device-struct OH_AVDataSourceExt {...}--><!--Device-struct OH_AVDataSourceExt {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 20
 
-**相关模块：** [CodecBase](capi-codecbase.md)
+**相关模块：** [CodecBase](capi-avcodec-kit-codecbase.md)
 
 **所在头文件：** [native_avcodec_base.h](capi-native-avcodec-base-h.md)
 
@@ -22,7 +24,7 @@ struct OH_AVDataSourceExt {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int64_t size | 数据源的总大小。 |
-| [OH_AVDataSourceReadAtExt](capi-native-avcodec-base-h.md#oh_avdatasourcereadatext) readAt | 数据源的数据回调。 |
+| int64_t size | 数据源的总大小，单位为字节。<br>**起始版本：** 20<br><!--Device-int64_t size--><!--Device-int64_t size-End--> |
+| [OH_AVDataSourceReadAtExt](capi-native-avcodec-base-h.md#oh_avdatasourcereadatext) readAt | 数据源的数据读取回调。<br>**起始版本：** 20<br><!--Device-OH_AVDataSourceReadAtExt readAt--><!--Device-OH_AVDataSourceReadAtExt readAt-End--> |
 
 

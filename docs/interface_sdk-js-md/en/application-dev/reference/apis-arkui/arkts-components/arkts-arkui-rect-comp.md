@@ -43,7 +43,7 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 ## Rect
 
 ```TypeScript
-new Rect(
+Rect(
     options?: RectOptions | RoundedRectOptions,
   )
 ```

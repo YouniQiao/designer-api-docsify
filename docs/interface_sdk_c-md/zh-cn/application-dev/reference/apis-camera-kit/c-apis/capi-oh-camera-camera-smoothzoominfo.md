@@ -1,18 +1,20 @@
 # Camera_SmoothZoomInfo
 
 ```c
-struct Camera_SmoothZoomInfo {...}
+typedef struct Camera_SmoothZoomInfo {...} Camera_SmoothZoomInfo
 ```
 
 ## 概述
 
 平滑变焦参数信息。
 
+<!--Device-struct Camera_SmoothZoomInfo {...}--><!--Device-struct Camera_SmoothZoomInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,6 +24,6 @@ struct Camera_SmoothZoomInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t duration | 平滑变焦总时长（以毫秒为单位）。 |
+| int32_t duration | 平滑变焦总时长（以毫秒为单位）。<br><!--Device-int32_t duration--><!--Device-int32_t duration-End--> |
 
 

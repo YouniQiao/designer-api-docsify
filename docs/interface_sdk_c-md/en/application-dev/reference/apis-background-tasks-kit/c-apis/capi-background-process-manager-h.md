@@ -2,26 +2,28 @@
 
 ## Overview
 
-The **background_process_manager.h** file declares the APIs for background child process management. You can use these APIs to suppress and unsuppress child processes to prevent child processes from occupying too many system resources and causing system stuttering. The APIs take effect only for the child processes created through OH_Ability_StartNativeChildProcess.
+The **background_process_manager.h** file declares the APIs for background child process management. You can use these APIs to suppress and unsuppress child processes to prevent child processes from occupying too many system resources and causing system stuttering. The APIs take effect only for the child processes created through [OH_Ability_StartNativeChildProcess](../../apis-ability-kit/c-apis/capi-native-child-process-h.md#oh_ability_startnativechildprocess).
 
-**Include**: <background_process_manager/background_process_manager.h>
+**File to Include**: <background_process_manager/background_process_manager.h>
 
 **Library**: libbackground_process_manager.z.so
 
+**System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
+
 **Since**: 17
 
-**Related module**: [BackgroundProcessManager](capi-backgroundprocessmanager.md)
+**Related module**: [BackgroundProcessManager](capi-background-tasks-kit-backgroundprocessmanager.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [BackgroundProcessManager_ProcessPriority](#backgroundprocessmanager_processpriority) | BackgroundProcessManager_ProcessPriority | Enumerates child process priorities. |
 | [BackgroundProcessManager_ErrorCode](#backgroundprocessmanager_errorcode) | BackgroundProcessManager_ErrorCode | Enumerates the error codes used by the background child process management. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -40,12 +42,16 @@ enum BackgroundProcessManager_ProcessPriority
 
 Enumerates child process priorities.
 
+<!--Device-enum BackgroundProcessManager_ProcessPriority--><!--Device-enum BackgroundProcessManager_ProcessPriority-End-->
+
+**System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
+
 **Since**: 17
 
 | Enum item | Description |
 | -- | -- |
-| PROCESS_BACKGROUND = 1 | Compared with **PROCESS_INACTIVE**, this priority has a more obvious suppression effect. Child processes can obtain less CPU resources. You are advised to set this priority when executing background child processes that cannot be perceived by users, such as background image-text pages.<br>**Since**: 17 |
-| PROCESS_INACTIVE = 2 | You are advised to set this priority when executing background child processes that can be perceived by users, such as audio playback and navigation.<br>**Since**: 17 |
+| PROCESS_BACKGROUND = 1 | Compared with **PROCESS_INACTIVE**, this priority has a more obvious suppression effect. Child processes can obtain less CPU resources. You are advised to set this priority when executing background child processes that cannot be perceived by users, such as background image-text pages.<br>**Since**: 17<br><!--Device-PROCESS_BACKGROUND = 1--><!--Device-PROCESS_BACKGROUND = 1-End--> |
+| PROCESS_INACTIVE = 2 | You are advised to set this priority when executing background child processes that can be perceived by users, such as audio playback and navigation.<br>**Since**: 17<br><!--Device-PROCESS_INACTIVE = 2--><!--Device-PROCESS_INACTIVE = 2-End--> |
 
 ### BackgroundProcessManager_ErrorCode
 
@@ -57,13 +63,17 @@ enum BackgroundProcessManager_ErrorCode
 
 Enumerates the error codes used by the background child process management.
 
+<!--Device-enum BackgroundProcessManager_ErrorCode--><!--Device-enum BackgroundProcessManager_ErrorCode-End-->
+
+**System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
+
 **Since**: 17
 
 | Enum item | Description |
 | -- | -- |
-| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 | result is OK.<br>**Since**: 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 | invalid parameter. Possible causes: 1. priority is out of range.<br>**Since**: 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 | remote error. Possible causes: 1. remote is not work.<br>**Since**: 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 | result is OK.<br>**Since**: 17<br><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0--><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0-End--> |
+| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 | invalid parameter. Possible causes: 1. priority is out of range.<br>**Since**: 17<br><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401--><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401-End--> |
+| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 | remote error. Possible causes: 1. remote is not work.<br>**Since**: 17<br><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001--><!--Device-ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001-End--> |
 
 
 ## Function description
@@ -78,13 +88,17 @@ int OH_BackgroundProcessManager_SetProcessPriority(int pid, BackgroundProcessMan
 
 Sets the child process priority. After a child process is suppressed, the CPU resources that can be obtained will be limited. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. To suppress the child process, call this API again.
 
+<!--Device-int OH_BackgroundProcessManager_SetProcessPriority(int pid, BackgroundProcessManager_ProcessPriority priority)--><!--Device-int OH_BackgroundProcessManager_SetProcessPriority(int pid, BackgroundProcessManager_ProcessPriority priority)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| int pid | ID of the child process to be suppressed, which is the value of the **pid** parameter after the child process is created through the OH_Ability_StartNativeChildProcess API. |
+| int pid | ID of the child process to be suppressed, which is the value of the **pid** parameter after the child process is created through the [OH_Ability_StartNativeChildProcess](../../apis-ability-kit/c-apis/capi-native-child-process-h.md#oh_ability_startnativechildprocess) API. |
 | [BackgroundProcessManager_ProcessPriority](capi-background-process-manager-h.md#backgroundprocessmanager_processpriority) priority | Suppression priority. |
 
 **Returns**:
@@ -103,13 +117,17 @@ int OH_BackgroundProcessManager_ResetProcessPriority(int pid)
 
 Unsuppresses the child process. In this case, the child process follows the scheduling policy of the main process. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. The effect is the same as calling **resetProcessPriority**.
 
+<!--Device-int OH_BackgroundProcessManager_ResetProcessPriority(int pid)--><!--Device-int OH_BackgroundProcessManager_ResetProcessPriority(int pid)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
+
 **Since**: 17
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| int pid | ID of the child process, which is the value of the **pid** parameter of the OH_Ability_StartNativeChildProcess API. |
+| int pid | ID of the child process, which is the value of the **pid** parameter of the [OH_Ability_StartNativeChildProcess](../../apis-ability-kit/c-apis/capi-native-child-process-h.md#oh_ability_startnativechildprocess) API. |
 
 **Returns**:
 

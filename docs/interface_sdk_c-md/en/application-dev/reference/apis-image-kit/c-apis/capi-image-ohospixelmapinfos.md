@@ -1,18 +1,20 @@
 # OhosPixelMapInfos
 
 ```c
-struct OhosPixelMapInfos {...}
+typedef struct OhosPixelMapInfos {...} OhosPixelMapInfos
 ```
 
 ## Overview
 
 Defines the pixel map information.
 
+<!--Device-struct OhosPixelMapInfos {...}--><!--Device-struct OhosPixelMapInfos {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 10
 
-**Related module**: [Image](capi-image.md)
+**Related module**: [Image](capi-image-kit-image.md)
 
 **Header file**: [image_pixel_map_mdk.h](capi-image-pixel-map-mdk-h.md)
 
@@ -22,9 +24,9 @@ Defines the pixel map information.
 
 | Name | Description |
 | -- | -- |
-| uint32_t width | Image width, in pixels. |
-| uint32_t height | Image height, in pixels. |
-| uint32_t rowSize | Number of bytes per row. |
-| int32_t pixelFormat | Pixel format. |
+| uint32_t width | Image width, in pixels.<br><!--Device-uint32_t width--><!--Device-uint32_t width-End--> |
+| uint32_t height | Image height, in pixels.<br><!--Device-uint32_t height--><!--Device-uint32_t height-End--> |
+| uint32_t rowSize | Number of bytes per row.<br><!--Device-uint32_t rowSize--><!--Device-uint32_t rowSize-End--> |
+| int32_t pixelFormat | Pixel format.<br><!--Device-int32_t pixelFormat--><!--Device-int32_t pixelFormat-End--> |
 
 

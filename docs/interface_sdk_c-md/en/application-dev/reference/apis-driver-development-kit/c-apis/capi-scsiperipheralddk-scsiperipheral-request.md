@@ -1,18 +1,20 @@
 # ScsiPeripheral_Request
 
 ```c
-struct ScsiPeripheral_Request {...}
+typedef struct ScsiPeripheral_Request {...} ScsiPeripheral_Request
 ```
 
 ## Overview
 
-Defines the request structure.
+Defines the SCSI request parameters. It is used to construct the request parameters for interacting with SCSI devices, including the CDB, data buffer, and timeout interval.
+
+<!--Device-struct ScsiPeripheral_Request {...}--><!--Device-struct ScsiPeripheral_Request {...}-End-->
 
 **System capability**: SystemCapability.Driver.SCSI.Extension
 
 **Since**: 18
 
-**Related module**: [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
+**Related module**: [ScsiPeripheralDDK](capi-driver-development-kit-scsiperipheralddk.md)
 
 **Header file**: [scsi_peripheral_types.h](capi-scsi-peripheral-types-h.md)
 
@@ -22,10 +24,10 @@ Defines the request structure.
 
 | Name | Description |
 | -- | -- |
-| uint8_t commandDescriptorBlock[SCSIPERIPHERAL_MAX_CMD_DESC_BLOCK_LEN] | Command descriptor block. |
-| uint8_t cdbLength | Length of the command descriptor block. |
-| int8_t dataTransferDirection | Data transfer direction: **–1** indicates no data transfer, **–2** indicates data transfer (write) from the host to the device, **–3** indicates data transfer (read) from the device to the host, and **–4** indicates bidirectional data transfer. |
-| ScsiPeripheral_DeviceMemMap *data | Buffer for data transmission. |
-| uint32_t timeout | Timeout duration, in ms. |
+| uint8_t commandDescriptorBlock[SCSIPERIPHERAL_MAX_CMD_DESC_BLOCK_LEN] | Command descriptor block.<br><!--Device-uint8_t commandDescriptorBlock[SCSIPERIPHERAL_MAX_CMD_DESC_BLOCK_LEN]--><!--Device-uint8_t commandDescriptorBlock[SCSIPERIPHERAL_MAX_CMD_DESC_BLOCK_LEN]-End--> |
+| uint8_t cdbLength | Length of the command descriptor block. Ensure that the length matches the actual command. The maximum length cannot exceed [SCSIPERIPHERAL_MAX_CMD_DESC_BLOCK_LEN](capi-scsi-peripheral-types-h.md#macros).<br><!--Device-uint8_t cdbLength--><!--Device-uint8_t cdbLength-End--> |
+| int8_t dataTransferDirection | Data transfer direction: **–1** indicates no data transfer, **–2** indicates data transfer (write) from the host to the device, **–3** indicates data transfer (read) from the device to the host, and **–4** indicates bidirectional data transfer.<br><!--Device-int8_t dataTransferDirection--><!--Device-int8_t dataTransferDirection-End--> |
+| [ScsiPeripheral_DeviceMemMap](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) *data | Buffer for data transmission.<br><!--Device-ScsiPeripheral_DeviceMemMap *data--><!--Device-ScsiPeripheral_DeviceMemMap *data-End--> |
+| uint32_t timeout | Timeout duration, in ms.<br><!--Device-uint32_t timeout--><!--Device-uint32_t timeout-End--> |
 
 

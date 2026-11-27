@@ -1,18 +1,20 @@
 # OH_AVSession_AVQueueItem
 
 ```c
-struct OH_AVSession_AVQueueItem {...}
+typedef struct OH_AVSession_AVQueueItem {...} OH_AVSession_AVQueueItem
 ```
 
 ## Overview
 
 Declaring the avqueue item. The instance of AVQueueItem.
 
+<!--Device-struct OH_AVSession_AVQueueItem {...}--><!--Device-struct OH_AVSession_AVQueueItem {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.AVSession.Core
 
 **Since**: 23
 
-**Related module**: [OHAVSession](capi-ohavsession.md)
+**Related module**: [OHAVSession](capi-avsession-kit-ohavsession.md)
 
 **Header file**: [native_avqueueitem.h](capi-native-avqueueitem-h.md)
 
@@ -22,7 +24,7 @@ Declaring the avqueue item. The instance of AVQueueItem.
 
 | Name | Description |
 | -- | -- |
-| uint32_t itemId | itemId. |
-| OH_AVSession_AVMediaDescription *description | media item info. |
+| uint32_t itemId | itemId.<br><!--Device-uint32_t itemId--><!--Device-uint32_t itemId-End--> |
+| [OH_AVSession_AVMediaDescription](capi-ohavsession-oh-avsession-avmediadescription.md) *description | media item info.<br><!--Device-OH_AVSession_AVMediaDescription *description--><!--Device-OH_AVSession_AVMediaDescription *description-End--> |
 
 

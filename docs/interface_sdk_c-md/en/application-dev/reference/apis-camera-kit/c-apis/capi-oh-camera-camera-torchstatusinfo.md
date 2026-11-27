@@ -1,18 +1,20 @@
 # Camera_TorchStatusInfo
 
 ```c
-struct Camera_TorchStatusInfo {...}
+typedef struct Camera_TorchStatusInfo {...} Camera_TorchStatusInfo
 ```
 
 ## Overview
 
 The struct describes the flashlight status information.
 
+<!--Device-struct Camera_TorchStatusInfo {...}--><!--Device-struct Camera_TorchStatusInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the flashlight status information.
 
 | Name | Description |
 | -- | -- |
-| bool isTorchAvailable | Whether the flashlight is available. **true** if available, **false** otherwise. |
-| bool isTorchActive | Whether the flashlight is activated. **true** if activated, **false** otherwise. |
-| float torchLevel | Flashlight level. The value range is [0, 1]. A larger value indicates a greater luminance. |
+| bool isTorchAvailable | Whether the flashlight is available. **true** if available, **false** otherwise.<br><!--Device-bool isTorchAvailable--><!--Device-bool isTorchAvailable-End--> |
+| bool isTorchActive | Whether the flashlight is activated. **true** if activated, **false** otherwise.<br><!--Device-bool isTorchActive--><!--Device-bool isTorchActive-End--> |
+| float torchLevel | Flashlight level. The value range is [0, 1]. A larger value indicates a greater luminance.<br><!--Device-float torchLevel--><!--Device-float torchLevel-End--> |
 
 

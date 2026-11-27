@@ -354,7 +354,7 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses | 是 | 安全控件的边框圆角半径。<br>默认值：**0vp**。<br>未显式指定单位时，单位为vp。<br>Dimension类型不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
+| radius | [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | 是 | 安全控件的边框圆角半径。<br>默认值：**0vp**。<br>未显式指定单位时，单位为vp。<br>Dimension类型不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
 
 **返回值：**
 
@@ -1164,7 +1164,7 @@ padding(value: Padding | Dimension): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件的内边距。<br>默认值：上下8vp，左右16vp。<br>未显式指定单位时，单位为vp。<br>**说明：** 本参数不支持设置百分比字符串数据类型。若设置百分比字符串，则对应内边距显示为0。 |
+| value | Padding &#124; [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件的内边距。<br>默认值：上下8vp，左右16vp。<br>未显式指定单位时，单位为vp。<br>**说明：** 本参数不支持设置百分比字符串数据类型。若设置百分比字符串，则对应内边距显示为0。 |
 
 **返回值：**
 

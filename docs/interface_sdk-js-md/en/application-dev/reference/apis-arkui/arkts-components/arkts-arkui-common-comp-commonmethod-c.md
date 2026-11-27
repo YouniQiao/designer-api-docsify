@@ -2409,7 +2409,7 @@ Sets the border color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Sets the border color of the element. After setting, the border is displayed in the corresponding color.<br>Default value: **Color.Black**<br>**Note:** When using the LocalizedEdgeColors type, the border color settings differ under different language directions. See Example 2. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Sets the border color of the element. After setting, the border is displayed in the corresponding color.<br>Default value: **Color.Black**<br>**Note:** When using the LocalizedEdgeColors type, the border color settings differ under different language directions. See Example 2. |
 
 **Return value:**
 
@@ -2470,7 +2470,7 @@ Sets the border radius.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Element border corner radius. Percentage is supported, and the percentage is based on the component width. Default unit: vp.<br>Default value: **0**. After the corner radius is set, you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br>**NOTE:** <br>When the LocalizedBorderRadiuses type is used, the border corner radius settings differ under different language directions. See Also example 2.<br>Set four different corner radii. If a corner radius exceeds half of the smaller value between the height and the width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Element border corner radius. Percentage is supported, and the percentage is based on the component width. Default unit: vp.<br>Default value: **0**. After the corner radius is set, you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br>**NOTE:** <br>When the LocalizedBorderRadiuses type is used, the border corner radius settings differ under different language directions. See Also example 2.<br>Set four different corner radii. If a corner radius exceeds half of the smaller value between the height and the width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -2503,7 +2503,7 @@ Sets the border corner radius and the rendering strategy for rounded corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Set the border corner radius of the element. Percentage is supported, and the percentage is based on the component width. Default you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br> **Note:** When using the LocalizedBorderRadiuses type, the border corner radius settings differ under different language directions. See also example 2.<br>Set four different corner radius values. If a corner radius value exceeds half of the smaller value of the height and width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect. <br>Unit: vp.<br>After the corner radius is set. Default value: **0**. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Set the border corner radius of the element. Percentage is supported, and the percentage is based on the component width. Default you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br> **Note:** When using the LocalizedBorderRadiuses type, the border corner radius settings differ under different language directions. See also example 2.<br>Set four different corner radius values. If a corner radius value exceeds half of the smaller value of the height and width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect. <br>Unit: vp.<br>After the corner radius is set. Default value: **0**. |
 | type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No | Sets the mode for drawing the corner radius of the component.<br><br>Optional values:<br>- **RenderStrategy.FAST**: fast rendering mode, suitable for common corner radius scenarios with better performance. If the component contains complex visual effects such as blur, using this mode may cause abnormal corner radius clipping.<br>- **RenderStrategy.OFFSCREEN**: offscreen rendering mode, suitable for corner radius scenarios with complex visual effects such as blur. It can render the corner radius correctly but incurs higher performance overhead. <br>Default value: **RenderStrategy.FAST**. |
 
 **Return value:**
@@ -2534,7 +2534,7 @@ Sets the border style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](../arkts-apis/arkts-arkui-edgestyles-t.md) | Yes | Element border style.<br>Default value: **BorderStyle.Solid**<br>**Since:** 9 |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | Yes | Element border style.<br>Default value: **BorderStyle.Solid**<br>**Since:** 9 |
 
 **Return value:**
 
@@ -2564,7 +2564,7 @@ Sets the border width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes | Sets the border width of the element. Percentage is not supported. Default unit: vp.<br>Default value: **0**.<br>**Note:** When the LocalizedEdgeWidths type is used, the border width setting differs under different language directions. See Example 2.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes | Sets the border width of the element. Percentage is not supported. Default unit: vp.<br>Default value: **0**.<br>**Note:** When the LocalizedEdgeWidths type is used, the border width setting differs under different language directions. See Example 2.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -7357,7 +7357,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Outline color.<br>**Since:** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Outline color.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -7389,7 +7389,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes | Outline color. <br>If **color** is **undefined**, the component reverts to its original style with the outline color of **Color.Black**. |
+| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes | Outline color. <br>If **color** is **undefined**, the component reverts to its original style with the outline color of **Color.Black**. |
 
 **Return value:**
 
@@ -7421,7 +7421,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [OutlineRadiuses](../arkts-apis/arkts-arkui-outlineradiuses-t.md) | Yes | Radius of the outline corners. Percentage values are not supported.<br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; OutlineRadiuses | Yes | Radius of the outline corners. Percentage values are not supported.<br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth |
 
 **Return value:**
 
@@ -7453,7 +7453,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [OutlineRadiuses](../arkts-apis/arkts-arkui-outlineradiuses-t.md)&gt; | Yes | Radius of the outline corners. Percentage values are not supported. <br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth <br>If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of 0. |
+| radius | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; OutlineRadiuses&gt; | Yes | Radius of the outline corners. Percentage values are not supported. <br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth <br>If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of 0. |
 
 **Return value:**
 
@@ -7485,7 +7485,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; [EdgeOutlineStyles](../arkts-apis/arkts-arkui-edgeoutlinestyles-t.md) | Yes | Outline style. |
+| value | [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; EdgeOutlineStyles | Yes | Outline style. |
 
 **Return value:**
 
@@ -7517,7 +7517,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; [EdgeOutlineStyles](../arkts-apis/arkts-arkui-edgeoutlinestyles-t.md)&gt; | Yes | Outline style. <br>If **style** is **undefined**, the component reverts to its original style with no outline. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; EdgeOutlineStyles&gt; | Yes | Outline style. <br>If **style** is **undefined**, the component reverts to its original style with no outline. |
 
 **Return value:**
 
@@ -7549,7 +7549,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md) | Yes | Outline thickness. Percentage values are not supported. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths | Yes | Outline thickness. Percentage values are not supported. |
 
 **Return value:**
 
@@ -7581,7 +7581,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md)&gt; | Yes | Outline thickness. Percentage values are not supported.<br>If **width** is **undefined**, the component reverts to its original style with no outline width. |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths&gt; | Yes | Outline thickness. Percentage values are not supported.<br>If **width** is **undefined**, the component reverts to its original style with no outline width. |
 
 **Return value:**
 
@@ -7657,7 +7657,7 @@ Sets the padding attribute of the component. After the setting, extra space is c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the component.<br>When the parameter is of the **Length** type, the padding takes effect on all four sides simultaneously.<br>Default value: **0** <br>Unit: vp <br> When padding is set to a percentage, the padding on all four sides uses the **width** of the parent container as the base value.<br>**Since:** 12 |
+| value | Padding &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the component.<br>When the parameter is of the **Length** type, the padding takes effect on all four sides simultaneously.<br>Default value: **0** <br>Unit: vp <br> When padding is set to a percentage, the padding on all four sides uses the **width** of the parent container as the base value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -8372,7 +8372,7 @@ Sets the safe area padding attribute. It allows a container to add a component-l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; LengthMetrics &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding of the component, which is used to create a component-level safe area inside the component for child components to extend into.<br>Default value: **0** <br>Unit: vp<br>When **paddingValue** is set to a percentage, the top, bottom, left, and right padding all use the width of the parent container as the base value. |
+| paddingValue | Padding &#124; LengthMetrics &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding of the component, which is used to create a component-level safe area inside the component for child components to extend into.<br>Default value: **0** <br>Unit: vp<br>When **paddingValue** is set to a percentage, the top, bottom, left, and right padding all use the width of the parent container as the base value. |
 
 **Return value:**
 

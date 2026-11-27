@@ -8,11 +8,13 @@ typedef struct OH_CM_UkeyInfo {...} OH_CM_UkeyInfo
 
 Defines a struct for the USB certificate credential information.
 
+<!--Device-typedef struct OH_CM_UkeyInfo {...} OH_CM_UkeyInfo--><!--Device-typedef struct OH_CM_UkeyInfo {...} OH_CM_UkeyInfo-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **起始版本：** 22
 
-**相关模块：** [CertManagerType](capi-certmanagertype.md)
+**相关模块：** [CertManagerType](capi-device-certificate-kit-certmanagertype.md)
 
 **所在头文件：** [cm_native_type.h](capi-cm-native-type-h.md)
 
@@ -22,6 +24,6 @@ Defines a struct for the USB certificate credential information.
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_CM_CertificatePurpose](capi-cm-native-type-h.md#oh_cm_certificatepurpose) certPurpose | Purpose of a certificate credential. |
+| [OH_CM_CertificatePurpose](capi-cm-native-type-h.md#oh_cm_certificatepurpose) certPurpose | Purpose of a certificate credential.<br><!--Device-OH_CM_CertificatePurpose certPurpose--><!--Device-OH_CM_CertificatePurpose certPurpose-End--> |
 
 

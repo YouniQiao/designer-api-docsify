@@ -54,7 +54,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnActionCallback](arkts-arkui-composelistitemv2-onactioncallback-t.md) | 列表项右侧元素为图标/箭头，通过点击触发回调函数的类型。 |
+| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | 列表项右侧元素为图标/箭头，通过点击触发回调函数的类型。 |
 | [OnChangeCallback](arkts-arkui-onchangecallback-t.md) | 列表项右侧元素为Switch/CheckBox/Radio时，当状态发生改变时的回调函数对应的类型。 |
 
 ### 枚举

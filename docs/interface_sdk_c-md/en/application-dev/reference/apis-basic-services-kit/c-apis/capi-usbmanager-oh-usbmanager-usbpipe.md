@@ -1,18 +1,20 @@
 # OH_UsbManager_UsbPipe
 
 ```c
-struct OH_UsbManager_UsbPipe {...}
+typedef struct OH_UsbManager_UsbPipe {...} OH_UsbManager_UsbPipe
 ```
 
 ## Overview
 
 Defines the USB device pipe used to communicate with an opened device.
 
+<!--Device-struct OH_UsbManager_UsbPipe {...}--><!--Device-struct OH_UsbManager_UsbPipe {...}-End-->
+
 **System capability**: SystemCapability.USB.USBManager
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
-**Related module**: [UsbManager](capi-usbmanager.md)
+**Related module**: [UsbManager](capi-basic-services-kit-usbmanager.md)
 
 **Header file**: [ohusb_manager.h](capi-ohusb-manager-h.md)
 
@@ -22,7 +24,7 @@ Defines the USB device pipe used to communicate with an opened device.
 
 | Name | Description |
 | -- | -- |
-| uint8_t busNum |  |
-| uint8_t devAddress |  |
+| uint8_t busNum | Bus number of the connected device.<br>**Since**: 26.0.1<br><!--Device-uint8_t busNum--><!--Device-uint8_t busNum-End--> |
+| uint8_t devAddress | Device address of the connected device.<br>**Since**: 26.0.1<br><!--Device-uint8_t devAddress--><!--Device-uint8_t devAddress-End--> |
 
 

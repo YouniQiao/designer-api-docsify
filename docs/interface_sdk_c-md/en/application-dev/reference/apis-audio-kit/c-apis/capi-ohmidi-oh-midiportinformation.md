@@ -8,11 +8,13 @@ typedef struct OH_MIDIPortInformation {...} OH_MIDIPortInformation
 
 Port Information (detailed). Used for enumeration (contains display names).
 
+<!--Device-typedef struct OH_MIDIPortInformation {...} OH_MIDIPortInformation--><!--Device-typedef struct OH_MIDIPortInformation {...} OH_MIDIPortInformation-End-->
+
 **System capability**: SystemCapability.Multimedia.Audio.MIDI
 
 **Since**: 24
 
-**Related module**: [OHMIDI](capi-ohmidi.md)
+**Related module**: [OHMIDI](capi-audio-kit-ohmidi.md)
 
 **Header file**: [native_midi_base.h](capi-native-midi-base-h.md)
 
@@ -22,9 +24,9 @@ Port Information (detailed). Used for enumeration (contains display names).
 
 | Name | Description |
 | -- | -- |
-| uint32_t portIndex | The index of the port.<br>**Since**: 24 |
-| int64_t deviceId | The ID of the device this port belongs to.<br>**Since**: 24 |
-| [OH_MIDIPortDirection](capi-native-midi-base-h.md#oh_midiportdirection) direction | Direction of the port (Input/Output).<br>**Since**: 24 |
-| char name[64] | Name of the port.<br>**Since**: 24 |
+| uint32_t portIndex | The index of the port.<br>**Since**: 24<br><!--Device-uint32_t portIndex--><!--Device-uint32_t portIndex-End--> |
+| int64_t deviceId | The ID of the device this port belongs to.<br>**Since**: 24<br><!--Device-int64_t deviceId--><!--Device-int64_t deviceId-End--> |
+| [OH_MIDIPortDirection](capi-native-midi-base-h.md#oh_midiportdirection) direction | Direction of the port (Input/Output).<br>**Since**: 24<br><!--Device-OH_MIDIPortDirection direction--><!--Device-OH_MIDIPortDirection direction-End--> |
+| char name[64] | Name of the port.<br>**Since**: 24<br><!--Device-char name[64]--><!--Device-char name[64]-End--> |
 
 

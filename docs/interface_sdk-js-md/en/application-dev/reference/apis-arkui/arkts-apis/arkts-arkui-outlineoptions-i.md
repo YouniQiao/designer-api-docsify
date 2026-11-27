@@ -22,7 +22,7 @@ Sets the outer outline color.
 
 Default value: **Color.Black**
 
-**Type:** [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Default value: **0**
 
 Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth
 
-**Type:** [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** OutlineRadiuses &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ Sets the outer outline style.
 
 Default value: **OutlineStyle.SOLID**
 
-**Type:** [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) &#124; [OutlineStyle](../arkts-components/arkts-arkui-common-comp-outlinestyle-e.md)
+**Type:** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-common-comp-outlinestyle-e.md)
 
 **Since:** 11
 
@@ -98,7 +98,7 @@ Default value: **0**
 
 **width** must be set to display the outline effect.
 
-**Type:** [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** EdgeOutlineWidths &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 

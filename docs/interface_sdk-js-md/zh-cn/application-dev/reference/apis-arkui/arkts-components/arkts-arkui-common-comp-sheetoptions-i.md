@@ -118,7 +118,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 底部弹窗时，底部边框颜色设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
 
@@ -146,7 +146,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 底部弹窗时，底部边框样式设置无效。
 
-**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](../arkts-apis/arkts-arkui-edgestyles-t.md)
+**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **起始版本：** 12
 
@@ -178,7 +178,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 底部弹窗时，底部边框宽度设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。取值范围为非负数，传入负值时设置无效。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -869,7 +869,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。
 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** LengthMetrics &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** LengthMetrics &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 15
 

@@ -77,7 +77,7 @@ contentAreaPadding?: Padding
 
 Padding of the content area of the dialog box. This attribute does not take effect when **localizedContentAreaPadding** is set.
 
-**Type:** [Padding](arkts-arkui-padding-t.md)
+**Type:** Padding
 
 **Since:** 12
 

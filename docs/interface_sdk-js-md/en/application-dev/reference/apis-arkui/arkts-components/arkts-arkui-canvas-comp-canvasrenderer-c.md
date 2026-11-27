@@ -661,7 +661,7 @@ Obtains the transform matrix currently applied to the context.
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | The transformation matrix currently applied to the context. |
+| Matrix2D | The transformation matrix currently applied to the context. |
 
 ## measureText
 
@@ -1056,7 +1056,7 @@ Resets the existing transform matrix and creates a new one with the **Matrix2D**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.<br>Exception values **undefined** and **null** are treated as invalid values.<br>Default value: **null** |
+| transform | Matrix2D | No | Transformation matrix.<br>Exception values **undefined** and **null** are treated as invalid values.<br>Default value: **null** |
 
 ## stroke
 

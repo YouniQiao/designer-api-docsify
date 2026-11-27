@@ -1,18 +1,20 @@
 # TEE_Attribute
 
 ```c
-typedef union TEE_Attribute {...} TEE_Attribute
+typedef struct TEE_Attribute {...} TEE_Attribute
 ```
 
 ## Overview
 
 Defines an object attribute.
 
+<!--Device-typedef struct TEE_Attribute {...} TEE_Attribute--><!--Device-typedef struct TEE_Attribute {...} TEE_Attribute-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -22,14 +24,10 @@ Defines an object attribute.
 
 | Name | Description |
 | -- | -- |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Reference type content.<br>**Since**: 20 |
-| void *buffer | Buffer pointer. |
-| size_t length;
- } ref | Length of the buffer. |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Value type content.<br>**Since**: 20 |
-| uint32_t a | First value. |
-| uint32_t b;
- } value;
- } content | Second value. |
+| uint32_t attributeID | Attribute ID.<br><!--Device-uint32_t attributeID--><!--Device-uint32_t attributeID-End--> |
+| content.ref.buffer | Buffer pointer.<br><!--Device-content.ref.buffer--><!--Device-content.ref.buffer-End--> |
+| content.ref.length | Length of the buffer.<br><!--Device-content.ref.length--><!--Device-content.ref.length-End--> |
+| content.value.a | First value.<br><!--Device-content.value.a--><!--Device-content.value.a-End--> |
+| content.value.b | Second value.<br><!--Device-content.value.b--><!--Device-content.value.b-End--> |
 
 

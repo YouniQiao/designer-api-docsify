@@ -6,33 +6,35 @@ Declares the APIs that can lock, access, and unlock a pixel map. Need link <b>li
 
 **Library**: libpixelmap_ndk.z.so
 
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 8
 
-**Related module**: [Image](capi-image.md)
+**Related module**: [Image](capi-image-kit-image.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | Description |
 | -- | -- |
 | [OhosPixelMapInfo](capi-image-ohospixelmapinfo.md) | Defines the pixel map information. |
 
-### Enum
+### Enums
 
 | Name | Description |
 | -- | -- |
-| [anonymous0](#anonymous0) | Enumerates the error codes returned by the functions.(Deprecated in API10) |
-| [anonymous1](#anonymous1) | Enumerates the pixel formats.(Deprecated in API10) |
+| [anonymous0](#anonymous0) | Enumerates the error codes returned by the functions.(Deprecated) |
+| [anonymous1](#anonymous1) | Enumerates the pixel formats.(Deprecated) |
 | [anonymous2](#anonymous2) | Enumerates the pixel map scale modes. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_GetImageInfo(napi_env env, napi_value value, OhosPixelMapInfo *info)](#oh_getimageinfo) | Obtains the information about a <b>PixelMap</b> object and stores the information to the [OhosPixelMapInfo](capi-image-ohospixelmapinfo.md) struct.(Deprecated in API10) |
-| [int32_t OH_AccessPixels(napi_env env, napi_value value, void** addrPtr)](#oh_accesspixels) | Obtains the memory address of a <b>PixelMap</b> object and locks the memory.<br> After the function is executed successfully, <b>*addrPtr</b> is the memory address to be accessed. After the access operation is complete, you must use [OH_UnAccessPixels](capi-image-pixel-map-napi-h.md#oh_unaccesspixels) to unlock the memory. Otherwise, the resources in the memory cannot be released. After the memory is unlocked, its address cannot be accessed or operated.(Deprecated in API10) |
-| [int32_t OH_UnAccessPixels(napi_env env, napi_value value)](#oh_unaccesspixels) | Unlocks the memory of a <b>PixelMap</b> object. This function is used with [OH_AccessPixels](capi-image-pixel-map-napi-h.md#oh_accesspixels) in pairs.(Deprecated in API10) |
+| [int32_t OH_GetImageInfo(napi_env env, napi_value value, OhosPixelMapInfo *info)](#oh_getimageinfo) | Obtains the information about a <b>PixelMap</b> object and stores the information to the [OhosPixelMapInfo](capi-image-ohospixelmapinfo.md) struct.(Deprecated) |
+| [int32_t OH_AccessPixels(napi_env env, napi_value value, void** addrPtr)](#oh_accesspixels) | Obtains the memory address of a <b>PixelMap</b> object and locks the memory.<br> After the function is executed successfully, <b>*addrPtr</b> is the memory address to be accessed. After the access operation is complete, you must use [OH_UnAccessPixels](capi-image-pixel-map-napi-h.md#oh_unaccesspixels) to unlock the memory. Otherwise, the resources in the memory cannot be released. After the memory is unlocked, its address cannot be accessed or operated.(Deprecated) |
+| [int32_t OH_UnAccessPixels(napi_env env, napi_value value)](#oh_unaccesspixels) | Unlocks the memory of a <b>PixelMap</b> object. This function is used with [OH_AccessPixels](capi-image-pixel-map-napi-h.md#oh_accesspixels) in pairs.(Deprecated) |
 
 ## Enum type description
 
@@ -46,14 +48,18 @@ enum anonymous0
 
 Enumerates the error codes returned by the functions.
 
+<!--Device-enum anonymous0--><!--Device-enum anonymous0-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 8
 
 **Deprecated**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OHOS_IMAGE_RESULT_SUCCESS = 0 | Operation success. |
-| OHOS_IMAGE_RESULT_BAD_PARAMETER = -1 | Invalid value. |
+| OHOS_IMAGE_RESULT_SUCCESS = 0 | Operation success.<br><!--Device-OHOS_IMAGE_RESULT_SUCCESS = 0--><!--Device-OHOS_IMAGE_RESULT_SUCCESS = 0-End--> |
+| OHOS_IMAGE_RESULT_BAD_PARAMETER = -1 | Invalid value.<br><!--Device-OHOS_IMAGE_RESULT_BAD_PARAMETER = -1--><!--Device-OHOS_IMAGE_RESULT_BAD_PARAMETER = -1-End--> |
 
 ### anonymous1
 
@@ -65,15 +71,19 @@ enum anonymous1
 
 Enumerates the pixel formats.
 
+<!--Device-enum anonymous1--><!--Device-enum anonymous1-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 8
 
 **Deprecated**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OHOS_PIXEL_MAP_FORMAT_NONE = 0 | Unknown format. |
-| OHOS_PIXEL_MAP_FORMAT_RGBA_8888 = 3 | 32-bit RGBA, with 8 bits each for R (red), G (green), B (blue), and A (alpha). The data is stored from the most significant bit to the least significant bit. |
-| OHOS_PIXEL_MAP_FORMAT_RGB_565 = 2 | 16-bit RGB, with 5, 6, and 5 bits for R, G, and B, respectively. The data is stored from the most significant bit to the least significant bit. |
+| OHOS_PIXEL_MAP_FORMAT_NONE = 0 | Unknown format.<br><!--Device-OHOS_PIXEL_MAP_FORMAT_NONE = 0--><!--Device-OHOS_PIXEL_MAP_FORMAT_NONE = 0-End--> |
+| OHOS_PIXEL_MAP_FORMAT_RGBA_8888 = 3 | 32-bit RGBA, with 8 bits each for R (red), G (green), B (blue), and A (alpha). The data is stored from the most significant bit to the least significant bit.<br><!--Device-OHOS_PIXEL_MAP_FORMAT_RGBA_8888 = 3--><!--Device-OHOS_PIXEL_MAP_FORMAT_RGBA_8888 = 3-End--> |
+| OHOS_PIXEL_MAP_FORMAT_RGB_565 = 2 | 16-bit RGB, with 5, 6, and 5 bits for R, G, and B, respectively. The data is stored from the most significant bit to the least significant bit.<br><!--Device-OHOS_PIXEL_MAP_FORMAT_RGB_565 = 2--><!--Device-OHOS_PIXEL_MAP_FORMAT_RGB_565 = 2-End--> |
 
 ### anonymous2
 
@@ -85,12 +95,16 @@ enum anonymous2
 
 Enumerates the pixel map scale modes.
 
+<!--Device-enum anonymous2--><!--Device-enum anonymous2-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OHOS_PIXEL_MAP_SCALE_MODE_FIT_TARGET_SIZE = 0 | Adaptation to the target image size. |
-| OHOS_PIXEL_MAP_SCALE_MODE_CENTER_CROP = 1 | Cropping the center portion of an image to the target size. |
+| OHOS_PIXEL_MAP_SCALE_MODE_FIT_TARGET_SIZE = 0 | Adaptation to the target image size.<br><!--Device-OHOS_PIXEL_MAP_SCALE_MODE_FIT_TARGET_SIZE = 0--><!--Device-OHOS_PIXEL_MAP_SCALE_MODE_FIT_TARGET_SIZE = 0-End--> |
+| OHOS_PIXEL_MAP_SCALE_MODE_CENTER_CROP = 1 | Cropping the center portion of an image to the target size.<br><!--Device-OHOS_PIXEL_MAP_SCALE_MODE_CENTER_CROP = 1--><!--Device-OHOS_PIXEL_MAP_SCALE_MODE_CENTER_CROP = 1-End--> |
 
 
 ## Function description
@@ -104,6 +118,10 @@ int32_t OH_GetImageInfo(napi_env env, napi_value value, OhosPixelMapInfo *info)
 **Description**
 
 Obtains the information about a <b>PixelMap</b> object and stores the information to the [OhosPixelMapInfo](capi-image-ohospixelmapinfo.md) struct.
+
+<!--Device-int32_t OH_GetImageInfo(napi_env env, napi_value value, OhosPixelMapInfo *info)--><!--Device-int32_t OH_GetImageInfo(napi_env env, napi_value value, OhosPixelMapInfo *info)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 8
 
@@ -138,6 +156,10 @@ int32_t OH_AccessPixels(napi_env env, napi_value value, void** addrPtr)
 
 Obtains the memory address of a <b>PixelMap</b> object and locks the memory.<br> After the function is executed successfully, <b>*addrPtr</b> is the memory address to be accessed. After the access operation is complete, you must use [OH_UnAccessPixels](capi-image-pixel-map-napi-h.md#oh_unaccesspixels) to unlock the memory. Otherwise, the resources in the memory cannot be released. After the memory is unlocked, its address cannot be accessed or operated.
 
+<!--Device-int32_t OH_AccessPixels(napi_env env, napi_value value, void** addrPtr)--><!--Device-int32_t OH_AccessPixels(napi_env env, napi_value value, void** addrPtr)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
+
 **Since**: 8
 
 **Deprecated**: 10
@@ -170,6 +192,10 @@ int32_t OH_UnAccessPixels(napi_env env, napi_value value)
 **Description**
 
 Unlocks the memory of a <b>PixelMap</b> object. This function is used with [OH_AccessPixels](capi-image-pixel-map-napi-h.md#oh_accesspixels) in pairs.
+
+<!--Device-int32_t OH_UnAccessPixels(napi_env env, napi_value value)--><!--Device-int32_t OH_UnAccessPixels(napi_env env, napi_value value)-End-->
+
+**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 8
 

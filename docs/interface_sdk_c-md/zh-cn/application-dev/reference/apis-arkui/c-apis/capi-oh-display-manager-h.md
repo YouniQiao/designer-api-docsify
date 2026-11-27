@@ -6,9 +6,11 @@ The file declares the functions for basic display management. You can call the f
 
 **库：** libnative_display_manager.so
 
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
-**相关模块：** [OH_DisplayManager](capi-oh-displaymanager.md)
+**相关模块：** [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
 
 ## 汇总
 
@@ -57,16 +59,6 @@ The file declares the functions for basic display management. You can call the f
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint64_t displayId, NativeDisplayManager_SourceMode *sourceMode)](#oh_nativedisplaymanager_getdisplaysourcemode) | - | 获取屏幕的显示模式，默认值为DisplaySourceMode.None。 |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64_t displayId, int32_t *x, int32_t *y)](#oh_nativedisplaymanager_getdisplayposition) | - | 获取屏幕的位置信息，即相对于原点（主屏左上角）的x坐标和y坐标。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId) | 注册屏幕状态变化的回调函数。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.WindowManager.WindowManager.Core |
-| void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)( NativeDisplayManager_FoldDisplayMode displayMode) | 注册屏幕展开、折叠状态变化的回调函数。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.WindowManager.WindowManager.Core |
-| void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId) | 注册屏幕可用区域变化的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.WindowManager.WindowManager.Core |
-| void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId) | 注册屏幕连接的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.WindowManager.WindowManager.Core |
-| void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId) | 注册屏幕移除的回调函数。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.WindowManager.WindowManager.Core |
-
 ## 函数说明
 
 ### OH_NativeDisplayManager_GetDefaultDisplayId()
@@ -78,6 +70,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayId(uint6
 **描述：**
 
 获取默认屏幕的id号。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayId(uint64_t *displayId)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayId(uint64_t *displayId)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -103,6 +99,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayWidth(in
 
 获取默认屏幕的宽度。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayWidth(int32_t *displayWidth)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayWidth(int32_t *displayWidth)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -126,6 +126,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayHeight(i
 **描述：**
 
 获取默认屏幕的高度。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayHeight(int32_t *displayHeight)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayHeight(int32_t *displayHeight)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -151,6 +155,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRotation
 
 获取默认屏幕的顺时针旋转角度。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRotation(NativeDisplayManager_Rotation *displayRotation)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRotation(NativeDisplayManager_Rotation *displayRotation)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -174,6 +182,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayOrientat
 **描述：**
 
 获取默认屏幕的旋转方向。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayOrientation(NativeDisplayManager_Orientation *displayOrientation)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayOrientation(NativeDisplayManager_Orientation *displayOrientation)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -199,6 +211,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayVirtualP
 
 获取默认屏幕的虚拟像素密度。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayVirtualPixelRatio(float *virtualPixels)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayVirtualPixelRatio(float *virtualPixels)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -222,6 +238,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRefreshR
 **描述：**
 
 获取默认屏幕的刷新率。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRefreshRate(uint32_t *refreshRate)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayRefreshRate(uint32_t *refreshRate)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -247,6 +267,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityD
 
 获取屏幕的物理像素密度。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityDpi(int32_t *densityDpi)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityDpi(int32_t *densityDpi)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -270,6 +294,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityP
 **描述：**
 
 获取屏幕逻辑像素的密度。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityPixels(float *densityPixels)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityPixels(float *densityPixels)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -295,6 +323,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayScaledDe
 
 获取屏幕显示字体的缩放因子。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayScaledDensity(float *scaledDensity)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayScaledDensity(float *scaledDensity)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -318,6 +350,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityX
 **描述：**
 
 获取屏幕X方向中每英寸屏幕的物理像素值。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityXdpi(float *xDpi)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityXdpi(float *xDpi)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -343,6 +379,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityY
 
 获取Y方向中每英寸屏幕的物理像素值。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityYdpi(float *yDpi)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDefaultDisplayDensityYdpi(float *yDpi)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -366,6 +406,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDefaultDisplayCutou
 **描述：**
 
 获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDefaultDisplayCutoutInfo(NativeDisplayManager_CutoutInfo **cutoutInfo)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDefaultDisplayCutoutInfo(NativeDisplayManager_CutoutInfo **cutoutInfo)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -391,6 +435,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyDefaultDisplayCuto
 
 销毁挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyDefaultDisplayCutoutInfo(NativeDisplayManager_CutoutInfo *cutoutInfo)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyDefaultDisplayCutoutInfo(NativeDisplayManager_CutoutInfo *cutoutInfo)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -415,6 +463,10 @@ bool OH_NativeDisplayManager_IsFoldable()
 
 查询设备是否可折叠。
 
+<!--Device-bool OH_NativeDisplayManager_IsFoldable()--><!--Device-bool OH_NativeDisplayManager_IsFoldable()-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -432,6 +484,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetFoldDisplayMode(Native
 **描述：**
 
 获取可折叠设备的显示模式。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetFoldDisplayMode(NativeDisplayManager_FoldDisplayMode *displayMode)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetFoldDisplayMode(NativeDisplayManager_FoldDisplayMode *displayMode)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -457,6 +513,10 @@ typedef void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId
 
 注册屏幕状态变化的回调函数。
 
+<!--Device-typedef void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId)--><!--Device-typedef void (*OH_NativeDisplayManager_DisplayChangeCallback)(uint64_t displayId)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -474,6 +534,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayChangeList
 **描述：**
 
 注册屏幕状态变化监听（如旋转变化、刷新率、DPI、分辨率等变化）。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayChangeListener(OH_NativeDisplayManager_DisplayChangeCallback displayChangeCallback, uint32_t *listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayChangeListener(OH_NativeDisplayManager_DisplayChangeCallback displayChangeCallback, uint32_t *listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -500,6 +564,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayChangeLi
 
 取消屏幕状态变化的监听。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayChangeListener(uint32_t listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayChangeListener(uint32_t listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -524,6 +592,10 @@ typedef void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)(NativeDisp
 
 注册屏幕展开、折叠状态变化的回调函数。
 
+<!--Device-typedef void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)(NativeDisplayManager_FoldDisplayMode displayMode)--><!--Device-typedef void (*OH_NativeDisplayManager_FoldDisplayModeChangeCallback)(NativeDisplayManager_FoldDisplayMode displayMode)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -541,6 +613,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterFoldDisplayModeCh
 **描述：**
 
 注册屏幕展开、折叠状态变化的监听。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterFoldDisplayModeChangeListener(OH_NativeDisplayManager_FoldDisplayModeChangeCallback displayModeChangeCallback, uint32_t *listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterFoldDisplayModeChangeListener(OH_NativeDisplayManager_FoldDisplayModeChangeCallback displayModeChangeCallback, uint32_t *listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
@@ -567,6 +643,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterFoldDisplayMode
 
 取消屏幕展开、折叠状态变化的监听。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterFoldDisplayModeChangeListener(uint32_t listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterFoldDisplayModeChangeListener(uint32_t listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -590,6 +670,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAllDisplays(NativeD
 **描述：**
 
 获取当前所有屏幕信息对象。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAllDisplays(NativeDisplayManager_DisplaysInfo **allDisplays)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAllDisplays(NativeDisplayManager_DisplaysInfo **allDisplays)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 14
 
@@ -615,6 +699,10 @@ void OH_NativeDisplayManager_DestroyAllDisplays(NativeDisplayManager_DisplaysInf
 
 销毁所有屏幕的信息对象。
 
+<!--Device-void OH_NativeDisplayManager_DestroyAllDisplays(NativeDisplayManager_DisplaysInfo *allDisplays)--><!--Device-void OH_NativeDisplayManager_DestroyAllDisplays(NativeDisplayManager_DisplaysInfo *allDisplays)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -632,6 +720,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDisplayById(uint32_
 **描述：**
 
 获取指定屏幕的信息对象。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDisplayById(uint32_t displayId, NativeDisplayManager_DisplayInfo **displayInfo)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateDisplayById(uint32_t displayId, NativeDisplayManager_DisplayInfo **displayInfo)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 14
 
@@ -658,6 +750,10 @@ void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *di
 
 销毁指定屏幕的信息对象。
 
+<!--Device-void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *displayInfo)--><!--Device-void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *displayInfo)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -675,6 +771,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(Nati
 **描述：**
 
 获取主屏信息对象。除2in1之外的设备获取的是设备自带屏幕的屏幕信息；2in1设备外接屏幕时获取的是当前主屏幕的屏幕信息；2in1设备没有外接屏幕时获取的是自带屏幕的屏幕信息。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(NativeDisplayManager_DisplayInfo **displayInfo)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(NativeDisplayManager_DisplayInfo **displayInfo)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 14
 
@@ -700,6 +800,10 @@ typedef void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t dis
 
 注册屏幕可用区域变化的回调函数。
 
+<!--Device-typedef void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId)--><!--Device-typedef void (*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -717,6 +821,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChan
 **描述：**
 
 注册屏幕可用区域变化监听。<br> 在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。 针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 
@@ -743,6 +851,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaCh
 
 取消屏幕可用区域变化的监听。<br> 在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。 针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -766,6 +878,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint6
 **描述：**
 
 获取屏幕的可用区域。<br> 在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。 针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过 [OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth)、[OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight) 获取当前设备屏幕的可用区域。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 
@@ -792,6 +908,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(Nati
 
 销毁屏幕的可用区域。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(NativeDisplayManager_Rect *availableArea)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(NativeDisplayManager_Rect *availableArea)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -816,6 +936,10 @@ typedef void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)
 
 注册屏幕连接的回调函数。
 
+<!--Device-typedef void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)--><!--Device-typedef void (*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -833,6 +957,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListene
 **描述：**
 
 注册屏幕连接变化监听（如插入显示器）。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListener(OH_NativeDisplayManager_DisplayAddCallback displayAddCallback, uint32_t *listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListener(OH_NativeDisplayManager_DisplayAddCallback displayAddCallback, uint32_t *listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 
@@ -859,6 +987,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayAddListe
 
 取消屏幕连接的监听。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayAddListener(uint32_t listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayAddListener(uint32_t listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -883,6 +1015,10 @@ typedef void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId
 
 注册屏幕移除的回调函数。
 
+<!--Device-typedef void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId)--><!--Device-typedef void (*OH_NativeDisplayManager_DisplayRemoveCallback)(uint64_t displayId)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -900,6 +1036,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayRemoveList
 **描述：**
 
 注册屏幕移除变化监听（如移除显示器）。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayRemoveListener(OH_NativeDisplayManager_DisplayRemoveCallback displayRemoveCallback, uint32_t *listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayRemoveListener(OH_NativeDisplayManager_DisplayRemoveCallback displayRemoveCallback, uint32_t *listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 
@@ -926,6 +1066,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayRemoveLi
 
 取消屏幕移除的监听。
 
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayRemoveListener(uint32_t listenerIndex)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterDisplayRemoveListener(uint32_t listenerIndex)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -949,6 +1093,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint
 **描述：**
 
 获取屏幕的显示模式，默认值为DisplaySourceMode.None。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint64_t displayId, NativeDisplayManager_SourceMode *sourceMode)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplaySourceMode(uint64_t displayId, NativeDisplayManager_SourceMode *sourceMode)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 
@@ -974,6 +1122,10 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64
 **描述：**
 
 获取屏幕的位置信息，即相对于原点（主屏左上角）的x坐标和y坐标。
+
+<!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64_t displayId, int32_t *x, int32_t *y)--><!--Device-NativeDisplayManager_ErrorCode OH_NativeDisplayManager_GetDisplayPosition(uint64_t displayId, int32_t *x, int32_t *y)-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 20
 

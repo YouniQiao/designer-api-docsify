@@ -30,7 +30,7 @@ ADAPTIVE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 仅在API版本12，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12 - 12开始，该接口支持在原子化服务中使用。
 
 <!--Device-TransitionHierarchyStrategy-ADAPTIVE = 1--><!--Device-TransitionHierarchyStrategy-ADAPTIVE = 1-End-->
 
@@ -50,7 +50,7 @@ NONE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 仅在API版本12，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12 - 12开始，该接口支持在原子化服务中使用。
 
 <!--Device-TransitionHierarchyStrategy-NONE = 0--><!--Device-TransitionHierarchyStrategy-NONE = 0-End-->
 

@@ -1,18 +1,20 @@
 # DrmSubsample
 
 ```c
-struct DrmSubsample {...}
+typedef struct DrmSubsample {...} DrmSubsample
 ```
 
 ## 概述
 
 Subsample结构类型定义。
 
+<!--Device-struct DrmSubsample {...}--><!--Device-struct DrmSubsample {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
-**相关模块：** [Multimedia_Drm](capi-multimedia-drm.md)
+**相关模块：** [Multimedia_Drm](capi-avcodec-kit-multimedia-drm.md)
 
 **所在头文件：** [native_cencinfo.h](capi-native-cencinfo-h.md)
 
@@ -22,7 +24,7 @@ Subsample结构类型定义。
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t clearHeaderLen | 头部清流数据的长度。<br>**起始版本：** 12 |
-| uint32_t payLoadLen | 加密数据的长度。<br>**起始版本：** 12 |
+| uint32_t clearHeaderLen | 头部清流数据的长度。<br>**起始版本：** 12<br><!--Device-uint32_t clearHeaderLen--><!--Device-uint32_t clearHeaderLen-End--> |
+| uint32_t payLoadLen | 加密数据的长度。<br>**起始版本：** 12<br><!--Device-uint32_t payLoadLen--><!--Device-uint32_t payLoadLen-End--> |
 
 

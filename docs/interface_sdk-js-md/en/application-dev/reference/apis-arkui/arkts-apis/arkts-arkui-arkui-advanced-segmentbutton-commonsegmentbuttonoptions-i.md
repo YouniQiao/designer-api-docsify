@@ -170,7 +170,7 @@ Unit: vp
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** For text only / icon only buttons Padding { top: 4, right: 8, bottom: 4, left: 8 }. For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
 
@@ -552,7 +552,7 @@ Unit: vp
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 0
 

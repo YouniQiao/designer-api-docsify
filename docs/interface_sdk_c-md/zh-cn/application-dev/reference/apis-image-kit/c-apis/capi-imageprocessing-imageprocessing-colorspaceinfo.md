@@ -1,18 +1,20 @@
 # ImageProcessing_ColorSpaceInfo
 
 ```c
-struct ImageProcessing_ColorSpaceInfo {...}
+typedef struct ImageProcessing_ColorSpaceInfo {...} ImageProcessing_ColorSpaceInfo
 ```
 
 ## 概述
 
 色彩空间信息，用于色彩空间转换能力查询。
 
+<!--Device-struct ImageProcessing_ColorSpaceInfo {...}--><!--Device-struct ImageProcessing_ColorSpaceInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **起始版本：** 13
 
-**相关模块：** [ImageProcessing](capi-imageprocessing.md)
+**相关模块：** [ImageProcessing](capi-image-kit-imageprocessing.md)
 
 **所在头文件：** [image_processing_types.h](capi-image-processing-types-h.md)
 
@@ -22,8 +24,8 @@ struct ImageProcessing_ColorSpaceInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t metadataType | 定义元数据类型，参考[OH_Pixelmap_HdrMetadataKey](capi-pixelmap-native-h.md#oh_pixelmap_hdrmetadatakey)。 |
-| int32_t colorSpace | 定义色彩空间，参考[ColorSpaceName](../../apis-arkgraphics2d/c-apis/capi-native-color-space-manager-h.md#colorspacename)。 |
-| int32_t pixelFormat | 定义像素格式，参考[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)。 |
+| int32_t metadataType | 定义元数据类型，参考[OH_Pixelmap_HdrMetadataKey](capi-pixelmap-native-h.md#oh_pixelmap_hdrmetadatakey)。<br><!--Device-int32_t metadataType--><!--Device-int32_t metadataType-End--> |
+| int32_t colorSpace | 定义色彩空间，参考[ColorSpaceName](../../apis-arkgraphics2d/c-apis/capi-native-color-space-manager-h.md#colorspacename)。<br><!--Device-int32_t colorSpace--><!--Device-int32_t colorSpace-End--> |
+| int32_t pixelFormat | 定义像素格式，参考[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)。<br><!--Device-int32_t pixelFormat--><!--Device-int32_t pixelFormat-End--> |
 
 

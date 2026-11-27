@@ -1,18 +1,20 @@
 # OH_AudioEncInfo
 
 ```c
-struct OH_AudioEncInfo {...}
+typedef struct OH_AudioEncInfo {...} OH_AudioEncInfo
 ```
 
 ## Overview
 
 The struct describes the audio encoding information.
 
+<!--Device-struct OH_AudioEncInfo {...}--><!--Device-struct OH_AudioEncInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
-**Related module**: [AVScreenCapture](capi-avscreencapture.md)
+**Related module**: [AVScreenCapture](capi-media-kit-avscreencapture.md)
 
 **Header file**: [native_avscreen_capture_base.h](capi-native-avscreen-capture-base-h.md)
 
@@ -22,7 +24,7 @@ The struct describes the audio encoding information.
 
 | Name | Description |
 | -- | -- |
-| int32_t audioBitrate | Audio encoder bitrate, in bit/s |
-| [OH_AudioCodecFormat](capi-native-avscreen-capture-base-h.md#oh_audiocodecformat) audioCodecformat | Audio codec format |
+| int32_t audioBitrate | Audio encoder bitrate, in bit/s<br><!--Device-int32_t audioBitrate--><!--Device-int32_t audioBitrate-End--> |
+| [OH_AudioCodecFormat](capi-native-avscreen-capture-base-h.md#oh_audiocodecformat) audioCodecformat | Audio codec format<br><!--Device-OH_AudioCodecFormat audioCodecformat--><!--Device-OH_AudioCodecFormat audioCodecformat-End--> |
 
 

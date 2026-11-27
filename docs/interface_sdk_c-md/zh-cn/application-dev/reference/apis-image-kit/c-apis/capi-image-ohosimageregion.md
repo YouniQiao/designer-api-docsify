@@ -8,11 +8,13 @@ struct OhosImageRegion {...}
 
 定义图像源解码的范围选项。是[OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)的成员变量。
 
+<!--Device-struct OhosImageRegion {...}--><!--Device-struct OhosImageRegion {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image.md)
+**相关模块：** [Image](capi-image-kit-image.md)
 
 **所在头文件：** [image_source_mdk.h](capi-image-source-mdk-h.md)
 
@@ -22,9 +24,9 @@ struct OhosImageRegion {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t x | 起始x坐标，用pixels表示。 |
-| int32_t y | 起始y坐标，用pixels表示。 |
-| int32_t width | 宽度范围，用pixels表示。 |
-| int32_t height | 高度范围，用pixels表示。 |
+| int32_t x | 起始x坐标，用pixels表示。<br><!--Device-int32_t x--><!--Device-int32_t x-End--> |
+| int32_t y | 起始y坐标，用pixels表示。<br><!--Device-int32_t y--><!--Device-int32_t y-End--> |
+| int32_t width | 宽度范围，用pixels表示。<br><!--Device-int32_t width--><!--Device-int32_t width-End--> |
+| int32_t height | 高度范围，用pixels表示。<br><!--Device-int32_t height--><!--Device-int32_t height-End--> |
 
 

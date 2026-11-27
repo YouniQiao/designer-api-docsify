@@ -1,18 +1,20 @@
 # OH_AudioSession_Strategy
 
 ```c
-struct OH_AudioSession_Strategy {...}
+typedef struct OH_AudioSession_Strategy {...} OH_AudioSession_Strategy
 ```
 
 ## Overview
 
 Declares the audio session strategy.
 
+<!--Device-struct OH_AudioSession_Strategy {...}--><!--Device-struct OH_AudioSession_Strategy {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 **Header file**: [native_audio_session_base.h](capi-native-audio-session-base-h.md)
 
@@ -22,6 +24,6 @@ Declares the audio session strategy.
 
 | Name | Description |
 | -- | -- |
-| [OH_AudioSession_ConcurrencyMode](capi-native-audio-session-base-h.md#oh_audiosession_concurrencymode) concurrencyMode | Audio session concurrency mode |
+| [OH_AudioSession_ConcurrencyMode](capi-native-audio-session-base-h.md#oh_audiosession_concurrencymode) concurrencyMode | Audio session concurrency mode<br><!--Device-OH_AudioSession_ConcurrencyMode concurrencyMode--><!--Device-OH_AudioSession_ConcurrencyMode concurrencyMode-End--> |
 
 

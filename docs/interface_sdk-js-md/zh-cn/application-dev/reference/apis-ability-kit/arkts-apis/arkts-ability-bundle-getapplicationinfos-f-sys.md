@@ -32,7 +32,7 @@ function getApplicationInfos(bundleFlags: number, userId: number, callback: Asyn
 | --- | --- | --- | --- |
 | bundleFlags | number | 是 | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
 | userId | number | 是 | User ID. Value range: greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-applicationinfo-i.md)&gt;&gt; | 是 | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 <!--Del-->
 **示例**
@@ -80,7 +80,7 @@ function getApplicationInfos(bundleFlags: number, callback: AsyncCallback<Array<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | number | 是 | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-applicationinfo-i.md)&gt;&gt; | 是 | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 <!--Del-->
 **示例**
@@ -133,7 +133,7 @@ function getApplicationInfos(bundleFlags: number, userId?: number): Promise<Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-applicationinfo-i.md)&gt;&gt; | Promise used to return the list of app information when obtained successfully. |
+| Promise&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | Promise used to return the list of app information when obtained successfully. |
 
 <!--Del-->
 **示例**

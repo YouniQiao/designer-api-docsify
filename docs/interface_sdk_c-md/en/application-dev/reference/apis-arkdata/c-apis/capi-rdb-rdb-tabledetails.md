@@ -1,18 +1,20 @@
 # Rdb_TableDetails
 
 ```c
-struct Rdb_TableDetails {...}
+typedef struct Rdb_TableDetails {...} Rdb_TableDetails
 ```
 
 ## Overview
 
 Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the table.
 
+<!--Device-struct Rdb_TableDetails {...}--><!--Device-struct Rdb_TableDetails {...}-End-->
+
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
-**Related module**: [RDB](capi-rdb.md)
+**Related module**: [RDB](capi-arkdata-rdb.md)
 
 **Header file**: [relational_store.h](capi-relational-store-h.md)
 
@@ -22,8 +24,8 @@ Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the table.
 
 | Name | Description |
 | -- | -- |
-| const char *table | Indicates the name of changed table. |
-| [Rdb_Statistic](capi-rdb-rdb-statistic.md) upload | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the upload process. |
-| [Rdb_Statistic](capi-rdb-rdb-statistic.md) download | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the download process. |
+| const char *table | Indicates the name of changed table.<br><!--Device-const char *table--><!--Device-const char *table-End--> |
+| [Rdb_Statistic](capi-rdb-rdb-statistic.md) upload | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the upload process.<br><!--Device-Rdb_Statistic upload--><!--Device-Rdb_Statistic upload-End--> |
+| [Rdb_Statistic](capi-rdb-rdb-statistic.md) download | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the download process.<br><!--Device-Rdb_Statistic download--><!--Device-Rdb_Statistic download-End--> |
 
 

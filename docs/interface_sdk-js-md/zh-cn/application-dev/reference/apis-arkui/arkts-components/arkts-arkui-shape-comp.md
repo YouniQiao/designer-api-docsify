@@ -68,7 +68,7 @@ Shape()
 ## Shape
 
 ```TypeScript
-new Shape(value?: PixelMap)
+Shape(value?: PixelMap)
 ```
 
 用于绘制Shape组件的构造函数。调用后创建一个Shape对象，可设置视口、填充、边框等属性。

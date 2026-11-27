@@ -8,11 +8,13 @@ typedef struct JSVM_CodeCache {...} JSVM_CodeCache
 
 对应JSVM代码缓存的地址与大小。
 
+<!--Device-typedef struct JSVM_CodeCache {...} JSVM_CodeCache--><!--Device-typedef struct JSVM_CodeCache {...} JSVM_CodeCache-End-->
+
 **系统能力：** SystemCapability.ArkCompiler.JSVM
 
 **起始版本：** 12
 
-**相关模块：** [JSVM](capi-jsvm.md)
+**相关模块：** [JSVM](capi-arkts-jsvm.md)
 
 **所在头文件：** [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -22,7 +24,7 @@ typedef struct JSVM_CodeCache {...} JSVM_CodeCache
 
 | 名称 | 描述 |
 | -- | -- |
-| uint8_t *cache | 缓存地址。 |
-| size_t length | 缓存大小。 |
+| uint8_t *cache | 缓存地址。<br><!--Device-uint8_t *cache--><!--Device-uint8_t *cache-End--> |
+| size_t length | 缓存大小。<br><!--Device-size_t length--><!--Device-size_t length-End--> |
 
 

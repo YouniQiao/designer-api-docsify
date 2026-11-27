@@ -93,7 +93,7 @@ Called to return a FormBindingData object.
 
 | Type | Description |
 | --- | --- |
-| [formBindingData.FormBindingData](../../apis-form-kit/arkts-apis/arkts-form-formbindingdata-depr-formbindingdata-i.md) | Returns the created FormBindingData object. |
+| [formBindingData.FormBindingData](../../apis-form-kit/arkts-apis/arkts-form-formbindingdata-formbindingdata-depr-i.md) | Returns the created FormBindingData object. |
 
 ## onDestroy
 

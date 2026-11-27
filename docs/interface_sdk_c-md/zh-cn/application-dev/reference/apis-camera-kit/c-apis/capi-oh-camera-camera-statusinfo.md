@@ -1,18 +1,20 @@
 # Camera_StatusInfo
 
 ```c
-struct Camera_StatusInfo {...}
+typedef struct Camera_StatusInfo {...} Camera_StatusInfo
 ```
 
 ## 概述
 
 相机状态信息。
 
+<!--Device-struct Camera_StatusInfo {...}--><!--Device-struct Camera_StatusInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_StatusInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [Camera_Device*](capi-oh-camera-camera-device.md) camera | 相机实例。 |
-| [Camera_Status](capi-camera-h.md#camera_status) status | 当前相机状态。 |
+| [Camera_Device*](capi-oh-camera-camera-device.md) camera | 相机实例。<br><!--Device-Camera_Device* camera--><!--Device-Camera_Device* camera-End--> |
+| [Camera_Status](capi-camera-h.md#camera_status) status | 当前相机状态。<br><!--Device-Camera_Status status--><!--Device-Camera_Status status-End--> |
 
 

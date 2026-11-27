@@ -1,18 +1,20 @@
 # Crypto_DataBlob
 
 ```c
-struct Crypto_DataBlob {...}
+typedef struct Crypto_DataBlob {...} Crypto_DataBlob
 ```
 
 ## Overview
 
 Crypto data structure.
 
+<!--Device-struct Crypto_DataBlob {...}--><!--Device-struct Crypto_DataBlob {...}-End-->
+
 **System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
-**Related module**: [CryptoCommonApi](capi-cryptocommonapi.md)
+**Related module**: [CryptoCommonApi](capi-crypto-architecture-kit-cryptocommonapi.md)
 
 **Header file**: [crypto_common.h](capi-crypto-common-h.md)
 
@@ -22,7 +24,7 @@ Crypto data structure.
 
 | Name | Description |
 | -- | -- |
-| uint8_t *data | Data buffer.<br>**Since**: 12 |
-| size_t len | Data length.<br>**Since**: 12 |
+| uint8_t *data | Data buffer.<br>**Since**: 12<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| size_t len | Data length.<br>**Since**: 12<br><!--Device-size_t len--><!--Device-size_t len-End--> |
 
 

@@ -2,3 +2,14 @@
 
 ## Overview
 
+<!--Device-struct mtpos {...}--><!--Device-struct mtpos {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| long mt_blkno | <!--Device-long mt_blkno--><!--Device-long mt_blkno-End--> |
+
+

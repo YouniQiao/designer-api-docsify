@@ -8,11 +8,13 @@ typedef struct NativeDisplayManager_DisplaysInfo {...} NativeDisplayManager_Disp
 
 The struct describes the information about displays of a device with multiple screens.
 
+<!--Device-typedef struct NativeDisplayManager_DisplaysInfo {...} NativeDisplayManager_DisplaysInfo--><!--Device-typedef struct NativeDisplayManager_DisplaysInfo {...} NativeDisplayManager_DisplaysInfo-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 14
 
-**相关模块：** [OH_DisplayManager](capi-oh-displaymanager.md)
+**相关模块：** [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
 
 **所在头文件：** [oh_display_info.h](capi-oh-display-info-h.md)
 
@@ -22,7 +24,7 @@ The struct describes the information about displays of a device with multiple sc
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t displaysLength | Number of displays of a device with multiple screens. |
-| NativeDisplayManager_DisplayInfo *displaysInfo | An array of NativeDisplayManager_DisplayInfo structs, each containing information about a display. |
+| uint32_t displaysLength | Number of displays of a device with multiple screens.<br><!--Device-uint32_t displaysLength--><!--Device-uint32_t displaysLength-End--> |
+| [NativeDisplayManager_DisplayInfo](capi-oh-displaymanager-nativedisplaymanager-displayinfo.md) *displaysInfo | An array of NativeDisplayManager_DisplayInfo structs, each containing information about a display.<br><!--Device-NativeDisplayManager_DisplayInfo *displaysInfo--><!--Device-NativeDisplayManager_DisplayInfo *displaysInfo-End--> |
 
 

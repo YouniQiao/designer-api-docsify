@@ -40,7 +40,7 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 

@@ -1,18 +1,20 @@
 # TimeZoneRules
 
 ```c
-struct TimeZoneRules {...}
+typedef struct TimeZoneRules {...} TimeZoneRules
 ```
 
 ## 概述
 
 完整的时区规则，包括起始时区规则、起始时间戳数组定义的时区规则和每年生效的时区规则，能够全面描述时区的历史和未来规则。
 
+<!--Device-struct TimeZoneRules {...}--><!--Device-struct TimeZoneRules {...}-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
-**相关模块：** [i18n](capi-i18n.md)
+**相关模块：** [i18n](capi-localization-kit-i18n.md)
 
 **所在头文件：** [timezone.h](capi-timezone-h.md)
 
@@ -22,10 +24,10 @@ struct TimeZoneRules {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) initial | 起始时区规则。 |
-| [TimeArrayTimeZoneRule*](capi-i18n-timearraytimezonerule.md) timeArrayRules | 起始时间戳数组定义的时区规则数组。 |
-| [AnnualTimeZoneRule*](capi-i18n-annualtimezonerule.md) annualRules | 每年生效的时区规则数组。 |
-| size_t numTimeArrayRules | 起始时间戳数组定义的时区规则数组的大小。 |
-| size_t numAnnualRules | 每年生效的时区规则数组的大小。 |
+| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) initial | 起始时区规则。<br><!--Device-InitialTimeZoneRule initial--><!--Device-InitialTimeZoneRule initial-End--> |
+| [TimeArrayTimeZoneRule*](capi-i18n-timearraytimezonerule.md) timeArrayRules | 起始时间戳数组定义的时区规则数组。<br><!--Device-TimeArrayTimeZoneRule* timeArrayRules--><!--Device-TimeArrayTimeZoneRule* timeArrayRules-End--> |
+| [AnnualTimeZoneRule*](capi-i18n-annualtimezonerule.md) annualRules | 每年生效的时区规则数组。<br><!--Device-AnnualTimeZoneRule* annualRules--><!--Device-AnnualTimeZoneRule* annualRules-End--> |
+| size_t numTimeArrayRules | 起始时间戳数组定义的时区规则数组的大小。<br><!--Device-size_t numTimeArrayRules--><!--Device-size_t numTimeArrayRules-End--> |
+| size_t numAnnualRules | 每年生效的时区规则数组的大小。<br><!--Device-size_t numAnnualRules--><!--Device-size_t numAnnualRules-End--> |
 
 

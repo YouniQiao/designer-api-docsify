@@ -1,18 +1,20 @@
 # Rdb_DistributedConfig
 
 ```c
-struct Rdb_DistributedConfig {...}
+typedef struct Rdb_DistributedConfig {...} Rdb_DistributedConfig
 ```
 
 ## Overview
 
 Manages the distributed configuration of the table.
 
+<!--Device-struct Rdb_DistributedConfig {...}--><!--Device-struct Rdb_DistributedConfig {...}-End-->
+
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
-**Related module**: [RDB](capi-rdb.md)
+**Related module**: [RDB](capi-arkdata-rdb.md)
 
 **Header file**: [relational_store.h](capi-relational-store-h.md)
 
@@ -22,7 +24,7 @@ Manages the distributed configuration of the table.
 
 | Name | Description |
 | -- | -- |
-| int version | The version used to uniquely identify the Rdb_DistributedConfig struct. |
-| bool isAutoSync | Specifies whether the table auto syncs. |
+| int version | The version used to uniquely identify the Rdb_DistributedConfig struct.<br><!--Device-int version--><!--Device-int version-End--> |
+| bool isAutoSync | Specifies whether the table auto syncs.<br><!--Device-bool isAutoSync--><!--Device-bool isAutoSync-End--> |
 
 

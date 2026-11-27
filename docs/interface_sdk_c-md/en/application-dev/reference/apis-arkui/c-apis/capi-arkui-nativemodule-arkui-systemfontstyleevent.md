@@ -6,13 +6,15 @@ typedef struct ArkUI_SystemFontStyleEvent ArkUI_SystemFontStyleEvent
 
 ## Overview
 
-Defines parameter used by the system font style callback event.
+Defines a system font style change event, which is used to pass the event information to the registered system font style change callback when the system font size or weight changes.
+
+<!--Device-typedef struct ArkUI_SystemFontStyleEvent ArkUI_SystemFontStyleEvent--><!--Device-typedef struct ArkUI_SystemFontStyleEvent ArkUI_SystemFontStyleEvent-End-->
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **Header file**: [native_type.h](capi-native-type-h.md)
 

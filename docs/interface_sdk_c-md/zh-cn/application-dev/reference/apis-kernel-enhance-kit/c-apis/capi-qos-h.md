@@ -6,9 +6,11 @@
 
 **库：** libqos.so
 
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 12
 
-**相关模块：** [QoS](capi-qos.md)
+**相关模块：** [QoS](capi-kernel-enhance-kit-qos.md)
 
 ## 汇总
 
@@ -50,9 +52,8 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| unsigned int OH_QoS_GewuSession | 会话句柄。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Resourceschedule.QoS.Core |
-| unsigned int OH_QoS_GewuRequest | 请求句柄。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Resourceschedule.QoS.Core |
-| void (*OH_QoS_GewuOnResponse)(void* context, const char* response) | 用于接收格物服务回复的回调。格物服务在推理完成后异步调用该回调函数，非流式推理时调用一次，流式推理时根据生成过程多次调用。例如：在使用格物服务进行对话式AI推理时，可通过此回调接收模型生成的回复内容。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Resourceschedule.QoS.Core |
+| unsigned int OH_QoS_GewuSession | 会话句柄。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Resourceschedule.QoS.Core<br><!--Device-unsigned int OH_QoS_GewuSession--><!--Device-unsigned int OH_QoS_GewuSession-End--> |
+| unsigned int OH_QoS_GewuRequest | 请求句柄。<br>**起始版本：** 20<br>**系统能力：** SystemCapability.Resourceschedule.QoS.Core<br><!--Device-unsigned int OH_QoS_GewuRequest--><!--Device-unsigned int OH_QoS_GewuRequest-End--> |
 
 ## 枚举类型说明
 
@@ -66,16 +67,20 @@ enum QoS_Level
 
 描述QoS等级。
 
+<!--Device-enum QoS_Level--><!--Device-enum QoS_Level-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| QOS_BACKGROUND = 0 | 表示QoS等级为用户不可见任务。 |
-| QOS_UTILITY | 表示QoS等级为后台重要任务。 |
-| QOS_DEFAULT | 表示QoS等级为默认。 |
-| QOS_USER_INITIATED | 表示QoS等级为用户触发任务。 |
-| QOS_DEADLINE_REQUEST | 表示QoS等级为限时任务。 |
-| QOS_USER_INTERACTIVE | 表示QoS等级为用户交互任务。 |
+| QOS_BACKGROUND = 0 | 表示QoS等级为用户不可见任务。<br><!--Device-QOS_BACKGROUND = 0--><!--Device-QOS_BACKGROUND = 0-End--> |
+| QOS_UTILITY | 表示QoS等级为后台重要任务。<br><!--Device-QOS_UTILITY--><!--Device-QOS_UTILITY-End--> |
+| QOS_DEFAULT | 表示QoS等级为默认。<br><!--Device-QOS_DEFAULT--><!--Device-QOS_DEFAULT-End--> |
+| QOS_USER_INITIATED | 表示QoS等级为用户触发任务。<br><!--Device-QOS_USER_INITIATED--><!--Device-QOS_USER_INITIATED-End--> |
+| QOS_DEADLINE_REQUEST | 表示QoS等级为限时任务。<br><!--Device-QOS_DEADLINE_REQUEST--><!--Device-QOS_DEADLINE_REQUEST-End--> |
+| QOS_USER_INTERACTIVE | 表示QoS等级为用户交互任务。<br><!--Device-QOS_USER_INTERACTIVE--><!--Device-QOS_USER_INTERACTIVE-End--> |
 
 ### OH_QoS_GewuErrorCode
 
@@ -87,18 +92,22 @@ enum OH_QoS_GewuErrorCode
 
 格物错误码。
 
+<!--Device-enum OH_QoS_GewuErrorCode--><!--Device-enum OH_QoS_GewuErrorCode-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_QOS_GEWU_OK     = 0 | 成功。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_NOPERM = 201 | 权限错误。可能原因：调用者缺少所需权限。解决措施：请确认已申请相关权限。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_NOMEM  = 203 | 内存错误。可能原因：系统内存不足。解决措施：请释放资源后重试。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_INVAL  = 401 | 参数错误。可能原因：参数类型不正确或参数值无效。解决措施：请检查参数类型和取值范围。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_EXIST  = 501 | 已存在句柄。可能原因：重复创建已存在的会话或请求。解决措施：请勿重复创建，或先销毁已有句柄。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_NOENT  = 502 | 找不到句柄。可能原因：传入的会话或请求句柄无效或已被销毁。解决措施：请检查句柄是否有效。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_NOSYS  = 801 | 找不到子系统。可能原因：目标设备不支持该功能。解决措施：更换为支持该功能的设备。<br>**起始版本：** 20 |
-| OH_QOS_GEWU_FAULT  = 901 | 其他错误。可能原因：未覆盖的内部系统错误。解决措施：请检查系统日志获取详细错误信息，或联系技术支持。<br>**起始版本：** 20 |
+| OH_QOS_GEWU_OK = 0 | 成功。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_OK = 0--><!--Device-OH_QOS_GEWU_OK = 0-End--> |
+| OH_QOS_GEWU_NOPERM = 201 | 权限错误。可能原因：调用者缺少所需权限。解决措施：请确认已申请相关权限。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_NOPERM = 201--><!--Device-OH_QOS_GEWU_NOPERM = 201-End--> |
+| OH_QOS_GEWU_NOMEM = 203 | 内存错误。可能原因：系统内存不足。解决措施：请释放资源后重试。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_NOMEM = 203--><!--Device-OH_QOS_GEWU_NOMEM = 203-End--> |
+| OH_QOS_GEWU_INVAL = 401 | 参数错误。可能原因：参数类型不正确或参数值无效。解决措施：请检查参数类型和取值范围。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_INVAL = 401--><!--Device-OH_QOS_GEWU_INVAL = 401-End--> |
+| OH_QOS_GEWU_EXIST = 501 | 已存在句柄。可能原因：重复创建已存在的会话或请求。解决措施：请勿重复创建，或先销毁已有句柄。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_EXIST = 501--><!--Device-OH_QOS_GEWU_EXIST = 501-End--> |
+| OH_QOS_GEWU_NOENT = 502 | 找不到句柄。可能原因：传入的会话或请求句柄无效或已被销毁。解决措施：请检查句柄是否有效。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_NOENT = 502--><!--Device-OH_QOS_GEWU_NOENT = 502-End--> |
+| OH_QOS_GEWU_NOSYS = 801 | 找不到子系统。可能原因：目标设备不支持该功能。解决措施：更换为支持该功能的设备。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_NOSYS = 801--><!--Device-OH_QOS_GEWU_NOSYS = 801-End--> |
+| OH_QOS_GEWU_FAULT = 901 | 其他错误。可能原因：未覆盖的内部系统错误。解决措施：请检查系统日志获取详细错误信息，或联系技术支持。<br>**起始版本：** 20<br><!--Device-OH_QOS_GEWU_FAULT = 901--><!--Device-OH_QOS_GEWU_FAULT = 901-End--> |
 
 
 ## 函数说明
@@ -112,6 +121,10 @@ int OH_QoS_SetThreadQoS(QoS_Level level)
 **描述：**
 
 为当前线程设置QoS等级。系统会根据QoS等级调整线程调度优先级和资源分配策略，等级越高的任务通常获得更及时的调度。例如：在执行后台下载或数据同步等用户不可见任务时，可设置QOS_BACKGROUND以降低资源占用； 在处理用户交互或前台渲染等高优先级任务时，可设置QOS_USER_INTERACTIVE以获得更快的响应速度。
+
+<!--Device-int OH_QoS_SetThreadQoS(QoS_Level level)--><!--Device-int OH_QoS_SetThreadQoS(QoS_Level level)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
 
 **起始版本：** 12
 
@@ -142,6 +155,10 @@ int OH_QoS_ResetThreadQoS()
 
 重置当前线程的QoS等级，线程将恢复为系统默认调度策略。例如：当之前设置的高优先级任务执行完毕后，调用此接口恢复默认等级，避免不必要的资源占用。
 
+<!--Device-int OH_QoS_ResetThreadQoS()--><!--Device-int OH_QoS_ResetThreadQoS()-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -164,6 +181,10 @@ int OH_QoS_GetThreadQoS(QoS_Level *level)
 **描述：**
 
 获取当前线程的QoS等级。该接口用于读取当前线程已设置的QoS等级，如果当前线程未设置QoS等级或发生内部错误则返回-1。例如：在需要根据线程当前优先级进行条件判断的场景中，可先调用此接口获取QoS等级，再决定后续操作。
+
+<!--Device-int OH_QoS_GetThreadQoS(QoS_Level *level)--><!--Device-int OH_QoS_GetThreadQoS(QoS_Level *level)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
 
 **起始版本：** 12
 
@@ -194,6 +215,10 @@ typedef void (*OH_QoS_GewuOnResponse)(void* context, const char* response)
 
 用于接收格物服务回复的回调。格物服务在推理完成后异步调用该回调函数，非流式推理时调用一次，流式推理时根据生成过程多次调用。例如：在使用格物服务进行对话式AI推理时，可通过此回调接收模型生成的回复内容。
 
+<!--Device-typedef void (*OH_QoS_GewuOnResponse)(void* context, const char* response)--><!--Device-typedef void (*OH_QoS_GewuOnResponse)(void* context, const char* response)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -212,6 +237,10 @@ OH_QoS_GewuCreateSessionResult OH_QoS_GewuCreateSession(const char* attributes)
 **描述：**
 
 创建格物会话。调用此接口前，需确保系统支持格物服务能力并已申请接口所需权限。该函数会根据会话属性加载指定的AI模型并初始化推理环境，为后续推理请求做好准备。 会话对象的生命周期从OH_QoS_GewuCreateSession函数返回开始，到调用OH_QoS_GewuDestroySession为止。在生命周期内，可以创建多个请求；建议在销毁会话前等待所有请求完成或中止， 否则这些请求会被自动中止且不再收到回复；销毁后会话句柄无法再使用。会话属性通过JSON字符串传入，该JSON字符串支持以下字段： <br>- model: string（必选），表示会话使用的模型路径。 <br>`attributes` JSON字符串例子： <br>{ <br>&nbsp;&nbsp;&nbsp;&nbsp;"model": "/data/storage/el2/base/files/qwen2/" <br>&nbsp;}
+
+<!--Device-OH_QoS_GewuCreateSessionResult OH_QoS_GewuCreateSession(const char* attributes)--><!--Device-OH_QoS_GewuCreateSessionResult OH_QoS_GewuCreateSession(const char* attributes)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
 
 **起始版本：** 20
 
@@ -237,6 +266,10 @@ OH_QoS_GewuErrorCode OH_QoS_GewuDestroySession(OH_QoS_GewuSession session)
 
 销毁格物会话。该函数会释放会话相关资源并清理内部状态。建议等待至所有请求都已完成或中止后再调用此接口。如果调用时还有正在进行的请求，这些请求将会被中止，且不再收到回复，请求句柄无法再被使用。注意，在调用完该接口后， 会话对象无法再被使用。
 
+<!--Device-OH_QoS_GewuErrorCode OH_QoS_GewuDestroySession(OH_QoS_GewuSession session)--><!--Device-OH_QoS_GewuErrorCode OH_QoS_GewuDestroySession(OH_QoS_GewuSession session)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -260,6 +293,10 @@ OH_QoS_GewuErrorCode OH_QoS_GewuAbortRequest(OH_QoS_GewuSession session, OH_QoS_
 **描述：**
 
 停止指定的请求。该函数会请求格物服务中止正在进行的推理计算，并清理该请求相关状态。调用此接口前，需确保传入的会话句柄有效（未通过OH_QoS_GewuDestroySession销毁），且请求句柄有效（ 已通过OH_QoS_GewuSubmitRequest提交）。典型使用场景包括用户主动取消正在进行的推理请求，或应用需要释放资源时提前终止不需要的请求。成功调用该函数后，客户端不会再收到该请求的回复，且该请求句柄无法再被使用。
+
+<!--Device-OH_QoS_GewuErrorCode OH_QoS_GewuAbortRequest(OH_QoS_GewuSession session, OH_QoS_GewuRequest request)--><!--Device-OH_QoS_GewuErrorCode OH_QoS_GewuAbortRequest(OH_QoS_GewuSession session, OH_QoS_GewuRequest request)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
 
 **起始版本：** 20
 
@@ -285,6 +322,10 @@ OH_QoS_GewuSubmitRequestResult OH_QoS_GewuSubmitRequest(OH_QoS_GewuSession sessi
 **描述：**
 
 提交请求。该函数会将推理请求提交到指定会话，由格物服务调度执行。调用此接口前，需确保传入的会话句柄有效（ 已通过OH_QoS_GewuCreateSession创建且未通过OH_QoS_GewuDestroySession销毁）。request参数为请求的JSON字符串，支持以下字段： <br>- messages: array，必填，表示消息的数组，其中每个元素支持以下字段： <br>&nbsp;&nbsp;&nbsp;&nbsp;- role: string，消息的角色类型，可选值包括： <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "developer"：开发者或系统提供的指示。 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "user"：用户输入。 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "assistant"：模型生成结果。 <br>&nbsp;&nbsp;&nbsp;&nbsp;- content: string，消息内容。 <br>- stream: boolean or null，可选，是否使能流式推理。传入true启用流式推理，适用于需要逐步接收模型生成内容、降低首字延迟的场景，回调会被多次调用；传入false或null使用非流式推理， 适用于需要一次性获取完整结果的场景，回调仅调用一次。不传入时默认为非流式。JSON字符串例子： <br>{ <br>&nbsp;&nbsp;&nbsp;&nbsp;"messages": [ <br>&nbsp;&nbsp;&nbsp;&nbsp;{ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"role": "developer", <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"content": "You are a helpful assistant." <br>&nbsp;&nbsp;&nbsp;&nbsp;}, <br>&nbsp;&nbsp;&nbsp;&nbsp;{ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"role": "user", <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"content": "What is OpenHarmony" <br>&nbsp;&nbsp;&nbsp;&nbsp;} <br>&nbsp;&nbsp;&nbsp;&nbsp;], <br>&nbsp;&nbsp;&nbsp;&nbsp;"stream": true <br>}
+
+<!--Device-OH_QoS_GewuSubmitRequestResult OH_QoS_GewuSubmitRequest(OH_QoS_GewuSession session, const char* request, OH_QoS_GewuOnResponse callback, void* context)--><!--Device-OH_QoS_GewuSubmitRequestResult OH_QoS_GewuSubmitRequest(OH_QoS_GewuSession session, const char* request, OH_QoS_GewuOnResponse callback, void* context)-End-->
+
+**系统能力：** SystemCapability.Resourceschedule.QoS.Core
 
 **起始版本：** 20
 

@@ -1,18 +1,20 @@
 # Hid_RelAxesArray
 
 ```c
-struct Hid_RelAxesArray {...}
+typedef struct Hid_RelAxesArray {...} Hid_RelAxesArray
 ```
 
 ## 概述
 
 相对坐标属性编码数组，用于存储HID设备支持的相对坐标属性信息。
 
+<!--Device-struct Hid_RelAxesArray {...}--><!--Device-struct Hid_RelAxesArray {...}-End-->
+
 **系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 11
 
-**相关模块：** [HidDdk](capi-hidddk.md)
+**相关模块：** [HidDdk](capi-driver-development-kit-hidddk.md)
 
 **所在头文件：** [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -22,7 +24,7 @@ struct Hid_RelAxesArray {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| Hid_RelAxes *hidRelAxes | 相对坐标属性编码数组的指针，指向调用方预先分配的数组（不允许为空指针），数组大小不小于length。 |
-| uint16_t length | 数组的有效长度，不超过hidRelAxes数组的实际长度。 |
+| [Hid_RelAxes](capi-hid-ddk-types-h.md#hid_relaxes) *hidRelAxes | 相对坐标属性编码数组的指针，指向调用方预先分配的数组（不允许为空指针），数组大小不小于length。<br><!--Device-Hid_RelAxes *hidRelAxes--><!--Device-Hid_RelAxes *hidRelAxes-End--> |
+| uint16_t length | 数组的有效长度，不超过hidRelAxes数组的实际长度。<br><!--Device-uint16_t length--><!--Device-uint16_t length-End--> |
 
 

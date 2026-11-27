@@ -77,4 +77,4 @@ Called when a connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Error code returned when the connection fails. 16000211 - The specified service is not found. 16000050 - System service connection failed. <br>The value should be an integer. |
+| code | number | Yes | Error code returned when the connection fails. 16000211 - The specified service is not found. 16000213 - The specified service is disabled. 16000219 - Connection to the specified service timed out. 16000050 - System service connection failed. <br>The value should be an integer. |

@@ -1,18 +1,20 @@
 # Hid_KeyCodeArray
 
 ```c
-struct Hid_KeyCodeArray {...}
+typedef struct Hid_KeyCodeArray {...} Hid_KeyCodeArray
 ```
 
 ## Overview
 
-Defines a struct for the key code array.
+Defines an array of key value attribute codes, which stores information about the key value codes supported by an HID device.
+
+<!--Device-struct Hid_KeyCodeArray {...}--><!--Device-struct Hid_KeyCodeArray {...}-End-->
 
 **System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
-**Related module**: [HidDdk](capi-hidddk.md)
+**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
 
 **Header file**: [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -22,7 +24,7 @@ Defines a struct for the key code array.
 
 | Name | Description |
 | -- | -- |
-| Hid_KeyCode *hidKeyCode | Key code array. |
-| uint16_t length | Valid length of an array. |
+| [Hid_KeyCode](capi-hid-ddk-types-h.md#hid_keycode) *hidKeyCode | Pointer to the array of key codes, which points to the array pre-allocated by the caller. The pointer cannot be null. The array size must be greater than or equal to the value of length.<br><!--Device-Hid_KeyCode *hidKeyCode--><!--Device-Hid_KeyCode *hidKeyCode-End--> |
+| uint16_t length | Valid length of the array, which cannot exceed the actual length of the **hidKeyCode** array.<br><!--Device-uint16_t length--><!--Device-uint16_t length-End--> |
 
 

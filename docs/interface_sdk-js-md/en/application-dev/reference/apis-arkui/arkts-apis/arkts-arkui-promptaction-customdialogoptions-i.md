@@ -70,7 +70,7 @@ borderColor?: ResourceColor | EdgeColors
 
 Border color of the dialog box. <br>Default value: **Color.Black**. <br> **borderColor** must be used with **borderWidth** in pairs.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md)
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box. <br>Default value: **BorderStyle.Solid**. <br> **borderStyle** must be used with **borderWidth** in pairs.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ borderWidth?: Dimension | EdgeWidths
 
 Border width of the dialog box. <br>You can set the width for all four sides or set separate widths for individual sides. <br>Default value: **0**. <br>Unit: vp. <br> When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. <br>If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ cornerRadius?: Dimension | BorderRadiuses
 
 Corner radius of the background. <br>You can set separate radii for the four corners. <br>Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }** <br> The radius of the rounded corners is subject to the component size. Its maximum value is half of the component width or height. If the value is negative, the default value is used. <br> When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 

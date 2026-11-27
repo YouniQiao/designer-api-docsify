@@ -1,18 +1,20 @@
 # OH_VideoEncInfo
 
 ```c
-struct OH_VideoEncInfo {...}
+typedef struct OH_VideoEncInfo {...} OH_VideoEncInfo
 ```
 
 ## 概述
 
 视频编码参数。<br> 用于配置屏幕录制的视频编码参数，支持设置编码格式、比特率和帧率。videoCodec指定编码格式（如H.264、H.265等）， videoBitrate影响视频清晰度和文件大小，videoFrameRate影响视频流畅度。通常在调用屏幕录制接口前设置这些参数。
 
+<!--Device-struct OH_VideoEncInfo {...}--><!--Device-struct OH_VideoEncInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **起始版本：** 10
 
-**相关模块：** [AVScreenCapture](capi-avscreencapture.md)
+**相关模块：** [AVScreenCapture](capi-media-kit-avscreencapture.md)
 
 **所在头文件：** [native_avscreen_capture_base.h](capi-native-avscreen-capture-base-h.md)
 
@@ -22,8 +24,8 @@ struct OH_VideoEncInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat) videoCodec | 视频编码格式。不同编码格式影响视频的压缩效率与兼容性，具体各格式效果参见[OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat)枚举说明。 |
-| int32_t videoBitrate | 视频编码比特率，单位为比特每秒（bit/s）。取值范围需根据编码格式和实际需求确定，默认取值为10000000， 值越大画质越好但文件也越大。 |
-| int32_t videoFrameRate | 视频编码帧率，单位为帧每秒（FPS）。常见取值范围为15~60 FPS。 |
+| [OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat) videoCodec | 视频编码格式。不同编码格式影响视频的压缩效率与兼容性，具体各格式效果参见[OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat)枚举说明。<br><!--Device-OH_VideoCodecFormat videoCodec--><!--Device-OH_VideoCodecFormat videoCodec-End--> |
+| int32_t videoBitrate | 视频编码比特率，单位为比特每秒（bit/s）。取值范围需根据编码格式和实际需求确定，默认取值为10000000， 值越大画质越好但文件也越大。<br><!--Device-int32_t videoBitrate--><!--Device-int32_t videoBitrate-End--> |
+| int32_t videoFrameRate | 视频编码帧率，单位为帧每秒（FPS）。常见取值范围为15~60 FPS。<br><!--Device-int32_t videoFrameRate--><!--Device-int32_t videoFrameRate-End--> |
 
 

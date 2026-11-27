@@ -8,11 +8,13 @@ typedef struct ffrt_function_header_t {...} ffrt_function_header_t
 
 任务执行体，用于定义任务的执行和销毁回调。<br> `exec`回调在任务被调度时调用，`destroy`回调在任务完成后被调用以释放任务相关资源。两者共同管理FFRT任务的完整生命周期。
 
+<!--Device-typedef struct ffrt_function_header_t {...} ffrt_function_header_t--><!--Device-typedef struct ffrt_function_header_t {...} ffrt_function_header_t-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.Ffrt.Core
 
 **起始版本：** 10
 
-**相关模块：** [FFRT](capi-ffrt.md)
+**相关模块：** [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 **所在头文件：** [type_def.h](capi-type-def-h.md)
 
@@ -22,8 +24,8 @@ typedef struct ffrt_function_header_t {...} ffrt_function_header_t
 
 | 名称 | 描述 |
 | -- | -- |
-| [ffrt_function_t](capi-type-def-h.md#ffrt_function_t) exec | 执行任务的函数。在任务被调度时由框架调用。 |
-| [ffrt_function_t](capi-type-def-h.md#ffrt_function_t) destroy | 销毁任务的函数。在任务执行完毕后由框架调用以释放资源。 |
-| uint64_t reserve[2] | 保留字段。需设置为0。 |
+| [ffrt_function_t](capi-type-def-h.md#ffrt_function_t) exec | 执行任务的函数。在任务被调度时由框架调用。<br><!--Device-ffrt_function_t exec--><!--Device-ffrt_function_t exec-End--> |
+| [ffrt_function_t](capi-type-def-h.md#ffrt_function_t) destroy | 销毁任务的函数。在任务执行完毕后由框架调用以释放资源。<br><!--Device-ffrt_function_t destroy--><!--Device-ffrt_function_t destroy-End--> |
+| uint64_t reserve[2] | 保留字段。需设置为0。<br><!--Device-uint64_t reserve[2]--><!--Device-uint64_t reserve[2]-End--> |
 
 

@@ -35,7 +35,7 @@ Ellipse(options?: EllipseOptions)
 ## Ellipse
 
 ```TypeScript
-new Ellipse(options?: EllipseOptions)
+Ellipse(options?: EllipseOptions)
 ```
 
 用于绘制椭圆的构造函数。调用后创建一个Ellipse对象，可设置宽高属性。

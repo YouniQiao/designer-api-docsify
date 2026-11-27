@@ -8,9 +8,11 @@
 
 **库：** libohcrypto.so
 
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**相关模块：** [CryptoMacApi](capi-cryptomacapi.md)
+**相关模块：** [CryptoMacApi](capi-crypto-architecture-kit-cryptomacapi.md)
 
 ## 汇总
 
@@ -50,12 +52,16 @@ enum CryptoMac_ParamType
 
 定义MAC算法参数类型。
 
+<!--Device-enum CryptoMac_ParamType--><!--Device-enum CryptoMac_ParamType-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CRYPTO_MAC_DIGEST_NAME_STR = 0 | HMAC的消息摘要算法名称，通过[OH_CryptoMac_SetParam](capi-crypto-mac-h.md#oh_cryptomac_setparam)设置。 取值："SHA1"、"SHA224"、"SHA256"、"SHA384"、"SHA512"、"SM3"、"MD5"。 从API version 26.0.0开始支持"SHA3-256"、"SHA3-384"、"SHA3-512"。<br>**起始版本：** 20 |
-| CRYPTO_MAC_CIPHER_NAME_STR = 1 | CMAC的对称加密算法名称，通过[OH_CryptoMac_SetParam](capi-crypto-mac-h.md#oh_cryptomac_setparam)设置。 取值："AES128"、"AES256"。<br>**起始版本：** 20 |
+| CRYPTO_MAC_DIGEST_NAME_STR = 0 | HMAC的消息摘要算法名称，通过[OH_CryptoMac_SetParam](capi-crypto-mac-h.md#oh_cryptomac_setparam)设置。 取值："SHA1"、"SHA224"、"SHA256"、"SHA384"、"SHA512"、"SM3"、"MD5"。 从API version 26.0.0开始支持"SHA3-256"、"SHA3-384"、"SHA3-512"。<br>**起始版本：** 20<br><!--Device-CRYPTO_MAC_DIGEST_NAME_STR = 0--><!--Device-CRYPTO_MAC_DIGEST_NAME_STR = 0-End--> |
+| CRYPTO_MAC_CIPHER_NAME_STR = 1 | CMAC的对称加密算法名称，通过[OH_CryptoMac_SetParam](capi-crypto-mac-h.md#oh_cryptomac_setparam)设置。 取值："AES128"、"AES256"。<br>**起始版本：** 20<br><!--Device-CRYPTO_MAC_CIPHER_NAME_STR = 1--><!--Device-CRYPTO_MAC_CIPHER_NAME_STR = 1-End--> |
 
 
 ## 函数说明
@@ -70,9 +76,13 @@ OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)
 
 根据给定的算法名称创建MAC上下文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_mac/OH_CryptoMac_Destroy {ctx}
+**资源释放：** [OH_CryptoMac_Destroy](#oh_cryptomac_destroy)
 
 **参数：**
 
@@ -101,6 +111,10 @@ OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType t
 **描述：**
 
 设置MAC上下文的指定参数。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType type, const Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType type, const Crypto_DataBlob *value)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -133,6 +147,10 @@ OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *ke
 
 使用对称密钥初始化MAC上下文。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *key)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
 **参数：**
@@ -162,6 +180,10 @@ OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *
 **描述：**
 
 更新MAC数据。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *in)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *in)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -193,9 +215,13 @@ OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)
 
 结束MAC操作。
 
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
+
 **起始版本：** 20
 
-**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {out}
+**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
 
 **参数：**
 
@@ -219,6 +245,10 @@ OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)
 **描述：**
 
 获取MAC结果的长度。
+
+<!--Device-OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)--><!--Device-OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 
@@ -244,6 +274,10 @@ void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)
 **描述：**
 
 销毁MAC上下文。
+
+<!--Device-void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)--><!--Device-void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

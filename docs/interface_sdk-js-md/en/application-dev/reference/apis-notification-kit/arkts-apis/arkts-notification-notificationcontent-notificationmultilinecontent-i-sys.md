@@ -34,7 +34,7 @@ lineWantAgents?: Array<WantAgent>
 
 ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
-**Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)&gt;
+**Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 
 **Since:** 20
 

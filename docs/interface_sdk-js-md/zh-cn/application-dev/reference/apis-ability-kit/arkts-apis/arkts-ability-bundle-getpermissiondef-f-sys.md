@@ -33,7 +33,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | string | 是 | 需要查询的权限的名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-permissiondef-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回定义的权限信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回定义的权限信息。 |
 
 <!--Del-->
 **示例**
@@ -98,7 +98,7 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-permissiondef-i-sys.md)&gt; | Promise对象，获取成功时返回权限详细信息。 |
+| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Promise对象，获取成功时返回权限详细信息。 |
 
 <!--Del-->
 **示例**

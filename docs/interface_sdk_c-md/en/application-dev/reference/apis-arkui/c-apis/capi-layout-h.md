@@ -6,20 +6,22 @@ Defines the layout-related types for the native module.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkUI_PixelRoundPolicy](capi-arkui-nativemodule-arkui-pixelroundpolicy.md) | ArkUI_PixelRoundPolicy | Defines the PixelRound policy of a component's four edges. |
 | [ArkUI_PositionEdges](capi-arkui-nativemodule-arkui-positionedges.md) | ArkUI_PositionEdges | Define the Edges describing the position of a component by distances to the container's four edges. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -41,7 +43,7 @@ Defines the layout-related types for the native module.
 | [ArkUI_LayoutPolicy](#arkui_layoutpolicy) | ArkUI_LayoutPolicy | Enumerates the LayoutPolicy. |
 | [ArkUI_PixelRoundCalcPolicy](#arkui_pixelroundcalcpolicy) | ArkUI_PixelRoundCalcPolicy | Enumerates the PixelRoundPolicy. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -122,19 +124,23 @@ enum ArkUI_Alignment
 
 Enumerates the alignment modes.
 
+<!--Device-enum ArkUI_Alignment--><!--Device-enum ArkUI_Alignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_ALIGNMENT_TOP_START = 0 | Top start. |
-| ARKUI_ALIGNMENT_TOP | Top center. |
-| ARKUI_ALIGNMENT_TOP_END | Top end. |
-| ARKUI_ALIGNMENT_START | Vertically centered start. |
-| ARKUI_ALIGNMENT_CENTER | Horizontally and vertically centered. |
-| ARKUI_ALIGNMENT_END | Vertically centered end. |
-| ARKUI_ALIGNMENT_BOTTOM_START | Bottom start. |
-| ARKUI_ALIGNMENT_BOTTOM | Horizontally centered on the bottom. |
-| ARKUI_ALIGNMENT_BOTTOM_END | Bottom end. |
+| ARKUI_ALIGNMENT_TOP_START = 0 | Top start.<br><!--Device-ARKUI_ALIGNMENT_TOP_START = 0--><!--Device-ARKUI_ALIGNMENT_TOP_START = 0-End--> |
+| ARKUI_ALIGNMENT_TOP | Top center.<br><!--Device-ARKUI_ALIGNMENT_TOP--><!--Device-ARKUI_ALIGNMENT_TOP-End--> |
+| ARKUI_ALIGNMENT_TOP_END | Top end.<br><!--Device-ARKUI_ALIGNMENT_TOP_END--><!--Device-ARKUI_ALIGNMENT_TOP_END-End--> |
+| ARKUI_ALIGNMENT_START | Vertically centered start.<br><!--Device-ARKUI_ALIGNMENT_START--><!--Device-ARKUI_ALIGNMENT_START-End--> |
+| ARKUI_ALIGNMENT_CENTER | Horizontally and vertically centered.<br><!--Device-ARKUI_ALIGNMENT_CENTER--><!--Device-ARKUI_ALIGNMENT_CENTER-End--> |
+| ARKUI_ALIGNMENT_END | Vertically centered end.<br><!--Device-ARKUI_ALIGNMENT_END--><!--Device-ARKUI_ALIGNMENT_END-End--> |
+| ARKUI_ALIGNMENT_BOTTOM_START | Bottom start.<br><!--Device-ARKUI_ALIGNMENT_BOTTOM_START--><!--Device-ARKUI_ALIGNMENT_BOTTOM_START-End--> |
+| ARKUI_ALIGNMENT_BOTTOM | Horizontally centered on the bottom.<br><!--Device-ARKUI_ALIGNMENT_BOTTOM--><!--Device-ARKUI_ALIGNMENT_BOTTOM-End--> |
+| ARKUI_ALIGNMENT_BOTTOM_END | Bottom end.<br><!--Device-ARKUI_ALIGNMENT_BOTTOM_END--><!--Device-ARKUI_ALIGNMENT_BOTTOM_END-End--> |
 
 ### ArkUI_ItemAlignment
 
@@ -146,16 +152,20 @@ enum ArkUI_ItemAlignment
 
 Enumerates the modes in which components are laid out along the cross axis of the container.
 
+<!--Device-enum ArkUI_ItemAlignment--><!--Device-enum ArkUI_ItemAlignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_ITEM_ALIGNMENT_AUTO = 0 | The default configuration in the container is used. |
-| ARKUI_ITEM_ALIGNMENT_START | The items in the container are aligned with the cross-start edge. |
-| ARKUI_ITEM_ALIGNMENT_CENTER | The items in the container are centered along the cross axis. |
-| ARKUI_ITEM_ALIGNMENT_END | The items in the container are aligned with the cross-end edge. |
-| ARKUI_ITEM_ALIGNMENT_STRETCH | The items in the container are stretched and padded along the cross axis. |
-| ARKUI_ITEM_ALIGNMENT_BASELINE | The items in the container are aligned in such a manner that their text baselines are aligned along the cross axis. |
+| ARKUI_ITEM_ALIGNMENT_AUTO = 0 | The default configuration in the container is used.<br><!--Device-ARKUI_ITEM_ALIGNMENT_AUTO = 0--><!--Device-ARKUI_ITEM_ALIGNMENT_AUTO = 0-End--> |
+| ARKUI_ITEM_ALIGNMENT_START | The items in the container are aligned with the cross-start edge.<br><!--Device-ARKUI_ITEM_ALIGNMENT_START--><!--Device-ARKUI_ITEM_ALIGNMENT_START-End--> |
+| ARKUI_ITEM_ALIGNMENT_CENTER | The items in the container are centered along the cross axis.<br><!--Device-ARKUI_ITEM_ALIGNMENT_CENTER--><!--Device-ARKUI_ITEM_ALIGNMENT_CENTER-End--> |
+| ARKUI_ITEM_ALIGNMENT_END | The items in the container are aligned with the cross-end edge.<br><!--Device-ARKUI_ITEM_ALIGNMENT_END--><!--Device-ARKUI_ITEM_ALIGNMENT_END-End--> |
+| ARKUI_ITEM_ALIGNMENT_STRETCH | The items in the container are stretched and padded along the cross axis.<br><!--Device-ARKUI_ITEM_ALIGNMENT_STRETCH--><!--Device-ARKUI_ITEM_ALIGNMENT_STRETCH-End--> |
+| ARKUI_ITEM_ALIGNMENT_BASELINE | The items in the container are aligned in such a manner that their text baselines are aligned along the cross axis.<br><!--Device-ARKUI_ITEM_ALIGNMENT_BASELINE--><!--Device-ARKUI_ITEM_ALIGNMENT_BASELINE-End--> |
 
 ### ArkUI_FlexAlignment
 
@@ -167,16 +177,20 @@ enum ArkUI_FlexAlignment
 
 Enumerates the vertical alignment modes.
 
+<!--Device-enum ArkUI_FlexAlignment--><!--Device-enum ArkUI_FlexAlignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_FLEX_ALIGNMENT_START = 1 | The child components are aligned with the start edge of the main axis. |
-| ARKUI_FLEX_ALIGNMENT_CENTER = 2 | The child components are aligned in the center of the main axis. |
-| ARKUI_FLEX_ALIGNMENT_END = 3 | The child components are aligned with the end edge of the main axis. |
-| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The first component is aligned with the main-start, and the last component is aligned with the main-end. |
-| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The space between the first component and main-start, and that between the last component and cross-main are both half the size of the space between two adjacent components. |
-| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | The child components are evenly distributed along the main axis. The space between the first component and main-start, the space between the last component and main-end, and the space between any two adjacent components are the same. |
+| ARKUI_FLEX_ALIGNMENT_START = 1 | The child components are aligned with the start edge of the main axis.<br><!--Device-ARKUI_FLEX_ALIGNMENT_START = 1--><!--Device-ARKUI_FLEX_ALIGNMENT_START = 1-End--> |
+| ARKUI_FLEX_ALIGNMENT_CENTER = 2 | The child components are aligned in the center of the main axis.<br><!--Device-ARKUI_FLEX_ALIGNMENT_CENTER = 2--><!--Device-ARKUI_FLEX_ALIGNMENT_CENTER = 2-End--> |
+| ARKUI_FLEX_ALIGNMENT_END = 3 | The child components are aligned with the end edge of the main axis.<br><!--Device-ARKUI_FLEX_ALIGNMENT_END = 3--><!--Device-ARKUI_FLEX_ALIGNMENT_END = 3-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The first component is aligned with the main-start, and the last component is aligned with the main-end.<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The space between the first component and main-start, and that between the last component and cross-main are both half the size of the space between two adjacent components.<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | The child components are evenly distributed along the main axis. The space between the first component and main-start, the space between the last component and main-end, and the space between any two adjacent components are the same.<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8-End--> |
 
 ### ArkUI_FlexDirection
 
@@ -188,14 +202,18 @@ enum ArkUI_FlexDirection
 
 Enumerates the directions of the main axis in the flex container.
 
+<!--Device-enum ArkUI_FlexDirection--><!--Device-enum ArkUI_FlexDirection-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_FLEX_DIRECTION_ROW = 0 | The child components are arranged in the same direction as the main axis runs along the rows. |
-| ARKUI_FLEX_DIRECTION_COLUMN | The child components are arranged in the same direction as the main axis runs down the columns. |
-| ARKUI_FLEX_DIRECTION_ROW_REVERSE | The child components are arranged opposite to the <b>ROW</b> direction. |
-| ARKUI_FLEX_DIRECTION_COLUMN_REVERSE | The child components are arranged opposite to the <b>COLUMN</b> direction. |
+| ARKUI_FLEX_DIRECTION_ROW = 0 | The child components are arranged in the same direction as the main axis runs along the rows.<br><!--Device-ARKUI_FLEX_DIRECTION_ROW = 0--><!--Device-ARKUI_FLEX_DIRECTION_ROW = 0-End--> |
+| ARKUI_FLEX_DIRECTION_COLUMN | The child components are arranged in the same direction as the main axis runs down the columns.<br><!--Device-ARKUI_FLEX_DIRECTION_COLUMN--><!--Device-ARKUI_FLEX_DIRECTION_COLUMN-End--> |
+| ARKUI_FLEX_DIRECTION_ROW_REVERSE | The child components are arranged opposite to the <b>ROW</b> direction.<br><!--Device-ARKUI_FLEX_DIRECTION_ROW_REVERSE--><!--Device-ARKUI_FLEX_DIRECTION_ROW_REVERSE-End--> |
+| ARKUI_FLEX_DIRECTION_COLUMN_REVERSE | The child components are arranged opposite to the <b>COLUMN</b> direction.<br><!--Device-ARKUI_FLEX_DIRECTION_COLUMN_REVERSE--><!--Device-ARKUI_FLEX_DIRECTION_COLUMN_REVERSE-End--> |
 
 ### ArkUI_FlexWrap
 
@@ -207,13 +225,17 @@ enum ArkUI_FlexWrap
 
 Defines whether the flex container has a single line or multiple lines.
 
+<!--Device-enum ArkUI_FlexWrap--><!--Device-enum ArkUI_FlexWrap-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_FLEX_WRAP_NO_WRAP = 0 | The child components in the flex container are arranged in a single line, and they cannot overflow. |
-| ARKUI_FLEX_WRAP_WRAP | The child components in the flex container are arranged in multiple lines, and they may overflow. |
-| ARKUI_FLEX_WRAP_WRAP_REVERSE | The child components in the flex container are reversely arranged in multiple lines, and they may overflow. |
+| ARKUI_FLEX_WRAP_NO_WRAP = 0 | The child components in the flex container are arranged in a single line, and they cannot overflow.<br><!--Device-ARKUI_FLEX_WRAP_NO_WRAP = 0--><!--Device-ARKUI_FLEX_WRAP_NO_WRAP = 0-End--> |
+| ARKUI_FLEX_WRAP_WRAP | The child components in the flex container are arranged in multiple lines, and they may overflow.<br><!--Device-ARKUI_FLEX_WRAP_WRAP--><!--Device-ARKUI_FLEX_WRAP_WRAP-End--> |
+| ARKUI_FLEX_WRAP_WRAP_REVERSE | The child components in the flex container are reversely arranged in multiple lines, and they may overflow.<br><!--Device-ARKUI_FLEX_WRAP_WRAP_REVERSE--><!--Device-ARKUI_FLEX_WRAP_WRAP_REVERSE-End--> |
 
 ### ArkUI_Direction
 
@@ -225,13 +247,17 @@ enum ArkUI_Direction
 
 Enumerates the modes in which components are laid out along the main axis of the container.
 
+<!--Device-enum ArkUI_Direction--><!--Device-enum ArkUI_Direction-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_DIRECTION_LTR = 0 | Components are arranged from left to right. |
-| ARKUI_DIRECTION_RTL | Components are arranged from right to left. |
-| ARKUI_DIRECTION_AUTO = 3 | The default layout direction is used. |
+| ARKUI_DIRECTION_LTR = 0 | Components are arranged from left to right.<br><!--Device-ARKUI_DIRECTION_LTR = 0--><!--Device-ARKUI_DIRECTION_LTR = 0-End--> |
+| ARKUI_DIRECTION_RTL | Components are arranged from right to left.<br><!--Device-ARKUI_DIRECTION_RTL--><!--Device-ARKUI_DIRECTION_RTL-End--> |
+| ARKUI_DIRECTION_AUTO = 3 | The default layout direction is used.<br><!--Device-ARKUI_DIRECTION_AUTO = 3--><!--Device-ARKUI_DIRECTION_AUTO = 3-End--> |
 
 ### ArkUI_Axis
 
@@ -243,12 +269,16 @@ enum ArkUI_Axis
 
 Enumerates the scroll directions for the <b><List></b> component.
 
+<!--Device-enum ArkUI_Axis--><!--Device-enum ArkUI_Axis-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_AXIS_VERTICAL = 0 | Only vertical scrolling is supported. |
-| ARKUI_AXIS_HORIZONTAL | Only horizontal scrolling is supported. |
+| ARKUI_AXIS_VERTICAL = 0 | Only vertical scrolling is supported.<br><!--Device-ARKUI_AXIS_VERTICAL = 0--><!--Device-ARKUI_AXIS_VERTICAL = 0-End--> |
+| ARKUI_AXIS_HORIZONTAL | Only horizontal scrolling is supported.<br><!--Device-ARKUI_AXIS_HORIZONTAL--><!--Device-ARKUI_AXIS_HORIZONTAL-End--> |
 
 ### ArkUI_VerticalAlignment
 
@@ -260,13 +290,17 @@ enum ArkUI_VerticalAlignment
 
 Enumerates the vertical alignment modes.
 
+<!--Device-enum ArkUI_VerticalAlignment--><!--Device-enum ArkUI_VerticalAlignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_VERTICAL_ALIGNMENT_TOP = 0 | Top aligned. |
-| ARKUI_VERTICAL_ALIGNMENT_CENTER | Center aligned. This is the default alignment mode. |
-| ARKUI_VERTICAL_ALIGNMENT_BOTTOM | Bottom aligned. |
+| ARKUI_VERTICAL_ALIGNMENT_TOP = 0 | Top aligned.<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_TOP = 0--><!--Device-ARKUI_VERTICAL_ALIGNMENT_TOP = 0-End--> |
+| ARKUI_VERTICAL_ALIGNMENT_CENTER | Center aligned. This is the default alignment mode.<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_CENTER--><!--Device-ARKUI_VERTICAL_ALIGNMENT_CENTER-End--> |
+| ARKUI_VERTICAL_ALIGNMENT_BOTTOM | Bottom aligned.<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_BOTTOM--><!--Device-ARKUI_VERTICAL_ALIGNMENT_BOTTOM-End--> |
 
 ### ArkUI_HorizontalAlignment
 
@@ -278,13 +312,17 @@ enum ArkUI_HorizontalAlignment
 
 Enumerates the alignment mode in the horizontal direction.
 
+<!--Device-enum ArkUI_HorizontalAlignment--><!--Device-enum ArkUI_HorizontalAlignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_HORIZONTAL_ALIGNMENT_START = 0 | Aligned with the start edge in the same direction as the language in use. |
-| ARKUI_HORIZONTAL_ALIGNMENT_CENTER | Center aligned. This is the default alignment mode. |
-| ARKUI_HORIZONTAL_ALIGNMENT_END | Aligned with the end edge in the same direction as the language in use. |
+| ARKUI_HORIZONTAL_ALIGNMENT_START = 0 | Aligned with the start edge in the same direction as the language in use.<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_START = 0--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_START = 0-End--> |
+| ARKUI_HORIZONTAL_ALIGNMENT_CENTER | Center aligned. This is the default alignment mode.<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_CENTER--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_CENTER-End--> |
+| ARKUI_HORIZONTAL_ALIGNMENT_END | Aligned with the end edge in the same direction as the language in use.<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_END--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_END-End--> |
 
 ### ArkUI_BarrierDirection
 
@@ -296,14 +334,18 @@ enum ArkUI_BarrierDirection
 
 defines the direction of the barrier line.
 
+<!--Device-enum ArkUI_BarrierDirection--><!--Device-enum ArkUI_BarrierDirection-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_BARRIER_DIRECTION_START = 0 | The barrier is the leftmost of all its referencedIds. |
-| ARKUI_BARRIER_DIRECTION_END | The barrier is on the rightmost side of all its referencedIds. |
-| ARKUI_BARRIER_DIRECTION_TOP | The barrier is at the top of all its referencedIds. |
-| ARKUI_BARRIER_DIRECTION_BOTTOM | The barrier is at the bottom of all its referencedIds. |
+| ARKUI_BARRIER_DIRECTION_START = 0 | The barrier is the leftmost of all its referencedIds.<br><!--Device-ARKUI_BARRIER_DIRECTION_START = 0--><!--Device-ARKUI_BARRIER_DIRECTION_START = 0-End--> |
+| ARKUI_BARRIER_DIRECTION_END | The barrier is on the rightmost side of all its referencedIds.<br><!--Device-ARKUI_BARRIER_DIRECTION_END--><!--Device-ARKUI_BARRIER_DIRECTION_END-End--> |
+| ARKUI_BARRIER_DIRECTION_TOP | The barrier is at the top of all its referencedIds.<br><!--Device-ARKUI_BARRIER_DIRECTION_TOP--><!--Device-ARKUI_BARRIER_DIRECTION_TOP-End--> |
+| ARKUI_BARRIER_DIRECTION_BOTTOM | The barrier is at the bottom of all its referencedIds.<br><!--Device-ARKUI_BARRIER_DIRECTION_BOTTOM--><!--Device-ARKUI_BARRIER_DIRECTION_BOTTOM-End--> |
 
 ### ArkUI_RelativeLayoutChainStyle
 
@@ -315,13 +357,17 @@ enum ArkUI_RelativeLayoutChainStyle
 
 defines the style of the chain.
 
+<!--Device-enum ArkUI_RelativeLayoutChainStyle--><!--Device-enum ArkUI_RelativeLayoutChainStyle-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0 | Components are evenly distributed among constraint anchor points. |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE | Except for the first and last two sub-components, other components are evenly distributed between the constraint anchor points. |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED | No gaps in subcomponents within the chain. |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0 | Components are evenly distributed among constraint anchor points.<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0-End--> |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE | Except for the first and last two sub-components, other components are evenly distributed between the constraint anchor points.<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE-End--> |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED | No gaps in subcomponents within the chain.<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED-End--> |
 
 ### ArkUI_SafeAreaEdge
 
@@ -333,14 +379,18 @@ enum ArkUI_SafeAreaEdge
 
 defines the enumerated value of the direction of the extended security zone.
 
+<!--Device-enum ArkUI_SafeAreaEdge--><!--Device-enum ArkUI_SafeAreaEdge-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_SAFE_AREA_EDGE_TOP = 1 | Upper area. |
-| ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | Lower area. |
-| ARKUI_SAFE_AREA_EDGE_START = 1 << 2 | Front area. |
-| ARKUI_SAFE_AREA_EDGE_END = 1 << 3 | Tail area. |
+| ARKUI_SAFE_AREA_EDGE_TOP = 1 | Upper area.<br><!--Device-ARKUI_SAFE_AREA_EDGE_TOP = 1--><!--Device-ARKUI_SAFE_AREA_EDGE_TOP = 1-End--> |
+| ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | Lower area.<br><!--Device-ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1--><!--Device-ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1-End--> |
+| ARKUI_SAFE_AREA_EDGE_START = 1 << 2 | Front area.<br><!--Device-ARKUI_SAFE_AREA_EDGE_START = 1 << 2--><!--Device-ARKUI_SAFE_AREA_EDGE_START = 1 << 2-End--> |
+| ARKUI_SAFE_AREA_EDGE_END = 1 << 3 | Tail area.<br><!--Device-ARKUI_SAFE_AREA_EDGE_END = 1 << 3--><!--Device-ARKUI_SAFE_AREA_EDGE_END = 1 << 3-End--> |
 
 ### ArkUI_LayoutSafeAreaType
 
@@ -352,11 +402,15 @@ enum ArkUI_LayoutSafeAreaType
 
 Define the types for expanding the safe area in layout.
 
+<!--Device-enum ArkUI_LayoutSafeAreaType--><!--Device-enum ArkUI_LayoutSafeAreaType-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 23
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1 | Default non-safe area of the system, including the status bar and navigation bar. |
+| ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1 | Default non-safe area of the system, including the status bar and navigation bar.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1-End--> |
 
 ### ArkUI_LayoutSafeAreaEdge
 
@@ -368,17 +422,21 @@ enum ArkUI_LayoutSafeAreaEdge
 
 Define the edges for expanding the safe area in layout.
 
+<!--Device-enum ArkUI_LayoutSafeAreaEdge--><!--Device-enum ArkUI_LayoutSafeAreaEdge-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 23
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1 | Top edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | Bottom edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2 | Start edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3 | End edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM | Vertical edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END | Horizontal edge of the safe area. |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL | All edges of the safe area. |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1 | Top edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | Bottom edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2 | Start edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3 | End edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM | Vertical edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END | Horizontal edge of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL | All edges of the safe area.<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL-End--> |
 
 ### ArkUI_LocalizedAlignment
 
@@ -390,19 +448,23 @@ enum ArkUI_LocalizedAlignment
 
 Enumerates the localizedAlignment modes.
 
+<!--Device-enum ArkUI_LocalizedAlignment--><!--Device-enum ArkUI_LocalizedAlignment-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 23
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0 | Top start. |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP | Top center. |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP_END | Top end. |
-| ARKUI_LOCALIZED_ALIGNMENT_START | Vertically centered start. |
-| ARKUI_LOCALIZED_ALIGNMENT_CENTER | Horizontally and vertically centered. |
-| ARKUI_LOCALIZED_ALIGNMENT_END | Vertically centered end. |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START | Bottom start. |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM | Horizontally centered on the bottom. |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END | Bottom end. |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0 | Top start.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP | Top center.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP_END | Top end.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_END-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_START | Vertically centered start.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_START--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_START-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_CENTER | Horizontally and vertically centered.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_CENTER--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_CENTER-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_END | Vertically centered end.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_END-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START | Bottom start.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM | Horizontally centered on the bottom.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END | Bottom end.<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END-End--> |
 
 ### ArkUI_LayoutPolicy
 
@@ -414,13 +476,17 @@ enum ArkUI_LayoutPolicy
 
 Enumerates the LayoutPolicy.
 
+<!--Device-enum ArkUI_LayoutPolicy--><!--Device-enum ArkUI_LayoutPolicy-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LAYOUTPOLICY_MATCHPARENT = 0 | The component fills its parent, which means its size is as large as its parent |
-| ARKUI_LAYOUTPOLICY_WRAPCONTENT | The component fills its content, which means its size is as large as its children but it is constrained by its parent. |
-| ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | The component fills its content which means its size is as large as its children. |
+| ARKUI_LAYOUTPOLICY_MATCHPARENT = 0 | The component fills its parent, which means its size is as large as its parent<br><!--Device-ARKUI_LAYOUTPOLICY_MATCHPARENT = 0--><!--Device-ARKUI_LAYOUTPOLICY_MATCHPARENT = 0-End--> |
+| ARKUI_LAYOUTPOLICY_WRAPCONTENT | The component fills its content, which means its size is as large as its children but it is constrained by its parent.<br><!--Device-ARKUI_LAYOUTPOLICY_WRAPCONTENT--><!--Device-ARKUI_LAYOUTPOLICY_WRAPCONTENT-End--> |
+| ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | The component fills its content which means its size is as large as its children.<br><!--Device-ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE--><!--Device-ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE-End--> |
 
 ### ArkUI_PixelRoundCalcPolicy
 
@@ -432,13 +498,17 @@ enum ArkUI_PixelRoundCalcPolicy
 
 Enumerates the PixelRoundPolicy.
 
+<!--Device-enum ArkUI_PixelRoundCalcPolicy--><!--Device-enum ArkUI_PixelRoundCalcPolicy-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0 | No Force round the component boundary coordinates to integer pixel. |
-| ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL | Force ceil the component boundary coordinates to integer pixel. |
-| ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR | Force floor the component boundary coordinates to integer pixel. |
+| ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0 | No Force round the component boundary coordinates to integer pixel.<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0-End--> |
+| ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL | Force ceil the component boundary coordinates to integer pixel.<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL-End--> |
+| ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR | Force floor the component boundary coordinates to integer pixel.<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR-End--> |
 
 
 ## Function description
@@ -452,6 +522,10 @@ ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)
 **Description**
 
 Create auxiliary line information in the RelativeContaine container.
+
+<!--Device-ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)--><!--Device-ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -477,6 +551,10 @@ void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)
 
 Destroy auxiliary line information.
 
+<!--Device-void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)--><!--Device-void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -494,6 +572,10 @@ void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char
 **Description**
 
 Set the Id of the auxiliary line.
+
+<!--Device-void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char* value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char* value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -515,6 +597,10 @@ void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, Ark
 
 Set the direction of the auxiliary line.
 
+<!--Device-void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, ArkUI_Axis value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, ArkUI_Axis value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -534,6 +620,10 @@ void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline,
 **Description**
 
 Set the distance from the left or top of the container.
+
+<!--Device-void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline, float value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline, float value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -555,6 +645,10 @@ void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, f
 
 Set the distance from the right or bottom of the container.
 
+<!--Device-void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, float value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, float value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -574,6 +668,10 @@ const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int
 **Description**
 
 Get the Id of the auxiliary line.
+
+<!--Device-const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -600,6 +698,10 @@ ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guidelin
 
 Get the direction of the auxiliary line.
 
+<!--Device-ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -624,6 +726,10 @@ float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline
 **Description**
 
 Get the distance from the left or top of the container.
+
+<!--Device-float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -650,6 +756,10 @@ float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, 
 
 Get the distance from the right side or bottom of the container.
 
+<!--Device-float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -675,6 +785,10 @@ ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)
 
 creates barrier information within the RelativeContaine container.
 
+<!--Device-ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)--><!--Device-ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -699,6 +813,10 @@ void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)
 
 Destroy barrier information.
 
+<!--Device-void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)--><!--Device-void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -716,6 +834,10 @@ void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char*
 **Description**
 
 Set the Id of the barrier.
+
+<!--Device-void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -737,6 +859,10 @@ void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkU
 
 Set the direction of the barrier.
 
+<!--Device-void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkUI_BarrierDirection value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkUI_BarrierDirection value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -757,6 +883,10 @@ void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, c
 
 Sets the dependent component of the barrier.
 
+<!--Device-void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -776,6 +906,10 @@ const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int3
 **Description**
 
 Get the Id of the barrier.
+
+<!--Device-const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -802,6 +936,10 @@ ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* 
 
 Gets the direction of the barrier.
 
+<!--Device-ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -826,6 +964,10 @@ const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierS
 **Description**
 
 Get the dependent components of the barrier.
+
+<!--Device-const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierStyle, int32_t index, int32_t referencedIndex)--><!--Device-const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierStyle, int32_t index, int32_t referencedIndex)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -853,6 +995,10 @@ int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierS
 
 Gets the number of dependent components of the barrier.
 
+<!--Device-int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -878,6 +1024,10 @@ ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()
 
 creates alignment rule information for subcomponents in relative containers.
 
+<!--Device-ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()--><!--Device-ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Returns**:
@@ -896,6 +1046,10 @@ void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)
 
 Destroys the alignment rule information of subcomponents in relative containers.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)--><!--Device-void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -913,6 +1067,10 @@ void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, co
 **Description**
 
 Set the start alignment parameter.
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -934,6 +1092,10 @@ void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, cons
 
 Set the end alignment parameter.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -953,6 +1115,10 @@ void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption*
 **Description**
 
 Set the parameters for horizontal center alignment.
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -974,6 +1140,10 @@ void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, cons
 
 Set the parameters for top alignment.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -993,6 +1163,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, c
 **Description**
 
 Set the bottom alignment parameters.
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1014,6 +1188,10 @@ void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* o
 
 Set the parameters for vertical center alignment.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1034,6 +1212,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* o
 
 Sets the horizontal offset parameter of the component under the anchor point constraint.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* option, float horizontal)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* option, float horizontal)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1053,6 +1235,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* opt
 
 Set the vertical offset parameter of the component under the anchor point constraint.
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* option, float vertical)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* option, float vertical)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1071,6 +1257,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* o
 **Description**
 
 Get the Id of the start-aligned parameter.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1096,6 +1286,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_A
 
 Gets the alignment of the start-aligned parameter.
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1119,6 +1313,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* opt
 **Description**
 
 Get the end alignment parameter.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1144,6 +1342,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_Ali
 
 Get the end alignment parameter.
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1167,6 +1369,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRu
 **Description**
 
 Gets the parameters of horizontal center alignment.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1192,6 +1398,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizon
 
 Gets the parameters of horizontal center alignment.
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1215,6 +1425,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* opt
 **Description**
 
 Get the top-aligned parameters.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1240,6 +1454,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_Align
 
 Get the top-aligned parameters.
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1263,6 +1481,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* 
 **Description**
 
 Get the bottom alignment parameters.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1288,6 +1510,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_Al
 
 Get the bottom alignment parameters.
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1311,6 +1537,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRule
 **Description**
 
 Gets the parameters of vertical center alignment.
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1336,6 +1566,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(
 
 Gets the parameters of vertical center alignment.
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1359,6 +1593,10 @@ float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* 
 **Description**
 
 Get the bias value in the horizontal direction.
+
+<!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1384,6 +1622,10 @@ float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* op
 
 Get the bias value in the vertical direction.
 
+<!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1408,6 +1650,10 @@ ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()
 
 Create an edge object for position attribute.
 
+<!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()--><!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Returns**:
@@ -1425,6 +1671,10 @@ ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edge
 **Description**
 
 Creates a deep copy of an edge object for position attribute.
+
+<!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edges)--><!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edges)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1450,6 +1700,10 @@ void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)
 
 Dispose an edge object for position attribute.
 
+<!--Device-void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)--><!--Device-void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1467,6 +1721,10 @@ void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)
 **Description**
 
 Sets the top edge of an edge object for position attribute.
+
+<!--Device-void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1486,6 +1744,10 @@ int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)
 **Description**
 
 Gets the top edge of an edge object for position attribute.
+
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1512,6 +1774,10 @@ void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)
 
 Sets the left edge of an edge object for position attribute.
 
+<!--Device-void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1530,6 +1796,10 @@ int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)
 **Description**
 
 Gets the left edge of an edge object for position attribute.
+
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1556,6 +1826,10 @@ void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)
 
 Sets the bottom edge of an edge object for position attribute.
 
+<!--Device-void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1574,6 +1848,10 @@ int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* valu
 **Description**
 
 Gets the bottom edge of an edge object for position attribute.
+
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1600,6 +1878,10 @@ void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)
 
 Sets the right edge of an edge object for position attribute.
 
+<!--Device-void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1618,6 +1900,10 @@ int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value
 **Description**
 
 Gets the right edge of an edge object for position attribute.
+
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1644,6 +1930,10 @@ ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()
 
 Create a policy object for PixelRound attribute.
 
+<!--Device-ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()--><!--Device-ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Returns**:
@@ -1661,6 +1951,10 @@ void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)
 **Description**
 
 Dispose a policy object for PixelRound attribute.
+
+<!--Device-void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)--><!--Device-void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1680,6 +1974,10 @@ void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_Pixe
 
 Sets the top edge of a policy object for PixelRound attribute.
 
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1698,6 +1996,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 **Description**
 
 Gets the top edge of a policy object for PixelRound attribute.
+
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1724,6 +2026,10 @@ void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_Pi
 
 Sets the start edge of a policy object for PixelRound attribute.
 
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1742,6 +2048,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI
 **Description**
 
 Gets the start edge of a policy object for PixelRound attribute.
+
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1768,6 +2078,10 @@ void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 
 Sets the bottom edge of a policy object for PixelRound attribute.
 
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1786,6 +2100,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkU
 **Description**
 
 Gets the bottom edge of a policy object for PixelRound attribute.
+
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 
@@ -1812,6 +2130,10 @@ void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_Pixe
 
 Sets the end edge of a policy object for PixelRound attribute.
 
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 21
 
 **Parameters**:
@@ -1830,6 +2152,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 **Description**
 
 Gets the end edge of a policy object for PixelRound attribute.
+
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 21
 

@@ -1,18 +1,20 @@
 # DRM_KeysInfo
 
 ```c
-struct DRM_KeysInfo {...}
+typedef struct DRM_KeysInfo {...} DRM_KeysInfo
 ```
 
 ## Overview
 
 The struct describes the information about media keys.
 
+<!--Device-struct DRM_KeysInfo {...}--><!--Device-struct DRM_KeysInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
-**Related module**: [Drm](capi-drm.md)
+**Related module**: [Drm](capi-drm-kit-drm.md)
 
 **Header file**: [native_drm_common.h](capi-native-drm-common-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the information about media keys.
 
 | Name | Description |
 | -- | -- |
-| uint32_t keysInfoCount | Keys count. |
-| uint8_t keyId[MAX_KEY_INFO_COUNT][MAX_KEY_ID_LEN] | Key id. |
-| char statusValue[MAX_KEY_INFO_COUNT][MAX_KEY_STATUS_VALUE_LEN] | Key status value. |
+| uint32_t keysInfoCount | Keys count.<br><!--Device-uint32_t keysInfoCount--><!--Device-uint32_t keysInfoCount-End--> |
+| uint8_t keyId[MAX_KEY_INFO_COUNT][MAX_KEY_ID_LEN] | Key id.<br><!--Device-uint8_t keyId[MAX_KEY_INFO_COUNT][MAX_KEY_ID_LEN]--><!--Device-uint8_t keyId[MAX_KEY_INFO_COUNT][MAX_KEY_ID_LEN]-End--> |
+| char statusValue[MAX_KEY_INFO_COUNT][MAX_KEY_STATUS_VALUE_LEN] | Key status value.<br><!--Device-char statusValue[MAX_KEY_INFO_COUNT][MAX_KEY_STATUS_VALUE_LEN]--><!--Device-char statusValue[MAX_KEY_INFO_COUNT][MAX_KEY_STATUS_VALUE_LEN]-End--> |
 
 

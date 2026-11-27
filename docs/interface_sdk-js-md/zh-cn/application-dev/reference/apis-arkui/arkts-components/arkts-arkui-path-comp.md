@@ -58,7 +58,7 @@ Path(options?: PathOptions)
 ## Path
 
 ```TypeScript
-new Path(options?: PathOptions)
+Path(options?: PathOptions)
 ```
 
 创建Path对象实例，用于根据绘制路径生成封闭的自定义形状。

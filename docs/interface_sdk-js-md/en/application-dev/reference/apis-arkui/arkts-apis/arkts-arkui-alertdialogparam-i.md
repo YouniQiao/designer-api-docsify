@@ -212,7 +212,7 @@ Default value: **Color.Black**
 
 When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -236,7 +236,7 @@ Default value: **BorderStyle.Solid**.
 
 **borderStyle** must be used with **borderWidth** in pairs.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **Since:** 12
 
@@ -266,7 +266,7 @@ If the left and right borders are greater than its width, or the top and bottom 
 
 When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -298,7 +298,7 @@ When set to a percentage, the value defines the radius as a percentage of the pa
 
 When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -601,7 +601,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** Offset
+**Type:** [Offset](arkts-arkui-offset-t.md)
 
 **Since:** 7
 
@@ -726,7 +726,7 @@ Callback for interactive dismissal of the dialog box.
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the **Esc** key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-alertdialog-comp-dismissdialogaction-i.md)&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

@@ -8,11 +8,13 @@ typedef union TEE_Param {...} TEE_Param
 
 Enumerates the TEE parameter.
 
+<!--Device-typedef union TEE_Param {...} TEE_Param--><!--Device-typedef union TEE_Param {...} TEE_Param-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -22,17 +24,11 @@ Enumerates the TEE parameter.
 
 | Name | Description |
 | -- | -- |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes a memory reference.<br>**Since**: 20 |
-| void *buffer | Pointer to the memory buffer. |
-| size_t size;
- } memref | Size of the memory buffer. |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes value parameters.<br>**Since**: 20 |
-| unsigned int a | First value. |
-| unsigned int b;
- } value | Second value. |
-| [](capi-teetrusted---tee-objecthandle.md)s[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md)r[](capi-teetrusted---tee-objecthandle.md)u[](capi-teetrusted---tee-objecthandle.md)c[](capi-teetrusted---tee-objecthandle.md)t[](capi-teetrusted---tee-objecthandle.md) | Describes shared memory reference.<br>**Since**: 20 |
-| void *buffer | Pointer to the shared memory buffer. |
-| size_t size;
- } sharedmem | Size of the shared memory buffer. |
+| memref.buffer | Pointer to the memory buffer.<br><!--Device-memref.buffer--><!--Device-memref.buffer-End--> |
+| memref.size | Size of the memory buffer.<br><!--Device-memref.size--><!--Device-memref.size-End--> |
+| value.a | First value.<br><!--Device-value.a--><!--Device-value.a-End--> |
+| value.b | Second value.<br><!--Device-value.b--><!--Device-value.b-End--> |
+| sharedmem.buffer | Pointer to the shared memory buffer.<br><!--Device-sharedmem.buffer--><!--Device-sharedmem.buffer-End--> |
+| sharedmem.size | Size of the shared memory buffer.<br><!--Device-sharedmem.size--><!--Device-sharedmem.size-End--> |
 
 

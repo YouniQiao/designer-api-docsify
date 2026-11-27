@@ -4,30 +4,32 @@
 
 Defines common data structures and error codes for crypto operations.
 
-**Include**: <CryptoArchitectureKit/crypto_common.h>
+**File to Include**: <CryptoArchitectureKit/crypto_common.h>
 
 **Library**: libohcrypto.so
 
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
-**Related module**: [CryptoCommonApi](capi-cryptocommonapi.md)
+**Related module**: [CryptoCommonApi](capi-crypto-architecture-kit-cryptocommonapi.md)
 
 ## Summary
 
-### Struct
+### Structs
 
-| Name | Description |
-| -- | -- |
-| [Crypto_DataBlob](capi-cryptocommonapi-crypto-datablob.md) | Crypto data structure. |
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [Crypto_DataBlob](capi-cryptocommonapi-crypto-datablob.md) | Crypto_DataBlob | Crypto data structure. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Crypto_ErrCode](#oh_crypto_errcode) | OH_Crypto_ErrCode | Enumerates the error codes. |
 | [Crypto_CipherMode](#crypto_ciphermode) | Crypto_CipherMode | Defines the cipher mode. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -45,17 +47,21 @@ enum OH_Crypto_ErrCode
 
 Enumerates the error codes.
 
+<!--Device-enum OH_Crypto_ErrCode--><!--Device-enum OH_Crypto_ErrCode-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_SUCCESS = 0 | Operation succeeded.<br>**Since**: 12 |
-| CRYPTO_INVALID_PARAMS = 401 | Invalid input parameters.<br>**Since**: 12 |
-| CRYPTO_NOT_SUPPORTED = 801 | Unsupported feature or algorithm.<br>**Since**: 12 |
-| CRYPTO_MEMORY_ERROR = 17620001 | Memory operation failed.<br>**Since**: 12 |
-| CRYPTO_PARAMETER_CHECK_FAILED = 17620003 | Parameter check failed.<br>**Since**: 20 |
-| CRYPTO_INVALID_CALL = 17620004 | Invalid function call.<br>**Since**: 26.0.0 |
-| CRYPTO_OPERTION_ERROR = 17630001 | Crypto operation error.<br>**Since**: 12 |
+| CRYPTO_SUCCESS = 0 | Operation succeeded.<br>**Since**: 12<br><!--Device-CRYPTO_SUCCESS = 0--><!--Device-CRYPTO_SUCCESS = 0-End--> |
+| CRYPTO_INVALID_PARAMS = 401 | Invalid input parameters.<br>**Since**: 12<br><!--Device-CRYPTO_INVALID_PARAMS = 401--><!--Device-CRYPTO_INVALID_PARAMS = 401-End--> |
+| CRYPTO_NOT_SUPPORTED = 801 | Unsupported feature or algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_NOT_SUPPORTED = 801--><!--Device-CRYPTO_NOT_SUPPORTED = 801-End--> |
+| CRYPTO_MEMORY_ERROR = 17620001 | Memory operation failed.<br>**Since**: 12<br><!--Device-CRYPTO_MEMORY_ERROR = 17620001--><!--Device-CRYPTO_MEMORY_ERROR = 17620001-End--> |
+| CRYPTO_PARAMETER_CHECK_FAILED = 17620003 | Parameter check failed.<br>**Since**: 20<br><!--Device-CRYPTO_PARAMETER_CHECK_FAILED = 17620003--><!--Device-CRYPTO_PARAMETER_CHECK_FAILED = 17620003-End--> |
+| CRYPTO_INVALID_CALL = 17620004 | Invalid function call.<br>**Since**: 26.0.0<br><!--Device-CRYPTO_INVALID_CALL = 17620004--><!--Device-CRYPTO_INVALID_CALL = 17620004-End--> |
+| CRYPTO_OPERTION_ERROR = 17630001 | Crypto operation error.<br>**Since**: 12<br><!--Device-CRYPTO_OPERTION_ERROR = 17630001--><!--Device-CRYPTO_OPERTION_ERROR = 17630001-End--> |
 
 ### Crypto_CipherMode
 
@@ -67,12 +73,16 @@ enum Crypto_CipherMode
 
 Defines the cipher mode.
 
+<!--Device-enum Crypto_CipherMode--><!--Device-enum Crypto_CipherMode-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_ENCRYPT_MODE = 0 | Encryption operation.<br>**Since**: 12 |
-| CRYPTO_DECRYPT_MODE = 1 | Decryption operation.<br>**Since**: 12 |
+| CRYPTO_ENCRYPT_MODE = 0 | Encryption operation.<br>**Since**: 12<br><!--Device-CRYPTO_ENCRYPT_MODE = 0--><!--Device-CRYPTO_ENCRYPT_MODE = 0-End--> |
+| CRYPTO_DECRYPT_MODE = 1 | Decryption operation.<br>**Since**: 12<br><!--Device-CRYPTO_DECRYPT_MODE = 1--><!--Device-CRYPTO_DECRYPT_MODE = 1-End--> |
 
 
 ## Function description
@@ -86,6 +96,10 @@ void OH_Crypto_FreeDataBlob(Crypto_DataBlob *dataBlob)
 **Description**
 
 Frees the memory of a data blob.
+
+<!--Device-void OH_Crypto_FreeDataBlob(Crypto_DataBlob *dataBlob)--><!--Device-void OH_Crypto_FreeDataBlob(Crypto_DataBlob *dataBlob)-End-->
+
+**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 

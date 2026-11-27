@@ -8,11 +8,13 @@ typedef struct ColorSpacePrimaries {...} ColorSpacePrimaries
 
 提供色彩原色结构体声明，用于存储色彩空间的红绿蓝三原色和白点的坐标信息。
 
+<!--Device-typedef struct ColorSpacePrimaries {...} ColorSpacePrimaries--><!--Device-typedef struct ColorSpacePrimaries {...} ColorSpacePrimaries-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **起始版本：** 13
 
-**相关模块：** [NativeColorSpaceManager](capi-nativecolorspacemanager.md)
+**相关模块：** [NativeColorSpaceManager](capi-arkgraphics2d-nativecolorspacemanager.md)
 
 **所在头文件：** [native_color_space_manager.h](capi-native-color-space-manager-h.md)
 
@@ -22,13 +24,13 @@ typedef struct ColorSpacePrimaries {...} ColorSpacePrimaries
 
 | 名称 | 描述 |
 | -- | -- |
-| float rX | 红色的x轴坐标值。 |
-| float rY | 红色的y轴坐标值。 |
-| float gX | 绿色的x轴坐标值。 |
-| float gY | 绿色的y轴坐标值。 |
-| float bX | 蓝色的x轴坐标值。 |
-| float bY | 蓝色的y轴坐标值。 |
-| float wX | 白点的x轴坐标值。 |
-| float wY | 白点的y轴坐标值。 |
+| float rX | 红色的x轴坐标值。<br><!--Device-float rX--><!--Device-float rX-End--> |
+| float rY | 红色的y轴坐标值。<br><!--Device-float rY--><!--Device-float rY-End--> |
+| float gX | 绿色的x轴坐标值。<br><!--Device-float gX--><!--Device-float gX-End--> |
+| float gY | 绿色的y轴坐标值。<br><!--Device-float gY--><!--Device-float gY-End--> |
+| float bX | 蓝色的x轴坐标值。<br><!--Device-float bX--><!--Device-float bX-End--> |
+| float bY | 蓝色的y轴坐标值。<br><!--Device-float bY--><!--Device-float bY-End--> |
+| float wX | 白点的x轴坐标值。<br><!--Device-float wX--><!--Device-float wX-End--> |
+| float wY | 白点的y轴坐标值。<br><!--Device-float wY--><!--Device-float wY-End--> |
 
 

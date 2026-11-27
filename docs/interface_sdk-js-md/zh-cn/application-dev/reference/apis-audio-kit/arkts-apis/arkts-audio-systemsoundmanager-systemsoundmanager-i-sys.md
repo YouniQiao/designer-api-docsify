@@ -238,7 +238,7 @@ systemSoundManagerInstance.close(fd).then(() => {
 factoryReset(): Promise<void>
 ```
 
-一键还原所有铃声和震动设置为出厂默认值，并删除自定义音频铃音（保留视频铃声）。
+一键还原所有铃声和振动设置为出厂默认值，并删除自定义音频铃音（保留视频铃声）。
 
 还原范围包括：来电铃声、短信/通知提示音、闹钟铃声的当前选中URI，以及铃音振动设置。还原后各项恢复为出厂预置默认值，同时删除铃音库中通过[addCustomizedTone](#addcustomizedtone)添加的自定义音频铃声，但保留视频铃声。
 
@@ -246,6 +246,8 @@ factoryReset(): Promise<void>
 > 还原过程在服务端原子执行，任一步骤失败将回滚已修改项并以错误码返回。
 
 **起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.WRITE_RINGTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,8 +267,8 @@ factoryReset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permisson verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permisson verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | 20700008 | I/O error. |
 

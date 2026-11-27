@@ -6,22 +6,24 @@
 
 **库：** libohi18n.so
 
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
-**相关模块：** [i18n](capi-i18n.md)
+**相关模块：** [i18n](capi-localization-kit-i18n.md)
 
 ## 汇总
 
 ### 结构体
 
-| 名称 | 描述 |
-| -- | -- |
-| [DateTimeRule](capi-i18n-datetimerule.md) | 时间日期规则。 |
-| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | 起始时区规则。 |
-| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | 起始时间戳数组定义的时区规则。 |
-| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | 每年生效的时区规则。 |
-| [TimeZoneRules](capi-i18n-timezonerules.md) | 完整的时区规则，包括起始时区规则、起始时间戳数组定义的时区规则和每年生效的时区规则，能够全面描述时区的历史和未来规则。 |
-| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | 用于传入查询的信息，并接收查询的结果。 |
+| 名称 | typedef关键字 | 描述 |
+| -- | -- | -- |
+| [DateTimeRule](capi-i18n-datetimerule.md) | DateTimeRule | 时间日期规则。 |
+| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | InitialTimeZoneRule | 起始时区规则。 |
+| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | TimeArrayTimeZoneRule | 起始时间戳数组定义的时区规则。 |
+| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | AnnualTimeZoneRule | 每年生效的时区规则。 |
+| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | 完整的时区规则，包括起始时区规则、起始时间戳数组定义的时区规则和每年生效的时区规则，能够全面描述时区的历史和未来规则。 |
+| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | TimeZoneRuleQuery | 用于传入查询的信息，并接收查询的结果。 |
 
 ### 枚举
 
@@ -64,14 +66,18 @@ enum DateRuleType
 
 日期规则类型的枚举。
 
+<!--Device-enum DateRuleType--><!--Device-enum DateRuleType-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| DOM = 0 | 当月的第几天，以2025年为例，十月十六日为：十月的第十六天。 |
-| DOW = 1 | 当月的第几个星期几，以2025年为例，十月十六日为：十月的第三个星期四。 |
-| DOW_GEQ_DOM = 2 | 当月第几天之后的第一个星期几，以2025年为例，十月十六日为：十月第十三天/十四天/十五天之后的第一个星期四。 |
-| DOW_LEQ_DOM = 3 | 当月第几天之前的最后一个星期几，以2025年为例，十月十六日为：十月第二十天之前的最后一个星期四。 |
+| DOM = 0 | 当月的第几天，以2025年为例，十月十六日为：十月的第十六天。<br><!--Device-DOM = 0--><!--Device-DOM = 0-End--> |
+| DOW = 1 | 当月的第几个星期几，以2025年为例，十月十六日为：十月的第三个星期四。<br><!--Device-DOW = 1--><!--Device-DOW = 1-End--> |
+| DOW_GEQ_DOM = 2 | 当月第几天之后的第一个星期几，以2025年为例，十月十六日为：十月第十三天/十四天/十五天之后的第一个星期四。<br><!--Device-DOW_GEQ_DOM = 2--><!--Device-DOW_GEQ_DOM = 2-End--> |
+| DOW_LEQ_DOM = 3 | 当月第几天之前的最后一个星期几，以2025年为例，十月十六日为：十月第二十天之前的最后一个星期四。<br><!--Device-DOW_LEQ_DOM = 3--><!--Device-DOW_LEQ_DOM = 3-End--> |
 
 ### TimeRuleType
 
@@ -83,13 +89,17 @@ enum TimeRuleType
 
 时间规则类型的枚举。
 
+<!--Device-enum TimeRuleType--><!--Device-enum TimeRuleType-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| WALL_TIME = 0 | 本地时钟时间（不考虑时区偏移）。 |
-| STANDARD_TIME = 1 | 本地标准时间（不考虑夏令时偏移）。 |
-| UTC_TIME = 2 | 世界标准时间（UTC时间）。 |
+| WALL_TIME = 0 | 本地时钟时间（不考虑时区偏移）。<br><!--Device-WALL_TIME = 0--><!--Device-WALL_TIME = 0-End--> |
+| STANDARD_TIME = 1 | 本地标准时间（不考虑夏令时偏移）。<br><!--Device-STANDARD_TIME = 1--><!--Device-STANDARD_TIME = 1-End--> |
+| UTC_TIME = 2 | 世界标准时间（UTC时间）。<br><!--Device-UTC_TIME = 2--><!--Device-UTC_TIME = 2-End--> |
 
 
 ## 函数说明
@@ -103,6 +113,10 @@ I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* r
 **描述：**
 
 通过时区ID，获取完整的时区规则。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)--><!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
@@ -129,6 +143,10 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 根据TimeArrayTimeZoneRule，获取时区规则的首次生效时间。
 
+<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 **参数：**
@@ -153,6 +171,10 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **描述：**
 
 根据AnnualTimeZoneRule，获取时区规则的首次生效时间。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
@@ -179,6 +201,10 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 根据TimeArrayTimeZoneRule，获取时区规则的最后一次生效时间。
 
+<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 **参数：**
@@ -203,6 +229,10 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **描述：**
 
 根据AnnualTimeZoneRule，获取时区规则的最后一次生效时间。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
@@ -229,6 +259,10 @@ I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 根据TimeArrayTimeZoneRule，获取时区规则在基准时间之后的下一次生效时间。
 
+<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 **参数：**
@@ -253,6 +287,10 @@ I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **描述：**
 
 根据AnnualTimeZoneRule，获取时区规则在基准时间之后的下一次生效时间。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
@@ -279,6 +317,10 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 根据TimeArrayTimeZoneRule，获取时区规则在基准时间之前的上一次生效时间。
 
+<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 **参数：**
@@ -303,6 +345,10 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **描述：**
 
 根据AnnualTimeZoneRule，获取时区规则在基准时间之前的上一次生效时间。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
@@ -329,6 +375,10 @@ I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index
 
 根据TimeArrayTimeZoneRule，获取时区规则指定索引的起始时间。
 
+<!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)--><!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 **起始版本：** 22
 
 **参数：**
@@ -354,6 +404,10 @@ I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, Ti
 **描述：**
 
 根据AnnualTimeZoneRule，获取时区规则在指定年份的生效时间。
+
+<!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)-End-->
+
+**系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 

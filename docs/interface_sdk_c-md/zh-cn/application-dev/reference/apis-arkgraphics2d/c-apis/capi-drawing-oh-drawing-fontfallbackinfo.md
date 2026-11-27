@@ -1,18 +1,20 @@
 # OH_Drawing_FontFallbackInfo
 
 ```c
-struct OH_Drawing_FontFallbackInfo {...}
+typedef struct OH_Drawing_FontFallbackInfo {...} OH_Drawing_FontFallbackInfo
 ```
 
 ## 概述
 
 备用字体信息结构体。
 
+<!--Device-struct OH_Drawing_FontFallbackInfo {...}--><!--Device-struct OH_Drawing_FontFallbackInfo {...}-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 **所在头文件：** [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -22,7 +24,7 @@ struct OH_Drawing_FontFallbackInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| char* language | 字体集所支持的语言类型，语言格式为bcp47。 |
-| char* familyName | 字体家族名。 |
+| char* language | 字体集所支持的语言类型，语言格式为bcp47。<br><!--Device-char* language--><!--Device-char* language-End--> |
+| char* familyName | 字体家族名。<br><!--Device-char* familyName--><!--Device-char* familyName-End--> |
 
 

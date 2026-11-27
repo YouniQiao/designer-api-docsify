@@ -20,7 +20,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Border color.
 
-**Type:** [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ Percentage values are not supported.
 
 **Widget capability**: This API cannot be used in ArkTS widgets.
 
-**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Percentage values are not supported.
 
 **Widget capability**: This API cannot be used in ArkTS widgets.
 
-**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ style?: EdgeStyles | BorderStyle
 
 Border style.
 
-**Type:** [EdgeStyles](arkts-arkui-edgestyles-t.md) &#124; [BorderStyle](arkts-arkui-borderstyle-e.md)
+**Type:** EdgeStyles &#124; [BorderStyle](arkts-arkui-borderstyle-e.md)
 
 **Since:** 7
 
@@ -128,7 +128,7 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 Border width.
 
-**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** EdgeWidths &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 7
 

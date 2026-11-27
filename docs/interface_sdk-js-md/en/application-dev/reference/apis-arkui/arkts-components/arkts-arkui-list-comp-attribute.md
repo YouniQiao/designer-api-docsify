@@ -576,7 +576,7 @@ on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [LengthConstrain](../arkts-apis/arkts-arkui-lengthconstrain-t.md) | Yes | Number of columns or rows in the layout of the **List** component.<br> Default value: **1**<br>Value range: [1, +∞). If a value less than 1 is passed, the default value is used. |
+| value | number &#124; LengthConstrain | Yes | Number of columns or rows in the layout of the **List** component.<br> Default value: **1**<br>Value range: [1, +∞). If a value less than 1 is passed, the default value is used. |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Column spacing or row spacing.<br>Default value: **0**<br>When the parameter type is number, the unit is vp.<br>Value range: [0, +∞).If a negative value is passed, the default value is used. <br>**NOTE:** <br>**gutter** specifies the column spacing or row spacing, which takes effect only when the number of columns or rows is greater than 1.<br> |
 
 ## lanes
@@ -603,7 +603,7 @@ Sets the number of layouts and the spacing along the cross axis of the **List** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [LengthConstrain](../arkts-apis/arkts-arkui-lengthconstrain-t.md) &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of layouts in the cross axis direction of the current **List** component. When the **List** scrolls vertically, it indicates the number of columns; when it scrolls horizontally, it indicates the number of rows.<br>When set to the number type, the number of columns or rows is determined by the numeric value. The value range of the number type is [1, +∞). If a value less than 1 is passed, the default value is used.<br> When set to the LengthConstrain type, the number of columns is determined by the maximum and minimum column widths when the **List** scrolls vertically, and the number of rows is determined by the maximum and minimum row heights when it scrolls horizontally.<br> When set to the ItemFillPolicy type, the number of columns is determined by the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the **List** component width. This type takes effect only when the **List** scroll direction is vertical. |
+| value | number &#124; LengthConstrain &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of layouts in the cross axis direction of the current **List** component. When the **List** scrolls vertically, it indicates the number of columns; when it scrolls horizontally, it indicates the number of rows.<br>When set to the number type, the number of columns or rows is determined by the numeric value. The value range of the number type is [1, +∞). If a value less than 1 is passed, the default value is used.<br> When set to the LengthConstrain type, the number of columns is determined by the maximum and minimum column widths when the **List** scrolls vertically, and the number of rows is determined by the maximum and minimum row heights when it scrolls horizontally.<br> When set to the ItemFillPolicy type, the number of columns is determined by the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the **List** component width. This type takes effect only when the **List** scroll direction is vertical. |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | When the **List** scrolls vertically, it indicates the column spacing; when it scrolls horizontally, it indicates the row spacing.<br><br>When the parameter type is number, the unit is vp.<br> If a negative value is passed, the default value is used.<br>**NOTE:** <br>This takes effect only when the number of columns or rows is greater than 1. <br>The value must be greater than or equal to 0. Default value: **0**. |
 
 ## listDirection
@@ -1215,11 +1215,15 @@ Sets the speed of the snap animation for list item scrolling. This parameter tak
 scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
 ```
 
-Sets a two-stage scroll snap strategy for the List.
+Set the limit scrolling strategy of the list so that the list aligns subcomponents in a specified way or stops at a customized suction position when the scrolling ends.
 
-**ScrollSnapAlign.START**, **ScrollSnapAlign.CENTER**, and **ScrollSnapAlign.END** select built-in strategies. **ScrollSnapAlign.NONE** is invalid and throws exception 401. A custom provider requires **calculateSnapOffset** to be a function. Passing **undefined** or no argument clears the strategy.
-
-This attribute and **scrollSnapAlign** use last-set-wins semantics. The final snap uses the List spring animation and follows **scrollSnapAnimationSpeed**.
+> **Note:** 
+> 
+> - The final adsorption position is always within the legal rolling range. For example, when the alignment is ScrollSnapAlign.CENTER, the first and last subcomponents are docked at the scrollable boundary, not at the center of the viewport.This behavior is different from scrollSnapAlign: scrollSnapAlign is aligned first, the first and last subcomponents are still centered in the CENTER gear, and the list may expose blank areas.
+> - After limit scrolling is enabled, limit scrolling is also triggered when the drag initiated through the onMove interface ends or the mouse selection operation ends.
+> - ListItemGroup participates in alignment as a whole.
+> - This attribute and scrollSnapAlign are mutually exclusive. The later setting takes effect.
+> - The limit animation of scrollSnapStrategy is not affected by scrollSnapAnimationSpeed. scrollSnapAnimationSpeed affects only the limit animation speed generated by scrollSnapAlign.
 
 **Since:** 26.1.0
 
@@ -1235,7 +1239,7 @@ This attribute and **scrollSnapAlign** use last-set-wins semantics. The final sn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Built-in alignment or custom provider. |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Limit rolling policy. When passing in the ScrollSnapAlign enumeration, the built-in alignments are used: START, CENTER, END to align the subcomponents to the start, center, and end positions of the viewport along the scroll axis, respectively. When the object that implements the ScrollSnapOffsetProvider interface is transferred, the developer calculates the scrolling distance and final suction position: calculateApproachOffset determines the scrolling distance in the inertia phase, and calculateSnapOffset determines the final suction position. When ScrollSnapAlign.NONE and undefined are not set or transferred, the limit scrolling is not enabled, and the list is not aligned. Instead, it slides naturally according to the inertia until it stops. |
 
 ## stackFromEnd
 

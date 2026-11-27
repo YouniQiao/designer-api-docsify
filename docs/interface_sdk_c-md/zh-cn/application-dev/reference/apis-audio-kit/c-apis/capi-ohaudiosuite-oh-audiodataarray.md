@@ -1,18 +1,20 @@
 # OH_AudioDataArray
 
 ```c
-struct OH_AudioDataArray {...}
+typedef struct OH_AudioDataArray {...} OH_AudioDataArray
 ```
 
 ## 概述
 
 定义多路输出渲染接口的输出数据描述。当管线中存在多输出效果节点时，通过多输出渲染接口获取处理过后的音频数据。
 
+<!--Device-struct OH_AudioDataArray {...}--><!--Device-struct OH_AudioDataArray {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 22
 
-**相关模块：** [OHAudioSuite](capi-ohaudiosuite.md)
+**相关模块：** [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
 
 **所在头文件：** [native_audio_suite_base.h](capi-native-audio-suite-base-h.md)
 
@@ -22,8 +24,8 @@ struct OH_AudioDataArray {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| void **audioDataArray | 输出的音频数据地址。<br>**起始版本：** 22 |
-| int32_t arraySize | 音频数据audioDataArray数组的元素个数。<br>**起始版本：** 22 |
-| int32_t requestFrameSize | audioDataArray数组中每个地址指向的内存大小，单位为字节（Byte）。应确保每个地址指向的内存大小均为requestFrameSize字节。<br>**起始版本：** 22 |
+| void **audioDataArray | 输出的音频数据地址。<br>**起始版本：** 22<br><!--Device-void **audioDataArray--><!--Device-void **audioDataArray-End--> |
+| int32_t arraySize | 音频数据audioDataArray数组的元素个数。<br>**起始版本：** 22<br><!--Device-int32_t arraySize--><!--Device-int32_t arraySize-End--> |
+| int32_t requestFrameSize | audioDataArray数组中每个地址指向的内存大小，单位为字节（Byte）。 应确保每个地址指向的内存大小均符合requestFrameSize字段定义。<br>**起始版本：** 22<br><!--Device-int32_t requestFrameSize--><!--Device-int32_t requestFrameSize-End--> |
 
 

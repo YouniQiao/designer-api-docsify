@@ -1,18 +1,20 @@
 # Camera_DeviceQueryInfo
 
 ```c
-struct Camera_DeviceQueryInfo {...}
+typedef struct Camera_DeviceQueryInfo {...} Camera_DeviceQueryInfo
 ```
 
 ## Overview
 
 Camera device query information.
 
+<!--Device-struct Camera_DeviceQueryInfo {...}--><!--Device-struct Camera_DeviceQueryInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 23
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,9 +24,9 @@ Camera device query information.
 
 | Name | Description |
 | -- | -- |
-| Camera_Type* cameraType | List of camera types. |
-| uint32_t cameraTypeSize | Size of the camera type list. |
-| [Camera_Position](capi-camera-h.md#camera_position) cameraPosition | Camera position. |
-| [Camera_Connection](capi-camera-h.md#camera_connection) connectionType | Camera connection type. |
+| [Camera_Type](capi-camera-h.md#camera_type)* cameraType | List of camera types.<br><!--Device-Camera_Type* cameraType--><!--Device-Camera_Type* cameraType-End--> |
+| uint32_t cameraTypeSize | Size of the camera type list.<br><!--Device-uint32_t cameraTypeSize--><!--Device-uint32_t cameraTypeSize-End--> |
+| [Camera_Position](capi-camera-h.md#camera_position) cameraPosition | Camera position.<br><!--Device-Camera_Position cameraPosition--><!--Device-Camera_Position cameraPosition-End--> |
+| [Camera_Connection](capi-camera-h.md#camera_connection) connectionType | Camera connection type.<br><!--Device-Camera_Connection connectionType--><!--Device-Camera_Connection connectionType-End--> |
 
 

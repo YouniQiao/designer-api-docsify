@@ -6,13 +6,15 @@ typedef struct OH_UdsContentForm OH_UdsContentForm
 
 ## Overview
 
-Describes the unified data struct of content form.
+Defines a struct for the unified data of the content card type.
+
+<!--Device-typedef struct OH_UdsContentForm OH_UdsContentForm--><!--Device-typedef struct OH_UdsContentForm OH_UdsContentForm-End-->
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
-**Related module**: [UDMF](capi-udmf.md)
+**Related module**: [UDMF](capi-arkdata-udmf.md)
 
 **Header file**: [uds.h](capi-uds-h.md)
 

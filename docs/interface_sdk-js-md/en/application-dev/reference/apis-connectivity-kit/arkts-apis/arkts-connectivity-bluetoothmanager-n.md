@@ -91,8 +91,8 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 | [DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md) | Describes the parameters of the Gatt client's descriptor read request. |
 | [DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md) | Describes the parameters of the Gatt client's characteristic write request. |
 | [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md) | Describes the class of a bluetooth device. |
-| [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-bluetoothmanager-ble-creategattclientdevice-f.md) to create an GattClientDevice instance. |
-| [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-bluetoothmanager-ble-creategattserver-f.md) to create an GattServer instance. |
+| [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md) to create an GattClientDevice instance. |
+| [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md) to create an GattServer instance. |
 | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Describes the Gatt service. |
 | [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) | Manager handsfree AG profile. |
 | [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) | Manager hid host profile. |

@@ -4,33 +4,37 @@
 
 This file declares the functions related to typography in the drawing module.
 
+**File to Include**: <native_drawing/drawing_text_typography.h>
+
 **Library**: libnative_drawing.so
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_PlaceholderSpan](capi-drawing-oh-drawing-placeholderspan.md) | OH_Drawing_PlaceholderSpan | This struct describes the placeholder that acts as a span. |
-| [OH_Drawing_FontFallbackInfo](capi-drawing-oh-drawing-fontfallbackinfo.md) | - | This struct describes the information about a font fallback. |
-| [OH_Drawing_FontFallbackGroup](capi-drawing-oh-drawing-fontfallbackgroup.md) | - | This struct describes the information about a font fallback group. |
-| [OH_Drawing_FontAdjustInfo](capi-drawing-oh-drawing-fontadjustinfo.md) | - | This struct describes the information about a font weight mapping. |
-| [OH_Drawing_FontAliasInfo](capi-drawing-oh-drawing-fontaliasinfo.md) | - | This struct describes the information about a font alias. |
-| [OH_Drawing_FontGenericInfo](capi-drawing-oh-drawing-fontgenericinfo.md) | - | This struct describes the information about generic fonts supported by the system. |
-| [OH_Drawing_FontConfigInfo](capi-drawing-oh-drawing-fontconfiginfo.md) | - | This struct describes the information about a system font configuration. |
-| [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) | - | This struct describes the detailed information about a system font. |
-| [OH_Drawing_LineMetrics](capi-drawing-oh-drawing-linemetrics.md) | - | This struct describes the measurement information about a line of text. |
-| [OH_Drawing_FontStyleStruct](capi-drawing-oh-drawing-fontstylestruct.md) | - | This struct describes a font style. |
+| [OH_Drawing_FontFallbackInfo](capi-drawing-oh-drawing-fontfallbackinfo.md) | OH_Drawing_FontFallbackInfo | This struct describes the information about a font fallback. |
+| [OH_Drawing_FontFallbackGroup](capi-drawing-oh-drawing-fontfallbackgroup.md) | OH_Drawing_FontFallbackGroup | This struct describes the information about a font fallback group. |
+| [OH_Drawing_FontAdjustInfo](capi-drawing-oh-drawing-fontadjustinfo.md) | OH_Drawing_FontAdjustInfo | This struct describes the information about a font weight mapping. |
+| [OH_Drawing_FontAliasInfo](capi-drawing-oh-drawing-fontaliasinfo.md) | OH_Drawing_FontAliasInfo | This struct describes the information about a font alias. |
+| [OH_Drawing_FontGenericInfo](capi-drawing-oh-drawing-fontgenericinfo.md) | OH_Drawing_FontGenericInfo | This struct describes the information about generic fonts supported by the system. |
+| [OH_Drawing_FontConfigInfo](capi-drawing-oh-drawing-fontconfiginfo.md) | OH_Drawing_FontConfigInfo | This struct describes the information about a system font configuration. |
+| [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) | OH_Drawing_FontDescriptor | This struct describes the detailed information about a system font. |
+| [OH_Drawing_LineMetrics](capi-drawing-oh-drawing-linemetrics.md) | OH_Drawing_LineMetrics | This struct describes the measurement information about a line of text. |
+| [OH_Drawing_FontStyleStruct](capi-drawing-oh-drawing-fontstylestruct.md) | OH_Drawing_FontStyleStruct | This struct describes a font style. |
 | [OH_Drawing_FontFeature](capi-drawing-oh-drawing-fontfeature.md) | OH_Drawing_FontFeature | This struct describes a font feature. |
 | [OH_Drawing_StrutStyle](capi-drawing-oh-drawing-strutstyle.md) | OH_Drawing_StrutStyle | This struct describes a strut style. The strut style determines the line spacing, baseline alignment mode, and other properties related to the line height when drawing text. |
-| [OH_Drawing_RectSize](capi-drawing-oh-drawing-rectsize.md) | - | Defines a text rectangle structure. |
+| [OH_Drawing_RectSize](capi-drawing-oh-drawing-rectsize.md) | OH_Drawing_RectSize | Defines a text rectangle structure. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -58,7 +62,7 @@ This file declares the functions related to typography in the drawing module.
 | [OH_Drawing_TextBadgeType](#oh_drawing_textbadgetype) | OH_Drawing_TextBadgeType | Enumerates the text badge styles. |
 | [OH_Drawing_TextVerticalAlignment](#oh_drawing_textverticalalignment) | OH_Drawing_TextVerticalAlignment | Enumerates the vertical alignment modes. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -134,7 +138,7 @@ This file declares the functions related to typography in the drawing module.
 | [float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)](#oh_drawing_getbottomfromtextbox) | Obtains the bottom position of a text box. |
 | [int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int index)](#oh_drawing_gettextdirectionfromtextbox) | Obtains the text direction of a text box. |
 | [size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)](#oh_drawing_getsizeoftextbox) | Obtains the number of text boxes. |
-| [OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)](#oh_drawing_typographygetglyphpositionatcoordinate) | Obtains the position and affinity of the glyph at the given coordinates.(Deprecated in API18) |
+| [OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)](#oh_drawing_typographygetglyphpositionatcoordinate) | Obtains the position and affinity of the glyph at the given coordinates.(Deprecated) |
 | [OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinateWithCluster(OH_Drawing_Typography* typography, double dx, double dy)](#oh_drawing_typographygetglyphpositionatcoordinatewithcluster) | Obtains the index position and affinity of the character cluster to which the text at the coordinate belongs. A character cluster refers to a group of one or more characters. When the [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md) is no longer needed, use [OH_Drawing_DestroyPositionAndAffinity](capi-drawing-text-typography-h.md#oh_drawing_destroypositionandaffinity) to release the pointer to the object. |
 | [size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)](#oh_drawing_getpositionfrompositionandaffinity) | Obtains the position attribute of an **OH_Drawing_PositionAndAffinity** object. |
 | [int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)](#oh_drawing_getaffinityfrompositionandaffinity) | Obtains the affinity attribute of an **OH_Drawing_PositionAndAffinity** object. The affinity determines whether the font is close to the front text or rear text. |
@@ -147,8 +151,8 @@ This file declares the functions related to typography in the drawing module.
 | [void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double letterSpacing)](#oh_drawing_settextstyleletterspacing) | Sets the letter spacing for a text style. |
 | [void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double wordSpacing)](#oh_drawing_settextstylewordspacing) | Sets the word spacing for a text style. |
 | [void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLeading)](#oh_drawing_settextstylehalfleading) | Sets whether to enable half leading for a text style. |
-| [void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)](#oh_drawing_settextstyleellipsis) | Sets the ellipsis content for a text style.(Deprecated in API18) |
-| [void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)](#oh_drawing_settextstyleellipsismodal) | Sets the ellipsis style for a text style.(Deprecated in API18) |
+| [void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)](#oh_drawing_settextstyleellipsis) | Sets the ellipsis content for a text style.(Deprecated) |
+| [void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)](#oh_drawing_settextstyleellipsismodal) | Sets the ellipsis style for a text style.(Deprecated) |
 | [void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style, int breakStrategy)](#oh_drawing_settypographytextbreakstrategy) | Sets the text break strategy. |
 | [void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style, int wordBreakType)](#oh_drawing_settypographytextwordbreaktype) | Sets the word break type. |
 | [void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style, int ellipsisModal)](#oh_drawing_settypographytextellipsismodal) | Sets the ellipsis style for a text style. |
@@ -170,7 +174,7 @@ This file declares the functions related to typography in the drawing module.
 | [void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const char* locale)](#oh_drawing_settypographytextlocale) | Sets the locale for a typography style. |
 | [void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, float textSplitRatio)](#oh_drawing_settypographytextsplitratio) | Sets the text division ratio, which is used to determine the cursor position within a glyph when tapping to locate a character. |
 | [OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographyStyle* style)](#oh_drawing_typographygettextstyle) | Obtains the default text style of a typography style. |
-| [int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)](#oh_drawing_typographygeteffectivealignment) | Obtains the text alignment mode.(Deprecated in API18) |
+| [int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)](#oh_drawing_typographygeteffectivealignment) | Obtains the text alignment mode.(Deprecated) |
 | [bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)](#oh_drawing_typographyislineunlimited) | Checks whether the maximum number of lines is limited for text. |
 | [bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)](#oh_drawing_typographyisellipsized) | Checks whether an ellipsis is configured for a typography style. |
 | [void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_Drawing_TextStyle* style)](#oh_drawing_settypographytextstyle) | Sets a text style. |
@@ -306,12 +310,16 @@ enum OH_Drawing_TextDirection
 
 Enumerates the text directions.
 
+<!--Device-enum OH_Drawing_TextDirection--><!--Device-enum OH_Drawing_TextDirection-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_DIRECTION_RTL | Right to left (RTL). |
-| TEXT_DIRECTION_LTR | Left to right (LTR). |
+| TEXT_DIRECTION_RTL | Right to left (RTL).<br><!--Device-TEXT_DIRECTION_RTL--><!--Device-TEXT_DIRECTION_RTL-End--> |
+| TEXT_DIRECTION_LTR | Left to right (LTR).<br><!--Device-TEXT_DIRECTION_LTR--><!--Device-TEXT_DIRECTION_LTR-End--> |
 
 ### OH_Drawing_TextAlign
 
@@ -323,16 +331,20 @@ enum OH_Drawing_TextAlign
 
 Enumerates the text alignment modes.
 
+<!--Device-enum OH_Drawing_TextAlign--><!--Device-enum OH_Drawing_TextAlign-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_ALIGN_LEFT | Left-aligned. |
-| TEXT_ALIGN_RIGHT | Right-aligned. |
-| TEXT_ALIGN_CENTER | Center-aligned. |
-| TEXT_ALIGN_JUSTIFY | Justified, which means that each line (except the last line) is stretched so that every line has equal width, and the left and right margins are straight. |
-| TEXT_ALIGN_START | When **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_LTR**, **TEXT_ALIGN_START** and **TEXT_ALIGN_LEFT**<br>are the same.<br>Similarly, when **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_RTL**, **<br>TEXT_ALIGN_START** and **TEXT_ALIGN_RIGHT** are the same. |
-| TEXT_ALIGN_END | When **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_LTR**, **TEXT_ALIGN_END** and **TEXT_ALIGN_RIGHT**<br>are the same.<br>Similarly, when **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_RTL**, **TEXT_ALIGN_END*<br> and **TEXT_ALIGN_LEFT** are the same. |
+| TEXT_ALIGN_LEFT | Left-aligned.<br><!--Device-TEXT_ALIGN_LEFT--><!--Device-TEXT_ALIGN_LEFT-End--> |
+| TEXT_ALIGN_RIGHT | Right-aligned.<br><!--Device-TEXT_ALIGN_RIGHT--><!--Device-TEXT_ALIGN_RIGHT-End--> |
+| TEXT_ALIGN_CENTER | Center-aligned.<br><!--Device-TEXT_ALIGN_CENTER--><!--Device-TEXT_ALIGN_CENTER-End--> |
+| TEXT_ALIGN_JUSTIFY | Justified, which means that each line (except the last line) is stretched so that every line has equal width, and the left and right margins are straight.<br><!--Device-TEXT_ALIGN_JUSTIFY--><!--Device-TEXT_ALIGN_JUSTIFY-End--> |
+| TEXT_ALIGN_START | When **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_LTR**, **TEXT_ALIGN_START** and **TEXT_ALIGN_LEFT** are the same.<br>Similarly, when **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_RTL**, ** TEXT_ALIGN_START** and **TEXT_ALIGN_RIGHT** are the same.<br><!--Device-TEXT_ALIGN_START--><!--Device-TEXT_ALIGN_START-End--> |
+| TEXT_ALIGN_END | When **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_LTR**, **TEXT_ALIGN_END** and **TEXT_ALIGN_RIGHT** are the same.<br>Similarly, when **OH_Drawing_TextDirection** is set to **TEXT_DIRECTION_RTL**, **TEXT_ALIGN_END* * and **TEXT_ALIGN_LEFT** are the same.<br><!--Device-TEXT_ALIGN_END--><!--Device-TEXT_ALIGN_END-End--> |
 
 ### OH_Drawing_FontWeight
 
@@ -344,19 +356,23 @@ enum OH_Drawing_FontWeight
 
 Enumerates the font weights.
 
+<!--Device-enum OH_Drawing_FontWeight--><!--Device-enum OH_Drawing_FontWeight-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| FONT_WEIGHT_100 | Thin. |
-| FONT_WEIGHT_200 | Extra-light. |
-| FONT_WEIGHT_300 | Light. |
-| FONT_WEIGHT_400 | Normal/Regular. |
-| FONT_WEIGHT_500 | Medium. |
-| FONT_WEIGHT_600 | Semi-bold. |
-| FONT_WEIGHT_700 | Bold. |
-| FONT_WEIGHT_800 | Extra-bold. |
-| FONT_WEIGHT_900 | Black. |
+| FONT_WEIGHT_100 | Thin.<br><!--Device-FONT_WEIGHT_100--><!--Device-FONT_WEIGHT_100-End--> |
+| FONT_WEIGHT_200 | Extra-light.<br><!--Device-FONT_WEIGHT_200--><!--Device-FONT_WEIGHT_200-End--> |
+| FONT_WEIGHT_300 | Light.<br><!--Device-FONT_WEIGHT_300--><!--Device-FONT_WEIGHT_300-End--> |
+| FONT_WEIGHT_400 | Normal/Regular.<br><!--Device-FONT_WEIGHT_400--><!--Device-FONT_WEIGHT_400-End--> |
+| FONT_WEIGHT_500 | Medium.<br><!--Device-FONT_WEIGHT_500--><!--Device-FONT_WEIGHT_500-End--> |
+| FONT_WEIGHT_600 | Semi-bold.<br><!--Device-FONT_WEIGHT_600--><!--Device-FONT_WEIGHT_600-End--> |
+| FONT_WEIGHT_700 | Bold.<br><!--Device-FONT_WEIGHT_700--><!--Device-FONT_WEIGHT_700-End--> |
+| FONT_WEIGHT_800 | Extra-bold.<br><!--Device-FONT_WEIGHT_800--><!--Device-FONT_WEIGHT_800-End--> |
+| FONT_WEIGHT_900 | Black.<br><!--Device-FONT_WEIGHT_900--><!--Device-FONT_WEIGHT_900-End--> |
 
 ### OH_Drawing_TextBaseline
 
@@ -368,12 +384,16 @@ enum OH_Drawing_TextBaseline
 
 Enumerates the text baselines.
 
+<!--Device-enum OH_Drawing_TextBaseline--><!--Device-enum OH_Drawing_TextBaseline-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_BASELINE_ALPHABETIC | Alphabetic, where the letters in alphabets like English sit on. |
-| TEXT_BASELINE_IDEOGRAPHIC | Ideographic, where the baseline is at the bottom of the text area. |
+| TEXT_BASELINE_ALPHABETIC | Alphabetic, where the letters in alphabets like English sit on.<br><!--Device-TEXT_BASELINE_ALPHABETIC--><!--Device-TEXT_BASELINE_ALPHABETIC-End--> |
+| TEXT_BASELINE_IDEOGRAPHIC | Ideographic, where the baseline is at the bottom of the text area.<br><!--Device-TEXT_BASELINE_IDEOGRAPHIC--><!--Device-TEXT_BASELINE_IDEOGRAPHIC-End--> |
 
 ### OH_Drawing_TextDecoration
 
@@ -385,14 +405,18 @@ enum OH_Drawing_TextDecoration
 
 Enumerates the text decorations.
 
+<!--Device-enum OH_Drawing_TextDecoration--><!--Device-enum OH_Drawing_TextDecoration-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_DECORATION_NONE = 0x0 | No decoration. |
-| TEXT_DECORATION_UNDERLINE = 0x1 | An underline is used for decoration. |
-| TEXT_DECORATION_OVERLINE = 0x2 | An overline is used for decoration. |
-| TEXT_DECORATION_LINE_THROUGH = 0x4 | A strikethrough is used for decoration. |
+| TEXT_DECORATION_NONE = 0x0 | No decoration.<br><!--Device-TEXT_DECORATION_NONE = 0x0--><!--Device-TEXT_DECORATION_NONE = 0x0-End--> |
+| TEXT_DECORATION_UNDERLINE = 0x1 | An underline is used for decoration.<br><!--Device-TEXT_DECORATION_UNDERLINE = 0x1--><!--Device-TEXT_DECORATION_UNDERLINE = 0x1-End--> |
+| TEXT_DECORATION_OVERLINE = 0x2 | An overline is used for decoration.<br><!--Device-TEXT_DECORATION_OVERLINE = 0x2--><!--Device-TEXT_DECORATION_OVERLINE = 0x2-End--> |
+| TEXT_DECORATION_LINE_THROUGH = 0x4 | A strikethrough is used for decoration.<br><!--Device-TEXT_DECORATION_LINE_THROUGH = 0x4--><!--Device-TEXT_DECORATION_LINE_THROUGH = 0x4-End--> |
 
 ### OH_Drawing_FontStyle
 
@@ -404,13 +428,17 @@ enum OH_Drawing_FontStyle
 
 Font styles, including non-italic, italic, and oblique.
 
+<!--Device-enum OH_Drawing_FontStyle--><!--Device-enum OH_Drawing_FontStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| FONT_STYLE_NORMAL | Normal style. |
-| FONT_STYLE_ITALIC | Italic. |
-| FONT_STYLE_OBLIQUE | Oblique. |
+| FONT_STYLE_NORMAL | Normal style.<br><!--Device-FONT_STYLE_NORMAL--><!--Device-FONT_STYLE_NORMAL-End--> |
+| FONT_STYLE_ITALIC | Italic.<br><!--Device-FONT_STYLE_ITALIC--><!--Device-FONT_STYLE_ITALIC-End--> |
+| FONT_STYLE_OBLIQUE | Oblique.<br><!--Device-FONT_STYLE_OBLIQUE--><!--Device-FONT_STYLE_OBLIQUE-End--> |
 
 ### OH_Drawing_PlaceholderVerticalAlignment
 
@@ -422,17 +450,21 @@ enum OH_Drawing_PlaceholderVerticalAlignment
 
 Enumerates the vertical alignment modes of placeholders.
 
+<!--Device-enum OH_Drawing_PlaceholderVerticalAlignment--><!--Device-enum OH_Drawing_PlaceholderVerticalAlignment-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ALIGNMENT_OFFSET_AT_BASELINE | Aligned to the baseline. |
-| ALIGNMENT_ABOVE_BASELINE | Aligned above the baseline. |
-| ALIGNMENT_BELOW_BASELINE | Aligned below the baseline. |
-| ALIGNMENT_TOP_OF_ROW_BOX | Aligned to the top of the row box. |
-| ALIGNMENT_BOTTOM_OF_ROW_BOX | Aligned to the bottom of the row box. |
-| ALIGNMENT_CENTER_OF_ROW_BOX | Aligned to the center of the row box. |
-| ALIGNMENT_FOLLOW_PARAGRAPH |  |
+| ALIGNMENT_OFFSET_AT_BASELINE | Aligned to the baseline.<br><!--Device-ALIGNMENT_OFFSET_AT_BASELINE--><!--Device-ALIGNMENT_OFFSET_AT_BASELINE-End--> |
+| ALIGNMENT_ABOVE_BASELINE | Aligned above the baseline.<br><!--Device-ALIGNMENT_ABOVE_BASELINE--><!--Device-ALIGNMENT_ABOVE_BASELINE-End--> |
+| ALIGNMENT_BELOW_BASELINE | Aligned below the baseline.<br><!--Device-ALIGNMENT_BELOW_BASELINE--><!--Device-ALIGNMENT_BELOW_BASELINE-End--> |
+| ALIGNMENT_TOP_OF_ROW_BOX | Aligned to the top of the row box.<br><!--Device-ALIGNMENT_TOP_OF_ROW_BOX--><!--Device-ALIGNMENT_TOP_OF_ROW_BOX-End--> |
+| ALIGNMENT_BOTTOM_OF_ROW_BOX | Aligned to the bottom of the row box.<br><!--Device-ALIGNMENT_BOTTOM_OF_ROW_BOX--><!--Device-ALIGNMENT_BOTTOM_OF_ROW_BOX-End--> |
+| ALIGNMENT_CENTER_OF_ROW_BOX | Aligned to the center of the row box.<br><!--Device-ALIGNMENT_CENTER_OF_ROW_BOX--><!--Device-ALIGNMENT_CENTER_OF_ROW_BOX-End--> |
+| ALIGNMENT_FOLLOW_PARAGRAPH | Follows the text vertical alignment.<br>**Since**: 20<br><!--Device-ALIGNMENT_FOLLOW_PARAGRAPH--><!--Device-ALIGNMENT_FOLLOW_PARAGRAPH-End--> |
 
 ### OH_Drawing_TextDecorationStyle
 
@@ -444,15 +476,19 @@ enum OH_Drawing_TextDecorationStyle
 
 Enumerates the text decoration styles.
 
+<!--Device-enum OH_Drawing_TextDecorationStyle--><!--Device-enum OH_Drawing_TextDecorationStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_DECORATION_STYLE_SOLID | Solid style. |
-| TEXT_DECORATION_STYLE_DOUBLE | Double style. |
-| TEXT_DECORATION_STYLE_DOTTED | Dotted style. |
-| TEXT_DECORATION_STYLE_DASHED | Dashed style. |
-| TEXT_DECORATION_STYLE_WAVY | Wavy style. |
+| TEXT_DECORATION_STYLE_SOLID | Solid style.<br><!--Device-TEXT_DECORATION_STYLE_SOLID--><!--Device-TEXT_DECORATION_STYLE_SOLID-End--> |
+| TEXT_DECORATION_STYLE_DOUBLE | Double style.<br><!--Device-TEXT_DECORATION_STYLE_DOUBLE--><!--Device-TEXT_DECORATION_STYLE_DOUBLE-End--> |
+| TEXT_DECORATION_STYLE_DOTTED | Dotted style.<br><!--Device-TEXT_DECORATION_STYLE_DOTTED--><!--Device-TEXT_DECORATION_STYLE_DOTTED-End--> |
+| TEXT_DECORATION_STYLE_DASHED | Dashed style.<br><!--Device-TEXT_DECORATION_STYLE_DASHED--><!--Device-TEXT_DECORATION_STYLE_DASHED-End--> |
+| TEXT_DECORATION_STYLE_WAVY | Wavy style.<br><!--Device-TEXT_DECORATION_STYLE_WAVY--><!--Device-TEXT_DECORATION_STYLE_WAVY-End--> |
 
 ### OH_Drawing_EllipsisModal
 
@@ -464,15 +500,19 @@ enum OH_Drawing_EllipsisModal
 
 Enumerates the ellipsis styles.
 
+<!--Device-enum OH_Drawing_EllipsisModal--><!--Device-enum OH_Drawing_EllipsisModal-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ELLIPSIS_MODAL_HEAD = 0 | Header ellipsis mode, that is, the ellipsis appears at the beginning of a line. This enumerated value is valid only when the maximum number of text lines is set to **1** by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines). |
-| ELLIPSIS_MODAL_MIDDLE = 1 | Middle ellipsis mode, that is, the ellipsis appears in the middle of a line. This enumerated value is valid only when the maximum number of text lines is set to **1** by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines). |
-| ELLIPSIS_MODAL_TAIL = 2 | End ellipsis mode, that is, the ellipsis appears at the end of a line. This enumerated value is valid when the maximum number of text lines is set to any value by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines). |
-| ELLIPSIS_MODAL_MULTILINE_HEAD = 3 |  |
-| ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4 |  |
+| ELLIPSIS_MODAL_HEAD = 0 | Header ellipsis mode, that is, the ellipsis appears at the beginning of a line. This enumerated value is valid only when the maximum number of text lines is set to **1** by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).<br><!--Device-ELLIPSIS_MODAL_HEAD = 0--><!--Device-ELLIPSIS_MODAL_HEAD = 0-End--> |
+| ELLIPSIS_MODAL_MIDDLE = 1 | Middle ellipsis mode, that is, the ellipsis appears in the middle of a line. This enumerated value is valid only when the maximum number of text lines is set to **1** by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).<br><!--Device-ELLIPSIS_MODAL_MIDDLE = 1--><!--Device-ELLIPSIS_MODAL_MIDDLE = 1-End--> |
+| ELLIPSIS_MODAL_TAIL = 2 | End ellipsis mode, that is, the ellipsis appears at the end of a line. This enumerated value is valid when the maximum number of text lines is set to any value by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).<br><!--Device-ELLIPSIS_MODAL_TAIL = 2--><!--Device-ELLIPSIS_MODAL_TAIL = 2-End--> |
+| ELLIPSIS_MODAL_MULTILINE_HEAD = 3 | Header ellipsis mode, that is, the ellipsis appears at the beginning of a line. This enumerated value is valid when the maximum number of text lines is set to any value by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).<br>**Since**: 24<br><!--Device-ELLIPSIS_MODAL_MULTILINE_HEAD = 3--><!--Device-ELLIPSIS_MODAL_MULTILINE_HEAD = 3-End--> |
+| ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4 | Middle ellipsis mode, that is, the ellipsis appears in the middle of a line. This enumerated value is valid when the maximum number of text lines is set to any value by calling [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).<br>**Since**: 24<br><!--Device-ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4--><!--Device-ELLIPSIS_MODAL_MULTILINE_MIDDLE = 4-End--> |
 
 ### OH_Drawing_BreakStrategy
 
@@ -484,13 +524,17 @@ enum OH_Drawing_BreakStrategy
 
 Enumerates the text break strategies.
 
+<!--Device-enum OH_Drawing_BreakStrategy--><!--Device-enum OH_Drawing_BreakStrategy-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| BREAK_STRATEGY_GREEDY = 0 | Each line is filled as much as possible during line break. |
-| BREAK_STRATEGY_HIGH_QUALITY = 1 | Text continuity is preferentially considered during line break. |
-| BREAK_STRATEGY_BALANCED = 2 | Line breaks are performed at the word boundary. |
+| BREAK_STRATEGY_GREEDY = 0 | Each line is filled as much as possible during line break.<br><!--Device-BREAK_STRATEGY_GREEDY = 0--><!--Device-BREAK_STRATEGY_GREEDY = 0-End--> |
+| BREAK_STRATEGY_HIGH_QUALITY = 1 | Text continuity is preferentially considered during line break.<br><!--Device-BREAK_STRATEGY_HIGH_QUALITY = 1--><!--Device-BREAK_STRATEGY_HIGH_QUALITY = 1-End--> |
+| BREAK_STRATEGY_BALANCED = 2 | Line breaks are performed at the word boundary.<br><!--Device-BREAK_STRATEGY_BALANCED = 2--><!--Device-BREAK_STRATEGY_BALANCED = 2-End--> |
 
 ### OH_Drawing_WordBreakType
 
@@ -502,14 +546,18 @@ enum OH_Drawing_WordBreakType
 
 Enumerates the word break types.
 
+<!--Device-enum OH_Drawing_WordBreakType--><!--Device-enum OH_Drawing_WordBreakType-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| WORD_BREAK_TYPE_NORMAL = 0 | Normal mode. |
-| WORD_BREAK_TYPE_BREAK_ALL = 1 | Breaks the words at any character to prevent overflow. |
-| WORD_BREAK_TYPE_BREAK_WORD = 2 | Breaks the words at arbitrary points to prevent overflow. |
-| WORD_BREAK_TYPE_BREAK_HYPHEN = 3 |  |
+| WORD_BREAK_TYPE_NORMAL = 0 | Normal mode.<br><!--Device-WORD_BREAK_TYPE_NORMAL = 0--><!--Device-WORD_BREAK_TYPE_NORMAL = 0-End--> |
+| WORD_BREAK_TYPE_BREAK_ALL = 1 | Breaks the words at any character to prevent overflow.<br><!--Device-WORD_BREAK_TYPE_BREAK_ALL = 1--><!--Device-WORD_BREAK_TYPE_BREAK_ALL = 1-End--> |
+| WORD_BREAK_TYPE_BREAK_WORD = 2 | Breaks the words at arbitrary points to prevent overflow.<br><!--Device-WORD_BREAK_TYPE_BREAK_WORD = 2--><!--Device-WORD_BREAK_TYPE_BREAK_WORD = 2-End--> |
+| WORD_BREAK_TYPE_BREAK_HYPHEN = 3 | Attempts to break words at the end of each line by inserting a hyphen ("-"). If a hyphen cannot be added, the behavior is the same as `WORD_BREAK_TYPE_BREAK_WORD`.<br>**Since**: 18<br><!--Device-WORD_BREAK_TYPE_BREAK_HYPHEN = 3--><!--Device-WORD_BREAK_TYPE_BREAK_HYPHEN = 3-End--> |
 
 ### OH_Drawing_RectHeightStyle
 
@@ -521,16 +569,20 @@ enum OH_Drawing_RectHeightStyle
 
 Enumerates the rectangle height styles.
 
+<!--Device-enum OH_Drawing_RectHeightStyle--><!--Device-enum OH_Drawing_RectHeightStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RECT_HEIGHT_STYLE_TIGHT | Tight style. The text box height closely fits the text content boundary. |
-| RECT_HEIGHT_STYLE_MAX | Max style. The text box height takes the maximum height among all lines. |
-| RECT_HEIGHT_STYLE_INCLUDELINESPACEMIDDLE | Include line spacing middle style. The text box height includes the middle portion of the line spacing. |
-| RECT_HEIGHT_STYLE_INCLUDELINESPACETOP | Include line spacing top style. The text box height includes the top portion of the line spacing. |
-| RECT_HEIGHT_STYLE_INCLUDELINESPACEBOTTOM | Include line spacing bottom style. The text box height includes the bottom portion of the line spacing. |
-| RECT_HEIGHT_STYLE_STRUCT | Struct style. The Strut Style determines the text box height. |
+| RECT_HEIGHT_STYLE_TIGHT | Tight style. The text box height closely fits the text content boundary.<br><!--Device-RECT_HEIGHT_STYLE_TIGHT--><!--Device-RECT_HEIGHT_STYLE_TIGHT-End--> |
+| RECT_HEIGHT_STYLE_MAX | Max style. The text box height takes the maximum height among all lines.<br><!--Device-RECT_HEIGHT_STYLE_MAX--><!--Device-RECT_HEIGHT_STYLE_MAX-End--> |
+| RECT_HEIGHT_STYLE_INCLUDELINESPACEMIDDLE | Include line spacing middle style. The text box height includes the middle portion of the line spacing.<br><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACEMIDDLE--><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACEMIDDLE-End--> |
+| RECT_HEIGHT_STYLE_INCLUDELINESPACETOP | Include line spacing top style. The text box height includes the top portion of the line spacing.<br><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACETOP--><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACETOP-End--> |
+| RECT_HEIGHT_STYLE_INCLUDELINESPACEBOTTOM | Include line spacing bottom style. The text box height includes the bottom portion of the line spacing.<br><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACEBOTTOM--><!--Device-RECT_HEIGHT_STYLE_INCLUDELINESPACEBOTTOM-End--> |
+| RECT_HEIGHT_STYLE_STRUCT | Struct style. The Strut Style determines the text box height.<br><!--Device-RECT_HEIGHT_STYLE_STRUCT--><!--Device-RECT_HEIGHT_STYLE_STRUCT-End--> |
 
 ### OH_Drawing_RectWidthStyle
 
@@ -542,12 +594,16 @@ enum OH_Drawing_RectWidthStyle
 
 Enumerates the rectangle width styles.
 
+<!--Device-enum OH_Drawing_RectWidthStyle--><!--Device-enum OH_Drawing_RectWidthStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RECT_WIDTH_STYLE_TIGHT | Tight style. The text box height closely fits the text content boundary. |
-| RECT_WIDTH_STYLE_MAX | Max style. The text box height takes the maximum height among all lines. |
+| RECT_WIDTH_STYLE_TIGHT | Tight style. The text box height closely fits the text content boundary.<br><!--Device-RECT_WIDTH_STYLE_TIGHT--><!--Device-RECT_WIDTH_STYLE_TIGHT-End--> |
+| RECT_WIDTH_STYLE_MAX | Max style. The text box height takes the maximum height among all lines.<br><!--Device-RECT_WIDTH_STYLE_MAX--><!--Device-RECT_WIDTH_STYLE_MAX-End--> |
 
 ### OH_Drawing_FontConfigInfoErrorCode
 
@@ -559,15 +615,19 @@ enum OH_Drawing_FontConfigInfoErrorCode
 
 Enumerates the error codes for the system font configuration information list.
 
+<!--Device-enum OH_Drawing_FontConfigInfoErrorCode--><!--Device-enum OH_Drawing_FontConfigInfoErrorCode-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| SUCCESS_FONT_CONFIG_INFO = 0 | Operation successful. |
-| ERROR_FONT_CONFIG_INFO_UNKNOWN = 1 | Unknown error. |
-| ERROR_FONT_CONFIG_INFO_PARSE_FILE = 2 | Failed to parse the system configuration file. |
-| ERROR_FONT_CONFIG_INFO_ALLOC_MEMORY = 3 | Memory allocation fails. |
-| ERROR_FONT_CONFIG_INFO_COPY_STRING_DATA = 4 | Failed to copy the string data. |
+| SUCCESS_FONT_CONFIG_INFO = 0 | Operation successful.<br><!--Device-SUCCESS_FONT_CONFIG_INFO = 0--><!--Device-SUCCESS_FONT_CONFIG_INFO = 0-End--> |
+| ERROR_FONT_CONFIG_INFO_UNKNOWN = 1 | Unknown error.<br><!--Device-ERROR_FONT_CONFIG_INFO_UNKNOWN = 1--><!--Device-ERROR_FONT_CONFIG_INFO_UNKNOWN = 1-End--> |
+| ERROR_FONT_CONFIG_INFO_PARSE_FILE = 2 | Failed to parse the system configuration file.<br><!--Device-ERROR_FONT_CONFIG_INFO_PARSE_FILE = 2--><!--Device-ERROR_FONT_CONFIG_INFO_PARSE_FILE = 2-End--> |
+| ERROR_FONT_CONFIG_INFO_ALLOC_MEMORY = 3 | Memory allocation fails.<br><!--Device-ERROR_FONT_CONFIG_INFO_ALLOC_MEMORY = 3--><!--Device-ERROR_FONT_CONFIG_INFO_ALLOC_MEMORY = 3-End--> |
+| ERROR_FONT_CONFIG_INFO_COPY_STRING_DATA = 4 | Failed to copy the string data.<br><!--Device-ERROR_FONT_CONFIG_INFO_COPY_STRING_DATA = 4--><!--Device-ERROR_FONT_CONFIG_INFO_COPY_STRING_DATA = 4-End--> |
 
 ### OH_Drawing_TextHeightBehavior
 
@@ -579,14 +639,18 @@ enum OH_Drawing_TextHeightBehavior
 
 Enumerates the text height modifier patterns.
 
+<!--Device-enum OH_Drawing_TextHeightBehavior--><!--Device-enum OH_Drawing_TextHeightBehavior-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_HEIGHT_ALL = 0x0 | Enables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the top of the first line and the bottom of the last line in a paragraph. |
-| TEXT_HEIGHT_DISABLE_FIRST_ASCENT = 0x1 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the top of the first line in a paragraph. |
-| TEXT_HEIGHT_DISABLE_LAST_ASCENT = 0x2 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the bottom of the last line in a paragraph. |
-| TEXT_HEIGHT_DISABLE_ALL = 0x1 \| 0x2 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for both the top of the first line and the bottom of the last line in a paragraph. |
+| TEXT_HEIGHT_ALL = 0x0 | Enables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the top of the first line and the bottom of the last line in a paragraph.<br><!--Device-TEXT_HEIGHT_ALL = 0x0--><!--Device-TEXT_HEIGHT_ALL = 0x0-End--> |
+| TEXT_HEIGHT_DISABLE_FIRST_ASCENT = 0x1 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the top of the first line in a paragraph.<br><!--Device-TEXT_HEIGHT_DISABLE_FIRST_ASCENT = 0x1--><!--Device-TEXT_HEIGHT_DISABLE_FIRST_ASCENT = 0x1-End--> |
+| TEXT_HEIGHT_DISABLE_LAST_ASCENT = 0x2 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for the bottom of the last line in a paragraph.<br><!--Device-TEXT_HEIGHT_DISABLE_LAST_ASCENT = 0x2--><!--Device-TEXT_HEIGHT_DISABLE_LAST_ASCENT = 0x2-End--> |
+| TEXT_HEIGHT_DISABLE_ALL = 0x1 \| 0x2 | Disables the height set by calling [OH_Drawing_SetTextStyleFontHeight](capi-drawing-text-typography-h.md#oh_drawing_settextstylefontheight) for both the top of the first line and the bottom of the last line in a paragraph.<br><!--Device-TEXT_HEIGHT_DISABLE_ALL = 0x1 \| 0x2--><!--Device-TEXT_HEIGHT_DISABLE_ALL = 0x1 \| 0x2-End--> |
 
 ### OH_Drawing_TextStyleType
 
@@ -598,19 +662,23 @@ enum OH_Drawing_TextStyleType
 
 Enumerates the text style types.
 
+<!--Device-enum OH_Drawing_TextStyleType--><!--Device-enum OH_Drawing_TextStyleType-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_STYLE_NONE | No text style. |
-| TEXT_STYLE_ALL_ATTRIBUTES | All text styles. |
-| TEXT_STYLE_FONT | Font style. |
-| TEXT_STYLE_FOREGROUND | Text foreground style. |
-| TEXT_STYLE_BACKGROUND | Text background style. |
-| TEXT_STYLE_SHADOW | Text shadow style. |
-| TEXT_STYLE_DECORATIONS | Text decoration style. |
-| TEXT_STYLE_LETTER_SPACING | Text letter spacing style. |
-| TEXT_STYLE_WORD_SPACING | Text word spacing style. |
+| TEXT_STYLE_NONE | No text style.<br><!--Device-TEXT_STYLE_NONE--><!--Device-TEXT_STYLE_NONE-End--> |
+| TEXT_STYLE_ALL_ATTRIBUTES | All text styles.<br><!--Device-TEXT_STYLE_ALL_ATTRIBUTES--><!--Device-TEXT_STYLE_ALL_ATTRIBUTES-End--> |
+| TEXT_STYLE_FONT | Font style.<br><!--Device-TEXT_STYLE_FONT--><!--Device-TEXT_STYLE_FONT-End--> |
+| TEXT_STYLE_FOREGROUND | Text foreground style.<br><!--Device-TEXT_STYLE_FOREGROUND--><!--Device-TEXT_STYLE_FOREGROUND-End--> |
+| TEXT_STYLE_BACKGROUND | Text background style.<br><!--Device-TEXT_STYLE_BACKGROUND--><!--Device-TEXT_STYLE_BACKGROUND-End--> |
+| TEXT_STYLE_SHADOW | Text shadow style.<br><!--Device-TEXT_STYLE_SHADOW--><!--Device-TEXT_STYLE_SHADOW-End--> |
+| TEXT_STYLE_DECORATIONS | Text decoration style.<br><!--Device-TEXT_STYLE_DECORATIONS--><!--Device-TEXT_STYLE_DECORATIONS-End--> |
+| TEXT_STYLE_LETTER_SPACING | Text letter spacing style.<br><!--Device-TEXT_STYLE_LETTER_SPACING--><!--Device-TEXT_STYLE_LETTER_SPACING-End--> |
+| TEXT_STYLE_WORD_SPACING | Text word spacing style.<br><!--Device-TEXT_STYLE_WORD_SPACING--><!--Device-TEXT_STYLE_WORD_SPACING-End--> |
 
 ### OH_Drawing_FontWidth
 
@@ -622,19 +690,23 @@ enum OH_Drawing_FontWidth
 
 Enumerates the font widths.
 
+<!--Device-enum OH_Drawing_FontWidth--><!--Device-enum OH_Drawing_FontWidth-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| FONT_WIDTH_ULTRA_CONDENSED = 1 | Ultra condensed font. |
-| FONT_WIDTH_EXTRA_CONDENSED = 2 | Extra condensed font. |
-| FONT_WIDTH_CONDENSED = 3 | Condensed font. |
-| FONT_WIDTH_SEMI_CONDENSED = 4 | Semi-condensed font. |
-| FONT_WIDTH_NORMAL = 5 | Normal font. |
-| FONT_WIDTH_SEMI_EXPANDED = 6 | Semi-expanded font. |
-| FONT_WIDTH_EXPANDED = 7 | Expanded font. |
-| FONT_WIDTH_EXTRA_EXPANDED = 8 | Extra expanded font. |
-| FONT_WIDTH_ULTRA_EXPANDED = 9 | Ultra expanded font. |
+| FONT_WIDTH_ULTRA_CONDENSED = 1 | Ultra condensed font.<br><!--Device-FONT_WIDTH_ULTRA_CONDENSED = 1--><!--Device-FONT_WIDTH_ULTRA_CONDENSED = 1-End--> |
+| FONT_WIDTH_EXTRA_CONDENSED = 2 | Extra condensed font.<br><!--Device-FONT_WIDTH_EXTRA_CONDENSED = 2--><!--Device-FONT_WIDTH_EXTRA_CONDENSED = 2-End--> |
+| FONT_WIDTH_CONDENSED = 3 | Condensed font.<br><!--Device-FONT_WIDTH_CONDENSED = 3--><!--Device-FONT_WIDTH_CONDENSED = 3-End--> |
+| FONT_WIDTH_SEMI_CONDENSED = 4 | Semi-condensed font.<br><!--Device-FONT_WIDTH_SEMI_CONDENSED = 4--><!--Device-FONT_WIDTH_SEMI_CONDENSED = 4-End--> |
+| FONT_WIDTH_NORMAL = 5 | Normal font.<br><!--Device-FONT_WIDTH_NORMAL = 5--><!--Device-FONT_WIDTH_NORMAL = 5-End--> |
+| FONT_WIDTH_SEMI_EXPANDED = 6 | Semi-expanded font.<br><!--Device-FONT_WIDTH_SEMI_EXPANDED = 6--><!--Device-FONT_WIDTH_SEMI_EXPANDED = 6-End--> |
+| FONT_WIDTH_EXPANDED = 7 | Expanded font.<br><!--Device-FONT_WIDTH_EXPANDED = 7--><!--Device-FONT_WIDTH_EXPANDED = 7-End--> |
+| FONT_WIDTH_EXTRA_EXPANDED = 8 | Extra expanded font.<br><!--Device-FONT_WIDTH_EXTRA_EXPANDED = 8--><!--Device-FONT_WIDTH_EXTRA_EXPANDED = 8-End--> |
+| FONT_WIDTH_ULTRA_EXPANDED = 9 | Ultra expanded font.<br><!--Device-FONT_WIDTH_ULTRA_EXPANDED = 9--><!--Device-FONT_WIDTH_ULTRA_EXPANDED = 9-End--> |
 
 ### OH_Drawing_TextStyleAttributeId
 
@@ -646,15 +718,19 @@ enum OH_Drawing_TextStyleAttributeId
 
 Enumerates the text style attributes.
 
+<!--Device-enum OH_Drawing_TextStyleAttributeId--><!--Device-enum OH_Drawing_TextStyleAttributeId-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0 | Maximum line height.<br>If line height scaling is enabled, the maximum line height takes effect only when **<br>FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the positive part of a single-precision floating point number. |
-| TEXT_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1 | Minimum line height.<br>If line height scaling is enabled, the minimum line height takes effect only when **<br>FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the non-negative part of a single-precision floating point number. The default value is **0**. |
-| TEXT_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 2 | Scaling base style of the line height. For details, see [OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle). |
-| TEXT_STYLE_ATTR_I_FONT_WIDTH = 3 | Font width. |
-| TEXT_STYLE_ATTR_I_FONT_EDGING = 4 |  |
+| TEXT_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0 | Maximum line height.<br>If line height scaling is enabled, the maximum line height takes effect only when ** FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the positive part of a single-precision floating point number.<br><!--Device-TEXT_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0--><!--Device-TEXT_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0-End--> |
+| TEXT_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1 | Minimum line height.<br>If line height scaling is enabled, the minimum line height takes effect only when ** FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the non-negative part of a single-precision floating point number. The default value is **0**.<br><!--Device-TEXT_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1--><!--Device-TEXT_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1-End--> |
+| TEXT_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 2 | Scaling base style of the line height. For details, see [OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle).<br><!--Device-TEXT_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 2--><!--Device-TEXT_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 2-End--> |
+| TEXT_STYLE_ATTR_I_FONT_WIDTH = 3 | Font width.<br><!--Device-TEXT_STYLE_ATTR_I_FONT_WIDTH = 3--><!--Device-TEXT_STYLE_ATTR_I_FONT_WIDTH = 3-End--> |
+| TEXT_STYLE_ATTR_I_FONT_EDGING = 4 | Font edge processing mode. Anti-aliasing is used by default. For details about how to process font edges, see [OH_Drawing_FontEdging](capi-drawing-font-h.md#oh_drawing_fontedging).<br>**Since**: 24<br><!--Device-TEXT_STYLE_ATTR_I_FONT_EDGING = 4--><!--Device-TEXT_STYLE_ATTR_I_FONT_EDGING = 4-End--> |
 
 ### OH_Drawing_LineHeightStyle
 
@@ -666,12 +742,16 @@ enum OH_Drawing_LineHeightStyle
 
 Enumerates the scaling base styles of the line height. The default style is **TEXT_LINE_HEIGHT_BY_FONT_SIZE**.
 
+<!--Device-enum OH_Drawing_LineHeightStyle--><!--Device-enum OH_Drawing_LineHeightStyle-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_LINE_HEIGHT_BY_FONT_SIZE = 0 | Uses the font size as the scaling base.<br>Formula for calculating the line height: **FontSize** x **FontHeight**<br>.<br>**FontSize** can be obtained from the [OH_Drawing_TextStyleGetFontSize](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontsize) API.<br>**FontHeight** can be obtained from the [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight) API. |
-| TEXT_LINE_HEIGHT_BY_FONT_HEIGHT = 1 | Uses the font height as the scaling base.<br>Formula for calculating the line height: font height x **FontHeight*<br>*.<br>The font height is obtained after the text is shaped using the font file.<br>**FontHeight** can be obtained from the [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight) API. |
+| TEXT_LINE_HEIGHT_BY_FONT_SIZE = 0 | Uses the font size as the scaling base.<br>Formula for calculating the line height: **FontSize** x **FontHeight** .<br>**FontSize** can be obtained from the [OH_Drawing_TextStyleGetFontSize](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontsize) API.<br>**FontHeight** can be obtained from the [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight) API.<br><!--Device-TEXT_LINE_HEIGHT_BY_FONT_SIZE = 0--><!--Device-TEXT_LINE_HEIGHT_BY_FONT_SIZE = 0-End--> |
+| TEXT_LINE_HEIGHT_BY_FONT_HEIGHT = 1 | Uses the font height as the scaling base.<br>Formula for calculating the line height: font height x **FontHeight* *.<br>The font height is obtained after the text is shaped using the font file.<br>**FontHeight** can be obtained from the [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight) API.<br><!--Device-TEXT_LINE_HEIGHT_BY_FONT_HEIGHT = 1--><!--Device-TEXT_LINE_HEIGHT_BY_FONT_HEIGHT = 1-End--> |
 
 ### OH_Drawing_TypographyStyleAttributeId
 
@@ -683,22 +763,26 @@ enum OH_Drawing_TypographyStyleAttributeId
 
 Enumerates the typography style attributes. <br>For the common attributes of the typography styles and text styles, you are advised to use the text style attributes, which can be obtained from [OH_Drawing_TextStyleAttributeId](capi-drawing-text-typography-h.md#oh_drawing_textstyleattributeid).
 
+<!--Device-enum OH_Drawing_TypographyStyleAttributeId--><!--Device-enum OH_Drawing_TypographyStyleAttributeId-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0 | Maximum line height.<br>If line height scaling is enabled, the maximum line height takes effect only when **<br>FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the positive part of a single-precision floating point number. |
-| TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1 | Minimum line height.<br>If line height scaling is enabled, the minimum line height takes effect only when **<br>FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the non-negative part of a single-precision floating point number. The default value is **0**. |
-| TYPOGRAPHY_STYLE_ATTR_D_LINE_SPACING = 2 | Interline spacing.<br>**lineSpacing** is not restricted by the maximum and minimum line heights.<br>By default, line spacing is added to the last line.<br>You can set **textHeightBehavior** to **DISABLE_LAST_ASCENT** in [OH_Drawing_TypographyTextSetHeightBehavior](capi-drawing-text-typography-h.md#oh_drawing_typographytextsetheightbehavior) to disable the line spacing of the last line.<br>The default value is **0**. |
-| TYPOGRAPHY_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 3 | Scaling base style of the line height. For details, see [OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle). |
-| TYPOGRAPHY_STYLE_ATTR_I_FONT_WIDTH = 4 | Font width. |
-| TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5 |  |
-| TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6 |  |
-| TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7 |  |
-| TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8 |  |
-| TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9 |  |
-| TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10 |  |
-| TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11 |  |
+| TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0 | Maximum line height.<br>If line height scaling is enabled, the maximum line height takes effect only when ** FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the positive part of a single-precision floating point number.<br><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0--><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MAXIMUM = 0-End--> |
+| TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1 | Minimum line height.<br>If line height scaling is enabled, the minimum line height takes effect only when ** FontHeight** (which can be obtained from [OH_Drawing_TextStyleGetFontHeight](capi-drawing-text-typography-h.md#oh_drawing_textstylegetfontheight)) is greater than 0.<br>The value is the non-negative part of a single-precision floating point number. The default value is **0**.<br><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1--><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_HEIGHT_MINIMUM = 1-End--> |
+| TYPOGRAPHY_STYLE_ATTR_D_LINE_SPACING = 2 | Interline spacing.<br>**lineSpacing** is not restricted by the maximum and minimum line heights.<br>By default, line spacing is added to the last line.<br>You can set **textHeightBehavior** to **DISABLE_LAST_ASCENT** in [OH_Drawing_TypographyTextSetHeightBehavior](capi-drawing-text-typography-h.md#oh_drawing_typographytextsetheightbehavior) to disable the line spacing of the last line.<br>The default value is **0**.<br><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_SPACING = 2--><!--Device-TYPOGRAPHY_STYLE_ATTR_D_LINE_SPACING = 2-End--> |
+| TYPOGRAPHY_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 3 | Scaling base style of the line height. For details, see [OH_Drawing_LineHeightStyle](capi-drawing-text-typography-h.md#oh_drawing_lineheightstyle).<br><!--Device-TYPOGRAPHY_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 3--><!--Device-TYPOGRAPHY_STYLE_ATTR_I_LINE_HEIGHT_STYLE = 3-End--> |
+| TYPOGRAPHY_STYLE_ATTR_I_FONT_WIDTH = 4 | Font width.<br><!--Device-TYPOGRAPHY_STYLE_ATTR_I_FONT_WIDTH = 4--><!--Device-TYPOGRAPHY_STYLE_ATTR_I_FONT_WIDTH = 4-End--> |
+| TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5 | Whether to enable line-start punctuation compression during text typography.<br>**NOTE**<br>1. The font file must support the "ss08" feature in [OH_Drawing_FontFeature](capi-drawing-oh-drawing-fontfeature.md); otherwise, compression cannot be applied.<br> 2. Only punctuation within the line-start punctuation compression range is affected by this feature.<br>**Since**: 23<br><!--Device-TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5--><!--Device-TYPOGRAPHY_STYLE_ATTR_B_COMPRESS_HEAD_PUNCTUATION = 5-End--> |
+| TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6 | Whether to enable the internal padding of the font during text typography.<br>**Since**: 23<br><!--Device-TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6--><!--Device-TYPOGRAPHY_STYLE_ATTR_B_INCLUDE_FONT_PADDING = 6-End--> |
+| TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7 | Whether to enable the line spacing fallback mechanism during text typography.<br>**Since**: 23<br><!--Device-TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7--><!--Device-TYPOGRAPHY_STYLE_ATTR_B_FALLBACK_LINE_SPACING = 7-End--> |
+| TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8 | Ellipsis style. For details about the ellipsis style, see [OH_Drawing_EllipsisModal](capi-drawing-text-typography-h.md#oh_drawing_ellipsismodal).<br>**Since**: 24<br><!--Device-TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8--><!--Device-TYPOGRAPHY_STYLE_ATTR_I_ELLIPSIS_MODAL = 8-End--> |
+| TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9 | First-line indent array.<br>All values in the indent array must be greater than or equal to 0. Each element in the array represents the indentation value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines.<br>**Since**: 26.0.0<br><!--Device-TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9--><!--Device-TYPOGRAPHY_STYLE_ATTR_DA_LINE_HEAD_INDENT = 9-End--> |
+| TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10 | First-line indent of a paragraph. The indent value must be greater than or equal to 0.<br>**Since**: 26.0.0<br><!--Device-TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10--><!--Device-TYPOGRAPHY_STYLE_ATTR_D_FIRST_LINE_HEAD_INDENT = 10-End--> |
+| TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11 | Last-line indent array.<br>All values in the indent array must be greater than or equal to 0. Each element in the array represents the indentation value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines.<br>**Since**: 26.0.0<br><!--Device-TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11--><!--Device-TYPOGRAPHY_STYLE_ATTR_DA_LINE_TAIL_INDENT = 11-End--> |
 
 ### OH_Drawing_TypographyAttributeId
 
@@ -710,11 +794,15 @@ enum OH_Drawing_TypographyAttributeId
 
 Enumerates the typography attributes.
 
+<!--Device-enum OH_Drawing_TypographyAttributeId--><!--Device-enum OH_Drawing_TypographyAttributeId-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 |  |
+| TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 | Whether to force reuse the rasterization result. True means to force reuse of the rasterization result. False means to allow updates to the rasterization result. The default value is false.<br>**Since**: 26.0.0<br><!--Device-TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0--><!--Device-TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0-End--> |
 
 ### OH_Drawing_TextBadgeType
 
@@ -726,13 +814,17 @@ enum OH_Drawing_TextBadgeType
 
 Enumerates the text badge styles.
 
+<!--Device-enum OH_Drawing_TextBadgeType--><!--Device-enum OH_Drawing_TextBadgeType-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_BADGE_NONE | Disable superscript or subscript. |
-| TEXT_SUPERSCRIPT | Enable superscript. |
-| TEXT_SUBSCRIPT | Enable subscript. |
+| TEXT_BADGE_NONE | Disable superscript or subscript.<br><!--Device-TEXT_BADGE_NONE--><!--Device-TEXT_BADGE_NONE-End--> |
+| TEXT_SUPERSCRIPT | Enable superscript.<br><!--Device-TEXT_SUPERSCRIPT--><!--Device-TEXT_SUPERSCRIPT-End--> |
+| TEXT_SUBSCRIPT | Enable subscript.<br><!--Device-TEXT_SUBSCRIPT--><!--Device-TEXT_SUBSCRIPT-End--> |
 
 ### OH_Drawing_TextVerticalAlignment
 
@@ -744,14 +836,18 @@ enum OH_Drawing_TextVerticalAlignment
 
 Enumerates the vertical alignment modes.
 
+<!--Device-enum OH_Drawing_TextVerticalAlignment--><!--Device-enum OH_Drawing_TextVerticalAlignment-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEXT_VERTICAL_ALIGNMENT_BASELINE | Aligned to the baseline. |
-| TEXT_VERTICAL_ALIGNMENT_BOTTOM | Bottom aligned. |
-| TEXT_VERTICAL_ALIGNMENT_CENTER | Center-aligned. |
-| TEXT_VERTICAL_ALIGNMENT_TOP | Top aligned. |
+| TEXT_VERTICAL_ALIGNMENT_BASELINE | Aligned to the baseline.<br><!--Device-TEXT_VERTICAL_ALIGNMENT_BASELINE--><!--Device-TEXT_VERTICAL_ALIGNMENT_BASELINE-End--> |
+| TEXT_VERTICAL_ALIGNMENT_BOTTOM | Bottom aligned.<br><!--Device-TEXT_VERTICAL_ALIGNMENT_BOTTOM--><!--Device-TEXT_VERTICAL_ALIGNMENT_BOTTOM-End--> |
+| TEXT_VERTICAL_ALIGNMENT_CENTER | Center-aligned.<br><!--Device-TEXT_VERTICAL_ALIGNMENT_CENTER--><!--Device-TEXT_VERTICAL_ALIGNMENT_CENTER-End--> |
+| TEXT_VERTICAL_ALIGNMENT_TOP | Top aligned.<br><!--Device-TEXT_VERTICAL_ALIGNMENT_TOP--><!--Device-TEXT_VERTICAL_ALIGNMENT_TOP-End--> |
 
 
 ## Function description
@@ -765,6 +861,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typo
 **Description**
 
 Obtains a bool-type typography attribute.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyAttributeBool(const OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 26.0.0
 
@@ -792,6 +892,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography
 
 Sets a bool-type typography attribute.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyAttributeBool(OH_Drawing_Typography* typography, OH_Drawing_TypographyAttributeId id, bool value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -817,6 +921,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle
 **Description**
 
 Sets the text style attribute of the **double** type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 21
 
@@ -844,6 +952,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle
 
 Obtains the text style attribute of the **double** type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeDouble(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, double* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 **Parameters**:
@@ -869,6 +981,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* s
 **Description**
 
 Sets the text style attribute of the **int** type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 21
 
@@ -896,6 +1012,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* s
 
 Obtains the text style attribute of the **int** type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTextStyleAttributeInt(OH_Drawing_TextStyle* style, OH_Drawing_TextStyleAttributeId id, int* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 **Parameters**:
@@ -921,6 +1041,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_Typ
 **Description**
 
 Sets the typography style attribute of the **double** type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 21
 
@@ -948,6 +1072,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_Typ
 
 Obtains the typography style attribute of the **double** type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDouble(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 **Parameters**:
@@ -973,6 +1101,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_Typogr
 **Description**
 
 Sets the typography style attribute of the **int** type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 21
 
@@ -1000,6 +1132,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_Typogr
 
 Obtains the typography style attribute of the **int** type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeInt(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, int* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 21
 
 **Parameters**:
@@ -1025,6 +1161,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_Typog
 **Description**
 
 Sets the typography style attribute of the **bool** type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -1052,6 +1192,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_Typog
 
 Obtains the typography style attribute of the **bool** type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool* value)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeBool(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, bool* value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 23
 
 **Parameters**:
@@ -1077,6 +1221,10 @@ OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawin
 **Description**
 
 Sets the typography style attribute of the floating-point array type.
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* arrayValue, size_t arrayLength)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_SetTypographyStyleAttributeDoubleArray(OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double* arrayValue, size_t arrayLength)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 26.0.0
 
@@ -1105,6 +1253,10 @@ OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_
 
 Obtains the typography style attribute of the floating-point array type.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double** arrayValue, size_t* arrayLength)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_GetTypographyStyleAttributeDoubleArray(const OH_Drawing_TypographyStyle* style, OH_Drawing_TypographyStyleAttributeId id, double** arrayValue, size_t* arrayLength)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1132,6 +1284,10 @@ OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)
 
 Creates an **OH_Drawing_TypographyStyle** object. Release this pointer by calling [OH_Drawing_DestroyTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytypographystyle) when this object is no longer needed.
 
+<!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)--><!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CreateTypographyStyle(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Returns**:
@@ -1150,6 +1306,10 @@ void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)
 
 Destroys an **OH_Drawing_TypographyStyle** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)--><!--Device-void OH_Drawing_DestroyTypographyStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1167,6 +1327,10 @@ void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, in
 **Description**
 
 Sets the text direction in a typography style.
+
+<!--Device-void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, int direction)--><!--Device-void OH_Drawing_SetTypographyTextDirection(OH_Drawing_TypographyStyle* style, int direction)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1187,6 +1351,10 @@ void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int al
 
 Text alignment mode.
 
+<!--Device-void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int align)--><!--Device-void OH_Drawing_SetTypographyTextAlign(OH_Drawing_TypographyStyle* style, int align)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1205,6 +1373,10 @@ void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int
 **Description**
 
 Sets the maximum number of lines in the text.
+
+<!--Device-void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int lineNumber)--><!--Device-void OH_Drawing_SetTypographyTextMaxLines(OH_Drawing_TypographyStyle* style, int lineNumber)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1225,6 +1397,10 @@ OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)
 
 Creates a pointer to an **OH_Drawing_TextStyle** object. When the [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md) is no longer needed, use [OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) to release the pointer to the object.
 
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_CreateTextStyle(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Returns**:
@@ -1243,6 +1419,10 @@ void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)
 
 Destroys an **OH_Drawing_TextStyle** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_DestroyTextStyle(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1260,6 +1440,10 @@ void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)
 **Description**
 
 Sets the color for a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)--><!--Device-void OH_Drawing_SetTextStyleColor(OH_Drawing_TextStyle* style, uint32_t color)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1280,6 +1464,10 @@ void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSiz
 
 Sets the font size for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSize)--><!--Device-void OH_Drawing_SetTextStyleFontSize(OH_Drawing_TextStyle* style, double fontSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1298,6 +1486,10 @@ void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeig
 **Description**
 
 Sets the font weight. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font weight does not change when the weight value is set to less than semi-bold, and a pseudo-bold effect may be triggered when the weight value is set to semi-bold or greater.
+
+<!--Device-void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeight)--><!--Device-void OH_Drawing_SetTextStyleFontWeight(OH_Drawing_TextStyle* style, int fontWeight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1318,6 +1510,10 @@ void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)
 
 Sets the baseline for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)--><!--Device-void OH_Drawing_SetTextStyleBaseLine(OH_Drawing_TextStyle* style, int baseline)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1336,6 +1532,10 @@ void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decorati
 **Description**
 
 Sets the decoration for a text style. Only one decoration can be set. To add multiple decorations, use [OH_Drawing_AddTextStyleDecoration](capi-drawing-text-typography-h.md#oh_drawing_addtextstyledecoration).
+
+<!--Device-void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_SetTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1356,6 +1556,10 @@ void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decorati
 
 Adds the decoration for a text style. Multiple decoration lines can be displayed.
 
+<!--Device-void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_AddTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -1374,6 +1578,10 @@ void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decor
 **Description**
 
 Removes the decoration for a text style.
+
+<!--Device-void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)--><!--Device-void OH_Drawing_RemoveTextStyleDecoration(OH_Drawing_TextStyle* style, int decoration)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -1394,6 +1602,10 @@ void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_
 
 Sets the decoration color for a text style. If this API is not called or **color** is set to **0**, the decoration color follows the text color.
 
+<!--Device-void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_t color)--><!--Device-void OH_Drawing_SetTextStyleDecorationColor(OH_Drawing_TextStyle* style, uint32_t color)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1413,6 +1625,10 @@ void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontH
 
 Sets the line height based on the multiple of the font size.
 
+<!--Device-void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontHeight)--><!--Device-void OH_Drawing_SetTextStyleFontHeight(OH_Drawing_TextStyle* style, double fontHeight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1431,6 +1647,10 @@ void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFa
 **Description**
 
 Sets the font families for a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFamiliesNumber, const char* fontFamilies[])--><!--Device-void OH_Drawing_SetTextStyleFontFamilies(OH_Drawing_TextStyle* style, int fontFamiliesNumber, const char* fontFamilies[])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1452,6 +1672,10 @@ void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle
 
 Sets the font style for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTextStyleFontStyle(OH_Drawing_TextStyle* style, int fontStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1470,6 +1694,10 @@ void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* loca
 **Description**
 
 Sets the locale for a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* locale)--><!--Device-void OH_Drawing_SetTextStyleLocale(OH_Drawing_TextStyle* style, const char* locale)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1490,6 +1718,10 @@ void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 
 Sets the foreground brush for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)--><!--Device-void OH_Drawing_SetTextStyleForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1508,6 +1740,10 @@ void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 **Description**
 
 Obtains the foreground brush of a text style.
+
+<!--Device-void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)--><!--Device-void OH_Drawing_TextStyleGetForegroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* foregroundBrush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -1528,6 +1764,10 @@ void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 Sets the foreground pen for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)--><!--Device-void OH_Drawing_SetTextStyleForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1546,6 +1786,10 @@ void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 **Description**
 
 Obtains the foreground pen of a text style.
+
+<!--Device-void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)--><!--Device-void OH_Drawing_TextStyleGetForegroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* foregroundPen)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -1566,6 +1810,10 @@ void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 
 Sets the background brush for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)--><!--Device-void OH_Drawing_SetTextStyleBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1584,6 +1832,10 @@ void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Draw
 **Description**
 
 Obtains the background brush of a text style.
+
+<!--Device-void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)--><!--Device-void OH_Drawing_TextStyleGetBackgroundBrush(OH_Drawing_TextStyle* style, OH_Drawing_Brush* backgroundBrush)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -1604,6 +1856,10 @@ void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 Sets the background pen for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)--><!--Device-void OH_Drawing_SetTextStyleBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1623,6 +1879,10 @@ void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawin
 
 Obtains the background pen of a text style.
 
+<!--Device-void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)--><!--Device-void OH_Drawing_TextStyleGetBackgroundPen(OH_Drawing_TextStyle* style, OH_Drawing_Pen* backgroundPen)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1641,6 +1901,10 @@ OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_Typog
 **Description**
 
 Creates an **OH_Drawing_TypographyCreate** object. Release this pointer by calling [OH_Drawing_DestroyTypographyHandler](capi-drawing-text-typography-h.md#oh_drawing_destroytypographyhandler) when this object is no longer needed. You are advised to use the [OH_Drawing_CreateSharedFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createsharedfontcollection) function to create an [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object.
+
+<!--Device-OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_TypographyStyle* style, OH_Drawing_FontCollection* fontCollection)--><!--Device-OH_Drawing_TypographyCreate* OH_Drawing_CreateTypographyHandler(OH_Drawing_TypographyStyle* style, OH_Drawing_FontCollection* fontCollection)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1667,6 +1931,10 @@ void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)
 
 Destroys an **OH_Drawing_TypographyCreate** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)--><!--Device-void OH_Drawing_DestroyTypographyHandler(OH_Drawing_TypographyCreate* handler)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1684,6 +1952,10 @@ void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* hand
 **Description**
 
 Pushes a text style into the text style stack. Any text added afterward will use the style currently on top of the stack.
+
+<!--Device-void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* handler, OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TypographyHandlerPushTextStyle(OH_Drawing_TypographyCreate* handler, OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1704,6 +1976,10 @@ void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, c
 
 Adds text.
 
+<!--Device-void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, const char* text)--><!--Device-void OH_Drawing_TypographyHandlerAddText(OH_Drawing_TypographyCreate* handler, const char* text)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1723,6 +1999,10 @@ void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handl
 
 Pops the top text style out of the text style stack.
 
+<!--Device-void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handler)--><!--Device-void OH_Drawing_TypographyHandlerPopTextStyle(OH_Drawing_TypographyCreate* handler)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1740,6 +2020,10 @@ OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* 
 **Description**
 
 Creates an **OH_Drawing_Typography** object. Release this pointer by calling [OH_Drawing_DestroyTypography](capi-drawing-text-typography-h.md#oh_drawing_destroytypography) when this object is no longer needed.
+
+<!--Device-OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* handler)--><!--Device-OH_Drawing_Typography* OH_Drawing_CreateTypography(OH_Drawing_TypographyCreate* handler)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1765,6 +2049,10 @@ void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)
 
 Destroys an **OH_Drawing_Typography** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)--><!--Device-void OH_Drawing_DestroyTypography(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 8
 
 **Parameters**:
@@ -1782,6 +2070,10 @@ void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWi
 **Description**
 
 Performs layout calculation on the typography object and wraps text based on the specified maximum width. After this API is called, the properties of the typography object can be correctly obtained.
+
+<!--Device-void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWidth)--><!--Device-void OH_Drawing_TypographyLayout(OH_Drawing_Typography* typography, double maxWidth)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1801,6 +2093,10 @@ void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Ca
 **Description**
 
 Draws text from the upper left corner at a specified position. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called and applied.
+
+<!--Device-void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, double positionX, double positionY)--><!--Device-void OH_Drawing_TypographyPaint(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, double positionX, double positionY)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
@@ -1823,6 +2119,10 @@ void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Draw
 
 Draws text along a specified path. This API must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called and takes effect. It is recommended to use [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines) to set the maximum number of lines to 1 to avoid overlapping issues caused by text width exceeding the typography width.
 
+<!--Device-void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, double hOffset, double vOffset)--><!--Device-void OH_Drawing_TypographyPaintOnPath(OH_Drawing_Typography* typography, OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, double hOffset, double vOffset)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -1844,6 +2144,10 @@ OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Draw
 **Description**
 
 Arranges the text in the constraint rectangle.
+
+<!--Device-OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Drawing_Typography* typography, OH_Drawing_RectSize constraintsRect, OH_Drawing_Array** fitStrRangeArr, size_t* fitStrRangeArrayLen)--><!--Device-OH_Drawing_RectSize OH_Drawing_TypographyLayoutWithConstraintsWithBuffer(OH_Drawing_Typography* typography, OH_Drawing_RectSize constraintsRect, OH_Drawing_Array** fitStrRangeArr, size_t* fitStrRangeArrayLen)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 24
 
@@ -1872,6 +2176,10 @@ OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_
 
 Obtains the pointer to the OH_Drawing_Range object based on the array index.
 
+<!--Device-OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_t index)--><!--Device-OH_Drawing_Range* OH_Drawing_GetRangeByArrayIndex(OH_Drawing_Array* array, size_t index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 24
 
 **Parameters**:
@@ -1897,6 +2205,10 @@ OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)
 
 Releases the memory occupied by the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object.
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_ReleaseArrayBuffer(OH_Drawing_Array* array)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 24
 
 **Parameters**:
@@ -1920,6 +2232,10 @@ double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)
 **Description**
 
 Obtains the typography width set by the user. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMaxWidth(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 9
 
@@ -1945,6 +2261,10 @@ double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)
 
 Obtains the overall height of a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
 
+<!--Device-double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetHeight(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 9
 
 **Parameters**:
@@ -1968,6 +2288,10 @@ double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)
 **Description**
 
 Obtains the width of the longest line in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. You are advised to round up the return value. If the text content is empty, **0.0** is returned.
+
+<!--Device-double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetLongestLine(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 9
 
@@ -1993,6 +2317,10 @@ double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typo
 
 Obtains the width of the longest line of a typography object, including its indentation. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. You are advised to round up the return value. If the text content is empty, **0.0** is returned.
 
+<!--Device-double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetLongestLineWithIndent(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 13
 
 **Parameters**:
@@ -2016,6 +2344,10 @@ double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typograp
 **Description**
 
 Obtains the minimum intrinsic width in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMinIntrinsicWidth(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 9
 
@@ -2041,6 +2373,10 @@ double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typograp
 
 Obtains the maximum intrinsic width in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
 
+<!--Device-double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetMaxIntrinsicWidth(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 9
 
 **Parameters**:
@@ -2064,6 +2400,10 @@ double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typogra
 **Description**
 
 Obtains the alphabetic baseline position of the typography object. This API must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetAlphabeticBaseline(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 9
 
@@ -2089,6 +2429,10 @@ double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typogr
 
 Obtains the ideographic baseline position of the typography object. This API must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
 
+<!--Device-double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typography)--><!--Device-double OH_Drawing_TypographyGetIdeographicBaseline(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 9
 
 **Parameters**:
@@ -2113,6 +2457,10 @@ void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* han
 
 Adds a placeholder.
 
+<!--Device-void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* handler, OH_Drawing_PlaceholderSpan* span)--><!--Device-void OH_Drawing_TypographyHandlerAddPlaceholder(OH_Drawing_TypographyCreate* handler, OH_Drawing_PlaceholderSpan* span)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2131,6 +2479,10 @@ bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)
 **Description**
 
 Checks whether the text in the typography object exceeds the line limit. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. It returns **false** if the line limit is not set using [OH_Drawing_SetTypographyTextMaxLines](capi-drawing-text-typography-h.md#oh_drawing_settypographytextmaxlines).
+
+<!--Device-bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)--><!--Device-bool OH_Drawing_TypographyDidExceedMaxLines(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2155,6 +2507,10 @@ OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography*
 **Description**
 
 Obtains text boxes in a given range of a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. Release this pointer by calling [OH_Drawing_TypographyDestroyTextBox](capi-drawing-text-typography-h.md#oh_drawing_typographydestroytextbox) when this object is no longer needed.
+
+<!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography* typography, size_t start, size_t end, OH_Drawing_RectHeightStyle heightStyle, OH_Drawing_RectWidthStyle widthStyle)--><!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForRange(OH_Drawing_Typography* typography, size_t start, size_t end, OH_Drawing_RectHeightStyle heightStyle, OH_Drawing_RectWidthStyle widthStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2184,6 +2540,10 @@ OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typo
 
 Obtains text boxes for placeholders in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. Release this pointer by calling [OH_Drawing_TypographyDestroyTextBox](capi-drawing-text-typography-h.md#oh_drawing_typographydestroytextbox) when this object is no longer needed.
 
+<!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typography* typography)--><!--Device-OH_Drawing_TextBox* OH_Drawing_TypographyGetRectsForPlaceholders(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2207,6 +2567,10 @@ float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)
 **Description**
 
 Obtains the left position of a text box.
+
+<!--Device-float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetLeftFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2233,6 +2597,10 @@ float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)
 
 Obtains the right position of a text box.
 
+<!--Device-float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetRightFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2257,6 +2625,10 @@ float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)
 **Description**
 
 Obtains the top position of a text box.
+
+<!--Device-float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetTopFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2283,6 +2655,10 @@ float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)
 
 Obtains the bottom position of a text box.
 
+<!--Device-float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-float OH_Drawing_GetBottomFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2307,6 +2683,10 @@ int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int inde
 **Description**
 
 Obtains the text direction of a text box.
+
+<!--Device-int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int index)--><!--Device-int OH_Drawing_GetTextDirectionFromTextBox(OH_Drawing_TextBox* textbox, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2333,6 +2713,10 @@ size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)
 
 Obtains the number of text boxes.
 
+<!--Device-size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)--><!--Device-size_t OH_Drawing_GetSizeOfTextBox(OH_Drawing_TextBox* textBox)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2356,6 +2740,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinat
 **Description**
 
 Obtains the position and affinity of the glyph at the given coordinates.
+
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinate(OH_Drawing_Typography* typography, double dx, double dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2387,6 +2775,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinat
 
 Obtains the index position and affinity of the character cluster to which the text at the coordinate belongs. A character cluster refers to a group of one or more characters. When the [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md) is no longer needed, use [OH_Drawing_DestroyPositionAndAffinity](capi-drawing-text-typography-h.md#oh_drawing_destroypositionandaffinity) to release the pointer to the object.
 
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinateWithCluster(OH_Drawing_Typography* typography, double dx, double dy)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetGlyphPositionAtCoordinateWithCluster(OH_Drawing_Typography* typography, double dx, double dy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2413,6 +2805,10 @@ size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffin
 
 Obtains the position attribute of an **OH_Drawing_PositionAndAffinity** object.
 
+<!--Device-size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-size_t OH_Drawing_GetPositionFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2437,6 +2833,10 @@ int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity
 
 Obtains the affinity attribute of an **OH_Drawing_PositionAndAffinity** object. The affinity determines whether the font is close to the front text or rear text.
 
+<!--Device-int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-int OH_Drawing_GetAffinityFromPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2460,6 +2860,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* ty
 **Description**
 
 Obtains the word boundary in the typography object. When the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) is no longer needed, use [OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer) to release the pointer to the object.
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* typography, size_t offset)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetWordBoundary(OH_Drawing_Typography* typography, size_t offset)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2486,6 +2890,10 @@ size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)
 
 Obtains the start position of an **OH_Drawing_Range** object.
 
+<!--Device-size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)--><!--Device-size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2509,6 +2917,10 @@ size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)
 **Description**
 
 Obtains the end position of an **OH_Drawing_Range** object.
+
+<!--Device-size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)--><!--Device-size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2534,6 +2946,10 @@ size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)
 
 Obtains the number of lines in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
 
+<!--Device-size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)--><!--Device-size_t OH_Drawing_TypographyGetLineCount(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2558,6 +2974,10 @@ void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int dec
 
 Sets the decoration style for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int decorationStyle)--><!--Device-void OH_Drawing_SetTextStyleDecorationStyle(OH_Drawing_TextStyle* style, int decorationStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2576,6 +2996,10 @@ void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style
 **Description**
 
 Sets the thickness scale factor for the decoration style of a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style, double decorationThicknessScale)--><!--Device-void OH_Drawing_SetTextStyleDecorationThicknessScale(OH_Drawing_TextStyle* style, double decorationThicknessScale)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2596,6 +3020,10 @@ void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double le
 
 Sets the letter spacing for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double letterSpacing)--><!--Device-void OH_Drawing_SetTextStyleLetterSpacing(OH_Drawing_TextStyle* style, double letterSpacing)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2614,6 +3042,10 @@ void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double word
 **Description**
 
 Sets the word spacing for a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double wordSpacing)--><!--Device-void OH_Drawing_SetTextStyleWordSpacing(OH_Drawing_TextStyle* style, double wordSpacing)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2634,6 +3066,10 @@ void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLe
 
 Sets whether to enable half leading for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLeading)--><!--Device-void OH_Drawing_SetTextStyleHalfLeading(OH_Drawing_TextStyle* style, bool halfLeading)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2652,6 +3088,10 @@ void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* el
 **Description**
 
 Sets the ellipsis content for a text style.
+
+<!--Device-void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)--><!--Device-void OH_Drawing_SetTextStyleEllipsis(OH_Drawing_TextStyle* style, const char* ellipsis)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2676,6 +3116,10 @@ void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellip
 
 Sets the ellipsis style for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)--><!--Device-void OH_Drawing_SetTextStyleEllipsisModal(OH_Drawing_TextStyle* style, int ellipsisModal)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Deprecated**: 18
@@ -2699,6 +3143,10 @@ void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style
 
 Sets the text break strategy.
 
+<!--Device-void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style, int breakStrategy)--><!--Device-void OH_Drawing_SetTypographyTextBreakStrategy(OH_Drawing_TypographyStyle* style, int breakStrategy)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2717,6 +3165,10 @@ void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style
 **Description**
 
 Sets the word break type.
+
+<!--Device-void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style, int wordBreakType)--><!--Device-void OH_Drawing_SetTypographyTextWordBreakType(OH_Drawing_TypographyStyle* style, int wordBreakType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2737,6 +3189,10 @@ void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style
 
 Sets the ellipsis style for a text style.
 
+<!--Device-void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style, int ellipsisModal)--><!--Device-void OH_Drawing_SetTypographyTextEllipsisModal(OH_Drawing_TypographyStyle* style, int ellipsisModal)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2755,6 +3211,10 @@ double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int
 **Description**
 
 Obtains the line height in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int lineNumber)--><!--Device-double OH_Drawing_TypographyGetLineHeight(OH_Drawing_Typography* typography, int lineNumber)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -2781,6 +3241,10 @@ double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int 
 
 Obtains the line width of a specified line. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
 
+<!--Device-double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int lineNumber)--><!--Device-double OH_Drawing_TypographyGetLineWidth(OH_Drawing_Typography* typography, int lineNumber)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -2805,6 +3269,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* t
 **Description**
 
 Obtains the line bounds in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. This function can only be used to obtain the bounds of existing lines. That is, the line index must start from 0, and the maximum index is [OH_Drawing_TypographyGetLineCount](capi-drawing-text-typography-h.md#oh_drawing_typographygetlinecount) – 1.
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* typography, int lineNumber, bool includeSpaces)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* typography, int lineNumber, bool includeSpaces)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -2832,6 +3300,10 @@ OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)
 
 Constructs a font descriptor object for describing detailed information about a system font. When the [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) is no longer needed, use [OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) to release the pointer to the object.
 
+<!--Device-OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)--><!--Device-OH_Drawing_FontDescriptor* OH_Drawing_CreateFontDescriptor(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Returns**:
@@ -2849,6 +3321,10 @@ void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)
 **Description**
 
 Destroys an **OH_Drawing_FontDescriptor** object and reclaims the memory occupied by the object.
+
+<!--Device-void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)--><!--Device-void OH_Drawing_DestroyFontDescriptor(OH_Drawing_FontDescriptor* descriptor)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -2868,6 +3344,10 @@ OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)
 
 Constructs a font parser object for parsing system fonts. When the [OH_Drawing_FontParser](capi-drawing-oh-drawing-fontparser.md) is no longer needed, use [OH_Drawing_DestroyFontParser](capi-drawing-text-typography-h.md#oh_drawing_destroyfontparser) to release the pointer to the object.
 
+<!--Device-OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)--><!--Device-OH_Drawing_FontParser* OH_Drawing_CreateFontParser(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Returns**:
@@ -2886,6 +3366,10 @@ void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)
 
 Destroys an **OH_Drawing_FontParser** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)--><!--Device-void OH_Drawing_DestroyFontParser(OH_Drawing_FontParser* parser)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -2903,6 +3387,10 @@ char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser,
 **Description**
 
 Obtains the list of system font names. When the list is no longer needed, use [OH_Drawing_DestroySystemFontList](capi-drawing-text-typography-h.md#oh_drawing_destroysystemfontlist) to release the memory. This API is supported only on phones and PC/2-in-1 devices.
+
+<!--Device-char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser, size_t* num)--><!--Device-char** OH_Drawing_FontParserGetSystemFontList(OH_Drawing_FontParser* fontParser, size_t* num)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -2929,6 +3417,10 @@ void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)
 
 Reclaims the memory occupied by the system font list.
 
+<!--Device-void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)--><!--Device-void OH_Drawing_DestroySystemFontList(char** fontList, size_t num)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -2947,6 +3439,10 @@ OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontPar
 **Description**
 
 Obtains the information about a system font based on the given system font name. This API is supported only on phones and PC/2-in-1 devices.
+
+<!--Device-OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontParser* fontParser, const char* name)--><!--Device-OH_Drawing_FontDescriptor* OH_Drawing_FontParserGetFontByName(OH_Drawing_FontParser* fontParser, const char* name)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -2973,6 +3469,10 @@ OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typograph
 
 Obtains the line metrics in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. Release this pointer by calling [OH_Drawing_DestroyLineMetrics](capi-drawing-text-typography-h.md#oh_drawing_destroylinemetrics) when this object is no longer needed.
 
+<!--Device-OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typography* typography)--><!--Device-OH_Drawing_LineMetrics* OH_Drawing_TypographyGetLineMetrics(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -2996,6 +3496,10 @@ size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)
 **Description**
 
 Obtains the number of lines.
+
+<!--Device-size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)--><!--Device-size_t OH_Drawing_LineMetricsGetSize(OH_Drawing_LineMetrics* lineMetrics)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3021,6 +3525,10 @@ void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)
 
 Destroys an **OH_Drawing_LineMetrics** object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)--><!--Device-void OH_Drawing_DestroyLineMetrics(OH_Drawing_LineMetrics* lineMetrics)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3038,6 +3546,10 @@ bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, in
 **Description**
 
 Obtains the position information of a specified line in the typography object. For details, see the [OH_Drawing_LineMetrics](capi-drawing-oh-drawing-linemetrics.md) struct. This API must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, int lineNumber, OH_Drawing_LineMetrics* lineMetric)--><!--Device-bool OH_Drawing_TypographyGetLineMetricsAt(OH_Drawing_Typography* typography, int lineNumber, OH_Drawing_LineMetrics* lineMetric)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3065,6 +3577,10 @@ void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, con
 
 Sets the ellipsis text for a typography style.
 
+<!--Device-void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, const char* ellipsis)--><!--Device-void OH_Drawing_SetTypographyTextEllipsis(OH_Drawing_TypographyStyle* style, const char* ellipsis)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3083,6 +3599,10 @@ void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const
 **Description**
 
 Sets the locale for a typography style.
+
+<!--Device-void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const char* locale)--><!--Device-void OH_Drawing_SetTypographyTextLocale(OH_Drawing_TypographyStyle* style, const char* locale)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3103,6 +3623,10 @@ void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, f
 
 Sets the text division ratio, which is used to determine the cursor position within a glyph when tapping to locate a character.
 
+<!--Device-void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, float textSplitRatio)--><!--Device-void OH_Drawing_SetTypographyTextSplitRatio(OH_Drawing_TypographyStyle* style, float textSplitRatio)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3121,6 +3645,10 @@ OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographySty
 **Description**
 
 Obtains the default text style of a typography style.
+
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_TypographyGetTextStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3145,6 +3673,10 @@ int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style
 **Description**
 
 Obtains the text alignment mode.
+
+<!--Device-int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)--><!--Device-int OH_Drawing_TypographyGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3174,6 +3706,10 @@ bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)
 
 Checks whether the maximum number of lines is limited for text.
 
+<!--Device-bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyIsLineUnlimited(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3197,6 +3733,10 @@ bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)
 **Description**
 
 Checks whether an ellipsis is configured for a typography style.
+
+<!--Device-bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyIsEllipsized(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3222,6 +3762,10 @@ void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_D
 
 Sets a text style.
 
+<!--Device-void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_SetTypographyTextStyle(OH_Drawing_TypographyStyle* handler, OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3240,6 +3784,10 @@ bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Dr
 **Description**
 
 Obtains the font metrics of a text style.
+
+<!--Device-bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Drawing_TextStyle* style, OH_Drawing_Font_Metrics* fontmetrics)--><!--Device-bool OH_Drawing_TextStyleGetFontMetrics(OH_Drawing_Typography* typography, OH_Drawing_TextStyle* style, OH_Drawing_Font_Metrics* fontmetrics)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3266,6 +3814,10 @@ bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lin
 **Description**
 
 Obtains the metrics of a given line or the metrics of the first character in a given line in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called.
+
+<!--Device-bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lineNumber, bool oneLine, bool includeWhitespace, OH_Drawing_LineMetrics* drawingLineMetrics)--><!--Device-bool OH_Drawing_TypographyGetLineInfo(OH_Drawing_Typography* typography, int lineNumber, bool oneLine, bool includeWhitespace, OH_Drawing_LineMetrics* drawingLineMetrics)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3295,6 +3847,10 @@ void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, i
 
 Sets the default font weight of the typography style. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non- variable fonts, the font weight does not change when the weight value is set to less than semi-bold, and a pseudo- bold effect may be triggered when the weight value is set to semi-bold or greater.
 
+<!--Device-void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, int weight)--><!--Device-void OH_Drawing_SetTypographyTextFontWeight(OH_Drawing_TypographyStyle* style, int weight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3313,6 +3869,10 @@ void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, in
 **Description**
 
 Sets the default font style for a typography style.
+
+<!--Device-void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTypographyTextFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3333,6 +3893,10 @@ void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, c
 
 Sets the font family name for text.
 
+<!--Device-void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, const char* fontFamily)--><!--Device-void OH_Drawing_SetTypographyTextFontFamily(OH_Drawing_TypographyStyle* style, const char* fontFamily)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3351,6 +3915,10 @@ void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, dou
 **Description**
 
 Sets the font size for text.
+
+<!--Device-void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, double fontSize)--><!--Device-void OH_Drawing_SetTypographyTextFontSize(OH_Drawing_TypographyStyle* style, double fontSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3371,6 +3939,10 @@ void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, d
 
 Sets the font height for text typography as a multiple of the current font size.
 
+<!--Device-void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, double fontHeight)--><!--Device-void OH_Drawing_SetTypographyTextFontHeight(OH_Drawing_TypographyStyle* style, double fontHeight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3389,6 +3961,10 @@ void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, 
 **Description**
 
 Sets whether to enable half leading for text.
+
+<!--Device-void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, bool halfLeading)--><!--Device-void OH_Drawing_SetTypographyTextHalfLeading(OH_Drawing_TypographyStyle* style, bool halfLeading)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3409,6 +3985,10 @@ void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style,
 
 Sets whether to enable the text line style.
 
+<!--Device-void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style, bool useLineStyle)--><!--Device-void OH_Drawing_SetTypographyTextUseLineStyle(OH_Drawing_TypographyStyle* style, bool useLineStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3427,6 +4007,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle*
 **Description**
 
 Sets the font weight of the text style in the strut style of the typography style. Before <!--RP1--> OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Starting from <!-- RP1-->OpenHarmony 6.1<!--RP1End-->, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font weight does not change when the weight value is set to less than semi-bold, and a pseudo-bold effect may be triggered when the weight value is set to semi-bold or greater.
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle* style, int weight)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontWeight(OH_Drawing_TypographyStyle* style, int weight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3447,6 +4031,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* 
 
 Sets the font style of the strut style in a typography style.
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontStyle(OH_Drawing_TypographyStyle* style, int fontStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3465,6 +4053,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyl
 **Description**
 
 Sets the font family of the line style for text typography.
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyle* style, int fontFamiliesNumber, const char* fontFamilies[])--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontFamilies(OH_Drawing_TypographyStyle* style, int fontFamiliesNumber, const char* fontFamilies[])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3486,6 +4078,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* s
 
 Sets the font size for a text line style.
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* style, double lineStyleFontSize)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontSize(OH_Drawing_TypographyStyle* style, double lineStyleFontSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3504,6 +4100,10 @@ void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle*
 **Description**
 
 Sets the font height of the line style for text typography as a multiple of the current font size.
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle* style, double lineStyleFontHeight)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleFontHeight(OH_Drawing_TypographyStyle* style, double lineStyleFontHeight)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3524,6 +4124,10 @@ void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle
 
 Sets whether to enable half leading for a text line style.
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle* style, bool lineStyleHalfLeading)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleHalfLeading(OH_Drawing_TypographyStyle* style, bool lineStyleHalfLeading)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3542,6 +4146,10 @@ void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyl
 **Description**
 
 Sets the spacing scale factor for a text line style.
+
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyle* style, double spacingScale)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleSpacingScale(OH_Drawing_TypographyStyle* style, double spacingScale)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3562,6 +4170,10 @@ void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style
 
 Sets whether to enable the text line style only.
 
+<!--Device-void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style, bool lineStyleOnly)--><!--Device-void OH_Drawing_SetTypographyTextLineStyleOnly(OH_Drawing_TypographyStyle* style, bool lineStyleOnly)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3581,6 +4193,10 @@ OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)
 
 Creates a pointer to a text shadow object. When the [OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md) is no longer needed, use [OH_Drawing_DestroyTextShadow](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadow) to release the pointer to the object.
 
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_CreateTextShadow(void)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Returns**:
@@ -3599,6 +4215,10 @@ void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)
 
 Releases the memory occupied by the text shadow object.
 
+<!--Device-void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_DestroyTextShadow(OH_Drawing_TextShadow* shadow)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3616,6 +4236,10 @@ OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* styl
 **Description**
 
 Obtains the text shadow container. When the [OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md) is no longer needed, use [OH_Drawing_DestroyTextShadows](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadows) to release the pointer to the object.
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadows(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3641,6 +4265,10 @@ int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)
 
 Obtains the size of the text shadow container.
 
+<!--Device-int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)--><!--Device-int OH_Drawing_TextStyleGetShadowCount(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3665,6 +4293,10 @@ void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing
 
 Adds a text shadow element to the text shadow container.
 
+<!--Device-void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_TextStyleAddShadow(OH_Drawing_TextStyle* style, const OH_Drawing_TextShadow* shadow)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3684,6 +4316,10 @@ void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)
 
 Clears all elements in the text shadow container.
 
+<!--Device-void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleClearShadows(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3701,6 +4337,10 @@ OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextSty
 **Description**
 
 Obtains the element at the specified index in the text shadow container.
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextStyle* style, int index)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_TextStyleGetShadowWithIndex(OH_Drawing_TextStyle* style, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3727,6 +4367,10 @@ void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int inde
 
 Sets indents for typography. If this function is not called, texts will have no indentation applied.
 
+<!--Device-void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int indentsNumber, const float indents[])--><!--Device-void OH_Drawing_TypographySetIndents(OH_Drawing_Typography* typography, int indentsNumber, const float indents[])-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3746,6 +4390,10 @@ float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography
 **Description**
 
 Obtains indents with a given index in a typography object. The line index starts from 0.
+
+<!--Device-float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography, int index)--><!--Device-float OH_Drawing_TypographyGetIndentsWithIndex(OH_Drawing_Typography* typography, int index)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3772,6 +4420,10 @@ void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)
 
 Releases the memory occupied by the vector composed of **OH_Drawing_TextShadow** objects.
 
+<!--Device-void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)--><!--Device-void OH_Drawing_DestroyTextShadows(OH_Drawing_TextShadow* shadow)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3789,6 +4441,10 @@ void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* styl
 **Description**
 
 Sets a text height modifier pattern.
+
+<!--Device-void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* style, OH_Drawing_TextHeightBehavior heightMode)--><!--Device-void OH_Drawing_TypographyTextSetHeightBehavior(OH_Drawing_TypographyStyle* style, OH_Drawing_TextHeightBehavior heightMode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3808,6 +4464,10 @@ OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Draw
 **Description**
 
 Obtains the text height modifier pattern.
+
+<!--Device-OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextHeightBehavior OH_Drawing_TypographyTextGetHeightBehavior(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3833,6 +4493,10 @@ void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH
 
 Sets a background rectangle and style ID for a text style. The style ID is valid only when the background box is a rounded rectangle.
 
+<!--Device-void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH_Drawing_RectStyle_Info* rectStyleInfo, int styleId)--><!--Device-void OH_Drawing_TextStyleSetBackgroundRect(OH_Drawing_TextStyle* style, const OH_Drawing_RectStyle_Info* rectStyleInfo, int styleId)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3853,6 +4517,10 @@ void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler,
 
 Adds the symbol to use in the typography creation process.
 
+<!--Device-void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler, uint32_t symbol)--><!--Device-void OH_Drawing_TypographyHandlerAddSymbol(OH_Drawing_TypographyCreate* handler, uint32_t symbol)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3871,6 +4539,10 @@ void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char*
 **Description**
 
 Adds a font feature for a text style.
+
+<!--Device-void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char* tag, int value)--><!--Device-void OH_Drawing_TextStyleAddFontFeature(OH_Drawing_TextStyle* style, const char* tag, int value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3892,6 +4564,10 @@ void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const cha
 
 Adds a font variation. This function takes effect only when the corresponding font file (.ttf file) supports variable adjustment. Otherwise, calling this function does not take effect.
 
+<!--Device-void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const char* axis, const float value)--><!--Device-void OH_Drawing_TextStyleAddFontVariation(OH_Drawing_TextStyle* style, const char* axis, const float value)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3912,6 +4588,10 @@ void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle*
 
 Adds the normalized variable font attributes. This function takes effect only when the corresponding font file (.ttf file) supports variable adjustment.
 
+<!--Device-void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle* style, const char* axis, const float normalizedValue)--><!--Device-void OH_Drawing_TextStyleAddFontVariationWithNormalization(OH_Drawing_TextStyle* style, const char* axis, const float normalizedValue)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 24
 
 **Parameters**:
@@ -3931,6 +4611,10 @@ OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle
 **Description**
 
 Obtains all the contents in a font feature map container of a text style.
+
+<!--Device-OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontFeature* OH_Drawing_TextStyleGetFontFeatures(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3956,6 +4640,10 @@ void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature
 
 Reclaims the memory occupied by the struct array that holds all the font features.
 
+<!--Device-void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature, size_t fontFeatureSize)--><!--Device-void OH_Drawing_TextStyleDestroyFontFeatures(OH_Drawing_FontFeature* fontFeature, size_t fontFeatureSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -3974,6 +4662,10 @@ size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)
 **Description**
 
 Obtains the size of a font feature map container in a text style.
+
+<!--Device-size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)--><!--Device-size_t OH_Drawing_TextStyleGetFontFeatureSize(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -3999,6 +4691,10 @@ void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)
 
 Clears all the contents in a font feature map container of a text style.
 
+<!--Device-void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleClearFontFeature(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4016,6 +4712,10 @@ void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double li
 **Description**
 
 Sets a baseline drift for a text style.
+
+<!--Device-void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double lineShift)--><!--Device-void OH_Drawing_TextStyleSetBaselineShift(OH_Drawing_TextStyle* style, double lineShift)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4035,6 +4735,10 @@ double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)
 **Description**
 
 Obtains the baseline drift of a text style.
+
+<!--Device-double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetBaselineShift(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4060,6 +4764,10 @@ uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)
 
 Obtains the color of a text style.
 
+<!--Device-uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)--><!--Device-uint32_t OH_Drawing_TextStyleGetColor(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4083,6 +4791,10 @@ OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing
 **Description**
 
 Obtains the decoration style of a text style.
+
+<!--Device-OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextDecorationStyle OH_Drawing_TextStyleGetDecorationStyle(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4108,6 +4820,10 @@ OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* st
 
 Obtains the font weight of a text style.
 
+<!--Device-OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontWeight OH_Drawing_TextStyleGetFontWeight(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4131,6 +4847,10 @@ OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* styl
 **Description**
 
 Obtains the font style of a text style.
+
+<!--Device-OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_FontStyle OH_Drawing_TextStyleGetFontStyle(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4156,6 +4876,10 @@ OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* st
 
 Obtains the baseline of a text style.
 
+<!--Device-OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextBaseline OH_Drawing_TextStyleGetBaseline(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4179,6 +4903,10 @@ char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* 
 **Description**
 
 Obtains the font family name list.
+
+<!--Device-char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* num)--><!--Device-char** OH_Drawing_TextStyleGetFontFamilies(OH_Drawing_TextStyle* style, size_t* num)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4205,6 +4933,10 @@ void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)
 
 Reclaims the memory occupied by the font families, where **num** specifies the number of font families.
 
+<!--Device-void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)--><!--Device-void OH_Drawing_TextStyleDestroyFontFamilies(char** fontFamilies, size_t num)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4223,6 +4955,10 @@ double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)
 **Description**
 
 Obtains the font size of a text style.
+
+<!--Device-double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetFontSize(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4248,6 +4984,10 @@ double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)
 
 Obtains the letter spacing of a text style.
 
+<!--Device-double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetLetterSpacing(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4271,6 +5011,10 @@ double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)
 **Description**
 
 Obtains the word spacing of a text style.
+
+<!--Device-double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetWordSpacing(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4296,6 +5040,10 @@ double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)
 
 Obtains the font height of a text style.
 
+<!--Device-double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)--><!--Device-double OH_Drawing_TextStyleGetFontHeight(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4319,6 +5067,10 @@ bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)
 **Description**
 
 Checks whether half leading is enabled for a text style.
+
+<!--Device-bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)--><!--Device-bool OH_Drawing_TextStyleGetHalfLeading(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4344,6 +5096,10 @@ void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style
 
 Vertical alignment mode of the text.
 
+<!--Device-void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style, OH_Drawing_TextVerticalAlignment align)--><!--Device-void OH_Drawing_SetTypographyVerticalAlignment(OH_Drawing_TypographyStyle* style, OH_Drawing_TextVerticalAlignment align)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -4362,6 +5118,10 @@ const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)
 **Description**
 
 Obtains the locale of a text style.
+
+<!--Device-const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)--><!--Device-const char* OH_Drawing_TextStyleGetLocale(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4387,6 +5147,10 @@ void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_Te
 
 Sets whether to enable superscript or subscript for text typography. If this API is not called, superscript and subscript are disabled by default.
 
+<!--Device-void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_TextBadgeType textBadgeType)--><!--Device-void OH_Drawing_SetTextStyleBadgeType(OH_Drawing_TextStyle* style, OH_Drawing_TextBadgeType textBadgeType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -4406,6 +5170,10 @@ void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextSty
 
 Sets the font style, including the font weight, width, and slant, for a text style.
 
+<!--Device-void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle, OH_Drawing_FontStyleStruct fontStyle)--><!--Device-void OH_Drawing_SetTextStyleFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle, OH_Drawing_FontStyleStruct fontStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4424,6 +5192,10 @@ OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_Tex
 **Description**
 
 Obtains the font style, including the font weight, width, and slant, of a text style.
+
+<!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle)--><!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TextStyleGetFontStyleStruct(OH_Drawing_TextStyle* drawingTextStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4449,6 +5221,10 @@ void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* dr
 
 Sets the font style, including the font weight, width, and slant, for the default text style of a typography style.
 
+<!--Device-void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle, OH_Drawing_FontStyleStruct fontStyle)--><!--Device-void OH_Drawing_SetTypographyStyleFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle, OH_Drawing_FontStyleStruct fontStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4467,6 +5243,10 @@ OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawi
 **Description**
 
 Obtains the font style, including the font weight, width, and slant, of the default text style of a typography style.
+
+<!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle)--><!--Device-OH_Drawing_FontStyleStruct OH_Drawing_TypographyStyleGetFontStyleStruct(OH_Drawing_TypographyStyle* drawingStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4491,6 +5271,10 @@ bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Dra
 **Description**
 
 Checks whether two text styles are equal. The word width property is not involved in the comparison.
+
+<!--Device-bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)--><!--Device-bool OH_Drawing_TextStyleIsEqual(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4517,6 +5301,10 @@ bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const 
 
 Checks whether the font style properties of two text styles are equal.
 
+<!--Device-bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)--><!--Device-bool OH_Drawing_TextStyleIsEqualByFont(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4541,6 +5329,10 @@ bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, c
 **Description**
 
 Checks whether two text styles have the same font style type.
+
+<!--Device-bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle, OH_Drawing_TextStyleType textStyleType)--><!--Device-bool OH_Drawing_TextStyleIsAttributeMatched(const OH_Drawing_TextStyle* style, const OH_Drawing_TextStyle* comparedStyle, OH_Drawing_TextStyleType textStyleType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4568,6 +5360,10 @@ void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)
 
 Adds a placeholder.
 
+<!--Device-void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)--><!--Device-void OH_Drawing_TextStyleSetPlaceholder(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4585,6 +5381,10 @@ bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)
 **Description**
 
 Checks whether a placeholder is set for a text style.
+
+<!--Device-bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)--><!--Device-bool OH_Drawing_TextStyleIsPlaceholder(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4610,6 +5410,10 @@ OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_
 
 Obtains the text alignment mode.
 
+<!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyStyleGetEffectiveAlignment(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4633,6 +5437,10 @@ bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)
 **Description**
 
 Checks whether font hinting is enabled for a typography style. Font hinting is used to improve the readability and appearance of small-sized text when rendering it.
+
+<!--Device-bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyStyleIsHintEnabled(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4658,6 +5466,10 @@ OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontCon
 
 Obtains the system font configuration.
 
+<!--Device-OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontConfigInfoErrorCode* errorCode)--><!--Device-OH_Drawing_FontConfigInfo* OH_Drawing_GetSystemFontConfigInfo(OH_Drawing_FontConfigInfoErrorCode* errorCode)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4682,6 +5494,10 @@ void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontC
 
 Reclaims the memory occupied by the system font configuration.
 
+<!--Device-void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontCfgInfo)--><!--Device-void OH_Drawing_DestroySystemFontConfigInfo(OH_Drawing_FontConfigInfo* drawFontCfgInfo)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4699,6 +5515,10 @@ void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* sty
 **Description**
 
 Sets the strut style for a typography style.
+
+<!--Device-void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* style, OH_Drawing_StrutStyle* strutstyle)--><!--Device-void OH_Drawing_SetTypographyStyleTextStrutStyle(OH_Drawing_TypographyStyle* style, OH_Drawing_StrutStyle* strutstyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4719,6 +5539,10 @@ void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutsty
 
 Reclaims the memory occupied by a strut style.
 
+<!--Device-void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutstyle)--><!--Device-void OH_Drawing_TypographyStyleDestroyStrutStyle(OH_Drawing_StrutStyle* strutstyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4736,6 +5560,10 @@ OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_Typogr
 **Description**
 
 Obtains the strut style of a typography style.
+
+<!--Device-OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_StrutStyle* OH_Drawing_TypographyStyleGetStrutStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4761,6 +5589,10 @@ bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_
 
 Checks whether two strut styles are equal.
 
+<!--Device-bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_Drawing_StrutStyle* to)--><!--Device-bool OH_Drawing_TypographyStyleStrutStyleEquals(OH_Drawing_StrutStyle* from, OH_Drawing_StrutStyle* to)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4780,6 +5612,10 @@ void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style
 
 Sets whether to enable font hinting for a typography style. Font hinting is used to improve the readability and appearance of small-sized text when rendering it.
 
+<!--Device-void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style, bool hintsEnabled)--><!--Device-void OH_Drawing_TypographyStyleSetHintsEnabled(OH_Drawing_TypographyStyle* style, bool hintsEnabled)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4798,6 +5634,10 @@ OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typo
 **Description**
 
 Obtains all font metrics from a given line in a typography object. This function must be called after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called. Otherwise, a null pointer is returned. Release this pointer by calling [OH_Drawing_TypographyDestroyLineFontMetrics](capi-drawing-text-typography-h.md#oh_drawing_typographydestroylinefontmetrics) when this object is no longer needed.
+
+<!--Device-OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typography* typography, size_t lineNumber, size_t* fontMetricsSize)--><!--Device-OH_Drawing_Font_Metrics* OH_Drawing_TypographyGetLineFontMetrics(OH_Drawing_Typography* typography, size_t lineNumber, size_t* fontMetricsSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4825,6 +5665,10 @@ void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFo
 
 Reclaims the memory occupied by the struct array that holds all the font metrics of a given line.
 
+<!--Device-void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFontMetric)--><!--Device-void OH_Drawing_TypographyDestroyLineFontMetrics(OH_Drawing_Font_Metrics* lineFontMetric)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4843,6 +5687,10 @@ void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)
 
 Marks a typography object as dirty data. This function is used to initialize the typography state.
 
+<!--Device-void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)--><!--Device-void OH_Drawing_TypographyMarkDirty(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4860,6 +5708,10 @@ int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typ
 **Description**
 
 Obtains the number of unresolved glyphs in a typography object. This function can be called only after [OH_Drawing_TypographyLayout](capi-drawing-text-typography-h.md#oh_drawing_typographylayout) is called and applied.
+
+<!--Device-int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typography)--><!--Device-int32_t OH_Drawing_TypographyGetUnresolvedGlyphsCount(OH_Drawing_Typography* typography)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -4885,6 +5737,10 @@ void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size
 
 Updates the font size in a typography object.
 
+<!--Device-void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size_t from, size_t to, float fontSize)--><!--Device-void OH_Drawing_TypographyUpdateFontSize(OH_Drawing_Typography* typography, size_t from, size_t to, float fontSize)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -4906,6 +5762,10 @@ void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uin
 
 Updates the font color in a typography object. This API call also updates the decoration color if it hasn't been set yet. The updated font color takes effect after you call [OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint) to draw the text.
 
+<!--Device-void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uint32_t color)--><!--Device-void OH_Drawing_TypographyUpdateFontColor(OH_Drawing_Typography* typography, uint32_t color)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -4924,6 +5784,10 @@ void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH
 **Description**
 
 Updates the decoration type of a typography object. The updated decoration type takes effect after you call [OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint) to draw the text.
+
+<!--Device-void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH_Drawing_TextDecoration decoration)--><!--Device-void OH_Drawing_TypographyUpdateDecoration(OH_Drawing_Typography* typography, OH_Drawing_TextDecoration decoration)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -4944,6 +5808,10 @@ void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* 
 
 Updates the decoration thickness scale of a typography object. The updated decoration thickness scale takes effect after you call [OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint) to draw the text.
 
+<!--Device-void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* typography, double decorationThicknessScale)--><!--Device-void OH_Drawing_TypographyUpdateDecorationThicknessScale(OH_Drawing_Typography* typography, double decorationThicknessScale)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -4962,6 +5830,10 @@ void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typograph
 **Description**
 
 Updates the decoration style of a typography object. The updated decoration style takes effect after you call [OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint) to draw the text.
+
+<!--Device-void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typography, OH_Drawing_TextDecorationStyle decorationStyle)--><!--Device-void OH_Drawing_TypographyUpdateDecorationStyle(OH_Drawing_Typography* typography, OH_Drawing_TextDecorationStyle decorationStyle)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -4982,6 +5854,10 @@ void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typograph
 
 Updates the decoration color of a typography object. <br> The updated decoration color takes effect after you call [OH_Drawing_TypographyPaint](capi-drawing-text-typography-h.md#oh_drawing_typographypaint) to draw the text.
 
+<!--Device-void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typography, uint32_t color)--><!--Device-void OH_Drawing_TypographyUpdateDecorationColor(OH_Drawing_Typography* typography, uint32_t color)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -5000,6 +5876,10 @@ bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)
 **Description**
 
 Checks whether the text line style is enabled for a typography style.
+
+<!--Device-bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextGetLineStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5025,6 +5905,10 @@ OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing
 
 Obtains the font weight of a text line style.
 
+<!--Device-OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_FontWeight OH_Drawing_TypographyTextlineStyleGetFontWeight(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5049,6 +5933,10 @@ OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_T
 
 Obtains the font style of the strut style in a typography style.
 
+<!--Device-OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_FontStyle OH_Drawing_TypographyTextlineStyleGetFontStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5072,6 +5960,10 @@ char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographySt
 **Description**
 
 Obtains the font families of a text line style.
+
+<!--Device-char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographyStyle* style, size_t* num)--><!--Device-char** OH_Drawing_TypographyTextlineStyleGetFontFamilies(OH_Drawing_TypographyStyle* style, size_t* num)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5098,6 +5990,10 @@ void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, 
 
 Releases the memory occupied by the font family name list.
 
+<!--Device-void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, size_t fontFamiliesNum)--><!--Device-void OH_Drawing_TypographyTextlineStyleDestroyFontFamilies(char** fontFamilies, size_t fontFamiliesNum)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5116,6 +6012,10 @@ double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle*
 **Description**
 
 Obtains the font size of a text line style.
+
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetFontSize(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5141,6 +6041,10 @@ double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographySty
 
 Obtains the height scale factor of a text line style.
 
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetHeightScale(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5164,6 +6068,10 @@ bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle*
 **Description**
 
 Checks whether only the font height is used for a text line style.
+
+<!--Device-bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineStyleGetHeightOnly(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5189,6 +6097,10 @@ bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle
 
 Checks whether half leading is enabled for a text line style.
 
+<!--Device-bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineStyleGetHalfLeading(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5212,6 +6124,10 @@ double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographySt
 **Description**
 
 Obtains the spacing scale factor of a text line style.
+
+<!--Device-double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographyStyle* style)--><!--Device-double OH_Drawing_TypographyTextlineStyleGetSpacingScale(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5237,6 +6153,10 @@ bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style
 
 Checks whether only the text line style is enabled for a typography style.
 
+<!--Device-bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style)--><!--Device-bool OH_Drawing_TypographyTextlineGetStyleOnly(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5260,6 +6180,10 @@ OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyl
 **Description**
 
 Obtains the text alignment mode.
+
+<!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextAlign OH_Drawing_TypographyGetTextAlign(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5285,6 +6209,10 @@ OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_Typogr
 
 Obtains the text direction of a typography style.
 
+<!--Device-OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TextDirection OH_Drawing_TypographyGetTextDirection(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5308,6 +6236,10 @@ size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)
 **Description**
 
 Obtains the maximum number of lines.
+
+<!--Device-size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)--><!--Device-size_t OH_Drawing_TypographyGetTextMaxLines(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5333,6 +6265,10 @@ char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)
 
 Obtains the text ellipsis content of a typography style.
 
+<!--Device-char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)--><!--Device-char* OH_Drawing_TypographyGetTextEllipsis(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5357,6 +6293,10 @@ void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)
 
 Releases the memory occupied by the ellipsis text.
 
+<!--Device-void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)--><!--Device-void OH_Drawing_TypographyDestroyEllipsis(char* ellipsis)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5374,6 +6314,10 @@ bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawi
 **Description**
 
 Checks whether two typography styles are the same. The text height modifier mode [OH_Drawing_TextHeightBehavior](capi-drawing-text-typography-h.md#oh_drawing_textheightbehavior) is not involved in the comparison.
+
+<!--Device-bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawing_TypographyStyle* to)--><!--Device-bool OH_Drawing_TypographyStyleEquals(OH_Drawing_TypographyStyle* from, OH_Drawing_TypographyStyle* to)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5400,6 +6344,10 @@ void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)
 
 Releases the memory occupied by a text box.
 
+<!--Device-void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)--><!--Device-void OH_Drawing_TypographyDestroyTextBox(OH_Drawing_TextBox* textBox)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -5417,6 +6365,10 @@ void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_
 **Description**
 
 Sets the parameters of the text shadow object.
+
+<!--Device-void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_Drawing_Point* offset, double blurRadius)--><!--Device-void OH_Drawing_SetTextShadow(OH_Drawing_TextShadow* shadow, uint32_t color, OH_Drawing_Point* offset, double blurRadius)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -5438,6 +6390,10 @@ OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, flo
 **Description**
 
 Creates a text tab object.
+
+<!--Device-OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, float location)--><!--Device-OH_Drawing_TextTab* OH_Drawing_CreateTextTab(OH_Drawing_TextAlign alignment, float location)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -5464,6 +6420,10 @@ void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)
 
 Releases the memory occupied by a text tab object.
 
+<!--Device-void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)--><!--Device-void OH_Drawing_DestroyTextTab(OH_Drawing_TextTab* tab)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -5481,6 +6441,10 @@ OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)
 **Description**
 
 Obtains the alignment mode of a text tab.
+
+<!--Device-OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)--><!--Device-OH_Drawing_TextAlign OH_Drawing_GetTextTabAlignment(OH_Drawing_TextTab* tab)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -5506,6 +6470,10 @@ float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)
 
 Obtains the location of a text tab.
 
+<!--Device-float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)--><!--Device-float OH_Drawing_GetTextTabLocation(OH_Drawing_TextTab* tab)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -5530,6 +6498,10 @@ void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawi
 
 Sets the alignment mode and location of a text tab. When the text alignment mode or ellipsis style is set, the tab does not take effect. When the tab location is less than 1.0, the tab is replaced with a space.
 
+<!--Device-void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawing_TextTab* tab)--><!--Device-void OH_Drawing_SetTypographyTextTab(OH_Drawing_TypographyStyle* style, OH_Drawing_TextTab* tab)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -5548,6 +6520,10 @@ size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)
 **Description**
 
 Obtains the number of objects in the input object array [OH_Drawing_Array](capi-drawing-oh-drawing-array.md).
+
+<!--Device-size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)--><!--Device-size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 14
 
@@ -5573,6 +6549,10 @@ void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographySty
 
 Sets whether to include the trailing spaces in alignment calculations during text typography.
 
+<!--Device-void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographyStyle* style, bool trailingSpaceOptimized)--><!--Device-void OH_Drawing_SetTypographyTextTrailingSpaceOptimized(OH_Drawing_TypographyStyle* style, bool trailingSpaceOptimized)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -5591,6 +6571,10 @@ void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* han
 **Description**
 
 Adds text encoded in a specified format.
+
+<!--Device-void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* handler, const void* text, size_t byteLength, OH_Drawing_TextEncoding textEncodingType)--><!--Device-void OH_Drawing_TypographyHandlerAddEncodedText(OH_Drawing_TypographyCreate* handler, const void* text, size_t byteLength, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -5613,6 +6597,10 @@ void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bo
 
 Sets whether to enable auto spacing for text typography. <br>Auto spacing is disabled by default. Once enabled, the spacing between CJK (Chinese, Japanese, and Korean characters) and Western characters (Latin, Cyrillic, and Greek letters), CJK and digits, CJK and copyright symbols, copyright symbols and digits, and copyright symbols and Western characters is automatically adjusted.
 
+<!--Device-void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bool enableAutoSpace)--><!--Device-void OH_Drawing_SetTypographyTextAutoSpace(OH_Drawing_TypographyStyle* style, bool enableAutoSpace)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -5631,6 +6619,10 @@ OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_Typography
 **Description**
 
 Creates a copy of an existing paragraph style object.
+
+<!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_TypographyStyle* style)--><!--Device-OH_Drawing_TypographyStyle* OH_Drawing_CopyTypographyStyle(OH_Drawing_TypographyStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -5656,6 +6648,10 @@ OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)
 
 Creates a copy of an existing text style object.
 
+<!--Device-OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)--><!--Device-OH_Drawing_TextStyle* OH_Drawing_CopyTextStyle(OH_Drawing_TextStyle* style)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -5679,6 +6675,10 @@ OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)
 **Description**
 
 Creates a copy of an existing text shadow object.
+
+<!--Device-OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)--><!--Device-OH_Drawing_TextShadow* OH_Drawing_CopyTextShadow(OH_Drawing_TextShadow* shadow)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -5704,6 +6704,10 @@ void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* posit
 
 Destroys an [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md) object and reclaims the memory occupied by the object.
 
+<!--Device-void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)--><!--Device-void OH_Drawing_DestroyPositionAndAffinity(OH_Drawing_PositionAndAffinity* positionAndAffinity)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 23
 
 **Parameters**:
@@ -5721,6 +6725,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(
 **Description**
 
 Obtains the character range corresponding to the specified glyph range.
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(OH_Drawing_Typography* typography, size_t glyphRangeStart, size_t glyphRangeEnd, OH_Drawing_Range** actualGlyphRange, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetCharacterRangeForGlyphRangeWithBuffer(OH_Drawing_Typography* typography, size_t glyphRangeStart, size_t glyphRangeEnd, OH_Drawing_Range** actualGlyphRange, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 24
 
@@ -5750,6 +6758,10 @@ OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoord
 
 Obtains the character position information closest to the specified coordinates.
 
+<!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoordinateWithBuffer(OH_Drawing_Typography* typography, double dx, double dy, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_PositionAndAffinity* OH_Drawing_TypographyGetCharacterPositionAtCoordinateWithBuffer(OH_Drawing_Typography* typography, double dx, double dy, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 24
 
 **Parameters**:
@@ -5776,6 +6788,10 @@ OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(
 **Description**
 
 Obtains the glyph range corresponding to the specified character range.
+
+<!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(OH_Drawing_Typography* typography, size_t characterRangeStart, size_t characterRangeEnd, OH_Drawing_Range** actualCharacterRange, OH_Drawing_TextEncoding textEncodingType)--><!--Device-OH_Drawing_Range* OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer(OH_Drawing_Typography* typography, size_t characterRangeStart, size_t characterRangeEnd, OH_Drawing_Range** actualCharacterRange, OH_Drawing_TextEncoding textEncodingType)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 24
 
@@ -5804,6 +6820,10 @@ void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)
 **Description**
 
 Releases the memory occupied by the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object.
+
+<!--Device-void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)--><!--Device-void OH_Drawing_ReleaseRangeBuffer(OH_Drawing_Range* range)-End-->
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 24
 

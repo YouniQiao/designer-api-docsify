@@ -32,7 +32,7 @@ You are advised to adjust this setting only when there is an error in the compon
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services only in API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12 - 12.
 
 <!--Device-GeometryTransitionOptions-hierarchyStrategy?: TransitionHierarchyStrategy--><!--Device-GeometryTransitionOptions-hierarchyStrategy?: TransitionHierarchyStrategy-End-->
 

@@ -8,11 +8,13 @@ typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_E
 
 Defines the expected frame rate range struct.
 
+<!--Device-typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_ExpectedRateRange--><!--Device-typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_ExpectedRateRange-End-->
+
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 11
 
-**Related module**: [OH_NativeXComponent Native XComponent](capi-oh-nativexcomponent-native-xcomponent.md)
+**Related module**: [OH_NativeXComponent Native XComponent](capi-arkui-oh-nativexcomponent-native-xcomponent.md)
 
 **Header file**: [native_interface_xcomponent.h](capi-native-interface-xcomponent-h.md)
 
@@ -22,8 +24,8 @@ Defines the expected frame rate range struct.
 
 | Name | Description |
 | -- | -- |
-| int32_t min | The minimum frame rate of dynamical callback rate range. |
-| int32_t max | The maximum frame rate of dynamical callback rate range. |
-| int32_t expected | The expected frame rate of dynamical callback rate range. |
+| int32_t min | The minimum frame rate of dynamical callback rate range.<br><!--Device-int32_t min--><!--Device-int32_t min-End--> |
+| int32_t max | The maximum frame rate of dynamical callback rate range.<br><!--Device-int32_t max--><!--Device-int32_t max-End--> |
+| int32_t expected | The expected frame rate of dynamical callback rate range.<br><!--Device-int32_t expected--><!--Device-int32_t expected-End--> |
 
 

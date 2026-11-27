@@ -1,28 +1,23 @@
 # clearTimeout
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## clearTimeout
 
 ```TypeScript
 export declare function clearTimeout(timeoutID?: number): void
 ```
 
-Cancels a timer set via **setTimeout()**. The timer object is stored in the thread where the timer is created and must be deleted in that thread.
+Cancels the timer set by " setTimeout()".
 
-**Since:** 7
+**Since:** 5
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void--><!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutID | number | No | The ID of the timer to be canceled, which must be the same as the return value of **setTimeout()**. If this parameter is omitted or the specified timer ID does not exist, no timer will be canceled. |
+| timeoutID | number | No | Indicates the timer ID returned by "setTimeout()". |

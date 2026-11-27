@@ -6,27 +6,29 @@ Provides URI-based file and directory authorization and persistence, permission 
 
 **Library**: libohfileshare.so
 
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Since**: 12
 
-**Related module**: [fileShare](capi-fileshare.md)
+**Related module**: [fileShare](capi-core-file-kit-fileshare.md)
 
 ## Summary
 
-### Struct
+### Structs
 
-| Name | Description |
-| -- | -- |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) | Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result on URI. |
-| [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) | Define the FileShare_PolicyInfo structure type.<br> Policy information to manager permissions on a URI. |
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) | FileShare_PolicyErrorResult | Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result on URI. |
+| [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) | FileShare_PolicyInfo | Define the FileShare_PolicyInfo structure type.<br> Policy information to manager permissions on a URI. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [FileShare_OperationMode](#fileshare_operationmode) | FileShare_OperationMode | Enumerates the uri operate mode types. |
 | [FileShare_PolicyErrorCode](#fileshare_policyerrorcode) | FileShare_PolicyErrorCode | Enumerates the error code of the permission policy for the URI operation. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -49,12 +51,16 @@ enum FileShare_OperationMode
 
 Enumerates the uri operate mode types.
 
+<!--Device-enum FileShare_OperationMode--><!--Device-enum FileShare_OperationMode-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| READ_MODE = 1 << 0 | Indicates read permissions. |
-| WRITE_MODE = 1 << 1 | Indicates write permissions. |
+| READ_MODE = 1 << 0 | Indicates read permissions.<br><!--Device-READ_MODE = 1 << 0--><!--Device-READ_MODE = 1 << 0-End--> |
+| WRITE_MODE = 1 << 1 | Indicates write permissions.<br><!--Device-WRITE_MODE = 1 << 1--><!--Device-WRITE_MODE = 1 << 1-End--> |
 
 ### FileShare_PolicyErrorCode
 
@@ -66,14 +72,18 @@ enum FileShare_PolicyErrorCode
 
 Enumerates the error code of the permission policy for the URI operation.
 
+<!--Device-enum FileShare_PolicyErrorCode--><!--Device-enum FileShare_PolicyErrorCode-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| PERSISTENCE_FORBIDDEN = 1 | Indicates that the policy is not allowed to be persisted. |
-| INVALID_MODE = 2 | Indicates that the mode of this policy is invalid. |
-| INVALID_PATH = 3 | Indicates that the path of this policy is invalid. |
-| PERMISSION_NOT_PERSISTED = 4 | Indicates that the policy is no persistent capability. |
+| PERSISTENCE_FORBIDDEN = 1 | Indicates that the policy is not allowed to be persisted.<br><!--Device-PERSISTENCE_FORBIDDEN = 1--><!--Device-PERSISTENCE_FORBIDDEN = 1-End--> |
+| INVALID_MODE = 2 | Indicates that the mode of this policy is invalid.<br><!--Device-INVALID_MODE = 2--><!--Device-INVALID_MODE = 2-End--> |
+| INVALID_PATH = 3 | Indicates that the path of this policy is invalid.<br><!--Device-INVALID_PATH = 3--><!--Device-INVALID_PATH = 3-End--> |
+| PERMISSION_NOT_PERSISTED = 4 | Indicates that the policy is no persistent capability.<br><!--Device-PERMISSION_NOT_PERSISTED = 4--><!--Device-PERMISSION_NOT_PERSISTED = 4-End--> |
 
 
 ## Function description
@@ -87,6 +97,10 @@ FileManagement_ErrCode OH_FileShare_PersistPermission(const FileShare_PolicyInfo
 **Description**
 
 Set persistent permissions for the URI.
+
+<!--Device-FileManagement_ErrCode OH_FileShare_PersistPermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)--><!--Device-FileManagement_ErrCode OH_FileShare_PersistPermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Required permission**: ohos.permission.FILE_ACCESS_PERSIST
 
@@ -117,6 +131,10 @@ FileManagement_ErrCode OH_FileShare_RevokePermission(const FileShare_PolicyInfo 
 
 Revoke persistent permissions for the URI.
 
+<!--Device-FileManagement_ErrCode OH_FileShare_RevokePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)--><!--Device-FileManagement_ErrCode OH_FileShare_RevokePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Required permission**: ohos.permission.FILE_ACCESS_PERSIST
 
 **Since**: 12
@@ -145,6 +163,10 @@ FileManagement_ErrCode OH_FileShare_ActivatePermission(const FileShare_PolicyInf
 **Description**
 
 Enable the URI that have been permanently authorized.
+
+<!--Device-FileManagement_ErrCode OH_FileShare_ActivatePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)--><!--Device-FileManagement_ErrCode OH_FileShare_ActivatePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Required permission**: ohos.permission.FILE_ACCESS_PERSIST
 
@@ -175,6 +197,10 @@ FileManagement_ErrCode OH_FileShare_DeactivatePermission(const FileShare_PolicyI
 
 Stop the authorized URI that has been enabled.
 
+<!--Device-FileManagement_ErrCode OH_FileShare_DeactivatePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)--><!--Device-FileManagement_ErrCode OH_FileShare_DeactivatePermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, FileShare_PolicyErrorResult **result, unsigned int *resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Required permission**: ohos.permission.FILE_ACCESS_PERSIST
 
 **Since**: 12
@@ -204,6 +230,10 @@ FileManagement_ErrCode OH_FileShare_CheckPersistentPermission(const FileShare_Po
 
 Check persistent permissions for the URI.
 
+<!--Device-FileManagement_ErrCode OH_FileShare_CheckPersistentPermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, bool **result, unsigned int *resultNum)--><!--Device-FileManagement_ErrCode OH_FileShare_CheckPersistentPermission(const FileShare_PolicyInfo *policies, unsigned int policyNum, bool **result, unsigned int *resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 **Required permission**: ohos.permission.FILE_ACCESS_PERSIST
 
 **Since**: 12
@@ -232,6 +262,10 @@ void OH_FileShare_ReleasePolicyErrorResult(FileShare_PolicyErrorResult *errorRes
 **Description**
 
 Free FileShare_PolicyErrorResult pointer points to address memory.
+
+<!--Device-void OH_FileShare_ReleasePolicyErrorResult(FileShare_PolicyErrorResult *errorResult, unsigned int resultNum)--><!--Device-void OH_FileShare_ReleasePolicyErrorResult(FileShare_PolicyErrorResult *errorResult, unsigned int resultNum)-End-->
+
+**System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Since**: 12
 

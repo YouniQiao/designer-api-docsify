@@ -1,18 +1,20 @@
 # Camera_Point
 
 ```c
-struct Camera_Point {...}
+typedef struct Camera_Point {...} Camera_Point
 ```
 
 ## 概述
 
 点参数。
 
+<!--Device-struct Camera_Point {...}--><!--Device-struct Camera_Point {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_Point {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| double x | X坐标，取值范围为[0,1]。 |
-| double y | Y坐标，取值范围为[0,1]。 |
+| double x | X坐标，取值范围为[0,1]。<br><!--Device-double x--><!--Device-double x-End--> |
+| double y | Y坐标，取值范围为[0,1]。<br><!--Device-double y--><!--Device-double y-End--> |
 
 

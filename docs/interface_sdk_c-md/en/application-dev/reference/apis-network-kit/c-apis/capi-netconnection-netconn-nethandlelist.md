@@ -1,18 +1,20 @@
 # NetConn_NetHandleList
 
 ```c
-struct NetConn_NetHandleList {...}
+typedef struct NetConn_NetHandleList {...} NetConn_NetHandleList
 ```
 
 ## Overview
 
 Defines the network list.
 
+<!--Device-struct NetConn_NetHandleList {...}--><!--Device-struct NetConn_NetHandleList {...}-End-->
+
 **System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 11
 
-**Related module**: [NetConnection](capi-netconnection.md)
+**Related module**: [NetConnection](capi-network-kit-netconnection.md)
 
 **Header file**: [net_connection_type.h](capi-net-connection-type-h.md)
 
@@ -22,7 +24,7 @@ Defines the network list.
 
 | Name | Description |
 | -- | -- |
-| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) netHandles[NETCONN_MAX_NET_SIZE] | Network handle list |
-| int32_t netHandleListSize | Actual size of the network handle list. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) netHandles[NETCONN_MAX_NET_SIZE] | Network handle list<br><!--Device-NetConn_NetHandle netHandles[NETCONN_MAX_NET_SIZE]--><!--Device-NetConn_NetHandle netHandles[NETCONN_MAX_NET_SIZE]-End--> |
+| int32_t netHandleListSize | Actual size of the network handle list.<br><!--Device-int32_t netHandleListSize--><!--Device-int32_t netHandleListSize-End--> |
 
 

@@ -1,18 +1,20 @@
 # Camera_OcclusionDetectionResult
 
 ```c
-struct Camera_OcclusionDetectionResult {...}
+typedef struct Camera_OcclusionDetectionResult {...} Camera_OcclusionDetectionResult
 ```
 
 ## 概述
 
 相机镜头遮挡、脏污检测结果。
 
+<!--Device-struct Camera_OcclusionDetectionResult {...}--><!--Device-struct Camera_OcclusionDetectionResult {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 23
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_OcclusionDetectionResult {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| bool isCameraOccluded | 检查相机镜头是否被遮挡。true表示被遮挡，false表示未被遮挡。 |
-| bool isCameraLensDirty | 检查相机镜头是否有脏污。true表示有脏污，false表示没有脏污。 |
+| bool isCameraOccluded | 检查相机镜头是否被遮挡。true表示被遮挡，false表示未被遮挡。<br><!--Device-bool isCameraOccluded--><!--Device-bool isCameraOccluded-End--> |
+| bool isCameraLensDirty | 检查相机镜头是否有脏污。true表示有脏污，false表示没有脏污。<br><!--Device-bool isCameraLensDirty--><!--Device-bool isCameraLensDirty-End--> |
 
 

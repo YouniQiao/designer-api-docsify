@@ -1,18 +1,20 @@
 # MetadataOutput_Callbacks
 
 ```c
-struct MetadataOutput_Callbacks {...}
+typedef struct MetadataOutput_Callbacks {...} MetadataOutput_Callbacks
 ```
 
 ## 概述
 
 元数据输出的回调。
 
+<!--Device-struct MetadataOutput_Callbacks {...}--><!--Device-struct MetadataOutput_Callbacks {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [metadata_output.h](capi-metadata-output-h.md)
 
@@ -22,7 +24,7 @@ struct MetadataOutput_Callbacks {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_MetadataOutput_OnMetadataObjectAvailable](capi-metadata-output-h.md#oh_metadataoutput_onmetadataobjectavailable) onMetadataObjectAvailable | 此回调将调用元数据输出结果数据。 |
-| [OH_MetadataOutput_OnError](capi-metadata-output-h.md#oh_metadataoutput_onerror) onError | 元数据输出错误事件。 |
+| [OH_MetadataOutput_OnMetadataObjectAvailable](capi-metadata-output-h.md#oh_metadataoutput_onmetadataobjectavailable) onMetadataObjectAvailable | 此回调将调用元数据输出结果数据。<br><!--Device-OH_MetadataOutput_OnMetadataObjectAvailable onMetadataObjectAvailable--><!--Device-OH_MetadataOutput_OnMetadataObjectAvailable onMetadataObjectAvailable-End--> |
+| [OH_MetadataOutput_OnError](capi-metadata-output-h.md#oh_metadataoutput_onerror) onError | 元数据输出错误事件。<br><!--Device-OH_MetadataOutput_OnError onError--><!--Device-OH_MetadataOutput_OnError onError-End--> |
 
 

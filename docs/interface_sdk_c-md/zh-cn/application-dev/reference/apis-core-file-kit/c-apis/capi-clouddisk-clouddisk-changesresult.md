@@ -1,18 +1,20 @@
 # CloudDisk_ChangesResult
 
 ```c
-struct CloudDisk_ChangesResult {...}
+typedef struct CloudDisk_ChangesResult {...} CloudDisk_ChangesResult
 ```
 
 ## 概述
 
 查询同步根路径中文件变更的结果。该结构体包含同步根路径中文件的变更数据，包括下一个更新序列号、结尾标志以及变更数据项数组。
 
+<!--Device-struct CloudDisk_ChangesResult {...}--><!--Device-struct CloudDisk_ChangesResult {...}-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
-**相关模块：** [CloudDisk](capi-clouddisk.md)
+**相关模块：** [CloudDisk](capi-core-file-kit-clouddisk.md)
 
 **所在头文件：** [oh_cloud_disk_manager.h](capi-oh-cloud-disk-manager-h.md)
 
@@ -22,9 +24,9 @@ struct CloudDisk_ChangesResult {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint64_t nextUsn{0} | 下一次可查询的有效起始变更序列号。<br>**起始版本：** 21 |
-| bool isEof{false} | 本次变更是否为同步根路径中记录的最后的修改记录。true：表示是最后的修改记录；false：表示不是最后的修改记录。<br>**起始版本：** 21 |
-| size_t bufferLength{0} | 历史变更记录数组中的元素数量。<br>**起始版本：** 21 |
-| [CloudDisk_ChangeData](capi-clouddisk-clouddisk-changedata.md) changeDatas[] | 历史变更记录数组。<br>**起始版本：** 21 |
+| uint64_t nextUsn{0} | 下一次可查询的有效起始变更序列号。<br>**起始版本：** 21<br><!--Device-uint64_t nextUsn{0}--><!--Device-uint64_t nextUsn{0}-End--> |
+| bool isEof{false} | 本次变更是否为同步根路径中记录的最后的修改记录。true：表示是最后的修改记录；false：表示不是最后的修改记录。<br>**起始版本：** 21<br><!--Device-bool isEof{false}--><!--Device-bool isEof{false}-End--> |
+| size_t bufferLength{0} | 历史变更记录数组中的元素数量。<br>**起始版本：** 21<br><!--Device-size_t bufferLength{0}--><!--Device-size_t bufferLength{0}-End--> |
+| [CloudDisk_ChangeData](capi-clouddisk-clouddisk-changedata.md) changeDatas[] | 历史变更记录数组。<br>**起始版本：** 21<br><!--Device-CloudDisk_ChangeData changeDatas[]--><!--Device-CloudDisk_ChangeData changeDatas[]-End--> |
 
 

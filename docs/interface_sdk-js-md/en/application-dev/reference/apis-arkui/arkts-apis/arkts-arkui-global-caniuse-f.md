@@ -1,10 +1,5 @@
 # canIUse
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## canIUse
 
 ```TypeScript
@@ -13,13 +8,13 @@ export declare function canIUse(syscap: string): boolean
 
 Defining syscap function.
 
-**Since:** 11
+**Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function canIUse(syscap: string): boolean--><!--Device-unnamed-export declare function canIUse(syscap: string): boolean-End-->
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 

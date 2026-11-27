@@ -8,11 +8,13 @@ typedef struct TEE_OperationInfoKey {...} TEE_OperationInfoKey
 
 Defines the key information stored in the <b>OperationInfo</b>.
 
+<!--Device-typedef struct TEE_OperationInfoKey {...} TEE_OperationInfoKey--><!--Device-typedef struct TEE_OperationInfoKey {...} TEE_OperationInfoKey-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 **Header file**: [tee_crypto_api.h](capi-tee-crypto-api-h.md)
 
@@ -22,7 +24,7 @@ Defines the key information stored in the <b>OperationInfo</b>.
 
 | Name | Description |
 | -- | -- |
-| uint32_t keySize | Key length |
-| uint32_t requiredKeyUsage | Required key usage |
+| uint32_t keySize | Key length<br><!--Device-uint32_t keySize--><!--Device-uint32_t keySize-End--> |
+| uint32_t requiredKeyUsage | Required key usage<br><!--Device-uint32_t requiredKeyUsage--><!--Device-uint32_t requiredKeyUsage-End--> |
 
 

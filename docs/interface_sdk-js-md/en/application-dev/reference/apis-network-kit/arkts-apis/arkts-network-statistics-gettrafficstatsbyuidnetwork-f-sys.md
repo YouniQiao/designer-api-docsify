@@ -35,7 +35,7 @@ Obtains the traffic usage details of the application on the specified network wi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; | Promise used to return the application historical traffic statistics information. |
+| Promise&lt;NetStatsInfoSequence&gt; | Promise used to return the application historical traffic statistics information. |
 
 **Error codes:**
 

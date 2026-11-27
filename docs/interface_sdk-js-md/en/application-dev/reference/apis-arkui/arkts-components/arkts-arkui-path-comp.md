@@ -58,7 +58,7 @@ Creates a **Path** component, which is used to generate a closed custom shape ba
 ## Path
 
 ```TypeScript
-new Path(options?: PathOptions)
+Path(options?: PathOptions)
 ```
 
 Creates a **Path** object instance, which is used to generate a closed custom shape based on the drawing path.

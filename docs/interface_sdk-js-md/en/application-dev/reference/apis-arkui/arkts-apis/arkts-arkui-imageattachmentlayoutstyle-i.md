@@ -24,7 +24,7 @@ Default value: **0**
 
 Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; BorderRadiuses
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ Default value: **0**
 
 Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [Padding](arkts-arkui-padding-t.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Padding
 
 **Since:** 12
 

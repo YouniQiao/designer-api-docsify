@@ -13,7 +13,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | 自定义弹窗的样式。 |
-| [DismissDialogAction](arkts-arkui-customdialog-comp-dismissdialogaction-i.md) | Dialog关闭的信息。 |
+| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Dialog关闭的信息。 |
 
 <!--Del-->
 ### 接口（系统接口）

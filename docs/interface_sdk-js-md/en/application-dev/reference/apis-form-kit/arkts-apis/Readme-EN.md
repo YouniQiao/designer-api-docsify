@@ -242,56 +242,56 @@
   <!--Del-->
   - [FormError(system api)](arkts-form-formerror-formerror-e-sys.md)<!--DelEnd-->
 - [@ohos.application.formBindingData](arkts-form-application-formbindingdata.md)
-  - [createFormBindingData](arkts-form-formbindingdata-depr-createformbindingdata-f.md)
-  - [FormBindingData](arkts-form-formbindingdata-depr-formbindingdata-i.md)
+  - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md)
+  - [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
 <!--Del-->
 - [@ohos.application.formHost](arkts-form-application-formhost.md)<!--DelEnd-->
   <!--Del-->
-  - [acquireFormState(system api)](arkts-form-formhost-depr-acquireformstate-f-sys.md)<!--DelEnd-->
+  - [acquireFormState(system api)](arkts-form-formhost-acquireformstate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [castTempForm(system api)](arkts-form-formhost-depr-casttempform-f-sys.md)<!--DelEnd-->
+  - [castTempForm(system api)](arkts-form-formhost-casttempform-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [deleteForm(system api)](arkts-form-formhost-depr-deleteform-f-sys.md)<!--DelEnd-->
+  - [deleteForm(system api)](arkts-form-formhost-deleteform-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [deleteInvalidForms(system api)](arkts-form-formhost-depr-deleteinvalidforms-f-sys.md)<!--DelEnd-->
+  - [deleteInvalidForms(system api)](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [disableFormsUpdate(system api)](arkts-form-formhost-depr-disableformsupdate-f-sys.md)<!--DelEnd-->
+  - [disableFormsUpdate(system api)](arkts-form-formhost-disableformsupdate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [enableFormsUpdate(system api)](arkts-form-formhost-depr-enableformsupdate-f-sys.md)<!--DelEnd-->
+  - [enableFormsUpdate(system api)](arkts-form-formhost-enableformsupdate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getAllFormsInfo(system api)](arkts-form-formhost-depr-getallformsinfo-f-sys.md)<!--DelEnd-->
+  - [getAllFormsInfo(system api)](arkts-form-formhost-getallformsinfo-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getFormsInfo(system api)](arkts-form-formhost-depr-getformsinfo-f-sys.md)<!--DelEnd-->
+  - [getFormsInfo(system api)](arkts-form-formhost-getformsinfo-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [isSystemReady(system api)](arkts-form-formhost-depr-issystemready-f-sys.md)<!--DelEnd-->
+  - [isSystemReady(system api)](arkts-form-formhost-issystemready-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyFormsEnableUpdate(system api)](arkts-form-formhost-depr-notifyformsenableupdate-f-sys.md)<!--DelEnd-->
+  - [notifyFormsEnableUpdate(system api)](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyFormsVisible(system api)](arkts-form-formhost-depr-notifyformsvisible-f-sys.md)<!--DelEnd-->
+  - [notifyFormsVisible(system api)](arkts-form-formhost-notifyformsvisible-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyInvisibleForms(system api)](arkts-form-formhost-depr-notifyinvisibleforms-f-sys.md)<!--DelEnd-->
+  - [notifyInvisibleForms(system api)](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyVisibleForms(system api)](arkts-form-formhost-depr-notifyvisibleforms-f-sys.md)<!--DelEnd-->
+  - [notifyVisibleForms(system api)](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-form-formhost-depr-off-f-sys.md)<!--DelEnd-->
+  - [off(system api)](arkts-form-formhost-off-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-form-formhost-depr-on-f-sys.md)<!--DelEnd-->
+  - [on(system api)](arkts-form-formhost-on-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [releaseForm(system api)](arkts-form-formhost-depr-releaseform-f-sys.md)<!--DelEnd-->
+  - [releaseForm(system api)](arkts-form-formhost-releaseform-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [requestForm(system api)](arkts-form-formhost-depr-requestform-f-sys.md)<!--DelEnd-->
+  - [requestForm(system api)](arkts-form-formhost-requestform-depr-f-sys.md)<!--DelEnd-->
 - [@ohos.application.formInfo](arkts-form-application-forminfo.md)
-  - [FormInfo](arkts-form-forminfo-depr-forminfo-i.md)
-  - [FormStateInfo](arkts-form-forminfo-depr-formstateinfo-i.md)
-  - [ColorMode](arkts-form-forminfo-depr-colormode-e.md)
-  - [FormParam](arkts-form-forminfo-depr-formparam-e.md)
+  - [FormInfo](arkts-form-forminfo-forminfo-depr-i.md)
+  - [FormStateInfo](arkts-form-forminfo-formstateinfo-depr-i.md)
+  - [ColorMode](arkts-form-forminfo-colormode-depr-e.md)
+  - [FormParam](arkts-form-forminfo-formparam-depr-e.md)
   <!--Del-->
-  - [FormParam(system api)](arkts-form-forminfo-depr-formparam-e-sys.md)<!--DelEnd-->
-  - [FormState](arkts-form-forminfo-depr-formstate-e.md)
-  - [FormType](arkts-form-forminfo-depr-formtype-e.md)
+  - [FormParam(system api)](arkts-form-forminfo-formparam-depr-e-sys.md)<!--DelEnd-->
+  - [FormState](arkts-form-forminfo-formstate-depr-e.md)
+  - [FormType](arkts-form-forminfo-formtype-depr-e.md)
 - [@ohos.application.formProvider](arkts-form-application-formprovider.md)
-  - [setFormNextRefreshTime](arkts-form-formprovider-depr-setformnextrefreshtime-f.md)
-  - [updateForm](arkts-form-formprovider-depr-updateform-f.md)
+  - [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md)
+  - [updateForm](arkts-form-formprovider-updateform-depr-f.md)
 - application<!--arkts-formkit-application-->
   - [FormEditExtensionContext(FormEditExtensionContext)](arkts-form-formeditextensioncontext.md)
     - [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)

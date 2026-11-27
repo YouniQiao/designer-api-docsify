@@ -1,18 +1,20 @@
 # OH_Huks_KeyInfo
 
 ```c
-struct OH_Huks_KeyInfo {...}
+typedef struct OH_Huks_KeyInfo {...} OH_Huks_KeyInfo
 ```
 
 ## 概述
 
 定义密钥信息的结构体类型。
 
+<!--Device-struct OH_Huks_KeyInfo {...}--><!--Device-struct OH_Huks_KeyInfo {...}-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
-**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -22,7 +24,7 @@ struct OH_Huks_KeyInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) alias | 密钥认证时的别名。 |
-| struct OH_Huks_ParamSet *paramSet | 指向密钥参数集的指针。 |
+| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) alias | 密钥认证时的别名。<br><!--Device-struct OH_Huks_Blob alias--><!--Device-struct OH_Huks_Blob alias-End--> |
+| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | 指向密钥参数集的指针。<br><!--Device-struct OH_Huks_ParamSet *paramSet--><!--Device-struct OH_Huks_ParamSet *paramSet-End--> |
 
 

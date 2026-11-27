@@ -24,7 +24,7 @@ extensionWantAgent?: WantAgent
 
 点击辅助区的跳转动作。默认为空。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 20
 

@@ -24,7 +24,7 @@ extensionWantAgent?: WantAgent
 
 Redirection by tapping in the auxiliary area. This parameter is left empty by default.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 20
 

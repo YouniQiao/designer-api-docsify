@@ -8,9 +8,11 @@ XComponent组件枚举类型定义，用于描述XComponent的渲染类型，支
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **相关示例：** [xcomponent_sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Native/XComponent3D)
 
@@ -40,11 +42,15 @@ enum ArkUI_XComponentType
 
 定义XComponent类型枚举值。
 
+<!--Device-enum ArkUI_XComponentType--><!--Device-enum ArkUI_XComponentType-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_XCOMPONENT_TYPE_SURFACE = 0 | 用于EGL/OpenGLES和媒体数据写入，开发者定制绘制内容单独显示在屏幕上。 |
-| ARKUI_XCOMPONENT_TYPE_TEXTURE = 2 | 用于EGL/OpenGLES和媒体数据写入，开发者定制绘制内容和XComponent组件内容合成后显示在屏幕上。 |
+| ARKUI_XCOMPONENT_TYPE_SURFACE = 0 | 用于EGL/OpenGLES和媒体数据写入，开发者定制绘制内容单独显示在屏幕上。<br><!--Device-ARKUI_XCOMPONENT_TYPE_SURFACE = 0--><!--Device-ARKUI_XCOMPONENT_TYPE_SURFACE = 0-End--> |
+| ARKUI_XCOMPONENT_TYPE_TEXTURE = 2 | 用于EGL/OpenGLES和媒体数据写入，开发者定制绘制内容和XComponent组件内容合成后显示在屏幕上。<br><!--Device-ARKUI_XCOMPONENT_TYPE_TEXTURE = 2--><!--Device-ARKUI_XCOMPONENT_TYPE_TEXTURE = 2-End--> |
 
 

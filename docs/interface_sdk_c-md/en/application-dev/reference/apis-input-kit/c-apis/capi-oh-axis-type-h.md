@@ -2,17 +2,21 @@
 
 ## Overview
 
-**Include**: <multimodalinput/oh_axis_type.h>
+Axis event enums of input devices. The axis type defines the physical behavior characteristics of the input device in different interaction scenarios. The system distinguishes and delivers different gesture interaction information through the axis type.
+
+**File to Include**: <multimodalinput/oh_axis_type.h>
 
 **Library**: libohinput.so
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
-**Related module**: [input](capi-input.md)
+**Related module**: [input](capi-input-kit-input.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -32,15 +36,19 @@ enum InputEvent_AxisType
 
 Defines the axis type of an input device.
 
+<!--Device-enum InputEvent_AxisType--><!--Device-enum InputEvent_AxisType-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_TYPE_UNKNOWN = 0 | Unknown axis type, which is usually used as the initial value.<br>**Since**: 12 |
-| AXIS_TYPE_SCROLL_VERTICAL = 1 | Vertical scroll axis. When you scroll the mouse wheel or slide with one or two fingers on the touchpad, the status of the vertical scroll axis changes.<br>**Since**: 12 |
-| AXIS_TYPE_SCROLL_HORIZONTAL = 2 | Horizontal scroll axis. When you scroll the mouse wheel or slide with two fingers on the touchpad, the status of the horizontal scroll axis changes.<br>**Since**: 12 |
-| AXIS_TYPE_PINCH = 3 | Pinch axis, which is used to describe a two-finger pinch gesture on the touchpad.<br>**Since**: 12 |
-| AXIS_TYPE_ROTATE = 4 | Rotation axis, which is used to describe a two-finger rotation gesture on the touchpad.<br>**Since**: 12 |
+| AXIS_TYPE_UNKNOWN = 0 | Unknown axis type, which is usually used as the initial value.<br>**Since**: 12<br><!--Device-AXIS_TYPE_UNKNOWN = 0--><!--Device-AXIS_TYPE_UNKNOWN = 0-End--> |
+| AXIS_TYPE_SCROLL_VERTICAL = 1 | Vertical scroll axis. When you scroll the mouse wheel or slide with one or two fingers on the touchpad, the status of the vertical scroll axis changes.<br>**Since**: 12<br><!--Device-AXIS_TYPE_SCROLL_VERTICAL = 1--><!--Device-AXIS_TYPE_SCROLL_VERTICAL = 1-End--> |
+| AXIS_TYPE_SCROLL_HORIZONTAL = 2 | Horizontal scroll axis. When you scroll the mouse wheel or slide with two fingers on the touchpad, the status of the horizontal scroll axis changes.<br>**Since**: 12<br><!--Device-AXIS_TYPE_SCROLL_HORIZONTAL = 2--><!--Device-AXIS_TYPE_SCROLL_HORIZONTAL = 2-End--> |
+| AXIS_TYPE_PINCH = 3 | Pinch axis, which is used to describe a two-finger pinch gesture on the touchpad.<br>**Since**: 12<br><!--Device-AXIS_TYPE_PINCH = 3--><!--Device-AXIS_TYPE_PINCH = 3-End--> |
+| AXIS_TYPE_ROTATE = 4 | Rotation axis, which is used to describe a two-finger rotation gesture on the touchpad.<br>**Since**: 12<br><!--Device-AXIS_TYPE_ROTATE = 4--><!--Device-AXIS_TYPE_ROTATE = 4-End--> |
 
 ### InputEvent_AxisEventType
 
@@ -52,12 +60,16 @@ enum InputEvent_AxisEventType
 
 Event type of the input device.
 
+<!--Device-enum InputEvent_AxisEventType--><!--Device-enum InputEvent_AxisEventType-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_EVENT_TYPE_PINCH = 1 | Two-finger pinch event. The value can be **AXIS_TYPE_PINCH** or **AXIS_TYPE_ROTATE**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type.<br>**Since**: 12 |
-| AXIS_EVENT_TYPE_SCROLL = 2 | Scroll event. The value can be **AXIS_TYPE_SCROLL_VERTICAL** or **AXIS_TYPE_SCROLL_HORIZONTAL**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type. For a mouse wheel event, only **AXIS_TYPE_SCROLL_VERTICAL**<br>is supported.<br>**Since**: 12 |
+| AXIS_EVENT_TYPE_PINCH = 1 | Two-finger pinch event. The value can be **AXIS_TYPE_PINCH** or **AXIS_TYPE_ROTATE**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type.<br>**Since**: 12<br><!--Device-AXIS_EVENT_TYPE_PINCH = 1--><!--Device-AXIS_EVENT_TYPE_PINCH = 1-End--> |
+| AXIS_EVENT_TYPE_SCROLL = 2 | Scroll event. The value can be **AXIS_TYPE_SCROLL_VERTICAL** or **AXIS_TYPE_SCROLL_HORIZONTAL**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type. For a mouse wheel event, only **AXIS_TYPE_SCROLL_VERTICAL**<br>is supported.<br>**Since**: 12<br><!--Device-AXIS_EVENT_TYPE_SCROLL = 2--><!--Device-AXIS_EVENT_TYPE_SCROLL = 2-End--> |
 
 ### InputEvent_AxisAction
 
@@ -69,13 +81,17 @@ enum InputEvent_AxisAction
 
 Action of the input device.
 
+<!--Device-enum InputEvent_AxisAction--><!--Device-enum InputEvent_AxisAction-End-->
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_ACTION_CANCEL = 0 | The axis event is canceled.<br>**Since**: 12 |
-| AXIS_ACTION_BEGIN = 1 | The axis event begins.<br>**Since**: 12 |
-| AXIS_ACTION_UPDATE = 2 | The axis event is updated.<br>**Since**: 12 |
-| AXIS_ACTION_END = 3 | The axis event ends.<br>**Since**: 12 |
+| AXIS_ACTION_CANCEL = 0 | The axis event is canceled.<br>**Since**: 12<br><!--Device-AXIS_ACTION_CANCEL = 0--><!--Device-AXIS_ACTION_CANCEL = 0-End--> |
+| AXIS_ACTION_BEGIN = 1 | The axis event begins.<br>**Since**: 12<br><!--Device-AXIS_ACTION_BEGIN = 1--><!--Device-AXIS_ACTION_BEGIN = 1-End--> |
+| AXIS_ACTION_UPDATE = 2 | The axis event is updated.<br>**Since**: 12<br><!--Device-AXIS_ACTION_UPDATE = 2--><!--Device-AXIS_ACTION_UPDATE = 2-End--> |
+| AXIS_ACTION_END = 3 | The axis event ends.<br>**Since**: 12<br><!--Device-AXIS_ACTION_END = 3--><!--Device-AXIS_ACTION_END = 3-End--> |
 
 

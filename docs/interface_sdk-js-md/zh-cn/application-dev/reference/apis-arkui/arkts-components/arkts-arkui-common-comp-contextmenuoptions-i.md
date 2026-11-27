@@ -317,7 +317,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 当设置BorderRadiuses或LocalizedBorderRadiuses类型且传参为异常值时，菜单默认没有圆角。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -815,7 +815,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 默认值：'#19ffffff'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md)
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **默认值：** '#19ffffff'
 
@@ -843,7 +843,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 不支持百分比，若需要外描边效果，outlineWidth为必填项。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths
 
 **默认值：** 0vp - Percentage values are not supported.
 

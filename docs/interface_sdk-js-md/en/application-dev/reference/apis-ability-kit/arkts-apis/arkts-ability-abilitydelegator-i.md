@@ -900,7 +900,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-ability-context-c.md) | [Context](arkts-ability-context-depr.md). |
+| [Context](arkts-ability-context-c.md) | [Context](arkts-ability-context.md). |
 
 **Examples**
 

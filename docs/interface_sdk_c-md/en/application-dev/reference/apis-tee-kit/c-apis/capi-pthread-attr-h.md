@@ -6,13 +6,15 @@ Provides the attr about TA multi-thread.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
-### Macro
+### Macros
 
 | Name | Description |
 | -- | -- |
@@ -22,7 +24,7 @@ Provides the attr about TA multi-thread.
 | TEESMP_THREAD_ATTR_HAS_SHADOW 0x1 | Defines that the thread attribute has a shadow.<br>**Since**: 20 |
 | TEESMP_THREAD_ATTR_NO_SHADOW 0x0 | Defines that the thread attribute does not have a shadow.<br>**Since**: 20 |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -39,6 +41,10 @@ int pthread_attr_settee(pthread_attr_t *a, int ca, int task_id, int shadow)
 **Description**
 
 Sets thread attributes for CA, task ID, and shadow settings.
+
+<!--Device-int pthread_attr_settee(pthread_attr_t *a, int ca, int task_id, int shadow)--><!--Device-int pthread_attr_settee(pthread_attr_t *a, int ca, int task_id, int shadow)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

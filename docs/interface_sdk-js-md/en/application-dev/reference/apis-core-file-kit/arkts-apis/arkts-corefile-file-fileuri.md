@@ -21,6 +21,7 @@ import { fileUri } from '@kit.CoreFileKit';
 | Name | Description |
 | --- | --- |
 | [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) | Get the uri from the path of file in app sandbox |
+| [getUriFromPathWithExtName](arkts-corefile-fileuri-geturifrompathwithextname-f.md#geturifrompathwithextname-1) | Generates a URI based on the file path in the application sandbox. Chinese characters and non-digit characters in the path are encoded into percentages. |
 
 ### Classes
 

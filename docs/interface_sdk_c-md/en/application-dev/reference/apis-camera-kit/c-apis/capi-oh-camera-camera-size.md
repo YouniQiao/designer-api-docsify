@@ -1,18 +1,20 @@
 # Camera_Size
 
 ```c
-struct Camera_Size {...}
+typedef struct Camera_Size {...} Camera_Size
 ```
 
 ## Overview
 
 The struct describes the parameters related to the size.
 
+<!--Device-struct Camera_Size {...}--><!--Device-struct Camera_Size {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ The struct describes the parameters related to the size.
 
 | Name | Description |
 | -- | -- |
-| uint32_t width | Width, in pixels. |
-| uint32_t height | Height, in pixels. |
+| uint32_t width | Width, in pixels.<br><!--Device-uint32_t width--><!--Device-uint32_t width-End--> |
+| uint32_t height | Height, in pixels.<br><!--Device-uint32_t height--><!--Device-uint32_t height-End--> |
 
 

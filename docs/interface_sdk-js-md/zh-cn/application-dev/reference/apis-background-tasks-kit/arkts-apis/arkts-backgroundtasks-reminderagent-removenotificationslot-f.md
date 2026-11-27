@@ -28,7 +28,7 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-depr-slottype-e.md) | 是 | 目标notification.slot的类型。 |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md) | 是 | 目标notification.slot的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
 
 **示例**
@@ -66,7 +66,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-depr-slottype-e.md) | 是 | 目标notification.slot的类型。 |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notification-slottype-depr-e.md) | 是 | 目标notification.slot的类型。 |
 
 **返回值：**
 

@@ -35,7 +35,7 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [AsyncLockCallback](arkts-arkts-utils-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |
+| [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |
 
 ### Enums
 

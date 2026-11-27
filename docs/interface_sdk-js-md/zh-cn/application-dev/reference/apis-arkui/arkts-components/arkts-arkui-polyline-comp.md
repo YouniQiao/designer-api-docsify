@@ -40,7 +40,7 @@ Polyline(options?: PolylineOptions)
 ## Polyline
 
 ```TypeScript
-new Polyline(options?: PolylineOptions)
+Polyline(options?: PolylineOptions)
 ```
 
 用于绘制折线的构造函数。

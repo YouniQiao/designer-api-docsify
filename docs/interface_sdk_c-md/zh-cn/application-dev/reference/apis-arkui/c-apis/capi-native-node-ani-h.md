@@ -4,11 +4,15 @@
 
 提供ArkTS1.2的FrameNode转换NodeHandle的方式。
 
+**引用文件：** <arkui/native_node_ani.h>
+
 **库：** libace_ndk.z.so
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -35,6 +39,10 @@ int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object
 
 获取ArkTS侧创建的FrameNode节点对象映射到Native侧的ArkUI_NodeHandle。
 
+<!--Device-int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object frameNode, ArkUI_NodeHandle* handle)--><!--Device-int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object frameNode, ArkUI_NodeHandle* handle)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -49,7 +57,7 @@ int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NativeModule_GetContextFromAniValue()
 
@@ -60,6 +68,10 @@ int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object co
 **描述：**
 
 获取ArkTS侧创建的UIContext对象映射到Native侧的ArkUI_ContextHandle。
+
+<!--Device-int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object context, ArkUI_ContextHandle* handle)--><!--Device-int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object context, ArkUI_ContextHandle* handle)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -75,7 +87,7 @@ int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object co
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NativeModule_GetNodeContentFromAniValue()
 
@@ -86,6 +98,10 @@ int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_objec
 **描述：**
 
 获取ArkTS侧创建的NodeContent对象映射到Native侧的ArkUI_NodeContentHandle。
+
+<!--Device-int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_object nodeContent, ArkUI_NodeContentHandle *content)--><!--Device-int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_object nodeContent, ArkUI_NodeContentHandle *content)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -101,7 +117,7 @@ int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_objec
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NativeModule_GetNavDestinationAniParam()
 
@@ -112,6 +128,10 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_GetNavDestinationAniParam(ArkUI_NodeHandle
 **描述：**
 
 获取指定节点所在的NavDestination页面的参数。
+
+<!--Device-ArkUI_ErrorCode OH_ArkUI_NativeModule_GetNavDestinationAniParam(ArkUI_NodeHandle node, ani_env* env, ani_value* param)--><!--Device-ArkUI_ErrorCode OH_ArkUI_NativeModule_GetNavDestinationAniParam(ArkUI_NodeHandle node, ani_env* env, ani_value* param)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -127,7 +147,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_GetNavDestinationAniParam(ArkUI_NodeHandle
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-native-type-h.md#arkui_errorcode) 查询页面参数信息失败。 |
+| ArkUI_ErrorCode | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) 查询页面参数信息失败。 |
 
 ### OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue()
 
@@ -138,6 +158,10 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, an
 **描述：**
 
 获取ArkTS侧的<b>DrawableDescriptor</b>对象，并将其映射到Native侧的<b>ArkUI_DrawableDescriptor</b>对象。
+
+<!--Device-int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, ani_object drawable, ArkUI_DrawableDescriptor **drawableDescriptor)--><!--Device-int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, ani_object drawable, ArkUI_DrawableDescriptor **drawableDescriptor)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -153,7 +177,7 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, an
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误代码。如果操作成功，则返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。如果发生参数错误，则返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
+| int32_t | 返回错误代码。如果操作成功，则返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。如果发生参数错误，则返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue()
 
@@ -164,6 +188,10 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env 
 **描述：**
 
 获取ArkTS侧的<b>Resource</b>对象，并将其映射到Native侧的<b>ArkUI_DrawableDescriptor</b>对象。
+
+<!--Device-int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env *env, ani_object resource, ArkUI_DrawableDescriptor **drawableDescriptor)--><!--Device-int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env *env, ani_object resource, ArkUI_DrawableDescriptor **drawableDescriptor)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -179,6 +207,6 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误代码。如果操作成功，则返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。如果发生参数错误，则返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
+| int32_t | 返回错误代码。如果操作成功，则返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode)。如果发生参数错误，则返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode)。 |
 
 

@@ -41,7 +41,7 @@ Draws a polygon.
 ## Polygon
 
 ```TypeScript
-new Polygon(options?: PolygonOptions)
+Polygon(options?: PolygonOptions)
 ```
 
 Draws a polygon.

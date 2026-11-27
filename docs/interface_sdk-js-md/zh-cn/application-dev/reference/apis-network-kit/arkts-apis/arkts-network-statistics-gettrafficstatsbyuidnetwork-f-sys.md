@@ -35,7 +35,7 @@ function getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Pro
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; | Promise对象，返回应用历史流量统计信息。 |
+| Promise&lt;NetStatsInfoSequence&gt; | Promise对象，返回应用历史流量统计信息。 |
 
 **错误码：**
 

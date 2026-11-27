@@ -1,18 +1,20 @@
 # Camera_Profile
 
 ```c
-struct Camera_Profile {...}
+typedef struct Camera_Profile {...} Camera_Profile
 ```
 
 ## 概述
 
 相机流的配置文件。
 
+<!--Device-struct Camera_Profile {...}--><!--Device-struct Camera_Profile {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_Profile {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [Camera_Format](capi-camera-h.md#camera_format) format | 相机格式。 |
-| [Camera_Size](capi-oh-camera-camera-size.md) size | 图片大小。 |
+| [Camera_Format](capi-camera-h.md#camera_format) format | 相机格式。<br><!--Device-Camera_Format format--><!--Device-Camera_Format format-End--> |
+| [Camera_Size](capi-oh-camera-camera-size.md) size | 图片大小。<br><!--Device-Camera_Size size--><!--Device-Camera_Size size-End--> |
 
 

@@ -1,18 +1,20 @@
 # HiAppEvent_AppEventGroup
 
 ```c
-struct HiAppEvent_AppEventGroup {...}
+typedef struct HiAppEvent_AppEventGroup {...} HiAppEvent_AppEventGroup
 ```
 
 ## 概述
 
 一组事件信息，用于管理和组织具有相同名称的事件信息。该结构体包含事件组的名称，按名称分组的单个事件信息数组，事件数组的长度。
 
+<!--Device-struct HiAppEvent_AppEventGroup {...}--><!--Device-struct HiAppEvent_AppEventGroup {...}-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
-**相关模块：** [HiAppEvent](capi-hiappevent.md)
+**相关模块：** [HiAppEvent](capi-performance-analysis-kit-hiappevent.md)
 
 **所在头文件：** [hiappevent.h](capi-hiappevent-h.md)
 
@@ -22,8 +24,8 @@ struct HiAppEvent_AppEventGroup {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| const char* name | 事件数组中相同的事件名称。 |
-| [const struct HiAppEvent_AppEventInfo*](capi-hiappevent-hiappevent-appeventinfo.md) appEventInfos | 具有相同事件名称的事件数组。 |
-| uint32_t infoLen | 具有相同事件名称的事件数组的长度。 |
+| const char* name | 事件数组中相同的事件名称。<br>**起始版本：** 12<br><!--Device-const char* name--><!--Device-const char* name-End--> |
+| [const struct HiAppEvent_AppEventInfo*](capi-hiappevent-hiappevent-appeventinfo.md) appEventInfos | 具有相同事件名称的事件数组。<br>**起始版本：** 12<br><!--Device-const struct HiAppEvent_AppEventInfo* appEventInfos--><!--Device-const struct HiAppEvent_AppEventInfo* appEventInfos-End--> |
+| uint32_t infoLen | 具有相同事件名称的事件数组的长度。<br>**起始版本：** 12<br><!--Device-uint32_t infoLen--><!--Device-uint32_t infoLen-End--> |
 
 

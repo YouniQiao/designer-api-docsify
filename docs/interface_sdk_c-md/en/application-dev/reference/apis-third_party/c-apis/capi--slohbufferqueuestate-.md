@@ -4,3 +4,15 @@
 
 OH Buffer queue state
 
+<!--Device-struct SLOHBufferQueueState_ {...}--><!--Device-struct SLOHBufferQueueState_ {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| SLuint32 count | <!--Device-SLuint32 count--><!--Device-SLuint32 count-End--> |
+| SLuint32 index | <!--Device-SLuint32 index--><!--Device-SLuint32 index-End--> |
+
+

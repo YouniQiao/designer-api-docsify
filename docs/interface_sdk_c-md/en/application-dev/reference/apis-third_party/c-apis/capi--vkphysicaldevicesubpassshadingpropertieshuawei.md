@@ -2,3 +2,16 @@
 
 ## Overview
 
+<!--Device-struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI {...}--><!--Device-struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI {...}-End-->
+
+## Summary
+
+### Member variables
+
+| Name | Description |
+| -- | -- |
+| VkStructureType sType | <!--Device-VkStructureType sType--><!--Device-VkStructureType sType-End--> |
+| void* pNext | <!--Device-void* pNext--><!--Device-void* pNext-End--> |
+| uint32_t maxSubpassShadingWorkgroupSizeAspectRatio | <!--Device-uint32_t maxSubpassShadingWorkgroupSizeAspectRatio--><!--Device-uint32_t maxSubpassShadingWorkgroupSizeAspectRatio-End--> |
+
+

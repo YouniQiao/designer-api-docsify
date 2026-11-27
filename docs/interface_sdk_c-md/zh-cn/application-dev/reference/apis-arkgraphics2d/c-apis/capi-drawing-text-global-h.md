@@ -6,9 +6,11 @@
 
 **库：** libnative_drawing.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## 汇总
 
@@ -38,13 +40,17 @@ enum OH_Drawing_TextHighContrast
 
 文本渲染高对比度模式枚举。
 
+<!--Device-enum OH_Drawing_TextHighContrast--><!--Device-enum OH_Drawing_TextHighContrast-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST | 跟随系统设置中的高对比度文字配置。 |
-| TEXT_APP_DISABLE_HIGH_CONTRAST | 关闭应用的文本渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。 |
-| TEXT_APP_ENABLE_HIGH_CONTRAST | 开启应用的文本渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。 |
+| TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST | 跟随系统设置中的高对比度文字配置。<br><!--Device-TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST--><!--Device-TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST-End--> |
+| TEXT_APP_DISABLE_HIGH_CONTRAST | 关闭应用的文本渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。<br><!--Device-TEXT_APP_DISABLE_HIGH_CONTRAST--><!--Device-TEXT_APP_DISABLE_HIGH_CONTRAST-End--> |
+| TEXT_APP_ENABLE_HIGH_CONTRAST | 开启应用的文本渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。<br><!--Device-TEXT_APP_ENABLE_HIGH_CONTRAST--><!--Device-TEXT_APP_ENABLE_HIGH_CONTRAST-End--> |
 
 ### OH_Drawing_TextUndefinedGlyphDisplay
 
@@ -56,12 +62,16 @@ enum OH_Drawing_TextUndefinedGlyphDisplay
 
 显示未定义字形的方式。
 
+<!--Device-enum OH_Drawing_TextUndefinedGlyphDisplay--><!--Device-enum OH_Drawing_TextUndefinedGlyphDisplay-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TEXT_NO_GLYPH_USE_DEFAULT = 0 | 使用字体文件中定义的默认字形（可能是空框、空白或自定义符号等）。 |
-| TEXT_NO_GLYPH_USE_TOFU = 1 | 始终使用豆腐块显示缺失的字形。 |
+| TEXT_NO_GLYPH_USE_DEFAULT = 0 | 使用字体文件中定义的默认字形（可能是空框、空白或自定义符号等）。<br><!--Device-TEXT_NO_GLYPH_USE_DEFAULT = 0--><!--Device-TEXT_NO_GLYPH_USE_DEFAULT = 0-End--> |
+| TEXT_NO_GLYPH_USE_TOFU = 1 | 始终使用豆腐块显示缺失的字形。<br><!--Device-TEXT_NO_GLYPH_USE_TOFU = 1--><!--Device-TEXT_NO_GLYPH_USE_TOFU = 1-End--> |
 
 
 ## 函数说明
@@ -75,6 +85,10 @@ void OH_Drawing_SetTextHighContrast(OH_Drawing_TextHighContrast action)
 **描述：**
 
 设置文本渲染高对比度模式。 <br>该接口设置后整个进程都会生效，进程内所有页面共用相同模式。 <br>可通过调用此接口设置文本渲染高对比度模式，也可通过系统设置界面中高对比度文字配置开关进行开启/关闭。使用此接口设置文本渲染高对比度的优先级高于系统设置。 <br>该接口针对应用的文字自绘制场景不生效。
+
+<!--Device-void OH_Drawing_SetTextHighContrast(OH_Drawing_TextHighContrast action)--><!--Device-void OH_Drawing_SetTextHighContrast(OH_Drawing_TextHighContrast action)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -93,6 +107,10 @@ void OH_Drawing_SetTextUndefinedGlyphDisplay(OH_Drawing_TextUndefinedGlyphDispla
 **描述：**
 
 设置未定义字形的呈现方式，调用此接口后影响本进程后续渲染的所有文本。
+
+<!--Device-void OH_Drawing_SetTextUndefinedGlyphDisplay(OH_Drawing_TextUndefinedGlyphDisplay undefinedGlyphDisplay)--><!--Device-void OH_Drawing_SetTextUndefinedGlyphDisplay(OH_Drawing_TextUndefinedGlyphDisplay undefinedGlyphDisplay)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 

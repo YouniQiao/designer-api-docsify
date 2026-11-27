@@ -4,7 +4,7 @@
 declare class ApplicationContext extends Context
 ```
 
-ApplicationContext inherits from [Context](arkts-ability-context-depr.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](arkts-ability-context.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE:** 
 > 
@@ -1827,13 +1827,6 @@ Sets the font for this application. This API can be called only on the main thre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | font | string | Yes | Font, which can be registered by calling UIContext.registerFont. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
 

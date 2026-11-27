@@ -130,7 +130,7 @@ Operation type. If this parameter is not set, no default operation type is used.
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType<sup>11+</sup> instead.
 
-**Type:** [wantAgent.OperationType](arkts-ability-wantagent-depr-operationtype-e.md)
+**Type:** [wantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
 **Since:** 7
 
@@ -154,7 +154,7 @@ Action execution attribute. If this parameter is not set, no execution attribute
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags<sup>11+</sup> instead.
 
-**Type:** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-depr-wantagentflags-e.md)&gt;
+**Type:** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
 
 **Since:** 7
 

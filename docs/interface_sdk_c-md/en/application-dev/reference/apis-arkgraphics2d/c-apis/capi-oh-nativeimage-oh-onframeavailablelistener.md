@@ -1,18 +1,20 @@
 # OH_OnFrameAvailableListener
 
 ```c
-struct OH_OnFrameAvailableListener {...}
+typedef struct OH_OnFrameAvailableListener {...} OH_OnFrameAvailableListener
 ```
 
 ## Overview
 
 A listener for native image, use <b>OH_NativeImage_SetOnFrameAvailableListener</b> to register the listener object to <b>OH_NativeImage</b>, the callback will be triggered when there is available frame
 
+<!--Device-struct OH_OnFrameAvailableListener {...}--><!--Device-struct OH_OnFrameAvailableListener {...}-End-->
+
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeImage
 
 **Since**: 11
 
-**Related module**: [OH_NativeImage](capi-oh-nativeimage.md)
+**Related module**: [OH_NativeImage](capi-arkgraphics2d-oh-nativeimage.md)
 
 **Header file**: [native_image.h](capi-native-image-h.md)
 
@@ -22,7 +24,7 @@ A listener for native image, use <b>OH_NativeImage_SetOnFrameAvailableListener</
 
 | Name | Description |
 | -- | -- |
-| void *context | User defined context, returned to the user in the callback function |
-| [OH_OnFrameAvailable](capi-native-image-h.md#oh_onframeavailable) onFrameAvailable | The callback function of frame available. |
+| void *context | User defined context, returned to the user in the callback function<br><!--Device-void *context--><!--Device-void *context-End--> |
+| [OH_OnFrameAvailable](capi-native-image-h.md#oh_onframeavailable) onFrameAvailable | The callback function of frame available.<br><!--Device-OH_OnFrameAvailable onFrameAvailable--><!--Device-OH_OnFrameAvailable onFrameAvailable-End--> |
 
 

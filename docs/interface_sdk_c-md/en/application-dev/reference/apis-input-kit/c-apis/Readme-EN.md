@@ -1,7 +1,7 @@
 # C API<!--c-inputkit-->
 
 - Module<!--inputkit-module-->
-    - [input](capi-input.md)
+    - [input](capi-input-kit-input.md)
 - Header file<!--inputkit-headerfile-->
     - [oh_pointer_style.h](capi-oh-pointer-style-h.md)
     - [oh_key_code.h](capi-oh-key-code-h.md)
@@ -22,3 +22,5 @@
     - [Input_CursorConfig](capi-input-input-cursorconfig.md)
     - [Input_InterceptorOptions](capi-input-input-interceptoroptions.md)
     - [OH_PixelmapNative](capi-input-oh-pixelmapnative.md)
+    - [OH_Input_EventHandler](capi-input-oh-input-eventhandler.md)
+    - [OH_Input_Event](capi-input-oh-input-event.md)

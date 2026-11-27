@@ -1,18 +1,20 @@
 # HiDebug_GraphicsMemorySummary
 
 ```c
-struct HiDebug_GraphicsMemorySummary {...}
+typedef struct HiDebug_GraphicsMemorySummary {...} HiDebug_GraphicsMemorySummary
 ```
 
 ## Overview
 
 Defines a struct for the application graphics memory usage details.
 
+<!--Device-struct HiDebug_GraphicsMemorySummary {...}--><!--Device-struct HiDebug_GraphicsMemorySummary {...}-End-->
+
 **System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Since**: 21
 
-**Related module**: [HiDebug](capi-hidebug.md)
+**Related module**: [HiDebug](capi-performance-analysis-kit-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -22,7 +24,7 @@ Defines a struct for the application graphics memory usage details.
 
 | Name | Description |
 | -- | -- |
-| uint32_t gl | GL memory size (memory occupied by RenderService for loading required resources, such as images and textures), in KB. |
-| uint32_t graph | Graph memory size (DMA memory usage of the process), in KB, including the DMA buffers obtained directly through the API and those obtained through **allocator_host**. |
+| uint32_t gl | GL memory size (memory occupied by RenderService for loading required resources, such as images and textures), in KB.<br><!--Device-uint32_t gl--><!--Device-uint32_t gl-End--> |
+| uint32_t graph | Graph memory size (DMA memory usage of the process), in KB, including the DMA buffers obtained directly through the API and those obtained through **allocator_host**.<br><!--Device-uint32_t graph--><!--Device-uint32_t graph-End--> |
 
 

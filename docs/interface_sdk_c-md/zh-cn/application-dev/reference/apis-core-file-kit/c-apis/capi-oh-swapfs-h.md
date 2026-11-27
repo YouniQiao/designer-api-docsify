@@ -8,7 +8,9 @@
 
 **库：** libohswapfs.so
 
+**系统能力：** SystemCapability.FileManagement.File.Swapfs
+
 **起始版本：** 26.0.0
 
-**相关模块：** [Swapfs](capi-swapfs.md)
+**相关模块：** [Swapfs](capi-core-file-kit-swapfs.md)
 

@@ -1,18 +1,20 @@
 # CloudDisk_FileSyncState
 
 ```c
-struct CloudDisk_FileSyncState {...}
+typedef struct CloudDisk_FileSyncState {...} CloudDisk_FileSyncState
 ```
 
 ## 概述
 
 文件的同步状态。
 
+<!--Device-struct CloudDisk_FileSyncState {...}--><!--Device-struct CloudDisk_FileSyncState {...}-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
-**相关模块：** [CloudDisk](capi-clouddisk.md)
+**相关模块：** [CloudDisk](capi-core-file-kit-clouddisk.md)
 
 **所在头文件：** [oh_cloud_disk_manager.h](capi-oh-cloud-disk-manager-h.md)
 
@@ -22,7 +24,7 @@ struct CloudDisk_FileSyncState {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) filePathInfo | 文件的路径信息。<br>**起始版本：** 21 |
-| [CloudDisk_SyncState](capi-oh-cloud-disk-manager-h.md#clouddisk_syncstate) syncState | 文件的同步状态。<br>**起始版本：** 21 |
+| [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) filePathInfo | 文件的路径信息。<br>**起始版本：** 21<br><!--Device-CloudDisk_PathInfo filePathInfo--><!--Device-CloudDisk_PathInfo filePathInfo-End--> |
+| [CloudDisk_SyncState](capi-oh-cloud-disk-manager-h.md#clouddisk_syncstate) syncState | 文件的同步状态。<br>**起始版本：** 21<br><!--Device-CloudDisk_SyncState syncState--><!--Device-CloudDisk_SyncState syncState-End--> |
 
 

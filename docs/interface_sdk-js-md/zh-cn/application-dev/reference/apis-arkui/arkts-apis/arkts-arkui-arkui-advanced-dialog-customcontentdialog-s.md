@@ -73,7 +73,7 @@ contentAreaPadding?: Padding
 
 弹出框内容区内边距。设置了localizedContentAreaPadding属性时该属性不生效。
 
-**类型：** [Padding](arkts-arkui-padding-t.md)
+**类型：** Padding
 
 **起始版本：** 12
 

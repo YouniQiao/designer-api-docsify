@@ -1,18 +1,20 @@
 # Camera_ControlCenterStatusInfo
 
 ```c
-struct Camera_ControlCenterStatusInfo {...}
+typedef struct Camera_ControlCenterStatusInfo {...} Camera_ControlCenterStatusInfo
 ```
 
 ## 概述
 
 控制器效果激活状态信息。
 
+<!--Device-struct Camera_ControlCenterStatusInfo {...}--><!--Device-struct Camera_ControlCenterStatusInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_ControlCenterStatusInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [Camera_ControlCenterEffectType](capi-camera-h.md#camera_controlcentereffecttype) effectType | 控制器效果类型。 |
-| bool isActive | 控制器是否激活。true表示激活，false表示未激活。 |
+| [Camera_ControlCenterEffectType](capi-camera-h.md#camera_controlcentereffecttype) effectType | 控制器效果类型。<br><!--Device-Camera_ControlCenterEffectType effectType--><!--Device-Camera_ControlCenterEffectType effectType-End--> |
+| bool isActive | 控制器是否激活。true表示激活，false表示未激活。<br><!--Device-bool isActive--><!--Device-bool isActive-End--> |
 
 

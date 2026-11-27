@@ -1,18 +1,20 @@
 # OH_NativeBuffer_Cta861
 
 ```c
-struct OH_NativeBuffer_Cta861 {...}
+typedef struct OH_NativeBuffer_Cta861 {...} OH_NativeBuffer_Cta861
 ```
 
 ## 概述
 
 表示CTA-861.3静态元数据。
 
+<!--Device-struct OH_NativeBuffer_Cta861 {...}--><!--Device-struct OH_NativeBuffer_Cta861 {...}-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **起始版本：** 12
 
-**相关模块：** [OH_NativeBuffer](capi-oh-nativebuffer.md)
+**相关模块：** [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
 
 **所在头文件：** [buffer_common.h](capi-buffer-common-h.md)
 
@@ -22,7 +24,7 @@ struct OH_NativeBuffer_Cta861 {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| float maxContentLightLevel | 最大内容亮度水平 |
-| float maxFrameAverageLightLevel | 最大的帧平均亮度水平 |
+| float maxContentLightLevel | 最大内容亮度水平<br><!--Device-float maxContentLightLevel--><!--Device-float maxContentLightLevel-End--> |
+| float maxFrameAverageLightLevel | 最大的帧平均亮度水平<br><!--Device-float maxFrameAverageLightLevel--><!--Device-float maxFrameAverageLightLevel-End--> |
 
 

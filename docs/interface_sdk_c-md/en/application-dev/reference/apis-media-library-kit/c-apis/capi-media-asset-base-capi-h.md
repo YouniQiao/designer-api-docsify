@@ -6,24 +6,26 @@ The file declares the structs and enums for the media asset manager.
 
 **Library**: libmedia_asset_manager.so
 
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
-**Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
+**Related module**: [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) | - | Defines a struct for the request ID. |
-| [MediaLibrary_RequestOptions](capi-mediaassetmanager-medialibrary-requestoptions.md) | - | The struct defines how media assets are requested and processed. |
+| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) | MediaLibrary_RequestId | Defines a struct for the request ID. |
+| [MediaLibrary_RequestOptions](capi-mediaassetmanager-medialibrary-requestoptions.md) | MediaLibrary_RequestOptions | The struct defines how media assets are requested and processed. |
 | [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md) | OH_MediaAssetManager | The struct describes the media asset manager. |
 | [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | OH_MediaAssetChangeRequest | The struct describes a media asset change request. |
 | [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md) | OH_MovingPhoto | The struct describes a moving photo. |
 | [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) | OH_MediaAsset | The struct describes a media asset. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -36,7 +38,7 @@ The file declares the structs and enums for the media asset manager.
 | [MediaLibrary_MediaQuality](#medialibrary_mediaquality) | MediaLibrary_MediaQuality | Enumerates the media resource quality, |
 | [MediaLibrary_MediaContentType](#medialibrary_mediacontenttype) | MediaLibrary_MediaContentType | Enumerates the media content types. |
 
-### Function
+### Functions
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -45,15 +47,11 @@ The file declares the structs and enums for the media asset manager.
 | [typedef void (\*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto)](#oh_medialibrary_onmovingphotodataprepared) | OH_MediaLibrary_OnMovingPhotoDataPrepared | Called when the requested moving photo is ready. |
 | [typedef void (\*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative)](#oh_medialibrary_onquickimagedataprepared) | OH_MediaLibrary_OnQuickImageDataPrepared | This callback is called when the requested image source is ready. If an image buffer exists in the system, an image object is returned, reducing the encoding time. |
 
-### Variable
+### Variables
 
 | Name | Description |
 | -- | -- |
-| static const int32_t UUID_STR_MAX_LENGTH = 37 | Maximum length of a request ID.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
-| void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_RequestId requestId) | Called when the requested media asset is ready.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
-| void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative) | Called when the requested image is ready.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
-| void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto) | Called when the requested moving photo is ready.<br>**Since**: 13<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
-| void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative) | This callback is called when the requested image source is ready. If an image buffer exists in the system, an image object is returned, reducing the encoding time.<br>**Since**: 23<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
+| static const int32_t UUID_STR_MAX_LENGTH = 37 | Maximum length of a request ID.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core<br><!--Device-static const int32_t UUID_STR_MAX_LENGTH = 37--><!--Device-static const int32_t UUID_STR_MAX_LENGTH = 37-End--> |
 
 ## Enum type description
 
@@ -67,19 +65,23 @@ enum MediaLibrary_ErrorCode
 
 Enumerates the error codes of the media library.
 
+<!--Device-enum MediaLibrary_ErrorCode--><!--Device-enum MediaLibrary_ErrorCode-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_OK = 0 | Operation success. |
-| MEDIA_LIBRARY_PERMISSION_DENIED = 201 | No access permission. |
-| MEDIA_LIBRARY_PARAMETER_ERROR = 401 | A mandatory parameter is not specified, the parameter type is incorrect, or parameter verification failed. |
-| MEDIA_LIBRARY_NO_SUCH_FILE = 23800101 | The file does not exist. |
-| MEDIA_LIBRARY_INVALID_DISPLAY_NAME = 23800102 | Invalid display name. |
-| MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103 | Invalid asset URI. |
-| MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104 | Invalid PhotoKey. |
-| MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201 | Unsupported operation. |
-| MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301 | Internal system error. Retry the operation and check logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| MEDIA_LIBRARY_OK = 0 | Operation success.<br><!--Device-MEDIA_LIBRARY_OK = 0--><!--Device-MEDIA_LIBRARY_OK = 0-End--> |
+| MEDIA_LIBRARY_PERMISSION_DENIED = 201 | No access permission.<br><!--Device-MEDIA_LIBRARY_PERMISSION_DENIED = 201--><!--Device-MEDIA_LIBRARY_PERMISSION_DENIED = 201-End--> |
+| MEDIA_LIBRARY_PARAMETER_ERROR = 401 | A mandatory parameter is not specified, the parameter type is incorrect, or parameter verification failed.<br><!--Device-MEDIA_LIBRARY_PARAMETER_ERROR = 401--><!--Device-MEDIA_LIBRARY_PARAMETER_ERROR = 401-End--> |
+| MEDIA_LIBRARY_NO_SUCH_FILE = 23800101 | The file does not exist.<br><!--Device-MEDIA_LIBRARY_NO_SUCH_FILE = 23800101--><!--Device-MEDIA_LIBRARY_NO_SUCH_FILE = 23800101-End--> |
+| MEDIA_LIBRARY_INVALID_DISPLAY_NAME = 23800102 | Invalid display name.<br><!--Device-MEDIA_LIBRARY_INVALID_DISPLAY_NAME = 23800102--><!--Device-MEDIA_LIBRARY_INVALID_DISPLAY_NAME = 23800102-End--> |
+| MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103 | Invalid asset URI.<br><!--Device-MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103--><!--Device-MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103-End--> |
+| MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104 | Invalid PhotoKey.<br><!--Device-MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104--><!--Device-MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104-End--> |
+| MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201 | Unsupported operation.<br><!--Device-MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201--><!--Device-MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201-End--> |
+| MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301 | Internal system error. Retry the operation and check logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out.<br><!--Device-MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301--><!--Device-MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301-End--> |
 
 ### MediaLibrary_DeliveryMode
 
@@ -91,13 +93,17 @@ enum MediaLibrary_DeliveryMode
 
 Enumerates the delivery modes of the requested media asset.
 
+<!--Device-enum MediaLibrary_DeliveryMode--><!--Device-enum MediaLibrary_DeliveryMode-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_FAST_MODE = 0 | delivery fast mode |
-| MEDIA_LIBRARY_HIGH_QUALITY_MODE = 1 | delivery high quality mode |
-| MEDIA_LIBRARY_BALANCED_MODE = 2 | delivery balanced mode |
+| MEDIA_LIBRARY_FAST_MODE = 0 | delivery fast mode<br><!--Device-MEDIA_LIBRARY_FAST_MODE = 0--><!--Device-MEDIA_LIBRARY_FAST_MODE = 0-End--> |
+| MEDIA_LIBRARY_HIGH_QUALITY_MODE = 1 | delivery high quality mode<br><!--Device-MEDIA_LIBRARY_HIGH_QUALITY_MODE = 1--><!--Device-MEDIA_LIBRARY_HIGH_QUALITY_MODE = 1-End--> |
+| MEDIA_LIBRARY_BALANCED_MODE = 2 | delivery balanced mode<br><!--Device-MEDIA_LIBRARY_BALANCED_MODE = 2--><!--Device-MEDIA_LIBRARY_BALANCED_MODE = 2-End--> |
 
 ### MediaLibrary_MediaType
 
@@ -109,12 +115,16 @@ enum MediaLibrary_MediaType
 
 Enumerates the media asset types.
 
+<!--Device-enum MediaLibrary_MediaType--><!--Device-enum MediaLibrary_MediaType-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_IMAGE = 1 | image asset |
-| MEDIA_LIBRARY_VIDEO = 2 | video asset |
+| MEDIA_LIBRARY_IMAGE = 1 | image asset<br><!--Device-MEDIA_LIBRARY_IMAGE = 1--><!--Device-MEDIA_LIBRARY_IMAGE = 1-End--> |
+| MEDIA_LIBRARY_VIDEO = 2 | video asset<br><!--Device-MEDIA_LIBRARY_VIDEO = 2--><!--Device-MEDIA_LIBRARY_VIDEO = 2-End--> |
 
 ### MediaLibrary_MediaSubType
 
@@ -126,13 +136,17 @@ enum MediaLibrary_MediaSubType
 
 Enumerates the media asset subtypes.
 
+<!--Device-enum MediaLibrary_MediaSubType--><!--Device-enum MediaLibrary_MediaSubType-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_DEFAULT = 0 | default Photo Type |
-| MEDIA_LIBRARY_MOVING_PHOTO = 3 | moving Photo Type |
-| MEDIA_LIBRARY_BURST = 4 | burst Photo Type |
+| MEDIA_LIBRARY_DEFAULT = 0 | default Photo Type<br><!--Device-MEDIA_LIBRARY_DEFAULT = 0--><!--Device-MEDIA_LIBRARY_DEFAULT = 0-End--> |
+| MEDIA_LIBRARY_MOVING_PHOTO = 3 | moving Photo Type<br><!--Device-MEDIA_LIBRARY_MOVING_PHOTO = 3--><!--Device-MEDIA_LIBRARY_MOVING_PHOTO = 3-End--> |
+| MEDIA_LIBRARY_BURST = 4 | burst Photo Type<br><!--Device-MEDIA_LIBRARY_BURST = 4--><!--Device-MEDIA_LIBRARY_BURST = 4-End--> |
 
 ### MediaLibrary_ResourceType
 
@@ -144,12 +158,16 @@ enum MediaLibrary_ResourceType
 
 Enumerates the media library resource types.
 
+<!--Device-enum MediaLibrary_ResourceType--><!--Device-enum MediaLibrary_ResourceType-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_IMAGE_RESOURCE = 1 | image resource |
-| MEDIA_LIBRARY_VIDEO_RESOURCE = 2 | video resource |
+| MEDIA_LIBRARY_IMAGE_RESOURCE = 1 | image resource<br><!--Device-MEDIA_LIBRARY_IMAGE_RESOURCE = 1--><!--Device-MEDIA_LIBRARY_IMAGE_RESOURCE = 1-End--> |
+| MEDIA_LIBRARY_VIDEO_RESOURCE = 2 | video resource<br><!--Device-MEDIA_LIBRARY_VIDEO_RESOURCE = 2--><!--Device-MEDIA_LIBRARY_VIDEO_RESOURCE = 2-End--> |
 
 ### MediaLibrary_ImageFileType
 
@@ -161,13 +179,17 @@ enum MediaLibrary_ImageFileType
 
 Enumerates the image file types.
 
+<!--Device-enum MediaLibrary_ImageFileType--><!--Device-enum MediaLibrary_ImageFileType-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_IMAGE_JPEG = 1 | JPEG type |
-| MEDIA_LIBRARY_IMAGE_HEIF = 2 | HEIF.<br>**Since**: 23 |
-| MEDIA_LIBRARY_FILE_VIDEO = 3 | MPEG.<br>**Since**: 19 |
+| MEDIA_LIBRARY_IMAGE_JPEG = 1 | JPEG type<br><!--Device-MEDIA_LIBRARY_IMAGE_JPEG = 1--><!--Device-MEDIA_LIBRARY_IMAGE_JPEG = 1-End--> |
+| MEDIA_LIBRARY_IMAGE_HEIF = 2 | HEIF.<br>**Since**: 23<br><!--Device-MEDIA_LIBRARY_IMAGE_HEIF = 2--><!--Device-MEDIA_LIBRARY_IMAGE_HEIF = 2-End--> |
+| MEDIA_LIBRARY_FILE_VIDEO = 3 | MPEG.<br>**Since**: 19<br><!--Device-MEDIA_LIBRARY_FILE_VIDEO = 3--><!--Device-MEDIA_LIBRARY_FILE_VIDEO = 3-End--> |
 
 ### MediaLibrary_MediaQuality
 
@@ -179,12 +201,16 @@ enum MediaLibrary_MediaQuality
 
 Enumerates the media resource quality,
 
+<!--Device-enum MediaLibrary_MediaQuality--><!--Device-enum MediaLibrary_MediaQuality-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_QUALITY_FAST = 1 | fast quality |
-| MEDIA_LIBRARY_QUALITY_FULL = 2 | full quality |
+| MEDIA_LIBRARY_QUALITY_FAST = 1 | fast quality<br><!--Device-MEDIA_LIBRARY_QUALITY_FAST = 1--><!--Device-MEDIA_LIBRARY_QUALITY_FAST = 1-End--> |
+| MEDIA_LIBRARY_QUALITY_FULL = 2 | full quality<br><!--Device-MEDIA_LIBRARY_QUALITY_FULL = 2--><!--Device-MEDIA_LIBRARY_QUALITY_FULL = 2-End--> |
 
 ### MediaLibrary_MediaContentType
 
@@ -196,12 +222,16 @@ enum MediaLibrary_MediaContentType
 
 Enumerates the media content types.
 
+<!--Device-enum MediaLibrary_MediaContentType--><!--Device-enum MediaLibrary_MediaContentType-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_COMPRESSED = 1 | compressed media content type |
-| MEDIA_LIBRARY_PICTURE_OBJECT = 2 | picture object media content type |
+| MEDIA_LIBRARY_COMPRESSED = 1 | compressed media content type<br><!--Device-MEDIA_LIBRARY_COMPRESSED = 1--><!--Device-MEDIA_LIBRARY_COMPRESSED = 1-End--> |
+| MEDIA_LIBRARY_PICTURE_OBJECT = 2 | picture object media content type<br><!--Device-MEDIA_LIBRARY_PICTURE_OBJECT = 2--><!--Device-MEDIA_LIBRARY_PICTURE_OBJECT = 2-End--> |
 
 
 ## Function description
@@ -215,6 +245,10 @@ typedef void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_Requ
 **Description**
 
 Called when the requested media asset is ready.
+
+<!--Device-typedef void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_RequestId requestId)--><!--Device-typedef void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_RequestId requestId)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 
@@ -235,6 +269,10 @@ typedef void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode resul
 
 Called when the requested image is ready.
 
+<!--Device-typedef void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative)--><!--Device-typedef void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -245,7 +283,7 @@ Called when the requested image is ready.
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested source, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested source, which is specified by [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
-| [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md)* imageSourceNative | Pointer to the [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image is ready. |
+| [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md)* imageSourceNative | Pointer to the [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image is ready. |
 
 ### OH_MediaLibrary_OnMovingPhotoDataPrepared()
 
@@ -256,6 +294,10 @@ typedef void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode
 **Description**
 
 Called when the requested moving photo is ready.
+
+<!--Device-typedef void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto)--><!--Device-typedef void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 13
 
@@ -278,6 +320,10 @@ typedef void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode 
 **Description**
 
 This callback is called when the requested image source is ready. If an image buffer exists in the system, an image object is returned, reducing the encoding time.
+
+<!--Device-typedef void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative)--><!--Device-typedef void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative)-End-->
+
+**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 23
 

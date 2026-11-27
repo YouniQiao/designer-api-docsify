@@ -1,18 +1,20 @@
 # OH_AudioSession_Strategy
 
 ```c
-struct OH_AudioSession_Strategy {...}
+typedef struct OH_AudioSession_Strategy {...} OH_AudioSession_Strategy
 ```
 
 ## 概述
 
-音频会话策略。<br>从API version 24开始，此结构体由native_audio_session_manager.h移动至native_audio_session_base.h文件。<br>在API version 24之前，使用该结构体请引用native_audio_session_manager.h头文件；从API version 24开始，引用native_audio_session_manager. h或native_audio_session_base.h均可正常使用该结构体。
+声明音频会话策略结构体，该结构体用于在激活会话时传递会话并发策略信息。 <br>从API version 24开始，此结构体由native_audio_session_manager. h移动至native_audio_session_base.h文件。 <br>在API version 24之前，使用该结构体请引用native_audio_session_manager.h头文件； 从API version 24开始， 引用native_audio_session_manager.h或native_audio_session_base.h均可正常使用该结构体。
+
+<!--Device-struct OH_AudioSession_Strategy {...}--><!--Device-struct OH_AudioSession_Strategy {...}-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
-**相关模块：** [OHAudio](capi-ohaudio.md)
+**相关模块：** [OHAudio](capi-audio-kit-ohaudio.md)
 
 **所在头文件：** [native_audio_session_base.h](capi-native-audio-session-base-h.md)
 
@@ -22,6 +24,6 @@ struct OH_AudioSession_Strategy {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_AudioSession_ConcurrencyMode](capi-native-audio-session-base-h.md#oh_audiosession_concurrencymode) concurrencyMode | 音频并发模式。 |
+| [OH_AudioSession_ConcurrencyMode](capi-native-audio-session-base-h.md#oh_audiosession_concurrencymode) concurrencyMode | 音频并发模式。<br><!--Device-OH_AudioSession_ConcurrencyMode concurrencyMode--><!--Device-OH_AudioSession_ConcurrencyMode concurrencyMode-End--> |
 
 

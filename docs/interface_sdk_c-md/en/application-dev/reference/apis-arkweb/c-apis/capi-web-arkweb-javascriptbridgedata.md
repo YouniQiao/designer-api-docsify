@@ -8,11 +8,13 @@ typedef struct ArkWeb_JavaScriptBridgeData {...} ArkWeb_JavaScriptBridgeData
 
 ArkWeb_JavaScriptBridgeData is a struct that defines JavaScript bridge data, used to transfer JavaScript bridge-related data between native code and web pages. This struct encapsulates the parameter data in bridge calls and serves as the basic data unit in the JavaScript bridge subsystem, working in conjunction with the JavaScript Proxy registration APIs in ArkWeb_ControllerAPI.
 
+<!--Device-typedef struct ArkWeb_JavaScriptBridgeData {...} ArkWeb_JavaScriptBridgeData--><!--Device-typedef struct ArkWeb_JavaScriptBridgeData {...} ArkWeb_JavaScriptBridgeData-End-->
+
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
 
-**Related module**: [Web](capi-web.md)
+**Related module**: [Web](capi-arkweb-web.md)
 
 **Header file**: [arkweb_type.h](capi-arkweb-type-h.md)
 
@@ -22,7 +24,7 @@ ArkWeb_JavaScriptBridgeData is a struct that defines JavaScript bridge data, use
 
 | Name | Description |
 | -- | -- |
-| const uint8_t* buffer | Pointer to the transmitted data. Supports String and ArrayBuffer types. Other types are JSON-serialized and passed as String. |
-| size_t size | Length of the transmitted data. It is recommended to set this value appropriately based on the actual data size and keep it consistent with the buffer size to avoid performance or data issues caused by excessively large or small values. |
+| const uint8_t* buffer | Pointer to the transmitted data. Supports String and ArrayBuffer types. Other types are JSON-serialized and passed as String.<br><!--Device-const uint8_t* buffer--><!--Device-const uint8_t* buffer-End--> |
+| size_t size | Length of the transmitted data. It is recommended to set this value appropriately based on the actual data size and keep it consistent with the buffer size to avoid performance or data issues caused by excessively large or small values.<br><!--Device-size_t size--><!--Device-size_t size-End--> |
 
 

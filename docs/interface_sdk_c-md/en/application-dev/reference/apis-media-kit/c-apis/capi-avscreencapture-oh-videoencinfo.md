@@ -1,18 +1,20 @@
 # OH_VideoEncInfo
 
 ```c
-struct OH_VideoEncInfo {...}
+typedef struct OH_VideoEncInfo {...} OH_VideoEncInfo
 ```
 
 ## Overview
 
 The struct describes the video encoding information.
 
+<!--Device-struct OH_VideoEncInfo {...}--><!--Device-struct OH_VideoEncInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
-**Related module**: [AVScreenCapture](capi-avscreencapture.md)
+**Related module**: [AVScreenCapture](capi-media-kit-avscreencapture.md)
 
 **Header file**: [native_avscreen_capture_base.h](capi-native-avscreen-capture-base-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the video encoding information.
 
 | Name | Description |
 | -- | -- |
-| [OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat) videoCodec | Video encoder format |
-| int32_t videoBitrate | Video encoder bitrate, in bit/s |
-| int32_t videoFrameRate | Video encoder frame rate, in fps |
+| [OH_VideoCodecFormat](capi-native-avscreen-capture-base-h.md#oh_videocodecformat) videoCodec | Video encoder format<br><!--Device-OH_VideoCodecFormat videoCodec--><!--Device-OH_VideoCodecFormat videoCodec-End--> |
+| int32_t videoBitrate | Video encoder bitrate, in bit/s<br><!--Device-int32_t videoBitrate--><!--Device-int32_t videoBitrate-End--> |
+| int32_t videoFrameRate | Video encoder frame rate, in fps<br><!--Device-int32_t videoFrameRate--><!--Device-int32_t videoFrameRate-End--> |
 
 

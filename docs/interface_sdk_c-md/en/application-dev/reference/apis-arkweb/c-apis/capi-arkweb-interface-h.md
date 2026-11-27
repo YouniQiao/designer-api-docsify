@@ -6,25 +6,27 @@
 
 **Library**: libohweb.so
 
+**System capability**: SystemCapability.Web.Webview.Core
+
 **Since**: 12
 
-**Related module**: [Web](capi-web.md)
+**Related module**: [Web](capi-arkweb-web.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md) | ArkWeb_AnyNativeAPI | ArkWeb_AnyNativeAPI is the basic struct type of ArkWeb Native API, used to uniformly represent pointers to various Native API structs obtained through the [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) API. This struct contains a size member of the size_t type, which records the size of the current struct. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkWeb_NativeAPIVariantKind](#arkweb_nativeapivariantkind) | ArkWeb_NativeAPIVariantKind | Enumerates the native API types. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -43,16 +45,20 @@ enum ArkWeb_NativeAPIVariantKind
 
 Enumerates the native API types.
 
+<!--Device-enum ArkWeb_NativeAPIVariantKind--><!--Device-enum ArkWeb_NativeAPIVariantKind-End-->
+
+**System capability**: SystemCapability.Web.Webview.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKWEB_NATIVE_COMPONENT | API type related to Component. |
-| ARKWEB_NATIVE_CONTROLLER | API type related to Controller. |
-| ARKWEB_NATIVE_WEB_MESSAGE_PORT | API type related to WebMessagePort. |
-| ARKWEB_NATIVE_WEB_MESSAGE | API type related to WebMessage. |
-| ARKWEB_NATIVE_COOKIE_MANAGER | API type related to CookieManager. |
-| ARKWEB_NATIVE_JAVASCRIPT_VALUE | API type related to ArkWeb JavaScript value.<br>**Since**: 18 |
+| ARKWEB_NATIVE_COMPONENT | API type related to Component.<br><!--Device-ARKWEB_NATIVE_COMPONENT--><!--Device-ARKWEB_NATIVE_COMPONENT-End--> |
+| ARKWEB_NATIVE_CONTROLLER | API type related to Controller.<br><!--Device-ARKWEB_NATIVE_CONTROLLER--><!--Device-ARKWEB_NATIVE_CONTROLLER-End--> |
+| ARKWEB_NATIVE_WEB_MESSAGE_PORT | API type related to WebMessagePort.<br><!--Device-ARKWEB_NATIVE_WEB_MESSAGE_PORT--><!--Device-ARKWEB_NATIVE_WEB_MESSAGE_PORT-End--> |
+| ARKWEB_NATIVE_WEB_MESSAGE | API type related to WebMessage.<br><!--Device-ARKWEB_NATIVE_WEB_MESSAGE--><!--Device-ARKWEB_NATIVE_WEB_MESSAGE-End--> |
+| ARKWEB_NATIVE_COOKIE_MANAGER | API type related to CookieManager.<br><!--Device-ARKWEB_NATIVE_COOKIE_MANAGER--><!--Device-ARKWEB_NATIVE_COOKIE_MANAGER-End--> |
+| ARKWEB_NATIVE_JAVASCRIPT_VALUE | API type related to ArkWeb JavaScript value.<br>**Since**: 18<br><!--Device-ARKWEB_NATIVE_JAVASCRIPT_VALUE--><!--Device-ARKWEB_NATIVE_JAVASCRIPT_VALUE-End--> |
 
 
 ## Function description
@@ -66,6 +72,10 @@ ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)
 **Description**
 
 Obtains the corresponding Native API struct based on the API type passed in. It is used in scenarios such as obtaining a Controller in native code to control Web component behavior, obtaining a CookieManager to manage cookies, obtaining a WebMessagePort for message communication, and obtaining a JavaScriptValue to operate JavaScript objects.
+
+<!--Device-ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)--><!--Device-ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)-End-->
+
+**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
 
@@ -90,6 +100,10 @@ bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallbac
 **Description**
 
 Registers a callback for the component scroll event. It is used in scenarios such as monitoring user scroll behavior for lazy loading, detecting scroll position for back-to-top functionality, recording user browsing behavior for data analysis, and implementing visual effects during scrolling.
+
+<!--Device-bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallback callback, void* userData)--><!--Device-bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallback callback, void* userData)-End-->
+
+**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 18
 

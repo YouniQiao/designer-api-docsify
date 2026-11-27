@@ -8,11 +8,13 @@ typedef struct RawFileDescriptor {...} RawFileDescriptor
 
 Provides rawfile file descriptor information, including the file descriptor, start position within the HAP, and file length.<br>This information is obtained through [OH_ResourceManager_GetRawFileDescriptorData](capi-raw-file-h.md#oh_resourcemanager_getrawfiledescriptordata), and must be released through [OH_ResourceManager_ReleaseRawFileDescriptorData](capi-raw-file-h.md#oh_resourcemanager_releaserawfiledescriptordata) after use.
 
+<!--Device-typedef struct RawFileDescriptor {...} RawFileDescriptor--><!--Device-typedef struct RawFileDescriptor {...} RawFileDescriptor-End-->
+
 **System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 8
 
-**Related module**: [rawfile](capi-rawfile.md)
+**Related module**: [rawfile](capi-localization-kit-rawfile.md)
 
 **Header file**: [raw_file.h](capi-raw-file-h.md)
 
@@ -22,8 +24,8 @@ Provides rawfile file descriptor information, including the file descriptor, sta
 
 | Name | Description |
 | -- | -- |
-| int fd | File descriptor of the rawfile. |
-| long start | Start position of the rawfile in the HAP, in bytes. |
-| long length | Length of the rawfile, in bytes. |
+| int fd | File descriptor of the rawfile.<br><!--Device-int fd--><!--Device-int fd-End--> |
+| long start | Start position of the rawfile in the HAP, in bytes.<br><!--Device-long start--><!--Device-long start-End--> |
+| long length | Length of the rawfile, in bytes.<br><!--Device-long length--><!--Device-long length-End--> |
 
 

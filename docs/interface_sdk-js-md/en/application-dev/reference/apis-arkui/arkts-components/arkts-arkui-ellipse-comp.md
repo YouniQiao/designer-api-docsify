@@ -35,7 +35,7 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 ## Ellipse
 
 ```TypeScript
-new Ellipse(options?: EllipseOptions)
+Ellipse(options?: EllipseOptions)
 ```
 
 Constructor used to draw an ellipse. After being called, it creates an **Ellipse** object, for which the width and height attributes can be set.

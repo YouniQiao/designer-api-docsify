@@ -250,7 +250,7 @@ Called to carry `AbilityInfo` to this ability after the ability is initialized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-depr-abilityinfo-i.md) | Yes | Indicates the `AbilityInfo` object containing information about this ability. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-depr-i.md) | Yes | Indicates the `AbilityInfo` object containing information about this ability. |
 
 ## openFile
 
@@ -304,7 +304,7 @@ Queries one or more data records in the database. This method should be implemen
 | uri | string | Yes | Indicates the database table storing the data to query. |
 | columns | Array&lt;string&gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
 | predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## update
 

@@ -8,11 +8,13 @@ typedef struct ArkUI_AccessibleRangeInfo {...} ArkUI_AccessibleRangeInfo
 
 用于表示特定组件（如Slider、Rating、Progress）的范围值信息，包含当前值、最大值和最小值，供无障碍服务读取并向障碍用户播报。
 
+<!--Device-typedef struct ArkUI_AccessibleRangeInfo {...} ArkUI_AccessibleRangeInfo--><!--Device-typedef struct ArkUI_AccessibleRangeInfo {...} ArkUI_AccessibleRangeInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 13
 
-**相关模块：** [ArkUI_Accessibility](capi-arkui-accessibility.md)
+**相关模块：** [ArkUI_Accessibility](capi-arkui-arkui-accessibility.md)
 
 **所在头文件：** [native_interface_accessibility.h](capi-native-interface-accessibility-h.md)
 
@@ -22,8 +24,8 @@ typedef struct ArkUI_AccessibleRangeInfo {...} ArkUI_AccessibleRangeInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| double min | 最小值。 |
-| double max | 最大值。 |
-| double current | 当前值。 |
+| double min | 最小值。<br><!--Device-double min--><!--Device-double min-End--> |
+| double max | 最大值。<br><!--Device-double max--><!--Device-double max-End--> |
+| double current | 当前值。<br><!--Device-double current--><!--Device-double current-End--> |
 
 

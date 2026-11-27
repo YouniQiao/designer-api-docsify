@@ -1,18 +1,20 @@
 # Camera_CaptureEndInfo
 
 ```c
-struct Camera_CaptureEndInfo {...}
+typedef struct Camera_CaptureEndInfo {...} Camera_CaptureEndInfo
 ```
 
 ## 概述
 
 捕获结束信息。
 
+<!--Device-struct Camera_CaptureEndInfo {...}--><!--Device-struct Camera_CaptureEndInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_CaptureEndInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t captureId | 捕获id。 |
-| int64_t frameCount | 帧数。 |
+| int32_t captureId | 捕获id。<br><!--Device-int32_t captureId--><!--Device-int32_t captureId-End--> |
+| int64_t frameCount | 帧数。<br><!--Device-int64_t frameCount--><!--Device-int64_t frameCount-End--> |
 
 

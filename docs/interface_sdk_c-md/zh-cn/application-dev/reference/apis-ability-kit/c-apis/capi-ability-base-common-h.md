@@ -6,9 +6,11 @@
 
 **库：** libability_base_want.so
 
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
-**相关模块：** [AbilityBase](capi-abilitybase.md)
+**相关模块：** [AbilityBase](capi-ability-kit-abilitybase.md)
 
 ## 汇总
 
@@ -30,11 +32,15 @@ enum AbilityBase_ErrorCode
 
 AbilityBase相关错误码枚举。
 
+<!--Device-enum AbilityBase_ErrorCode--><!--Device-enum AbilityBase_ErrorCode-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 **起始版本：** 15
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ABILITY_BASE_ERROR_CODE_NO_ERROR = 0 | 操作成功。 |
-| ABILITY_BASE_ERROR_CODE_PARAM_INVALID = 401 | 非法入参。 |
+| ABILITY_BASE_ERROR_CODE_NO_ERROR = 0 | 操作成功。<br><!--Device-ABILITY_BASE_ERROR_CODE_NO_ERROR = 0--><!--Device-ABILITY_BASE_ERROR_CODE_NO_ERROR = 0-End--> |
+| ABILITY_BASE_ERROR_CODE_PARAM_INVALID = 401 | 非法入参。<br><!--Device-ABILITY_BASE_ERROR_CODE_PARAM_INVALID = 401--><!--Device-ABILITY_BASE_ERROR_CODE_PARAM_INVALID = 401-End--> |
 
 

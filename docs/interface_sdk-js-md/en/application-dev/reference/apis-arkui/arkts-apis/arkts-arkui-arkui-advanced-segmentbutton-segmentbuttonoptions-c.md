@@ -258,7 +258,7 @@ The padding for icon + text buttons is: `{ top: 6, right: 8, bottom: 6, left: 8 
 
 Unit: vp
 
-**Type:** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -652,7 +652,7 @@ When the value is **undefined**, the text padding is **0**.
 
 Unit: vp
 
-**Type:** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 

@@ -1,18 +1,20 @@
 # OH_NN_UInt32Array
 
 ```c
-struct OH_NN_UInt32Array {...}
+typedef struct OH_NN_UInt32Array {...} OH_NN_UInt32Array
 ```
 
 ## Overview
 
 This structure is used to store a 32-bit unsigned integer array.
 
+<!--Device-struct OH_NN_UInt32Array {...}--><!--Device-struct OH_NN_UInt32Array {...}-End-->
+
 **System capability**: SystemCapability.AI.NeuralNetworkRuntime
 
 **Since**: 9
 
-**Related module**: [NeuralNetworkRuntime](capi-neuralnetworkruntime.md)
+**Related module**: [NeuralNetworkRuntime](capi-neural-network-runtime-kit-neuralnetworkruntime.md)
 
 **Header file**: [neural_network_runtime_type.h](capi-neural-network-runtime-type-h.md)
 
@@ -22,7 +24,7 @@ This structure is used to store a 32-bit unsigned integer array.
 
 | Name | Description |
 | -- | -- |
-| uint32_t *data | Pointer to the unsigned integer array |
-| uint32_t size | Array length |
+| uint32_t *data | Pointer to the unsigned integer array<br><!--Device-uint32_t *data--><!--Device-uint32_t *data-End--> |
+| uint32_t size | Array length<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
 
 

@@ -1,18 +1,20 @@
 # Rdb_TableDetails
 
 ```c
-struct Rdb_TableDetails {...}
+typedef struct Rdb_TableDetails {...} Rdb_TableDetails
 ```
 
 ## 概述
 
 描述数据库表执行端云同步任务上传和下载的统计信息。
 
+<!--Device-struct Rdb_TableDetails {...}--><!--Device-struct Rdb_TableDetails {...}-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 **所在头文件：** [relational_store.h](capi-relational-store-h.md)
 
@@ -22,8 +24,8 @@ struct Rdb_TableDetails {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| const char *table | 数据库表名。 |
-| [Rdb_Statistic](capi-rdb-rdb-statistic.md) upload | 表示数据库表中端云同步上传过程的统计信息。 |
-| [Rdb_Statistic](capi-rdb-rdb-statistic.md) download | 表示数据库表中端云同步下载过程的统计信息。 |
+| const char *table | 数据库表名。<br><!--Device-const char *table--><!--Device-const char *table-End--> |
+| [Rdb_Statistic](capi-rdb-rdb-statistic.md) upload | 表示数据库表中端云同步上传过程的统计信息。<br><!--Device-Rdb_Statistic upload--><!--Device-Rdb_Statistic upload-End--> |
+| [Rdb_Statistic](capi-rdb-rdb-statistic.md) download | 表示数据库表中端云同步下载过程的统计信息。<br><!--Device-Rdb_Statistic download--><!--Device-Rdb_Statistic download-End--> |
 
 

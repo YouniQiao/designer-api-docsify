@@ -443,8 +443,6 @@
   - [UidInfo(system api)](arkts-network-statistics-uidinfo-i-sys.md)<!--DelEnd-->
   - [NetBearType](arkts-network-statistics-netbeartype-t.md)
   <!--Del-->
-  - [NetStatsInfoSequence(system api)](arkts-network-statistics-netstatsinfosequence-t-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [UidNetStatsInfo(system api)](arkts-network-statistics-uidnetstatsinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TrafficPlanParam(system api)](arkts-network-statistics-trafficplanparam-e-sys.md)<!--DelEnd-->
@@ -521,11 +519,11 @@
   - [ResponseHeaders](arkts-network-websocket-responseheaders-t.md)
   - [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md)
 - [@system.fetch(Data Request)](arkts-network-system-fetch.md)
-  - [Fetch](arkts-network-fetch-depr-fetch-c.md)
-  - [FetchResponse](arkts-network-fetch-depr-fetchresponse-i.md)
+  - [Fetch](arkts-network-system-fetch-fetch-depr-c.md)
+  - [FetchResponse](arkts-network-system-fetch-fetchresponse-depr-i.md)
 - [@system.network(Network State)](arkts-network-system-network.md)
-  - [Network](arkts-network-network-depr-network-c.md)
-  - [NetworkResponse](arkts-network-network-depr-networkresponse-i.md)
+  - [Network](arkts-network-system-network-network-depr-c.md)
+  - [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md)
 - application<!--arkts-networkkit-application-->
   - [VpnExtensionContext(VPN Extension Context)](arkts-network-vpnextensioncontext.md)
     - [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)

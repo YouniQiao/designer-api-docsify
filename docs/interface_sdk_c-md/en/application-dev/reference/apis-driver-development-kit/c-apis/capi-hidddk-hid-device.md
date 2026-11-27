@@ -1,18 +1,20 @@
 # Hid_Device
 
 ```c
-struct Hid_Device {...}
+typedef struct Hid_Device {...} Hid_Device
 ```
 
 ## Overview
 
-Defines a struct for basic device information.
+Describes basic device information, including the name, vendor ID, and product ID of an HID device. This information is used as the device identifier when creating and operating an HID device.
+
+<!--Device-struct Hid_Device {...}--><!--Device-struct Hid_Device {...}-End-->
 
 **System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
-**Related module**: [HidDdk](capi-hidddk.md)
+**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
 
 **Header file**: [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -22,12 +24,12 @@ Defines a struct for basic device information.
 
 | Name | Description |
 | -- | -- |
-| const char *deviceName | Device name. |
-| uint16_t vendorId | Vendor ID. |
-| uint16_t productId | Product ID. |
-| uint16_t version | Version number. |
-| uint16_t bustype | Bus type. |
-| Hid_DeviceProp *properties | Device properties indicated by [Hid_DeviceProp](capi-hid-ddk-types-h.md#hid_deviceprop). |
-| uint16_t propLength | Number of device properties. |
+| const char *deviceName | Device name, which can contain a maximum of 128 characters and cannot be null. If the length exceeds the upper limit or the value is null, an error is returned.<br><!--Device-const char *deviceName--><!--Device-const char *deviceName-End--> |
+| uint16_t vendorId | Vendor ID.<br><!--Device-uint16_t vendorId--><!--Device-uint16_t vendorId-End--> |
+| uint16_t productId | Product ID.<br><!--Device-uint16_t productId--><!--Device-uint16_t productId-End--> |
+| uint16_t version | Version.<br><!--Device-uint16_t version--><!--Device-uint16_t version-End--> |
+| uint16_t bustype | Bus type. For details about the value, see the bus type definition in the standard HID protocol.<br><!--Device-uint16_t bustype--><!--Device-uint16_t bustype-End--> |
+| [Hid_DeviceProp](capi-hid-ddk-types-h.md#hid_deviceprop) *properties | Device properties. Before using this pointer, check whether it is null. This pointer is valid only when the **Hid_Device** object is valid and should not be manually released.<br><!--Device-Hid_DeviceProp *properties--><!--Device-Hid_DeviceProp *properties-End--> |
+| uint16_t propLength | Number of device properties, indicating the number of valid elements in the properties array. Note: When traversing the array, use this value as the boundary condition. The value may be **0**.<br><!--Device-uint16_t propLength--><!--Device-uint16_t propLength-End--> |
 
 

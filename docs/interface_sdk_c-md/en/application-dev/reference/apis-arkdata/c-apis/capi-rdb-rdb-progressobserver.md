@@ -1,18 +1,20 @@
 # Rdb_ProgressObserver
 
 ```c
-struct Rdb_ProgressObserver {...}
+typedef struct Rdb_ProgressObserver {...} Rdb_ProgressObserver
 ```
 
 ## Overview
 
 The observer of progress.
 
+<!--Device-struct Rdb_ProgressObserver {...}--><!--Device-struct Rdb_ProgressObserver {...}-End-->
+
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
-**Related module**: [RDB](capi-rdb.md)
+**Related module**: [RDB](capi-arkdata-rdb.md)
 
 **Header file**: [relational_store.h](capi-relational-store-h.md)
 
@@ -22,7 +24,7 @@ The observer of progress.
 
 | Name | Description |
 | -- | -- |
-| void *context | The context of progress observer. |
-| [Rdb_ProgressCallback](capi-relational-store-h.md#rdb_progresscallback) callback | The callback function of progress observer. |
+| void *context | The context of progress observer.<br><!--Device-void *context--><!--Device-void *context-End--> |
+| [Rdb_ProgressCallback](capi-relational-store-h.md#rdb_progresscallback) callback | The callback function of progress observer.<br><!--Device-Rdb_ProgressCallback callback--><!--Device-Rdb_ProgressCallback callback-End--> |
 
 

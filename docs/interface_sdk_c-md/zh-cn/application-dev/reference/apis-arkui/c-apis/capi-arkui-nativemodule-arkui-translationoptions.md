@@ -8,11 +8,13 @@ typedef struct ArkUI_TranslationOptions {...} ArkUI_TranslationOptions
 
 Defines the translation options for component transition.
 
+<!--Device-typedef struct ArkUI_TranslationOptions {...} ArkUI_TranslationOptions--><!--Device-typedef struct ArkUI_TranslationOptions {...} ArkUI_TranslationOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 **所在头文件：** [native_type.h](capi-native-type-h.md)
 
@@ -22,8 +24,8 @@ Defines the translation options for component transition.
 
 | 名称 | 描述 |
 | -- | -- |
-| float x | Translation distance along the x-axis. |
-| float y | Translation distance along the y-axis. |
-| float z | Translation distance along the z-axis. |
+| float x | Translation distance along the x-axis.<br><!--Device-float x--><!--Device-float x-End--> |
+| float y | Translation distance along the y-axis.<br><!--Device-float y--><!--Device-float y-End--> |
+| float z | Translation distance along the z-axis.<br><!--Device-float z--><!--Device-float z-End--> |
 
 

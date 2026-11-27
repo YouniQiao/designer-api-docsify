@@ -1,18 +1,20 @@
 # OH_Huks_KeyAliasSet
 
 ```c
-struct OH_Huks_KeyAliasSet {...}
+typedef struct OH_Huks_KeyAliasSet {...} OH_Huks_KeyAliasSet
 ```
 
 ## Overview
 
 Defines the struct of a key alias set.
 
+<!--Device-struct OH_Huks_KeyAliasSet {...}--><!--Device-struct OH_Huks_KeyAliasSet {...}-End-->
+
 **System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 
-**Related module**: [HuksTypeApi](capi-hukstypeapi.md)
+**Related module**: [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
 
 **Header file**: [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -22,7 +24,7 @@ Defines the struct of a key alias set.
 
 | Name | Description |
 | -- | -- |
-| uint32_t aliasesCnt | Number of key aliases. |
-| struct OH_Huks_Blob *aliases | Pointer to the key alias set. |
+| uint32_t aliasesCnt | Number of key aliases.<br><!--Device-uint32_t aliasesCnt--><!--Device-uint32_t aliasesCnt-End--> |
+| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *aliases | Pointer to the key alias set.<br><!--Device-struct OH_Huks_Blob *aliases--><!--Device-struct OH_Huks_Blob *aliases-End--> |
 
 

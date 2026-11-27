@@ -1,18 +1,20 @@
 # Camera_FoldStatusInfo
 
 ```c
-struct Camera_FoldStatusInfo {...}
+typedef struct Camera_FoldStatusInfo {...} Camera_FoldStatusInfo
 ```
 
 ## Overview
 
 The struct describes the fold status information of the camera.
 
+<!--Device-struct Camera_FoldStatusInfo {...}--><!--Device-struct Camera_FoldStatusInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 13
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the fold status information of the camera.
 
 | Name | Description |
 | -- | -- |
-| [Camera_Device*](capi-oh-camera-camera-device.md)* supportedCameras | Double pointer to the camera list. |
-| uint32_t cameraSize | Number of cameras in the list. |
-| [Camera_FoldStatus](capi-camera-h.md#camera_foldstatus) foldStatus | Current fold status. |
+| [Camera_Device*](capi-oh-camera-camera-device.md)* supportedCameras | Double pointer to the camera list.<br><!--Device-Camera_Device** supportedCameras--><!--Device-Camera_Device** supportedCameras-End--> |
+| uint32_t cameraSize | Number of cameras in the list.<br><!--Device-uint32_t cameraSize--><!--Device-uint32_t cameraSize-End--> |
+| [Camera_FoldStatus](capi-camera-h.md#camera_foldstatus) foldStatus | Current fold status.<br><!--Device-Camera_FoldStatus foldStatus--><!--Device-Camera_FoldStatus foldStatus-End--> |
 
 

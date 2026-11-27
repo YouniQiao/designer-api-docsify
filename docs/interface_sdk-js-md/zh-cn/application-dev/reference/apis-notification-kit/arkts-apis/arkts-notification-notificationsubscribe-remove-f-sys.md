@@ -34,7 +34,7 @@ function remove(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| notificationKey | [NotificationKey](arkts-notification-notification-depr-notificationkey-i.md) | 是 | 通知键值。 |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | 是 | 通知键值。 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 | 通知删除原因。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
@@ -102,7 +102,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| notificationKey | [NotificationKey](arkts-notification-notification-depr-notificationkey-i.md) | 是 | 通知键值。 |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | 是 | 通知键值。 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 | 通知删除原因。 |
 
 **返回值：**

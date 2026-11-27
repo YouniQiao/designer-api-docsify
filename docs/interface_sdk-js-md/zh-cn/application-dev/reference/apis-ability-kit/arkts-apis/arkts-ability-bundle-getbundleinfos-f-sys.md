@@ -32,7 +32,7 @@ function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncC
 | --- | --- | --- | --- |
 | bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | 是 | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | userId | number | 是 | User ID. Value range: greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt;&gt; | 是 | Callback used to return the result. If ${具体的操作} is successful, **err** is **undefined**, and ${XX} is ${XX} obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If ${具体的操作} is successful, **err** is **undefined**, and ${XX} is ${XX} obtained. Otherwise, **err** is an error object. |
 
 <!--Del-->
 **示例**
@@ -80,7 +80,7 @@ function getBundleInfos(bundleFlag: BundleFlag, callback: AsyncCallback<Array<Bu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | 是 | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt;&gt; | 是 | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 <!--Del-->
 **示例**
@@ -133,7 +133,7 @@ function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt;&gt; | Promise used to return all available BundleInfo. |
+| Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | Promise used to return all available BundleInfo. |
 
 <!--Del-->
 **示例**

@@ -40,7 +40,7 @@ Polygon(options?: PolygonOptions)
 ## Polygon
 
 ```TypeScript
-new Polygon(options?: PolygonOptions)
+Polygon(options?: PolygonOptions)
 ```
 
 用于绘制多边形的构造函数。

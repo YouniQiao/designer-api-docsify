@@ -1,18 +1,20 @@
 # Rdb_ProgressObserver
 
 ```c
-struct Rdb_ProgressObserver {...}
+typedef struct Rdb_ProgressObserver {...} Rdb_ProgressObserver
 ```
 
 ## 概述
 
 端云同步进度观察者。
 
+<!--Device-struct Rdb_ProgressObserver {...}--><!--Device-struct Rdb_ProgressObserver {...}-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 **所在头文件：** [relational_store.h](capi-relational-store-h.md)
 
@@ -22,7 +24,7 @@ struct Rdb_ProgressObserver {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| void *context | 端云同步进度观察者的上下文。 |
-| [Rdb_ProgressCallback](capi-relational-store-h.md#rdb_progresscallback) callback | 端云同步进度观察者的回调函数。 |
+| void *context | 端云同步进度观察者的上下文。<br><!--Device-void *context--><!--Device-void *context-End--> |
+| [Rdb_ProgressCallback](capi-relational-store-h.md#rdb_progresscallback) callback | 端云同步进度观察者的回调函数。<br><!--Device-Rdb_ProgressCallback callback--><!--Device-Rdb_ProgressCallback callback-End--> |
 
 

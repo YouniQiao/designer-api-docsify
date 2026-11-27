@@ -1,0 +1,51 @@
+# observer
+
+```TypeScript
+export interface observer
+```
+
+Defines the observer interface.
+
+**Since:** 6
+
+<!--Device-unnamed-export interface observer--><!--Device-unnamed-export interface observer-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## observe
+
+```TypeScript
+observe(callback: string): void
+```
+
+Turn on the listener.
+
+**Since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-observer-observe(callback: string): void--><!--Device-observer-observe(callback: string): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | string | Yes |  |
+
+## unobserve
+
+```TypeScript
+unobserve(): void
+```
+
+Turn off the listener.
+
+**Since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-observer-unobserve(): void--><!--Device-observer-unobserve(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

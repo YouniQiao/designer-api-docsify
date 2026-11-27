@@ -6,20 +6,22 @@ The file declares the functions of the media struct AVBuffer.
 
 **Library**: libnative_media_core.so
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
-**Related module**: [Core](capi-core.md)
+**Related module**: [Core](capi-avcodec-kit-core.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AVBuffer](capi-core-oh-avbuffer.md) | OH_AVBuffer | Describes a native object for the media memory interface. |
 | [OH_NativeBuffer](capi-core-oh-nativebuffer.md) | OH_NativeBuffer | Describes a native object for the graphics memory interface. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -31,7 +33,7 @@ The file declares the functions of the media struct AVBuffer.
 | [OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)](#oh_avbuffer_setparameter) | Sets parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance. |
 | [uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)](#oh_avbuffer_getaddr) | Obtains the virtual address of a data buffer. |
 | [int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)](#oh_avbuffer_getcapacity) | Obtains the capacity (in bytes) of a buffer. |
-| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | Obtains the pointer to an OH_NativeBuffer instance. You must call OH_NativeBuffer_Unreference to manually release the OH_NativeBuffer instance returned. |
+| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | Obtains the pointer to an OH_NativeBuffer instance. You must call [OH_NativeBuffer_Unreference](../../apis-arkgraphics2d/c-apis/capi-native-buffer-h.md#oh_nativebuffer_unreference) to manually release the OH_NativeBuffer instance returned. |
 
 ## Function description
 
@@ -44,6 +46,10 @@ OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)
 **Description**
 
 Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy) to manually release the OH_AVBuffer instance returned.
+
+<!--Device-OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)--><!--Device-OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 11
 
@@ -69,6 +75,10 @@ OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)
 
 Releases an OH_AVBuffer instance. A buffer cannot be destroyed repeatedly.
 
+<!--Device-OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)--><!--Device-OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -92,6 +102,10 @@ OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr
 **Description**
 
 Obtains the basic attributes, including **pts**, **size**, **offset**, and **flags**, of a buffer.
+
+<!--Device-OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr *attr)--><!--Device-OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr *attr)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 11
 
@@ -118,6 +132,10 @@ OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBuff
 
 Sets the basic attributes, including **pts**, **size**, **offset**, and **flags**, of a buffer.
 
+<!--Device-OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBufferAttr *attr)--><!--Device-OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBufferAttr *attr)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -143,6 +161,10 @@ OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)
 
 Obtains parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance. You must call [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy) to manually release the OH_AVFormat instance returned.
 
+<!--Device-OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)--><!--Device-OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -155,7 +177,7 @@ Obtains parameters except basic attributes of a buffer. The information is carri
 
 | Type | Description |
 | -- | -- |
-| [OH_AVFormat *](capi-core-oh-avformat.md) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows: <br>1. The value of **buffer** is nullptr. <br>2. The meta of the buffer is nullptr. <br>3. The value of **buffer** fails parameter structure verification. |
+| [OH_AVFormat *](capi-core-oh-avformat.md) | If the operation is successful, the pointer to the OH_AVFormat instance is returned. Otherwise, NULL is returned. <br>The possible causes are as follows: <br>1. The value of **buffer** is nullptr. <br>2. The meta of the buffer is nullptr. <br>3. The value of **buffer** fails parameter structure verification. |
 
 ### OH_AVBuffer_SetParameter()
 
@@ -166,6 +188,10 @@ OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *fo
 **Description**
 
 Sets parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance.
+
+<!--Device-OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)--><!--Device-OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 11
 
@@ -192,6 +218,10 @@ uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)
 
 Obtains the virtual address of a data buffer.
 
+<!--Device-uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)--><!--Device-uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -216,6 +246,10 @@ int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)
 
 Obtains the capacity (in bytes) of a buffer.
 
+<!--Device-int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)--><!--Device-int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 **Parameters**:
@@ -238,7 +272,11 @@ OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)
 
 **Description**
 
-Obtains the pointer to an OH_NativeBuffer instance. You must call OH_NativeBuffer_Unreference to manually release the OH_NativeBuffer instance returned.
+Obtains the pointer to an OH_NativeBuffer instance. You must call [OH_NativeBuffer_Unreference](../../apis-arkgraphics2d/c-apis/capi-native-buffer-h.md#oh_nativebuffer_unreference) to manually release the OH_NativeBuffer instance returned.
+
+<!--Device-OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)--><!--Device-OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)-End-->
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 11
 

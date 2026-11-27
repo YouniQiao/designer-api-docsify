@@ -2402,7 +2402,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的边框颜色，设置后边框显示为相应颜色。<br>默认值：Color.Black <br>**说明：** <br>使用LocalizedEdgeColors类型时，在不同语言方向下边框颜色设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的边框颜色，设置后边框显示为相应颜色。<br>默认值：Color.Black <br>**说明：** <br>使用LocalizedEdgeColors类型时，在不同语言方向下边框颜色设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -2466,7 +2466,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，默认单位：vp。<br>默认值：0。设置圆角后，可搭配[clip](#clip)属性进行裁剪，避免子组件超出组件自身。<br>**说明：** <br>使用LocalizedBorderRadiuses类型时，在不同语言方向下边框圆角半径设置会有差异，具体参见示例2。<br>设置四个不同圆角值，若某个圆角值超过高度和宽度中的最小值的一半时，按值的比例绘制异形圆角，效果参见示例4。<br>**适用版本：** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，默认单位：vp。<br>默认值：0。设置圆角后，可搭配[clip](#clip)属性进行裁剪，避免子组件超出组件自身。<br>**说明：** <br>使用LocalizedBorderRadiuses类型时，在不同语言方向下边框圆角半径设置会有差异，具体参见示例2。<br>设置四个不同圆角值，若某个圆角值超过高度和宽度中的最小值的一半时，按值的比例绘制异形圆角，效果参见示例4。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -2502,7 +2502,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度。设置圆角后，可搭配clip属性进行裁剪，避免子组件超出组件自身。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度。设置圆角后，可搭配clip属性进行裁剪，避免子组件超出组件自身。 |
 | type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | 否 | 设置组件绘制圆角的模式。<br>默认值：RenderStrategy.FAST。<br>可选值：<br>- RenderStrategy.FAST：快速绘制模式，适用于常规圆角场景，性能更优。若组件包含模糊等复杂视觉效果，使用该模式可能导致圆角裁剪异常。<br>- RenderStrategy.OFFSCREEN：离屏绘制模式，适用于包含模糊等复杂视觉效果的圆角场景，可正确渲染圆角但性能开销较大。<br>默认值： **RenderStrategy.FAST**。 |
 
 **返回值：**
@@ -2533,7 +2533,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](../arkts-apis/arkts-arkui-edgestyles-t.md) | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid |
 
 **返回值：**
 
@@ -2563,7 +2563,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | 是 | 设置元素的边框宽度，不支持百分比。默认单位：vp。<br>默认值：0。<br>**说明：** 使用LocalizedEdgeWidths类型时，在不同语言方向下边框宽度设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | 是 | 设置元素的边框宽度，不支持百分比。默认单位：vp。<br>默认值：0。<br>**说明：** 使用LocalizedEdgeWidths类型时，在不同语言方向下边框宽度设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -7294,7 +7294,7 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的外描边颜色，未设置时默认显示为黑色。<br>**适用版本：** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的外描边颜色，未设置时默认显示为黑色。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -7326,7 +7326,7 @@ outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | 是 | 设置元素的外描边颜色。<br>当color的值为undefined时，恢复为外描边颜色为Color.Black的效果。 |
+| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | 是 | 设置元素的外描边颜色。<br>当color的值为undefined时，恢复为外描边颜色为Color.Black的效果。 |
 
 **返回值：**
 
@@ -7358,7 +7358,7 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [OutlineRadiuses](../arkts-apis/arkts-arkui-outlineradiuses-t.md) | 是 | 设置元素的外描边圆角半径，不支持百分比，未设置时默认值为0。<br>最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; OutlineRadiuses | 是 | 设置元素的外描边圆角半径，不支持百分比，未设置时默认值为0。<br>最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。 |
 
 **返回值：**
 
@@ -7390,7 +7390,7 @@ outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [OutlineRadiuses](../arkts-apis/arkts-arkui-outlineradiuses-t.md)&gt; | 是 | 设置元素的外描边圆角半径，不支持百分比。<br>最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。<br>当radius的值为undefined时，恢复为外描边圆角半径为0的效果。 |
+| radius | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; OutlineRadiuses&gt; | 是 | 设置元素的外描边圆角半径，不支持百分比。<br>最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。<br>当radius的值为undefined时，恢复为外描边圆角半径为0的效果。 |
 
 **返回值：**
 
@@ -7422,7 +7422,7 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; [EdgeOutlineStyles](../arkts-apis/arkts-arkui-edgeoutlinestyles-t.md) | 是 | 设置元素的外描边样式，未设置时默认显示为一条实线。 |
+| value | [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; EdgeOutlineStyles | 是 | 设置元素的外描边样式，未设置时默认显示为一条实线。 |
 
 **返回值：**
 
@@ -7454,7 +7454,7 @@ outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; [EdgeOutlineStyles](../arkts-apis/arkts-arkui-edgeoutlinestyles-t.md)&gt; | 是 | 设置元素的外描边样式，需设置outlineWidth大于0，外描边样式才可见。<br>当style的值为undefined时，恢复为外描边样式为实线的效果。 |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) &#124; EdgeOutlineStyles&gt; | 是 | 设置元素的外描边样式，需设置outlineWidth大于0，外描边样式才可见。<br>当style的值为undefined时，恢复为外描边样式为实线的效果。 |
 
 **返回值：**
 
@@ -7486,7 +7486,7 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md) | 是 | 设置元素的外描边宽度，不支持百分比，未设置时默认值为0。 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths | 是 | 设置元素的外描边宽度，不支持百分比，未设置时默认值为0。 |
 
 **返回值：**
 
@@ -7518,7 +7518,7 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md)&gt; | 是 | 设置元素的外描边宽度，不支持百分比，传入百分比时不生效。<br>当width的值为undefined时，恢复为外描边宽度为0的效果。 |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths&gt; | 是 | 设置元素的外描边宽度，不支持百分比，传入百分比时不生效。<br>当width的值为undefined时，恢复为外描边宽度为0的效果。 |
 
 **返回值：**
 
@@ -7586,7 +7586,7 @@ padding(value: Padding | Length | LocalizedPadding): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的内边距。<br>参数为Length类型时，四个方向内边距同时生效。<br>默认值：0 <br>单位：vp <br>padding设置百分比时，上下左右内边距均以父容器的width作为基础值。<br>**适用版本：** 12 |
+| value | Padding &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的内边距。<br>参数为Length类型时，四个方向内边距同时生效。<br>默认值：0 <br>单位：vp <br>padding设置百分比时，上下左右内边距均以父容器的width作为基础值。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -8290,7 +8290,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; LengthMetrics &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。<br>默认值：0 <br>单位：vp <br>paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
+| paddingValue | Padding &#124; LengthMetrics &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。<br>默认值：0 <br>单位：vp <br>paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
 
 **返回值：**
 

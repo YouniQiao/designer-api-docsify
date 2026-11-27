@@ -34,7 +34,7 @@ Converts a SendableContext object to a Context object.
 
 | Type | Description |
 | --- | --- |
-| [common.Context](arkts-ability-common-context-t.md) | [Context](arkts-ability-context-depr.md) object. |
+| [common.Context](arkts-ability-common-context-t.md) | [Context](arkts-ability-context.md) object. |
 
 **Error codes:**
 

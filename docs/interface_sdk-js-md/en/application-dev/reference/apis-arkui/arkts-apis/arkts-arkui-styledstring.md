@@ -344,7 +344,7 @@ struct StyledStringBindEventsDemo {
 
 ### Example 3: Setting the Text Style
 
-This example shows how to query and set styles for styled strings using the [getStyles](arkts-arkui-styledstring-c.md#getstyles) and [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle) APIs, available since API version 12.
+This example shows how to query and set styles for styled strings using the [getStyles](arkts-arkui-styledstring-c.md#getstyles) and setStyle APIs, available since API version 12.
 
 
 

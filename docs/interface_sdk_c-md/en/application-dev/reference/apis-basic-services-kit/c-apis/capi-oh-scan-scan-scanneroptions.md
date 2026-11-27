@@ -6,13 +6,15 @@ typedef struct Scan_ScannerOptions {...} Scan_ScannerOptions
 
 ## Overview
 
-Defines all parameter options of a scanner.
+Defines the configurable parameters of a scanner. You can configure the title, description, value range, and number of options for each parameter. Each option includes the **titles**, **descriptions**, and **ranges** fields, which are stored as parallel arrays. The **optionCount** field indicates the total number of options. You can use the index i (which must be within the range of [0, **optionCount**)) to access **titles[i]**, **descriptions[i]**, and **ranges[i]** simultaneously to obtain the complete information about option i. Ensure that the array lengths of **titles**, **descriptions**, and **ranges** are the same and equal to the value of **optionCount**. Otherwise, the complete information about the options may not be obtained correctly.
+
+<!--Device-typedef struct Scan_ScannerOptions {...} Scan_ScannerOptions--><!--Device-typedef struct Scan_ScannerOptions {...} Scan_ScannerOptions-End-->
 
 **System capability**: SystemCapability.Print.PrintFramework
 
 **Since**: 12
 
-**Related module**: [OH_Scan](capi-oh-scan.md)
+**Related module**: [OH_Scan](capi-basic-services-kit-oh-scan.md)
 
 **Header file**: [ohscan.h](capi-ohscan-h.md)
 
@@ -22,9 +24,9 @@ Defines all parameter options of a scanner.
 
 | Name | Description |
 | -- | -- |
-| char **titles | Option titles. |
-| char **descriptions | Option descriptions. |
-| char **ranges | Ranges of options. |
-| int32_t optionCount | Number of configurable parameter options. |
+| char **titles | Option titles.<br><!--Device-char **titles--><!--Device-char **titles-End--> |
+| char **descriptions | Option descriptions.<br><!--Device-char **descriptions--><!--Device-char **descriptions-End--> |
+| char **ranges | Ranges of options.<br><!--Device-char **ranges--><!--Device-char **ranges-End--> |
+| int32_t optionCount | Number of options.<br><!--Device-int32_t optionCount--><!--Device-int32_t optionCount-End--> |
 
 

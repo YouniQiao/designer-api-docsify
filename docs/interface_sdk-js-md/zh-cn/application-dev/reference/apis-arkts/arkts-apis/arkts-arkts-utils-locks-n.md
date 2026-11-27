@@ -39,7 +39,7 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AsyncLockCallback](arkts-arkts-utils-locks-asynclockcallback-t.md) | 这是一个补充类型别名，表示lockAsync函数所有重载中的回调。 |
+| [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | 这是一个补充类型别名，表示lockAsync函数所有重载中的回调。 |
 
 ### 枚举
 

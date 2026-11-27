@@ -44,7 +44,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
@@ -92,7 +92,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Slice width of the upper left corner, upper right corner, lower left corner, and lower right corner of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
@@ -140,7 +140,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 

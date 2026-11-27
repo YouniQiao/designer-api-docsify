@@ -36,7 +36,7 @@ No permission is required for obtaining the caller's own information.
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | Yes | Includes **userId**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
 
 **Examples**
 
@@ -87,7 +87,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
 
 **Examples**
 
@@ -141,7 +141,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[BundleInfo](arkts-ability-bundleinfo-depr-bundleinfo-i.md)&gt; | Promise used to return the bundle information. |
+| Promise&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt; | Promise used to return the bundle information. |
 
 **Examples**
 

@@ -6,13 +6,15 @@ struct UsbSerial_Params {...}
 
 ## 概述
 
-定义USB Serial DDK使用的USB串口参数，用于USB转串口设备的通信参数配置，需与目标通信设备的配置保持一致，否则可能无法正常通信。常见于工业控制设备、调试工具、 传感器数据采集等需要通过USB串口与设备通信的场景。
+定义USB Serial DDK使用的USB串口参数，用于USB转串口设备的通信参数配置，需与目标通信设备的配置保持一致，否则可能无法正常通信。常见于工业控制设备、调试工具、传 感器数据采集等需要通过USB串口与设备通信的场景。
+
+<!--Device-struct UsbSerial_Params {...}--><!--Device-struct UsbSerial_Params {...}-End-->
 
 **系统能力：** SystemCapability.Driver.UsbSerial.Extension
 
 **起始版本：** 18
 
-**相关模块：** [USBSerialDDK](capi-usbserialddk.md)
+**相关模块：** [USBSerialDDK](capi-driver-development-kit-usbserialddk.md)
 
 **所在头文件：** [usb_serial_types.h](capi-usb-serial-types-h.md)
 
@@ -22,9 +24,9 @@ struct UsbSerial_Params {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t baudRate | 波特率，单位：波特。 |
-| uint8_t nDataBits | 数据位比特数。 |
-| uint8_t nStopBits | 停止位比特数。 |
-| uint8_t parity | 校验参数设置（0：无校验；1：奇校验；2：偶校验）。 |
+| uint32_t baudRate | 波特率，单位：波特。<br><!--Device-uint32_t baudRate--><!--Device-uint32_t baudRate-End--> |
+| uint8_t nDataBits | 数据位比特数。<br><!--Device-uint8_t nDataBits--><!--Device-uint8_t nDataBits-End--> |
+| uint8_t nStopBits | 停止位比特数。<br><!--Device-uint8_t nStopBits--><!--Device-uint8_t nStopBits-End--> |
+| uint8_t parity | 校验参数设置（0：无校验；1：奇校验；2：偶校验）。<br><!--Device-uint8_t parity--><!--Device-uint8_t parity-End--> |
 
 

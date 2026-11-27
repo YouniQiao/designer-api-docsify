@@ -18,7 +18,7 @@
 | [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) | 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。 |
 | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) | 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。 |
 | [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。 |
-| [DismissDialogAction](arkts-arkui-alertdialog-comp-dismissdialogaction-i.md) | Dialog关闭的信息。 |
+| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Dialog关闭的信息。 |
 | [TextStyle](arkts-arkui-textstyle-i.md) | 弹窗中message的文本样式，包含文本截断方式等。 |
 
 <!--Del-->

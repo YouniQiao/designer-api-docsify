@@ -6,9 +6,11 @@
 
 **库：** librawfile.z.so
 
+**系统能力：** SystemCapability.Global.ResourceManager
+
 **起始版本：** 8
 
-**相关模块：** [rawfile](capi-rawfile.md)
+**相关模块：** [rawfile](capi-localization-kit-rawfile.md)
 
 ## 汇总
 
@@ -47,6 +49,10 @@ NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env
 
 初始化NativeResourceManager对象。
 
+<!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)--><!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
 **起始版本：** 8
 
 **参数：**
@@ -72,6 +78,10 @@ void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resM
 
 释放NativeResourceManager对象及其关联资源。
 
+<!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)--><!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
 **起始版本：** 8
 
 **参数：**
@@ -89,6 +99,10 @@ RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const ch
 **描述：**
 
 打开rawfile目录。
+
+<!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)--><!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 8
 
@@ -121,6 +135,10 @@ RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const 
 
 打开rawfile文件并返回RawFile对象，用于读取rawfile文件内容。
 
+<!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
 **起始版本：** 8
 
 **参数：**
@@ -152,6 +170,10 @@ RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, co
 
 打开rawfile文件并返回RawFile对象，用于读取rawfile文件内容。支持2GB以上的大文件。
 
+<!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
 **起始版本：** 11
 
 **参数：**
@@ -182,6 +204,10 @@ bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *p
 **描述：**
 
 判断指定路径是否为rawfile的子目录。用于在遍历目录前，判断对应路径是否为目录，或在打开文件前，判断对应路径是否为文件。
+
+<!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)--><!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 

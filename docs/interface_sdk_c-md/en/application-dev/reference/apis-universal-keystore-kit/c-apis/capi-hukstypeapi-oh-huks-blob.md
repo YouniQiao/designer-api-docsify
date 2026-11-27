@@ -1,18 +1,20 @@
 # OH_Huks_Blob
 
 ```c
-struct OH_Huks_Blob {...}
+typedef struct OH_Huks_Blob {...} OH_Huks_Blob
 ```
 
 ## Overview
 
 Defines the struct of a binary large object (BLOB).
 
+<!--Device-struct OH_Huks_Blob {...}--><!--Device-struct OH_Huks_Blob {...}-End-->
+
 **System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
-**Related module**: [HuksTypeApi](capi-hukstypeapi.md)
+**Related module**: [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
 
 **Header file**: [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -22,7 +24,7 @@ Defines the struct of a binary large object (BLOB).
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Data size in bytes. |
-| uint8_t *data | Pointer to the data. |
+| uint32_t size | Data size in bytes.<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
+| uint8_t *data | Pointer to the data.<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
 
 

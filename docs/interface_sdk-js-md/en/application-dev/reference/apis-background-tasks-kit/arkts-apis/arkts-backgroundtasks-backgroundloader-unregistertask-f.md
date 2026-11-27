@@ -35,5 +35,8 @@ Unregister background load task.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-parameter-verification-failed) | Check on taskInfo failed. |
+| 9710001 | Memory operation failed. |
+| 9710002 | Parcel operation failed. |
+| 9710003 | Background loader service operation failed. |
+| 9710004 | Parameter error. |
+| 9710005 | Background load failed. |

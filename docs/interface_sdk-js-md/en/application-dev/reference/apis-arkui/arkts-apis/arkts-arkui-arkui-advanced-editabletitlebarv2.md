@@ -40,7 +40,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 | --- | --- |
 | [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md) | Defines the type alias of the left avatar item. The left avatar does not support configuring accessibility attributes. |
 | [EditableTitleBarItemV2Options](arkts-arkui-editabletitlebaritemv2options-t.md) | Defines the type alias of the left avatar item configuration options. |
-| [OnActionCallback](arkts-arkui-editabletitlebarv2-onactioncallback-t.md) | Defines the callback for the tap event. |
+| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | Defines the callback for the tap event. |
 
 ### Enums
 

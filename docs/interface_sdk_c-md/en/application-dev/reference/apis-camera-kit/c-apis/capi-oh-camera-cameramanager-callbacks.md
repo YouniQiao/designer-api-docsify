@@ -1,18 +1,20 @@
 # CameraManager_Callbacks
 
 ```c
-struct CameraManager_Callbacks {...}
+typedef struct CameraManager_Callbacks {...} CameraManager_Callbacks
 ```
 
 ## Overview
 
 The struct describes the callbacks used to listen for camera status changes.
 
+<!--Device-struct CameraManager_Callbacks {...}--><!--Device-struct CameraManager_Callbacks {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera_manager.h](capi-camera-manager-h.md)
 
@@ -22,6 +24,6 @@ The struct describes the callbacks used to listen for camera status changes.
 
 | Name | Description |
 | -- | -- |
-| [OH_CameraManager_StatusCallback](capi-camera-manager-h.md#oh_cameramanager_statuscallback) onCameraStatus | Camera status change event. |
+| [OH_CameraManager_StatusCallback](capi-camera-manager-h.md#oh_cameramanager_statuscallback) onCameraStatus | Camera status change event.<br><!--Device-OH_CameraManager_StatusCallback onCameraStatus--><!--Device-OH_CameraManager_StatusCallback onCameraStatus-End--> |
 
 

@@ -62,7 +62,7 @@ wantAgent?: WantAgent
 
 Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 26.0.1
 

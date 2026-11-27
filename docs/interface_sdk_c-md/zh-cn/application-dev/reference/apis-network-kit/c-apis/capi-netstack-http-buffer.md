@@ -1,18 +1,20 @@
 # Http_Buffer
 
 ```c
-struct Http_Buffer {...}
+typedef struct Http_Buffer {...} Http_Buffer
 ```
 
 ## 概述
 
 HTTP缓存结构体。
 
+<!--Device-struct Http_Buffer {...}--><!--Device-struct Http_Buffer {...}-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 20
 
-**相关模块：** [netstack](capi-netstack.md)
+**相关模块：** [netstack](capi-network-kit-netstack.md)
 
 **所在头文件：** [net_http_type.h](capi-net-http-type-h.md)
 
@@ -22,7 +24,7 @@ HTTP缓存结构体。
 
 | 名称 | 描述 |
 | -- | -- |
-| const char *buffer | 缓存区数据。 |
-| uint32_t length | 缓存区长度。 |
+| const char *buffer | 缓存区数据。<br><!--Device-const char *buffer--><!--Device-const char *buffer-End--> |
+| uint32_t length | 缓存区长度。<br><!--Device-uint32_t length--><!--Device-uint32_t length-End--> |
 
 

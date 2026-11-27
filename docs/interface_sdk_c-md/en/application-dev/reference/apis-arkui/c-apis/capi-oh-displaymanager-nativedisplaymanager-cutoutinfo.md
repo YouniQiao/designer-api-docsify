@@ -8,11 +8,13 @@ typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_Cutout
 
 The struct describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display.
 
+<!--Device-typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_CutoutInfo--><!--Device-typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_CutoutInfo-End-->
+
 **System capability**: SystemCapability.WindowManager.WindowManager.Core
 
 **Since**: 12
 
-**Related module**: [OH_DisplayManager](capi-oh-displaymanager.md)
+**Related module**: [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
 
 **Header file**: [oh_display_info.h](capi-oh-display-info-h.md)
 
@@ -22,8 +24,8 @@ The struct describes the unusable area of a display, including punch hole, notch
 
 | Name | Description |
 | -- | -- |
-| int32_t boundingRectsLength | boundingRects length |
-| NativeDisplayManager_Rect *boundingRects | boundingRects info pointer |
-| [NativeDisplayManager_WaterfallDisplayAreaRects](capi-oh-displaymanager-nativedisplaymanager-waterfalldisplayarearects.md) waterfallDisplayAreaRects | waterfallDisplayAreaRects info |
+| int32_t boundingRectsLength | boundingRects length<br><!--Device-int32_t boundingRectsLength--><!--Device-int32_t boundingRectsLength-End--> |
+| [NativeDisplayManager_Rect](capi-oh-displaymanager-nativedisplaymanager-rect.md) *boundingRects | boundingRects info pointer<br><!--Device-NativeDisplayManager_Rect *boundingRects--><!--Device-NativeDisplayManager_Rect *boundingRects-End--> |
+| [NativeDisplayManager_WaterfallDisplayAreaRects](capi-oh-displaymanager-nativedisplaymanager-waterfalldisplayarearects.md) waterfallDisplayAreaRects | waterfallDisplayAreaRects info<br><!--Device-NativeDisplayManager_WaterfallDisplayAreaRects waterfallDisplayAreaRects--><!--Device-NativeDisplayManager_WaterfallDisplayAreaRects waterfallDisplayAreaRects-End--> |
 
 

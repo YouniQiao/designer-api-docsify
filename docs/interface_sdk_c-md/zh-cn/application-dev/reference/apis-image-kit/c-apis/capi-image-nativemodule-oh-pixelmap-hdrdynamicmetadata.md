@@ -1,18 +1,20 @@
 # OH_Pixelmap_HdrDynamicMetadata
 
 ```c
-struct OH_Pixelmap_HdrDynamicMetadata {...}
+typedef struct OH_Pixelmap_HdrDynamicMetadata {...} OH_Pixelmap_HdrDynamicMetadata
 ```
 
 ## 概述
 
 表示HDR_DYNAMIC_METADATA关键字对应的动态元数据值，用于存储HDR图像的动态元数据。 HDR动态元数据可用于在显示过程中动态调整HDR图像的显示参数，以适配不同显示设备的能力，获得更准确的HDR显示效果。 在调用[OH_PixelmapNative_SetMetadata](capi-pixelmap-native-h.md#oh_pixelmapnative_setmetadata)和[OH_PixelmapNative_GetMetadata](capi-pixelmap-native-h.md#oh_pixelmapnative_getmetadata)时作为 [OH_Pixelmap_HdrMetadataValue](capi-image-nativemodule-oh-pixelmap-hdrmetadatavalue.md)的成员使用。
 
+<!--Device-struct OH_Pixelmap_HdrDynamicMetadata {...}--><!--Device-struct OH_Pixelmap_HdrDynamicMetadata {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 12
 
-**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 **所在头文件：** [pixelmap_native.h](capi-pixelmap-native-h.md)
 
@@ -22,7 +24,7 @@ struct OH_Pixelmap_HdrDynamicMetadata {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint8_t *data | 动态元数据值的指针，指向存储动态元数据的二进制数据缓冲区，缓冲区长度由length成员指定。 |
-| uint32_t length | 动态元数据值的长度，单位：字节（Byte），取值需与data指向的数据缓冲区实际长度一致。 |
+| uint8_t *data | 动态元数据值的指针，指向存储动态元数据的二进制数据缓冲区，缓冲区长度由length成员指定。<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| uint32_t length | 动态元数据值的长度，单位：字节（Byte），取值需与data指向的数据缓冲区实际长度一致。<br><!--Device-uint32_t length--><!--Device-uint32_t length-End--> |
 
 

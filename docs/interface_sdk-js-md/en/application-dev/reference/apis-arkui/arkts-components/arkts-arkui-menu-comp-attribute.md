@@ -134,7 +134,7 @@ Sets the radius of the menu border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; BorderRadiuses | Yes | Radius of the menu border corners. <br>Default value: **8vp** for 2-in-1 devices and **20vp** for other devices <br> Since API version 12, if the sum of the two maximum corner radii in the horizontal direction exceeds the menu width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu height, the default corner radius will be used for all four corners of the menu. <br>When the Dimension type is used: Invalid input values will trigger a fallback to the default corner radius. <br>When the BorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes | Radius of the menu border corners. <br>Default value: **8vp** for 2-in-1 devices and **20vp** for other devices <br> Since API version 12, if the sum of the two maximum corner radii in the horizontal direction exceeds the menu width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu height, the default corner radius will be used for all four corners of the menu. <br>When the Dimension type is used: Invalid input values will trigger a fallback to the default corner radius. <br>When the BorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default. |
 
 ## subMenuExpandingMode
 

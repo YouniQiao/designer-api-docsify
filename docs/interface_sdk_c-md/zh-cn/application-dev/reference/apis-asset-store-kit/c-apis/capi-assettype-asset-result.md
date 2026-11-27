@@ -6,13 +6,15 @@ typedef struct Asset_Result {...} Asset_Result
 
 ## 概述
 
-单条关键资的产查询结果。
+单条关键资产的查询结果。
+
+<!--Device-typedef struct Asset_Result {...} Asset_Result--><!--Device-typedef struct Asset_Result {...} Asset_Result-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
-**相关模块：** [AssetType](capi-assettype.md)
+**相关模块：** [AssetType](capi-asset-store-kit-assettype.md)
 
 **所在头文件：** [asset_type.h](capi-asset-type-h.md)
 
@@ -22,7 +24,7 @@ typedef struct Asset_Result {...} Asset_Result
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t count | 关键资产属性的个数。 |
-| Asset_Attr *attrs | 指向关键资产属性数组的指针。 |
+| uint32_t count | 关键资产属性的个数。<br><!--Device-uint32_t count--><!--Device-uint32_t count-End--> |
+| [Asset_Attr](capi-assettype-asset-attr.md) *attrs | 指向关键资产属性数组的指针。<br><!--Device-Asset_Attr *attrs--><!--Device-Asset_Attr *attrs-End--> |
 
 

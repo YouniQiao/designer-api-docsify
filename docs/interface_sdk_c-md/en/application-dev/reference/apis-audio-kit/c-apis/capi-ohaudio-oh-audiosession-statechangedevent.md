@@ -1,18 +1,20 @@
 # OH_AudioSession_StateChangedEvent
 
 ```c
-struct OH_AudioSession_StateChangedEvent {...}
+typedef struct OH_AudioSession_StateChangedEvent {...} OH_AudioSession_StateChangedEvent
 ```
 
 ## Overview
 
 declare the audio session state change event
 
+<!--Device-struct OH_AudioSession_StateChangedEvent {...}--><!--Device-struct OH_AudioSession_StateChangedEvent {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 **Header file**: [native_audio_session_manager.h](capi-native-audio-session-manager-h.md)
 
@@ -22,6 +24,6 @@ declare the audio session state change event
 
 | Name | Description |
 | -- | -- |
-| [OH_AudioSession_StateChangeHint](capi-native-audio-session-manager-h.md#oh_audiosession_statechangehint) stateChangeHint | audio session state change hints. |
+| [OH_AudioSession_StateChangeHint](capi-native-audio-session-manager-h.md#oh_audiosession_statechangehint) stateChangeHint | audio session state change hints.<br><!--Device-OH_AudioSession_StateChangeHint stateChangeHint--><!--Device-OH_AudioSession_StateChangeHint stateChangeHint-End--> |
 
 

@@ -1,18 +1,20 @@
 # Hid_RawDevInfo
 
 ```c
-struct Hid_RawDevInfo {...}
+typedef struct Hid_RawDevInfo {...} Hid_RawDevInfo
 ```
 
 ## 概述
 
 HID原始设备信息，包含总线类型、供应商ID、产品ID等关键标识信息。开发者可以通过此结构体识别和区分不同的HID设备，通常用于设备识别、设备匹配、设备过滤等场景。
 
+<!--Device-struct Hid_RawDevInfo {...}--><!--Device-struct Hid_RawDevInfo {...}-End-->
+
 **系统能力：** SystemCapability.Driver.HID.Extension
 
 **起始版本：** 18
 
-**相关模块：** [HidDdk](capi-hidddk.md)
+**相关模块：** [HidDdk](capi-driver-development-kit-hidddk.md)
 
 **所在头文件：** [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -22,8 +24,8 @@ HID原始设备信息，包含总线类型、供应商ID、产品ID等关键标�
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t busType | 总线类型，用于标识HID设备的物理连接方式。 |
-| uint16_t vendor | 供应商ID。 |
-| uint16_t product | 产品ID。 |
+| uint32_t busType | 总线类型，用于标识HID设备的物理连接方式。<br><!--Device-uint32_t busType--><!--Device-uint32_t busType-End--> |
+| uint16_t vendor | 供应商ID。<br><!--Device-uint16_t vendor--><!--Device-uint16_t vendor-End--> |
+| uint16_t product | 产品ID。<br><!--Device-uint16_t product--><!--Device-uint16_t product-End--> |
 
 

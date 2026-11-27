@@ -1,18 +1,20 @@
 # OH_Huks_CertChain
 
 ```c
-struct OH_Huks_CertChain {...}
+typedef struct OH_Huks_CertChain {...} OH_Huks_CertChain
 ```
 
 ## 概述
 
 定义证书链的结构体类型。
 
+<!--Device-struct OH_Huks_CertChain {...}--><!--Device-struct OH_Huks_CertChain {...}-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
-**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -22,7 +24,7 @@ struct OH_Huks_CertChain {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| struct OH_Huks_Blob *certs | 指向证书数据的指针。 |
-| uint32_t certsCount | 证书数量。 |
+| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *certs | 指向证书数据的指针。<br><!--Device-struct OH_Huks_Blob *certs--><!--Device-struct OH_Huks_Blob *certs-End--> |
+| uint32_t certsCount | 证书数量。<br><!--Device-uint32_t certsCount--><!--Device-uint32_t certsCount-End--> |
 
 

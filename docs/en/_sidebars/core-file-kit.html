@@ -1,6 +1,6 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(431)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(490)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.application.BackupExtensionAbility(Backup and Restore Extension Capability) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
@@ -143,6 +143,7 @@
 <summary>@ohos.file.fileuri(File URI) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md">getUriFromPath</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompathwithextname-f.md">getUriFromPathWithExtName</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md">FileUri</a></li>
 </ul>
 </details></li>
@@ -421,8 +422,9 @@
 <li class="has-children"><details>
 <summary>@ohos.document(File Operation) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document-depr-document-n.md">document</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document-depr--f.md">choose</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document-depr-n.md">document</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document-choose-f.md">choose</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-document-show-f.md">show</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
@@ -488,14 +490,71 @@
 <li class="has-children"><details>
 <summary>@ohos.fileio(File Management) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-fileio-n.md">fileIO</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr--f.md">access</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-dir-i.md">Dir</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-dirent-i.md">Dirent</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-readout-i.md">ReadOut</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-stat-i.md">Stat</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-stream-i.md">Stream</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-watcher-i.md">Watcher</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-depr-n.md">fileIO</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-access-f.md">access</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-accesssync-f.md">accessSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-chmod-f.md">chmod</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-chmodsync-f.md">chmodSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-chown-f.md">chown</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-chownsync-f.md">chownSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-close-f.md">close</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-closesync-f.md">closeSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-copyfile-f.md">copyFile</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-copyfilesync-f.md">copyFileSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-createstream-f.md">createStream</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-createstreamsync-f.md">createStreamSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-createwatcher-f.md">createWatcher</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fchmod-f.md">fchmod</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fchmodsync-f.md">fchmodSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fchown-f.md">fchown</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fchownsync-f.md">fchownSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fdatasync-f.md">fdatasync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fdatasyncsync-f.md">fdatasyncSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fdopenstream-f.md">fdopenStream</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fdopenstreamsync-f.md">fdopenStreamSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fstat-f.md">fstat</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fstatsync-f.md">fstatSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fsync-f.md">fsync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-fsyncsync-f.md">fsyncSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-ftruncate-f.md">ftruncate</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-ftruncatesync-f.md">ftruncateSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-hash-f.md">hash</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-lchown-f.md">lchown</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-lchownsync-f.md">lchownSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-lstat-f.md">lstat</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-lstatsync-f.md">lstatSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-mkdir-f.md">mkdir</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-mkdirsync-f.md">mkdirSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-mkdtemp-f.md">mkdtemp</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-mkdtempsync-f.md">mkdtempSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-open-f.md">open</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-opendir-f.md">opendir</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-opendirsync-f.md">opendirSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-opensync-f.md">openSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-read-f.md">read</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-readsync-f.md">readSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-readtext-f.md">readText</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-readtextsync-f.md">readTextSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-rename-f.md">rename</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-renamesync-f.md">renameSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-rmdir-f.md">rmdir</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-rmdirsync-f.md">rmdirSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-f.md">stat</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-statsync-f.md">statSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-symlink-f.md">symlink</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-symlinksync-f.md">symlinkSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-truncate-f.md">truncate</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-truncatesync-f.md">truncateSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-unlink-f.md">unlink</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-unlinksync-f.md">unlinkSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-write-f.md">write</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-writesync-f.md">writeSync</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-dir-depr-i.md">Dir</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-dirent-depr-i.md">Dirent</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-readout-depr-i.md">ReadOut</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md">Stat</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stream-depr-i.md">Stream</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-fileio-watcher-depr-i.md">Watcher</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
@@ -531,30 +590,30 @@
 <li class="has-children"><details>
 <summary>@ohos.statfs(statfs) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-statfs.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-statfs-depr-getfreebytes-f.md">getFreeBytes</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-statfs-depr-gettotalbytes-f.md">getTotalBytes</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-statfs-getfreebytes-depr-f.md">getFreeBytes</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-statfs-gettotalbytes-depr-f.md">getTotalBytes</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
 <summary>@system.file(File interface) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-file-c.md">File</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-fileaccessoption-i.md">FileAccessOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filecopyoption-i.md">FileCopyOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filedeleteoption-i.md">FileDeleteOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filegetoption-i.md">FileGetOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filelistoption-i.md">FileListOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filelistresponse-i.md">FileListResponse</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filemkdiroption-i.md">FileMkdirOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filemoveoption-i.md">FileMoveOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filereadarraybufferoption-i.md">FileReadArrayBufferOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filereadarraybufferresponse-i.md">FileReadArrayBufferResponse</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filereadtextoption-i.md">FileReadTextOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filereadtextresponse-i.md">FileReadTextResponse</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-fileresponse-i.md">FileResponse</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filermdiroption-i.md">FileRmdirOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filewritearraybufferoption-i.md">FileWriteArrayBufferOption</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-file-depr-filewritetextoption-i.md">FileWriteTextOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-file-depr-c.md">File</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-fileaccessoption-depr-i.md">FileAccessOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filecopyoption-depr-i.md">FileCopyOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filedeleteoption-depr-i.md">FileDeleteOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filegetoption-depr-i.md">FileGetOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistoption-depr-i.md">FileListOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md">FileListResponse</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filemkdiroption-depr-i.md">FileMkdirOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filemoveoption-depr-i.md">FileMoveOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filereadarraybufferoption-depr-i.md">FileReadArrayBufferOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md">FileReadArrayBufferResponse</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filereadtextoption-depr-i.md">FileReadTextOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filereadtextresponse-depr-i.md">FileReadTextResponse</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-fileresponse-depr-i.md">FileResponse</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filermdiroption-depr-i.md">FileRmdirOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filewritearraybufferoption-depr-i.md">FileWriteArrayBufferOption</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filewritetextoption-depr-i.md">FileWriteTextOption</a></li>
 </ul>
 </details></li>
 </ul>
@@ -562,18 +621,18 @@
 </div>
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">C API <span class="tree-count">(47)</span></summary>
+    <summary class="tree-section-label">C API <span class="tree-count">(56)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>Module</summary>
 <ul class="tree-l2">
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-fileshare.md">fileShare</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-fileuri.md">fileUri</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive.md">Archive</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-fileio.md">FileIO</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk.md">CloudDisk</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-environment.md">Environment</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs.md">Swapfs</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-fileshare.md">fileShare</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-fileuri.md">fileUri</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-archive.md">Archive</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-fileio.md">FileIO</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-clouddisk.md">CloudDisk</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-environment.md">Environment</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-core-file-kit-swapfs.md">Swapfs</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
@@ -601,10 +660,11 @@
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-fileshare-fileshare-policyinfo.md">FileShare_PolicyInfo</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-oh-archive-streaminfo.md">OH_Archive_StreamInfo</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-oh-archive-stream-config.md">OH_Archive_Stream_Config</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-8hoh-archive-writer-ctx.md">*OH_Archive_Writer_Ctx</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-8hoh-archive-reader-ctx.md">*OH_Archive_Reader_Ctx</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-8hoh-archive-streamwrite-ctx.md">*OH_Archive_StreamWrite_Ctx</a></li>
-<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-8hoh-archive-streamread-ctx.md">*OH_Archive_StreamRead_Ctx</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivewritectx.md">ArchiveWriteCtx</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivereadctx.md">ArchiveReadCtx</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivestreamwritectx.md">ArchiveStreamWriteCtx</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivestreamreadctx.md">ArchiveStreamReadCtx</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-operationtypearray.md">OH_CloudDisk_OperationTypeArray</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-pathinfo.md">CloudDisk_PathInfo</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-filesyncstate.md">CloudDisk_FileSyncState</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-changedata.md">CloudDisk_ChangeData</a></li>
@@ -615,6 +675,14 @@
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-syncfolder.md">CloudDisk_SyncFolder</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-syncfolderex.md">OH_CloudDisk_SyncFolderEx</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-placeholderinfo.md">OH_CloudDisk_PlaceholderInfo</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-placeholdercustominfo.md">OH_CloudDisk_PlaceholderCustomInfo</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-databuf.md">OH_CloudDisk_DataBuf</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-callbackreqhead.md">OH_CloudDisk_CallbackReqHead</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-dehydrateinfo.md">OH_CloudDisk_DehydrateInfo</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-fetchdatarequest.md">OH_CloudDisk_FetchDataRequest</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-callbackcontext.md">OH_CloudDisk_CallbackContext</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-fetchdata.md">OH_CloudDisk_FetchData</a></li>
+<li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-callbackresponse.md">OH_CloudDisk_CallbackResponse</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsconfig-sys.md">OH_SwapfsConfig(System API)</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsswapoutrequest-sys.md">OH_SwapfsSwapOutRequest(System API)</a></li>
 <li><a href="#/interface_sdk_c-md/en/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsswapinrequest-sys.md">OH_SwapfsSwapInRequest(System API)</a></li>

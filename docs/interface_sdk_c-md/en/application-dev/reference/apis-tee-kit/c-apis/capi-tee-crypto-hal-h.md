@@ -6,19 +6,21 @@ Provides APIs for cryptographic operations.<br> You can use these APIs to implem
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | Description |
 | -- | -- |
 | [CRYPTO_ENGINE](#crypto_engine) | Enumerates the types of the crypto engine. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -37,15 +39,19 @@ enum CRYPTO_ENGINE
 
 Enumerates the types of the crypto engine.
 
+<!--Device-enum CRYPTO_ENGINE--><!--Device-enum CRYPTO_ENGINE-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| DX_CRYPTO = 0 | The hardware-based DX crypto engine. |
-| EPS_CRYPTO = 1 | The hardware-based MSPE crypto engine. |
-| SOFT_CRYPTO = 2 | The software-based crypto engine, such as OpenSSL. |
-| SEC_CRYPTO = 3 | The SEC crypto engine, commonly employed in vehicle platforms. |
-| CRYPTO_ENGINE_MAX = 1024 | The maximum value of the crypto engine. |
+| DX_CRYPTO = 0 | The hardware-based DX crypto engine.<br><!--Device-DX_CRYPTO = 0--><!--Device-DX_CRYPTO = 0-End--> |
+| EPS_CRYPTO = 1 | The hardware-based MSPE crypto engine.<br><!--Device-EPS_CRYPTO = 1--><!--Device-EPS_CRYPTO = 1-End--> |
+| SOFT_CRYPTO = 2 | The software-based crypto engine, such as OpenSSL.<br><!--Device-SOFT_CRYPTO = 2--><!--Device-SOFT_CRYPTO = 2-End--> |
+| SEC_CRYPTO = 3 | The SEC crypto engine, commonly employed in vehicle platforms.<br><!--Device-SEC_CRYPTO = 3--><!--Device-SEC_CRYPTO = 3-End--> |
+| CRYPTO_ENGINE_MAX = 1024 | The maximum value of the crypto engine.<br><!--Device-CRYPTO_ENGINE_MAX = 1024--><!--Device-CRYPTO_ENGINE_MAX = 1024-End--> |
 
 
 ## Function description
@@ -59,6 +65,10 @@ TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)
 **Description**
 
 Sets the encryption and decryption engines to an operation.
+
+<!--Device-TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)--><!--Device-TEE_Result TEE_SetCryptoFlag(TEE_OperationHandle operation, uint32_t crypto)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -84,6 +94,10 @@ TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)
 **Description**
 
 Sets the encryption and decryption engines to an object.
+
+<!--Device-TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)--><!--Device-TEE_Result TEE_SetObjectFlag(TEE_ObjectHandle object, uint32_t crypto)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

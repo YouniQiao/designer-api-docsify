@@ -1,18 +1,20 @@
 # Camera_FrameShutterInfo
 
 ```c
-struct Camera_FrameShutterInfo {...}
+typedef struct Camera_FrameShutterInfo {...} Camera_FrameShutterInfo
 ```
 
 ## 概述
 
 帧快门回调信息。
 
+<!--Device-struct Camera_FrameShutterInfo {...}--><!--Device-struct Camera_FrameShutterInfo {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-oh-camera.md)
+**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ struct Camera_FrameShutterInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t captureId | 捕获id。 |
-| uint64_t timestamp | 帧的时间戳，单位毫秒。 |
+| int32_t captureId | 捕获id。<br><!--Device-int32_t captureId--><!--Device-int32_t captureId-End--> |
+| uint64_t timestamp | 帧的时间戳，单位毫秒。<br><!--Device-uint64_t timestamp--><!--Device-uint64_t timestamp-End--> |
 
 

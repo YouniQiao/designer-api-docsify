@@ -6,20 +6,22 @@
 
 **库：** libhttp_interceptor.so
 
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 24
 
-**相关模块：** [netstack](capi-netstack.md)
+**相关模块：** [netstack](capi-network-kit-netstack.md)
 
 ## 汇总
 
 ### 结构体
 
-| 名称 | 描述 |
-| -- | -- |
-| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | 定义拦截器的请求/响应头信息。 |
-| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | 定义拦截器的HTTP请求数据包结构。 |
-| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | 定义拦截器的HTTP响应数据包结构。 |
-| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | 定义HTTP全局拦截器的配置信息。 |
+| 名称 | typedef关键字 | 描述 |
+| -- | -- | -- |
+| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | OH_Http_Interceptor_Headers | 定义拦截器的请求/响应头信息。 |
+| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | OH_Http_Interceptor_Request | 定义拦截器的HTTP请求数据包结构。 |
+| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | OH_Http_Interceptor_Response | 定义拦截器的HTTP响应数据包结构。 |
+| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | OH_Http_Interceptor | 定义HTTP全局拦截器的配置信息。 |
 
 ### 枚举
 
@@ -35,12 +37,6 @@
 | -- | -- | -- |
 | [typedef OH_Interceptor_Result (\*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)](#oh_http_interceptorhandler) | OH_Http_InterceptorHandler | 定义HTTP拦截器处理函数。 |
 
-### 变量
-
-| 名称 | 描述 |
-| -- | -- |
-| OH_Interceptor_Result (*OH_Http_InterceptorHandler)( OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified) | 定义HTTP拦截器处理函数。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Communication.NetStack |
-
 ## 枚举类型说明
 
 ### OH_Interceptor_Stage
@@ -53,12 +49,16 @@ enum OH_Interceptor_Stage
 
 定义拦截器的执行阶段。
 
+<!--Device-enum OH_Interceptor_Stage--><!--Device-enum OH_Interceptor_Stage-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_STAGE_REQUEST | 拦截器处理请求。<br>**起始版本：** 24 |
-| OH_STAGE_RESPONSE | 拦截器处理响应。<br>**起始版本：** 24 |
+| OH_STAGE_REQUEST | 拦截器处理请求。<br>**起始版本：** 24<br><!--Device-OH_STAGE_REQUEST--><!--Device-OH_STAGE_REQUEST-End--> |
+| OH_STAGE_RESPONSE | 拦截器处理响应。<br>**起始版本：** 24<br><!--Device-OH_STAGE_RESPONSE--><!--Device-OH_STAGE_RESPONSE-End--> |
 
 ### OH_Interceptor_Type
 
@@ -70,12 +70,16 @@ enum OH_Interceptor_Type
 
 定义拦截器的类型。
 
+<!--Device-enum OH_Interceptor_Type--><!--Device-enum OH_Interceptor_Type-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TYPE_READ_ONLY | 只读拦截器。<br>**起始版本：** 24 |
-| OH_TYPE_MODIFY_NETWORK_KIT | 可修改拦截器。仅针对Network Kit HTTP请求生效。<br>**起始版本：** 26.0.0 |
+| OH_TYPE_READ_ONLY | 只读拦截器。<br>**起始版本：** 24<br><!--Device-OH_TYPE_READ_ONLY--><!--Device-OH_TYPE_READ_ONLY-End--> |
+| OH_TYPE_MODIFY_NETWORK_KIT | 可修改拦截器。仅针对Network Kit HTTP请求生效。<br>**起始版本：** 26.0.0<br><!--Device-OH_TYPE_MODIFY_NETWORK_KIT--><!--Device-OH_TYPE_MODIFY_NETWORK_KIT-End--> |
 
 ### OH_Interceptor_Result
 
@@ -87,12 +91,16 @@ enum OH_Interceptor_Result
 
 定义拦截器的处理结果。
 
+<!--Device-enum OH_Interceptor_Result--><!--Device-enum OH_Interceptor_Result-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CONTINUE | 继续处理。<br>**起始版本：** 24 |
-| OH_ABORT | 拦截处理。<br>**起始版本：** 24 |
+| OH_CONTINUE | 继续处理。<br>**起始版本：** 24<br><!--Device-OH_CONTINUE--><!--Device-OH_CONTINUE-End--> |
+| OH_ABORT | 拦截处理。<br>**起始版本：** 24<br><!--Device-OH_ABORT--><!--Device-OH_ABORT-End--> |
 
 
 ## 函数说明
@@ -106,6 +114,10 @@ typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_
 **描述：**
 
 定义HTTP拦截器处理函数。
+
+<!--Device-typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)--><!--Device-typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 24
 

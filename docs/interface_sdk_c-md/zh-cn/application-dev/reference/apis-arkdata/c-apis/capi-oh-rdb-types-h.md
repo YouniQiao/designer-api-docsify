@@ -8,9 +8,11 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 ## 汇总
 
@@ -49,16 +51,20 @@ enum Rdb_ConflictResolution
 
 表示冲突解决策略的枚举。
 
+<!--Device-enum Rdb_ConflictResolution--><!--Device-enum Rdb_ConflictResolution-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 | 枚举项 | 描述 |
 | -- | -- |
-| RDB_CONFLICT_NONE = 1 | 发生冲突时不执行任何操作。 |
-| RDB_CONFLICT_ROLLBACK | 发生冲突时抛出错误码，同时回滚本次事务。 |
-| RDB_CONFLICT_ABORT | 发生冲突时抛出错误码，同时回滚本次修改。 |
-| RDB_CONFLICT_FAIL | 发生冲突时抛出错误码，不回滚冲突前的修改同时终止本次修改。 |
-| RDB_CONFLICT_IGNORE | 发生冲突时忽略冲突的数据，继续执行后续修改。 |
-| RDB_CONFLICT_REPLACE | 发生冲突时，尝试删除后插入，如果还是冲突则等同于RDB_CONFLICT_ABORT。 |
+| RDB_CONFLICT_NONE = 1 | 发生冲突时不执行任何操作。<br><!--Device-RDB_CONFLICT_NONE = 1--><!--Device-RDB_CONFLICT_NONE = 1-End--> |
+| RDB_CONFLICT_ROLLBACK | 发生冲突时抛出错误码，同时回滚本次事务。<br><!--Device-RDB_CONFLICT_ROLLBACK--><!--Device-RDB_CONFLICT_ROLLBACK-End--> |
+| RDB_CONFLICT_ABORT | 发生冲突时抛出错误码，同时回滚本次修改。<br><!--Device-RDB_CONFLICT_ABORT--><!--Device-RDB_CONFLICT_ABORT-End--> |
+| RDB_CONFLICT_FAIL | 发生冲突时抛出错误码，不回滚冲突前的修改同时终止本次修改。<br><!--Device-RDB_CONFLICT_FAIL--><!--Device-RDB_CONFLICT_FAIL-End--> |
+| RDB_CONFLICT_IGNORE | 发生冲突时忽略冲突的数据，继续执行后续修改。<br><!--Device-RDB_CONFLICT_IGNORE--><!--Device-RDB_CONFLICT_IGNORE-End--> |
+| RDB_CONFLICT_REPLACE | 发生冲突时，尝试删除后插入，如果还是冲突则等同于RDB_CONFLICT_ABORT。<br><!--Device-RDB_CONFLICT_REPLACE--><!--Device-RDB_CONFLICT_REPLACE-End--> |
 
 
 ## 函数说明
@@ -72,6 +78,10 @@ OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)
 **描述：**
 
 创建[OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md)的实例对象。
+
+<!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)--><!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 23
 
@@ -96,6 +106,10 @@ void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)
 
 销毁[OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md)实例对象。
 
+<!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)--><!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -113,6 +127,10 @@ int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *cons
 **描述：**
 
 设置结果集中返回的字段。
+
+<!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)--><!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 23
 
@@ -140,6 +158,10 @@ int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)
 
 设置返回结果集的最大行数量。
 
+<!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)--><!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -165,6 +187,10 @@ OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)
 
 获取数据变化的游标，默认包含1024行。
 
+<!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)--><!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -188,6 +214,10 @@ int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)
 **描述：**
 
 获取受此操作影响的数据行的数量。
+
+<!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)--><!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 23
 

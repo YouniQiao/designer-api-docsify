@@ -24,7 +24,7 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; BorderRadiuses
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 12
 
@@ -72,7 +72,7 @@ padding?: LengthMetrics | Padding
 
 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [Padding](arkts-arkui-padding-t.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Padding
 
 **起始版本：** 12
 

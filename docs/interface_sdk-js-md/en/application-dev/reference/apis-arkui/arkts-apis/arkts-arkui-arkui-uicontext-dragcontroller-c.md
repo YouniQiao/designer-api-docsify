@@ -568,7 +568,7 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 **Examples**
 
-See the example for [animate](arkts-arkui-dragcontroller-dragpreview-c.md#animate).
+See the example for animate.
 
 ## notifyDragStartRequest
 

@@ -8,7 +8,7 @@ Defines component edge widths for absolute directions.
 
 To reference this object, at least one parameter must be passed.
 
-**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md)
+**Type:** EdgeWidths
 
 **Since:** 10
 

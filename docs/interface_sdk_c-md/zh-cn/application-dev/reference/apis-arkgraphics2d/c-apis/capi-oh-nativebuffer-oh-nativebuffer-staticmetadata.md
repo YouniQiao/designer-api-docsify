@@ -1,18 +1,20 @@
 # OH_NativeBuffer_StaticMetadata
 
 ```c
-struct OH_NativeBuffer_StaticMetadata {...}
+typedef struct OH_NativeBuffer_StaticMetadata {...} OH_NativeBuffer_StaticMetadata
 ```
 
 ## 概述
 
 表示HDR静态元数据。
 
+<!--Device-struct OH_NativeBuffer_StaticMetadata {...}--><!--Device-struct OH_NativeBuffer_StaticMetadata {...}-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **起始版本：** 12
 
-**相关模块：** [OH_NativeBuffer](capi-oh-nativebuffer.md)
+**相关模块：** [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
 
 **所在头文件：** [buffer_common.h](capi-buffer-common-h.md)
 
@@ -22,7 +24,7 @@ struct OH_NativeBuffer_StaticMetadata {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_NativeBuffer_Smpte2086](capi-oh-nativebuffer-oh-nativebuffer-smpte2086.md) smpte2086 | smpte2086静态元数据 |
-| [OH_NativeBuffer_Cta861](capi-oh-nativebuffer-oh-nativebuffer-cta861.md) cta861 | CTA-861.3静态元数据 |
+| [OH_NativeBuffer_Smpte2086](capi-oh-nativebuffer-oh-nativebuffer-smpte2086.md) smpte2086 | smpte2086静态元数据<br><!--Device-OH_NativeBuffer_Smpte2086 smpte2086--><!--Device-OH_NativeBuffer_Smpte2086 smpte2086-End--> |
+| [OH_NativeBuffer_Cta861](capi-oh-nativebuffer-oh-nativebuffer-cta861.md) cta861 | CTA-861.3静态元数据<br><!--Device-OH_NativeBuffer_Cta861 cta861--><!--Device-OH_NativeBuffer_Cta861 cta861-End--> |
 
 

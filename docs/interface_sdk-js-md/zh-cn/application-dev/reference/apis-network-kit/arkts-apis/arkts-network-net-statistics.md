@@ -101,7 +101,6 @@ import { statistics } from '@kit.NetworkKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | 获取的应用历史流量信息。 |
 | [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | 获取的所有应用历史流量信息。 |
 <!--DelEnd-->
 

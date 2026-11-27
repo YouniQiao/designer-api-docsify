@@ -1,18 +1,20 @@
 # NetConn_NetHandleList
 
 ```c
-struct NetConn_NetHandleList {...}
+typedef struct NetConn_NetHandleList {...} NetConn_NetHandleList
 ```
 
 ## 概述
 
 网络列表。
 
+<!--Device-struct NetConn_NetHandleList {...}--><!--Device-struct NetConn_NetHandleList {...}-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 11
 
-**相关模块：** [NetConnection](capi-netconnection.md)
+**相关模块：** [NetConnection](capi-network-kit-netconnection.md)
 
 **所在头文件：** [net_connection_type.h](capi-net-connection-type-h.md)
 
@@ -22,7 +24,7 @@ struct NetConn_NetHandleList {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) netHandles[NETCONN_MAX_NET_SIZE] | 网络句柄列表。 |
-| int32_t netHandleListSize | netHandleList的实际大小。 |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) netHandles[NETCONN_MAX_NET_SIZE] | 网络句柄列表。<br><!--Device-NetConn_NetHandle netHandles[NETCONN_MAX_NET_SIZE]--><!--Device-NetConn_NetHandle netHandles[NETCONN_MAX_NET_SIZE]-End--> |
+| int32_t netHandleListSize | netHandleList的实际大小。<br><!--Device-int32_t netHandleListSize--><!--Device-int32_t netHandleListSize-End--> |
 
 

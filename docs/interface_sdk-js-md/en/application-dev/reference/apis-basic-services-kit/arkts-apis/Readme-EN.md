@@ -581,17 +581,17 @@
 - [@ohos.request(Upload and Download)](arkts-basicservices-request.md)
   - [request](arkts-basicservices-request-n.md)
     - [agent](arkts-basicservices-request-agent-n.md)
-      - [attachGroup](arkts-basicservices-request-agent-attachgroup-f.md)
-      - [create](arkts-basicservices-request-agent-create-f.md)
-      - [createGroup](arkts-basicservices-request-agent-creategroup-f.md)
-      - [deleteGroup](arkts-basicservices-request-agent-deletegroup-f.md)
-      - [getTask](arkts-basicservices-request-agent-gettask-f.md)
+      - [attachGroup](arkts-basicservices-agent-attachgroup-f.md)
+      - [create](arkts-basicservices-agent-create-f.md)
+      - [createGroup](arkts-basicservices-agent-creategroup-f.md)
+      - [deleteGroup](arkts-basicservices-agent-deletegroup-f.md)
+      - [getTask](arkts-basicservices-agent-gettask-f.md)
       <!--Del-->
-      - [query(system api)](arkts-basicservices-request-agent-query-f-sys.md)<!--DelEnd-->
-      - [remove](arkts-basicservices-request-agent-remove-f.md)
-      - [search](arkts-basicservices-request-agent-search-f.md)
-      - [show](arkts-basicservices-request-agent-show-f.md)
-      - [touch](arkts-basicservices-request-agent-touch-f.md)
+      - [query(system api)](arkts-basicservices-agent-query-f-sys.md)<!--DelEnd-->
+      - [remove](arkts-basicservices-agent-remove-f.md)
+      - [search](arkts-basicservices-agent-search-f.md)
+      - [show](arkts-basicservices-agent-show-f.md)
+      - [touch](arkts-basicservices-agent-touch-f.md)
       - [Config](arkts-basicservices-agent-config-i.md)
       - [FileSpec](arkts-basicservices-agent-filespec-i.md)
       - [Filter](arkts-basicservices-agent-filter-i.md)
@@ -1171,13 +1171,13 @@
   - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
   - [ErrorCode](arkts-basicservices-zlib-errorcode-e.md)
 - [@ohos.commonEvent(Common Event)](arkts-basicservices-commonevent.md)
-  - [createSubscriber](arkts-basicservice-commonevent-depr-createsubscriber-f.md)
-  - [publish](arkts-basicservice-commonevent-depr-publish-f.md)
+  - [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md)
+  - [publish](arkts-basicservices-commonevent-publish-depr-f.md)
   <!--Del-->
-  - [publishAsUser(system api)](arkts-basicservice-commonevent-depr-publishasuser-f-sys.md)<!--DelEnd-->
-  - [subscribe](arkts-basicservice-commonevent-depr-subscribe-f.md)
-  - [unsubscribe](arkts-basicservice-commonevent-depr-unsubscribe-f.md)
-  - [Support](arkts-basicservice-commonevent-depr-support-e.md)
+  - [publishAsUser(system api)](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md)<!--DelEnd-->
+  - [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md)
+  - [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md)
+  - [Support](arkts-basicservices-commonevent-support-depr-e.md)
 <!--Del-->
 - [@ohos.systemparameter(System Parameter)](arkts-basicservices-systemparameter.md)<!--DelEnd-->
   <!--Del-->

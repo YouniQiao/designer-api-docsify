@@ -6,13 +6,15 @@ Declare common types for external audio accessory device interfaces.
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -23,7 +25,7 @@ Declare common types for external audio accessory device interfaces.
 | [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) | OH_AudioAccessory | Declare the audio accessory. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) | OH_AudioAccessoryInputStream | Declare the audio accessory input stream. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -41,10 +43,14 @@ enum OH_AudioAccessoryType
 
 Enumerates audio accessory connection types.
 
+<!--Device-enum OH_AudioAccessoryType--><!--Device-enum OH_AudioAccessoryType-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_ACCESSORY_TYPE_BT_SPP = 1 | Bluetooth SPP (Signal Processing Plugin) connection.<br>**Since**: 26.0.0 |
+| AUDIO_ACCESSORY_TYPE_BT_SPP = 1 | Bluetooth SPP (Serial Port Profile) connection.<br>**Since**: 26.0.0<br><!--Device-AUDIO_ACCESSORY_TYPE_BT_SPP = 1--><!--Device-AUDIO_ACCESSORY_TYPE_BT_SPP = 1-End--> |
 
 

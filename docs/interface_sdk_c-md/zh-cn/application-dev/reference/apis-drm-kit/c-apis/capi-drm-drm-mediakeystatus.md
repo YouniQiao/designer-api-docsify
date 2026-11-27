@@ -1,18 +1,20 @@
 # DRM_MediaKeyStatus
 
 ```c
-struct DRM_MediaKeyStatus {...}
+typedef struct DRM_MediaKeyStatus {...} DRM_MediaKeyStatus
 ```
 
 ## 概述
 
 媒体密钥状态。
 
+<!--Device-struct DRM_MediaKeyStatus {...}--><!--Device-struct DRM_MediaKeyStatus {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm.md)
+**相关模块：** [Drm](capi-drm-kit-drm.md)
 
 **所在头文件：** [native_drm_common.h](capi-native-drm-common-h.md)
 
@@ -22,8 +24,8 @@ struct DRM_MediaKeyStatus {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t statusCount | 媒体密钥状态项的数量，表示statusName和statusValue数组中有效元素的个数。取值范围为[0, MAX_MEDIA_KEY_STATUS_COUNT]。 |
-| char statusName[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_NAME_LEN] | 媒体密钥状态名称数组，每行存储一个状态的名称。常见状态名称包括"Usable"（可用）、"Expired"（已过期）、 "OutputRestricted"（输出受限）等，具体由DRM解决方案定义。数组维度由MAX_MEDIA_KEY_STATUS_COUNT和MAX_MEDIA_KEY_STATUS_NAME_LEN宏定义。 |
-| char statusValue[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_VALUE_LEN] | 媒体密钥状态值数组，每行存储对应statusName的状态值。状态值格式由DRM解决方案定义，可能包含时间戳、级别等信息。 数组维度由MAX_MEDIA_KEY_STATUS_COUNT和MAX_MEDIA_KEY_STATUS_VALUE_LEN宏定义。 |
+| uint32_t statusCount | 媒体密钥状态项的数量，表示statusName和statusValue数组中有效元素的个数。取值范围为[0, MAX_MEDIA_KEY_STATUS_COUNT]。<br><!--Device-uint32_t statusCount--><!--Device-uint32_t statusCount-End--> |
+| char statusName[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_NAME_LEN] | 媒体密钥状态名称数组，每行存储一个状态的名称。常见状态名称包括"Usable"（可用）、"Expired"（已过期）、 "OutputRestricted"（输出受限）等，具体由DRM解决方案定义。数组维度由MAX_MEDIA_KEY_STATUS_COUNT和MAX_MEDIA_KEY_STATUS_NAME_LEN宏定义。<br><!--Device-char statusName[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_NAME_LEN]--><!--Device-char statusName[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_NAME_LEN]-End--> |
+| char statusValue[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_VALUE_LEN] | 媒体密钥状态值数组，每行存储对应statusName的状态值。状态值格式由DRM解决方案定义，可能包含时间戳、级别等信息。 数组维度由MAX_MEDIA_KEY_STATUS_COUNT和MAX_MEDIA_KEY_STATUS_VALUE_LEN宏定义。<br><!--Device-char statusValue[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_VALUE_LEN]--><!--Device-char statusValue[MAX_MEDIA_KEY_STATUS_COUNT][MAX_MEDIA_KEY_STATUS_VALUE_LEN]-End--> |
 
 

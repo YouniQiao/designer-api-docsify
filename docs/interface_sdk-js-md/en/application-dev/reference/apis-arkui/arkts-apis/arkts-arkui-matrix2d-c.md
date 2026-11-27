@@ -4,16 +4,16 @@
 declare class Matrix2D
 ```
 
-A matrix object used for graphic transformation in [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md), [OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-offscreencanvasrenderingcontext2d-c.md), [CanvasPattern](../arkts-components/arkts-arkui-canvas-comp-canvaspattern-i.md), and [Path2D](../arkts-components/arkts-arkui-canvas-comp-path2d-c.md). It can perform scaling, rotation, translation, and other transformations on the matrix.
+A matrix object used for graphic transformation in CanvasRenderingContext2D, OffscreenCanvasRenderingContext2D, CanvasPattern, and Path2D. It can perform scaling, rotation, translation, and other transformations on the matrix.
 
 **Matrix2D** is used in the following scenarios:
 
-1. In [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md) and
-[OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-offscreencanvasrenderingcontext2d-c.md), call [getTransform](../arkts-components/arkts-arkui-canvas-comp-canvasrenderer-c.md#gettransform) to obtain the canvas graphic transformation **Matrix2D** object, and call [setTransform](../arkts-components/arkts-arkui-canvas-comp-canvaspattern-i.md#settransform) to apply the graphic transformation corresponding to the **Matrix2D** object to subsequent drawing content.
-2. In [CanvasPattern](../arkts-components/arkts-arkui-canvas-comp-canvaspattern-i.md), call
-[setTransform](../arkts-components/arkts-arkui-canvas-comp-canvaspattern-i.md#settransform) to apply the graphic transformation corresponding to the **Matrix2D** object to the [CanvasPattern](../arkts-components/arkts-arkui-canvas-comp-canvaspattern-i.md) object.
-3. In [Path2D](../arkts-components/arkts-arkui-canvas-comp-path2d-c.md), call
-[addPath](../arkts-components/arkts-arkui-canvas-comp-path2d-c.md#addpath) to apply the graphic transformation corresponding to the **Matrix2D** object to the [Path2D](../arkts-components/arkts-arkui-canvas-comp-path2d-c.md) object.
+1. In CanvasRenderingContext2D and
+OffscreenCanvasRenderingContext2D, call [getTransform](../arkts-components/arkts-arkui-canvas-comp-canvasrenderer-c.md#gettransform) to obtain the canvas graphic transformation **Matrix2D** object, and call setTransform to apply the graphic transformation corresponding to the **Matrix2D** object to subsequent drawing content.
+2. In CanvasPattern, call
+setTransform to apply the graphic transformation corresponding to the **Matrix2D** object to the CanvasPattern object.
+3. In Path2D, call
+addPath to apply the graphic transformation corresponding to the **Matrix2D** object to the Path2D object.
 
 > **NOTE:** 
 > 
@@ -71,7 +71,7 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **Matrix2D** object. The configuration cannot be dynamically changed after being set. The configuration method is the same as that of [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md). <br>Default value: **DEFAULT** <br>If the invalid values **NaN** and **Infinity** are passed in, the default value is used. |
+| unit | LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **Matrix2D** object. The configuration cannot be dynamically changed after being set. The configuration method is the same as that of [CanvasRenderingContext2D. <br>Default value: **DEFAULT** <br>If the invalid values **NaN** and **Infinity** are passed in, the default value is used. |
 
 ## identity
 

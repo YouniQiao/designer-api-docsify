@@ -1,7 +1,7 @@
 # C API<!--c-camerakit-->
 
 - Module<!--camerakit-module-->
-    - [OH_Camera](capi-oh-camera.md)
+    - [OH_Camera](capi-camera-kit-oh-camera.md)
 - Header file<!--camerakit-headerfile-->
     - [camera.h](capi-camera-h.md)
     - [capture_session.h](capi-capture-session-h.md)
@@ -57,6 +57,7 @@
     - [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)
     - [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md)
     - [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)
+    - [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md)
     - [OH_Camera_PhotoCaptureSettingExt](capi-oh-camera-oh-camera-photocapturesettingext.md)
     - [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md)
     - [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)

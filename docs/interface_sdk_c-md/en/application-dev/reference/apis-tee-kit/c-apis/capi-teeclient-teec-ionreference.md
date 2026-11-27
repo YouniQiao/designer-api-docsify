@@ -8,11 +8,13 @@ typedef struct TEEC_IonReference {...} TEEC_IonReference
 
 Describes the size and handle of the ION memory.
 
+<!--Device-typedef struct TEEC_IonReference {...} TEEC_IonReference--><!--Device-typedef struct TEEC_IonReference {...} TEEC_IonReference-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeClient](capi-teeclient.md)
+**Related module**: [TeeClient](capi-tee-kit-teeclient.md)
 
 **Header file**: [tee_client_type.h](capi-tee-client-type-h.md)
 
@@ -22,7 +24,7 @@ Describes the size and handle of the ION memory.
 
 | Name | Description |
 | -- | -- |
-| int ion_share_fd | File descriptor for the shared ion memory. |
-| uint32_t ion_size | Size of the ion memory. |
+| int ion_share_fd | File descriptor for the shared ion memory.<br><!--Device-int ion_share_fd--><!--Device-int ion_share_fd-End--> |
+| uint32_t ion_size | Size of the ion memory.<br><!--Device-uint32_t ion_size--><!--Device-uint32_t ion_size-End--> |
 
 

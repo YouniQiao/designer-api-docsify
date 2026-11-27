@@ -1,18 +1,20 @@
 # OH_PictureNative_AuxiliaryPictureCopyItem
 
 ```c
-struct OH_PictureNative_AuxiliaryPictureCopyItem {...}
+typedef struct OH_PictureNative_AuxiliaryPictureCopyItem {...} OH_PictureNative_AuxiliaryPictureCopyItem
 ```
 
 ## Overview
 
 This structure is used to specify an auxiliary picture copy rule when creating a deep copy of a PictureNative object. It describes how to copy an auxiliary picture from one type to another.
 
+<!--Device-struct OH_PictureNative_AuxiliaryPictureCopyItem {...}--><!--Device-struct OH_PictureNative_AuxiliaryPictureCopyItem {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 **Header file**: [picture_native.h](capi-picture-native-h.md)
 
@@ -22,7 +24,7 @@ This structure is used to specify an auxiliary picture copy rule when creating a
 
 | Name | Description |
 | -- | -- |
-| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) srcType | Source auxiliary picture type. It specifies the type of auxiliary picture to be copied from the source picture.<br>**Since**: 26.0.0 |
-| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) dstType | Destination auxiliary picture type. It specifies the type under which the copied auxiliary picture will be stored in the destination picture.<br>**Since**: 26.0.0 |
+| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) srcType | Source auxiliary picture type. It specifies the type of auxiliary picture to be copied from the source picture.<br>**Since**: 26.0.0<br><!--Device-Image_AuxiliaryPictureType srcType--><!--Device-Image_AuxiliaryPictureType srcType-End--> |
+| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) dstType | Destination auxiliary picture type. It specifies the type under which the copied auxiliary picture will be stored in the destination picture.<br>**Since**: 26.0.0<br><!--Device-Image_AuxiliaryPictureType dstType--><!--Device-Image_AuxiliaryPictureType dstType-End--> |
 
 

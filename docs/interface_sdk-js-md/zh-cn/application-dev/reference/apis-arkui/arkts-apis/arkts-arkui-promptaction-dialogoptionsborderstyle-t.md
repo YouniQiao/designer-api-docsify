@@ -19,4 +19,4 @@ declare type DialogOptionsBorderStyle = BorderStyle | EdgeStyles
 | 类型 | 说明 |
 | --- | --- |
 | [BorderStyle](arkts-arkui-borderstyle-e.md) |  |
-| [EdgeStyles](arkts-arkui-edgestyles-t.md) |  |
+| EdgeStyles |  |

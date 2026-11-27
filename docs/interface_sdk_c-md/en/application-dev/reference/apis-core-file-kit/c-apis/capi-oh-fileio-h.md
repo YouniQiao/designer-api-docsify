@@ -6,19 +6,21 @@ Defines the native APIs used to obtain the location of a file.
 
 **Library**: libohfileio.so
 
+**System capability**: SystemCapability.FileManagement.File.FileIO
+
 **Since**: 12
 
-**Related module**: [FileIO](capi-fileio.md)
+**Related module**: [FileIO](capi-core-file-kit-fileio.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [FileIO_FileLocation](#fileio_filelocation) | FileIO_FileLocation | Enumerates the file location. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -36,13 +38,17 @@ enum FileIO_FileLocation
 
 Enumerates the file location.
 
+<!--Device-enum FileIO_FileLocation--><!--Device-enum FileIO_FileLocation-End-->
+
+**System capability**: SystemCapability.FileManagement.File.FileIO
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| LOCAL = 1 | The file is stored on the local device.<br>**Since**: 12 |
-| CLOUD = 2 | The file is stored on the cloud.<br>**Since**: 12 |
-| LOCAL_AND_CLOUD = 3 | The file is stored on the local device and cloud.<br>**Since**: 12 |
+| LOCAL = 1 | The file is stored on the local device.<br>**Since**: 12<br><!--Device-LOCAL = 1--><!--Device-LOCAL = 1-End--> |
+| CLOUD = 2 | The file is stored on the cloud.<br>**Since**: 12<br><!--Device-CLOUD = 2--><!--Device-CLOUD = 2-End--> |
+| LOCAL_AND_CLOUD = 3 | The file is stored on the local device and cloud.<br>**Since**: 12<br><!--Device-LOCAL_AND_CLOUD = 3--><!--Device-LOCAL_AND_CLOUD = 3-End--> |
 
 
 ## Function description
@@ -56,6 +62,10 @@ FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileI
 **Description**
 
 Obtains the location of a file.
+
+<!--Device-FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileIO_FileLocation *location)--><!--Device-FileManagement_ErrCode OH_FileIO_GetFileLocation(char *uri, int uriLength, FileIO_FileLocation *location)-End-->
+
+**System capability**: SystemCapability.FileManagement.File.FileIO
 
 **Since**: 12
 

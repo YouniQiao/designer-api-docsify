@@ -6,19 +6,21 @@ Provides APIs for memory management.
 
 **Library**: NA
 
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-teetrusted.md)
+**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | Description |
 | -- | -- |
 | [MALLOC_HINT](#malloc_hint) | Defines the enumeration values for memory allocation hints. |
 
-### Macro
+### Macros
 
 | Name | Description |
 | -- | -- |
@@ -31,7 +33,7 @@ Provides APIs for memory management.
 | TEE_MEMORY_ACCESS_WRITE     0x00000002 | Grants write access to memory.<br>**Since**: 20 |
 | TEE_MEMORY_ACCESS_ANY_OWNER 0x00000004 | Grants access to memory by any owner.<br>**Since**: 20 |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -57,26 +59,30 @@ enum MALLOC_HINT
 
 Defines the enumeration values for memory allocation hints.
 
+<!--Device-enum MALLOC_HINT--><!--Device-enum MALLOC_HINT-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| ZERO           = 0 | Uninitialized buffer. |
-| NOT_ZERO       = 1 | Non-zero initialized buffer. |
-| ALIGN_004      = 0x80000002 | 4-byte aligned buffer. |
-| ALIGN_008      = 0x80000003 | 8-byte aligned buffer. |
-| ALIGN_016      = 0x80000004 | 16-byte aligned buffer. |
-| ALIGN_032      = 0x80000005 | 32-byte aligned buffer. |
-| ALIGN_064      = 0x80000006 | 64-byte aligned buffer. |
-| ALIGN_128      = 0x80000007 | 128-byte aligned buffer. |
-| ALIGN_256      = 0x80000008 | 256-byte aligned buffer. |
-| ALIGN_004_ZERO = 0x80000012 | 4-byte aligned buffer initialized to zero. |
-| ALIGN_008_ZERO = 0x80000013 | 8-byte aligned buffer initialized to zero. |
-| ALIGN_016_ZERO = 0x80000014 | 16-byte aligned buffer initialized to zero. |
-| ALIGN_032_ZERO = 0x80000015 | 32-byte aligned buffer initialized to zero. |
-| ALIGN_064_ZERO = 0x80000016 | 64-byte aligned buffer initialized to zero. |
-| ALIGN_128_ZERO = 0x80000017 | 128-byte aligned buffer initialized to zero. |
-| ALIGN_256_ZERO = 0x80000018 | 256-byte aligned buffer initialized to zero. |
+| ZERO = 0 | Uninitialized buffer.<br><!--Device-ZERO = 0--><!--Device-ZERO = 0-End--> |
+| NOT_ZERO = 1 | Non-zero initialized buffer.<br><!--Device-NOT_ZERO = 1--><!--Device-NOT_ZERO = 1-End--> |
+| ALIGN_004 = 0x80000002 | 4-byte aligned buffer.<br><!--Device-ALIGN_004 = 0x80000002--><!--Device-ALIGN_004 = 0x80000002-End--> |
+| ALIGN_008 = 0x80000003 | 8-byte aligned buffer.<br><!--Device-ALIGN_008 = 0x80000003--><!--Device-ALIGN_008 = 0x80000003-End--> |
+| ALIGN_016 = 0x80000004 | 16-byte aligned buffer.<br><!--Device-ALIGN_016 = 0x80000004--><!--Device-ALIGN_016 = 0x80000004-End--> |
+| ALIGN_032 = 0x80000005 | 32-byte aligned buffer.<br><!--Device-ALIGN_032 = 0x80000005--><!--Device-ALIGN_032 = 0x80000005-End--> |
+| ALIGN_064 = 0x80000006 | 64-byte aligned buffer.<br><!--Device-ALIGN_064 = 0x80000006--><!--Device-ALIGN_064 = 0x80000006-End--> |
+| ALIGN_128 = 0x80000007 | 128-byte aligned buffer.<br><!--Device-ALIGN_128 = 0x80000007--><!--Device-ALIGN_128 = 0x80000007-End--> |
+| ALIGN_256 = 0x80000008 | 256-byte aligned buffer.<br><!--Device-ALIGN_256 = 0x80000008--><!--Device-ALIGN_256 = 0x80000008-End--> |
+| ALIGN_004_ZERO = 0x80000012 | 4-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_004_ZERO = 0x80000012--><!--Device-ALIGN_004_ZERO = 0x80000012-End--> |
+| ALIGN_008_ZERO = 0x80000013 | 8-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_008_ZERO = 0x80000013--><!--Device-ALIGN_008_ZERO = 0x80000013-End--> |
+| ALIGN_016_ZERO = 0x80000014 | 16-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_016_ZERO = 0x80000014--><!--Device-ALIGN_016_ZERO = 0x80000014-End--> |
+| ALIGN_032_ZERO = 0x80000015 | 32-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_032_ZERO = 0x80000015--><!--Device-ALIGN_032_ZERO = 0x80000015-End--> |
+| ALIGN_064_ZERO = 0x80000016 | 64-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_064_ZERO = 0x80000016--><!--Device-ALIGN_064_ZERO = 0x80000016-End--> |
+| ALIGN_128_ZERO = 0x80000017 | 128-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_128_ZERO = 0x80000017--><!--Device-ALIGN_128_ZERO = 0x80000017-End--> |
+| ALIGN_256_ZERO = 0x80000018 | 256-byte aligned buffer initialized to zero.<br><!--Device-ALIGN_256_ZERO = 0x80000018--><!--Device-ALIGN_256_ZERO = 0x80000018-End--> |
 
 
 ## Function description
@@ -90,6 +96,10 @@ void TEE_MemFill(void *buffer, uint8_t x, size_t size)
 **Description**
 
 Fills <b>x</b> into the first <b>size</b> bytes of the buffer.
+
+<!--Device-void TEE_MemFill(void *buffer, uint8_t x, size_t size)--><!--Device-void TEE_MemFill(void *buffer, uint8_t x, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -111,6 +121,10 @@ void TEE_MemMove(void *dest, const void *src, size_t size)
 
 Copies bytes.
 
+<!--Device-void TEE_MemMove(void *dest, const void *src, size_t size)--><!--Device-void TEE_MemMove(void *dest, const void *src, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -130,6 +144,10 @@ void *TEE_Malloc(size_t size, uint32_t hint)
 **Description**
 
 Allocates space of the specified size for an object.
+
+<!--Device-void *TEE_Malloc(size_t size, uint32_t hint)--><!--Device-void *TEE_Malloc(size_t size, uint32_t hint)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -156,6 +174,10 @@ void TEE_Free(void *buffer)
 
 Releases the memory allocated by <b>TEE_Malloc</b>.<br> If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing. The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot be released repeatedly. Otherwise, unexpected result may be caused.
 
+<!--Device-void TEE_Free(void *buffer)--><!--Device-void TEE_Free(void *buffer)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -173,6 +195,10 @@ void *TEE_Realloc(void *buffer, size_t new_size)
 **Description**
 
 Reallocates memory.<br> If <b>new_size</b> is greater than the old size, the content of the original memory does not change and the space in excess of the old size contains unspecified content. If the new size of the memory object requires movement of the object, the space for the previous instantiation of the object is deallocated. If the space cannot be allocated, the original object remains allocated and this function returns a <b>NULL</b> pointer. If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>.
+
+<!--Device-void *TEE_Realloc(void *buffer, size_t new_size)--><!--Device-void *TEE_Realloc(void *buffer, size_t new_size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -198,6 +224,10 @@ int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)
 **Description**
 
 Compares memory content from the beginning.
+
+<!--Device-int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)--><!--Device-int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -225,6 +255,10 @@ TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer,
 
 Checks whether this TA has the requested permissions to access a buffer.
 
+<!--Device-TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer, size_t size)--><!--Device-TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer, size_t size)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -251,6 +285,10 @@ void TEE_SetInstanceData(void *instanceData)
 
 Sets the TA instance data pointer.
 
+<!--Device-void TEE_SetInstanceData(void *instanceData)--><!--Device-void TEE_SetInstanceData(void *instanceData)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
+
 **Since**: 20
 
 **Parameters**:
@@ -268,6 +306,10 @@ void *TEE_GetInstanceData(void)
 **Description**
 
 Obtains the instance data pointer set by the TA using <b>TEE_SetInstanceData</b>.
+
+<!--Device-void *TEE_GetInstanceData(void)--><!--Device-void *TEE_GetInstanceData(void)-End-->
+
+**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

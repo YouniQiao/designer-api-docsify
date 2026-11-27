@@ -1,18 +1,20 @@
 # ScsiPeripheral_TestUnitReadyRequest
 
 ```c
-struct ScsiPeripheral_TestUnitReadyRequest {...}
+typedef struct ScsiPeripheral_TestUnitReadyRequest {...} ScsiPeripheral_TestUnitReadyRequest
 ```
 
 ## Overview
 
-Defines the request structure of the **test unit ready** command.
+Defines the SCSI command (**TEST UNIT READY**) request struct, which is usually used to check whether the logical unit is ready. A logical unit is an I/O operation entity that can be independently addressed in a SCSI device.
+
+<!--Device-struct ScsiPeripheral_TestUnitReadyRequest {...}--><!--Device-struct ScsiPeripheral_TestUnitReadyRequest {...}-End-->
 
 **System capability**: SystemCapability.Driver.SCSI.Extension
 
 **Since**: 18
 
-**Related module**: [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
+**Related module**: [ScsiPeripheralDDK](capi-driver-development-kit-scsiperipheralddk.md)
 
 **Header file**: [scsi_peripheral_types.h](capi-scsi-peripheral-types-h.md)
 
@@ -22,7 +24,7 @@ Defines the request structure of the **test unit ready** command.
 
 | Name | Description |
 | -- | -- |
-| uint8_t control | Control** field used to specify control information. |
-| uint32_t timeout | Timeout duration, in ms. |
+| uint8_t control | **Control** field used to specify the control information of the SCSI command.<br><!--Device-uint8_t control--><!--Device-uint8_t control-End--> |
+| uint32_t timeout | Timeout interval, in milliseconds.<br><!--Device-uint32_t timeout--><!--Device-uint32_t timeout-End--> |
 
 

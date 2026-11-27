@@ -32,7 +32,7 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-bundleinstaller-i-sys.md)&gt; | Yes | Callback used to return the installation package. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-i-sys.md)&gt; | Yes | Callback used to return the installation package. |
 
 <!--Del-->
 **Examples**
@@ -89,7 +89,7 @@ Obtains the installation package. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-bundleinstaller-i-sys.md)&gt; | Promise used to return the installation package. |
+| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-i-sys.md)&gt; | Promise used to return the installation package. |
 
 <!--Del-->
 **Examples**

@@ -1,18 +1,20 @@
 # Rdb_Statistic
 
 ```c
-struct Rdb_Statistic {...}
+typedef struct Rdb_Statistic {...} Rdb_Statistic
 ```
 
 ## 概述
 
 描述数据库表的端云同步过程的统计信息。
 
+<!--Device-struct Rdb_Statistic {...}--><!--Device-struct Rdb_Statistic {...}-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 **所在头文件：** [relational_store.h](capi-relational-store-h.md)
 
@@ -22,9 +24,9 @@ struct Rdb_Statistic {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int total | 表示数据库表中需要端云同步的总行数。 |
-| int successful | 表示数据库表中端云同步成功的行数。 |
-| int failed | 表示数据库表中端云同步失败的行数。 |
-| int remained | 表示数据库表中端云同步剩余未执行的行数。 |
+| int total | 表示数据库表中需要端云同步的总行数。<br><!--Device-int total--><!--Device-int total-End--> |
+| int successful | 表示数据库表中端云同步成功的行数。<br><!--Device-int successful--><!--Device-int successful-End--> |
+| int failed | 表示数据库表中端云同步失败的行数。<br><!--Device-int failed--><!--Device-int failed-End--> |
+| int remained | 表示数据库表中端云同步剩余未执行的行数。<br><!--Device-int remained--><!--Device-int remained-End--> |
 
 

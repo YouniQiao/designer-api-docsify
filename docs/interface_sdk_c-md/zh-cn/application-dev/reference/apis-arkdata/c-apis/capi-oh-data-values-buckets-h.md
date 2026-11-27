@@ -8,9 +8,11 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 ## 汇总
 
@@ -42,6 +44,10 @@ OH_Data_VBuckets *OH_VBuckets_Create(void)
 
 创建OH_Data_VBuckets实例。
 
+<!--Device-OH_Data_VBuckets *OH_VBuckets_Create(void)--><!--Device-OH_Data_VBuckets *OH_VBuckets_Create(void)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **返回值：**
@@ -64,6 +70,10 @@ int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)
 **描述：**
 
 销毁OH_Data_VBuckets对象。
+
+<!--Device-int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)--><!--Device-int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -88,6 +98,10 @@ int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)
 **描述：**
 
 添加OH_VBucket类型数据。
+
+<!--Device-int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)--><!--Device-int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -114,6 +128,10 @@ int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)
 
 添加OH_Data_VBuckets类型数据。
 
+<!--Device-int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)--><!--Device-int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -138,6 +156,10 @@ int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)
 **描述：**
 
 获取OH_Data_VBuckets中OH_VBucket的行数。
+
+<!--Device-int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)--><!--Device-int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 

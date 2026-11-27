@@ -226,7 +226,7 @@ function on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | 是 | 设置事件类型。type为“fenceStatusChange”，表示订阅围栏事件上报。 |
 | request | [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | 是 | 围栏的配置参数。 |
-| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md) | 是 | 用于接收地理围栏事件上报（进出围栏）。 |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 用于接收地理围栏事件上报（进出围栏）。 |
 
 **示例**
 

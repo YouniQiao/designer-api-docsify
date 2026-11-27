@@ -1,18 +1,20 @@
 # Camera_Point
 
 ```c
-struct Camera_Point {...}
+typedef struct Camera_Point {...} Camera_Point
 ```
 
 ## Overview
 
 The struct describes the parameters related to a point.
 
+<!--Device-struct Camera_Point {...}--><!--Device-struct Camera_Point {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ The struct describes the parameters related to a point.
 
 | Name | Description |
 | -- | -- |
-| double x | X coordinate. The value range is [0,1]. |
-| double y | Y coordinate. The value range is [0,1]. |
+| double x | X coordinate. The value range is [0,1].<br><!--Device-double x--><!--Device-double x-End--> |
+| double y | Y coordinate. The value range is [0,1].<br><!--Device-double y--><!--Device-double y-End--> |
 
 

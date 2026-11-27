@@ -1,18 +1,20 @@
 # Camera_ControlCenterStatusInfo
 
 ```c
-struct Camera_ControlCenterStatusInfo {...}
+typedef struct Camera_ControlCenterStatusInfo {...} Camera_ControlCenterStatusInfo
 ```
 
 ## Overview
 
 The struct describes the effect status information of a camera controller.
 
+<!--Device-struct Camera_ControlCenterStatusInfo {...}--><!--Device-struct Camera_ControlCenterStatusInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ The struct describes the effect status information of a camera controller.
 
 | Name | Description |
 | -- | -- |
-| [Camera_ControlCenterEffectType](capi-camera-h.md#camera_controlcentereffecttype) effectType | Effect type of the camera controller. |
-| bool isActive | Whether the controller is activated. **true** if activated, **false** otherwise. |
+| [Camera_ControlCenterEffectType](capi-camera-h.md#camera_controlcentereffecttype) effectType | Effect type of the camera controller.<br><!--Device-Camera_ControlCenterEffectType effectType--><!--Device-Camera_ControlCenterEffectType effectType-End--> |
+| bool isActive | Whether the controller is activated. **true** if activated, **false** otherwise.<br><!--Device-bool isActive--><!--Device-bool isActive-End--> |
 
 

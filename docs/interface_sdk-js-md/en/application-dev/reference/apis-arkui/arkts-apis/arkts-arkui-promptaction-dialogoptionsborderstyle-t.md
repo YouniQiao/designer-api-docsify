@@ -19,4 +19,4 @@ Defines the allowed data types for specifying the background border style of a d
 | Type | Description |
 | --- | --- |
 | [BorderStyle](arkts-arkui-borderstyle-e.md) |  |
-| [EdgeStyles](arkts-arkui-edgestyles-t.md) |  |
+| EdgeStyles |  |

@@ -6,25 +6,27 @@ Declares the queue interfaces in C.
 
 **Library**: libffrt.z.so
 
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
-**Related module**: [FFRT](capi-ffrt.md)
+**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) | ffrt_queue_t | Queue handle, which identifies different queues. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ffrt_queue_type_t](#ffrt_queue_type_t) | ffrt_queue_type_t | Enumerates the queue types. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -49,13 +51,13 @@ Declares the queue interfaces in C.
 | [FFRT_C_API void ffrt_queue_wait(ffrt_task_handle_t handle)](#ffrt_queue_wait) | Waits until a task in the queue is complete. |
 | [FFRT_C_API int ffrt_queue_cancel(ffrt_task_handle_t handle)](#ffrt_queue_cancel) | Cancels a task in the queue.<br> Tasks that have already started executing cannot be canceled. |
 | [FFRT_C_API ffrt_queue_t ffrt_get_main_queue(void)](#ffrt_get_main_queue) | Gets the application main thread queue. |
-| [FFRT_C_API ffrt_queue_t ffrt_get_current_queue(void)](#ffrt_get_current_queue) | Gets the application worker (ArkTS) thread queue.(Deprecated in API18) |
+| [FFRT_C_API ffrt_queue_t ffrt_get_current_queue(void)](#ffrt_get_current_queue) | Gets the application worker (ArkTS) thread queue.(Deprecated) |
 
-### Variable
+### Variables
 
 | Name | Description |
 | -- | -- |
-| void* ffrt_queue_t | Queue handle, which identifies different queues.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core |
+| void* ffrt_queue_t | Queue handle, which identifies different queues.<br>**Since**: 10<br>**System capability**: SystemCapability.Resourceschedule.Ffrt.Core<br><!--Device-void* ffrt_queue_t--><!--Device-void* ffrt_queue_t-End--> |
 
 ## Enum type description
 
@@ -69,13 +71,17 @@ enum ffrt_queue_type_t
 
 Enumerates the queue types.
 
+<!--Device-enum ffrt_queue_type_t--><!--Device-enum ffrt_queue_type_t-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ffrt_queue_serial | Serial queue. |
-| ffrt_queue_concurrent | Concurrent queue. |
-| ffrt_queue_max | Maximum valid queue type value, used as a sentinel (for example, in iteration). |
+| ffrt_queue_serial | Serial queue.<br><!--Device-ffrt_queue_serial--><!--Device-ffrt_queue_serial-End--> |
+| ffrt_queue_concurrent | Concurrent queue.<br><!--Device-ffrt_queue_concurrent--><!--Device-ffrt_queue_concurrent-End--> |
+| ffrt_queue_max | Maximum valid queue type value, used as a sentinel (for example, in iteration).<br><!--Device-ffrt_queue_max--><!--Device-ffrt_queue_max-End--> |
 
 
 ## Function description
@@ -89,6 +95,10 @@ FFRT_C_API int ffrt_queue_attr_init(ffrt_queue_attr_t* attr)
 **Description**
 
 Initializes a queue attribute.<br> The queue attribute must later be destroyed by [ffrt_queue_attr_destroy](capi-queue-h.md#ffrt_queue_attr_destroy).
+
+<!--Device-FFRT_C_API int ffrt_queue_attr_init(ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API int ffrt_queue_attr_init(ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -114,6 +124,10 @@ FFRT_C_API void ffrt_queue_attr_destroy(ffrt_queue_attr_t* attr)
 
 Destroys a queue attribute.<br> The queue attribute must have been initialized by [ffrt_queue_attr_init](capi-queue-h.md#ffrt_queue_attr_init).
 
+<!--Device-FFRT_C_API void ffrt_queue_attr_destroy(ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API void ffrt_queue_attr_destroy(ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -131,6 +145,10 @@ FFRT_C_API void ffrt_queue_attr_set_qos(ffrt_queue_attr_t* attr, ffrt_qos_t qos)
 **Description**
 
 Sets the QoS for a queue attribute.
+
+<!--Device-FFRT_C_API void ffrt_queue_attr_set_qos(ffrt_queue_attr_t* attr, ffrt_qos_t qos)--><!--Device-FFRT_C_API void ffrt_queue_attr_set_qos(ffrt_queue_attr_t* attr, ffrt_qos_t qos)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -150,6 +168,10 @@ FFRT_C_API ffrt_qos_t ffrt_queue_attr_get_qos(const ffrt_queue_attr_t* attr)
 **Description**
 
 Gets the QoS of a queue attribute.
+
+<!--Device-FFRT_C_API ffrt_qos_t ffrt_queue_attr_get_qos(const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API ffrt_qos_t ffrt_queue_attr_get_qos(const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -175,6 +197,10 @@ FFRT_C_API void ffrt_queue_attr_set_timeout(ffrt_queue_attr_t* attr, uint64_t ti
 
 Sets the execution timeout of a queue attribute.
 
+<!--Device-FFRT_C_API void ffrt_queue_attr_set_timeout(ffrt_queue_attr_t* attr, uint64_t timeout_us)--><!--Device-FFRT_C_API void ffrt_queue_attr_set_timeout(ffrt_queue_attr_t* attr, uint64_t timeout_us)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -193,6 +219,10 @@ FFRT_C_API uint64_t ffrt_queue_attr_get_timeout(const ffrt_queue_attr_t* attr)
 **Description**
 
 Gets the execution timeout of a queue attribute.
+
+<!--Device-FFRT_C_API uint64_t ffrt_queue_attr_get_timeout(const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API uint64_t ffrt_queue_attr_get_timeout(const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -218,6 +248,10 @@ FFRT_C_API void ffrt_queue_attr_set_callback(ffrt_queue_attr_t* attr, ffrt_funct
 
 Sets the timeout callback of a queue attribute.<br> The callback is triggered when a task in the queue runs longer than the timeout duration set by [ffrt_queue_attr_set_timeout](capi-queue-h.md#ffrt_queue_attr_set_timeout).
 
+<!--Device-FFRT_C_API void ffrt_queue_attr_set_callback(ffrt_queue_attr_t* attr, ffrt_function_header_t* f)--><!--Device-FFRT_C_API void ffrt_queue_attr_set_callback(ffrt_queue_attr_t* attr, ffrt_function_header_t* f)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -237,6 +271,10 @@ FFRT_C_API ffrt_function_header_t* ffrt_queue_attr_get_callback(const ffrt_queue
 
 Gets the timeout callback of a queue attribute.
 
+<!--Device-FFRT_C_API ffrt_function_header_t* ffrt_queue_attr_get_callback(const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API ffrt_function_header_t* ffrt_queue_attr_get_callback(const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -249,7 +287,7 @@ Gets the timeout callback of a queue attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_function_header_t* | The queue task timeout callback function. |
+| FFRT_C_API [ffrt_function_header_t](capi-ffrt-ffrt-function-header-t.md)* | The queue task timeout callback function. |
 
 ### ffrt_queue_attr_set_max_concurrency()
 
@@ -260,6 +298,10 @@ FFRT_C_API void ffrt_queue_attr_set_max_concurrency(ffrt_queue_attr_t* attr, con
 **Description**
 
 Sets the max concurrency of a concurrent queue attribute.
+
+<!--Device-FFRT_C_API void ffrt_queue_attr_set_max_concurrency(ffrt_queue_attr_t* attr, const int max_concurrency)--><!--Device-FFRT_C_API void ffrt_queue_attr_set_max_concurrency(ffrt_queue_attr_t* attr, const int max_concurrency)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -279,6 +321,10 @@ FFRT_C_API int ffrt_queue_attr_get_max_concurrency(const ffrt_queue_attr_t* attr
 **Description**
 
 Gets the max concurrency of a concurrent queue attribute.
+
+<!--Device-FFRT_C_API int ffrt_queue_attr_get_max_concurrency(const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API int ffrt_queue_attr_get_max_concurrency(const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -304,6 +350,10 @@ FFRT_C_API void ffrt_queue_attr_set_thread_mode(ffrt_queue_attr_t* attr, bool mo
 
 Sets the execution mode of a queue attribute.<br> This interface specifies whether tasks in the queue are executed in coroutine mode or thread mode. By default, tasks are executed in coroutine mode. Set mode to `true` to enable thread-based execution.
 
+<!--Device-FFRT_C_API void ffrt_queue_attr_set_thread_mode(ffrt_queue_attr_t* attr, bool mode)--><!--Device-FFRT_C_API void ffrt_queue_attr_set_thread_mode(ffrt_queue_attr_t* attr, bool mode)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -322,6 +372,10 @@ FFRT_C_API bool ffrt_queue_attr_get_thread_mode(const ffrt_queue_attr_t* attr)
 **Description**
 
 Gets the execution mode of a queue attribute.
+
+<!--Device-FFRT_C_API bool ffrt_queue_attr_get_thread_mode(const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API bool ffrt_queue_attr_get_thread_mode(const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 20
 
@@ -347,6 +401,10 @@ FFRT_C_API ffrt_queue_t ffrt_queue_create(ffrt_queue_type_t type, const char* na
 
 Creates a queue.<br> The queue must later be destroyed by [ffrt_queue_destroy](capi-queue-h.md#ffrt_queue_destroy) when no longer needed.
 
+<!--Device-FFRT_C_API ffrt_queue_t ffrt_queue_create(ffrt_queue_type_t type, const char* name, const ffrt_queue_attr_t* attr)--><!--Device-FFRT_C_API ffrt_queue_t ffrt_queue_create(ffrt_queue_type_t type, const char* name, const ffrt_queue_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -361,7 +419,7 @@ Creates a queue.<br> The queue must later be destroyed by [ffrt_queue_destroy](c
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_queue_t | A non-null queue handle if the queue is created; a null pointer otherwise. |
+| FFRT_C_API [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) | A non-null queue handle if the queue is created; a null pointer otherwise. |
 
 ### ffrt_queue_destroy()
 
@@ -372,6 +430,10 @@ FFRT_C_API void ffrt_queue_destroy(ffrt_queue_t queue)
 **Description**
 
 Destroys a queue.<br> The queue must have been created by [ffrt_queue_create](capi-queue-h.md#ffrt_queue_create). Destruction cancels tasks that have not yet started and blocks until any currently executing tasks complete.
+
+<!--Device-FFRT_C_API void ffrt_queue_destroy(ffrt_queue_t queue)--><!--Device-FFRT_C_API void ffrt_queue_destroy(ffrt_queue_t queue)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -390,6 +452,10 @@ FFRT_C_API void ffrt_queue_submit(ffrt_queue_t queue, ffrt_function_header_t* f,
 **Description**
 
 Submits a task to a queue.
+
+<!--Device-FFRT_C_API void ffrt_queue_submit(ffrt_queue_t queue, ffrt_function_header_t* f, const ffrt_task_attr_t* attr)--><!--Device-FFRT_C_API void ffrt_queue_submit(ffrt_queue_t queue, ffrt_function_header_t* f, const ffrt_task_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -416,6 +482,10 @@ FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h(ffrt_queue_t queue, ffrt_funct
 
 Submits a task to the queue, and obtains a task handle.
 
+<!--Device-FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h(ffrt_queue_t queue, ffrt_function_header_t* f, const ffrt_task_attr_t* attr)--><!--Device-FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h(ffrt_queue_t queue, ffrt_function_header_t* f, const ffrt_task_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 10
 
 **Parameters**:
@@ -430,7 +500,7 @@ Submits a task to the queue, and obtains a task handle.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted; a null pointer otherwise. |
+| FFRT_C_API [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) | A non-null task handle if the task is submitted; a null pointer otherwise. |
 
 **Reference**:
 
@@ -446,6 +516,10 @@ FFRT_C_API void ffrt_queue_submit_f(ffrt_queue_t queue, ffrt_function_t func, vo
 **Description**
 
 Submits a task to a queue, simplified from the [ffrt_queue_submit](capi-queue-h.md#ffrt_queue_submit) interface.<br> This interface wraps the provided task function and its argument into a task wrapper designed for queue submission (`ffrt_function_kind_queue`). During wrapper creation, the task destroy callback (after_func), which is intended to handle any post-execution cleanup, is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper is then submitted to the specified queue via the [ffrt_queue_submit](capi-queue-h.md#ffrt_queue_submit) interface.
+
+<!--Device-FFRT_C_API void ffrt_queue_submit_f(ffrt_queue_t queue, ffrt_function_t func, void* arg, const ffrt_task_attr_t* attr)--><!--Device-FFRT_C_API void ffrt_queue_submit_f(ffrt_queue_t queue, ffrt_function_t func, void* arg, const ffrt_task_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 20
 
@@ -473,6 +547,10 @@ FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h_f(ffrt_queue_t queue, ffrt_fun
 
 Submits a task to a queue, and obtains a handle, simplified from the [ffrt_queue_submit_h](capi-queue-h.md#ffrt_queue_submit_h) interface.<br> This interface wraps the provided task function and its argument into a task wrapper designed for queue submission (`ffrt_function_kind_queue`). During wrapper creation, the task destroy callback (after_func), which is intended to handle any post-execution cleanup, is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper is then submitted to the specified queue via the [ffrt_queue_submit_h](capi-queue-h.md#ffrt_queue_submit_h) interface.
 
+<!--Device-FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h_f(ffrt_queue_t queue, ffrt_function_t func, void* arg, const ffrt_task_attr_t* attr)--><!--Device-FFRT_C_API ffrt_task_handle_t ffrt_queue_submit_h_f(ffrt_queue_t queue, ffrt_function_t func, void* arg, const ffrt_task_attr_t* attr)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 20
 
 **Parameters**:
@@ -488,7 +566,7 @@ Submits a task to a queue, and obtains a handle, simplified from the [ffrt_queue
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted; a null pointer otherwise. |
+| FFRT_C_API [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) | A non-null task handle if the task is submitted; a null pointer otherwise. |
 
 **Reference**:
 
@@ -504,6 +582,10 @@ FFRT_C_API void ffrt_queue_wait(ffrt_task_handle_t handle)
 **Description**
 
 Waits until a task in the queue is complete.
+
+<!--Device-FFRT_C_API void ffrt_queue_wait(ffrt_task_handle_t handle)--><!--Device-FFRT_C_API void ffrt_queue_wait(ffrt_task_handle_t handle)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -522,6 +604,10 @@ FFRT_C_API int ffrt_queue_cancel(ffrt_task_handle_t handle)
 **Description**
 
 Cancels a task in the queue.<br> Tasks that have already started executing cannot be canceled.
+
+<!--Device-FFRT_C_API int ffrt_queue_cancel(ffrt_task_handle_t handle)--><!--Device-FFRT_C_API int ffrt_queue_cancel(ffrt_task_handle_t handle)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -547,13 +633,17 @@ FFRT_C_API ffrt_queue_t ffrt_get_main_queue(void)
 
 Gets the application main thread queue.
 
+<!--Device-FFRT_C_API ffrt_queue_t ffrt_get_main_queue(void)--><!--Device-FFRT_C_API ffrt_queue_t ffrt_get_main_queue(void)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 12
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_queue_t | The application main thread queue. |
+| FFRT_C_API [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) | The application main thread queue. |
 
 ### ffrt_get_current_queue()
 
@@ -565,6 +655,10 @@ FFRT_C_API ffrt_queue_t ffrt_get_current_queue(void)
 
 Gets the application worker (ArkTS) thread queue.
 
+<!--Device-FFRT_C_API ffrt_queue_t ffrt_get_current_queue(void)--><!--Device-FFRT_C_API ffrt_queue_t ffrt_get_current_queue(void)-End-->
+
+**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
+
 **Since**: 12
 
 **Deprecated**: 18
@@ -573,6 +667,6 @@ Gets the application worker (ArkTS) thread queue.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_queue_t | The application worker (ArkTS) thread queue. |
+| FFRT_C_API [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) | The application worker (ArkTS) thread queue. |
 
 

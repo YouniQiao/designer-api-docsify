@@ -1,18 +1,20 @@
 # OH_PictureNative_MetadataCopyItem
 
 ```c
-struct OH_PictureNative_MetadataCopyItem {...}
+typedef struct OH_PictureNative_MetadataCopyItem {...} OH_PictureNative_MetadataCopyItem
 ```
 
 ## Overview
 
 This structure is used to specify a metadata copy rule when creating a deep copy of a PictureNative object. It describes how to copy metadata from one type to another.
 
+<!--Device-struct OH_PictureNative_MetadataCopyItem {...}--><!--Device-struct OH_PictureNative_MetadataCopyItem {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
-**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 **Header file**: [picture_native.h](capi-picture-native-h.md)
 
@@ -22,7 +24,7 @@ This structure is used to specify a metadata copy rule when creating a deep copy
 
 | Name | Description |
 | -- | -- |
-| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) srcType | Source metadata type. It specifies the type of metadata to be copied from the source picture.<br>**Since**: 26.0.0 |
-| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) dstType | Destination metadata type. It specifies the type under which the copied metadata will be stored in the destination picture.<br>**Since**: 26.0.0 |
+| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) srcType | Source metadata type. It specifies the type of metadata to be copied from the source picture.<br>**Since**: 26.0.0<br><!--Device-Image_MetadataType srcType--><!--Device-Image_MetadataType srcType-End--> |
+| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) dstType | Destination metadata type. It specifies the type under which the copied metadata will be stored in the destination picture.<br>**Since**: 26.0.0<br><!--Device-Image_MetadataType dstType--><!--Device-Image_MetadataType dstType-End--> |
 
 

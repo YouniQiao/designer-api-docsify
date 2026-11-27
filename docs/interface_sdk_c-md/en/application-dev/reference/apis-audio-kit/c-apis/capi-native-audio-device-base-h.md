@@ -6,36 +6,40 @@ Declare audio device related interfaces for audio device descriptor.<br> Defines
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
-**Related module**: [OHAudio](capi-ohaudio.md)
+**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
 
 ## Summary
 
-### Struct
+### Structs
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) | - | Declaring the audio device descriptor array. |
+| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) | OH_AudioDeviceDescriptorArray | Declaring the audio device descriptor array. |
 | [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) | OH_AudioDeviceDescriptor | Declaring the audio device descriptor. The instance is used to get more audio device detail attributes. |
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioDevice_ChangeType](#oh_audiodevice_changetype) | OH_AudioDevice_ChangeType | Defines the audio device change type. |
 | [OH_AudioDevice_Role](#oh_audiodevice_role) | OH_AudioDevice_Role | Defines the audio device role. |
 | [OH_AudioDevice_Type](#oh_audiodevice_type) | OH_AudioDevice_Type | Defines the audio device type. |
+| [OH_AudioDevice_UsbHeadsetType](#oh_audiodevice_usbheadsettype) | OH_AudioDevice_UsbHeadsetType | Defines the USB headset subtype. |
 | [OH_AudioDevice_Flag](#oh_audiodevice_flag) | OH_AudioDevice_Flag | Defines the audio device flag. |
 | [OH_AudioDevice_Usage](#oh_audiodevice_usage) | OH_AudioDevice_Usage | Defines the audio device usage. |
 | [OH_AudioDevice_BlockStatus](#oh_audiodevice_blockstatus) | OH_AudioDevice_BlockStatus | Declaring the audio device blocked status. By default, the audio device is considered as unblocked. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
 | [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Role *deviceRole)](#oh_audiodevicedescriptor_getdevicerole) | Query the device role of the target audio device descriptor. |
 | [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Type *deviceType)](#oh_audiodevicedescriptor_getdevicetype) | Query the device type of the target audio device descriptor. |
+| [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetUsbHeadsetType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_UsbHeadsetType *usbHeadsetType)](#oh_audiodevicedescriptor_getusbheadsettype) | Queries the USB headset subtype of the USB headset device descriptor. <br>The caller should first confirm through [OH_AudioDeviceDescriptor_GetDeviceType](capi-native-audio-device-base-h.md#oh_audiodevicedescriptor_getdevicetype) that the device type is [AUDIO_DEVICE_TYPE_USB_HEADSET](capi-native-audio-device-base-h.md#oh_audiodevice_type) and then call this API. <br>When the device type is Audio Device Type USB Headset, this interface returns the HiFi USB headset, ARM USB headset. Otherwise, an invalid value is returned. |
 | [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t *id)](#oh_audiodevicedescriptor_getdeviceid) | Query the device id of the target audio device descriptor. |
 | [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **name)](#oh_audiodevicedescriptor_getdevicename) | Query the device name of the target audio device descriptor. |
 | [OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **address)](#oh_audiodevicedescriptor_getdeviceaddress) | Query the device address of the target audio device descriptor. |
@@ -56,12 +60,16 @@ enum OH_AudioDevice_ChangeType
 
 Defines the audio device change type.
 
+<!--Device-enum OH_AudioDevice_ChangeType--><!--Device-enum OH_AudioDevice_ChangeType-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_CHANGE_TYPE_CONNECT = 0 | Device connection. |
-| AUDIO_DEVICE_CHANGE_TYPE_DISCONNECT = 1 | Device disconnection. |
+| AUDIO_DEVICE_CHANGE_TYPE_CONNECT = 0 | Device connection.<br><!--Device-AUDIO_DEVICE_CHANGE_TYPE_CONNECT = 0--><!--Device-AUDIO_DEVICE_CHANGE_TYPE_CONNECT = 0-End--> |
+| AUDIO_DEVICE_CHANGE_TYPE_DISCONNECT = 1 | Device disconnection.<br><!--Device-AUDIO_DEVICE_CHANGE_TYPE_DISCONNECT = 1--><!--Device-AUDIO_DEVICE_CHANGE_TYPE_DISCONNECT = 1-End--> |
 
 ### OH_AudioDevice_Role
 
@@ -73,12 +81,16 @@ enum OH_AudioDevice_Role
 
 Defines the audio device role.
 
+<!--Device-enum OH_AudioDevice_Role--><!--Device-enum OH_AudioDevice_Role-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_ROLE_INPUT = 1 | Input role. |
-| AUDIO_DEVICE_ROLE_OUTPUT = 2 | Output role. |
+| AUDIO_DEVICE_ROLE_INPUT = 1 | Input role.<br><!--Device-AUDIO_DEVICE_ROLE_INPUT = 1--><!--Device-AUDIO_DEVICE_ROLE_INPUT = 1-End--> |
+| AUDIO_DEVICE_ROLE_OUTPUT = 2 | Output role.<br><!--Device-AUDIO_DEVICE_ROLE_OUTPUT = 2--><!--Device-AUDIO_DEVICE_ROLE_OUTPUT = 2-End--> |
 
 ### OH_AudioDevice_Type
 
@@ -90,28 +102,54 @@ enum OH_AudioDevice_Type
 
 Defines the audio device type.
 
+<!--Device-enum OH_AudioDevice_Type--><!--Device-enum OH_AudioDevice_Type-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_TYPE_INVALID = 0 | Invalid device. |
-| AUDIO_DEVICE_TYPE_EARPIECE = 1 | Built-in earpiece. |
-| AUDIO_DEVICE_TYPE_SPEAKER = 2 | Built-in speaker. |
-| AUDIO_DEVICE_TYPE_WIRED_HEADSET = 3 | Wired headset, which is a combination of a pair of earpieces and a microphone. |
-| AUDIO_DEVICE_TYPE_WIRED_HEADPHONES = 4 | A pair of wired headphones. |
-| AUDIO_DEVICE_TYPE_BLUETOOTH_SCO = 7 | Bluetooth device using the synchronous connection oriented link (SCO). |
-| AUDIO_DEVICE_TYPE_BLUETOOTH_A2DP = 8 | Bluetooth device using advanced audio distibution profile (A2DP). |
-| AUDIO_DEVICE_TYPE_MIC = 15 | Built-in microphone. |
-| AUDIO_DEVICE_TYPE_USB_HEADSET = 22 | USB audio headset. |
-| AUDIO_DEVICE_TYPE_DISPLAY_PORT = 23 | Display port device. |
-| AUDIO_DEVICE_TYPE_REMOTE_CAST = 24 | Device type for rerouting audio to other remote devices by system application. |
-| AUDIO_DEVICE_TYPE_USB_DEVICE = 25 | Usb audio device.<br>**Since**: 18 |
-| AUDIO_DEVICE_TYPE_ACCESSORY = 26 | Accessory device, such as the microphone on a remote control.<br>**Since**: 19 |
-| AUDIO_DEVICE_TYPE_HDMI = 27 | HDMI device, such as a device connected through an HDMI, ARC, or eARC interface.<br>**Since**: 19 |
-| AUDIO_DEVICE_TYPE_LINE_DIGITAL = 28 | Line-connected, digital audio output device, such as an S/PDIF device.<br>**Since**: 19 |
-| AUDIO_DEVICE_TYPE_HEARING_AID = 30 | Hearing aid device.<br>**Since**: 20 |
-| AUDIO_DEVICE_TYPE_NEARLINK = 31 | Nearlink device.<br>**Since**: 20 |
-| AUDIO_DEVICE_TYPE_DEFAULT = 1000 | Default device type. |
+| AUDIO_DEVICE_TYPE_INVALID = 0 | Invalid device.<br><!--Device-AUDIO_DEVICE_TYPE_INVALID = 0--><!--Device-AUDIO_DEVICE_TYPE_INVALID = 0-End--> |
+| AUDIO_DEVICE_TYPE_EARPIECE = 1 | Built-in earpiece.<br><!--Device-AUDIO_DEVICE_TYPE_EARPIECE = 1--><!--Device-AUDIO_DEVICE_TYPE_EARPIECE = 1-End--> |
+| AUDIO_DEVICE_TYPE_SPEAKER = 2 | Built-in speaker.<br><!--Device-AUDIO_DEVICE_TYPE_SPEAKER = 2--><!--Device-AUDIO_DEVICE_TYPE_SPEAKER = 2-End--> |
+| AUDIO_DEVICE_TYPE_WIRED_HEADSET = 3 | Wired headset, which is a combination of a pair of earpieces and a microphone.<br><!--Device-AUDIO_DEVICE_TYPE_WIRED_HEADSET = 3--><!--Device-AUDIO_DEVICE_TYPE_WIRED_HEADSET = 3-End--> |
+| AUDIO_DEVICE_TYPE_WIRED_HEADPHONES = 4 | A pair of wired headphones.<br><!--Device-AUDIO_DEVICE_TYPE_WIRED_HEADPHONES = 4--><!--Device-AUDIO_DEVICE_TYPE_WIRED_HEADPHONES = 4-End--> |
+| AUDIO_DEVICE_TYPE_BLUETOOTH_SCO = 7 | Bluetooth device using the synchronous connection oriented link (SCO).<br><!--Device-AUDIO_DEVICE_TYPE_BLUETOOTH_SCO = 7--><!--Device-AUDIO_DEVICE_TYPE_BLUETOOTH_SCO = 7-End--> |
+| AUDIO_DEVICE_TYPE_BLUETOOTH_A2DP = 8 | Bluetooth device using advanced audio distibution profile (A2DP).<br><!--Device-AUDIO_DEVICE_TYPE_BLUETOOTH_A2DP = 8--><!--Device-AUDIO_DEVICE_TYPE_BLUETOOTH_A2DP = 8-End--> |
+| AUDIO_DEVICE_TYPE_MIC = 15 | Built-in microphone.<br><!--Device-AUDIO_DEVICE_TYPE_MIC = 15--><!--Device-AUDIO_DEVICE_TYPE_MIC = 15-End--> |
+| AUDIO_DEVICE_TYPE_USB_HEADSET = 22 | USB audio headset.<br><!--Device-AUDIO_DEVICE_TYPE_USB_HEADSET = 22--><!--Device-AUDIO_DEVICE_TYPE_USB_HEADSET = 22-End--> |
+| AUDIO_DEVICE_TYPE_DISPLAY_PORT = 23 | Display port device.<br><!--Device-AUDIO_DEVICE_TYPE_DISPLAY_PORT = 23--><!--Device-AUDIO_DEVICE_TYPE_DISPLAY_PORT = 23-End--> |
+| AUDIO_DEVICE_TYPE_REMOTE_CAST = 24 | Device type for rerouting audio to other remote devices by system application.<br><!--Device-AUDIO_DEVICE_TYPE_REMOTE_CAST = 24--><!--Device-AUDIO_DEVICE_TYPE_REMOTE_CAST = 24-End--> |
+| AUDIO_DEVICE_TYPE_USB_DEVICE = 25 | Usb audio device.<br>**Since**: 18<br><!--Device-AUDIO_DEVICE_TYPE_USB_DEVICE = 25--><!--Device-AUDIO_DEVICE_TYPE_USB_DEVICE = 25-End--> |
+| AUDIO_DEVICE_TYPE_ACCESSORY = 26 | Accessory device, such as the microphone on a remote control.<br>**Since**: 19<br><!--Device-AUDIO_DEVICE_TYPE_ACCESSORY = 26--><!--Device-AUDIO_DEVICE_TYPE_ACCESSORY = 26-End--> |
+| AUDIO_DEVICE_TYPE_HDMI = 27 | HDMI device, such as a device connected through an HDMI, ARC, or eARC interface.<br>**Since**: 19<br><!--Device-AUDIO_DEVICE_TYPE_HDMI = 27--><!--Device-AUDIO_DEVICE_TYPE_HDMI = 27-End--> |
+| AUDIO_DEVICE_TYPE_LINE_DIGITAL = 28 | Line-connected, digital audio output device, such as an S/PDIF device.<br>**Since**: 19<br><!--Device-AUDIO_DEVICE_TYPE_LINE_DIGITAL = 28--><!--Device-AUDIO_DEVICE_TYPE_LINE_DIGITAL = 28-End--> |
+| AUDIO_DEVICE_TYPE_HEARING_AID = 30 | Hearing aid device.<br>**Since**: 20<br><!--Device-AUDIO_DEVICE_TYPE_HEARING_AID = 30--><!--Device-AUDIO_DEVICE_TYPE_HEARING_AID = 30-End--> |
+| AUDIO_DEVICE_TYPE_NEARLINK = 31 | Nearlink device.<br>**Since**: 20<br><!--Device-AUDIO_DEVICE_TYPE_NEARLINK = 31--><!--Device-AUDIO_DEVICE_TYPE_NEARLINK = 31-End--> |
+| AUDIO_DEVICE_TYPE_DEFAULT = 1000 | Default device type.<br><!--Device-AUDIO_DEVICE_TYPE_DEFAULT = 1000--><!--Device-AUDIO_DEVICE_TYPE_DEFAULT = 1000-End--> |
+
+### OH_AudioDevice_UsbHeadsetType
+
+```c
+enum OH_AudioDevice_UsbHeadsetType
+```
+
+**Description**
+
+Defines the USB headset subtype.
+
+<!--Device-enum OH_AudioDevice_UsbHeadsetType--><!--Device-enum OH_AudioDevice_UsbHeadsetType-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_AUDIO_DEVICE_USB_HEADSET_TYPE_INVALID = 0 | Invalid USB headset subtype.<br>**Since**: 26.1.0<br><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_INVALID = 0--><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_INVALID = 0-End--> |
+| OH_AUDIO_DEVICE_USB_HEADSET_TYPE_HIFI = 1 | HiFi USB headset.<br>**Since**: 26.1.0<br><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_HIFI = 1--><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_HIFI = 1-End--> |
+| OH_AUDIO_DEVICE_USB_HEADSET_TYPE_ARM = 2 | ARM USB headset.<br>**Since**: 26.1.0<br><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_ARM = 2--><!--Device-OH_AUDIO_DEVICE_USB_HEADSET_TYPE_ARM = 2-End--> |
 
 ### OH_AudioDevice_Flag
 
@@ -123,14 +161,18 @@ enum OH_AudioDevice_Flag
 
 Defines the audio device flag.
 
+<!--Device-enum OH_AudioDevice_Flag--><!--Device-enum OH_AudioDevice_Flag-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_FLAG_NONE = 0 | None device. |
-| AUDIO_DEVICE_FLAG_OUTPUT = 1 | Output device. |
-| AUDIO_DEVICE_FLAG_INPUT = 2 | Input device. |
-| AUDIO_DEVICE_FLAG_ALL = 3 | All device. |
+| AUDIO_DEVICE_FLAG_NONE = 0 | None device.<br><!--Device-AUDIO_DEVICE_FLAG_NONE = 0--><!--Device-AUDIO_DEVICE_FLAG_NONE = 0-End--> |
+| AUDIO_DEVICE_FLAG_OUTPUT = 1 | Output device.<br><!--Device-AUDIO_DEVICE_FLAG_OUTPUT = 1--><!--Device-AUDIO_DEVICE_FLAG_OUTPUT = 1-End--> |
+| AUDIO_DEVICE_FLAG_INPUT = 2 | Input device.<br><!--Device-AUDIO_DEVICE_FLAG_INPUT = 2--><!--Device-AUDIO_DEVICE_FLAG_INPUT = 2-End--> |
+| AUDIO_DEVICE_FLAG_ALL = 3 | All device.<br><!--Device-AUDIO_DEVICE_FLAG_ALL = 3--><!--Device-AUDIO_DEVICE_FLAG_ALL = 3-End--> |
 
 ### OH_AudioDevice_Usage
 
@@ -142,16 +184,20 @@ enum OH_AudioDevice_Usage
 
 Defines the audio device usage.
 
+<!--Device-enum OH_AudioDevice_Usage--><!--Device-enum OH_AudioDevice_Usage-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_USAGE_MEDIA_OUTPUT = 1 | Device used for media output.<br>**Since**: 12 |
-| AUDIO_DEVICE_USAGE_MEDIA_INPUT = 2 | Device used for media input.<br>**Since**: 12 |
-| AUDIO_DEVICE_USAGE_MEDIA_ALL = 3 | Device used for media, including input and output.<br>**Since**: 12 |
-| AUDIO_DEVICE_USAGE_CALL_OUTPUT = 4 | Device used for call output.<br>**Since**: 12 |
-| AUDIO_DEVICE_USAGE_CALL_INPUT = 8 | Device used for call input.<br>**Since**: 12 |
-| AUDIO_DEVICE_USAGE_CALL_ALL = 12 | Device used for call, including input and output.<br>**Since**: 12 |
+| AUDIO_DEVICE_USAGE_MEDIA_OUTPUT = 1 | Device used for media output.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_MEDIA_OUTPUT = 1--><!--Device-AUDIO_DEVICE_USAGE_MEDIA_OUTPUT = 1-End--> |
+| AUDIO_DEVICE_USAGE_MEDIA_INPUT = 2 | Device used for media input.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_MEDIA_INPUT = 2--><!--Device-AUDIO_DEVICE_USAGE_MEDIA_INPUT = 2-End--> |
+| AUDIO_DEVICE_USAGE_MEDIA_ALL = 3 | Device used for media, including input and output.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_MEDIA_ALL = 3--><!--Device-AUDIO_DEVICE_USAGE_MEDIA_ALL = 3-End--> |
+| AUDIO_DEVICE_USAGE_CALL_OUTPUT = 4 | Device used for call output.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_CALL_OUTPUT = 4--><!--Device-AUDIO_DEVICE_USAGE_CALL_OUTPUT = 4-End--> |
+| AUDIO_DEVICE_USAGE_CALL_INPUT = 8 | Device used for call input.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_CALL_INPUT = 8--><!--Device-AUDIO_DEVICE_USAGE_CALL_INPUT = 8-End--> |
+| AUDIO_DEVICE_USAGE_CALL_ALL = 12 | Device used for call, including input and output.<br>**Since**: 12<br><!--Device-AUDIO_DEVICE_USAGE_CALL_ALL = 12--><!--Device-AUDIO_DEVICE_USAGE_CALL_ALL = 12-End--> |
 
 ### OH_AudioDevice_BlockStatus
 
@@ -163,12 +209,16 @@ enum OH_AudioDevice_BlockStatus
 
 Declaring the audio device blocked status. By default, the audio device is considered as unblocked.
 
+<!--Device-enum OH_AudioDevice_BlockStatus--><!--Device-enum OH_AudioDevice_BlockStatus-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| AUDIO_DEVICE_UNBLOCKED = 0 | Audio device is unblocked.<br>**Since**: 13 |
-| AUDIO_DEVICE_BLOCKED = 1 | Audio Device is blocked.<br>**Since**: 13 |
+| AUDIO_DEVICE_UNBLOCKED = 0 | Audio device is unblocked.<br>**Since**: 13<br><!--Device-AUDIO_DEVICE_UNBLOCKED = 0--><!--Device-AUDIO_DEVICE_UNBLOCKED = 0-End--> |
+| AUDIO_DEVICE_BLOCKED = 1 | Audio Device is blocked.<br>**Since**: 13<br><!--Device-AUDIO_DEVICE_BLOCKED = 1--><!--Device-AUDIO_DEVICE_BLOCKED = 1-End--> |
 
 
 ## Function description
@@ -183,13 +233,17 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescr
 
 Query the device role of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Role *deviceRole)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Role *deviceRole)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
 | [OH_AudioDevice_Role](capi-native-audio-device-base-h.md#oh_audiodevice_role) *deviceRole | the pointer [OH_AudioDevice_Role](capi-native-audio-device-base-h.md#oh_audiodevice_role) variable that will be set the device role value. |
 
 **Returns**:
@@ -208,13 +262,17 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescr
 
 Query the device type of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Type *deviceType)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_Type *deviceType)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
 | [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) *deviceType | the pointer [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) pointer variable that will be set the device type value. |
 
 **Returns**:
@@ -222,6 +280,35 @@ Query the device type of the target audio device descriptor.
 | Type | Description |
 | -- | -- |
 | [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result). |
+
+### OH_AudioDeviceDescriptor_GetUsbHeadsetType()
+
+```c
+OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetUsbHeadsetType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_UsbHeadsetType *usbHeadsetType)
+```
+
+**Description**
+
+Queries the USB headset subtype of the USB headset device descriptor. <br>The caller should first confirm through [OH_AudioDeviceDescriptor_GetDeviceType](capi-native-audio-device-base-h.md#oh_audiodevicedescriptor_getdevicetype) that the device type is [AUDIO_DEVICE_TYPE_USB_HEADSET](capi-native-audio-device-base-h.md#oh_audiodevice_type) and then call this API. <br>When the device type is Audio Device Type USB Headset, this interface returns the HiFi USB headset, ARM USB headset. Otherwise, an invalid value is returned.
+
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetUsbHeadsetType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_UsbHeadsetType *usbHeadsetType)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetUsbHeadsetType(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioDevice_UsbHeadsetType *usbHeadsetType)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | [in] USB headset device descriptor. [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or to OH_AudioRoutingManager_OnDeviceChangedCallback. |
+| [OH_AudioDevice_UsbHeadsetType](capi-native-audio-device-base-h.md#oh_audiodevice_usbheadsettype) *usbHeadsetType | [out] Point to the variable used to receive the USB headset subtype. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul> <li>AUDIOCOMMON_RESULT_SUCCESS: The function is executed successfully. </li> <li>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM: <br>1. The value of audioDeviceDescriptor is nullptr. <br>2. The usbHeadsetType parameter is nullptr. <br>3. The device type corresponding to audioDeviceDescriptor is not [AUDIO_DEVICE_TYPE_USB_HEADSET](capi-native-audio-device-base-h.md#oh_audiodevice_type). </li> </ul> |
 
 ### OH_AudioDeviceDescriptor_GetDeviceId()
 
@@ -233,13 +320,17 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescrip
 
 Query the device id of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t *id)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t *id)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
 | uint32_t *id | pointer variable that will be set the device id value. |
 
 **Returns**:
@@ -258,14 +349,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescr
 
 Query the device name of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **name)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **name)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| char **name | pointer variable that will be set the device name value. Do not release the name pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| char **name | pointer variable that will be set the device name value. Do not release the name pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 
 **Returns**:
 
@@ -283,14 +378,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDe
 
 Query the device address of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **address)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **address)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| char **address | pointer variable that will be set the device address value. Do not release the address pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| char **address | pointer variable that will be set the device address value. Do not release the address pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 
 **Returns**:
 
@@ -308,14 +407,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceSampleRates(OH_AudioDevi
 
 Query the sample rate array of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceSampleRates(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t **sampleRates, uint32_t *size)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceSampleRates(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t **sampleRates, uint32_t *size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| uint32_t **sampleRates | array pointer variable that will be set the sample rate array value. Do not release the sampleRates pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| uint32_t **sampleRates | array pointer variable that will be set the sample rate array value. Do not release the sampleRates pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 | uint32_t *size | pointer variable that will be set the sample rate size value. |
 
 **Returns**:
@@ -334,14 +437,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceChannelCounts(OH_AudioDe
 
 Query the device channel count array of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceChannelCounts(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t **channelCounts, uint32_t *size)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceChannelCounts(OH_AudioDeviceDescriptor *audioDeviceDescriptor, uint32_t **channelCounts, uint32_t *size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| uint32_t **channelCounts | array pointer variable that will be set the channel count array value. Do not release the channelCounts pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| uint32_t **channelCounts | array pointer variable that will be set the channel count array value. Do not release the channelCounts pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 | uint32_t *size | pointer variable that will be set the channel count size value. |
 
 **Returns**:
@@ -360,14 +467,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceDisplayName(OH_AudioDevi
 
 Query the display name of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceDisplayName(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **displayName)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceDisplayName(OH_AudioDeviceDescriptor *audioDeviceDescriptor, char **displayName)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| char **displayName | pointer variable that will be set the display name value. Do not release the displayName pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| char **displayName | pointer variable that will be set the display name value. Do not release the displayName pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 
 **Returns**:
 
@@ -385,14 +496,18 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceEncodingTypes(OH_AudioDe
 
 Query the encoding type array of the target audio device descriptor.
 
+<!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceEncodingTypes(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioStream_EncodingType **encodingTypes, uint32_t *size)--><!--Device-OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceEncodingTypes(OH_AudioDeviceDescriptor *audioDeviceDescriptor, OH_AudioStream_EncodingType **encodingTypes, uint32_t *size)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by OH_AudioRoutingManager_GetDevices or OH_AudioRouterManager_OnDeviceChangedCallback. |
-| [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) **encodingTypes | the [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) Do not release the encodingTypes pointer separately instead call OH_AudioRoutingManager_ReleaseDevices to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | reference returned by [OH_AudioRoutingManager_GetDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_getdevices) or OH_AudioRouterManager_OnDeviceChangedCallback. |
+| [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) **encodingTypes | the [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) Do not release the encodingTypes pointer separately instead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 | uint32_t *size | pointer variable that will be set the encoding type size value. |
 
 **Returns**:

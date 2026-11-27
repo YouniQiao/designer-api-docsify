@@ -2,13 +2,15 @@
 
 ## 概述
 
-Defines the code of the HiDebug module.
+HiDebug模块代码结构体定义。
 
 **库：** libohhidebug.so
 
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 12
 
-**相关模块：** [HiDebug](capi-hidebug.md)
+**相关模块：** [HiDebug](capi-performance-analysis-kit-hidebug.md)
 
 ## 汇总
 
@@ -16,21 +18,21 @@ Defines the code of the HiDebug module.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [HiDebug_ThreadCpuUsage](capi-hidebug-hidebug-threadcpuusage.md) | - | 当前进程所有线程的CPU使用率结构体定义。<br>使用场景：<br>应用性能监控：获取线程CPU使用率，监控应用的运行状态和性能瓶颈。<br>线程性能优化：分析各线程的CPU占用情况，优化线程调度和资源分配。<br> 系统调试：在调试阶段追踪线程的CPU使用情况，定位性能问题。 |
-| [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md) | - | 系统内存信息结构类型定义。用于获取系统内存的总量、空闲量、可用量等关键信息，适用于系统性能分析、内存监控、故障诊断等场景，帮助开发者了解系统内存使用状况，优化内存管理策略。 |
-| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) | - | 应用程序进程本机内存信息结构类型定义。 |
-| [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md) | - | 应用程序进程内存限制结构类型定义。 |
-| [OH_HiDebug_RequestTraceConfig](capi-hidebug-oh-hidebug-requesttraceconfig.md) | - | 请求trace采集的配置结构类型定义。用于在应用性能分析和调试场景中配置trace采集参数，如定位应用启动慢、UI卡顿、CPU占用高等性能问题。 |
-| [HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) | - | 应用程序进程可替换/恢复的HiDebug_MallocDispatch表结构类型定义。通过该结构体，开发者可以自定义内存管理函数指针，实现对进程内存分配和释放的监控与定制。主要特点包括：支持动态替换和恢复内存管理函数、 提供全面的内存操作接口（malloc、calloc、realloc、free、mmap、munmap）、不影响系统默认内存管理行为。使用场景包括：内存泄漏检测、内存使用性能分析、自定义内存分配策略、内存安全监控等。 能够帮助开发者及时发现和解决内存问题，提升应用稳定性和性能。 |
-| [HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) | - | js栈帧内容的定义。用于在性能分析和调试场景中，记录js调用栈的帧信息，包括代码位置、函数名称、映射区域等关键信息。 |
-| [HiDebug_NativeStackFrame](capi-hidebug-hidebug-nativestackframe.md) | - | native栈帧内容的定义。 |
-| [HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md) | - | 栈帧内容的定义。该结构体用于表示调试时的栈帧信息，支持获取当前栈的类型以及对应的js栈帧或Native栈帧内容，帮助开发者进行问题定位和调试分析。 |
-| [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md) | - | 应用图形显存占用详情的结构定义。 |
-| [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md) | - | 采样配置的结构定义。 |
-| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md) | - | 封装单次资源采集的结果。 |
-| [OH_HiDebug_ResProfilerConfig](capi-hidebug-oh-hidebug-resprofilerconfig.md) | - | 定义资源采集配置结构体类型。 |
-| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object.md) | HiDebug_Backtrace_Object | 用于栈回溯及栈解析的对象。该对象封装了栈回溯所需的上下文信息，包括调用栈地址、线程状态等数据，通过相关接口可获取详细的栈帧信息和符号解析结果。该对象通过HiDebug相关接口创建，使用后需要调用对应的销毁接口释放资源。 |
-| [HiDebug_ThreadCpuUsage*](capi-hidebug-hidebug-threadcpuusage8h.md) | HiDebug_ThreadCpuUsagePtr | Defines pointer of HiDebug_ThreadCpuUsage. |
+| [HiDebug_ThreadCpuUsage](capi-hidebug-hidebug-threadcpuusage.md) | HiDebug_ThreadCpuUsage | 当前进程所有线程的CPU使用率结构体定义。<br>使用场景：<br>应用性能监控：获取线程CPU使用率，监控应用的运行状态和性能瓶颈。<br>线程性能优化：分析各线程的CPU占用情况，优化线程调度和资源分配。<br> 系统调试：在调试阶段追踪线程的CPU使用情况，定位性能问题。 |
+| [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md) | HiDebug_SystemMemInfo | 系统内存信息结构类型定义。用于获取系统内存的总量、空闲量、可用量等关键信息，适用于系统性能分析、内存监控、故障诊断等场景，帮助开发者了解系统内存使用状况，优化内存管理策略。 |
+| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) | HiDebug_NativeMemInfo | 应用程序进程本机内存信息结构类型定义。 |
+| [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md) | HiDebug_MemoryLimit | 应用程序进程内存限制结构类型定义。 |
+| [OH_HiDebug_RequestTraceConfig](capi-hidebug-oh-hidebug-requesttraceconfig.md) | OH_HiDebug_RequestTraceConfig | 请求trace采集的配置结构类型定义。用于在应用性能分析和调试场景中配置trace采集参数，如定位应用启动慢、UI卡顿、CPU占用高等性能问题。 |
+| [HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) | HiDebug_MallocDispatch | 应用程序进程可替换/恢复的HiDebug_MallocDispatch表结构类型定义。通过该结构体，开发者可以自定义内存管理函数指针，实现对进程内存分配和释放的监控与定制。主要特点包括：支持动态替换和恢复内存管理函数、 提供全面的内存操作接口（malloc、calloc、realloc、free、mmap、munmap）、不影响系统默认内存管理行为。使用场景包括：内存泄漏检测、内存使用性能分析、自定义内存分配策略、内存安全监控等。 能够帮助开发者及时发现和解决内存问题，提升应用稳定性和性能。 |
+| [HiDebug_JsStackFrame](capi-hidebug-hidebug-jsstackframe.md) | HiDebug_JsStackFrame | js栈帧内容的定义。用于在性能分析和调试场景中，记录js调用栈的帧信息，包括代码位置、函数名称、映射区域等关键信息。 |
+| [HiDebug_NativeStackFrame](capi-hidebug-hidebug-nativestackframe.md) | HiDebug_NativeStackFrame | native栈帧内容的定义。 |
+| [HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md) | HiDebug_StackFrame | 栈帧内容的定义。该结构体用于表示调试时的栈帧信息，支持获取当前栈的类型以及对应的js栈帧或Native栈帧内容，帮助开发者进行问题定位和调试分析。 |
+| [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md) | HiDebug_GraphicsMemorySummary | 应用图形显存占用详情的结构定义。 |
+| [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md) | HiDebug_ProcessSamplerConfig | 采样配置的结构定义。 |
+| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md) | OH_HiDebug_ProfilingResult | 封装单次资源采集的结果。 |
+| [OH_HiDebug_ResProfilerConfig](capi-hidebug-oh-hidebug-resprofilerconfig.md) | OH_HiDebug_ResProfilerConfig | 定义资源采集配置结构体类型。 |
+| [HiDebug_Backtrace_Object\_\_*](capi-hidebug-hidebug-backtrace-object--8h.md) | HiDebug_Backtrace_Object | 用于栈回溯及栈解析的对象。该对象封装了栈回溯所需的上下文信息，包括调用栈地址、线程状态等数据，通过相关接口可获取详细的栈帧信息和符号解析结果。该对象通过HiDebug相关接口创建，使用后需要调用对应的销毁接口释放资源。 |
+| [HiDebug_ThreadCpuUsage*](capi-hidebug-hidebug-threadcpuusage8h.md) | HiDebug_ThreadCpuUsagePtr | 定义HiDebug_ThreadCpuUsage的指针类型。 |
 
 ### 枚举
 
@@ -42,43 +44,44 @@ Defines the code of the HiDebug module.
 | [HiDebug_CrashObjType](#hidebug_crashobjtype) | HiDebug_CrashObjType | 维测信息数据类型的枚举。 |
 | [OH_HiDebug_ResourceType](#oh_hidebug_resourcetype) | OH_HiDebug_ResourceType | 定义资源采集类型的枚举。 |
 | [OH_HiDebug_MemListenerType](#oh_hidebug_memlistenertype) | OH_HiDebug_MemListenerType | 内存监听回调的类型枚举。开发者根据回调类型处理相关逻辑。 |
+| [OH_HiDebug_ProfilerStackTraceMode](#oh_hidebug_profilerstacktracemode) | OH_HiDebug_ProfilerStackTraceMode | 定义调用栈追踪模式枚举。 |
 
 ### 宏定义
 
 | 名称 | 描述 |
 | -- | -- |
-| HIDEBUG_TRACE_TAG_FFRT (1ULL << 13) | FFRT tasks.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_COMMON_LIBRARY (1ULL << 16) | Common library subsystem tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_HDF (1ULL << 18) | HDF subsystem tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_NET (1ULL << 23) | Net tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_NWEB (1ULL << 24) | NWeb tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_AUDIO (1ULL << 27) | Distributed audio tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_FILE_MANAGEMENT (1ULL << 29) | File management tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_OHOS (1ULL << 30) | OHOS generic tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_ABILITY_MANAGER (1ULL << 31) | Ability Manager tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_CAMERA (1ULL << 32) | Camera module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_MEDIA (1ULL << 33) | Media module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_IMAGE (1ULL << 34) | Image module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_AUDIO (1ULL << 35) | Audio module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_DATA (1ULL << 36) | Distributed data manager module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_GRAPHICS (1ULL << 38) | Graphics module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_ARKUI (1ULL << 39) | ARKUI development framework tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_NOTIFICATION (1ULL << 40) | Notification module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_MISC (1ULL << 41) | MISC module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_MULTIMODAL_INPUT (1ULL << 42) | Multimodal input module tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_RPC (1ULL << 46) | RPC tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_ARK (1ULL << 47) | ARK tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_WINDOW_MANAGER (1ULL << 48) | Window manager tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_SCREEN (1ULL << 50) | Distributed screen tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_CAMERA (1ULL << 51) | Distributed camera tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_HARDWARE_FRAMEWORK (1ULL << 52) | Distributed hardware framework tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_GLOBAL_RESOURCE_MANAGER (1ULL << 53) | Global resource manager tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_HARDWARE_DEVICE_MANAGER (1ULL << 54) | Distributed hardware device manager tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_SAMGR (1ULL << 55) | SA tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_POWER_MANAGER (1ULL << 56) | Power manager tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_SCHEDULER (1ULL << 57) | Distributed scheduler tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_DISTRIBUTED_INPUT (1ULL << 59) | Distributed input tag.<br>**起始版本：** 12 |
-| HIDEBUG_TRACE_TAG_BLUETOOTH (1ULL << 60) | bluetooth tag.<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_FFRT (1ULL << 13) | FFRT任务标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_COMMON_LIBRARY (1ULL << 16) | 公共库子系统标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_HDF (1ULL << 18) | HDF子系统标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_NET (1ULL << 23) | 网络标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_NWEB (1ULL << 24) | NWeb标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_AUDIO (1ULL << 27) | 分布式音频标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_FILE_MANAGEMENT (1ULL << 29) | 文件管理标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_OHOS (1ULL << 30) | OHOS通用标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_ABILITY_MANAGER (1ULL << 31) | Ability Manager标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_CAMERA (1ULL << 32) | 相机模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_MEDIA (1ULL << 33) | 媒体模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_IMAGE (1ULL << 34) | 图像模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_AUDIO (1ULL << 35) | 音频模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_DATA (1ULL << 36) | 分布式数据管理器模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_GRAPHICS (1ULL << 38) | 图形模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_ARKUI (1ULL << 39) | ArkUI开发框架标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_NOTIFICATION (1ULL << 40) | 通知模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_MISC (1ULL << 41) | MISC模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_MULTIMODAL_INPUT (1ULL << 42) | 多模态输入模块标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_RPC (1ULL << 46) | RPC标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_ARK (1ULL << 47) | JSVM虚拟机标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_WINDOW_MANAGER (1ULL << 48) | 窗口管理器标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_SCREEN (1ULL << 50) | 分布式屏幕标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_CAMERA (1ULL << 51) | 分布式相机标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_HARDWARE_FRAMEWORK (1ULL << 52) | 分布式硬件框架标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_GLOBAL_RESOURCE_MANAGER (1ULL << 53) | 全局资源管理器标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_HARDWARE_DEVICE_MANAGER (1ULL << 54) | 分布式硬件设备管理器标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_SAMGR (1ULL << 55) | SA标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_POWER_MANAGER (1ULL << 56) | 电源管理器标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_SCHEDULER (1ULL << 57) | 分布式调度程序标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_DISTRIBUTED_INPUT (1ULL << 59) | 分布式输入标签。<br>**起始版本：** 12 |
+| HIDEBUG_TRACE_TAG_BLUETOOTH (1ULL << 60) | 蓝牙标签。<br>**起始版本：** 12 |
 
 ### 函数
 
@@ -91,9 +94,7 @@ Defines the code of the HiDebug module.
 
 | 名称 | 描述 |
 | -- | -- |
-| HiDebug_ThreadCpuUsage* HiDebug_ThreadCpuUsagePtr | Defines pointer of HiDebug_ThreadCpuUsage.<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug |
-| void (*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, const char* filePath) | 请求trace采集的回调类型定义。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug |
-| void (*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result) | 定义资源采集回调函数。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug |
+| HiDebug_ThreadCpuUsage* HiDebug_ThreadCpuUsagePtr | 定义HiDebug_ThreadCpuUsage的指针类型。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug<br><!--Device-HiDebug_ThreadCpuUsage* HiDebug_ThreadCpuUsagePtr--><!--Device-HiDebug_ThreadCpuUsage* HiDebug_ThreadCpuUsagePtr-End--> |
 
 ## 枚举类型说明
 
@@ -107,42 +108,47 @@ enum HiDebug_ErrorCode
 
 错误码定义。用于HiDebug模块各功能接口的返回状态标识，包括成功、参数错误、权限问题、系统内部错误、设备不支持等多种情况。开发者可根据错误码定位问题原因并采取相应的错误处理措施。
 
+<!--Device-enum HiDebug_ErrorCode--><!--Device-enum HiDebug_ErrorCode-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HIDEBUG_SUCCESS = 0 | 成功。 |
-| HIDEBUG_INVALID_ARGUMENT = 401 | 无效参数，可能的原因： 1.参数传值问题；2.参数类型问题。 |
-| HIDEBUG_TRACE_CAPTURED_ALREADY = 11400102 | 重复采集。 |
-| HIDEBUG_NO_PERMISSION = 11400103 | 没有写文件的权限。 |
-| HIDEBUG_TRACE_ABNORMAL = 11400104 | 系统内部错误。 |
-| HIDEBUG_NO_TRACE_RUNNING = 11400105 | 当前没有trace正在运行。 |
-| OH_HIDEBUG_TRACE_STORAGE_LIMIT = 11400120 |  |
-| HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS = 11400200 |  |
-| HIDEBUG_NOT_SUPPORTED = 11400300 |  |
-| HIDEBUG_UNDER_SAMPLING = 11400301 |  |
-| HIDEBUG_RESOURCE_UNAVAILABLE = 11400302 |  |
-| HIDEBUG_RES_PROF_SUCCESS = 11400400 |  |
-| HIDEBUG_RES_PROF_INVALID_ARG = 11400410 |  |
-| HIDEBUG_RES_PROF_INVALID_MAX_DURATION = 11400411 |  |
-| HIDEBUG_RES_PROF_INVALID_FILTER_SIZE = 11400412 |  |
-| HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH = 11400413 |  |
-| HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL = 11400414 |  |
-| HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL = 11400415 |  |
-| HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE = 11400416 |  |
-| HIDEBUG_RES_PROF_PERMISSION_DENIED = 11400420 |  |
-| HIDEBUG_RES_PROF_ALREADY_STARTED = 11400421 |  |
-| HIDEBUG_RES_PROF_NOT_STARTED = 11400422 |  |
-| HIDEBUG_RES_PROF_PROCESS_OVERLIMIT = 11400423 |  |
-| HIDEBUG_RES_PROF_CONFLICT = 11400424 |  |
-| HIDEBUG_RES_PROF_AUTO_STOPPED_BY_DURATION = 11400425 |  |
-| HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED = 11400426 |  |
-| HIDEBUG_RES_PROF_CPU_OVERLOADED = 11400427 |  |
-| HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL = 11400428 |  |
-| HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL = 11400429 |  |
-| HIDEBUG_RES_PROF_FAILURE = 11400430 |  |
-| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431 | 无效的最大异步嵌套深度。<br>**起始版本：** 26.1.0 |
-| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432 | 无效的最大异步任务栈深度。<br>**起始版本：** 26.1.0 |
+| HIDEBUG_SUCCESS = 0 | 成功。<br><!--Device-HIDEBUG_SUCCESS = 0--><!--Device-HIDEBUG_SUCCESS = 0-End--> |
+| HIDEBUG_INVALID_ARGUMENT = 401 | 无效参数，可能的原因： 1.参数传值问题；2.参数类型问题。<br><!--Device-HIDEBUG_INVALID_ARGUMENT = 401--><!--Device-HIDEBUG_INVALID_ARGUMENT = 401-End--> |
+| HIDEBUG_TRACE_CAPTURED_ALREADY = 11400102 | 重复采集。<br><!--Device-HIDEBUG_TRACE_CAPTURED_ALREADY = 11400102--><!--Device-HIDEBUG_TRACE_CAPTURED_ALREADY = 11400102-End--> |
+| HIDEBUG_NO_PERMISSION = 11400103 | 没有写文件的权限。<br><!--Device-HIDEBUG_NO_PERMISSION = 11400103--><!--Device-HIDEBUG_NO_PERMISSION = 11400103-End--> |
+| HIDEBUG_TRACE_ABNORMAL = 11400104 | 系统内部错误。<br><!--Device-HIDEBUG_TRACE_ABNORMAL = 11400104--><!--Device-HIDEBUG_TRACE_ABNORMAL = 11400104-End--> |
+| HIDEBUG_NO_TRACE_RUNNING = 11400105 | 当前没有trace正在运行。<br><!--Device-HIDEBUG_NO_TRACE_RUNNING = 11400105--><!--Device-HIDEBUG_NO_TRACE_RUNNING = 11400105-End--> |
+| OH_HIDEBUG_TRACE_STORAGE_LIMIT = 11400120 | trace文件存储达到限制。<br>**起始版本：** 24<br><!--Device-OH_HIDEBUG_TRACE_STORAGE_LIMIT = 11400120--><!--Device-OH_HIDEBUG_TRACE_STORAGE_LIMIT = 11400120-End--> |
+| HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS = 11400200 | 传入符号解析函数的pc地址是无效的。<br>**起始版本：** 20<br><!--Device-HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS = 11400200--><!--Device-HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS = 11400200-End--> |
+| HIDEBUG_NOT_SUPPORTED = 11400300 | 当前设备不支持。<br>**起始版本：** 22<br><!--Device-HIDEBUG_NOT_SUPPORTED = 11400300--><!--Device-HIDEBUG_NOT_SUPPORTED = 11400300-End--> |
+| HIDEBUG_UNDER_SAMPLING = 11400301 | 当前进程正在采样。<br>**起始版本：** 22<br><!--Device-HIDEBUG_UNDER_SAMPLING = 11400301--><!--Device-HIDEBUG_UNDER_SAMPLING = 11400301-End--> |
+| HIDEBUG_RESOURCE_UNAVAILABLE = 11400302 | 采样资源不可用。<br>**起始版本：** 22<br><!--Device-HIDEBUG_RESOURCE_UNAVAILABLE = 11400302--><!--Device-HIDEBUG_RESOURCE_UNAVAILABLE = 11400302-End--> |
+| HIDEBUG_RES_PROF_SUCCESS = 11400400 | 资源采集启动/停止成功。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_SUCCESS = 11400400--><!--Device-HIDEBUG_RES_PROF_SUCCESS = 11400400-End--> |
+| HIDEBUG_RES_PROF_INVALID_ARG = 11400410 | 资源采集参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_ARG = 11400410--><!--Device-HIDEBUG_RES_PROF_INVALID_ARG = 11400410-End--> |
+| HIDEBUG_RES_PROF_INVALID_MAX_DURATION = 11400411 | 资源采集最大持续时间参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_DURATION = 11400411--><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_DURATION = 11400411-End--> |
+| HIDEBUG_RES_PROF_INVALID_FILTER_SIZE = 11400412 | 资源采集过滤大小参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_FILTER_SIZE = 11400412--><!--Device-HIDEBUG_RES_PROF_INVALID_FILTER_SIZE = 11400412-End--> |
+| HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH = 11400413 | 资源采集最大回栈深度参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH = 11400413--><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH = 11400413-End--> |
+| HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL = 11400414 | 资源采集统计间隔参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL = 11400414--><!--Device-HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL = 11400414-End--> |
+| HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL = 11400415 | 资源采集采样大小参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL = 11400415--><!--Device-HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL = 11400415-End--> |
+| HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE = 11400416 | 资源采集资源类型参数无效。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE = 11400416--><!--Device-HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE = 11400416-End--> |
+| HIDEBUG_RES_PROF_PERMISSION_DENIED = 11400420 | 资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_PERMISSION_DENIED = 11400420--><!--Device-HIDEBUG_RES_PROF_PERMISSION_DENIED = 11400420-End--> |
+| HIDEBUG_RES_PROF_ALREADY_STARTED = 11400421 | 资源采集重复启动。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_ALREADY_STARTED = 11400421--><!--Device-HIDEBUG_RES_PROF_ALREADY_STARTED = 11400421-End--> |
+| HIDEBUG_RES_PROF_NOT_STARTED = 11400422 | 资源采集未启动，停止失败。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_NOT_STARTED = 11400422--><!--Device-HIDEBUG_RES_PROF_NOT_STARTED = 11400422-End--> |
+| HIDEBUG_RES_PROF_PROCESS_OVERLIMIT = 11400423 | 资源采集进程数超过4个上限。 仅对发布签名应用生效，调试签名应用不受此限制， 用于开发和调试目的。已有采集任务停止后限制释放。[since 26.0.1] API版本26.0.0及以下，该限制对所有应用生效。[since 24 - 26.0.0]<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_PROCESS_OVERLIMIT = 11400423--><!--Device-HIDEBUG_RES_PROF_PROCESS_OVERLIMIT = 11400423-End--> |
+| HIDEBUG_RES_PROF_CONFLICT = 11400424 | 资源采集与命令行工具或系统采集任务冲突。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_CONFLICT = 11400424--><!--Device-HIDEBUG_RES_PROF_CONFLICT = 11400424-End--> |
+| HIDEBUG_RES_PROF_AUTO_STOPPED_BY_DURATION = 11400425 | 资源采集到达指定最大持续时间限制自动停止。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_AUTO_STOPPED_BY_DURATION = 11400425--><!--Device-HIDEBUG_RES_PROF_AUTO_STOPPED_BY_DURATION = 11400425-End--> |
+| HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED = 11400426 | 资源采集每日配额超出限制。 发布签名应用：每应用每日限制采集2次，整机每日限制采集4次； 调试签名应用：采集不受限制，用于开发和调试目的。配额每日重置。[since 26.0.1] API版本26.0.0及以下，仅调试签名应用支持采集，每日限10次。[since 24 - 26.0.0]<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED = 11400426--><!--Device-HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED = 11400426-End--> |
+| HIDEBUG_RES_PROF_CPU_OVERLOADED = 11400427 | 系统CPU处于高负载状态，禁止资源采集。 CPU占用率超过70%。CPU使用率恢复后可重试。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_CPU_OVERLOADED = 11400427--><!--Device-HIDEBUG_RES_PROF_CPU_OVERLOADED = 11400427-End--> |
+| HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL = 11400428 | 系统内存可用空间紧张，禁止资源采集。 可用空间不足2GB，该阈值为固定值，不随设备容量变化。 可用内存恢复后可重试。[since 26.0.1] API版本26.0.0及以下，可用空间少于15%。[since 24 - 26.0.0]<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL = 11400428--><!--Device-HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL = 11400428-End--> |
+| HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL = 11400429 | 系统存储可用空间紧张，禁止资源采集。 可用空间不足总容量的3%与15GB中的较大值。 可用存储恢复后可重试。[since 26.0.1] API版本26.0.0及以下，可用空间少于15%。[since 24 - 26.0.0]<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL = 11400429--><!--Device-HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL = 11400429-End--> |
+| HIDEBUG_RES_PROF_FAILURE = 11400430 | 资源采集启动/停止失败。可检查系统条件后重试。<br>**起始版本：** 24<br><!--Device-HIDEBUG_RES_PROF_FAILURE = 11400430--><!--Device-HIDEBUG_RES_PROF_FAILURE = 11400430-End--> |
+| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431 | 无效的最大异步嵌套深度。<br>**起始版本：** 26.0.1<br><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431--><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431-End--> |
+| HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432 | 无效的最大异步任务栈深度。<br>**起始版本：** 26.0.1<br><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432--><!--Device-HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432-End--> |
+| HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE = 11400433 | 无效的调用栈追踪模式。<br>**起始版本：** 26.0.1<br><!--Device-HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE = 11400433--><!--Device-HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE = 11400433-End--> |
 
 ### HiDebug_TraceFlag
 
@@ -154,12 +160,16 @@ enum HiDebug_TraceFlag
 
 采集trace线程的类型。
 
+<!--Device-enum HiDebug_TraceFlag--><!--Device-enum HiDebug_TraceFlag-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HIDEBUG_TRACE_FLAG_MAIN_THREAD = 1 | 只采集当前应用主线程。 |
-| HIDEBUG_TRACE_FLAG_ALL_THREADS = 2 | 采集当前应用下所有线程。 |
+| HIDEBUG_TRACE_FLAG_MAIN_THREAD = 1 | 只采集当前应用主线程。<br><!--Device-HIDEBUG_TRACE_FLAG_MAIN_THREAD = 1--><!--Device-HIDEBUG_TRACE_FLAG_MAIN_THREAD = 1-End--> |
+| HIDEBUG_TRACE_FLAG_ALL_THREADS = 2 | 采集当前应用下所有线程。<br><!--Device-HIDEBUG_TRACE_FLAG_ALL_THREADS = 2--><!--Device-HIDEBUG_TRACE_FLAG_ALL_THREADS = 2-End--> |
 
 ### HiDebug_StackFrameType
 
@@ -171,12 +181,16 @@ enum HiDebug_StackFrameType
 
 栈帧类型的枚举值定义。
 
+<!--Device-enum HiDebug_StackFrameType--><!--Device-enum HiDebug_StackFrameType-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HIDEBUG_STACK_FRAME_TYPE_JS = 1 | js类型栈帧。 |
-| HIDEBUG_STACK_FRAME_TYPE_NATIVE = 2 | native类型栈帧。 |
+| HIDEBUG_STACK_FRAME_TYPE_JS = 1 | js类型栈帧。<br><!--Device-HIDEBUG_STACK_FRAME_TYPE_JS = 1--><!--Device-HIDEBUG_STACK_FRAME_TYPE_JS = 1-End--> |
+| HIDEBUG_STACK_FRAME_TYPE_NATIVE = 2 | native类型栈帧。<br><!--Device-HIDEBUG_STACK_FRAME_TYPE_NATIVE = 2--><!--Device-HIDEBUG_STACK_FRAME_TYPE_NATIVE = 2-End--> |
 
 ### HiDebug_CrashObjType
 
@@ -188,16 +202,20 @@ enum HiDebug_CrashObjType
 
 维测信息数据类型的枚举。
 
+<!--Device-enum HiDebug_CrashObjType--><!--Device-enum HiDebug_CrashObjType-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HIDEBUG_CRASHOBJ_STRING = 0 | 字符串 |
-| HIDEBUG_CRASHOBJ_MEMORY_64B = 1 | 64字节内存块 |
-| HIDEBUG_CRASHOBJ_MEMORY_256B = 2 | 256字节内存块 |
-| HIDEBUG_CRASHOBJ_MEMORY_1024B = 3 | 1024字节内存块 |
-| HIDEBUG_CRASHOBJ_MEMORY_2048B = 4 | 2048字节内存块 |
-| HIDEBUG_CRASHOBJ_MEMORY_4096B = 5 | 4096字节内存块 |
+| HIDEBUG_CRASHOBJ_STRING = 0 | 字符串<br><!--Device-HIDEBUG_CRASHOBJ_STRING = 0--><!--Device-HIDEBUG_CRASHOBJ_STRING = 0-End--> |
+| HIDEBUG_CRASHOBJ_MEMORY_64B = 1 | 64字节内存块<br><!--Device-HIDEBUG_CRASHOBJ_MEMORY_64B = 1--><!--Device-HIDEBUG_CRASHOBJ_MEMORY_64B = 1-End--> |
+| HIDEBUG_CRASHOBJ_MEMORY_256B = 2 | 256字节内存块<br><!--Device-HIDEBUG_CRASHOBJ_MEMORY_256B = 2--><!--Device-HIDEBUG_CRASHOBJ_MEMORY_256B = 2-End--> |
+| HIDEBUG_CRASHOBJ_MEMORY_1024B = 3 | 1024字节内存块<br><!--Device-HIDEBUG_CRASHOBJ_MEMORY_1024B = 3--><!--Device-HIDEBUG_CRASHOBJ_MEMORY_1024B = 3-End--> |
+| HIDEBUG_CRASHOBJ_MEMORY_2048B = 4 | 2048字节内存块<br><!--Device-HIDEBUG_CRASHOBJ_MEMORY_2048B = 4--><!--Device-HIDEBUG_CRASHOBJ_MEMORY_2048B = 4-End--> |
+| HIDEBUG_CRASHOBJ_MEMORY_4096B = 5 | 4096字节内存块<br><!--Device-HIDEBUG_CRASHOBJ_MEMORY_4096B = 5--><!--Device-HIDEBUG_CRASHOBJ_MEMORY_4096B = 5-End--> |
 
 ### OH_HiDebug_ResourceType
 
@@ -209,18 +227,22 @@ enum OH_HiDebug_ResourceType
 
 定义资源采集类型的枚举。
 
+<!--Device-enum OH_HiDebug_ResourceType--><!--Device-enum OH_HiDebug_ResourceType-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_RES_TYPE_FD |  |
-| OH_RES_TYPE_THREAD |  |
-| OH_RES_TYPE_NATIVE |  |
-| OH_RES_TYPE_GPU |  |
-| OH_RES_TYPE_GLOBAL_HANDLE |  |
-| OH_RES_TYPE_DMA | DMA内存<br>**起始版本：** 26.1.0 |
-| OH_RES_TYPE_ASHMEM | 匿名共享内存<br>**起始版本：** 26.1.0 |
-| OH_RES_TYPE_COMPOSITE_HEAP | 组合堆<br>**起始版本：** 26.1.0 |
+| OH_RES_TYPE_FD | 文件描述符<br>**起始版本：** 24<br><!--Device-OH_RES_TYPE_FD--><!--Device-OH_RES_TYPE_FD-End--> |
+| OH_RES_TYPE_THREAD | 线程<br>**起始版本：** 24<br><!--Device-OH_RES_TYPE_THREAD--><!--Device-OH_RES_TYPE_THREAD-End--> |
+| OH_RES_TYPE_NATIVE | Native 内存<br>**起始版本：** 24<br><!--Device-OH_RES_TYPE_NATIVE--><!--Device-OH_RES_TYPE_NATIVE-End--> |
+| OH_RES_TYPE_GPU | GPU 内存<br>**起始版本：** 24<br><!--Device-OH_RES_TYPE_GPU--><!--Device-OH_RES_TYPE_GPU-End--> |
+| OH_RES_TYPE_GLOBAL_HANDLE | 全局句柄<br>**起始版本：** 24<br><!--Device-OH_RES_TYPE_GLOBAL_HANDLE--><!--Device-OH_RES_TYPE_GLOBAL_HANDLE-End--> |
+| OH_RES_TYPE_DMA | DMA内存<br>**起始版本：** 26.0.1<br><!--Device-OH_RES_TYPE_DMA--><!--Device-OH_RES_TYPE_DMA-End--> |
+| OH_RES_TYPE_ASHMEM | 匿名共享内存<br>**起始版本：** 26.0.1<br><!--Device-OH_RES_TYPE_ASHMEM--><!--Device-OH_RES_TYPE_ASHMEM-End--> |
+| OH_RES_TYPE_COMPOSITE_HEAP | 组合堆<br>**起始版本：** 26.0.1<br><!--Device-OH_RES_TYPE_COMPOSITE_HEAP--><!--Device-OH_RES_TYPE_COMPOSITE_HEAP-End--> |
 
 ### OH_HiDebug_MemListenerType
 
@@ -232,13 +254,38 @@ enum OH_HiDebug_MemListenerType
 
 内存监听回调的类型枚举。开发者根据回调类型处理相关逻辑。
 
+<!--Device-enum OH_HiDebug_MemListenerType--><!--Device-enum OH_HiDebug_MemListenerType-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_HIDEBUG_DO_NOTHING = 0 |  |
-| OH_HIDEBUG_RUNNING_GC = 1 |  |
-| OH_HIDEBUG_DUMP_SNAPSHOT = 2 |  |
+| OH_HIDEBUG_DO_NOTHING = 0 | 无特定操作，仅通知回调。<br>**起始版本：** 26.0.0<br><!--Device-OH_HIDEBUG_DO_NOTHING = 0--><!--Device-OH_HIDEBUG_DO_NOTHING = 0-End--> |
+| OH_HIDEBUG_RUNNING_GC = 1 | 垃圾回收（GC）操作。<br>**起始版本：** 26.0.0<br><!--Device-OH_HIDEBUG_RUNNING_GC = 1--><!--Device-OH_HIDEBUG_RUNNING_GC = 1-End--> |
+| OH_HIDEBUG_DUMP_SNAPSHOT = 2 | 导出内存快照。<br>**起始版本：** 26.0.0<br><!--Device-OH_HIDEBUG_DUMP_SNAPSHOT = 2--><!--Device-OH_HIDEBUG_DUMP_SNAPSHOT = 2-End--> |
+
+### OH_HiDebug_ProfilerStackTraceMode
+
+```c
+enum OH_HiDebug_ProfilerStackTraceMode
+```
+
+**描述：**
+
+定义调用栈追踪模式枚举。
+
+<!--Device-enum OH_HiDebug_ProfilerStackTraceMode--><!--Device-enum OH_HiDebug_ProfilerStackTraceMode-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**起始版本：** 26.0.1
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_HIDEBUG_STACK_TRACE_KEEP_ALL = 0 | 保留所有调用栈追踪，包括已销毁的。<br>**起始版本：** 26.0.1<br><!--Device-OH_HIDEBUG_STACK_TRACE_KEEP_ALL = 0--><!--Device-OH_HIDEBUG_STACK_TRACE_KEEP_ALL = 0-End--> |
+| OH_HIDEBUG_STACK_TRACE_DISCARD_DESTROYED = 1 | 丢弃已销毁的调用栈追踪。<br>**起始版本：** 26.0.1<br><!--Device-OH_HIDEBUG_STACK_TRACE_DISCARD_DESTROYED = 1--><!--Device-OH_HIDEBUG_STACK_TRACE_DISCARD_DESTROYED = 1-End--> |
 
 
 ## 函数说明
@@ -252,6 +299,10 @@ typedef void (*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, con
 **描述：**
 
 请求trace采集的回调类型定义。
+
+<!--Device-typedef void (*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, const char* filePath)--><!--Device-typedef void (*OH_HiDebug_RequestTraceCallback)(HiDebug_ErrorCode errorCode, const char* filePath)-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **起始版本：** 24
 
@@ -271,6 +322,10 @@ typedef void (*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)
 **描述：**
 
 定义资源采集回调函数。
+
+<!--Device-typedef void (*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)--><!--Device-typedef void (*OH_HiDebug_ProfilingCallback)(OH_HiDebug_ProfilingResult* result)-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **起始版本：** 24
 

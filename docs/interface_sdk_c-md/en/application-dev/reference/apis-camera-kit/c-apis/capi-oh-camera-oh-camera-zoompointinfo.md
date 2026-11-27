@@ -1,18 +1,20 @@
 # OH_Camera_ZoomPointInfo
 
 ```c
-struct OH_Camera_ZoomPointInfo {...}
+typedef struct OH_Camera_ZoomPointInfo {...} OH_Camera_ZoomPointInfo
 ```
 
 ## Overview
 
 Describes the zoom point info.
 
+<!--Device-struct OH_Camera_ZoomPointInfo {...}--><!--Device-struct OH_Camera_ZoomPointInfo {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ Describes the zoom point info.
 
 | Name | Description |
 | -- | -- |
-| float zoomRatio |  |
-| uint32_t equivalentFocalLength |  |
+| float zoomRatio | Zoom ratio.<br>**Since**: 26.0.0<br><!--Device-float zoomRatio--><!--Device-float zoomRatio-End--> |
+| uint32_t equivalentFocalLength | Equivalent focal length.<br>**Since**: 26.0.0<br><!--Device-uint32_t equivalentFocalLength--><!--Device-uint32_t equivalentFocalLength-End--> |
 
 

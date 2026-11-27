@@ -110,7 +110,7 @@ If the borderColor attribute is used, it must be used together with the borderWi
 
 For a bottom sheet, the bottom border color does not take effect. When the systemMaterial attribute is set, the effect of this attribute may be overridden. Using it together with systemMaterial is not recommended.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ If the borderStyle attribute is used, it must be used together with the borderWi
 
 For a bottom sheet, the bottom border style does not take effect.
 
-**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](../arkts-apis/arkts-arkui-edgestyles-t.md)
+**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **Since:** 12
 
@@ -170,7 +170,7 @@ When the left and right borders of the sheet are greater than the sheet width, a
 
 For a bottom sheet, the bottom border width does not take effect. When the systemMaterial attribute is set, the effect of this attribute may be overridden. Using it together with systemMaterial is not recommended. The value range is non-negative numbers. Setting a negative value does not take effect.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -866,7 +866,7 @@ It is not recommended to set four unequal corner radii. The visual experience is
 4. When the corner radius is greater than half of the sheet width, the corner radius takes the value of half of the sheet width.
 5. When the sheet height is too small and the corner radius is set too large, the display may be abnormal.
 
-**Type:** LengthMetrics &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** LengthMetrics &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 15
 

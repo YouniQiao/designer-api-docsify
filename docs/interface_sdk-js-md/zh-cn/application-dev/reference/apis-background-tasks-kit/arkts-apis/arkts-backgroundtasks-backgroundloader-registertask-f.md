@@ -35,5 +35,9 @@ function registerTask(taskInfo: TaskInfo): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) | Check on taskInfo failed. |
+| 9710001 | Memory operation failed. |
+| 9710002 | Parcel operation failed. |
+| 9710003 | Background loader service operation failed. |
+| 9710004 | Parameter error. |
+| 9710005 | Background load failed. |
+| [9700006](../errorcode-workScheduler.md#9700006-执行频率参数校验失败) | Background load prohibited. |

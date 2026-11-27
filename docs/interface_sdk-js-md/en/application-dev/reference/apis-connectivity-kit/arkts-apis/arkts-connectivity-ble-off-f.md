@@ -3,57 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
-
-## off('advertisingStateChange')
-
-```TypeScript
-function off(type: 'advertisingStateChange', callback?: Callback<AdvertisingStateChangeInfo>): void
-```
-
-Unsubscribe from advertising state change event.
-
-**Since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ble-function off(type: 'advertisingStateChange', callback?: Callback<AdvertisingStateChangeInfo>): void--><!--Device-ble-function off(type: 'advertisingStateChange', callback?: Callback<AdvertisingStateChangeInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'advertisingStateChange' | Yes | Type of the advertising state to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AdvertisingStateChangeInfo](arkts-connectivity-ble-advertisingstatechangeinfo-i.md)&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to [ble.on('advertisingStateChange')] [on](arkts-connectivity-ble-on-f.md#onadvertisingstatechange) The callback functions in * are the same. If no parameter is transferred, all callback function notifications corresponding to the type are unsubscribed from. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
-| 2900099 | Operation failed. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: ble.AdvertisingStateChangeInfo) {
-    console.info('bluetooth advertising state = ' + JSON.stringify(data));
-}
-try {
-    ble.on('advertisingStateChange', onReceiveEvent);
-    ble.off('advertisingStateChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## off('BLEDeviceFind')
 
@@ -61,17 +12,19 @@ try {
 function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void
 ```
 
-Unsubscribe BLE scan result.
+Unsubscribe BLE scan result. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
-**Since:** 10
+**Since:** 9
 
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+**Deprecated since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**Substitutes:** BLEDeviceFind
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Required permissions:** 
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
+- API version 9: ohos.permission.USE_BLUETOOTH
 
-<!--Device-ble-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void--><!--Device-ble-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void-End-->
+<!--Device-BLE-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void--><!--Device-BLE-function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,27 +33,28 @@ Unsubscribe BLE scan result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;&gt; | No | Specifies the callback function notification for unsubscription. If the parameter is transferred, the parameter must be set to The callback functions in [ble.on('BLEDeviceFind')](arkts-connectivity-ble-on-f.md#onbledevicefind) are consistent; if If there is no input parameter, all callback function notifications corresponding to the type are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ScanResult](arkts-connectivity-ble-scanresult-i.md)&gt;&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: <br>1. The hardware does not support the capability; <br>2. The chip does not support the capability; <br>3. A dependent service feature is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900099 | Operation failed. |
 
 **Examples**
 
 ```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: Array<ble.ScanResult>) {
+import { BusinessError } from '@ohos.base';
+function onReceiveEvent(data: Array<bluetoothManager.ScanResult>) {
     console.info('bluetooth device find = '+ JSON.stringify(data));
 }
 try {
-    ble.on('BLEDeviceFind', onReceiveEvent);
-    ble.off('BLEDeviceFind', onReceiveEvent);
+    bluetoothManager.BLE.on('BLEDeviceFind', onReceiveEvent);
+    bluetoothManager.BLE.off('BLEDeviceFind', onReceiveEvent);
 } catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
 ```

@@ -1,18 +1,20 @@
 # OH_NativeBuffer_StaticMetadata
 
 ```c
-struct OH_NativeBuffer_StaticMetadata {...}
+typedef struct OH_NativeBuffer_StaticMetadata {...} OH_NativeBuffer_StaticMetadata
 ```
 
 ## Overview
 
 Indicates the HDR static metadata.
 
+<!--Device-struct OH_NativeBuffer_StaticMetadata {...}--><!--Device-struct OH_NativeBuffer_StaticMetadata {...}-End-->
+
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
-**Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
+**Related module**: [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
 
 **Header file**: [buffer_common.h](capi-buffer-common-h.md)
 
@@ -22,7 +24,7 @@ Indicates the HDR static metadata.
 
 | Name | Description |
 | -- | -- |
-| [OH_NativeBuffer_Smpte2086](capi-oh-nativebuffer-oh-nativebuffer-smpte2086.md) smpte2086 | smpte 2086 metadata |
-| [OH_NativeBuffer_Cta861](capi-oh-nativebuffer-oh-nativebuffer-cta861.md) cta861 | CTA-861.3 metadata |
+| [OH_NativeBuffer_Smpte2086](capi-oh-nativebuffer-oh-nativebuffer-smpte2086.md) smpte2086 | smpte 2086 metadata<br><!--Device-OH_NativeBuffer_Smpte2086 smpte2086--><!--Device-OH_NativeBuffer_Smpte2086 smpte2086-End--> |
+| [OH_NativeBuffer_Cta861](capi-oh-nativebuffer-oh-nativebuffer-cta861.md) cta861 | CTA-861.3 metadata<br><!--Device-OH_NativeBuffer_Cta861 cta861--><!--Device-OH_NativeBuffer_Cta861 cta861-End--> |
 
 

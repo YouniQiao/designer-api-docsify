@@ -20,7 +20,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 设置边框颜色。
 
-**类型：** [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 7
 
@@ -44,7 +44,7 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 **卡片能力：** 该接口不支持在ArkTS卡片中使用。
 
-**类型：** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 **卡片能力：** 该接口不支持在ArkTS卡片中使用。
 
-**类型：** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ style?: EdgeStyles | BorderStyle
 
 设置边框样式。
 
-**类型：** [EdgeStyles](arkts-arkui-edgestyles-t.md) &#124; [BorderStyle](arkts-arkui-borderstyle-e.md)
+**类型：** EdgeStyles &#124; [BorderStyle](arkts-arkui-borderstyle-e.md)
 
 **起始版本：** 7
 
@@ -128,7 +128,7 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 设置边框宽度。
 
-**类型：** [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 7
 

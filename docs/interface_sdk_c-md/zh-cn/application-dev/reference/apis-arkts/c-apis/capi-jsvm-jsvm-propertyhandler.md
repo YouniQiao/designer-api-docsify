@@ -8,11 +8,13 @@ typedef struct JSVM_PropertyHandler {...} JSVM_PropertyHandler
 
 包含将class作为函数进行调用时所触发的回调函数的函数指针和 访问实例对象属性时触发的回调函数的函数指针集。
 
+<!--Device-typedef struct JSVM_PropertyHandler {...} JSVM_PropertyHandler--><!--Device-typedef struct JSVM_PropertyHandler {...} JSVM_PropertyHandler-End-->
+
 **系统能力：** SystemCapability.ArkCompiler.JSVM
 
 **起始版本：** 18
 
-**相关模块：** [JSVM](capi-jsvm.md)
+**相关模块：** [JSVM](capi-arkts-jsvm.md)
 
 **所在头文件：** [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -22,7 +24,7 @@ typedef struct JSVM_PropertyHandler {...} JSVM_PropertyHandler
 
 | 名称 | 描述 |
 | -- | -- |
-| JSVM_PropertyHandlerCfg propertyHandlerCfg | 访问实例对象属性触发相应的回调函数。 |
-| JSVM_Callback callAsFunctionCallback | 将实例对象作为函数调用将触发此回调。 |
+| JSVM_PropertyHandlerCfg propertyHandlerCfg | 访问实例对象属性触发相应的回调函数。<br><!--Device-JSVM_PropertyHandlerCfg propertyHandlerCfg--><!--Device-JSVM_PropertyHandlerCfg propertyHandlerCfg-End--> |
+| JSVM_Callback callAsFunctionCallback | 将实例对象作为函数调用将触发此回调。<br><!--Device-JSVM_Callback callAsFunctionCallback--><!--Device-JSVM_Callback callAsFunctionCallback-End--> |
 
 

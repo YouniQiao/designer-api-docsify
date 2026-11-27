@@ -6,32 +6,34 @@ Declares the battery APIs that are used to obtain the current battery capacity a
 
 **Library**: libohbattery_info.so
 
+**System capability**: SystemCapability.PowerManager.BatteryManager.Core
+
 **Since**: 13
 
-**Related module**: [OH_BatteryInfo](capi-oh-batteryinfo.md)
+**Related module**: [OH_BatteryInfo](capi-basic-services-kit-oh-batteryinfo.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [BatteryInfo_BatteryPluggedType](#batteryinfo_batterypluggedtype) | BatteryInfo_BatteryPluggedType | Enumerates the battery plugged types. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
 | [int32_t OH_BatteryInfo_GetCapacity()](#oh_batteryinfo_getcapacity) | Obtains the current battery capacity in percent. |
 | [BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()](#oh_batteryinfo_getpluggedtype) | Obtains the battery plugged type. |
 
-### Variable
+### Variables
 
 | Name | Description |
 | -- | -- |
-| static const char *COMMON_EVENT_KEY_CAPACITY = "soc" | Defines the common event indicating a battery capacity change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core |
-| static const char *COMMON_EVENT_KEY_CHARGE_STATE = "chargeState" | Defines the common event indicating a charging status change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core |
-| static const char *COMMON_EVENT_KEY_PLUGGED_TYPE = "pluggedType" | Defines the common event indicating a battery plugged type change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core |
+| static const char *COMMON_EVENT_KEY_CAPACITY = "soc" | Defines the common event indicating a battery capacity change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core<br><!--Device-static const char *COMMON_EVENT_KEY_CAPACITY = "soc"--><!--Device-static const char *COMMON_EVENT_KEY_CAPACITY = "soc"-End--> |
+| static const char *COMMON_EVENT_KEY_CHARGE_STATE = "chargeState" | Defines the common event indicating a charging status change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core<br><!--Device-static const char *COMMON_EVENT_KEY_CHARGE_STATE = "chargeState"--><!--Device-static const char *COMMON_EVENT_KEY_CHARGE_STATE = "chargeState"-End--> |
+| static const char *COMMON_EVENT_KEY_PLUGGED_TYPE = "pluggedType" | Defines the common event indicating a battery plugged type change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core<br><!--Device-static const char *COMMON_EVENT_KEY_PLUGGED_TYPE = "pluggedType"--><!--Device-static const char *COMMON_EVENT_KEY_PLUGGED_TYPE = "pluggedType"-End--> |
 
 ## Enum type description
 
@@ -45,15 +47,19 @@ enum BatteryInfo_BatteryPluggedType
 
 Enumerates the battery plugged types.
 
+<!--Device-enum BatteryInfo_BatteryPluggedType--><!--Device-enum BatteryInfo_BatteryPluggedType-End-->
+
+**System capability**: SystemCapability.PowerManager.BatteryManager.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| PLUGGED_TYPE_NONE |  |
-| PLUGGED_TYPE_AC |  |
-| PLUGGED_TYPE_USB |  |
-| PLUGGED_TYPE_WIRELESS |  |
-| PLUGGED_TYPE_BUTT |  |
+| PLUGGED_TYPE_NONE | No power supply.<br>**Since**: 13<br><!--Device-PLUGGED_TYPE_NONE--><!--Device-PLUGGED_TYPE_NONE-End--> |
+| PLUGGED_TYPE_AC | AC charging.<br>**Since**: 13<br><!--Device-PLUGGED_TYPE_AC--><!--Device-PLUGGED_TYPE_AC-End--> |
+| PLUGGED_TYPE_USB | USB DC charging.<br>**Since**: 13<br><!--Device-PLUGGED_TYPE_USB--><!--Device-PLUGGED_TYPE_USB-End--> |
+| PLUGGED_TYPE_WIRELESS | Wireless charging.<br>**Since**: 13<br><!--Device-PLUGGED_TYPE_WIRELESS--><!--Device-PLUGGED_TYPE_WIRELESS-End--> |
+| PLUGGED_TYPE_BUTT | Unknown type.<br>**Since**: 13<br><!--Device-PLUGGED_TYPE_BUTT--><!--Device-PLUGGED_TYPE_BUTT-End--> |
 
 
 ## Function description
@@ -67,6 +73,10 @@ int32_t OH_BatteryInfo_GetCapacity()
 **Description**
 
 Obtains the current battery capacity in percent.
+
+<!--Device-int32_t OH_BatteryInfo_GetCapacity()--><!--Device-int32_t OH_BatteryInfo_GetCapacity()-End-->
+
+**System capability**: SystemCapability.PowerManager.BatteryManager.Core
 
 **Since**: 13
 
@@ -85,6 +95,10 @@ BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()
 **Description**
 
 Obtains the battery plugged type.
+
+<!--Device-BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()--><!--Device-BatteryInfo_BatteryPluggedType OH_BatteryInfo_GetPluggedType()-End-->
+
+**System capability**: SystemCapability.PowerManager.BatteryManager.Core
 
 **Since**: 13
 

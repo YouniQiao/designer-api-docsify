@@ -1,18 +1,20 @@
 # AbilityBase_Element
 
 ```c
-struct AbilityBase_Element {...}
+typedef struct AbilityBase_Element {...} AbilityBase_Element
 ```
 
 ## 概述
 
 声明Want中Element结构体。
 
+<!--Device-struct AbilityBase_Element {...}--><!--Device-struct AbilityBase_Element {...}-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 **起始版本：** 15
 
-**相关模块：** [AbilityBase](capi-abilitybase.md)
+**相关模块：** [AbilityBase](capi-ability-kit-abilitybase.md)
 
 **所在头文件：** [want.h](capi-want-h.md)
 
@@ -22,8 +24,8 @@ struct AbilityBase_Element {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| char* bundleName | 应用的包名。 |
-| char* moduleName | 模块名称。 |
-| char* abilityName | Ability名称。 |
+| char* bundleName | 应用的包名。<br><!--Device-char* bundleName--><!--Device-char* bundleName-End--> |
+| char* moduleName | 模块名称。<br><!--Device-char* moduleName--><!--Device-char* moduleName-End--> |
+| char* abilityName | Ability名称。<br><!--Device-char* abilityName--><!--Device-char* abilityName-End--> |
 
 

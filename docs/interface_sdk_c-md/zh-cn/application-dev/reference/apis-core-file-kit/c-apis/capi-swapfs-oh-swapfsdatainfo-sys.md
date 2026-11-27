@@ -1,12 +1,14 @@
 # OH_SwapfsDataInfo（系统接口）
 
 ```c
-struct OH_SwapfsDataInfo {...}
+typedef struct OH_SwapfsDataInfo {...} OH_SwapfsDataInfo
 ```
 
 ## 概述
 
 单个key的信息。用于在应用需要精确管理换出数据条目的元信息时（如查询换出状态、监控换出大小等）。
+
+<!--Device-struct OH_SwapfsDataInfo {...}--><!--Device-struct OH_SwapfsDataInfo {...}-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.Swapfs
 
@@ -14,7 +16,7 @@ struct OH_SwapfsDataInfo {...}
 
 **系统接口：** 此接口为系统接口。
 
-**相关模块：** [Swapfs](capi-swapfs.md)
+**相关模块：** [Swapfs](capi-core-file-kit-swapfs.md)
 
 **所在头文件：** [oh_swapfs.h（系统接口）](capi-oh-swapfs-h-sys.md)
 
@@ -24,11 +26,11 @@ struct OH_SwapfsDataInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint64_t keyId | 交换数据条目的标识符，用于唯一标识交换数据，不同keyId对应不同的数据条目。<br>**起始版本：** 26.0.0 |
-| uint64_t dataSize | 换出时调用方提供的原始数据大小，单位：Byte。该大小决定了数据占用的空间和读取时的性能表现。<br>**起始版本：** 26.0.0 |
-| uint64_t occupiedSize | 磁盘上占用的文件大小，单位：Byte。 在Direct I/O模式下为dataSize向上对齐到SWAPFS_DIO_ALIGNMENT的值；在缓冲模式下等于dataSize。<br>**起始版本：** 26.0.0 |
-| int64_t createTime | key创建时的时间戳（Unix纪元，单位为ms）。该时间戳用于记录数据创建时间，可用于数据排序、过期策略判断等。<br>**起始版本：** 26.0.0 |
-| OH_SwapfsKeyStatus status | key的当前状态。不同状态值表示key的不同使用阶段，如是否可用、是否正在交换中、是否已删除等。<br>**起始版本：** 26.0.0 |
-| bool canSwapIn | 该key是否可被换入。 如果key的[OH_SwapfsKeyStatus](capi-oh-swapfs-h.md#oh_swapfskeystatus)状态处于OH_SWAPFS_KEY_STATUS_REMOVING则为false，若key活跃未被清理则为true。<br>**起始版本：** 26.0.0 |
+| uint64_t keyId | 交换数据条目的标识符，用于唯一标识交换数据，不同keyId对应不同的数据条目。<br>**起始版本：** 26.0.0<br><!--Device-uint64_t keyId--><!--Device-uint64_t keyId-End--> |
+| uint64_t dataSize | 换出时调用方提供的原始数据大小，单位：Byte。该大小决定了数据占用的空间和读取时的性能表现。<br>**起始版本：** 26.0.0<br><!--Device-uint64_t dataSize--><!--Device-uint64_t dataSize-End--> |
+| uint64_t occupiedSize | 磁盘上占用的文件大小，单位：Byte。 在Direct I/O模式下为dataSize向上对齐到SWAPFS_DIO_ALIGNMENT的值；在缓冲模式下等于dataSize。<br>**起始版本：** 26.0.0<br><!--Device-uint64_t occupiedSize--><!--Device-uint64_t occupiedSize-End--> |
+| int64_t createTime | key创建时的时间戳（Unix纪元，单位为ms）。该时间戳用于记录数据创建时间，可用于数据排序、过期策略判断等。<br>**起始版本：** 26.0.0<br><!--Device-int64_t createTime--><!--Device-int64_t createTime-End--> |
+| OH_SwapfsKeyStatus status | key的当前状态。不同状态值表示key的不同使用阶段，如是否可用、是否正在交换中、是否已删除等。<br>**起始版本：** 26.0.0<br><!--Device-OH_SwapfsKeyStatus status--><!--Device-OH_SwapfsKeyStatus status-End--> |
+| bool canSwapIn | 该key是否可被换入。 如果key的[OH_SwapfsKeyStatus](capi-oh-swapfs-h.md#oh_swapfskeystatus)状态处于OH_SWAPFS_KEY_STATUS_REMOVING则为false，若key活跃未被清理则为true。<br>**起始版本：** 26.0.0<br><!--Device-bool canSwapIn--><!--Device-bool canSwapIn-End--> |
 
 

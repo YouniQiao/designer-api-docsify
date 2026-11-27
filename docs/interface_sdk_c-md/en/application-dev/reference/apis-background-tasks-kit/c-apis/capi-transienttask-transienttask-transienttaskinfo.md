@@ -1,18 +1,20 @@
 # TransientTask_TransientTaskInfo
 
 ```c
-struct TransientTask_TransientTaskInfo {...}
+typedef struct TransientTask_TransientTaskInfo {...} TransientTask_TransientTaskInfo
 ```
 
 ## Overview
 
 A struct that describes all transient task information. The struct returns all transient task information, including the remaining quota of the current day.
 
+<!--Device-struct TransientTask_TransientTaskInfo {...}--><!--Device-struct TransientTask_TransientTaskInfo {...}-End-->
+
 **System capability**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Since**: 20
 
-**Related module**: [TransientTask](capi-transienttask.md)
+**Related module**: [TransientTask](capi-background-tasks-kit-transienttask.md)
 
 **Header file**: [transient_task_type.h](capi-transient-task-type-h.md)
 
@@ -22,7 +24,7 @@ A struct that describes all transient task information. The struct returns all t
 
 | Name | Description |
 | -- | -- |
-| int32_t remainingQuota | Remaining quota of the current day, in ms.<br>**Since**: 20 |
-| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] | The info of delay suspend<br>**Since**: 20 |
+| int32_t remainingQuota | Remaining quota of the current day, in ms.<br>**Since**: 20<br><!--Device-int32_t remainingQuota--><!--Device-int32_t remainingQuota-End--> |
+| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] | The info of delay suspend<br>**Since**: 20<br><!--Device-TransientTask_DelaySuspendInfo transientTasks[TRANSIENT_TASK_MAX_NUM]--><!--Device-TransientTask_DelaySuspendInfo transientTasks[TRANSIENT_TASK_MAX_NUM]-End--> |
 
 

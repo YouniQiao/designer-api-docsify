@@ -1,18 +1,20 @@
 # OH_ImageBufferData
 
 ```c
-struct OH_ImageBufferData {...}
+typedef struct OH_ImageBufferData {...} OH_ImageBufferData
 ```
 
 ## 概述
 
 OH_ImageBufferData是native层封装的图像数据结构体。获取OH_ImageNative_GetBufferData对象使用[OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata)函数。 <br> 结构体中保存的是对原图像数据的浅拷贝，当原数据被释放后，不应再对该结构体中的指针进行任何读写操作，否则会出现未定义行为。
 
+<!--Device-struct OH_ImageBufferData {...}--><!--Device-struct OH_ImageBufferData {...}-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 23
 
-**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
 
 **所在头文件：** [image_native.h](capi-image-native-h.md)
 
@@ -22,10 +24,10 @@ OH_ImageBufferData是native层封装的图像数据结构体。获取OH_ImageNat
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t *rowStride | 图像颜色分量行间距的数组，单位为像素（px）。 |
-| int32_t *pixelStride | 图像颜色分量像素间距的数组，单位为像素（px）。 |
-| int32_t numStride | 数组长度。 |
-| size_t bufferSize | 缓冲区的大小，单位为字节（Byte）。 |
-| OH_NativeBuffer *nativeBuffer | 图像的OH_NativeBuffer缓冲区对象的指针。 |
+| int32_t *rowStride | 图像颜色分量行间距的数组，单位为像素（px）。<br><!--Device-int32_t *rowStride--><!--Device-int32_t *rowStride-End--> |
+| int32_t *pixelStride | 图像颜色分量像素间距的数组，单位为像素（px）。<br><!--Device-int32_t *pixelStride--><!--Device-int32_t *pixelStride-End--> |
+| int32_t numStride | 数组长度。<br><!--Device-int32_t numStride--><!--Device-int32_t numStride-End--> |
+| size_t bufferSize | 缓冲区的大小，单位为字节（Byte）。<br><!--Device-size_t bufferSize--><!--Device-size_t bufferSize-End--> |
+| [OH_NativeBuffer](../../apis-arkgraphics2d/c-apis/capi-oh-nativebuffer-oh-nativebuffer.md) *nativeBuffer | 图像的OH_NativeBuffer缓冲区对象的指针。<br><!--Device-OH_NativeBuffer *nativeBuffer--><!--Device-OH_NativeBuffer *nativeBuffer-End--> |
 
 

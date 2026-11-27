@@ -15,7 +15,7 @@ This module provides the following common window-related functions:
  > [@ohos.window (Window)](arkts-arkui-window-n.md).
  >
  > - For the system capability SystemCapability.Window.SessionManager, use
- > [canIUse()](arkts-arkui-global-caniuse-f.md) to check whether the device supports this system
+ > canIUse() to check whether the device supports this system
  > capability and the corresponding APIs.
 
 

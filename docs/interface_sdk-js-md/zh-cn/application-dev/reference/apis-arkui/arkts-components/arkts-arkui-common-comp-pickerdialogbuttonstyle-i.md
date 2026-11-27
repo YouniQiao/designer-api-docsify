@@ -40,7 +40,7 @@ borderRadius?: Length | BorderRadiuses
 
 圆角半径，用于设置按钮的圆角大小。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 12
 

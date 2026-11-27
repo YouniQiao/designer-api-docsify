@@ -6,9 +6,11 @@
 
 **库：** libnative_drawing.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 23
 
-**相关模块：** [Drawing](capi-drawing.md)
+**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
 
 ## 汇总
 
@@ -40,17 +42,21 @@ enum OH_Drawing_PathIteratorVerb
 
 迭代器包含的路径操作类型枚举，可用于读取路径的操作指令。
 
+<!--Device-enum OH_Drawing_PathIteratorVerb--><!--Device-enum OH_Drawing_PathIteratorVerb-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MOVE = 0 | 设置路径的起始点。 |
-| LINE = 1 | 添加线段。 |
-| QUAD = 2 | 添加二阶贝塞尔曲线。 |
-| CONIC = 3 | 添加圆锥曲线。 |
-| CUBIC = 4 | 添加三阶贝塞尔曲线。 |
-| CLOSE = 5 | 闭合路径。 |
-| DONE = CLOSE + 1 | 表示路径操作迭代结束。 |
+| MOVE = 0 | 设置路径的起始点。<br><!--Device-MOVE = 0--><!--Device-MOVE = 0-End--> |
+| LINE = 1 | 添加线段。<br><!--Device-LINE = 1--><!--Device-LINE = 1-End--> |
+| QUAD = 2 | 添加二阶贝塞尔曲线。<br><!--Device-QUAD = 2--><!--Device-QUAD = 2-End--> |
+| CONIC = 3 | 添加圆锥曲线。<br><!--Device-CONIC = 3--><!--Device-CONIC = 3-End--> |
+| CUBIC = 4 | 添加三阶贝塞尔曲线。<br><!--Device-CUBIC = 4--><!--Device-CUBIC = 4-End--> |
+| CLOSE = 5 | 闭合路径。<br><!--Device-CLOSE = 5--><!--Device-CLOSE = 5-End--> |
+| DONE = CLOSE + 1 | 表示路径操作迭代结束。<br><!--Device-DONE = CLOSE + 1--><!--Device-DONE = CLOSE + 1-End--> |
 
 
 ## 函数说明
@@ -64,6 +70,10 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, 
 **描述：**
 
 创建路径操作迭代器对象。使用完毕后，必须调用[OH_Drawing_PathIteratorDestroy](capi-drawing-path-iterator-h.md#oh_drawing_pathiteratordestroy)销毁迭代器对象并释放内存， 否则会导致内存泄漏。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, OH_Drawing_PathIterator** pathIterator)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, OH_Drawing_PathIterator** pathIterator)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -90,6 +100,10 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pat
 
 销毁路径操作迭代器对象并回收该对象占用的内存。
 
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pathIterator)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pathIterator)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **起始版本：** 23
 
 **参数：**
@@ -113,6 +127,10 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterato
 **描述：**
 
 判断路径操作迭代器中是否还有下一个操作。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterator* pathIterator, bool* hasNext)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterator* pathIterator, bool* hasNext)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -138,6 +156,10 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIt
 **描述：**
 
 返回当前路径的下一个操作，并将迭代器置于该操作。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIterator, OH_Drawing_Point2D* points, uint32_t count, uint32_t offset, OH_Drawing_PathIteratorVerb* verb)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIterator, OH_Drawing_Point2D* points, uint32_t count, uint32_t offset, OH_Drawing_PathIteratorVerb* verb)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 
@@ -166,6 +188,10 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* 
 **描述：**
 
 返回当前路径的下一个操作，迭代器保持在原操作。
+
+<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* pathIterator, OH_Drawing_PathIteratorVerb* verb)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* pathIterator, OH_Drawing_PathIteratorVerb* verb)-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 23
 

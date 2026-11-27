@@ -1,18 +1,20 @@
 # HiDebug_ThreadCpuUsage
 
 ```c
-struct HiDebug_ThreadCpuUsage {...}
+typedef struct HiDebug_ThreadCpuUsage {...} HiDebug_ThreadCpuUsage
 ```
 
 ## Overview
 
 Defines the struct for the CPU usage of all threads of an application.
 
+<!--Device-struct HiDebug_ThreadCpuUsage {...}--><!--Device-struct HiDebug_ThreadCpuUsage {...}-End-->
+
 **System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Since**: 12
 
-**Related module**: [HiDebug](capi-hidebug.md)
+**Related module**: [HiDebug](capi-performance-analysis-kit-hidebug.md)
 
 **Header file**: [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -22,8 +24,8 @@ Defines the struct for the CPU usage of all threads of an application.
 
 | Name | Description |
 | -- | -- |
-| uint32_t threadId | Thread ID. |
-| double cpuUsage | Thread CPU usage, in percentage. |
-| struct HiDebug_ThreadCpuUsage *next | Pointer to the CPU usage of the next thread. |
+| uint32_t threadId | Thread ID.<br><!--Device-uint32_t threadId--><!--Device-uint32_t threadId-End--> |
+| double cpuUsage | Thread CPU usage, in percentage.<br><!--Device-double cpuUsage--><!--Device-double cpuUsage-End--> |
+| [struct HiDebug_ThreadCpuUsage](capi-hidebug-hidebug-threadcpuusage.md) *next | Pointer to the CPU usage of the next thread.<br><!--Device-struct HiDebug_ThreadCpuUsage *next--><!--Device-struct HiDebug_ThreadCpuUsage *next-End--> |
 
 

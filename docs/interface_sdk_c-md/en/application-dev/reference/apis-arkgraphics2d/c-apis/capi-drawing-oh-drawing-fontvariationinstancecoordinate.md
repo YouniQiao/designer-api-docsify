@@ -8,11 +8,13 @@ typedef struct OH_Drawing_FontVariationInstanceCoordinate {...} OH_Drawing_FontV
 
 Variable font attribute key-value pair.
 
+<!--Device-typedef struct OH_Drawing_FontVariationInstanceCoordinate {...} OH_Drawing_FontVariationInstanceCoordinate--><!--Device-typedef struct OH_Drawing_FontVariationInstanceCoordinate {...} OH_Drawing_FontVariationInstanceCoordinate-End-->
+
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 24
 
-**Related module**: [Drawing](capi-drawing.md)
+**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
 
 **Header file**: [drawing_text_font_descriptor.h](capi-drawing-text-font-descriptor-h.md)
 
@@ -22,7 +24,7 @@ Variable font attribute key-value pair.
 
 | Name | Description |
 | -- | -- |
-| char* axisKey | String identified by the keyword in the variable font attribute key-value pair. |
-| double value | Value of the variable font attribute key-value pair. |
+| char* axisKey | String identified by the keyword in the variable font attribute key-value pair.<br><!--Device-char* axisKey--><!--Device-char* axisKey-End--> |
+| double value | Value of the variable font attribute key-value pair.<br><!--Device-double value--><!--Device-double value-End--> |
 
 

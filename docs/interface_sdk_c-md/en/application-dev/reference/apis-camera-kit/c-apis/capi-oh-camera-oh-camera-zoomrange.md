@@ -1,18 +1,20 @@
 # OH_Camera_ZoomRange
 
 ```c
-struct OH_Camera_ZoomRange {...}
+typedef struct OH_Camera_ZoomRange {...} OH_Camera_ZoomRange
 ```
 
 ## Overview
 
 Describes the zoom range configuration.
 
+<!--Device-struct OH_Camera_ZoomRange {...}--><!--Device-struct OH_Camera_ZoomRange {...}-End-->
+
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
-**Related module**: [OH_Camera](capi-oh-camera.md)
+**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -22,7 +24,7 @@ Describes the zoom range configuration.
 
 | Name | Description |
 | -- | -- |
-| float minZoom |  |
-| float maxZoom |  |
+| float minZoom | Minimum zoom value.<br>**Since**: 24<br><!--Device-float minZoom--><!--Device-float minZoom-End--> |
+| float maxZoom | Maximum zoom value.<br>**Since**: 24<br><!--Device-float maxZoom--><!--Device-float maxZoom-End--> |
 
 

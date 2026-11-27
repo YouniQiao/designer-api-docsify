@@ -49,16 +49,14 @@ ROM空间不足错误。
 ## ERROR_INVALID_PARAM
 
 ```TypeScript
-ERROR_INVALID_PARAM = 20700008
+ERROR_INVALID_PARAM = 20700007
 ```
 
-I/O错误。
+参数非法错误。
 
-**起始版本：** 26.1.0
+**起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SystemSoundError-ERROR_INVALID_PARAM = 20700008--><!--Device-SystemSoundError-ERROR_INVALID_PARAM = 20700008-End-->
+<!--Device-SystemSoundError-ERROR_INVALID_PARAM = 20700007--><!--Device-SystemSoundError-ERROR_INVALID_PARAM = 20700007-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -75,6 +73,24 @@ IO错误。
 **起始版本：** 20
 
 <!--Device-SystemSoundError-ERROR_IO = 5400103--><!--Device-SystemSoundError-ERROR_IO = 5400103-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+## ERROR_IO_ERROR
+
+```TypeScript
+ERROR_IO_ERROR = 20700008
+```
+
+I/O错误。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundError-ERROR_IO_ERROR = 20700008--><!--Device-SystemSoundError-ERROR_IO_ERROR = 20700008-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

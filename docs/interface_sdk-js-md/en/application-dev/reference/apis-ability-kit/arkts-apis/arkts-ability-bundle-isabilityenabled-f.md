@@ -26,7 +26,7 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-depr-abilityinfo-i.md) | Yes | Ability information. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-depr-i.md) | Yes | Ability information. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
 
 **Examples**
@@ -69,7 +69,7 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-depr-abilityinfo-i.md) | Yes | Ability information. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-depr-i.md) | Yes | Ability information. |
 
 **Return value:**
 

@@ -8,9 +8,11 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
-**相关模块：** [RDB](capi-rdb.md)
+**相关模块：** [RDB](capi-arkdata-rdb.md)
 
 ## 汇总
 
@@ -53,13 +55,17 @@ enum Rdb_EncryptionAlgo
 
 数据库加密算法。
 
+<!--Device-enum Rdb_EncryptionAlgo--><!--Device-enum Rdb_EncryptionAlgo-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| RDB_AES_256_GCM = 0 | 表示数据库使用RDB_AES_256_GCM加密。 |
-| RDB_AES_256_CBC | 表示数据库使用RDB_AES_256_CBC加密。 |
-| RDB_PLAIN_TEXT | 表示数据库不加密。<br>**起始版本：** 22 |
+| RDB_AES_256_GCM = 0 | 表示数据库使用RDB_AES_256_GCM加密。<br><!--Device-RDB_AES_256_GCM = 0--><!--Device-RDB_AES_256_GCM = 0-End--> |
+| RDB_AES_256_CBC | 表示数据库使用RDB_AES_256_CBC加密。<br><!--Device-RDB_AES_256_CBC--><!--Device-RDB_AES_256_CBC-End--> |
+| RDB_PLAIN_TEXT | 表示数据库不加密。<br>**起始版本：** 22<br><!--Device-RDB_PLAIN_TEXT--><!--Device-RDB_PLAIN_TEXT-End--> |
 
 ### Rdb_HmacAlgo
 
@@ -71,13 +77,17 @@ enum Rdb_HmacAlgo
 
 打开数据库时支持的HMAC算法。
 
+<!--Device-enum Rdb_HmacAlgo--><!--Device-enum Rdb_HmacAlgo-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| RDB_HMAC_SHA1 = 0 | RDB_HMAC_SHA1算法。 |
-| RDB_HMAC_SHA256 | RDB_HMAC_SHA256算法。 |
-| RDB_HMAC_SHA512 | RDB_HMAC_SHA512算法。 |
+| RDB_HMAC_SHA1 = 0 | RDB_HMAC_SHA1算法。<br><!--Device-RDB_HMAC_SHA1 = 0--><!--Device-RDB_HMAC_SHA1 = 0-End--> |
+| RDB_HMAC_SHA256 | RDB_HMAC_SHA256算法。<br><!--Device-RDB_HMAC_SHA256--><!--Device-RDB_HMAC_SHA256-End--> |
+| RDB_HMAC_SHA512 | RDB_HMAC_SHA512算法。<br><!--Device-RDB_HMAC_SHA512--><!--Device-RDB_HMAC_SHA512-End--> |
 
 ### Rdb_KdfAlgo
 
@@ -89,13 +99,17 @@ enum Rdb_KdfAlgo
 
 打开数据库时支持的KDF算法。
 
+<!--Device-enum Rdb_KdfAlgo--><!--Device-enum Rdb_KdfAlgo-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| RDB_KDF_SHA1 = 0 | RDB_KDF_SHA1算法。 |
-| RDB_KDF_SHA256 | RDB_KDF_SHA256算法。 |
-| RDB_KDF_SHA512 | RDB_KDF_SHA512算法。 |
+| RDB_KDF_SHA1 = 0 | RDB_KDF_SHA1算法。<br><!--Device-RDB_KDF_SHA1 = 0--><!--Device-RDB_KDF_SHA1 = 0-End--> |
+| RDB_KDF_SHA256 | RDB_KDF_SHA256算法。<br><!--Device-RDB_KDF_SHA256--><!--Device-RDB_KDF_SHA256-End--> |
+| RDB_KDF_SHA512 | RDB_KDF_SHA512算法。<br><!--Device-RDB_KDF_SHA512--><!--Device-RDB_KDF_SHA512-End--> |
 
 
 ## 函数说明
@@ -109,6 +123,10 @@ OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)
 **描述：**
 
 创建一个[OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md)实例对象。
+
+<!--Device-OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)--><!--Device-OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 
@@ -133,6 +151,10 @@ int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)
 
 销毁一个[OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md)实例对象。
 
+<!--Device-int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)--><!--Device-int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -156,6 +178,10 @@ int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, in
 **描述：**
 
 设置[OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md)对象的密钥数据。
+
+<!--Device-int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, int32_t length)--><!--Device-int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, int32_t length)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 
@@ -183,6 +209,10 @@ int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)
 
 设置打开加密数据库时使用的KDF算法迭代次数。
 
+<!--Device-int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)--><!--Device-int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -207,6 +237,10 @@ int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 **描述：**
 
 设置打开加密数据库时使用的加密算法。
+
+<!--Device-int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 
@@ -233,6 +267,10 @@ int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 
 设置打开加密数据库时使用的HMAC算法。
 
+<!--Device-int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -258,6 +296,10 @@ int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 
 设置打开加密数据库时使用的KDF算法。
 
+<!--Device-int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -282,6 +324,10 @@ int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)
 **描述：**
 
 设置打开加密数据库时使用的页大小。
+
+<!--Device-int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)--><!--Device-int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 

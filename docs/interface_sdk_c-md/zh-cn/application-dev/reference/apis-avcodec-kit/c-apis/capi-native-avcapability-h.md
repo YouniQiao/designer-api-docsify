@@ -8,11 +8,11 @@
 
 **库：** libnative_media_codecbase.so
 
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
-**相关模块：** [AVCapability](capi-avcapability.md)
-
-**相关示例：** [AVCodec](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/AVCodec)
+**相关模块：** [AVCapability](capi-avcodec-kit-avcapability.md)
 
 ## 汇总
 
@@ -20,7 +20,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_AVRange](capi-avcapability-oh-avrange.md) | - | 范围包含最小值和最大值。 |
+| [OH_AVRange](capi-avcapability-oh-avrange.md) | OH_AVRange | 范围包含最小值和最大值。 |
 | [OH_AVCapability](capi-avcapability-oh-avcapability.md) | OH_AVCapability | 为OH_AVCapability接口定义native层对象。 |
 
 ### 枚举
@@ -39,7 +39,7 @@
 | [OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)](#oh_avcodec_getcapabilitybycategory) | 获取指定类别中的编解码器能力。 通过指定类别，匹配的编解码器仅限于硬件编解码器或软件编解码器。 |
 | [OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)](#oh_avcodec_getcapabilitylist) | 获取指定编解码器类型的能力列表。<br> 此功能会根据提供的编解码器类型检索出系统支持的所有匹配的编解码器能力。 |
 | [bool OH_AVCapability_IsHardware(OH_AVCapability *capability)](#oh_avcapability_ishardware) | 检查能力实例是否描述了硬件编解码器。 |
-| [bool OH_AVCapability_IsSecure(OH_AVCapability *capability)](#oh_avcapability_issecure) | 检查能力实例是否描述了一个安全解码器。 |
+| [bool OH_AVCapability_IsSecure(OH_AVCapability *capability)](#oh_avcapability_issecure) | 检查能力实例是否描述了一个DRM(Digital Rights Management)解码器。 |
 | [const char *OH_AVCapability_GetName(OH_AVCapability *capability)](#oh_avcapability_getname) | 获取编解码器名称。 |
 | [const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)](#oh_avcapability_getmimetype) | 获取编解码器的MIME类型。 |
 | [bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)](#oh_avcapability_checkmimetype) | 检查编解码器的MIME类型是否与指定的MIME类型匹配。 |
@@ -49,7 +49,6 @@
 | [OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability, OH_AVRange *qualityRange)](#oh_avcapability_getencoderqualityrange) | 获取编码器支持的质量范围。 |
 | [OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capability, OH_AVRange *complexityRange)](#oh_avcapability_getencodercomplexityrange) | 获取编码器支持的编码器复杂性范围。 |
 | [OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capability, const int32_t **sampleRates, uint32_t *sampleRateNum)](#oh_avcapability_getaudiosupportedsamplerates) | 获取音频编解码器支持的采样率。 |
-| [OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)](#oh_avcapability_getaudiosupportedsamplerateranges) | 获取音频编解码器支持的采样率范围。 |
 | [OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capability, OH_AVRange *channelCountRange)](#oh_avcapability_getaudiochannelcountrange) | 获取音频编解码器支持的音频通道计数范围。 |
 | [OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability, int32_t *widthAlignment)](#oh_avcapability_getvideowidthalignment) | 获取视频编解码器支持的视频宽度对齐。 |
 | [OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability, int32_t *heightAlignment)](#oh_avcapability_getvideoheightalignment) | 获取视频编解码器支持的视频高度对齐。 |
@@ -62,12 +61,13 @@
 | [OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)](#oh_avcapability_getvideoframeraterangeforsize) | 获取指定视频大小的视频编解码器支持的视频帧率范围。 |
 | [bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)](#oh_avcapability_arevideosizeandframeratesupported) | 检查视频编解码器是否支持视频大小和帧率的特定组合。 |
 | [OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)](#oh_avcapability_getvideosupportedpixelformats) | 获取视频编解码器支持的视频像素格式。 |
-| [OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)](#oh_avcapability_getvideosupportednativebufferformats) | 获取视频编解码器支持的OH_NativeBuffer格式。<br> 该函数提供了视频编解码器能够处理的OH_NativeBuffer格式信息，具体取值可见OH_NativeBuffer_Format。 |
+| [OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)](#oh_avcapability_getvideosupportednativebufferformats) | 获取视频编解码器支持的OH_NativeBuffer格式。该函数提供了视频编解码器能够处理的OH_NativeBuffer格式信息，具体取值可见OH_NativeBuffer_Format。 |
 | [OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)](#oh_avcapability_getsupportedprofiles) | 获取编解码器支持的档次。 |
 | [OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)](#oh_avcapability_getsupportedlevelsforprofile) | 获取特定档次支持的编解码器级别。 |
 | [bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)](#oh_avcapability_areprofileandlevelsupported) | 检查编解码器是否支持档次和级别的特定组合。 |
 | [bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabilityFeature feature)](#oh_avcapability_isfeaturesupported) | 检查编解码器是否支持指定特性。 |
-| [OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)](#oh_avcapability_getfeatureproperties) | 获取指定特性的属性。 需要注意的是，返回值指向的OH_AVFormat实例的生命周期需要调用者手动释放。 |
+| [OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)](#oh_avcapability_getfeatureproperties) | 获取指定特性的属性。需要注意的是，返回值指向的OH_AVFormat实例的生命周期需要调用者手动释放。 |
+| [OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)](#oh_avcapability_getaudiosupportedsamplerateranges) | 获取音频编解码器支持的采样率范围。 |
 
 ## 枚举类型说明
 
@@ -81,12 +81,16 @@ enum OH_AVCodecCategory
 
 编解码器类别。
 
+<!--Device-enum OH_AVCodecCategory--><!--Device-enum OH_AVCodecCategory-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HARDWARE = 0 | 硬件编解码。 |
-| SOFTWARE | 软件编解码。 |
+| HARDWARE = 0 | 硬件编解码。<br>**起始版本：** 10<br><!--Device-HARDWARE = 0--><!--Device-HARDWARE = 0-End--> |
+| SOFTWARE | 软件编解码。<br>**起始版本：** 10<br><!--Device-SOFTWARE--><!--Device-SOFTWARE-End--> |
 
 ### OH_AVCodecType
 
@@ -98,14 +102,18 @@ enum OH_AVCodecType
 
 编解码器类型。
 
+<!--Device-enum OH_AVCodecType--><!--Device-enum OH_AVCodecType-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | 表示视频编码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | 表示视频解码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | 表示音频编码器。<br>**起始版本：** 24 |
-| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | 表示音频解码器。<br>**起始版本：** 24 |
+| OH_AVCODEC_TYPE_VIDEO_ENCODER = 0 | 表示视频编码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0--><!--Device-OH_AVCODEC_TYPE_VIDEO_ENCODER = 0-End--> |
+| OH_AVCODEC_TYPE_VIDEO_DECODER = 1 | 表示视频解码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1--><!--Device-OH_AVCODEC_TYPE_VIDEO_DECODER = 1-End--> |
+| OH_AVCODEC_TYPE_AUDIO_ENCODER = 2 | 表示音频编码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2--><!--Device-OH_AVCODEC_TYPE_AUDIO_ENCODER = 2-End--> |
+| OH_AVCODEC_TYPE_AUDIO_DECODER = 3 | 表示音频解码器。<br>**起始版本：** 24<br><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3--><!--Device-OH_AVCODEC_TYPE_AUDIO_DECODER = 3-End--> |
 
 ### OH_AVCapabilityFeature
 
@@ -117,17 +125,21 @@ enum OH_AVCapabilityFeature
 
 可以在特定编解码器场景中使用的可选特性。
 
+<!--Device-enum OH_AVCapabilityFeature--><!--Device-enum OH_AVCapabilityFeature-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | 编解码器支持时域可分层特性，只用于视频编码场景。 |
-| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | 编解码器支持长期参考帧特性，只用于视频编码场景。 |
-| VIDEO_LOW_LATENCY = 2 | 编解码器支持低时延特性，只用于视频解码场景。 |
-| VIDEO_ENCODER_B_FRAME = 7 |  |
-| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | 解码器支持按解码顺序输出帧特性，只用于视频解码场景。<br>**起始版本：** 26.0.0 |
-| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | 编码器支持视频编码前处理降采样特性，该能力仅适用于视频编码器。<br>**起始版本：** 26.0.0 |
-| VIDEO_ENCODER_PREPROC_CROP = 10 | 编码器支持视频编码前处理裁剪特性，该特性仅适用于视频编码器。<br>**起始版本：** 26.0.0 |
+| VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0 | 编解码器支持时域可分层特性，只用于视频编码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0--><!--Device-VIDEO_ENCODER_TEMPORAL_SCALABILITY = 0-End--> |
+| VIDEO_ENCODER_LONG_TERM_REFERENCE = 1 | 编解码器支持长期参考帧特性，只用于视频编码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1--><!--Device-VIDEO_ENCODER_LONG_TERM_REFERENCE = 1-End--> |
+| VIDEO_LOW_LATENCY = 2 | 编解码器支持低时延特性，只用于视频解码场景。<br>**起始版本：** 12<br><!--Device-VIDEO_LOW_LATENCY = 2--><!--Device-VIDEO_LOW_LATENCY = 2-End--> |
+| VIDEO_ENCODER_B_FRAME = 7 | 编解码器支持B帧特性，只用于视频编码场景。<br>**起始版本：** 20<br><!--Device-VIDEO_ENCODER_B_FRAME = 7--><!--Device-VIDEO_ENCODER_B_FRAME = 7-End--> |
+| VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8 | 解码器支持按解码顺序输出帧特性，只用于视频解码场景。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8--><!--Device-VIDEO_DECODER_OUTPUT_IN_DECODING_ORDER = 8-End--> |
+| VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9 | 编码器支持视频编码前处理降采样特性，该能力仅适用于视频编码器。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9--><!--Device-VIDEO_ENCODER_PREPROC_DOWNSAMPLING = 9-End--> |
+| VIDEO_ENCODER_PREPROC_CROP = 10 | 编码器支持视频编码前处理裁剪特性，该特性仅适用于视频编码器。<br>**起始版本：** 26.0.0<br><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10--><!--Device-VIDEO_ENCODER_PREPROC_CROP = 10-End--> |
 
 
 ## 函数说明
@@ -141,6 +153,10 @@ OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)
 **描述：**
 
 获取系统推荐的编解码器能力。
+
+<!--Device-OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)--><!--Device-OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -166,6 +182,10 @@ OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEnc
 **描述：**
 
 获取指定类别中的编解码器能力。 通过指定类别，匹配的编解码器仅限于硬件编解码器或软件编解码器。
+
+<!--Device-OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)--><!--Device-OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEncoder, OH_AVCodecCategory category)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -197,6 +217,10 @@ OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_
 >
 > 编解码器能力列表的内存由系统底层全局维护，调用者无需管理其生命周期，不得手动分配或释放此内存。
 
+<!--Device-OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)--><!--Device-OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_t *count)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 24
 
 **参数：**
@@ -210,7 +234,7 @@ OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVCapability **](capi-avcapability-oh-avcapability.md) | 如果找到匹配项，则返回指向OH_AVCapability实例数组的指针。\n如果未找到匹配的编解码器或发生错误，则返回NULL。 |
+| [OH_AVCapability **](capi-avcapability-oh-avcapability.md) | 如果找到匹配项，则返回指向OH_AVCapability实例数组的指针。<br>如果未找到匹配的编解码器或发生错误，则返回NULL。 |
 
 ### OH_AVCapability_IsHardware()
 
@@ -221,6 +245,10 @@ bool OH_AVCapability_IsHardware(OH_AVCapability *capability)
 **描述：**
 
 检查能力实例是否描述了硬件编解码器。
+
+<!--Device-bool OH_AVCapability_IsHardware(OH_AVCapability *capability)--><!--Device-bool OH_AVCapability_IsHardware(OH_AVCapability *capability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -244,7 +272,11 @@ bool OH_AVCapability_IsSecure(OH_AVCapability *capability)
 
 **描述：**
 
-检查能力实例是否描述了一个安全解码器。
+检查能力实例是否描述了一个DRM(Digital Rights Management)解码器。
+
+<!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)--><!--Device-bool OH_AVCapability_IsSecure(OH_AVCapability *capability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 24
 
@@ -258,7 +290,7 @@ bool OH_AVCapability_IsSecure(OH_AVCapability *capability)
 
 | 类型 | 说明 |
 | -- | -- |
-| bool | 如果能力实例描述的是安全解码器，则返回true。\n如果能力实例描述的是非安全解码器，则为false。 |
+| bool | 如果能力实例描述的是DRM解码器，则返回true。如果能力实例描述的是非DRM解码器，则为false。 |
 
 ### OH_AVCapability_GetName()
 
@@ -269,6 +301,10 @@ const char *OH_AVCapability_GetName(OH_AVCapability *capability)
 **描述：**
 
 获取编解码器名称。
+
+<!--Device-const char *OH_AVCapability_GetName(OH_AVCapability *capability)--><!--Device-const char *OH_AVCapability_GetName(OH_AVCapability *capability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -294,6 +330,10 @@ const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)
 
 获取编解码器的MIME类型。
 
+<!--Device-const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)--><!--Device-const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 24
 
 **参数：**
@@ -317,6 +357,10 @@ bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mime
 **描述：**
 
 检查编解码器的MIME类型是否与指定的MIME类型匹配。
+
+<!--Device-bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)--><!--Device-bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mimeType)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 24
 
@@ -343,6 +387,10 @@ int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)
 
 获取编解码器支持的最大实例数。
 
+<!--Device-int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)--><!--Device-int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 **参数：**
@@ -367,6 +415,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability,
 
 获取编码器支持的比特率范围。
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability, OH_AVRange *bitrateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability, OH_AVRange *bitrateRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 **参数：**
@@ -380,7 +432,7 @@ OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability,
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器码率范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器码率范围的指针为空指针。 |
 
 ### OH_AVCapability_IsEncoderBitrateModeSupported()
 
@@ -391,6 +443,10 @@ bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, 
 **描述：**
 
 检查编码器是否支持特定的比特率模式。
+
+<!--Device-bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, OH_BitrateMode bitrateMode)--><!--Device-bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, OH_BitrateMode bitrateMode)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -417,6 +473,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability,
 
 获取编码器支持的质量范围。
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability, OH_AVRange *qualityRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability, OH_AVRange *qualityRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 **参数：**
@@ -430,7 +490,7 @@ OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability,
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器质量范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器质量范围的指针为空指针。 |
 
 ### OH_AVCapability_GetEncoderComplexityRange()
 
@@ -441,6 +501,10 @@ OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capabili
 **描述：**
 
 获取编码器支持的编码器复杂性范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capability, OH_AVRange *complexityRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capability, OH_AVRange *complexityRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -455,7 +519,7 @@ OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capabili
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器复杂度范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向编码器复杂度范围的指针为空指针。 |
 
 ### OH_AVCapability_GetAudioSupportedSampleRates()
 
@@ -466,6 +530,10 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capab
 **描述：**
 
 获取音频编解码器支持的采样率。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capability, const int32_t **sampleRates, uint32_t *sampleRateNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capability, const int32_t **sampleRates, uint32_t *sampleRateNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -481,33 +549,7 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capab
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向采样率数组的指针为空指针，或者指向采样率数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
-
-### OH_AVCapability_GetAudioSupportedSampleRateRanges()
-
-```c
-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)
-```
-
-**描述：**
-
-获取音频编解码器支持的采样率范围。
-
-**起始版本：** 20
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_AVCapability](capi-avcapability-oh-avcapability.md) *capability | 音频编解码能力指针。如果给的是视频编解码器能力指针，会导致未定义行为。 |
-| [OH_AVRange](capi-avcapability-oh-avrange.md) **sampleRateRanges | 输出参数。指向采样率范围数组的指针。 |
-| uint32_t *rangesNum | 输出参数。采样率范围数组的元素数目。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向采样率范围数组的指针为空指针，或者指向采样率范围数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向采样率数组的指针为空指针，或者指向采样率数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 ### OH_AVCapability_GetAudioChannelCountRange()
 
@@ -518,6 +560,10 @@ OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capabili
 **描述：**
 
 获取音频编解码器支持的音频通道计数范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capability, OH_AVRange *channelCountRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capability, OH_AVRange *channelCountRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -532,7 +578,7 @@ OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capabili
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向音频通道计数范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向音频通道计数范围的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoWidthAlignment()
 
@@ -543,6 +589,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability,
 **描述：**
 
 获取视频编解码器支持的视频宽度对齐。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability, int32_t *widthAlignment)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability, int32_t *widthAlignment)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -557,7 +607,7 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability,
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频宽度对齐的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频宽度对齐的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoHeightAlignment()
 
@@ -568,6 +618,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability
 **描述：**
 
 获取视频编解码器支持的视频高度对齐。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability, int32_t *heightAlignment)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability, int32_t *heightAlignment)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -582,7 +636,7 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频高度对齐的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频高度对齐的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoWidthRangeForHeight()
 
@@ -593,6 +647,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capabi
 **描述：**
 
 获取指定高度情况下视频编解码器支持的视频宽度范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capability, int32_t height, OH_AVRange *widthRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capability, int32_t height, OH_AVRange *widthRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -608,7 +666,7 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capabi
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者高度不在通过[OH_AVCapability_GetVideoHeightRange](capi-native-avcapability-h.md#oh_avcapability_getvideoheightrange)获取支持的高度范围中，或者指向宽度范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者高度不在通过[OH_AVCapability_GetVideoHeightRange](capi-native-avcapability-h.md#oh_avcapability_getvideoheightrange)获取支持的高度范围中，或者指向宽度范围的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoHeightRangeForWidth()
 
@@ -619,6 +677,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capabi
 **描述：**
 
 获取指定宽度情况下视频编解码器支持的视频高度范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capability, int32_t width, OH_AVRange *heightRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capability, int32_t width, OH_AVRange *heightRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -634,7 +696,7 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capabi
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者宽度不在通过[OH_AVCapability_GetVideoWidthRange](capi-native-avcapability-h.md#oh_avcapability_getvideowidthrange)获取支持的宽度范围中，或者指向高度范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者宽度不在通过[OH_AVCapability_GetVideoWidthRange](capi-native-avcapability-h.md#oh_avcapability_getvideowidthrange)获取支持的宽度范围中，或者指向高度范围的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoWidthRange()
 
@@ -645,6 +707,10 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_
 **描述：**
 
 获取视频编解码器支持的视频宽度范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_AVRange *widthRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_AVRange *widthRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -659,7 +725,7 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频宽度范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频宽度范围的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoHeightRange()
 
@@ -670,6 +736,10 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH
 **描述：**
 
 获取视频编解码器支持的视频高度范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH_AVRange *heightRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH_AVRange *heightRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -684,7 +754,7 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频高度范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频高度范围的指针为空指针。 |
 
 ### OH_AVCapability_IsVideoSizeSupported()
 
@@ -695,6 +765,10 @@ bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t w
 **描述：**
 
 检查视频编解码器是否支持特定的视频大小。
+
+<!--Device-bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t width, int32_t height)--><!--Device-bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t width, int32_t height)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -722,6 +796,10 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability,
 
 获取视频编解码器支持的视频帧率范围。
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability, OH_AVRange *frameRateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability, OH_AVRange *frameRateRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 **参数：**
@@ -735,7 +813,7 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability,
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频帧率范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频帧率范围的指针为空指针。 |
 
 ### OH_AVCapability_GetVideoFrameRateRangeForSize()
 
@@ -746,6 +824,10 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capa
 **描述：**
 
 获取指定视频大小的视频编解码器支持的视频帧率范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capability, int32_t width, int32_t height, OH_AVRange *frameRateRange)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -762,7 +844,7 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capa
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者宽度和高度组合不支持，或者指向帧率范围的指针为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者宽度和高度组合不支持，或者指向帧率范围的指针为空指针。 |
 
 ### OH_AVCapability_AreVideoSizeAndFrameRateSupported()
 
@@ -773,6 +855,10 @@ bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capabili
 **描述：**
 
 检查视频编解码器是否支持视频大小和帧率的特定组合。
+
+<!--Device-bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)--><!--Device-bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capability, int32_t width, int32_t height, int32_t frameRate)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -801,6 +887,10 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capa
 
 获取视频编解码器支持的视频像素格式。
 
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capability, const int32_t **pixelFormats, uint32_t *pixelFormatNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 10
 
 **参数：**
@@ -815,7 +905,7 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capa
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向视频像素格式数组的指针为空指针，或者指向像素格式数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向视频像素格式数组的指针为空指针，或者指向像素格式数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 ### OH_AVCapability_GetVideoSupportedNativeBufferFormats()
 
@@ -825,7 +915,11 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapabilit
 
 **描述：**
 
-获取视频编解码器支持的OH_NativeBuffer格式。<br> 该函数提供了视频编解码器能够处理的OH_NativeBuffer格式信息，具体取值可见OH_NativeBuffer_Format。
+获取视频编解码器支持的OH_NativeBuffer格式。该函数提供了视频编解码器能够处理的OH_NativeBuffer格式信息，具体取值可见OH_NativeBuffer_Format。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapability *capability, const OH_NativeBuffer_Format **nativeBufferFormats, uint32_t *nativeBufferFormatNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 22
 
@@ -841,7 +935,7 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapabilit
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效、能力实例是音频编码解码器能力、指向NativeBuffer格式数组的指针为空指针、或指向NativeBuffer格式数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效、能力实例是音频编解码器能力、指向NativeBuffer格式数组的指针为空指针、<br>或指向NativeBuffer格式数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 ### OH_AVCapability_GetSupportedProfiles()
 
@@ -852,6 +946,10 @@ OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, c
 **描述：**
 
 获取编解码器支持的档次。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, const int32_t **profiles, uint32_t *profileNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -867,7 +965,7 @@ OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, c
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者指向档次数组的指针为空指针，或者指向档次数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向档次数组的指针为空指针，或者指向档次数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 ### OH_AVCapability_GetSupportedLevelsForProfile()
 
@@ -878,6 +976,10 @@ OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capab
 **描述：**
 
 获取特定档次支持的编解码器级别。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capability, int32_t profile, const int32_t **levels, uint32_t *levelNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -894,7 +996,7 @@ OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capab
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。\n AV_ERR_INVALID_VAL：能力实例无效，或者档次不在通过[OH_AVCapability_GetSupportedProfiles](capi-native-avcapability-h.md#oh_avcapability_getsupportedprofiles)获取支持的档次数组中，或者指向级别数组的指针为空指针，或者指向级别数组的元素数目的指针为空指针。\n AV_ERR_UNKNOWN：未知错误。\n AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者档次不在通过[OH_AVCapability_GetSupportedProfiles](capi-native-avcapability-h.md#oh_avcapability_getsupportedprofiles)获取支持的档次数组中，或者指向级别数组的指针为空指针，或者指向级别数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 ### OH_AVCapability_AreProfileAndLevelSupported()
 
@@ -905,6 +1007,10 @@ bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, in
 **描述：**
 
 检查编解码器是否支持档次和级别的特定组合。
+
+<!--Device-bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)--><!--Device-bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, int32_t profile, int32_t level)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -932,6 +1038,10 @@ bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabi
 
 检查编解码器是否支持指定特性。
 
+<!--Device-bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabilityFeature feature)--><!--Device-bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabilityFeature feature)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 12
 
 **参数：**
@@ -955,7 +1065,11 @@ OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, O
 
 **描述：**
 
-获取指定特性的属性。 需要注意的是，返回值指向的OH_AVFormat实例的生命周期需要调用者手动释放。
+获取指定特性的属性。需要注意的是，返回值指向的OH_AVFormat实例的生命周期需要调用者手动释放。
+
+<!--Device-OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)--><!--Device-OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, OH_AVCapabilityFeature feature)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 12
 
@@ -971,5 +1085,35 @@ OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, O
 | 类型 | 说明 |
 | -- | -- |
 | [OH_AVFormat *](capi-core-oh-avformat.md) | 返回指向OH_AVFormat实例的指针。 |
+
+### OH_AVCapability_GetAudioSupportedSampleRateRanges()
+
+```c
+OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)
+```
+
+**描述：**
+
+获取音频编解码器支持的采样率范围。
+
+<!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)--><!--Device-OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *capability, OH_AVRange **sampleRateRanges, uint32_t *rangesNum)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
+**起始版本：** 20
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_AVCapability](capi-avcapability-oh-avcapability.md) *capability | 音频编解码能力指针。如果给的是视频编解码器能力指针，会导致未定义行为。 |
+| [OH_AVRange](capi-avcapability-oh-avrange.md) **sampleRateRanges | 输出参数。指向采样率范围数组的指针。 |
+| uint32_t *rangesNum | 输出参数。采样率范围数组的元素数目。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>AV_ERR_INVALID_VAL：能力实例无效，或者指向采样率范围数组的指针为空指针，或者指向采样率范围数组的元素数目的指针为空指针。<br>AV_ERR_UNKNOWN：未知错误。<br>AV_ERR_NO_MEMORY：内部使用内存分配失败。 |
 
 

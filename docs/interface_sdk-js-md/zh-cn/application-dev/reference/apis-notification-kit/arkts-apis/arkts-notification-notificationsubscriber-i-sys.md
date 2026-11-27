@@ -630,7 +630,7 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [notification.DoNotDisturbDate](arkts-notification-notification-depr-donotdisturbdate-i-sys.md) | 是 |  |
+| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | 是 |  |
 
 <!--Del-->
 **示例**

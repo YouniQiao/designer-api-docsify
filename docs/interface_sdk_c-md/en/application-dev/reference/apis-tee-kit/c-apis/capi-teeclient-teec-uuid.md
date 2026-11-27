@@ -8,11 +8,13 @@ typedef struct TEEC_UUID {...} TEEC_UUID
 
 Defines the universally unique identifier (UUID) as defined in RFC4122 [2]. The UUIDs are used to identify TAs.
 
+<!--Device-typedef struct TEEC_UUID {...} TEEC_UUID--><!--Device-typedef struct TEEC_UUID {...} TEEC_UUID-End-->
+
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeClient](capi-teeclient.md)
+**Related module**: [TeeClient](capi-tee-kit-teeclient.md)
 
 **Header file**: [tee_client_type.h](capi-tee-client-type-h.md)
 
@@ -22,9 +24,9 @@ Defines the universally unique identifier (UUID) as defined in RFC4122 [2]. The 
 
 | Name | Description |
 | -- | -- |
-| uint32_t timeLow | The low part of the time field. |
-| uint16_t timeMid | The middle part of the time field. |
-| uint16_t timeHiAndVersion | The high part of the time field and version information. |
-| uint8_t clockSeqAndNode[8] | The clock sequence and node field (8 bytes). |
+| uint32_t timeLow | The low part of the time field.<br><!--Device-uint32_t timeLow--><!--Device-uint32_t timeLow-End--> |
+| uint16_t timeMid | The middle part of the time field.<br><!--Device-uint16_t timeMid--><!--Device-uint16_t timeMid-End--> |
+| uint16_t timeHiAndVersion | The high part of the time field and version information.<br><!--Device-uint16_t timeHiAndVersion--><!--Device-uint16_t timeHiAndVersion-End--> |
+| uint8_t clockSeqAndNode[8] | The clock sequence and node field (8 bytes).<br><!--Device-uint8_t clockSeqAndNode[8]--><!--Device-uint8_t clockSeqAndNode[8]-End--> |
 
 

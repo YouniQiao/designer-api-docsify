@@ -6,20 +6,22 @@ Define interfaces for querying bluetooth switch status.
 
 **Library**: libbluetooth_ndk.so
 
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
-**Related module**: [Bluetooth](capi-bluetooth.md)
+**Related module**: [Bluetooth](capi-connectivity-kit-bluetooth.md)
 
 ## Summary
 
-### Enum
+### Enums
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Bluetooth_SwitchState](#bluetooth_switchstate) | Bluetooth_SwitchState | Enumeration state of bluetooth switch. |
 | [Bluetooth_ResultCode](#bluetooth_resultcode) | Bluetooth_ResultCode | Enumeration the bluetooth result codes. |
 
-### Function
+### Functions
 
 | Name | Description |
 | -- | -- |
@@ -37,17 +39,21 @@ enum Bluetooth_SwitchState
 
 Enumeration state of bluetooth switch.
 
+<!--Device-enum Bluetooth_SwitchState--><!--Device-enum Bluetooth_SwitchState-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| BLUETOOTH_STATE_OFF = 0 | Indicates the local bluetooth is off. |
-| BLUETOOTH_STATE_TURNING_ON = 1 | Indicates the local bluetooth is turning on. |
-| BLUETOOTH_STATE_ON = 2 | Indicates the local bluetooth is on, and ready for use. |
-| BLUETOOTH_STATE_TURNING_OFF = 3 | Indicates the local bluetooth is turning off. |
-| BLUETOOTH_STATE_BLE_TURNING_ON = 4 | Indicates the local bluetooth is turning LE mode on. |
-| BLUETOOTH_STATE_BLE_ON = 5 | Indicates the local bluetooth is in LE only mode. |
-| BLUETOOTH_STATE_BLE_TURNING_OFF = 6 | Indicates the local bluetooth is turning off LE only mode. |
+| BLUETOOTH_STATE_OFF = 0 | Indicates the local bluetooth is off.<br><!--Device-BLUETOOTH_STATE_OFF = 0--><!--Device-BLUETOOTH_STATE_OFF = 0-End--> |
+| BLUETOOTH_STATE_TURNING_ON = 1 | Indicates the local bluetooth is turning on.<br><!--Device-BLUETOOTH_STATE_TURNING_ON = 1--><!--Device-BLUETOOTH_STATE_TURNING_ON = 1-End--> |
+| BLUETOOTH_STATE_ON = 2 | Indicates the local bluetooth is on, and ready for use.<br><!--Device-BLUETOOTH_STATE_ON = 2--><!--Device-BLUETOOTH_STATE_ON = 2-End--> |
+| BLUETOOTH_STATE_TURNING_OFF = 3 | Indicates the local bluetooth is turning off.<br><!--Device-BLUETOOTH_STATE_TURNING_OFF = 3--><!--Device-BLUETOOTH_STATE_TURNING_OFF = 3-End--> |
+| BLUETOOTH_STATE_BLE_TURNING_ON = 4 | Indicates the local bluetooth is turning LE mode on.<br><!--Device-BLUETOOTH_STATE_BLE_TURNING_ON = 4--><!--Device-BLUETOOTH_STATE_BLE_TURNING_ON = 4-End--> |
+| BLUETOOTH_STATE_BLE_ON = 5 | Indicates the local bluetooth is in LE only mode.<br><!--Device-BLUETOOTH_STATE_BLE_ON = 5--><!--Device-BLUETOOTH_STATE_BLE_ON = 5-End--> |
+| BLUETOOTH_STATE_BLE_TURNING_OFF = 6 | Indicates the local bluetooth is turning off LE only mode.<br><!--Device-BLUETOOTH_STATE_BLE_TURNING_OFF = 6--><!--Device-BLUETOOTH_STATE_BLE_TURNING_OFF = 6-End--> |
 
 ### Bluetooth_ResultCode
 
@@ -59,12 +65,16 @@ enum Bluetooth_ResultCode
 
 Enumeration the bluetooth result codes.
 
+<!--Device-enum Bluetooth_ResultCode--><!--Device-enum Bluetooth_ResultCode-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
+
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| BLUETOOTH_SUCCESS = 0 | &nbsp;The operation is successful. |
-| BLUETOOTH_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range. |
+| BLUETOOTH_SUCCESS = 0 | &nbsp;The operation is successful.<br><!--Device-BLUETOOTH_SUCCESS = 0--><!--Device-BLUETOOTH_SUCCESS = 0-End--> |
+| BLUETOOTH_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range.<br><!--Device-BLUETOOTH_INVALID_PARAM = 401--><!--Device-BLUETOOTH_INVALID_PARAM = 401-End--> |
 
 
 ## Function description
@@ -78,6 +88,10 @@ Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState 
 **Description**
 
 Get the bluetooth switch state.
+
+<!--Device-Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState *state)--><!--Device-Bluetooth_ResultCode OH_Bluetooth_GetBluetoothSwitchState(Bluetooth_SwitchState *state)-End-->
+
+**System capability**: SystemCapability.Communication.Bluetooth.Core
 
 **Since**: 13
 

@@ -1,18 +1,20 @@
 # VideoProcessing_ColorSpaceInfo
 
 ```c
-struct VideoProcessing_ColorSpaceInfo {...}
+typedef struct VideoProcessing_ColorSpaceInfo {...} VideoProcessing_ColorSpaceInfo
 ```
 
 ## Overview
 
-Video color space information structure of querying if video color space conversion is supported.
+The struct describes the color space information of video processing.
+
+<!--Device-struct VideoProcessing_ColorSpaceInfo {...}--><!--Device-struct VideoProcessing_ColorSpaceInfo {...}-End-->
 
 **System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
-**Related module**: [VideoProcessing](capi-videoprocessing.md)
+**Related module**: [VideoProcessing](capi-media-kit-videoprocessing.md)
 
 **Header file**: [video_processing_types.h](capi-video-processing-types-h.md)
 
@@ -22,8 +24,8 @@ Video color space information structure of querying if video color space convers
 
 | Name | Description |
 | -- | -- |
-| int32_t metadataType | The metadata type of the video, see enum OH_NativeBuffer_MetadataType |
-| int32_t colorSpace | The color space type of the video, see enum OH_NativeBuffer_ColorSpace |
-| int32_t pixelFormat | The pixel format of the video, see enum OH_NativeBuffer_Format |
+| int32_t metadataType | The metadata type of the video, see enum OH_NativeBuffer_MetadataType<br><!--Device-int32_t metadataType--><!--Device-int32_t metadataType-End--> |
+| int32_t colorSpace | The color space type of the video, see enum OH_NativeBuffer_ColorSpace<br><!--Device-int32_t colorSpace--><!--Device-int32_t colorSpace-End--> |
+| int32_t pixelFormat | The pixel format of the video, see enum OH_NativeBuffer_Format<br><!--Device-int32_t pixelFormat--><!--Device-int32_t pixelFormat-End--> |
 
 

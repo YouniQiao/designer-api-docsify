@@ -34,7 +34,7 @@ Removes a notification based on the bundle information and notification key. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | [NotificationKey](arkts-notification-notification-depr-notificationkey-i.md) | Yes | Notification key. |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Yes | Notification key. |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for removing the notification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -102,7 +102,7 @@ Removes a notification based on the bundle information and notification key. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | [NotificationKey](arkts-notification-notification-depr-notificationkey-i.md) | Yes | Notification key. |
+| notificationKey | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Yes | Notification key. |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for removing the notification. |
 
 **Return value:**

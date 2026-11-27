@@ -246,7 +246,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 对话框的边框颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black
 
@@ -268,7 +268,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 背景的边框半径。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -290,7 +290,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **默认值：** BorderStyle.Solid
 
@@ -312,7 +312,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 对话框边框宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 

@@ -10,7 +10,7 @@ Manages notifications.
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](arkts-notification-notification-depr.md)
+**替代接口：** [notification/notification](arkts-notification-notification.md)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -34,7 +34,7 @@ static show(options?: ShowNotificationOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](arkts-notification-notification-depr.md)
+**替代接口：** [notification/notification](arkts-notification-notification.md)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

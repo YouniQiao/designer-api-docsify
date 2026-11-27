@@ -1148,7 +1148,7 @@ query(
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果此参数为空，则查询所有列。 |
 | predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
 
@@ -1192,7 +1192,7 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
 
@@ -1234,7 +1234,7 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
 
@@ -1277,7 +1277,7 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 **示例**
 
@@ -1327,7 +1327,7 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Promise对象，返回查询结果。 |
+| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Promise对象，返回查询结果。 |
 
 **示例**
 

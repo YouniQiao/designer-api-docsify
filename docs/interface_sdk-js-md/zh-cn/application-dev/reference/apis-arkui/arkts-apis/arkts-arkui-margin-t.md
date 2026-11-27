@@ -8,7 +8,7 @@ declare type Margin = Padding
 
 引入该对象时，至少传入一个参数。
 
-**类型：** [Padding](arkts-arkui-padding-t.md)
+**类型：** Padding
 
 **起始版本：** 7
 

@@ -8,11 +8,13 @@ typedef struct ffrt_rwlock_t {...} ffrt_rwlock_t
 
 Defines the rwlock structure used to store internal data of the rwlock.
 
+<!--Device-typedef struct ffrt_rwlock_t {...} ffrt_rwlock_t--><!--Device-typedef struct ffrt_rwlock_t {...} ffrt_rwlock_t-End-->
+
 **System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 
-**Related module**: [FFRT](capi-ffrt.md)
+**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
 
 **Header file**: [type_def.h](capi-type-def-h.md)
 
@@ -22,6 +24,6 @@ Defines the rwlock structure used to store internal data of the rwlock.
 
 | Name | Description |
 | -- | -- |
-| uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)] | Internal storage backing the rwlock. Do not access directly; use the `ffrt_rwlock_*` APIs. |
+| uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)] | Internal storage backing the rwlock. Do not access directly; use the `ffrt_rwlock_*` APIs.<br><!--Device-uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]--><!--Device-uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]-End--> |
 
 

@@ -2,13 +2,15 @@
 
 ## 概述
 
-Defines the layout-related types for the native module.
+定义布局相关的枚举和接口。
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -122,19 +124,23 @@ enum ArkUI_Alignment
 
 定义布局对齐枚举值。
 
+<!--Device-enum ArkUI_Alignment--><!--Device-enum ArkUI_Alignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ALIGNMENT_TOP_START = 0 | 顶部起始，该值为默认值。 |
-| ARKUI_ALIGNMENT_TOP | 顶部居中。 |
-| ARKUI_ALIGNMENT_TOP_END | 顶部尾端。 |
-| ARKUI_ALIGNMENT_START | 起始端纵向居中。 |
-| ARKUI_ALIGNMENT_CENTER | 横向和纵向居中。 |
-| ARKUI_ALIGNMENT_END | 尾端纵向居中。 |
-| ARKUI_ALIGNMENT_BOTTOM_START | 底部起始端。 |
-| ARKUI_ALIGNMENT_BOTTOM | 底部横向居中。 |
-| ARKUI_ALIGNMENT_BOTTOM_END | 底部尾端。 |
+| ARKUI_ALIGNMENT_TOP_START = 0 | 顶部起始，该值为默认值。<br><!--Device-ARKUI_ALIGNMENT_TOP_START = 0--><!--Device-ARKUI_ALIGNMENT_TOP_START = 0-End--> |
+| ARKUI_ALIGNMENT_TOP | 顶部居中。<br><!--Device-ARKUI_ALIGNMENT_TOP--><!--Device-ARKUI_ALIGNMENT_TOP-End--> |
+| ARKUI_ALIGNMENT_TOP_END | 顶部尾端。<br><!--Device-ARKUI_ALIGNMENT_TOP_END--><!--Device-ARKUI_ALIGNMENT_TOP_END-End--> |
+| ARKUI_ALIGNMENT_START | 起始端纵向居中。<br><!--Device-ARKUI_ALIGNMENT_START--><!--Device-ARKUI_ALIGNMENT_START-End--> |
+| ARKUI_ALIGNMENT_CENTER | 横向和纵向居中。<br><!--Device-ARKUI_ALIGNMENT_CENTER--><!--Device-ARKUI_ALIGNMENT_CENTER-End--> |
+| ARKUI_ALIGNMENT_END | 尾端纵向居中。<br><!--Device-ARKUI_ALIGNMENT_END--><!--Device-ARKUI_ALIGNMENT_END-End--> |
+| ARKUI_ALIGNMENT_BOTTOM_START | 底部起始端。<br><!--Device-ARKUI_ALIGNMENT_BOTTOM_START--><!--Device-ARKUI_ALIGNMENT_BOTTOM_START-End--> |
+| ARKUI_ALIGNMENT_BOTTOM | 底部横向居中。<br><!--Device-ARKUI_ALIGNMENT_BOTTOM--><!--Device-ARKUI_ALIGNMENT_BOTTOM-End--> |
+| ARKUI_ALIGNMENT_BOTTOM_END | 底部尾端。<br><!--Device-ARKUI_ALIGNMENT_BOTTOM_END--><!--Device-ARKUI_ALIGNMENT_BOTTOM_END-End--> |
 
 ### ArkUI_ItemAlignment
 
@@ -146,16 +152,20 @@ enum ArkUI_ItemAlignment
 
 设置子组件在父容器交叉轴的对齐格式枚举值。
 
+<!--Device-enum ArkUI_ItemAlignment--><!--Device-enum ArkUI_ItemAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ITEM_ALIGNMENT_AUTO = 0 | 使用Flex容器中默认配置，该值为默认值。 |
-| ARKUI_ITEM_ALIGNMENT_START | 元素在Flex容器中，交叉轴方向首部对齐。 |
-| ARKUI_ITEM_ALIGNMENT_CENTER | 元素在Flex容器中，交叉轴方向居中对齐。 |
-| ARKUI_ITEM_ALIGNMENT_END | 元素在Flex容器中，交叉轴方向底部对齐。 |
-| ARKUI_ITEM_ALIGNMENT_STRETCH | 元素在Flex容器中，交叉轴方向拉伸填充。 |
-| ARKUI_ITEM_ALIGNMENT_BASELINE | 元素在Flex容器中，交叉轴方向文本基线对齐。 |
+| ARKUI_ITEM_ALIGNMENT_AUTO = 0 | 使用Flex容器中默认配置，该值为默认值。<br><!--Device-ARKUI_ITEM_ALIGNMENT_AUTO = 0--><!--Device-ARKUI_ITEM_ALIGNMENT_AUTO = 0-End--> |
+| ARKUI_ITEM_ALIGNMENT_START | 元素在Flex容器中，交叉轴方向首部对齐。<br><!--Device-ARKUI_ITEM_ALIGNMENT_START--><!--Device-ARKUI_ITEM_ALIGNMENT_START-End--> |
+| ARKUI_ITEM_ALIGNMENT_CENTER | 元素在Flex容器中，交叉轴方向居中对齐。<br><!--Device-ARKUI_ITEM_ALIGNMENT_CENTER--><!--Device-ARKUI_ITEM_ALIGNMENT_CENTER-End--> |
+| ARKUI_ITEM_ALIGNMENT_END | 元素在Flex容器中，交叉轴方向底部对齐。<br><!--Device-ARKUI_ITEM_ALIGNMENT_END--><!--Device-ARKUI_ITEM_ALIGNMENT_END-End--> |
+| ARKUI_ITEM_ALIGNMENT_STRETCH | 元素在Flex容器中，交叉轴方向拉伸填充。<br><!--Device-ARKUI_ITEM_ALIGNMENT_STRETCH--><!--Device-ARKUI_ITEM_ALIGNMENT_STRETCH-End--> |
+| ARKUI_ITEM_ALIGNMENT_BASELINE | 元素在Flex容器中，交叉轴方向文本基线对齐。<br><!--Device-ARKUI_ITEM_ALIGNMENT_BASELINE--><!--Device-ARKUI_ITEM_ALIGNMENT_BASELINE-End--> |
 
 ### ArkUI_FlexAlignment
 
@@ -167,16 +177,20 @@ enum ArkUI_FlexAlignment
 
 定义垂直方向对齐方式。
 
+<!--Device-enum ArkUI_FlexAlignment--><!--Device-enum ArkUI_FlexAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FLEX_ALIGNMENT_START = 1 | 主轴方向首端对齐，该值为默认值。 |
-| ARKUI_FLEX_ALIGNMENT_CENTER = 2 | 主轴方向中心对齐。 |
-| ARKUI_FLEX_ALIGNMENT_END = 3 | 主轴方向尾部对齐。 |
-| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离相同，第一个元素行首对齐，最后的元素行尾对齐。 |
-| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离相同，第一个元素到行首的距离是相邻元素间距离的一半。 |
-| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离、第一个元素到行首的距离和最后的元素到行尾的距离均相等。 |
+| ARKUI_FLEX_ALIGNMENT_START = 1 | 主轴方向首端对齐，该值为默认值。<br><!--Device-ARKUI_FLEX_ALIGNMENT_START = 1--><!--Device-ARKUI_FLEX_ALIGNMENT_START = 1-End--> |
+| ARKUI_FLEX_ALIGNMENT_CENTER = 2 | 主轴方向中心对齐。<br><!--Device-ARKUI_FLEX_ALIGNMENT_CENTER = 2--><!--Device-ARKUI_FLEX_ALIGNMENT_CENTER = 2-End--> |
+| ARKUI_FLEX_ALIGNMENT_END = 3 | 主轴方向尾部对齐。<br><!--Device-ARKUI_FLEX_ALIGNMENT_END = 3--><!--Device-ARKUI_FLEX_ALIGNMENT_END = 3-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离相同，第一个元素行首对齐，最后的元素行尾对齐。<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离相同，第一个元素到行首的距离是相邻元素间距离的一半。<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7-End--> |
+| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | Flex主轴方向均匀分配弹性元素，相邻元素之间距离、第一个元素到行首的距离和最后的元素到行尾的距离均相等。<br><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8--><!--Device-ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8-End--> |
 
 ### ArkUI_FlexDirection
 
@@ -188,14 +202,18 @@ enum ArkUI_FlexDirection
 
 定义Flex容器的主轴方向。
 
+<!--Device-enum ArkUI_FlexDirection--><!--Device-enum ArkUI_FlexDirection-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FLEX_DIRECTION_ROW = 0 | 主轴与行方向一致，该值为默认值。 |
-| ARKUI_FLEX_DIRECTION_COLUMN | 主轴与列方向一致。 |
-| ARKUI_FLEX_DIRECTION_ROW_REVERSE | 主轴与行方向相反。 |
-| ARKUI_FLEX_DIRECTION_COLUMN_REVERSE | 主轴与列方向相反。 |
+| ARKUI_FLEX_DIRECTION_ROW = 0 | 主轴与行方向一致，该值为默认值。<br><!--Device-ARKUI_FLEX_DIRECTION_ROW = 0--><!--Device-ARKUI_FLEX_DIRECTION_ROW = 0-End--> |
+| ARKUI_FLEX_DIRECTION_COLUMN | 主轴与列方向一致。<br><!--Device-ARKUI_FLEX_DIRECTION_COLUMN--><!--Device-ARKUI_FLEX_DIRECTION_COLUMN-End--> |
+| ARKUI_FLEX_DIRECTION_ROW_REVERSE | 主轴与行方向相反。<br><!--Device-ARKUI_FLEX_DIRECTION_ROW_REVERSE--><!--Device-ARKUI_FLEX_DIRECTION_ROW_REVERSE-End--> |
+| ARKUI_FLEX_DIRECTION_COLUMN_REVERSE | 主轴与列方向相反。<br><!--Device-ARKUI_FLEX_DIRECTION_COLUMN_REVERSE--><!--Device-ARKUI_FLEX_DIRECTION_COLUMN_REVERSE-End--> |
 
 ### ArkUI_FlexWrap
 
@@ -207,13 +225,17 @@ enum ArkUI_FlexWrap
 
 定义Flex行列布局模式。
 
+<!--Device-enum ArkUI_FlexWrap--><!--Device-enum ArkUI_FlexWrap-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FLEX_WRAP_NO_WRAP = 0 | 单行/单列布局，子项不能超出容器，该值为默认值。 |
-| ARKUI_FLEX_WRAP_WRAP | 多行/多列布局，子项允许超出容器。 |
-| ARKUI_FLEX_WRAP_WRAP_REVERSE | 反向多行/多列布局，子项允许超出容器。 |
+| ARKUI_FLEX_WRAP_NO_WRAP = 0 | 单行/单列布局，子项不能超出容器，该值为默认值。<br><!--Device-ARKUI_FLEX_WRAP_NO_WRAP = 0--><!--Device-ARKUI_FLEX_WRAP_NO_WRAP = 0-End--> |
+| ARKUI_FLEX_WRAP_WRAP | 多行/多列布局，子项允许超出容器。<br><!--Device-ARKUI_FLEX_WRAP_WRAP--><!--Device-ARKUI_FLEX_WRAP_WRAP-End--> |
+| ARKUI_FLEX_WRAP_WRAP_REVERSE | 反向多行/多列布局，子项允许超出容器。<br><!--Device-ARKUI_FLEX_WRAP_WRAP_REVERSE--><!--Device-ARKUI_FLEX_WRAP_WRAP_REVERSE-End--> |
 
 ### ArkUI_Direction
 
@@ -225,13 +247,17 @@ enum ArkUI_Direction
 
 设置容器元素内主轴方向上的布局枚举值。
 
+<!--Device-enum ArkUI_Direction--><!--Device-enum ArkUI_Direction-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_DIRECTION_LTR = 0 | 元素从左到右布局，该值为默认值。 |
-| ARKUI_DIRECTION_RTL | 元素从右到左布局。 |
-| ARKUI_DIRECTION_AUTO = 3 | 使用系统布局方向。 |
+| ARKUI_DIRECTION_LTR = 0 | 元素从左到右布局，该值为默认值。<br><!--Device-ARKUI_DIRECTION_LTR = 0--><!--Device-ARKUI_DIRECTION_LTR = 0-End--> |
+| ARKUI_DIRECTION_RTL | 元素从右到左布局。<br><!--Device-ARKUI_DIRECTION_RTL--><!--Device-ARKUI_DIRECTION_RTL-End--> |
+| ARKUI_DIRECTION_AUTO = 3 | 使用系统布局方向。<br><!--Device-ARKUI_DIRECTION_AUTO = 3--><!--Device-ARKUI_DIRECTION_AUTO = 3-End--> |
 
 ### ArkUI_Axis
 
@@ -243,12 +269,16 @@ enum ArkUI_Axis
 
 定义方向或List组件排列方向枚举值。
 
+<!--Device-enum ArkUI_Axis--><!--Device-enum ArkUI_Axis-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_AXIS_VERTICAL = 0 | 竖直方向，或者仅支持竖直方向滚动，该值为默认值。 |
-| ARKUI_AXIS_HORIZONTAL | 水平方向，或者仅支持水平方向滚动。 |
+| ARKUI_AXIS_VERTICAL = 0 | 竖直方向，或者仅支持竖直方向滚动，该值为默认值。<br><!--Device-ARKUI_AXIS_VERTICAL = 0--><!--Device-ARKUI_AXIS_VERTICAL = 0-End--> |
+| ARKUI_AXIS_HORIZONTAL | 水平方向，或者仅支持水平方向滚动。<br><!--Device-ARKUI_AXIS_HORIZONTAL--><!--Device-ARKUI_AXIS_HORIZONTAL-End--> |
 
 ### ArkUI_VerticalAlignment
 
@@ -260,13 +290,17 @@ enum ArkUI_VerticalAlignment
 
 定义垂直对齐方式。
 
+<!--Device-enum ArkUI_VerticalAlignment--><!--Device-enum ArkUI_VerticalAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_VERTICAL_ALIGNMENT_TOP = 0 | 顶部对齐。 |
-| ARKUI_VERTICAL_ALIGNMENT_CENTER | 居中对齐，默认对齐方式。 |
-| ARKUI_VERTICAL_ALIGNMENT_BOTTOM | 底部对齐。 |
+| ARKUI_VERTICAL_ALIGNMENT_TOP = 0 | 顶部对齐。<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_TOP = 0--><!--Device-ARKUI_VERTICAL_ALIGNMENT_TOP = 0-End--> |
+| ARKUI_VERTICAL_ALIGNMENT_CENTER | 居中对齐，默认对齐方式。<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_CENTER--><!--Device-ARKUI_VERTICAL_ALIGNMENT_CENTER-End--> |
+| ARKUI_VERTICAL_ALIGNMENT_BOTTOM | 底部对齐。<br><!--Device-ARKUI_VERTICAL_ALIGNMENT_BOTTOM--><!--Device-ARKUI_VERTICAL_ALIGNMENT_BOTTOM-End--> |
 
 ### ArkUI_HorizontalAlignment
 
@@ -278,13 +312,17 @@ enum ArkUI_HorizontalAlignment
 
 定义语言方向对齐方式。
 
+<!--Device-enum ArkUI_HorizontalAlignment--><!--Device-enum ArkUI_HorizontalAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_HORIZONTAL_ALIGNMENT_START = 0 | 按照语言方向起始端对齐。 |
-| ARKUI_HORIZONTAL_ALIGNMENT_CENTER | 居中对齐，默认对齐方式。 |
-| ARKUI_HORIZONTAL_ALIGNMENT_END | 按照语言方向末端对齐。 |
+| ARKUI_HORIZONTAL_ALIGNMENT_START = 0 | 按照语言方向起始端对齐。<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_START = 0--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_START = 0-End--> |
+| ARKUI_HORIZONTAL_ALIGNMENT_CENTER | 居中对齐，默认对齐方式。<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_CENTER--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_CENTER-End--> |
+| ARKUI_HORIZONTAL_ALIGNMENT_END | 按照语言方向末端对齐。<br><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_END--><!--Device-ARKUI_HORIZONTAL_ALIGNMENT_END-End--> |
 
 ### ArkUI_BarrierDirection
 
@@ -296,14 +334,18 @@ enum ArkUI_BarrierDirection
 
 定义屏障线的方向。
 
+<!--Device-enum ArkUI_BarrierDirection--><!--Device-enum ArkUI_BarrierDirection-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_BARRIER_DIRECTION_START = 0 | 屏障在其所有referencedId的最左侧。 |
-| ARKUI_BARRIER_DIRECTION_END | 屏障在其所有referencedId的最右侧。 |
-| ARKUI_BARRIER_DIRECTION_TOP | 屏障在其所有referencedId的最上方。 |
-| ARKUI_BARRIER_DIRECTION_BOTTOM | 屏障在其所有referencedId的最下方。 |
+| ARKUI_BARRIER_DIRECTION_START = 0 | 屏障在其所有referencedId的最左侧。<br><!--Device-ARKUI_BARRIER_DIRECTION_START = 0--><!--Device-ARKUI_BARRIER_DIRECTION_START = 0-End--> |
+| ARKUI_BARRIER_DIRECTION_END | 屏障在其所有referencedId的最右侧。<br><!--Device-ARKUI_BARRIER_DIRECTION_END--><!--Device-ARKUI_BARRIER_DIRECTION_END-End--> |
+| ARKUI_BARRIER_DIRECTION_TOP | 屏障在其所有referencedId的最上方。<br><!--Device-ARKUI_BARRIER_DIRECTION_TOP--><!--Device-ARKUI_BARRIER_DIRECTION_TOP-End--> |
+| ARKUI_BARRIER_DIRECTION_BOTTOM | 屏障在其所有referencedId的最下方。<br><!--Device-ARKUI_BARRIER_DIRECTION_BOTTOM--><!--Device-ARKUI_BARRIER_DIRECTION_BOTTOM-End--> |
 
 ### ArkUI_RelativeLayoutChainStyle
 
@@ -315,13 +357,17 @@ enum ArkUI_RelativeLayoutChainStyle
 
 定义链的风格。
 
+<!--Device-enum ArkUI_RelativeLayoutChainStyle--><!--Device-enum ArkUI_RelativeLayoutChainStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0 | 组件在约束锚点间均匀分布，该值为默认值。 |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE | 除首尾2个子组件的其他组件在约束锚点间均匀分布。 |
-| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED | 链内子组件无间隙。 |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0 | 组件在约束锚点间均匀分布，该值为默认值。<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD = 0-End--> |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE | 除首尾2个子组件的其他组件在约束锚点间均匀分布。<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_SPREAD_INSIDE-End--> |
+| ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED | 链内子组件无间隙。<br><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED--><!--Device-ARKUI_RELATIVE_LAYOUT_CHAIN_STYLE_PACKED-End--> |
 
 ### ArkUI_SafeAreaEdge
 
@@ -333,14 +379,18 @@ enum ArkUI_SafeAreaEdge
 
 定义扩展安全区域的方向的枚举值。
 
+<!--Device-enum ArkUI_SafeAreaEdge--><!--Device-enum ArkUI_SafeAreaEdge-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SAFE_AREA_EDGE_TOP = 1 | 上方区域，该值为默认值。 |
-| ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | 下方区域。 |
-| ARKUI_SAFE_AREA_EDGE_START = 1 << 2 | 前部区域。 |
-| ARKUI_SAFE_AREA_EDGE_END = 1 << 3 | 尾部区域。 |
+| ARKUI_SAFE_AREA_EDGE_TOP = 1 | 上方区域，该值为默认值。<br><!--Device-ARKUI_SAFE_AREA_EDGE_TOP = 1--><!--Device-ARKUI_SAFE_AREA_EDGE_TOP = 1-End--> |
+| ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | 下方区域。<br><!--Device-ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1--><!--Device-ARKUI_SAFE_AREA_EDGE_BOTTOM = 1 << 1-End--> |
+| ARKUI_SAFE_AREA_EDGE_START = 1 << 2 | 前部区域。<br><!--Device-ARKUI_SAFE_AREA_EDGE_START = 1 << 2--><!--Device-ARKUI_SAFE_AREA_EDGE_START = 1 << 2-End--> |
+| ARKUI_SAFE_AREA_EDGE_END = 1 << 3 | 尾部区域。<br><!--Device-ARKUI_SAFE_AREA_EDGE_END = 1 << 3--><!--Device-ARKUI_SAFE_AREA_EDGE_END = 1 << 3-End--> |
 
 ### ArkUI_LayoutSafeAreaType
 
@@ -352,11 +402,15 @@ enum ArkUI_LayoutSafeAreaType
 
 定义扩展安全区域的枚举值。
 
+<!--Device-enum ArkUI_LayoutSafeAreaType--><!--Device-enum ArkUI_LayoutSafeAreaType-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1 | 系统默认非安全区域，包括状态栏、导航栏。 |
+| ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1 | 系统默认非安全区域，包括状态栏、导航栏。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_TYPE_SYSTEM = 1-End--> |
 
 ### ArkUI_LayoutSafeAreaEdge
 
@@ -368,17 +422,21 @@ enum ArkUI_LayoutSafeAreaEdge
 
 定义扩展安全区域的方向的枚举值。
 
+<!--Device-enum ArkUI_LayoutSafeAreaEdge--><!--Device-enum ArkUI_LayoutSafeAreaEdge-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1 | 上方区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | 下方区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2 | 前部区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3 | 尾部区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM | 垂直区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END | 水平区域。 |
-| ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL | 全部区域。 |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1 | 上方区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP = 1-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1 | 下方区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM = 1 << 1-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2 | 前部区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_START = 1 << 2-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3 | 尾部区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_END = 1 << 3-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM | 垂直区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_TOP \| ARKUI_LAYOUT_SAFE_AREA_EDGE_BOTTOM-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END | 水平区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL = ARKUI_LAYOUT_SAFE_AREA_EDGE_START \| ARKUI_LAYOUT_SAFE_AREA_EDGE_END-End--> |
+| ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL | 全部区域。<br><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL--><!--Device-ARKUI_LAYOUT_SAFE_AREA_EDGE_ALL = ARKUI_LAYOUT_SAFE_AREA_EDGE_VERTICAL \| ARKUI_LAYOUT_SAFE_AREA_EDGE_HORIZONTAL-End--> |
 
 ### ArkUI_LocalizedAlignment
 
@@ -390,19 +448,23 @@ enum ArkUI_LocalizedAlignment
 
 定义Stack容器中子组件的对齐规则。
 
+<!--Device-enum ArkUI_LocalizedAlignment--><!--Device-enum ArkUI_LocalizedAlignment-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0 | 顶部起始。 |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP | 顶部居中。 |
-| ARKUI_LOCALIZED_ALIGNMENT_TOP_END | 顶部尾端。 |
-| ARKUI_LOCALIZED_ALIGNMENT_START | 起始端纵向居中。 |
-| ARKUI_LOCALIZED_ALIGNMENT_CENTER | 横向和纵向居中。 |
-| ARKUI_LOCALIZED_ALIGNMENT_END | 尾端纵向居中。 |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START | 底部起始端。 |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM | 底部横向居中。 |
-| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END | 底部尾端。 |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0 | 顶部起始。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_START = 0-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP | 顶部居中。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_TOP_END | 顶部尾端。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_TOP_END-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_START | 起始端纵向居中。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_START--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_START-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_CENTER | 横向和纵向居中。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_CENTER--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_CENTER-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_END | 尾端纵向居中。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_END-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START | 底部起始端。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_START-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM | 底部横向居中。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM-End--> |
+| ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END | 底部尾端。<br><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END--><!--Device-ARKUI_LOCALIZED_ALIGNMENT_BOTTOM_END-End--> |
 
 ### ArkUI_LayoutPolicy
 
@@ -414,13 +476,17 @@ enum ArkUI_LayoutPolicy
 
 布局策略枚举。
 
+<!--Device-enum ArkUI_LayoutPolicy--><!--Device-enum ArkUI_LayoutPolicy-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_LAYOUTPOLICY_MATCHPARENT = 0 | 组件自适应父组件布局。 |
-| ARKUI_LAYOUTPOLICY_WRAPCONTENT | 组件自适应子组件（内容），且其大小受父组件内容区大小约束。 |
-| ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | 组件自适应子组件（内容），且其大小不受父组件内容区大小约束。 |
+| ARKUI_LAYOUTPOLICY_MATCHPARENT = 0 | 组件自适应父组件布局。<br><!--Device-ARKUI_LAYOUTPOLICY_MATCHPARENT = 0--><!--Device-ARKUI_LAYOUTPOLICY_MATCHPARENT = 0-End--> |
+| ARKUI_LAYOUTPOLICY_WRAPCONTENT | 组件自适应子组件（内容），且其大小受父组件内容区大小约束。<br><!--Device-ARKUI_LAYOUTPOLICY_WRAPCONTENT--><!--Device-ARKUI_LAYOUTPOLICY_WRAPCONTENT-End--> |
+| ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | 组件自适应子组件（内容），且其大小不受父组件内容区大小约束。<br><!--Device-ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE--><!--Device-ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE-End--> |
 
 ### ArkUI_PixelRoundCalcPolicy
 
@@ -432,13 +498,17 @@ enum ArkUI_PixelRoundCalcPolicy
 
 定义像素取整计算策略枚举。
 
+<!--Device-enum ArkUI_PixelRoundCalcPolicy--><!--Device-enum ArkUI_PixelRoundCalcPolicy-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0 | 非取整计算。 |
-| ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL | 向上取整计算。 |
-| ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR | 向下取整计算。 |
+| ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0 | 非取整计算。<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_NOFORCEROUND = 0-End--> |
+| ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL | 向上取整计算。<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCECEIL-End--> |
+| ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR | 向下取整计算。<br><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR--><!--Device-ARKUI_PIXELROUNDCALCPOLICY_FORCEFLOOR-End--> |
 
 
 ## 函数说明
@@ -452,6 +522,10 @@ ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)
 **描述：**
 
 创建RelativeContainer容器内的辅助线信息。
+
+<!--Device-ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)--><!--Device-ArkUI_GuidelineOption* OH_ArkUI_GuidelineOption_Create(int32_t size)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -477,6 +551,10 @@ void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)
 
 销毁辅助线信息。
 
+<!--Device-void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)--><!--Device-void OH_ArkUI_GuidelineOption_Dispose(ArkUI_GuidelineOption* guideline)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -494,6 +572,10 @@ void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char
 **描述：**
 
 设置辅助线的Id。
+
+<!--Device-void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char* value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetId(ArkUI_GuidelineOption* guideline, const char* value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -515,6 +597,10 @@ void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, Ark
 
 设置辅助线的方向。
 
+<!--Device-void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, ArkUI_Axis value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetDirection(ArkUI_GuidelineOption* guideline, ArkUI_Axis value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -534,6 +620,10 @@ void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline,
 **描述：**
 
 设置距离容器左侧或者顶部的距离。
+
+<!--Device-void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline, float value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetPositionStart(ArkUI_GuidelineOption* guideline, float value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -555,6 +645,10 @@ void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, f
 
 设置距离容器右侧或者底部的距离。
 
+<!--Device-void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, float value, int32_t index)--><!--Device-void OH_ArkUI_GuidelineOption_SetPositionEnd(ArkUI_GuidelineOption* guideline, float value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -574,6 +668,10 @@ const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int
 **描述：**
 
 获取辅助线的Id。
+
+<!--Device-const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-const char* OH_ArkUI_GuidelineOption_GetId(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -600,6 +698,10 @@ ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guidelin
 
 获取辅助线的方向。
 
+<!--Device-ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-ArkUI_Axis OH_ArkUI_GuidelineOption_GetDirection(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -624,6 +726,10 @@ float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline
 **描述：**
 
 获取辅助线距离容器左侧或者顶部的距离。
+
+<!--Device-float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-float OH_ArkUI_GuidelineOption_GetPositionStart(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -650,6 +756,10 @@ float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, 
 
 获取辅助线距离容器右侧或者底部的距离。
 
+<!--Device-float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, int32_t index)--><!--Device-float OH_ArkUI_GuidelineOption_GetPositionEnd(ArkUI_GuidelineOption* guideline, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -675,6 +785,10 @@ ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)
 
 创建RelativeContainer容器内的屏障信息。
 
+<!--Device-ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)--><!--Device-ArkUI_BarrierOption* OH_ArkUI_BarrierOption_Create(int32_t size)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -699,6 +813,10 @@ void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)
 
 销毁屏障信息。
 
+<!--Device-void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)--><!--Device-void OH_ArkUI_BarrierOption_Dispose(ArkUI_BarrierOption* barrierStyle)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -716,6 +834,10 @@ void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char*
 **描述：**
 
 设置屏障的Id。
+
+<!--Device-void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -737,6 +859,10 @@ void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkU
 
 设置屏障的方向。
 
+<!--Device-void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkUI_BarrierDirection value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetDirection(ArkUI_BarrierOption* barrierStyle, ArkUI_BarrierDirection value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -757,6 +883,10 @@ void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, c
 
 设置屏障的依赖的组件。
 
+<!--Device-void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)--><!--Device-void OH_ArkUI_BarrierOption_SetReferencedId(ArkUI_BarrierOption* barrierStyle, const char* value, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -776,6 +906,10 @@ const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int3
 **描述：**
 
 获取屏障的Id。
+
+<!--Device-const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-const char* OH_ArkUI_BarrierOption_GetId(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -802,6 +936,10 @@ ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* 
 
 获取屏障的方向。
 
+<!--Device-ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-ArkUI_BarrierDirection OH_ArkUI_BarrierOption_GetDirection(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -826,6 +964,10 @@ const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierS
 **描述：**
 
 获取屏障的依赖的组件。
+
+<!--Device-const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierStyle, int32_t index, int32_t referencedIndex)--><!--Device-const char* OH_ArkUI_BarrierOption_GetReferencedId(ArkUI_BarrierOption* barrierStyle, int32_t index, int32_t referencedIndex)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -853,6 +995,10 @@ int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierS
 
 获取屏障的依赖的组件的个数。
 
+<!--Device-int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierStyle, int32_t index)--><!--Device-int32_t OH_ArkUI_BarrierOption_GetReferencedIdSize(ArkUI_BarrierOption* barrierStyle, int32_t index)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -878,6 +1024,10 @@ ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()
 
 创建相对容器中子组件的对齐规则信息。
 
+<!--Device-ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()--><!--Device-ArkUI_AlignmentRuleOption* OH_ArkUI_AlignmentRuleOption_Create()-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **返回值：**
@@ -896,6 +1046,10 @@ void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)
 
 销毁相对容器中子组件的对齐规则信息。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)--><!--Device-void OH_ArkUI_AlignmentRuleOption_Dispose(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -913,6 +1067,10 @@ void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, co
 **描述：**
 
 设置相对布局的左对齐方式。
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetStart(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -934,6 +1092,10 @@ void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, cons
 
 设置相对布局的右对齐方式。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetEnd(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -953,6 +1115,10 @@ void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption*
 **描述：**
 
 设置相对布局的横向居中对齐方式。
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterHorizontal(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_HorizontalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -974,6 +1140,10 @@ void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, cons
 
 设置相对布局的顶部对齐方式。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetTop(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -993,6 +1163,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, c
 **描述：**
 
 设置相对布局的底部对齐方式。
+
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBottom(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1014,6 +1188,10 @@ void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* o
 
 设置相对布局的纵向居中对齐方式。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetCenterVertical(ArkUI_AlignmentRuleOption* option, const char* id, ArkUI_VerticalAlignment alignment)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1034,6 +1212,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* o
 
 设置组件在锚点约束下的水平方向上偏移参数。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* option, float horizontal)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasHorizontal(ArkUI_AlignmentRuleOption* option, float horizontal)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1053,6 +1235,10 @@ void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* opt
 
 设置组件在锚点约束下的垂直方向上偏移参数。
 
+<!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* option, float vertical)--><!--Device-void OH_ArkUI_AlignmentRuleOption_SetBiasVertical(ArkUI_AlignmentRuleOption* option, float vertical)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1071,6 +1257,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* o
 **描述：**
 
 获取左对齐参数的Id。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetStartId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1096,6 +1286,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_A
 
 获取左对齐参数的对齐方式。
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetStartAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1119,6 +1313,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* opt
 **描述：**
 
 获取右对齐参数。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetEndId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1144,6 +1342,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_Ali
 
 获取右对齐参数。
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetEndAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1167,6 +1369,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRu
 **描述：**
 
 获取横向居中对齐方式的参数。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1192,6 +1398,10 @@ ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizon
 
 获取横向居中对齐方式的参数。
 
+<!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_HorizontalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1215,6 +1425,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* opt
 **描述：**
 
 获取顶部对齐的参数。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetTopId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1240,6 +1454,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_Align
 
 获取顶部对齐的参数。
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetTopAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1263,6 +1481,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* 
 **描述：**
 
 获取底部对齐的参数。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetBottomId(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1288,6 +1510,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_Al
 
 获取底部对齐的参数。
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetBottomAlignment(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1311,6 +1537,10 @@ const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRule
 **描述：**
 
 获取纵向居中对齐方式的参数。
+
+<!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-const char* OH_ArkUI_AlignmentRuleOption_GetCenterIdVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1336,6 +1566,10 @@ ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(
 
 获取纵向居中对齐方式的参数。
 
+<!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-ArkUI_VerticalAlignment OH_ArkUI_AlignmentRuleOption_GetCenterAlignmentVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1359,6 +1593,10 @@ float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* 
 **描述：**
 
 获取水平方向上的bias值。
+
+<!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* option)--><!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasHorizontal(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1384,6 +1622,10 @@ float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* op
 
 获取垂直方向上的bias值。
 
+<!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* option)--><!--Device-float OH_ArkUI_AlignmentRuleOption_GetBiasVertical(ArkUI_AlignmentRuleOption* option)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1408,6 +1650,10 @@ ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()
 
 创建PositionEdges属性对象。
 
+<!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()--><!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Create()-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **返回值：**
@@ -1425,6 +1671,10 @@ ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edge
 **描述：**
 
 深拷贝PositionEdges属性对象。
+
+<!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edges)--><!--Device-ArkUI_PositionEdges* OH_ArkUI_PositionEdges_Copy(const ArkUI_PositionEdges* edges)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1450,6 +1700,10 @@ void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)
 
 销毁PositionEdges属性对象。
 
+<!--Device-void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)--><!--Device-void OH_ArkUI_PositionEdges_Dispose(ArkUI_PositionEdges* edges)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1467,6 +1721,10 @@ void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)
 **描述：**
 
 设置PositionEdges属性对象的上方向值。
+
+<!--Device-void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetTop(ArkUI_PositionEdges* edges, float value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1487,6 +1745,10 @@ int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)
 
 获取PositionEdges属性对象的上方向值。
 
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1500,7 +1762,7 @@ int32_t OH_ArkUI_PositionEdges_GetTop(ArkUI_PositionEdges* edges, float* value)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PositionEdges_SetLeft()
 
@@ -1511,6 +1773,10 @@ void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)
 **描述：**
 
 设置PositionEdges属性对象的左方向值。
+
+<!--Device-void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetLeft(ArkUI_PositionEdges* edges, float value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1531,6 +1797,10 @@ int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)
 
 获取PositionEdges属性对象的左方向值。
 
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1544,7 +1814,7 @@ int32_t OH_ArkUI_PositionEdges_GetLeft(ArkUI_PositionEdges* edges, float* value)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PositionEdges_SetBottom()
 
@@ -1555,6 +1825,10 @@ void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)
 **描述：**
 
 设置PositionEdges属性对象的下方向值。
+
+<!--Device-void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetBottom(ArkUI_PositionEdges* edges, float value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1575,6 +1849,10 @@ int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* valu
 
 获取PositionEdges属性对象的下方向值。
 
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1588,7 +1866,7 @@ int32_t OH_ArkUI_PositionEdges_GetBottom(ArkUI_PositionEdges* edges, float* valu
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PositionEdges_SetRight()
 
@@ -1599,6 +1877,10 @@ void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)
 **描述：**
 
 设置PositionEdges属性对象的右方向值。
+
+<!--Device-void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)--><!--Device-void OH_ArkUI_PositionEdges_SetRight(ArkUI_PositionEdges* edges, float value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1619,6 +1901,10 @@ int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value
 
 获取PositionEdges属性对象的右方向值。
 
+<!--Device-int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value)--><!--Device-int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1632,7 +1918,7 @@ int32_t OH_ArkUI_PositionEdges_GetRight(ArkUI_PositionEdges* edges, float* value
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PixelRoundPolicy_Create()
 
@@ -1643,6 +1929,10 @@ ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()
 **描述：**
 
 创建PixelRoundPolicy属性对象。
+
+<!--Device-ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()--><!--Device-ArkUI_PixelRoundPolicy* OH_ArkUI_PixelRoundPolicy_Create()-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1662,6 +1952,10 @@ void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)
 
 释放PixelRoundPolicy属性对象。
 
+<!--Device-void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)--><!--Device-void OH_ArkUI_PixelRoundPolicy_Dispose(ArkUI_PixelRoundPolicy* policy)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1679,6 +1973,10 @@ void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_Pixe
 **描述：**
 
 设置PixelRoundPolicy属性对象的上部方向值。
+
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1699,6 +1997,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 
 获取PixelRoundPolicy属性对象的上部方向值。
 
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1712,7 +2014,7 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetTop(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PixelRoundPolicy_SetStart()
 
@@ -1723,6 +2025,10 @@ void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_Pi
 **描述：**
 
 设置PixelRoundPolicy属性对象的前部方向值。
+
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1743,6 +2049,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI
 
 获取PixelRoundPolicy属性对象的前部方向值。
 
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1756,7 +2066,7 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetStart(ArkUI_PixelRoundPolicy* policy, ArkUI
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PixelRoundPolicy_SetBottom()
 
@@ -1767,6 +2077,10 @@ void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 **描述：**
 
 设置PixelRoundPolicy属性对象的下部方向值。
+
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1787,6 +2101,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkU
 
 获取PixelRoundPolicy属性对象的下部方向值。
 
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1800,7 +2118,7 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetBottom(ArkUI_PixelRoundPolicy* policy, ArkU
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 ### OH_ArkUI_PixelRoundPolicy_SetEnd()
 
@@ -1811,6 +2129,10 @@ void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_Pixe
 **描述：**
 
 设置PixelRoundPolicy属性对象的尾部方向值。
+
+<!--Device-void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)--><!--Device-void OH_ArkUI_PixelRoundPolicy_SetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 21
 
@@ -1831,6 +2153,10 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 
 获取PixelRoundPolicy属性对象的尾部方向值。
 
+<!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)--><!--Device-int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_PixelRoundCalcPolicy* value)-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -1844,6 +2170,6 @@ int32_t OH_ArkUI_PixelRoundPolicy_GetEnd(ArkUI_PixelRoundPolicy* policy, ArkUI_P
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 表示参数无效。 |
+| int32_t | 返回错误码。返回 [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 表示操作成功。返回 [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 表示参数无效。 |
 
 
