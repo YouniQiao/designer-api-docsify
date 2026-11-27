@@ -6,11 +6,9 @@
 
 **库：** liblocation_ndk.so
 
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
-**相关模块：** [Location](capi-location-kit-location.md)
+**相关模块：** [Location](capi-location.md)
 
 ## 汇总
 
@@ -18,7 +16,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [Location_BasicInfo](capi-location-location-basicinfo.md) | Location_BasicInfo | 定义位置基本信息的结构体。 |
+| [Location_BasicInfo](capi-location-location-basicinfo.md) | - | 定义位置基本信息的结构体。 |
 | [Location_Info](capi-location-location-info.md) | Location_Info | 定义位置信息的结构体。 |
 | [Location_RequestConfig](capi-location-location-requestconfig.md) | Location_RequestConfig | 定义位置请求参数的结构体。 |
 
@@ -46,6 +44,12 @@
 | [void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)](#oh_locationrequestconfig_setinterval) | - | 设置位置请求参数中的位置上报间隔。 |
 | [void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)](#oh_locationrequestconfig_setcallback) | - | 设置回调函数。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*Location_InfoCallback)(Location_Info* location, void* userData) | 用于接收位置上报的回调函数。<br>指向Location_Info实例的指针，携带最新的位置信息。<br>location实例的内存会在Location_InfoCallback结束时回收，请在此之前调用OH_LocationInfo_GetBasicInfo等接口获取位置信息。<br>**起始版本：** 13<br>**系统能力：** SystemCapability.Location.Location.Core |
+
 ## 枚举类型说明
 
 ### Location_ResultCode
@@ -58,20 +62,16 @@ enum Location_ResultCode
 
 定义位置服务的错误码。
 
-<!--Device-enum Location_ResultCode--><!--Device-enum Location_ResultCode-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| LOCATION_SUCCESS = 0 | 操作成功。<br><!--Device-LOCATION_SUCCESS = 0--><!--Device-LOCATION_SUCCESS = 0-End--> |
-| LOCATION_PERMISSION_DENIED = 201 | 权限校验失败。<br><!--Device-LOCATION_PERMISSION_DENIED = 201--><!--Device-LOCATION_PERMISSION_DENIED = 201-End--> |
-| LOCATION_INVALID_PARAM = 401 | 参数错误。 可能原因：1.输入参数为空指针；2.参数数值超出定义范围。<br><!--Device-LOCATION_INVALID_PARAM = 401--><!--Device-LOCATION_INVALID_PARAM = 401-End--> |
-| LOCATION_NOT_SUPPORTED = 801 | 该功能不支持。由于设备能力有限，无法调用该函数。<br><!--Device-LOCATION_NOT_SUPPORTED = 801--><!--Device-LOCATION_NOT_SUPPORTED = 801-End--> |
-| LOCATION_SERVICE_UNAVAILABLE = 3301000 | 位置服务不可用。<br><!--Device-LOCATION_SERVICE_UNAVAILABLE = 3301000--><!--Device-LOCATION_SERVICE_UNAVAILABLE = 3301000-End--> |
-| LOCATION_SWITCH_OFF = 3301100 | 位置开关处于关闭状态。<br><!--Device-LOCATION_SWITCH_OFF = 3301100--><!--Device-LOCATION_SWITCH_OFF = 3301100-End--> |
+| LOCATION_SUCCESS = 0 | 操作成功。 |
+| LOCATION_PERMISSION_DENIED = 201 | 权限校验失败。 |
+| LOCATION_INVALID_PARAM = 401 | 参数错误。 可能原因：1.输入参数为空指针；2.参数数值超出定义范围。 |
+| LOCATION_NOT_SUPPORTED = 801 | 该功能不支持。由于设备能力有限，无法调用该函数。 |
+| LOCATION_SERVICE_UNAVAILABLE = 3301000 | 位置服务不可用。 |
+| LOCATION_SWITCH_OFF = 3301100 | 位置开关处于关闭状态。 |
 
 ### Location_UseScene
 
@@ -83,18 +83,14 @@ enum Location_UseScene
 
 定义位置请求中的用户活动场景类型。
 
-<!--Device-enum Location_UseScene--><!--Device-enum Location_UseScene-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| LOCATION_USE_SCENE_NAVIGATION = 0x0401 | 导航场景。 适用于在户外获取设备实时位置的场景，如车载、步行导航。 主要使用GNSS定位技术提供定位服务，功耗较高。<br><!--Device-LOCATION_USE_SCENE_NAVIGATION = 0x0401--><!--Device-LOCATION_USE_SCENE_NAVIGATION = 0x0401-End--> |
-| LOCATION_USE_SCENE_SPORT = 0x0402 | 表示运动场景。 适用于记录用户位置轨迹的场景，如运动类应用记录轨迹功能。 主要使用GNSS定位技术提供定位服务，功耗较高。<br><!--Device-LOCATION_USE_SCENE_SPORT = 0x0402--><!--Device-LOCATION_USE_SCENE_SPORT = 0x0402-End--> |
-| LOCATION_USE_SCENE_TRANSPORT = 0x0403 | 表示出行场景。 适用于用户出行场景，如打车、乘坐公共交通等场景。 主要使用GNSS定位技术提供定位服务，功耗较高。<br><!--Device-LOCATION_USE_SCENE_TRANSPORT = 0x0403--><!--Device-LOCATION_USE_SCENE_TRANSPORT = 0x0403-End--> |
-| LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404 | 表示日常服务使用场景。 适用于不需要定位用户精确位置的使用场景，如新闻资讯、网购、点餐类应用。 该场景仅使用网络定位技术提供定位服务，功耗较低。<br><!--Device-LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404--><!--Device-LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404-End--> |
+| LOCATION_USE_SCENE_NAVIGATION = 0x0401 | 导航场景。 适用于在户外获取设备实时位置的场景，如车载、步行导航。 主要使用GNSS定位技术提供定位服务，功耗较高。 |
+| LOCATION_USE_SCENE_SPORT = 0x0402 | 表示运动场景。 适用于记录用户位置轨迹的场景，如运动类应用记录轨迹功能。 主要使用GNSS定位技术提供定位服务，功耗较高。 |
+| LOCATION_USE_SCENE_TRANSPORT = 0x0403 | 表示出行场景。 适用于用户出行场景，如打车、乘坐公共交通等场景。 主要使用GNSS定位技术提供定位服务，功耗较高。 |
+| LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404 | 表示日常服务使用场景。 适用于不需要定位用户精确位置的使用场景，如新闻资讯、网购、点餐类应用。 该场景仅使用网络定位技术提供定位服务，功耗较低。 |
 
 ### Location_PowerConsumptionScene
 
@@ -106,17 +102,13 @@ enum Location_PowerConsumptionScene
 
 定义位置请求中的功耗场景类型。
 
-<!--Device-enum Location_PowerConsumptionScene--><!--Device-enum Location_PowerConsumptionScene-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| LOCATION_HIGH_POWER_CONSUMPTION = 0x0601 | 高功耗。 以GNSS定位技术为主。在GNSS提供稳定位置结果之前会使用网络定位技术提供服务。 在持续定位时，如果超过30秒无法获取GNSS定位结果则会使用网络定位技术获取位置。 对设备的硬件资源消耗较大，功耗较大。<br><!--Device-LOCATION_HIGH_POWER_CONSUMPTION = 0x0601--><!--Device-LOCATION_HIGH_POWER_CONSUMPTION = 0x0601-End--> |
-| LOCATION_LOW_POWER_CONSUMPTION = 0x0602 | 低功耗。 适用于对用户位置精度要求不高的使用场景，如新闻资讯、网购、点餐类应用。 该场景仅使用网络定位技术提供定位服务，功耗较低。<br><!--Device-LOCATION_LOW_POWER_CONSUMPTION = 0x0602--><!--Device-LOCATION_LOW_POWER_CONSUMPTION = 0x0602-End--> |
-| LOCATION_NO_POWER_CONSUMPTION = 0x0603 | 无功耗。 这种场景下不会主动触发定位，会在其他应用定位时，才给当前应用返回位置。<br><!--Device-LOCATION_NO_POWER_CONSUMPTION = 0x0603--><!--Device-LOCATION_NO_POWER_CONSUMPTION = 0x0603-End--> |
+| LOCATION_HIGH_POWER_CONSUMPTION = 0x0601 | 高功耗。 以GNSS定位技术为主。在GNSS提供稳定位置结果之前会使用网络定位技术提供服务。 在持续定位时，如果超过30秒无法获取GNSS定位结果则会使用网络定位技术获取位置。 对设备的硬件资源消耗较大，功耗较大。 |
+| LOCATION_LOW_POWER_CONSUMPTION = 0x0602 | 低功耗。 适用于对用户位置精度要求不高的使用场景，如新闻资讯、网购、点餐类应用。 该场景仅使用网络定位技术提供定位服务，功耗较低。 |
+| LOCATION_NO_POWER_CONSUMPTION = 0x0603 | 无功耗。 这种场景下不会主动触发定位，会在其他应用定位时，才给当前应用返回位置。 |
 
 ### Location_SourceType
 
@@ -128,18 +120,14 @@ enum Location_SourceType
 
 定义位置信息的来源。
 
-<!--Device-enum Location_SourceType--><!--Device-enum Location_SourceType-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
 | -- | -- |
-| LOCATION_SOURCE_TYPE_GNSS = 1 | 表示定位结果来自于GNSS定位技术。<br><!--Device-LOCATION_SOURCE_TYPE_GNSS = 1--><!--Device-LOCATION_SOURCE_TYPE_GNSS = 1-End--> |
-| LOCATION_SOURCE_TYPE_NETWORK = 2 | 表示定位结果来自于网络定位技术。<br><!--Device-LOCATION_SOURCE_TYPE_NETWORK = 2--><!--Device-LOCATION_SOURCE_TYPE_NETWORK = 2-End--> |
-| LOCATION_SOURCE_TYPE_INDOOR = 3 | 表示定位结果来自于室内高精度定位技术。<br><!--Device-LOCATION_SOURCE_TYPE_INDOOR = 3--><!--Device-LOCATION_SOURCE_TYPE_INDOOR = 3-End--> |
-| LOCATION_SOURCE_TYPE_RTK = 4 | 表示定位结果来自于室外高精度定位技术。<br><!--Device-LOCATION_SOURCE_TYPE_RTK = 4--><!--Device-LOCATION_SOURCE_TYPE_RTK = 4-End--> |
+| LOCATION_SOURCE_TYPE_GNSS = 1 | 表示定位结果来自于GNSS定位技术。 |
+| LOCATION_SOURCE_TYPE_NETWORK = 2 | 表示定位结果来自于网络定位技术。 |
+| LOCATION_SOURCE_TYPE_INDOOR = 3 | 表示定位结果来自于室内高精度定位技术。 |
+| LOCATION_SOURCE_TYPE_RTK = 4 | 表示定位结果来自于室外高精度定位技术。 |
 
 
 ## 函数说明
@@ -153,10 +141,6 @@ bool OH_LocationInfo_IsFromMock(Location_Info* location)
 **描述：**
 
 判断定位信息是否来自模拟位置功能。
-
-<!--Device-bool OH_LocationInfo_IsFromMock(Location_Info* location)--><!--Device-bool OH_LocationInfo_IsFromMock(Location_Info* location)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **起始版本：** 26.0.0
 
@@ -182,10 +166,6 @@ Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)
 
 获取位置基本信息。
 
-<!--Device-Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)--><!--Device-Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -209,10 +189,6 @@ Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, c
 **描述：**
 
 获取位置信息中的附加信息。
-
-<!--Device-Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)--><!--Device-Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **起始版本：** 13
 
@@ -240,10 +216,6 @@ typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)
 
 用于接收位置上报的回调函数。<br>指向Location_Info实例的指针，携带最新的位置信息。<br>location实例的内存会在Location_InfoCallback结束时回收，请在此之前调用OH_LocationInfo_GetBasicInfo等接口获取位置信息。
 
-<!--Device-typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)--><!--Device-typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -263,10 +235,6 @@ Location_RequestConfig* OH_Location_CreateRequestConfig(void)
 
 创建一个位置请求参数结构体实例。
 
-<!--Device-Location_RequestConfig* OH_Location_CreateRequestConfig(void)--><!--Device-Location_RequestConfig* OH_Location_CreateRequestConfig(void)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **返回值：**
@@ -285,10 +253,6 @@ void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)
 
 销毁位置请求参数实例并回收内存。
 
-<!--Device-void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)--><!--Device-void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -306,10 +270,6 @@ void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig,
 **描述：**
 
 设置位置请求参数中的用户活动场景。 位置请求参数[Location_RequestConfig](capi-location-location-requestconfig.md)中以useScene优先。 如果设置了useScene，则powerConsumptionScene参数无效。 如果未设置useScene，设置了powerConsumptionScene则该参数生效。 如果两个参数都未设置，则默认useScene为[LOCATION_USE_SCENE_DAILY_LIFE_SERVICE](capi-oh-location-type-h.md#location_usescene)， powerConsumptionScene参数无效。
-
-<!--Device-void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig, Location_UseScene useScene)--><!--Device-void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig, Location_UseScene useScene)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **起始版本：** 13
 
@@ -330,10 +290,6 @@ void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* r
 
 设置位置请求参数中的功耗场景。
 
-<!--Device-void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* requestConfig, Location_PowerConsumptionScene powerConsumptionScene)--><!--Device-void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* requestConfig, Location_PowerConsumptionScene powerConsumptionScene)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -353,10 +309,6 @@ void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig,
 
 设置位置请求参数中的位置上报间隔。
 
-<!--Device-void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)--><!--Device-void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -375,10 +327,6 @@ void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig,
 **描述：**
 
 设置回调函数。
-
-<!--Device-void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)--><!--Device-void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
 
 **起始版本：** 13
 

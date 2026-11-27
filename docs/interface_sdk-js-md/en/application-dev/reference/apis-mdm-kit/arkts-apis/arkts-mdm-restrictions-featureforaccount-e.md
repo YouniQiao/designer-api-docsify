@@ -209,6 +209,38 @@ Device printing capability. If the device printing capability is disabled for a 
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## SCREEN_RECORD
+
+```TypeScript
+SCREEN_RECORD = 18
+```
+
+Screen recording capability. After this capability is disabled, screen recording cannot be performed.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-SCREEN_RECORD = 18--><!--Device-FeatureForAccount-SCREEN_RECORD = 18-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SCREEN_SHOT
+
+```TypeScript
+SCREEN_SHOT = 17
+```
+
+Screenshot capability. After this capability is disabled, screenshots cannot be taken.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-SCREEN_SHOT = 17--><!--Device-FeatureForAccount-SCREEN_SHOT = 17-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## SUDO
 
 ```TypeScript

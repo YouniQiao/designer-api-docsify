@@ -6,21 +6,19 @@ Provides functions and enumerations related to the data values.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) | OH_Data_Values | Define the OH_Data_Values structure type. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -64,10 +62,6 @@ OH_Data_Values *OH_Values_Create(void)
 
 Creates an OH_Data_Values instance object.
 
-<!--Device-OH_Data_Values *OH_Values_Create(void)--><!--Device-OH_Data_Values *OH_Values_Create(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Returns**:
@@ -90,10 +84,6 @@ int OH_Values_Destroy(OH_Data_Values *values)
 **Description**
 
 Destroys an OH_Data_Values instance object.
-
-<!--Device-int OH_Values_Destroy(OH_Data_Values *values)--><!--Device-int OH_Values_Destroy(OH_Data_Values *values)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -118,10 +108,6 @@ int OH_Values_Put(OH_Data_Values *values, const OH_Data_Value *val)
 **Description**
 
 Add OH_Data_Value data to the OH_Data_Values object.
-
-<!--Device-int OH_Values_Put(OH_Data_Values *values, const OH_Data_Value *val)--><!--Device-int OH_Values_Put(OH_Data_Values *values, const OH_Data_Value *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -148,10 +134,6 @@ int OH_Values_PutNull(OH_Data_Values *values)
 
 Add empty data to the OH_Data_Values object.
 
-<!--Device-int OH_Values_PutNull(OH_Data_Values *values)--><!--Device-int OH_Values_PutNull(OH_Data_Values *values)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -175,10 +157,6 @@ int OH_Values_PutInt(OH_Data_Values *values, int64_t val)
 **Description**
 
 Add integer data to the OH_Data_Values object.
-
-<!--Device-int OH_Values_PutInt(OH_Data_Values *values, int64_t val)--><!--Device-int OH_Values_PutInt(OH_Data_Values *values, int64_t val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -205,10 +183,6 @@ int OH_Values_PutReal(OH_Data_Values *values, double val)
 
 Add decimal data to the OH_Data_Values object.
 
-<!--Device-int OH_Values_PutReal(OH_Data_Values *values, double val)--><!--Device-int OH_Values_PutReal(OH_Data_Values *values, double val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -234,10 +208,6 @@ int OH_Values_PutText(OH_Data_Values *values, const char *val)
 
 Add string data to the OH_Data_Values object.
 
-<!--Device-int OH_Values_PutText(OH_Data_Values *values, const char *val)--><!--Device-int OH_Values_PutText(OH_Data_Values *values, const char *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -262,10 +232,6 @@ int OH_Values_PutBlob(OH_Data_Values *values, const unsigned char *val, size_t l
 **Description**
 
 Add binary data to the OH_Data_Values object.
-
-<!--Device-int OH_Values_PutBlob(OH_Data_Values *values, const unsigned char *val, size_t length)--><!--Device-int OH_Values_PutBlob(OH_Data_Values *values, const unsigned char *val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -293,10 +259,6 @@ int OH_Values_PutAsset(OH_Data_Values *values, const Data_Asset *val)
 
 Add Data_Asset data to the OH_Data_Values object.
 
-<!--Device-int OH_Values_PutAsset(OH_Data_Values *values, const Data_Asset *val)--><!--Device-int OH_Values_PutAsset(OH_Data_Values *values, const Data_Asset *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -321,10 +283,6 @@ int OH_Values_PutAssets(OH_Data_Values *values, const Data_Asset * const * val, 
 **Description**
 
 Add multiple Data_Asset data to the OH_Data_Values object.
-
-<!--Device-int OH_Values_PutAssets(OH_Data_Values *values, const Data_Asset * const * val, size_t length)--><!--Device-int OH_Values_PutAssets(OH_Data_Values *values, const Data_Asset * const * val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -352,10 +310,6 @@ int OH_Values_PutFloatVector(OH_Data_Values *values, const float *val, size_t le
 
 Add float array data to the OH_Data_Values object.
 
-<!--Device-int OH_Values_PutFloatVector(OH_Data_Values *values, const float *val, size_t length)--><!--Device-int OH_Values_PutFloatVector(OH_Data_Values *values, const float *val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -381,10 +335,6 @@ int OH_Values_PutUnlimitedInt(OH_Data_Values *values, int sign, const uint64_t *
 **Description**
 
 Add an integer of any length data to the OH_Data_Values object.
-
-<!--Device-int OH_Values_PutUnlimitedInt(OH_Data_Values *values, int sign, const uint64_t *trueForm, size_t length)--><!--Device-int OH_Values_PutUnlimitedInt(OH_Data_Values *values, int sign, const uint64_t *trueForm, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -413,10 +363,6 @@ int OH_Values_Count(OH_Data_Values *values, size_t *count)
 
 Get data count from OH_Data_Values object.
 
-<!--Device-int OH_Values_Count(OH_Data_Values *values, size_t *count)--><!--Device-int OH_Values_Count(OH_Data_Values *values, size_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -441,10 +387,6 @@ int OH_Values_GetType(OH_Data_Values *values, int index, OH_ColumnType *type)
 **Description**
 
 Get data type from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetType(OH_Data_Values *values, int index, OH_ColumnType *type)--><!--Device-int OH_Values_GetType(OH_Data_Values *values, int index, OH_ColumnType *type)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -472,10 +414,6 @@ int OH_Values_Get(OH_Data_Values *values, int index, OH_Data_Value **val)
 
 Get OH_Data_Value data from OH_Data_Values object.
 
-<!--Device-int OH_Values_Get(OH_Data_Values *values, int index, OH_Data_Value **val)--><!--Device-int OH_Values_Get(OH_Data_Values *values, int index, OH_Data_Value **val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -501,10 +439,6 @@ int OH_Values_IsNull(OH_Data_Values *values, int index, bool *val)
 **Description**
 
 Check whether the data is empty from OH_Data_Values object.
-
-<!--Device-int OH_Values_IsNull(OH_Data_Values *values, int index, bool *val)--><!--Device-int OH_Values_IsNull(OH_Data_Values *values, int index, bool *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -532,10 +466,6 @@ int OH_Values_GetInt(OH_Data_Values *values, int index, int64_t *val)
 
 Get integer data from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetInt(OH_Data_Values *values, int index, int64_t *val)--><!--Device-int OH_Values_GetInt(OH_Data_Values *values, int index, int64_t *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -561,10 +491,6 @@ int OH_Values_GetReal(OH_Data_Values *values, int index, double *val)
 **Description**
 
 Get decimal data from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetReal(OH_Data_Values *values, int index, double *val)--><!--Device-int OH_Values_GetReal(OH_Data_Values *values, int index, double *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -592,10 +518,6 @@ int OH_Values_GetText(OH_Data_Values *values, int index, const char **val)
 
 Get string data from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetText(OH_Data_Values *values, int index, const char **val)--><!--Device-int OH_Values_GetText(OH_Data_Values *values, int index, const char **val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -621,10 +543,6 @@ int OH_Values_GetBlob(OH_Data_Values *values, int index, const uint8_t **val, si
 **Description**
 
 Get binary data from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetBlob(OH_Data_Values *values, int index, const uint8_t **val, size_t *length)--><!--Device-int OH_Values_GetBlob(OH_Data_Values *values, int index, const uint8_t **val, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -653,10 +571,6 @@ int OH_Values_GetAsset(OH_Data_Values *values, int index, Data_Asset *val)
 
 Get Data_Asset data from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetAsset(OH_Data_Values *values, int index, Data_Asset *val)--><!--Device-int OH_Values_GetAsset(OH_Data_Values *values, int index, Data_Asset *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -683,10 +597,6 @@ int OH_Values_GetAssetsCount(OH_Data_Values *values, int index, size_t *length)
 
 Get multiple Data_Asset size from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetAssetsCount(OH_Data_Values *values, int index, size_t *length)--><!--Device-int OH_Values_GetAssetsCount(OH_Data_Values *values, int index, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -712,10 +622,6 @@ int OH_Values_GetAssets(OH_Data_Values *values, int index, Data_Asset **val, siz
 **Description**
 
 Get multiple Data_Asset data from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetAssets(OH_Data_Values *values, int index, Data_Asset **val, size_t inLen, size_t *outLen)--><!--Device-int OH_Values_GetAssets(OH_Data_Values *values, int index, Data_Asset **val, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -750,10 +656,6 @@ int OH_Values_GetFloatVectorCount(OH_Data_Values *values, int index, size_t *len
 
 Get float array data size from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetFloatVectorCount(OH_Data_Values *values, int index, size_t *length)--><!--Device-int OH_Values_GetFloatVectorCount(OH_Data_Values *values, int index, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -779,10 +681,6 @@ int OH_Values_GetFloatVector(OH_Data_Values *values, int index, float *val, size
 **Description**
 
 Get float array from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetFloatVector(OH_Data_Values *values, int index, float *val, size_t inLen, size_t *outLen)--><!--Device-int OH_Values_GetFloatVector(OH_Data_Values *values, int index, float *val, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -817,10 +715,6 @@ int OH_Values_GetUnlimitedIntBand(OH_Data_Values *values, int index, size_t *len
 
 Get an integer of any length data size from OH_Data_Values object.
 
-<!--Device-int OH_Values_GetUnlimitedIntBand(OH_Data_Values *values, int index, size_t *length)--><!--Device-int OH_Values_GetUnlimitedIntBand(OH_Data_Values *values, int index, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -846,10 +740,6 @@ int OH_Values_GetUnlimitedInt(OH_Data_Values *values, int index, int *sign, uint
 **Description**
 
 Get an integer of any length data from OH_Data_Values object.
-
-<!--Device-int OH_Values_GetUnlimitedInt(OH_Data_Values *values, int index, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)--><!--Device-int OH_Values_GetUnlimitedInt(OH_Data_Values *values, int index, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 

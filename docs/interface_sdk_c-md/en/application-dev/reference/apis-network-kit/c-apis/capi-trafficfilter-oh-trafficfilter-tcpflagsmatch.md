@@ -1,20 +1,18 @@
 # OH_TrafficFilter_TCPFlagsMatch
 
 ```c
-typedef struct OH_TrafficFilter_TCPFlagsMatch {...} OH_TrafficFilter_TCPFlagsMatch
+struct OH_TrafficFilter_TCPFlagsMatch {...}
 ```
 
 ## Overview
 
-Defines the TCP flag matching condition. It is valid only for the TCP protocol.
-
-<!--Device-struct OH_TrafficFilter_TCPFlagsMatch {...}--><!--Device-struct OH_TrafficFilter_TCPFlagsMatch {...}-End-->
+TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
-**Related module**: [TrafficFilter](capi-network-kit-trafficfilter.md)
+**Related module**: [TrafficFilter](capi-trafficfilter.md)
 
 **Header file**: [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -24,8 +22,8 @@ Defines the TCP flag matching condition. It is valid only for the TCP protocol.
 
 | Name | Description |
 | -- | -- |
-| bool enable | Whether to enable TCP flag matching. The value **true** means to enable TCP flag matching, and **false** means not to enable TCP flag matching.<br>**Since**: 26.0.1<br><!--Device-bool enable--><!--Device-bool enable-End--> |
-| uint8_t flagMask | Flag mask (specifies the flags to check).<br>**Since**: 26.0.1<br><!--Device-uint8_t flagMask--><!--Device-uint8_t flagMask-End--> |
-| uint8_t flagComp | Flag comparison value (value to compare against the flags).<br>**Since**: 26.0.1<br><!--Device-uint8_t flagComp--><!--Device-uint8_t flagComp-End--> |
+| bool enable | Enable TCP flags matching<br>**Since**: 26.1.0 |
+| uint8_t flagMask | Flag mask (which flags to check, use OH_TRAFFICFILTER_TCP_FLAG_* constants)<br>**Since**: 26.1.0 |
+| uint8_t flagComp | Flag to compare (which flags must be set)<br>**Since**: 26.1.0 |
 
 

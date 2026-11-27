@@ -32,8 +32,8 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-depr-i.md) | 是 | 获得的ElementName信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
+| elementName | [ElementName](arkts-ability-elementname-depr-elementname-i.md) | 是 | 获得的ElementName信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-remoteabilityinfo-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
 
 
 ## getRemoteAbilityInfo
@@ -62,10 +62,10 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-depr-i.md) | 是 | 获得的ElementName信息。 |
+| elementName | [ElementName](arkts-ability-elementname-depr-elementname-i.md) | 是 | 获得的ElementName信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md)&gt; | Promise形式返回远程基本能力信息。 |
+| Promise&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-remoteabilityinfo-i-sys.md)&gt; | Promise形式返回远程基本能力信息。 |

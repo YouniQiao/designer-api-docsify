@@ -19,4 +19,4 @@ Defines the allowed data types for specifying the background border width of a d
 | Type | Description |
 | --- | --- |
 | [Dimension](arkts-arkui-dimension-t.md) |  |
-| EdgeWidths |  |
+| [EdgeWidths](arkts-arkui-edgewidths-t.md) |  |

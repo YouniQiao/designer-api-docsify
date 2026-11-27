@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getSuspendStateByPidList
@@ -12,7 +12,7 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 function getSuspendStateByPidList(pidList: Array<number>): Array<FreezeState>
 ```
 
-根据进程的PID查询进程的冻结状态。
+根据进程的pid查询进程的冻结状态。
 
 **起始版本：** 26.1.0
 
@@ -30,7 +30,7 @@ function getSuspendStateByPidList(pidList: Array<number>): Array<FreezeState>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pidList | Array&lt;number&gt; | 是 | 要查询的进程ID列表。<br>必须为正整数。 |
+| pidList | Array&lt;number&gt; | 是 | 要查询的进程ID列表。必须为正整数。 |
 
 **返回值：**
 

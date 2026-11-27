@@ -8,13 +8,11 @@ struct OhosImageRect {...}
 
 定义图像矩形信息。
 
-<!--Device-struct OhosImageRect {...}--><!--Device-struct OhosImageRect {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image-kit-image.md)
+**相关模块：** [Image](capi-image.md)
 
 **所在头文件：** [image_mdk.h](capi-image-mdk-h.md)
 
@@ -24,9 +22,9 @@ struct OhosImageRect {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t x | 矩形x坐标值。<br><!--Device-int32_t x--><!--Device-int32_t x-End--> |
-| int32_t y | 矩形y坐标值。<br><!--Device-int32_t y--><!--Device-int32_t y-End--> |
-| int32_t width | 矩形宽度值，用pixels表示。<br><!--Device-int32_t width--><!--Device-int32_t width-End--> |
-| int32_t height | 矩形高度值，用pixels表示。<br><!--Device-int32_t height--><!--Device-int32_t height-End--> |
+| int32_t x | 矩形x坐标值。 |
+| int32_t y | 矩形y坐标值。 |
+| int32_t width | 矩形宽度值，用pixels表示。 |
+| int32_t height | 矩形高度值，用pixels表示。 |
 
 

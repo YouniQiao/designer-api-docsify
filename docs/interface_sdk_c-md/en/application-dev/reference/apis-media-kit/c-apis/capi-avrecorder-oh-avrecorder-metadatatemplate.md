@@ -1,18 +1,16 @@
 # OH_AVRecorder_MetadataTemplate
 
 ```c
-typedef struct OH_AVRecorder_MetadataTemplate {...} OH_AVRecorder_MetadataTemplate
+struct OH_AVRecorder_MetadataTemplate {...}
 ```
 
 ## Overview
 
-Defines the basic template of metadata during audio and video recording. Metadata is organized in key-value pair format. This struct is applicable to scenarios where custom metadata (such as title, author, and description) needs to be added to the recording output, facilitating the classification, retrieval, and management of recorded files. You can use the [OH_AVRecorder_Prepare][OH_AVRecorder_Prepare](capi-avrecorder-h.md#oh_avrecorder_prepare) API of AVRecorder to set the metadata in this struct to the recording output file.
-
-<!--Device-struct OH_AVRecorder_MetadataTemplate {...}--><!--Device-struct OH_AVRecorder_MetadataTemplate {...}-End-->
+The struct describes the basic template of metadata.
 
 **Since**: 18
 
-**Related module**: [AVRecorder](capi-media-kit-avrecorder.md)
+**Related module**: [AVRecorder](capi-avrecorder.md)
 
 **Header file**: [avrecorder_base.h](capi-avrecorder-base-h.md)
 
@@ -22,7 +20,7 @@ Defines the basic template of metadata during audio and video recording. Metadat
 
 | Name | Description |
 | -- | -- |
-| char *key | Metadata key.<br>**Since**: 18<br><!--Device-char *key--><!--Device-char *key-End--> |
-| char *value | Metadata value.<br>**Since**: 18<br><!--Device-char *value--><!--Device-char *value-End--> |
+| char *key | key value of the metadata |
+| char *value | contents of the metadata |
 
 

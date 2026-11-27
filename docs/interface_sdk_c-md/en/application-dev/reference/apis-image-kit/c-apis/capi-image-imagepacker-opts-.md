@@ -1,20 +1,18 @@
 # ImagePacker_Opts_
 
 ```c
-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts
+struct ImagePacker_Opts_ {...}
 ```
 
 ## Overview
 
 Defines the image packing options.
 
-<!--Device-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts--><!--Device-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts-End-->
-
 **System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 11
 
-**Related module**: [Image](capi-image-kit-image.md)
+**Related module**: [Image](capi-image.md)
 
 **Header file**: [image_packer_mdk.h](capi-image-packer-mdk-h.md)
 
@@ -24,7 +22,7 @@ Defines the image packing options.
 
 | Name | Description |
 | -- | -- |
-| const char* format | Encoding format.<br><!--Device-const char* format--><!--Device-const char* format-End--> |
-| int quality | Encoding quality.<br><!--Device-int quality--><!--Device-int quality-End--> |
+| const char* format | Encoding format. |
+| int quality | Encoding quality. |
 
 

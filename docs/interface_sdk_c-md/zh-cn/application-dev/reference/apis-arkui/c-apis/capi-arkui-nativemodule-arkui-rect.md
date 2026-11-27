@@ -8,13 +8,11 @@ typedef struct ArkUI_Rect {...} ArkUI_Rect
 
 定义遮罩屏蔽区域的范围结构体。
 
-<!--Device-typedef struct ArkUI_Rect {...} ArkUI_Rect--><!--Device-typedef struct ArkUI_Rect {...} ArkUI_Rect-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **所在头文件：** [common_type.h](capi-common-type-h.md)
 
@@ -24,9 +22,9 @@ typedef struct ArkUI_Rect {...} ArkUI_Rect
 
 | 名称 | 描述 |
 | -- | -- |
-| float x | 区域在x轴的位置，单位：vp。<br>**起始版本：** 12<br><!--Device-float x--><!--Device-float x-End--> |
-| float y | 区域在y轴的位置，单位：vp。<br>**起始版本：** 12<br><!--Device-float y--><!--Device-float y-End--> |
-| float width | 区域宽度，单位：vp。<br>**起始版本：** 12<br><!--Device-float width--><!--Device-float width-End--> |
-| float height | 区域高度，单位：vp。<br>**起始版本：** 12<br><!--Device-float height--><!--Device-float height-End--> |
+| float x | 区域在x轴的位置，单位：vp。<br>**起始版本：** 12 |
+| float y | 区域在y轴的位置，单位：vp。<br>**起始版本：** 12 |
+| float width | 区域宽度，单位：vp。<br>**起始版本：** 12 |
+| float height | 区域高度，单位：vp。<br>**起始版本：** 12 |
 
 

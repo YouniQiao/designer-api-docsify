@@ -8,21 +8,21 @@ The file declares the AVImageGenerator APIs. You can use the APIs to extract vid
 
 **Since**: 18
 
-**Related module**: [AVImageGenerator](capi-media-kit-avimagegenerator.md)
+**Related module**: [AVImageGenerator](capi-avimagegenerator.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AVImageGenerator](capi-avimagegenerator-oh-avimagegenerator.md) | OH_AVImageGenerator | The OH_AVImageGenerator struct describes the type used for generating video frames at specified timestamps. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
-| [OH_AVImageGenerator *OH_AVImageGenerator_Create(void)](#oh_avimagegenerator_create) | Creates an OH_AVImageGenerator instance, which is used to generate video frames at given time points. |
+| [OH_AVImageGenerator* OH_AVImageGenerator_Create(void)](#oh_avimagegenerator_create) | Creates an OH_AVImageGenerator instance, which is used to generate video frames at given time points. |
 | [OH_AVErrCode OH_AVImageGenerator_SetFDSource(OH_AVImageGenerator* generator, int32_t fd, int64_t offset, int64_t size)](#oh_avimagegenerator_setfdsource) | Sets a data source based on the media file descriptor. |
 | [OH_AVErrCode OH_AVImageGenerator_FetchFrameByTime(OH_AVImageGenerator* generator, int64_t timeUs, OH_AVImageGenerator_QueryOptions options, OH_PixelmapNative** pixelMap)](#oh_avimagegenerator_fetchframebytime) | Extracts a video frame at a given time from a video. |
 | [OH_AVErrCode OH_AVImageGenerator_Release(OH_AVImageGenerator* generator)](#oh_avimagegenerator_release) | Releases the resources used by the OH_AVImageGenerator instance and destroys the instance. |
@@ -32,14 +32,12 @@ The file declares the AVImageGenerator APIs. You can use the APIs to extract vid
 ### OH_AVImageGenerator_Create()
 
 ```c
-OH_AVImageGenerator *OH_AVImageGenerator_Create(void)
+OH_AVImageGenerator* OH_AVImageGenerator_Create(void)
 ```
 
 **Description**
 
 Creates an OH_AVImageGenerator instance, which is used to generate video frames at given time points.
-
-<!--Device-OH_AVImageGenerator *OH_AVImageGenerator_Create(void)--><!--Device-OH_AVImageGenerator *OH_AVImageGenerator_Create(void)-End-->
 
 **Since**: 18
 
@@ -47,7 +45,7 @@ Creates an OH_AVImageGenerator instance, which is used to generate video frames 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVImageGenerator *](capi-avimagegenerator-oh-avimagegenerator.md) | Pointer to the OH_AVImageGenerator instance created if the operation is successful; nullptr otherwise. |
+| [OH_AVImageGenerator*](capi-avimagegenerator-oh-avimagegenerator.md) | Returns a pointer to an OH_AVImageGenerator instance for success, nullptr for failure. Possible failure causes: HstEngineFactory failed to CreateAVMetadataHelperEngine. |
 
 ### OH_AVImageGenerator_SetFDSource()
 
@@ -58,8 +56,6 @@ OH_AVErrCode OH_AVImageGenerator_SetFDSource(OH_AVImageGenerator* generator, int
 **Description**
 
 Sets a data source based on the media file descriptor.
-
-<!--Device-OH_AVErrCode OH_AVImageGenerator_SetFDSource(OH_AVImageGenerator* generator, int32_t fd, int64_t offset, int64_t size)--><!--Device-OH_AVErrCode OH_AVImageGenerator_SetFDSource(OH_AVImageGenerator* generator, int32_t fd, int64_t offset, int64_t size)-End-->
 
 **Since**: 18
 
@@ -88,8 +84,6 @@ OH_AVErrCode OH_AVImageGenerator_FetchFrameByTime(OH_AVImageGenerator* generator
 
 Extracts a video frame at a given time from a video.
 
-<!--Device-OH_AVErrCode OH_AVImageGenerator_FetchFrameByTime(OH_AVImageGenerator* generator, int64_t timeUs, OH_AVImageGenerator_QueryOptions options, OH_PixelmapNative** pixelMap)--><!--Device-OH_AVErrCode OH_AVImageGenerator_FetchFrameByTime(OH_AVImageGenerator* generator, int64_t timeUs, OH_AVImageGenerator_QueryOptions options, OH_PixelmapNative** pixelMap)-End-->
-
 **Since**: 18
 
 **Parameters**:
@@ -116,8 +110,6 @@ OH_AVErrCode OH_AVImageGenerator_Release(OH_AVImageGenerator* generator)
 **Description**
 
 Releases the resources used by the OH_AVImageGenerator instance and destroys the instance.
-
-<!--Device-OH_AVErrCode OH_AVImageGenerator_Release(OH_AVImageGenerator* generator)--><!--Device-OH_AVErrCode OH_AVImageGenerator_Release(OH_AVImageGenerator* generator)-End-->
 
 **Since**: 18
 

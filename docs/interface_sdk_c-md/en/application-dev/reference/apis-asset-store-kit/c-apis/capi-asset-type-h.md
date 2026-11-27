@@ -6,15 +6,13 @@ Defines the enums, structs, and error codes used in the asset store service.
 
 **Library**: libasset_ndk.z.so
 
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
-**Related module**: [AssetType](capi-asset-store-kit-assettype.md)
+**Related module**: [AssetType](capi-assettype.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -25,7 +23,7 @@ Defines the enums, structs, and error codes used in the asset store service.
 | [Asset_ResultSet](capi-assettype-asset-resultset.md) | Asset_ResultSet | Represents the query result of multiple assets. |
 | [Asset_SyncResult](capi-assettype-asset-syncresult.md) | Asset_SyncResult | Represents the sync result of an asset. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -40,7 +38,7 @@ Defines the enums, structs, and error codes used in the asset store service.
 | [Asset_ReturnType](#asset_returntype) | Asset_ReturnType | Type of the asset query result to return. |
 | [Asset_OperationType](#asset_operationtype) | Asset_OperationType | Enumerates the additional asset operation types. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
@@ -58,17 +56,13 @@ enum Asset_TagType
 
 Enumerates the types of the tags of asset attributes.
 
-<!--Device-enum Asset_TagType--><!--Device-enum Asset_TagType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_TYPE_BOOL = 0x1 << 28 | Boolean.<br><!--Device-ASSET_TYPE_BOOL = 0x1 << 28--><!--Device-ASSET_TYPE_BOOL = 0x1 << 28-End--> |
-| ASSET_TYPE_NUMBER = 0x2 << 28 | Number (uint32_t).<br><!--Device-ASSET_TYPE_NUMBER = 0x2 << 28--><!--Device-ASSET_TYPE_NUMBER = 0x2 << 28-End--> |
-| ASSET_TYPE_BYTES = 0x3 << 28 | Bytes.<br><!--Device-ASSET_TYPE_BYTES = 0x3 << 28--><!--Device-ASSET_TYPE_BYTES = 0x3 << 28-End--> |
+| ASSET_TYPE_BOOL = 0x1 << 28 | Boolean. |
+| ASSET_TYPE_NUMBER = 0x2 << 28 | Number (uint32_t). |
+| ASSET_TYPE_BYTES = 0x3 << 28 | Bytes. |
 
 ### Asset_Tag
 
@@ -80,46 +74,42 @@ enum Asset_Tag
 
 Enumerates the tags of asset attributes.
 
-<!--Device-enum Asset_Tag--><!--Device-enum Asset_Tag-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_TAG_SECRET = ASSET_TYPE_BYTES \| 0x01 | Sensitive user data in the form of bytes, such as passwords and tokens.<br><!--Device-ASSET_TAG_SECRET = ASSET_TYPE_BYTES \| 0x01--><!--Device-ASSET_TAG_SECRET = ASSET_TYPE_BYTES \| 0x01-End--> |
-| ASSET_TAG_ALIAS = ASSET_TYPE_BYTES \| 0x02 | Asset alias (identifier) in the form of bytes.<br><!--Device-ASSET_TAG_ALIAS = ASSET_TYPE_BYTES \| 0x02--><!--Device-ASSET_TAG_ALIAS = ASSET_TYPE_BYTES \| 0x02-End--> |
-| ASSET_TAG_ACCESSIBILITY = ASSET_TYPE_NUMBER \| 0x03 | Access control based on the lock screen status. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_ACCESSIBILITY = ASSET_TYPE_NUMBER \| 0x03--><!--Device-ASSET_TAG_ACCESSIBILITY = ASSET_TYPE_NUMBER \| 0x03-End--> |
-| ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04 | A Boolean value indicating whether the asset is available only with a lock screen password. true indicates that asset is only available when a lock screen password is set, and false indicates that asset is not restricted by the lock screen password.<br><!--Device-ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04--><!--Device-ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04-End--> |
-| ASSET_TAG_AUTH_TYPE = ASSET_TYPE_NUMBER \| 0x05 | User authentication type for the asset. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_AUTH_TYPE = ASSET_TYPE_NUMBER \| 0x05--><!--Device-ASSET_TAG_AUTH_TYPE = ASSET_TYPE_NUMBER \| 0x05-End--> |
-| ASSET_TAG_AUTH_VALIDITY_PERIOD = ASSET_TYPE_NUMBER \| 0x06 | Validity period of the user authentication, in seconds. The value is of the uint32_t type, in seconds.<br><!--Device-ASSET_TAG_AUTH_VALIDITY_PERIOD = ASSET_TYPE_NUMBER \| 0x06--><!--Device-ASSET_TAG_AUTH_VALIDITY_PERIOD = ASSET_TYPE_NUMBER \| 0x06-End--> |
-| ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07 | Challenge value, in the form of bytes, used for anti-replay during the authentication.<br><!--Device-ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07--><!--Device-ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07-End--> |
-| ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08 | Authentication token, in the form of bytes, obtained after a successful user authentication.<br><!--Device-ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08--><!--Device-ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08-End--> |
-| ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10 | Asset sync type. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10--><!--Device-ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10-End--> |
-| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | Whether the asset needs to be stored persistently. true indicates that assets are retained when the application is uninstalled, while false indicates that assets are not retained. Verification of **ohos.permission.STORE_PERSISTENT_DATA** is required if **OH_Asset_Add** is called with this tag passed in.<br><!--Device-ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11--><!--Device-ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11-End--> |
-| ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20 | Custom data, which is of the bytes type and cannot be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20--><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20-End--> |
-| ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21 | Custom data, which is of the bytes type and cannot be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21--><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21-End--> |
-| ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22 | Custom data, which is of the bytes type and cannot be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22--><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22-End--> |
-| ASSET_TAG_DATA_LABEL_CRITICAL_4 = ASSET_TYPE_BYTES \| 0x23 | Custom data, which is of the bytes type and cannot be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_4 = ASSET_TYPE_BYTES \| 0x23--><!--Device-ASSET_TAG_DATA_LABEL_CRITICAL_4 = ASSET_TYPE_BYTES \| 0x23-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_1 = ASSET_TYPE_BYTES \| 0x30 | Custom data, which is of the bytes type and can be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_1 = ASSET_TYPE_BYTES \| 0x30--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_1 = ASSET_TYPE_BYTES \| 0x30-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_2 = ASSET_TYPE_BYTES \| 0x31 | Custom data, which is of the bytes type and can be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_2 = ASSET_TYPE_BYTES \| 0x31--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_2 = ASSET_TYPE_BYTES \| 0x31-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_3 = ASSET_TYPE_BYTES \| 0x32 | Custom data, which is of the bytes type and can be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_3 = ASSET_TYPE_BYTES \| 0x32--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_3 = ASSET_TYPE_BYTES \| 0x32-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_4 = ASSET_TYPE_BYTES \| 0x33 | Custom data, which is of the bytes type and can be changed.<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_4 = ASSET_TYPE_BYTES \| 0x33--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_4 = ASSET_TYPE_BYTES \| 0x33-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36-End--> |
-| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37 | Custom data, which is of the bytes type, can be changed, but cannot be synced.<br>**Since**: 12<br><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37--><!--Device-ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37-End--> |
-| ASSET_TAG_RETURN_TYPE = ASSET_TYPE_NUMBER \| 0x40 | Type of asset information to return. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_RETURN_TYPE = ASSET_TYPE_NUMBER \| 0x40--><!--Device-ASSET_TAG_RETURN_TYPE = ASSET_TYPE_NUMBER \| 0x40-End--> |
-| ASSET_TAG_RETURN_LIMIT = ASSET_TYPE_NUMBER \| 0x41 | Maximum number of assets that can be returned in a query operation. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_RETURN_LIMIT = ASSET_TYPE_NUMBER \| 0x41--><!--Device-ASSET_TAG_RETURN_LIMIT = ASSET_TYPE_NUMBER \| 0x41-End--> |
-| ASSET_TAG_RETURN_OFFSET = ASSET_TYPE_NUMBER \| 0x42 | Offset of the returned assets in a batch query. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_RETURN_OFFSET = ASSET_TYPE_NUMBER \| 0x42--><!--Device-ASSET_TAG_RETURN_OFFSET = ASSET_TYPE_NUMBER \| 0x42-End--> |
-| ASSET_TAG_RETURN_ORDERED_BY = ASSET_TYPE_NUMBER \| 0x43 | Sorting order of the assets in the query result. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_RETURN_ORDERED_BY = ASSET_TYPE_NUMBER \| 0x43--><!--Device-ASSET_TAG_RETURN_ORDERED_BY = ASSET_TYPE_NUMBER \| 0x43-End--> |
-| ASSET_TAG_CONFLICT_RESOLUTION = ASSET_TYPE_NUMBER \| 0x44 | Policy for resolving the conflict when an asset is added. The value is of the uint32_t type.<br><!--Device-ASSET_TAG_CONFLICT_RESOLUTION = ASSET_TYPE_NUMBER \| 0x44--><!--Device-ASSET_TAG_CONFLICT_RESOLUTION = ASSET_TYPE_NUMBER \| 0x44-End--> |
-| ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45 | Asset update time, in timestamp format. The value is of the bytes type.<br>**Since**: 12<br><!--Device-ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45--><!--Device-ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45-End--> |
-| ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46 | Additional operation type. The value is of the uint32_t type.<br>**Since**: 12<br><!--Device-ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46--><!--Device-ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46-End--> |
-| ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47 | Whether to encrypt the additional information customized by the service. The value is of the Boolean type. true indicates that the additional information customized by the service is encrypted, and false indicates that the additional information customized by the service is not encrypted.<br>**Since**: 14<br><!--Device-ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47--><!--Device-ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47-End--> |
-| ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48 | Group to which the asset belongs. The value is of the bytes type.<br>**Since**: 18<br><!--Device-ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48--><!--Device-ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48-End--> |
-| ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49 | Encrypted import/export type supported by the asset. The value is of the uint32_t type.<br>**Since**: 18<br><!--Device-ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49--><!--Device-ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49-End--> |
+| ASSET_TAG_SECRET = ASSET_TYPE_BYTES \| 0x01 | Sensitive user data in the form of bytes, such as passwords and tokens. |
+| ASSET_TAG_ALIAS = ASSET_TYPE_BYTES \| 0x02 | Asset alias (identifier) in the form of bytes. |
+| ASSET_TAG_ACCESSIBILITY = ASSET_TYPE_NUMBER \| 0x03 | Access control based on the lock screen status. The value is of the uint32_t type. |
+| ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04 | A Boolean value indicating whether the asset is available only with a lock screen password. true indicates that asset is only available when a lock screen password is set, and false indicates that asset is not restricted by the lock screen password. |
+| ASSET_TAG_AUTH_TYPE = ASSET_TYPE_NUMBER \| 0x05 | User authentication type for the asset. The value is of the uint32_t type. |
+| ASSET_TAG_AUTH_VALIDITY_PERIOD = ASSET_TYPE_NUMBER \| 0x06 | Validity period of the user authentication, in seconds. The value is of the uint32_t type, in seconds. |
+| ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07 | Challenge value, in the form of bytes, used for anti-replay during the authentication. |
+| ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08 | Authentication token, in the form of bytes, obtained after a successful user authentication. |
+| ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10 | Asset sync type. The value is of the uint32_t type. |
+| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | Whether the asset needs to be stored persistently. true indicates that assets are retained when the application is uninstalled, while false indicates that assets are not retained. Verification of **ohos.permission.STORE_PERSISTENT_DATA**<br>is required if **OH_Asset_Add** is called with this tag passed in. |
+| ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20 | Custom data, which is of the bytes type and cannot be changed. |
+| ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21 | Custom data, which is of the bytes type and cannot be changed. |
+| ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22 | Custom data, which is of the bytes type and cannot be changed. |
+| ASSET_TAG_DATA_LABEL_CRITICAL_4 = ASSET_TYPE_BYTES \| 0x23 | Custom data, which is of the bytes type and cannot be changed. |
+| ASSET_TAG_DATA_LABEL_NORMAL_1 = ASSET_TYPE_BYTES \| 0x30 | Custom data, which is of the bytes type and can be changed. |
+| ASSET_TAG_DATA_LABEL_NORMAL_2 = ASSET_TYPE_BYTES \| 0x31 | Custom data, which is of the bytes type and can be changed. |
+| ASSET_TAG_DATA_LABEL_NORMAL_3 = ASSET_TYPE_BYTES \| 0x32 | Custom data, which is of the bytes type and can be changed. |
+| ASSET_TAG_DATA_LABEL_NORMAL_4 = ASSET_TYPE_BYTES \| 0x33 | Custom data, which is of the bytes type and can be changed. |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_1 = ASSET_TYPE_BYTES \| 0x34 |  |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_2 = ASSET_TYPE_BYTES \| 0x35 |  |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_3 = ASSET_TYPE_BYTES \| 0x36 |  |
+| ASSET_TAG_DATA_LABEL_NORMAL_LOCAL_4 = ASSET_TYPE_BYTES \| 0x37 |  |
+| ASSET_TAG_RETURN_TYPE = ASSET_TYPE_NUMBER \| 0x40 | Type of asset information to return. The value is of the uint32_t type. |
+| ASSET_TAG_RETURN_LIMIT = ASSET_TYPE_NUMBER \| 0x41 | Maximum number of assets that can be returned in a query operation. The value is of the uint32_t type. |
+| ASSET_TAG_RETURN_OFFSET = ASSET_TYPE_NUMBER \| 0x42 | Offset of the returned assets in a batch query. The value is of the uint32_t type. |
+| ASSET_TAG_RETURN_ORDERED_BY = ASSET_TYPE_NUMBER \| 0x43 | Sorting order of the assets in the query result. The value is of the uint32_t type. |
+| ASSET_TAG_CONFLICT_RESOLUTION = ASSET_TYPE_NUMBER \| 0x44 | Policy for resolving the conflict when an asset is added. The value is of the uint32_t type. |
+| ASSET_TAG_UPDATE_TIME = ASSET_TYPE_BYTES \| 0x45 |  |
+| ASSET_TAG_OPERATION_TYPE = ASSET_TYPE_NUMBER \| 0x46 |  |
+| ASSET_TAG_REQUIRE_ATTR_ENCRYPTED = ASSET_TYPE_BOOL \| 0x47 |  |
+| ASSET_TAG_GROUP_ID = ASSET_TYPE_BYTES \| 0x48 |  |
+| ASSET_TAG_WRAP_TYPE = ASSET_TYPE_NUMBER \| 0x49 |  |
 
 ### Asset_ResultCode
 
@@ -131,35 +121,31 @@ enum Asset_ResultCode
 
 Enumerates the result codes used in the ASSET APIs.
 
-<!--Device-enum Asset_ResultCode--><!--Device-enum Asset_ResultCode-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_SUCCESS = 0 | The operation is successful.<br><!--Device-ASSET_SUCCESS = 0--><!--Device-ASSET_SUCCESS = 0-End--> |
-| ASSET_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API.<br><!--Device-ASSET_PERMISSION_DENIED = 201--><!--Device-ASSET_PERMISSION_DENIED = 201-End--> |
-| ASSET_INVALID_ARGUMENT = 401 | The parameter is invalid.<br><!--Device-ASSET_INVALID_ARGUMENT = 401--><!--Device-ASSET_INVALID_ARGUMENT = 401-End--> |
-| ASSET_SERVICE_UNAVAILABLE = 24000001 | The asset store service is unavailable.<br><!--Device-ASSET_SERVICE_UNAVAILABLE = 24000001--><!--Device-ASSET_SERVICE_UNAVAILABLE = 24000001-End--> |
-| ASSET_NOT_FOUND = 24000002 | The asset is not found.<br><!--Device-ASSET_NOT_FOUND = 24000002--><!--Device-ASSET_NOT_FOUND = 24000002-End--> |
-| ASSET_DUPLICATED = 24000003 | The asset already exists.<br><!--Device-ASSET_DUPLICATED = 24000003--><!--Device-ASSET_DUPLICATED = 24000003-End--> |
-| ASSET_ACCESS_DENIED = 24000004 | The access to the asset is denied.<br><!--Device-ASSET_ACCESS_DENIED = 24000004--><!--Device-ASSET_ACCESS_DENIED = 24000004-End--> |
-| ASSET_STATUS_MISMATCH = 24000005 | The lock screen status does not match.<br><!--Device-ASSET_STATUS_MISMATCH = 24000005--><!--Device-ASSET_STATUS_MISMATCH = 24000005-End--> |
-| ASSET_OUT_OF_MEMORY = 24000006 | The system memory is insufficient.<br><!--Device-ASSET_OUT_OF_MEMORY = 24000006--><!--Device-ASSET_OUT_OF_MEMORY = 24000006-End--> |
-| ASSET_DATA_CORRUPTED = 24000007 | The asset is corrupted.<br><!--Device-ASSET_DATA_CORRUPTED = 24000007--><!--Device-ASSET_DATA_CORRUPTED = 24000007-End--> |
-| ASSET_DATABASE_ERROR = 24000008 | The database operation failed.<br><!--Device-ASSET_DATABASE_ERROR = 24000008--><!--Device-ASSET_DATABASE_ERROR = 24000008-End--> |
-| ASSET_CRYPTO_ERROR = 24000009 | The cryptographic operation failed.<br><!--Device-ASSET_CRYPTO_ERROR = 24000009--><!--Device-ASSET_CRYPTO_ERROR = 24000009-End--> |
-| ASSET_IPC_ERROR = 24000010 | The IPC failed.<br><!--Device-ASSET_IPC_ERROR = 24000010--><!--Device-ASSET_IPC_ERROR = 24000010-End--> |
-| ASSET_BMS_ERROR = 24000011 | The Bundle Manager service is abnormal.<br><!--Device-ASSET_BMS_ERROR = 24000011--><!--Device-ASSET_BMS_ERROR = 24000011-End--> |
-| ASSET_ACCOUNT_ERROR = 24000012 | The Account service is abnormal.<br><!--Device-ASSET_ACCOUNT_ERROR = 24000012--><!--Device-ASSET_ACCOUNT_ERROR = 24000012-End--> |
-| ASSET_ACCESS_TOKEN_ERROR = 24000013 | The Access Token service is abnormal.<br><!--Device-ASSET_ACCESS_TOKEN_ERROR = 24000013--><!--Device-ASSET_ACCESS_TOKEN_ERROR = 24000013-End--> |
-| ASSET_FILE_OPERATION_ERROR = 24000014 | The file operation failed.<br><!--Device-ASSET_FILE_OPERATION_ERROR = 24000014--><!--Device-ASSET_FILE_OPERATION_ERROR = 24000014-End--> |
-| ASSET_GET_SYSTEM_TIME_ERROR = 24000015 | Failed to obtain the system time.<br><!--Device-ASSET_GET_SYSTEM_TIME_ERROR = 24000015--><!--Device-ASSET_GET_SYSTEM_TIME_ERROR = 24000015-End--> |
-| ASSET_LIMIT_EXCEEDED = 24000016 | The number of cached assets exceeds the limit.<br><!--Device-ASSET_LIMIT_EXCEEDED = 24000016--><!--Device-ASSET_LIMIT_EXCEEDED = 24000016-End--> |
-| ASSET_UNSUPPORTED = 24000017 | The function is not supported.<br><!--Device-ASSET_UNSUPPORTED = 24000017--><!--Device-ASSET_UNSUPPORTED = 24000017-End--> |
-| ASSET_PARAM_VERIFICATION_FAILED = 24000018 | The parameter verification fails.<br>**Since**: 20<br><!--Device-ASSET_PARAM_VERIFICATION_FAILED = 24000018--><!--Device-ASSET_PARAM_VERIFICATION_FAILED = 24000018-End--> |
+| ASSET_SUCCESS = 0 | The operation is successful. |
+| ASSET_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| ASSET_INVALID_ARGUMENT = 401 | The parameter is invalid. |
+| ASSET_SERVICE_UNAVAILABLE = 24000001 | The asset store service is unavailable. |
+| ASSET_NOT_FOUND = 24000002 | The asset is not found. |
+| ASSET_DUPLICATED = 24000003 | The asset already exists. |
+| ASSET_ACCESS_DENIED = 24000004 | The access to the asset is denied. |
+| ASSET_STATUS_MISMATCH = 24000005 | The lock screen status does not match. |
+| ASSET_OUT_OF_MEMORY = 24000006 | The system memory is insufficient. |
+| ASSET_DATA_CORRUPTED = 24000007 | The asset is corrupted. |
+| ASSET_DATABASE_ERROR = 24000008 | The database operation failed. |
+| ASSET_CRYPTO_ERROR = 24000009 | The cryptographic operation failed. |
+| ASSET_IPC_ERROR = 24000010 | The IPC failed. |
+| ASSET_BMS_ERROR = 24000011 | The Bundle Manager service is abnormal. |
+| ASSET_ACCOUNT_ERROR = 24000012 | The Account service is abnormal. |
+| ASSET_ACCESS_TOKEN_ERROR = 24000013 | The Access Token service is abnormal. |
+| ASSET_FILE_OPERATION_ERROR = 24000014 | The file operation failed. |
+| ASSET_GET_SYSTEM_TIME_ERROR = 24000015 | Failed to obtain the system time. |
+| ASSET_LIMIT_EXCEEDED = 24000016 | The number of cached assets exceeds the limit. |
+| ASSET_UNSUPPORTED = 24000017 | The function is not supported. |
+| ASSET_PARAM_VERIFICATION_FAILED = 24000018 |  |
 
 ### Asset_Accessibility
 
@@ -171,17 +157,13 @@ enum Asset_Accessibility
 
 Enumerates the types of the access control based on the lock screen status.
 
-<!--Device-enum Asset_Accessibility--><!--Device-enum Asset_Accessibility-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_ACCESSIBILITY_DEVICE_POWERED_ON = 0 | The asset can be accessed after the device is powered on.<br><!--Device-ASSET_ACCESSIBILITY_DEVICE_POWERED_ON = 0--><!--Device-ASSET_ACCESSIBILITY_DEVICE_POWERED_ON = 0-End--> |
-| ASSET_ACCESSIBILITY_DEVICE_FIRST_UNLOCKED = 1 | The asset can be accessed only after the device is unlocked for the first time.<br><!--Device-ASSET_ACCESSIBILITY_DEVICE_FIRST_UNLOCKED = 1--><!--Device-ASSET_ACCESSIBILITY_DEVICE_FIRST_UNLOCKED = 1-End--> |
-| ASSET_ACCESSIBILITY_DEVICE_UNLOCKED = 2 | The asset can be accessed only after the device is unlocked.<br><!--Device-ASSET_ACCESSIBILITY_DEVICE_UNLOCKED = 2--><!--Device-ASSET_ACCESSIBILITY_DEVICE_UNLOCKED = 2-End--> |
+| ASSET_ACCESSIBILITY_DEVICE_POWERED_ON = 0 | The asset can be accessed after the device is powered on. |
+| ASSET_ACCESSIBILITY_DEVICE_FIRST_UNLOCKED = 1 | The asset can be accessed only after the device is unlocked for the first time. |
+| ASSET_ACCESSIBILITY_DEVICE_UNLOCKED = 2 | The asset can be accessed only after the device is unlocked. |
 
 ### Asset_AuthType
 
@@ -193,16 +175,12 @@ enum Asset_AuthType
 
 Enumerates the user authentication types supported by assets.
 
-<!--Device-enum Asset_AuthType--><!--Device-enum Asset_AuthType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_AUTH_TYPE_NONE = 0x00 | No user authentication is required before the asset is accessed.<br><!--Device-ASSET_AUTH_TYPE_NONE = 0x00--><!--Device-ASSET_AUTH_TYPE_NONE = 0x00-End--> |
-| ASSET_AUTH_TYPE_ANY = 0xFF | The asset can be accessed if any user authentication (such as PIN, facial, or fingerprint authentication) is successful.<br><!--Device-ASSET_AUTH_TYPE_ANY = 0xFF--><!--Device-ASSET_AUTH_TYPE_ANY = 0xFF-End--> |
+| ASSET_AUTH_TYPE_NONE = 0x00 | No user authentication is required before the asset is accessed. |
+| ASSET_AUTH_TYPE_ANY = 0xFF | The asset can be accessed if any user authentication (such as PIN, facial, or fingerprint authentication) is successful. |
 
 ### Asset_SyncType
 
@@ -214,18 +192,14 @@ enum Asset_SyncType
 
 Asset sync type.
 
-<!--Device-enum Asset_SyncType--><!--Device-enum Asset_SyncType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_SYNC_TYPE_NEVER = 0 | Asset sync is not allowed.<br><!--Device-ASSET_SYNC_TYPE_NEVER = 0--><!--Device-ASSET_SYNC_TYPE_NEVER = 0-End--> |
-| ASSET_SYNC_TYPE_THIS_DEVICE = 1 << 0 | Asset sync is allowed only on the local device, for example, in data restore on the local device.<br><!--Device-ASSET_SYNC_TYPE_THIS_DEVICE = 1 << 0--><!--Device-ASSET_SYNC_TYPE_THIS_DEVICE = 1 << 0-End--> |
-| ASSET_SYNC_TYPE_TRUSTED_DEVICE = 1 << 1 | Asset sync is allowed only between trusted devices, for example, in the case of cloning.<br><!--Device-ASSET_SYNC_TYPE_TRUSTED_DEVICE = 1 << 1--><!--Device-ASSET_SYNC_TYPE_TRUSTED_DEVICE = 1 << 1-End--> |
-| ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2 | Asset sync is allowed only between the devices that are logged in with trusted accounts, for example, in cloud sync scenarios.<br>**Since**: 12<br><!--Device-ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2--><!--Device-ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2-End--> |
+| ASSET_SYNC_TYPE_NEVER = 0 | Asset sync is not allowed. |
+| ASSET_SYNC_TYPE_THIS_DEVICE = 1 << 0 | Asset sync is allowed only on the local device, for example, in data restore on the local device. |
+| ASSET_SYNC_TYPE_TRUSTED_DEVICE = 1 << 1 | Asset sync is allowed only between trusted devices, for example, in the case of cloning. |
+| ASSET_SYNC_TYPE_TRUSTED_ACCOUNT = 1 << 2 |  |
 
 ### Asset_WrapType
 
@@ -237,16 +211,12 @@ enum Asset_WrapType
 
 Encrypted import/export type supported by the asset.
 
-<!--Device-enum Asset_WrapType--><!--Device-enum Asset_WrapType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 18
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_WRAP_TYPE_NEVER = 0 | Encrypted import/export is not allowed for the asset.<br><!--Device-ASSET_WRAP_TYPE_NEVER = 0--><!--Device-ASSET_WRAP_TYPE_NEVER = 0-End--> |
-| ASSET_WRAP_TYPE_TRUSTED_ACCOUNT = 1 | Encrypted import/export is allowed for the asset only on devices where a trusted account is logged in.<br><!--Device-ASSET_WRAP_TYPE_TRUSTED_ACCOUNT = 1--><!--Device-ASSET_WRAP_TYPE_TRUSTED_ACCOUNT = 1-End--> |
+| ASSET_WRAP_TYPE_NEVER = 0 | Encrypted import/export is not allowed for the asset. |
+| ASSET_WRAP_TYPE_TRUSTED_ACCOUNT = 1 | Encrypted import/export is allowed for the asset only on devices where a trusted account is logged in. |
 
 ### Asset_ConflictResolution
 
@@ -258,16 +228,12 @@ enum Asset_ConflictResolution
 
 Policy for resolving the conflict (for example, a duplicate alias).
 
-<!--Device-enum Asset_ConflictResolution--><!--Device-enum Asset_ConflictResolution-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_CONFLICT_OVERWRITE = 0 | Overwrite the original asset.<br><!--Device-ASSET_CONFLICT_OVERWRITE = 0--><!--Device-ASSET_CONFLICT_OVERWRITE = 0-End--> |
-| ASSET_CONFLICT_THROW_ERROR = 1 | Throw an exception for the service to perform subsequent processing.<br><!--Device-ASSET_CONFLICT_THROW_ERROR = 1--><!--Device-ASSET_CONFLICT_THROW_ERROR = 1-End--> |
+| ASSET_CONFLICT_OVERWRITE = 0 | Overwrite the original asset. |
+| ASSET_CONFLICT_THROW_ERROR = 1 | Throw an exception for the service to perform subsequent processing. |
 
 ### Asset_ReturnType
 
@@ -279,16 +245,12 @@ enum Asset_ReturnType
 
 Type of the asset query result to return.
 
-<!--Device-enum Asset_ReturnType--><!--Device-enum Asset_ReturnType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_RETURN_ALL = 0 | The query result contains the asset plaintext and its attributes.<br><!--Device-ASSET_RETURN_ALL = 0--><!--Device-ASSET_RETURN_ALL = 0-End--> |
-| ASSET_RETURN_ATTRIBUTES = 1 | The query result contains only the asset attributes.<br><!--Device-ASSET_RETURN_ATTRIBUTES = 1--><!--Device-ASSET_RETURN_ATTRIBUTES = 1-End--> |
+| ASSET_RETURN_ALL = 0 | The query result contains the asset plaintext and its attributes. |
+| ASSET_RETURN_ATTRIBUTES = 1 | The query result contains only the asset attributes. |
 
 ### Asset_OperationType
 
@@ -300,15 +262,11 @@ enum Asset_OperationType
 
 Enumerates the additional asset operation types.
 
-<!--Device-enum Asset_OperationType--><!--Device-enum Asset_OperationType-End-->
-
-**System capability**: SystemCapability.Security.Asset
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ASSET_NEED_SYNC = 0 | Sync.<br><!--Device-ASSET_NEED_SYNC = 0--><!--Device-ASSET_NEED_SYNC = 0-End--> |
-| ASSET_NEED_LOGOUT = 1 | Logout.<br><!--Device-ASSET_NEED_LOGOUT = 1--><!--Device-ASSET_NEED_LOGOUT = 1-End--> |
+| ASSET_NEED_SYNC = 0 | Sync. |
+| ASSET_NEED_LOGOUT = 1 | Logout. |
 
 

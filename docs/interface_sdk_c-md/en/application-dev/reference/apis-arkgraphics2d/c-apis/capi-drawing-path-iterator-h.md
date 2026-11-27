@@ -6,21 +6,19 @@ This file declares the functions related to the path operation iterator object.
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_PathIteratorVerb](#oh_drawing_pathiteratorverb) | OH_Drawing_PathIteratorVerb | Enumerates the path operation types contained in an iterator. It is used to read path operation instructions. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -42,21 +40,17 @@ enum OH_Drawing_PathIteratorVerb
 
 Enumerates the path operation types contained in an iterator. It is used to read path operation instructions.
 
-<!--Device-enum OH_Drawing_PathIteratorVerb--><!--Device-enum OH_Drawing_PathIteratorVerb-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 | Enum item | Description |
 | -- | -- |
-| MOVE = 0 | Sets the start point of the path.<br><!--Device-MOVE = 0--><!--Device-MOVE = 0-End--> |
-| LINE = 1 | Adds a line segment.<br><!--Device-LINE = 1--><!--Device-LINE = 1-End--> |
-| QUAD = 2 | Adds a quadratic Bezier curve for smooth transitions.<br><!--Device-QUAD = 2--><!--Device-QUAD = 2-End--> |
-| CONIC = 3 | Adds a conic curve.<br><!--Device-CONIC = 3--><!--Device-CONIC = 3-End--> |
-| CUBIC = 4 | Adds a cubic Bezier curve for smooth transitions.<br><!--Device-CUBIC = 4--><!--Device-CUBIC = 4-End--> |
-| CLOSE = 5 | Closes the path.<br><!--Device-CLOSE = 5--><!--Device-CLOSE = 5-End--> |
-| DONE = CLOSE + 1 | Completes the path configuration.<br><!--Device-DONE = CLOSE + 1--><!--Device-DONE = CLOSE + 1-End--> |
+| MOVE = 0 | Sets the start point of the path. |
+| LINE = 1 | Adds a line segment. |
+| QUAD = 2 | Adds a quadratic Bezier curve for smooth transitions. |
+| CONIC = 3 | Adds a conic curve. |
+| CUBIC = 4 | Adds a cubic Bezier curve for smooth transitions. |
+| CLOSE = 5 | Closes the path. |
+| DONE = CLOSE + 1 | Completes the path configuration. |
 
 
 ## Function description
@@ -70,10 +64,6 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, 
 **Description**
 
 Creates an **OH_Drawing_PathIterator** object.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, OH_Drawing_PathIterator** pathIterator)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorCreate(const OH_Drawing_Path* path, OH_Drawing_PathIterator** pathIterator)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -100,10 +90,6 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pat
 
 Destroys an **OH_Drawing_PathIterator** object and reclaims the memory occupied by the object.
 
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pathIterator)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorDestroy(OH_Drawing_PathIterator* pathIterator)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -127,10 +113,6 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterato
 **Description**
 
 Checks whether there is any next operation in the path operation iterator.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterator* pathIterator, bool* hasNext)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorHasNext(const OH_Drawing_PathIterator* pathIterator, bool* hasNext)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -156,10 +138,6 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIt
 **Description**
 
 Retrieves the next operation in this path and moves the iterator to that operation.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIterator, OH_Drawing_Point2D* points, uint32_t count, uint32_t offset, OH_Drawing_PathIteratorVerb* verb)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorNext(OH_Drawing_PathIterator* pathIterator, OH_Drawing_Point2D* points, uint32_t count, uint32_t offset, OH_Drawing_PathIteratorVerb* verb)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -188,10 +166,6 @@ OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* 
 **Description**
 
 Retrieves the next operation in this path, without moving the iterator.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* pathIterator, OH_Drawing_PathIteratorVerb* verb)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_PathIteratorPeek(const OH_Drawing_PathIterator* pathIterator, OH_Drawing_PathIteratorVerb* verb)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 

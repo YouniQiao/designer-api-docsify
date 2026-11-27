@@ -6,15 +6,13 @@ typedef struct OH_TrafficFilter_PacketController OH_TrafficFilter_PacketControll
 
 ## Overview
 
-Defines the packet controller.
-
-<!--Device-typedef struct OH_TrafficFilter_PacketController OH_TrafficFilter_PacketController--><!--Device-typedef struct OH_TrafficFilter_PacketController OH_TrafficFilter_PacketController-End-->
+Packet controller
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
-**Related module**: [TrafficFilter](capi-network-kit-trafficfilter.md)
+**Related module**: [TrafficFilter](capi-trafficfilter.md)
 
 **Header file**: [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 

@@ -12,7 +12,7 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 > **ServiceExtensionAbility**, you are advised to use the
 > [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md) for offscreen drawing.
 > 
-> The beginPath, [moveTo](arkts-arkui-canvas-comp-canvaspath-c.md#moveto),
+> The [beginPath](arkts-arkui-canvas-comp-canvasrenderer-c.md#beginpath), [moveTo](arkts-arkui-canvas-comp-canvaspath-c.md#moveto),
 > [lineTo](arkts-arkui-canvas-comp-canvaspath-c.md#lineto), [closePath](arkts-arkui-canvas-comp-canvaspath-c.md#closepath),
 > [bezierCurveTo](arkts-arkui-canvas-comp-canvaspath-c.md#beziercurveto), [quadraticCurveTo](arkts-arkui-canvas-comp-canvaspath-c.md#quadraticcurveto),
 > [arc](arkts-arkui-canvas-comp-canvaspath-c.md#arc),

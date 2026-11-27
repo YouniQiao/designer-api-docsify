@@ -8,13 +8,11 @@ typedef struct Asset_Blob {...} Asset_Blob
 
 Defines a binary array, that is, an array of bytes with variable length.
 
-<!--Device-typedef struct Asset_Blob {...} Asset_Blob--><!--Device-typedef struct Asset_Blob {...} Asset_Blob-End-->
-
 **System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
-**Related module**: [AssetType](capi-asset-store-kit-assettype.md)
+**Related module**: [AssetType](capi-assettype.md)
 
 **Header file**: [asset_type.h](capi-asset-type-h.md)
 
@@ -24,7 +22,7 @@ Defines a binary array, that is, an array of bytes with variable length.
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Size of the byte array.<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| uint8_t *data | Pointer to the byte array.<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| uint32_t size | Size of the byte array. |
+| uint8_t *data | Pointer to the byte array. |
 
 

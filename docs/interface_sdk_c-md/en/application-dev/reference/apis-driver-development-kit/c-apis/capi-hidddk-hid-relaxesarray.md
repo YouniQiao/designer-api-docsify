@@ -1,20 +1,18 @@
 # Hid_RelAxesArray
 
 ```c
-typedef struct Hid_RelAxesArray {...} Hid_RelAxesArray
+struct Hid_RelAxesArray {...}
 ```
 
 ## Overview
 
-Defines an array of relative coordinate attribute codes, which stores the relative coordinate attributes supported by an HID device.
-
-<!--Device-struct Hid_RelAxesArray {...}--><!--Device-struct Hid_RelAxesArray {...}-End-->
+Defines an array of relative coordinates.
 
 **System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
-**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
+**Related module**: [HidDdk](capi-hidddk.md)
 
 **Header file**: [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -24,7 +22,7 @@ Defines an array of relative coordinate attribute codes, which stores the relati
 
 | Name | Description |
 | -- | -- |
-| [Hid_RelAxes](capi-hid-ddk-types-h.md#hid_relaxes) *hidRelAxes | Pointer to the array of relative coordinate attribute codes, which points to the array pre-allocated by the caller. The pointer cannot be null. The array size must be greater than or equal to the value of length.<br><!--Device-Hid_RelAxes *hidRelAxes--><!--Device-Hid_RelAxes *hidRelAxes-End--> |
-| uint16_t length | Valid length of the array, which cannot exceed the actual length of the **hidRelAxes** array.<br><!--Device-uint16_t length--><!--Device-uint16_t length-End--> |
+| Hid_RelAxes *hidRelAxes | Array of relative coordinates. |
+| uint16_t length | Valid length of an array. |
 
 

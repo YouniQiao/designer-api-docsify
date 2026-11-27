@@ -6,21 +6,19 @@ Provides trusted storage APIs.<br> You can use these APIs to implement trusted s
 
 **Library**: NA
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
+**Related module**: [TeeTrusted](capi-teetrusted.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | Description |
 | -- | -- |
 | [\_\_TEE_ObjectEnumHandle](capi-teetrusted---tee-objectenumhandle.md) | Defines the handle for enumerating objects. |
 
-### Enums
+### Enum
 
 | Name | Description |
 | -- | -- |
@@ -30,7 +28,7 @@ Provides trusted storage APIs.<br> You can use these APIs to implement trusted s
 | [TEE_DATA_Size](#tee_data_size) | Defines the maximum number of bytes that can be held in a data stream. |
 | [Data_Flag_Constants](#data_flag_constants) | Defines the <b>handleFlags</b> of a <b>TEE_ObjectHandle</b>. The <b>handleFlags</b> determines the access permissions to the data stream associated with the object. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -44,12 +42,12 @@ Provides trusted storage APIs.<br> You can use these APIs to implement trusted s
 | [TEE_Result TEE_RenamePersistentObject(TEE_ObjectHandle object, void *newObjectID, size_t newObjectIDLen)](#tee_renamepersistentobject) | Changes the object identifier.<br> The <b>TEE_ObjectHandle</b> must have been opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE_META</b> permission. |
 | [TEE_Result TEE_CloseAndDeletePersistentObject1(TEE_ObjectHandle object)](#tee_closeanddeletepersistentobject1) | Closes a <b>TEE_ObjectHandle</b> and deletes the object.<br> The object must be a persistent object, and the object handle must have been opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE_META</b> permission. |
 
-### Variables
+### Variable
 
 | Name | Description |
 | -- | -- |
-| uint32_t TEE_Whence | Defines the type for the data stream position.<br>**Since**: 20<br>**System capability**: SystemCapability.Tee.TeeClient<br><!--Device-uint32_t TEE_Whence--><!--Device-uint32_t TEE_Whence-End--> |
-| typedef uint32_t TEE_Whence | Defines the type for the data stream position.<br>**Since**: 20<br>**System capability**: SystemCapability.Tee.TeeClient<br><!--Device-typedef uint32_t TEE_Whence--><!--Device-typedef uint32_t TEE_Whence-End--> |
+| uint32_t TEE_Whence | Defines the type for the data stream position.<br>**Since**: 20<br>**System capability**: SystemCapability.Tee.TeeClient |
+| typedef uint32_t TEE_Whence | Defines the type for the data stream position.<br>**Since**: 20<br>**System capability**: SystemCapability.Tee.TeeClient |
 
 ## Enum type description
 
@@ -63,17 +61,13 @@ enum __TEE_Whence
 
 Defines the start position in the data stream associated with an object. It is used in the <b>TEE_SeekObjectData</b> function.
 
-<!--Device-enum __TEE_Whence--><!--Device-enum __TEE_Whence-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEE_DATA_SEEK_SET = 0 | Set the start position to the beginning of the data stream.<br><!--Device-TEE_DATA_SEEK_SET = 0--><!--Device-TEE_DATA_SEEK_SET = 0-End--> |
-| TEE_DATA_SEEK_CUR | Set the start position to the current data stream position.<br><!--Device-TEE_DATA_SEEK_CUR--><!--Device-TEE_DATA_SEEK_CUR-End--> |
-| TEE_DATA_SEEK_END | Set the start position to the end of the data stream.<br><!--Device-TEE_DATA_SEEK_END--><!--Device-TEE_DATA_SEEK_END-End--> |
+| TEE_DATA_SEEK_SET = 0 | Set the start position to the beginning of the data stream. |
+| TEE_DATA_SEEK_CUR | Set the start position to the current data stream position. |
+| TEE_DATA_SEEK_END | Set the start position to the end of the data stream. |
 
 ### Object_Storage_Constants
 
@@ -85,20 +79,16 @@ enum Object_Storage_Constants
 
 Defines the storage ID, which identifies the storage space of the application.
 
-<!--Device-enum Object_Storage_Constants--><!--Device-enum Object_Storage_Constants-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEE_OBJECT_STORAGE_PRIVATE = 0x00000001 | Separate private storage space for each application.<br><!--Device-TEE_OBJECT_STORAGE_PRIVATE = 0x00000001--><!--Device-TEE_OBJECT_STORAGE_PRIVATE = 0x00000001-End--> |
-| TEE_OBJECT_STORAGE_PERSO = 0x00000002 | Separate personal storage space for application.<br><!--Device-TEE_OBJECT_STORAGE_PERSO = 0x00000002--><!--Device-TEE_OBJECT_STORAGE_PERSO = 0x00000002-End--> |
-| TEE_OBJECT_SEC_FLASH = 0x80000000 | Space for secure flash storage.<br><!--Device-TEE_OBJECT_SEC_FLASH = 0x80000000--><!--Device-TEE_OBJECT_SEC_FLASH = 0x80000000-End--> |
-| TEE_OBJECT_STORAGE_RPMB = 0x80000001 | Space for RPMB storage.<br><!--Device-TEE_OBJECT_STORAGE_RPMB = 0x80000001--><!--Device-TEE_OBJECT_STORAGE_RPMB = 0x80000001-End--> |
-| TEE_OBJECT_STORAGE_CE = 0x80000002 | Credential encrypted storage space.<br><!--Device-TEE_OBJECT_STORAGE_CE = 0x80000002--><!--Device-TEE_OBJECT_STORAGE_CE = 0x80000002-End--> |
-| TEE_OBJECT_STORAGE_ANTIROLLBACK = 0x80000003 | Anti-rollback storage space.<br><!--Device-TEE_OBJECT_STORAGE_ANTIROLLBACK = 0x80000003--><!--Device-TEE_OBJECT_STORAGE_ANTIROLLBACK = 0x80000003-End--> |
+| TEE_OBJECT_STORAGE_PRIVATE = 0x00000001 | Separate private storage space for each application. |
+| TEE_OBJECT_STORAGE_PERSO   = 0x00000002 | Separate personal storage space for application. |
+| TEE_OBJECT_SEC_FLASH       = 0x80000000 | Space for secure flash storage. |
+| TEE_OBJECT_STORAGE_RPMB    = 0x80000001 | Space for RPMB storage. |
+| TEE_OBJECT_STORAGE_CE      = 0x80000002 | Credential encrypted storage space. |
+| TEE_OBJECT_STORAGE_ANTIROLLBACK = 0x80000003 | Anti-rollback storage space. |
 
 ### Miscellaneous_Constants
 
@@ -110,16 +100,12 @@ enum Miscellaneous_Constants
 
 Defines the system resource constraints, such as the maximum value for the data stream position indicator.
 
-<!--Device-enum Miscellaneous_Constants--><!--Device-enum Miscellaneous_Constants-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEE_DATA_MAX_POSITION = 0xFFFFFFFF | Maximum length that the position indicator of the data stream can take.<br><!--Device-TEE_DATA_MAX_POSITION = 0xFFFFFFFF--><!--Device-TEE_DATA_MAX_POSITION = 0xFFFFFFFF-End--> |
-| TEE_OBJECT_ID_MAX_LEN = 64 | Maximum length of the object ID, which can extend to 128 bytes.<br><!--Device-TEE_OBJECT_ID_MAX_LEN = 64--><!--Device-TEE_OBJECT_ID_MAX_LEN = 64-End--> |
+| TEE_DATA_MAX_POSITION = 0xFFFFFFFF | Maximum length that the position indicator of the data stream can take. |
+| TEE_OBJECT_ID_MAX_LEN = 64 | Maximum length of the object ID, which can extend to 128 bytes. |
 
 ### TEE_DATA_Size
 
@@ -131,15 +117,10 @@ enum TEE_DATA_Size
 
 Defines the maximum number of bytes that can be held in a data stream.
 
-<!--Device-enum TEE_DATA_Size--><!--Device-enum TEE_DATA_Size-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEE_DATA_OBJECT_MAX_SIZE = 0xFFFFFFFF | <!--Device-TEE_DATA_OBJECT_MAX_SIZE = 0xFFFFFFFF--><!--Device-TEE_DATA_OBJECT_MAX_SIZE = 0xFFFFFFFF-End--> |
 
 ### Data_Flag_Constants
 
@@ -151,28 +132,24 @@ enum Data_Flag_Constants
 
 Defines the <b>handleFlags</b> of a <b>TEE_ObjectHandle</b>. The <b>handleFlags</b> determines the access permissions to the data stream associated with the object.
 
-<!--Device-enum Data_Flag_Constants--><!--Device-enum Data_Flag_Constants-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| TEE_DATA_FLAG_ACCESS_READ = 0x00000001 | The data stream can be read.<br><!--Device-TEE_DATA_FLAG_ACCESS_READ = 0x00000001--><!--Device-TEE_DATA_FLAG_ACCESS_READ = 0x00000001-End--> |
-| TEE_DATA_FLAG_ACCESS_WRITE = 0x00000002 | The data stream can be written or truncated.<br><!--Device-TEE_DATA_FLAG_ACCESS_WRITE = 0x00000002--><!--Device-TEE_DATA_FLAG_ACCESS_WRITE = 0x00000002-End--> |
-| TEE_DATA_FLAG_ACCESS_WRITE_META = 0x00000004 | The data stream can be deleted or renamed.<br><!--Device-TEE_DATA_FLAG_ACCESS_WRITE_META = 0x00000004--><!--Device-TEE_DATA_FLAG_ACCESS_WRITE_META = 0x00000004-End--> |
-| TEE_DATA_FLAG_SHARE_READ = 0x00000010 | Multiple TEE_ObjectHandles can be opened for concurrent read.<br><!--Device-TEE_DATA_FLAG_SHARE_READ = 0x00000010--><!--Device-TEE_DATA_FLAG_SHARE_READ = 0x00000010-End--> |
-| TEE_DATA_FLAG_SHARE_WRITE = 0x00000020 | Multiple TEE_ObjectHandles can be opened for concurrent write.<br><!--Device-TEE_DATA_FLAG_SHARE_WRITE = 0x00000020--><!--Device-TEE_DATA_FLAG_SHARE_WRITE = 0x00000020-End--> |
-| TEE_DATA_FLAG_CREATE = 0x00000200 | Reserved.<br><!--Device-TEE_DATA_FLAG_CREATE = 0x00000200--><!--Device-TEE_DATA_FLAG_CREATE = 0x00000200-End--> |
-| TEE_DATA_FLAG_EXCLUSIVE = 0x00000400 | Protect the existing file with the same name. Throw an error if the file with the same name exists; create a data file otherwise.<br><!--Device-TEE_DATA_FLAG_EXCLUSIVE = 0x00000400--><!--Device-TEE_DATA_FLAG_EXCLUSIVE = 0x00000400-End--> |
-| TEE_DATA_FLAG_OVERWRITE = 0x00000400 | Protect the existing file with the same name. Throw an error if the file with the same name exists; create a data file otherwise.<br><!--Device-TEE_DATA_FLAG_OVERWRITE = 0x00000400--><!--Device-TEE_DATA_FLAG_OVERWRITE = 0x00000400-End--> |
-| TEE_DATA_FLAG_GID = 0x02000000 | If the bit25 is set to 1, it means deriving TA root key by using gid<br><!--Device-TEE_DATA_FLAG_GID = 0x02000000--><!--Device-TEE_DATA_FLAG_GID = 0x02000000-End--> |
-| TEE_DATA_FLAG_HUK2 = 0x04000000 | If the bit26 is set to 1, it means deriving TA root key by using huk2<br><!--Device-TEE_DATA_FLAG_HUK2 = 0x04000000--><!--Device-TEE_DATA_FLAG_HUK2 = 0x04000000-End--> |
-| TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE = 0x08000000 | If the bit27 is set to 1, it means deriving the 32-bytes TA root key at one time, if it is 0, it means deriving TA root keys and combined them together.<br><!--Device-TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE = 0x08000000--><!--Device-TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE = 0x08000000-End--> |
-| TEE_DATA_FLAG_AES256 = 0x10000000 | Use AES256 if bit 28 is 1; use AES128 if bit 28 is 0.<br><!--Device-TEE_DATA_FLAG_AES256 = 0x10000000--><!--Device-TEE_DATA_FLAG_AES256 = 0x10000000-End--> |
-| TEE_DATA_FLAG_OPEN_AESC = 0x20000000 | If bit 29 is set to 1, open the earlier version preferentially.<br><!--Device-TEE_DATA_FLAG_OPEN_AESC = 0x20000000--><!--Device-TEE_DATA_FLAG_OPEN_AESC = 0x20000000-End--> |
-| TEE_DATA_FLAG_GM = 0x40000000 | If bit30 is set to 1, it means use GM algorithm to protect data<br><!--Device-TEE_DATA_FLAG_GM = 0x40000000--><!--Device-TEE_DATA_FLAG_GM = 0x40000000-End--> |
+| TEE_DATA_FLAG_ACCESS_READ = 0x00000001 | The data stream can be read. |
+| TEE_DATA_FLAG_ACCESS_WRITE = 0x00000002 | The data stream can be written or truncated. |
+| TEE_DATA_FLAG_ACCESS_WRITE_META = 0x00000004 | The data stream can be deleted or renamed. |
+| TEE_DATA_FLAG_SHARE_READ = 0x00000010 | Multiple TEE_ObjectHandles can be opened for concurrent read. |
+| TEE_DATA_FLAG_SHARE_WRITE = 0x00000020 | Multiple TEE_ObjectHandles can be opened for concurrent write. |
+| TEE_DATA_FLAG_CREATE = 0x00000200 | Reserved. |
+| TEE_DATA_FLAG_EXCLUSIVE = 0x00000400 | Protect the existing file with the same name. Throw an error if the file with the same name exists; create a data file otherwise. |
+| TEE_DATA_FLAG_OVERWRITE = 0x00000400 | Protect the existing file with the same name. Throw an error if the file with the same name exists; create a data file otherwise. |
+| TEE_DATA_FLAG_GID = 0x02000000 | If the bit25 is set to 1, it means deriving TA root key by using gid |
+| TEE_DATA_FLAG_HUK2 = 0x04000000 | If the bit26 is set to 1, it means deriving TA root key by using huk2 |
+| TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE =  0x08000000 | If the bit27 is set to 1, it means deriving the 32-bytes TA root key at one time, if it is 0, it means deriving TA root keys and combined them together. |
+| TEE_DATA_FLAG_AES256 =  0x10000000 | Use AES256 if bit 28 is 1; use AES128 if bit 28 is 0. |
+| TEE_DATA_FLAG_OPEN_AESC = 0x20000000 | If bit 29 is set to 1, open the earlier version preferentially. |
+| TEE_DATA_FLAG_GM =  0x40000000 | If bit30 is set to 1, it means use GM algorithm to protect data |
 
 
 ## Function description
@@ -186,10 +163,6 @@ TEE_Result TEE_CreatePersistentObject(uint32_t storageID, const void *objectID, 
 **Description**
 
 Creates a persistent object.<br> This function creates a persistent object with initialized <b>TEE_Attribute</b> and data stream. You can use the returned handle to access the <b>TEE_Attribute</b> and data stream of the object.
-
-<!--Device-TEE_Result TEE_CreatePersistentObject(uint32_t storageID, const void *objectID, size_t objectIDLen, uint32_t flags, TEE_ObjectHandle attributes, const void *initialData, size_t initialDataLen, TEE_ObjectHandle *object)--><!--Device-TEE_Result TEE_CreatePersistentObject(uint32_t storageID, const void *objectID, size_t objectIDLen, uint32_t flags, TEE_ObjectHandle attributes, const void *initialData, size_t initialDataLen, TEE_ObjectHandle *object)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -222,10 +195,6 @@ TEE_Result TEE_OpenPersistentObject(uint32_t storageID, const void *objectID, si
 
 Opens an existing persistent object.<br> The handle returned can be used to access the <b>TEE_Attribute</b> and data stream of the object.
 
-<!--Device-TEE_Result TEE_OpenPersistentObject(uint32_t storageID, const void *objectID, size_t objectIDLen, uint32_t flags, TEE_ObjectHandle *object)--><!--Device-TEE_Result TEE_OpenPersistentObject(uint32_t storageID, const void *objectID, size_t objectIDLen, uint32_t flags, TEE_ObjectHandle *object)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -254,10 +223,6 @@ TEE_Result TEE_ReadObjectData(TEE_ObjectHandle object, void *buffer, size_t size
 
 Reads data from the data stream associated with an object into the buffer.<br> The <b>TEE_ObjectHandle</b> of the object must have been opened with the <b>TEE_DATA_FLAG_ACCESS_READ</b> permission.
 
-<!--Device-TEE_Result TEE_ReadObjectData(TEE_ObjectHandle object, void *buffer, size_t size, uint32_t *count)--><!--Device-TEE_Result TEE_ReadObjectData(TEE_ObjectHandle object, void *buffer, size_t size, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -285,10 +250,6 @@ TEE_Result TEE_WriteObjectData(TEE_ObjectHandle object, const void *buffer, size
 
 Writes bytes from the buffer to the data stream associated with an object.<br> The <b>TEE_ObjectHandle</b> must have been opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE</b> permission.
 
-<!--Device-TEE_Result TEE_WriteObjectData(TEE_ObjectHandle object, const void *buffer, size_t size)--><!--Device-TEE_Result TEE_WriteObjectData(TEE_ObjectHandle object, const void *buffer, size_t size)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -315,10 +276,6 @@ TEE_Result TEE_TruncateObjectData(TEE_ObjectHandle object, size_t size)
 
 Changes the size of a data stream.<br> If the size is less than the current size of the data stream, all bytes beyond <b>size</b> are deleted. If the size is greater than the current size of the data stream, add 0s at the end of the stream to extend the stream. The object handle must be opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE</b> permission.
 
-<!--Device-TEE_Result TEE_TruncateObjectData(TEE_ObjectHandle object, size_t size)--><!--Device-TEE_Result TEE_TruncateObjectData(TEE_ObjectHandle object, size_t size)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -343,10 +300,6 @@ TEE_Result TEE_SeekObjectData(TEE_ObjectHandle object, int32_t offset, TEE_Whenc
 **Description**
 
 Sets the position of the data stream to which <b>TEE_ObjectHandle</b> points.<br> The data position indicator is determined by the start position and an offset together. The <b>whence</b> parameter determines the start position. Its value is set in <b>TEE_Whence</b> as follows: <b>TEE_DATA_SEEK_SET = 0</b>: The start position is the beginning of the data stream. <b>TEE_DATA_SEEK_CUR</b>: The start position is the current position of the data stream. <b>TEE_DATA_SEEK_END</b>: The start position is the end of the data stream. If the parameter <b>offset</b> is a positive number, the data position is moved forward. If <b>offset</b> is a negative number, the data position is moved backward.
-
-<!--Device-TEE_Result TEE_SeekObjectData(TEE_ObjectHandle object, int32_t offset, TEE_Whence whence)--><!--Device-TEE_Result TEE_SeekObjectData(TEE_ObjectHandle object, int32_t offset, TEE_Whence whence)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -374,10 +327,6 @@ TEE_Result TEE_SyncPersistentObject(TEE_ObjectHandle object)
 
 Synchronizes the opened <b>TEE_ObjectHandle</b> and the corresponding security attribute file to the disk.
 
-<!--Device-TEE_Result TEE_SyncPersistentObject(TEE_ObjectHandle object)--><!--Device-TEE_Result TEE_SyncPersistentObject(TEE_ObjectHandle object)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -401,10 +350,6 @@ TEE_Result TEE_RenamePersistentObject(TEE_ObjectHandle object, void *newObjectID
 **Description**
 
 Changes the object identifier.<br> The <b>TEE_ObjectHandle</b> must have been opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE_META</b> permission.
-
-<!--Device-TEE_Result TEE_RenamePersistentObject(TEE_ObjectHandle object, void *newObjectID, size_t newObjectIDLen)--><!--Device-TEE_Result TEE_RenamePersistentObject(TEE_ObjectHandle object, void *newObjectID, size_t newObjectIDLen)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -431,10 +376,6 @@ TEE_Result TEE_CloseAndDeletePersistentObject1(TEE_ObjectHandle object)
 **Description**
 
 Closes a <b>TEE_ObjectHandle</b> and deletes the object.<br> The object must be a persistent object, and the object handle must have been opened with the <b>TEE_DATA_FLAG_ACCESS_WRITE_META</b> permission.
-
-<!--Device-TEE_Result TEE_CloseAndDeletePersistentObject1(TEE_ObjectHandle object)--><!--Device-TEE_Result TEE_CloseAndDeletePersistentObject1(TEE_ObjectHandle object)-End-->
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

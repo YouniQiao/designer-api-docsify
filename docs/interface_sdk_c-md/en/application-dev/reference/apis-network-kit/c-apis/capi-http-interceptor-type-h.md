@@ -6,24 +6,22 @@ Defines the data structures for the C APIs of the global HTTP interceptor module
 
 **Library**: libhttp_interceptor.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 24
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | OH_Http_Interceptor_Headers | Defines a struct for the request/response header information of the interceptor. |
-| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | OH_Http_Interceptor_Request | Defines a struct for the HTTP request data packet of the interceptor. |
-| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | OH_Http_Interceptor_Response | Defines a struct for the HTTP response data packet of the interceptor. |
-| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | OH_Http_Interceptor | Defines a struct for the configuration information of the global HTTP interceptor. |
+| Name | Description |
+| -- | -- |
+| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | Defines a struct for the request/response header information of the interceptor. |
+| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | Defines a struct for the HTTP request data packet of the interceptor. |
+| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | Defines a struct for the HTTP response data packet of the interceptor. |
+| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | Defines a struct for the configuration information of the global HTTP interceptor. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -31,11 +29,17 @@ Defines the data structures for the C APIs of the global HTTP interceptor module
 | [OH_Interceptor_Type](#oh_interceptor_type) | OH_Interceptor_Type | Defines an enum for the interceptor types. |
 | [OH_Interceptor_Result](#oh_interceptor_result) | OH_Interceptor_Result | Defines an enum for the interceptor results. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef OH_Interceptor_Result (\*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)](#oh_http_interceptorhandler) | OH_Http_InterceptorHandler | Defines the HTTP interceptor handler function. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| OH_Interceptor_Result (*OH_Http_InterceptorHandler)( OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified) | Defines the HTTP interceptor handler function.<br>**Since**: 24<br>**System capability**: SystemCapability.Communication.NetStack |
 
 ## Enum type description
 
@@ -49,16 +53,12 @@ enum OH_Interceptor_Stage
 
 Defines an enum for the interceptor stages.
 
-<!--Device-enum OH_Interceptor_Stage--><!--Device-enum OH_Interceptor_Stage-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_STAGE_REQUEST | The interceptor processes the request.<br>**Since**: 24<br><!--Device-OH_STAGE_REQUEST--><!--Device-OH_STAGE_REQUEST-End--> |
-| OH_STAGE_RESPONSE | The interceptor processes the response.<br>**Since**: 24<br><!--Device-OH_STAGE_RESPONSE--><!--Device-OH_STAGE_RESPONSE-End--> |
+| OH_STAGE_REQUEST | The interceptor processes the request.<br>**Since**: 24 |
+| OH_STAGE_RESPONSE | The interceptor processes the response.<br>**Since**: 24 |
 
 ### OH_Interceptor_Type
 
@@ -70,16 +70,12 @@ enum OH_Interceptor_Type
 
 Defines an enum for the interceptor types.
 
-<!--Device-enum OH_Interceptor_Type--><!--Device-enum OH_Interceptor_Type-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_TYPE_READ_ONLY | Read-only interceptor.<br>**Since**: 24<br><!--Device-OH_TYPE_READ_ONLY--><!--Device-OH_TYPE_READ_ONLY-End--> |
-| OH_TYPE_MODIFY_NETWORK_KIT | interceptor will modify the packet from Network Kit<br>**Since**: 26.0.0<br><!--Device-OH_TYPE_MODIFY_NETWORK_KIT--><!--Device-OH_TYPE_MODIFY_NETWORK_KIT-End--> |
+| OH_TYPE_READ_ONLY | Read-only interceptor.<br>**Since**: 24 |
+| OH_TYPE_MODIFY_NETWORK_KIT | interceptor will modify the packet from Network Kit<br>**Since**: 26.0.0 |
 
 ### OH_Interceptor_Result
 
@@ -91,16 +87,12 @@ enum OH_Interceptor_Result
 
 Defines an enum for the interceptor results.
 
-<!--Device-enum OH_Interceptor_Result--><!--Device-enum OH_Interceptor_Result-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CONTINUE | The processing continues.<br>**Since**: 24<br><!--Device-OH_CONTINUE--><!--Device-OH_CONTINUE-End--> |
-| OH_ABORT | The processing is aborted.<br>**Since**: 24<br><!--Device-OH_ABORT--><!--Device-OH_ABORT-End--> |
+| OH_CONTINUE | The processing continues.<br>**Since**: 24 |
+| OH_ABORT | The processing is aborted.<br>**Since**: 24 |
 
 
 ## Function description
@@ -114,10 +106,6 @@ typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_
 **Description**
 
 Defines the HTTP interceptor handler function.
-
-<!--Device-typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)--><!--Device-typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 24
 

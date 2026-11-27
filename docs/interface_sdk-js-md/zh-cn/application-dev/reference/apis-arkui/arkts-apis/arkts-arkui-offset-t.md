@@ -1,19 +1,17 @@
 # Offset
 
 ```TypeScript
-export type Offset = Vector2
+declare type Offset
 ```
 
-用于设置组件或效果的偏移。
+相对布局完成位置坐标偏移量。
 
-**类型：** [Vector2](arkts-arkui-graphics-vector2-i.md)
+**起始版本：** 7
 
-**起始版本：** 11
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-unnamed-export type Offset = Vector2--><!--Device-unnamed-export type Offset = Vector2-End-->
+<!--Device-unnamed-declare type Offset--><!--Device-unnamed-declare type Offset-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

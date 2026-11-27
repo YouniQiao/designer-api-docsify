@@ -154,7 +154,7 @@ struct TextInputExample {
 
 ### Example 2: Setting Underlines
 
-This example demonstrates the display effects of underlines in different scenarios through [showUnderline](arkts-arkui-textinput-comp-attribute.md#showunderline), [showError](#showerror10), [showUnit](arkts-arkui-textinput-comp-attribute.md#showunit), and [passwordIcon](#passwordicon10) attributes, available since API version 10. The [underlineColor](#underlinecolor12) attribute (available since API version 12) can be used to configure the underline color.
+This example demonstrates the display effects of underlines in different scenarios through [showUnderline](arkts-arkui-textinput-comp-attribute.md#showunderline), [showError](arkts-arkui-textinput-comp-attribute.md#showerror), [showUnit](arkts-arkui-textinput-comp-attribute.md#showunit), and [passwordIcon](#passwordicon10) attributes, available since API version 10. The [underlineColor](#underlinecolor12) attribute (available since API version 12) can be used to configure the underline color.
 
 
 

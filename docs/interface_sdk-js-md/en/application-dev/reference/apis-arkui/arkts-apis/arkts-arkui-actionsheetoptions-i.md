@@ -214,7 +214,7 @@ If the **borderColor** attribute is used, it must be used together with the **bo
 
 When the **borderColor** attribute type is **LocalizedEdgeColors**, the layout order can be changed based on the language habit.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Default:** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -240,7 +240,7 @@ Default value: **BorderStyle.Solid**.
 
 If the **borderStyle** attribute is used, it must be used together with the **borderWidth** attribute.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
 
 **Default:** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -274,7 +274,7 @@ When the left and right borders of the dialog box are greater than the dialog bo
 
 When the **borderWidth** attribute type is **LocalizedEdgeWidths**, the layout order can be changed based on the language habit.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -328,7 +328,7 @@ Percentage parameter: the corner radius of the dialog box is set as a percentage
 
 When the **cornerRadius** attribute type is **LocalizedBorderRadiuses**, the layout order can be changed based on the language habit.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -758,10 +758,10 @@ Interactive dismiss callback.
 
 **NOTE:** 
 
-1. When the user performs interactive operations such as tapping the mask to close, swiping (left/right), pressing the three-key back button, or pressing ESC on the keyboard, if this callback is registered, the dialog box will not be closed immediately. In the callback, you can obtain the operation type that blocks the dialog box closure through reason, and determine whether the dialog box can be closed based on the reason. To close the dialog box, call the **dismiss** method of [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) in the callback. The reason returned by the current component does not support the **CLOSE_BUTTON** enum value.
+1. When the user performs interactive operations such as tapping the mask to close, swiping (left/right), pressing the three-key back button, or pressing ESC on the keyboard, if this callback is registered, the dialog box will not be closed immediately. In the callback, you can obtain the operation type that blocks the dialog box closure through reason, and determine whether the dialog box can be closed based on the reason. To close the dialog box, call the **dismiss** method of [DismissDialogAction](arkts-arkui-actionsheet-comp-dismissdialogaction-i.md) in the callback. The reason returned by the current component does not support the **CLOSE_BUTTON** enum value.
 2. In the **onWillDismiss** callback, **onWillDismiss** interception cannot be performed again.
 
-**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-actionsheet-comp-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

@@ -2,16 +2,3 @@
 
 ## Overview
 
-<!--Device-struct VkPipelineCompilerControlCreateInfoAMD {...}--><!--Device-struct VkPipelineCompilerControlCreateInfoAMD {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| VkStructureType sType | <!--Device-VkStructureType sType--><!--Device-VkStructureType sType-End--> |
-| const void* pNext | <!--Device-const void* pNext--><!--Device-const void* pNext-End--> |
-| VkPipelineCompilerControlFlagsAMD compilerControlFlags | <!--Device-VkPipelineCompilerControlFlagsAMD compilerControlFlags--><!--Device-VkPipelineCompilerControlFlagsAMD compilerControlFlags-End--> |
-
-

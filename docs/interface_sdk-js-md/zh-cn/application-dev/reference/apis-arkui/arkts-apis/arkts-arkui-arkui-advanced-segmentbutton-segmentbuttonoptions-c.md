@@ -253,7 +253,7 @@ buttonPadding: Padding | Dimension
 
 单位：vp
 
-**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
+**类型：** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -657,7 +657,7 @@ textPadding: Padding | Dimension
 
 单位：vp
 
-**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
+**类型：** [Padding](arkts-arkui-padding-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 

@@ -1,20 +1,18 @@
 # Rdb_DistributedConfig
 
 ```c
-typedef struct Rdb_DistributedConfig {...} Rdb_DistributedConfig
+struct Rdb_DistributedConfig {...}
 ```
 
 ## 概述
 
 记录表的分布式配置信息。
 
-<!--Device-struct Rdb_DistributedConfig {...}--><!--Device-struct Rdb_DistributedConfig {...}-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 11
 
-**相关模块：** [RDB](capi-arkdata-rdb.md)
+**相关模块：** [RDB](capi-rdb.md)
 
 **所在头文件：** [relational_store.h](capi-relational-store-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Rdb_DistributedConfig {...} Rdb_DistributedConfig
 
 | 名称 | 描述 |
 | -- | -- |
-| int version | 表示Rdb_DistributedConfig结构的版本。<br><!--Device-int version--><!--Device-int version-End--> |
-| bool isAutoSync | 表示该表是否支持端云自动同步。为true时，支持系统自动触发端云同步；为false时不支持系统自动触发端云同步，需要调用[OH_Rdb_CloudSync](capi-relational-store-h.md#oh_rdb_cloudsync)接口触发端云同步。<br><!--Device-bool isAutoSync--><!--Device-bool isAutoSync-End--> |
+| int version | 表示Rdb_DistributedConfig结构的版本。 |
+| bool isAutoSync | 表示该表是否支持端云自动同步。为true时，支持系统自动触发端云同步；为false时不支持系统自动触发端云同步，需要调用[OH_Rdb_CloudSync](capi-relational-store-h.md#oh_rdb_cloudsync)接口触发端云同步。 |
 
 

@@ -6,24 +6,22 @@ Declare underlying data structure.
 
 **Library**: libohaudiosuite.so
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 **System API:** This is a system API.
 
-**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [OH_AudioSuite_SystemNodeFormat(System API)](capi-ohaudiosuite-oh-audiosuite-systemnodeformat-sys.md) | OH_AudioSuite_SystemNodeFormat | Define the audio format info structure, used to describe basic audio format for system node.<br>**System API:** This is a system API. |
-| [OH_AudioSuite_MetaFrame(System API)](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md) | OH_AudioSuite_MetaFrame | Define the audio meta data frame structure. This structure is used to pass audio data and meta data together.<br>**System API:** This is a system API. |
+| Name | Description |
+| -- | -- |
+| [OH_AudioSuite_SystemNodeFormat(System API)](capi-ohaudiosuite-oh-audiosuite-systemnodeformat-sys.md) | Define the audio format info structure, used to describe basic audio format for system node.<br>**System API:** This is a system API. |
+| [OH_AudioSuite_MetaFrame(System API)](capi-ohaudiosuite-oh-audiosuite-metaframe-sys.md) | Define the audio meta data frame structure. This structure is used to pass audio data and meta data together.<br>**System API:** This is a system API. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -41,17 +39,13 @@ enum OH_AudioSuite_SystemNodeType
 
 Define audio node system type.
 
-<!--Device-enum OH_AudioSuite_SystemNodeType--><!--Device-enum OH_AudioSuite_SystemNodeType-End-->
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
 | Enum item | Description |
 | -- | -- |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 | Dialogue Algo System Effect Node.<br>**Since**: 26.0.0<br><!--Device-OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301--><!--Device-OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301-End--> |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 | Voice Beautifier System Effect Node.<br>**Since**: 26.0.0<br><!--Device-OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302--><!--Device-OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302-End--> |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 |  |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 |  |
 
 

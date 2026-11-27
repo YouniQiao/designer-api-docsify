@@ -6,15 +6,13 @@ typedef struct OH_AbilityRuntime_ModObjDispatcher_InputParams {...} OH_AbilityRu
 
 ## Overview
 
-Defines the parameter structure for method invocation. rgvarg points to the array of parameter variants, and the array length is specified by cArgs. The parameter order must be consistent with the parameter order in the method definition.
-
-<!--Device-typedef struct OH_AbilityRuntime_ModObjDispatcher_InputParams {...} OH_AbilityRuntime_ModObjDispatcher_InputParams--><!--Device-typedef struct OH_AbilityRuntime_ModObjDispatcher_InputParams {...} OH_AbilityRuntime_ModObjDispatcher_InputParams-End-->
+Defines a parameter structure for method invocation.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
-**Related module**: [AbilityRuntime](capi-ability-kit-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
 **Header file**: [modular_object_dispatcher.h](capi-modular-object-dispatcher-h.md)
 
@@ -24,7 +22,7 @@ Defines the parameter structure for method invocation. rgvarg points to the arra
 
 | Name | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_Variant*](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md) rgvarg | Array of argument variants.<br>**Since**: 26.0.0<br><!--Device-OH_AbilityRuntime_ModObjDispatcher_Variant* rgvarg--><!--Device-OH_AbilityRuntime_ModObjDispatcher_Variant* rgvarg-End--> |
-| uint32_t cArgs | Number of arguments.<br>**Since**: 26.0.0<br><!--Device-uint32_t cArgs--><!--Device-uint32_t cArgs-End--> |
+| [OH_AbilityRuntime_ModObjDispatcher_Variant*](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md) rgvarg | Array of argument variants.<br>**Since**: 26.0.0 |
+| uint32_t cArgs | Number of arguments.<br>**Since**: 26.0.0 |
 
 

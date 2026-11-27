@@ -1,20 +1,18 @@
 # OH_NativeBuffer_ColorXY
 
 ```c
-typedef struct OH_NativeBuffer_ColorXY {...} OH_NativeBuffer_ColorXY
+struct OH_NativeBuffer_ColorXY {...}
 ```
 
 ## Overview
 
 Indicates the color x and y.
 
-<!--Device-struct OH_NativeBuffer_ColorXY {...}--><!--Device-struct OH_NativeBuffer_ColorXY {...}-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **Since**: 12
 
-**Related module**: [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
+**Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
 
 **Header file**: [buffer_common.h](capi-buffer-common-h.md)
 
@@ -24,7 +22,7 @@ Indicates the color x and y.
 
 | Name | Description |
 | -- | -- |
-| float x | color X<br><!--Device-float x--><!--Device-float x-End--> |
-| float y | color Y<br><!--Device-float y--><!--Device-float y-End--> |
+| float x | color X |
+| float y | color Y |
 
 

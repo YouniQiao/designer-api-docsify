@@ -1,14 +1,12 @@
 # OH_AudioSuite_DownloadStatusInfoArray(System API)
 
 ```c
-typedef struct OH_AudioSuite_DownloadStatusInfoArray {...} OH_AudioSuite_DownloadStatusInfoArray
+struct OH_AudioSuite_DownloadStatusInfoArray {...}
 ```
 
 ## Overview
 
 Define download status information array structure.
-
-<!--Device-struct OH_AudioSuite_DownloadStatusInfoArray {...}--><!--Device-struct OH_AudioSuite_DownloadStatusInfoArray {...}-End-->
 
 **System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
@@ -16,7 +14,7 @@ Define download status information array structure.
 
 **System API:** This is a system API.
 
-**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
 
 **Header file**: [native_audio_suite_download_manager.h(System API)](capi-native-audio-suite-download-manager-h-sys.md)
 
@@ -26,7 +24,7 @@ Define download status information array structure.
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Download status Info Array size.<br>**Since**: 26.0.0<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| [OH_AudioSuite_DownloadStatusInfo](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfo-sys.md) **downloadStatusInfo | Array of download status info pointers.<br>**Since**: 26.0.0<br><!--Device-OH_AudioSuite_DownloadStatusInfo **downloadStatusInfo--><!--Device-OH_AudioSuite_DownloadStatusInfo **downloadStatusInfo-End--> |
+| uint32_t size | Array size.<br>**Since**: 26.0.0 |
+| OH_AudioSuite_DownloadStatusInfo **downloadStatusInfo | Array of download status info pointers.<br>**Since**: 26.0.0 |
 
 

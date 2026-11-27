@@ -6,25 +6,13 @@ typedef struct Print_Resolution {...} Print_Resolution
 
 ## Overview
 
-Represents the printing resolution, in dpi. This API can be used to control the fineness and quality of the print output.
-
-<!--Device-typedef struct Print_Resolution {...} Print_Resolution--><!--Device-typedef struct Print_Resolution {...} Print_Resolution-End-->
+Defines a struct for the printing resolution in dpi.
 
 **System capability**: SystemCapability.Print.PrintFramework
 
 **Since**: 12
 
-**Related module**: [Print](capi-basic-services-kit-print.md)
+**Related module**: [Print](capi-print.md)
 
 **Header file**: [ohprint.h](capi-ohprint-h.md)
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| uint32_t horizontalDpi | <!--Device-uint32_t horizontalDpi--><!--Device-uint32_t horizontalDpi-End--> |
-| uint32_t verticalDpi | <!--Device-uint32_t verticalDpi--><!--Device-uint32_t verticalDpi-End--> |
-
 

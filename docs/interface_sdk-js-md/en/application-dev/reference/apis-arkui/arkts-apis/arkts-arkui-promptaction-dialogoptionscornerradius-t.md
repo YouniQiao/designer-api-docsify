@@ -19,4 +19,4 @@ Defines the allowed data types for specifying the background corner radius of a 
 | Type | Description |
 | --- | --- |
 | [Dimension](arkts-arkui-dimension-t.md) |  |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |  |
+| BorderRadiuses |  |

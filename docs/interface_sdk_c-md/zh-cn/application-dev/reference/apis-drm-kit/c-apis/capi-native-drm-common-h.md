@@ -8,11 +8,9 @@
 
 **库：** libnative_drm.so
 
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
-**相关模块：** [Drm](capi-drm-kit-drm.md)
+**相关模块：** [Drm](capi-drm.md)
 
 ## 汇总
 
@@ -20,15 +18,15 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [DRM_MediaKeyRequestInfo](capi-drm-drm-mediakeyrequestinfo.md) | DRM_MediaKeyRequestInfo | 媒体密钥请求信息。 |
-| [DRM_MediaKeyRequest](capi-drm-drm-mediakeyrequest.md) | DRM_MediaKeyRequest | 媒体密钥请求。 |
-| [DRM_Statistics](capi-drm-drm-statistics.md) | DRM_Statistics | MediaKeySystem的度量信息。 |
-| [DRM_OfflineMediakeyIdArray](capi-drm-drm-offlinemediakeyidarray.md) | DRM_OfflineMediakeyIdArray | 离线媒体密钥ID数组。 |
-| [DRM_KeysInfo](capi-drm-drm-keysinfo.md) | DRM_KeysInfo | 媒体密钥信息。 |
-| [DRM_MediaKeyStatus](capi-drm-drm-mediakeystatus.md) | DRM_MediaKeyStatus | 媒体密钥状态。 |
-| [DRM_PsshInfo](capi-drm-drm-psshinfo.md) | DRM_PsshInfo | DRM内容保护系统专用头（Protection System Specific Header）信息。 |
-| [DRM_MediaKeySystemInfo](capi-drm-drm-mediakeysysteminfo.md) | DRM_MediaKeySystemInfo | 加密媒体内容的DRM信息。 |
-| [DRM_MediaKeySystemDescription](capi-drm-drm-mediakeysystemdescription.md) | DRM_MediaKeySystemDescription | DRM解决方案名称及其UUID的列表。 |
+| [DRM_MediaKeyRequestInfo](capi-drm-drm-mediakeyrequestinfo.md) | - | 媒体密钥请求信息。 |
+| [DRM_MediaKeyRequest](capi-drm-drm-mediakeyrequest.md) | - | 媒体密钥请求。 |
+| [DRM_Statistics](capi-drm-drm-statistics.md) | - | MediaKeySystem的度量信息。 |
+| [DRM_OfflineMediakeyIdArray](capi-drm-drm-offlinemediakeyidarray.md) | - | 离线媒体密钥ID数组。 |
+| [DRM_KeysInfo](capi-drm-drm-keysinfo.md) | - | 媒体密钥信息。 |
+| [DRM_MediaKeyStatus](capi-drm-drm-mediakeystatus.md) | - | 媒体密钥状态。 |
+| [DRM_PsshInfo](capi-drm-drm-psshinfo.md) | - | DRM内容保护系统专用头（Protection System Specific Header）信息。 |
+| [DRM_MediaKeySystemInfo](capi-drm-drm-mediakeysysteminfo.md) | - | 加密媒体内容的DRM信息。 |
+| [DRM_MediaKeySystemDescription](capi-drm-drm-mediakeysystemdescription.md) | - | DRM解决方案名称及其UUID的列表。 |
 | [MediaKeySystem](capi-drm-mediakeysystem.md) | MediaKeySystem | MediaKeySystem结构，用于表示一个媒体密钥系统实例。MediaKeySystem提供数字版权保护能力， 负责DRM插件配置管理、设备证书管理、统计信息获取、内容保护级别查询以及创建MediaKeySession等功能。 通过OH_MediaKeySystem_Create接口创建实例，通过OH_MediaKeySystem_Destroy接口销毁实例。 |
 | [MediaKeySession](capi-drm-mediakeysession.md) | MediaKeySession | MediaKeySession结构，用于表示一个媒体密钥会话实例。MediaKeySession是DRM解密流程的核心组件， 负责生成许可证请求、处理许可证响应、管理密钥状态等功能。每个MediaKeySession实例对应一个播放会话的密钥解密过程。 通过OH_MediaKeySystem_CreateMediaKeySession接口创建实例，通过OH_MediaKeySession_Destroy接口销毁实例。 每个MediaKeySystem可创建多个MediaKeySession实例，用于处理不同的播放会话。 |
 
@@ -77,6 +75,12 @@
 | -- | -- | -- |
 | [typedef void (\*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#drm_mediakeysysteminfocallback) | DRM_MediaKeySystemInfoCallback | 应用为从媒体源获取DRM信息而设置的回调函数。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo) | 应用为从媒体源获取DRM信息而设置的回调函数。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Multimedia.Drm.Core |
+
 ## 枚举类型说明
 
 ### DRM_EventType
@@ -89,20 +93,16 @@ enum DRM_EventType
 
 监听事件类型。
 
-<!--Device-enum DRM_EventType--><!--Device-enum DRM_EventType-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| EVENT_DRM_BASE = 200 | DRM基础事件。<br><!--Device-EVENT_DRM_BASE = 200--><!--Device-EVENT_DRM_BASE = 200-End--> |
-| EVENT_PROVISION_REQUIRED = 201 | 设备证书请求事件。<br><!--Device-EVENT_PROVISION_REQUIRED = 201--><!--Device-EVENT_PROVISION_REQUIRED = 201-End--> |
-| EVENT_KEY_REQUIRED = 202 | 密钥请求事件。<br><!--Device-EVENT_KEY_REQUIRED = 202--><!--Device-EVENT_KEY_REQUIRED = 202-End--> |
-| EVENT_KEY_EXPIRED = 203 | 密钥过期事件。<br><!--Device-EVENT_KEY_EXPIRED = 203--><!--Device-EVENT_KEY_EXPIRED = 203-End--> |
-| EVENT_VENDOR_DEFINED = 204 | DRM解决方案自定义事件。<br><!--Device-EVENT_VENDOR_DEFINED = 204--><!--Device-EVENT_VENDOR_DEFINED = 204-End--> |
-| EVENT_EXPIRATION_UPDATE = 206 | 密钥过期更新事件。<br><!--Device-EVENT_EXPIRATION_UPDATE = 206--><!--Device-EVENT_EXPIRATION_UPDATE = 206-End--> |
+| EVENT_DRM_BASE = 200 | DRM基础事件。 |
+| EVENT_PROVISION_REQUIRED = 201 | 设备证书请求事件。 |
+| EVENT_KEY_REQUIRED = 202 | 密钥请求事件。 |
+| EVENT_KEY_EXPIRED = 203 | 密钥过期事件。 |
+| EVENT_VENDOR_DEFINED = 204 | DRM解决方案自定义事件。 |
+| EVENT_EXPIRATION_UPDATE = 206 | 密钥过期更新事件。 |
 
 ### DRM_ContentProtectionLevel
 
@@ -114,19 +114,15 @@ enum DRM_ContentProtectionLevel
 
 内容保护级别。
 
-<!--Device-enum DRM_ContentProtectionLevel--><!--Device-enum DRM_ContentProtectionLevel-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CONTENT_PROTECTION_LEVEL_UNKNOWN = 0 | 未知级别。<br><!--Device-CONTENT_PROTECTION_LEVEL_UNKNOWN = 0--><!--Device-CONTENT_PROTECTION_LEVEL_UNKNOWN = 0-End--> |
-| CONTENT_PROTECTION_LEVEL_SW_CRYPTO | 软件安全级别。<br><!--Device-CONTENT_PROTECTION_LEVEL_SW_CRYPTO--><!--Device-CONTENT_PROTECTION_LEVEL_SW_CRYPTO-End--> |
-| CONTENT_PROTECTION_LEVEL_HW_CRYPTO | 硬件安全级别。<br><!--Device-CONTENT_PROTECTION_LEVEL_HW_CRYPTO--><!--Device-CONTENT_PROTECTION_LEVEL_HW_CRYPTO-End--> |
-| CONTENT_PROTECTION_LEVEL_ENHANCED_HW_CRYPTO | 硬件增强级别。<br><!--Device-CONTENT_PROTECTION_LEVEL_ENHANCED_HW_CRYPTO--><!--Device-CONTENT_PROTECTION_LEVEL_ENHANCED_HW_CRYPTO-End--> |
-| CONTENT_PROTECTION_LEVEL_MAX | 最大安全级别。<br><!--Device-CONTENT_PROTECTION_LEVEL_MAX--><!--Device-CONTENT_PROTECTION_LEVEL_MAX-End--> |
+| CONTENT_PROTECTION_LEVEL_UNKNOWN = 0 | 未知级别。 |
+| CONTENT_PROTECTION_LEVEL_SW_CRYPTO | 软件安全级别。 |
+| CONTENT_PROTECTION_LEVEL_HW_CRYPTO | 硬件安全级别。 |
+| CONTENT_PROTECTION_LEVEL_ENHANCED_HW_CRYPTO | 硬件增强级别。 |
+| CONTENT_PROTECTION_LEVEL_MAX | 最大安全级别。 |
 
 ### DRM_MediaKeyType
 
@@ -138,16 +134,12 @@ enum DRM_MediaKeyType
 
 媒体密钥类型。
 
-<!--Device-enum DRM_MediaKeyType--><!--Device-enum DRM_MediaKeyType-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MEDIA_KEY_TYPE_OFFLINE = 0 | 离线。<br><!--Device-MEDIA_KEY_TYPE_OFFLINE = 0--><!--Device-MEDIA_KEY_TYPE_OFFLINE = 0-End--> |
-| MEDIA_KEY_TYPE_ONLINE | 在线。<br><!--Device-MEDIA_KEY_TYPE_ONLINE--><!--Device-MEDIA_KEY_TYPE_ONLINE-End--> |
+| MEDIA_KEY_TYPE_OFFLINE = 0 | 离线。 |
+| MEDIA_KEY_TYPE_ONLINE | 在线。 |
 
 ### DRM_MediaKeyRequestType
 
@@ -159,20 +151,16 @@ enum DRM_MediaKeyRequestType
 
 媒体密钥请求类型。
 
-<!--Device-enum DRM_MediaKeyRequestType--><!--Device-enum DRM_MediaKeyRequestType-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0 | 未知请求类型。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End--> |
-| MEDIA_KEY_REQUEST_TYPE_INITIAL | 初始化请求。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_INITIAL--><!--Device-MEDIA_KEY_REQUEST_TYPE_INITIAL-End--> |
-| MEDIA_KEY_REQUEST_TYPE_RENEWAL | 续订请求。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_RENEWAL--><!--Device-MEDIA_KEY_REQUEST_TYPE_RENEWAL-End--> |
-| MEDIA_KEY_REQUEST_TYPE_RELEASE | 释放请求。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_RELEASE--><!--Device-MEDIA_KEY_REQUEST_TYPE_RELEASE-End--> |
-| MEDIA_KEY_REQUEST_TYPE_NONE | 无请求。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_NONE--><!--Device-MEDIA_KEY_REQUEST_TYPE_NONE-End--> |
-| MEDIA_KEY_REQUEST_TYPE_UPDATE | 更新请求。<br><!--Device-MEDIA_KEY_REQUEST_TYPE_UPDATE--><!--Device-MEDIA_KEY_REQUEST_TYPE_UPDATE-End--> |
+| MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0 | 未知请求类型。 |
+| MEDIA_KEY_REQUEST_TYPE_INITIAL | 初始化请求。 |
+| MEDIA_KEY_REQUEST_TYPE_RENEWAL | 续订请求。 |
+| MEDIA_KEY_REQUEST_TYPE_RELEASE | 释放请求。 |
+| MEDIA_KEY_REQUEST_TYPE_NONE | 无请求。 |
+| MEDIA_KEY_REQUEST_TYPE_UPDATE | 更新请求。 |
 
 ### DRM_OfflineMediaKeyStatus
 
@@ -184,17 +172,13 @@ enum DRM_OfflineMediaKeyStatus
 
 离线媒体密钥状态。
 
-<!--Device-enum DRM_OfflineMediaKeyStatus--><!--Device-enum DRM_OfflineMediaKeyStatus-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0 | 未知状态。<br><!--Device-OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0--><!--Device-OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0-End--> |
-| OFFLINE_MEDIA_KEY_STATUS_USABLE | 可用状态。<br><!--Device-OFFLINE_MEDIA_KEY_STATUS_USABLE--><!--Device-OFFLINE_MEDIA_KEY_STATUS_USABLE-End--> |
-| OFFLINE_MEDIA_KEY_STATUS_INACTIVE | 失活状态。<br><!--Device-OFFLINE_MEDIA_KEY_STATUS_INACTIVE--><!--Device-OFFLINE_MEDIA_KEY_STATUS_INACTIVE-End--> |
+| OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0 | 未知状态。 |
+| OFFLINE_MEDIA_KEY_STATUS_USABLE | 可用状态。 |
+| OFFLINE_MEDIA_KEY_STATUS_INACTIVE | 失活状态。 |
 
 ### DRM_CertificateStatus
 
@@ -206,19 +190,15 @@ enum DRM_CertificateStatus
 
 设备DRM证书状态。
 
-<!--Device-enum DRM_CertificateStatus--><!--Device-enum DRM_CertificateStatus-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CERT_STATUS_PROVISIONED = 0 | 设备已安装设备DRM证书。<br><!--Device-CERT_STATUS_PROVISIONED = 0--><!--Device-CERT_STATUS_PROVISIONED = 0-End--> |
-| CERT_STATUS_NOT_PROVISIONED | 设备未安装设备DRM证书或证书状态异常。<br><!--Device-CERT_STATUS_NOT_PROVISIONED--><!--Device-CERT_STATUS_NOT_PROVISIONED-End--> |
-| CERT_STATUS_EXPIRED | 设备DRM证书过期。<br><!--Device-CERT_STATUS_EXPIRED--><!--Device-CERT_STATUS_EXPIRED-End--> |
-| CERT_STATUS_INVALID | 设备DRM证书无效。<br><!--Device-CERT_STATUS_INVALID--><!--Device-CERT_STATUS_INVALID-End--> |
-| CERT_STATUS_UNAVAILABLE | 设备DRM证书不可用。<br><!--Device-CERT_STATUS_UNAVAILABLE--><!--Device-CERT_STATUS_UNAVAILABLE-End--> |
+| CERT_STATUS_PROVISIONED = 0 | 设备已安装设备DRM证书。 |
+| CERT_STATUS_NOT_PROVISIONED | 设备未安装设备DRM证书或证书状态异常。 |
+| CERT_STATUS_EXPIRED | 设备DRM证书过期。 |
+| CERT_STATUS_INVALID | 设备DRM证书无效。 |
+| CERT_STATUS_UNAVAILABLE | 设备DRM证书不可用。 |
 
 
 ## 函数说明
@@ -232,10 +212,6 @@ typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeyS
 **描述：**
 
 应用为从媒体源获取DRM信息而设置的回调函数。
-
-<!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **起始版本：** 11
 

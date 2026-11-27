@@ -1,20 +1,18 @@
 # FileShare_PolicyErrorResult
 
 ```c
-typedef struct FileShare_PolicyErrorResult {...} FileShare_PolicyErrorResult
+struct FileShare_PolicyErrorResult {...}
 ```
 
 ## Overview
 
 Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result on URI.
 
-<!--Device-struct FileShare_PolicyErrorResult {...}--><!--Device-struct FileShare_PolicyErrorResult {...}-End-->
-
 **System capability**: SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Since**: 12
 
-**Related module**: [fileShare](capi-core-file-kit-fileshare.md)
+**Related module**: [fileShare](capi-fileshare.md)
 
 **Header file**: [oh_file_share.h](capi-oh-file-share-h.md)
 
@@ -24,8 +22,8 @@ Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result 
 
 | Name | Description |
 | -- | -- |
-| char *uri | Indicates the failed uri of the policy information.<br><!--Device-char *uri--><!--Device-char *uri-End--> |
-| [FileShare_PolicyErrorCode](capi-oh-file-share-h.md#fileshare_policyerrorcode) code | Indicates the error code of the failure in the policy information.<br><!--Device-FileShare_PolicyErrorCode code--><!--Device-FileShare_PolicyErrorCode code-End--> |
-| char *message | Indicates the reason of the failure in the policy information.<br><!--Device-char *message--><!--Device-char *message-End--> |
+| char *uri | Indicates the failed uri of the policy information. |
+| [FileShare_PolicyErrorCode](capi-oh-file-share-h.md#fileshare_policyerrorcode) code | Indicates the error code of the failure in the policy information. |
+| char *message | Indicates the reason of the failure in the policy information. |
 
 

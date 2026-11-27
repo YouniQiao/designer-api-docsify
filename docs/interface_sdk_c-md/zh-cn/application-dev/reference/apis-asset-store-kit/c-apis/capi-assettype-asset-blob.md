@@ -8,13 +8,11 @@ typedef struct Asset_Blob {...} Asset_Blob
 
 二进制数组类型，即不定长的字节数组。
 
-<!--Device-typedef struct Asset_Blob {...} Asset_Blob--><!--Device-typedef struct Asset_Blob {...} Asset_Blob-End-->
-
 **系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
-**相关模块：** [AssetType](capi-asset-store-kit-assettype.md)
+**相关模块：** [AssetType](capi-assettype.md)
 
 **所在头文件：** [asset_type.h](capi-asset-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Asset_Blob {...} Asset_Blob
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 表示字节数组的大小。<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| uint8_t *data | 指向字节数组的指针。<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| uint32_t size | 表示字节数组的大小。 |
+| uint8_t *data | 指向字节数组的指针。 |
 
 

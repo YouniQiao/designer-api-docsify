@@ -4,7 +4,7 @@
 export interface SuspendStateObserver
 ```
 
-定义挂起状态变化的观察者。
+定义冻结状态变化的观察者。
 
 **起始版本：** 26.1.0
 
@@ -17,7 +17,7 @@ export interface SuspendStateObserver
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## onActive
@@ -26,7 +26,7 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 onActive(pidList: Array<number>, uid: number): void
 ```
 
-当应用程序转换到活动状态时调用。
+当应用状态转换到活动状态时回调。
 
 **起始版本：** 26.1.0
 
@@ -42,8 +42,8 @@ onActive(pidList: Array<number>, uid: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pidList | Array&lt;number&gt; | 是 | 转换为活动的进程ID列表。 |
-| uid | number | 是 | 应用的UID。<br>取值限定为整数。 |
+| pidList | Array&lt;number&gt; | 是 | 转换为激活状态的uid对应的pid列表。 |
+| uid | number | 是 | 应用转为激活状态的uid。 |
 
 ## onDoze
 
@@ -51,7 +51,7 @@ onActive(pidList: Array<number>, uid: number): void
 onDoze(pidList: Array<number>, uid: number): void
 ```
 
-当应用程序进入doze状态时调用。
+当应用程序进入doze状态时回调。
 
 **起始版本：** 26.1.0
 
@@ -67,8 +67,8 @@ onDoze(pidList: Array<number>, uid: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pidList | Array&lt;number&gt; | 是 | 被doze的进程ID列表。 |
-| uid | number | 是 | 应用的UID。<br>取值限定为整数。 |
+| pidList | Array&lt;number&gt; | 是 | 被doze的uid对应的pid列表。 |
+| uid | number | 是 | 被doze的应用的uid。 |
 
 ## onFrozen
 
@@ -76,7 +76,7 @@ onDoze(pidList: Array<number>, uid: number): void
 onFrozen(pidList: Array<number>, uid: number): void
 ```
 
-当应用程序完全冻结时调用。
+当应用程序完全冻结时回调。
 
 **起始版本：** 26.1.0
 
@@ -92,5 +92,5 @@ onFrozen(pidList: Array<number>, uid: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pidList | Array&lt;number&gt; | 是 | 被冻结的进程ID列表。 |
-| uid | number | 是 | 应用的UID。<br>取值限定为整数。 |
+| pidList | Array&lt;number&gt; | 是 | 冻结的uid对应的pid列表。 |
+| uid | number | 是 | 被冻结的应用uid |

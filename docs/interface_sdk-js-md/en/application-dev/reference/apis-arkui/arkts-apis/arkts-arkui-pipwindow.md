@@ -6,7 +6,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 > 
 > - Before <!--RP2-->OpenHarmony 6.0<!--RP2End-->, the PiP feature was supported only on phones and tablets. Starting from <!--RP2-->OpenHarmony 6.0<!--RP2End-->, the PiP feature is supported on phones, PCs/2-in-1 devices, tablets,but is unavailable on all other devices.
 > 
-> - For the system capability SystemCapability.Window.SessionManager, use canIUse() to check whether the device supports this system capability and the corresponding APIs.
+> - For the system capability SystemCapability.Window.SessionManager, use [canIUse()](arkts-arkui-global-caniuse-f.md) to check whether the device supports this system capability and the corresponding APIs.
 
 **Since:** 11
 

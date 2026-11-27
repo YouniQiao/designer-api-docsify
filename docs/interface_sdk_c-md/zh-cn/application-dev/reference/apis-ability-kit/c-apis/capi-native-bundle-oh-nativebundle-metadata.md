@@ -1,20 +1,18 @@
 # OH_NativeBundle_Metadata
 
 ```c
-typedef struct OH_NativeBundle_Metadata {...} OH_NativeBundle_Metadata
+struct OH_NativeBundle_Metadata {...}
 ```
 
 ## 概述
 
 元数据信息。
 
-<!--Device-struct OH_NativeBundle_Metadata {...}--><!--Device-struct OH_NativeBundle_Metadata {...}-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **起始版本：** 20
 
-**相关模块：** [Native_Bundle](capi-ability-kit-native-bundle.md)
+**相关模块：** [Native_Bundle](capi-native-bundle.md)
 
 **所在头文件：** [native_interface_bundle.h](capi-native-interface-bundle-h.md)
 
@@ -24,8 +22,8 @@ typedef struct OH_NativeBundle_Metadata {...} OH_NativeBundle_Metadata
 
 | 名称 | 描述 |
 | -- | -- |
-| char* name | 元数据名称。<br>**起始版本：** 20<br><!--Device-char* name--><!--Device-char* name-End--> |
-| char* value | 元数据值。<br>**起始版本：** 20<br><!--Device-char* value--><!--Device-char* value-End--> |
-| char* resource | 元数据资源。<br>**起始版本：** 20<br><!--Device-char* resource--><!--Device-char* resource-End--> |
+| char* name | 元数据名称。 |
+| char* value | 元数据值。 |
+| char* resource | 元数据资源。 |
 
 

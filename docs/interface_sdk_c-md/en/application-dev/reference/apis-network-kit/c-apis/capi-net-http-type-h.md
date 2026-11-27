@@ -6,43 +6,41 @@ Defines the data structures for the C APIs of the HTTP request module.
 
 **Library**: libnet_http.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 20
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Http_Buffer](capi-netstack-http-buffer.md) | Http_Buffer | Defines the HTTP buffer structure. |
-| [Http_HeaderValue](capi-netstack-http-headervalue.md) | Http_HeaderValue | Defines the type of a mapped value in a request or response header. |
-| [Http_HeaderEntry](capi-netstack-http-headerentry.md) | Http_HeaderEntry | Defines all key-value pairs in the request or response header. |
-| [Http_ClientCert](capi-netstack-http-clientcert.md) | Http_ClientCert | Defines the client certificate sent to a remote server, which will be used by the server to verify the identity of the client. |
-| [Http_CustomProxy](capi-netstack-http-customproxy.md) | Http_CustomProxy | Defines the custom proxy configuration. |
-| [Http_Proxy](capi-netstack-http-proxy.md) | Http_Proxy | Defines the proxy configuration structure. |
-| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) | Http_PerformanceTiming | Defines the HTTP response timing information, which will be collected via [Http_Response](capi-netstack-http-response.md). |
-| [Http_RequestOptions](capi-netstack-http-requestoptions.md) | Http_RequestOptions | Defines the structure of HTTP requests. |
-| [Http_Response](capi-netstack-http-response.md) | Http_Response | Defines the structure of HTTP responses. |
-| [Http_Request](capi-netstack-http-request.md) | Http_Request | Defines an HTTP request. |
-| [Http_EventsHandler](capi-netstack-http-eventshandler.md) | Http_EventsHandler | Defines the callback for various HTTP events. |
+| [Http_Buffer](capi-netstack-http-buffer.md) | - | Defines the HTTP buffer structure. |
+| [Http_HeaderValue](capi-netstack-http-headervalue.md) | - | Defines the type of a mapped value in a request or response header. |
+| [Http_HeaderEntry](capi-netstack-http-headerentry.md) | - | Defines all key-value pairs in the request or response header. |
+| [Http_ClientCert](capi-netstack-http-clientcert.md) | - | Defines the client certificate sent to a remote server, which will be used by the server to verify the identity of the client. |
+| [Http_CustomProxy](capi-netstack-http-customproxy.md) | - | Defines the custom proxy configuration. |
+| [Http_Proxy](capi-netstack-http-proxy.md) | - | Defines the proxy configuration structure. |
+| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) | - | Defines the HTTP response timing information, which will be collected via [Http_Response](capi-netstack-http-response.md). |
+| [Http_RequestOptions](capi-netstack-http-requestoptions.md) | - | Defines the structure of HTTP requests. |
+| [Http_Response](capi-netstack-http-response.md) | - | Defines the structure of HTTP responses. |
+| [Http_Request](capi-netstack-http-request.md) | - | Defines an HTTP request. |
+| [Http_EventsHandler](capi-netstack-http-eventshandler.md) | - | Defines the callback for various HTTP events. |
 | [Http_Headers](capi-netstack-http-headers.md) | Http_Headers | Defines the header of an HTTP request or response. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Http_ErrCode](#http_errcode) | Http_ErrCode | Enumerates the error codes of an HTTP request. |
-| [Http_ResponseCode](#http_responsecode) | Http_ResponseCode | Enumerates the result codes of an HTTP response. |
-| [Http_AddressFamilyType](#http_addressfamilytype) | Http_AddressFamilyType | Enumerates the IP address family of the target domain name. |
-| [Http_HttpProtocol](#http_httpprotocol) | Http_HttpProtocol | Enumerates HTTP protocol versions. |
-| [Http_CertType](#http_certtype) | Http_CertType | Enumerates certificate types. |
-| [Http_ProxyType](#http_proxytype) | Http_ProxyType | Enumerates proxy types. |
+| [Http_ErrCode](#http_errcode) | Http_ErrCode | Defines http error code. |
+| [Http_ResponseCode](#http_responsecode) | Http_ResponseCode | Defines http response code. |
+| [Http_AddressFamilyType](#http_addressfamilytype) | Http_AddressFamilyType | Defines the address Family. |
+| [Http_HttpProtocol](#http_httpprotocol) | Http_HttpProtocol | Defines the HTTP version. |
+| [Http_CertType](#http_certtype) | Http_CertType | Defines the Cert Type. |
+| [Http_ProxyType](#http_proxytype) | Http_ProxyType | Proxy type. Used to distinguish different proxy configurations. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
@@ -58,15 +56,25 @@ Defines the data structures for the C APIs of the HTTP request module.
 | NET_HTTP_METHOD_PUT "PUT" | Sets the HTTP request method to PUT.<br>**Since**: 20 |
 | NET_HTTP_METHOD_PATCH "CONNECT" | Sets the HTTP request method to CONNECT.<br>**Since**: 20 |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode)](#http_responsecallback) | Http_ResponseCallback | Callback invoked when an HTTP response is received. |
-| [typedef void (\*Http_OnDataReceiveCallback)(const char *data, size_t length)](#http_ondatareceivecallback) | Http_OnDataReceiveCallback | Callback invoked when data is received. |
-| [typedef void (\*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)](#http_onprogresscallback) | Http_OnProgressCallback | Callback invoked during request/response data transmission. |
-| [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | Callback invoked when an HTTP response header is received. |
-| [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | Callback invoked when a DataEnd or Cancel event is received. |
+| [typedef void (\*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode)](#http_responsecallback) | Http_ResponseCallback | Callback function that is invoked when response is received. |
+| [typedef void (\*Http_OnDataReceiveCallback)(const char *data, size_t length)](#http_ondatareceivecallback) | Http_OnDataReceiveCallback | Callback function that is invoked when a response body is received. |
+| [typedef void (\*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)](#http_onprogresscallback) | Http_OnProgressCallback | Callback function invoked during request/response data transmission. |
+| [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | Callback called when header are received. |
+| [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | Empty callback function for requested DataEnd or Canceled event callback. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode) | Callback function that is invoked when response is received.<br>**Since**: 20<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*Http_OnDataReceiveCallback)(const char *data, size_t length) | Callback function that is invoked when a response body is received.<br>**Since**: 20<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize) | Callback function invoked during request/response data transmission.<br>**Since**: 20<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers) | Callback called when header are received.<br>**Since**: 20<br>**System capability**: SystemCapability.Communication.NetStack |
+| void (*Http_OnVoidCallback)(void) | Empty callback function for requested DataEnd or Canceled event callback.<br>**Since**: 20<br>**System capability**: SystemCapability.Communication.NetStack |
 
 ## Enum type description
 
@@ -78,51 +86,47 @@ enum Http_ErrCode
 
 **Description**
 
-Enumerates the error codes of an HTTP request.
-
-<!--Device-enum Http_ErrCode--><!--Device-enum Http_ErrCode-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Defines http error code.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_RESULT_OK = 0 | The request succeeded.<br><!--Device-OH_HTTP_RESULT_OK = 0--><!--Device-OH_HTTP_RESULT_OK = 0-End--> |
-| OH_HTTP_PARAMETER_ERROR = 401 | Invalid parameter.<br><!--Device-OH_HTTP_PARAMETER_ERROR = 401--><!--Device-OH_HTTP_PARAMETER_ERROR = 401-End--> |
-| OH_HTTP_PERMISSION_DENIED = 201 | Permission denied.<br><!--Device-OH_HTTP_PERMISSION_DENIED = 201--><!--Device-OH_HTTP_PERMISSION_DENIED = 201-End--> |
-| OH_HTTP_NETSTACK_E_BASE = 2300000 | Base error code offset.<br><!--Device-OH_HTTP_NETSTACK_E_BASE = 2300000--><!--Device-OH_HTTP_NETSTACK_E_BASE = 2300000-End--> |
-| OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1) | Unsupported protocol.<br><!--Device-OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1)--><!--Device-OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1)-End--> |
-| OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3) | Invalid URL format.<br><!--Device-OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3)--><!--Device-OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3)-End--> |
-| OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5) | Failed to resolve the proxy server domain name.<br><!--Device-OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5)--><!--Device-OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5)-End--> |
-| OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6) | Failed to resolve the domain name.<br><!--Device-OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6)--><!--Device-OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6)-End--> |
-| OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7) | Failed to connect to the server.<br><!--Device-OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7)--><!--Device-OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7)-End--> |
-| OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8) | The server returned invalid data.<br><!--Device-OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8)--><!--Device-OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8)-End--> |
-| OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9) | Access to the remote resource is denied.<br><!--Device-OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9)--><!--Device-OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9)-End--> |
-| OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16) | An error occurred in the HTTP/2 framing layer.<br><!--Device-OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16)--><!--Device-OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16)-End--> |
-| OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18) | Part of the file was transferred.<br><!--Device-OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18)--><!--Device-OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18)-End--> |
-| OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23) | Failed to write the received data to the disk or application.<br><!--Device-OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23)--><!--Device-OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23)-End--> |
-| OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25) | Upload failed.<br><!--Device-OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25)--><!--Device-OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25)-End--> |
-| OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26) | Failed to open or read local data from the file or application.<br><!--Device-OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26)--><!--Device-OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26)-End--> |
-| OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27) | Insufficient memory.<br><!--Device-OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27)--><!--Device-OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27)-End--> |
-| OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28) | Operation timed out.<br><!--Device-OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28)--><!--Device-OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28)-End--> |
-| OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47) | The number of redirections has reached the maximum allowed.<br><!--Device-OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47)--><!--Device-OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47)-End--> |
-| OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52) | The server returned nothing (no header or data).<br><!--Device-OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52)--><!--Device-OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52)-End--> |
-| OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55) | Failed to send data.<br><!--Device-OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55)--><!--Device-OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55)-End--> |
-| OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56) | Failed to receive data.<br><!--Device-OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56)--><!--Device-OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56)-End--> |
-| OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58) | Local SSL certificate error.<br><!--Device-OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58)--><!--Device-OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58)-End--> |
-| OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59) | The specified cipher suite is unavailable.<br><!--Device-OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59)--><!--Device-OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59)-End--> |
-| OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60) | Invalid SSL peer certificate or SSH remote key.<br><!--Device-OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60)--><!--Device-OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60)-End--> |
-| OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61) | Invalid HTTP encoding format.<br><!--Device-OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61)--><!--Device-OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61)-End--> |
-| OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63) | The maximum file size is exceeded.<br><!--Device-OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63)--><!--Device-OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63)-End--> |
-| OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70) | The remote disk is full.<br><!--Device-OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70)--><!--Device-OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70)-End--> |
-| OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73) | The remote file already exists.<br><!--Device-OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73)--><!--Device-OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73)-End--> |
-| OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77) | The SSL CA certificate does not exist or is inaccessible.<br><!--Device-OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77)--><!--Device-OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77)-End--> |
-| OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78) | The remote file was not found.<br><!--Device-OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78)--><!--Device-OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78)-End--> |
-| OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94) | Authentication error.<br><!--Device-OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94)--><!--Device-OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94)-End--> |
-| OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996) | The request was intercepted by the HTTP global interceptor.<br>**Since**: 26.0.0<br><!--Device-OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996)--><!--Device-OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996)-End--> |
-| OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998) | Access to the domain is not allowed.<br><!--Device-OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998)--><!--Device-OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998)-End--> |
-| OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999) | Unknown error.<br><!--Device-OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999)--><!--Device-OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999)-End--> |
+| OH_HTTP_RESULT_OK = 0 | Operation success. |
+| OH_HTTP_PARAMETER_ERROR = 401 | @brief Parameter error. |
+| OH_HTTP_PERMISSION_DENIED = 201 | @brief Permission denied. |
+| OH_HTTP_NETSTACK_E_BASE = 2300000 | @brief Error code base. |
+| OH_HTTP_UNSUPPORTED_PROTOCOL = (OH_HTTP_NETSTACK_E_BASE + 1) | @brief Unsupported protocol. |
+| OH_HTTP_INVALID_URL = (OH_HTTP_NETSTACK_E_BASE + 3) | @brief Invalid URL format or missing URL. |
+| OH_HTTP_RESOLVE_PROXY_FAILED = (OH_HTTP_NETSTACK_E_BASE + 5) | @brief Failed to resolve the proxy name. |
+| OH_HTTP_RESOLVE_HOST_FAILED = (OH_HTTP_NETSTACK_E_BASE + 6) | @brief Failed to resolve the host name. |
+| OH_HTTP_CONNECT_SERVER_FAILED = (OH_HTTP_NETSTACK_E_BASE + 7) | @brief Failed to connect to the server. |
+| OH_HTTP_INVALID_SERVER_RESPONSE = (OH_HTTP_NETSTACK_E_BASE + 8) | @brief Invalid server response. |
+| OH_HTTP_ACCESS_REMOTE_DENIED = (OH_HTTP_NETSTACK_E_BASE + 9) | @brief Access to the remote resource denied. |
+| OH_HTTP_HTTP2_FRAMING_ERROR = (OH_HTTP_NETSTACK_E_BASE + 16) | @brief Error in the HTTP2 framing layer. |
+| OH_HTTP_TRANSFER_PARTIAL_FILE = (OH_HTTP_NETSTACK_E_BASE + 18) | @brief Transferred a partial file. |
+| OH_HTTP_WRITE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 23) | @brief Failed to write the received data to the disk or application. |
+| OH_HTTP_UPLOAD_FAILED = (OH_HTTP_NETSTACK_E_BASE + 25) | @brief Upload failed. |
+| OH_HTTP_OPEN_LOCAL_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 26) | @brief Failed to open or read local data from the file or application. |
+| OH_HTTP_OUT_OF_MEMORY = (OH_HTTP_NETSTACK_E_BASE + 27) | @brief Out of memory. |
+| OH_HTTP_OPERATION_TIMEOUT = (OH_HTTP_NETSTACK_E_BASE + 28) | @brief Operation timeout. |
+| OH_HTTP_TOO_MANY_REDIRECTIONS = (OH_HTTP_NETSTACK_E_BASE + 47) | @brief The number of redirections reaches the maximum allowed. |
+| OH_HTTP_SERVER_RETURNED_NOTHING = (OH_HTTP_NETSTACK_E_BASE + 52) | @brief The server returned nothing (no header or data). |
+| OH_HTTP_SEND_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 55) | @brief Failed to send data to the peer. |
+| OH_HTTP_RECEIVE_DATA_FAILED = (OH_HTTP_NETSTACK_E_BASE + 56) | @brief Failed to receive data from the peer. |
+| OH_HTTP_SSL_CERTIFICATE_ERROR = (OH_HTTP_NETSTACK_E_BASE + 58) | @brief Local SSL certificate error. |
+| OH_HTTP_SSL_CIPHER_USED_ERROR = (OH_HTTP_NETSTACK_E_BASE + 59) | @brief The specified SSL cipher cannot be used. |
+| OH_HTTP_INVALID_SSL_PEER_CERT = (OH_HTTP_NETSTACK_E_BASE + 60) | @brief Invalid SSL peer certificate or SSH remote key. |
+| OH_HTTP_INVALID_ENCODING_FORMAT = (OH_HTTP_NETSTACK_E_BASE + 61) | @brief Invalid HTTP encoding format. |
+| OH_HTTP_FILE_TOO_LARGE = (OH_HTTP_NETSTACK_E_BASE + 63) | @brief Maximum file size exceeded. |
+| OH_HTTP_REMOTE_DISK_FULL = (OH_HTTP_NETSTACK_E_BASE + 70) | @brief Remote disk full. |
+| OH_HTTP_REMOTE_FILE_EXISTS = (OH_HTTP_NETSTACK_E_BASE + 73) | @brief Remote file already exists. |
+| OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77) | @brief The SSL CA certificate does not exist or is inaccessible. |
+| OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78) | @brief Remote file not found. |
+| OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94) | @brief Authentication error. |
+| OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996) | The request was intercepted by the HTTP global interceptor.<br>**Since**: 26.0.0 |
+| OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998) | @brief It is not allowed to access this domain. |
+| OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999) | @brief Unknown error. |
 
 ### Http_ResponseCode
 
@@ -132,52 +136,48 @@ enum Http_ResponseCode
 
 **Description**
 
-Enumerates the result codes of an HTTP response.
-
-<!--Device-enum Http_ResponseCode--><!--Device-enum Http_ResponseCode-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Defines http response code.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_OK = 200 | Request succeeded.<br><!--Device-OH_HTTP_OK = 200--><!--Device-OH_HTTP_OK = 200-End--> |
-| OH_HTTP_CREATED = 201 | "Created." The request has been successfully sent and a new resource is created.<br><!--Device-OH_HTTP_CREATED = 201--><!--Device-OH_HTTP_CREATED = 201-End--> |
-| OH_HTTP_ACCEPTED = 202 | "Accepted." The request has been accepted for processing, but the processing has not been completed.<br><!--Device-OH_HTTP_ACCEPTED = 202--><!--Device-OH_HTTP_ACCEPTED = 202-End--> |
-| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | "Non-Authoritative Information." The request was successfully processed, but the returned response body contains non-authoritative information.<br><!--Device-OH_HTTP_NON_AUTHORITATIVE_INFO = 203--><!--Device-OH_HTTP_NON_AUTHORITATIVE_INFO = 203-End--> |
-| OH_HTTP_NO_CONTENT = 204 | "No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.<br><!--Device-OH_HTTP_NO_CONTENT = 204--><!--Device-OH_HTTP_NO_CONTENT = 204-End--> |
-| OH_HTTP_RESET = 205 | "Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content.<br><!--Device-OH_HTTP_RESET = 205--><!--Device-OH_HTTP_RESET = 205-End--> |
-| OH_HTTP_PARTIAL = 206 | "Partial Content." The server has successfully fulfilled the partial GET request for a given resource.<br><!--Device-OH_HTTP_PARTIAL = 206--><!--Device-OH_HTTP_PARTIAL = 206-End--> |
-| OH_HTTP_MULTI_CHOICE = 300 | "Multiple Choices." The requested resource corresponds to any one of a set of representations.<br><!--Device-OH_HTTP_MULTI_CHOICE = 300--><!--Device-OH_HTTP_MULTI_CHOICE = 300-End--> |
-| OH_HTTP_MOVED_PERM = 301 | "Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.<br><!--Device-OH_HTTP_MOVED_PERM = 301--><!--Device-OH_HTTP_MOVED_PERM = 301-End--> |
-| OH_HTTP_MOVED_TEMP = 302 | "Moved Temporarily." The requested resource is moved temporarily to a different URI.<br><!--Device-OH_HTTP_MOVED_TEMP = 302--><!--Device-OH_HTTP_MOVED_TEMP = 302-End--> |
-| OH_HTTP_SEE_OTHER = 303 | "See Other." The response to the request can be found under a different URI.<br><!--Device-OH_HTTP_SEE_OTHER = 303--><!--Device-OH_HTTP_SEE_OTHER = 303-End--> |
-| OH_HTTP_NOT_MODIFIED = 304 | "Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified.<br><!--Device-OH_HTTP_NOT_MODIFIED = 304--><!--Device-OH_HTTP_NOT_MODIFIED = 304-End--> |
-| OH_HTTP_USE_PROXY = 305 | "Use Proxy." The requested resource can only be accessed through the proxy.<br><!--Device-OH_HTTP_USE_PROXY = 305--><!--Device-OH_HTTP_USE_PROXY = 305-End--> |
-| OH_HTTP_BAD_REQUEST = 400 | "Bad Request." The request could not be understood by the server due to incorrect syntax.<br><!--Device-OH_HTTP_BAD_REQUEST = 400--><!--Device-OH_HTTP_BAD_REQUEST = 400-End--> |
-| OH_HTTP_UNAUTHORIZED = 401 | "Unauthorized." The request requires user authentication.<br><!--Device-OH_HTTP_UNAUTHORIZED = 401--><!--Device-OH_HTTP_UNAUTHORIZED = 401-End--> |
-| OH_HTTP_PAYMENT_REQUIRED = 402 | "Payment Required." This code is reserved for future use.<br><!--Device-OH_HTTP_PAYMENT_REQUIRED = 402--><!--Device-OH_HTTP_PAYMENT_REQUIRED = 402-End--> |
-| OH_HTTP_FORBIDDEN = 403 | "Forbidden." The server understands the request but refuses to process it.<br><!--Device-OH_HTTP_FORBIDDEN = 403--><!--Device-OH_HTTP_FORBIDDEN = 403-End--> |
-| OH_HTTP_NOT_FOUND = 404 | "Not Found." The server does not find anything matching the Request-URI.<br><!--Device-OH_HTTP_NOT_FOUND = 404--><!--Device-OH_HTTP_NOT_FOUND = 404-End--> |
-| OH_HTTP_BAD_METHOD = 405 | "Method Not Allowed." The method specified in the request is not allowed for the resource identified by the Request-URI.<br><!--Device-OH_HTTP_BAD_METHOD = 405--><!--Device-OH_HTTP_BAD_METHOD = 405-End--> |
-| OH_HTTP_NOT_ACCEPTABLE = 406 | "Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request.<br><!--Device-OH_HTTP_NOT_ACCEPTABLE = 406--><!--Device-OH_HTTP_NOT_ACCEPTABLE = 406-End--> |
-| OH_HTTP_PROXY_AUTH = 407 | "Proxy Authentication Required." The request requires user authentication with the proxy.<br><!--Device-OH_HTTP_PROXY_AUTH = 407--><!--Device-OH_HTTP_PROXY_AUTH = 407-End--> |
-| OH_HTTP_CLIENT_TIMEOUT = 408 | "Request Timeout." The client fails to generate a request within the timeout period.<br><!--Device-OH_HTTP_CLIENT_TIMEOUT = 408--><!--Device-OH_HTTP_CLIENT_TIMEOUT = 408-End--> |
-| OH_HTTP_CONFLICT = 409 | "Conflict." The request cannot be fulfilled due to a conflict with the current state of the resource. Conflicts are most likely to occur in response to a PUT request.<br><!--Device-OH_HTTP_CONFLICT = 409--><!--Device-OH_HTTP_CONFLICT = 409-End--> |
-| OH_HTTP_GONE = 410 | "Gone." The requested resource has been deleted permanently and is no longer available.<br><!--Device-OH_HTTP_GONE = 410--><!--Device-OH_HTTP_GONE = 410-End--> |
-| OH_HTTP_LENGTH_REQUIRED = 411 | "Length Required." The server refuses to process the request without a defined Content-Length.<br><!--Device-OH_HTTP_LENGTH_REQUIRED = 411--><!--Device-OH_HTTP_LENGTH_REQUIRED = 411-End--> |
-| OH_HTTP_PRECON_FAILED = 412 | "Precondition Failed." The precondition in the request is incorrect.<br><!--Device-OH_HTTP_PRECON_FAILED = 412--><!--Device-OH_HTTP_PRECON_FAILED = 412-End--> |
-| OH_HTTP_ENTITY_TOO_LARGE = 413 | "Request Entity Too Large." The server refuses to process a request because the request entity is larger than the server is able to process.<br><!--Device-OH_HTTP_ENTITY_TOO_LARGE = 413--><!--Device-OH_HTTP_ENTITY_TOO_LARGE = 413-End--> |
-| OH_HTTP_REQUEST_TOO_LONG = 414 | "Request-URI Too Long." The Request-URI is too long for the server to process.<br><!--Device-OH_HTTP_REQUEST_TOO_LONG = 414--><!--Device-OH_HTTP_REQUEST_TOO_LONG = 414-End--> |
-| OH_HTTP_UNSUPPORTED_TYPE = 415 | "Unsupported Media Type." The server is unable to process the media format in the request.<br><!--Device-OH_HTTP_UNSUPPORTED_TYPE = 415--><!--Device-OH_HTTP_UNSUPPORTED_TYPE = 415-End--> |
-| OH_HTTP_RANGE_NOT_MET = 416 | "Range Not Satisfiable." The server cannot serve the requested ranges.<br><!--Device-OH_HTTP_RANGE_NOT_MET = 416--><!--Device-OH_HTTP_RANGE_NOT_MET = 416-End--> |
-| OH_HTTP_INTERNAL_ERROR = 500 | "Internal Server Error." The server encounters an unexpected error that prevents it from fulfilling the request.<br><!--Device-OH_HTTP_INTERNAL_ERROR = 500--><!--Device-OH_HTTP_INTERNAL_ERROR = 500-End--> |
-| OH_HTTP_NOT_IMPLEMENTED = 501 | "Not Implemented." The server does not support the function required to fulfill the request.<br><!--Device-OH_HTTP_NOT_IMPLEMENTED = 501--><!--Device-OH_HTTP_NOT_IMPLEMENTED = 501-End--> |
-| OH_HTTP_BAD_GATEWAY = 502 | "Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server.<br><!--Device-OH_HTTP_BAD_GATEWAY = 502--><!--Device-OH_HTTP_BAD_GATEWAY = 502-End--> |
-| OH_HTTP_UNAVAILABLE = 503 | "Service Unavailable." The server is currently unable to process the request due to a temporary overload or system maintenance.<br><!--Device-OH_HTTP_UNAVAILABLE = 503--><!--Device-OH_HTTP_UNAVAILABLE = 503-End--> |
-| OH_HTTP_GATEWAY_TIMEOUT = 504 | "Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period.<br><!--Device-OH_HTTP_GATEWAY_TIMEOUT = 504--><!--Device-OH_HTTP_GATEWAY_TIMEOUT = 504-End--> |
-| OH_HTTP_VERSION = 505 | "HTTP Version Not Supported." The server does not support the HTTP protocol version used in the request.<br><!--Device-OH_HTTP_VERSION = 505--><!--Device-OH_HTTP_VERSION = 505-End--> |
+| OH_HTTP_OK = 200 | @brief The request was successful. |
+| OH_HTTP_CREATED = 201 | @brief Successfully requested and created a new resource. |
+| OH_HTTP_ACCEPTED = 202 | @brief The request has been accepted but has not been processed completely. |
+| OH_HTTP_NON_AUTHORITATIVE_INFO = 203 | @brief Unauthorized information. The request was successful. |
+| OH_HTTP_NO_CONTENT = 204 | @brief No content. The server successfully processed, but did not return content. |
+| OH_HTTP_RESET = 205 | @brief Reset the content. |
+| OH_HTTP_PARTIAL = 206 | @brief Partial content. The server successfully processed some GET requests. |
+| OH_HTTP_MULTI_CHOICE = 300 | @brief Multiple options. |
+| OH_HTTP_MOVED_PERM = 301 | Permanently move. The requested resource has been permanently moved to a new URI, and the returned information will include the new URI. The browser will automatically redirect to the new URI. |
+| OH_HTTP_MOVED_TEMP = 302 | @brief Temporary movement. |
+| OH_HTTP_SEE_OTHER = 303 | @brief View other addresses. |
+| OH_HTTP_NOT_MODIFIED = 304 | @brief Not modified. |
+| OH_HTTP_USE_PROXY = 305 | @brief Using proxies. |
+| OH_HTTP_BAD_REQUEST = 400 | @brief The server cannot understand the syntax error error requested by the client. |
+| OH_HTTP_UNAUTHORIZED = 401 | @brief Request for user authentication. |
+| OH_HTTP_PAYMENT_REQUIRED = 402 | @brief Reserved for future use. |
+| OH_HTTP_FORBIDDEN = 403 | @brief The server understands the request from the requesting client, but refuses to execute it. |
+| OH_HTTP_NOT_FOUND = 404 | @brief The server was unable to find resources (web pages) based on the client's request. |
+| OH_HTTP_BAD_METHOD = 405 | @brief The method in the client request is prohibited. |
+| OH_HTTP_NOT_ACCEPTABLE = 406 | @brief The server unabled to complete request based on the content characteristics requested by the client. |
+| OH_HTTP_PROXY_AUTH = 407 | @brief Request authentication of the proxy's identity. |
+| OH_HTTP_CLIENT_TIMEOUT = 408 | @brief The request took too long and timed out. |
+| OH_HTTP_CONFLICT = 409 | The server may have returned this code when completing the client's PUT request, as there was a conflict when the server was processing the request. |
+| OH_HTTP_GONE = 410 | @brief The resource requested by the client no longer exists. |
+| OH_HTTP_LENGTH_REQUIRED = 411 | @brief The server is unable to process request information sent by the client without Content Length. |
+| OH_HTTP_PRECON_FAILED = 412 | @brief The prerequisite for requesting information from the client is incorrect. |
+| OH_HTTP_ENTITY_TOO_LARGE = 413 | @brief The request was rejected because the requested entity was too large for the server to process. |
+| OH_HTTP_REQUEST_TOO_LONG = 414 | @brief The requested URI is too long (usually a URL) and the server cannot process it. |
+| OH_HTTP_UNSUPPORTED_TYPE = 415 | @brief The server is unable to process the requested format. |
+| OH_HTTP_RANGE_NOT_MET = 416 | @brief Requested Range not satisfiable. |
+| OH_HTTP_INTERNAL_ERROR = 500 | @brief Internal server error, unable to complete the request. |
+| OH_HTTP_NOT_IMPLEMENTED = 501 | @brief The server does not support the requested functionality and cannot complete the request. |
+| OH_HTTP_BAD_GATEWAY = 502 | @brief The server acting as a gateway or proxy received an invalid request from the remote server. |
+| OH_HTTP_UNAVAILABLE = 503 | @brief Due to overload or system maintenance, the server is temporarily unable to process client requests. |
+| OH_HTTP_GATEWAY_TIMEOUT = 504 | @brief The server acting as gateway did not obtain requests from the remote server in a timely manner. |
+| OH_HTTP_VERSION = 505 | @brief The version of the HTTP protocol requested by the server. |
 
 ### Http_AddressFamilyType
 
@@ -187,19 +187,15 @@ enum Http_AddressFamilyType
 
 **Description**
 
-Enumerates the IP address family of the target domain name.
-
-<!--Device-enum Http_AddressFamilyType--><!--Device-enum Http_AddressFamilyType-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Defines the address Family.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| HTTP_ADDRESS_FAMILY_DEFAULT = 0 | Default value. The system determines whether to use the IPv4 or IPv6 address of the target domain name.<br><!--Device-HTTP_ADDRESS_FAMILY_DEFAULT = 0--><!--Device-HTTP_ADDRESS_FAMILY_DEFAULT = 0-End--> |
-| HTTP_ADDRESS_FAMILY_ONLY_V4 = 1 | The system resolves only the IPv4 address of the target domain name and ignores the IPv6 address.<br><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V4 = 1--><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V4 = 1-End--> |
-| HTTP_ADDRESS_FAMILY_ONLY_V6 = 2 | The system resolves only the IPv6 address of the target domain name and ignores the IPv4 address.<br><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V6 = 2--><!--Device-HTTP_ADDRESS_FAMILY_ONLY_V6 = 2-End--> |
+| HTTP_ADDRESS_FAMILY_DEFAULT = 0 | Default, The system automatically selects the IPv4 or IPv6 address of the domain name. |
+| HTTP_ADDRESS_FAMILY_ONLY_V4 = 1 | IPv4, Selects the IPv4 address of the domain name. |
+| HTTP_ADDRESS_FAMILY_ONLY_V6 = 2 | IPv6, Selects the IPv4 address of the domain name. |
 
 ### Http_HttpProtocol
 
@@ -209,20 +205,16 @@ enum Http_HttpProtocol
 
 **Description**
 
-Enumerates HTTP protocol versions.
-
-<!--Device-enum Http_HttpProtocol--><!--Device-enum Http_HttpProtocol-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Defines the HTTP version.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_NONE = 0 | Protocol version complies with cURL.<br><!--Device-OH_HTTP_NONE = 0--><!--Device-OH_HTTP_NONE = 0-End--> |
-| OH_HTTP1_1 | HTTP 1.1 version.<br><!--Device-OH_HTTP1_1--><!--Device-OH_HTTP1_1-End--> |
-| OH_HTTP2 | HTTP 2 version.<br><!--Device-OH_HTTP2--><!--Device-OH_HTTP2-End--> |
-| OH_HTTP3 | HTTP 3 version.<br><!--Device-OH_HTTP3--><!--Device-OH_HTTP3-End--> |
+| OH_HTTP_NONE = 0 | Default choose by curl. |
+| OH_HTTP1_1 | HTTP 1.1 version. |
+| OH_HTTP2 | HTTP 2 version. |
+| OH_HTTP3 | HTTP 3 version. |
 
 ### Http_CertType
 
@@ -232,19 +224,15 @@ enum Http_CertType
 
 **Description**
 
-Enumerates certificate types.
-
-<!--Device-enum Http_CertType--><!--Device-enum Http_CertType-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Defines the Cert Type.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_HTTP_PEM = 0 | PEM certificate.<br><!--Device-OH_HTTP_PEM = 0--><!--Device-OH_HTTP_PEM = 0-End--> |
-| OH_HTTP_DER = 1 | DER certificate.<br><!--Device-OH_HTTP_DER = 1--><!--Device-OH_HTTP_DER = 1-End--> |
-| OH_HTTP_P12 = 2 | P12 certificate.<br><!--Device-OH_HTTP_P12 = 2--><!--Device-OH_HTTP_P12 = 2-End--> |
+| OH_HTTP_PEM = 0 | PEM Cert Type. |
+| OH_HTTP_DER = 1 | DER Cert Type. |
+| OH_HTTP_P12 = 2 | P12 Cert Type. |
 
 ### Http_ProxyType
 
@@ -254,19 +242,15 @@ enum Http_ProxyType
 
 **Description**
 
-Enumerates proxy types.
-
-<!--Device-enum Http_ProxyType--><!--Device-enum Http_ProxyType-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Proxy type. Used to distinguish different proxy configurations.
 
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| HTTP_PROXY_NOT_USE | No proxy.<br><!--Device-HTTP_PROXY_NOT_USE--><!--Device-HTTP_PROXY_NOT_USE-End--> |
-| HTTP_PROXY_SYSTEM | The system proxy is used.<br><!--Device-HTTP_PROXY_SYSTEM--><!--Device-HTTP_PROXY_SYSTEM-End--> |
-| HTTP_PROXY_CUSTOM | The custom proxy is used.<br><!--Device-HTTP_PROXY_CUSTOM--><!--Device-HTTP_PROXY_CUSTOM-End--> |
+| HTTP_PROXY_NOT_USE | No proxy |
+| HTTP_PROXY_SYSTEM | System proxy |
+| HTTP_PROXY_CUSTOM | Use custom proxy |
 
 
 ## Function description
@@ -279,11 +263,7 @@ typedef void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t e
 
 **Description**
 
-Callback invoked when an HTTP response is received.
-
-<!--Device-typedef void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode)--><!--Device-typedef void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Callback function that is invoked when response is received.
 
 **Since**: 20
 
@@ -291,8 +271,8 @@ Callback invoked when an HTTP response is received.
 
 | Parameter | Description |
 | -- | -- |
-| [struct Http_Response](capi-netstack-http-response.md) *response | Pointer to the HTTP response. For details, see [Http_Response](capi-netstack-http-response.md). |
-| uint32_t errCode | Response code. |
+| [struct Http_Response](capi-netstack-http-response.md) *response | Http response struct, see [Http_Response](capi-netstack-http-response.md). |
+| uint32_t errCode | Response error code. |
 
 ### Http_OnDataReceiveCallback()
 
@@ -302,11 +282,7 @@ typedef void (*Http_OnDataReceiveCallback)(const char *data, size_t length)
 
 **Description**
 
-Callback invoked when data is received.
-
-<!--Device-typedef void (*Http_OnDataReceiveCallback)(const char *data, size_t length)--><!--Device-typedef void (*Http_OnDataReceiveCallback)(const char *data, size_t length)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Callback function that is invoked when a response body is received.
 
 **Since**: 20
 
@@ -315,7 +291,7 @@ Callback invoked when data is received.
 | Parameter | Description |
 | -- | -- |
 | const char *data | Response body. |
-| size_t length | Length of the response body. |
+| size_t length | Length of response body. |
 
 ### Http_OnProgressCallback()
 
@@ -325,11 +301,7 @@ typedef void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferred
 
 **Description**
 
-Callback invoked during request/response data transmission.
-
-<!--Device-typedef void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)--><!--Device-typedef void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Callback function invoked during request/response data transmission.
 
 **Since**: 20
 
@@ -337,8 +309,8 @@ Callback invoked during request/response data transmission.
 
 | Parameter | Description |
 | -- | -- |
-| uint64_t totalSize | Total data size. |
-| uint64_t transferredSize | Size of transferred data. |
+| uint64_t totalSize | total size. |
+| uint64_t transferredSize | transferred size. |
 
 ### Http_OnHeaderReceiveCallback()
 
@@ -348,11 +320,7 @@ typedef void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers)
 
 **Description**
 
-Callback invoked when an HTTP response header is received.
-
-<!--Device-typedef void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers)--><!--Device-typedef void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Callback called when header are received.
 
 **Since**: 20
 
@@ -360,7 +328,7 @@ Callback invoked when an HTTP response header is received.
 
 | Parameter | Description |
 | -- | -- |
-| [Http_Headers](capi-netstack-http-headers.md) *headers | Pointer to the received request header. For details, see [Http_Headers](capi-netstack-http-headers.md). |
+| [Http_Headers](capi-netstack-http-headers.md) *headers | Headers of the received requests, which points to the pointer of [Http_Headers](capi-netstack-http-headers.md). |
 
 ### Http_OnVoidCallback()
 
@@ -370,11 +338,7 @@ typedef void (*Http_OnVoidCallback)(void)
 
 **Description**
 
-Callback invoked when a DataEnd or Cancel event is received.
-
-<!--Device-typedef void (*Http_OnVoidCallback)(void)--><!--Device-typedef void (*Http_OnVoidCallback)(void)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Empty callback function for requested DataEnd or Canceled event callback.
 
 **Since**: 20
 

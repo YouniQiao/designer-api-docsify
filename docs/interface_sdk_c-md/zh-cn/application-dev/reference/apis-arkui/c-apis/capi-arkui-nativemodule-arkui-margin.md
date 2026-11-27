@@ -8,13 +8,11 @@ typedef struct ArkUI_Margin {...} ArkUI_Margin
 
 外边距属性，定义组件边界与父容器或相邻组件之间的空白区域，影响组件在布局中的实际占用空间和位置。
 
-<!--Device-typedef struct ArkUI_Margin {...} ArkUI_Margin--><!--Device-typedef struct ArkUI_Margin {...} ArkUI_Margin-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **所在头文件：** [water_flow.h](capi-water-flow-h.md)
 
@@ -24,9 +22,9 @@ typedef struct ArkUI_Margin {...} ArkUI_Margin
 
 | 名称 | 描述 |
 | -- | -- |
-| float top | 上外边距，单位为vp。<br><!--Device-float top--><!--Device-float top-End--> |
-| float right | 右外边距，单位为vp。<br><!--Device-float right--><!--Device-float right-End--> |
-| float bottom | 下外边距，单位为vp。<br><!--Device-float bottom--><!--Device-float bottom-End--> |
-| float left | 左外边距，单位为vp。<br><!--Device-float left--><!--Device-float left-End--> |
+| float top | 上外边距，单位为vp。 |
+| float right | 右外边距，单位为vp。 |
+| float bottom | 下外边距，单位为vp。 |
+| float left | 左外边距，单位为vp。 |
 
 

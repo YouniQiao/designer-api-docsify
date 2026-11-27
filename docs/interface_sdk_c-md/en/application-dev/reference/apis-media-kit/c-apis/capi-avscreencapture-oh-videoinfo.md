@@ -1,20 +1,18 @@
 # OH_VideoInfo
 
 ```c
-typedef struct OH_VideoInfo {...} OH_VideoInfo
+struct OH_VideoInfo {...}
 ```
 
 ## Overview
 
 The struct describes the video information.
 
-<!--Device-struct OH_VideoInfo {...}--><!--Device-struct OH_VideoInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
-**Related module**: [AVScreenCapture](capi-media-kit-avscreencapture.md)
+**Related module**: [AVScreenCapture](capi-avscreencapture.md)
 
 **Header file**: [native_avscreen_capture_base.h](capi-native-avscreen-capture-base-h.md)
 
@@ -24,7 +22,7 @@ The struct describes the video information.
 
 | Name | Description |
 | -- | -- |
-| [OH_VideoCaptureInfo](capi-avscreencapture-oh-videocaptureinfo.md) videoCapInfo | Video capture info<br><!--Device-OH_VideoCaptureInfo videoCapInfo--><!--Device-OH_VideoCaptureInfo videoCapInfo-End--> |
-| [OH_VideoEncInfo](capi-avscreencapture-oh-videoencinfo.md) videoEncInfo | Video encoder info<br><!--Device-OH_VideoEncInfo videoEncInfo--><!--Device-OH_VideoEncInfo videoEncInfo-End--> |
+| [OH_VideoCaptureInfo](capi-avscreencapture-oh-videocaptureinfo.md) videoCapInfo | Video capture info |
+| [OH_VideoEncInfo](capi-avscreencapture-oh-videoencinfo.md) videoEncInfo | Video encoder info |
 
 

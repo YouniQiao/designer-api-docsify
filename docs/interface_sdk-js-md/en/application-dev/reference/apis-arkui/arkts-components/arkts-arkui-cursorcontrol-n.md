@@ -9549,7 +9549,7 @@ struct CustomLayout {
 
 ### Example 1: Displaying a Basic Menu
 
-This example demonstrates how to display a basic menu by configuring [MenuElement](#menuelement) for bindMenu.
+This example demonstrates how to display a basic menu by configuring [MenuElement](arkts-arkui-common-comp-menuelement-i.md) for bindMenu.
 
 
 
@@ -9930,7 +9930,7 @@ struct MenuExample {
 
 ### Example 9: Setting the Symbol Icon
 
-This example shows how to display a menu with symbol icons by setting symbolIcon in [MenuElement](#menuelement) of bindMenu.
+This example shows how to display a menu with symbol icons by setting symbolIcon in [MenuElement](arkts-arkui-common-comp-menuelement-i.md) of bindMenu.
 
 
 

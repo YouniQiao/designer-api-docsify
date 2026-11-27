@@ -6,15 +6,13 @@ Defines the event names of all predefined events.<br> In addition to custom even
 
 **Library**: libhiappevent_ndk.z.so
 
-**System capability**: SystemCapability.HiviewDFX.HiAppEvent
-
 **Since**: 8
 
-**Related module**: [HiAppEvent](capi-performance-analysis-kit-hiappevent.md)
+**Related module**: [HiAppEvent](capi-hiappevent.md)
 
 ## Summary
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |

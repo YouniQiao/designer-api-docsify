@@ -1,20 +1,18 @@
 # HiCollie_DetectionParam
 
 ```c
-typedef struct HiCollie_DetectionParam {...} HiCollie_DetectionParam
+struct HiCollie_DetectionParam {...}
 ```
 
 ## 概述
 
-检测业务线程卡顿的相关参数，可用于应用线程卡顿检测与分析等场景。请注意，从API version 12及以上支持。
-
-<!--Device-struct HiCollie_DetectionParam {...}--><!--Device-struct HiCollie_DetectionParam {...}-End-->
+检测业务线程卡顿的相关参数。请注意，API 12及以上支持。
 
 **系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 12
 
-**相关模块：** [HiCollie](capi-performance-analysis-kit-hicollie.md)
+**相关模块：** [HiCollie](capi-hicollie.md)
 
 **所在头文件：** [hicollie.h](capi-hicollie-h.md)
 
@@ -24,7 +22,7 @@ typedef struct HiCollie_DetectionParam {...} HiCollie_DetectionParam
 
 | 名称 | 描述 |
 | -- | -- |
-| int sampleStackTriggerTime | 保留字段，用于后续功能扩展。<br><!--Device-int sampleStackTriggerTime--><!--Device-int sampleStackTriggerTime-End--> |
-| int reserved | 保留字段，用于后续功能扩展。<br><!--Device-int reserved--><!--Device-int reserved-End--> |
+| int sampleStackTriggerTime | 卡顿场景下，触发采样栈的时间阈值。 |
+| int reserved | 扩展参数以供将来使用。 |
 
 

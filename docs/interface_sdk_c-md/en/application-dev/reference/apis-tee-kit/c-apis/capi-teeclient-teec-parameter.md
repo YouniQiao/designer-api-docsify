@@ -8,13 +8,11 @@ typedef union TEEC_Parameter {...} TEEC_Parameter
 
 Defines a parameter of {@code TEEC_Operation}.
 
-<!--Device-typedef union TEEC_Parameter {...} TEEC_Parameter--><!--Device-typedef union TEEC_Parameter {...} TEEC_Parameter-End-->
-
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeClient](capi-tee-kit-teeclient.md)
+**Related module**: [TeeClient](capi-teeclient.md)
 
 **Header file**: [tee_client_type.h](capi-tee-client-type-h.md)
 
@@ -24,9 +22,9 @@ Defines a parameter of {@code TEEC_Operation}.
 
 | Name | Description |
 | -- | -- |
-| [TEEC_TempMemoryReference](capi-teeclient-teec-tempmemoryreference.md) tmpref | Temporary memory reference.<br><!--Device-TEEC_TempMemoryReference tmpref--><!--Device-TEEC_TempMemoryReference tmpref-End--> |
-| [TEEC_RegisteredMemoryReference](capi-teeclient-teec-registeredmemoryreference.md) memref | Registered memory reference.<br><!--Device-TEEC_RegisteredMemoryReference memref--><!--Device-TEEC_RegisteredMemoryReference memref-End--> |
-| [TEEC_Value](capi-teeclient-teec-value.md) value | A value containing two 32-bit values.<br><!--Device-TEEC_Value value--><!--Device-TEEC_Value value-End--> |
-| [TEEC_IonReference](capi-teeclient-teec-ionreference.md) ionref | Ion memory reference.<br><!--Device-TEEC_IonReference ionref--><!--Device-TEEC_IonReference ionref-End--> |
+| [TEEC_TempMemoryReference](capi-teeclient-teec-tempmemoryreference.md) tmpref | Temporary memory reference. |
+| [TEEC_RegisteredMemoryReference](capi-teeclient-teec-registeredmemoryreference.md) memref | Registered memory reference. |
+| [TEEC_Value](capi-teeclient-teec-value.md) value | A value containing two 32-bit values. |
+| [TEEC_IonReference](capi-teeclient-teec-ionreference.md) ionref | Ion memory reference. |
 
 

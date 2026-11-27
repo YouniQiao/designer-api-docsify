@@ -6,27 +6,25 @@ Provides functions and enumerations related to the data value.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Data_Value](capi-rdb-oh-data-value.md) | OH_Data_Value | Define the OH_Data_Value structure type. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_ColumnType](#oh_columntype) | OH_ColumnType | Indicates the column type. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -67,23 +65,19 @@ enum OH_ColumnType
 
 Indicates the column type.
 
-<!--Device-enum OH_ColumnType--><!--Device-enum OH_ColumnType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| TYPE_NULL = 0 | Indicates the column type is NULL. Moved from oh_cursor.h file.<br>**Since**: 10<br><!--Device-TYPE_NULL = 0--><!--Device-TYPE_NULL = 0-End--> |
-| TYPE_INT64 | Indicates the column type is INT64. Moved from oh_cursor.h file.<br>**Since**: 10<br><!--Device-TYPE_INT64--><!--Device-TYPE_INT64-End--> |
-| TYPE_REAL | Indicates the column type is REAL. Moved from oh_cursor.h file.<br>**Since**: 10<br><!--Device-TYPE_REAL--><!--Device-TYPE_REAL-End--> |
-| TYPE_TEXT | Indicates the column type is TEXT. Moved from oh_cursor.h file.<br>**Since**: 10<br><!--Device-TYPE_TEXT--><!--Device-TYPE_TEXT-End--> |
-| TYPE_BLOB | Indicates the column type is BLOB. Moved from oh_cursor.h file.<br>**Since**: 10<br><!--Device-TYPE_BLOB--><!--Device-TYPE_BLOB-End--> |
-| TYPE_ASSET | Indicates the column type is [Data_Asset](capi-rdb-data-asset.md). Moved from oh_cursor.h file.<br>**Since**: 11<br><!--Device-TYPE_ASSET--><!--Device-TYPE_ASSET-End--> |
-| TYPE_ASSETS | Indicates the column type is array of [Data_Asset](capi-rdb-data-asset.md). Moved from oh_cursor.h file.<br>**Since**: 11<br><!--Device-TYPE_ASSETS--><!--Device-TYPE_ASSETS-End--> |
-| TYPE_FLOAT_VECTOR | Indicates the column type is FLOAT VECTOR.<br>**Since**: 18<br><!--Device-TYPE_FLOAT_VECTOR--><!--Device-TYPE_FLOAT_VECTOR-End--> |
-| TYPE_UNLIMITED_INT | Indicates that the column type is a number whose length is greater than 64 bits.<br>**Since**: 18<br><!--Device-TYPE_UNLIMITED_INT--><!--Device-TYPE_UNLIMITED_INT-End--> |
+| TYPE_NULL = 0 | Indicates the column type is NULL. Moved from oh_cursor.h file.<br>**Since**: 10 |
+| TYPE_INT64 | Indicates the column type is INT64. Moved from oh_cursor.h file.<br>**Since**: 10 |
+| TYPE_REAL | Indicates the column type is REAL. Moved from oh_cursor.h file.<br>**Since**: 10 |
+| TYPE_TEXT | Indicates the column type is TEXT. Moved from oh_cursor.h file.<br>**Since**: 10 |
+| TYPE_BLOB | Indicates the column type is BLOB. Moved from oh_cursor.h file.<br>**Since**: 10 |
+| TYPE_ASSET | Indicates the column type is [Data_Asset](capi-rdb-data-asset.md). Moved from oh_cursor.h file.<br>**Since**: 11 |
+| TYPE_ASSETS | Indicates the column type is array of [Data_Asset](capi-rdb-data-asset.md). Moved from oh_cursor.h file.<br>**Since**: 11 |
+| TYPE_FLOAT_VECTOR | Indicates the column type is FLOAT VECTOR.<br>**Since**: 18 |
+| TYPE_UNLIMITED_INT | Indicates that the column type is a number whose length is greater than 64 bits.<br>**Since**: 18 |
 
 
 ## Function description
@@ -97,10 +91,6 @@ OH_Data_Value *OH_Value_Create(void)
 **Description**
 
 Creates an OH_Data_Value instance object.
-
-<!--Device-OH_Data_Value *OH_Value_Create(void)--><!--Device-OH_Data_Value *OH_Value_Create(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -124,10 +114,6 @@ int OH_Value_Destroy(OH_Data_Value *value)
 **Description**
 
 Destroys an OH_Data_Value instance object.
-
-<!--Device-int OH_Value_Destroy(OH_Data_Value *value)--><!--Device-int OH_Value_Destroy(OH_Data_Value *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -153,10 +139,6 @@ int OH_Value_PutNull(OH_Data_Value *value)
 
 Set empty data to the OH_Data_Value object.
 
-<!--Device-int OH_Value_PutNull(OH_Data_Value *value)--><!--Device-int OH_Value_PutNull(OH_Data_Value *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -180,10 +162,6 @@ int OH_Value_PutInt(OH_Data_Value *value, int64_t val)
 **Description**
 
 Set integer data to the OH_Data_Value object.
-
-<!--Device-int OH_Value_PutInt(OH_Data_Value *value, int64_t val)--><!--Device-int OH_Value_PutInt(OH_Data_Value *value, int64_t val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -210,10 +188,6 @@ int OH_Value_PutReal(OH_Data_Value *value, double val)
 
 Set decimal data to the OH_Data_Value object.
 
-<!--Device-int OH_Value_PutReal(OH_Data_Value *value, double val)--><!--Device-int OH_Value_PutReal(OH_Data_Value *value, double val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -239,10 +213,6 @@ int OH_Value_PutText(OH_Data_Value *value, const char *val)
 
 Set string data to the OH_Data_Value object.
 
-<!--Device-int OH_Value_PutText(OH_Data_Value *value, const char *val)--><!--Device-int OH_Value_PutText(OH_Data_Value *value, const char *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -267,10 +237,6 @@ int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t leng
 **Description**
 
 Set binary data to the OH_Data_Value object.
-
-<!--Device-int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t length)--><!--Device-int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -298,10 +264,6 @@ int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)
 
 Set Data_Asset data to the OH_Data_Value object.
 
-<!--Device-int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)--><!--Device-int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -326,10 +288,6 @@ int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, siz
 **Description**
 
 Set multiple Data_Asset data to the OH_Data_Value object.
-
-<!--Device-int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, size_t length)--><!--Device-int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -357,10 +315,6 @@ int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t lengt
 
 Set float array data to the OH_Data_Value object.
 
-<!--Device-int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t length)--><!--Device-int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -386,10 +340,6 @@ int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *tru
 **Description**
 
 Set an integer of any length data to the OH_Data_Value object.
-
-<!--Device-int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *trueForm, size_t length)--><!--Device-int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *trueForm, size_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -418,10 +368,6 @@ int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)
 
 Get data type from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)--><!--Device-int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -446,10 +392,6 @@ int OH_Value_IsNull(OH_Data_Value *value, bool *val)
 **Description**
 
 Check whether the data is empty from OH_Data_Value object.
-
-<!--Device-int OH_Value_IsNull(OH_Data_Value *value, bool *val)--><!--Device-int OH_Value_IsNull(OH_Data_Value *value, bool *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -476,10 +418,6 @@ int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)
 
 Get integer data from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)--><!--Device-int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -504,10 +442,6 @@ int OH_Value_GetReal(OH_Data_Value *value, double *val)
 **Description**
 
 Get decimal data from OH_Data_Value object.
-
-<!--Device-int OH_Value_GetReal(OH_Data_Value *value, double *val)--><!--Device-int OH_Value_GetReal(OH_Data_Value *value, double *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -534,10 +468,6 @@ int OH_Value_GetText(OH_Data_Value *value, const char **val)
 
 Get string data from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetText(OH_Data_Value *value, const char **val)--><!--Device-int OH_Value_GetText(OH_Data_Value *value, const char **val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -562,10 +492,6 @@ int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)
 **Description**
 
 Get binary data from OH_Data_Value object.
-
-<!--Device-int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)--><!--Device-int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -593,10 +519,6 @@ int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)
 
 Get Data_Asset data from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)--><!--Device-int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -622,10 +544,6 @@ int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)
 
 Get multiple Data_Asset size from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -650,10 +568,6 @@ int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, siz
 **Description**
 
 Get multiple Data_Asset data from OH_Data_Value object.
-
-<!--Device-int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -687,10 +601,6 @@ int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)
 
 Get float array data size from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -715,10 +625,6 @@ int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size
 **Description**
 
 Get float array from OH_Data_Value object.
-
-<!--Device-int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -752,10 +658,6 @@ int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)
 
 Get an integer of any length data size from OH_Data_Value object.
 
-<!--Device-int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)--><!--Device-int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -780,10 +682,6 @@ int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm
 **Description**
 
 Get an integer of any length data from OH_Data_Value object.
-
-<!--Device-int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)--><!--Device-int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm, size_t inLen, size_t *outLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 

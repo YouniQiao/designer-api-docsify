@@ -8,13 +8,11 @@ typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_E
 
 定义期望帧率范围，用于设置XComponent渲染时的期望帧率区间，适用于需要对动画或渲染帧率进行精确控制的场景，可帮助在画面流畅度与功耗之间取得平衡。
 
-<!--Device-typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_ExpectedRateRange--><!--Device-typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_ExpectedRateRange-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 11
 
-**相关模块：** [OH_NativeXComponent Native XComponent](capi-arkui-oh-nativexcomponent-native-xcomponent.md)
+**相关模块：** [OH_NativeXComponent Native XComponent](capi-oh-nativexcomponent-native-xcomponent.md)
 
 **所在头文件：** [native_interface_xcomponent.h](capi-native-interface-xcomponent-h.md)
 
@@ -24,8 +22,8 @@ typedef struct OH_NativeXComponent_ExpectedRateRange {...} OH_NativeXComponent_E
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t min | 期望帧率范围最小值。单位为帧/秒。<br><!--Device-int32_t min--><!--Device-int32_t min-End--> |
-| int32_t max | 期望帧率范围最大值。单位为帧/秒。<br><!--Device-int32_t max--><!--Device-int32_t max-End--> |
-| int32_t expected | 期望帧率。单位为帧/秒。<br><!--Device-int32_t expected--><!--Device-int32_t expected-End--> |
+| int32_t min | 期望帧率范围最小值。单位为帧/秒。 |
+| int32_t max | 期望帧率范围最大值。单位为帧/秒。 |
+| int32_t expected | 期望帧率。单位为帧/秒。 |
 
 

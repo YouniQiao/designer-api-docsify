@@ -1,20 +1,18 @@
 # NetConn_NetHandle
 
 ```c
-typedef struct NetConn_NetHandle {...} NetConn_NetHandle
+struct NetConn_NetHandle {...}
 ```
 
 ## Overview
 
 Defines network handles for network IDs.
 
-<!--Device-struct NetConn_NetHandle {...}--><!--Device-struct NetConn_NetHandle {...}-End-->
-
 **System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 11
 
-**Related module**: [NetConnection](capi-network-kit-netconnection.md)
+**Related module**: [NetConnection](capi-netconnection.md)
 
 **Header file**: [net_connection_type.h](capi-net-connection-type-h.md)
 
@@ -24,6 +22,6 @@ Defines network handles for network IDs.
 
 | Name | Description |
 | -- | -- |
-| int32_t netId | Network ID.<br><!--Device-int32_t netId--><!--Device-int32_t netId-End--> |
+| int32_t netId | Network ID. |
 
 

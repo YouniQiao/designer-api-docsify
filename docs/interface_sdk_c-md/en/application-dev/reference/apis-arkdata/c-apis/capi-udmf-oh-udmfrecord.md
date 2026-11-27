@@ -6,15 +6,13 @@ typedef struct OH_UdmfRecord OH_UdmfRecord
 
 ## Overview
 
-Defines a struct for a data record in a unified data object.
-
-<!--Device-typedef struct OH_UdmfRecord OH_UdmfRecord--><!--Device-typedef struct OH_UdmfRecord OH_UdmfRecord-End-->
+Describes the record type in the unified data.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
-**Related module**: [UDMF](capi-arkdata-udmf.md)
+**Related module**: [UDMF](capi-udmf.md)
 
 **Header file**: [udmf.h](capi-udmf-h.md)
 

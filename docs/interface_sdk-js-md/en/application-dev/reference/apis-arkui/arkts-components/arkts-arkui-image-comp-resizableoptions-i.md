@@ -66,7 +66,7 @@ The default width of each direction is **0**. The default unit is vp.
 
 The effect of setting **EdgeWidths** is shown in Figure 1 (Effect of Setting EdgeWidths).
 
-**Type:** EdgeWidths
+**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md)
 
 **Since:** 11
 

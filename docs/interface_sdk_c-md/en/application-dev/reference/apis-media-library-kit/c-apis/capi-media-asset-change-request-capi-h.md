@@ -6,15 +6,13 @@ The file declares the APIs related to media asset change requests. You can use t
 
 **Library**: libmedia_asset_manager.so
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
-**Related module**: [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
+**Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -38,10 +36,6 @@ OH_MediaAssetChangeRequest* OH_MediaAssetChangeRequest_Create(OH_MediaAsset* med
 
 Creates an [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchangerequest.md) instance.
 
-<!--Device-OH_MediaAssetChangeRequest* OH_MediaAssetChangeRequest_Create(OH_MediaAsset* mediaAsset)--><!--Device-OH_MediaAssetChangeRequest* OH_MediaAssetChangeRequest_Create(OH_MediaAsset* mediaAsset)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -54,7 +48,7 @@ Creates an [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchan
 
 | Type | Description |
 | -- | -- |
-| [OH_MediaAssetChangeRequest*](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | An instance of OH_MediaAssetChangeRequest. If the creation fails, return a NULL pointer. |
+| [OH_MediaAssetChangeRequest*](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | MEDIA_LIBRARY_OK if the method call succeeds. <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAssetChangeRequest_AddResourceWithUri()
 
@@ -65,10 +59,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithUri(OH_MediaAss
 **Description**
 
 Adds a resource of the given URI.
-
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithUri(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, char* fileUri)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithUri(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, char* fileUri)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 13
 
@@ -95,10 +85,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithBuffer(OH_Media
 **Description**
 
 Adds a resource using ArrayBuffer data.
-
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithBuffer(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, uint8_t* buffer, uint32_t length)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithBuffer(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, uint8_t* buffer, uint32_t length)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 
@@ -127,10 +113,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_GetWriteCacheHandler(OH_MediaA
 
 Obtains the handler used for writing a file to cache.
 
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_GetWriteCacheHandler(OH_MediaAssetChangeRequest* changeRequest, int32_t* fd)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_GetWriteCacheHandler(OH_MediaAssetChangeRequest* changeRequest, int32_t* fd)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Required permission**: ohos.permission.WRITE_IMAGEVIDEO
 
 **Since**: 13
@@ -158,10 +140,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetC
 
 Saves the photo taken by the camera.
 
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ImageFileType imageFileType)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ImageFileType imageFileType)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -187,10 +165,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_DiscardCameraPhoto(OH_MediaAss
 
 Discards the photo taken by the camera.
 
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_DiscardCameraPhoto(OH_MediaAssetChangeRequest* changeRequest)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_DiscardCameraPhoto(OH_MediaAssetChangeRequest* changeRequest)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -214,10 +188,6 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_Release(OH_MediaAssetChangeReq
 **Description**
 
 Releases an [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchangerequest.md) instance.
-
-<!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_Release(OH_MediaAssetChangeRequest* changeRequest)--><!--Device-MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_Release(OH_MediaAssetChangeRequest* changeRequest)-End-->
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 

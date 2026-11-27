@@ -6,22 +6,20 @@ The file declares the capture session concepts.
 
 **Library**: libohcamera.so
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) | CaptureSession_Callbacks | The struct describes the callbacks related to a capture session. |
+| [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) | - | The struct describes the callbacks related to a capture session. |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) | Camera_CaptureSession | The struct describes the capture session object. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -61,9 +59,6 @@ The file declares the capture session concepts.
 | [typedef void (\*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState)](#oh_capturesession_onexposurestatechange) | OH_CaptureSession_OnExposureStateChange | Defines a callback function that is invoked when the exposure state changes. |
 | [Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)](#oh_capturesession_registerexposurestatechangecallback) | - | Registers a callback for exposure state changes.<br> After this callback is registered, the callback is invoked when the exposure state changes in the capture session. |
 | [Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)](#oh_capturesession_unregisterexposurestatechangecallback) | - | Unregisters the callback for exposure state changes. |
-| [typedef void (\*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)](#oh_capturesession_oncameradeviceswitchrequest) | OH_CaptureSession_OnCameraDeviceSwitchRequest | Defines a callback function that is invoked when the camera device switch request happens. |
-| [Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_registercameradeviceswitchrequestcallback) | - | Registers a callback for camera device switch request.<br> After this callback is registered, the callback is invoked when the camera device switch request happens in the capture session. |
-| [Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)](#oh_capturesession_unregistercameradeviceswitchrequestcallback) | - | Unregisters the callback for camera device switch request. |
 | [Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession* session, Camera_ExposureMode exposureMode, bool* isSupported)](#oh_capturesession_isexposuremodesupported) | - | Checks whether an exposure mode is supported. |
 | [Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode* exposureMode)](#oh_capturesession_getexposuremode) | - | Obtains the exposure mode in use. This API directly returns an invalid value if you have not set the exposure mode using [OH_CaptureSession_SetExposureMode](capi-capture-session-h.md#oh_capturesession_setexposuremode). |
 | [Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode, bool* isSupported)](#oh_capturesession_iswhitebalancemodesupported) | - | Checks whether the specified white balance mode is supported. |
@@ -161,6 +156,22 @@ The file declares the capture session concepts.
 | [Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)](#oh_capturesession_lockfocustracking) | - | Lock focus tracking, can be unlocked by [OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking). |
 | [Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)](#oh_capturesession_unlockfocustracking) | - | Unlock focus tracking. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState) | Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report focus status changes of a capture session.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode) | Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report capture session errors.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo) | Defines the callback invoked when smooth zoom is triggered for a capture session.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo) | Capture session device switch status callback.<br>**Since**: 13<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel) | Defines the callback used to listen for capture system pressure level changes.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState) | Capture session flash state change callback.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState) | Defines a callback function that is invoked when the exposure state changes.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue) | Defines the callback used to listen for ISO changes in a camera session.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration) | Capture session exposure duration change callback.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected) | Defines the callback used to listen for macro status changes of a camera session.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+| void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo) | Defines the callback used to listen for effect status changes of a camera controller.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Camera.Core |
+
 ## Function description
 
 ### OH_CaptureSession_OnFocusStateChange()
@@ -172,10 +183,6 @@ typedef void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* sess
 **Description**
 
 Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report focus status changes of a capture session.
-
-<!--Device-typedef void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState)--><!--Device-typedef void (*OH_CaptureSession_OnFocusStateChange)(Camera_CaptureSession* session, Camera_FocusState focusState)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -195,10 +202,6 @@ typedef void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera
 **Description**
 
 Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md) struct and used to report capture session errors.
-
-<!--Device-typedef void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode)--><!--Device-typedef void (*OH_CaptureSession_OnError)(Camera_CaptureSession* session, Camera_ErrorCode errorCode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -224,10 +227,6 @@ typedef void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* sessio
 
 Defines the callback invoked when smooth zoom is triggered for a capture session.
 
-<!--Device-typedef void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo)--><!--Device-typedef void (*OH_CaptureSession_OnSmoothZoomInfo)(Camera_CaptureSession* session, Camera_SmoothZoomInfo* smoothZoomInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -246,10 +245,6 @@ typedef void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureS
 **Description**
 
 Capture session device switch status callback.
-
-<!--Device-typedef void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo)--><!--Device-typedef void (*OH_CaptureSession_OnAutoDeviceSwitchStatusChange)(Camera_CaptureSession* session, Camera_AutoDeviceSwitchStatusInfo* autoDeviceSwitchStatusInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 13
 
@@ -270,10 +265,6 @@ typedef void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSess
 
 Defines the callback used to listen for capture system pressure level changes.
 
-<!--Device-typedef void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel)--><!--Device-typedef void (*OH_CaptureSession_OnSystemPressureLevelChange)(Camera_CaptureSession* session, Camera_SystemPressureLevel systemPressureLevel)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -292,10 +283,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterCallback(Camera_CaptureSession* sessi
 **Description**
 
 Registers a callback to listen for capture session events.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterCallback(Camera_CaptureSession* session, CaptureSession_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterCallback(Camera_CaptureSession* session, CaptureSession_Callbacks* callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -322,10 +309,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterCallback(Camera_CaptureSession* ses
 
 Unregisters the callback used to listen for capture session events.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterCallback(Camera_CaptureSession* session, CaptureSession_Callbacks* callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterCallback(Camera_CaptureSession* session, CaptureSession_Callbacks* callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -350,10 +333,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterSmoothZoomInfoCallback(Camera_Capture
 **Description**
 
 Registers a callback to listen for smooth zoom events.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterSmoothZoomInfoCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSmoothZoomInfo smoothZoomInfoCallback)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterSmoothZoomInfoCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSmoothZoomInfo smoothZoomInfoCallback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -380,10 +359,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterSmoothZoomInfoCallback(Camera_Captu
 
 Unregisters the callback used to listen for smooth zoom events.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterSmoothZoomInfoCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSmoothZoomInfo smoothZoomInfoCallback)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterSmoothZoomInfoCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSmoothZoomInfo smoothZoomInfoCallback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -408,10 +383,6 @@ Camera_ErrorCode OH_CaptureSession_SetSessionMode(Camera_CaptureSession* session
 **Description**
 
 Sets a session mode. This API cannot be called after [OH_CaptureSession_BeginConfig](capi-capture-session-h.md#oh_capturesession_beginconfig). You are advised to call this function immediately after [OH_CameraManager_CreateCaptureSession](capi-camera-manager-h.md#oh_cameramanager_createcapturesession).
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetSessionMode(Camera_CaptureSession* session, Camera_SceneMode sceneMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetSessionMode(Camera_CaptureSession* session, Camera_SceneMode sceneMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -438,10 +409,6 @@ Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* sessio
 
 Marks a preview output stream as secure output.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -467,10 +434,6 @@ Camera_ErrorCode OH_CaptureSession_BeginConfig(Camera_CaptureSession* session)
 
 Starts the configuration for a capture session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_BeginConfig(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_BeginConfig(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -495,10 +458,6 @@ Camera_ErrorCode OH_CaptureSession_CommitConfig(Camera_CaptureSession* session)
 
 Commits the configuration for a capture session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_CommitConfig(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_CommitConfig(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -522,10 +481,6 @@ Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Came
 **Description**
 
 Adds a Camera_Input instance to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Camera_Input* cameraInput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Camera_Input* cameraInput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -552,10 +507,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, C
 
 Removes a Camera_Input instance from a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, Camera_Input* cameraInput)--><!--Device-Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, Camera_Input* cameraInput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -580,10 +531,6 @@ Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* sessi
 **Description**
 
 Adds a PreviewOutput instance to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -610,10 +557,6 @@ Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* se
 
 Removes a PreviewOutput instance from a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* previewOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -638,10 +581,6 @@ Camera_ErrorCode OH_CaptureSession_AddPhotoOutput(Camera_CaptureSession* session
 **Description**
 
 Adds a PhotoOutput instance to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddPhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* photoOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddPhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* photoOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -668,10 +607,6 @@ Camera_ErrorCode OH_CaptureSession_RemovePhotoOutput(Camera_CaptureSession* sess
 
 Removes a PhotoOutput instance from a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_RemovePhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* photoOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_RemovePhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* photoOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -696,10 +631,6 @@ Camera_ErrorCode OH_CaptureSession_AddVideoOutput(Camera_CaptureSession* session
 **Description**
 
 Adds a **VideoOutput** instance to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* videoOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* videoOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -726,10 +657,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveVideoOutput(Camera_CaptureSession* sess
 
 Removes a VideoOutput instance from a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_RemoveVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* videoOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_RemoveVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* videoOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -754,10 +681,6 @@ Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* sess
 **Description**
 
 Adds a MetadataOutput instance to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* session, Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* session, Camera_MetadataOutput* metadataOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -784,10 +707,6 @@ Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* s
 
 Removes a MetadataOutput instance from a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* session, Camera_MetadataOutput* metadataOutput)--><!--Device-Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* session, Camera_MetadataOutput* metadataOutput)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -813,10 +732,6 @@ Camera_ErrorCode OH_CaptureSession_Start(Camera_CaptureSession* session)
 
 Starts a capture session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_Start(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_Start(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -840,10 +755,6 @@ Camera_ErrorCode OH_CaptureSession_Stop(Camera_CaptureSession* session)
 **Description**
 
 Stops a capture session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_Stop(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_Stop(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -869,10 +780,6 @@ Camera_ErrorCode OH_CaptureSession_Release(Camera_CaptureSession* session)
 
 Releases a CaptureSession instance.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_Release(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_Release(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -896,10 +803,6 @@ Camera_ErrorCode OH_CaptureSession_HasFlash(Camera_CaptureSession* session, bool
 **Description**
 
 Checks whether the device has flash.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_HasFlash(Camera_CaptureSession* session, bool* hasFlash)--><!--Device-Camera_ErrorCode OH_CaptureSession_HasFlash(Camera_CaptureSession* session, bool* hasFlash)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -925,10 +828,6 @@ Camera_ErrorCode OH_CaptureSession_IsFlashModeSupported(Camera_CaptureSession* s
 **Description**
 
 Checks whether a flash mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsFlashModeSupported(Camera_CaptureSession* session, Camera_FlashMode flashMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsFlashModeSupported(Camera_CaptureSession* session, Camera_FlashMode flashMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -956,10 +855,6 @@ Camera_ErrorCode OH_CaptureSession_GetFlashMode(Camera_CaptureSession* session, 
 
 Obtains the flash mode in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetFlashMode(Camera_CaptureSession* session, Camera_FlashMode* flashMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetFlashMode(Camera_CaptureSession* session, Camera_FlashMode* flashMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -984,10 +879,6 @@ Camera_ErrorCode OH_CaptureSession_SetFlashMode(Camera_CaptureSession* session, 
 **Description**
 
 Sets a flash mode for the device.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetFlashMode(Camera_CaptureSession* session, Camera_FlashMode flashMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetFlashMode(Camera_CaptureSession* session, Camera_FlashMode flashMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -1014,10 +905,6 @@ typedef void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession
 
 Capture session flash state change callback.
 
-<!--Device-typedef void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState)--><!--Device-typedef void (*OH_CaptureSession_OnFlashStateChange)(const Camera_CaptureSession* session, OH_Camera_FlashState flashState)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1036,10 +923,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterFlashStateChangeCallback(const Camera
 **Description**
 
 Register flash state change event callback.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterFlashStateChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnFlashStateChange flashStateChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterFlashStateChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnFlashStateChange flashStateChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -1066,10 +949,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterFlashStateChangeCallback(const Came
 
 Unregister flash state change callback.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterFlashStateChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnFlashStateChange flashStateChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterFlashStateChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnFlashStateChange flashStateChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1095,10 +974,6 @@ typedef void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera
 
 Defines a callback function that is invoked when the exposure state changes.
 
-<!--Device-typedef void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState)--><!--Device-typedef void (*OH_CaptureSession_OnExposureStateChange)(void* context, OH_Camera_ExposureState exposureState)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1117,10 +992,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Cam
 **Description**
 
 Registers a callback for exposure state changes.<br> After this callback is registered, the callback is invoked when the exposure state changes in the capture session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1148,10 +1019,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const C
 
 Unregisters the callback for exposure state changes.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterExposureStateChangeCallback(const Camera_CaptureSession* session, void* context, OH_CaptureSession_OnExposureStateChange callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1168,102 +1035,6 @@ Unregisters the callback for exposure state changes.
 | -- | -- |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
-### OH_CaptureSession_OnCameraDeviceSwitchRequest()
-
-```c
-typedef void (*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)
-```
-
-**Description**
-
-Defines a callback function that is invoked when the camera device switch request happens.
-
-<!--Device-typedef void (*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)--><!--Device-typedef void (*OH_CaptureSession_OnCameraDeviceSwitchRequest)(void *userContext, Camera_CaptureSession *userSession, Camera_Device *userDevice)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Resource release**: OH_CameraManager_DeleteCameraDevices {userDevice}
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| void *userContext | [out] Output parameter indicating the pointer to the user-defined context. |
-| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *userSession | [out] Output parameter indicating the pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
-| [Camera_Device](capi-oh-camera-camera-device.md) *userDevice | [out] Output parameter indicating the pointer to the [Camera_Device](capi-oh-camera-camera-device.md) instance. |
-
-### OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback()
-
-```c
-Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
-```
-
-**Description**
-
-Registers a callback for camera device switch request.<br> After this callback is registered, the callback is invoked when the camera device switch request happens in the capture session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [in] the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
-| void *context | [in] Indicates the pointer to the user-defined context. |
-| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [in] [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) Indicates the callback to register. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
-
-**Reference**:
-
-OH_CaptureSession_OnCameraDeviceSwitchRequest for further information
-
-
-### OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback()
-
-```c
-Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)
-```
-
-**Description**
-
-Unregisters the callback for camera device switch request.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterCameraDeviceSwitchRequestCallback(const Camera_CaptureSession *session, void *context, OH_CaptureSession_OnCameraDeviceSwitchRequest callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) *session | [in] the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) instance. |
-| void *context | [in] Indicates the pointer to the user-defined context specified when the callback was registered. |
-| [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) callback | [in] [OH_CaptureSession_OnCameraDeviceSwitchRequest](capi-capture-session-h.md#oh_capturesession_oncameradeviceswitchrequest) Indicates the callback to unregister. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
-
-**Reference**:
-
-OH_CaptureSession_OnCameraDeviceSwitchRequest for further information
-
-
 ### OH_CaptureSession_IsExposureModeSupported()
 
 ```c
@@ -1273,10 +1044,6 @@ Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession
 **Description**
 
 Checks whether an exposure mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession* session, Camera_ExposureMode exposureMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsExposureModeSupported(Camera_CaptureSession* session, Camera_ExposureMode exposureMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -1304,10 +1071,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* sessio
 
 Obtains the exposure mode in use. This API directly returns an invalid value if you have not set the exposure mode using [OH_CaptureSession_SetExposureMode](capi-capture-session-h.md#oh_capturesession_setexposuremode).
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode* exposureMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode* exposureMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -1332,10 +1095,6 @@ Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSes
 **Description**
 
 Checks whether the specified white balance mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsWhiteBalanceModeSupported(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -1363,10 +1122,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceMode(Camera_CaptureSession* se
 
 Obtains the white balance mode in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceMode(Camera_CaptureSession* session, Camera_WhiteBalanceMode* whiteBalanceMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceMode(Camera_CaptureSession* session, Camera_WhiteBalanceMode* whiteBalanceMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1392,10 +1147,6 @@ Camera_ErrorCode OH_CaptureSession_SetWhiteBalanceMode(Camera_CaptureSession* se
 
 Sets a white balance mode.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetWhiteBalanceMode(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetWhiteBalanceMode(Camera_CaptureSession* session, Camera_WhiteBalanceMode whiteBalanceMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1420,10 +1171,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceRange(Camera_CaptureSession* s
 **Description**
 
 Obtains the supported white balance color temperature range.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceRange(Camera_CaptureSession* session, int32_t *minColorTemperature, int32_t *maxColorTemperature)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalanceRange(Camera_CaptureSession* session, int32_t *minColorTemperature, int32_t *maxColorTemperature)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -1451,10 +1198,6 @@ Camera_ErrorCode OH_CaptureSession_GetWhiteBalance(Camera_CaptureSession* sessio
 
 Obtains the white balance color temperature.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalance(Camera_CaptureSession* session, int32_t *colorTemperature)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetWhiteBalance(Camera_CaptureSession* session, int32_t *colorTemperature)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1480,10 +1223,6 @@ Camera_ErrorCode OH_CaptureSession_SetWhiteBalance(Camera_CaptureSession* sessio
 
 Sets the white balance color temperature. Before setting this parameter, you are advised to use [OH_CaptureSession_GetWhiteBalanceRange](capi-capture-session-h.md#oh_capturesession_getwhitebalancerange) to obtain the supported white balance color temperature range.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetWhiteBalance(Camera_CaptureSession* session, int32_t colorTemperature)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetWhiteBalance(Camera_CaptureSession* session, int32_t colorTemperature)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1508,10 +1247,6 @@ Camera_ErrorCode OH_CaptureSession_GetColorTintRange(const Camera_CaptureSession
 **Description**
 
 Obtains the supported white balance color tint range.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetColorTintRange(const Camera_CaptureSession* session, int32_t *minColorTint, int32_t *maxColorTint)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetColorTintRange(const Camera_CaptureSession* session, int32_t *minColorTint, int32_t *maxColorTint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1539,10 +1274,6 @@ Camera_ErrorCode OH_CaptureSession_GetColorTint(const Camera_CaptureSession* ses
 
 Obtains the white balance color tint.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetColorTint(const Camera_CaptureSession* session, int32_t *colorTint)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetColorTint(const Camera_CaptureSession* session, int32_t *colorTint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1567,10 +1298,6 @@ Camera_ErrorCode OH_CaptureSession_SetColorTint(Camera_CaptureSession* session, 
 **Description**
 
 Sets the white balance color tint.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetColorTint(Camera_CaptureSession* session, int32_t colorTint)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetColorTint(Camera_CaptureSession* session, int32_t colorTint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1597,10 +1324,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureMode(Camera_CaptureSession* sessio
 
 Sets an exposure mode for the device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode exposureMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureMode(Camera_CaptureSession* session, Camera_ExposureMode exposureMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -1625,10 +1348,6 @@ Camera_ErrorCode OH_CaptureSession_GetMeteringPoint(Camera_CaptureSession* sessi
 **Description**
 
 Obtains the metering point in use.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetMeteringPoint(Camera_CaptureSession* session, Camera_Point* point)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetMeteringPoint(Camera_CaptureSession* session, Camera_Point* point)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -1655,10 +1374,6 @@ Camera_ErrorCode OH_CaptureSession_SetMeteringPoint(Camera_CaptureSession* sessi
 
 Sets the metering point, which is the center point of the metering rectangle.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetMeteringPoint(Camera_CaptureSession* session, Camera_Point point)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetMeteringPoint(Camera_CaptureSession* session, Camera_Point point)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -1683,10 +1398,6 @@ Camera_ErrorCode OH_CaptureSession_IsExposureMeteringModeSupported(const Camera_
 **Description**
 
 Check whether a specified exposure metering mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsExposureMeteringModeSupported(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode exposureMeteringMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsExposureMeteringModeSupported(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode exposureMeteringMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -1714,10 +1425,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureMeteringMode(const Camera_CaptureS
 
 Get current exposure metering mode.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureMeteringMode(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode* exposureMeteringMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureMeteringMode(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode* exposureMeteringMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1743,10 +1450,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureMeteringMode(const Camera_CaptureS
 
 Set exposure metering mode.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureMeteringMode(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode exposureMeteringMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureMeteringMode(const Camera_CaptureSession* session, OH_Camera_ExposureMeteringMode exposureMeteringMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1771,10 +1474,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedISORange(const Camera_CaptureSess
 **Description**
 
 Query the iso range.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedISORange(const Camera_CaptureSession* session, int32_t *minIsoValue, int32_t *maxIsoValue)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedISORange(const Camera_CaptureSession* session, int32_t *minIsoValue, int32_t *maxIsoValue)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -1802,10 +1501,6 @@ Camera_ErrorCode OH_CaptureSession_GetIso(const Camera_CaptureSession* session, 
 
 Get current iso sensitivity value, as defined in ISO 12232:2006.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetIso(const Camera_CaptureSession* session, int32_t* isoValue)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetIso(const Camera_CaptureSession* session, int32_t* isoValue)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1831,10 +1526,6 @@ Camera_ErrorCode OH_CaptureSession_SetIso(const Camera_CaptureSession* session, 
 
 Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control can not effective if ExposureMode is set to EXPOSURE_MODE_LOCKED.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetIso(const Camera_CaptureSession* session, int32_t isoValue)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetIso(const Camera_CaptureSession* session, int32_t isoValue)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1848,7 +1539,7 @@ Sets ISO sensitivity value, within the range of getSupportedIsoRange. This contr
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](../../apis-core-file-kit/c-apis/capi-oh-cloud-disk-manager-h.md#clouddisk_errorreason) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_OnIsoChange()
 
@@ -1859,10 +1550,6 @@ typedef void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, in
 **Description**
 
 Defines the callback used to listen for ISO changes in a camera session.
-
-<!--Device-typedef void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue)--><!--Device-typedef void (*OH_CaptureSession_OnIsoChange)(Camera_CaptureSession* session, int32_t isoValue)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 22
 
@@ -1882,10 +1569,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterIsoChangeCallback(Camera_CaptureSessi
 **Description**
 
 Registers a callback to listen for ISO changes.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterIsoChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnIsoChange isoChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterIsoChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnIsoChange isoChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 22
 
@@ -1912,10 +1595,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterIsoChangeCallback(Camera_CaptureSes
 
 Unregisters the callback used to listen for ISO changes.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterIsoChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnIsoChange isoChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterIsoChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnIsoChange isoChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -1940,10 +1619,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedPhysicalApertures(const Camera_Ca
 **Description**
 
 Gets the supported physical apertures list. Release the physical apertures memory by calling [OH_CaptureSession_DeletePhysicalApertures](capi-capture-session-h.md#oh_capturesession_deletephysicalapertures).
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedPhysicalApertures(const Camera_CaptureSession* session, OH_Camera_PhysicalAperture** apertures, uint32_t* size)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedPhysicalApertures(const Camera_CaptureSession* session, OH_Camera_PhysicalAperture** apertures, uint32_t* size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -1971,10 +1646,6 @@ Camera_ErrorCode OH_CaptureSession_GetPhysicalAperture(const Camera_CaptureSessi
 
 Gets the current physical aperture value
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetPhysicalAperture(const Camera_CaptureSession* session, double* aperture)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetPhysicalAperture(const Camera_CaptureSession* session, double* aperture)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -1999,10 +1670,6 @@ Camera_ErrorCode OH_CaptureSession_DeletePhysicalApertures(const Camera_CaptureS
 **Description**
 
 Delete the physical apertures.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_DeletePhysicalApertures(const Camera_CaptureSession* session, OH_Camera_PhysicalAperture* apertures, uint32_t size)--><!--Device-Camera_ErrorCode OH_CaptureSession_DeletePhysicalApertures(const Camera_CaptureSession* session, OH_Camera_PhysicalAperture* apertures, uint32_t size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -2030,10 +1697,6 @@ Camera_ErrorCode OH_CaptureSession_SetPhysicalAperture(const Camera_CaptureSessi
 
 Set physical aperture value.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetPhysicalAperture(const Camera_CaptureSession* session, double aperture)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetPhysicalAperture(const Camera_CaptureSession* session, double aperture)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -2058,10 +1721,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureBiasRange(Camera_CaptureSession* s
 **Description**
 
 Obtains the exposure compensation values of the device.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureBiasRange(Camera_CaptureSession* session, float* minExposureBias, float* maxExposureBias, float* step)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureBiasRange(Camera_CaptureSession* session, float* minExposureBias, float* maxExposureBias, float* step)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -2090,10 +1749,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureBias(Camera_CaptureSession* sessio
 
 Sets an exposure compensation value for the device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureBias(Camera_CaptureSession* session, float exposureBias)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureBias(Camera_CaptureSession* session, float exposureBias)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2119,10 +1774,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureBias(Camera_CaptureSession* sessio
 
 Obtains the exposure compensation value in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureBias(Camera_CaptureSession* session, float* exposureBias)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureBias(Camera_CaptureSession* session, float* exposureBias)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2147,10 +1798,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedExposureDurationRange(const Camer
 **Description**
 
 Get the supported range of exposure durations. Units: Microseconds.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedExposureDurationRange(const Camera_CaptureSession* session, int32_t* minExposureDuration, int32_t* maxExposureDuration)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedExposureDurationRange(const Camera_CaptureSession* session, int32_t* minExposureDuration, int32_t* maxExposureDuration)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -2178,10 +1825,6 @@ Camera_ErrorCode OH_CaptureSession_SetExposureDuration(const Camera_CaptureSessi
 
 Set exposure duration. Units: Microseconds.This control is only effective if ExposureMode is set to EXPOSURE_MODE_MANUAL. If the sensor can't expose this duration exactly, it will shorten the duration to the nearest supported value, which is reporeted by Callback [OH_CaptureSession_OnExposureDurationChange](capi-capture-session-h.md#oh_capturesession_onexposuredurationchange).
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureDuration(const Camera_CaptureSession* session, int32_t exposureDuration)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetExposureDuration(const Camera_CaptureSession* session, int32_t exposureDuration)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -2206,10 +1849,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureDuration(const Camera_CaptureSessi
 **Description**
 
 Get current exposure duration. Units: Microseconds.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureDuration(const Camera_CaptureSession* session, int32_t* exposureDuration)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureDuration(const Camera_CaptureSession* session, int32_t* exposureDuration)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -2236,10 +1875,6 @@ typedef void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureS
 
 Capture session exposure duration change callback.
 
-<!--Device-typedef void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration)--><!--Device-typedef void (*OH_CaptureSession_OnExposureDurationChange)(const Camera_CaptureSession* session, int32_t exposureDuration)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -2258,10 +1893,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterExposureInfoChangeCallback(const Came
 **Description**
 
 Register exposure info change event callback. After exposure parameters are changed, the system will returns the updated exposure infos.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterExposureInfoChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnExposureDurationChange exposureDurationChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterExposureInfoChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnExposureDurationChange exposureDurationChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -2288,10 +1919,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterExposureInfoChangeCallback(const Ca
 
 Unregister exposure info change callback.Invoke this method after finishing camera operations.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterExposureInfoChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnExposureDurationChange exposureDurationChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterExposureInfoChangeCallback(const Camera_CaptureSession* session, OH_CaptureSession_OnExposureDurationChange exposureDurationChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -2316,10 +1943,6 @@ Camera_ErrorCode OH_CaptureSession_IsFocusModeSupported(Camera_CaptureSession* s
 **Description**
 
 Checks whether a focus mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsFocusModeSupported(Camera_CaptureSession* session, Camera_FocusMode focusMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsFocusModeSupported(Camera_CaptureSession* session, Camera_FocusMode focusMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -2347,10 +1970,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusMode(Camera_CaptureSession* session, 
 
 Obtains the focus mode in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusMode(Camera_CaptureSession* session, Camera_FocusMode* focusMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusMode(Camera_CaptureSession* session, Camera_FocusMode* focusMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2375,10 +1994,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusMode(Camera_CaptureSession* session, 
 **Description**
 
 Sets a focus mode for the device.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusMode(Camera_CaptureSession* session, Camera_FocusMode focusMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusMode(Camera_CaptureSession* session, Camera_FocusMode focusMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -2405,10 +2020,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusPoint(Camera_CaptureSession* session,
 
 Obtains the focal point in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusPoint(Camera_CaptureSession* session, Camera_Point* focusPoint)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusPoint(Camera_CaptureSession* session, Camera_Point* focusPoint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2434,10 +2045,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusPoint(Camera_CaptureSession* session,
 
 Sets a focal point for the device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusPoint(Camera_CaptureSession* session, Camera_Point focusPoint)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusPoint(Camera_CaptureSession* session, Camera_Point focusPoint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2462,10 +2069,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomRatioRange(Camera_CaptureSession* sess
 **Description**
 
 Obtains the supported zoom ratio range.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomRatioRange(Camera_CaptureSession* session, float* minZoom, float* maxZoom)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomRatioRange(Camera_CaptureSession* session, float* minZoom, float* maxZoom)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -2493,10 +2096,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomRatio(Camera_CaptureSession* session, 
 
 Obtains the zoom ratio in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomRatio(Camera_CaptureSession* session, float* zoom)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomRatio(Camera_CaptureSession* session, float* zoom)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2522,10 +2121,6 @@ Camera_ErrorCode OH_CaptureSession_SetZoomRatio(Camera_CaptureSession* session, 
 
 Sets a zoom ratio for the device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetZoomRatio(Camera_CaptureSession* session, float zoom)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetZoomRatio(Camera_CaptureSession* session, float zoom)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2550,10 +2145,6 @@ Camera_ErrorCode OH_CaptureSession_IsVideoStabilizationModeSupported(Camera_Capt
 **Description**
 
 Checks whether a video stabilization mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsVideoStabilizationModeSupported(Camera_CaptureSession* session, Camera_VideoStabilizationMode mode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsVideoStabilizationModeSupported(Camera_CaptureSession* session, Camera_VideoStabilizationMode mode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -2581,10 +2172,6 @@ Camera_ErrorCode OH_CaptureSession_GetVideoStabilizationMode(Camera_CaptureSessi
 
 Obtains the video stabilization mode in use.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetVideoStabilizationMode(Camera_CaptureSession* session, Camera_VideoStabilizationMode* mode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetVideoStabilizationMode(Camera_CaptureSession* session, Camera_VideoStabilizationMode* mode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2610,10 +2197,6 @@ Camera_ErrorCode OH_CaptureSession_SetVideoStabilizationMode(Camera_CaptureSessi
 
 Sets a video stabilization mode for the device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetVideoStabilizationMode(Camera_CaptureSession* session, Camera_VideoStabilizationMode mode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetVideoStabilizationMode(Camera_CaptureSession* session, Camera_VideoStabilizationMode mode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2638,10 +2221,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, C
 **Description**
 
 Checks whether a Camera_Input instance can be added to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, Camera_Input* cameraInput, bool* isSuccessful)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, Camera_Input* cameraInput, bool* isSuccessful)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -2669,10 +2248,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* se
 
 Checks whether a PreviewOutput instance can be added to a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* cameraOutput, bool* isSuccessful)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* session, Camera_PreviewOutput* cameraOutput, bool* isSuccessful)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2698,10 +2273,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddPhotoOutput(Camera_CaptureSession* sess
 **Description**
 
 Checks whether a PhotoOutput instance can be added to a session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanAddPhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* cameraOutput, bool* isSuccessful)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanAddPhotoOutput(Camera_CaptureSession* session, Camera_PhotoOutput* cameraOutput, bool* isSuccessful)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -2729,10 +2300,6 @@ Camera_ErrorCode OH_CaptureSession_CanAddVideoOutput(Camera_CaptureSession* sess
 
 Checks whether a **VideoOutput** instance can be added to a session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanAddVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* cameraOutput, bool* isSuccessful)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanAddVideoOutput(Camera_CaptureSession* session, Camera_VideoOutput* cameraOutput, bool* isSuccessful)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2759,10 +2326,6 @@ Camera_ErrorCode OH_CaptureSession_CanPreconfig(Camera_CaptureSession* session, 
 
 Checks whether a preconfigured resolution type is supported.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanPreconfig(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, bool* canPreconfig)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanPreconfig(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, bool* canPreconfig)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2788,10 +2351,6 @@ Camera_ErrorCode OH_CaptureSession_CanPreconfigWithRatio(Camera_CaptureSession* 
 **Description**
 
 Checks whether a preconfigured resolution type with an aspect ratio is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_CanPreconfigWithRatio(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, Camera_PreconfigRatio preconfigRatio, bool* canPreconfig)--><!--Device-Camera_ErrorCode OH_CaptureSession_CanPreconfigWithRatio(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, Camera_PreconfigRatio preconfigRatio, bool* canPreconfig)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -2820,10 +2379,6 @@ Camera_ErrorCode OH_CaptureSession_Preconfig(Camera_CaptureSession* session, Cam
 
 Sets a preconfigured resolution type.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_Preconfig(Camera_CaptureSession* session, Camera_PreconfigType preconfigType)--><!--Device-Camera_ErrorCode OH_CaptureSession_Preconfig(Camera_CaptureSession* session, Camera_PreconfigType preconfigType)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2848,10 +2403,6 @@ Camera_ErrorCode OH_CaptureSession_PreconfigWithRatio(Camera_CaptureSession* ses
 **Description**
 
 Sets a preconfigured resolution type with an aspect ratio.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_PreconfigWithRatio(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, Camera_PreconfigRatio preconfigRatio)--><!--Device-Camera_ErrorCode OH_CaptureSession_PreconfigWithRatio(Camera_CaptureSession* session, Camera_PreconfigType preconfigType, Camera_PreconfigRatio preconfigRatio)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -2879,10 +2430,6 @@ Camera_ErrorCode OH_CaptureSession_GetExposureValue(Camera_CaptureSession* sessi
 
 Obtains the exposure value.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureValue(Camera_CaptureSession* session, float* exposureValue)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetExposureValue(Camera_CaptureSession* session, float* exposureValue)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2907,10 +2454,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocalLength(Camera_CaptureSession* session
 **Description**
 
 Obtains the current focal length.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetFocalLength(Camera_CaptureSession* session, float* focalLength)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetFocalLength(Camera_CaptureSession* session, float* focalLength)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -2937,10 +2480,6 @@ Camera_ErrorCode OH_CaptureSession_IsFocusDistanceSupported(const Camera_Capture
 
 Check whether focus distance is supported.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsFocusDistanceSupported(const Camera_CaptureSession* session, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsFocusDistanceSupported(const Camera_CaptureSession* session, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -2965,10 +2504,6 @@ Camera_ErrorCode OH_CaptureSession_GetFocusDistance(const Camera_CaptureSession*
 **Description**
 
 Get current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusDistance(const Camera_CaptureSession* session, float* focusDistance)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetFocusDistance(const Camera_CaptureSession* session, float* focusDistance)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -2995,10 +2530,6 @@ Camera_ErrorCode OH_CaptureSession_SetFocusDistance(const Camera_CaptureSession*
 
 Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusDistance(const Camera_CaptureSession* session, float focusDistance)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetFocusDistance(const Camera_CaptureSession* session, float focusDistance)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -3012,7 +2543,7 @@ Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 be
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](../../apis-core-file-kit/c-apis/capi-oh-cloud-disk-manager-h.md#clouddisk_errorreason) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetSmoothZoom()
 
@@ -3023,10 +2554,6 @@ Camera_ErrorCode OH_CaptureSession_SetSmoothZoom(Camera_CaptureSession* session,
 **Description**
 
 Sets smooth zoom.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetSmoothZoom(Camera_CaptureSession* session, float targetZoom, Camera_SmoothZoomMode smoothZoomMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetSmoothZoom(Camera_CaptureSession* session, float targetZoom, Camera_SmoothZoomMode smoothZoomMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -3054,10 +2581,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedColorSpaces(Camera_CaptureSession
 
 Obtains the supported color spaces.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedColorSpaces(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace** colorSpace, uint32_t* size)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedColorSpaces(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace** colorSpace, uint32_t* size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -3084,10 +2607,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteColorSpaces(Camera_CaptureSession* sess
 
 Deletes color spaces.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_DeleteColorSpaces(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace* colorSpace)--><!--Device-Camera_ErrorCode OH_CaptureSession_DeleteColorSpaces(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace* colorSpace)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -3112,10 +2631,6 @@ Camera_ErrorCode OH_CaptureSession_GetActiveColorSpace(Camera_CaptureSession* se
 **Description**
 
 Obtains the active color space.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetActiveColorSpace(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace* colorSpace)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetActiveColorSpace(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace* colorSpace)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -3142,10 +2657,6 @@ Camera_ErrorCode OH_CaptureSession_SetActiveColorSpace(Camera_CaptureSession* se
 
 Sets the active color space.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetActiveColorSpace(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace colorSpace)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetActiveColorSpace(Camera_CaptureSession* session, OH_NativeBuffer_ColorSpace colorSpace)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -3170,10 +2681,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterAutoDeviceSwitchStatusCallback(Camera
 **Description**
 
 Register device switch event callback.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterAutoDeviceSwitchStatusCallback(Camera_CaptureSession* session, OH_CaptureSession_OnAutoDeviceSwitchStatusChange autoDeviceSwitchStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterAutoDeviceSwitchStatusCallback(Camera_CaptureSession* session, OH_CaptureSession_OnAutoDeviceSwitchStatusChange autoDeviceSwitchStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 13
 
@@ -3200,10 +2707,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterAutoDeviceSwitchStatusCallback(Came
 
 Unregister device switch event callback.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterAutoDeviceSwitchStatusCallback(Camera_CaptureSession* session, OH_CaptureSession_OnAutoDeviceSwitchStatusChange autoDeviceSwitchStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterAutoDeviceSwitchStatusCallback(Camera_CaptureSession* session, OH_CaptureSession_OnAutoDeviceSwitchStatusChange autoDeviceSwitchStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -3228,10 +2731,6 @@ Camera_ErrorCode OH_CaptureSession_IsAutoDeviceSwitchSupported(Camera_CaptureSes
 **Description**
 
 Check whether auto device switch is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsAutoDeviceSwitchSupported(Camera_CaptureSession* session, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsAutoDeviceSwitchSupported(Camera_CaptureSession* session, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 13
 
@@ -3258,10 +2757,6 @@ Camera_ErrorCode OH_CaptureSession_EnableAutoDeviceSwitch(Camera_CaptureSession*
 
 Enable auto switch or not for the camera device.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_EnableAutoDeviceSwitch(Camera_CaptureSession* session, bool enabled)--><!--Device-Camera_ErrorCode OH_CaptureSession_EnableAutoDeviceSwitch(Camera_CaptureSession* session, bool enabled)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -3286,10 +2781,6 @@ Camera_ErrorCode OH_CaptureSession_SetQualityPrioritization(Camera_CaptureSessio
 **Description**
 
 Set quality prioritization.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetQualityPrioritization(Camera_CaptureSession* session, Camera_QualityPrioritization qualityPrioritization)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetQualityPrioritization(Camera_CaptureSession* session, Camera_QualityPrioritization qualityPrioritization)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 14
 
@@ -3316,10 +2807,6 @@ Camera_ErrorCode OH_CaptureSession_IsMacroSupported(Camera_CaptureSession* sessi
 
 Checks whether macro photography is supported.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsMacroSupported(Camera_CaptureSession* session, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsMacroSupported(Camera_CaptureSession* session, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 19
 
 **Parameters**:
@@ -3344,10 +2831,6 @@ Camera_ErrorCode OH_CaptureSession_EnableMacro(Camera_CaptureSession* session, b
 **Description**
 
 Enables or disables macro photography for the camera device.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_EnableMacro(Camera_CaptureSession* session, bool enabled)--><!--Device-Camera_ErrorCode OH_CaptureSession_EnableMacro(Camera_CaptureSession* session, bool enabled)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 19
 
@@ -3374,10 +2857,6 @@ typedef void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* ses
 
 Defines the callback used to listen for macro status changes of a camera session.
 
-<!--Device-typedef void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected)--><!--Device-typedef void (*OH_CaptureSession_OnMacroStatusChange)(Camera_CaptureSession* session, bool isMacroDetected)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3396,10 +2875,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterMacroStatusChangeCallback(Camera_Capt
 **Description**
 
 Registers a callback to listen for macro status changes of a camera session.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterMacroStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnMacroStatusChange macroStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterMacroStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnMacroStatusChange macroStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -3426,10 +2901,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterMacroStatusChangeCallback(Camera_Ca
 
 Unregisters the callback used to listen for macro status changes of a camera session.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterMacroStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnMacroStatusChange macroStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterMacroStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnMacroStatusChange macroStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3454,10 +2925,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterSystemPressureLevelChangeCallback(Cam
 **Description**
 
 Registers a callback to listen for capture system pressure level changes.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterSystemPressureLevelChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSystemPressureLevelChange systemPressureLevelChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterSystemPressureLevelChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSystemPressureLevelChange systemPressureLevelChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -3484,10 +2951,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterSystemPressureLevelChangeCallback(C
 
 Unregisters the callback used to listen for capture system pressure level changes.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterSystemPressureLevelChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSystemPressureLevelChange systemPressureLevelChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterSystemPressureLevelChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnSystemPressureLevelChange systemPressureLevelChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3513,10 +2976,6 @@ Camera_ErrorCode OH_CaptureSession_IsControlCenterSupported(Camera_CaptureSessio
 
 Checks whether the camera controller is supported.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsControlCenterSupported(Camera_CaptureSession* session, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsControlCenterSupported(Camera_CaptureSession* session, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3541,10 +3000,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedEffectTypes(Camera_CaptureSession
 **Description**
 
 Obtains the effect types supported by the camera controller.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedEffectTypes(Camera_CaptureSession* session, Camera_ControlCenterEffectType** types, uint32_t* size)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedEffectTypes(Camera_CaptureSession* session, Camera_ControlCenterEffectType** types, uint32_t* size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -3572,10 +3027,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteSupportedEffectTypes(Camera_CaptureSess
 
 Deletes the effect types supported by the camera controller.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_DeleteSupportedEffectTypes(Camera_CaptureSession* session, Camera_ControlCenterEffectType* types, uint32_t size)--><!--Device-Camera_ErrorCode OH_CaptureSession_DeleteSupportedEffectTypes(Camera_CaptureSession* session, Camera_ControlCenterEffectType* types, uint32_t size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3602,10 +3053,6 @@ Camera_ErrorCode OH_CaptureSession_EnableControlCenter(Camera_CaptureSession* se
 
 Enables or disables the camera controller.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_EnableControlCenter(Camera_CaptureSession* session, bool enabled)--><!--Device-Camera_ErrorCode OH_CaptureSession_EnableControlCenter(Camera_CaptureSession* session, bool enabled)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3631,10 +3078,6 @@ typedef void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_Captu
 
 Defines the callback used to listen for effect status changes of a camera controller.
 
-<!--Device-typedef void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo)--><!--Device-typedef void (*OH_CaptureSession_OnControlCenterEffectStatusChange)(Camera_CaptureSession* session, Camera_ControlCenterStatusInfo* controlCenterStatusInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3653,10 +3096,6 @@ Camera_ErrorCode OH_CaptureSession_RegisterControlCenterEffectStatusChangeCallba
 **Description**
 
 Registers a callback to listen for effect status changes of a camera controller.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_RegisterControlCenterEffectStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnControlCenterEffectStatusChange controlCenterEffectStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_RegisterControlCenterEffectStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnControlCenterEffectStatusChange controlCenterEffectStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 20
 
@@ -3683,10 +3122,6 @@ Camera_ErrorCode OH_CaptureSession_UnregisterControlCenterEffectStatusChangeCall
 
 Unregisters the callback used to listen for effect status changes of a camera controller.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterControlCenterEffectStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnControlCenterEffectStatusChange controlCenterEffectStatusChange)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnregisterControlCenterEffectStatusChangeCallback(Camera_CaptureSession* session, OH_CaptureSession_OnControlCenterEffectStatusChange controlCenterEffectStatusChange)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -3712,10 +3147,6 @@ Camera_ErrorCode OH_CaptureSession_GetRAWCaptureZoomRatioRange(const Camera_Capt
 
 Query the raw zoom range.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetRAWCaptureZoomRatioRange(const Camera_CaptureSession* session, float* minZoom, float* maxZoom)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetRAWCaptureZoomRatioRange(const Camera_CaptureSession* session, float* minZoom, float* maxZoom)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -3730,7 +3161,7 @@ Query the raw zoom range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](../../apis-core-file-kit/c-apis/capi-oh-cloud-disk-manager-h.md#clouddisk_errorreason) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds. [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal. [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_IsOISModeSupported()
 
@@ -3741,10 +3172,6 @@ Camera_ErrorCode OH_CaptureSession_IsOISModeSupported(const Camera_CaptureSessio
 **Description**
 
 Checks if the specified OIS mode is supported.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_IsOISModeSupported(const Camera_CaptureSession* session, OH_Camera_OISMode oisMode, bool* isSupported)--><!--Device-Camera_ErrorCode OH_CaptureSession_IsOISModeSupported(const Camera_CaptureSession* session, OH_Camera_OISMode oisMode, bool* isSupported)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -3771,10 +3198,6 @@ Camera_ErrorCode OH_CaptureSession_GetSupportedOISBiasRange(const Camera_Capture
 **Description**
 
 Gets the supported bias range for the specified OIS axis.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedOISBiasRange(const Camera_CaptureSession* session, OH_Camera_OISAxes oisAxis, float* minBias, float* maxBias, float* step)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetSupportedOISBiasRange(const Camera_CaptureSession* session, OH_Camera_OISAxes oisAxis, float* minBias, float* maxBias, float* step)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -3804,10 +3227,6 @@ Camera_ErrorCode OH_CaptureSession_GetCurrentOISMode(const Camera_CaptureSession
 
 Gets the current OIS mode.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetCurrentOISMode(const Camera_CaptureSession* session, OH_Camera_OISMode* oisMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetCurrentOISMode(const Camera_CaptureSession* session, OH_Camera_OISMode* oisMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -3832,10 +3251,6 @@ Camera_ErrorCode OH_CaptureSession_GetCurrentCustomOISBias(const Camera_CaptureS
 **Description**
 
 Gets the current custom bias values for all OIS axes.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetCurrentCustomOISBias(const Camera_CaptureSession* session, float* pitchBias, float* yawBias)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetCurrentCustomOISBias(const Camera_CaptureSession* session, float* pitchBias, float* yawBias)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -3863,10 +3278,6 @@ Camera_ErrorCode OH_CaptureSession_SetOISMode(const Camera_CaptureSession* sessi
 
 Sets the OIS mode.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetOISMode(const Camera_CaptureSession* session, OH_Camera_OISMode oisMode)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetOISMode(const Camera_CaptureSession* session, OH_Camera_OISMode oisMode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -3891,10 +3302,6 @@ Camera_ErrorCode OH_CaptureSession_SetOISModeCustom(const Camera_CaptureSession*
 **Description**
 
 Sets custom OIS bias values for all axes.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_SetOISModeCustom(const Camera_CaptureSession* session, float pitchBias, float yawBias)--><!--Device-Camera_ErrorCode OH_CaptureSession_SetOISModeCustom(const Camera_CaptureSession* session, float pitchBias, float yawBias)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -3922,10 +3329,6 @@ Camera_ErrorCode OH_CaptureSession_GetZoomPointInfos(const Camera_CaptureSession
 
 Gets the zoom point infos. Release the zoom point infos memory by calling [OH_CaptureSession_DeleteZoomPointInfos](capi-capture-session-h.md#oh_capturesession_deletezoompointinfos).
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomPointInfos(const Camera_CaptureSession* session, uint32_t* size, OH_Camera_ZoomPointInfo** zoomPointInfo)--><!--Device-Camera_ErrorCode OH_CaptureSession_GetZoomPointInfos(const Camera_CaptureSession* session, uint32_t* size, OH_Camera_ZoomPointInfo** zoomPointInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -3952,10 +3355,6 @@ Camera_ErrorCode OH_CaptureSession_DeleteZoomPointInfos(const Camera_CaptureSess
 
 Delete the zoom point infos.
 
-<!--Device-Camera_ErrorCode OH_CaptureSession_DeleteZoomPointInfos(const Camera_CaptureSession* session, OH_Camera_ZoomPointInfo* zoomPointInfo)--><!--Device-Camera_ErrorCode OH_CaptureSession_DeleteZoomPointInfos(const Camera_CaptureSession* session, OH_Camera_ZoomPointInfo* zoomPointInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -3981,10 +3380,6 @@ bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession*
 
 Checks whether the lock focus tracking is supported.
 
-<!--Device-bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession* session)--><!--Device-bool OH_CaptureSession_IsLockFocusTrackingSupported(const Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -4008,10 +3403,6 @@ Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* sess
 **Description**
 
 Lock focus tracking, can be unlocked by [OH_CaptureSession_UnlockFocusTracking](capi-capture-session-h.md#oh_capturesession_unlockfocustracking).
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)--><!--Device-Camera_ErrorCode OH_CaptureSession_LockFocusTracking(Camera_CaptureSession* session, Camera_Point focusPoint)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -4037,10 +3428,6 @@ Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* se
 **Description**
 
 Unlock focus tracking.
-
-<!--Device-Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)--><!--Device-Camera_ErrorCode OH_CaptureSession_UnlockFocusTracking(Camera_CaptureSession* session)-End-->
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 

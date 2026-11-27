@@ -8,13 +8,11 @@ typedef struct ArkUI_NativeDialogAPI_2 {...} ArkUI_NativeDialogAPI_2
 
 Provides the custom dialog box APIs for the native side.
 
-<!--Device-typedef struct ArkUI_NativeDialogAPI_2 {...} ArkUI_NativeDialogAPI_2--><!--Device-typedef struct ArkUI_NativeDialogAPI_2 {...} ArkUI_NativeDialogAPI_2-End-->
-
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [native_dialog.h](capi-native-dialog-h.md)
 
@@ -24,14 +22,14 @@ Provides the custom dialog box APIs for the native side.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md) nativeDialogAPI1 | Provides the custom dialog box APIs for the native side. The API scope is [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md)<br>**Since**: 15<br><!--Device-ArkUI_NativeDialogAPI_1 nativeDialogAPI1--><!--Device-ArkUI_NativeDialogAPI_1 nativeDialogAPI1-End--> |
+| [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md) nativeDialogAPI1 | Provides the custom dialog box APIs for the native side. The API scope is [ArkUI_NativeDialogAPI_1](capi-arkui-nativemodule-arkui-nativedialogapi-1.md)<br>**Since**: 15 |
 
 
 ### Member functions
 
 | Name | Description |
 | -- | -- |
-| [int32_t (\*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float distance, ArkUI_LengthMetricUnit unit)](#setkeyboardavoiddistance) | Defines the distance between the customDialog and system keyboard.<br> |
+| [int32_t (\*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float distance, ArkUI_LengthMetricUnit unit)](#setkeyboardavoiddistance) | Defines the distance between the customDialog and system keyboard.<br>  |
 | [int32_t (\*setLevelMode)(ArkUI_NativeDialogHandle handle, ArkUI_LevelMode levelMode)](#setlevelmode) | Sets the level mode for a custom dialog box. |
 | [int32_t (\*setLevelUniqueId)(ArkUI_NativeDialogHandle handle, int32_t uniqueId)](#setleveluniqueid) | Sets the level uniqueId for a custom dialog box. |
 | [int32_t (\*setImmersiveMode)(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMode immersiveMode)](#setimmersivemode) | Sets the immersive mode for a custom dialog box. |
@@ -46,13 +44,11 @@ int32_t (*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float dista
 
 **Description**
 
-Defines the distance between the customDialog and system keyboard.<br>
+Defines the distance between the customDialog and system keyboard.<br> 
 
 > **Note**:
 >
 > This method must be called before the <b>show</b> method.
-
-<!--Device-int32_t (*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float distance, ArkUI_LengthMetricUnit unit)--><!--Device-int32_t (*setKeyboardAvoidDistance)(ArkUI_NativeDialogHandle handle, float distance, ArkUI_LengthMetricUnit unit)-End-->
 
 **Since**: 15
 
@@ -60,7 +56,7 @@ Defines the distance between the customDialog and system keyboard.<br>
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
 |  float distance | distance, in vp. |
 |  [ArkUI_LengthMetricUnit](capi-native-type-h.md#arkui_lengthmetricunit) unit |  Indicates the unit, which is an enumerated value of [ArkUI_LengthMetricUnit](capi-native-type-h.md#arkui_lengthmetricunit) |
 
@@ -84,15 +80,13 @@ Sets the level mode for a custom dialog box.
 >
 > This method must be called before the <b>show</b> method.
 
-<!--Device-int32_t (*setLevelMode)(ArkUI_NativeDialogHandle handle, ArkUI_LevelMode levelMode)--><!--Device-int32_t (*setLevelMode)(ArkUI_NativeDialogHandle handle, ArkUI_LevelMode levelMode)-End-->
-
 **Since**: 15
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
 |  [ArkUI_LevelMode](capi-native-dialog-h.md#arkui_levelmode) levelMode | Indicates the level mode. The parameter type is [ArkUI_LevelMode](capi-native-dialog-h.md#arkui_levelmode). |
 
 **Returns**:
@@ -115,15 +109,13 @@ Sets the level uniqueId for a custom dialog box.
 >
 > This method must be called before the <b>setLevelMode</b> method.
 
-<!--Device-int32_t (*setLevelUniqueId)(ArkUI_NativeDialogHandle handle, int32_t uniqueId)--><!--Device-int32_t (*setLevelUniqueId)(ArkUI_NativeDialogHandle handle, int32_t uniqueId)-End-->
-
 **Since**: 15
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
 |  int32_t uniqueId | Indicates the uniqueId of any nodes in router or navigation pages. |
 
 **Returns**:
@@ -146,15 +138,13 @@ Sets the immersive mode for a custom dialog box.
 >
 > This method must be called before the <b>show</b> method.
 
-<!--Device-int32_t (*setImmersiveMode)(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMode immersiveMode)--><!--Device-int32_t (*setImmersiveMode)(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMode immersiveMode)-End-->
-
 **Since**: 15
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
+| [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | Indicates the pointer to the custom dialog box controller. |
 |  [ArkUI_ImmersiveMode](capi-native-dialog-h.md#arkui_immersivemode) immersiveMode | Indicates the immersive mode. The parameter type is [ArkUI_ImmersiveMode](capi-native-dialog-h.md#arkui_immersivemode). |
 
 **Returns**:

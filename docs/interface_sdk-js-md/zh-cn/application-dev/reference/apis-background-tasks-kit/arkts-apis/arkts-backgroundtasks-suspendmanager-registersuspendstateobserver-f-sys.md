@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## registerSuspendStateObserver
@@ -12,7 +12,7 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 function registerSuspendStateObserver(observer: SuspendStateObserver, stateList: Array<FreezeState>, pidList?: Array<number>): void
 ```
 
-注册一个挂起状态观察者来监听应用的挂起状态变化。
+注册一个冻结状态观察者来监听应用冻结状态的变化。
 
 **起始版本：** 26.1.0
 
@@ -30,8 +30,8 @@ function registerSuspendStateObserver(observer: SuspendStateObserver, stateList:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [SuspendStateObserver](arkts-backgroundtasks-suspendmanager-suspendstateobserver-i-sys.md) | 是 | 要注册的观察员。 |
-| stateList | Array&lt;[FreezeState](arkts-backgroundtasks-suspendmanager-freezestate-e-sys.md)&gt; | 是 | 订阅状态类型列表。 |
+| observer | [SuspendStateObserver](arkts-backgroundtasks-suspendmanager-suspendstateobserver-i-sys.md) | 是 | 要注册的观察者。 |
+| stateList | Array&lt;[FreezeState](arkts-backgroundtasks-suspendmanager-freezestate-e-sys.md)&gt; | 是 | 订阅状态类型的列表。 |
 | pidList | Array&lt;number&gt; | 否 | 要筛选的可选进程ID列表。如果未指定或为空，所有进程状态更改都会触发回调。 |
 
 **错误码：**

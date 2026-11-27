@@ -8,24 +8,26 @@ Includes some memory-related methods and structures, such as: malloc, calloc, re
 
 **Since**: 12
 
-**Related module**: [MuslMalloc](capi-cstandard-library-muslmalloc.md)
+**Related module**: [MuslMalloc](capi-muslmalloc.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | Description |
 | -- | -- |
 | [mallinfo](capi-muslmalloc-mallinfo.md) |  |
 | [mallinfo2](capi-muslmalloc-mallinfo2.md) |  |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
 | [int malloc_check_from_ptr(void *ptr)
 
-struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated using Standard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe. |
+struct mallinfo 
+
+struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated using Standard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe. |
 | [struct mallinfo mallinfo(void)](#mallinfo) | Obtains the memory information allocated by malloc-related operations. |
 | [struct mallinfo2 mallinfo2(void)](#mallinfo2) | Obtains the memory information allocated by malloc-related operations. |
 
@@ -37,13 +39,14 @@ struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint
 int malloc_check_from_ptr(void *ptr)
 
 struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost
+}
+
+struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost
 ```
 
 **Description**
 
 This function determines whether a given memory block was allocated using Standard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe.
-
-<!--Device-int malloc_check_from_ptr(void *ptr) struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost--><!--Device-int malloc_check_from_ptr(void *ptr) struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost-End-->
 
 **Since**: 19
 
@@ -69,8 +72,6 @@ struct mallinfo mallinfo(void)
 
 Obtains the memory information allocated by malloc-related operations.
 
-<!--Device-struct mallinfo mallinfo(void)--><!--Device-struct mallinfo mallinfo(void)-End-->
-
 **Since**: 20
 
 **Returns**:
@@ -88,8 +89,6 @@ struct mallinfo2 mallinfo2(void)
 **Description**
 
 Obtains the memory information allocated by malloc-related operations.
-
-<!--Device-struct mallinfo2 mallinfo2(void)--><!--Device-struct mallinfo2 mallinfo2(void)-End-->
 
 **Since**: 20
 

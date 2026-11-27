@@ -1,0 +1,34 @@
+# @ohos.application.abilityDelegatorRegistry(AbilityDelegatorRegistry)
+
+The **AbilityDelegatorRegistry** module provides APIs for storing global registers of the registered [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) and [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md) objects, including obtaining the **AbilityDelegator** and **AbilityDelegatorArgs** objects. The APIs can be used only in the test framework.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [abilityDelegatorRegistry](arkts-test-app-ability-abilitydelegatorregistry.md)
+
+<!--Device-unnamed-declare namespace abilityDelegatorRegistry--><!--Device-unnamed-declare namespace abilityDelegatorRegistry-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+import abilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
+```
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-depr-getabilitydelegator-f.md#getabilitydelegator-1) | Obtains the **AbilityDelegator** object of the application. |
+| [getArguments](arkts-test-abilitydelegatorregistry-depr-getarguments-f.md#getarguments-1) | Obtains the **AbilityDelegatorArgs** object of the application. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-depr-abilitylifecyclestate-e.md) | Enumerates the ability lifecycle states. |

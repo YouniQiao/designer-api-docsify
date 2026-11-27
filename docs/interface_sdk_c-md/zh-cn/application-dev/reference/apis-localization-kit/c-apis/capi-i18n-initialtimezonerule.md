@@ -1,20 +1,18 @@
 # InitialTimeZoneRule
 
 ```c
-typedef struct InitialTimeZoneRule {...} InitialTimeZoneRule
+struct InitialTimeZoneRule {...}
 ```
 
 ## 概述
 
 起始时区规则。
 
-<!--Device-struct InitialTimeZoneRule {...}--><!--Device-struct InitialTimeZoneRule {...}-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 **起始版本：** 22
 
-**相关模块：** [i18n](capi-localization-kit-i18n.md)
+**相关模块：** [i18n](capi-i18n.md)
 
 **所在头文件：** [timezone.h](capi-timezone-h.md)
 
@@ -24,7 +22,7 @@ typedef struct InitialTimeZoneRule {...} InitialTimeZoneRule
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t rawOffset | 时区的原始偏移量，单位为毫秒（ms）。<br><!--Device-int32_t rawOffset--><!--Device-int32_t rawOffset-End--> |
-| int32_t dstSavings | 夏令时的偏移量，单位为毫秒（ms）。<br><!--Device-int32_t dstSavings--><!--Device-int32_t dstSavings-End--> |
+| int32_t rawOffset | 时区的原始偏移量，单位为毫秒（ms）。 |
+| int32_t dstSavings | 夏令时的偏移量，单位为毫秒（ms）。 |
 
 

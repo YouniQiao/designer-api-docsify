@@ -223,7 +223,7 @@ Default value: **Color.Black**
 
 **borderColor** must be used with **borderWidth** in pairs.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md)
 
 **Since:** 12
 
@@ -247,7 +247,7 @@ Default value: **BorderStyle.Solid**
 
 **borderStyle** must be used with **borderWidth** in pairs.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
 
 **Since:** 12
 
@@ -275,7 +275,7 @@ When set to a percentage, the value defines the border width as a percentage of 
 
 If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md)
 
 **Since:** 12
 
@@ -357,7 +357,7 @@ Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottom
 
 Note: The default corner radius of the background is 32 vp. This attribute must be used together with the [borderRadius](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderradius-1) attribute.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **Since:** 10
 
@@ -805,7 +805,7 @@ Offset of the dialog box relative to the alignment position.
 
 Default value: **{dx: 0, dy: 0}**
 
-**Type:** [Offset](arkts-arkui-offset-t.md)
+**Type:** Offset
 
 **Since:** 7
 
@@ -934,7 +934,7 @@ Callback for interactive closure of the dialog box.
 the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-customdialog-comp-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

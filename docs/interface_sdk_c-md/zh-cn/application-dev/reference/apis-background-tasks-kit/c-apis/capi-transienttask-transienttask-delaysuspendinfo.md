@@ -1,20 +1,18 @@
 # TransientTask_DelaySuspendInfo
 
 ```c
-typedef struct TransientTask_DelaySuspendInfo {...} TransientTask_DelaySuspendInfo
+struct TransientTask_DelaySuspendInfo {...}
 ```
 
 ## 概述
 
 定义短时任务返回信息结构体。用于返回当前短时任务的任务ID和剩余时间。
 
-<!--Device-struct TransientTask_DelaySuspendInfo {...}--><!--Device-struct TransientTask_DelaySuspendInfo {...}-End-->
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **起始版本：** 13
 
-**相关模块：** [TransientTask](capi-background-tasks-kit-transienttask.md)
+**相关模块：** [TransientTask](capi-transienttask.md)
 
 **所在头文件：** [transient_task_type.h](capi-transient-task-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct TransientTask_DelaySuspendInfo {...} TransientTask_DelaySuspendIn
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t requestId | 短时任务请求ID。<br>**起始版本：** 13<br><!--Device-int32_t requestId--><!--Device-int32_t requestId-End--> |
-| int32_t actualDelayTime | 剩余时间（单位：ms）。取值范围：[0, 180000]。<br>**起始版本：** 13<br><!--Device-int32_t actualDelayTime--><!--Device-int32_t actualDelayTime-End--> |
+| int32_t requestId | 短时任务请求ID。<br>**起始版本：** 13 |
+| int32_t actualDelayTime | 剩余时间（单位：ms）。取值范围：[0, 180000]。<br>**起始版本：** 13 |
 
 

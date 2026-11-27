@@ -35,7 +35,7 @@ Circle(value?: CircleOptions)
 ## Circle
 
 ```TypeScript
-Circle(value?: CircleOptions)
+new Circle(value?: CircleOptions)
 ```
 
 用于绘制圆形的构造函数。调用后创建一个Circle对象，可设置宽高属性。

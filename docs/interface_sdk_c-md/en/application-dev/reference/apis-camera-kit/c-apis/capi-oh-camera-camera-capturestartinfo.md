@@ -1,20 +1,18 @@
 # Camera_CaptureStartInfo
 
 ```c
-typedef struct Camera_CaptureStartInfo {...} Camera_CaptureStartInfo
+struct Camera_CaptureStartInfo {...}
 ```
 
 ## Overview
 
 The struct describes the capture start information.
 
-<!--Device-struct Camera_CaptureStartInfo {...}--><!--Device-struct Camera_CaptureStartInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ The struct describes the capture start information.
 
 | Name | Description |
 | -- | -- |
-| int32_t captureId | Capture ID.<br><!--Device-int32_t captureId--><!--Device-int32_t captureId-End--> |
-| int64_t time | Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **–1** is reported, there is no estimated duration.<br><!--Device-int64_t time--><!--Device-int64_t time-End--> |
+| int32_t captureId | Capture ID. |
+| int64_t time | Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **–1** is reported, there is no estimated duration. |
 
 

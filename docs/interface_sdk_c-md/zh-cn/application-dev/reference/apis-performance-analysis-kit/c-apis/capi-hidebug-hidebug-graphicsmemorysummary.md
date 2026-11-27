@@ -1,20 +1,18 @@
 # HiDebug_GraphicsMemorySummary
 
 ```c
-typedef struct HiDebug_GraphicsMemorySummary {...} HiDebug_GraphicsMemorySummary
+struct HiDebug_GraphicsMemorySummary {...}
 ```
 
 ## 概述
 
 应用图形显存占用详情的结构定义。
 
-<!--Device-struct HiDebug_GraphicsMemorySummary {...}--><!--Device-struct HiDebug_GraphicsMemorySummary {...}-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **起始版本：** 21
 
-**相关模块：** [HiDebug](capi-performance-analysis-kit-hidebug.md)
+**相关模块：** [HiDebug](capi-hidebug.md)
 
 **所在头文件：** [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct HiDebug_GraphicsMemorySummary {...} HiDebug_GraphicsMemorySummary
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t gl | gl内存大小，RenderService渲染进程加载所需资源占用的内存，例如图片、纹理等，以KB为单位。<br><!--Device-uint32_t gl--><!--Device-uint32_t gl-End--> |
-| uint32_t graph | graph内存大小，进程统计的DMA内存占用，包括直接通过接口申请的DMA buffer和通过allocator_host申请的DMA buffer，以KB为单位。<br><!--Device-uint32_t graph--><!--Device-uint32_t graph-End--> |
+| uint32_t gl | gl内存大小，RenderService渲染进程加载所需资源占用的内存，例如图片、纹理等，以KB为单位。 |
+| uint32_t graph | graph内存大小，进程统计的DMA内存占用，包括直接通过接口申请的DMA buffer和通过allocator_host申请的DMA buffer，以KB为单位。 |
 
 

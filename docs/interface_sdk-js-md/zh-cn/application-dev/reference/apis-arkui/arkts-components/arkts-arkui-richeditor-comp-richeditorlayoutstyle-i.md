@@ -24,7 +24,7 @@ borderRadius?: Dimension | BorderRadiuses
 
 参数为Dimension类型时，不支持以Percentage形式设置
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **起始版本：** 11
 

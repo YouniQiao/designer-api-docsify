@@ -6,22 +6,20 @@ Declare avmetadata builder related interfaces.
 
 **Library**: libohavsession.so
 
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
-**Related module**: [OHAVSession](capi-avsession-kit-ohavsession.md)
+**Related module**: [OHAVSession](capi-ohavsession.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AVMetadataBuilderStruct](capi-ohavsession-oh-avmetadatabuilderstruct.md) | OH_AVMetadataBuilder | Declaring the avmetadata builder. The instance of builder is used for creating avmetadata. |
-| [OH_AVMetadataStruct](capi-ohavsession-oh-avmetadatastruct.md) | OH_AVMetadata | Declaring the avmetadata. The instance of avmetadata set by application for current resource. |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md) | OH_AVMetadataBuilder | Declaring the avmetadata builder. The instance of builder is used for creating avmetadata. |
+| [OH_AVMetadata](capi-ohavsession-oh-avmetadata.md) | OH_AVMetadata | Declaring the avmetadata. The instance of avmetadata set by application for current resource. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -57,17 +55,13 @@ AVMetadata_Result OH_AVMetadataBuilder_Create(OH_AVMetadataBuilder** builder)
 
 Creates an AVMetadataBuilder instance.
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_Create(OH_AVMetadataBuilder** builder)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_Create(OH_AVMetadataBuilder** builder)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)** builder | The builder reference to the created result. |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)** builder | The builder reference to the created result. |
 
 **Returns**:
 
@@ -85,17 +79,13 @@ AVMetadata_Result OH_AVMetadataBuilder_Destroy(OH_AVMetadataBuilder* builder)
 
 Destroy a builder.
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_Destroy(OH_AVMetadataBuilder* builder)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_Destroy(OH_AVMetadataBuilder* builder)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 
 **Returns**:
 
@@ -113,17 +103,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetAssetId(OH_AVMetadataBuilder* builder,
 
 Set current asset id of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAssetId(OH_AVMetadataBuilder* builder, const char* assetId)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAssetId(OH_AVMetadataBuilder* builder, const char* assetId)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* assetId | The current assetId of resource. |
 
 **Returns**:
@@ -142,17 +128,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetTitle(OH_AVMetadataBuilder* builder, c
 
 Set the title of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetTitle(OH_AVMetadataBuilder* builder, const char* title)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetTitle(OH_AVMetadataBuilder* builder, const char* title)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* title | The title of resource. |
 
 **Returns**:
@@ -171,17 +153,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetArtist(OH_AVMetadataBuilder* builder, 
 
 Set the artist of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetArtist(OH_AVMetadataBuilder* builder, const char* artist)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetArtist(OH_AVMetadataBuilder* builder, const char* artist)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* artist | The artist of resource. |
 
 **Returns**:
@@ -200,17 +178,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetAuthor(OH_AVMetadataBuilder* builder, 
 
 Set the author of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAuthor(OH_AVMetadataBuilder* builder, const char* author)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAuthor(OH_AVMetadataBuilder* builder, const char* author)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* author | The author of resource. |
 
 **Returns**:
@@ -229,17 +203,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetAlbum(OH_AVMetadataBuilder* builder, c
 
 Set the album information
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAlbum(OH_AVMetadataBuilder* builder, const char* album)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetAlbum(OH_AVMetadataBuilder* builder, const char* album)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* album | The album name |
 
 **Returns**:
@@ -258,17 +228,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetWriter(OH_AVMetadataBuilder* builder, 
 
 Set the writer of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetWriter(OH_AVMetadataBuilder* builder, const char* writer)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetWriter(OH_AVMetadataBuilder* builder, const char* writer)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* writer | The writer of resource. |
 
 **Returns**:
@@ -287,17 +253,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetComposer(OH_AVMetadataBuilder* builder
 
 Set the composer of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetComposer(OH_AVMetadataBuilder* builder, const char* composer)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetComposer(OH_AVMetadataBuilder* builder, const char* composer)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* composer | The composer of resource. |
 
 **Returns**:
@@ -316,17 +278,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetDuration(OH_AVMetadataBuilder* builder
 
 Set the duration of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDuration(OH_AVMetadataBuilder* builder, int64_t duration)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDuration(OH_AVMetadataBuilder* builder, int64_t duration)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | int64_t duration | The duration of resource, in miliseconds |
 
 **Returns**:
@@ -345,17 +303,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetMediaImageUri(OH_AVMetadataBuilder* bu
 
 Set the media image uri of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetMediaImageUri(OH_AVMetadataBuilder* builder, const char* mediaImageUri)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetMediaImageUri(OH_AVMetadataBuilder* builder, const char* mediaImageUri)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* mediaImageUri | The mediaImageUri of resource. |
 
 **Returns**:
@@ -374,17 +328,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetSubtitle(OH_AVMetadataBuilder* builder
 
 Set the subtitle of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetSubtitle(OH_AVMetadataBuilder* builder, const char* subtitle)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetSubtitle(OH_AVMetadataBuilder* builder, const char* subtitle)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* subtitle | The subtitle of resource. |
 
 **Returns**:
@@ -403,17 +353,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetDescription(OH_AVMetadataBuilder* buil
 
 Set the media description of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDescription(OH_AVMetadataBuilder* builder, const char* description)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDescription(OH_AVMetadataBuilder* builder, const char* description)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* description | The description of resource. |
 
 **Returns**:
@@ -432,17 +378,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetLyric(OH_AVMetadataBuilder* builder, c
 
 Set the media lyric content of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetLyric(OH_AVMetadataBuilder* builder, const char* lyric)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetLyric(OH_AVMetadataBuilder* builder, const char* lyric)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | const char* lyric | The lyric of resource. |
 
 **Returns**:
@@ -461,17 +403,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetSkipIntervals(OH_AVMetadataBuilder* bu
 
 Set the skip intervals of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetSkipIntervals(OH_AVMetadataBuilder* builder, AVMetadata_SkipIntervals intervals)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetSkipIntervals(OH_AVMetadataBuilder* builder, AVMetadata_SkipIntervals intervals)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | [AVMetadata_SkipIntervals](capi-native-avsession-base-h.md#avmetadata_skipintervals) intervals | The intervals of resource, only can be set : 10, 15, 30 |
 
 **Returns**:
@@ -490,17 +428,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetDisplayTags(OH_AVMetadataBuilder* buil
 
 Set the display tags of the resource
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDisplayTags(OH_AVMetadataBuilder* builder, int32_t tags)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetDisplayTags(OH_AVMetadataBuilder* builder, int32_t tags)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | int32_t tags | The display tags of resource which are supported by this app to be displayed on the media center |
 
 **Returns**:
@@ -519,17 +453,13 @@ AVMetadata_Result OH_AVMetadataBuilder_SetFilter(OH_AVMetadataBuilder* builder, 
 
 Set the protocols supported
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetFilter(OH_AVMetadataBuilder* builder, uint32_t filter)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_SetFilter(OH_AVMetadataBuilder* builder, uint32_t filter)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 23
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
 | uint32_t filter | The protocols supported by this session,if not set, the default is [TYPE_CAST_PLUS_STREAM](capi-native-avsession-base-h.md#avsession_protocoltype) |
 
 **Returns**:
@@ -548,18 +478,14 @@ AVMetadata_Result OH_AVMetadataBuilder_GenerateAVMetadata(OH_AVMetadataBuilder* 
 
 Create the avmetadata.
 
-<!--Device-AVMetadata_Result OH_AVMetadataBuilder_GenerateAVMetadata(OH_AVMetadataBuilder* builder, OH_AVMetadata** avMetadata)--><!--Device-AVMetadata_Result OH_AVMetadataBuilder_GenerateAVMetadata(OH_AVMetadataBuilder* builder, OH_AVMetadata** avMetadata)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilderstruct.md)* builder | The metadata builder instance pointer |
-| [OH_AVMetadata](capi-ohavsession-oh-avmetadatastruct.md)** avMetadata | Pointer to a variable to receive the avMetadata object. |
+| [OH_AVMetadataBuilder](capi-ohavsession-oh-avmetadatabuilder.md)* builder | The metadata builder instance pointer |
+| [OH_AVMetadata](capi-ohavsession-oh-avmetadata.md)** avMetadata | Pointer to a variable to receive the avMetadata object. |
 
 **Returns**:
 
@@ -577,17 +503,13 @@ AVMetadata_Result OH_AVMetadata_Destroy(OH_AVMetadata* avMetadata)
 
 Request to release the avmetadata.
 
-<!--Device-AVMetadata_Result OH_AVMetadata_Destroy(OH_AVMetadata* avMetadata)--><!--Device-AVMetadata_Result OH_AVMetadata_Destroy(OH_AVMetadata* avMetadata)-End-->
-
-**System capability**: SystemCapability.Multimedia.AVSession.Core
-
 **Since**: 13
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMetadata](capi-ohavsession-oh-avmetadatastruct.md)* avMetadata | Pointer to a variable to receive the avMetadata object. |
+| [OH_AVMetadata](capi-ohavsession-oh-avmetadata.md)* avMetadata | Pointer to a variable to receive the avMetadata object. |
 
 **Returns**:
 

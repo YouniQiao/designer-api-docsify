@@ -6,11 +6,9 @@
 
 **库：** libnet_websocket.so
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
-**相关模块：** [netstack](capi-network-kit-netstack.md)
+**相关模块：** [netstack](capi-netstack.md)
 
 ## 汇总
 
@@ -23,7 +21,7 @@
 | [int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)](#oh_websocketclient_connect) | 客户端连接服务端。 |
 | [int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)](#oh_websocketclient_send) | 客户端向服务端发送数据。 |
 | [int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)](#oh_websocketclient_close) | Closes the connection on the 客户端。 |
-| [int OH_WebSocketClient_Destroy(struct WebSocket *client)](#oh_websocketclient_destroy) | 释放WebSocket连接上下文和资源。<br> **注意**<br>- 调用WebSocket_OnCloseCallback订阅WebSocket连接关闭事件，并在该回调函数中调用OH_WebSocketClient_Destroy方法。 - 调用OH_WebSocketClient_Close关闭WebSocket连接。 - 确保触发WebSocket_OnCloseCallback回调后再调用该接口，否则系统内存资源被释放后可能出现socket泄露以及连接未关闭的情况。 |
+| [int OH_WebSocketClient_Destroy(struct WebSocket *client)](#oh_websocketclient_destroy) | 释放WebSocket连接上下文和资源。使用方式如下： |
 
 ## 函数说明
 
@@ -36,10 +34,6 @@ struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen
 **描述：**
 
 WebSocket客户端的构造函数。
-
-<!--Device-struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen, WebSocket_OnMessageCallback onMessage, WebSocket_OnErrorCallback onError, WebSocket_OnCloseCallback onclose)--><!--Device-struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen, WebSocket_OnMessageCallback onMessage, WebSocket_OnErrorCallback onError, WebSocket_OnCloseCallback onclose)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 11
 
@@ -56,7 +50,7 @@ WebSocket客户端的构造函数。
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct WebSocket *](capi-netstack-websocket.md) | 成功返回客户端指针，失败返回为NULL。 |
+| struct WebSocket * | 成功返回客户端指针，失败返回为NULL。 |
 
 ### OH_WebSocketClient_AddHeader()
 
@@ -68,17 +62,13 @@ int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Head
 
 将header头信息添加到client客户端request中。
 
-<!--Device-int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Header header)--><!--Device-int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Header header)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | 客户端指针。 |
+| struct WebSocket *client | 客户端指针。 |
 | [struct WebSocket_Header](capi-netstack-websocket-header.md) header | Header头信息。 |
 
 **返回值：**
@@ -97,10 +87,6 @@ int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct
 
 客户端连接服务端。
 
-<!--Device-int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)--><!--Device-int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 **需要权限：** ohos.permission.INTERNET
 
 **起始版本：** 11
@@ -109,7 +95,7 @@ int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | 客户端指针。 |
+| struct WebSocket *client | 客户端指针。 |
 | const char *url | 客户端要连接到服务端的地址。 |
 | [struct WebSocket_RequestOptions](capi-netstack-websocket-requestoptions.md) options | 发起连接的可选参数。 |
 
@@ -129,10 +115,6 @@ int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)
 
 客户端向服务端发送数据。
 
-<!--Device-int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)--><!--Device-int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 **需要权限：** ohos.permission.INTERNET
 
 **起始版本：** 11
@@ -141,7 +123,7 @@ int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | 客户端。 |
+| struct WebSocket *client | 客户端。 |
 | char *data | Data sent by the 客户端。 |
 | size_t length | Length of the data sent by the 客户端。 |
 
@@ -161,10 +143,6 @@ int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOpt
 
 Closes the connection on the 客户端。
 
-<!--Device-int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)--><!--Device-int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 **需要权限：** ohos.permission.INTERNET
 
 **起始版本：** 11
@@ -173,7 +151,7 @@ Closes the connection on the 客户端。
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | 客户端。 |
+| struct WebSocket *client | 客户端。 |
 | [struct WebSocket_CloseOption](capi-netstack-websocket-closeoption.md) options | 发起关闭连接的可选参数。 |
 
 **返回值：**
@@ -190,14 +168,7 @@ int OH_WebSocketClient_Destroy(struct WebSocket *client)
 
 **描述：**
 
-释放WebSocket连接上下文和资源。<br> **注意**
-- 调用WebSocket_OnCloseCallback订阅WebSocket连接关闭事件，并在该回调函数中调用OH_WebSocketClient_Destroy方法。
-- 调用OH_WebSocketClient_Close关闭WebSocket连接。
-- 确保触发WebSocket_OnCloseCallback回调后再调用该接口，否则系统内存资源被释放后可能出现socket泄露以及连接未关闭的情况。
-
-<!--Device-int OH_WebSocketClient_Destroy(struct WebSocket *client)--><!--Device-int OH_WebSocketClient_Destroy(struct WebSocket *client)-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
+释放WebSocket连接上下文和资源。使用方式如下：
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -207,7 +178,7 @@ int OH_WebSocketClient_Destroy(struct WebSocket *client)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct WebSocket](capi-netstack-websocket.md) *client | 客户端。 |
+| struct WebSocket *client | 客户端。 |
 
 **返回值：**
 

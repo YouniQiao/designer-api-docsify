@@ -8,13 +8,11 @@ typedef struct Asset_ResultSet {...} Asset_ResultSet
 
 多条关键资产的查询结果。
 
-<!--Device-typedef struct Asset_ResultSet {...} Asset_ResultSet--><!--Device-typedef struct Asset_ResultSet {...} Asset_ResultSet-End-->
-
 **系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
-**相关模块：** [AssetType](capi-asset-store-kit-assettype.md)
+**相关模块：** [AssetType](capi-assettype.md)
 
 **所在头文件：** [asset_type.h](capi-asset-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Asset_ResultSet {...} Asset_ResultSet
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t count | 关键资产的条数。<br><!--Device-uint32_t count--><!--Device-uint32_t count-End--> |
-| [Asset_Result](capi-assettype-asset-result.md) *results | 指向关键资产数组的指针。<br><!--Device-Asset_Result *results--><!--Device-Asset_Result *results-End--> |
+| uint32_t count | 关键资产的条数。 |
+| Asset_Result *results | 指向关键资产数组的指针。 |
 
 

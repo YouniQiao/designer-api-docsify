@@ -30,7 +30,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | 点击菜单项时触发的回调函数类型。 |
+| [OnActionCallback](arkts-arkui-composetitlebarv2-onactioncallback-t.md) | 点击菜单项时触发的回调函数类型。 |
 
 ## 示例
 

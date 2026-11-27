@@ -8,13 +8,11 @@ typedef struct OH_AudioAccessoryNoiseReductionCapability {...} OH_AudioAccessory
 
 Defines the noise reduction capability of an audio accessory.
 
-<!--Device-typedef struct OH_AudioAccessoryNoiseReductionCapability {...} OH_AudioAccessoryNoiseReductionCapability--><!--Device-typedef struct OH_AudioAccessoryNoiseReductionCapability {...} OH_AudioAccessoryNoiseReductionCapability-End-->
-
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
-**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
+**Related module**: [OHAudio](capi-ohaudio.md)
 
 **Header file**: [native_audio_accessory_common.h](capi-native-audio-accessory-common-h.md)
 
@@ -24,9 +22,9 @@ Defines the noise reduction capability of an audio accessory.
 
 | Name | Description |
 | -- | -- |
-| uint32_t structSize | Size of this structure in bytes. Must be initialized by the caller (e.g., info.structSize = sizeof(OH_AudioAccessoryNoiseReductionCapability)). The framework uses this to determine which version of the structure is being used.<br>**Since**: 26.0.0<br><!--Device-uint32_t structSize--><!--Device-uint32_t structSize-End--> |
-| [const OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode) *supportedModes | Array of supported noise reduction modes.<br>**Since**: 26.0.0<br><!--Device-const OH_AudioNoiseReductionMode *supportedModes--><!--Device-const OH_AudioNoiseReductionMode *supportedModes-End--> |
-| uint32_t supportedModeCount | Number of supported noise reduction modes.<br>**Since**: 26.0.0<br><!--Device-uint32_t supportedModeCount--><!--Device-uint32_t supportedModeCount-End--> |
-| [OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode) currentMode | The current noise reduction mode of the device. This represents the initial state when the capability is registered.<br>**Since**: 26.0.0<br><!--Device-OH_AudioNoiseReductionMode currentMode--><!--Device-OH_AudioNoiseReductionMode currentMode-End--> |
+| uint32_t structSize | Size of this structure in bytes. Must be initialized by the caller (e.g., info.structSize = sizeof(OH_AudioAccessoryNoiseReductionCapability)). The framework uses this to determine which version of the structure is being used.<br>**Since**: 26.0.0 |
+| const OH_AudioNoiseReductionMode *supportedModes | Array of supported noise reduction modes.<br>**Since**: 26.0.0 |
+| uint32_t supportedModeCount | Number of supported noise reduction modes.<br>**Since**: 26.0.0 |
+| [OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode) currentMode | The current noise reduction mode of the device. This represents the initial state when the capability is registered.<br>**Since**: 26.0.0 |
 
 

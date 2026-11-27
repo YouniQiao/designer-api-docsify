@@ -30,7 +30,7 @@ For example, if the **in** component is at a higher hierarchy level than the **o
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12 - 12.
+**Atomic service API:** This API can be used in atomic services only in API version 12.
 
 <!--Device-TransitionHierarchyStrategy-ADAPTIVE = 1--><!--Device-TransitionHierarchyStrategy-ADAPTIVE = 1-End-->
 
@@ -50,7 +50,7 @@ The **in** / **out** components maintain their original hierarchy levels and are
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12 - 12.
+**Atomic service API:** This API can be used in atomic services only in API version 12.
 
 <!--Device-TransitionHierarchyStrategy-NONE = 0--><!--Device-TransitionHierarchyStrategy-NONE = 0-End-->
 

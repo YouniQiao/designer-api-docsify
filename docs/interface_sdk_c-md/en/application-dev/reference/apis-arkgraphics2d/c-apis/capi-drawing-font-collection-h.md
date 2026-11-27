@@ -4,25 +4,21 @@
 
 Defines functions related to font collections in the drawing module, which are used to manage font resources required for text typography. It supports creating independent or shareable font collection objects to meet text typography requirements in different scenarios. Through font collection objects, you can implement custom font loading, system font management, font cache cleanup, and other functions.
 
-**File to Include**: <native_drawing/drawing_font_collection.h>
-
 **Library**: libnative_drawing.so
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
-| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | Creates an [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object.(Deprecated) |
+| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | Creates an [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object.(Deprecated in API26.1.0) |
 | [void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_destroyfontcollection) | Destroys an **OH_Drawing_FontCollection** object and reclaims the memory occupied by the object. |
-| [void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionfallback) | Disables the system fonts.(Deprecated) |
+| [void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionfallback) | Disables the system fonts.(Deprecated in API18) |
 | [void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionsystemfont) | Disables system fonts. After disabling, the font collection object can only use registered custom fonts for text rendering. |
 | [OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)](#oh_drawing_createsharedfontcollection) | Creates a shareable [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object. |
 | [void OH_Drawing_ClearFontCaches(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_clearfontcaches) | Clears the font cache. (The font cache has a memory limit and a clearing mechanism. It occupies limited memory. You are not advised to clear it unless otherwise required.) |
@@ -40,15 +36,11 @@ OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)
 
 Creates an [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object.
 
-<!--Device-OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)--><!--Device-OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 8
 
-**Resource release**: [OH_Drawing_DestroyFontCollection](#oh_drawing_destroyfontcollection)
+**Resource release**: OH_Drawing_DestroyFontCollection {return}
 
-**Deprecated**: 26.0.1
+**Deprecated**: 26.1.0
 
 **Replaced by**: OH_Drawing_CreateSharedFontCollection
 
@@ -68,10 +60,6 @@ void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)
 
 Destroys an **OH_Drawing_FontCollection** object and reclaims the memory occupied by the object.
 
-<!--Device-void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)--><!--Device-void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 8
 
 **Parameters**:
@@ -89,10 +77,6 @@ void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCol
 **Description**
 
 Disables the system fonts.
-
-<!--Device-void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)--><!--Device-void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -116,10 +100,6 @@ void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontC
 
 Disables system fonts. After disabling, the font collection object can only use registered custom fonts for text rendering.
 
-<!--Device-void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontCollection)--><!--Device-void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontCollection)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 **Parameters**:
@@ -138,13 +118,9 @@ OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)
 
 Creates a shareable [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md) object.
 
-<!--Device-OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)--><!--Device-OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
-**Resource release**: [OH_Drawing_DestroyFontCollection](#oh_drawing_destroyfontcollection)
+**Resource release**: OH_Drawing_DestroyFontCollection {return}
 
 **Returns**:
 
@@ -161,10 +137,6 @@ void OH_Drawing_ClearFontCaches(OH_Drawing_FontCollection* fontCollection)
 **Description**
 
 Clears the font cache. (The font cache has a memory limit and a clearing mechanism. It occupies limited memory. You are not advised to clear it unless otherwise required.)
-
-<!--Device-void OH_Drawing_ClearFontCaches(OH_Drawing_FontCollection* fontCollection)--><!--Device-void OH_Drawing_ClearFontCaches(OH_Drawing_FontCollection* fontCollection)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -183,10 +155,6 @@ OH_Drawing_FontCollection* OH_Drawing_GetFontCollectionGlobalInstance(void)
 **Description**
 
 Obtains the global font collection object [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md), which can be used to obtain theme font information. This object is prohibited from being released.
-
-<!--Device-OH_Drawing_FontCollection* OH_Drawing_GetFontCollectionGlobalInstance(void)--><!--Device-OH_Drawing_FontCollection* OH_Drawing_GetFontCollectionGlobalInstance(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 14
 

@@ -6,11 +6,9 @@
 
 **库：** libtime_service_ndk.so
 
-**系统能力：** SystemCapability.MiscServices.Time
-
 **起始版本：** 12
 
-**相关模块：** [TimeService](capi-basic-services-kit-timeservice.md)
+**相关模块：** [TimeService](capi-timeservice.md)
 
 ## 汇总
 
@@ -38,17 +36,13 @@ enum TimeService_ErrCode
 
 枚举错误码。
 
-<!--Device-enum TimeService_ErrCode--><!--Device-enum TimeService_ErrCode-End-->
-
-**系统能力：** SystemCapability.MiscServices.Time
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| TIMESERVICE_ERR_OK = 0 | 成功。<br><!--Device-TIMESERVICE_ERR_OK = 0--><!--Device-TIMESERVICE_ERR_OK = 0-End--> |
-| TIMESERVICE_ERR_INTERNAL_ERROR = 13000001 | 获取系统参数失败。请稍后重试，若问题持续存在请检查系统服务状态。<br><!--Device-TIMESERVICE_ERR_INTERNAL_ERROR = 13000001--><!--Device-TIMESERVICE_ERR_INTERNAL_ERROR = 13000001-End--> |
-| TIMESERVICE_ERR_INVALID_PARAMETER = 13000002 | 无效的参数。请检查timeZone是否为NULL指针，或时区名称（不包括结束字符（'\0'））的大小是否大于或等于len。<br><!--Device-TIMESERVICE_ERR_INVALID_PARAMETER = 13000002--><!--Device-TIMESERVICE_ERR_INVALID_PARAMETER = 13000002-End--> |
+| TIMESERVICE_ERR_OK = 0 | 成功。 |
+| TIMESERVICE_ERR_INTERNAL_ERROR = 13000001 | 获取系统参数失败。请稍后重试，若问题持续存在请检查系统服务状态。 |
+| TIMESERVICE_ERR_INVALID_PARAMETER = 13000002 | 无效的参数。请检查timeZone是否为NULL指针，或时区名称（不包括结束字符（'\0'））的大小是否大于或等于len。 |
 
 
 ## 函数说明
@@ -62,10 +56,6 @@ TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)
 **描述：**
 
 获取当前系统时区。
-
-<!--Device-TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)--><!--Device-TimeService_ErrCode OH_TimeService_GetTimeZone(char *timeZone, uint32_t len)-End-->
-
-**系统能力：** SystemCapability.MiscServices.Time
 
 **起始版本：** 12
 

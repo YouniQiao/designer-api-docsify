@@ -8,13 +8,11 @@ typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat
 
 This struct describes the pixel format of a bitmap, including the color type and alpha type.
 
-<!--Device-typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat--><!--Device-typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 **Header file**: [drawing_bitmap.h](capi-drawing-bitmap-h.md)
 
@@ -24,7 +22,7 @@ This struct describes the pixel format of a bitmap, including the color type and
 
 | Name | Description |
 | -- | -- |
-| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorFormat | Storage format of bitmap pixels.<br><!--Device-OH_Drawing_ColorFormat colorFormat--><!--Device-OH_Drawing_ColorFormat colorFormat-End--> |
-| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaFormat | Alpha format of bitmap pixels.<br><!--Device-OH_Drawing_AlphaFormat alphaFormat--><!--Device-OH_Drawing_AlphaFormat alphaFormat-End--> |
+| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorFormat | Storage format of bitmap pixels. |
+| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaFormat | Alpha format of bitmap pixels. |
 
 

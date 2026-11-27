@@ -4,42 +4,43 @@
 
 Declares the APIs used to access HUKS.
 
-**File to Include**: <huks/native_huks_api.h>
+**Include**: <huks/native_huks_api.h>
 
 **Library**: libhuks_ndk.z.so
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
-**Related module**: [HuksKeyApi](capi-universal-keystore-kit-hukskeyapi.md)
+**Related module**: [HuksKeyApi](capi-hukskeyapi.md)
 
 ## Summary
 
-### Functions
+### Macro
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)](#oh_huks_getsdkversion) | - | Obtains the current HUKS SDK version number. |
-| [struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)](#oh_huks_generatekeyitem) | - | Generates a key. |
-| [struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)](#oh_huks_importkeyitem) | - | Imports a key in plaintext. |
-| [struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)](#oh_huks_importwrappedkeyitem) | - | Imports a key in ciphertext. |
-| [struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)](#oh_huks_exportpublickeyitem) | - | Exports the public key. |
-| [struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_deletekeyitem) | - | Deletes a key. |
-| [struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)](#oh_huks_getkeyitemparamset) | - | Obtains the properties of a key. |
-| [struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_iskeyitemexist) | - | Checks whether a key exists. |
-| [struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_attestkeyitem) | - | Obtains the certificate chain of a key. This API is open only to system applications. |
-| [struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_anonattestkeyitem) | - | Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread |
-| [struct OH_Huks_Result OH_Huks_AnonAttestKeyItemOffline(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_anonattestkeyitemoffline) | - | Obtain the anonymous key certificate offline. The offline key certificate depends on the network. You need to periodically connect to the network and use this interface to update the offline certificate. The offline anonymous key proof requires that the local time is accurate. Otherwise, the peer authentication certificate may expire and cannot work properly. |
-| [typedef void (\*OH_Huks_AsyncAnonAttestCallback)(void *outOwnedCtxData, int32_t result, const struct OH_Huks_CertChain *outBorrowedCertChain)](#oh_huks_asyncanonattestcallback) | OH_Huks_AsyncAnonAttestCallback | Callback function pointer for receiving the asynchronous anonymous attestation result. |
-| [struct OH_Huks_Result OH_Huks_AsyncAnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const OH_Huks_AsyncAnonAttestCallback callback, void *ctxData)](#oh_huks_asyncanonattestkeyitem) | - | Obtains the certificate chain of a key. Asynchronously performs anonymous attestation for a specified key. This is a time-consuming network interface. |
-| [struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)](#oh_huks_initsession) | - | Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) . |
-| [struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_updatesession) | - | Adds data by segment for the key operation, performs the related key operation, and outputs the processed data. |
-| [struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_finishsession) | - | Finishes a key session. |
-| [struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_abortsession) | - | Aborts a key session. |
-| [struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)](#oh_huks_listaliases) | - | Obtains the key alias set. |
-| [struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)](#oh_huks_wrapkey) | - | Exports a wrapped key. |
-| [struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)](#oh_huks_unwrapkey) | - | Imports a wrapped key. |
+| Name | Description |
+| -- | -- |
+| NATIVE_HUKS_API_H | Declares the APIs used to access HUKS.<br>**Since**: 9<br>**System capability**: SystemCapability.Security.Huks.Core |
+
+### Function
+
+| Name | Description |
+| -- | -- |
+| [struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)](#oh_huks_getsdkversion) | Obtains the current HUKS SDK version number. |
+| [struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)](#oh_huks_generatekeyitem) | Generates a key. |
+| [struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)](#oh_huks_importkeyitem) | Imports a key in plaintext. |
+| [struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)](#oh_huks_importwrappedkeyitem) | Imports a key in ciphertext. |
+| [struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)](#oh_huks_exportpublickeyitem) | Exports the public key. |
+| [struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_deletekeyitem) | Deletes a key. |
+| [struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)](#oh_huks_getkeyitemparamset) | Obtains the properties of a key. |
+| [struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_iskeyitemexist) | Checks whether a key exists. |
+| [struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_attestkeyitem) | Obtains the certificate chain of a key. This API is open only to system applications. |
+| [struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_anonattestkeyitem) | Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread |
+| [struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)](#oh_huks_initsession) | Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) . |
+| [struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_updatesession) | Adds data by segment for the key operation, performs the related key operation, and outputs the processed data. |
+| [struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_finishsession) | Finishes a key session. |
+| [struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_abortsession) | Aborts a key session. |
+| [struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)](#oh_huks_listaliases) | Obtains the key alias set. |
+| [struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)](#oh_huks_wrapkey) | Exports a wrapped key. |
+| [struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)](#oh_huks_unwrapkey) | Imports a wrapped key. |
 
 ## Function description
 
@@ -52,10 +53,6 @@ struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)
 **Description**
 
 Obtains the current HUKS SDK version number.
-
-<!--Device-struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)--><!--Device-struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -80,10 +77,6 @@ struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlia
 **Description**
 
 Generates a key.
-
-<!--Device-struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)--><!--Device-struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -111,10 +104,6 @@ struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Imports a key in plaintext.
 
-<!--Device-struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)--><!--Device-struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *key)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -140,10 +129,6 @@ struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *ke
 **Description**
 
 Imports a key in ciphertext.
-
-<!--Device-struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)--><!--Device-struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_Blob *wrappingKeyAlias, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *wrappedKeyData)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -172,10 +157,6 @@ struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *key
 
 Exports the public key.
 
-<!--Device-struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)--><!--Device-struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *key)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -202,10 +183,6 @@ struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Deletes a key.
 
-<!--Device-struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -230,10 +207,6 @@ struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyA
 **Description**
 
 Obtains the properties of a key.
-
-<!--Device-struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)--><!--Device-struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -261,10 +234,6 @@ struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias
 
 Checks whether a key exists.
 
-<!--Device-struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -289,10 +258,6 @@ struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias,
 **Description**
 
 Obtains the certificate chain of a key. This API is open only to system applications.
-
-<!--Device-struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)--><!--Device-struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Required permission**: ohos.permission.ATTEST_KEY
 
@@ -322,10 +287,6 @@ struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAl
 
 Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread
 
-<!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)--><!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -342,91 +303,6 @@ Obtains the certificate chain of a key. This is a networking duration interface 
 | -- | -- |
 | [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (**errorCode**): <br>OH_HUKS_SUCCESS 0: Operation successful. <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: The **keyAlias**, **paramSet**, or **certChain** parameter is invalid. <br>OH_HUKS_ERR_CODE_FEATURE_NOT_SUPPORTED 12000001: This feature is not supported currently. <br>OH_HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT 12000002: Failed to obtain the key parameter. <br>OH_HUKS_ERR_CODE_INVALID_CRYPTO_ALG_ARGUMENT 12000003: The key parameter is invalid. <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed. <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The encryption engine fails. <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The key file does not exist. <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: The device environment or input parameters are abnormal. <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The group name specified by accessing the group tag is invalid. (This error code is added in API version 23.) |
 
-### OH_Huks_AnonAttestKeyItemOffline()
-
-```c
-struct OH_Huks_Result OH_Huks_AnonAttestKeyItemOffline(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)
-```
-
-**Description**
-
-Obtain the anonymous key certificate offline. The offline key certificate depends on the network. You need to periodically connect to the network and use this interface to update the offline certificate. The offline anonymous key proof requires that the local time is accurate. Otherwise, the peer authentication certificate may expire and cannot work properly.
-
-<!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItemOffline(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)--><!--Device-struct OH_Huks_Result OH_Huks_AnonAttestKeyItemOffline(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *keyAlias | Pointer to the key alias. |
-| [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Obtains the pointer to the certificate chain parameter. |
-| [struct OH_Huks_CertChain](capi-hukstypeapi-oh-huks-certchain.md) *certChain | Pointer to the obtained certificate chain. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (**errorCode**):<ul> <li>OH_HUKS_SUCCESS 0: The operation is successful. </li> <li>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: The function is not supported. Possible causes are as follows: 1. The hardware does not support this capability. 2. The chip does not support this capability. 3. Dependent service features are not supported. </li> <li>OH_HUKS_ERR_CODE_FE:00-20:00_NOT_SUPPORTED 12000001: The algorithm mode is not supported. </li> <li>OH_HUKS_ERR_CODE_FILE_OPERATION_FAIL 12000004: The file operation fails. </li> <li>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: The IPC communication fails. </li> <li>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The encryption engine is faulty. </li> <li>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The key file does not exist. </li> <li>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: The device environment or input parameter is abnormal. </li> <li>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: The memory is insufficient. </li> <li>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The parameter is incorrect. Possible causes are as follows: 1. The mandatory parameter is empty. 2. The parameter type is incorrect. 3. Parameter verification failed. 4. The group ID specified by the access group tag is invalid. </li> <li>OH_HUKS_ERR_CODE_BUSY 12000024: The operation times out, which may be caused by network jitter. </li> <li>OH_HUKS_ERR_CODE_NETWORK_UNAVAILABLE 12000027: The network is unavailable. Check the network connection. </li> </ul> |
-
-### OH_Huks_AsyncAnonAttestCallback()
-
-```c
-typedef void (*OH_Huks_AsyncAnonAttestCallback)(void *outOwnedCtxData, int32_t result, const struct OH_Huks_CertChain *outBorrowedCertChain)
-```
-
-**Description**
-
-Callback function pointer for receiving the asynchronous anonymous attestation result.
-
-<!--Device-typedef void (*OH_Huks_AsyncAnonAttestCallback)(void *outOwnedCtxData, int32_t result, const struct OH_Huks_CertChain *outBorrowedCertChain)--><!--Device-typedef void (*OH_Huks_AsyncAnonAttestCallback)(void *outOwnedCtxData, int32_t result, const struct OH_Huks_CertChain *outBorrowedCertChain)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| void *outOwnedCtxData | [out] Pointer to the user-defined context data, passed back when the callback is invoked. |
-| int32_t result | [out] Status code indicating the execution result of the asynchronous operation. |
-| [const struct OH_Huks_CertChain](capi-hukstypeapi-oh-huks-certchain.md) *outBorrowedCertChain | [out] Pointer to the returned certificate chain structure generated asynchronously. |
-
-### OH_Huks_AsyncAnonAttestKeyItem()
-
-```c
-struct OH_Huks_Result OH_Huks_AsyncAnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const OH_Huks_AsyncAnonAttestCallback callback, void *ctxData)
-```
-
-**Description**
-
-Obtains the certificate chain of a key. Asynchronously performs anonymous attestation for a specified key. This is a time-consuming network interface.
-
-<!--Device-struct OH_Huks_Result OH_Huks_AsyncAnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const OH_Huks_AsyncAnonAttestCallback callback, void *ctxData)--><!--Device-struct OH_Huks_Result OH_Huks_AsyncAnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, const OH_Huks_AsyncAnonAttestCallback callback, void *ctxData)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *keyAlias | [in] Pointer to the alias of the target key. |
-| [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | [in] Pointer to the parameters for obtaining the certificate chain. |
-| [const OH_Huks_AsyncAnonAttestCallback](capi-native-huks-api-h.md#oh_huks_asyncanonattestcallback) callback | [in] Pointer to the callback function invoked when the asynchronous operation completes. |
-| void *ctxData | [in] Pointer to user-defined context data, passed directly to the callback function. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (**errorCode**): <br>OH_HUKS_SUCCESS 0: Operation successful. <br>OH_HUKS_ERR_CODE_FEATURE_NOT_SUPPORTED 12000001: This feature is not supported currently. <br>OH_HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT 12000002: Failed to obtain the key parameter. <br>OH_HUKS_ERR_CODE_INVALID_CRYPTO_ALG_ARGUMENT 12000003: The key parameter is invalid. <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed. <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The encryption engine fails. <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The key file does not exist. <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: The device environment or input parameters are abnormal. <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The group name specified by accessing the group tag is invalid. |
-
 ### OH_Huks_InitSession()
 
 ```c
@@ -436,10 +312,6 @@ struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, c
 **Description**
 
 Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) .
-
-<!--Device-struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)--><!--Device-struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -475,10 +347,6 @@ struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, c
 
 Adds data by segment for the key operation, performs the related key operation, and outputs the processed data.
 
-<!--Device-struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)--><!--Device-struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -512,10 +380,6 @@ struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, c
 **Description**
 
 Finishes a key session.
-
-<!--Device-struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)--><!--Device-struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -551,10 +415,6 @@ struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, co
 
 Aborts a key session.
 
-<!--Device-struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)--><!--Device-struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -587,10 +447,6 @@ struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSe
 
 Obtains the key alias set.
 
-<!--Device-struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)--><!--Device-struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -615,10 +471,6 @@ struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const
 **Description**
 
 Exports a wrapped key.
-
-<!--Device-struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)--><!--Device-struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 
@@ -645,10 +497,6 @@ struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, con
 **Description**
 
 Imports a wrapped key.
-
-<!--Device-struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)--><!--Device-struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *wrappedKey)-End-->
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 

@@ -227,7 +227,7 @@ level?: notification.SlotLevel
 
 Notification level.
 
-**Type:** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
+**Type:** [notification.SlotLevel](arkts-notification-notification-depr-slotlevel-e.md)
 
 **Since:** 7
 
@@ -247,7 +247,7 @@ type?: notification.SlotType
 
 Slot type.
 
-**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
+**Type:** [notification.SlotType](arkts-notification-notification-depr-slottype-e.md)
 
 **Since:** 7
 

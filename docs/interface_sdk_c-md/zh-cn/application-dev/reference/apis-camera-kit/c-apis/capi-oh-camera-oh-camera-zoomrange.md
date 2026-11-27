@@ -1,20 +1,18 @@
 # OH_Camera_ZoomRange
 
 ```c
-typedef struct OH_Camera_ZoomRange {...} OH_Camera_ZoomRange
+struct OH_Camera_ZoomRange {...}
 ```
 
 ## 概述
 
 变焦范围配置。
 
-<!--Device-struct OH_Camera_ZoomRange {...}--><!--Device-struct OH_Camera_ZoomRange {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Camera_ZoomRange {...} OH_Camera_ZoomRange
 
 | 名称 | 描述 |
 | -- | -- |
-| float minZoom | 最小变焦值。<br>**起始版本：** 24<br><!--Device-float minZoom--><!--Device-float minZoom-End--> |
-| float maxZoom | 最大变焦值。<br>**起始版本：** 24<br><!--Device-float maxZoom--><!--Device-float maxZoom-End--> |
+| float minZoom |  |
+| float maxZoom |  |
 
 

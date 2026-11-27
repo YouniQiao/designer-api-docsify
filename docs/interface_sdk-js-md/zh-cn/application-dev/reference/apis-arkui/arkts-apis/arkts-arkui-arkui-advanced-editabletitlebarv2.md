@@ -40,7 +40,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 | --- | --- |
 | [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md) | 左侧图像项类型别名。 |
 | [EditableTitleBarItemV2Options](arkts-arkui-editabletitlebaritemv2options-t.md) | 左侧图像项配置选项类型别名。 |
-| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | 点击事件的回调函数类型。 |
+| [OnActionCallback](arkts-arkui-editabletitlebarv2-onactioncallback-t.md) | 点击事件的回调函数类型。 |
 
 ### 枚举
 

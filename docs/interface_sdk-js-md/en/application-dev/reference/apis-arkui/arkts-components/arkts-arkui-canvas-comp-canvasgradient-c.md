@@ -82,8 +82,8 @@ Sets the gradient breakpoint value, including the offset and color. Colors in RG
 
 > **NOTE:** 
 > 
-> Only the [fillStyle](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#fillstyle) and
-> [strokeStyle](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#strokestyle) attributes of the
+> Only the fillStyle and
+> [strokeStyle](arkts-arkui-canvas-comp-canvasrenderer-c.md#strokestyle) attributes of the
 > [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md) object support setting a
 > wide color gamut **CanvasGradient** object. When using HDR colors, you must set the
 > color gamut mode of the window where the **Canvas** component is located to the wide

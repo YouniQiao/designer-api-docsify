@@ -8,13 +8,11 @@ typedef struct OH_Drawing_FontFeature {...} OH_Drawing_FontFeature
 
 描述文本字体特征结构体。
 
-<!--Device-typedef struct OH_Drawing_FontFeature {...} OH_Drawing_FontFeature--><!--Device-typedef struct OH_Drawing_FontFeature {...} OH_Drawing_FontFeature-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Drawing_FontFeature {...} OH_Drawing_FontFeature
 
 | 名称 | 描述 |
 | -- | -- |
-| char* tag | 字体特征的标签。<br><!--Device-char* tag--><!--Device-char* tag-End--> |
-| int value | 字体特征的值。<br><!--Device-int value--><!--Device-int value-End--> |
+| char* tag | 字体特征的标签。 |
+| int value | 字体特征的值。 |
 
 

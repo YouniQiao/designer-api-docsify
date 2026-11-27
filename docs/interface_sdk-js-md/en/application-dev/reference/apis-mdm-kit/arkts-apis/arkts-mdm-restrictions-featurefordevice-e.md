@@ -111,6 +111,22 @@ Device camera capability.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## COMPANION_AI
+
+```TypeScript
+COMPANION_AI = 56
+```
+
+Companion AI.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-COMPANION_AI = 56--><!--Device-FeatureForDevice-COMPANION_AI = 56-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## CONTROL_CENTER
 
 ```TypeScript

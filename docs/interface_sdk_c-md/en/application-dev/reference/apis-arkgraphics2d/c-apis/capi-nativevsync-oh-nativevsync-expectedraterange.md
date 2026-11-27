@@ -6,15 +6,13 @@ typedef struct OH_NativeVSync_ExpectedRateRange {...} OH_NativeVSync_ExpectedRat
 
 ## Overview
 
-Provides the expected frame rate range.
-
-<!--Device-typedef struct OH_NativeVSync_ExpectedRateRange {...} OH_NativeVSync_ExpectedRateRange--><!--Device-typedef struct OH_NativeVSync_ExpectedRateRange {...} OH_NativeVSync_ExpectedRateRange-End-->
+Defines the expected frame rate range struct.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeVsync
 
 **Since**: 20
 
-**Related module**: [NativeVsync](capi-arkgraphics2d-nativevsync.md)
+**Related module**: [NativeVsync](capi-nativevsync.md)
 
 **Header file**: [native_vsync.h](capi-native-vsync-h.md)
 
@@ -24,8 +22,8 @@ Provides the expected frame rate range.
 
 | Name | Description |
 | -- | -- |
-| int32_t min | Minimum frame rate.<br><!--Device-int32_t min--><!--Device-int32_t min-End--> |
-| int32_t max | Maximum frame rate.<br><!--Device-int32_t max--><!--Device-int32_t max-End--> |
-| int32_t expected | Expected frame rate.<br><!--Device-int32_t expected--><!--Device-int32_t expected-End--> |
+| int32_t min | The minimum frame rate of dynamical callback rate range. |
+| int32_t max | The maximum frame rate of dynamical callback rate range. |
+| int32_t expected | The expected frame rate of dynamical callback rate range. |
 
 

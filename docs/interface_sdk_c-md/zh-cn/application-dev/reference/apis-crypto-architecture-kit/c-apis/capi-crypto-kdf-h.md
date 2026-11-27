@@ -8,11 +8,9 @@
 
 **库：** libohcrypto.so
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**相关模块：** [CryptoKdfApi](capi-crypto-architecture-kit-cryptokdfapi.md)
+**相关模块：** [CryptoKdfApi](capi-cryptokdfapi.md)
 
 ## 汇总
 
@@ -52,22 +50,18 @@ enum CryptoKdf_ParamType
 
 定义KDF参数类型。
 
-<!--Device-enum CryptoKdf_ParamType--><!--Device-enum CryptoKdf_ParamType-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CRYPTO_KDF_KEY_DATABLOB = 0 | 表示KDF的密钥或密码。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_KEY_DATABLOB = 0--><!--Device-CRYPTO_KDF_KEY_DATABLOB = 0-End--> |
-| CRYPTO_KDF_SALT_DATABLOB = 1 | 表示KDF的盐值。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_SALT_DATABLOB = 1--><!--Device-CRYPTO_KDF_SALT_DATABLOB = 1-End--> |
-| CRYPTO_KDF_INFO_DATABLOB = 2 | 表示KDF的Info信息。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_INFO_DATABLOB = 2--><!--Device-CRYPTO_KDF_INFO_DATABLOB = 2-End--> |
-| CRYPTO_KDF_ITER_COUNT_INT = 3 | 表示PBKDF2的迭代次数。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_ITER_COUNT_INT = 3--><!--Device-CRYPTO_KDF_ITER_COUNT_INT = 3-End--> |
-| CRYPTO_KDF_SCRYPT_N_UINT64 = 4 | 表示SCRYPT KDF的n参数。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_SCRYPT_N_UINT64 = 4--><!--Device-CRYPTO_KDF_SCRYPT_N_UINT64 = 4-End--> |
-| CRYPTO_KDF_SCRYPT_R_UINT64 = 5 | 表示SCRYPT KDF的r参数。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_SCRYPT_R_UINT64 = 5--><!--Device-CRYPTO_KDF_SCRYPT_R_UINT64 = 5-End--> |
-| CRYPTO_KDF_SCRYPT_P_UINT64 = 6 | 表示SCRYPT KDF的p参数。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_SCRYPT_P_UINT64 = 6--><!--Device-CRYPTO_KDF_SCRYPT_P_UINT64 = 6-End--> |
-| CRYPTO_KDF_SCRYPT_MAX_MEM_UINT64 = 7 | 表示SCRYPT KDF的最大内存参数。<br>**起始版本：** 20<br><!--Device-CRYPTO_KDF_SCRYPT_MAX_MEM_UINT64 = 7--><!--Device-CRYPTO_KDF_SCRYPT_MAX_MEM_UINT64 = 7-End--> |
+| CRYPTO_KDF_KEY_DATABLOB = 0 | 表示KDF的密钥或密码。<br>**起始版本：** 20 |
+| CRYPTO_KDF_SALT_DATABLOB = 1 | 表示KDF的盐值。<br>**起始版本：** 20 |
+| CRYPTO_KDF_INFO_DATABLOB = 2 | 表示KDF的Info信息。<br>**起始版本：** 20 |
+| CRYPTO_KDF_ITER_COUNT_INT = 3 | 表示PBKDF2的迭代次数。<br>**起始版本：** 20 |
+| CRYPTO_KDF_SCRYPT_N_UINT64 = 4 | 表示SCRYPT KDF的n参数。<br>**起始版本：** 20 |
+| CRYPTO_KDF_SCRYPT_R_UINT64 = 5 | 表示SCRYPT KDF的r参数。<br>**起始版本：** 20 |
+| CRYPTO_KDF_SCRYPT_P_UINT64 = 6 | 表示SCRYPT KDF的p参数。<br>**起始版本：** 20 |
+| CRYPTO_KDF_SCRYPT_MAX_MEM_UINT64 = 7 | 表示SCRYPT KDF的最大内存参数。<br>**起始版本：** 20 |
 
 
 ## 函数说明
@@ -82,13 +76,9 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfPa
 
 创建KDF参数。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_Create(const char *algoName, OH_CryptoKdfParams **params)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_CryptoKdfParams_Destroy](#oh_cryptokdfparams_destroy)
+**资源释放：** crypto_kdf/OH_CryptoKdfParams_Destroy {params}
 
 **参数：**
 
@@ -118,10 +108,6 @@ OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, Crypto
 
 设置KDF参数。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdfParams_SetParam(OH_CryptoKdfParams *params, CryptoKdf_ParamType type, Crypto_DataBlob *value)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
 **参数：**
@@ -148,10 +134,6 @@ void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)
 
 销毁KDF参数。
 
-<!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)--><!--Device-void OH_CryptoKdfParams_Destroy(OH_CryptoKdfParams *params)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
 **参数：**
@@ -170,13 +152,9 @@ OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)
 
 根据给定的算法名称创建KDF上下文。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Create(const char *algoName, OH_CryptoKdf **ctx)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_CryptoKdf_Destroy](#oh_cryptokdf_destroy)
+**资源释放：** crypto_kdf/OH_CryptoKdf_Destroy {ctx}
 
 **参数：**
 
@@ -206,13 +184,9 @@ OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParam
 
 派生密钥。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)--><!--Device-OH_Crypto_ErrCode OH_CryptoKdf_Derive(OH_CryptoKdf *ctx, const OH_CryptoKdfParams *params, int keyLen, Crypto_DataBlob *key)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {key}
 
 **参数：**
 
@@ -238,10 +212,6 @@ void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)
 **描述：**
 
 销毁KDF上下文。
-
-<!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)--><!--Device-void OH_CryptoKdf_Destroy(OH_CryptoKdf *ctx)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

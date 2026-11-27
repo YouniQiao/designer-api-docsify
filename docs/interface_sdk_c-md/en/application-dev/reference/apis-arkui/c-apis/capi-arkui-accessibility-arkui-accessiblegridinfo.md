@@ -8,13 +8,11 @@ typedef struct ArkUI_AccessibleGridInfo {...} ArkUI_AccessibleGridInfo
 
 Defines a struct for the accessible grid information.
 
-<!--Device-typedef struct ArkUI_AccessibleGridInfo {...} ArkUI_AccessibleGridInfo--><!--Device-typedef struct ArkUI_AccessibleGridInfo {...} ArkUI_AccessibleGridInfo-End-->
-
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
-**Related module**: [ArkUI_Accessibility](capi-arkui-arkui-accessibility.md)
+**Related module**: [ArkUI_Accessibility](capi-arkui-accessibility.md)
 
 **Header file**: [native_interface_accessibility.h](capi-native-interface-accessibility-h.md)
 
@@ -24,8 +22,8 @@ Defines a struct for the accessible grid information.
 
 | Name | Description |
 | -- | -- |
-| int32_t rowCount | Number of rows.<br><!--Device-int32_t rowCount--><!--Device-int32_t rowCount-End--> |
-| int32_t columnCount | Number of columns.<br><!--Device-int32_t columnCount--><!--Device-int32_t columnCount-End--> |
-| int32_t selectionMode | Selection mode. The value <b>0</b> indicates that only one row can be selected.<br><!--Device-int32_t selectionMode--><!--Device-int32_t selectionMode-End--> |
+| int32_t rowCount | Number of rows. |
+| int32_t columnCount | Number of columns. |
+| int32_t selectionMode | Selection mode. The value <b>0</b> indicates that only one row can be selected. |
 
 

@@ -1,20 +1,18 @@
 # AbilityBase_Element
 
 ```c
-typedef struct AbilityBase_Element {...} AbilityBase_Element
+struct AbilityBase_Element {...}
 ```
 
 ## Overview
 
 The struct describes the Element in Want.
 
-<!--Device-struct AbilityBase_Element {...}--><!--Device-struct AbilityBase_Element {...}-End-->
-
 **System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
-**Related module**: [AbilityBase](capi-ability-kit-abilitybase.md)
+**Related module**: [AbilityBase](capi-abilitybase.md)
 
 **Header file**: [want.h](capi-want-h.md)
 
@@ -24,8 +22,8 @@ The struct describes the Element in Want.
 
 | Name | Description |
 | -- | -- |
-| char* bundleName | Pointer to the bundle name of the application.<br>**Since**: 15<br><!--Device-char* bundleName--><!--Device-char* bundleName-End--> |
-| char* moduleName | Pointer to the module name.<br>**Since**: 15<br><!--Device-char* moduleName--><!--Device-char* moduleName-End--> |
-| char* abilityName | Pointer to the ability name.<br>**Since**: 15<br><!--Device-char* abilityName--><!--Device-char* abilityName-End--> |
+| char* bundleName |  |
+| char* moduleName |  |
+| char* abilityName |  |
 
 

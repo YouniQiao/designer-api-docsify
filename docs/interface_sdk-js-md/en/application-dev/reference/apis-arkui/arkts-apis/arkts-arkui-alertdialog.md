@@ -18,7 +18,7 @@
 | [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
 | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
 | [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
-| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
+| [DismissDialogAction](arkts-arkui-alertdialog-comp-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 | [TextStyle](arkts-arkui-textstyle-i.md) | Describes the word break rule of the message in the dialog box. |
 
 <!--Del-->

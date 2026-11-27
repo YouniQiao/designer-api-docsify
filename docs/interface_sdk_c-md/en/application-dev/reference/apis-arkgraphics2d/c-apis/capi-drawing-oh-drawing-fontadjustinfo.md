@@ -1,20 +1,18 @@
 # OH_Drawing_FontAdjustInfo
 
 ```c
-typedef struct OH_Drawing_FontAdjustInfo {...} OH_Drawing_FontAdjustInfo
+struct OH_Drawing_FontAdjustInfo {...}
 ```
 
 ## Overview
 
 This struct describes the information about a font weight mapping.
 
-<!--Device-struct OH_Drawing_FontAdjustInfo {...}--><!--Device-struct OH_Drawing_FontAdjustInfo {...}-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 **Header file**: [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,7 +22,7 @@ This struct describes the information about a font weight mapping.
 
 | Name | Description |
 | -- | -- |
-| int weight | Original font weight.<br><!--Device-int weight--><!--Device-int weight-End--> |
-| int to | Font weight displayed in the application.<br><!--Device-int to--><!--Device-int to-End--> |
+| int weight | Original font weight. |
+| int to | Font weight displayed in the application. |
 
 

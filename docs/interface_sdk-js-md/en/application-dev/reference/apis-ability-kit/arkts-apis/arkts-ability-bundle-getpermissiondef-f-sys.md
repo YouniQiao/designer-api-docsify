@@ -33,7 +33,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionName | string | Yes | Name of the permission. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes | Callback used to return the permission details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-permissiondef-i-sys.md)&gt; | Yes | Callback used to return the permission details. |
 
 <!--Del-->
 **Examples**
@@ -98,7 +98,7 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Promise used to return the permission details. |
+| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-permissiondef-i-sys.md)&gt; | Promise used to return the permission details. |
 
 <!--Del-->
 **Examples**

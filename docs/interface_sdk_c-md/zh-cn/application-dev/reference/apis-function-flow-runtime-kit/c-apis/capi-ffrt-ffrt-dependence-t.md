@@ -8,13 +8,11 @@ typedef struct ffrt_dependence_t {...} ffrt_dependence_t
 
 依赖数据项结构，用于描述任务间的单个依赖关系。
 
-<!--Device-typedef struct ffrt_dependence_t {...} ffrt_dependence_t--><!--Device-typedef struct ffrt_dependence_t {...} ffrt_dependence_t-End-->
-
 **系统能力：** SystemCapability.Resourceschedule.Ffrt.Core
 
 **起始版本：** 10
 
-**相关模块：** [FFRT](capi-function-flow-runtime-kit-ffrt.md)
+**相关模块：** [FFRT](capi-ffrt.md)
 
 **所在头文件：** [type_def.h](capi-type-def-h.md)
 
@@ -24,7 +22,7 @@ typedef struct ffrt_dependence_t {...} ffrt_dependence_t
 
 | 名称 | 描述 |
 | -- | -- |
-| [ffrt_dependence_type_t](capi-type-def-h.md#ffrt_dependence_type_t) type | 依赖类型。<br><!--Device-ffrt_dependence_type_t type--><!--Device-ffrt_dependence_type_t type-End--> |
-| const void* ptr | 依赖指针。数据依赖时指向数据，任务依赖时指向任务句柄。<br><!--Device-const void* ptr--><!--Device-const void* ptr-End--> |
+| [ffrt_dependence_type_t](capi-type-def-h.md#ffrt_dependence_type_t) type | 依赖类型。 |
+| const void* ptr | 依赖指针。数据依赖时指向数据，任务依赖时指向任务句柄。 |
 
 

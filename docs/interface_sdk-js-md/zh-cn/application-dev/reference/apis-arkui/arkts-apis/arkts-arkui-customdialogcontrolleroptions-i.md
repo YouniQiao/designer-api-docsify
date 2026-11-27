@@ -218,7 +218,7 @@ borderColor?: ResourceColor | EdgeColors
 
 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](arkts-arkui-edgecolors-t.md)
 
 **起始版本：** 12
 
@@ -242,7 +242,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; [EdgeStyles](arkts-arkui-edgestyles-t.md)
 
 **起始版本：** 12
 
@@ -270,7 +270,7 @@ borderWidth?: Dimension | EdgeWidths
 
 当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [EdgeWidths](arkts-arkui-edgewidths-t.md)
 
 **起始版本：** 12
 
@@ -352,7 +352,7 @@ cornerRadius?: Dimension | BorderRadiuses
 
 **说明：** 自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和[borderRadius](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderradius-1)属性一起使用。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **起始版本：** 10
 
@@ -795,7 +795,7 @@ offset?: Offset
 
 默认值：{ dx: 0, dy: 0 }
 
-**类型：** [Offset](arkts-arkui-offset-t.md)
+**类型：** Offset
 
 **起始版本：** 7
 
@@ -925,7 +925,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-customdialog-comp-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 

@@ -4,25 +4,23 @@
 
 The file declares the native APIs used for audio and video multiplexing.
 
-**File to Include**: <multimedia/player_framework/native_avmuxer.h>
+**Include**: <multimedia/player_framework/native_avmuxer.h>
 
 **Library**: libnative_media_avmuxer.so
 
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 10
 
-**Related module**: [AVMuxer](capi-avcodec-kit-avmuxer.md)
+**Related module**: [AVMuxer](capi-avmuxer.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AVMuxer](capi-avmuxer-oh-avmuxer.md) | OH_AVMuxer | The struct describes a native object for the muxer interface. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -31,7 +29,7 @@ The file declares the native APIs used for audio and video multiplexing.
 | [OH_AVErrCode OH_AVMuxer_SetFormat(OH_AVMuxer *muxer, OH_AVFormat *format)](#oh_avmuxer_setformat) | Set format to the muxer. |
 | [OH_AVErrCode OH_AVMuxer_AddTrack(OH_AVMuxer *muxer, int32_t *trackIndex, OH_AVFormat *trackFormat)](#oh_avmuxer_addtrack) | Adds an audio or video track to a muxer. Each time this function is called, an audio or video track is added to the muxer. This function must be called before [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start). |
 | [OH_AVErrCode OH_AVMuxer_Start(OH_AVMuxer *muxer)](#oh_avmuxer_start) | Starts a muxer. This function must be called after [OH_AVMuxer_AddTrack](capi-native-avmuxer-h.md#oh_avmuxer_addtrack) and before [OH_AVMuxer_WriteSample](capi-native-avmuxer-h.md#oh_avmuxer_writesample). |
-| [OH_AVErrCode OH_AVMuxer_WriteSample(OH_AVMuxer *muxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr info)](#oh_avmuxer_writesample) | Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start) and before [OH_AVMuxer_Stop](capi-native-avmuxer-h.md#oh_avmuxer_stop). The caller must write the sample to the correct audio or video track based on the timing in **info**.(Deprecated) |
+| [OH_AVErrCode OH_AVMuxer_WriteSample(OH_AVMuxer *muxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr info)](#oh_avmuxer_writesample) | Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start) and before [OH_AVMuxer_Stop](capi-native-avmuxer-h.md#oh_avmuxer_stop). The caller must write the sample to the correct audio or video track based on the timing in **info**.(Deprecated in API11) |
 | [OH_AVErrCode OH_AVMuxer_WriteSampleBuffer(OH_AVMuxer *muxer, uint32_t trackIndex, const OH_AVBuffer *sample)](#oh_avmuxer_writesamplebuffer) | Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start) and before [OH_AVMuxer_Stop](capi-native-avmuxer-h.md#oh_avmuxer_stop). The caller must write the sample to the correct audio or video track based on the timing in **sample**. |
 | [OH_AVErrCode OH_AVMuxer_Stop(OH_AVMuxer *muxer)](#oh_avmuxer_stop) | Stops a muxer. Once the muxer is stopped, it cannot be restarted. |
 | [OH_AVErrCode OH_AVMuxer_Destroy(OH_AVMuxer *muxer)](#oh_avmuxer_destroy) | Clears internal resources and destroys an OH_AVMuxer instance.<br> Do not repeatedly destroy the instance. Otherwise, the program may crash. |
@@ -47,10 +45,6 @@ OH_AVMuxer *OH_AVMuxer_Create(int32_t fd, OH_AVOutputFormat format)
 **Description**
 
 Creates an OH_AVMuxer instance by using the file descriptor and container format.
-
-<!--Device-OH_AVMuxer *OH_AVMuxer_Create(int32_t fd, OH_AVOutputFormat format)--><!--Device-OH_AVMuxer *OH_AVMuxer_Create(int32_t fd, OH_AVOutputFormat format)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
 
 **Since**: 10
 
@@ -77,10 +71,6 @@ OH_AVErrCode OH_AVMuxer_SetRotation(OH_AVMuxer *muxer, int32_t rotation)
 
 Sets the rotation angle (clockwise), which must be 0, 90, 180, or 270, of an output video. This function must be called before [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start).
 
-<!--Device-OH_AVErrCode OH_AVMuxer_SetRotation(OH_AVMuxer *muxer, int32_t rotation)--><!--Device-OH_AVErrCode OH_AVMuxer_SetRotation(OH_AVMuxer *muxer, int32_t rotation)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 10
 
 **Parameters**:
@@ -106,10 +96,6 @@ OH_AVErrCode OH_AVMuxer_SetFormat(OH_AVMuxer *muxer, OH_AVFormat *format)
 
 Set format to the muxer.
 
-<!--Device-OH_AVErrCode OH_AVMuxer_SetFormat(OH_AVMuxer *muxer, OH_AVFormat *format)--><!--Device-OH_AVErrCode OH_AVMuxer_SetFormat(OH_AVMuxer *muxer, OH_AVFormat *format)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 14
 
 **Parameters**:
@@ -134,10 +120,6 @@ OH_AVErrCode OH_AVMuxer_AddTrack(OH_AVMuxer *muxer, int32_t *trackIndex, OH_AVFo
 **Description**
 
 Adds an audio or video track to a muxer. Each time this function is called, an audio or video track is added to the muxer. This function must be called before [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start).
-
-<!--Device-OH_AVErrCode OH_AVMuxer_AddTrack(OH_AVMuxer *muxer, int32_t *trackIndex, OH_AVFormat *trackFormat)--><!--Device-OH_AVErrCode OH_AVMuxer_AddTrack(OH_AVMuxer *muxer, int32_t *trackIndex, OH_AVFormat *trackFormat)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
 
 **Since**: 10
 
@@ -165,10 +147,6 @@ OH_AVErrCode OH_AVMuxer_Start(OH_AVMuxer *muxer)
 
 Starts a muxer. This function must be called after [OH_AVMuxer_AddTrack](capi-native-avmuxer-h.md#oh_avmuxer_addtrack) and before [OH_AVMuxer_WriteSample](capi-native-avmuxer-h.md#oh_avmuxer_writesample).
 
-<!--Device-OH_AVErrCode OH_AVMuxer_Start(OH_AVMuxer *muxer)--><!--Device-OH_AVErrCode OH_AVMuxer_Start(OH_AVMuxer *muxer)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 10
 
 **Parameters**:
@@ -192,10 +170,6 @@ OH_AVErrCode OH_AVMuxer_WriteSample(OH_AVMuxer *muxer, uint32_t trackIndex, OH_A
 **Description**
 
 Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start) and before [OH_AVMuxer_Stop](capi-native-avmuxer-h.md#oh_avmuxer_stop). The caller must write the sample to the correct audio or video track based on the timing in **info**.
-
-<!--Device-OH_AVErrCode OH_AVMuxer_WriteSample(OH_AVMuxer *muxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr info)--><!--Device-OH_AVErrCode OH_AVMuxer_WriteSample(OH_AVMuxer *muxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr info)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
 
 **Since**: 10
 
@@ -228,10 +202,6 @@ OH_AVErrCode OH_AVMuxer_WriteSampleBuffer(OH_AVMuxer *muxer, uint32_t trackIndex
 
 Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start](capi-native-avmuxer-h.md#oh_avmuxer_start) and before [OH_AVMuxer_Stop](capi-native-avmuxer-h.md#oh_avmuxer_stop). The caller must write the sample to the correct audio or video track based on the timing in **sample**.
 
-<!--Device-OH_AVErrCode OH_AVMuxer_WriteSampleBuffer(OH_AVMuxer *muxer, uint32_t trackIndex, const OH_AVBuffer *sample)--><!--Device-OH_AVErrCode OH_AVMuxer_WriteSampleBuffer(OH_AVMuxer *muxer, uint32_t trackIndex, const OH_AVBuffer *sample)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 11
 
 **Parameters**:
@@ -258,10 +228,6 @@ OH_AVErrCode OH_AVMuxer_Stop(OH_AVMuxer *muxer)
 
 Stops a muxer. Once the muxer is stopped, it cannot be restarted.
 
-<!--Device-OH_AVErrCode OH_AVMuxer_Stop(OH_AVMuxer *muxer)--><!--Device-OH_AVErrCode OH_AVMuxer_Stop(OH_AVMuxer *muxer)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 10
 
 **Parameters**:
@@ -285,10 +251,6 @@ OH_AVErrCode OH_AVMuxer_Destroy(OH_AVMuxer *muxer)
 **Description**
 
 Clears internal resources and destroys an OH_AVMuxer instance.<br> Do not repeatedly destroy the instance. Otherwise, the program may crash.
-
-<!--Device-OH_AVErrCode OH_AVMuxer_Destroy(OH_AVMuxer *muxer)--><!--Device-OH_AVErrCode OH_AVMuxer_Destroy(OH_AVMuxer *muxer)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Muxer
 
 **Since**: 10
 

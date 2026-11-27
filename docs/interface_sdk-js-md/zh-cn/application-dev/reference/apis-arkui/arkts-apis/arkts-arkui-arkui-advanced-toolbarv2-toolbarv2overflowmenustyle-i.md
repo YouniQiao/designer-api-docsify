@@ -106,7 +106,7 @@ radius?: Dimension | BorderRadiuses
 
 溢出菜单圆角半径。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **起始版本：** 26.1.0
 

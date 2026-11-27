@@ -8,7 +8,7 @@ declare type EdgeWidth = EdgeWidths
 
 引入该对象时，至少传入一个参数。
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](arkts-arkui-edgewidths-t.md)
 
 **起始版本：** 10
 

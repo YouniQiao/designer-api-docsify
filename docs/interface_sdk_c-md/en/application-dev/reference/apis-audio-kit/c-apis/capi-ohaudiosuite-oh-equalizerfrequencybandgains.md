@@ -1,20 +1,18 @@
 # OH_EqualizerFrequencyBandGains
 
 ```c
-typedef struct OH_EqualizerFrequencyBandGains {...} OH_EqualizerFrequencyBandGains
+struct OH_EqualizerFrequencyBandGains {...}
 ```
 
 ## Overview
 
 Specify equalizer frequency band gains.
 
-<!--Device-struct OH_EqualizerFrequencyBandGains {...}--><!--Device-struct OH_EqualizerFrequencyBandGains {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 22
 
-**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
 
 **Header file**: [native_audio_suite_base.h](capi-native-audio-suite-base-h.md)
 
@@ -24,6 +22,6 @@ Specify equalizer frequency band gains.
 
 | Name | Description |
 | -- | -- |
-| int32_t gains[EQUALIZER_BAND_NUM] | The equalizer supports gain adjustment for 10 specific frequencies. Frequencies: 31 Hz, 62 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz.<br>**Since**: 22<br><!--Device-int32_t gains[EQUALIZER_BAND_NUM]--><!--Device-int32_t gains[EQUALIZER_BAND_NUM]-End--> |
+| int32_t gains[EQUALIZER_BAND_NUM] |  |
 
 

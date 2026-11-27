@@ -8,13 +8,11 @@ typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_Cutout
 
 挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。
 
-<!--Device-typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_CutoutInfo--><!--Device-typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_CutoutInfo-End-->
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
-**相关模块：** [OH_DisplayManager](capi-arkui-oh-displaymanager.md)
+**相关模块：** [OH_DisplayManager](capi-oh-displaymanager.md)
 
 **所在头文件：** [oh_display_info.h](capi-oh-display-info-h.md)
 
@@ -24,8 +22,8 @@ typedef struct NativeDisplayManager_CutoutInfo {...} NativeDisplayManager_Cutout
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t boundingRectsLength | boundingRects length<br><!--Device-int32_t boundingRectsLength--><!--Device-int32_t boundingRectsLength-End--> |
-| [NativeDisplayManager_Rect](capi-oh-displaymanager-nativedisplaymanager-rect.md) *boundingRects | boundingRects info pointer<br><!--Device-NativeDisplayManager_Rect *boundingRects--><!--Device-NativeDisplayManager_Rect *boundingRects-End--> |
-| [NativeDisplayManager_WaterfallDisplayAreaRects](capi-oh-displaymanager-nativedisplaymanager-waterfalldisplayarearects.md) waterfallDisplayAreaRects | waterfallDisplayAreaRects info<br><!--Device-NativeDisplayManager_WaterfallDisplayAreaRects waterfallDisplayAreaRects--><!--Device-NativeDisplayManager_WaterfallDisplayAreaRects waterfallDisplayAreaRects-End--> |
+| int32_t boundingRectsLength | boundingRects length |
+| NativeDisplayManager_Rect *boundingRects | boundingRects info pointer |
+| [NativeDisplayManager_WaterfallDisplayAreaRects](capi-oh-displaymanager-nativedisplaymanager-waterfalldisplayarearects.md) waterfallDisplayAreaRects | waterfallDisplayAreaRects info |
 
 

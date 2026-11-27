@@ -44,7 +44,7 @@ Line(options?: LineOptions)
 ## Line
 
 ```TypeScript
-Line(options?: LineOptions)
+new Line(options?: LineOptions)
 ```
 
 用于绘制直线的构造函数。Line组件在width和height定义的矩形区域内绘制直线，绘制区域的左上角为坐标原点(0,0)，x轴向右延伸，y轴向下延伸。

@@ -6,15 +6,13 @@ Declares APIs for acquiring the set of system capabilities .
 
 **Library**: NA
 
-**System capability**: SystemCapability.Startup.SystemInfo
-
 **Since**: 10
 
-**Related module**: [SyscapNdk](capi-basic-services-kit-syscapndk.md)
+**Related module**: [SyscapNdk](capi-syscapndk.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -31,10 +29,6 @@ bool canIUse(const char *cap)
 **Description**
 
 Provides the API for querying whether a SystemCapability (SysCap) is supported. SysCap refers to a standalone feature in the operating system. Different devices support different SysCap sets. Each SysCap corresponds to one or more APIs. You can determine whether an API can be used by checking SysCap support.
-
-<!--Device-bool canIUse(const char *cap)--><!--Device-bool canIUse(const char *cap)-End-->
-
-**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 8
 

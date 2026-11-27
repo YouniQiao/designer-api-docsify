@@ -11,23 +11,23 @@
     <!--Del-->
     - [sharing(system api)](arkts-arkdata-clouddata-sharing-n.md)<!--DelEnd-->
       <!--Del-->
-      - [allocResourceAndShare(system api)](arkts-arkdata-sharing-allocresourceandshare-f-sys.md)<!--DelEnd-->
+      - [allocResourceAndShare(system api)](arkts-arkdata-clouddata-sharing-allocresourceandshare-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [changeConfirmation(system api)](arkts-arkdata-sharing-changeconfirmation-f-sys.md)<!--DelEnd-->
+      - [changeConfirmation(system api)](arkts-arkdata-clouddata-sharing-changeconfirmation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [changePrivilege(system api)](arkts-arkdata-sharing-changeprivilege-f-sys.md)<!--DelEnd-->
+      - [changePrivilege(system api)](arkts-arkdata-clouddata-sharing-changeprivilege-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [confirmInvitation(system api)](arkts-arkdata-sharing-confirminvitation-f-sys.md)<!--DelEnd-->
+      - [confirmInvitation(system api)](arkts-arkdata-clouddata-sharing-confirminvitation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [exit(system api)](arkts-arkdata-sharing-exit-f-sys.md)<!--DelEnd-->
+      - [exit(system api)](arkts-arkdata-clouddata-sharing-exit-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [queryParticipants(system api)](arkts-arkdata-sharing-queryparticipants-f-sys.md)<!--DelEnd-->
+      - [queryParticipants(system api)](arkts-arkdata-clouddata-sharing-queryparticipants-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [queryParticipantsByInvitation(system api)](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md)<!--DelEnd-->
+      - [queryParticipantsByInvitation(system api)](arkts-arkdata-clouddata-sharing-queryparticipantsbyinvitation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [share(system api)](arkts-arkdata-sharing-share-f-sys.md)<!--DelEnd-->
+      - [share(system api)](arkts-arkdata-clouddata-sharing-share-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [unshare(system api)](arkts-arkdata-sharing-unshare-f-sys.md)<!--DelEnd-->
+      - [unshare(system api)](arkts-arkdata-clouddata-sharing-unshare-f-sys.md)<!--DelEnd-->
       <!--Del-->
       - [Participant(system api)](arkts-arkdata-sharing-participant-i-sys.md)<!--DelEnd-->
       <!--Del-->
@@ -517,4 +517,4 @@
   - [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md)
 - data<!--arkts-arkdata-data-->
   - [resultSet(The result set of database queries.)](arkts-arkdata-resultset.md)
-    - [ResultSet](arkts-arkdata-resultset-depr-i.md)
+    - [ResultSet](arkts-arkdata-resultset-depr-resultset-i.md)

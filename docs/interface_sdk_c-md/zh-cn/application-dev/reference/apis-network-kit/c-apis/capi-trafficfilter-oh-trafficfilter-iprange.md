@@ -1,20 +1,18 @@
 # OH_TrafficFilter_IPRange
 
 ```c
-typedef struct OH_TrafficFilter_IPRange {...} OH_TrafficFilter_IPRange
+struct OH_TrafficFilter_IPRange {...}
 ```
 
 ## 概述
 
 范围匹配的IP匹配值。
 
-<!--Device-struct OH_TrafficFilter_IPRange {...}--><!--Device-struct OH_TrafficFilter_IPRange {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
-**相关模块：** [TrafficFilter](capi-network-kit-trafficfilter.md)
+**相关模块：** [TrafficFilter](capi-trafficfilter.md)
 
 **所在头文件：** [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_TrafficFilter_IPRange {...} OH_TrafficFilter_IPRange
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) start | 范围的起始IP地址。<br>**起始版本：** 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress start--><!--Device-OH_TrafficFilter_IPAddress start-End--> |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) end | 范围的结束IP地址。<br>**起始版本：** 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress end--><!--Device-OH_TrafficFilter_IPAddress end-End--> |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) start | 范围的起始IP地址。<br>**起始版本：** 26.0.0 |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) end | 范围的结束IP地址。<br>**起始版本：** 26.0.0 |
 
 

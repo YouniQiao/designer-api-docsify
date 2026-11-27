@@ -6,15 +6,13 @@ typedef struct ArkUI_PointF {...} ArkUI_PointF
 
 ## Overview
 
-Defines a two-dimensional coordinate point, used to describe coordinate information such as the component position or offset. The coordinates are stored as floating-point numbers.
-
-<!--Device-typedef struct ArkUI_PointF {...} ArkUI_PointF--><!--Device-typedef struct ArkUI_PointF {...} ArkUI_PointF-End-->
+Defines a two-dimensional point struct, with coordinates stored as float type.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 24
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [native_type_visual.h](capi-native-type-visual-h.md)
 
@@ -24,7 +22,7 @@ Defines a two-dimensional coordinate point, used to describe coordinate informat
 
 | Name | Description |
 | -- | -- |
-| float x | X-coordinate, in px. Value range: (-∞, +∞).<br><!--Device-float x--><!--Device-float x-End--> |
-| float y | Y-coordinate, in px. Value range: (-∞, +∞).<br><!--Device-float y--><!--Device-float y-End--> |
+| float x | x-axis coordinate. |
+| float y | y-axis coordinate. |
 
 

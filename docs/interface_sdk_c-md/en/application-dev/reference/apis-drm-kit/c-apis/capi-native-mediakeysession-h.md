@@ -6,22 +6,20 @@ The file declares the MediaKeySession APIs for DRM operations. The APIs can be u
 
 **Library**: libnative_drm.so
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
-**Related module**: [Drm](capi-drm-kit-drm.md)
+**Related module**: [Drm](capi-drm.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [MediaKeySession_Callback](capi-drm-mediakeysession-callback.md) | OH_MediaKeySession_Callback | The MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It does not provide a MediaKeySession instance, making it suitable for single-session decryption scenarios. |
-| [OH_MediaKeySession_Callback](capi-drm-oh-mediakeysession-callback.md) | OH_MediaKeySession_Callback | The OH_MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It provides a MediaKeySession instance, making it suitable for multi-session decryption scenarios. |
+| Name | Description |
+| -- | -- |
+| [MediaKeySession_Callback](capi-drm-mediakeysession-callback.md) | The MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It does not provide a MediaKeySession instance, making it suitable for single-session decryption scenarios. |
+| [OH_MediaKeySession_Callback](capi-drm-oh-mediakeysession-callback.md) | The OH_MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It provides a MediaKeySession instance, making it suitable for multi-session decryption scenarios. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -42,6 +40,15 @@ The file declares the MediaKeySession APIs for DRM operations. The APIs can be u
 | [Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_MediaKeySession_Callback *callback)](#oh_mediakeysession_setcallback) | - | Set media key session event callback. |
 | [Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)](#oh_mediakeysession_destroy) | - | Release the resource before the session going to be unused. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | Defines the callback used to listen for media key session events, for example, key expiration events.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo, bool newKeysAvailable) | Call back will be invoked when key changes.<br>**Since**: 11<br>**System capability**: SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKeySession, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | Defines the callback used to listen for media key session events.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Drm.Core |
+| Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *mediaKeySession, DRM_KeysInfo *keysInfo, bool newKeysAvailable) | Call back will be invoked when key changes.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Drm.Core |
+
 ## Function description
 
 ### MediaKeySession_EventCallback()
@@ -53,10 +60,6 @@ typedef Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, ui
 **Description**
 
 Defines the callback used to listen for media key session events, for example, key expiration events.
-
-<!--Device-typedef Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra)--><!--Device-typedef Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -85,10 +88,6 @@ typedef Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo,
 
 Call back will be invoked when key changes.
 
-<!--Device-typedef Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo, bool newKeysAvailable)--><!--Device-typedef Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo, bool newKeysAvailable)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -113,10 +112,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKe
 **Description**
 
 Defines the callback used to listen for media key session events.
-
-<!--Device-typedef Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKeySession, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra)--><!--Device-typedef Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKeySession, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 12
 
@@ -146,10 +141,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *med
 
 Call back will be invoked when key changes.
 
-<!--Device-typedef Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *mediaKeySession, DRM_KeysInfo *keysInfo, bool newKeysAvailable)--><!--Device-typedef Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *mediaKeySession, DRM_KeysInfo *keysInfo, bool newKeysAvailable)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -176,10 +167,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateMediaKeyRequest(MediaKeySession *mediaKey
 
 Generate media key request.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_GenerateMediaKeyRequest(MediaKeySession *mediaKeySession, DRM_MediaKeyRequestInfo *info, DRM_MediaKeyRequest *mediaKeyRequest)--><!--Device-Drm_ErrCode OH_MediaKeySession_GenerateMediaKeyRequest(MediaKeySession *mediaKeySession, DRM_MediaKeyRequestInfo *info, DRM_MediaKeyRequest *mediaKeyRequest)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -205,10 +192,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessMediaKeyResponse(MediaKeySession *mediaKey
 **Description**
 
 Process media key response.
-
-<!--Device-Drm_ErrCode OH_MediaKeySession_ProcessMediaKeyResponse(MediaKeySession *mediaKeySession, uint8_t *response, int32_t responseLen, uint8_t *offlineMediaKeyId, int32_t *offlineMediaKeyIdLen)--><!--Device-Drm_ErrCode OH_MediaKeySession_ProcessMediaKeyResponse(MediaKeySession *mediaKeySession, uint8_t *response, int32_t responseLen, uint8_t *offlineMediaKeyId, int32_t *offlineMediaKeyIdLen)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -238,10 +221,6 @@ Drm_ErrCode OH_MediaKeySession_CheckMediaKeyStatus(MediaKeySession *mediaKeySess
 
 Check media key status.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_CheckMediaKeyStatus(MediaKeySession *mediaKeySession, DRM_MediaKeyStatus *mediaKeyStatus)--><!--Device-Drm_ErrCode OH_MediaKeySession_CheckMediaKeyStatus(MediaKeySession *mediaKeySession, DRM_MediaKeyStatus *mediaKeyStatus)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -267,10 +246,6 @@ Drm_ErrCode OH_MediaKeySession_ClearMediaKeys(MediaKeySession *mediaKeySession)
 
 Clear media keys of the current session .
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_ClearMediaKeys(MediaKeySession *mediaKeySession)--><!--Device-Drm_ErrCode OH_MediaKeySession_ClearMediaKeys(MediaKeySession *mediaKeySession)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -294,10 +269,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateOfflineReleaseRequest(MediaKeySession *me
 **Description**
 
 Generate offline media key release request.
-
-<!--Device-Drm_ErrCode OH_MediaKeySession_GenerateOfflineReleaseRequest(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen, uint8_t *releaseRequest, int32_t *releaseRequestLen)--><!--Device-Drm_ErrCode OH_MediaKeySession_GenerateOfflineReleaseRequest(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen, uint8_t *releaseRequest, int32_t *releaseRequestLen)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -327,10 +298,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessOfflineReleaseResponse(MediaKeySession *me
 
 Process offline media key release response.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_ProcessOfflineReleaseResponse(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen, uint8_t *releaseResponse, int32_t releaseResponseLen)--><!--Device-Drm_ErrCode OH_MediaKeySession_ProcessOfflineReleaseResponse(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen, uint8_t *releaseResponse, int32_t releaseResponseLen)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -359,10 +326,6 @@ Drm_ErrCode OH_MediaKeySession_RestoreOfflineMediaKeys(MediaKeySession *mediaKey
 
 Restore offline media keys by ID.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_RestoreOfflineMediaKeys(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen)--><!--Device-Drm_ErrCode OH_MediaKeySession_RestoreOfflineMediaKeys(MediaKeySession *mediaKeySession, uint8_t *offlineMediaKeyId, int32_t offlineMediaKeyIdLen)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -389,10 +352,6 @@ Drm_ErrCode OH_MediaKeySession_GetContentProtectionLevel(MediaKeySession *mediaK
 
 Get content protection level of the session.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_GetContentProtectionLevel(MediaKeySession *mediaKeySession, DRM_ContentProtectionLevel *contentProtectionLevel)--><!--Device-Drm_ErrCode OH_MediaKeySession_GetContentProtectionLevel(MediaKeySession *mediaKeySession, DRM_ContentProtectionLevel *contentProtectionLevel)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -417,10 +376,6 @@ Drm_ErrCode OH_MediaKeySession_RequireSecureDecoderModule(MediaKeySession *media
 **Description**
 
 Whether the encrypted content require a secure decoder or not.
-
-<!--Device-Drm_ErrCode OH_MediaKeySession_RequireSecureDecoderModule(MediaKeySession *mediaKeySession, const char *mimeType, bool *status)--><!--Device-Drm_ErrCode OH_MediaKeySession_RequireSecureDecoderModule(MediaKeySession *mediaKeySession, const char *mimeType, bool *status)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -448,10 +403,6 @@ Drm_ErrCode OH_MediaKeySession_SetMediaKeySessionCallback(MediaKeySession *media
 
 Set media key session event callback.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_SetMediaKeySessionCallback(MediaKeySession *mediaKeySession, MediaKeySession_Callback *callback)--><!--Device-Drm_ErrCode OH_MediaKeySession_SetMediaKeySessionCallback(MediaKeySession *mediaKeySession, MediaKeySession_Callback *callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -477,10 +428,6 @@ Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_
 
 Set media key session event callback.
 
-<!--Device-Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_MediaKeySession_Callback *callback)--><!--Device-Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_MediaKeySession_Callback *callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -488,7 +435,7 @@ Set media key session event callback.
 | Parameter | Description |
 | -- | -- |
 | [MediaKeySession](capi-drm-mediakeysession.md) *mediaKeySession | Media key session instance. |
-| [OH_MediaKeySession_Callback](capi-drm-mediakeysession-callback.md) *callback | Callback to be set to the media key session. |
+| [OH_MediaKeySession_Callback](capi-drm-oh-mediakeysession-callback.md) *callback | Callback to be set to the media key session. |
 
 **Returns**:
 
@@ -505,10 +452,6 @@ Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)
 **Description**
 
 Release the resource before the session going to be unused.
-
-<!--Device-Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)--><!--Device-Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)-End-->
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 

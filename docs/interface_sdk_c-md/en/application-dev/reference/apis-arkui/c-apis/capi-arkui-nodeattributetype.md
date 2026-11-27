@@ -2,17 +2,17 @@
 
 ## Overview
 
-Enumerates the attribute types that can be set by ArkUI on the native side.
+Defines the ArkUI style attributes that can be set on the native side.
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [native_node.h](capi-native-node-h.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 
 <!--Del-->
@@ -22,7 +22,6 @@ Enumerates the attribute types that can be set by ArkUI on the native side.
 - [Background Display](capi-arkui-nodeattributetype-background-display.md)
 - [Visual](capi-arkui-nodeattributetype-visual.md)
 - [Interaction](capi-arkui-nodeattributetype-interaction.md)
-- [Visual](capi-arkui-nodeattributetype-visual.md)
 - [Animate](capi-arkui-nodeattributetype-animate.md)
 - [Accessibility](capi-arkui-nodeattributetype-accessibility.md)
 - [Text Display](capi-arkui-nodeattributetype-text-display.md)
@@ -45,6 +44,5 @@ Enumerates the attribute types that can be set by ArkUI on the native side.
 - [Navigation Related Components](capi-arkui-nodeattributetype-navigation-related-components.md)
 - [Scrollable Container Component](capi-arkui-nodeattributetype-scrollable-container-component.md)
 - [EmbeddedComponent](capi-arkui-nodeattributetype-embeddedcomponent.md)
-- [Picker](capi-arkui-nodeattributetype-picker.md)
 - [Picker](capi-arkui-nodeattributetype-picker.md)
 <!--DelEnd-->

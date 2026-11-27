@@ -230,15 +230,15 @@
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - [@ohos.backgroundTaskManager（后台任务管理）](arkts-backgroundtasks-backgroundtaskmanager.md)
-  - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
-  - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
-  - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md)
-  - [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md)
-  - [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-depr-f.md)
-  - [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-depr-i.md)
-  - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md)
+  - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-depr-cancelsuspenddelay-f.md)
+  - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-depr-getremainingdelaytime-f.md)
+  - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-depr-requestsuspenddelay-f.md)
+  - [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-depr-startbackgroundrunning-f.md)
+  - [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-depr-stopbackgroundrunning-f.md)
+  - [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-depr-delaysuspendinfo-i.md)
+  - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-depr-backgroundmode-e.md)
   <!--Del-->
-  - [BackgroundMode（系统接口）](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e-sys.md)<!--DelEnd-->
+  - [BackgroundMode（系统接口）](arkts-backgroundtasks-backgroundtaskmanager-depr-backgroundmode-e-sys.md)<!--DelEnd-->
 - [@ohos.bundleState（设备使用信息统计）](arkts-backgroundtasks-bundlestate.md)
   - [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md)
   - [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md)

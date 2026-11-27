@@ -1,20 +1,18 @@
 # MetadataOutput_Callbacks
 
 ```c
-typedef struct MetadataOutput_Callbacks {...} MetadataOutput_Callbacks
+struct MetadataOutput_Callbacks {...}
 ```
 
 ## Overview
 
 The struct describes the callbacks related to metadata output.
 
-<!--Device-struct MetadataOutput_Callbacks {...}--><!--Device-struct MetadataOutput_Callbacks {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [metadata_output.h](capi-metadata-output-h.md)
 
@@ -24,7 +22,7 @@ The struct describes the callbacks related to metadata output.
 
 | Name | Description |
 | -- | -- |
-| [OH_MetadataOutput_OnMetadataObjectAvailable](capi-metadata-output-h.md#oh_metadataoutput_onmetadataobjectavailable) onMetadataObjectAvailable | Callback to report the metadata output result.<br><!--Device-OH_MetadataOutput_OnMetadataObjectAvailable onMetadataObjectAvailable--><!--Device-OH_MetadataOutput_OnMetadataObjectAvailable onMetadataObjectAvailable-End--> |
-| [OH_MetadataOutput_OnError](capi-metadata-output-h.md#oh_metadataoutput_onerror) onError | Callback to report a metadata output error.<br><!--Device-OH_MetadataOutput_OnError onError--><!--Device-OH_MetadataOutput_OnError onError-End--> |
+| [OH_MetadataOutput_OnMetadataObjectAvailable](capi-metadata-output-h.md#oh_metadataoutput_onmetadataobjectavailable) onMetadataObjectAvailable | Callback to report the metadata output result. |
+| [OH_MetadataOutput_OnError](capi-metadata-output-h.md#oh_metadataoutput_onerror) onError | Callback to report a metadata output error. |
 
 

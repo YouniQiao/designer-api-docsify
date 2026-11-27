@@ -1,20 +1,18 @@
 # NetConn_ProbeResultInfo
 
 ```c
-typedef struct NetConn_ProbeResultInfo {...} NetConn_ProbeResultInfo
+struct NetConn_ProbeResultInfo {...}
 ```
 
 ## 概述
 
 定义探测结果信息。
 
-<!--Device-struct NetConn_ProbeResultInfo {...}--><!--Device-struct NetConn_ProbeResultInfo {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 20
 
-**相关模块：** [NetConnection](capi-network-kit-netconnection.md)
+**相关模块：** [NetConnection](capi-netconnection.md)
 
 **所在头文件：** [net_connection_type.h](capi-net-connection-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct NetConn_ProbeResultInfo {...} NetConn_ProbeResultInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| uint8_t lossRate | 丢包率，百分制，值100表示100%丢包；50表示50%丢包。<br><!--Device-uint8_t lossRate--><!--Device-uint8_t lossRate-End--> |
-| uint32_t rtt[NETCONN_MAX_RTT_NUM] | 往返时间RTT，单位微秒，包含最小值/平均值/最大值/标准差。<br><!--Device-uint32_t rtt[NETCONN_MAX_RTT_NUM]--><!--Device-uint32_t rtt[NETCONN_MAX_RTT_NUM]-End--> |
+| uint8_t lossRate | 丢包率，百分制，值100表示100%丢包；50表示50%丢包。 |
+| uint32_t rtt[NETCONN_MAX_RTT_NUM] | 往返时间RTT，单位微秒，包含最小值/平均值/最大值/标准差。 |
 
 

@@ -6,15 +6,13 @@ typedef struct Print_PrintDocCallback {...} Print_PrintDocCallback
 
 ## Overview
 
-Represents a callback for the printed document. This API can be used by native apps written in C or C++ to provide file generation and task status receiving capabilities for the print framework.
-
-<!--Device-typedef struct Print_PrintDocCallback {...} Print_PrintDocCallback--><!--Device-typedef struct Print_PrintDocCallback {...} Print_PrintDocCallback-End-->
+Defines a struct for the print job state callback.
 
 **System capability**: SystemCapability.Print.PrintFramework
 
 **Since**: 13
 
-**Related module**: [Print](capi-basic-services-kit-print.md)
+**Related module**: [Print](capi-print.md)
 
 **Header file**: [ohprint.h](capi-ohprint-h.md)
 
@@ -24,7 +22,7 @@ Represents a callback for the printed document. This API can be used by native a
 
 | Name | Description |
 | -- | -- |
-| [Print_OnStartLayoutWrite](capi-ohprint-h.md#print_onstartlayoutwrite) startLayoutWriteCb | Callback invoked when the file write-back starts. When the file write-back starts, the system calls this callback to instruct the app to write the content to be printed.<br><!--Device-Print_OnStartLayoutWrite startLayoutWriteCb--><!--Device-Print_OnStartLayoutWrite startLayoutWriteCb-End--> |
-| [Print_OnJobStateChanged](capi-ohprint-h.md#print_onjobstatechanged) jobStateChangedCb | Callback invoked when the print job state changes. When the print job state changes, the system invokes this callback to notify the app of the change.<br><!--Device-Print_OnJobStateChanged jobStateChangedCb--><!--Device-Print_OnJobStateChanged jobStateChangedCb-End--> |
+| [Print_OnStartLayoutWrite](capi-ohprint-h.md#print_onstartlayoutwrite) startLayoutWriteCb | Callback to be invoked when the file write-back starts. |
+| [Print_OnJobStateChanged](capi-ohprint-h.md#print_onjobstatechanged) jobStateChangedCb | Callback to be invoked when the print job state changes. |
 
 

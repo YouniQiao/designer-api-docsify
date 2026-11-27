@@ -8,13 +8,11 @@ typedef struct TEE_Time {...} TEE_Time
 
 Definitions the TEE time.
 
-<!--Device-typedef struct TEE_Time {...} TEE_Time--><!--Device-typedef struct TEE_Time {...} TEE_Time-End-->
-
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
+**Related module**: [TeeTrusted](capi-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -24,7 +22,7 @@ Definitions the TEE time.
 
 | Name | Description |
 | -- | -- |
-| uint32_t seconds | Seconds part of the time.<br><!--Device-uint32_t seconds--><!--Device-uint32_t seconds-End--> |
-| uint32_t millis | Milliseconds part of the time.<br><!--Device-uint32_t millis--><!--Device-uint32_t millis-End--> |
+| uint32_t seconds | Seconds part of the time. |
+| uint32_t millis | Milliseconds part of the time. |
 
 

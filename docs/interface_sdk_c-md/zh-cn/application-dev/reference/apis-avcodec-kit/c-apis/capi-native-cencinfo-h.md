@@ -8,11 +8,9 @@
 
 **库：** libnative_media_avcencinfo.so
 
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
-
 **起始版本：** 12
 
-**相关模块：** [Multimedia_Drm](capi-avcodec-kit-multimedia-drm.md)
+**相关模块：** [Multimedia_Drm](capi-multimedia-drm.md)
 
 ## 汇总
 
@@ -20,8 +18,8 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [DrmSubsample](capi-multimedia-drm-drmsubsample.md) | DrmSubsample | Subsample结构类型定义。 |
-| [OH_AVBuffer](capi-multimedia-drm-oh-avbuffer.md) | OH_AVBuffer | 为媒体内存接口定义native层对象。 |
+| [DrmSubsample](capi-multimedia-drm-drmsubsample.md) | - | Subsample结构类型定义。 |
+| [OH_AVBuffer](capi-multimedia-drm-oh-avbuffer.md) | OH_AVBuffer | AVBuffer结构。 |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) | OH_AVCencInfo | 该结构体用于描述音视频通用加密方案（CENC）信息。 |
 
 ### 枚举
@@ -63,20 +61,16 @@ enum DrmCencAlgorithm
 
 Drm CENC算法类型。
 
-<!--Device-enum DrmCencAlgorithm--><!--Device-enum DrmCencAlgorithm-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| DRM_ALG_CENC_UNENCRYPTED = 0x0 | 不加密算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_UNENCRYPTED = 0x0--><!--Device-DRM_ALG_CENC_UNENCRYPTED = 0x0-End--> |
-| DRM_ALG_CENC_AES_CTR = 0x1 | AES CTR算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_AES_CTR = 0x1--><!--Device-DRM_ALG_CENC_AES_CTR = 0x1-End--> |
-| DRM_ALG_CENC_AES_WV = 0x2 | AES WV算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_AES_WV = 0x2--><!--Device-DRM_ALG_CENC_AES_WV = 0x2-End--> |
-| DRM_ALG_CENC_AES_CBC = 0x3 | AES CBC算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_AES_CBC = 0x3--><!--Device-DRM_ALG_CENC_AES_CBC = 0x3-End--> |
-| DRM_ALG_CENC_SM4_CBC = 0x4 | SM4 CBC算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_SM4_CBC = 0x4--><!--Device-DRM_ALG_CENC_SM4_CBC = 0x4-End--> |
-| DRM_ALG_CENC_SM4_CTR = 0x5 | SM4 CTR算法。<br>**起始版本：** 12<br><!--Device-DRM_ALG_CENC_SM4_CTR = 0x5--><!--Device-DRM_ALG_CENC_SM4_CTR = 0x5-End--> |
+| DRM_ALG_CENC_UNENCRYPTED = 0x0 |  |
+| DRM_ALG_CENC_AES_CTR = 0x1 |  |
+| DRM_ALG_CENC_AES_WV = 0x2 |  |
+| DRM_ALG_CENC_AES_CBC = 0x3 |  |
+| DRM_ALG_CENC_SM4_CBC = 0x4 |  |
+| DRM_ALG_CENC_SM4_CTR = 0x5 |  |
 
 ### DrmCencInfoMode
 
@@ -88,16 +82,12 @@ enum DrmCencInfoMode
 
 枚举类型，表示cencInfo中keyId/iv/subsample信息是否设置。
 
-<!--Device-enum DrmCencInfoMode--><!--Device-enum DrmCencInfoMode-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0 | keyId/iv/subsample信息已设置。<br>**起始版本：** 12<br><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0--><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0-End--> |
-| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1 | keyId/iv/subsample信息未设置。<br>**起始版本：** 12<br><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1--><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1-End--> |
+| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0 | keyId/iv/subsample信息已设置。<br>**起始版本：** 12 |
+| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1 | keyId/iv/subsample信息未设置。<br>**起始版本：** 12 |
 
 
 ## 函数说明
@@ -111,10 +101,6 @@ OH_AVCencInfo *OH_AVCencInfo_Create()
 **描述：**
 
 创建用于设置cencInfo的OH_AVCencInfo实例。
-
-<!--Device-OH_AVCencInfo *OH_AVCencInfo_Create()--><!--Device-OH_AVCencInfo *OH_AVCencInfo_Create()-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
@@ -133,10 +119,6 @@ OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)
 **描述：**
 
 销毁OH_AVCencInfo实例并释放内部资源。<br> 同一个实例只能销毁一次。在再次创建实例之前，不应使用该实例。 建议在实例销毁成功后立即将实例指针设置为nullptr。
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)--><!--Device-OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
@@ -162,10 +144,6 @@ OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlg
 
 设置cencInfo加密算法。
 
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
-
 **起始版本：** 12
 
 **参数：**
@@ -173,7 +151,7 @@ OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlg
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
-| enum [DrmCencAlgorithm](capi-native-cencinfo-h.md#drmcencalgorithm) algo | 加密算法模式。 |
+| enum DrmCencAlgorithm algo | 加密算法模式。 |
 
 **返回值：**
 
@@ -190,10 +168,6 @@ OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId
 **描述：**
 
 设置cencInfo的keyId和iv。
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
@@ -222,10 +196,6 @@ OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t en
 **描述：**
 
 设置cencInfo的subsamples信息。
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 
@@ -256,10 +226,6 @@ OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode
 
 设置cencInfo的模式。
 
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode mode)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode mode)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
-
 **起始版本：** 12
 
 **参数：**
@@ -267,7 +233,7 @@ OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
-| enum [DrmCencInfoMode](capi-native-cencinfo-h.md#drmcencinfomode) mode | cencInfo模式，指示是否设置了keyId/iv/subsample。 |
+| enum DrmCencInfoMode mode | cencInfo模式，指示是否设置了keyId/iv/subsample。 |
 
 **返回值：**
 
@@ -284,10 +250,6 @@ OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buf
 **描述：**
 
 将cencInfo设置到AVBuffer。
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buffer)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buffer)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Spliter
 
 **起始版本：** 12
 

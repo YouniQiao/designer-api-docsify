@@ -1,20 +1,18 @@
 # OH_PictureNative_AuxiliaryPictureCopyItem
 
 ```c
-typedef struct OH_PictureNative_AuxiliaryPictureCopyItem {...} OH_PictureNative_AuxiliaryPictureCopyItem
+struct OH_PictureNative_AuxiliaryPictureCopyItem {...}
 ```
 
 ## 概述
 
 此结构体用于在创建PictureNative对象的深拷贝时指定辅助图的拷贝规则。描述如何将辅助图从一种类型拷贝到另一种类型。
 
-<!--Device-struct OH_PictureNative_AuxiliaryPictureCopyItem {...}--><!--Device-struct OH_PictureNative_AuxiliaryPictureCopyItem {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
-**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
 
 **所在头文件：** [picture_native.h](capi-picture-native-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_PictureNative_AuxiliaryPictureCopyItem {...} OH_PictureNative_
 
 | 名称 | 描述 |
 | -- | -- |
-| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) srcType | <!--Device-Image_AuxiliaryPictureType srcType--><!--Device-Image_AuxiliaryPictureType srcType-End--> |
-| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) dstType | <!--Device-Image_AuxiliaryPictureType dstType--><!--Device-Image_AuxiliaryPictureType dstType-End--> |
+| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) srcType |  |
+| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) dstType |  |
 
 

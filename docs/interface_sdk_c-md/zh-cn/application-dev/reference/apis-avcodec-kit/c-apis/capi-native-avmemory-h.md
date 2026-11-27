@@ -8,11 +8,9 @@
 
 **库：** libnative_media_core.so
 
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 9
 
-**相关模块：** [Core](capi-avcodec-kit-core.md)
+**相关模块：** [Core](capi-core.md)
 
 ## 汇总
 
@@ -26,10 +24,10 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_AVMemory *OH_AVMemory_Create(int32_t size)](#oh_avmemory_create) | 创建OH_AVMemory实例的指针。(已废弃) |
-| [uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)](#oh_avmemory_getaddr) | 获取内存虚拟地址。(已废弃) |
-| [int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)](#oh_avmemory_getsize) | 获取内存长度。(已废弃) |
-| [OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)](#oh_avmemory_destroy) | 释放OH_AVMemory实例占用的资源。(已废弃) |
+| [OH_AVMemory *OH_AVMemory_Create(int32_t size)](#oh_avmemory_create) | 创建OH_AVMemory实例的指针。(API11废弃) |
+| [uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)](#oh_avmemory_getaddr) | 获取内存虚拟地址。(API11废弃) |
+| [int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)](#oh_avmemory_getsize) | 获取内存长度。(API11废弃) |
+| [OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)](#oh_avmemory_destroy) | 释放OH_AVMemory实例指针的资源。(API11废弃) |
 
 ## 函数说明
 
@@ -43,15 +41,11 @@ OH_AVMemory *OH_AVMemory_Create(int32_t size)
 
 创建OH_AVMemory实例的指针。
 
-<!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)--><!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** OH_AVBuffer_Create
+**替代接口：** [OH_AVBuffer_Create](capi-native-avbuffer-h.md#oh_avbuffer_create)
 
 **参数：**
 
@@ -75,15 +69,11 @@ uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)
 
 获取内存虚拟地址。
 
-<!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)--><!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** OH_AVBuffer_GetAddr
+**替代接口：** [OH_AVBuffer_GetAddr](capi-native-avbuffer-h.md#oh_avbuffer_getaddr)
 
 **参数：**
 
@@ -107,15 +97,11 @@ int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)
 
 获取内存长度。
 
-<!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)--><!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** OH_AVBuffer_GetCapacity
+**替代接口：** [OH_AVBuffer_GetCapacity](capi-native-avbuffer-h.md#oh_avbuffer_getcapacity)
 
 **参数：**
 
@@ -137,17 +123,13 @@ OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)
 
 **描述：**
 
-释放OH_AVMemory实例占用的资源。
-
-<!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)--><!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
+释放OH_AVMemory实例指针的资源。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** OH_AVBuffer_Destroy
+**替代接口：** [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy)
 
 **参数：**
 

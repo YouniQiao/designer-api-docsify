@@ -4,7 +4,7 @@
 declare interface CanvasPattern
 ```
 
-**CanvasPattern** represents an object, created by the [createPattern](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#createpattern) API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency.
+**CanvasPattern** represents an object, created by the [createPattern](arkts-arkui-canvas-comp-canvasrenderer-c.md#createpattern) API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency.
 
 **Since:** 8
 
@@ -36,4 +36,4 @@ Applies a matrix transformation to the current **CanvasPattern** using a **Matri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | Transformation matrix used to perform geometric transformations such as translation, scaling, and rotation on the **CanvasPattern**.<br>Note: No matrix transformation is performed when the parameter is **undefined** or **null**.<br>Default value: **null** |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix used to perform geometric transformations such as translation, scaling, and rotation on the **CanvasPattern**.<br>Note: No matrix transformation is performed when the parameter is **undefined** or **null**.<br>Default value: **null** |

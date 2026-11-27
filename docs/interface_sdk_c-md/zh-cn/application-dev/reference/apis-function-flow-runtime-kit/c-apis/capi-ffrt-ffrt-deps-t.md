@@ -8,13 +8,11 @@ typedef struct ffrt_deps_t {...} ffrt_deps_t
 
 依赖结构体，用于保存任务的依赖列表。
 
-<!--Device-typedef struct ffrt_deps_t {...} ffrt_deps_t--><!--Device-typedef struct ffrt_deps_t {...} ffrt_deps_t-End-->
-
 **系统能力：** SystemCapability.Resourceschedule.Ffrt.Core
 
 **起始版本：** 10
 
-**相关模块：** [FFRT](capi-function-flow-runtime-kit-ffrt.md)
+**相关模块：** [FFRT](capi-ffrt.md)
 
 **所在头文件：** [type_def.h](capi-type-def-h.md)
 
@@ -24,7 +22,7 @@ typedef struct ffrt_deps_t {...} ffrt_deps_t
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t len | 依赖数量。<br><!--Device-uint32_t len--><!--Device-uint32_t len-End--> |
-| [const ffrt_dependence_t*](capi-ffrt-ffrt-dependence-t.md) items | 依赖数据数组。<br><!--Device-const ffrt_dependence_t* items--><!--Device-const ffrt_dependence_t* items-End--> |
+| uint32_t len | 依赖数量。 |
+| [const ffrt_dependence_t*](capi-ffrt-ffrt-dependence-t.md) items | 依赖数据数组。 |
 
 

@@ -59,7 +59,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 | Name | Description |
 | --- | --- |
-| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | Defines the callback triggered for the tap event of the right icon or arrow of the list item. |
+| [OnActionCallback](arkts-arkui-composelistitemv2-onactioncallback-t.md) | Defines the callback triggered for the tap event of the right icon or arrow of the list item. |
 | [OnChangeCallback](arkts-arkui-onchangecallback-t.md) | Defines the callback triggered when the state of the right element **Switch**, **CheckBox**, or **Radio** of the list item changes. |
 
 ### Enums

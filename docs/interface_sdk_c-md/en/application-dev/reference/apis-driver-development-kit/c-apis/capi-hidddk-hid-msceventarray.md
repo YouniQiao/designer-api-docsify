@@ -1,20 +1,18 @@
 # Hid_MscEventArray
 
 ```c
-typedef struct Hid_MscEventArray {...} Hid_MscEventArray
+struct Hid_MscEventArray {...}
 ```
 
 ## Overview
 
-Defines an array of miscellaneous events, which stores information about the miscellaneous events supported by an HID device.
-
-<!--Device-struct Hid_MscEventArray {...}--><!--Device-struct Hid_MscEventArray {...}-End-->
+Defines an array of miscellaneous events.
 
 **System capability**: SystemCapability.Driver.HID.Extension
 
 **Since**: 11
 
-**Related module**: [HidDdk](capi-driver-development-kit-hidddk.md)
+**Related module**: [HidDdk](capi-hidddk.md)
 
 **Header file**: [hid_ddk_types.h](capi-hid-ddk-types-h.md)
 
@@ -24,7 +22,7 @@ Defines an array of miscellaneous events, which stores information about the mis
 
 | Name | Description |
 | -- | -- |
-| [Hid_MscEvent](capi-hid-ddk-types-h.md#hid_mscevent) *hidMscEvent | Pointer to the array of miscellaneous events, which points to the array pre-allocated by the caller. The pointer cannot be null. The array size must be greater than or equal to the value of length.<br><!--Device-Hid_MscEvent *hidMscEvent--><!--Device-Hid_MscEvent *hidMscEvent-End--> |
-| uint16_t length | Valid length of the array, which cannot exceed the actual length of the **hidMscEvent** array.<br><!--Device-uint16_t length--><!--Device-uint16_t length-End--> |
+| Hid_MscEvent *hidMscEvent | Miscellaneous events. |
+| uint16_t length | Valid length of an array. |
 
 

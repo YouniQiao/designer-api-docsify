@@ -1,20 +1,18 @@
 # Input_InterceptorEventCallback
 
 ```c
-typedef struct Input_InterceptorEventCallback {...} Input_InterceptorEventCallback
+struct Input_InterceptorEventCallback {...}
 ```
 
 ## 概述
 
-拦截回调事件结构体，用于定义输入事件拦截所需的回调函数类型，支持拦截鼠标事件、触屏输入事件和轴事件。
-
-<!--Device-struct Input_InterceptorEventCallback {...}--><!--Device-struct Input_InterceptorEventCallback {...}-End-->
+拦截回调事件结构体，用于定义输入事件拦截所需的回调函数类型，支持拦截鼠标事件、触屏输入事件、按键事件和轴事件。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
-**相关模块：** [input](capi-input-kit-input.md)
+**相关模块：** [input](capi-input.md)
 
 **所在头文件：** [oh_input_manager.h](capi-oh-input-manager-h.md)
 
@@ -24,8 +22,8 @@ typedef struct Input_InterceptorEventCallback {...} Input_InterceptorEventCallba
 
 | 名称 | 描述 |
 | -- | -- |
-| [Input_MouseEventCallback](capi-oh-input-manager-h.md#input_mouseeventcallback) mouseCallback | 鼠标事件的回调函数。<br>**起始版本：** 12<br><!--Device-Input_MouseEventCallback mouseCallback--><!--Device-Input_MouseEventCallback mouseCallback-End--> |
-| [Input_TouchEventCallback](capi-oh-input-manager-h.md#input_toucheventcallback) touchCallback | 触屏输入事件的回调函数。<br>**起始版本：** 12<br><!--Device-Input_TouchEventCallback touchCallback--><!--Device-Input_TouchEventCallback touchCallback-End--> |
-| [Input_AxisEventCallback](capi-oh-input-manager-h.md#input_axiseventcallback) axisCallback | 轴事件的回调函数。<br>**起始版本：** 12<br><!--Device-Input_AxisEventCallback axisCallback--><!--Device-Input_AxisEventCallback axisCallback-End--> |
+| [Input_MouseEventCallback](capi-oh-input-manager-h.md#input_mouseeventcallback) mouseCallback | 鼠标事件的回调函数。 |
+| [Input_TouchEventCallback](capi-oh-input-manager-h.md#input_toucheventcallback) touchCallback | 触屏输入事件的回调函数。 |
+| [Input_AxisEventCallback](capi-oh-input-manager-h.md#input_axiseventcallback) axisCallback | 轴事件的回调函数。 |
 
 

@@ -6,28 +6,26 @@ The file declares the attribute definition of the media struct AVMemory.
 
 **Library**: libnative_media_core.so
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 9
 
-**Related module**: [Core](capi-avcodec-kit-core.md)
+**Related module**: [Core](capi-core.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AVMemory](capi-core-oh-avmemory.md) | OH_AVMemory | Describes a native object for the audio and video memory interface. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
-| [OH_AVMemory *OH_AVMemory_Create(int32_t size)](#oh_avmemory_create) | Creates an OH_AVMemory instance.(Deprecated) |
-| [uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)](#oh_avmemory_getaddr) | Obtains the virtual memory address.(Deprecated) |
-| [int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)](#oh_avmemory_getsize) | Obtains the memory length.(Deprecated) |
-| [OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)](#oh_avmemory_destroy) | Releases an OH_AVMemory instance.(Deprecated) |
+| [OH_AVMemory *OH_AVMemory_Create(int32_t size)](#oh_avmemory_create) | Creates an OH_AVMemory instance.(Deprecated in API11) |
+| [uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)](#oh_avmemory_getaddr) | Obtains the virtual memory address.(Deprecated in API11) |
+| [int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)](#oh_avmemory_getsize) | Obtains the memory length.(Deprecated in API11) |
+| [OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)](#oh_avmemory_destroy) | Releases an OH_AVMemory instance.(Deprecated in API11) |
 
 ## Function description
 
@@ -40,10 +38,6 @@ OH_AVMemory *OH_AVMemory_Create(int32_t size)
 **Description**
 
 Creates an OH_AVMemory instance.
-
-<!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)--><!--Device-OH_AVMemory *OH_AVMemory_Create(int32_t size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 10
 
@@ -73,10 +67,6 @@ uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)
 
 Obtains the virtual memory address.
 
-<!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)--><!--Device-uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 9
 
 **Deprecated**: 11
@@ -105,10 +95,6 @@ int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)
 
 Obtains the memory length.
 
-<!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)--><!--Device-int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 9
 
 **Deprecated**: 11
@@ -136,10 +122,6 @@ OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)
 **Description**
 
 Releases an OH_AVMemory instance.
-
-<!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)--><!--Device-OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 10
 

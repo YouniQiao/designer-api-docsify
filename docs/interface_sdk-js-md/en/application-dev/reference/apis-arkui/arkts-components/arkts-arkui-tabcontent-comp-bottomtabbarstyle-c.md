@@ -238,7 +238,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the bottom tab, which is used to set the distance between the tab content and the boundary. (The percentage setting is not supported.) When you need to adjust the interior space distribution of the tab and optimize the visual effect, pass a custom value. <br>Value range: [0, +∞] <br>Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}** <br>If of the LocalizedPadding type, this attribute supports the mirroring capability. <br>Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),** <br>**top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}**<br>**Since:** 12 |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the bottom tab, which is used to set the distance between the tab content and the boundary. (The percentage setting is not supported.) When you need to adjust the interior space distribution of the tab and optimize the visual effect, pass a custom value. <br>Value range: [0, +∞] <br>Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}** <br>If of the LocalizedPadding type, this attribute supports the mirroring capability. <br>Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),** <br>**top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}**<br>**Since:** 12 |
 
 **Return value:**
 

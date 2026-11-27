@@ -8,13 +8,11 @@ typedef struct TEE_Date_Time {...} TEE_Date_Time
 
 Definitions the date time of TEE.
 
-<!--Device-typedef struct TEE_Date_Time {...} TEE_Date_Time--><!--Device-typedef struct TEE_Date_Time {...} TEE_Date_Time-End-->
-
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
+**Related module**: [TeeTrusted](capi-teetrusted.md)
 
 **Header file**: [tee_defines.h](capi-tee-defines-h.md)
 
@@ -24,12 +22,12 @@ Definitions the date time of TEE.
 
 | Name | Description |
 | -- | -- |
-| int32_t seconds | Seconds part of the date time.<br><!--Device-int32_t seconds--><!--Device-int32_t seconds-End--> |
-| int32_t millis | Milliseconds part of the date time.<br><!--Device-int32_t millis--><!--Device-int32_t millis-End--> |
-| int32_t min | Minutes part of the date time.<br><!--Device-int32_t min--><!--Device-int32_t min-End--> |
-| int32_t hour | Hours part of the date time.<br><!--Device-int32_t hour--><!--Device-int32_t hour-End--> |
-| int32_t day | Day part of the date time.<br><!--Device-int32_t day--><!--Device-int32_t day-End--> |
-| int32_t month | Month part of the date time.<br><!--Device-int32_t month--><!--Device-int32_t month-End--> |
-| int32_t year | Year part of the date time.<br><!--Device-int32_t year--><!--Device-int32_t year-End--> |
+| int32_t seconds | Seconds part of the date time. |
+| int32_t millis | Milliseconds part of the date time. |
+| int32_t min | Minutes part of the date time. |
+| int32_t hour | Hours part of the date time. |
+| int32_t day | Day part of the date time. |
+| int32_t month | Month part of the date time. |
+| int32_t year | Year part of the date time. |
 
 

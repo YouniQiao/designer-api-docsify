@@ -900,7 +900,7 @@ getAppContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](arkts-ability-context-c.md) | 应用[Context](arkts-ability-context.md)。 |
+| [Context](arkts-ability-context-c.md) | 应用[Context](arkts-ability-context-depr.md)。 |
 
 **示例**
 

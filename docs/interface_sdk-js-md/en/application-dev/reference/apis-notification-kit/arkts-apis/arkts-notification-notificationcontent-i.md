@@ -116,7 +116,7 @@ contentType?: notification.ContentType
 
 Notification content type.
 
-**Type:** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
+**Type:** [notification.ContentType](arkts-notification-notification-depr-contenttype-e.md)
 
 **Since:** 7
 

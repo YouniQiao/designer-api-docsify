@@ -41,7 +41,7 @@ Creates a polyline.
 ## Polyline
 
 ```TypeScript
-Polyline(options?: PolylineOptions)
+new Polyline(options?: PolylineOptions)
 ```
 
 Creates a polyline.

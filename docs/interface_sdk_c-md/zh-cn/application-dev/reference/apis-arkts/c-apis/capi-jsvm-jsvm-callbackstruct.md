@@ -8,13 +8,11 @@ typedef struct JSVM_CallbackStruct {...} JSVM_CallbackStruct
 
 用户提供的native回调函数的指针和数据，这些函数通过JSVM-API接口暴露给JavaScript。
 
-<!--Device-typedef struct JSVM_CallbackStruct {...} JSVM_CallbackStruct--><!--Device-typedef struct JSVM_CallbackStruct {...} JSVM_CallbackStruct-End-->
-
 **系统能力：** SystemCapability.ArkCompiler.JSVM
 
 **起始版本：** 11
 
-**相关模块：** [JSVM](capi-arkts-jsvm.md)
+**相关模块：** [JSVM](capi-jsvm.md)
 
 **所在头文件：** [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -25,8 +23,8 @@ typedef struct JSVM_CallbackStruct {...} JSVM_CallbackStruct
 | 名称 | 描述 |
 | -- | -- |
 | JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env,
- JSVM_CallbackInfo info) | 用户提供的native回调函数的指针。<br><!--Device-JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env, JSVM_CallbackInfo info)--><!--Device-JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env, JSVM_CallbackInfo info)-End--> |
-| void* data | 用户提供的native回调函数的数据。<br><!--Device-void* data--><!--Device-void* data-End--> |
+ JSVM_CallbackInfo info) | 用户提供的native回调函数的指针。 |
+| void* data | 用户提供的native回调函数的数据。 |
 
 
 ### 成员函数
@@ -46,7 +44,5 @@ JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env,JSVM_CallbackInfo info)
 **描述：**
 
 用户提供的native回调函数的指针。
-
-<!--Device-JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env, JSVM_CallbackInfo info)--><!--Device-JSVM_Value(JSVM_CDECL* callback)(JSVM_Env env, JSVM_CallbackInfo info)-End-->
 
 

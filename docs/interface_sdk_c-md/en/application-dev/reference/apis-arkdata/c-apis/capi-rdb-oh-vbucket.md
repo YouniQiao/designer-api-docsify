@@ -8,13 +8,11 @@ typedef struct OH_VBucket {...} OH_VBucket
 
 Define the OH_VBucket structure type.
 
-<!--Device-typedef struct OH_VBucket {...} OH_VBucket--><!--Device-typedef struct OH_VBucket {...} OH_VBucket-End-->
-
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 **Header file**: [oh_values_bucket.h](capi-oh-values-bucket-h.md)
 
@@ -24,8 +22,8 @@ Define the OH_VBucket structure type.
 
 | Name | Description |
 | -- | -- |
-| int64_t id | The id used to uniquely identify the OH_VBucket struct.<br><!--Device-int64_t id--><!--Device-int64_t id-End--> |
-| uint16_t capability | Indicates the capability of OH_VBucket.<br><!--Device-uint16_t capability--><!--Device-uint16_t capability-End--> |
+| int64_t id | The id used to uniquely identify the OH_VBucket struct. |
+| uint16_t capability | Indicates the capability of OH_VBucket. |
 
 
 ### Member functions
@@ -51,8 +49,6 @@ int (*putText)(OH_VBucket *bucket, const char *field, const char *value)
 **Description**
 
 Put the const char * value to this [OH_VBucket](capi-rdb-oh-vbucket.md) object for the given column name.
-
-<!--Device-int (*putText)(OH_VBucket *bucket, const char *field, const char *value)--><!--Device-int (*putText)(OH_VBucket *bucket, const char *field, const char *value)-End-->
 
 **Since**: 10
 
@@ -85,8 +81,6 @@ int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)
 
 Put the int64 value to this [OH_VBucket](capi-rdb-oh-vbucket.md) object for the given column name.
 
-<!--Device-int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)--><!--Device-int (*putInt64)(OH_VBucket *bucket, const char *field, int64_t value)-End-->
-
 **Since**: 10
 
 **Parameters**:
@@ -118,8 +112,6 @@ int (*putReal)(OH_VBucket *bucket, const char *field, double value)
 
 Put the double value to this [OH_VBucket](capi-rdb-oh-vbucket.md) object for the given column name.
 
-<!--Device-int (*putReal)(OH_VBucket *bucket, const char *field, double value)--><!--Device-int (*putReal)(OH_VBucket *bucket, const char *field, double value)-End-->
-
 **Since**: 10
 
 **Parameters**:
@@ -150,8 +142,6 @@ int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint
 **Description**
 
 Put the const uint8_t * value to this [OH_VBucket](capi-rdb-oh-vbucket.md) object for the given column name.
-
-<!--Device-int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)--><!--Device-int (*putBlob)(OH_VBucket *bucket, const char *field, const uint8_t *value, uint32_t size)-End-->
 
 **Since**: 10
 
@@ -185,8 +175,6 @@ int (*putNull)(OH_VBucket *bucket, const char *field)
 
 Put NULL to this [OH_VBucket](capi-rdb-oh-vbucket.md) object for the given column name.
 
-<!--Device-int (*putNull)(OH_VBucket *bucket, const char *field)--><!--Device-int (*putNull)(OH_VBucket *bucket, const char *field)-End-->
-
 **Since**: 10
 
 **Parameters**:
@@ -217,8 +205,6 @@ int (*clear)(OH_VBucket *bucket)
 
 Clear the [OH_VBucket](capi-rdb-oh-vbucket.md) object's values.
 
-<!--Device-int (*clear)(OH_VBucket *bucket)--><!--Device-int (*clear)(OH_VBucket *bucket)-End-->
-
 **Since**: 10
 
 **Parameters**:
@@ -247,8 +233,6 @@ int (*destroy)(OH_VBucket *bucket)
 **Description**
 
 Destroy the [OH_VBucket](capi-rdb-oh-vbucket.md) object and reclaim the memory occupied by the object.
-
-<!--Device-int (*destroy)(OH_VBucket *bucket)--><!--Device-int (*destroy)(OH_VBucket *bucket)-End-->
 
 **Since**: 10
 

@@ -1,20 +1,18 @@
 # DRM_MediaKeySystemDescription
 
 ```c
-typedef struct DRM_MediaKeySystemDescription {...} DRM_MediaKeySystemDescription
+struct DRM_MediaKeySystemDescription {...}
 ```
 
 ## Overview
 
 The struct describes the DRM solution name and UUID list.
 
-<!--Device-struct DRM_MediaKeySystemDescription {...}--><!--Device-struct DRM_MediaKeySystemDescription {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 12
 
-**Related module**: [Drm](capi-drm-kit-drm.md)
+**Related module**: [Drm](capi-drm.md)
 
 **Header file**: [native_drm_common.h](capi-native-drm-common-h.md)
 
@@ -24,7 +22,7 @@ The struct describes the DRM solution name and UUID list.
 
 | Name | Description |
 | -- | -- |
-| char name[MAX_MEDIA_KEY_SYSTEM_NAME_LEN] | Name of DRM plugin.<br><!--Device-char name[MAX_MEDIA_KEY_SYSTEM_NAME_LEN]--><!--Device-char name[MAX_MEDIA_KEY_SYSTEM_NAME_LEN]-End--> |
-| uint8_t uuid[DRM_UUID_LEN] | uuid.<br><!--Device-uint8_t uuid[DRM_UUID_LEN]--><!--Device-uint8_t uuid[DRM_UUID_LEN]-End--> |
+| char name[MAX_MEDIA_KEY_SYSTEM_NAME_LEN] | Name of DRM plugin. |
+| uint8_t uuid[DRM_UUID_LEN] | uuid. |
 
 

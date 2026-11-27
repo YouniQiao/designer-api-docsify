@@ -1,14 +1,12 @@
 # AVPlayerCallback
 
 ```c
-typedef struct AVPlayerCallback {...} AVPlayerCallback
+struct AVPlayerCallback {...}
 ```
 
 ## Overview
 
 The struct contains the set of the **OH_AVPlayerOnInfo** and **OH_AVPlayerOnError** callback function pointers. To ensure the normal running of OH_AVPlayer, you must register the instance of this struct with the OH_AVPlayer instance and process the information reported by the callback functions.
-
-<!--Device-struct AVPlayerCallback {...}--><!--Device-struct AVPlayerCallback {...}-End-->
 
 **Since**: 11
 
@@ -16,17 +14,7 @@ The struct contains the set of the **OH_AVPlayerOnInfo** and **OH_AVPlayerOnErro
 
 **Replaced by**: [OH_AVPlayerOnInfoCallback](capi-avplayer-base-h.md#oh_avplayeroninfocallback) [OH_AVPlayerOnErrorCallback](capi-avplayer-base-h.md#oh_avplayeronerrorcallback)
 
-**Related module**: [AVPlayer](capi-media-kit-avplayer.md)
+**Related module**: [AVPlayer](capi-avplayer.md)
 
 **Header file**: [avplayer_base.h](capi-avplayer-base-h.md)
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| [OH_AVPlayerOnInfo](capi-avplayer-base-h.md#oh_avplayeroninfo) onInfo | <!--Device-OH_AVPlayerOnInfo onInfo--><!--Device-OH_AVPlayerOnInfo onInfo-End--> |
-| [OH_AVPlayerOnError](capi-avplayer-base-h.md#oh_avplayeronerror) onError | <!--Device-OH_AVPlayerOnError onError--><!--Device-OH_AVPlayerOnError onError-End--> |
-
 

@@ -6,15 +6,13 @@ Define interfaces for querying location switch status, starting locating, and st
 
 **Library**: liblocation_ndk.so
 
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
-**Related module**: [Location](capi-location-kit-location.md)
+**Related module**: [Location](capi-location.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -33,10 +31,6 @@ Location_ResultCode OH_Location_IsLocatingEnabled(bool* enabled)
 **Description**
 
 Check whether the location switch is enabled.
-
-<!--Device-Location_ResultCode OH_Location_IsLocatingEnabled(bool* enabled)--><!--Device-Location_ResultCode OH_Location_IsLocatingEnabled(bool* enabled)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Since**: 13
 
@@ -61,10 +55,6 @@ Location_ResultCode OH_Location_StartLocating(const Location_RequestConfig* requ
 **Description**
 
 Start locating and subscribe location changed.
-
-<!--Device-Location_ResultCode OH_Location_StartLocating(const Location_RequestConfig* requestConfig)--><!--Device-Location_ResultCode OH_Location_StartLocating(const Location_RequestConfig* requestConfig)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Required permission**: ohos.permission.APPROXIMATELY_LOCATION
 
@@ -91,10 +81,6 @@ Location_ResultCode OH_Location_StopLocating(const Location_RequestConfig* reque
 **Description**
 
 Stop locating and unsubscribe location changed.
-
-<!--Device-Location_ResultCode OH_Location_StopLocating(const Location_RequestConfig* requestConfig)--><!--Device-Location_ResultCode OH_Location_StopLocating(const Location_RequestConfig* requestConfig)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Required permission**: ohos.permission.APPROXIMATELY_LOCATION
 

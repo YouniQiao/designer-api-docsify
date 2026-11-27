@@ -8,13 +8,11 @@ typedef struct OH_RDB_ReturningContext OH_RDB_ReturningContext
 
 Define the OH_RDB_ReturningContext structure type.
 
-<!--Device-typedef struct OH_RDB_ReturningContext OH_RDB_ReturningContext--><!--Device-typedef struct OH_RDB_ReturningContext OH_RDB_ReturningContext-End-->
-
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 **Header file**: [oh_rdb_types.h](capi-oh-rdb-types-h.md)
 

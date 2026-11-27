@@ -24,7 +24,7 @@ Default value: the border radius is 0.
 
 When the parameter is of the Dimension type, setting it in Percentage form is not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **Since:** 11
 

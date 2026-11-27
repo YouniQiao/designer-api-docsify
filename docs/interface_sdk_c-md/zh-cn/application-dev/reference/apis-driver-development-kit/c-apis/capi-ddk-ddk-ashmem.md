@@ -1,20 +1,18 @@
 # DDK_Ashmem
 
 ```c
-typedef struct DDK_Ashmem {...} DDK_Ashmem
+struct DDK_Ashmem {...}
 ```
 
 ## 概述
 
-定义通过接口[OH_DDK_CreateAshmem](capi-ddk-api-h.md#oh_ddk_createashmem)创建的共享内存。共享内存的缓冲区提供更好的性能，适用于多个模块之间高效共享大数据量、驱动程序与应用程序之间快速数据交换等需要高性能数据共享的场景。
-
-<!--Device-struct DDK_Ashmem {...}--><!--Device-struct DDK_Ashmem {...}-End-->
+定义通过接口OH_DDK_CreateAshmem创建的共享内存。共享内存的缓冲区提供更好的性能，适用于多个模块之间高效共享大数据量、驱动程序与应用程序之间快速数据交换等需要高性能数据共享的场景。
 
 **系统能力：** SystemCapability.Driver.DDK.Extension
 
 **起始版本：** 12
 
-**相关模块：** [Ddk](capi-driver-development-kit-ddk.md)
+**相关模块：** [Ddk](capi-ddk.md)
 
 **所在头文件：** [ddk_types.h](capi-ddk-types-h.md)
 
@@ -24,11 +22,11 @@ typedef struct DDK_Ashmem {...} DDK_Ashmem
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t ashmemFd | 共享内存的文件描述符。<br><!--Device-int32_t ashmemFd--><!--Device-int32_t ashmemFd-End--> |
-| const uint8_t *address | 缓冲区地址。<br><!--Device-const uint8_t *address--><!--Device-const uint8_t *address-End--> |
-| const uint32_t size | 缓冲区大小。<br><!--Device-const uint32_t size--><!--Device-const uint32_t size-End--> |
-| uint32_t offset | 已使用缓冲区的偏移量。默认值为0，表示没有偏移，缓冲区从address指定地址开始。offset与bufferLength之和不超过size，否则会导致越界访问。<br><!--Device-uint32_t offset--><!--Device-uint32_t offset-End--> |
-| uint32_t bufferLength | 使用的缓冲区长度。该值在默认情况下等于size（表示使用整个缓冲区），且offset与bufferLength之和不能大于size，否则会导致越界访问。<br><!--Device-uint32_t bufferLength--><!--Device-uint32_t bufferLength-End--> |
-| uint32_t transferredLength | 已传输数据的长度。单位：Byte。在数据传输完成后由接口更新。<br><!--Device-uint32_t transferredLength--><!--Device-uint32_t transferredLength-End--> |
+| int32_t ashmemFd | 共享内存的文件描述符。 |
+| const uint8_t* address | 缓冲区地址。 |
+| const uint32_t size | 缓冲区大小。 |
+| uint32_t offset | 已使用缓冲区的偏移量。默认值为0，表示没有偏移，缓冲区从address指定地址开始。offset与bufferLength之和不超过size，否则会导致越界访问。 |
+| uint32_t bufferLength | 使用的缓冲区长度。该值在默认情况下等于size（表示使用整个缓冲区），且offset与bufferLength之和不能大于size，否则会导致越界访问。 |
+| uint32_t transferredLength | 已传输数据的长度。单位：Byte。在数据传输完成后由接口更新。 |
 
 

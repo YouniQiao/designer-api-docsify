@@ -1,20 +1,18 @@
 # AVSession_PlaybackPosition
 
 ```c
-typedef struct AVSession_PlaybackPosition {...} AVSession_PlaybackPosition
+struct AVSession_PlaybackPosition {...}
 ```
 
 ## 概述
 
 媒体播放位置的相关属性。
 
-<!--Device-struct AVSession_PlaybackPosition {...}--><!--Device-struct AVSession_PlaybackPosition {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **起始版本：** 13
 
-**相关模块：** [OHAVSession](capi-avsession-kit-ohavsession.md)
+**相关模块：** [OHAVSession](capi-ohavsession.md)
 
 **所在头文件：** [native_avplaybackstate.h](capi-native-avplaybackstate-h.md)
 
@@ -24,7 +22,7 @@ typedef struct AVSession_PlaybackPosition {...} AVSession_PlaybackPosition
 
 | 名称 | 描述 |
 | -- | -- |
-| int64_t elapsedTime | 已用时间，单位毫秒（ms）。<br><!--Device-int64_t elapsedTime--><!--Device-int64_t elapsedTime-End--> |
-| int64_t updateTime | 更新时间，单位毫秒（ms）。<br><!--Device-int64_t updateTime--><!--Device-int64_t updateTime-End--> |
+| int64_t elapsedTime | 已用时间，单位毫秒（ms）。 |
+| int64_t updateTime | 更新时间，单位毫秒（ms）。 |
 
 

@@ -6,21 +6,19 @@ Provides functions and enumerations related to the data value buckets.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) | OH_Data_VBuckets | Define the OH_Data_VBuckets structure type. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -41,10 +39,6 @@ OH_Data_VBuckets *OH_VBuckets_Create(void)
 **Description**
 
 Creates an OH_Data_VBuckets instance object.
-
-<!--Device-OH_Data_VBuckets *OH_VBuckets_Create(void)--><!--Device-OH_Data_VBuckets *OH_VBuckets_Create(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -69,10 +63,6 @@ int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)
 
 Destroys an OH_Data_VBuckets instance object.
 
-<!--Device-int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)--><!--Device-int OH_VBuckets_Destroy(OH_Data_VBuckets *buckets)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -96,10 +86,6 @@ int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)
 **Description**
 
 Add an OH_VBucket to OH_Data_VBuckets object.
-
-<!--Device-int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)--><!--Device-int OH_VBuckets_PutRow(OH_Data_VBuckets *buckets, const OH_VBucket *row)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -126,10 +112,6 @@ int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)
 
 Add an OH_Data_VBuckets to OH_Data_VBuckets object.
 
-<!--Device-int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)--><!--Device-int OH_VBuckets_PutRows(OH_Data_VBuckets *buckets, const OH_Data_VBuckets *rows)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -154,10 +136,6 @@ int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)
 **Description**
 
 Gets the number of rows in OH_Data_VBuckets object.
-
-<!--Device-int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)--><!--Device-int OH_VBuckets_RowCount(OH_Data_VBuckets *buckets, size_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 

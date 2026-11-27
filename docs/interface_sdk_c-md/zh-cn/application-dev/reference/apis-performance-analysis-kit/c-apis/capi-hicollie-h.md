@@ -2,24 +2,22 @@
 
 ## 概述
 
-HiCollie模块提供检测业务线程卡死卡顿以及上报卡死事件的能力。
+定义HiCollie模块的接口。
 
 **库：** libohhicollie.so
 
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 12
 
-**相关模块：** [HiCollie](capi-performance-analysis-kit-hicollie.md)
+**相关模块：** [HiCollie](capi-hicollie.md)
 
 ## 汇总
 
 ### 结构体
 
-| 名称 | typedef关键字 | 描述 |
-| -- | -- | -- |
-| [HiCollie_DetectionParam](capi-hicollie-hicollie-detectionparam.md) | HiCollie_DetectionParam | 检测业务线程卡顿的相关参数，可用于应用线程卡顿检测与分析等场景。请注意，从API version 12及以上支持。 |
-| [HiCollie_SetTimerParam](capi-hicollie-hicollie-settimerparam.md) | HiCollie_SetTimerParam | 定义OH_HiCollie_SetTimer函数的输入参数，用于设置定时器监控任务的名称、任务超时时间阈值、超时回调函数及执行动作标志。 使用场景：适用于需要监控任务执行时间的场景，帮助开发者监控和处理任务超时问题。 |
+| 名称 | 描述 |
+| -- | -- |
+| [HiCollie_DetectionParam](capi-hicollie-hicollie-detectionparam.md) | 检测业务线程卡顿的相关参数。请注意，API 12及以上支持。 |
+| [HiCollie_SetTimerParam](capi-hicollie-hicollie-settimerparam.md) | 定义OH_HiCollie_SetTimer函数的输入参数。 |
 
 ### 枚举
 
@@ -48,6 +46,16 @@ HiCollie模块提供检测业务线程卡死卡顿以及上报卡死事件的能
 | [void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)](#oh_hicollie_setfreezecallback) | - | 将冻屏回调设置进系统，系统将在冻屏事件发生时回调此函数。 |
 | [HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)](#oh_hicollie_associateprocessreport) | - | 报告一个进程的冻屏事件，此时会生成APP_HICOLLIE类型HiAppEvent事件。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_HiCollie_Task)(void) | 在业务线程卡死检测中，通过实现该函数来检测业务线程是否卡住。 HiCollie将在业务线程中每3秒调用一次该函数。 例如：该函数可实现向业务线程发送消息，在业务线程接收到消息之后，设置一个标记，检查这个标记，确定业务线程是否卡住。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiCollie |
+| void (*OH_HiCollie_BeginFunc)(const char* eventName) | 卡顿检测中，需要在业务线程处理事件前后各插入一个桩函数。该函数在每个事件处理前插入。 由HiCollie检查事件的执行时间。如果超过预设阈值，上报jank事件。 该函数在每个事件处理前插入。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiCollie |
+| void (*OH_HiCollie_EndFunc)(const char* eventName) | 卡顿检测中，该函数用于记录业务线程处理事件的结束时间。该函数在每个事件处理后插入。 由HiCollie检查事件的执行时间。如果超过预设阈值，上报jank事件。 该函数在每个事件处理后插入。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiCollie |
+| void (*OH_HiCollie_Callback)(void*) | 当用户调用[OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer)后，未在其自定义的任务超时时间阈值内调用[OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer)，回调函数将被执行。<br>**起始版本：** 18<br>**系统能力：** SystemCapability.HiviewDFX.HiCollie |
+| size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size) | 冻屏事件使用的回调。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.HiviewDFX.HiCollie |
+
 ## 枚举类型说明
 
 ### HiCollie_ErrorCode
@@ -60,23 +68,19 @@ enum HiCollie_ErrorCode
 
 错误码定义。
 
-<!--Device-enum HiCollie_ErrorCode--><!--Device-enum HiCollie_ErrorCode-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HICOLLIE_SUCCESS = 0 | 成功。<br>**起始版本：** 12<br><!--Device-HICOLLIE_SUCCESS = 0--><!--Device-HICOLLIE_SUCCESS = 0-End--> |
-| HICOLLIE_INVALID_ARGUMENT = 401 | 无效参数。<br>**起始版本：** 12<br><!--Device-HICOLLIE_INVALID_ARGUMENT = 401--><!--Device-HICOLLIE_INVALID_ARGUMENT = 401-End--> |
-| HICOLLIE_WRONG_THREAD_CONTEXT = 29800001 | 调用线程错误。<br>**起始版本：** 12<br><!--Device-HICOLLIE_WRONG_THREAD_CONTEXT = 29800001--><!--Device-HICOLLIE_WRONG_THREAD_CONTEXT = 29800001-End--> |
-| HICOLLIE_REMOTE_FAILED = 29800002 | 远程调用错误。<br>**起始版本：** 12<br><!--Device-HICOLLIE_REMOTE_FAILED = 29800002--><!--Device-HICOLLIE_REMOTE_FAILED = 29800002-End--> |
-| HICOLLIE_INVALID_TIMER_NAME = 29800003 | 无效的计时器名称。<br>**起始版本：** 18<br><!--Device-HICOLLIE_INVALID_TIMER_NAME = 29800003--><!--Device-HICOLLIE_INVALID_TIMER_NAME = 29800003-End--> |
-| HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004 | 无效的函数执行超时时间阈值。<br>**起始版本：** 18<br><!--Device-HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004--><!--Device-HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004-End--> |
-| HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005 | 函数执行超时检测接入进程错误。<br>**起始版本：** 18<br><!--Device-HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005--><!--Device-HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005-End--> |
-| HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006 | 用于保存返回的计时器id的指针不应为NULL。<br>**起始版本：** 18<br><!--Device-HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006--><!--Device-HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006-End--> |
-| OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007 | 上报频率超过限制。<br>**起始版本：** 24<br><!--Device-OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007--><!--Device-OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007-End--> |
+| HICOLLIE_SUCCESS = 0 |  |
+| HICOLLIE_INVALID_ARGUMENT = 401 |  |
+| HICOLLIE_WRONG_THREAD_CONTEXT = 29800001 |  |
+| HICOLLIE_REMOTE_FAILED = 29800002 |  |
+| HICOLLIE_INVALID_TIMER_NAME = 29800003 |  |
+| HICOLLIE_INVALID_TIMEOUT_VALUE = 29800004 |  |
+| HICOLLIE_WRONG_PROCESS_CONTEXT = 29800005 |  |
+| HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM = 29800006 |  |
+| OH_HICOLLIE_REACH_REPORT_LIMIT = 29800007 |  |
 
 ### HiCollie_Flag
 
@@ -88,18 +92,14 @@ enum HiCollie_Flag
 
 定义函数执行超时时发生的动作。
 
-<!--Device-enum HiCollie_Flag--><!--Device-enum HiCollie_Flag-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
 | -- | -- |
-| HICOLLIE_FLAG_DEFAULT = (~0) | 默认动作，生成日志及执行恢复动作。<br><!--Device-HICOLLIE_FLAG_DEFAULT = (~0)--><!--Device-HICOLLIE_FLAG_DEFAULT = (~0)-End--> |
-| HICOLLIE_FLAG_NOOP = (0) | 仅执行回调函数。<br><!--Device-HICOLLIE_FLAG_NOOP = (0)--><!--Device-HICOLLIE_FLAG_NOOP = (0)-End--> |
-| HICOLLIE_FLAG_LOG = (1 << 0) | 生成日志。<br><!--Device-HICOLLIE_FLAG_LOG = (1 << 0)--><!--Device-HICOLLIE_FLAG_LOG = (1 << 0)-End--> |
-| HICOLLIE_FLAG_RECOVERY = (1 << 1) | 执行恢复动作。<br><!--Device-HICOLLIE_FLAG_RECOVERY = (1 << 1)--><!--Device-HICOLLIE_FLAG_RECOVERY = (1 << 1)-End--> |
+| HICOLLIE_FLAG_DEFAULT = (~0) | 默认动作，生成日志及执行恢复动作。 |
+| HICOLLIE_FLAG_NOOP = (0) | 仅执行回调函数。 |
+| HICOLLIE_FLAG_LOG = (1 << 0) | 生成日志。 |
+| HICOLLIE_FLAG_RECOVERY = (1 << 1) | 执行恢复动作。 |
 
 ### OH_HiCollie_Freeze_Type
 
@@ -111,22 +111,18 @@ enum OH_HiCollie_Freeze_Type
 
 定义FreezeCallback返回的冻屏事件类型。
 
-<!--Device-enum OH_HiCollie_Freeze_Type--><!--Device-enum OH_HiCollie_Freeze_Type-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 24
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_THREAD_BLOCK_3S | 主线程超时一个周期。<br>**起始版本：** 24<br><!--Device-OH_THREAD_BLOCK_3S--><!--Device-OH_THREAD_BLOCK_3S-End--> |
-| OH_THREAD_BLOCK_6S | 主线程超时两个周期。<br>**起始版本：** 24<br><!--Device-OH_THREAD_BLOCK_6S--><!--Device-OH_THREAD_BLOCK_6S-End--> |
-| OH_LIFECYCLE_HALF_TIMEOUT | Ability生命周期超时一个周期。<br>**起始版本：** 24<br><!--Device-OH_LIFECYCLE_HALF_TIMEOUT--><!--Device-OH_LIFECYCLE_HALF_TIMEOUT-End--> |
-| OH_LIFECYCLE_TIMEOUT | Ability生命周期超时两个周期。<br>**起始版本：** 24<br><!--Device-OH_LIFECYCLE_TIMEOUT--><!--Device-OH_LIFECYCLE_TIMEOUT-End--> |
-| OH_APP_INPUT_BLOCK | 输入事件超时。<br>**起始版本：** 24<br><!--Device-OH_APP_INPUT_BLOCK--><!--Device-OH_APP_INPUT_BLOCK-End--> |
-| OH_BUSINESS_THREAD_BLOCK_3S | 通过[OH_HiCollie_Report](capi-hicollie-h.md#oh_hicollie_report)上报3秒冻屏事件。<br>**起始版本：** 24<br><!--Device-OH_BUSINESS_THREAD_BLOCK_3S--><!--Device-OH_BUSINESS_THREAD_BLOCK_3S-End--> |
-| OH_BUSINESS_THREAD_BLOCK_6S | 通过[OH_HiCollie_Report](capi-hicollie-h.md#oh_hicollie_report)上报6秒冻屏事件。<br>**起始版本：** 24<br><!--Device-OH_BUSINESS_THREAD_BLOCK_6S--><!--Device-OH_BUSINESS_THREAD_BLOCK_6S-End--> |
-| OH_BUSINESS_INPUT_BLOCK | 通过[OH_HiCollie_ReportInputBlock](capi-hicollie-h.md#oh_hicollie_reportinputblock)上报冻屏事件。<br>**起始版本：** 24<br><!--Device-OH_BUSINESS_INPUT_BLOCK--><!--Device-OH_BUSINESS_INPUT_BLOCK-End--> |
+| OH_THREAD_BLOCK_3S | 主线程超时一个周期。<br>**起始版本：** 24 |
+| OH_THREAD_BLOCK_6S | 主线程超时两个周期。<br>**起始版本：** 24 |
+| OH_LIFECYCLE_HALF_TIMEOUT | Ability生命周期超时一个周期。<br>**起始版本：** 24 |
+| OH_LIFECYCLE_TIMEOUT | Ability生命周期超时两个周期。<br>**起始版本：** 24 |
+| OH_APP_INPUT_BLOCK | 输入事件超时。<br>**起始版本：** 24 |
+| OH_BUSINESS_THREAD_BLOCK_3S | 通过[OH_HiCollie_Report](capi-hicollie-h.md#oh_hicollie_report)上报3秒冻屏事件。<br>**起始版本：** 24 |
+| OH_BUSINESS_THREAD_BLOCK_6S | 通过[OH_HiCollie_Report](capi-hicollie-h.md#oh_hicollie_report)上报6秒冻屏事件。<br>**起始版本：** 24 |
+| OH_BUSINESS_INPUT_BLOCK | 通过[OH_HiCollie_ReportInputBlock](capi-hicollie-h.md#oh_hicollie_reportinputblock)上报冻屏事件。<br>**起始版本：** 24 |
 
 
 ## 函数说明
@@ -141,10 +137,6 @@ typedef void (*OH_HiCollie_Task)(void)
 
 在业务线程卡死检测中，通过实现该函数来检测业务线程是否卡住。 HiCollie将在业务线程中每3秒调用一次该函数。 例如：该函数可实现向业务线程发送消息，在业务线程接收到消息之后，设置一个标记，检查这个标记，确定业务线程是否卡住。
 
-<!--Device-typedef void (*OH_HiCollie_Task)(void)--><!--Device-typedef void (*OH_HiCollie_Task)(void)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 12
 
 ### OH_HiCollie_BeginFunc()
@@ -156,10 +148,6 @@ typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)
 **描述：**
 
 卡顿检测中，需要在业务线程处理事件前后各插入一个桩函数。该函数在每个事件处理前插入。 由HiCollie检查事件的执行时间。如果超过预设阈值，上报jank事件。 该函数在每个事件处理前插入。
-
-<!--Device-typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)--><!--Device-typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 12
 
@@ -179,10 +167,6 @@ typedef void (*OH_HiCollie_EndFunc)(const char* eventName)
 
 卡顿检测中，该函数用于记录业务线程处理事件的结束时间。该函数在每个事件处理后插入。 由HiCollie检查事件的执行时间。如果超过预设阈值，上报jank事件。 该函数在每个事件处理后插入。
 
-<!--Device-typedef void (*OH_HiCollie_EndFunc)(const char* eventName)--><!--Device-typedef void (*OH_HiCollie_EndFunc)(const char* eventName)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 12
 
 **参数：**
@@ -200,10 +184,6 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)
 **描述：**
 
 注册应用业务线程卡死的周期性检测任务。用户实现回调函数, 用于定时检测业务线程卡死情况。 默认检测时间：3s上报BUSSINESS_THREAD_BLOCK_3S告警事件，6s上报BUSSINESS_THREAD_BLOCK_6S卡死事件。
-
-<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 12
 
@@ -229,10 +209,6 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task t
 
 注册应用业务线程卡死的周期性检测任务。用户实现回调函数, 用于定时检测业务线程卡死情况。 开发者可以设置卡死检测时间，可设置的时间范围：[3, 15]，单位：秒。
 
-<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 18
 
 **参数：**
@@ -257,10 +233,6 @@ HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFu
 **描述：**
 
 注册应用业务线程卡顿检测的回调函数。 线程卡顿监控功能需要开发者实现两个卡顿检测回调函数, 分别放在业务线程处理事件的前后。作为插桩函数，监控业务线程处理事件执行情况。
-
-<!--Device-HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 12
 
@@ -288,10 +260,6 @@ HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)
 
 上报应用业务线程卡死事件，生成卡死故障日志，辅助定位应用卡死问题。 先调用OH_HiCollie_Init_StuckDetection或OH_HiCollie_Init_StuckDetectionWithTimeout接口，初始化检测的task； 如果task任务超时，结合业务逻辑，调用OH_HiCollie_Report接口上报卡死事件。
 
-<!--Device-HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)--><!--Device-HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 12
 
 **参数：**
@@ -316,10 +284,6 @@ HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()
 
 上报应用输入无响应事件，生成卡死故障日志，辅助定位应用卡死问题。如果在PC或平板设备上，还会弹窗提示用户继续等待或关闭应用，其他设备不会弹窗。建议如下两种方式使用该接口。 方式一（推荐）：配合OH_HiCollie_Report、OH_HiCollie_Init_StuckDetection或OH_HiCollie_Init_StuckDetectionWithTimeout接口使用， 业务线程通过上述接口周期性检测自身卡死情况，当满足业务线程卡死且有输入事件（如屏幕点击、鼠标点击、键盘输入等）条件时再调用OH_HiCollie_ReportInputBlock接口。 方式二：业务线程不通过OH_HiCollie_Report、OH_HiCollie_Init_StuckDetection或OH_HiCollie_Init_StuckDetectionWithTimeout接口也能检测自身卡死情况， 则应用结合业务线程卡死情况和输入事件再调用OH_HiCollie_ReportInputBlock接口。
 
-<!--Device-HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()--><!--Device-HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 24
 
 **返回值：**
@@ -338,10 +302,6 @@ typedef void (*OH_HiCollie_Callback)(void*)
 
 当用户调用[OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer)后，未在其自定义的任务超时时间阈值内调用[OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer)，回调函数将被执行。
 
-<!--Device-typedef void (*OH_HiCollie_Callback)(void*)--><!--Device-typedef void (*OH_HiCollie_Callback)(void*)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 18
 
 ### OH_HiCollie_SetTimer()
@@ -353,10 +313,6 @@ HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)
 **描述：**
 
 注册定时器，用于检测函数或代码块执行是否超过自定义时间。 结合OH_HiCollie_CancelTimer接口配套使用，应在调用耗时的函数之前使用。
-
-<!--Device-HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)--><!--Device-HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 18
 
@@ -383,10 +339,6 @@ void OH_HiCollie_CancelTimer(int id)
 
 取消定时器。 结合OH_HiCollie_SetTimer接口配套使用，执行函数或代码块后使用，OH_HiCollie_CancelTimer通过id将该任务取消； 若未在自定义时间内取消，则执行回调函数，在特定自定义超时动作下，生成故障日志。
 
-<!--Device-void OH_HiCollie_CancelTimer(int id)--><!--Device-void OH_HiCollie_CancelTimer(int id)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 18
 
 **参数：**
@@ -404,10 +356,6 @@ typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void*
 **描述：**
 
 冻屏事件使用的回调。
-
-<!--Device-typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size)--><!--Device-typedef size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 24
 
@@ -435,10 +383,6 @@ void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)
 
 将冻屏回调设置进系统，系统将在冻屏事件发生时回调此函数。
 
-<!--Device-void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)--><!--Device-void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
-
 **起始版本：** 24
 
 **参数：**
@@ -462,10 +406,6 @@ HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)
 **描述：**
 
 报告一个进程的冻屏事件，此时会生成APP_HICOLLIE类型HiAppEvent事件。
-
-<!--Device-HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)--><!--Device-HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiCollie
 
 **起始版本：** 24
 

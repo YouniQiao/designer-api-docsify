@@ -1,20 +1,18 @@
 # HiDebug_NativeMemInfo
 
 ```c
-typedef struct HiDebug_NativeMemInfo {...} HiDebug_NativeMemInfo
+struct HiDebug_NativeMemInfo {...}
 ```
 
 ## 概述
 
 应用程序进程本机内存信息结构类型定义。
 
-<!--Device-struct HiDebug_NativeMemInfo {...}--><!--Device-struct HiDebug_NativeMemInfo {...}-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **起始版本：** 12
 
-**相关模块：** [HiDebug](capi-performance-analysis-kit-hidebug.md)
+**相关模块：** [HiDebug](capi-hidebug.md)
 
 **所在头文件：** [hidebug_type.h](capi-hidebug-type-h.md)
 
@@ -24,12 +22,12 @@ typedef struct HiDebug_NativeMemInfo {...} HiDebug_NativeMemInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t pss | 进程比例集大小内存，以KB为单位。<br><!--Device-uint32_t pss--><!--Device-uint32_t pss-End--> |
-| uint32_t vss | 虚拟内存大小，以KB为单位。<br><!--Device-uint32_t vss--><!--Device-uint32_t vss-End--> |
-| uint32_t rss | 常驻集大小，以KB为单位。<br><!--Device-uint32_t rss--><!--Device-uint32_t rss-End--> |
-| uint32_t sharedDirty | 共享脏内存的大小，以KB为单位。<br><!--Device-uint32_t sharedDirty--><!--Device-uint32_t sharedDirty-End--> |
-| uint32_t privateDirty | 专用脏内存的大小，以KB为单位。<br><!--Device-uint32_t privateDirty--><!--Device-uint32_t privateDirty-End--> |
-| uint32_t sharedClean | 共享干净内存的大小，以KB为单位。<br><!--Device-uint32_t sharedClean--><!--Device-uint32_t sharedClean-End--> |
-| uint32_t privateClean | 专用干净内存的大小，以KB为单位。<br><!--Device-uint32_t privateClean--><!--Device-uint32_t privateClean-End--> |
+| uint32_t pss | 进程比例集大小内存，以KB为单位。 |
+| uint32_t vss | 虚拟内存大小，以KB为单位。 |
+| uint32_t rss | 常驻集大小，以KB为单位。 |
+| uint32_t sharedDirty | 共享脏内存的大小，以KB为单位。 |
+| uint32_t privateDirty | 专用脏内存的大小，以KB为单位。 |
+| uint32_t sharedClean | 共享干净内存的大小，以KB为单位。 |
+| uint32_t privateClean | 专用干净内存的大小，以KB为单位。 |
 
 

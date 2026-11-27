@@ -6,15 +6,13 @@ Declared the common media types definition.
 
 **Library**: libnative_media_core.so
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 18
 
-**Related module**: [Core](capi-avcodec-kit-core.md)
+**Related module**: [Core](capi-core.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -32,15 +30,11 @@ enum OH_Core_HdrType
 
 Enumerates HDR types.
 
-<!--Device-enum OH_Core_HdrType--><!--Device-enum OH_Core_HdrType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 18
 
 | Enum item | Description |
 | -- | -- |
-| OH_CORE_HDR_TYPE_NONE = 0 | This option is used to mark none HDR type.<br><!--Device-OH_CORE_HDR_TYPE_NONE = 0--><!--Device-OH_CORE_HDR_TYPE_NONE = 0-End--> |
-| OH_CORE_HDR_TYPE_VIVID = 1 | This option is used to mark HDR Vivid type.<br><!--Device-OH_CORE_HDR_TYPE_VIVID = 1--><!--Device-OH_CORE_HDR_TYPE_VIVID = 1-End--> |
+| OH_CORE_HDR_TYPE_NONE = 0 | This option is used to mark none HDR type. |
+| OH_CORE_HDR_TYPE_VIVID = 1 | This option is used to mark HDR Vivid type. |
 
 

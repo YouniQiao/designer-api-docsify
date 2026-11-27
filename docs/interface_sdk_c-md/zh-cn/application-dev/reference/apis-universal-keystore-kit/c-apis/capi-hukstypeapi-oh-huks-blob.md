@@ -1,20 +1,18 @@
 # OH_Huks_Blob
 
 ```c
-typedef struct OH_Huks_Blob {...} OH_Huks_Blob
+struct OH_Huks_Blob {...}
 ```
 
 ## 概述
 
 定义存放数据的结构体类型。
 
-<!--Device-struct OH_Huks_Blob {...}--><!--Device-struct OH_Huks_Blob {...}-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
-**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Huks_Blob {...} OH_Huks_Blob
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 数据大小。<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| uint8_t *data | 指向数据内存的指针。<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| uint32_t size | 数据大小。 |
+| uint8_t *data | 指向数据内存的指针。 |
 
 

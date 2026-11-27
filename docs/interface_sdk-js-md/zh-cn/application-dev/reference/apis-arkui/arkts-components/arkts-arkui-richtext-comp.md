@@ -12,7 +12,7 @@ RichText(content: string | Resource)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 仅在API版本11，该接口支持在原子化服务中使用。
 
 <!--Device-RichTextInterface-(content: string | Resource): RichTextAttribute--><!--Device-RichTextInterface-(content: string | Resource): RichTextAttribute-End-->
 

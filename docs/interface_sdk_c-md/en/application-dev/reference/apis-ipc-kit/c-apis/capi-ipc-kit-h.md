@@ -2,15 +2,11 @@
 
 ## Overview
 
-The IPC header file provides C API declarations of IPC Kit, facilitating developer references. You can use inter-process communication capabilities through this header file.
-
-**File to Include**: <IPCKit/ipc_kit.h>
+Provides an entry to the IPC header files for you to reference.
 
 **Library**: libipc_capi.so
 
-**System capability**: SystemCapability.Communication.IPC.Core
-
 **Since**: 12
 
-**Related module**: [IPCKit](capi-ipc-kit-ipckit.md)
+**Related module**: [IPCKit](capi-ipckit.md)
 

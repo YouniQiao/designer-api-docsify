@@ -8,13 +8,11 @@ typedef struct JSVM_TypeTag {...} JSVM_TypeTag
 
 A 128-bit value stored as two unsigned 64-bit integers. It serves as a UUID with which JavaScript objects or externals can be "tagged" in order to ensure that they are of a certain type.
 
-<!--Device-typedef struct JSVM_TypeTag {...} JSVM_TypeTag--><!--Device-typedef struct JSVM_TypeTag {...} JSVM_TypeTag-End-->
-
 **System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 11
 
-**Related module**: [JSVM](capi-arkts-jsvm.md)
+**Related module**: [JSVM](capi-jsvm.md)
 
 **Header file**: [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -24,7 +22,7 @@ A 128-bit value stored as two unsigned 64-bit integers. It serves as a UUID with
 
 | Name | Description |
 | -- | -- |
-| uint64_t lower | lower type.<br><!--Device-uint64_t lower--><!--Device-uint64_t lower-End--> |
-| uint64_t upper | upper type.<br><!--Device-uint64_t upper--><!--Device-uint64_t upper-End--> |
+| uint64_t lower | lower type. |
+| uint64_t upper | upper type. |
 
 

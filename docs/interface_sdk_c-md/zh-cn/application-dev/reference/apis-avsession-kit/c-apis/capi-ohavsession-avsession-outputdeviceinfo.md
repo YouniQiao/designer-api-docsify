@@ -1,20 +1,18 @@
 # AVSession_OutputDeviceInfo
 
 ```c
-typedef struct AVSession_OutputDeviceInfo {...} AVSession_OutputDeviceInfo
+struct AVSession_OutputDeviceInfo {...}
 ```
 
 ## 概述
 
 输出设备信息的定义。
 
-<!--Device-struct AVSession_OutputDeviceInfo {...}--><!--Device-struct AVSession_OutputDeviceInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **起始版本：** 23
 
-**相关模块：** [OHAVSession](capi-avsession-kit-ohavsession.md)
+**相关模块：** [OHAVSession](capi-ohavsession.md)
 
 **所在头文件：** [native_deviceinfo.h](capi-native-deviceinfo-h.md)
 
@@ -24,7 +22,7 @@ typedef struct AVSession_OutputDeviceInfo {...} AVSession_OutputDeviceInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 设备信息数组的大小。<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| [AVSession_DeviceInfo](capi-ohavsession-avsession-deviceinfo.md) **deviceInfos | 设备信息数组。<br><!--Device-AVSession_DeviceInfo **deviceInfos--><!--Device-AVSession_DeviceInfo **deviceInfos-End--> |
+| uint32_t size | 设备信息数组的大小。 |
+| AVSession_DeviceInfo **deviceInfos | 设备信息数组。 |
 
 

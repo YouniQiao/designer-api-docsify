@@ -1,7 +1,7 @@
 # C API<!--c-medialibrarykit-->
 
 - Module<!--medialibrarykit-module-->
-    - [MediaAssetManager](capi-media-library-kit-mediaassetmanager.md)
+    - [MediaAssetManager](capi-mediaassetmanager.md)
 - Header file<!--medialibrarykit-headerfile-->
     - [moving_photo_capi.h](capi-moving-photo-capi-h.md)
     - [media_asset_manager_capi.h](capi-media-asset-manager-capi-h.md)

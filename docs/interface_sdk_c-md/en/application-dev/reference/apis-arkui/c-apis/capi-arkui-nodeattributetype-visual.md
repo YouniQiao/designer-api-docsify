@@ -2,13 +2,157 @@
 
 ## Overview
 
-Enumerates the attribute types that can be set by ArkUI on the native side.
+Defines the ArkUI style attributes that can be set on the native side.
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [native_node.h](capi-native-node-h.md)
+
+### NODE_TRANSLATE
+
+```c
+NODE_TRANSLATE
+```
+
+**Description**
+
+Defines the translate attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: distance to translate along the x-axis, in vp. The default value is <b>0</b>. .value[1].f32: distance to translate along the y-axis, in vp. The default value is <b>0</b>. .value[2].f32: distance to translate along the z-axis, in vp. The default value is <b>0</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: distance to translate along the x-axis, in vp. .value[1].f32: distance to translate along the y-axis, in vp. .value[2].f32: distance to translate along the z-axis, in vp.
+
+**Since**: 12
+
+### NODE_SCALE
+
+```c
+NODE_SCALE
+```
+
+**Description**
+
+Defines the scale attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: scale factor along the x-axis. The default value is <b>1</b>. .value[1].f32: scale factor along the y-axis. The default value is <b>1</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: scale factor along the x-axis. .value[1].f32: scale factor along the y-axis.
+
+**Since**: 12
+
+### NODE_ROTATE
+
+```c
+NODE_ROTATE
+```
+
+**Description**
+
+Defines the rotate attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: X coordinate of the rotation axis vector. The default value is <b>0</b>. .value[1].f32: Y coordinate of the rotation axis vector. The default value is <b>0</b>. .value[2].f32: Z coordinate of the rotation axis vector. The default value is <b>0</b>. .value[3].f32: rotation angle. The default value is <b>0</b>. .value[4].f32: line of sight, that is, the distance from the viewpoint to the z=0 plane, in vp. The default value is <b>0</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: X coordinate of the rotation axis vector. .value[1].f32: Y coordinate of the rotation axis vector. .value[2].f32: Z coordinate of the rotation axis vector. .value[3].f32: rotation angle. .value[4].f32: line of sight, that is, the distance from the viewpoint to the z=0 plane, in vp.
+
+**Since**: 12
+
+### NODE_BRIGHTNESS
+
+```c
+NODE_BRIGHTNESS
+```
+
+**Description**
+
+Sets the brightness attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: brightness value. The default value is <b>1.0</b>, and the recommended value range is [0, 2]. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: brightness value.
+
+**Since**: 12
+
+### NODE_SATURATION
+
+```c
+NODE_SATURATION
+```
+
+**Description**
+
+Sets the saturation attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: saturation value. The default value is <b>1.0</b>, and the recommended value range is [0, 50). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: saturation value.
+
+**Since**: 12
+
+### NODE_BLUR
+
+```c
+NODE_BLUR
+```
+
+**Description**
+
+Sets the blur attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: blur radius. A larger value indicates a higher blur degree. If the value is <b>0</b>, the component is not blurred. The unit is vp. The default value is <b>0.0</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: blur radius. The larger the fuzzy radius, the more blurred the image. If the value is <b>0</b>, the image is not blurred. The unit is vp.
+
+**Since**: 12
+
+### NODE_LINEAR_GRADIENT
+
+```c
+NODE_LINEAR_GRADIENT
+```
+
+**Description**
+
+Sets the gradient attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: start angle of the linear gradient. This attribute takes effect only when [ArkUI_LinearGradientDirection](capi-native-type-visual-h.md#arkui_lineargradientdirection) is set to <b>ARKUI_LINEAR_GRADIENT_DIRECTION_CUSTOM</b>. A positive value indicates a clockwise rotation from the origin, (0, 0). The default value is <b>180</b>. .value[1].i32: direction of the linear gradient. When it is set, the <b>angle</b> attribute does not take effect. The parameter type is [ArkUI_LinearGradientDirection](capi-native-type-visual-h.md#arkui_lineargradientdirection): .value[2].i32: whether the colors are repeated. The default value is <b>false</b>. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: start angle of the linear gradient. .value[1].i32: direction of the linear gradient. It does not take effect when <b>angle</b> is set. .value[2].i32: whether the colors are repeated. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors.
+
+**Since**: 12
+
+### NODE_OPACITY
+
+```c
+NODE_OPACITY
+```
+
+**Description**
+
+Defines the opacity attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: opacity value. The value ranges from 0 to 1. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: opacity value. The value ranges from 0 to 1.
+
+**Since**: 12
+
+### NODE_CLIP
+
+```c
+NODE_CLIP
+```
+
+**Description**
+
+Defines the clipping and masking attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32: whether to clip the component based on the parent container bounds. The value <b>1</b> means to clip the component, and <b>0</b> means the opposite. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32: whether to clip the component based on the parent container bounds. The value <b>1</b> means to clip the component, and <b>0</b> means the opposite.
+
+**Since**: 12
+
+### NODE_CLIP_SHAPE
+
+```c
+NODE_CLIP_SHAPE
+```
+
+**Description**
+
+Defines the clipping region on the component. This attribute can be set and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute, which supports four types of shapes: 1. Rectangle: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_RECTANGLE</b> for the rectangle shape. .value[1].f32: width of the rectangle. .value[2].f32: height of rectangle. .value[3].f32: width of the rounded corner of the rectangle. .value[4].f32: height of the rounded corner of the rectangle. .value[5]?.f32: radius of the top left corner of the rectangular shape. .value[6]?.f32: radius of the bottom left corner of the rectangular shape. .value[7]?.f32: radius of the top right corner of the rectangular shape. .value[8]?.f32: radius of the bottom right corner of the rectangular shape. ?.object: clipOption of the rectangle. The parameter type is [ArkUI_RenderNodeClipOption](capi-arkui-rendernodeutils-arkui-rendernodeclipoption.md) type. It takes effect when only the .object parameter is passed, ArkUI_RenderNodeClipOption type is rectangle, and .size must be equal to 1. 2. Circle: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_CIRCLE</b> for the circle shape. .value[1].f32: width of the circle. .value[2].f32: height of the circle. ?.object: clipOption of the circle. The parameter type is [ArkUI_RenderNodeClipOption](capi-arkui-rendernodeutils-arkui-rendernodeclipoption.md) type. It takes effect when only the .object parameter is passed, ArkUI_RenderNodeClipOption type is circle, and .size must be equal to 1. 3.Ellipse: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_ELLIPSE</b> for the ellipse shape. .value[1].f32: width of the ellipse. .value[2].f32: height of the ellipse. ?.object: clipOption of the ellipse. The parameter type is [ArkUI_RenderNodeClipOption](capi-arkui-rendernodeutils-arkui-rendernodeclipoption.md) type. It takes effect when only the .object parameter is passed, ArkUI_RenderNodeClipOption type is ellipse, and .size must be equal to 1. 4. Path: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_PATH</b> for the path shape. .value[1].f32: width of the path. .value[2].f32: height of the path. .string: command for drawing the path. ?.object: clipOption of the path. The parameter type is [ArkUI_RenderNodeClipOption](capi-arkui-rendernodeutils-arkui-rendernodeclipoption.md) type. It takes effect when only the .object parameter is passed, ArkUI_RenderNodeClipOption type is path, and .size must be equal to 1. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md), which supports four types of shapes: 1. Rectangle: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_RECTANGLE</b> for the rectangle shape. .value[1].f32: width of the rectangle. .value[2].f32: height of rectangle. .value[3].f32: width of the rounded corner of the rectangle. .value[4].f32: height of the rounded corner of the rectangle. .value[5].f32: radius of the top left corner of the rectangular shape; .value[6].f32: radius of the bottom left corner of the rectangular shape; .value[7].f32: radius of the top right corner of the rectangular shape; .value[8].f32: radius of the bottom right corner of the rectangular shape; .value[9]?.f32: horizontal coordinate offset of the rectangle. .value[10]?.f32: vertical coordinate offset of the rectangle. 2. Circle: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_CIRCLE</b> for the circle shape. .value[1].f32: width of the circle. .value[2].f32: height of the circle. .value[3]?.f32: horizontal coordinate offset of the circle. .value[4]?.f32: vertical coordinate offset of the circle. 3.Ellipse: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_ELLIPSE</b> for the ellipse shape. .value[1].f32: width of the ellipse. .value[2].f32: height of the ellipse. .value[3]?.f32: horizontal coordinate offset of the ellipse. .value[4]?.f32: vertical coordinate offset of the ellipse. 4. Path: .value[0].i32: type of shape. The parameter type is [ArkUI_ClipType](capi-native-type-visual-h.md#arkui_cliptype). The value is <b>ARKUI_CLIP_TYPE_PATH</b> for the path shape. .value[1].f32: width of the path. .value[2].f32: height of the path. .string: command for drawing the path.
+
+**Since**: 12
+
+### NODE_TRANSFORM
+
+```c
+NODE_TRANSFORM
+```
+
+**Description**
+
+Defines the transform attribute, which can be used to translate, rotate, and scale images. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0...15].f32: 16 floating-point numbers. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0...15].f32: 16 floating-point numbers.
+
+**Since**: 12
+
+### NODE_SHADOW
+
+```c
+NODE_SHADOW
+```
+
+**Description**
+
+Defines the shadow attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32: shadow effect. The parameter type is [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32: shadow effect. The parameter type is [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle).
+
+**Since**: 12
 
 ### NODE_CUSTOM_SHADOW
 
@@ -18,9 +162,43 @@ NODE_CUSTOM_SHADOW
 
 **Description**
 
-User-defined shadow effect, which is mutually exclusive with NODE_SHADOW. A component can use only one shadow attribute setting mode. If the shadow attribute setting mode is set at the same time, the shadow attribute setting mode overrides the shadow attribute setting mode. To use the predefined shadow style, use NODE_SHADOW. To customize shadow parameters, use NODE_CUSTOM_SHADOW. Interfaces for setting, resetting, and obtaining attributes are supported. <br>The format of the return value of the attribute setting method parameter and attribute obtaining method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) is as follows: Parameters: * * <ul> <li>.value[0]?.f32: shadow blur radius. The value range is[0, + △). If a negative value is transferred, a parameter verification failure is returned. The unit is px. The default value is 0.0. </li> <li>.value[1]?.i32: Indicates whether to enable intelligent color obtaining. The value 0 indicates that intelligent color obtaining is disabled(fixed colors are used). The value 1 indicates that intelligent color obtaining is enabled(colors are automatically obtained from the surrounding area of the component to adapt to the background). The default value is disabled. </li> <li>.value[2]?.f32: X-axis offset of the shadow. The unit is px. The default value is 0.0. </li> <li>.value[3]?.f32: offset of the shadow on the Y axis. The unit is px. The default value is 0.0. </li> <li>.value[4]?.i32: shadow type. The parameter type is [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is ARKUI_SHADOW_TYPE_COLOR. </li> <li>.value[5]?.u32: indicates the shadow color when intelligent color selection is disabled(.value[1] is 0). The value is in the format of 0xAARRGGBB. For example, 0xFFFF0000 indicates red. If this parameter is not specified, the default value is 0xFF000000(black). When intelligent color selection is enabled(.value[1] is set to 1), this parameter indicates the color policy. The enumerated value of [ArkUI_ColorStrategy](capi-native-type-visual-h.md#arkui_colorstrategy) is used. </li> <li>.value[6]?.u32: indicates whether the shadow is filled. The value 0 indicates that the shadow is not filled, and the value 1 indicates that the shadow is filled. </li> </ul> Return: * * <ul> <li>.value[0].f32: shadow blur radius, in px. </li> <li>.value[1].i32: indicates whether to enable intelligent color obtaining. The value 0 indicates that intelligent color obtaining is disabled, and the value 1 indicates that intelligent color obtaining is enabled. </li> <li>.value[2].f32: X-axis offset of the shadow, in px. </li> <li>.value[3].f32: offset of the shadow on the Y axis, in px. </li> <li>.value[4].i32: shadow type. The parameter type is [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is RKUI_SHADOW_TYPE_COLOR. The options are as follows: RKUI_SHADOW_TYPE_COLOR(color shadow) and RKUI_SHADOW_TYPE_BLUR( blur shadow). </li> <li>.value[5].u32: shadow color. The value is in the format of 0xAARRGGBB. For example, 0xFFFF0000 indicates red. </li> <li>.value[6].u32: indicates whether the shadow is filled. The value 0 indicates that the shadow is not filled, and the value 1 indicates that the shadow is filled. </li> </ul>
+Defines the custom shadow effect. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0]?.f32: blur radius of the shadow, in px. .value[1]?.i32: whether to enable the coloring strategy. The value <b>1</b> means to enable the coloring strategy, and <b>0</b> (default value) means the opposite. .value[2]?.f32: offset of the shadow along the x-axis, in px. .value[3]?.f32: offset of the shadow along the y-axis, in px. .value[4]?.i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>. .value[5]?.u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red. .value[6]?.u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b> means the opposite.<br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: blur radius of the shadow, in px. .value[1].i32: whether to enable the coloring strategy. .value[2].f32: offset of the shadow along the x-axis, in px. .value[3].f32: offset of the shadow along the y-axis, in px. .value[4].i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>. .value[5].u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red. .value[6].u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b> means the opposite.
 
-<!--Device-NODE_CUSTOM_SHADOW--><!--Device-NODE_CUSTOM_SHADOW-End-->
+**Since**: 12
+
+### NODE_TRANSFORM_CENTER
+
+```c
+NODE_TRANSFORM_CENTER
+```
+
+**Description**
+
+Defines the transform center attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0]?.f32: X coordinate of the center point, in vp. .value[1]?.f32: Y coordinate of the center point, in vp. .value[2]?.f32: Z coordinate of the center point, in vp. .value[3]?.f32 : X coordinate of the center point, expressed in a number that represents a percentage. For example, 0.2 indicates 20%. This attribute overwrites value[0].f32. The default value is <b>0.5f</b>. .value[4]?.f32 : Y coordinate of the center point, expressed in a number that represents a percentage. For example, 0.2 indicates 20%. This attribute overwrites value[1].f32. The default value is <b>0.5f</b>. .value[5]?.f32 : Z coordinate of the center point, expressed in a number that represents a percentage. For example, 0.2 indicates 20%. This attribute overwrites value[2].f32. The default value is <b>0.0f</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: X coordinate of the center point, in vp. .value[1].f32: Y coordinate of the center point, in vp. .value[2].f32: Z coordinate of the center point, in vp. Note: If the coordinate is expressed in a number that represents a percentage, the attribute obtaining API returns the calculated value in vp.
+
+**Since**: 12
+
+### NODE_SWEEP_GRADIENT
+
+```c
+NODE_SWEEP_GRADIENT
+```
+
+**Description**
+
+Defines the sweep gradient effect. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0]?.f32: X coordinate of the sweep gradient center relative to the upper left corner of the component. .value[1]?.f32: Y coordinate of the sweep gradient center relative to the upper left corner of the component. .value[2]?.f32: start point of the sweep gradient. The default value is <b>0</b>. .value[3]?.f32: end point of the sweep gradient. The default value is <b>0</b>. .value[4]?.f32: rotation angle of the sweep gradient. The default value is <b>0</b>. .value[5]?.i32: whether the colors are repeated. The value <b>1</b> means that the colors are repeated, and <b>0</b> means the opposite. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: X coordinate of the sweep gradient center relative to the upper left corner of the component. .value[1].f32: Y coordinate of the sweep gradient center relative to the upper left corner of the component. .value[2].f32: start point of the sweep gradient. The default value is <b>0</b>. .value[3].f32: end point of the sweep gradient. The default value is <b>0</b>. .value[4].f32: rotation angle of the sweep gradient. The default value is <b>0</b>. .value[5].i32: whether the colors are repeated. The value <b>1</b> means that the colors are repeated, and <b>0</b> means the opposite. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors.
+
+**Since**: 12
+
+### NODE_RADIAL_GRADIENT
+
+```c
+NODE_RADIAL_GRADIENT
+```
+
+**Description**
+
+Defines the radial gradient effect. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0]?.f32: X coordinate of the radial gradient center relative to the upper left corner of the component. .value[1]?.f32: Y coordinate of the radial gradient center relative to the upper left corner of the component. .value[2]?.f32: radius of the radial gradient. The default value is <b>0</b>. .value[3]?.i32: whether the colors are repeated. The value <b>1</b> means that the colors are repeated, and <b>0</b> means the opposite. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: X coordinate of the radial gradient center relative to the upper left corner of the component. .value[1].f32: Y coordinate of the radial gradient center relative to the upper left corner of the component. .value[2].f32: radius of the radial gradient. The default value is <b>0</b>. .value[3].i32: whether the colors are repeated. The value <b>1</b> means that the colors are repeated, and <b>0</b> means the opposite. .object: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. colors: colors of the color stops. stops: stop positions of the color stops. size: number of colors.
 
 **Since**: 12
 
@@ -32,19 +210,67 @@ NODE_MASK
 
 **Description**
 
-The mask of the specified shape is added to the component. The attribute setting, attribute reset, and attribute obtaining interfaces are supported. <br>The format of the return value of the attribute setting method parameter and attribute obtaining method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) is as follows: **Parameters: * *
-1. Rectangle type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype), RKUI_MASK_TYPE_RECKNOWNLE. </li> <li>.value[4].f32: rectangle width, in vp. </li> <li>.value[5].f32: rectangle height, in vp. </li> <li>.value[6].f32: width of the rounded corner of the rectangle, in vp. </li> <li>.value[7].f32: height of the rounded corner of the rectangle, in vp. </li> <li>.value[8]?.f32: radius of the upper left corner of the rectangle, in vp. The default value is 0. </li> <li>.value[9]?.f32: radius of the lower left corner of the rectangle, in vp. The default value is 0. </li> <li>.value[10]?.f32: radius of the upper right corner of the rectangle, in vp. The default value is 0. </li> <li>.value[11]?.f32: radius of the lower right corner of the rectangle, in vp. The default value is 0. </li> </ul>
-2. Circle type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype), RKUI_MASK_TYPE_CIRCLE. </li> <li>.value[4].f32: circle width, in vp. </li> <li>.value[5].f32: circle height, in vp. </li> </ul>
-3. ellipse type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype), RKUI_MASK_TYPE_ELLIPSE. </li> <li>.value[4].f32: width of the ellipse, in vp. </li> <li>.value[5].f32: height of the ellipse, in vp. </li> </ul>
-4. Path type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype), RKUI_MASK_TYPE_PATH. </li> <li>.value[4].f32: path width, in vp. </li> <li>.value[5].f32: path height, in vp. </li> <li>.string: command string for drawing a path. The format complies with the SVG path data syntax, for example, 'M0 0 L100 100 Z'. </li> </ul>
-5. Progress type: <ul> <li>.value[0].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype), RKUI_MASK_TYPE_PROGRESS. </li> <li>.value[1].f32: Current value of the progress mask. </li> <li>.value[2].f32: maximum value of the progress mask. </li> <li>.value[3].u32: color of the progress mask. </li> </ul> **Return to: * *
-1. Rectangle type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. </li> <li>.value[4].f32: rectangle width, in vp. </li> <li>.value[5].f32: rectangle height, in vp. </li> <li>.value[6].f32: width of the rounded corner of the rectangle, in vp. </li> <li>.value[7].f32: height of the rounded corner of the rectangle, in vp. </li> <li>.value[8].f32: radius of the upper left corner of the rectangle, in vp. </li> <li>.value[9].f32: radius of the lower left corner of a rectangle, in vp. </li> <li>.value[10].f32: radius of the upper right corner of the rectangle, in vp. </li> <li>.value[11].f32: radius of the lower right corner of the rectangle, in vp. </li> </ul>
-2. Circle type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. </li> <li>.value[4].f32: circle width, in vp. </li> <li>.value[5].f32: circle height, in vp. </li> </ul>
-3. ellipse type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. </li> <li>.value[4].f32: width of the ellipse, in vp. </li> <li>.value[5].f32: height of the ellipse, in vp. </li> </ul>
-4. Path type: <ul> <li>.value[0].u32: fill color. The value type is 0xAARRGGBB. </li> <li>.value[1].u32: stroke color. The type is 0xAARRGGBB. </li> <li>.value[2].f32: stroke width, in vp. </li> <li>.value[3].i32: mask type. </li> <li>.value[4].f32: path width, in vp. </li> <li>.value[5].f32: path height, in vp. </li> <li>.string: command string for drawing a path. </li> </ul>
-5. Progress type: <ul> <li>.value[0].i32: mask type. </li> <li>.value[1].f32: Current value of the progress mask. </li> <li>.value[2].f32: maximum value of the progress mask. </li> <li>.value[3].u32: color of the progress mask. </li> </ul>
+Adds a mask of the specified shape to the component. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute, which supports five types of shapes: 1. Rectangle: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype). The value is <b>ARKUI_MASK_TYPE_RECTANGLE</b> for the rectangle shape. .value[4].f32: width of the rectangle. .value[5].f32: height of the rectangle. .value[6].f32: width of the rounded corner of the rectangle. .value[7].f32: height of the rounded corner of the rectangle. .value[8]?.f32: radius of the top left corner of the rectangular shape. .value[9]?.f32: radius of the bottom left corner of the rectangular shape. .value[10]?.f32: radius of the top right corner of the rectangular shape. .value[11]?.f32: radius of the bottom right corner of the rectangular shape. 2. Circle: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype). The value is <b>ARKUI_MASK_TYPE_CIRCLE</b> for the circle shape. .value[4].f32: width of the circle. .value[5].f32: height of the circle. 3. Ellipse: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype). The value is <b>ARKUI_MASK_TYPE_ELLIPSE</b> for the ellipse shape. .value[4].f32: width of the ellipse. .value[5].f32: height of the ellipse. 4. Path: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype). The value is <b>ARKUI_MASK_TYPE_PATH</b> for the path shape. .value[4].f32: width of the path. .value[5].f32: height of the path. .string: command for drawing the path. 5. Progress: .value[0].i32: mask type. The parameter type is [ArkUI_MaskType](capi-native-type-visual-h.md#arkui_masktype). The value is <b>ARKUI_MASK_TYPE_PROGRESS</b> for the progress shape. .value[1].f32: current value of the progress indicator. .value[2].f32: maximum value of the progress indicator. .value[3].u32: color of the progress indicator, in 0xARGB format. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md), which supports five types of shapes: 1. Rectangle: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. .value[4].f32: width of the rectangle. .value[5].f32: height of the rectangle. .value[6].f32: width of the rounded corner of the rectangle. .value[7].f32: height of the rounded corner of the rectangle. .value[8].f32: radius of the top left corner of the rectangular shape. .value[9].f32: radius of the bottom left corner of the rectangular shape. .value[10].f32: radius of the top right corner of the rectangular shape. .value[11].f32: radius of the bottom right corner of the rectangular shape. 2. Circle: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. .value[4].f32: width of the circle. .value[5].f32: height of the circle. 3. Ellipse: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. .value[4].f32: width of the ellipse. .value[5].f32: height of the ellipse. 4. Path: .value[0].u32 fill color, in 0xARGB format. .value[1].u32: stroke color, in 0xARGB format. .value[2].f32: stroke width, in vp. .value[3].i32: mask type. .value[4].f32: width of the path. .value[5].f32: height of the path. .string: command for drawing the path. 5. Progress: .value[0].i32: mask type. .value[1].f32: current value of the progress indicator. .value[2].f32: maximum value of the progress indicator. .value[3].u32: color of the progress indicator.
 
-<!--Device-NODE_MASK--><!--Device-NODE_MASK-End-->
+**Since**: 12
+
+### NODE_BLEND_MODE
+
+```c
+NODE_BLEND_MODE
+```
+
+**Description**
+
+Blends the component's background with the content of the component's child node. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32: blend mode. The parameter type is [ArkUI_BlendMode](capi-native-type-visual-h.md#arkui_blendmode). The default value is <b>ARKUI_BLEND_MODE_NONE</b>. .value[1].?i32: how the specified blend mode is applied. The parameter type is [ArkUI_BlendApplyType](capi-native-type-visual-h.md#arkui_blendapplytype). The default value is <b>BLEND_APPLY_TYPE_FAST</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32: blend mode. The parameter type is [ArkUI_BlendMode](capi-native-type-visual-h.md#arkui_blendmode). The default value is <b>ARKUI_BLEND_MODE_NONE</b>. .value[1].i32: how the specified blend mode is applied. The parameter type is [ArkUI_BlendApplyType](capi-native-type-visual-h.md#arkui_blendapplytype). The default value is <b>BLEND_APPLY_TYPE_FAST</b>.
+
+**Since**: 12
+
+### NODE_GRAY_SCALE
+
+```c
+NODE_GRAY_SCALE
+```
+
+**Description**
+
+Defines the grayscale effect. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: grayscale conversion ratio. The value ranges from 0 to 1. For example, 0.5 indicates a 50% grayscale conversion ratio. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: grayscale conversion ratio. The value ranges from 0 to 1.
+
+**Since**: 12
+
+### NODE_INVERT
+
+```c
+NODE_INVERT
+```
+
+**Description**
+
+Inverts the image. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: image inversion ratio. The value ranges from 0 to 1. For example, 0.5 indicates a 50% image inversion ratio. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: image inversion ratio. The value ranges from 0 to 1.
+
+**Since**: 12
+
+### NODE_SEPIA
+
+```c
+NODE_SEPIA
+```
+
+**Description**
+
+Defines the sepia conversion ratio. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: sepia conversion ratio. The value ranges from 0 to 1. For example, 0.5 indicates that a 50% sepia conversion ratio. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: sepia conversion ratio. The value ranges from 0 to 1.
+
+**Since**: 12
+
+### NODE_CONTRAST
+
+```c
+NODE_CONTRAST
+```
+
+**Description**
+
+Defines the contrast attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: contrast. If the value is <b>1</b>, the source image is displayed. A larger value indicates a higher contrast. Value range: [0, 10). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: contrast. Value range: [0, 10).
 
 **Since**: 12
 
@@ -56,9 +282,31 @@ NODE_FOREGROUND_COLOR
 
 **Description**
 
-Foreground color attribute, which supports attribute setting and attribute obtaining interfaces. The attribute resetting interface has no effect. The foreground color is an attribute type that cannot be automatically restored to the default value. Therefore, the reset operation does not change the preset foreground color. <br>The format of the return value of the attribute setting method parameter and attribute obtaining method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) is as follows: **Parameters: * * <ul> <li>.value[0].u32: color value. The value is of the 0xAARRGGBB type. For example, 0xFFFF0000 indicates red. The default value is 0xFF000000. Used to directly specify a color value. </li> <li>.value[0].i32: color value enumeration [ArkUI_ColorStrategy](capi-native-type-visual-h.md#arkui_colorstrategy). </li> </ul> **Return to: * * <ul> <li>.value[0].u32: color value. The value type is 0xAARRGGBB. </li> </ul>
+Defines the foreground color attribute, which can be set, reset, and obtained as required through APIs.<br> There are two formats of [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) for setting the attribute value: 1: .value[0].u32: color value, in 0xARGB format. For example, 0xFFFF0000 indicates red. 2: .value[0].i32: color enum [ArkUI_ColorStrategy](capi-native-type-visual-h.md#arkui_colorstrategy). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].u32: color value, in 0xARGB format.
 
-<!--Device-NODE_FOREGROUND_COLOR--><!--Device-NODE_FOREGROUND_COLOR-End-->
+**Since**: 12
+
+### NODE_OUTLINE_WIDTH
+
+```c
+NODE_OUTLINE_WIDTH
+```
+
+**Description**
+
+Sets the thickness of an element's outline.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: thickness of the left outline. .value[1].f32: thickness of the top outline. .value[2].f32: thickness of the right outline. .value[3].f32: thickness of the bottom outline. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: thickness of the left outline. .value[1].f32: thickness of the top outline. .value[2].f32: thickness of the right outline. .value[3].f32: thickness of the bottom outline.
+
+**Since**: 12
+
+### NODE_RENDER_FIT
+
+```c
+NODE_RENDER_FIT
+```
+
+**Description**
+
+Set the component content filling method in the process of width and height animation, support property setting, property reset, property acquisition interface.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32 Content filling mode [ArkUI_RenderFit](capi-native-type-visual-h.md#arkui_renderfit). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32 Content filling mode [ArkUI_RenderFit](capi-native-type-visual-h.md#arkui_renderfit).
 
 **Since**: 12
 
@@ -70,11 +318,19 @@ NODE_OUTLINE_COLOR
 
 **Description**
 
-Outer stroke color attribute, which supports attribute setting, attribute resetting, and attribute obtaining interfaces. <br>The format of the return value of the attribute setting method parameter and attribute obtaining method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) is as follows: **Parameters: * *
-1. If only .value[0] is transferred, set the border colors of the four edges. <ul> <li>.value[0].u32: Set the border colors of the four edges in a unified manner. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> </ul>
-2. When values ranging from.value[0] to.value[3] are transferred, set the border colors of the four edges respectively. <ul> <li>.value[0].u32: color of the upper border. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[1].u32: color of the border on the right. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[2].u32: indicates the lower border color, which is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[3].u32: color of the left border. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> </ul> **Return to: * * <ul> <li>.value[0].u32: color of the upper border. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[1].u32: color of the border on the right. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[2].u32: indicates the lower border color, which is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> <li>.value[3].u32: color of the left border. The color is represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> </ul>
+External stroke color properties, support property setting, property reset and property acquisition interface.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: 1: .value[0].u32: Set the border color of the four sides uniformly, using 0xargb, such as 0xFFFF11FF. 2: .value[0].u32: Set the top border color, represented by 0xargb, such as 0xFFFF11FF. .value[1].u32: Set the right border color, represented by 0xargb, such as 0xFFFF11FF. .value[2].u32: Set the lower side box color, denoted by 0xargb, such as 0xFFFF11FF. .value[3].u32: Set the left border color, denoted by 0xargb, such as 0xFFFF11FF. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].u32: Set the top border color, represented by 0xargb, such as 0xFFFF11FF. .value[1].u32: Set the right border color, represented by 0xargb, such as 0xFFFF11FF. .value[2].u32: Set the lower side box color, denoted by 0xargb, such as 0xFFFF11FF. .value[3].u32: Set the left border color, denoted by 0xargb, such as 0xFFFF11FF.
 
-<!--Device-NODE_OUTLINE_COLOR--><!--Device-NODE_OUTLINE_COLOR-End-->
+**Since**: 12
+
+### NODE_RENDER_GROUP
+
+```c
+NODE_RENDER_GROUP
+```
+
+**Description**
+
+Set whether the current component and child component are rendered off the screen first and then fused with the parent control, supporting property setting, property reset and property acquisition.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32: The parameter type is 1 or 0. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32: The parameter type is 1 or 0.
 
 **Since**: 12
 
@@ -86,10 +342,68 @@ NODE_COLOR_BLEND
 
 **Description**
 
-Adds the color overlay effect for the widget, and supports the interface for setting, resetting, and obtaining attributes. <br>The format of the return value of the attribute setting method parameter and attribute obtaining method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) is as follows: **Parameters: * * <ul> <li>.value[0].u32: overlay color, represented by 0xAARRGGBB. The default value is 0x00000000. </li> </ul> **Return to: * * <ul> <li>.value[0].u32: superimposed color, represented by 0xAARRGGBB, for example, 0xFFFF11FF. </li> </ul>
-
-<!--Device-NODE_COLOR_BLEND--><!--Device-NODE_COLOR_BLEND-End-->
+Add color overlay effect to components, support property setting, property reset and property acquisition interface.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].u32: The color of the overlay is represented by 0xargb, such as 0xFFFF11FF. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].u32: The color of the overlay is represented by 0xargb, such as 0xFFFF11FF.
 
 **Since**: 12
+
+### NODE_FOREGROUND_BLUR_STYLE
+
+```c
+NODE_FOREGROUND_BLUR_STYLE
+```
+
+**Description**
+
+Provide content ambiguity capability for the current component, support property setting, property reset, property acquisition interface.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].i32 Represents the content blurring style, and uses the [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle) enumeration value. .value[1]?.i32 Represents the dark and light mode used by the content blur effect, with the [ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode) enumeration value. .value[2]?.i32 The color extraction mode used to represent the content blur effect takes the [ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor) enumeration value. .value[3]?.f32: blur degree. The value range is [0.0, 1.0]. .value[4]?.f32 It is a gray-level fuzzy parameter. The value range is [0,127]. .value[5]?.f32 It is a gray-level fuzzy parameter. The value range is [0,127]. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].i32 Represents the content blurring style, and uses the [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle) enumeration value. .value[1].i32 Represents the dark and light mode used by the content blur effect, with the [ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode) enumeration value. .value[2].i32 The color extraction mode used to represent the content blur effect takes the [ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor) enumeration value. .value[3].f32: blur degree. The value range is [0.0, 1.0]. .value[4].f32 It is a gray-level fuzzy parameter. The value range is [0,127]. .value[5].f32 It is a gray-level fuzzy parameter. The value range is [0,127].
+
+**Since**: 12
+
+### NODE_BACKDROP_BLUR
+
+```c
+NODE_BACKDROP_BLUR = 99
+```
+
+**Description**
+
+Defines the backdrop blur attribute, which can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32：backdrop blur radius, in px. The value range is [0, +∞). .value[1]?.f32：grayscale blur settings that control the brightness of the black color. The value range is [0, 127]. .value[2]?.f32：grayscale blur settings that control the darkness of the white color. The value range is [0, 127]. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32：backdrop blur radius, in px. The value range is [0, +∞). .value[1].f32：grayscale blur settings that control the brightness of the black color. The value range is [0, 127]. .value[2].f32：grayscale blur settings that control the darkness of the white color. The value range is [0, 127].
+
+**Since**: 15
+
+### NODE_TRANSLATE_WITH_PERCENT
+
+```c
+NODE_TRANSLATE_WITH_PERCENT = 103
+```
+
+**Description**
+
+Defines the translate attribute, which supports for percentile translation input, and can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: distance to translate along the x-axis. The default unit is percentage. The unit is vp only if value[3] exists and value[3] is 0. The default value of value[0] is <b>0</b>. .value[1].f32: distance to translate along the y-axis. The default unit is percentage. The unit is vp only if value[4] exists and value[4] is 0. The default value of value[1] is <b>0</b>. .value[2].f32: distance to translate along the z-axis, in vp. The default value is <b>0</b>. .value[3]?.i32: Whether the translation distance along the x-axis is specified as a percentage. The value can be 0 or 1. When the value is 1, it is specified as a percentage. For example, value[0].f32=0.1 and value[3].i32=1 indicates a 10% shift in the x direction. The default value is <b>1</b>. .value[4]?.i32: Whether the translation distance along the y-axis is specified as a percentage. The value can be 0 or 1. When the value is 1, it is specified as a percentage. For example, value[1].f32=0.1 and value[4].i32=1 indicates a 10% shift in the y direction. The default value is <b>1</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: distance to translate along the x-axis. The unit depends on value[3]. .value[1].f32: distance to translate along the y-axis. The unit depends on value[4]. .value[2].f32: distance to translate along the z-axis. The unit is vp. .value[3].i32: Whether the unit of the X-axis translation distance is in percentage. When value[3].i32 is 0, the unit of the X-axis translation distance is vp; when value[3].i32 is 1, the unit of the X-axis translation distance is percentage; .value[4].i32: Whether the unit of the Y-axis translation distance is in percentage. When value[4].i32 is 0, the unit of the Y-axis translation distance is vp; when value[4].i32 is 1, the unit of the Y-axis translation distance is percentage;
+
+**Since**: 20
+
+### NODE_ROTATE_ANGLE
+
+```c
+NODE_ROTATE_ANGLE = 104
+```
+
+**Description**
+
+Sets component rotation with multi-axis angle control. This attribute can be set, reset, and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .value[0].f32: x-axis rotation angle. The default value is <b>0</b>. .value[1].f32: y-axis rotation angle. The default value is <b>0</b>. .value[2].f32: z-axis rotation angle. The default value is <b>0</b>. .value[3].f32: perspective distance from the viewpoint to the z=0 plane, in px. The default value is <b>0</b>. Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .value[0].f32: x-axis rotation angle. The default value is <b>0</b>. .value[1].f32: y-axis rotation angle. The default value is <b>0</b>. .value[2].f32: z-axis rotation angle. The default value is <b>0</b>. .value[3].f32: perspective distance from the viewpoint to the z=0 plane, in px. The default value is <b>0</b>.
+
+**Since**: 20
+
+### NODE_SYSTEM_MATERIAL
+
+```c
+NODE_SYSTEM_MATERIAL = 127
+```
+
+**Description**
+
+Defines the system material attribute, which can be set, reset, and obtained as required through APIs. Only devices that support systemMaterial can use this attribute. Otherwise, when setting this attribute, the error code ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED will be returned. Whether a device supports materials can be determined by calling [OH_ArkUI_NativeModule_GetSystemMaterialSupported](capi-native-material-h.md#oh_arkui_nativemodule_getsystemmaterialsupported). The material effect behaves differently on devices with different level of computing powers. The level is defined by [ArkUI_MaterialLevel](capi-native-material-h.md#arkui_materiallevel), which can be obtained by [OH_ArkUI_NativeModule_GetGlobalMaterialLevel](capi-native-material-h.md#oh_arkui_nativemodule_getglobalmateriallevel). On devices with the computing power level of ARKUI_MATERIAL_LEVEL_SMOOTH, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with the computing power levels of ARKUI_MATERIAL_LEVEL_EXQUISITE or ARKUI_MATERIAL_LEVEL_GENTLE, it affects shadow attribute and adds a filter effect at the system material layer, which can produce an effect similar to glass.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute: .object: system material object. The parameter type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md). Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md): .object: system material object. The parameter type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerialhandle.md). The ArkUI_ImmersiveMaterialHandle object of the return value is a pointer to static member, so do not release the return object by calling [OH_ArkUI_NativeModule_ImmersiveMaterial_Destroy](capi-native-material-h.md#oh_arkui_nativemodule_immersivematerial_destroy).
+
+**Since**: 26.0.0
 
 

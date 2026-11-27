@@ -1,19 +1,17 @@
 # BorderRadiuses
 
 ```TypeScript
-export type BorderRadiuses = Corners<number>
+declare type BorderRadiuses
 ```
 
-Sets the uniform radius of the four corners.
+Defines the corner radius of a component's border. To reference this object, at least one parameter must be passed.
 
-**Type:** [Corners](arkts-arkui-graphics-corners-i.md)&lt;number&gt;
+**Since:** 9
 
-**Since:** 12
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Model restriction:** This API can be used only in the stage model.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-export type BorderRadiuses = Corners<number>--><!--Device-unnamed-export type BorderRadiuses = Corners<number>-End-->
+<!--Device-unnamed-declare type BorderRadiuses--><!--Device-unnamed-declare type BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -6,32 +6,30 @@ Provides database related functions and enumerations.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Rdb_Config](capi-rdb-oh-rdb-config.md) | OH_Rdb_Config | Manages relational database configurations. |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) | OH_Rdb_Store | Define OH_Rdb_Store type. |
-| [Rdb_DistributedConfig](capi-rdb-rdb-distributedconfig.md) | Rdb_DistributedConfig | Manages the distributed configuration of the table. |
-| [Rdb_KeyInfo](capi-rdb-rdb-keyinfo.md) | Rdb_KeyInfo | Describes the primary keys or row-ids of changed rows. |
-| [Rdb_ChangeInfo](capi-rdb-rdb-changeinfo.md) | Rdb_ChangeInfo | Describes the notify info of data change. |
-| [Rdb_SubscribeCallback](capi-rdb-rdb-subscribecallback.md) | Rdb_SubscribeCallback | Indicates the callback functions. |
-| [Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) | Rdb_DataObserver | Indicates the observer of data. |
-| [Rdb_Statistic](capi-rdb-rdb-statistic.md) | Rdb_Statistic | Describes the statistic of the cloud sync process. |
-| [Rdb_TableDetails](capi-rdb-rdb-tabledetails.md) | Rdb_TableDetails | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the table. |
-| [Rdb_ProgressDetails](capi-rdb-rdb-progressdetails.md) | Rdb_ProgressDetails | Describes detail of the cloud sync progress. |
-| [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) | Rdb_ProgressObserver | The observer of progress. |
+| [Rdb_DistributedConfig](capi-rdb-rdb-distributedconfig.md) | - | Manages the distributed configuration of the table. |
+| [Rdb_KeyInfo](capi-rdb-rdb-keyinfo.md) | - | Describes the primary keys or row-ids of changed rows. |
+| [Rdb_ChangeInfo](capi-rdb-rdb-changeinfo.md) | - | Describes the notify info of data change. |
+| [Rdb_SubscribeCallback](capi-rdb-rdb-subscribecallback.md) | - | Indicates the callback functions. |
+| [Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) | - | Indicates the observer of data. |
+| [Rdb_Statistic](capi-rdb-rdb-statistic.md) | - | Describes the statistic of the cloud sync process. |
+| [Rdb_TableDetails](capi-rdb-rdb-tabledetails.md) | - | Describes the [Rdb_Statistic](capi-rdb-rdb-statistic.md) details of the table. |
+| [Rdb_ProgressDetails](capi-rdb-rdb-progressdetails.md) | - | Describes detail of the cloud sync progress. |
+| [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) | - | The observer of progress. |
 | [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) | OH_Rdb_ConfigV2 | Define OH_Rdb_ConfigV2 type. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -43,18 +41,19 @@ Provides database related functions and enumerations.
 | [Rdb_ChangeType](#rdb_changetype) | Rdb_ChangeType | Describes the change type. |
 | [Rdb_SubscribeType](#rdb_subscribetype) | Rdb_SubscribeType | Indicates the subscribe type. |
 | [Rdb_SyncMode](#rdb_syncmode) | Rdb_SyncMode | Indicates the database synchronization mode. |
-| [Rdb_Progress](#rdb_progress) | Rdb_Progress | The cloud sync progress |
-| [Rdb_ProgressCode](#rdb_progresscode) | Rdb_ProgressCode | Describes the status of cloud sync progress. |
+| [Rdb_Progress](#rdb_progress) | Rdb_Progress |  |
+| [Rdb_ProgressCode](#rdb_progresscode) | Rdb_ProgressCode |  |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
+| RELATIONAL_STORE_H | Provides database related functions and enumerations.<br>**Since**: 10<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
 | DISTRIBUTED_CONFIG_VERSION 1 | Indicates version of [Rdb_DistributedConfig](capi-rdb-rdb-distributedconfig.md)<br>**Since**: 11 |
 | DISTRIBUTED_CHANGE_INFO_VERSION 1 | Indicates version of [Rdb_ChangeInfo](capi-rdb-rdb-changeinfo.md)<br>**Since**: 11 |
 | DISTRIBUTED_PROGRESS_DETAIL_VERSION 1 | Indicates version of [Rdb_ProgressDetails](capi-rdb-rdb-progressdetails.md)<br>**Since**: 11 |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -136,6 +135,16 @@ Provides database related functions and enumerations.
 | [int OH_Rdb_UpdateWithReturning(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdb_updatewithreturning) | - | Updates data in the database based on specified conditions and output change info to context. |
 | [int OH_Rdb_DeleteWithReturning(OH_Rdb_Store *store, OH_Predicates *predicates, OH_RDB_ReturningContext *context)](#oh_rdb_deletewithreturning) | - | Deletes data from the database based on specified conditions and output change info to context. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Rdb_BriefObserver)(void *context, const char *values[], uint32_t count) | The callback function of cloud data change event.<br>**Since**: 11<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
+| void (*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **changeInfo, uint32_t count) | The callback function of cloud data change details event.<br>**Since**: 11<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
+| void (*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progressDetails) | The callback function of progress.<br>**Since**: 11<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
+| void (*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails) | The callback function of sync.<br>**Since**: 11<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
+| void (*Rdb_CorruptedHandler)(void *context, OH_Rdb_ConfigV2 *config, OH_Rdb_Store *store) | The callback function of database corruption handle.<br>**Since**: 22<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
+
 ## Enum type description
 
 ### OH_Rdb_SecurityLevel
@@ -148,18 +157,14 @@ enum OH_Rdb_SecurityLevel
 
 Describe the security level of the database.
 
-<!--Device-enum OH_Rdb_SecurityLevel--><!--Device-enum OH_Rdb_SecurityLevel-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| S1 = 1 | Low-level security. Data leaks have a minor impact.<br><!--Device-S1 = 1--><!--Device-S1 = 1-End--> |
-| S2 | Medium-level security. Data leaks have a major impact.<br><!--Device-S2--><!--Device-S2-End--> |
-| S3 | High-level security. Data leaks have a severe impact.<br><!--Device-S3--><!--Device-S3-End--> |
-| S4 | Critical-level security. Data leaks have a critical impact.<br><!--Device-S4--><!--Device-S4-End--> |
+| S1 = 1 | Low-level security. Data leaks have a minor impact. |
+| S2 | Medium-level security. Data leaks have a major impact. |
+| S3 | High-level security. Data leaks have a severe impact. |
+| S4 | Critical-level security. Data leaks have a critical impact. |
 
 ### Rdb_SecurityArea
 
@@ -171,19 +176,15 @@ enum Rdb_SecurityArea
 
 Describe the security area of the database.
 
-<!--Device-enum Rdb_SecurityArea--><!--Device-enum Rdb_SecurityArea-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RDB_SECURITY_AREA_EL1 = 1 | Security Area 1.<br><!--Device-RDB_SECURITY_AREA_EL1 = 1--><!--Device-RDB_SECURITY_AREA_EL1 = 1-End--> |
-| RDB_SECURITY_AREA_EL2 | Security Area 2.<br><!--Device-RDB_SECURITY_AREA_EL2--><!--Device-RDB_SECURITY_AREA_EL2-End--> |
-| RDB_SECURITY_AREA_EL3 | Security Area 3.<br><!--Device-RDB_SECURITY_AREA_EL3--><!--Device-RDB_SECURITY_AREA_EL3-End--> |
-| RDB_SECURITY_AREA_EL4 | Security Area 4.<br><!--Device-RDB_SECURITY_AREA_EL4--><!--Device-RDB_SECURITY_AREA_EL4-End--> |
-| RDB_SECURITY_AREA_EL5 | Security Area 5.<br>**Since**: 12<br><!--Device-RDB_SECURITY_AREA_EL5--><!--Device-RDB_SECURITY_AREA_EL5-End--> |
+| RDB_SECURITY_AREA_EL1 = 1 | Security Area 1. |
+| RDB_SECURITY_AREA_EL2 | Security Area 2. |
+| RDB_SECURITY_AREA_EL3 | Security Area 3. |
+| RDB_SECURITY_AREA_EL4 | Security Area 4. |
+| RDB_SECURITY_AREA_EL5 | Security Area 5.<br>**Since**: 12 |
 
 ### Rdb_DBType
 
@@ -195,17 +196,13 @@ enum Rdb_DBType
 
 Define Rdb_DBType type.
 
-<!--Device-enum Rdb_DBType--><!--Device-enum Rdb_DBType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 | Enum item | Description |
 | -- | -- |
-| RDB_SQLITE = 1 | Means using SQLITE as the db kernel<br>**Since**: 14<br><!--Device-RDB_SQLITE = 1--><!--Device-RDB_SQLITE = 1-End--> |
-| RDB_CAYLEY = 2 | Means using CAYLEY_DB as the db kernel<br>**Since**: 14<br><!--Device-RDB_CAYLEY = 2--><!--Device-RDB_CAYLEY = 2-End--> |
-| DBTYPE_BUTT = 64 | Means largest value for Rdb_DBType<br>**Since**: 14<br><!--Device-DBTYPE_BUTT = 64--><!--Device-DBTYPE_BUTT = 64-End--> |
+| RDB_SQLITE = 1 | Means using SQLITE as the db kernel<br>**Since**: 14 |
+| RDB_CAYLEY = 2 | Means using CAYLEY_DB as the db kernel<br>**Since**: 14 |
+| DBTYPE_BUTT = 64 | Means largest value for Rdb_DBType<br>**Since**: 14 |
 
 ### Rdb_Tokenizer
 
@@ -217,17 +214,13 @@ enum Rdb_Tokenizer
 
 Define Rdb_Tokenizer type.
 
-<!--Device-enum Rdb_Tokenizer--><!--Device-enum Rdb_Tokenizer-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 17
 
 | Enum item | Description |
 | -- | -- |
-| RDB_NONE_TOKENIZER = 1 | Means not using tokenizer.<br>**Since**: 17<br><!--Device-RDB_NONE_TOKENIZER = 1--><!--Device-RDB_NONE_TOKENIZER = 1-End--> |
-| RDB_ICU_TOKENIZER = 2 | Means using native icu tokenizer.<br>**Since**: 17<br><!--Device-RDB_ICU_TOKENIZER = 2--><!--Device-RDB_ICU_TOKENIZER = 2-End--> |
-| RDB_CUSTOM_TOKENIZER = 3 | Means using self-developed enhance tokenizer.<br>**Since**: 18<br><!--Device-RDB_CUSTOM_TOKENIZER = 3--><!--Device-RDB_CUSTOM_TOKENIZER = 3-End--> |
+| RDB_NONE_TOKENIZER = 1 | Means not using tokenizer. <br>**Since**: 17 |
+| RDB_ICU_TOKENIZER = 2 | Means using native icu tokenizer. <br>**Since**: 17 |
+| RDB_CUSTOM_TOKENIZER = 3 | Means using self-developed enhance tokenizer. <br>**Since**: 18 |
 
 ### Rdb_DistributedType
 
@@ -239,15 +232,11 @@ enum Rdb_DistributedType
 
 Describes the distribution type of the tables.
 
-<!--Device-enum Rdb_DistributedType--><!--Device-enum Rdb_DistributedType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RDB_DISTRIBUTED_CLOUD | Indicates the table is distributed among the devices.<br><!--Device-RDB_DISTRIBUTED_CLOUD--><!--Device-RDB_DISTRIBUTED_CLOUD-End--> |
+| RDB_DISTRIBUTED_CLOUD | Indicates the table is distributed among the devices. |
 
 ### Rdb_ChangeType
 
@@ -259,16 +248,12 @@ enum Rdb_ChangeType
 
 Describes the change type.
 
-<!--Device-enum Rdb_ChangeType--><!--Device-enum Rdb_ChangeType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RDB_DATA_CHANGE | Means the change type is data change.<br><!--Device-RDB_DATA_CHANGE--><!--Device-RDB_DATA_CHANGE-End--> |
-| RDB_ASSET_CHANGE | Means the change type is asset change.<br><!--Device-RDB_ASSET_CHANGE--><!--Device-RDB_ASSET_CHANGE-End--> |
+| RDB_DATA_CHANGE | Means the change type is data change. |
+| RDB_ASSET_CHANGE | Means the change type is asset change. |
 
 ### Rdb_SubscribeType
 
@@ -280,17 +265,13 @@ enum Rdb_SubscribeType
 
 Indicates the subscribe type.
 
-<!--Device-enum Rdb_SubscribeType--><!--Device-enum Rdb_SubscribeType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RDB_SUBSCRIBE_TYPE_CLOUD | Subscription to cloud data changes.<br><!--Device-RDB_SUBSCRIBE_TYPE_CLOUD--><!--Device-RDB_SUBSCRIBE_TYPE_CLOUD-End--> |
-| RDB_SUBSCRIBE_TYPE_CLOUD_DETAILS | Subscription to cloud data change details.<br><!--Device-RDB_SUBSCRIBE_TYPE_CLOUD_DETAILS--><!--Device-RDB_SUBSCRIBE_TYPE_CLOUD_DETAILS-End--> |
-| RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS | Subscription to local data change details.<br>**Since**: 12<br><!--Device-RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS--><!--Device-RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS-End--> |
+| RDB_SUBSCRIBE_TYPE_CLOUD | Subscription to cloud data changes. |
+| RDB_SUBSCRIBE_TYPE_CLOUD_DETAILS | Subscription to cloud data change details. |
+| RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS | Subscription to local data change details.<br>**Since**: 12 |
 
 ### Rdb_SyncMode
 
@@ -302,17 +283,13 @@ enum Rdb_SyncMode
 
 Indicates the database synchronization mode.
 
-<!--Device-enum Rdb_SyncMode--><!--Device-enum Rdb_SyncMode-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| RDB_SYNC_MODE_TIME_FIRST | Indicates that data is synchronized from the end with the closest modification time to the end with a more distant modification time.<br><!--Device-RDB_SYNC_MODE_TIME_FIRST--><!--Device-RDB_SYNC_MODE_TIME_FIRST-End--> |
-| RDB_SYNC_MODE_NATIVE_FIRST | Indicates that data is synchronized from local to cloud.<br><!--Device-RDB_SYNC_MODE_NATIVE_FIRST--><!--Device-RDB_SYNC_MODE_NATIVE_FIRST-End--> |
-| RDB_SYNC_MODE_CLOUD_FIRST | Indicates that data is synchronized from cloud to local.<br><!--Device-RDB_SYNC_MODE_CLOUD_FIRST--><!--Device-RDB_SYNC_MODE_CLOUD_FIRST-End--> |
+| RDB_SYNC_MODE_TIME_FIRST | Indicates that data is synchronized from the end with the closest modification time to the end with a more distant modification time. |
+| RDB_SYNC_MODE_NATIVE_FIRST | Indicates that data is synchronized from local to cloud. |
+| RDB_SYNC_MODE_CLOUD_FIRST | Indicates that data is synchronized from cloud to local. |
 
 ### Rdb_Progress
 
@@ -322,19 +299,11 @@ enum Rdb_Progress
 
 **Description**
 
-The cloud sync progress
-
-<!--Device-enum Rdb_Progress--><!--Device-enum Rdb_Progress-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Since**: 11
-
 | Enum item | Description |
 | -- | -- |
-| RDB_SYNC_BEGIN | Means the sync process begin.<br><!--Device-RDB_SYNC_BEGIN--><!--Device-RDB_SYNC_BEGIN-End--> |
-| RDB_SYNC_IN_PROGRESS | Means the sync process is in progress<br><!--Device-RDB_SYNC_IN_PROGRESS--><!--Device-RDB_SYNC_IN_PROGRESS-End--> |
-| RDB_SYNC_FINISH | Means the sync process is finished<br><!--Device-RDB_SYNC_FINISH--><!--Device-RDB_SYNC_FINISH-End--> |
+| RDB_SYNC_BEGIN | Means the sync process begin. |
+| RDB_SYNC_IN_PROGRESS | Means the sync process is in progress |
+| RDB_SYNC_FINISH | Means the sync process is finished |
 
 ### Rdb_ProgressCode
 
@@ -344,23 +313,15 @@ enum Rdb_ProgressCode
 
 **Description**
 
-Describes the status of cloud sync progress.
-
-<!--Device-enum Rdb_ProgressCode--><!--Device-enum Rdb_ProgressCode-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Since**: 11
-
 | Enum item | Description |
 | -- | -- |
-| RDB_SUCCESS | Means the status of progress is success.<br><!--Device-RDB_SUCCESS--><!--Device-RDB_SUCCESS-End--> |
-| RDB_UNKNOWN_ERROR | Means the progress meets unknown error.<br><!--Device-RDB_UNKNOWN_ERROR--><!--Device-RDB_UNKNOWN_ERROR-End--> |
-| RDB_NETWORK_ERROR | Means the progress meets network error.<br><!--Device-RDB_NETWORK_ERROR--><!--Device-RDB_NETWORK_ERROR-End--> |
-| RDB_CLOUD_DISABLED | Means cloud is disabled.<br><!--Device-RDB_CLOUD_DISABLED--><!--Device-RDB_CLOUD_DISABLED-End--> |
-| RDB_LOCKED_BY_OTHERS | Means the progress is locked by others.<br><!--Device-RDB_LOCKED_BY_OTHERS--><!--Device-RDB_LOCKED_BY_OTHERS-End--> |
-| RDB_RECORD_LIMIT_EXCEEDED | Means the record exceeds the limit.<br><!--Device-RDB_RECORD_LIMIT_EXCEEDED--><!--Device-RDB_RECORD_LIMIT_EXCEEDED-End--> |
-| RDB_NO_SPACE_FOR_ASSET | Means the cloud has no space for the asset.<br><!--Device-RDB_NO_SPACE_FOR_ASSET--><!--Device-RDB_NO_SPACE_FOR_ASSET-End--> |
+| RDB_SUCCESS | Means the status of progress is success. |
+| RDB_UNKNOWN_ERROR | Means the progress meets unknown error. |
+| RDB_NETWORK_ERROR | Means the progress meets network error. |
+| RDB_CLOUD_DISABLED | Means cloud is disabled. |
+| RDB_LOCKED_BY_OTHERS | Means the progress is locked by others. |
+| RDB_RECORD_LIMIT_EXCEEDED | Means the record exceeds the limit. |
+| RDB_NO_SPACE_FOR_ASSET | Means the cloud has no space for the asset. |
 
 
 ## Function description
@@ -374,10 +335,6 @@ OH_Rdb_ConfigV2 *OH_Rdb_CreateConfig()
 **Description**
 
 Create OH_Rdb_ConfigV2 which is used to open store
-
-<!--Device-OH_Rdb_ConfigV2 *OH_Rdb_CreateConfig()--><!--Device-OH_Rdb_ConfigV2 *OH_Rdb_CreateConfig()-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -402,10 +359,6 @@ int OH_Rdb_DestroyConfig(OH_Rdb_ConfigV2 *config)
 
 Destroy OH_Rdb_ConfigV2 which is created by OH_Rdb_CreateConfig
 
-<!--Device-int OH_Rdb_DestroyConfig(OH_Rdb_ConfigV2 *config)--><!--Device-int OH_Rdb_DestroyConfig(OH_Rdb_ConfigV2 *config)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -429,10 +382,6 @@ int OH_Rdb_SetDatabaseDir(OH_Rdb_ConfigV2 *config, const char *databaseDir)
 **Description**
 
 Set property databaseDir into config
-
-<!--Device-int OH_Rdb_SetDatabaseDir(OH_Rdb_ConfigV2 *config, const char *databaseDir)--><!--Device-int OH_Rdb_SetDatabaseDir(OH_Rdb_ConfigV2 *config, const char *databaseDir)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -459,10 +408,6 @@ int OH_Rdb_SetStoreName(OH_Rdb_ConfigV2 *config, const char *storeName)
 
 Set property storeName into config
 
-<!--Device-int OH_Rdb_SetStoreName(OH_Rdb_ConfigV2 *config, const char *storeName)--><!--Device-int OH_Rdb_SetStoreName(OH_Rdb_ConfigV2 *config, const char *storeName)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -487,10 +432,6 @@ int OH_Rdb_SetBundleName(OH_Rdb_ConfigV2 *config, const char *bundleName)
 **Description**
 
 Set property bundleName into config
-
-<!--Device-int OH_Rdb_SetBundleName(OH_Rdb_ConfigV2 *config, const char *bundleName)--><!--Device-int OH_Rdb_SetBundleName(OH_Rdb_ConfigV2 *config, const char *bundleName)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -517,10 +458,6 @@ int OH_Rdb_SetModuleName(OH_Rdb_ConfigV2 *config, const char *moduleName)
 
 Set property moduleName into config
 
-<!--Device-int OH_Rdb_SetModuleName(OH_Rdb_ConfigV2 *config, const char *moduleName)--><!--Device-int OH_Rdb_SetModuleName(OH_Rdb_ConfigV2 *config, const char *moduleName)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -545,10 +482,6 @@ int OH_Rdb_SetEncrypted(OH_Rdb_ConfigV2 *config, bool isEncrypted)
 **Description**
 
 Set property isEncrypted into config
-
-<!--Device-int OH_Rdb_SetEncrypted(OH_Rdb_ConfigV2 *config, bool isEncrypted)--><!--Device-int OH_Rdb_SetEncrypted(OH_Rdb_ConfigV2 *config, bool isEncrypted)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -575,10 +508,6 @@ int OH_Rdb_SetSecurityLevel(OH_Rdb_ConfigV2 *config, int securityLevel)
 
 Set property securityLevel into config
 
-<!--Device-int OH_Rdb_SetSecurityLevel(OH_Rdb_ConfigV2 *config, int securityLevel)--><!--Device-int OH_Rdb_SetSecurityLevel(OH_Rdb_ConfigV2 *config, int securityLevel)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -603,10 +532,6 @@ int OH_Rdb_SetArea(OH_Rdb_ConfigV2 *config, int area)
 **Description**
 
 Set property area into config
-
-<!--Device-int OH_Rdb_SetArea(OH_Rdb_ConfigV2 *config, int area)--><!--Device-int OH_Rdb_SetArea(OH_Rdb_ConfigV2 *config, int area)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -633,10 +558,6 @@ int OH_Rdb_SetDbType(OH_Rdb_ConfigV2 *config, int dbType)
 
 Set property dbType into config
 
-<!--Device-int OH_Rdb_SetDbType(OH_Rdb_ConfigV2 *config, int dbType)--><!--Device-int OH_Rdb_SetDbType(OH_Rdb_ConfigV2 *config, int dbType)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -661,10 +582,6 @@ int OH_Rdb_SetCustomDir(OH_Rdb_ConfigV2 *config, const char *customDir)
 **Description**
 
 Sets the customized directory relative to the database.
-
-<!--Device-int OH_Rdb_SetCustomDir(OH_Rdb_ConfigV2 *config, const char *customDir)--><!--Device-int OH_Rdb_SetCustomDir(OH_Rdb_ConfigV2 *config, const char *customDir)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -691,10 +608,6 @@ int OH_Rdb_SetReadOnly(OH_Rdb_ConfigV2 *config, bool readOnly)
 
 Sets the relation database store is read-only mode.
 
-<!--Device-int OH_Rdb_SetReadOnly(OH_Rdb_ConfigV2 *config, bool readOnly)--><!--Device-int OH_Rdb_SetReadOnly(OH_Rdb_ConfigV2 *config, bool readOnly)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -719,10 +632,6 @@ int OH_Rdb_SetPlugins(OH_Rdb_ConfigV2 *config, const char **plugins, int32_t len
 **Description**
 
 Sets the dynamic libraries with capabilities such as Full-Text Search (FTS).
-
-<!--Device-int OH_Rdb_SetPlugins(OH_Rdb_ConfigV2 *config, const char **plugins, int32_t length)--><!--Device-int OH_Rdb_SetPlugins(OH_Rdb_ConfigV2 *config, const char **plugins, int32_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -750,10 +659,6 @@ int OH_Rdb_SetCryptoParam(OH_Rdb_ConfigV2 *config, const OH_Rdb_CryptoParam *cry
 
 Sets the custom encryption parameters.
 
-<!--Device-int OH_Rdb_SetCryptoParam(OH_Rdb_ConfigV2 *config, const OH_Rdb_CryptoParam *cryptoParam)--><!--Device-int OH_Rdb_SetCryptoParam(OH_Rdb_ConfigV2 *config, const OH_Rdb_CryptoParam *cryptoParam)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -778,10 +683,6 @@ int OH_Rdb_SetTokenizer(OH_Rdb_ConfigV2 *config, Rdb_Tokenizer tokenizer)
 **Description**
 
 Set property tokenizer into config
-
-<!--Device-int OH_Rdb_SetTokenizer(OH_Rdb_ConfigV2 *config, Rdb_Tokenizer tokenizer)--><!--Device-int OH_Rdb_SetTokenizer(OH_Rdb_ConfigV2 *config, Rdb_Tokenizer tokenizer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 17
 
@@ -808,10 +709,6 @@ int OH_Rdb_SetPersistent(OH_Rdb_ConfigV2 *config, bool isPersistent)
 
 Set property persist into config
 
-<!--Device-int OH_Rdb_SetPersistent(OH_Rdb_ConfigV2 *config, bool isPersistent)--><!--Device-int OH_Rdb_SetPersistent(OH_Rdb_ConfigV2 *config, bool isPersistent)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -836,10 +733,6 @@ int OH_Rdb_SetSemanticIndex(OH_Rdb_ConfigV2 *config, bool enableSemanticIndex)
 **Description**
 
 Set whether the database enable the capabilities for semantic indexing processing.
-
-<!--Device-int OH_Rdb_SetSemanticIndex(OH_Rdb_ConfigV2 *config, bool enableSemanticIndex)--><!--Device-int OH_Rdb_SetSemanticIndex(OH_Rdb_ConfigV2 *config, bool enableSemanticIndex)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -866,10 +759,6 @@ int OH_Rdb_IsTokenizerSupported(Rdb_Tokenizer tokenizer, bool *isSupported)
 
 Check if a tokenizer is supported or not.
 
-<!--Device-int OH_Rdb_IsTokenizerSupported(Rdb_Tokenizer tokenizer, bool *isSupported)--><!--Device-int OH_Rdb_IsTokenizerSupported(Rdb_Tokenizer tokenizer, bool *isSupported)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -895,10 +784,6 @@ const int *OH_Rdb_GetSupportedDbType(int *typeCount)
 
 Get support db type list
 
-<!--Device-const int *OH_Rdb_GetSupportedDbType(int *typeCount)--><!--Device-const int *OH_Rdb_GetSupportedDbType(int *typeCount)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -923,10 +808,6 @@ OH_VObject *OH_Rdb_CreateValueObject()
 
 Creates an [OH_VObject](capi-rdb-oh-vobject.md) instance.
 
-<!--Device-OH_VObject *OH_Rdb_CreateValueObject()--><!--Device-OH_VObject *OH_Rdb_CreateValueObject()-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Returns**:
@@ -950,10 +831,6 @@ OH_VBucket *OH_Rdb_CreateValuesBucket()
 
 Creates an [OH_VBucket](capi-rdb-oh-vbucket.md) object.
 
-<!--Device-OH_VBucket *OH_Rdb_CreateValuesBucket()--><!--Device-OH_VBucket *OH_Rdb_CreateValuesBucket()-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Returns**:
@@ -976,10 +853,6 @@ OH_Predicates *OH_Rdb_CreatePredicates(const char *table)
 **Description**
 
 Creates an [OH_Predicates](capi-rdb-oh-predicates.md) instance.
-
-<!--Device-OH_Predicates *OH_Rdb_CreatePredicates(const char *table)--><!--Device-OH_Predicates *OH_Rdb_CreatePredicates(const char *table)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1009,10 +882,6 @@ OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)
 **Description**
 
 Obtains an RDB store.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store.
-
-<!--Device-OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)--><!--Device-OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1044,10 +913,6 @@ OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)
 
 Obtains an RDB store with OH_Rdb_ConfigV2.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store.
 
-<!--Device-OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)--><!--Device-OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -1078,10 +943,6 @@ int OH_Rdb_CloseStore(OH_Rdb_Store *store)
 
 Close the [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) object and reclaim the memory occupied by the object.
 
-<!--Device-int OH_Rdb_CloseStore(OH_Rdb_Store *store)--><!--Device-int OH_Rdb_CloseStore(OH_Rdb_Store *store)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1110,10 +971,6 @@ int OH_Rdb_DeleteStore(const OH_Rdb_Config *config)
 **Description**
 
 Deletes the database with a specified path.
-
-<!--Device-int OH_Rdb_DeleteStore(const OH_Rdb_Config *config)--><!--Device-int OH_Rdb_DeleteStore(const OH_Rdb_Config *config)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1144,10 +1001,6 @@ int OH_Rdb_DeleteStoreV2(const OH_Rdb_ConfigV2 *config)
 
 Deletes the database with a specified path.
 
-<!--Device-int OH_Rdb_DeleteStoreV2(const OH_Rdb_ConfigV2 *config)--><!--Device-int OH_Rdb_DeleteStoreV2(const OH_Rdb_ConfigV2 *config)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -1176,10 +1029,6 @@ int OH_Rdb_Insert(OH_Rdb_Store *store, const char *table, OH_VBucket *valuesBuck
 **Description**
 
 Inserts a row of data into the target table.
-
-<!--Device-int OH_Rdb_Insert(OH_Rdb_Store *store, const char *table, OH_VBucket *valuesBucket)--><!--Device-int OH_Rdb_Insert(OH_Rdb_Store *store, const char *table, OH_VBucket *valuesBucket)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1212,10 +1061,6 @@ int OH_Rdb_InsertWithConflictResolution(OH_Rdb_Store *store, const char *table, 
 
 Inserts a row of data into the target table and support conflict resolution.
 
-<!--Device-int OH_Rdb_InsertWithConflictResolution(OH_Rdb_Store *store, const char *table, OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)--><!--Device-int OH_Rdb_InsertWithConflictResolution(OH_Rdb_Store *store, const char *table, OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1244,10 +1089,6 @@ int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBu
 
 Inserts a batch of data into the target table.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
-<!--Device-int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)--><!--Device-int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -1275,10 +1116,6 @@ int OH_Rdb_Update(OH_Rdb_Store *store, OH_VBucket *valuesBucket, OH_Predicates *
 **Description**
 
 Updates data in the database based on specified conditions.
-
-<!--Device-int OH_Rdb_Update(OH_Rdb_Store *store, OH_VBucket *valuesBucket, OH_Predicates *predicates)--><!--Device-int OH_Rdb_Update(OH_Rdb_Store *store, OH_VBucket *valuesBucket, OH_Predicates *predicates)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1311,10 +1148,6 @@ int OH_Rdb_UpdateWithConflictResolution(OH_Rdb_Store *store, OH_VBucket *row, OH
 
 Updates data in the database based on specified conditions and support conflict resolution.
 
-<!--Device-int OH_Rdb_UpdateWithConflictResolution(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)--><!--Device-int OH_Rdb_UpdateWithConflictResolution(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -1342,10 +1175,6 @@ int OH_Rdb_Delete(OH_Rdb_Store *store, OH_Predicates *predicates)
 **Description**
 
 Deletes data from the database based on specified conditions.
-
-<!--Device-int OH_Rdb_Delete(OH_Rdb_Store *store, OH_Predicates *predicates)--><!--Device-int OH_Rdb_Delete(OH_Rdb_Store *store, OH_Predicates *predicates)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1376,10 +1205,6 @@ OH_Cursor *OH_Rdb_Query(OH_Rdb_Store *store, OH_Predicates *predicates, const ch
 **Description**
 
 Queries data in the database based on specified conditions.
-
-<!--Device-OH_Cursor *OH_Rdb_Query(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const *columnNames, int length)--><!--Device-OH_Cursor *OH_Rdb_Query(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const *columnNames, int length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1413,10 +1238,6 @@ OH_Cursor *OH_Rdb_QueryWithoutRowCount(OH_Rdb_Store *store, OH_Predicates *predi
 
 Queries data in the database based on specified conditions without row count.
 
-<!--Device-OH_Cursor *OH_Rdb_QueryWithoutRowCount(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const columns[], int length)--><!--Device-OH_Cursor *OH_Rdb_QueryWithoutRowCount(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const columns[], int length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -1449,10 +1270,6 @@ OH_Cursor *OH_Rdb_QuerySqlWithoutRowCount(OH_Rdb_Store *store, const char *sql, 
 
 Queries data in the database based on an SQL statement without row count.
 
-<!--Device-OH_Cursor *OH_Rdb_QuerySqlWithoutRowCount(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args)--><!--Device-OH_Cursor *OH_Rdb_QuerySqlWithoutRowCount(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -1484,10 +1301,6 @@ int OH_Rdb_Execute(OH_Rdb_Store *store, const char *sql)
 
 Executes an SQL statement.
 
-<!--Device-int OH_Rdb_Execute(OH_Rdb_Store *store, const char *sql)--><!--Device-int OH_Rdb_Execute(OH_Rdb_Store *store, const char *sql)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1517,10 +1330,6 @@ int OH_Rdb_ExecuteV2(OH_Rdb_Store *store, const char *sql, const OH_Data_Values 
 **Description**
 
 Executes an SQL statement.
-
-<!--Device-int OH_Rdb_ExecuteV2(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)--><!--Device-int OH_Rdb_ExecuteV2(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -1554,10 +1363,6 @@ int OH_Rdb_ExecuteByTrxId(OH_Rdb_Store *store, int64_t trxId, const char *sql)
 
 Write operations are performed using the specified transaction represented by the transaction ID
 
-<!--Device-int OH_Rdb_ExecuteByTrxId(OH_Rdb_Store *store, int64_t trxId, const char *sql)--><!--Device-int OH_Rdb_ExecuteByTrxId(OH_Rdb_Store *store, int64_t trxId, const char *sql)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -1589,10 +1394,6 @@ OH_Cursor *OH_Rdb_ExecuteQuery(OH_Rdb_Store *store, const char *sql)
 
 Queries data in the database based on an SQL statement.
 
-<!--Device-OH_Cursor *OH_Rdb_ExecuteQuery(OH_Rdb_Store *store, const char *sql)--><!--Device-OH_Cursor *OH_Rdb_ExecuteQuery(OH_Rdb_Store *store, const char *sql)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1622,10 +1423,6 @@ OH_Cursor *OH_Rdb_ExecuteQueryV2(OH_Rdb_Store *store, const char *sql, const OH_
 **Description**
 
 Queries data in the database based on an SQL statement.
-
-<!--Device-OH_Cursor *OH_Rdb_ExecuteQueryV2(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args)--><!--Device-OH_Cursor *OH_Rdb_ExecuteQueryV2(OH_Rdb_Store *store, const char *sql, const OH_Data_Values *args)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -1658,10 +1455,6 @@ int OH_Rdb_BeginTransaction(OH_Rdb_Store *store)
 
 Begins a transaction in EXCLUSIVE mode.
 
-<!--Device-int OH_Rdb_BeginTransaction(OH_Rdb_Store *store)--><!--Device-int OH_Rdb_BeginTransaction(OH_Rdb_Store *store)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1690,10 +1483,6 @@ int OH_Rdb_RollBack(OH_Rdb_Store *store)
 **Description**
 
 Rolls back a transaction in EXCLUSIVE mode.
-
-<!--Device-int OH_Rdb_RollBack(OH_Rdb_Store *store)--><!--Device-int OH_Rdb_RollBack(OH_Rdb_Store *store)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1724,10 +1513,6 @@ int OH_Rdb_Commit(OH_Rdb_Store *store)
 
 Commits a transaction in EXCLUSIVE mode.
 
-<!--Device-int OH_Rdb_Commit(OH_Rdb_Store *store)--><!--Device-int OH_Rdb_Commit(OH_Rdb_Store *store)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1756,10 +1541,6 @@ int OH_Rdb_BeginTransWithTrxId(OH_Rdb_Store *store, int64_t *trxId)
 **Description**
 
 Begin a transaction and the transaction ID corresponding to the transaction.
-
-<!--Device-int OH_Rdb_BeginTransWithTrxId(OH_Rdb_Store *store, int64_t *trxId)--><!--Device-int OH_Rdb_BeginTransWithTrxId(OH_Rdb_Store *store, int64_t *trxId)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -1791,10 +1572,6 @@ int OH_Rdb_RollBackByTrxId(OH_Rdb_Store *store, int64_t trxId)
 
 Roll back a transaction that is represented by a specified transaction ID
 
-<!--Device-int OH_Rdb_RollBackByTrxId(OH_Rdb_Store *store, int64_t trxId)--><!--Device-int OH_Rdb_RollBackByTrxId(OH_Rdb_Store *store, int64_t trxId)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 14
 
 **Parameters**:
@@ -1824,10 +1601,6 @@ int OH_Rdb_CommitByTrxId(OH_Rdb_Store *store, int64_t trxId)
 **Description**
 
 Commit a transaction that is represented by a specified transaction ID
-
-<!--Device-int OH_Rdb_CommitByTrxId(OH_Rdb_Store *store, int64_t trxId)--><!--Device-int OH_Rdb_CommitByTrxId(OH_Rdb_Store *store, int64_t trxId)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 14
 
@@ -1859,10 +1632,6 @@ int OH_Rdb_Backup(OH_Rdb_Store *store, const char *databasePath)
 
 Backs up a database on specified path.
 
-<!--Device-int OH_Rdb_Backup(OH_Rdb_Store *store, const char *databasePath)--><!--Device-int OH_Rdb_Backup(OH_Rdb_Store *store, const char *databasePath)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1892,10 +1661,6 @@ int OH_Rdb_Restore(OH_Rdb_Store *store, const char *databasePath)
 **Description**
 
 Restores a database from a specified database file.
-
-<!--Device-int OH_Rdb_Restore(OH_Rdb_Store *store, const char *databasePath)--><!--Device-int OH_Rdb_Restore(OH_Rdb_Store *store, const char *databasePath)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 10
 
@@ -1927,10 +1692,6 @@ int OH_Rdb_GetVersion(OH_Rdb_Store *store, int *version)
 
 Gets the version of a database.
 
-<!--Device-int OH_Rdb_GetVersion(OH_Rdb_Store *store, int *version)--><!--Device-int OH_Rdb_GetVersion(OH_Rdb_Store *store, int *version)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1961,10 +1722,6 @@ int OH_Rdb_SetVersion(OH_Rdb_Store *store, int version)
 
 Sets the version of a database.
 
-<!--Device-int OH_Rdb_SetVersion(OH_Rdb_Store *store, int version)--><!--Device-int OH_Rdb_SetVersion(OH_Rdb_Store *store, int version)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -1994,10 +1751,6 @@ int OH_Rdb_SetDistributedTables(OH_Rdb_Store *store, const char *tables[], uint3
 **Description**
 
 Set table to be distributed table.
-
-<!--Device-int OH_Rdb_SetDistributedTables(OH_Rdb_Store *store, const char *tables[], uint32_t count, Rdb_DistributedType type, const Rdb_DistributedConfig *config)--><!--Device-int OH_Rdb_SetDistributedTables(OH_Rdb_Store *store, const char *tables[], uint32_t count, Rdb_DistributedType type, const Rdb_DistributedConfig *config)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
@@ -2033,10 +1786,6 @@ OH_Cursor *OH_Rdb_FindModifyTime(OH_Rdb_Store *store, const char *tableName, con
 
 Set table to be distributed table.
 
-<!--Device-OH_Cursor *OH_Rdb_FindModifyTime(OH_Rdb_Store *store, const char *tableName, const char *columnName, OH_VObject *values)--><!--Device-OH_Cursor *OH_Rdb_FindModifyTime(OH_Rdb_Store *store, const char *tableName, const char *columnName, OH_VObject *values)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2071,10 +1820,6 @@ typedef void (*Rdb_BriefObserver)(void *context, const char *values[], uint32_t 
 
 The callback function of cloud data change event.
 
-<!--Device-typedef void (*Rdb_BriefObserver)(void *context, const char *values[], uint32_t count)--><!--Device-typedef void (*Rdb_BriefObserver)(void *context, const char *values[], uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2094,10 +1839,6 @@ typedef void (*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **change
 **Description**
 
 The callback function of cloud data change details event.
-
-<!--Device-typedef void (*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **changeInfo, uint32_t count)--><!--Device-typedef void (*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **changeInfo, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
@@ -2123,10 +1864,6 @@ int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_Data
 **Description**
 
 Registers an observer for the database. When data in the distributed database or the local database changes, the callback will be invoked.
-
-<!--Device-int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)--><!--Device-int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
@@ -2160,10 +1897,6 @@ int OH_Rdb_Unsubscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_Da
 
 Remove specified observer of specified type from the database.
 
-<!--Device-int OH_Rdb_Unsubscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)--><!--Device-int OH_Rdb_Unsubscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2196,10 +1929,6 @@ Rdb_TableDetails *OH_Rdb_GetTableDetails(Rdb_ProgressDetails *progress, int32_t 
 
 Get table details from progress details.
 
-<!--Device-Rdb_TableDetails *OH_Rdb_GetTableDetails(Rdb_ProgressDetails *progress, int32_t version)--><!--Device-Rdb_TableDetails *OH_Rdb_GetTableDetails(Rdb_ProgressDetails *progress, int32_t version)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2231,10 +1960,6 @@ typedef void (*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progres
 
 The callback function of progress.
 
-<!--Device-typedef void (*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progressDetails)--><!--Device-typedef void (*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progressDetails)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2259,10 +1984,6 @@ typedef void (*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails)
 
 The callback function of sync.
 
-<!--Device-typedef void (*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails)--><!--Device-typedef void (*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2285,10 +2006,6 @@ int OH_Rdb_CloudSync(OH_Rdb_Store *store, Rdb_SyncMode mode, const char *tables[
 **Description**
 
 Sync data to cloud.
-
-<!--Device-int OH_Rdb_CloudSync(OH_Rdb_Store *store, Rdb_SyncMode mode, const char *tables[], uint32_t count, const Rdb_ProgressObserver *observer)--><!--Device-int OH_Rdb_CloudSync(OH_Rdb_Store *store, Rdb_SyncMode mode, const char *tables[], uint32_t count, const Rdb_ProgressObserver *observer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
@@ -2324,10 +2041,6 @@ int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObse
 
 Subscribes to the automatic synchronization progress of an RDB store. A callback will be invoked when there is a notification of the automatic synchronization progress.
 
-<!--Device-int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)--><!--Device-int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -2358,10 +2071,6 @@ int OH_Rdb_UnsubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressOb
 **Description**
 
 Unsubscribes from the automatic synchronization progress of an RDB store.
-
-<!--Device-int OH_Rdb_UnsubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)--><!--Device-int OH_Rdb_UnsubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
@@ -2394,10 +2103,6 @@ int OH_Rdb_LockRow(OH_Rdb_Store *store, OH_Predicates *predicates)
 
 Lock data from the database based on specified conditions.
 
-<!--Device-int OH_Rdb_LockRow(OH_Rdb_Store *store, OH_Predicates *predicates)--><!--Device-int OH_Rdb_LockRow(OH_Rdb_Store *store, OH_Predicates *predicates)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2428,10 +2133,6 @@ int OH_Rdb_UnlockRow(OH_Rdb_Store *store, OH_Predicates *predicates)
 
 Unlock data from the database based on specified conditions.
 
-<!--Device-int OH_Rdb_UnlockRow(OH_Rdb_Store *store, OH_Predicates *predicates)--><!--Device-int OH_Rdb_UnlockRow(OH_Rdb_Store *store, OH_Predicates *predicates)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2461,10 +2162,6 @@ OH_Cursor *OH_Rdb_QueryLockedRow(OH_Rdb_Store *store, OH_Predicates *predicates,
 **Description**
 
 Queries locked data in the database based on specified conditions.
-
-<!--Device-OH_Cursor *OH_Rdb_QueryLockedRow(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const *columnNames, int length)--><!--Device-OH_Cursor *OH_Rdb_QueryLockedRow(OH_Rdb_Store *store, OH_Predicates *predicates, const char *const *columnNames, int length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 12
 
@@ -2498,10 +2195,6 @@ int OH_Rdb_CreateTransaction(OH_Rdb_Store *store, const OH_RDB_TransOptions *opt
 
 Creates an OH_Rdb_Transaction instance object.
 
-<!--Device-int OH_Rdb_CreateTransaction(OH_Rdb_Store *store, const OH_RDB_TransOptions *options, OH_Rdb_Transaction **trans)--><!--Device-int OH_Rdb_CreateTransaction(OH_Rdb_Store *store, const OH_RDB_TransOptions *options, OH_Rdb_Transaction **trans)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -2533,10 +2226,6 @@ int OH_Rdb_Attach(OH_Rdb_Store *store, const OH_Rdb_ConfigV2 *config, const char
 
 Attaches a database file to the currently linked database.
 
-<!--Device-int OH_Rdb_Attach(OH_Rdb_Store *store, const OH_Rdb_ConfigV2 *config, const char *attachName, int64_t waitTime, size_t *attachedNumber)--><!--Device-int OH_Rdb_Attach(OH_Rdb_Store *store, const OH_Rdb_ConfigV2 *config, const char *attachName, int64_t waitTime, size_t *attachedNumber)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -2564,10 +2253,6 @@ int OH_Rdb_Detach(OH_Rdb_Store *store, const char *attachName, int64_t waitTime,
 **Description**
 
 Detaches a database from this database.
-
-<!--Device-int OH_Rdb_Detach(OH_Rdb_Store *store, const char *attachName, int64_t waitTime, size_t *attachedNumber)--><!--Device-int OH_Rdb_Detach(OH_Rdb_Store *store, const char *attachName, int64_t waitTime, size_t *attachedNumber)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -2601,10 +2286,6 @@ int OH_Rdb_SetLocale(OH_Rdb_Store *store, const char *locale)
 
 Support for collations in different languages.
 
-<!--Device-int OH_Rdb_SetLocale(OH_Rdb_Store *store, const char *locale)--><!--Device-int OH_Rdb_SetLocale(OH_Rdb_Store *store, const char *locale)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -2635,10 +2316,6 @@ typedef void (*Rdb_CorruptedHandler)(void *context, OH_Rdb_ConfigV2 *config, OH_
 
 The callback function of database corruption handle.
 
-<!--Device-typedef void (*Rdb_CorruptedHandler)(void *context, OH_Rdb_ConfigV2 *config, OH_Rdb_Store *store)--><!--Device-typedef void (*Rdb_CorruptedHandler)(void *context, OH_Rdb_ConfigV2 *config, OH_Rdb_Store *store)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -2659,10 +2336,6 @@ int OH_Rdb_RegisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context
 
 Registers corrupted handler for the database.
 
-<!--Device-int OH_Rdb_RegisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)--><!--Device-int OH_Rdb_RegisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -2677,7 +2350,7 @@ Registers corrupted handler for the database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code. [RDB_OK](capi-relational-store-error-code-h.md#oh_rdb_errcode) if the execution is successful. [RDB_E_INVALID_ARGS](capi-relational-store-error-code-h.md#oh_rdb_errcode) - The error code for common invalid args. [RDB_E_SUB_LIMIT_REACHED](capi-relational-store-error-code-h.md#oh_rdb_errcode) - Indicates the number of subscriptions exceeds the limit. Specific error codes can be referenced [OH_Rdb_ErrCode](capi-relational-store-error-code-h.md#oh_rdb_errcode). |
+| int | Returns a specific error code. [RDB_OK](capi-relational-store-error-code-h.md#oh_rdb_errcode) if the execution is successful. [RDB_E_INVALID_ARGS](capi-relational-store-error-code-h.md#oh_rdb_errcode) - The error code for common invalid args. RDB_E_SUB_OVER_LIMIT - Indicates the number of subscriptions exceeds the limit. Specific error codes can be referenced [OH_Rdb_ErrCode](capi-relational-store-error-code-h.md#oh_rdb_errcode). |
 
 **Reference**:
 
@@ -2693,10 +2366,6 @@ int OH_Rdb_UnregisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *conte
 **Description**
 
 Unregisters corrupted handler for the database.
-
-<!--Device-int OH_Rdb_UnregisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)--><!--Device-int OH_Rdb_UnregisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 22
 
@@ -2729,10 +2398,6 @@ int OH_Rdb_RekeyEx(OH_Rdb_Store *store, OH_Rdb_CryptoParam *param)
 
 Change the encrypted database key.
 
-<!--Device-int OH_Rdb_RekeyEx(OH_Rdb_Store *store, OH_Rdb_CryptoParam *param)--><!--Device-int OH_Rdb_RekeyEx(OH_Rdb_Store *store, OH_Rdb_CryptoParam *param)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -2757,10 +2422,6 @@ int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, cons
 **Description**
 
 Inserts a batch of data into the target table and output change info to context.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
-
-<!--Device-int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)--><!--Device-int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -2795,10 +2456,6 @@ int OH_Rdb_UpdateWithReturning(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicat
 
 Updates data in the database based on specified conditions and output change info to context.
 
-<!--Device-int OH_Rdb_UpdateWithReturning(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)--><!--Device-int OH_Rdb_UpdateWithReturning(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -2831,10 +2488,6 @@ int OH_Rdb_DeleteWithReturning(OH_Rdb_Store *store, OH_Predicates *predicates, O
 **Description**
 
 Deletes data from the database based on specified conditions and output change info to context.
-
-<!--Device-int OH_Rdb_DeleteWithReturning(OH_Rdb_Store *store, OH_Predicates *predicates, OH_RDB_ReturningContext *context)--><!--Device-int OH_Rdb_DeleteWithReturning(OH_Rdb_Store *store, OH_Predicates *predicates, OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 

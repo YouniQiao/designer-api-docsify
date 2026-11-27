@@ -6,15 +6,13 @@ Provide environment APIS.
 
 **Library**: libohenvironment.so
 
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
-
 **Since**: 12
 
-**Related module**: [Environment](capi-core-file-kit-environment.md)
+**Related module**: [Environment](capi-environment.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -33,10 +31,6 @@ FileManagement_ErrCode OH_Environment_GetUserDownloadDir(char **result)
 **Description**
 
 Obtains the sandbox path of the Download root directory.
-
-<!--Device-FileManagement_ErrCode OH_Environment_GetUserDownloadDir(char **result)--><!--Device-FileManagement_ErrCode OH_Environment_GetUserDownloadDir(char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **Since**: 12
 
@@ -62,10 +56,6 @@ FileManagement_ErrCode OH_Environment_GetUserDesktopDir(char **result)
 
 Obtains the sandbox path of the Desktop root directory.
 
-<!--Device-FileManagement_ErrCode OH_Environment_GetUserDesktopDir(char **result)--><!--Device-FileManagement_ErrCode OH_Environment_GetUserDesktopDir(char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
-
 **Since**: 12
 
 **Parameters**:
@@ -89,10 +79,6 @@ FileManagement_ErrCode OH_Environment_GetUserDocumentDir(char **result)
 **Description**
 
 Obtains the sandbox path of the Document root directory.
-
-<!--Device-FileManagement_ErrCode OH_Environment_GetUserDocumentDir(char **result)--><!--Device-FileManagement_ErrCode OH_Environment_GetUserDocumentDir(char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **Since**: 12
 

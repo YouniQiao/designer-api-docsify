@@ -1,20 +1,18 @@
 # NetConn_NetHandle
 
 ```c
-typedef struct NetConn_NetHandle {...} NetConn_NetHandle
+struct NetConn_NetHandle {...}
 ```
 
 ## 概述
 
 存放网络ID。
 
-<!--Device-struct NetConn_NetHandle {...}--><!--Device-struct NetConn_NetHandle {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 11
 
-**相关模块：** [NetConnection](capi-network-kit-netconnection.md)
+**相关模块：** [NetConnection](capi-netconnection.md)
 
 **所在头文件：** [net_connection_type.h](capi-net-connection-type-h.md)
 
@@ -24,6 +22,6 @@ typedef struct NetConn_NetHandle {...} NetConn_NetHandle
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t netId | 网络标识符。<br><!--Device-int32_t netId--><!--Device-int32_t netId-End--> |
+| int32_t netId | 网络标识符。 |
 
 

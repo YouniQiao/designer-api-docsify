@@ -108,6 +108,22 @@ CAMERA = 19
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## COMPANION_AI
+
+```TypeScript
+COMPANION_AI = 56
+```
+
+伴随式AI。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-COMPANION_AI = 56--><!--Device-FeatureForDevice-COMPANION_AI = 56-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## CONTROL_CENTER
 
 ```TypeScript

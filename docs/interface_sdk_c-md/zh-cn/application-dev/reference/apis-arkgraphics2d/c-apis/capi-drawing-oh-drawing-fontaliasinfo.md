@@ -1,20 +1,18 @@
 # OH_Drawing_FontAliasInfo
 
 ```c
-typedef struct OH_Drawing_FontAliasInfo {...} OH_Drawing_FontAliasInfo
+struct OH_Drawing_FontAliasInfo {...}
 ```
 
 ## 概述
 
 别名字体信息结构体。
 
-<!--Device-struct OH_Drawing_FontAliasInfo {...}--><!--Device-struct OH_Drawing_FontAliasInfo {...}-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Drawing_FontAliasInfo {...} OH_Drawing_FontAliasInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| char* familyName | 字体家族名。<br><!--Device-char* familyName--><!--Device-char* familyName-End--> |
-| int weight | 字体字重值，当字重值大于0时，表示此字体集只包含所指定字重的字体，当字重值等于0时，表示此字体集包含所有字体。<br><!--Device-int weight--><!--Device-int weight-End--> |
+| char* familyName | 字体家族名。 |
+| int weight | 字体字重值，当字重值大于0时，表示此字体集只包含所指定字重的字体，当字重值等于0时，表示此字体集包含所有字体。 |
 
 

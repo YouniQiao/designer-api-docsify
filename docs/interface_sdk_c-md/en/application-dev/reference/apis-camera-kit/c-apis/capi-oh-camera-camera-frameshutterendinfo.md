@@ -1,20 +1,18 @@
 # Camera_FrameShutterEndInfo
 
 ```c
-typedef struct Camera_FrameShutterEndInfo {...} Camera_FrameShutterEndInfo
+struct Camera_FrameShutterEndInfo {...}
 ```
 
 ## Overview
 
 The struct describes the frame shutter end information during capture.
 
-<!--Device-struct Camera_FrameShutterEndInfo {...}--><!--Device-struct Camera_FrameShutterEndInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -24,6 +22,6 @@ The struct describes the frame shutter end information during capture.
 
 | Name | Description |
 | -- | -- |
-| int32_t captureId | Capture ID.<br><!--Device-int32_t captureId--><!--Device-int32_t captureId-End--> |
+| int32_t captureId | Capture ID. |
 
 

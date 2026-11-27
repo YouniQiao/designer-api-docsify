@@ -1,20 +1,18 @@
 # OH_Drawing_FontFallbackInfo
 
 ```c
-typedef struct OH_Drawing_FontFallbackInfo {...} OH_Drawing_FontFallbackInfo
+struct OH_Drawing_FontFallbackInfo {...}
 ```
 
 ## Overview
 
 This struct describes the information about a font fallback.
 
-<!--Device-struct OH_Drawing_FontFallbackInfo {...}--><!--Device-struct OH_Drawing_FontFallbackInfo {...}-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 **Header file**: [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,7 +22,7 @@ This struct describes the information about a font fallback.
 
 | Name | Description |
 | -- | -- |
-| char* language | Pointer to the language supported by the font fallback. The language format is bcp47.<br><!--Device-char* language--><!--Device-char* language-End--> |
-| char* familyName | Pointer to the name of a font family.<br><!--Device-char* familyName--><!--Device-char* familyName-End--> |
+| char* language | Pointer to the language supported by the font fallback. The language format is bcp47. |
+| char* familyName | Pointer to the name of a font family. |
 
 

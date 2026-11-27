@@ -42,7 +42,7 @@ Rect(
 ## Rect
 
 ```TypeScript
-Rect(
+new Rect(
     options?: RectOptions | RoundedRectOptions,
   )
 ```

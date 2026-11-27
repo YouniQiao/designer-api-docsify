@@ -1,20 +1,18 @@
 # OH_AudioSuite_SpaceRenderExtensionParams
 
 ```c
-typedef struct OH_AudioSuite_SpaceRenderExtensionParams {...} OH_AudioSuite_SpaceRenderExtensionParams
+struct OH_AudioSuite_SpaceRenderExtensionParams {...}
 ```
 
 ## Overview
 
 Space rendering extension mode parameters.
 
-<!--Device-struct OH_AudioSuite_SpaceRenderExtensionParams {...}--><!--Device-struct OH_AudioSuite_SpaceRenderExtensionParams {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 23
 
-**Related module**: [OHAudioSuite](capi-audio-kit-ohaudiosuite.md)
+**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
 
 **Header file**: [native_audio_suite_base.h](capi-native-audio-suite-base-h.md)
 
@@ -24,7 +22,7 @@ Space rendering extension mode parameters.
 
 | Name | Description |
 | -- | -- |
-| float extRadius | Expansion radius, value range: [1.0, 5.0], unit: meters. If the value is out of range, the setting will fail and return [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result).<br>**Since**: 23<br><!--Device-float extRadius--><!--Device-float extRadius-End--> |
-| int32_t extAngle | Expansion angle, value range: (0, 360), unit: degrees. If the value is out of range, the setting will fail and return [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result).<br>**Since**: 23<br><!--Device-int32_t extAngle--><!--Device-int32_t extAngle-End--> |
+| float extRadius |  |
+| int32_t extAngle |  |
 
 

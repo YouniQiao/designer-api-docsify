@@ -1,20 +1,18 @@
 # OH_TrafficFilter_PortMulti
 
 ```c
-typedef struct OH_TrafficFilter_PortMulti {...} OH_TrafficFilter_PortMulti
+struct OH_TrafficFilter_PortMulti {...}
 ```
 
 ## 概述
 
 多端口匹配的端口匹配值。
 
-<!--Device-struct OH_TrafficFilter_PortMulti {...}--><!--Device-struct OH_TrafficFilter_PortMulti {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
-**相关模块：** [TrafficFilter](capi-network-kit-trafficfilter.md)
+**相关模块：** [TrafficFilter](capi-trafficfilter.md)
 
 **所在头文件：** [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_TrafficFilter_PortMulti {...} OH_TrafficFilter_PortMulti
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t portCount | 数组中的端口数量。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t portCount--><!--Device-uint32_t portCount-End--> |
-| uint16_t ports[OH_TRAFFICFILTER_MAX_MULTI_PORT_COUNT] | 端口数组<br>**起始版本：** 26.0.0<br><!--Device-uint16_t ports[OH_TRAFFICFILTER_MAX_MULTI_PORT_COUNT]--><!--Device-uint16_t ports[OH_TRAFFICFILTER_MAX_MULTI_PORT_COUNT]-End--> |
+| uint32_t portCount | 数组中的端口数量。<br>**起始版本：** 26.0.0 |
+| uint16_t ports[OH_TRAFFICFILTER_MAX_MULTI_PORT_COUNT] | 端口数组<br>**起始版本：** 26.0.0 |
 
 

@@ -8,13 +8,11 @@ typedef struct Asset_Attr {...} Asset_Attr
 
 Defines an asset attribute, which consists of a tag and a value in the form of a key-value (KV) pair.
 
-<!--Device-typedef struct Asset_Attr {...} Asset_Attr--><!--Device-typedef struct Asset_Attr {...} Asset_Attr-End-->
-
 **System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
-**Related module**: [AssetType](capi-asset-store-kit-assettype.md)
+**Related module**: [AssetType](capi-assettype.md)
 
 **Header file**: [asset_type.h](capi-asset-type-h.md)
 
@@ -24,7 +22,7 @@ Defines an asset attribute, which consists of a tag and a value in the form of a
 
 | Name | Description |
 | -- | -- |
-| uint32_t tag | The tag of an asset attribute.<br><!--Device-uint32_t tag--><!--Device-uint32_t tag-End--> |
-| [Asset_Value](capi-assettype-asset-value.md) value | The value (content) of an asset attribute.<br><!--Device-Asset_Value value--><!--Device-Asset_Value value-End--> |
+| uint32_t tag | The tag of an asset attribute. |
+| [Asset_Value](capi-assettype-asset-value.md) value | The value (content) of an asset attribute. |
 
 

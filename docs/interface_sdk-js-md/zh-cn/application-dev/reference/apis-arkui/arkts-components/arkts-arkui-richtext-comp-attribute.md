@@ -24,7 +24,7 @@ onComplete(callback: () => void)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 仅在API版本11，该接口支持在原子化服务中使用。
 
 <!--Device-RichTextAttribute-onComplete(callback: () => void): RichTextAttribute--><!--Device-RichTextAttribute-onComplete(callback: () => void): RichTextAttribute-End-->
 
@@ -46,7 +46,7 @@ onStart(callback: () => void)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 仅在API版本11，该接口支持在原子化服务中使用。
 
 <!--Device-RichTextAttribute-onStart(callback: () => void): RichTextAttribute--><!--Device-RichTextAttribute-onStart(callback: () => void): RichTextAttribute-End-->
 

@@ -24,7 +24,7 @@ borderWidth: EdgeWidths
 
 边框宽度类型，用于描述组件边框不同方向的宽度。单位：vp。
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md)
 
 **起始版本：** 9
 
@@ -68,7 +68,7 @@ padding: Padding
 
 内边距类型，用于描述组件不同方向的内边距。单位：vp。
 
-**类型：** Padding
+**类型：** [Padding](../arkts-apis/arkts-arkui-padding-t.md)
 
 **起始版本：** 9
 

@@ -1,20 +1,18 @@
 # CloudDisk_FileSyncState
 
 ```c
-typedef struct CloudDisk_FileSyncState {...} CloudDisk_FileSyncState
+struct CloudDisk_FileSyncState {...}
 ```
 
 ## Overview
 
 A struct that encapsulates the file sync state.
 
-<!--Device-struct CloudDisk_FileSyncState {...}--><!--Device-struct CloudDisk_FileSyncState {...}-End-->
-
 **System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
-**Related module**: [CloudDisk](capi-core-file-kit-clouddisk.md)
+**Related module**: [CloudDisk](capi-clouddisk.md)
 
 **Header file**: [oh_cloud_disk_manager.h](capi-oh-cloud-disk-manager-h.md)
 
@@ -24,7 +22,7 @@ A struct that encapsulates the file sync state.
 
 | Name | Description |
 | -- | -- |
-| [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) filePathInfo | File path information.<br>**Since**: 21<br><!--Device-CloudDisk_PathInfo filePathInfo--><!--Device-CloudDisk_PathInfo filePathInfo-End--> |
-| [CloudDisk_SyncState](capi-oh-cloud-disk-manager-h.md#clouddisk_syncstate) syncState | File sync state.<br>**Since**: 21<br><!--Device-CloudDisk_SyncState syncState--><!--Device-CloudDisk_SyncState syncState-End--> |
+| [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) filePathInfo | File path information.<br>**Since**: 21 |
+| [CloudDisk_SyncState](capi-oh-cloud-disk-manager-h.md#clouddisk_syncstate) syncState | File sync state.<br>**Since**: 21 |
 
 

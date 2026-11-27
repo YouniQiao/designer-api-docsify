@@ -6,25 +6,23 @@ Declares the common sensor attributes.
 
 **Library**: libohsensor.so
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
-**Related module**: [Sensor](capi-sensor-service-kit-sensor.md)
+**Related module**: [Sensor](capi-sensor.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Sensor_Info](capi-sensor-sensor-info.md) | Sensor_Info | Defines a struct for the sensor information, which is used to store the basic attributes and data of a sensor, including key fields such as the sensor type, version, and ID. You can use this struct to obtain the complete description of a sensor, which is used for sensor initialization and data query. |
-| [Sensor_Event](capi-sensor-sensor-event.md) | Sensor_Event | Defines a struct for the sensor event, including the sensor type, timestamp, and sensor data. |
-| [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) | Sensor_SubscriptionId | Defines a struct for the sensor subscription ID, which uniquely identifies a sensor subscription. This struct is used to identify a sensor subscription, including the sensor type and subscription conditions. You can use the sensor subscription ID to manage the lifecycle of a sensor subscription, including activating, deactivating, and querying the subscription status.<br>When subscribing to sensor data, the sensor subscription ID is used as a parameter in the subscription request to identify the subscription relationship. When querying the subscribed sensor information, the sensor subscription ID is used to obtain the corresponding subscription status and data. When canceling a sensor subscription, the sensor subscription ID is used to specify the subscription to be canceled. |
-| [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) | Sensor_SubscriptionAttribute | Defines a struct for the sensor subscription attribute, including the sensor type, sampling rate, and data reporting interval. This attribute is applicable to sensor data subscription scenarios, helping developers configure the subscription mode based on service requirements and providing flexible capabilities for obtaining sensor data. This attribute can be used for step count and heart rate data subscription in health and fitness apps, real-time collection of temperature and humidity data in environment monitoring apps, and status change monitoring in device control apps. |
-| [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) | Sensor_Subscriber | Defines a struct for the sensor subscriber, including the subscription callback function and user data. You can use this struct to specify the parameters of a sensor subscriber. After the subscription is successful, the sensor data updates will be received. |
+| [Sensor_Info](capi-sensor-sensor-info.md) | Sensor_Info | Defines a struct for the sensor information. |
+| [Sensor_Event](capi-sensor-sensor-event.md) | Sensor_Event | Defines a struct for the sensor data information. |
+| [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) | Sensor_SubscriptionId | Defines a struct for the sensor subscription ID, which uniquely identifies a sensor. |
+| [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) | Sensor_SubscriptionAttribute | Defines a struct for the sensor subscription attribute. |
+| [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) | Sensor_Subscriber | Defines a struct the sensor subscriber information. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -32,51 +30,41 @@ Declares the common sensor attributes.
 | [Sensor_Result](#sensor_result) | Sensor_Result | Enumerates the sensor result codes. |
 | [Sensor_Accuracy](#sensor_accuracy) | Sensor_Accuracy | Enumerates the accuracy levels of data reported by a sensor. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)](#oh_sensor_createinfos) | - | Creates an instance array using a given number. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After the instance is successfully created, a pointer to the array of **count** **Sensor_Info** instances is returned. <br>After the instance array created by calling this function is used, you must call **OH_Sensor_DestroyInfos()** to destroy the instance array and reclaim the memory. Otherwise, resource leak may occur. |
-| [int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)](#oh_sensor_destroyinfos) | - | Destroys the instance array and reclaims the memory. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After this API is successfully called, the memory occupied by the instance array is released, and the **sensors** pointer and all **<br>Sensor_Info** instances to which the pointer points can no longer be used. |
-| [int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)](#oh_sensorinfo_getname) | - | Obtains the sensor name. After the sensor name is obtained, the **sensorName** parameter is filled with the sensor name string, and the **length** parameter returns the length of the string (including the terminator). |
-| [int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)](#oh_sensorinfo_getvendorname) | - | Obtains the sensor's vendor name. After the vendor name is obtained, the **vendorName** parameter is filled with the sensor vendor name string, and the **length** parameter returns the length of the string (including the terminator). |
-| [int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)](#oh_sensorinfo_gettype) | - | Obtains the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type). After the sensor type is obtained, the **sensorType** parameter is filled with the sensor type value. |
-| [int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)](#oh_sensorinfo_getresolution) | - | Obtains the sensor resolution. After the sensor resolution is obtained, the **resolution** parameter is filled with the sensor resolution value. |
-| [int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)](#oh_sensorinfo_getminsamplinginterval) | - | Obtains the minimum data reporting interval of a sensor. After the interval is obtained, the **<br>minSamplingInterval** parameter is filled with the minimum data reporting interval of the sensor, in nanoseconds. |
-| [int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)](#oh_sensorinfo_getmaxsamplinginterval) | - | Obtains the maximum data reporting interval of a sensor. After the interval is obtained, the **<br>maxSamplingInterval** parameter is filled with the maximum data reporting interval of the sensor, in nanoseconds. |
+| [Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)](#oh_sensor_createinfos) | - | Creates an instance array using a given number. For details, see [Sensor_Info](capi-sensor-sensor-info.md). |
+| [int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)](#oh_sensor_destroyinfos) | - | Destroys the sensor instance array and reclaims the memory. For details, see [Sensor_Info](capi-sensor-sensor-info.md). |
+| [int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)](#oh_sensorinfo_getname) | - | Obtains the sensor name. |
+| [int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)](#oh_sensorinfo_getvendorname) | - | Obtains the sensor's vendor name. |
+| [int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)](#oh_sensorinfo_gettype) | - | Obtains the sensor type. |
+| [int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)](#oh_sensorinfo_getresolution) | - | Obtains the sensor resolution. |
+| [int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)](#oh_sensorinfo_getminsamplinginterval) | - | Obtains the minimum data reporting interval of a sensor. |
+| [int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)](#oh_sensorinfo_getmaxsamplinginterval) | - | Obtains the maximum data reporting interval of a sensor. |
 | [int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)](#oh_sensorevent_gettype) | - | Obtains the sensor type. |
 | [int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)](#oh_sensorevent_gettimestamp) | - | Obtains the timestamp of sensor data. |
 | [int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)](#oh_sensorevent_getaccuracy) | - | Obtains the accuracy of sensor data. |
-| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | Obtains sensor data. The data length and content depend on the sensor type. The format of the sensor data reported is as follows:<br>\| Type\| Data Element and Description\|
-\| --- \| --- \|
-\| SENSOR_TYPE_ACCELEROMETER \| **data[0]**, **data[1]**, and **data[2]** indicate the acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_GYROSCOPE \| **data[0]**, **data[1]**, and **data[2]** indicate the angular velocity of rotation around the x, y, and z axes of a device, respectively, in rad/s.\|
-\| SENSOR_TYPE_AMBIENT_LIGHT \| **data[0]** indicates the ambient light intensity, in lux.<br> Two additional data values are returned since API version 12. **data[1]** indicates the color temperature, in kelvin (K), and **data[2]** indicates the infrared luminance, in cd/m².\|
-\| SENSOR_TYPE_MAGNETIC_FIELD \| **data[0]**, **data[1]**, and **data[2]** indicate the magnetic field strength around the x, y, and z axes of a device, respectively, in μT.\|
-\| SENSOR_TYPE_BAROMETER \| **data[0]** indicates the atmospheric pressure, in hPa.\|
-\| SENSOR_TYPE_HALL \| **data[0]** indicates the opening/closing state of the flip cover. The value **0** means that the flip cover is opened, and a value greater than 0 means that the flip cover is closed.\|
-\| SENSOR_TYPE_PROXIMITY \| **data[0]** indicates the approaching state. The value **0** means the two objects are close to each other, and a value greater than 0 means that they are far away from each other.\|
-\| SENSOR_TYPE_ORIENTATION \| **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the z, x, and y axes, respectively, in degree.\|
-\| SENSOR_TYPE_GRAVITY \| **data[0]**, **data[1]**, and **data[2]** indicate the gravitational acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_ROTATION_VECTOR \| **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector.\|
-\| SENSOR_TYPE_PEDOMETER_DETECTION \| **data[0]** indicates the pedometer detection status. The value **1** means that the number of detected steps changes.\|
-\| SENSOR_TYPE_PEDOMETER \| **data[0]** indicates the number of steps a user has walked.\|
-\| SENSOR_TYPE_HEART_RATE \| **data[0]** indicates the heart rate value.\|
-\| SENSOR_TYPE_LINEAR_ACCELERATION \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the linear acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_GAME_ROTATION_VECTOR \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the x, y, and z axes, respectively, in degree. **data[3]** indicates the rotation vector.\| |
-| [Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)](#oh_sensor_createsubscriptionid) | - | Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriptionId()**<br>to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur. |
+| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | Obtains sensor data. The data length and content depend on the sensor type. The format of the sensor data reported is as follows: SENSOR_TYPE_ACCELEROMETER: data[0], data[1], and data[2], indicating the acceleration around the x, y, and z axes of the device, respectively, in m/s2. SENSOR_TYPE_GYROSCOPE: data[0], data[1], and data[2], indicating the angular velocity of rotation around the x, y, and z axes of the device, respectively, in rad/s. SENSOR_TYPE_AMBIENT_LIGHT: data[0], indicating the ambient light intensity, in lux. Since api version 12, two additional data will be returned, where data[1] indicating the color temperature, in kelvin; data[2] indicating the infrared luminance, in cd/m2. SENSOR_TYPE_MAGNETIC_FIELD: data[0], data[1], and data[2], indicating the magnetic field strength around the x, y, and z axes of the device, respectively, in μT. SENSOR_TYPE_BAROMETER: data[0], indicating the atmospheric pressure, in hPa. SENSOR_TYPE_HALL: data[0], indicating the opening/closing state of the flip cover. The value <b>0</b> means that the flip cover is opened, and a value greater than <b>0</b> means that the flip cover is closed. SENSOR_TYPE_PROXIMITY: data[0], indicates the approaching state. The value <b>0</b> means the two objects are close to each other, and a value greater than <b>0</b> means that they are far away from each other. SENSOR_TYPE_ORIENTATION: data[0], data[1], and data[2], indicating the rotation angles of a device around the z, x, and y axes, respectively, in degree. SENSOR_TYPE_GRAVITY: data[0], data[1], and data[2], indicating the gravitational acceleration around the x, y, and z axes of a device, respectively, in m/s2. SENSOR_TYPE_ROTATION_VECTOR: data[0], data[1] and data[2], indicating the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector. SENSOR_TYPE_PEDOMETER_DETECTION: data[0], indicating the pedometer detection status. The value <b>1</b> means that the number of detected steps changes. SENSOR_TYPE_PEDOMETER: data[0], indicating the number of steps a user has walked. SENSOR_TYPE_HEART_RATE: data[0], indicating the heart rate value. SENSOR_TYPE_LINEAR_ACCELERATION: Supported from api version 13. data[0], data[1], and data[2], indicating the linear acceleration around the x, y, and z axes of the device, respectively, in m/s2. SENSOR_TYPE_GAME_ROTATION_VECTOR: Supported from api version 13. data[0], data[1] and data[2], indicating the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector. |
+| [Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)](#oh_sensor_createsubscriptionid) | - | Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance. |
 | [int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)](#oh_sensor_destroysubscriptionid) | - | Destroys a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance and reclaims the memory. |
 | [int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *sensorType)](#oh_sensorsubscriptionid_gettype) | - | Obtains the sensor type. |
-| [int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)](#oh_sensorsubscriptionid_settype) | - | Sets the sensor type. After this method is successfully called, the subscription ID type is set to the value of **sensorType**. |
-| [Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)](#oh_sensor_createsubscriptionattribute) | - | Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance. <br>After using the instance created by calling this function, you must call **<br>OH_Sensor_DestroySubscriptionAttribute()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur. |
+| [int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)](#oh_sensorsubscriptionid_settype) | - | Sets the sensor type. |
+| [Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)](#oh_sensor_createsubscriptionattribute) | - | Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance. |
 | [int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *attribute)](#oh_sensor_destroysubscriptionattribute) | - | Destroys a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance and reclaims the memory. |
-| [int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)](#oh_sensorsubscriptionattribute_setsamplinginterval) | - | Sets the sensor data reporting interval. After this API is called successfully, the sampling interval of the subscription is set to the value of **samplingInterval**. Subsequent sensor data will be reported at this interval. |
+| [int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)](#oh_sensorsubscriptionattribute_setsamplinginterval) | - | Sets the sensor data reporting interval. |
 | [int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAttribute* attribute, int64_t *samplingInterval)](#oh_sensorsubscriptionattribute_getsamplinginterval) | - | Obtains the sensor data reporting interval. |
 | [typedef void (\*Sensor_EventCallback)(Sensor_Event *event)](#sensor_eventcallback) | Sensor_EventCallback | Defines the callback function used to report sensor data. |
-| [Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)](#oh_sensor_createsubscriber) | - | Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriber()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur. |
+| [Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)](#oh_sensor_createsubscriber) | - | Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance. |
 | [int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)](#oh_sensor_destroysubscriber) | - | Destroys a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance and reclaims the memory. |
-| [int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)](#oh_sensorsubscriber_setcallback) | - | Sets a callback function to report sensor data. After this API is called successfully, the subscriber will use the specified callback function to report sensor data. |
+| [int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)](#oh_sensorsubscriber_setcallback) | - | Sets a callback function to report sensor data. |
 | [int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)](#oh_sensorsubscriber_getcallback) | - | Obtains the callback function used to report sensor data. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Sensor_EventCallback)(Sensor_Event *event) | Defines the callback function used to report sensor data.<br>**Since**: 11<br>**System capability**: SystemCapability.Sensors.Sensor |
 
 ## Enum type description
 
@@ -90,29 +78,25 @@ enum Sensor_Type
 
 Enumerates the sensor types.
 
-<!--Device-enum Sensor_Type--><!--Device-enum Sensor_Type-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| SENSOR_TYPE_ACCELEROMETER = 1 | Acceleration sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_ACCELEROMETER = 1--><!--Device-SENSOR_TYPE_ACCELEROMETER = 1-End--> |
-| SENSOR_TYPE_GYROSCOPE = 2 | Gyroscope sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_GYROSCOPE = 2--><!--Device-SENSOR_TYPE_GYROSCOPE = 2-End--> |
-| SENSOR_TYPE_AMBIENT_LIGHT = 5 | Ambient light sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_AMBIENT_LIGHT = 5--><!--Device-SENSOR_TYPE_AMBIENT_LIGHT = 5-End--> |
-| SENSOR_TYPE_MAGNETIC_FIELD = 6 | Magnetic field sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_MAGNETIC_FIELD = 6--><!--Device-SENSOR_TYPE_MAGNETIC_FIELD = 6-End--> |
-| SENSOR_TYPE_BAROMETER = 8 | Barometer sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_BAROMETER = 8--><!--Device-SENSOR_TYPE_BAROMETER = 8-End--> |
-| SENSOR_TYPE_HALL = 10 | Hall effect sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_HALL = 10--><!--Device-SENSOR_TYPE_HALL = 10-End--> |
-| SENSOR_TYPE_PROXIMITY = 12 | Proximity sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_PROXIMITY = 12--><!--Device-SENSOR_TYPE_PROXIMITY = 12-End--> |
-| SENSOR_TYPE_ORIENTATION = 256 | Orientation sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_ORIENTATION = 256--><!--Device-SENSOR_TYPE_ORIENTATION = 256-End--> |
-| SENSOR_TYPE_GRAVITY = 257 | Gravity sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_GRAVITY = 257--><!--Device-SENSOR_TYPE_GRAVITY = 257-End--> |
-| SENSOR_TYPE_LINEAR_ACCELERATION = 258 | Linear acceleration sensor.<br>**Since**: 13<br><!--Device-SENSOR_TYPE_LINEAR_ACCELERATION = 258--><!--Device-SENSOR_TYPE_LINEAR_ACCELERATION = 258-End--> |
-| SENSOR_TYPE_ROTATION_VECTOR = 259 | Rotation vector sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_ROTATION_VECTOR = 259--><!--Device-SENSOR_TYPE_ROTATION_VECTOR = 259-End--> |
-| SENSOR_TYPE_GAME_ROTATION_VECTOR = 262 | Game rotation vector sensor.<br>**Since**: 13<br><!--Device-SENSOR_TYPE_GAME_ROTATION_VECTOR = 262--><!--Device-SENSOR_TYPE_GAME_ROTATION_VECTOR = 262-End--> |
-| SENSOR_TYPE_PEDOMETER_DETECTION = 265 | Pedometer detection sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_PEDOMETER_DETECTION = 265--><!--Device-SENSOR_TYPE_PEDOMETER_DETECTION = 265-End--> |
-| SENSOR_TYPE_PEDOMETER = 266 | Pedometer sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_PEDOMETER = 266--><!--Device-SENSOR_TYPE_PEDOMETER = 266-End--> |
-| SENSOR_TYPE_HEART_RATE = 278 | Heart rate sensor.<br>**Since**: 11<br><!--Device-SENSOR_TYPE_HEART_RATE = 278--><!--Device-SENSOR_TYPE_HEART_RATE = 278-End--> |
+| SENSOR_TYPE_ACCELEROMETER = 1 |  |
+| SENSOR_TYPE_GYROSCOPE = 2 |  |
+| SENSOR_TYPE_AMBIENT_LIGHT = 5 |  |
+| SENSOR_TYPE_MAGNETIC_FIELD = 6 |  |
+| SENSOR_TYPE_BAROMETER = 8 |  |
+| SENSOR_TYPE_HALL = 10 |  |
+| SENSOR_TYPE_PROXIMITY = 12 |  |
+| SENSOR_TYPE_ORIENTATION = 256 |  |
+| SENSOR_TYPE_GRAVITY = 257 |  |
+| SENSOR_TYPE_LINEAR_ACCELERATION = 258 |  |
+| SENSOR_TYPE_ROTATION_VECTOR = 259 |  |
+| SENSOR_TYPE_GAME_ROTATION_VECTOR = 262 |  |
+| SENSOR_TYPE_PEDOMETER_DETECTION = 265 |  |
+| SENSOR_TYPE_PEDOMETER = 266 |  |
+| SENSOR_TYPE_HEART_RATE = 278 |  |
 
 ### Sensor_Result
 
@@ -124,18 +108,14 @@ enum Sensor_Result
 
 Enumerates the sensor result codes.
 
-<!--Device-enum Sensor_Result--><!--Device-enum Sensor_Result-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| SENSOR_SUCCESS = 0 | Operation success.<br>**Since**: 11<br><!--Device-SENSOR_SUCCESS = 0--><!--Device-SENSOR_SUCCESS = 0-End--> |
-| SENSOR_PERMISSION_DENIED = 201 | Permission verification failed. Possible causes: The app does not have the required sensor permission, the permission request is rejected, or the permission level is insufficient. Solution: Check whether the required sensor permission has been requested in the app configuration file. Ensure that the permission is correctly requested and obtained during app running.<br>**Since**: 11<br><!--Device-SENSOR_PERMISSION_DENIED = 201--><!--Device-SENSOR_PERMISSION_DENIED = 201-End--> |
-| SENSOR_PARAMETER_ERROR = 401 | An error occurs during parameter verification. Possible causes: The parameter is empty, the parameter value is out of the valid range, the parameter type does not match, or a mandatory parameter is missing. Solution: Check whether the input parameters are complete, meet the type requirements, and are within the valid range based on the parameter description of the specific function, and modify the parameter values if necessary.<br>**Since**: 11<br><!--Device-SENSOR_PARAMETER_ERROR = 401--><!--Device-SENSOR_PARAMETER_ERROR = 401-End--> |
-| SENSOR_SERVICE_EXCEPTION = 14500101 | The sensor service is abnormal. Possible causes: The sensor service is not started or has crashed, the device does not support the specified sensor, or the system resources are insufficient. Solution: Check whether the device supports the required sensor and ensure that the system resources are sufficient. If necessary, restart the device or reinitialize the sensor service.<br>**Since**: 11<br><!--Device-SENSOR_SERVICE_EXCEPTION = 14500101--><!--Device-SENSOR_SERVICE_EXCEPTION = 14500101-End--> |
+| SENSOR_SUCCESS = 0 |  |
+| SENSOR_PERMISSION_DENIED = 201 |  |
+| SENSOR_PARAMETER_ERROR = 401 |  |
+| SENSOR_SERVICE_EXCEPTION = 14500101 |  |
 
 ### Sensor_Accuracy
 
@@ -147,18 +127,14 @@ enum Sensor_Accuracy
 
 Enumerates the accuracy levels of data reported by a sensor.
 
-<!--Device-enum Sensor_Accuracy--><!--Device-enum Sensor_Accuracy-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| SENSOR_ACCURACY_UNRELIABLE = 0 | The sensor data is unreliable. It is possible that the sensor does not contact with the device to measure.<br>**Since**: 11<br><!--Device-SENSOR_ACCURACY_UNRELIABLE = 0--><!--Device-SENSOR_ACCURACY_UNRELIABLE = 0-End--> |
-| SENSOR_ACCURACY_LOW = 1 | The sensor data is at a low accuracy level. The data must be calibrated based on the environment before being used.<br>**Since**: 11<br><!--Device-SENSOR_ACCURACY_LOW = 1--><!--Device-SENSOR_ACCURACY_LOW = 1-End--> |
-| SENSOR_ACCURACY_MEDIUM = 2 | The sensor data is at a medium accuracy level. You are advised to calibrate the data based on the environment before using it.<br>**Since**: 11<br><!--Device-SENSOR_ACCURACY_MEDIUM = 2--><!--Device-SENSOR_ACCURACY_MEDIUM = 2-End--> |
-| SENSOR_ACCURACY_HIGH = 3 | The sensor data is at a high accuracy level. The data can be used directly.<br>**Since**: 11<br><!--Device-SENSOR_ACCURACY_HIGH = 3--><!--Device-SENSOR_ACCURACY_HIGH = 3-End--> |
+| SENSOR_ACCURACY_UNRELIABLE = 0 |  |
+| SENSOR_ACCURACY_LOW = 1 |  |
+| SENSOR_ACCURACY_MEDIUM = 2 |  |
+| SENSOR_ACCURACY_HIGH = 3 |  |
 
 
 ## Function description
@@ -171,11 +147,7 @@ Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)
 
 **Description**
 
-Creates an instance array using a given number. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After the instance is successfully created, a pointer to the array of **count** **Sensor_Info** instances is returned. <br>After the instance array created by calling this function is used, you must call **OH_Sensor_DestroyInfos()** to destroy the instance array and reclaim the memory. Otherwise, resource leak may occur.
-
-<!--Device-Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)--><!--Device-Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Creates an instance array using a given number. For details, see [Sensor_Info](capi-sensor-sensor-info.md).
 
 **Since**: 11
 
@@ -189,7 +161,7 @@ Creates an instance array using a given number. For details, see [Sensor_Info](c
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Info **](capi-sensor-sensor-info.md) | Double pointer to the [Sensor_Info](capi-sensor-sensor-info.md) instance array if the operation is successful. The array contains * *count** **Sensor_Info** instances for storing sensor information. Otherwise, **NULL** is returned. |
+| [Sensor_Info **](capi-sensor-sensor-info.md) | Double pointer to the [Sensor_Info](capi-sensor-sensor-info.md) instance array if the operation is successful; NULL otherwise. |
 
 ### OH_Sensor_DestroyInfos()
 
@@ -199,11 +171,7 @@ int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)
 
 **Description**
 
-Destroys the instance array and reclaims the memory. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After this API is successfully called, the memory occupied by the instance array is released, and the **sensors** pointer and all **<br>Sensor_Info** instances to which the pointer points can no longer be used.
-
-<!--Device-int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)--><!--Device-int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Destroys the sensor instance array and reclaims the memory. For details, see [Sensor_Info](capi-sensor-sensor-info.md).
 
 **Since**: 11
 
@@ -218,7 +186,7 @@ Destroys the instance array and reclaims the memory. For details, see [Sensor_In
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that all instances have been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetName()
 
@@ -228,11 +196,7 @@ int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *l
 
 **Description**
 
-Obtains the sensor name. After the sensor name is obtained, the **sensorName** parameter is filled with the sensor name string, and the **length** parameter returns the length of the string (including the terminator).
-
-<!--Device-int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)--><!--Device-int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *length)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the sensor name.
 
 **Since**: 11
 
@@ -242,13 +206,13 @@ Obtains the sensor name. After the sensor name is obtained, the **sensorName** p
 | -- | -- |
 | [Sensor_Info](capi-sensor-sensor-info.md)* sensor | Pointer to the sensor information. |
 | char *sensorName | Pointer to the sensor data. |
-| uint32_t *length | Pointer to the length, in bytes. Before the call, set this parameter to the buffer size. After the call, the actual name length is returned. |
+| uint32_t *length | Pointer to the length, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetVendorName()
 
@@ -258,11 +222,7 @@ int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint3
 
 **Description**
 
-Obtains the sensor's vendor name. After the vendor name is obtained, the **vendorName** parameter is filled with the sensor vendor name string, and the **length** parameter returns the length of the string (including the terminator).
-
-<!--Device-int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)--><!--Device-int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint32_t *length)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the sensor's vendor name.
 
 **Since**: 11
 
@@ -272,13 +232,13 @@ Obtains the sensor's vendor name. After the vendor name is obtained, the **vendo
 | -- | -- |
 | [Sensor_Info](capi-sensor-sensor-info.md)* sensor | Pointer to the sensor information. |
 | char *vendorName | Pointer to the vendor name. |
-| uint32_t *length | Pointer to the length, in bytes. Before the call, set this parameter to the buffer size. After the call, the actual vendor name length is returned. |
+| uint32_t *length | Pointer to the length, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the vendor sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetType()
 
@@ -288,11 +248,7 @@ int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)
 
 **Description**
 
-Obtains the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type). After the sensor type is obtained, the **sensorType** parameter is filled with the sensor type value.
-
-<!--Device-int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the sensor type.
 
 **Since**: 11
 
@@ -307,7 +263,7 @@ Obtains the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type). After the senso
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetResolution()
 
@@ -317,11 +273,7 @@ int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)
 
 **Description**
 
-Obtains the sensor resolution. After the sensor resolution is obtained, the **resolution** parameter is filled with the sensor resolution value.
-
-<!--Device-int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)--><!--Device-int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the sensor resolution.
 
 **Since**: 11
 
@@ -330,13 +282,13 @@ Obtains the sensor resolution. After the sensor resolution is obtained, the **re
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Info](capi-sensor-sensor-info.md)* sensor | Pointer to the sensor information. |
-| float *resolution | Pointer to the sensor resolution. |
+| float *resolution | Pointer to the sensor resolution [Sensor_Accuracy](capi-oh-sensor-type-h.md#sensor_accuracy). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor resolution has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetMinSamplingInterval()
 
@@ -346,11 +298,7 @@ int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSa
 
 **Description**
 
-Obtains the minimum data reporting interval of a sensor. After the interval is obtained, the **<br>minSamplingInterval** parameter is filled with the minimum data reporting interval of the sensor, in nanoseconds.
-
-<!--Device-int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)--><!--Device-int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSamplingInterval)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the minimum data reporting interval of a sensor.
 
 **Since**: 11
 
@@ -359,13 +307,13 @@ Obtains the minimum data reporting interval of a sensor. After the interval is o
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Info](capi-sensor-sensor-info.md)* sensor | Pointer to the sensor information. |
-| int64_t *minSamplingInterval | Pointer to the minimum data reporting interval, in nanoseconds. This value indicates the fastest data reporting interval supported by the sensor. If the interval is set to a value smaller than this value, data may be lost or performance may deteriorate. |
+| int64_t *minSamplingInterval | Pointer to the minimum data reporting interval, in nanoseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the minimum data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorInfo_GetMaxSamplingInterval()
 
@@ -375,11 +323,7 @@ int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSa
 
 **Description**
 
-Obtains the maximum data reporting interval of a sensor. After the interval is obtained, the **<br>maxSamplingInterval** parameter is filled with the maximum data reporting interval of the sensor, in nanoseconds.
-
-<!--Device-int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)--><!--Device-int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSamplingInterval)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains the maximum data reporting interval of a sensor.
 
 **Since**: 11
 
@@ -388,13 +332,13 @@ Obtains the maximum data reporting interval of a sensor. After the interval is o
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Info](capi-sensor-sensor-info.md)* sensor | Pointer to the sensor information. |
-| int64_t *maxSamplingInterval | Pointer to the maximum data reporting interval, in nanoseconds. This value indicates the slowest data reporting interval supported by the sensor. If the interval is set to a value greater than this value, data may not be updated in a timely manner. |
+| int64_t *maxSamplingInterval | Pointer to the maximum data reporting interval, in nanoseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the maximum data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorEvent_GetType()
 
@@ -406,10 +350,6 @@ int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorTyp
 
 Obtains the sensor type.
 
-<!--Device-int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -423,7 +363,7 @@ Obtains the sensor type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor event type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorEvent_GetTimestamp()
 
@@ -435,10 +375,6 @@ int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestam
 
 Obtains the timestamp of sensor data.
 
-<!--Device-int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)--><!--Device-int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -446,13 +382,13 @@ Obtains the timestamp of sensor data.
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Event](capi-sensor-sensor-event.md)* sensorEvent | Pointer to the sensor data information. |
-| int64_t *timestamp | Pointer to the timestamp, in nanoseconds. It indicates the time when the sensor data is collected, that is, the number of nanoseconds since the system startup. |
+| int64_t *timestamp | Pointer to the timestamp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the timestamp has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorEvent_GetAccuracy()
 
@@ -464,10 +400,6 @@ int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *a
 
 Obtains the accuracy of sensor data.
 
-<!--Device-int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)--><!--Device-int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -475,13 +407,13 @@ Obtains the accuracy of sensor data.
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Event](capi-sensor-sensor-event.md)* sensorEvent | Pointer to the sensor data information. |
-| [Sensor_Accuracy](capi-oh-sensor-type-h.md#sensor_accuracy) *accuracy | Pointer to the sensor data accuracy level. |
+| [Sensor_Accuracy](capi-oh-sensor-type-h.md#sensor_accuracy) *accuracy | Pointer to the accuracy. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data accuracy has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorEvent_GetData()
 
@@ -491,27 +423,7 @@ int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t
 
 **Description**
 
-Obtains sensor data. The data length and content depend on the sensor type. The format of the sensor data reported is as follows:<br>\| Type\| Data Element and Description\|
-\| --- \| --- \|
-\| SENSOR_TYPE_ACCELEROMETER \| **data[0]**, **data[1]**, and **data[2]** indicate the acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_GYROSCOPE \| **data[0]**, **data[1]**, and **data[2]** indicate the angular velocity of rotation around the x, y, and z axes of a device, respectively, in rad/s.\|
-\| SENSOR_TYPE_AMBIENT_LIGHT \| **data[0]** indicates the ambient light intensity, in lux.<br> Two additional data values are returned since API version 12. **data[1]** indicates the color temperature, in kelvin (K), and **data[2]** indicates the infrared luminance, in cd/m².\|
-\| SENSOR_TYPE_MAGNETIC_FIELD \| **data[0]**, **data[1]**, and **data[2]** indicate the magnetic field strength around the x, y, and z axes of a device, respectively, in μT.\|
-\| SENSOR_TYPE_BAROMETER \| **data[0]** indicates the atmospheric pressure, in hPa.\|
-\| SENSOR_TYPE_HALL \| **data[0]** indicates the opening/closing state of the flip cover. The value **0** means that the flip cover is opened, and a value greater than 0 means that the flip cover is closed.\|
-\| SENSOR_TYPE_PROXIMITY \| **data[0]** indicates the approaching state. The value **0** means the two objects are close to each other, and a value greater than 0 means that they are far away from each other.\|
-\| SENSOR_TYPE_ORIENTATION \| **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the z, x, and y axes, respectively, in degree.\|
-\| SENSOR_TYPE_GRAVITY \| **data[0]**, **data[1]**, and **data[2]** indicate the gravitational acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_ROTATION_VECTOR \| **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector.\|
-\| SENSOR_TYPE_PEDOMETER_DETECTION \| **data[0]** indicates the pedometer detection status. The value **1** means that the number of detected steps changes.\|
-\| SENSOR_TYPE_PEDOMETER \| **data[0]** indicates the number of steps a user has walked.\|
-\| SENSOR_TYPE_HEART_RATE \| **data[0]** indicates the heart rate value.\|
-\| SENSOR_TYPE_LINEAR_ACCELERATION \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the linear acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
-\| SENSOR_TYPE_GAME_ROTATION_VECTOR \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the x, y, and z axes, respectively, in degree. **data[3]** indicates the rotation vector.\|
-
-<!--Device-int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)--><!--Device-int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Obtains sensor data. The data length and content depend on the sensor type. The format of the sensor data reported is as follows: SENSOR_TYPE_ACCELEROMETER: data[0], data[1], and data[2], indicating the acceleration around the x, y, and z axes of the device, respectively, in m/s2. SENSOR_TYPE_GYROSCOPE: data[0], data[1], and data[2], indicating the angular velocity of rotation around the x, y, and z axes of the device, respectively, in rad/s. SENSOR_TYPE_AMBIENT_LIGHT: data[0], indicating the ambient light intensity, in lux. Since api version 12, two additional data will be returned, where data[1] indicating the color temperature, in kelvin; data[2] indicating the infrared luminance, in cd/m2. SENSOR_TYPE_MAGNETIC_FIELD: data[0], data[1], and data[2], indicating the magnetic field strength around the x, y, and z axes of the device, respectively, in μT. SENSOR_TYPE_BAROMETER: data[0], indicating the atmospheric pressure, in hPa. SENSOR_TYPE_HALL: data[0], indicating the opening/closing state of the flip cover. The value <b>0</b> means that the flip cover is opened, and a value greater than <b>0</b> means that the flip cover is closed. SENSOR_TYPE_PROXIMITY: data[0], indicates the approaching state. The value <b>0</b> means the two objects are close to each other, and a value greater than <b>0</b> means that they are far away from each other. SENSOR_TYPE_ORIENTATION: data[0], data[1], and data[2], indicating the rotation angles of a device around the z, x, and y axes, respectively, in degree. SENSOR_TYPE_GRAVITY: data[0], data[1], and data[2], indicating the gravitational acceleration around the x, y, and z axes of a device, respectively, in m/s2. SENSOR_TYPE_ROTATION_VECTOR: data[0], data[1] and data[2], indicating the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector. SENSOR_TYPE_PEDOMETER_DETECTION: data[0], indicating the pedometer detection status. The value <b>1</b> means that the number of detected steps changes. SENSOR_TYPE_PEDOMETER: data[0], indicating the number of steps a user has walked. SENSOR_TYPE_HEART_RATE: data[0], indicating the heart rate value. SENSOR_TYPE_LINEAR_ACCELERATION: Supported from api version 13. data[0], data[1], and data[2], indicating the linear acceleration around the x, y, and z axes of the device, respectively, in m/s2. SENSOR_TYPE_GAME_ROTATION_VECTOR: Supported from api version 13. data[0], data[1] and data[2], indicating the rotation angles of a device around the x, y, and z axes, respectively, in degree. data[3] indicates the rotation vector.
 
 **Since**: 11
 
@@ -519,15 +431,15 @@ Obtains sensor data. The data length and content depend on the sensor type. The 
 
 | Parameter | Description |
 | -- | -- |
-| [Sensor_Event](capi-sensor-sensor-event.md)* sensorEvent | Pointer to the sensor data information. |
-| float **data | Pointer to the sensor data array. This is an output parameter. The data format depends on the sensor type. For details, see the function description. |
-| uint32_t *length | Length of the data array, which indicates the number of valid data records in the data array. This is an output parameter. |
+| [Sensor_Event](capi-sensor-sensor-event.md)* sensorEvent | - Pointer to the sensor data information. |
+| float **data | - Double pointer to the sensor data. |
+| uint32_t *length | - Pointer to the array length. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Returns <b>SENSOR_SUCCESS</b> if the operation is successful; returns an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_Sensor_CreateSubscriptionId()
 
@@ -537,11 +449,7 @@ Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)
 
 **Description**
 
-Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriptionId()**<br>to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
-
-<!--Device-Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)--><!--Device-Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance.
 
 **Since**: 11
 
@@ -549,7 +457,7 @@ Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance
 
 | Type | Description |
 | -- | -- |
-| [Sensor_SubscriptionId *](capi-sensor-sensor-subscriptionid.md) | Pointer to the [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance (which can be used to identify sensor subscription) if the operation is successful; **NULL** otherwise. |
+| [Sensor_SubscriptionId *](capi-sensor-sensor-subscriptionid.md) | Pointer to the [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance if the operation is successful; **NULL** otherwise. |
 
 ### OH_Sensor_DestroySubscriptionId()
 
@@ -560,10 +468,6 @@ int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)
 **Description**
 
 Destroys a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance and reclaims the memory.
-
-<!--Device-int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)--><!--Device-int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -577,7 +481,7 @@ Destroys a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instanc
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the instance ID has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriptionId_GetType()
 
@@ -588,10 +492,6 @@ int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *
 **Description**
 
 Obtains the sensor type.
-
-<!--Device-int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *sensorType)--><!--Device-int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *sensorType)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -606,7 +506,7 @@ Obtains the sensor type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor subscription type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriptionId_SetType()
 
@@ -616,11 +516,7 @@ int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_
 
 **Description**
 
-Sets the sensor type. After this method is successfully called, the subscription ID type is set to the value of **sensorType**.
-
-<!--Device-int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)--><!--Device-int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_Type sensorType)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Sets the sensor type.
 
 **Since**: 11
 
@@ -629,13 +525,13 @@ Sets the sensor type. After this method is successfully called, the subscription
 | Parameter | Description |
 | -- | -- |
 | [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md)* id | Pointer to the sensor subscription ID. |
-| [const Sensor_Type](capi-oh-sensor-type-h.md#sensor_type) sensorType | Sensor type to be set, which specifies the type of the sensor to be subscribed to. The value range is the sensor types defined in the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type) enumeration, for example, **SENSOR_TYPE_ACCELEROMETER**. |
+| [const Sensor_Type](capi-oh-sensor-type-h.md#sensor_type) sensorType | Sensor type to set. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor subscription type has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_Sensor_CreateSubscriptionAttribute()
 
@@ -645,11 +541,7 @@ Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)
 
 **Description**
 
-Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance. <br>After using the instance created by calling this function, you must call **<br>OH_Sensor_DestroySubscriptionAttribute()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
-
-<!--Device-Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)--><!--Device-Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance.
 
 **Since**: 11
 
@@ -657,7 +549,7 @@ Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribut
 
 | Type | Description |
 | -- | -- |
-| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful. The instance can be used to configure sensor subscription attributes. Otherwise, **NULL** is returned. |
+| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful; **NULL** otherwise. |
 
 ### OH_Sensor_DestroySubscriptionAttribute()
 
@@ -668,10 +560,6 @@ int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *att
 **Description**
 
 Destroys a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance and reclaims the memory.
-
-<!--Device-int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *attribute)--><!--Device-int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *attribute)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -685,7 +573,7 @@ Destroys a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribu
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the attribute instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriptionAttribute_SetSamplingInterval()
 
@@ -695,11 +583,7 @@ int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAt
 
 **Description**
 
-Sets the sensor data reporting interval. After this API is called successfully, the sampling interval of the subscription is set to the value of **samplingInterval**. Subsequent sensor data will be reported at this interval.
-
-<!--Device-int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)--><!--Device-int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAttribute* attribute, const int64_t samplingInterval)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Sets the sensor data reporting interval.
 
 **Since**: 11
 
@@ -708,13 +592,13 @@ Sets the sensor data reporting interval. After this API is called successfully, 
 | Parameter | Description |
 | -- | -- |
 | [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md)* attribute | Pointer to the sensor subscription attribute. |
-| const int64_t samplingInterval | Data reporting interval to be set, in nanoseconds. This value determines the frequency at which sensor data is reported. A smaller value indicates a higher reporting frequency. However, if the value is too small, it may cause system performance pressure. Therefore, select a proper value range based on the sensor type. |
+| const int64_t samplingInterval | Data reporting interval to set, in nanoseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data reporting interval has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriptionAttribute_GetSamplingInterval()
 
@@ -726,10 +610,6 @@ int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAt
 
 Obtains the sensor data reporting interval.
 
-<!--Device-int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAttribute* attribute, int64_t *samplingInterval)--><!--Device-int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAttribute* attribute, int64_t *samplingInterval)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -737,13 +617,13 @@ Obtains the sensor data reporting interval.
 | Parameter | Description |
 | -- | -- |
 | [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md)* attribute | Pointer to the sensor subscription attribute. |
-| int64_t *samplingInterval | Pointer to the data reporting interval, in nanoseconds. This value is the current data reporting interval of the sensor and can be used to determine the frequency of data reporting. For details about the value range, see the specific requirements of the sensor. |
+| int64_t *samplingInterval | Pointer to the data reporting interval, in nanoseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### Sensor_EventCallback()
 
@@ -754,10 +634,6 @@ typedef void (*Sensor_EventCallback)(Sensor_Event *event)
 **Description**
 
 Defines the callback function used to report sensor data.
-
-<!--Device-typedef void (*Sensor_EventCallback)(Sensor_Event *event)--><!--Device-typedef void (*Sensor_EventCallback)(Sensor_Event *event)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -775,11 +651,7 @@ Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)
 
 **Description**
 
-Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriber()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
-
-<!--Device-Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)--><!--Device-Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance.
 
 **Since**: 11
 
@@ -787,7 +659,7 @@ Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance. <br>Af
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Subscriber *](capi-sensor-sensor-subscriber.md) | Pointer to the [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance if the operation is successful. The instance can be used to subscribe to sensor data. Otherwise, **NULL** is returned. |
+| [Sensor_Subscriber *](capi-sensor-sensor-subscriber.md) | Pointer to the [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance if the operation is successful; **NULL** otherwise. |
 
 ### OH_Sensor_DestroySubscriber()
 
@@ -798,10 +670,6 @@ int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)
 **Description**
 
 Destroys a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance and reclaims the memory.
-
-<!--Device-int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)--><!--Device-int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -815,7 +683,7 @@ Destroys a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance and re
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the subscriber instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriber_SetCallback()
 
@@ -825,11 +693,7 @@ int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sen
 
 **Description**
 
-Sets a callback function to report sensor data. After this API is called successfully, the subscriber will use the specified callback function to report sensor data.
-
-<!--Device-int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)--><!--Device-int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sensor_EventCallback callback)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
+Sets a callback function to report sensor data.
 
 **Since**: 11
 
@@ -838,13 +702,13 @@ Sets a callback function to report sensor data. After this API is called success
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Subscriber](capi-sensor-sensor-subscriber.md)* subscriber | Pointer to the sensor subscriber information. |
-| [const Sensor_EventCallback](capi-oh-sensor-type-h.md#sensor_eventcallback) callback | Callback to be set, which is used to receive the reported sensor data. The callback signature is **<br>void (*Sensor_EventCallback)(Sensor_Event *event)**, where the **event** parameter contains the detailed information about the sensor data, such as the data type, timestamp, precision, and sensor data value. |
+| [const Sensor_EventCallback](capi-oh-sensor-type-h.md#sensor_eventcallback) callback | Sets the callback function. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the callback function has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_SensorSubscriber_GetCallback()
 
@@ -856,10 +720,6 @@ int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_Ev
 
 Obtains the callback function used to report sensor data.
 
-<!--Device-int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)--><!--Device-int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_EventCallback *callback)-End-->
-
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -867,12 +727,12 @@ Obtains the callback function used to report sensor data.
 | Parameter | Description |
 | -- | -- |
 | [Sensor_Subscriber](capi-sensor-sensor-subscriber.md)* subscriber | Pointer to the sensor subscriber information. |
-| [Sensor_EventCallback](capi-oh-sensor-type-h.md#sensor_eventcallback) *callback | Pointer to the callback function. The value is the pointer to the currently set callback function. If no callback function is set, the value is **NULL**. |
+| [Sensor_EventCallback](capi-oh-sensor-type-h.md#sensor_eventcallback) *callback | Pointer to the callback function. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the callback function has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | **SENSOR_SUCCESS** if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 

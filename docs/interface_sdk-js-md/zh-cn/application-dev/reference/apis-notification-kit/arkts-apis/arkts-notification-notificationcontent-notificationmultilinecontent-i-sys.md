@@ -34,7 +34,7 @@ lineWantAgents?: Array<WantAgent>
 
 ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
-**类型：** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
+**类型：** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)&gt;
 
 **起始版本：** 20
 

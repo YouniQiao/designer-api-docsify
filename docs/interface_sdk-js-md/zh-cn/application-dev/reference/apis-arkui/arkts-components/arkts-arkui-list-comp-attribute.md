@@ -563,7 +563,7 @@ lanes(value: number | LengthConstrain, gutter?: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; LengthConstrain | 是 | List组件的布局列数或行数。<br>默认值：1 <br>取值范围：[1, +∞)，传入小于1的值时按默认值处理。 |
+| value | number &#124; [LengthConstrain](../arkts-apis/arkts-arkui-lengthconstrain-t.md) | 是 | List组件的布局列数或行数。<br>默认值：1 <br>取值范围：[1, +∞)，传入小于1的值时按默认值处理。 |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | 列间距或行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：** <br>gutter为列间距或行间距，当列数或行数大于1时生效。<br><br>**适用版本：** 10 |
 
 ## lanes
@@ -590,7 +590,7 @@ lanes(value: number | LengthConstrain | ItemFillPolicy, gutter?: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; LengthConstrain &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 当前List组件交叉轴方向的布局数量。List垂直滚动时表示列数，水平滚动时表示行数。<br>设置为number类型时，根据number类型的数值确定列数或行数，number类型取值范围：[1, +∞)，传入小于1的值时按默认值处理。<br>设置为LengthConstrain类型时，垂直滚动时根据列宽的最大值和最小值确定列数，水平滚动时根据行高的最大值和最小值确定行数。<br>设置为ItemFillPolicy类型时，根据List组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数，该类型只在List滚动方向为垂直方向时才生效。 |
+| value | number &#124; [LengthConstrain](../arkts-apis/arkts-arkui-lengthconstrain-t.md) &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 当前List组件交叉轴方向的布局数量。List垂直滚动时表示列数，水平滚动时表示行数。<br>设置为number类型时，根据number类型的数值确定列数或行数，number类型取值范围：[1, +∞)，传入小于1的值时按默认值处理。<br>设置为LengthConstrain类型时，垂直滚动时根据列宽的最大值和最小值确定列数，水平滚动时根据行高的最大值和最小值确定行数。<br>设置为ItemFillPolicy类型时，根据List组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数，该类型只在List滚动方向为垂直方向时才生效。 |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | List垂直滚动时表示列间距，水平滚动时表示行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：** <br>当列数或行数大于1时生效。 |
 
 ## listDirection

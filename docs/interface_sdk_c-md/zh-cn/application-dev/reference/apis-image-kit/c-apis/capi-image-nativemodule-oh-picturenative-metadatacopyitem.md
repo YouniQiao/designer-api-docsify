@@ -1,20 +1,18 @@
 # OH_PictureNative_MetadataCopyItem
 
 ```c
-typedef struct OH_PictureNative_MetadataCopyItem {...} OH_PictureNative_MetadataCopyItem
+struct OH_PictureNative_MetadataCopyItem {...}
 ```
 
 ## 概述
 
 此结构体用于在创建PictureNative对象的深拷贝时指定元数据的拷贝规则。描述如何将元数据从一种类型拷贝到另一种类型。
 
-<!--Device-struct OH_PictureNative_MetadataCopyItem {...}--><!--Device-struct OH_PictureNative_MetadataCopyItem {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
-**相关模块：** [Image_NativeModule](capi-image-kit-image-nativemodule.md)
+**相关模块：** [Image_NativeModule](capi-image-nativemodule.md)
 
 **所在头文件：** [picture_native.h](capi-picture-native-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_PictureNative_MetadataCopyItem {...} OH_PictureNative_Metadata
 
 | 名称 | 描述 |
 | -- | -- |
-| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) srcType | <!--Device-Image_MetadataType srcType--><!--Device-Image_MetadataType srcType-End--> |
-| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) dstType | <!--Device-Image_MetadataType dstType--><!--Device-Image_MetadataType dstType-End--> |
+| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) srcType |  |
+| [Image_MetadataType](capi-image-common-h.md#image_metadatatype) dstType |  |
 
 

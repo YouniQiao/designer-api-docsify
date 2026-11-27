@@ -6,15 +6,13 @@ Defines the APIs for the websocket client module.
 
 **Library**: libnet_websocket.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -23,7 +21,7 @@ Defines the APIs for the websocket client module.
 | [int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)](#oh_websocketclient_connect) | Connects the WebSocket client to the server. |
 | [int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)](#oh_websocketclient_send) | Sends data from the WebSocket client to the server. |
 | [int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)](#oh_websocketclient_close) | Closes the connection on the WebSocket client. |
-| [int OH_WebSocketClient_Destroy(struct WebSocket *client)](#oh_websocketclient_destroy) | Releases the WebSocket connection context and resources.<br> Usage: 1. Call [WebSocket_OnCloseCallback](capi-net-websocket-type-h.md#websocket_onclosecallback) to subscribe to the WebSocket connection close event, and call the [OH_WebSocketClient_Destroy](capi-net-websocket-h.md#oh_websocketclient_destroy) method in the callback. 2. Call [OH_WebSocketClient_Close](capi-net-websocket-h.md#oh_websocketclient_close) to close the WebSocket connection.<br> > **NOTE**<br>> > Ensure that this API is called after the [WebSocket_OnCloseCallback](capi-net-websocket-type-h.md#websocket_onclosecallback) callback is triggered. Otherwise, > socket leaks may occur and the connection may not be closed after the system memory resources are released. |
+| [int OH_WebSocketClient_Destroy(struct WebSocket *client)](#oh_websocketclient_destroy) | Destroys the WebSocket client and releases the context and resources of the WebSocket connection. Usage: |
 
 ## Function description
 
@@ -36,10 +34,6 @@ struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen
 **Description**
 
 Constructor used to create a WebSocket client.
-
-<!--Device-struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen, WebSocket_OnMessageCallback onMessage, WebSocket_OnErrorCallback onError, WebSocket_OnCloseCallback onclose)--><!--Device-struct WebSocket *OH_WebSocketClient_Constructor(WebSocket_OnOpenCallback onOpen, WebSocket_OnMessageCallback onMessage, WebSocket_OnErrorCallback onError, WebSocket_OnCloseCallback onclose)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 11
 
@@ -68,10 +62,6 @@ int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Head
 
 Adds the header information to the client request.
 
-<!--Device-int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Header header)--><!--Device-int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Header header)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
 **Parameters**:
@@ -96,10 +86,6 @@ int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct
 **Description**
 
 Connects the WebSocket client to the server.
-
-<!--Device-int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)--><!--Device-int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct WebSocket_RequestOptions options)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -129,10 +115,6 @@ int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)
 
 Sends data from the WebSocket client to the server.
 
-<!--Device-int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)--><!--Device-int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 11
@@ -161,10 +143,6 @@ int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOpt
 
 Closes the connection on the WebSocket client.
 
-<!--Device-int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)--><!--Device-int OH_WebSocketClient_Close(struct WebSocket *client, struct WebSocket_CloseOption options)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 11
@@ -190,17 +168,7 @@ int OH_WebSocketClient_Destroy(struct WebSocket *client)
 
 **Description**
 
-Releases the WebSocket connection context and resources.<br> Usage:
-1. Call [WebSocket_OnCloseCallback](capi-net-websocket-type-h.md#websocket_onclosecallback) to subscribe to the WebSocket connection close event, and call the [OH_WebSocketClient_Destroy](capi-net-websocket-h.md#oh_websocketclient_destroy) method in the callback.
-2. Call [OH_WebSocketClient_Close](capi-net-websocket-h.md#oh_websocketclient_close) to close the WebSocket connection.<br>
-> **NOTE**
->
-> Ensure that this API is called after the [WebSocket_OnCloseCallback](capi-net-websocket-type-h.md#websocket_onclosecallback) callback is triggered. Otherwise,
-> socket leaks may occur and the connection may not be closed after the system memory resources are released.
-
-<!--Device-int OH_WebSocketClient_Destroy(struct WebSocket *client)--><!--Device-int OH_WebSocketClient_Destroy(struct WebSocket *client)-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
+Destroys the WebSocket client and releases the context and resources of the WebSocket connection. Usage:
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -216,6 +184,6 @@ Releases the WebSocket connection context and resources.<br> Usage:
 
 | Type | Description |
 | -- | -- |
-| int | If the return value is 0, the execution is successful. If the return value is not 0, the execution fails. For details about the returned value, see [WebSocket_ErrCode](capi-net-websocket-type-h.md#websocket_errcode). |
+| int | **0** if the operation is successful; a non-0 value otherwise. For details about the return values, see ** OH_Websocket_ErrCode**. |
 
 

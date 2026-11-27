@@ -8,13 +8,11 @@ typedef struct JSVM_ScriptOrigin {...} JSVM_ScriptOrigin
 
 某段JavaScript代码的原始信息，如sourceMap路径、源文件名、源文件中的起始行/列号等。
 
-<!--Device-typedef struct JSVM_ScriptOrigin {...} JSVM_ScriptOrigin--><!--Device-typedef struct JSVM_ScriptOrigin {...} JSVM_ScriptOrigin-End-->
-
 **系统能力：** SystemCapability.ArkCompiler.JSVM
 
 **起始版本：** 12
 
-**相关模块：** [JSVM](capi-arkts-jsvm.md)
+**相关模块：** [JSVM](capi-jsvm.md)
 
 **所在头文件：** [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -24,9 +22,9 @@ typedef struct JSVM_ScriptOrigin {...} JSVM_ScriptOrigin
 
 | 名称 | 描述 |
 | -- | -- |
-| const char* sourceMapUrl | Sourcemap 路径。<br><!--Device-const char* sourceMapUrl--><!--Device-const char* sourceMapUrl-End--> |
-| const char* resourceName | 源文件名。<br><!--Device-const char* resourceName--><!--Device-const char* resourceName-End--> |
-| size_t resourceLineOffset | 这段代码在源文件中的起始行号。<br><!--Device-size_t resourceLineOffset--><!--Device-size_t resourceLineOffset-End--> |
-| size_t resourceColumnOffset | 这段代码在源文件中的起始列号。<br><!--Device-size_t resourceColumnOffset--><!--Device-size_t resourceColumnOffset-End--> |
+| const char* sourceMapUrl | Sourcemap 路径。 |
+| const char* resourceName | 源文件名。 |
+| size_t resourceLineOffset | 这段代码在源文件中的起始行号。 |
+| size_t resourceColumnOffset | 这段代码在源文件中的起始列号。 |
 
 

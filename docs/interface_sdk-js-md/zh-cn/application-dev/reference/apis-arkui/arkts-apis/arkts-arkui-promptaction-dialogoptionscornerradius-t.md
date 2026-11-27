@@ -19,4 +19,4 @@ declare type DialogOptionsCornerRadius = Dimension | BorderRadiuses
 | 类型 | 说明 |
 | --- | --- |
 | [Dimension](arkts-arkui-dimension-t.md) |  |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |  |
+| BorderRadiuses |  |

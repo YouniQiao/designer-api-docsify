@@ -6,37 +6,42 @@ Declare the interface for parsing audio and video media data.
 
 **Library**: libnative_media_avdemuxer.so
 
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 10
 
-**Related module**: [AVDemuxer](capi-avcodec-kit-avdemuxer.md)
+**Related module**: [AVDemuxer](capi-avdemuxer.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AVDemuxer](capi-avdemuxer-oh-avdemuxer.md) | OH_AVDemuxer | The struct describes a native object for the OH_AVDemuxer interface. |
 | [DRM_MediaKeySystemInfo](capi-avdemuxer-drm-mediakeysysteminfo.md) | DRM_MediaKeySystemInfo | The struct describes a native object for the DRM_MediaKeySystemInfo interface. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#drm_mediakeysysteminfocallback) | DRM_MediaKeySystemInfoCallback | Defines a pointer to the callback function for DRM_MediaKeySystemInfo. No demuxer instance is returned. This callback function applies to the scenario where a single demuxer instance is used.<br> You need to call [OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback) to set the callback function as a callback.(Deprecated) |
+| [typedef void (\*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#drm_mediakeysysteminfocallback) | DRM_MediaKeySystemInfoCallback | Defines a pointer to the callback function for DRM_MediaKeySystemInfo. No demuxer instance is returned. This callback function applies to the scenario where a single demuxer instance is used.<br> You need to call [OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback) to set the callback function as a callback.(Deprecated in API14) |
 | [typedef void (\*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#demuxer_mediakeysysteminfocallback) | Demuxer_MediaKeySystemInfoCallback | Defines a pointer to the callback function for [DRM_MediaKeySystemInfo](capi-avdemuxer-drm-mediakeysysteminfo.md). A demuxer instance is returned. This callback function applies to the scenario where multiple demuxer instances are used.<br> You need to call [OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setdemuxermediakeysysteminfocallback) to set the callback function as a callback. This callback function is recommended. |
 | [OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)](#oh_avdemuxer_createwithsource) | - | Creates an OH_AVDemuxer instance based on a source instance.<br> For details about how to create, destroy, and use a source instance, see [OH_AVSource](capi-avsource-oh-avsource.md). |
 | [OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)](#oh_avdemuxer_destroy) | - | Destroys an OH_AVDemuxer instance and clears internal resources. An instance can be destroyed only once.<br> The destroyed instance cannot be used until it is re-created. You are advised to set the pointer to NULL after the instance is destroyed. |
 | [OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)](#oh_avdemuxer_selecttrackbyid) | - | Selects a track from which the demuxer reads sample data.<br> You can select multiple tracks by calling this API multiple times, with a different track index passed in each time.<br> When [OH_AVDemuxer_ReadSample](capi-native-avdemuxer-h.md#oh_avdemuxer_readsample) is called, only the data in the selected track is read. If the same track is selected multiple times, [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) is returned and the API call takes effect only once. |
 | [OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)](#oh_avdemuxer_unselecttrackbyid) | - | Deselects a track. The demuxer no longer reads sample data from a track after it is deselected.<br> You can deselect multiple tracks by calling this API multiple times, with a different track index passed in each time. If the same track is deselected multiple times, [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) is returned and the API call takes effect only once. |
-| [OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)](#oh_avdemuxer_readsample) | - | Reads the sample and related information from the specified track.<br> You must select a track before reading the sample. After this API is called, the demuxer automatically proceeds to the next frame.(Deprecated) |
+| [OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)](#oh_avdemuxer_readsample) | - | Reads the sample and related information from the specified track.<br> You must select a track before reading the sample. After this API is called, the demuxer automatically proceeds to the next frame.(Deprecated in API11) |
 | [OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVBuffer *sample)](#oh_avdemuxer_readsamplebuffer) | - | Reads the sample and related information from the specified track.<br> You can use [OH_AVDemuxer_SelectTrackByID](capi-native-avdemuxer-h.md#oh_avdemuxer_selecttrackbyid) to select a track before reading the sample. After this API is called, the demuxer automatically proceeds to the next frame. |
-| [OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)](#oh_avdemuxer_seektotime) | - | Seeks to the specified time for all the selected tracks based on a seek mode. Before calling this function, call **OH_AVDemuxer_SelectTrackByID** to select a track. |
-| [OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)](#oh_avdemuxer_setmediakeysysteminfocallback) | - | Sets a callback for obtaining the media key system information.(Deprecated) |
+| [OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)](#oh_avdemuxer_seektotime) | - | Seeks to the specified time for all the selected tracks based on a seek mode. |
+| [OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)](#oh_avdemuxer_setmediakeysysteminfocallback) | - | Sets a callback for obtaining the media key system information.(Deprecated in API14) |
 | [OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)](#oh_avdemuxer_setdemuxermediakeysysteminfocallback) | - | Sets a callback for obtaining the media key system information. |
 | [OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)](#oh_avdemuxer_getmediakeysysteminfo) | - | Obtains the media key system information. The media key system information can be obtained only after [Demuxer_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#demuxer_mediakeysysteminfocallback) or [DRM_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#drm_mediakeysysteminfocallback) is successfully invoked. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo) | Defines a pointer to the callback function for DRM_MediaKeySystemInfo. No demuxer instance is returned. This callback function applies to the scenario where a single demuxer instance is used.<br> You need to call [OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback) to set the callback function as a callback.<br>**Since**: 11<br>**Deprecated**: 14<br>**Replaced by**: Demuxer_MediaKeySystemInfoCallback<br>**System capability**: SystemCapability.Multimedia.Media.Spliter |
+| void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo) | Defines a pointer to the callback function for [DRM_MediaKeySystemInfo](capi-avdemuxer-drm-mediakeysysteminfo.md). A demuxer instance is returned. This callback function applies to the scenario where multiple demuxer instances are used.<br> You need to call [OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setdemuxermediakeysysteminfocallback) to set the callback function as a callback. This callback function is recommended.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Media.Spliter |
 
 ## Function description
 
@@ -49,10 +54,6 @@ typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeyS
 **Description**
 
 Defines a pointer to the callback function for DRM_MediaKeySystemInfo. No demuxer instance is returned. This callback function applies to the scenario where a single demuxer instance is used.<br> You need to call [OH_AVDemuxer_SetMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setmediakeysysteminfocallback) to set the callback function as a callback.
-
-<!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-typedef void (*DRM_MediaKeySystemInfoCallback)(DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 11
 
@@ -69,10 +70,6 @@ typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_Me
 **Description**
 
 Defines a pointer to the callback function for [DRM_MediaKeySystemInfo](capi-avdemuxer-drm-mediakeysysteminfo.md). A demuxer instance is returned. This callback function applies to the scenario where multiple demuxer instances are used.<br> You need to call [OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#oh_avdemuxer_setdemuxermediakeysysteminfocallback) to set the callback function as a callback. This callback function is recommended.
-
-<!--Device-typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-typedef void (*Demuxer_MediaKeySystemInfoCallback)(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 
@@ -93,10 +90,6 @@ OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)
 
 Creates an OH_AVDemuxer instance based on a source instance.<br> For details about how to create, destroy, and use a source instance, see [OH_AVSource](capi-avsource-oh-avsource.md).
 
-<!--Device-OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)--><!--Device-OH_AVDemuxer *OH_AVDemuxer_CreateWithSource(OH_AVSource *source)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 10
 
 **Parameters**:
@@ -109,7 +102,7 @@ Creates an OH_AVDemuxer instance based on a source instance.<br> For details abo
 
 | Type | Description |
 | -- | -- |
-| [OH_AVDemuxer *](capi-avdemuxer-oh-avdemuxer.md) | Pointer to an OH_AVDemuxer instance. <br>If the operation fails, NULL is returned. <br>The possible causes of an operation failure are as follows: <br> 1. `source` is a null pointer. <br> 2. `source` is not an OH_AVSource instance. |
+| [OH_AVDemuxer *](capi-avdemuxer-oh-avdemuxer.md) | Pointer to an OH_AVDemuxer instance. <br>If the operation fails, NULL is returned. <br>The possible causes of an operation failure are as follows: <br>1. The value of **source** is invalid (either nullptr or a pointer to a non-OH_AVSource instance). <br>2. The value of **source** does not point to an OH_AVSource instance. |
 
 ### OH_AVDemuxer_Destroy()
 
@@ -120,10 +113,6 @@ OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)
 **Description**
 
 Destroys an OH_AVDemuxer instance and clears internal resources. An instance can be destroyed only once.<br> The destroyed instance cannot be used until it is re-created. You are advised to set the pointer to NULL after the instance is destroyed.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)--><!--Device-OH_AVErrCode OH_AVDemuxer_Destroy(OH_AVDemuxer *demuxer)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 10
 
@@ -148,10 +137,6 @@ OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackI
 **Description**
 
 Selects a track from which the demuxer reads sample data.<br> You can select multiple tracks by calling this API multiple times, with a different track index passed in each time.<br> When [OH_AVDemuxer_ReadSample](capi-native-avdemuxer-h.md#oh_avdemuxer_readsample) is called, only the data in the selected track is read. If the same track is selected multiple times, [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) is returned and the API call takes effect only once.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)--><!--Device-OH_AVErrCode OH_AVDemuxer_SelectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 10
 
@@ -178,10 +163,6 @@ OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trac
 
 Deselects a track. The demuxer no longer reads sample data from a track after it is deselected.<br> You can deselect multiple tracks by calling this API multiple times, with a different track index passed in each time. If the same track is deselected multiple times, [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) is returned and the API call takes effect only once.
 
-<!--Device-OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)--><!--Device-OH_AVErrCode OH_AVDemuxer_UnselectTrackByID(OH_AVDemuxer *demuxer, uint32_t trackIndex)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 10
 
 **Parameters**:
@@ -206,10 +187,6 @@ OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex,
 **Description**
 
 Reads the sample and related information from the specified track.<br> You must select a track before reading the sample. After this API is called, the demuxer automatically proceeds to the next frame.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)--><!--Device-OH_AVErrCode OH_AVDemuxer_ReadSample(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVMemory *sample, OH_AVCodecBufferAttr *info)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 10
 
@@ -242,10 +219,6 @@ OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t track
 
 Reads the sample and related information from the specified track.<br> You can use [OH_AVDemuxer_SelectTrackByID](capi-native-avdemuxer-h.md#oh_avdemuxer_selecttrackbyid) to select a track before reading the sample. After this API is called, the demuxer automatically proceeds to the next frame.
 
-<!--Device-OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVBuffer *sample)--><!--Device-OH_AVErrCode OH_AVDemuxer_ReadSampleBuffer(OH_AVDemuxer *demuxer, uint32_t trackIndex, OH_AVBuffer *sample)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 11
 
 **Parameters**:
@@ -260,7 +233,7 @@ Reads the sample and related information from the specified track.<br> You can u
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): <br>1. The value of **demuxer** is nullptr or does not point to a demuxer instance. <br>2. The value of **sample** is nullptr. <br>3. The track index is out of range. <br>[AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): <br>1. The track with the specified index is not selected. <br>2. The demuxer is not correctly initialized. <br>[AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode): The sample capacity is insufficient to store all frame data. <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): Failed to read or parse the frame from the file. |
+| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): <br>1. The value of **demuxer** is nullptr or does not point to a demuxer instance. <br>2. The value of **sample** is nullptr. <br>3. The track index is out of range. <br>4. The value of **sample** is null. <br>[AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): <br>1. The track with the specified index is not selected. <br>2. The demuxer is not correctly initialized. <br>[AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode): The sample capacity is insufficient to store all frame data. <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): Failed to read or parse the frame from the file. |
 
 ### OH_AVDemuxer_SeekToTime()
 
@@ -270,11 +243,7 @@ OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond,
 
 **Description**
 
-Seeks to the specified time for all the selected tracks based on a seek mode. Before calling this function, call **OH_AVDemuxer_SelectTrackByID** to select a track.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)--><!--Device-OH_AVErrCode OH_AVDemuxer_SeekToTime(OH_AVDemuxer *demuxer, int64_t millisecond, OH_AVSeekMode mode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
+Seeks to the specified time for all the selected tracks based on a seek mode.
 
 **Since**: 10
 
@@ -301,10 +270,6 @@ OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, D
 **Description**
 
 Sets a callback for obtaining the media key system information.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)--><!--Device-OH_AVErrCode OH_AVDemuxer_SetMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfoCallback callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 11
 
@@ -335,10 +300,6 @@ OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *dem
 
 Sets a callback for obtaining the media key system information.
 
-<!--Device-OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)--><!--Device-OH_AVErrCode OH_AVDemuxer_SetDemuxerMediaKeySystemInfoCallback(OH_AVDemuxer *demuxer, Demuxer_MediaKeySystemInfoCallback callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
 **Parameters**:
@@ -363,10 +324,6 @@ OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_Media
 **Description**
 
 Obtains the media key system information. The media key system information can be obtained only after [Demuxer_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#demuxer_mediakeysysteminfocallback) or [DRM_MediaKeySystemInfoCallback](capi-native-avdemuxer-h.md#drm_mediakeysysteminfocallback) is successfully invoked.
-
-<!--Device-OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)--><!--Device-OH_AVErrCode OH_AVDemuxer_GetMediaKeySystemInfo(OH_AVDemuxer *demuxer, DRM_MediaKeySystemInfo *mediaKeySystemInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 11
 

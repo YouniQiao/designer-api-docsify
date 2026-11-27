@@ -45,17 +45,27 @@
 
 | Name | Description |
 | --- | --- |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Defines the corner radius of a component's border. To reference this object, at least one parameter must be passed. |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Defines ColorMetrics. |
 | [Degree](arkts-arkui-degree-t.md) | Angle type, used to describe an angle in deg. |
 | [Dimension](arkts-arkui-dimension-t.md) | Defines a size unit. |
+| [EdgeColors](arkts-arkui-edgecolors-t.md) | Defines the edge colors of a component. To reference this object, at least one parameter must be passed. |
+| [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) | To reference this object, at least one parameter must be passed. |
+| [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) | To reference this object, at least one parameter must be passed. |
+| [EdgeStyles](arkts-arkui-edgestyles-t.md) | Defines the edge styles of a component. To reference this object, at least one parameter must be passed. |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines component edge widths for absolute directions. |
+| [EdgeWidths](arkts-arkui-edgewidths-t.md) | Defines component edge widths for absolute directions. |
 | [FP](arkts-arkui-fp-t.md) | Defines a length in fp. |
 | [Length](arkts-arkui-length-t.md) | Defines a size unit. |
+| [LengthConstrain](arkts-arkui-lengthconstrain-t.md) | Defines the maximum and minimum lengths of a component. |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Defines LengthMetrics. |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Defines length metrics unit. |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | Defines the margins in different directions of a component. |
 | [LPX](arkts-arkui-lpx-t.md) | Defines a length in lpx. |
 | [Margin](arkts-arkui-margin-t.md) | Defines the margins in different directions of a component. |
+| [Offset](arkts-arkui-offset-t.md) | Defines the offset coordinates of a component in the layout. |
+| [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) | To reference this object, at least one parameter must be passed. |
+| [Padding](arkts-arkui-padding-t.md) | Defines the paddings in different directions of a component. To reference this object, at least one parameter must be passed. |
 | [Percentage](arkts-arkui-percentage-t.md) | Length type, used to describe a length in percentage units. |
 | [PX](arkts-arkui-px-t.md) | Defines a length in px. |
 | [Resource](arkts-arkui-resource-t.md) | Defines reference resources for component attributes. Resource files must be stored and managed in specific subdirectories. For examples of resource directories, see [Resource Categories](../../../quick-start/resource-categories-and-access.md#resource-categories). |

@@ -1,7 +1,7 @@
 # C API<!--c-mindsporelitekit-->
 
 - Module<!--mindsporelitekit-module-->
-    - [MindSpore](capi-mind-spore-lite-kit-mindspore.md)
+    - [MindSpore](capi-mindspore.md)
 - Header file<!--mindsporelitekit-headerfile-->
     - [context.h](capi-context-h.md)
     - [tensor.h](capi-tensor-h.md)

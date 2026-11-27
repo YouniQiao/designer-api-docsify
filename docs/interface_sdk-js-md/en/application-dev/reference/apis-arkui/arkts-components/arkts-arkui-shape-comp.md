@@ -61,7 +61,7 @@ Draws the **Shape** component. This function has no parameter. After being calle
 ## Shape
 
 ```TypeScript
-Shape(value?: PixelMap)
+new Shape(value?: PixelMap)
 ```
 
 Draws the **Shape** component. After being called, it creates a **Shape** object, on which attributes such as the viewport, fill, and stroke can be set.

@@ -208,7 +208,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Padding &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、优化视觉效果时传入自定义值。<br>取值范围：[0, +∞]<br>默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}<br>使用LocalizedPadding时，支持镜像能力。<br>默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),<br>top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**适用版本：** 10 - 11 |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、优化视觉效果时传入自定义值。<br>取值范围：[0, +∞]<br>默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}<br>使用LocalizedPadding时，支持镜像能力。<br>默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),<br>top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**适用版本：** 10 - 11 |
 
 **返回值：**
 

@@ -116,7 +116,7 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 | Name | Description |
 | --- | --- |
 | [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md) | Defines the parameters of the **Canvas** component. |
-| [CanvasPattern](arkts-arkui-canvas-comp-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the [createPattern](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#createpattern) API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency. |
+| [CanvasPattern](arkts-arkui-canvas-comp-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the [createPattern](arkts-arkui-canvas-comp-canvasrenderer-c.md#createpattern) API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency. |
 | [RenderingContextOptions](arkts-arkui-canvas-comp-renderingcontextoptions-i.md) | Defines the specific configuration parameters for the rendering context. |
 | [Size](arkts-arkui-canvas-comp-size-i.md) | Provides size information of the **DrawingRenderingContext** object. |
 | [TextMetrics](arkts-arkui-canvas-comp-textmetrics-i.md) | Size information of the text. |

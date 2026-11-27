@@ -309,7 +309,7 @@ startWithType(type: SyncType): Promise<void>
 
 启动端云同步。该接口使用promise返回结果。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -368,7 +368,7 @@ startWithType(callback: Callback<void>, type: SyncType): void
 
 启动端云同步。该接口使用异步回调返回结果。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 

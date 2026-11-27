@@ -12,7 +12,7 @@ import { sendableContextManager } from '@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-设置[Context](arkts-ability-context.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
+设置[Context](arkts-ability-context-depr.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
 
 > **说明：** 
 > 

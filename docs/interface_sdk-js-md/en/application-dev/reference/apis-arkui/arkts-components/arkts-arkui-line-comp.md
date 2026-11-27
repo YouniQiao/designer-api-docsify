@@ -45,7 +45,7 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 ## Line
 
 ```TypeScript
-Line(options?: LineOptions)
+new Line(options?: LineOptions)
 ```
 
 Draws a straight line. The **Line** component draws the line within the rectangular area defined by **width** and **height**. The upper left corner of the drawing area is the coordinate origin (0,0), with the x-axis extending to the right and the y-axis extending downward.

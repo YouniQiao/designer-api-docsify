@@ -544,7 +544,7 @@ removalWantAgent?: WantAgent
 
 当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md)的actionType字段取值为4）。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
 
 **起始版本：** 9
 
@@ -670,7 +670,7 @@ wantAgent?: WantAgent
 
 封装了应用的行为意图，点击通知时触发该行为，默认为空。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
 
 **起始版本：** 7
 
@@ -686,7 +686,7 @@ slotType?: notification.SlotType
 
 通知渠道类型，默认值为OTHER_TYPES。
 
-**类型：** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
+**类型：** [notification.SlotType](arkts-notification-notification-depr-slottype-e.md)
 
 **起始版本：** 7
 

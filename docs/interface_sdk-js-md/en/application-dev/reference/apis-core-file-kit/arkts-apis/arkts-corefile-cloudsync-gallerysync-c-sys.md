@@ -309,7 +309,7 @@ startWithType(type: SyncType): Promise<void>
 
 Starts device-cloud sync. This API uses a promise to return the result.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -351,7 +351,7 @@ startWithType(callback: Callback<void>, type: SyncType): void
 
 Starts device-cloud sync. This API uses a callback to return the result.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 

@@ -62,7 +62,7 @@ wantAgent?: WantAgent
 
 通知参数，用于指定点击长时任务通知后跳转的界面。默认为申请长时任务时传入的wantAgent。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
 
 **起始版本：** 26.0.1
 

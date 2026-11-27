@@ -6,28 +6,26 @@ This file declares the functions related to the region in the drawing module, in
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_RegionOpMode](#oh_drawing_regionopmode) | OH_Drawing_RegionOpMode | Enumerates the operation modes available for a region. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Region* OH_Drawing_RegionCreate(void)](#oh_drawing_regioncreate) | Creates an **OH_Drawing_Region** object for more accurate graphical control. |
 | [OH_Drawing_Region* OH_Drawing_RegionCopy(const OH_Drawing_Region* region)](#oh_drawing_regioncopy) | Creates a copy of a region object. |
 | [bool OH_Drawing_RegionContains(OH_Drawing_Region* region, int32_t x, int32_t y)](#oh_drawing_regioncontains) | Checks whether a region contains the specified point. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [bool OH_Drawing_RegionOp(OH_Drawing_Region* region, const OH_Drawing_Region* other, OH_Drawing_RegionOpMode op)](#oh_drawing_regionop) | Merges two regions based on the specified region operation type. <br>This API generates an error code, which can be obtained through [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). <br>Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either region or other is NULL. <br>Returns OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if op is not within the enum range. |
+| [bool OH_Drawing_RegionOp(OH_Drawing_Region* region, const OH_Drawing_Region* other, OH_Drawing_RegionOpMode op)](#oh_drawing_regionop) | Combines two regions based on the specified operation mode. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **region** or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **op** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [bool OH_Drawing_RegionSetRect(OH_Drawing_Region* region, const OH_Drawing_Rect* rect)](#oh_drawing_regionsetrect) | Sets the boundary for an **OH_Drawing_Region** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **region** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [bool OH_Drawing_RegionSetPath(OH_Drawing_Region* region, const OH_Drawing_Path* path, const OH_Drawing_Region* clip)](#oh_drawing_regionsetpath) | Sets a region to the area described by the path. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **region**, **path**, or **clip** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_RegionDestroy(OH_Drawing_Region* region)](#oh_drawing_regiondestroy) | Destroys an **OH_Drawing_Region** object and reclaims the memory occupied by the object. |
@@ -53,20 +51,16 @@ enum OH_Drawing_RegionOpMode
 
 Enumerates the operation modes available for a region.
 
-<!--Device-enum OH_Drawing_RegionOpMode--><!--Device-enum OH_Drawing_RegionOpMode-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| REGION_OP_MODE_DIFFERENCE | Difference operation.<br><!--Device-REGION_OP_MODE_DIFFERENCE--><!--Device-REGION_OP_MODE_DIFFERENCE-End--> |
-| REGION_OP_MODE_INTERSECT | Intersection operation.<br><!--Device-REGION_OP_MODE_INTERSECT--><!--Device-REGION_OP_MODE_INTERSECT-End--> |
-| REGION_OP_MODE_UNION | Union operation.<br><!--Device-REGION_OP_MODE_UNION--><!--Device-REGION_OP_MODE_UNION-End--> |
-| REGION_OP_MODE_XOR | XOR operation.<br><!--Device-REGION_OP_MODE_XOR--><!--Device-REGION_OP_MODE_XOR-End--> |
-| REGION_OP_MODE_REVERSE_DIFFERENCE | Reverse difference operation.<br><!--Device-REGION_OP_MODE_REVERSE_DIFFERENCE--><!--Device-REGION_OP_MODE_REVERSE_DIFFERENCE-End--> |
-| REGION_OP_MODE_REPLACE | Replacement operation.<br><!--Device-REGION_OP_MODE_REPLACE--><!--Device-REGION_OP_MODE_REPLACE-End--> |
+| REGION_OP_MODE_DIFFERENCE | Difference operation. |
+| REGION_OP_MODE_INTERSECT | Intersection operation. |
+| REGION_OP_MODE_UNION | Union operation. |
+| REGION_OP_MODE_XOR | XOR operation. |
+| REGION_OP_MODE_REVERSE_DIFFERENCE | Reverse difference operation. |
+| REGION_OP_MODE_REPLACE | Replacement operation. |
 
 
 ## Function description
@@ -80,10 +74,6 @@ OH_Drawing_Region* OH_Drawing_RegionCreate(void)
 **Description**
 
 Creates an **OH_Drawing_Region** object for more accurate graphical control.
-
-<!--Device-OH_Drawing_Region* OH_Drawing_RegionCreate(void)--><!--Device-OH_Drawing_Region* OH_Drawing_RegionCreate(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -102,10 +92,6 @@ OH_Drawing_Region* OH_Drawing_RegionCopy(const OH_Drawing_Region* region)
 **Description**
 
 Creates a copy of a region object.
-
-<!--Device-OH_Drawing_Region* OH_Drawing_RegionCopy(const OH_Drawing_Region* region)--><!--Device-OH_Drawing_Region* OH_Drawing_RegionCopy(const OH_Drawing_Region* region)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -131,10 +117,6 @@ bool OH_Drawing_RegionContains(OH_Drawing_Region* region, int32_t x, int32_t y)
 
 Checks whether a region contains the specified point. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
-<!--Device-bool OH_Drawing_RegionContains(OH_Drawing_Region* region, int32_t x, int32_t y)--><!--Device-bool OH_Drawing_RegionContains(OH_Drawing_Region* region, int32_t x, int32_t y)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 **Parameters**:
@@ -159,11 +141,7 @@ bool OH_Drawing_RegionOp(OH_Drawing_Region* region, const OH_Drawing_Region* oth
 
 **Description**
 
-Merges two regions based on the specified region operation type. <br>This API generates an error code, which can be obtained through [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). <br>Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either region or other is NULL. <br>Returns OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if op is not within the enum range.
-
-<!--Device-bool OH_Drawing_RegionOp(OH_Drawing_Region* region, const OH_Drawing_Region* other, OH_Drawing_RegionOpMode op)--><!--Device-bool OH_Drawing_RegionOp(OH_Drawing_Region* region, const OH_Drawing_Region* other, OH_Drawing_RegionOpMode op)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+Combines two regions based on the specified operation mode. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **region** or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **op** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -171,9 +149,9 @@ Merges two regions based on the specified region operation type. <br>This API ge
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_Region](capi-drawing-oh-drawing-region.md)* region | Pointer to the region object OH_Drawing_Region. The region result after the operation is stored in this region object. |
-| [const OH_Drawing_Region](capi-drawing-oh-drawing-region.md)* other | Pointer to another region object OH_Drawing_Region that participates in the merge operation. It is merged with the region specified by the region parameter according to the operation type op. |
-| [OH_Drawing_RegionOpMode](capi-drawing-region-h.md#oh_drawing_regionopmode) op | Region operation enum type. For the supported modes, see the OH_Drawing_RegionOpMode enum. |
+| [OH_Drawing_Region](capi-drawing-oh-drawing-region.md)* region | Pointer to an [OH_Drawing_Region](capi-drawing-oh-drawing-region.md) object, in which the resulting region is saved. |
+| [const OH_Drawing_Region](capi-drawing-oh-drawing-region.md)* other | Pointer to the [OH_Drawing_Region](capi-drawing-oh-drawing-region.md) object. |
+| [OH_Drawing_RegionOpMode](capi-drawing-region-h.md#oh_drawing_regionopmode) op | Operation mode of the region. For details about the available options, see [OH_Drawing_RegionOpMode](capi-drawing-region-h.md#oh_drawing_regionopmode). |
 
 **Returns**:
 
@@ -190,10 +168,6 @@ bool OH_Drawing_RegionSetRect(OH_Drawing_Region* region, const OH_Drawing_Rect* 
 **Description**
 
 Sets the boundary for an **OH_Drawing_Region** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **region** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
-
-<!--Device-bool OH_Drawing_RegionSetRect(OH_Drawing_Region* region, const OH_Drawing_Rect* rect)--><!--Device-bool OH_Drawing_RegionSetRect(OH_Drawing_Region* region, const OH_Drawing_Rect* rect)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -219,10 +193,6 @@ bool OH_Drawing_RegionSetPath(OH_Drawing_Region* region, const OH_Drawing_Path* 
 **Description**
 
 Sets a region to the area described by the path. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **region**, **path**, or **clip** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
-
-<!--Device-bool OH_Drawing_RegionSetPath(OH_Drawing_Region* region, const OH_Drawing_Path* path, const OH_Drawing_Region* clip)--><!--Device-bool OH_Drawing_RegionSetPath(OH_Drawing_Region* region, const OH_Drawing_Path* path, const OH_Drawing_Region* clip)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -250,10 +220,6 @@ void OH_Drawing_RegionDestroy(OH_Drawing_Region* region)
 
 Destroys an **OH_Drawing_Region** object and reclaims the memory occupied by the object.
 
-<!--Device-void OH_Drawing_RegionDestroy(OH_Drawing_Region* region)--><!--Device-void OH_Drawing_RegionDestroy(OH_Drawing_Region* region)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 **Parameters**:
@@ -271,10 +237,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionEmpty(OH_Drawing_Region* region)
 **Description**
 
 Sets the existing region to empty.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionEmpty(OH_Drawing_Region* region)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionEmpty(OH_Drawing_Region* region)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 22
 
@@ -299,10 +261,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionGetBoundaryPath(const OH_Drawing_Region* r
 **Description**
 
 Sets the path as the boundary of the region. If the region is empty, the path is also empty.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionGetBoundaryPath(const OH_Drawing_Region* region, OH_Drawing_Path* path)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionGetBoundaryPath(const OH_Drawing_Region* region, OH_Drawing_Path* path)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -329,10 +287,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionGetBounds(const OH_Drawing_Region* region,
 
 Obtains the smallest bounding rectangle that contains the region.
 
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionGetBounds(const OH_Drawing_Region* region, OH_Drawing_Rect* rect)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionGetBounds(const OH_Drawing_Region* region, OH_Drawing_Rect* rect)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -357,10 +311,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionIsComplex(const OH_Drawing_Region* region,
 **Description**
 
 Checks whether the region contains two or more rectangles.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsComplex(const OH_Drawing_Region* region, bool* isComplex)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsComplex(const OH_Drawing_Region* region, bool* isComplex)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -387,10 +337,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionIsEmpty(const OH_Drawing_Region* region, b
 
 Checks whether the region is empty.
 
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsEmpty(const OH_Drawing_Region* region, bool* isEmpty)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsEmpty(const OH_Drawing_Region* region, bool* isEmpty)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -416,10 +362,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionIsRect(const OH_Drawing_Region* region, bo
 
 Checks whether the region the same as a rectangle.
 
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsRect(const OH_Drawing_Region* region, bool* isRect)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionIsRect(const OH_Drawing_Region* region, bool* isRect)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -444,10 +386,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionQuickContains(const OH_Drawing_Region* reg
 **Description**
 
 Checks whether the region is the same as a single rectangle and contains the specified rectangle.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionQuickContains(const OH_Drawing_Region* region, int32_t left, int32_t top, int32_t right, int32_t bottom, bool* isContained)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionQuickContains(const OH_Drawing_Region* region, int32_t left, int32_t top, int32_t right, int32_t bottom, bool* isContained)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -478,10 +416,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionQuickReject(const OH_Drawing_Region* regio
 
 Checks whether the region is empty or does not intersect the specified rectangle.
 
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionQuickReject(const OH_Drawing_Region* region, int32_t left, int32_t top, int32_t right, int32_t bottom, bool* isReject)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionQuickReject(const OH_Drawing_Region* region, int32_t left, int32_t top, int32_t right, int32_t bottom, bool* isReject)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -510,10 +444,6 @@ OH_Drawing_ErrorCode OH_Drawing_RegionTranslate(OH_Drawing_Region* region, int32
 **Description**
 
 Translates the region by a specified distance on the X and Y axes. If the region is empty, no operation is performed.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionTranslate(OH_Drawing_Region* region, int32_t dx, int32_t dy)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_RegionTranslate(OH_Drawing_Region* region, int32_t dx, int32_t dy)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 

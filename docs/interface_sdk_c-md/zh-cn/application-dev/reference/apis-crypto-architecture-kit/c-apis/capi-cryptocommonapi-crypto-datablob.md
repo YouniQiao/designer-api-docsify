@@ -1,20 +1,18 @@
 # Crypto_DataBlob
 
 ```c
-typedef struct Crypto_DataBlob {...} Crypto_DataBlob
+struct Crypto_DataBlob {...}
 ```
 
 ## 概述
 
 加解密数据结构体。
 
-<!--Device-struct Crypto_DataBlob {...}--><!--Device-struct Crypto_DataBlob {...}-End-->
-
 **系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 
-**相关模块：** [CryptoCommonApi](capi-crypto-architecture-kit-cryptocommonapi.md)
+**相关模块：** [CryptoCommonApi](capi-cryptocommonapi.md)
 
 **所在头文件：** [crypto_common.h](capi-crypto-common-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Crypto_DataBlob {...} Crypto_DataBlob
 
 | 名称 | 描述 |
 | -- | -- |
-| uint8_t *data | 数据缓冲区。<br>**起始版本：** 12<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
-| size_t len | 数据长度。<br>**起始版本：** 12<br><!--Device-size_t len--><!--Device-size_t len-End--> |
+| uint8_t *data | 数据缓冲区。<br>**起始版本：** 12 |
+| size_t len | 数据长度。<br>**起始版本：** 12 |
 
 

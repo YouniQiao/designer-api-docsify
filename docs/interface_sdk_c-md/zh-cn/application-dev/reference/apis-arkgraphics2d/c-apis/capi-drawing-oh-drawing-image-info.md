@@ -8,13 +8,11 @@ typedef struct OH_Drawing_Image_Info {...} OH_Drawing_Image_Info
 
 定义图片信息结构体。
 
-<!--Device-typedef struct OH_Drawing_Image_Info {...} OH_Drawing_Image_Info--><!--Device-typedef struct OH_Drawing_Image_Info {...} OH_Drawing_Image_Info-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_types.h](capi-drawing-types-h.md)
 
@@ -24,9 +22,9 @@ typedef struct OH_Drawing_Image_Info {...} OH_Drawing_Image_Info
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t width | 宽度，单位为像素。<br>**起始版本：** 12<br><!--Device-int32_t width--><!--Device-int32_t width-End--> |
-| int32_t height | 高度，单位为像素。<br>**起始版本：** 12<br><!--Device-int32_t height--><!--Device-int32_t height-End--> |
-| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorType | 颜色类型[OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat)。<br>**起始版本：** 12<br><!--Device-OH_Drawing_ColorFormat colorType--><!--Device-OH_Drawing_ColorFormat colorType-End--> |
-| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaType | 透明度类型[OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat)。<br>**起始版本：** 12<br><!--Device-OH_Drawing_AlphaFormat alphaType--><!--Device-OH_Drawing_AlphaFormat alphaType-End--> |
+| int32_t width | 宽度，单位为像素。<br>**起始版本：** 12 |
+| int32_t height | 高度，单位为像素。<br>**起始版本：** 12 |
+| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorType | 颜色类型[OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat)。<br>**起始版本：** 12 |
+| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaType | 透明度类型[OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat)。<br>**起始版本：** 12 |
 
 

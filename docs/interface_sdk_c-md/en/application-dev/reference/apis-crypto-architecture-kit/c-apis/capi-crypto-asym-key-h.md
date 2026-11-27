@@ -4,19 +4,17 @@
 
 Defines the asymmetric key interfaces.
 
-**File to Include**: <CryptoArchitectureKit/crypto_asym_key.h>
+**Include**: <CryptoArchitectureKit/crypto_asym_key.h>
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Related module**: [CryptoAsymKeyApi](capi-crypto-architecture-kit-cryptoasymkeyapi.md)
+**Related module**: [CryptoAsymKeyApi](capi-cryptoasymkeyapi.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -29,7 +27,7 @@ Defines the asymmetric key interfaces.
 | [OH_CryptoAsymKeyGeneratorWithSpec](capi-cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec.md) | OH_CryptoAsymKeyGeneratorWithSpec | Specification-based asymmetric key generator structure, representing a specification-based asymmetric key generator. |
 | [OH_CryptoEcPoint](capi-cryptoasymkeyapi-oh-cryptoecpoint.md) | OH_CryptoEcPoint | Elliptic curve point structure, representing a point on the elliptic curve. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -38,7 +36,7 @@ Defines the asymmetric key interfaces.
 | [CryptoPrivKeyEncoding_ParamType](#cryptoprivkeyencoding_paramtype) | CryptoPrivKeyEncoding_ParamType | Defines private key encoding parameter types. |
 | [CryptoAsymKeySpec_Type](#cryptoasymkeyspec_type) | CryptoAsymKeySpec_Type | Defines asymmetric key specification types. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -86,44 +84,40 @@ enum CryptoAsymKey_ParamType
 
 Defines asymmetric key parameter types.
 
-<!--Device-enum CryptoAsymKey_ParamType--><!--Device-enum CryptoAsymKey_ParamType-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_DSA_P_DATABLOB = 101 | Prime p of the DSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DSA_P_DATABLOB = 101--><!--Device-CRYPTO_DSA_P_DATABLOB = 101-End--> |
-| CRYPTO_DSA_Q_DATABLOB = 102 | Sub-prime q of the DSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DSA_Q_DATABLOB = 102--><!--Device-CRYPTO_DSA_Q_DATABLOB = 102-End--> |
-| CRYPTO_DSA_G_DATABLOB = 103 | Base g of the DSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DSA_G_DATABLOB = 103--><!--Device-CRYPTO_DSA_G_DATABLOB = 103-End--> |
-| CRYPTO_DSA_SK_DATABLOB = 104 | Private key of the DSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DSA_SK_DATABLOB = 104--><!--Device-CRYPTO_DSA_SK_DATABLOB = 104-End--> |
-| CRYPTO_DSA_PK_DATABLOB = 105 | Public key of the DSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DSA_PK_DATABLOB = 105--><!--Device-CRYPTO_DSA_PK_DATABLOB = 105-End--> |
-| CRYPTO_ECC_FP_P_DATABLOB = 201 | Prime p of the elliptic curve (EC) prime field.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_FP_P_DATABLOB = 201--><!--Device-CRYPTO_ECC_FP_P_DATABLOB = 201-End--> |
-| CRYPTO_ECC_A_DATABLOB = 202 | First coefficient a of the elliptic curve.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_A_DATABLOB = 202--><!--Device-CRYPTO_ECC_A_DATABLOB = 202-End--> |
-| CRYPTO_ECC_B_DATABLOB = 203 | Second coefficient b of the elliptic curve.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_B_DATABLOB = 203--><!--Device-CRYPTO_ECC_B_DATABLOB = 203-End--> |
-| CRYPTO_ECC_G_X_DATABLOB = 204 | Affine x-coordinate of the base point g.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_G_X_DATABLOB = 204--><!--Device-CRYPTO_ECC_G_X_DATABLOB = 204-End--> |
-| CRYPTO_ECC_G_Y_DATABLOB = 205 | Affine y-coordinate of the base point g.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_G_Y_DATABLOB = 205--><!--Device-CRYPTO_ECC_G_Y_DATABLOB = 205-End--> |
-| CRYPTO_ECC_N_DATABLOB = 206 | Order of the base point g.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_N_DATABLOB = 206--><!--Device-CRYPTO_ECC_N_DATABLOB = 206-End--> |
-| CRYPTO_ECC_H_INT = 207 | Cofactor of the elliptic curve.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_H_INT = 207--><!--Device-CRYPTO_ECC_H_INT = 207-End--> |
-| CRYPTO_ECC_SK_DATABLOB = 208 | Private key value of the ECC private key.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_SK_DATABLOB = 208--><!--Device-CRYPTO_ECC_SK_DATABLOB = 208-End--> |
-| CRYPTO_ECC_PK_X_DATABLOB = 209 | Affine x-coordinate of the public key point in the ECC public key.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_PK_X_DATABLOB = 209--><!--Device-CRYPTO_ECC_PK_X_DATABLOB = 209-End--> |
-| CRYPTO_ECC_PK_Y_DATABLOB = 210 | Affine y-coordinate of the public key point in the ECC public key.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_PK_Y_DATABLOB = 210--><!--Device-CRYPTO_ECC_PK_Y_DATABLOB = 210-End--> |
-| CRYPTO_ECC_FIELD_TYPE_STR = 211 | Finite field type of the elliptic curve.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_FIELD_TYPE_STR = 211--><!--Device-CRYPTO_ECC_FIELD_TYPE_STR = 211-End--> |
-| CRYPTO_ECC_FIELD_SIZE_INT = 212 | Bit length of the finite field.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_FIELD_SIZE_INT = 212--><!--Device-CRYPTO_ECC_FIELD_SIZE_INT = 212-End--> |
-| CRYPTO_ECC_CURVE_NAME_STR = 213 | Curve name of the SECG standard.<br>**Since**: 12<br><!--Device-CRYPTO_ECC_CURVE_NAME_STR = 213--><!--Device-CRYPTO_ECC_CURVE_NAME_STR = 213-End--> |
-| CRYPTO_RSA_N_DATABLOB = 301 | Modulus n of the RSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_RSA_N_DATABLOB = 301--><!--Device-CRYPTO_RSA_N_DATABLOB = 301-End--> |
-| CRYPTO_RSA_D_DATABLOB = 302 | Private key exponent d of the RSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_RSA_D_DATABLOB = 302--><!--Device-CRYPTO_RSA_D_DATABLOB = 302-End--> |
-| CRYPTO_RSA_E_DATABLOB = 303 | Public key exponent e of the RSA algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_RSA_E_DATABLOB = 303--><!--Device-CRYPTO_RSA_E_DATABLOB = 303-End--> |
-| CRYPTO_DH_P_DATABLOB = 401 | Prime p of the DH algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DH_P_DATABLOB = 401--><!--Device-CRYPTO_DH_P_DATABLOB = 401-End--> |
-| CRYPTO_DH_G_DATABLOB = 402 | Generator g of the DH algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DH_G_DATABLOB = 402--><!--Device-CRYPTO_DH_G_DATABLOB = 402-End--> |
-| CRYPTO_DH_L_INT = 403 | Bit length of the private key in the DH algorithm.<br>**Since**: 12<br><!--Device-CRYPTO_DH_L_INT = 403--><!--Device-CRYPTO_DH_L_INT = 403-End--> |
-| CRYPTO_DH_SK_DATABLOB = 404 | Private key value of the DH private key.<br>**Since**: 12<br><!--Device-CRYPTO_DH_SK_DATABLOB = 404--><!--Device-CRYPTO_DH_SK_DATABLOB = 404-End--> |
-| CRYPTO_DH_PK_DATABLOB = 405 | Public key value of the DH public key.<br>**Since**: 12<br><!--Device-CRYPTO_DH_PK_DATABLOB = 405--><!--Device-CRYPTO_DH_PK_DATABLOB = 405-End--> |
-| CRYPTO_ED25519_SK_DATABLOB = 501 | Private key value of the ED25519 private key.<br>**Since**: 12<br><!--Device-CRYPTO_ED25519_SK_DATABLOB = 501--><!--Device-CRYPTO_ED25519_SK_DATABLOB = 501-End--> |
-| CRYPTO_ED25519_PK_DATABLOB = 502 | Public key value of the ED25519 public key.<br>**Since**: 12<br><!--Device-CRYPTO_ED25519_PK_DATABLOB = 502--><!--Device-CRYPTO_ED25519_PK_DATABLOB = 502-End--> |
-| CRYPTO_X25519_SK_DATABLOB = 601 | Private key value of the X25519 private key.<br>**Since**: 12<br><!--Device-CRYPTO_X25519_SK_DATABLOB = 601--><!--Device-CRYPTO_X25519_SK_DATABLOB = 601-End--> |
-| CRYPTO_X25519_PK_DATABLOB = 602 | Public key value of the X25519 public key.<br>**Since**: 12<br><!--Device-CRYPTO_X25519_PK_DATABLOB = 602--><!--Device-CRYPTO_X25519_PK_DATABLOB = 602-End--> |
+| CRYPTO_DSA_P_DATABLOB = 101 | Prime p of the DSA algorithm.<br>**Since**: 12 |
+| CRYPTO_DSA_Q_DATABLOB = 102 | Sub-prime q of the DSA algorithm.<br>**Since**: 12 |
+| CRYPTO_DSA_G_DATABLOB = 103 | Base g of the DSA algorithm.<br>**Since**: 12 |
+| CRYPTO_DSA_SK_DATABLOB = 104 | Private key of the DSA algorithm.<br>**Since**: 12 |
+| CRYPTO_DSA_PK_DATABLOB = 105 | Public key of the DSA algorithm.<br>**Since**: 12 |
+| CRYPTO_ECC_FP_P_DATABLOB = 201 | Prime p of the elliptic curve (EC) prime field.<br>**Since**: 12 |
+| CRYPTO_ECC_A_DATABLOB = 202 | First coefficient a of the elliptic curve.<br>**Since**: 12 |
+| CRYPTO_ECC_B_DATABLOB = 203 | Second coefficient b of the elliptic curve.<br>**Since**: 12 |
+| CRYPTO_ECC_G_X_DATABLOB = 204 | Affine x-coordinate of the base point g.<br>**Since**: 12 |
+| CRYPTO_ECC_G_Y_DATABLOB = 205 | Affine y-coordinate of the base point g.<br>**Since**: 12 |
+| CRYPTO_ECC_N_DATABLOB = 206 | Order of the base point g.<br>**Since**: 12 |
+| CRYPTO_ECC_H_INT = 207 | Cofactor of the elliptic curve.<br>**Since**: 12 |
+| CRYPTO_ECC_SK_DATABLOB = 208 | Private key value of the ECC private key.<br>**Since**: 12 |
+| CRYPTO_ECC_PK_X_DATABLOB = 209 | Affine x-coordinate of the public key point in the ECC public key.<br>**Since**: 12 |
+| CRYPTO_ECC_PK_Y_DATABLOB = 210 | Affine y-coordinate of the public key point in the ECC public key.<br>**Since**: 12 |
+| CRYPTO_ECC_FIELD_TYPE_STR = 211 | Finite field type of the elliptic curve.<br>**Since**: 12 |
+| CRYPTO_ECC_FIELD_SIZE_INT = 212 | Bit length of the finite field.<br>**Since**: 12 |
+| CRYPTO_ECC_CURVE_NAME_STR = 213 | Curve name of the SECG standard.<br>**Since**: 12 |
+| CRYPTO_RSA_N_DATABLOB = 301 | Modulus n of the RSA algorithm.<br>**Since**: 12 |
+| CRYPTO_RSA_D_DATABLOB = 302 | Private key exponent d of the RSA algorithm.<br>**Since**: 12 |
+| CRYPTO_RSA_E_DATABLOB = 303 | Public key exponent e of the RSA algorithm.<br>**Since**: 12 |
+| CRYPTO_DH_P_DATABLOB = 401 | Prime p of the DH algorithm.<br>**Since**: 12 |
+| CRYPTO_DH_G_DATABLOB = 402 | Generator g of the DH algorithm.<br>**Since**: 12 |
+| CRYPTO_DH_L_INT = 403 | Bit length of the private key in the DH algorithm.<br>**Since**: 12 |
+| CRYPTO_DH_SK_DATABLOB = 404 | Private key value of the DH private key.<br>**Since**: 12 |
+| CRYPTO_DH_PK_DATABLOB = 405 | Public key value of the DH public key.<br>**Since**: 12 |
+| CRYPTO_ED25519_SK_DATABLOB = 501 | Private key value of the ED25519 private key.<br>**Since**: 12 |
+| CRYPTO_ED25519_PK_DATABLOB = 502 | Public key value of the ED25519 public key.<br>**Since**: 12 |
+| CRYPTO_X25519_SK_DATABLOB = 601 | Private key value of the X25519 private key.<br>**Since**: 12 |
+| CRYPTO_X25519_PK_DATABLOB = 602 | Public key value of the X25519 public key.<br>**Since**: 12 |
 
 ### Crypto_EncodingType
 
@@ -135,16 +129,12 @@ enum Crypto_EncodingType
 
 Defines the encoding type.
 
-<!--Device-enum Crypto_EncodingType--><!--Device-enum Crypto_EncodingType-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_PEM = 0 | PEM format.<br>**Since**: 12<br><!--Device-CRYPTO_PEM = 0--><!--Device-CRYPTO_PEM = 0-End--> |
-| CRYPTO_DER = 1 | DER format.<br>**Since**: 12<br><!--Device-CRYPTO_DER = 1--><!--Device-CRYPTO_DER = 1-End--> |
+| CRYPTO_PEM = 0 | PEM format.<br>**Since**: 12 |
+| CRYPTO_DER = 1 | DER format.<br>**Since**: 12 |
 
 ### CryptoPrivKeyEncoding_ParamType
 
@@ -156,16 +146,12 @@ enum CryptoPrivKeyEncoding_ParamType
 
 Defines private key encoding parameter types.
 
-<!--Device-enum CryptoPrivKeyEncoding_ParamType--><!--Device-enum CryptoPrivKeyEncoding_ParamType-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_PRIVATE_KEY_ENCODING_PASSWORD_STR = 0 | Password string.<br>**Since**: 20<br><!--Device-CRYPTO_PRIVATE_KEY_ENCODING_PASSWORD_STR = 0--><!--Device-CRYPTO_PRIVATE_KEY_ENCODING_PASSWORD_STR = 0-End--> |
-| CRYPTO_PRIVATE_KEY_ENCODING_SYMMETRIC_CIPHER_STR = 1 | Symmetric cipher algorithm name, set via [OH_CryptoPrivKeyEncodingParams_SetParam](capi-crypto-asym-key-h.md#oh_cryptoprivkeyencodingparams_setparam). Values: "DES-EDE3-CBC", "AES-128-CBC", "AES-192-CBC", "AES-256-CBC".<br>**Since**: 20<br><!--Device-CRYPTO_PRIVATE_KEY_ENCODING_SYMMETRIC_CIPHER_STR = 1--><!--Device-CRYPTO_PRIVATE_KEY_ENCODING_SYMMETRIC_CIPHER_STR = 1-End--> |
+| CRYPTO_PRIVATE_KEY_ENCODING_PASSWORD_STR = 0 | Password string.<br>**Since**: 20 |
+| CRYPTO_PRIVATE_KEY_ENCODING_SYMMETRIC_CIPHER_STR = 1 | Symmetric cipher algorithm name, set via [OH_CryptoPrivKeyEncodingParams_SetParam](capi-crypto-asym-key-h.md#oh_cryptoprivkeyencodingparams_setparam). Values: "DES-EDE3-CBC", "AES-128-CBC", "AES-192-CBC", "AES-256-CBC".<br>**Since**: 20 |
 
 ### CryptoAsymKeySpec_Type
 
@@ -177,18 +163,14 @@ enum CryptoAsymKeySpec_Type
 
 Defines asymmetric key specification types.
 
-<!--Device-enum CryptoAsymKeySpec_Type--><!--Device-enum CryptoAsymKeySpec_Type-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| CRYPTO_ASYM_KEY_COMMON_PARAMS_SPEC = 0 | Common parameter specification.<br>**Since**: 20<br><!--Device-CRYPTO_ASYM_KEY_COMMON_PARAMS_SPEC = 0--><!--Device-CRYPTO_ASYM_KEY_COMMON_PARAMS_SPEC = 0-End--> |
-| CRYPTO_ASYM_KEY_PRIVATE_KEY_SPEC = 1 | Private key specification.<br>**Since**: 20<br><!--Device-CRYPTO_ASYM_KEY_PRIVATE_KEY_SPEC = 1--><!--Device-CRYPTO_ASYM_KEY_PRIVATE_KEY_SPEC = 1-End--> |
-| CRYPTO_ASYM_KEY_PUBLIC_KEY_SPEC = 2 | Public key specification.<br>**Since**: 20<br><!--Device-CRYPTO_ASYM_KEY_PUBLIC_KEY_SPEC = 2--><!--Device-CRYPTO_ASYM_KEY_PUBLIC_KEY_SPEC = 2-End--> |
-| CRYPTO_ASYM_KEY_KEY_PAIR_SPEC = 3 | Key pair specification.<br>**Since**: 20<br><!--Device-CRYPTO_ASYM_KEY_KEY_PAIR_SPEC = 3--><!--Device-CRYPTO_ASYM_KEY_KEY_PAIR_SPEC = 3-End--> |
+| CRYPTO_ASYM_KEY_COMMON_PARAMS_SPEC = 0 | Common parameter specification.<br>**Since**: 20 |
+| CRYPTO_ASYM_KEY_PRIVATE_KEY_SPEC = 1 | Private key specification.<br>**Since**: 20 |
+| CRYPTO_ASYM_KEY_PUBLIC_KEY_SPEC = 2 | Public key specification.<br>**Since**: 20 |
+| CRYPTO_ASYM_KEY_KEY_PAIR_SPEC = 3 | Key pair specification.<br>**Since**: 20 |
 
 
 ## Function description
@@ -203,13 +185,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Create(const char *algoName, OH_Cryp
 
 Creates an asymmetric key generator based on the given algorithm name.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Create(const char *algoName, OH_CryptoAsymKeyGenerator **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Create(const char *algoName, OH_CryptoAsymKeyGenerator **ctx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoAsymKeyGenerator_Destroy](#oh_cryptoasymkeygenerator_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeyGenerator_Destroy {ctx}
 
 **Parameters**:
 
@@ -240,13 +218,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Generate(OH_CryptoAsymKeyGenerator *
 
 Generates an asymmetric key pair.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Generate(OH_CryptoAsymKeyGenerator *ctx, OH_CryptoKeyPair **keyCtx)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Generate(OH_CryptoAsymKeyGenerator *ctx, OH_CryptoKeyPair **keyCtx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyCtx}
 
 **Parameters**:
 
@@ -271,13 +245,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Convert(OH_CryptoAsymKeyGenerator *c
 
 Converts asymmetric key data to a key pair.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Convert(OH_CryptoAsymKeyGenerator *ctx, Crypto_EncodingType type, Crypto_DataBlob *pubKeyData, Crypto_DataBlob *priKeyData, OH_CryptoKeyPair **keyCtx)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_Convert(OH_CryptoAsymKeyGenerator *ctx, Crypto_EncodingType type, Crypto_DataBlob *pubKeyData, Crypto_DataBlob *priKeyData, OH_CryptoKeyPair **keyCtx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyCtx}
 
 **Parameters**:
 
@@ -305,10 +275,6 @@ const char *OH_CryptoAsymKeyGenerator_GetAlgoName(OH_CryptoAsymKeyGenerator *ctx
 
 Obtains the algorithm name of the asymmetric key generator.
 
-<!--Device-const char *OH_CryptoAsymKeyGenerator_GetAlgoName(OH_CryptoAsymKeyGenerator *ctx)--><!--Device-const char *OH_CryptoAsymKeyGenerator_GetAlgoName(OH_CryptoAsymKeyGenerator *ctx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -333,10 +299,6 @@ void OH_CryptoAsymKeyGenerator_Destroy(OH_CryptoAsymKeyGenerator *ctx)
 
 Destroys the asymmetric key generator.
 
-<!--Device-void OH_CryptoAsymKeyGenerator_Destroy(OH_CryptoAsymKeyGenerator *ctx)--><!--Device-void OH_CryptoAsymKeyGenerator_Destroy(OH_CryptoAsymKeyGenerator *ctx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -355,10 +317,6 @@ void OH_CryptoKeyPair_Destroy(OH_CryptoKeyPair *keyCtx)
 
 Destroys the key pair.
 
-<!--Device-void OH_CryptoKeyPair_Destroy(OH_CryptoKeyPair *keyCtx)--><!--Device-void OH_CryptoKeyPair_Destroy(OH_CryptoKeyPair *keyCtx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -376,10 +334,6 @@ OH_CryptoPubKey *OH_CryptoKeyPair_GetPubKey(OH_CryptoKeyPair *keyCtx)
 **Description**
 
 Obtains the public key from the key pair.
-
-<!--Device-OH_CryptoPubKey *OH_CryptoKeyPair_GetPubKey(OH_CryptoKeyPair *keyCtx)--><!--Device-OH_CryptoPubKey *OH_CryptoKeyPair_GetPubKey(OH_CryptoKeyPair *keyCtx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 
@@ -405,10 +359,6 @@ OH_CryptoPrivKey *OH_CryptoKeyPair_GetPrivKey(OH_CryptoKeyPair *keyCtx)
 
 Obtains the private key from the key pair.
 
-<!--Device-OH_CryptoPrivKey *OH_CryptoKeyPair_GetPrivKey(OH_CryptoKeyPair *keyCtx)--><!--Device-OH_CryptoPrivKey *OH_CryptoKeyPair_GetPrivKey(OH_CryptoKeyPair *keyCtx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -433,13 +383,9 @@ OH_Crypto_ErrCode OH_CryptoPubKey_Encode(OH_CryptoPubKey *key, Crypto_EncodingTy
 
 Encodes the public key.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPubKey_Encode(OH_CryptoPubKey *key, Crypto_EncodingType type, const char *encodingStandard, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoPubKey_Encode(OH_CryptoPubKey *key, Crypto_EncodingType type, const char *encodingStandard, Crypto_DataBlob *out)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -466,13 +412,9 @@ OH_Crypto_ErrCode OH_CryptoPubKey_GetParam(OH_CryptoPubKey *key, CryptoAsymKey_P
 
 Obtains the specified parameter of the public key.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPubKey_GetParam(OH_CryptoPubKey *key, CryptoAsymKey_ParamType item, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoPubKey_GetParam(OH_CryptoPubKey *key, CryptoAsymKey_ParamType item, Crypto_DataBlob *value)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -497,10 +439,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_SetPassword(OH_CryptoAsymKeyGenerato
 **Description**
 
 Sets the password for the asymmetric key generator. Call this method to set the password if you need to use [OH_CryptoAsymKeyGenerator_Convert](capi-crypto-asym-key-h.md#oh_cryptoasymkeygenerator_convert) to convert encrypted private key data to a key pair.
-
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_SetPassword(OH_CryptoAsymKeyGenerator *ctx, const unsigned char *password, uint32_t passwordLen)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGenerator_SetPassword(OH_CryptoAsymKeyGenerator *ctx, const unsigned char *password, uint32_t passwordLen)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -528,13 +466,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_Create(OH_CryptoPrivKeyEncoding
 
 Creates private key encoding parameters.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_Create(OH_CryptoPrivKeyEncodingParams **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_Create(OH_CryptoPrivKeyEncodingParams **ctx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoPrivKeyEncodingParams_Destroy](#oh_cryptoprivkeyencodingparams_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoPrivKeyEncodingParams_Destroy {ctx}
 
 **Parameters**:
 
@@ -563,10 +497,6 @@ OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_SetParam(OH_CryptoPrivKeyEncodi
 
 Sets private key encoding parameters.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_SetParam(OH_CryptoPrivKeyEncodingParams *ctx, CryptoPrivKeyEncoding_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoPrivKeyEncodingParams_SetParam(OH_CryptoPrivKeyEncodingParams *ctx, CryptoPrivKeyEncoding_ParamType type, Crypto_DataBlob *value)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -593,10 +523,6 @@ void OH_CryptoPrivKeyEncodingParams_Destroy(OH_CryptoPrivKeyEncodingParams *ctx)
 
 Destroys private key encoding parameters.
 
-<!--Device-void OH_CryptoPrivKeyEncodingParams_Destroy(OH_CryptoPrivKeyEncodingParams *ctx)--><!--Device-void OH_CryptoPrivKeyEncodingParams_Destroy(OH_CryptoPrivKeyEncodingParams *ctx)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -615,13 +541,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKey_Encode(OH_CryptoPrivKey *key, Crypto_Encoding
 
 Encodes the private key.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPrivKey_Encode(OH_CryptoPrivKey *key, Crypto_EncodingType type, const char *encodingStandard, OH_CryptoPrivKeyEncodingParams *params, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoPrivKey_Encode(OH_CryptoPrivKey *key, Crypto_EncodingType type, const char *encodingStandard, OH_CryptoPrivKeyEncodingParams *params, Crypto_DataBlob *out)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -649,13 +571,9 @@ OH_Crypto_ErrCode OH_CryptoPrivKey_GetParam(OH_CryptoPrivKey *key, CryptoAsymKey
 
 Obtains the specified parameter of the private key.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoPrivKey_GetParam(OH_CryptoPrivKey *key, CryptoAsymKey_ParamType item, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoPrivKey_GetParam(OH_CryptoPrivKey *key, CryptoAsymKey_ParamType item, Crypto_DataBlob *value)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -681,13 +599,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenEcCommonParamsSpec(const char *curveNa
 
 Generates EC common parameter specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenEcCommonParamsSpec(const char *curveName, OH_CryptoAsymKeySpec **spec)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenEcCommonParamsSpec(const char *curveName, OH_CryptoAsymKeySpec **spec)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -712,13 +626,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenDhCommonParamsSpec(int pLen, int skLen
 
 Generates DH common parameter specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenDhCommonParamsSpec(int pLen, int skLen, OH_CryptoAsymKeySpec **spec)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GenDhCommonParamsSpec(int pLen, int skLen, OH_CryptoAsymKeySpec **spec)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -744,13 +654,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_Create(const char *algoName, CryptoAsymKe
 
 Creates an asymmetric key specification based on the given algorithm name and specification type.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_Create(const char *algoName, CryptoAsymKeySpec_Type type, OH_CryptoAsymKeySpec **spec)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_Create(const char *algoName, CryptoAsymKeySpec_Type type, OH_CryptoAsymKeySpec **spec)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeySpec_Destroy](#oh_cryptoasymkeyspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeySpec_Destroy {spec}
 
 **Parameters**:
 
@@ -775,10 +681,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetParam(OH_CryptoAsymKeySpec *spec, Cryp
 **Description**
 
 Sets the specified parameter of the asymmetric key specification.
-
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetParam(OH_CryptoAsymKeySpec *spec, CryptoAsymKey_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetParam(OH_CryptoAsymKeySpec *spec, CryptoAsymKey_ParamType type, Crypto_DataBlob *value)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -806,10 +708,6 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetCommonParamsSpec(OH_CryptoAsymKeySpec 
 
 Sets the common parameter specification into the asymmetric key specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetCommonParamsSpec(OH_CryptoAsymKeySpec *spec, OH_CryptoAsymKeySpec *commonParamsSpec)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_SetCommonParamsSpec(OH_CryptoAsymKeySpec *spec, OH_CryptoAsymKeySpec *commonParamsSpec)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -835,13 +733,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GetParam(OH_CryptoAsymKeySpec *spec, Cryp
 
 Obtains the specified parameter of the asymmetric key specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GetParam(OH_CryptoAsymKeySpec *spec, CryptoAsymKey_ParamType type, Crypto_DataBlob *value)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeySpec_GetParam(OH_CryptoAsymKeySpec *spec, CryptoAsymKey_ParamType type, Crypto_DataBlob *value)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {value}
 
 **Parameters**:
 
@@ -867,10 +761,6 @@ void OH_CryptoAsymKeySpec_Destroy(OH_CryptoAsymKeySpec *spec)
 
 Destroys the asymmetric key specification.
 
-<!--Device-void OH_CryptoAsymKeySpec_Destroy(OH_CryptoAsymKeySpec *spec)--><!--Device-void OH_CryptoAsymKeySpec_Destroy(OH_CryptoAsymKeySpec *spec)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -889,13 +779,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_Create(OH_CryptoAsymKeySpec 
 
 Creates a key generator based on the asymmetric key specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_Create(OH_CryptoAsymKeySpec *keySpec, OH_CryptoAsymKeyGeneratorWithSpec **generator)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_Create(OH_CryptoAsymKeySpec *keySpec, OH_CryptoAsymKeyGeneratorWithSpec **generator)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoAsymKeyGeneratorWithSpec_Destroy](#oh_cryptoasymkeygeneratorwithspec_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoAsymKeyGeneratorWithSpec_Destroy {generator}
 
 **Parameters**:
 
@@ -925,13 +811,9 @@ OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_GenKeyPair(OH_CryptoAsymKeyG
 
 Generates a key pair based on the asymmetric key specification.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_GenKeyPair(OH_CryptoAsymKeyGeneratorWithSpec *generator, OH_CryptoKeyPair **keyPair)--><!--Device-OH_Crypto_ErrCode OH_CryptoAsymKeyGeneratorWithSpec_GenKeyPair(OH_CryptoAsymKeyGeneratorWithSpec *generator, OH_CryptoKeyPair **keyPair)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoKeyPair_Destroy](#oh_cryptokeypair_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoKeyPair_Destroy {keyPair}
 
 **Parameters**:
 
@@ -956,10 +838,6 @@ void OH_CryptoAsymKeyGeneratorWithSpec_Destroy(OH_CryptoAsymKeyGeneratorWithSpec
 
 Destroys the specification-based asymmetric key generator.
 
-<!--Device-void OH_CryptoAsymKeyGeneratorWithSpec_Destroy(OH_CryptoAsymKeyGeneratorWithSpec *generator)--><!--Device-void OH_CryptoAsymKeyGeneratorWithSpec_Destroy(OH_CryptoAsymKeyGeneratorWithSpec *generator)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -978,13 +856,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_Create(const char *curveName, Crypto_DataBlob
 
 Creates an elliptic curve point.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_Create(const char *curveName, Crypto_DataBlob *ecKeyData, OH_CryptoEcPoint **point)--><!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_Create(const char *curveName, Crypto_DataBlob *ecKeyData, OH_CryptoEcPoint **point)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_CryptoEcPoint_Destroy](#oh_cryptoecpoint_destroy)
+**Resource release**: crypto_asym_key/OH_CryptoEcPoint_Destroy {point}
 
 **Parameters**:
 
@@ -1016,13 +890,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_GetCoordinate(OH_CryptoEcPoint *point, Crypto
 
 Obtains the x and y coordinates of the elliptic curve point.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_GetCoordinate(OH_CryptoEcPoint *point, Crypto_DataBlob *x, Crypto_DataBlob *y)--><!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_GetCoordinate(OH_CryptoEcPoint *point, Crypto_DataBlob *x, Crypto_DataBlob *y)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {x}
 
 **Parameters**:
 
@@ -1047,10 +917,6 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_SetCoordinate(OH_CryptoEcPoint *point, Crypto
 **Description**
 
 Sets the x and y coordinates of the elliptic curve point.
-
-<!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_SetCoordinate(OH_CryptoEcPoint *point, Crypto_DataBlob *x, Crypto_DataBlob *y)--><!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_SetCoordinate(OH_CryptoEcPoint *point, Crypto_DataBlob *x, Crypto_DataBlob *y)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -1083,13 +949,9 @@ OH_Crypto_ErrCode OH_CryptoEcPoint_Encode(OH_CryptoEcPoint *point, const char *f
 
 Encodes the elliptic curve point to the specified format.
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_Encode(OH_CryptoEcPoint *point, const char *format, Crypto_DataBlob *out)--><!--Device-OH_Crypto_ErrCode OH_CryptoEcPoint_Encode(OH_CryptoEcPoint *point, const char *format, Crypto_DataBlob *out)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
-**Resource release**: [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
 
 **Parameters**:
 
@@ -1114,10 +976,6 @@ void OH_CryptoEcPoint_Destroy(OH_CryptoEcPoint *point)
 **Description**
 
 Destroys the elliptic curve point.
-
-<!--Device-void OH_CryptoEcPoint_Destroy(OH_CryptoEcPoint *point)--><!--Device-void OH_CryptoEcPoint_Destroy(OH_CryptoEcPoint *point)-End-->
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

@@ -8,13 +8,11 @@ typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat
 
 结构体用于描述位图像素的格式，包括颜色类型和透明度类型。
 
-<!--Device-typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat--><!--Device-typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_bitmap.h](capi-drawing-bitmap-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Drawing_BitmapFormat {...} OH_Drawing_BitmapFormat
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorFormat | 描述位图像素的存储格式。<br><!--Device-OH_Drawing_ColorFormat colorFormat--><!--Device-OH_Drawing_ColorFormat colorFormat-End--> |
-| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaFormat | 描述位图像素的透明度分量。<br><!--Device-OH_Drawing_AlphaFormat alphaFormat--><!--Device-OH_Drawing_AlphaFormat alphaFormat-End--> |
+| [OH_Drawing_ColorFormat](capi-drawing-types-h.md#oh_drawing_colorformat) colorFormat | 描述位图像素的存储格式。 |
+| [OH_Drawing_AlphaFormat](capi-drawing-types-h.md#oh_drawing_alphaformat) alphaFormat | 描述位图像素的透明度分量。 |
 
 

@@ -2,5 +2,3 @@
 
 ## Overview
 
-<!--Device-struct cpu_set_t {...}--><!--Device-struct cpu_set_t {...}-End-->
-

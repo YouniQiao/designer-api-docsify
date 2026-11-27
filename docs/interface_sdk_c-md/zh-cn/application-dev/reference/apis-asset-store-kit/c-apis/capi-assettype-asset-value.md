@@ -8,13 +8,11 @@ typedef union Asset_Value {...} Asset_Value
 
 关键资产属性的值（内容）。
 
-<!--Device-typedef union Asset_Value {...} Asset_Value--><!--Device-typedef union Asset_Value {...} Asset_Value-End-->
-
 **系统能力：** SystemCapability.Security.Asset
 
 **起始版本：** 11
 
-**相关模块：** [AssetType](capi-asset-store-kit-assettype.md)
+**相关模块：** [AssetType](capi-assettype.md)
 
 **所在头文件：** [asset_type.h](capi-asset-type-h.md)
 
@@ -24,8 +22,8 @@ typedef union Asset_Value {...} Asset_Value
 
 | 名称 | 描述 |
 | -- | -- |
-| bool boolean | 该字段用于传入bool类型的属性值。<br><!--Device-bool boolean--><!--Device-bool boolean-End--> |
-| uint32_t u32 | 该字段用于传入uint32类型的属性值。<br><!--Device-uint32_t u32--><!--Device-uint32_t u32-End--> |
-| [Asset_Blob](capi-assettype-asset-blob.md) blob | 该字段用于传入bytes类型的属性值。<br><!--Device-Asset_Blob blob--><!--Device-Asset_Blob blob-End--> |
+| bool boolean | 该字段用于传入bool类型的关键资产。 |
+| uint32_t u32 | 该字段用于传入uint32类型的关键资产。 |
+| [Asset_Blob](capi-assettype-asset-blob.md) blob | 该字段用于传入bytes类型的关键资产。 |
 
 

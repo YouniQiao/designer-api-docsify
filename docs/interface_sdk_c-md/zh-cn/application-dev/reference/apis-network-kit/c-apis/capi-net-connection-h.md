@@ -6,19 +6,11 @@
 
 **库：** libnet_connection.so
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
-**相关模块：** [NetConnection](capi-network-kit-netconnection.md)
+**相关模块：** [NetConnection](capi-netconnection.md)
 
 ## 汇总
-
-### 宏定义
-
-| 名称 | 描述 |
-| -- | -- |
-| NATIVE_NET_CONN_API_H | 为网络管理数据网络连接模块提供C接口。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Communication.NetManager.Core |
 
 ### 函数
 
@@ -33,10 +25,10 @@
 | [int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)](#oh_netconn_getaddrinfo) | 通过netId获取DNS结果。 |
 | [int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)](#oh_netconn_freednsresult) | 释放DNS结果。 |
 | [int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)](#oh_netconn_getallnets) | 查询所有激活的数据网络。 |
-| [int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#ohos_netconn_registerdnsresolver) | 注册自定义DNS解析器。(已废弃) |
-| [int32_t OHOS_NetConn_UnregisterDnsResolver(void)](#ohos_netconn_unregisterdnsresolver) | 取消注册自定义DNS解析器。(已废弃) |
-| [int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registerdnsresolver) | 注册自定义DNS解析器。不再使用时，应调用 [OH_NetConn_UnregisterDnsResolver](capi-net-connection-h.md#oh_netconn_unregisterdnsresolver)注销自定义DNS解析器。 <br>建议使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)接口注册。当使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)时，需要使用 [OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)接口取消注册。(已废弃) |
-| [int32_t OH_NetConn_UnregisterDnsResolver(void)](#oh_netconn_unregisterdnsresolver) | 取消注册自定义DNS解析器。(已废弃) |
+| [int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#ohos_netconn_registerdnsresolver) | 注册自定义DNS解析器。(API13废弃) |
+| [int32_t OHOS_NetConn_UnregisterDnsResolver(void)](#ohos_netconn_unregisterdnsresolver) | 取消注册自定义DNS解析器。(API13废弃) |
+| [int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registerdnsresolver) | 注册自定义DNS解析器。不再使用时，应调用 [OH_NetConn_UnregisterDnsResolver](capi-net-connection-h.md#oh_netconn_unregisterdnsresolver)注销自定义DNS解析器。 <br>建议使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)接口注册。当使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)时，需要使用 [OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)接口取消注册。(API26.0.0废弃) |
+| [int32_t OH_NetConn_UnregisterDnsResolver(void)](#oh_netconn_unregisterdnsresolver) | 取消注册自定义DNS解析器。(API26.0.0废弃) |
 | [int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registercustomdnsresolver) | 注册自定义DNS解析器。注册后，系统DNS解析请求将优先回调该解析器，由开发者按需返回自定义解析结果；若未返回自定义结果，则继续使用系统默认DNS解析规则。 <br>同一时间全局仅支持一个自定义DNS解析器生效。如需更换解析器，应先调用[OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)注销已注册的解析器，再重新注册。 <br>作用范围：适用于系统DNS查询，以及应用通过系统网络库发起的DNS查询；不适用于应用自行实现的HTTPDNS解析、加密DNS解析（如 DoH/DoT）等非系统 DNS 通道的解析请求。不再使用时，应调用 [OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)注销自定义DNS解析器。 |
 | [int32_t OH_NetConn_UnregisterCustomDnsResolver(void)](#oh_netconn_unregistercustomdnsresolver) | 取消注册自定义DNS解析器。 |
 | [int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)](#oh_netconn_bindsocket) | 将套接字绑定到特定的网络。 |
@@ -64,10 +56,6 @@ int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)
 
 查询是否有默认激活的数据网络。
 
-<!--Device-int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)--><!--Device-int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 11
@@ -93,10 +81,6 @@ int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)
 **描述：**
 
 获取激活的默认的数据网络。
-
-<!--Device-int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)--><!--Device-int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -124,10 +108,6 @@ int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)
 
 查询默认数据网络是否计流量。
 
-<!--Device-int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)--><!--Device-int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 11
@@ -153,10 +133,6 @@ int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn
 **描述：**
 
 查询某个数据网络的链路信息。
-
-<!--Device-int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *prop)--><!--Device-int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *prop)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -185,10 +161,6 @@ int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetC
 
 查询某个网络的能力集。
 
-<!--Device-int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)--><!--Device-int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 11
@@ -216,10 +188,6 @@ int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)
 
 查询默认的网络代理。
 
-<!--Device-int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)--><!--Device-int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
 **参数：**
@@ -243,10 +211,6 @@ int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, st
 **描述：**
 
 通过netId获取DNS结果。
-
-<!--Device-int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)--><!--Device-int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -278,10 +242,6 @@ int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)
 
 释放DNS结果。
 
-<!--Device-int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)--><!--Device-int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.INTERNET
 
 **起始版本：** 11
@@ -308,10 +268,6 @@ int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)
 
 查询所有激活的数据网络。
 
-<!--Device-int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)--><!--Device-int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 11
@@ -337,10 +293,6 @@ int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)
 **描述：**
 
 注册自定义DNS解析器。
-
-<!--Device-int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 11
 
@@ -370,10 +322,6 @@ int32_t OHOS_NetConn_UnregisterDnsResolver(void)
 
 取消注册自定义DNS解析器。
 
-<!--Device-int32_t OHOS_NetConn_UnregisterDnsResolver(void)--><!--Device-int32_t OHOS_NetConn_UnregisterDnsResolver(void)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
 **废弃版本：** 13
@@ -395,10 +343,6 @@ int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)
 **描述：**
 
 注册自定义DNS解析器。不再使用时，应调用 [OH_NetConn_UnregisterDnsResolver](capi-net-connection-h.md#oh_netconn_unregisterdnsresolver)注销自定义DNS解析器。 <br>建议使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)接口注册。当使用[OH_NetConn_RegisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_registercustomdnsresolver)时，需要使用 [OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)接口取消注册。
-
-<!--Device-int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 13
 
@@ -428,10 +372,6 @@ int32_t OH_NetConn_UnregisterDnsResolver(void)
 
 取消注册自定义DNS解析器。
 
-<!--Device-int32_t OH_NetConn_UnregisterDnsResolver(void)--><!--Device-int32_t OH_NetConn_UnregisterDnsResolver(void)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 13
 
 **废弃版本：** 26.0.0
@@ -453,10 +393,6 @@ int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolv
 **描述：**
 
 注册自定义DNS解析器。注册后，系统DNS解析请求将优先回调该解析器，由开发者按需返回自定义解析结果；若未返回自定义结果，则继续使用系统默认DNS解析规则。 <br>同一时间全局仅支持一个自定义DNS解析器生效。如需更换解析器，应先调用[OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)注销已注册的解析器，再重新注册。 <br>作用范围：适用于系统DNS查询，以及应用通过系统网络库发起的DNS查询；不适用于应用自行实现的HTTPDNS解析、加密DNS解析（如 DoH/DoT）等非系统 DNS 通道的解析请求。不再使用时，应调用 [OH_NetConn_UnregisterCustomDnsResolver](capi-net-connection-h.md#oh_netconn_unregistercustomdnsresolver)注销自定义DNS解析器。
-
-<!--Device-int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 26.0.0
 
@@ -482,10 +418,6 @@ int32_t OH_NetConn_UnregisterCustomDnsResolver(void)
 
 取消注册自定义DNS解析器。
 
-<!--Device-int32_t OH_NetConn_UnregisterCustomDnsResolver(void)--><!--Device-int32_t OH_NetConn_UnregisterCustomDnsResolver(void)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 26.0.0
 
 **返回值：**
@@ -503,10 +435,6 @@ int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)
 **描述：**
 
 将套接字绑定到特定的网络。
-
-<!--Device-int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)--><!--Device-int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 12
 
@@ -533,10 +461,6 @@ int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)
 
 为当前应用设置http代理配置信息。
 
-<!--Device-int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)--><!--Device-int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -560,10 +484,6 @@ int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange ap
 **描述：**
 
 注册监听应用http代理变化的回调。
-
-<!--Device-int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange appHttpProxyChange, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange appHttpProxyChange, uint32_t *callbackId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 12
 
@@ -590,10 +510,6 @@ void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)
 
 注销监听应用http代理变化的回调。
 
-<!--Device-void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)--><!--Device-void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -611,10 +527,6 @@ int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxy
 **描述：**
 
 请求全局HTTP代理重新认证，并通过一次性回调报告结果。<br> 该函数提交异步重新认证请求。返回值为0表示请求已被接受，不表示重新认证成功。 最终结果通过回调报告。<br><br> 如果该函数返回0，回调最多会被调用一次。回调被调用后，将由系统自动释放。<br><br> 如果该函数返回非0值，回调不会被调用。<br><br> 回调可能在系统工作线程上调用。调用者必须确保回调实现是线程安全的并快速返回。<br><br> 调用者必须确保回调函数和userData在回调被调用之前保持有效。
-
-<!--Device-int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)--><!--Device-int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -642,10 +554,6 @@ int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetC
 **描述：**
 
 注册监听网络状态变化的回调。
-
-<!--Device-int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetConn_NetConnCallback *netConnCallback, uint32_t timeout, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetConn_NetConnCallback *netConnCallback, uint32_t timeout, uint32_t *callbackId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -676,10 +584,6 @@ int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netCo
 
 注册监听默认网络状态变化的回调。
 
-<!--Device-int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netConnCallback, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netConnCallback, uint32_t *callbackId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 12
@@ -707,10 +611,6 @@ int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)
 
 注销监听网络状态变化的回调。
 
-<!--Device-int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)--><!--Device-int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 12
@@ -736,10 +636,6 @@ NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)
 **描述：**
 
 设置当前PAC脚本（Proxy Auto-Configuration Script，代理自动配置脚本）的URL地址，比如：http://127.0.0.1:21998/PacProxyScript.pac。 通过解析脚本地址可以获取代理信息。
-
-<!--Device-NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)--><!--Device-NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.SET_PAC_URL
 
@@ -767,10 +663,6 @@ NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)
 
 获取系统级代理自动配置（PAC）脚本地址。
 
-<!--Device-NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)--><!--Device-NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 15
 
 **参数：**
@@ -794,10 +686,6 @@ int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn
 **描述：**
 
 查询网络探测结果。若出现异常（例如断网），导致发送请求失败，则接口会立即返回，不再进行后续探测。本接口涉及网络操作，避免在主流程调用，否则可能导致UI卡顿。
-
-<!--Device-int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)--><!--Device-int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -826,10 +714,6 @@ int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *
 **描述：**
 
 查询网络跟踪路由。
-
-<!--Device-int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *option, NetConn_TraceRouteInfo *traceRouteInfo)--><!--Device-int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *option, NetConn_TraceRouteInfo *traceRouteInfo)-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **需要权限：** ohos.permission.INTERNET and ohos.permission.LOCATION and ohos.permission.ACCESS_NET_TRACE_INFO
 

@@ -6,15 +6,13 @@ typedef struct OH_DisplaySoloist OH_DisplaySoloist
 
 ## Overview
 
-Declares the OH_DisplaySoloist struct, which is used for native-side services that need to implement frame rate control on a dedicated thread.
-
-<!--Device-typedef struct OH_DisplaySoloist OH_DisplaySoloist--><!--Device-typedef struct OH_DisplaySoloist OH_DisplaySoloist-End-->
+Provides the declaration of an **OH_DisplaySoloist** struct.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.HyperGraphicManager
 
 **Since**: 12
 
-**Related module**: [NativeDisplaySoloist](capi-arkgraphics2d-nativedisplaysoloist.md)
+**Related module**: [NativeDisplaySoloist](capi-nativedisplaysoloist.md)
 
 **Header file**: [native_display_soloist.h](capi-native-display-soloist-h.md)
 

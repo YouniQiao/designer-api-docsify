@@ -1,20 +1,18 @@
 # VkMemoryGetNativeBufferInfoOHOS
 
 ```c
-typedef struct VkMemoryGetNativeBufferInfoOHOS {...} VkMemoryGetNativeBufferInfoOHOS
+struct VkMemoryGetNativeBufferInfoOHOS {...}
 ```
 
 ## Overview
 
 Defines a struct used to obtain an <b>OH_NativeBuffer</b> from the Vulkan memory.
 
-<!--Device-struct VkMemoryGetNativeBufferInfoOHOS {...}--><!--Device-struct VkMemoryGetNativeBufferInfoOHOS {...}-End-->
-
 **System capability**: SystemCapability.Graphic.Vulkan
 
 **Since**: 10
 
-**Related module**: [Vulkan](capi-arkgraphics2d-vulkan.md)
+**Related module**: [Vulkan](capi-vulkan.md)
 
 **Header file**: [vulkan_ohos.h](capi-vulkan-ohos-h.md)
 
@@ -24,8 +22,8 @@ Defines a struct used to obtain an <b>OH_NativeBuffer</b> from the Vulkan memory
 
 | Name | Description |
 | -- | -- |
-| VkStructureType sType | sType is a VkStructureType value identifying this structure. sType must be VK_STRUCTURE_TYPE_MEMORY_GET_NATIVE_BUFFER_INFO_OHOS.<br><!--Device-VkStructureType sType--><!--Device-VkStructureType sType-End--> |
-| const void* pNext | pNext is NULL or a pointer to a structure extending this structure. pNext must be NULL<br><!--Device-const void* pNext--><!--Device-const void* pNext-End--> |
-| VkDeviceMemory memory | memory is a valid VkDeviceMemory object from which the Open Harmony OS native buffer will be exported. memory must be a valid VkDeviceMemory handle<br><!--Device-VkDeviceMemory memory--><!--Device-VkDeviceMemory memory-End--> |
+| VkStructureType sType | sType is a VkStructureType value identifying this structure. sType must be VK_STRUCTURE_TYPE_MEMORY_GET_NATIVE_BUFFER_INFO_OHOS. |
+| const void* pNext | pNext is NULL or a pointer to a structure extending this structure. pNext must be NULL |
+| VkDeviceMemory memory | memory is a valid VkDeviceMemory object from which the Open Harmony OS native buffer will be exported. memory must be a valid VkDeviceMemory handle |
 
 

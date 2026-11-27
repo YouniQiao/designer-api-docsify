@@ -6,39 +6,37 @@ The file declares the common structs, character constants, and enums used for ru
 
 **Library**: libnative_avscreen_capture.so
 
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
-**Related module**: [AVScreenCapture](capi-media-kit-avscreencapture.md)
+**Related module**: [AVScreenCapture](capi-avscreencapture.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioCaptureInfo](capi-avscreencapture-oh-audiocaptureinfo.md) | OH_AudioCaptureInfo | The struct describes the audio capture information. |
-| [OH_AudioEncInfo](capi-avscreencapture-oh-audioencinfo.md) | OH_AudioEncInfo | The struct describes the audio encoding information. |
-| [OH_AudioInfo](capi-avscreencapture-oh-audioinfo.md) | OH_AudioInfo | The struct describes the audio information. |
-| [OH_VideoCaptureInfo](capi-avscreencapture-oh-videocaptureinfo.md) | OH_VideoCaptureInfo | The struct describes the video capture information. When **videoFrameWidth** and **videoFrameHeight** are both **0**, video-related parameters are ignored and screen data is not recorded. |
-| [OH_VideoEncInfo](capi-avscreencapture-oh-videoencinfo.md) | OH_VideoEncInfo | The struct describes the video encoding information. |
-| [OH_VideoInfo](capi-avscreencapture-oh-videoinfo.md) | OH_VideoInfo | The struct describes the video information. |
-| [OH_RecorderInfo](capi-avscreencapture-oh-recorderinfo.md) | OH_RecorderInfo | The struct describes the recording file information. |
-| [OH_AVScreenCaptureConfig](capi-avscreencapture-oh-avscreencaptureconfig.md) | OH_AVScreenCaptureConfig | The struct describes the screen capture configuration. |
-| [OH_PrivacyProtectInfo](capi-avscreencapture-oh-privacyprotectinfo.md) | OH_PrivacyProtectInfo | Defines the privacy protection information. |
-| [OH_AVScreenCaptureCallback](capi-avscreencapture-oh-avscreencapturecallback.md) | OH_AVScreenCaptureCallback | Defines all the asynchronous callback function pointers of an **OH_AVScreenCapture** instance. To ensure the normal running of **OH_AVScreenCapture**, you must register the instance of this struct with the **<br>OH_AVScreenCapture** instance to process the information reported by the callback functions. |
-| [OH_Rect](capi-avscreencapture-oh-rect.md) | OH_Rect | The struct describes the width, height, and image information of the rectangle used for screen capture. |
-| [OH_AudioBuffer](capi-avscreencapture-oh-audiobuffer.md) | OH_AudioBuffer | The struct describes the configuration such as the size, type, and timestamp of audio data. |
-| [OH_AVScreenCaptureHighlightConfig](capi-avscreencapture-oh-avscreencapturehighlightconfig.md) | OH_AVScreenCaptureHighlightConfig | The struct describes the style of the highlight border shown during screen capture, including its shape, thickness, and color. |
-| [OH_MultiDisplayCapability](capi-avscreencapture-oh-multidisplaycapability.md) | OH_MultiDisplayCapability | Defines a struct for the multi-screen recording capability. It includes whether the multi-screen supports joint recording and the width and height of the screen for joint recording. |
+| [OH_AudioCaptureInfo](capi-avscreencapture-oh-audiocaptureinfo.md) | - | The struct describes the audio capture information. |
+| [OH_AudioEncInfo](capi-avscreencapture-oh-audioencinfo.md) | - | The struct describes the audio encoding information. |
+| [OH_AudioInfo](capi-avscreencapture-oh-audioinfo.md) | - | The struct describes the audio information. |
+| [OH_VideoCaptureInfo](capi-avscreencapture-oh-videocaptureinfo.md) | - | The struct describes the video capture information. When **videoFrameWidth** and **videoFrameHeight** are both **0**, video-related parameters are ignored and screen data is not recorded. |
+| [OH_VideoEncInfo](capi-avscreencapture-oh-videoencinfo.md) | - | The struct describes the video encoding information. |
+| [OH_VideoInfo](capi-avscreencapture-oh-videoinfo.md) | - | The struct describes the video information. |
+| [OH_RecorderInfo](capi-avscreencapture-oh-recorderinfo.md) | - | The struct describes the recording file information. |
+| [OH_AVScreenCaptureConfig](capi-avscreencapture-oh-avscreencaptureconfig.md) | - | The struct describes the screen capture configuration. |
+| [OH_PrivacyProtectInfo](capi-avscreencapture-oh-privacyprotectinfo.md) | - | Defines the privacy protection information. |
+| [OH_AVScreenCaptureCallback](capi-avscreencapture-oh-avscreencapturecallback.md) | - | Defines all the asynchronous callback function pointers of an **OH_AVScreenCapture** instance. To ensure the normal running of **OH_AVScreenCapture**, you must register the instance of this struct with the **<br>OH_AVScreenCapture** instance to process the information reported by the callback functions. |
+| [OH_Rect](capi-avscreencapture-oh-rect.md) | - | The struct describes the width, height, and image information of the rectangle used for screen capture. |
+| [OH_AudioBuffer](capi-avscreencapture-oh-audiobuffer.md) | - | The struct describes the configuration such as the size, type, and timestamp of audio data. |
+| [OH_AVScreenCaptureHighlightConfig](capi-avscreencapture-oh-avscreencapturehighlightconfig.md) | - | The struct describes the style of the highlight border shown during screen capture, including its shape, thickness, and color. |
+| [OH_MultiDisplayCapability](capi-avscreencapture-oh-multidisplaycapability.md) | - | Defines a struct for the multi-screen recording capability. It includes whether the multi-screen supports joint recording and the width and height of the screen for joint recording. |
 | [OH_NativeBuffer](capi-avscreencapture-oh-nativebuffer.md) | OH_NativeBuffer | The struct describes the native video stream class for screen capture. |
 | [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) | OH_AVScreenCapture | Defines all the asynchronous callback function pointers of an **OH_AVScreenCapture** instance. To ensure the normal running of **OH_AVScreenCapture**, you must register the instance of this struct with the **<br>OH_AVScreenCapture** instance to process the information reported by the callback functions. |
 | [OH_AVScreenCapture_ContentFilter](capi-avscreencapture-oh-avscreencapture-contentfilter.md) | OH_AVScreenCapture_ContentFilter | The OH_AVScreenCapture_ContentFilter struct describes the filter used to filter audio and video content. |
 | [OH_AVScreenCapture_CaptureStrategy](capi-avscreencapture-oh-avscreencapture-capturestrategy.md) | OH_AVScreenCapture_CaptureStrategy | The OH_AVScreenCapture_CaptureStrategy struct describes the screen capture strategy. |
 | [OH_AVScreenCapture_UserSelectionInfo](capi-avscreencapture-oh-avscreencapture-userselectioninfo.md) | OH_AVScreenCapture_UserSelectionInfo | The OH_AVScreenCapture_UserSelectionInfo struct describes the parameters selected by the user on the authorization UI (selection UI). |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -56,9 +54,14 @@ The file declares the common structs, character constants, and enums used for ru
 | [OH_ScreenCaptureHighlightMode](#oh_screencapturehighlightmode) | OH_ScreenCaptureHighlightMode | Enumerates the display modes of the highlight border shown during screen capture. |
 | [OH_AVScreenCapture_FillMode](#oh_avscreencapture_fillmode) | OH_AVScreenCapture_FillMode | Enumerates the image fill modes. |
 | [OH_CapturePickerMode](#oh_capturepickermode) | OH_CapturePickerMode | Enumerates the display modes of the picker. |
-| [typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum](#typedef  oh_avscreencapture_autopausecapturesceneenum) | - | Scene Enumeration for Auto Pause Screen Capture. |
 
-### Functions
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NATIVE_AVSCREEN_CAPTURE_BASE_H | The file declares the common structs, character constants, and enums used for running screen capture.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -73,13 +76,21 @@ The file declares the common structs, character constants, and enums used for ru
 | [typedef void (\*OH_AVScreenCapture_OnUserSelected)(OH_AVScreenCapture* capture, OH_AVScreenCapture_UserSelectionInfo* selections, void *userData)](#oh_avscreencapture_onuserselected) | OH_AVScreenCapture_OnUserSelected | Called to return the parameters selected by the user on the authorization UI to the application. |
 | [typedef void (\*OH_AVScreenCapture_OnPrivacyProtect)(OH_AVScreenCapture* capture, OH_PrivacyProtectInfo* privacyProtect, void *userData)](#oh_avscreencapture_onprivacyprotect) | OH_AVScreenCapture_OnPrivacyProtect | Called when a privacy protection event occurs during the running of the [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) instance. |
 
-### Variables
+### Variable
 
 | Name | Description |
 | -- | -- |
-| const char *OH_SCREEN_CAPTURE_CONTENT_RECT | Key for obtaining the valid content area information in the screen recording image frame. The returned value is an int32_t array. The array length is 4. The array elements are defined as [top,left,width,height]. The value can be obtained from [OH_AVFormat_GetIntBuffer](../../apis-avcodec-kit/c-apis/capi-native-avformat-h.md#oh_avformat_getintbuffer).<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture<br><!--Device-const char *OH_SCREEN_CAPTURE_CONTENT_RECT--><!--Device-const char *OH_SCREEN_CAPTURE_CONTENT_RECT-End--> |
-| uint32_t OH_AVScreenCapture_AutoPauseSceneSet | Conditional set declaration for auto pause screen capture.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture<br><!--Device-uint32_t OH_AVScreenCapture_AutoPauseSceneSet--><!--Device-uint32_t OH_AVScreenCapture_AutoPauseSceneSet-End--> |
-| typedef uint32_t OH_AVScreenCapture_AutoPauseSceneSet | Conditional set declaration for auto pause screen capture.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture<br><!--Device-typedef uint32_t OH_AVScreenCapture_AutoPauseSceneSet--><!--Device-typedef uint32_t OH_AVScreenCapture_AutoPauseSceneSet-End--> |
+| const char *OH_SCREEN_CAPTURE_CONTENT_RECT | Key for obtaining the valid content area information in the screen recording image frame. The returned value is an int32_t array. The array length is 4. The array elements are defined as [top,left,width,height]. The value can be obtained from [OH_AVFormat_GetIntBuffer](capi-native-avformat-h.md#oh_avformat_getintbuffer).<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCaptureOnError)(OH_AVScreenCapture *capture, int32_t errorCode) | Called when an error occurs during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnError](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onerror) instead.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCaptureOnAudioBufferAvailable)(OH_AVScreenCapture *capture, bool isReady, OH_AudioCaptureSourceType type) | Called when an audio buffer is available during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnBufferAvailable](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onbufferavailable) instead.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCaptureOnVideoBufferAvailable)(OH_AVScreenCapture *capture, bool isReady) | Called when a video buffer is available during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnBufferAvailable](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onbufferavailable) instead.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnStateChange)(struct OH_AVScreenCapture *capture, OH_AVScreenCaptureStateCode stateCode, void *userData) | Called when the state changes during the running of an OH_AVScreenCapture instance.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnError)(OH_AVScreenCapture *capture, int32_t errorCode, void *userData) | Called when an error occurs during the running of an OH_AVScreenCapture instance.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnBufferAvailable)(OH_AVScreenCapture *capture, OH_AVBuffer *buffer, OH_AVScreenCaptureBufferType bufferType, int64_t timestamp, void *userData) | Called when an audio buffer or a video buffer is available during the running of an OH_AVScreenCapture instance.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnDisplaySelected)(OH_AVScreenCapture *capture, uint64_t displayId, void *userData) | When one of the display devices start being captured, the function pointer will be called<br>**Since**: 15<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnCaptureContentChanged)(OH_AVScreenCapture* capture, OH_AVScreenCaptureContentChangedEvent event, OH_Rect* area, void *userData) | Called when the screen capture content changes during the running of an OH_AVScreenCapture instance.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnUserSelected)(OH_AVScreenCapture* capture, OH_AVScreenCapture_UserSelectionInfo* selections, void *userData) | Called to return the parameters selected by the user on the authorization UI to the application.<br>**Since**: 20<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+| void (*OH_AVScreenCapture_OnPrivacyProtect)(OH_AVScreenCapture* capture, OH_PrivacyProtectInfo* privacyProtect, void *userData) | Called when a privacy protection event occurs during the running of the [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) instance.<br>**Since**: 24<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
 
 ## Enum type description
 
@@ -93,19 +104,14 @@ enum OH_CaptureMode
 
 Enumerates the screen capture modes.
 
-<!--Device-enum OH_CaptureMode--><!--Device-enum OH_CaptureMode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAPTURE_HOME_SCREEN = 0 | capture home screen<br><!--Device-OH_CAPTURE_HOME_SCREEN = 0--><!--Device-OH_CAPTURE_HOME_SCREEN = 0-End--> |
-| OH_CAPTURE_SPECIFIED_SCREEN = 1 | capture a specified screen<br><!--Device-OH_CAPTURE_SPECIFIED_SCREEN = 1--><!--Device-OH_CAPTURE_SPECIFIED_SCREEN = 1-End--> |
-| OH_CAPTURE_SPECIFIED_WINDOW = 2 | capture a specified window<br><!--Device-OH_CAPTURE_SPECIFIED_WINDOW = 2--><!--Device-OH_CAPTURE_SPECIFIED_WINDOW = 2-End--> |
-| OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3 | Create a virtual extended screen and capture the contents of that screen<br>**Since**: 26.0.1<br><!--Device-OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3--><!--Device-OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3-End--> |
-| OH_CAPTURE_INVAILD = -1 | <!--Device-OH_CAPTURE_INVAILD = -1--><!--Device-OH_CAPTURE_INVAILD = -1-End--> |
+| OH_CAPTURE_HOME_SCREEN = 0 | capture home screen |
+| OH_CAPTURE_SPECIFIED_SCREEN = 1 | capture a specified screen |
+| OH_CAPTURE_SPECIFIED_WINDOW = 2 | capture a specified window |
+| OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3 | Create a virtual extended screen and capture the contents of that screen<br>**Since**: 26.1.0 |
 
 ### OH_AudioCaptureSourceType
 
@@ -117,19 +123,15 @@ enum OH_AudioCaptureSourceType
 
 Enumerates the audio source types during screen capture.
 
-<!--Device-enum OH_AudioCaptureSourceType--><!--Device-enum OH_AudioCaptureSourceType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_SOURCE_INVALID = -1 | Invalid audio source<br><!--Device-OH_SOURCE_INVALID = -1--><!--Device-OH_SOURCE_INVALID = -1-End--> |
-| OH_SOURCE_DEFAULT = 0 | Default audio source<br><!--Device-OH_SOURCE_DEFAULT = 0--><!--Device-OH_SOURCE_DEFAULT = 0-End--> |
-| OH_MIC = 1 | Microphone<br><!--Device-OH_MIC = 1--><!--Device-OH_MIC = 1-End--> |
-| OH_ALL_PLAYBACK = 2 | inner all PlayBack<br><!--Device-OH_ALL_PLAYBACK = 2--><!--Device-OH_ALL_PLAYBACK = 2-End--> |
-| OH_APP_PLAYBACK = 3 | inner app PlayBack<br><!--Device-OH_APP_PLAYBACK = 3--><!--Device-OH_APP_PLAYBACK = 3-End--> |
+| OH_SOURCE_INVALID = -1 | Invalid audio source |
+| OH_SOURCE_DEFAULT = 0 | Default audio source |
+| OH_MIC = 1 | Microphone |
+| OH_ALL_PLAYBACK = 2 | inner all PlayBack |
+| OH_APP_PLAYBACK = 3 | inner app PlayBack |
 
 ### OH_AudioCodecFormat
 
@@ -141,17 +143,13 @@ enum OH_AudioCodecFormat
 
 Enumerates the audio encoding formats.
 
-<!--Device-enum OH_AudioCodecFormat--><!--Device-enum OH_AudioCodecFormat-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_AUDIO_DEFAULT = 0 | Default format<br><!--Device-OH_AUDIO_DEFAULT = 0--><!--Device-OH_AUDIO_DEFAULT = 0-End--> |
-| OH_AAC_LC = 3 | Advanced Audio Coding Low Complexity (AAC-LC)<br><!--Device-OH_AAC_LC = 3--><!--Device-OH_AAC_LC = 3-End--> |
-| OH_AUDIO_CODEC_FORMAT_BUTT | Invalid value<br><!--Device-OH_AUDIO_CODEC_FORMAT_BUTT--><!--Device-OH_AUDIO_CODEC_FORMAT_BUTT-End--> |
+| OH_AUDIO_DEFAULT = 0 | Default format |
+| OH_AAC_LC = 3 | Advanced Audio Coding Low Complexity (AAC-LC) |
+| OH_AUDIO_CODEC_FORMAT_BUTT | Invalid value |
 
 ### OH_VideoCodecFormat
 
@@ -163,21 +161,17 @@ enum OH_VideoCodecFormat
 
 Enumerates the video encoding formats.
 
-<!--Device-enum OH_VideoCodecFormat--><!--Device-enum OH_VideoCodecFormat-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_VIDEO_DEFAULT = 0 | Default format<br><!--Device-OH_VIDEO_DEFAULT = 0--><!--Device-OH_VIDEO_DEFAULT = 0-End--> |
-| OH_H264 = 2 | H.264<br><!--Device-OH_H264 = 2--><!--Device-OH_H264 = 2-End--> |
-| OH_H265 = 4 | H.265/HEVC<br><!--Device-OH_H265 = 4--><!--Device-OH_H265 = 4-End--> |
-| OH_MPEG4 = 6 | MPEG4<br><!--Device-OH_MPEG4 = 6--><!--Device-OH_MPEG4 = 6-End--> |
-| OH_VP8 = 8 | VP8<br><!--Device-OH_VP8 = 8--><!--Device-OH_VP8 = 8-End--> |
-| OH_VP9 = 10 | VP9<br><!--Device-OH_VP9 = 10--><!--Device-OH_VP9 = 10-End--> |
-| OH_VIDEO_CODEC_FORMAT_BUTT | Invalid format<br><!--Device-OH_VIDEO_CODEC_FORMAT_BUTT--><!--Device-OH_VIDEO_CODEC_FORMAT_BUTT-End--> |
+| OH_VIDEO_DEFAULT = 0 | Default format |
+| OH_H264 = 2 | H.264 |
+| OH_H265 = 4 | H.265/HEVC |
+| OH_MPEG4 = 6 | MPEG4 |
+| OH_VP8 = 8 | VP8 |
+| OH_VP9 = 10 | VP9 |
+| OH_VIDEO_CODEC_FORMAT_BUTT | Invalid format |
 
 ### OH_DataType
 
@@ -189,18 +183,13 @@ enum OH_DataType
 
 Enumerates the data types of screen capture streams.
 
-<!--Device-enum OH_DataType--><!--Device-enum OH_DataType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_ORIGINAL_STREAM = 0 | YUV/RGBA/PCM, etc. original stream<br><!--Device-OH_ORIGINAL_STREAM = 0--><!--Device-OH_ORIGINAL_STREAM = 0-End--> |
-| OH_ENCODED_STREAM = 1 | h264/AAC, etc. encoded stream<br><!--Device-OH_ENCODED_STREAM = 1--><!--Device-OH_ENCODED_STREAM = 1-End--> |
-| OH_CAPTURE_FILE = 2 | mp4 file<br><!--Device-OH_CAPTURE_FILE = 2--><!--Device-OH_CAPTURE_FILE = 2-End--> |
-| OH_INVAILD = -1 | <!--Device-OH_INVAILD = -1--><!--Device-OH_INVAILD = -1-End--> |
+| OH_ORIGINAL_STREAM = 0 | YUV/RGBA/PCM, etc. original stream |
+| OH_ENCODED_STREAM = 1 | h264/AAC, etc. encoded stream |
+| OH_CAPTURE_FILE = 2 | mp4 file |
 
 ### OH_VideoSourceType
 
@@ -212,18 +201,14 @@ enum OH_VideoSourceType
 
 Enumerates the video source formats. Currently, only the RGBA format is supported.
 
-<!--Device-enum OH_VideoSourceType--><!--Device-enum OH_VideoSourceType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| OH_VIDEO_SOURCE_SURFACE_YUV = 0 | RGBA format.<br><!--Device-OH_VIDEO_SOURCE_SURFACE_YUV = 0--><!--Device-OH_VIDEO_SOURCE_SURFACE_YUV = 0-End--> |
-| OH_VIDEO_SOURCE_SURFACE_ES | Raw encoded data provided through graphic<br><!--Device-OH_VIDEO_SOURCE_SURFACE_ES--><!--Device-OH_VIDEO_SOURCE_SURFACE_ES-End--> |
-| OH_VIDEO_SOURCE_SURFACE_RGBA | RGBA video data provided through graphic<br><!--Device-OH_VIDEO_SOURCE_SURFACE_RGBA--><!--Device-OH_VIDEO_SOURCE_SURFACE_RGBA-End--> |
-| OH_VIDEO_SOURCE_BUTT | Invalid value<br><!--Device-OH_VIDEO_SOURCE_BUTT--><!--Device-OH_VIDEO_SOURCE_BUTT-End--> |
+| OH_VIDEO_SOURCE_SURFACE_YUV = 0 | RGBA format. |
+| OH_VIDEO_SOURCE_SURFACE_ES | Raw encoded data provided through graphic |
+| OH_VIDEO_SOURCE_SURFACE_RGBA | RGBA video data provided through graphic |
+| OH_VIDEO_SOURCE_BUTT | Invalid value |
 
 ### OH_ContainerFormatType
 
@@ -235,16 +220,12 @@ enum OH_ContainerFormatType
 
 Enumerates the types of files generated during screen capture.
 
-<!--Device-enum OH_ContainerFormatType--><!--Device-enum OH_ContainerFormatType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 | Enum item | Description |
 | -- | -- |
-| CFT_MPEG_4A = 0 | Audio format type -- m4a<br><!--Device-CFT_MPEG_4A = 0--><!--Device-CFT_MPEG_4A = 0-End--> |
-| CFT_MPEG_4 = 1 | Video format type -- mp4<br><!--Device-CFT_MPEG_4 = 1--><!--Device-CFT_MPEG_4 = 1-End--> |
+| CFT_MPEG_4A = 0 | Audio format type -- m4a |
+| CFT_MPEG_4 = 1 | Video format type -- mp4 |
 
 ### OH_AVScreenCaptureStateCode
 
@@ -256,29 +237,25 @@ enum OH_AVScreenCaptureStateCode
 
 Enumerates the screen capture states.
 
-<!--Device-enum OH_AVScreenCaptureStateCode--><!--Device-enum OH_AVScreenCaptureStateCode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCREEN_CAPTURE_STATE_STARTED = 0 | Screen capture started by user<br><!--Device-OH_SCREEN_CAPTURE_STATE_STARTED = 0--><!--Device-OH_SCREEN_CAPTURE_STATE_STARTED = 0-End--> |
-| OH_SCREEN_CAPTURE_STATE_CANCELED = 1 | Screen capture canceled by user<br><!--Device-OH_SCREEN_CAPTURE_STATE_CANCELED = 1--><!--Device-OH_SCREEN_CAPTURE_STATE_CANCELED = 1-End--> |
-| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER = 2 | ScreenCapture stopped by user<br><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER = 2--><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER = 2-End--> |
-| OH_SCREEN_CAPTURE_STATE_INTERRUPTED_BY_OTHER = 3 | ScreenCapture interrupted by other screen capture<br><!--Device-OH_SCREEN_CAPTURE_STATE_INTERRUPTED_BY_OTHER = 3--><!--Device-OH_SCREEN_CAPTURE_STATE_INTERRUPTED_BY_OTHER = 3-End--> |
-| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_CALL = 4 | ScreenCapture stopped by SIM call<br><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_CALL = 4--><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_CALL = 4-End--> |
-| OH_SCREEN_CAPTURE_STATE_MIC_UNAVAILABLE = 5 | Microphone is temporarily unavailable<br><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_UNAVAILABLE = 5--><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_UNAVAILABLE = 5-End--> |
-| OH_SCREEN_CAPTURE_STATE_MIC_MUTED_BY_USER = 6 | Microphone is muted by user<br><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_MUTED_BY_USER = 6--><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_MUTED_BY_USER = 6-End--> |
-| OH_SCREEN_CAPTURE_STATE_MIC_UNMUTED_BY_USER = 7 | Microphone is unmuted by user<br><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_UNMUTED_BY_USER = 7--><!--Device-OH_SCREEN_CAPTURE_STATE_MIC_UNMUTED_BY_USER = 7-End--> |
-| OH_SCREEN_CAPTURE_STATE_ENTER_PRIVATE_SCENE = 8 | Current captured screen has private window<br><!--Device-OH_SCREEN_CAPTURE_STATE_ENTER_PRIVATE_SCENE = 8--><!--Device-OH_SCREEN_CAPTURE_STATE_ENTER_PRIVATE_SCENE = 8-End--> |
-| OH_SCREEN_CAPTURE_STATE_EXIT_PRIVATE_SCENE = 9 | Private window disappeared on current captured screen<br><!--Device-OH_SCREEN_CAPTURE_STATE_EXIT_PRIVATE_SCENE = 9--><!--Device-OH_SCREEN_CAPTURE_STATE_EXIT_PRIVATE_SCENE = 9-End--> |
-| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10 | ScreenCapture stopped by user switches<br><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10--><!--Device-OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10-End--> |
-| OH_SCREEN_CAPTURE_STATE_PAUSED_BY_USER = 11 | Screen capture paused by user<br>**Since**: 26.0.0<br><!--Device-OH_SCREEN_CAPTURE_STATE_PAUSED_BY_USER = 11--><!--Device-OH_SCREEN_CAPTURE_STATE_PAUSED_BY_USER = 11-End--> |
-| OH_SCREEN_CAPTURE_STATE_RESUMED_BY_USER = 12 | Screen capture resumed by user<br>**Since**: 26.0.0<br><!--Device-OH_SCREEN_CAPTURE_STATE_RESUMED_BY_USER = 12--><!--Device-OH_SCREEN_CAPTURE_STATE_RESUMED_BY_USER = 12-End--> |
-| OH_SCREEN_CAPTURE_STATE_PAUSED_BY_APP = 13 | Screen capture paused by app<br>**Since**: 26.0.0<br><!--Device-OH_SCREEN_CAPTURE_STATE_PAUSED_BY_APP = 13--><!--Device-OH_SCREEN_CAPTURE_STATE_PAUSED_BY_APP = 13-End--> |
-| OH_SCREEN_CAPTURE_STATE_RESUMED_BY_APP = 14 | Screen capture resumed by app<br>**Since**: 26.0.0<br><!--Device-OH_SCREEN_CAPTURE_STATE_RESUMED_BY_APP = 14--><!--Device-OH_SCREEN_CAPTURE_STATE_RESUMED_BY_APP = 14-End--> |
+| OH_SCREEN_CAPTURE_STATE_STARTED = 0 | Screen capture started by user |
+| OH_SCREEN_CAPTURE_STATE_CANCELED = 1 | Screen capture canceled by user |
+| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER = 2 | ScreenCapture stopped by user |
+| OH_SCREEN_CAPTURE_STATE_INTERRUPTED_BY_OTHER = 3 | ScreenCapture interrupted by other screen capture |
+| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_CALL = 4 | ScreenCapture stopped by SIM call |
+| OH_SCREEN_CAPTURE_STATE_MIC_UNAVAILABLE = 5 | Microphone is temporarily unavailable |
+| OH_SCREEN_CAPTURE_STATE_MIC_MUTED_BY_USER = 6 | Microphone is muted by user |
+| OH_SCREEN_CAPTURE_STATE_MIC_UNMUTED_BY_USER = 7 | Microphone is unmuted by user |
+| OH_SCREEN_CAPTURE_STATE_ENTER_PRIVATE_SCENE = 8 | Current captured screen has private window |
+| OH_SCREEN_CAPTURE_STATE_EXIT_PRIVATE_SCENE = 9 | Private window disappeared on current captured screen |
+| OH_SCREEN_CAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10 | ScreenCapture stopped by user switches |
+| OH_SCREEN_CAPTURE_STATE_PAUSED_BY_USER = 11 | Screen capture paused by user<br>**Since**: 26.0.0 |
+| OH_SCREEN_CAPTURE_STATE_RESUMED_BY_USER = 12 | Screen capture resumed by user<br>**Since**: 26.0.0 |
+| OH_SCREEN_CAPTURE_STATE_PAUSED_BY_APP = 13 | Screen capture paused by app<br>**Since**: 26.0.0 |
+| OH_SCREEN_CAPTURE_STATE_RESUMED_BY_APP = 14 | Screen capture resumed by app<br>**Since**: 26.0.0 |
 
 ### OH_AVScreenCaptureBufferType
 
@@ -290,17 +267,13 @@ enum OH_AVScreenCaptureBufferType
 
 Enumerates the buffer types.
 
-<!--Device-enum OH_AVScreenCaptureBufferType--><!--Device-enum OH_AVScreenCaptureBufferType-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCREEN_CAPTURE_BUFFERTYPE_VIDEO = 0 | Buffer of video data from screen<br><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_VIDEO = 0--><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_VIDEO = 0-End--> |
-| OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_INNER = 1 | Buffer of audio data from inner capture<br><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_INNER = 1--><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_INNER = 1-End--> |
-| OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_MIC = 2 | Buffer of audio data from microphone<br><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_MIC = 2--><!--Device-OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_MIC = 2-End--> |
+| OH_SCREEN_CAPTURE_BUFFERTYPE_VIDEO = 0 | Buffer of video data from screen |
+| OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_INNER = 1 | Buffer of audio data from inner capture |
+| OH_SCREEN_CAPTURE_BUFFERTYPE_AUDIO_MIC = 2 | Buffer of audio data from microphone |
 
 ### OH_AVScreenCaptureFilterableAudioContent
 
@@ -312,16 +285,12 @@ enum OH_AVScreenCaptureFilterableAudioContent
 
 Enumerates the buffer types.
 
-<!--Device-enum OH_AVScreenCaptureFilterableAudioContent--><!--Device-enum OH_AVScreenCaptureFilterableAudioContent-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCREEN_CAPTURE_NOTIFICATION_AUDIO = 0 | Audio content of notification sound<br><!--Device-OH_SCREEN_CAPTURE_NOTIFICATION_AUDIO = 0--><!--Device-OH_SCREEN_CAPTURE_NOTIFICATION_AUDIO = 0-End--> |
-| OH_SCREEN_CAPTURE_CURRENT_APP_AUDIO = 1 | Audio content of the sound of the app itself<br><!--Device-OH_SCREEN_CAPTURE_CURRENT_APP_AUDIO = 1--><!--Device-OH_SCREEN_CAPTURE_CURRENT_APP_AUDIO = 1-End--> |
+| OH_SCREEN_CAPTURE_NOTIFICATION_AUDIO = 0 | Audio content of notification sound |
+| OH_SCREEN_CAPTURE_CURRENT_APP_AUDIO = 1 | Audio content of the sound of the app itself |
 
 ### OH_AVScreenCaptureContentChangedEvent
 
@@ -333,17 +302,13 @@ enum OH_AVScreenCaptureContentChangedEvent
 
 Enumerates the screen capture content change events.
 
-<!--Device-enum OH_AVScreenCaptureContentChangedEvent--><!--Device-enum OH_AVScreenCaptureContentChangedEvent-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCREEN_CAPTURE_CONTENT_HIDE = 0 | The screen capture content is hidden.<br><!--Device-OH_SCREEN_CAPTURE_CONTENT_HIDE = 0--><!--Device-OH_SCREEN_CAPTURE_CONTENT_HIDE = 0-End--> |
-| OH_SCREEN_CAPTURE_CONTENT_VISIBLE = 1 | The screen capture content is visible.<br><!--Device-OH_SCREEN_CAPTURE_CONTENT_VISIBLE = 1--><!--Device-OH_SCREEN_CAPTURE_CONTENT_VISIBLE = 1-End--> |
-| OH_SCREEN_CAPTURE_CONTENT_UNAVAILABLE = 2 | The screen capture content becomes unavailable. For example, the screen capture window is closed.<br><!--Device-OH_SCREEN_CAPTURE_CONTENT_UNAVAILABLE = 2--><!--Device-OH_SCREEN_CAPTURE_CONTENT_UNAVAILABLE = 2-End--> |
+| OH_SCREEN_CAPTURE_CONTENT_HIDE = 0 | The screen capture content is hidden. |
+| OH_SCREEN_CAPTURE_CONTENT_VISIBLE = 1 | The screen capture content is visible. |
+| OH_SCREEN_CAPTURE_CONTENT_UNAVAILABLE = 2 | The screen capture content becomes unavailable. For example, the screen capture window is closed. |
 
 ### OH_ScreenCaptureHighlightMode
 
@@ -355,16 +320,12 @@ enum OH_ScreenCaptureHighlightMode
 
 Enumerates the display modes of the highlight border shown during screen capture.
 
-<!--Device-enum OH_ScreenCaptureHighlightMode--><!--Device-enum OH_ScreenCaptureHighlightMode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| OH_HIGHLIGHT_MODE_CLOSED = 0 | Highlights the capture area with a full square border. This is the default mode.<br><!--Device-OH_HIGHLIGHT_MODE_CLOSED = 0--><!--Device-OH_HIGHLIGHT_MODE_CLOSED = 0-End--> |
-| OH_HIGHLIGHT_MODE_CORNER_WRAP = 1 | Highlights the capture area with a corner-wrapping border.<br><!--Device-OH_HIGHLIGHT_MODE_CORNER_WRAP = 1--><!--Device-OH_HIGHLIGHT_MODE_CORNER_WRAP = 1-End--> |
+| OH_HIGHLIGHT_MODE_CLOSED = 0 | Highlights the capture area with a full square border. This is the default mode. |
+| OH_HIGHLIGHT_MODE_CORNER_WRAP = 1 | Highlights the capture area with a corner-wrapping border. |
 
 ### OH_AVScreenCapture_FillMode
 
@@ -376,16 +337,12 @@ enum OH_AVScreenCapture_FillMode
 
 Enumerates the image fill modes.
 
-<!--Device-enum OH_AVScreenCapture_FillMode--><!--Device-enum OH_AVScreenCapture_FillMode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCREENCAPTURE_FILLMODE_ASPECT_SCALE_FIT = 0 | Keeps the original aspect ratio of the image to fit the target size. Black bars may appear if the aspect ratios differ.<br><!--Device-OH_SCREENCAPTURE_FILLMODE_ASPECT_SCALE_FIT = 0--><!--Device-OH_SCREENCAPTURE_FILLMODE_ASPECT_SCALE_FIT = 0-End--> |
-| OH_SCREENCAPTURE_FILLMODE_SCALE_TO_FILL = 1 | Stretches the image to fill the target size. The image may stretch and distort if the aspect ratios differ.<br><!--Device-OH_SCREENCAPTURE_FILLMODE_SCALE_TO_FILL = 1--><!--Device-OH_SCREENCAPTURE_FILLMODE_SCALE_TO_FILL = 1-End--> |
+| OH_SCREENCAPTURE_FILLMODE_ASPECT_SCALE_FIT = 0 | Keeps the original aspect ratio of the image to fit the target size. Black bars may appear if the aspect ratios differ. |
+| OH_SCREENCAPTURE_FILLMODE_SCALE_TO_FILL = 1 | Stretches the image to fill the target size. The image may stretch and distort if the aspect ratios differ. |
 
 ### OH_CapturePickerMode
 
@@ -397,42 +354,17 @@ enum OH_CapturePickerMode
 
 Enumerates the display modes of the picker.
 
-<!--Device-enum OH_CapturePickerMode--><!--Device-enum OH_CapturePickerMode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| OH_CAPTURE_PICKER_MODE_WINDOW_ONLY = 0 | Displays only a list of windows.<br><!--Device-OH_CAPTURE_PICKER_MODE_WINDOW_ONLY = 0--><!--Device-OH_CAPTURE_PICKER_MODE_WINDOW_ONLY = 0-End--> |
-| OH_CAPTURE_PICKER_MODE_SCREEN_ONLY = 1 | Displays only a list of screens.<br><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_ONLY = 1--><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_ONLY = 1-End--> |
-| OH_CAPTURE_PICKER_MODE_SCREEN_AND_WINDOW = 2 | Displays both screens and windows. This is the default mode.<br><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_AND_WINDOW = 2--><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_AND_WINDOW = 2-End--> |
-| OH_CAPTURE_PICKER_MODE_APP_ONLY = 3 | Show application options only.<br>**Since**: 26.0.0<br><!--Device-OH_CAPTURE_PICKER_MODE_APP_ONLY = 3--><!--Device-OH_CAPTURE_PICKER_MODE_APP_ONLY = 3-End--> |
-| OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4 | Show both window and application options.<br>**Since**: 26.0.0<br><!--Device-OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4--><!--Device-OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4-End--> |
-| OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5 | Show both screen and application options.<br>**Since**: 26.0.0<br><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5--><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5-End--> |
-| OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6 | Show screen, window, and application options.<br>**Since**: 26.0.0<br><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6--><!--Device-OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6-End--> |
-
-### typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
-
-```c
-enum typedef  OH_AVScreenCapture_AutoPauseCaptureSceneEnum
-```
-
-**Description**
-
-Scene Enumeration for Auto Pause Screen Capture.
-
-<!--Device-enum typedef OH_AVScreenCapture_AutoPauseCaptureSceneEnum--><!--Device-enum typedef OH_AVScreenCapture_AutoPauseCaptureSceneEnum-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
-**Since**: 26.1.0
-
-| Enum item | Description |
-| -- | -- |
-| OH_CAPTURE_AUTO_PAUSE_SCENE_NONE = 0 | Default value, indicating that auto-pause is not performed in any scenario.<br>**Since**: 26.1.0<br><!--Device-OH_CAPTURE_AUTO_PAUSE_SCENE_NONE = 0--><!--Device-OH_CAPTURE_AUTO_PAUSE_SCENE_NONE = 0-End--> |
-| OH_CAPTURE_AUTO_PAUSE_SCENE_SCREEN_FOLD_STATE_CHANGE = 1 << 0 | Scene for the folding status of the screen changes.<br>**Since**: 26.1.0<br><!--Device-OH_CAPTURE_AUTO_PAUSE_SCENE_SCREEN_FOLD_STATE_CHANGE = 1 << 0--><!--Device-OH_CAPTURE_AUTO_PAUSE_SCENE_SCREEN_FOLD_STATE_CHANGE = 1 << 0-End--> |
+| OH_CAPTURE_PICKER_MODE_WINDOW_ONLY = 0 | Displays only a list of windows. |
+| OH_CAPTURE_PICKER_MODE_SCREEN_ONLY = 1 | Displays only a list of screens. |
+| OH_CAPTURE_PICKER_MODE_SCREEN_AND_WINDOW = 2 | Displays both screens and windows. This is the default mode. |
+| OH_CAPTURE_PICKER_MODE_APP_ONLY = 3 | Show application options only.<br>**Since**: 26.0.0 |
+| OH_CAPTURE_PICKER_MODE_WINDOW_AND_APP = 4 | Show both window and application options.<br>**Since**: 26.0.0 |
+| OH_CAPTURE_PICKER_MODE_SCREEN_AND_APP = 5 | Show both screen and application options.<br>**Since**: 26.0.0 |
+| OH_CAPTURE_PICKER_MODE_SCREEN_WINDOW_AND_APP = 6 | Show screen, window, and application options.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -446,10 +378,6 @@ typedef void (*OH_AVScreenCaptureOnError)(OH_AVScreenCapture *capture, int32_t e
 **Description**
 
 Called when an error occurs during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnError](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onerror) instead.
-
-<!--Device-typedef void (*OH_AVScreenCaptureOnError)(OH_AVScreenCapture *capture, int32_t errorCode)--><!--Device-typedef void (*OH_AVScreenCaptureOnError)(OH_AVScreenCapture *capture, int32_t errorCode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
@@ -469,10 +397,6 @@ typedef void (*OH_AVScreenCaptureOnAudioBufferAvailable)(OH_AVScreenCapture *cap
 **Description**
 
 Called when an audio buffer is available during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnBufferAvailable](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onbufferavailable) instead.
-
-<!--Device-typedef void (*OH_AVScreenCaptureOnAudioBufferAvailable)(OH_AVScreenCapture *capture, bool isReady, OH_AudioCaptureSourceType type)--><!--Device-typedef void (*OH_AVScreenCaptureOnAudioBufferAvailable)(OH_AVScreenCapture *capture, bool isReady, OH_AudioCaptureSourceType type)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
@@ -494,10 +418,6 @@ typedef void (*OH_AVScreenCaptureOnVideoBufferAvailable)(OH_AVScreenCapture *cap
 
 Called when a video buffer is available during the running of an OH_AVScreenCapture instance. Starting from API version 12, you are advised to use [OH_AVScreenCapture_OnBufferAvailable](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onbufferavailable) instead.
 
-<!--Device-typedef void (*OH_AVScreenCaptureOnVideoBufferAvailable)(OH_AVScreenCapture *capture, bool isReady)--><!--Device-typedef void (*OH_AVScreenCaptureOnVideoBufferAvailable)(OH_AVScreenCapture *capture, bool isReady)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 10
 
 **Parameters**:
@@ -516,10 +436,6 @@ typedef void (*OH_AVScreenCapture_OnStateChange)(struct OH_AVScreenCapture *capt
 **Description**
 
 Called when the state changes during the running of an OH_AVScreenCapture instance.
-
-<!--Device-typedef void (*OH_AVScreenCapture_OnStateChange)(struct OH_AVScreenCapture *capture, OH_AVScreenCaptureStateCode stateCode, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnStateChange)(struct OH_AVScreenCapture *capture, OH_AVScreenCaptureStateCode stateCode, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 12
 
@@ -541,10 +457,6 @@ typedef void (*OH_AVScreenCapture_OnError)(OH_AVScreenCapture *capture, int32_t 
 
 Called when an error occurs during the running of an OH_AVScreenCapture instance.
 
-<!--Device-typedef void (*OH_AVScreenCapture_OnError)(OH_AVScreenCapture *capture, int32_t errorCode, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnError)(OH_AVScreenCapture *capture, int32_t errorCode, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 12
 
 **Parameters**:
@@ -564,10 +476,6 @@ typedef void (*OH_AVScreenCapture_OnBufferAvailable)(OH_AVScreenCapture *capture
 **Description**
 
 Called when an audio buffer or a video buffer is available during the running of an OH_AVScreenCapture instance.
-
-<!--Device-typedef void (*OH_AVScreenCapture_OnBufferAvailable)(OH_AVScreenCapture *capture, OH_AVBuffer *buffer, OH_AVScreenCaptureBufferType bufferType, int64_t timestamp, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnBufferAvailable)(OH_AVScreenCapture *capture, OH_AVBuffer *buffer, OH_AVScreenCaptureBufferType bufferType, int64_t timestamp, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 12
 
@@ -591,10 +499,6 @@ typedef void (*OH_AVScreenCapture_OnDisplaySelected)(OH_AVScreenCapture *capture
 
 When one of the display devices start being captured, the function pointer will be called
 
-<!--Device-typedef void (*OH_AVScreenCapture_OnDisplaySelected)(OH_AVScreenCapture *capture, uint64_t displayId, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnDisplaySelected)(OH_AVScreenCapture *capture, uint64_t displayId, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 15
 
 **Parameters**:
@@ -614,10 +518,6 @@ typedef void (*OH_AVScreenCapture_OnCaptureContentChanged)(OH_AVScreenCapture* c
 **Description**
 
 Called when the screen capture content changes during the running of an OH_AVScreenCapture instance.
-
-<!--Device-typedef void (*OH_AVScreenCapture_OnCaptureContentChanged)(OH_AVScreenCapture* capture, OH_AVScreenCaptureContentChangedEvent event, OH_Rect* area, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnCaptureContentChanged)(OH_AVScreenCapture* capture, OH_AVScreenCaptureContentChangedEvent event, OH_Rect* area, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 20
 
@@ -640,10 +540,6 @@ typedef void (*OH_AVScreenCapture_OnUserSelected)(OH_AVScreenCapture* capture, O
 
 Called to return the parameters selected by the user on the authorization UI to the application.
 
-<!--Device-typedef void (*OH_AVScreenCapture_OnUserSelected)(OH_AVScreenCapture* capture, OH_AVScreenCapture_UserSelectionInfo* selections, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnUserSelected)(OH_AVScreenCapture* capture, OH_AVScreenCapture_UserSelectionInfo* selections, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
-
 **Since**: 20
 
 **Parameters**:
@@ -663,10 +559,6 @@ typedef void (*OH_AVScreenCapture_OnPrivacyProtect)(OH_AVScreenCapture* capture,
 **Description**
 
 Called when a privacy protection event occurs during the running of the [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) instance.
-
-<!--Device-typedef void (*OH_AVScreenCapture_OnPrivacyProtect)(OH_AVScreenCapture* capture, OH_PrivacyProtectInfo* privacyProtect, void *userData)--><!--Device-typedef void (*OH_AVScreenCapture_OnPrivacyProtect)(OH_AVScreenCapture* capture, OH_PrivacyProtectInfo* privacyProtect, void *userData)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 24
 

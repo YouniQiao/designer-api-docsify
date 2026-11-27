@@ -6,15 +6,13 @@ typedef union ArkUI_NumberValue {...} ArkUI_NumberValue
 
 ## Overview
 
-Defines a numeric type used by ArkUI on the native side, including floating-point, signed integer, and unsigned integer types.
-
-<!--Device-typedef union ArkUI_NumberValue {...} ArkUI_NumberValue--><!--Device-typedef union ArkUI_NumberValue {...} ArkUI_NumberValue-End-->
+Provides the number types of ArkUI in the native code.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **Header file**: [common_type.h](capi-common-type-h.md)
 
@@ -24,8 +22,8 @@ Defines a numeric type used by ArkUI on the native side, including floating-poin
 
 | Name | Description |
 | -- | -- |
-| float f32 | Variable of floating-point type, used to store floating-point values.<br>**Since**: 12<br><!--Device-float f32--><!--Device-float f32-End--> |
-| int32_t i32 | Variable of signed integer type, used to store signed integer values.<br>**Since**: 12<br><!--Device-int32_t i32--><!--Device-int32_t i32-End--> |
-| uint32_t u32 | Variable of unsigned integer type, used to store unsigned integer values.<br>**Since**: 12<br><!--Device-uint32_t u32--><!--Device-uint32_t u32-End--> |
+| float f32 |  |
+| int32_t i32 |  |
+| uint32_t u32 |  |
 
 

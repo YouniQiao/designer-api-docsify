@@ -8,13 +8,11 @@ typedef struct ArkUI_AccessibleAction {...} ArkUI_AccessibleAction
 
 Defines a struct for the accessible action.
 
-<!--Device-typedef struct ArkUI_AccessibleAction {...} ArkUI_AccessibleAction--><!--Device-typedef struct ArkUI_AccessibleAction {...} ArkUI_AccessibleAction-End-->
-
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
-**Related module**: [ArkUI_Accessibility](capi-arkui-arkui-accessibility.md)
+**Related module**: [ArkUI_Accessibility](capi-arkui-accessibility.md)
 
 **Header file**: [native_interface_accessibility.h](capi-native-interface-accessibility-h.md)
 
@@ -24,7 +22,7 @@ Defines a struct for the accessible action.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_Accessibility_ActionType](capi-native-interface-accessibility-h.md#arkui_accessibility_actiontype) actionType | Action type.<br><!--Device-ArkUI_Accessibility_ActionType actionType--><!--Device-ArkUI_Accessibility_ActionType actionType-End--> |
-| const char* description | Action description.<br><!--Device-const char* description--><!--Device-const char* description-End--> |
+| [ArkUI_Accessibility_ActionType](capi-native-interface-accessibility-h.md#arkui_accessibility_actiontype) actionType | Action type. |
+| const char* description | Action description. |
 
 

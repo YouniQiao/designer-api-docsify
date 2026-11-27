@@ -6,7 +6,7 @@ enum SyncType
 
 枚举Gallery的端云同步类型。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 <!--Device-cloudSync-enum SyncType--><!--Device-cloudSync-enum SyncType-End-->
 
@@ -22,7 +22,7 @@ FORCE_THM = 0
 
 强制缩略图同步。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

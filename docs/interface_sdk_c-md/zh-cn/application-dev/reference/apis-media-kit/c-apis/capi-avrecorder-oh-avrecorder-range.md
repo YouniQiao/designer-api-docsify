@@ -1,20 +1,18 @@
 # OH_AVRecorder_Range
 
 ```c
-typedef struct OH_AVRecorder_Range {...} OH_AVRecorder_Range
+struct OH_AVRecorder_Range {...}
 ```
 
 ## 概述
 
 表示AVRecorder相关参数（如比特率、帧率等）的取值范围，用于限定录制参数的可配置范围。 开发者可通过[OH_AVRecorder_GetAvailableEncoder](capi-avrecorder-h.md#oh_avrecorder_getavailableencoder)接口获取编码器相关参数取值范围，并在min和max所界定的范围内设置参数值，以确保配置有效。
 
-<!--Device-struct OH_AVRecorder_Range {...}--><!--Device-struct OH_AVRecorder_Range {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 
-**相关模块：** [AVRecorder](capi-media-kit-avrecorder.md)
+**相关模块：** [AVRecorder](capi-avrecorder.md)
 
 **所在头文件：** [avrecorder_base.h](capi-avrecorder-base-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_AVRecorder_Range {...} OH_AVRecorder_Range
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t min | AVRecorder相关参数取值范围的最小值。单位与所描述的参数一致。<br>**起始版本：** 18<br><!--Device-int32_t min--><!--Device-int32_t min-End--> |
-| int32_t max | AVRecorder相关参数取值范围的最大值。单位与所描述的参数一致。<br>**起始版本：** 18<br><!--Device-int32_t max--><!--Device-int32_t max-End--> |
+| int32_t min | AVRecorder相关参数取值范围的最小值。单位与所描述的参数一致。 |
+| int32_t max | AVRecorder相关参数取值范围的最大值。单位与所描述的参数一致。 |
 
 

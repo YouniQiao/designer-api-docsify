@@ -1,20 +1,18 @@
 # OH_AudioCaptureInfo
 
 ```c
-typedef struct OH_AudioCaptureInfo {...} OH_AudioCaptureInfo
+struct OH_AudioCaptureInfo {...}
 ```
 
 ## Overview
 
 The struct describes the audio capture information.
 
-<!--Device-struct OH_AudioCaptureInfo {...}--><!--Device-struct OH_AudioCaptureInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Since**: 10
 
-**Related module**: [AVScreenCapture](capi-media-kit-avscreencapture.md)
+**Related module**: [AVScreenCapture](capi-avscreencapture.md)
 
 **Header file**: [native_avscreen_capture_base.h](capi-native-avscreen-capture-base-h.md)
 
@@ -24,8 +22,8 @@ The struct describes the audio capture information.
 
 | Name | Description |
 | -- | -- |
-| int32_t audioSampleRate | Audio capture sample rate info, in Hz<br><!--Device-int32_t audioSampleRate--><!--Device-int32_t audioSampleRate-End--> |
-| int32_t audioChannels | Audio capture channel info<br><!--Device-int32_t audioChannels--><!--Device-int32_t audioChannels-End--> |
-| [OH_AudioCaptureSourceType](capi-native-avscreen-capture-base-h.md#oh_audiocapturesourcetype) audioSource | Audio capture source type<br><!--Device-OH_AudioCaptureSourceType audioSource--><!--Device-OH_AudioCaptureSourceType audioSource-End--> |
+| int32_t audioSampleRate | Audio capture sample rate info, in Hz |
+| int32_t audioChannels | Audio capture channel info |
+| [OH_AudioCaptureSourceType](capi-native-avscreen-capture-base-h.md#oh_audiocapturesourcetype) audioSource | Audio capture source type |
 
 

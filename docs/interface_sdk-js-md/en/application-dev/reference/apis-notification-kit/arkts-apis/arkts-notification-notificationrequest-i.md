@@ -546,7 +546,7 @@ Behavior intent of an application, which is triggered when a notification is rem
 
 Currently, redirection to UIAbility is not supported. Only common events can be published (that is, the **actionType** field of [WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md) is set to **4**).
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
 
 **Since:** 9
 
@@ -675,7 +675,7 @@ wantAgent?: WantAgent
 
 Behavior intent of an application, which is triggered when a notification is clicked. This parameter is left empty by default.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-wantagent-t.md)
 
 **Since:** 7
 
@@ -691,7 +691,7 @@ slotType?: notification.SlotType
 
 Notification slot type. The default value is **OTHER_TYPES**.
 
-**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
+**Type:** [notification.SlotType](arkts-notification-notification-depr-slottype-e.md)
 
 **Since:** 7
 

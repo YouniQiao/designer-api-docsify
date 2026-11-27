@@ -8,13 +8,11 @@ typedef struct OH_AudioStreamManager OH_AudioStreamManager
 
 Declare the audio stream manager. Audio stream manager provides many functions about audio streams, like monitoring audio streams status, getting different stream types supported information and so on.
 
-<!--Device-typedef struct OH_AudioStreamManager OH_AudioStreamManager--><!--Device-typedef struct OH_AudioStreamManager OH_AudioStreamManager-End-->
-
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 19
 
-**Related module**: [OHAudio](capi-audio-kit-ohaudio.md)
+**Related module**: [OHAudio](capi-ohaudio.md)
 
 **Header file**: [native_audio_stream_manager.h](capi-native-audio-stream-manager-h.md)
 

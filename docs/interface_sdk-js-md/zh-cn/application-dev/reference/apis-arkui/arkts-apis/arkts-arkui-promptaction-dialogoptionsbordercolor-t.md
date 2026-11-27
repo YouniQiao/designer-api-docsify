@@ -19,4 +19,4 @@ declare type DialogOptionsBorderColor = ResourceColor | EdgeColors
 | 类型 | 说明 |
 | --- | --- |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) |  |
-| EdgeColors |  |
+| [EdgeColors](arkts-arkui-edgecolors-t.md) |  |

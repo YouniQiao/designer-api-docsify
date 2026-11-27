@@ -1,20 +1,18 @@
 # OH_Drawing_FontAdjustInfo
 
 ```c
-typedef struct OH_Drawing_FontAdjustInfo {...} OH_Drawing_FontAdjustInfo
+struct OH_Drawing_FontAdjustInfo {...}
 ```
 
 ## 概述
 
 字重映射信息结构体。
 
-<!--Device-struct OH_Drawing_FontAdjustInfo {...}--><!--Device-struct OH_Drawing_FontAdjustInfo {...}-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Drawing_FontAdjustInfo {...} OH_Drawing_FontAdjustInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| int weight | 字体原本的字重值。<br><!--Device-int weight--><!--Device-int weight-End--> |
-| int to | 字体在应用中显示的字重值。<br><!--Device-int to--><!--Device-int to-End--> |
+| int weight | 字体原本的字重值。 |
+| int to | 字体在应用中显示的字重值。 |
 
 

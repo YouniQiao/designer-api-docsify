@@ -1,20 +1,18 @@
 # OH_Huks_KeyMaterialDh
 
 ```c
-typedef struct OH_Huks_KeyMaterialDh {...} OH_Huks_KeyMaterialDh
+struct OH_Huks_KeyMaterialDh {...}
 ```
 
 ## 概述
 
 定义DH密钥的结构体类型。
 
-<!--Device-struct OH_Huks_KeyMaterialDh {...}--><!--Device-struct OH_Huks_KeyMaterialDh {...}-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
-**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -24,10 +22,10 @@ typedef struct OH_Huks_KeyMaterialDh {...} OH_Huks_KeyMaterialDh
 
 | 名称 | 描述 |
 | -- | -- |
-| enum [OH_Huks_KeyAlg](capi-native-huks-type-h.md#oh_huks_keyalg) keyAlg | 密钥的算法类型。<br><!--Device-enum OH_Huks_KeyAlg keyAlg--><!--Device-enum OH_Huks_KeyAlg keyAlg-End--> |
-| uint32_t keySize | DH密钥的长度，单位：Bit。<br><!--Device-uint32_t keySize--><!--Device-uint32_t keySize-End--> |
-| uint32_t pubKeySize | 公钥的长度，单位：Byte。<br><!--Device-uint32_t pubKeySize--><!--Device-uint32_t pubKeySize-End--> |
-| uint32_t priKeySize | 私钥的长度，单位：Byte。<br><!--Device-uint32_t priKeySize--><!--Device-uint32_t priKeySize-End--> |
-| uint32_t reserved | 保留字段。<br><!--Device-uint32_t reserved--><!--Device-uint32_t reserved-End--> |
+| enum OH_Huks_KeyAlg keyAlg | 密钥的算法类型。 |
+| uint32_t keySize | DH密钥的长度，单位：Bit。 |
+| uint32_t pubKeySize | 公钥的长度，单位：Byte。 |
+| uint32_t priKeySize | 私钥的长度，单位：Byte。 |
+| uint32_t reserved | 保留字段。 |
 
 

@@ -6,24 +6,23 @@ The file declares the common enums and structs used by the image interface.
 
 **Library**: libimage_common.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
-**Related module**: [Image_NativeModule](capi-image-kit-image-nativemodule.md)
+**Related module**: [Image_NativeModule](capi-image-nativemodule.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Image_Size](capi-image-nativemodule-image-size.md) | Image_Size | Declaration the image size. |
 | [Image_Region](capi-image-nativemodule-image-region.md) | Image_Region | Declaration the image region. |
-| [OH_PictureMetadata](capi-image-nativemodule-oh-picturemetadata.md) | OH_PictureMetadata | Define a PictureMetadata struct type, used for picture metadata. |
+| [OH_PictureMetadata](capi-image-nativemodule-oh-picturemetadata.md) | - | Define a PictureMetadata struct type, used for picture metadata. |
 | [Image_String](capi-image-nativemodule-image-string.md) | Image_String | Defines the property string (in key-value format) of the image source. |
+| [Image_MimeType](capi-image-nativemodule-image-mimetype.md) | Image_MimeType | Defines the image encode format. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -31,7 +30,7 @@ The file declares the common enums and structs used by the image interface.
 | [Image_MetadataType](#image_metadatatype) | Image_MetadataType | Enumerates the metadata types. |
 | [IMAGE_ALLOCATOR_MODE](#image_allocator_mode) | IMAGE_ALLOCATOR_MODE | Type of allocator used to allocate memory of a PixelMap. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -57,52 +56,48 @@ enum Image_ErrorCode
 
 Enumerates the return values that may be used by the interface.
 
-<!--Device-enum Image_ErrorCode--><!--Device-enum Image_ErrorCode-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| IMAGE_SUCCESS = 0 | operation success<br><!--Device-IMAGE_SUCCESS = 0--><!--Device-IMAGE_SUCCESS = 0-End--> |
-| IMAGE_BAD_PARAMETER = 401 | invalid parameter<br><!--Device-IMAGE_BAD_PARAMETER = 401--><!--Device-IMAGE_BAD_PARAMETER = 401-End--> |
-| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;Permission verification failed. A non-system application calls a system API.<br>**Since**: 26.0.1<br><!--Device-OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202--><!--Device-OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202-End--> |
-| IMAGE_UNSUPPORTED_MIME_TYPE = 7600101 | unsupported mime type<br><!--Device-IMAGE_UNSUPPORTED_MIME_TYPE = 7600101--><!--Device-IMAGE_UNSUPPORTED_MIME_TYPE = 7600101-End--> |
-| IMAGE_UNKNOWN_MIME_TYPE = 7600102 | unknown mime type<br><!--Device-IMAGE_UNKNOWN_MIME_TYPE = 7600102--><!--Device-IMAGE_UNKNOWN_MIME_TYPE = 7600102-End--> |
-| IMAGE_TOO_LARGE = 7600103 | too large data or image<br><!--Device-IMAGE_TOO_LARGE = 7600103--><!--Device-IMAGE_TOO_LARGE = 7600103-End--> |
-| IMAGE_GET_IMAGE_DATA_FAILED = 7600104 | &nbsp;Failed to get image data.<br>**Since**: 23<br><!--Device-IMAGE_GET_IMAGE_DATA_FAILED = 7600104--><!--Device-IMAGE_GET_IMAGE_DATA_FAILED = 7600104-End--> |
-| IMAGE_PIXELMAP_RELEASED = 7600105 | &nbsp;PixelMap has been released.<br>**Since**: 26.0.0<br><!--Device-IMAGE_PIXELMAP_RELEASED = 7600105--><!--Device-IMAGE_PIXELMAP_RELEASED = 7600105-End--> |
-| IMAGE_DMA_NOT_EXIST = 7600173 | &nbsp;DMA memory does not exist<br><!--Device-IMAGE_DMA_NOT_EXIST = 7600173--><!--Device-IMAGE_DMA_NOT_EXIST = 7600173-End--> |
-| IMAGE_DMA_OPERATION_FAILED = 7600174 | &nbsp;DMA operation failed<br><!--Device-IMAGE_DMA_OPERATION_FAILED = 7600174--><!--Device-IMAGE_DMA_OPERATION_FAILED = 7600174-End--> |
-| IMAGE_UNSUPPORTED_OPERATION = 7600201 | unsupported operations<br><!--Device-IMAGE_UNSUPPORTED_OPERATION = 7600201--><!--Device-IMAGE_UNSUPPORTED_OPERATION = 7600201-End--> |
-| IMAGE_UNSUPPORTED_METADATA = 7600202 | unsupported metadata<br><!--Device-IMAGE_UNSUPPORTED_METADATA = 7600202--><!--Device-IMAGE_UNSUPPORTED_METADATA = 7600202-End--> |
-| IMAGE_UNSUPPORTED_CONVERSION = 7600203 | unsupported conversion<br><!--Device-IMAGE_UNSUPPORTED_CONVERSION = 7600203--><!--Device-IMAGE_UNSUPPORTED_CONVERSION = 7600203-End--> |
-| IMAGE_INVALID_REGION = 7600204 | invalid region<br><!--Device-IMAGE_INVALID_REGION = 7600204--><!--Device-IMAGE_INVALID_REGION = 7600204-End--> |
-| IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205 | &nbsp;unsupported memory format<br>**Since**: 13<br><!--Device-IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205--><!--Device-IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205-End--> |
-| IMAGE_INVALID_PARAMETER = 7600206 | &nbsp;Invalid parameter.<br>**Since**: 19<br><!--Device-IMAGE_INVALID_PARAMETER = 7600206--><!--Device-IMAGE_INVALID_PARAMETER = 7600206-End--> |
-| IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207 | &nbsp;Unsupported data format<br>**Since**: 22<br><!--Device-IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207--><!--Device-IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207-End--> |
-| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;the decomposition process failed.<br>**Since**: 26.0.1<br><!--Device-OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208--><!--Device-OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208-End--> |
-| IMAGE_ALLOC_FAILED = 7600301 | failed to allocate memory<br><!--Device-IMAGE_ALLOC_FAILED = 7600301--><!--Device-IMAGE_ALLOC_FAILED = 7600301-End--> |
-| IMAGE_COPY_FAILED = 7600302 | memory copy failed<br><!--Device-IMAGE_COPY_FAILED = 7600302--><!--Device-IMAGE_COPY_FAILED = 7600302-End--> |
-| IMAGE_LOCK_UNLOCK_FAILED = 7600303 | &nbsp;memory lock or unlock failed<br>**Since**: 15<br><!--Device-IMAGE_LOCK_UNLOCK_FAILED = 7600303--><!--Device-IMAGE_LOCK_UNLOCK_FAILED = 7600303-End--> |
-| IMAGE_INIT_FAILED = 7600304 | &nbsp;Initialization failed<br>**Since**: 22<br><!--Device-IMAGE_INIT_FAILED = 7600304--><!--Device-IMAGE_INIT_FAILED = 7600304-End--> |
-| IMAGE_CREATE_PIXELMAP_FAILED = 7600305 | &nbsp;Create PixelMap failed<br>**Since**: 22<br><!--Device-IMAGE_CREATE_PIXELMAP_FAILED = 7600305--><!--Device-IMAGE_CREATE_PIXELMAP_FAILED = 7600305-End--> |
-| IMAGE_DATA_CONVERSION_FAILED = 7600306 | &nbsp;Data conversion failed.<br>**Since**: 26.0.0<br><!--Device-IMAGE_DATA_CONVERSION_FAILED = 7600306--><!--Device-IMAGE_DATA_CONVERSION_FAILED = 7600306-End--> |
-| IMAGE_ALLOCATOR_MODE_UNSUPPORTED = 7600501 | &nbsp;unsupported allocator mode, e.g., use share memory to create a HDR image as only DMA supported hdr metadata.<br>**Since**: 20<br><!--Device-IMAGE_ALLOCATOR_MODE_UNSUPPORTED = 7600501--><!--Device-IMAGE_ALLOCATOR_MODE_UNSUPPORTED = 7600501-End--> |
-| IMAGE_UNKNOWN_ERROR = 7600901 | unknown error<br><!--Device-IMAGE_UNKNOWN_ERROR = 7600901--><!--Device-IMAGE_UNKNOWN_ERROR = 7600901-End--> |
-| IMAGE_BAD_SOURCE = 7700101 | decode data source exception<br><!--Device-IMAGE_BAD_SOURCE = 7700101--><!--Device-IMAGE_BAD_SOURCE = 7700101-End--> |
-| IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102 | &nbsp;unsupported mime type<br>**Since**: 15<br><!--Device-IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102--><!--Device-IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102-End--> |
-| IMAGE_SOURCE_TOO_LARGE = 7700103 | &nbsp;image to large<br>**Since**: 15<br><!--Device-IMAGE_SOURCE_TOO_LARGE = 7700103--><!--Device-IMAGE_SOURCE_TOO_LARGE = 7700103-End--> |
-| IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201 | &nbsp;unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata.<br>**Since**: 15<br><!--Device-IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201--><!--Device-IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201-End--> |
-| IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202 | &nbsp;Unsupported metadata. For example, the property key is not supported, or the property value is invalid.<br>**Since**: 23<br><!--Device-IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202--><!--Device-IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202-End--> |
-| IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203 | &nbsp;unsupported options, e.g, cannot convert image into desired pixel format.<br>**Since**: 15<br><!--Device-IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203--><!--Device-IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203-End--> |
-| IMAGE_SOURCE_INVALID_PARAMETER = 7700204 | &nbsp;Invalid parameter.<br>**Since**: 19<br><!--Device-IMAGE_SOURCE_INVALID_PARAMETER = 7700204--><!--Device-IMAGE_SOURCE_INVALID_PARAMETER = 7700204-End--> |
-| IMAGE_DECODE_FAILED = 7700301 | decode failed<br><!--Device-IMAGE_DECODE_FAILED = 7700301--><!--Device-IMAGE_DECODE_FAILED = 7700301-End--> |
-| IMAGE_SOURCE_ALLOC_FAILED = 7700302 | &nbsp;memory allocation failed<br>**Since**: 15<br><!--Device-IMAGE_SOURCE_ALLOC_FAILED = 7700302--><!--Device-IMAGE_SOURCE_ALLOC_FAILED = 7700302-End--> |
-| IMAGE_PACKER_INVALID_PARAMETER = 7800202 | &nbsp;Invalid parameter for ImagePacker.<br>**Since**: 19<br><!--Device-IMAGE_PACKER_INVALID_PARAMETER = 7800202--><!--Device-IMAGE_PACKER_INVALID_PARAMETER = 7800202-End--> |
-| IMAGE_ENCODE_FAILED = 7800301 | encode failed<br><!--Device-IMAGE_ENCODE_FAILED = 7800301--><!--Device-IMAGE_ENCODE_FAILED = 7800301-End--> |
-| IMAGE_RECEIVER_INVALID_PARAMETER = 7900201 | &nbsp;Invalid parameter for ImageReceiver.<br>**Since**: 20<br><!--Device-IMAGE_RECEIVER_INVALID_PARAMETER = 7900201--><!--Device-IMAGE_RECEIVER_INVALID_PARAMETER = 7900201-End--> |
+| IMAGE_SUCCESS = 0 | operation success |
+| IMAGE_BAD_PARAMETER = 401 | invalid parameter |
+| OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION = 202 | &nbsp;Permission verification failed. A non-system application calls a system API.<br>**Since**: 26.1.0 |
+| IMAGE_UNSUPPORTED_MIME_TYPE = 7600101 | unsupported mime type |
+| IMAGE_UNKNOWN_MIME_TYPE = 7600102 | unknown mime type |
+| IMAGE_TOO_LARGE = 7600103 | too large data or image |
+| IMAGE_GET_IMAGE_DATA_FAILED = 7600104 | &nbsp;Failed to get image data.<br>**Since**: 23 |
+| IMAGE_PIXELMAP_RELEASED = 7600105 | &nbsp;PixelMap has been released.<br>**Since**: 26.0.0 |
+| IMAGE_DMA_NOT_EXIST = 7600173 | @error DMA memory does not exist |
+| IMAGE_DMA_OPERATION_FAILED = 7600174 | @error DMA operation failed |
+| IMAGE_UNSUPPORTED_OPERATION = 7600201 | unsupported operations |
+| IMAGE_UNSUPPORTED_METADATA = 7600202 | unsupported metadata |
+| IMAGE_UNSUPPORTED_CONVERSION = 7600203 | unsupported conversion |
+| IMAGE_INVALID_REGION = 7600204 | invalid region |
+| IMAGE_UNSUPPORTED_MEMORY_FORMAT = 7600205 | &nbsp;unsupported memory format<br>**Since**: 13 |
+| IMAGE_INVALID_PARAMETER = 7600206 | &nbsp;Invalid parameter.<br>**Since**: 19 |
+| IMAGE_UNSUPPORTED_DATA_FORMAT = 7600207 | &nbsp;Unsupported data format<br>**Since**: 22 |
+| OH_IMAGE_ERROR_DECOMPOSE_FAILED = 7600208 | &nbsp;the decomposition process failed.<br>**Since**: 26.1.0 |
+| IMAGE_ALLOC_FAILED = 7600301 | failed to allocate memory |
+| IMAGE_COPY_FAILED = 7600302 | memory copy failed |
+| IMAGE_LOCK_UNLOCK_FAILED = 7600303 | &nbsp;memory lock or unlock failed<br>**Since**: 15 |
+| IMAGE_INIT_FAILED = 7600304 | &nbsp;Initialization failed<br>**Since**: 22 |
+| IMAGE_CREATE_PIXELMAP_FAILED = 7600305 | &nbsp;Create PixelMap failed<br>**Since**: 22 |
+| IMAGE_DATA_CONVERSION_FAILED = 7600306 | &nbsp;Data conversion failed.<br>**Since**: 26.0.0 |
+| IMAGE_ALLOCATOR_MODE_UNSUPPORTED = 7600501 | &nbsp;unsupported allocator mode, e.g., use share memory to create a HDR image as only DMA supported hdr metadata.<br>**Since**: 20 |
+| IMAGE_UNKNOWN_ERROR = 7600901 | unknown error |
+| IMAGE_BAD_SOURCE = 7700101 | decode data source exception |
+| IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE = 7700102 | &nbsp;unsupported mime type<br>**Since**: 15 |
+| IMAGE_SOURCE_TOO_LARGE = 7700103 | &nbsp;image to large<br>**Since**: 15 |
+| IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE = 7700201 | &nbsp;unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata.<br>**Since**: 15 |
+| IMAGE_SOURCE_UNSUPPORTED_METADATA = 7700202 | &nbsp;Unsupported metadata. For example, the property key is not supported, or the property value is invalid.<br>**Since**: 23 |
+| IMAGE_SOURCE_UNSUPPORTED_OPTIONS = 7700203 | &nbsp;unsupported options, e.g, cannot convert image into desired pixel format.<br>**Since**: 15 |
+| IMAGE_SOURCE_INVALID_PARAMETER = 7700204 | &nbsp;Invalid parameter.<br>**Since**: 19 |
+| IMAGE_DECODE_FAILED = 7700301 | decode failed |
+| IMAGE_SOURCE_ALLOC_FAILED = 7700302 | &nbsp;memory allocation failed<br>**Since**: 15 |
+| IMAGE_PACKER_INVALID_PARAMETER = 7800202 | &nbsp;Invalid parameter for ImagePacker.<br>**Since**: 19 |
+| IMAGE_ENCODE_FAILED = 7800301 | encode failed |
+| IMAGE_RECEIVER_INVALID_PARAMETER = 7900201 | &nbsp;Invalid parameter for ImageReceiver.<br>**Since**: 20 |
 
 ### Image_MetadataType
 
@@ -114,17 +109,13 @@ enum Image_MetadataType
 
 Enumerates the metadata types.
 
-<!--Device-enum Image_MetadataType--><!--Device-enum Image_MetadataType-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| EXIF_METADATA = 1 | Exif metadata.<br>**Since**: 13<br><!--Device-EXIF_METADATA = 1--><!--Device-EXIF_METADATA = 1-End--> |
-| FRAGMENT_METADATA = 2 | Fragment map metadata.<br>**Since**: 13<br><!--Device-FRAGMENT_METADATA = 2--><!--Device-FRAGMENT_METADATA = 2-End--> |
-| GIF_METADATA = 5 | GIF image metadata.<br>**Since**: 20<br><!--Device-GIF_METADATA = 5--><!--Device-GIF_METADATA = 5-End--> |
+| EXIF_METADATA = 1 |  |
+| FRAGMENT_METADATA = 2 |  |
+| GIF_METADATA = 5 |  |
 
 ### IMAGE_ALLOCATOR_MODE
 
@@ -136,17 +127,13 @@ enum IMAGE_ALLOCATOR_MODE
 
 Type of allocator used to allocate memory of a PixelMap.
 
-<!--Device-enum IMAGE_ALLOCATOR_MODE--><!--Device-enum IMAGE_ALLOCATOR_MODE-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| IMAGE_ALLOCATOR_MODE_AUTO = 0 | The system determines which memory to use to create the PixelMap.<br>**Since**: 20<br><!--Device-IMAGE_ALLOCATOR_MODE_AUTO = 0--><!--Device-IMAGE_ALLOCATOR_MODE_AUTO = 0-End--> |
-| IMAGE_ALLOCATOR_MODE_DMA = 1 | Use DMA buffer to create the PixelMap.<br>**Since**: 20<br><!--Device-IMAGE_ALLOCATOR_MODE_DMA = 1--><!--Device-IMAGE_ALLOCATOR_MODE_DMA = 1-End--> |
-| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 | Use share memory to create the PixelMap.<br>**Since**: 20<br><!--Device-IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2--><!--Device-IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2-End--> |
+| IMAGE_ALLOCATOR_MODE_AUTO = 0 |  |
+| IMAGE_ALLOCATOR_MODE_DMA = 1 |  |
+| IMAGE_ALLOCATOR_MODE_SHARED_MEMORY = 2 |  |
 
 
 ## Function description
@@ -160,10 +147,6 @@ Image_ErrorCode OH_PictureMetadata_Create(Image_MetadataType metadataType, OH_Pi
 **Description**
 
 Creates the pointer to an OH_PictureMetadata struct.
-
-<!--Device-Image_ErrorCode OH_PictureMetadata_Create(Image_MetadataType metadataType, OH_PictureMetadata **metadata)--><!--Device-Image_ErrorCode OH_PictureMetadata_Create(Image_MetadataType metadataType, OH_PictureMetadata **metadata)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -189,10 +172,6 @@ Image_ErrorCode OH_PictureMetadata_GetProperty(OH_PictureMetadata *metadata, Ima
 **Description**
 
 Obtains a property of metadata based on the key. **value.data** obtained through this API lacks the string terminator **\0**. Please use it with caution.
-
-<!--Device-Image_ErrorCode OH_PictureMetadata_GetProperty(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)--><!--Device-Image_ErrorCode OH_PictureMetadata_GetProperty(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -220,10 +199,6 @@ Image_ErrorCode OH_PictureMetadata_GetPropertyWithNull(OH_PictureMetadata *metad
 
 Obtains the metadata value of an OH_PictureMetadata instance. The output **value.data** ends with the string terminator **\0**.
 
-<!--Device-Image_ErrorCode OH_PictureMetadata_GetPropertyWithNull(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)--><!--Device-Image_ErrorCode OH_PictureMetadata_GetPropertyWithNull(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 19
 
 **Parameters**:
@@ -249,10 +224,6 @@ Image_ErrorCode OH_PictureMetadata_SetProperty(OH_PictureMetadata *metadata, Ima
 **Description**
 
 Sets a property of metadata based on the key.
-
-<!--Device-Image_ErrorCode OH_PictureMetadata_SetProperty(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)--><!--Device-Image_ErrorCode OH_PictureMetadata_SetProperty(OH_PictureMetadata *metadata, Image_String *key, Image_String *value)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -280,10 +251,6 @@ Image_ErrorCode OH_PictureMetadata_SetBlobData(OH_PictureMetadata *metadata, uin
 
 Sets blob data in the metadata.
 
-<!--Device-Image_ErrorCode OH_PictureMetadata_SetBlobData(OH_PictureMetadata *metadata, uint8_t *blob, uint32_t blobSize)--><!--Device-Image_ErrorCode OH_PictureMetadata_SetBlobData(OH_PictureMetadata *metadata, uint8_t *blob, uint32_t blobSize)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -310,10 +277,6 @@ Image_ErrorCode OH_PictureMetadata_GetBlobDataSize(OH_PictureMetadata *metadata,
 
 Obtains the size of the blob data in the metadata.
 
-<!--Device-Image_ErrorCode OH_PictureMetadata_GetBlobDataSize(OH_PictureMetadata *metadata, uint32_t *blobSize)--><!--Device-Image_ErrorCode OH_PictureMetadata_GetBlobDataSize(OH_PictureMetadata *metadata, uint32_t *blobSize)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -338,10 +301,6 @@ Image_ErrorCode OH_PictureMetadata_GetBlobData(OH_PictureMetadata *metadata, uin
 **Description**
 
 Obtains blob data from the metadata.
-
-<!--Device-Image_ErrorCode OH_PictureMetadata_GetBlobData(OH_PictureMetadata *metadata, uint8_t *blob, uint32_t blobSize)--><!--Device-Image_ErrorCode OH_PictureMetadata_GetBlobData(OH_PictureMetadata *metadata, uint8_t *blob, uint32_t blobSize)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -369,10 +328,6 @@ Image_ErrorCode OH_PictureMetadata_Release(OH_PictureMetadata *metadata)
 
 Releases the pointer to an OH_PictureMetadata struct.
 
-<!--Device-Image_ErrorCode OH_PictureMetadata_Release(OH_PictureMetadata *metadata)--><!--Device-Image_ErrorCode OH_PictureMetadata_Release(OH_PictureMetadata *metadata)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -396,10 +351,6 @@ Image_ErrorCode OH_PictureMetadata_Clone(OH_PictureMetadata *oldMetadata, OH_Pic
 **Description**
 
 Clones metadata.
-
-<!--Device-Image_ErrorCode OH_PictureMetadata_Clone(OH_PictureMetadata *oldMetadata, OH_PictureMetadata **newMetadata)--><!--Device-Image_ErrorCode OH_PictureMetadata_Clone(OH_PictureMetadata *oldMetadata, OH_PictureMetadata **newMetadata)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 

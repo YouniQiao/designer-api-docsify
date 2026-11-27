@@ -50,7 +50,7 @@ Adds a path to this path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-canvas-comp-path2d-c.md) | Yes | Path object to be added to the current path.<br> The abnormal values **undefined** and **null** are treated as invalid values. |
-| transform | Matrix2D | No | Transformation matrix object for the added path, used to perform transformations such as translation, rotation, and scaling on the added path. Pass this parameter when graphic transformation is needed for the added path; it can be omitted when no transformation is required. If not passed, the default value is **null**, indicating that no transformation is applied to the path.<br> The abnormal values **undefined** and **null** are treated as invalid values.<br> Default value: **null** |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix object for the added path, used to perform transformations such as translation, rotation, and scaling on the added path. Pass this parameter when graphic transformation is needed for the added path; it can be omitted when no transformation is required. If not passed, the default value is **null**, indicating that no transformation is applied to the path.<br> The abnormal values **undefined** and **null** are treated as invalid values.<br> Default value: **null** |
 
 ## constructor
 

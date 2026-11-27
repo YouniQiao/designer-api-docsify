@@ -1,19 +1,17 @@
 # Offset
 
 ```TypeScript
-export type Offset = Vector2
+declare type Offset
 ```
 
-Sets the offset of the component or effect.
+Defines the offset coordinates of a component in the layout.
 
-**Type:** [Vector2](arkts-arkui-graphics-vector2-i.md)
+**Since:** 7
 
-**Since:** 11
+**Model restriction:** This API can be used in both the stage model and FA model.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-export type Offset = Vector2--><!--Device-unnamed-export type Offset = Vector2-End-->
+<!--Device-unnamed-declare type Offset--><!--Device-unnamed-declare type Offset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

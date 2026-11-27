@@ -8,7 +8,7 @@ Defines the margins in different directions of a component.
 
 To reference this object, at least one parameter must be passed.
 
-**Type:** Padding
+**Type:** [Padding](arkts-arkui-padding-t.md)
 
 **Since:** 7
 

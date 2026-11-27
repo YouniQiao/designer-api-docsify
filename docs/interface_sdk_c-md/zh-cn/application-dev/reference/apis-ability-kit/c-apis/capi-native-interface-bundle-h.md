@@ -6,11 +6,9 @@
 
 **库：** libbundle_ndk.z.so
 
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 9
 
-**相关模块：** [Native_Bundle](capi-ability-kit-native-bundle.md)
+**相关模块：** [Native_Bundle](capi-native-bundle.md)
 
 ## 汇总
 
@@ -20,8 +18,8 @@
 | -- | -- | -- |
 | [OH_NativeBundle_ApplicationInfo](capi-native-bundle-oh-nativebundle-applicationinfo.md) | OH_NativeBundle_ApplicationInfo | 应用包信息数据结构，包含应用包名和应用指纹信息。 |
 | [OH_NativeBundle_ElementName](capi-native-bundle-oh-nativebundle-elementname.md) | OH_NativeBundle_ElementName | elementName信息。 |
-| [OH_NativeBundle_Metadata](capi-native-bundle-oh-nativebundle-metadata.md) | OH_NativeBundle_Metadata | 元数据信息。 |
-| [OH_NativeBundle_ModuleMetadata](capi-native-bundle-oh-nativebundle-modulemetadata.md) | OH_NativeBundle_ModuleMetadata | 模块元数据的信息。 |
+| [OH_NativeBundle_Metadata](capi-native-bundle-oh-nativebundle-metadata.md) | - | 元数据信息。 |
+| [OH_NativeBundle_ModuleMetadata](capi-native-bundle-oh-nativebundle-modulemetadata.md) | - | 模块元数据的信息。 |
 
 ### 宏定义
 
@@ -54,10 +52,6 @@ OH_NativeBundle_ApplicationInfo OH_NativeBundle_GetCurrentApplicationInfo()
 
 获取当前应用信息，包含应用包名和应用指纹信息。
 
-<!--Device-OH_NativeBundle_ApplicationInfo OH_NativeBundle_GetCurrentApplicationInfo()--><!--Device-OH_NativeBundle_ApplicationInfo OH_NativeBundle_GetCurrentApplicationInfo()-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 9
 
 **返回值：**
@@ -75,10 +69,6 @@ char* OH_NativeBundle_GetAppId()
 **描述：**
 
 获取当前应用的appId。appId是应用的唯一标识，由应用包名和签名信息决定。在使用此接口后，为了避免内存泄漏，需要手动释放接口返回的指针。
-
-<!--Device-char* OH_NativeBundle_GetAppId()--><!--Device-char* OH_NativeBundle_GetAppId()-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **起始版本：** 11
 
@@ -98,10 +88,6 @@ char* OH_NativeBundle_GetAppIdentifier()
 
 获取当前应用的应用程序标识符。该应用程序标识符在应用的整个生命周期中不会发生变化，包括版本更新、证书更改、公钥和私钥更改以及应用程序迁移。在使用此接口后，为了避免内存泄漏，需要手动释放接口返回的指针。
 
-<!--Device-char* OH_NativeBundle_GetAppIdentifier()--><!--Device-char* OH_NativeBundle_GetAppIdentifier()-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 11
 
 **返回值：**
@@ -119,10 +105,6 @@ OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()
 **描述：**
 
 获取当前应用入口元素mainElement的信息，包括包名、模块名和组件名，在使用此接口后，为了避免内存泄漏，需要手动释放接口返回的指针。
-
-<!--Device-OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()--><!--Device-OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **起始版本：** 13
 
@@ -142,10 +124,6 @@ char* OH_NativeBundle_GetCompatibleDeviceType()
 
 获取当前应用适用的设备类型。用于将手机应用分发到平板/2in1设备时，合理适配布局和字体大小。在使用此接口后，为了避免内存泄漏，需要手动释放接口返回的指针。
 
-<!--Device-char* OH_NativeBundle_GetCompatibleDeviceType()--><!--Device-char* OH_NativeBundle_GetCompatibleDeviceType()-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 14
 
 **返回值：**
@@ -164,17 +142,13 @@ bool OH_NativeBundle_IsDebugMode(bool* isDebugMode)
 
 查询当前应用是否处于调试模式。
 
-<!--Device-bool OH_NativeBundle_IsDebugMode(bool* isDebugMode)--><!--Device-bool OH_NativeBundle_IsDebugMode(bool* isDebugMode)-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 20
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| bool* isDebugMode | [in] 表示应用是否处于调试模式，取值为true表示可调试模式，取值为false表示不可调试模式。 |
+| bool* isDebugMode | 表示应用是否处于调试模式，取值为true表示可调试模式，取值为false表示不可调试模式。 |
 
 **返回值：**
 
@@ -192,17 +166,13 @@ OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)
 
 获取当前应用程序的模块元数据数组。在使用该接口之后，为了防止内存泄漏，需要手动释放接口返回的指针。
 
-<!--Device-OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)--><!--Device-OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **起始版本：** 20
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| size_t* size | [in] 表示模块元数据数组大小。 |
+| size_t* size | 表示模块元数据数组大小。 |
 
 **返回值：**
 
@@ -220,10 +190,6 @@ BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, O
 
 获取支持打开特定文件类型的组件资源信息列表。在使用完该接口之后，为了防止内存泄漏，需要调用[OH_AbilityResourceInfo_Destroy](capi-ability-resource-info-h.md#oh_abilityresourceinfo_destroy)进行释放。
 
-<!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, OH_NativeBundle_AbilityResourceInfo** abilityResourceInfo, size_t* size)--><!--Device-BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, OH_NativeBundle_AbilityResourceInfo** abilityResourceInfo, size_t* size)-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 **需要权限：** ohos.permission.GET_ABILITY_INFO
 
 **起始版本：** 21
@@ -232,9 +198,9 @@ BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, O
 
 | 参数项 | 描述 |
 | -- | -- |
-| char* fileType | [in] 表示待查询的特定文件类型，推荐使用UTD类型，比如：'general.plain-text'、'general.image'。 目前也可以兼容使用MIME type类型 和文件后缀名称，如：'text/xml' 、 '.png'等。 文件后缀与文件类型的映射关系参见UTD预置列表。不支持传'*\/*'。 |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)** abilityResourceInfo | [in] 表示返回的组件资源信息列表。 |
-| size_t* size | [in] 表示返回的组件资源信息列表大小。 |
+| char* fileType | 表示待查询的特定文件类型，推荐使用UTD类型，比如：'general.plain-text'、'general.image'。目前也可以兼容使用MIME type类型 和文件后缀名称，如：'text/xml' 、 '.png'等。文件后缀与文件类型的映射关系参见UTD预置列表。不支持传'\*\/\*'。 |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)** abilityResourceInfo | 表示返回的组件资源信息列表。 |
+| size_t* size | 表示返回的组件资源信息列表大小。 |
 
 **返回值：**
 

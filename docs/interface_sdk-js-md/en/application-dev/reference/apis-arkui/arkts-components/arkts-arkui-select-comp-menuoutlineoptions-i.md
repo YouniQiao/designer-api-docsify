@@ -22,7 +22,7 @@ Color of the outline.
 
 Default value: **#19ffffff**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [EdgeColors](../arkts-apis/arkts-arkui-edgecolors-t.md)
 
 **Since:** 20
 
@@ -44,7 +44,7 @@ Width of the outline. Percentage values are not supported.
 
 Default value: **0**
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [EdgeOutlineWidths](../arkts-apis/arkts-arkui-edgeoutlinewidths-t.md)
 
 **Since:** 20
 

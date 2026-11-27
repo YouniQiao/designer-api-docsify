@@ -1,20 +1,18 @@
 # OH_AudioStreamInfo
 
 ```c
-typedef struct OH_AudioStreamInfo {...} OH_AudioStreamInfo
+struct OH_AudioStreamInfo {...}
 ```
 
 ## 概述
 
-声明音频流信息结构体，该结构体用于表示音频基础格式，包括采样率、声道布局、编码格式和采样格式信息。
-
-<!--Device-struct OH_AudioStreamInfo {...}--><!--Device-struct OH_AudioStreamInfo {...}-End-->
+定义音频流信息结构体，用于描述基本音频格式。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 19
 
-**相关模块：** [OHAudio](capi-audio-kit-ohaudio.md)
+**相关模块：** [OHAudio](capi-ohaudio.md)
 
 **所在头文件：** [native_audiostream_base.h](capi-native-audiostream-base-h.md)
 
@@ -24,9 +22,9 @@ typedef struct OH_AudioStreamInfo {...} OH_AudioStreamInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t samplingRate | 音频流采样率。单位为赫兹（Hz）。<br>**起始版本：** 19<br><!--Device-int32_t samplingRate--><!--Device-int32_t samplingRate-End--> |
-| [OH_AudioChannelLayout](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout) channelLayout | 音频流声道布局。<br>**起始版本：** 19<br><!--Device-OH_AudioChannelLayout channelLayout--><!--Device-OH_AudioChannelLayout channelLayout-End--> |
-| [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) encodingType | 音频流编码类型。<br>**起始版本：** 19<br><!--Device-OH_AudioStream_EncodingType encodingType--><!--Device-OH_AudioStream_EncodingType encodingType-End--> |
-| [OH_AudioStream_SampleFormat](capi-native-audiostream-base-h.md#oh_audiostream_sampleformat) sampleFormat | 音频流采样格式。<br>**起始版本：** 19<br><!--Device-OH_AudioStream_SampleFormat sampleFormat--><!--Device-OH_AudioStream_SampleFormat sampleFormat-End--> |
+| int32_t samplingRate | 音频流采样率。单位为赫兹（Hz）。<br>**起始版本：** 19 |
+| [OH_AudioChannelLayout](../../apis-avcodec-kit/c-apis/capi-native-audio-channel-layout-h.md#oh_audiochannellayout) channelLayout | 音频流声道布局。<br>**起始版本：** 19 |
+| [OH_AudioStream_EncodingType](capi-native-audiostream-base-h.md#oh_audiostream_encodingtype) encodingType | 音频流编码类型。<br>**起始版本：** 19 |
+| [OH_AudioStream_SampleFormat](capi-native-audiostream-base-h.md#oh_audiostream_sampleformat) sampleFormat | 音频流采样格式。<br>**起始版本：** 19 |
 
 

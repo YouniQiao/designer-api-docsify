@@ -1,20 +1,18 @@
 # OH_AVSession_AVQueueItem
 
 ```c
-typedef struct OH_AVSession_AVQueueItem {...} OH_AVSession_AVQueueItem
+struct OH_AVSession_AVQueueItem {...}
 ```
 
 ## 概述
 
 音视频队列元素的定义。
 
-<!--Device-struct OH_AVSession_AVQueueItem {...}--><!--Device-struct OH_AVSession_AVQueueItem {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **起始版本：** 23
 
-**相关模块：** [OHAVSession](capi-avsession-kit-ohavsession.md)
+**相关模块：** [OHAVSession](capi-ohavsession.md)
 
 **所在头文件：** [native_avqueueitem.h](capi-native-avqueueitem-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_AVSession_AVQueueItem {...} OH_AVSession_AVQueueItem
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t itemId | 资源ID。<br><!--Device-uint32_t itemId--><!--Device-uint32_t itemId-End--> |
-| [OH_AVSession_AVMediaDescription](capi-ohavsession-oh-avsession-avmediadescription.md) *description | 媒体项信息。<br><!--Device-OH_AVSession_AVMediaDescription *description--><!--Device-OH_AVSession_AVMediaDescription *description-End--> |
+| uint32_t itemId | 资源ID。 |
+| OH_AVSession_AVMediaDescription *description | 媒体项信息。 |
 
 

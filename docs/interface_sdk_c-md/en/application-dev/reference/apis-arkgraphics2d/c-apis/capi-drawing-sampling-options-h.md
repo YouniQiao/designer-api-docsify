@@ -6,22 +6,20 @@ This file declares the functions related to sampling in the drawing module. It i
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_FilterMode](#oh_drawing_filtermode) | OH_Drawing_FilterMode | Defines an enum for the filter modes. |
 | [OH_Drawing_MipmapMode](#oh_drawing_mipmapmode) | OH_Drawing_MipmapMode | Defines an enum for the mipmap modes. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -41,16 +39,12 @@ enum OH_Drawing_FilterMode
 
 Defines an enum for the filter modes.
 
-<!--Device-enum OH_Drawing_FilterMode--><!--Device-enum OH_Drawing_FilterMode-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| FILTER_MODE_NEAREST | Nearest filter mode.<br><!--Device-FILTER_MODE_NEAREST--><!--Device-FILTER_MODE_NEAREST-End--> |
-| FILTER_MODE_LINEAR | Linear filter mode.<br><!--Device-FILTER_MODE_LINEAR--><!--Device-FILTER_MODE_LINEAR-End--> |
+| FILTER_MODE_NEAREST | Nearest filter mode. |
+| FILTER_MODE_LINEAR | Linear filter mode. |
 
 ### OH_Drawing_MipmapMode
 
@@ -62,17 +56,13 @@ enum OH_Drawing_MipmapMode
 
 Defines an enum for the mipmap modes.
 
-<!--Device-enum OH_Drawing_MipmapMode--><!--Device-enum OH_Drawing_MipmapMode-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MIPMAP_MODE_NONE | Mipmap level ignored.<br><!--Device-MIPMAP_MODE_NONE--><!--Device-MIPMAP_MODE_NONE-End--> |
-| MIPMAP_MODE_NEAREST | Nearest sampling from two adjacent mipmap levels.<br><!--Device-MIPMAP_MODE_NEAREST--><!--Device-MIPMAP_MODE_NEAREST-End--> |
-| MIPMAP_MODE_LINEAR | Linear interpolation sampling between two adjacent mipmap levels.<br><!--Device-MIPMAP_MODE_LINEAR--><!--Device-MIPMAP_MODE_LINEAR-End--> |
+| MIPMAP_MODE_NONE | Mipmap level ignored. |
+| MIPMAP_MODE_NEAREST | Nearest sampling from two adjacent mipmap levels. |
+| MIPMAP_MODE_LINEAR | Linear interpolation sampling between two adjacent mipmap levels. |
 
 
 ## Function description
@@ -86,10 +76,6 @@ OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMo
 **Description**
 
 Creates an **OH_Drawing_SamplingOptions** object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **mipmapMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
-
-<!--Device-OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMode filterMode, OH_Drawing_MipmapMode mipmapMode)--><!--Device-OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMode filterMode, OH_Drawing_MipmapMode mipmapMode)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -116,10 +102,6 @@ OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCopy(OH_Drawing_SamplingOp
 
 Creates a copy of an [OH_Drawing_SamplingOptions](capi-drawing-oh-drawing-samplingoptions.md) object.
 
-<!--Device-OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCopy(OH_Drawing_SamplingOptions* samplingOptions)--><!--Device-OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCopy(OH_Drawing_SamplingOptions* samplingOptions)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 20
 
 **Parameters**:
@@ -143,10 +125,6 @@ void OH_Drawing_SamplingOptionsDestroy(OH_Drawing_SamplingOptions* samplingOptio
 **Description**
 
 Destroys an **OH_Drawing_SamplingOptions** object and reclaims the memory occupied by the object.
-
-<!--Device-void OH_Drawing_SamplingOptionsDestroy(OH_Drawing_SamplingOptions* samplingOptions)--><!--Device-void OH_Drawing_SamplingOptionsDestroy(OH_Drawing_SamplingOptions* samplingOptions)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

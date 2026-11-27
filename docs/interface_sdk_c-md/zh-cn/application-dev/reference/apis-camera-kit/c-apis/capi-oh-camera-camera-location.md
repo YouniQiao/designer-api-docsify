@@ -1,20 +1,18 @@
 # Camera_Location
 
 ```c
-typedef struct Camera_Location {...} Camera_Location
+struct Camera_Location {...}
 ```
 
 ## 概述
 
 拍照位置。
 
-<!--Device-struct Camera_Location {...}--><!--Device-struct Camera_Location {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,8 +22,8 @@ typedef struct Camera_Location {...} Camera_Location
 
 | 名称 | 描述 |
 | -- | -- |
-| double latitude | 纬度。<br><!--Device-double latitude--><!--Device-double latitude-End--> |
-| double longitude | 经度。<br><!--Device-double longitude--><!--Device-double longitude-End--> |
-| double altitude | 海拔高度，单位为米。<br><!--Device-double altitude--><!--Device-double altitude-End--> |
+| double latitude | 纬度。 |
+| double longitude | 经度。 |
+| double altitude | 海拔高度，单位为米。 |
 
 

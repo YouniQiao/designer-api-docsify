@@ -2,17 +2,3 @@
 
 ## Overview
 
-<!--Device-struct StdVideoDecodeH264ReferenceInfoFlags {...}--><!--Device-struct StdVideoDecodeH264ReferenceInfoFlags {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| uint32_t top_field_flag : 1 | <!--Device-uint32_t top_field_flag : 1--><!--Device-uint32_t top_field_flag : 1-End--> |
-| uint32_t bottom_field_flag : 1 | <!--Device-uint32_t bottom_field_flag : 1--><!--Device-uint32_t bottom_field_flag : 1-End--> |
-| uint32_t used_for_long_term_reference : 1 | <!--Device-uint32_t used_for_long_term_reference : 1--><!--Device-uint32_t used_for_long_term_reference : 1-End--> |
-| uint32_t is_non_existing : 1 | <!--Device-uint32_t is_non_existing : 1--><!--Device-uint32_t is_non_existing : 1-End--> |
-
-

@@ -6,21 +6,19 @@ Defines APIs for game devices.
 
 **Library**: libohgame_controller.z.so
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
-**Related module**: [GameController](capi-game-controller-kit-gamecontroller.md)
+**Related module**: [GameController](capi-gamecontroller.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md) | GameDevice_AllDeviceInfos | Defines the result returned by [OH_GameDevice_GetAllDeviceInfos](capi-game-device-h.md#oh_gamedevice_getalldeviceinfos). |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -42,10 +40,6 @@ GameController_ErrorCode OH_GameDevice_GetAllDeviceInfos(GameDevice_AllDeviceInf
 **Description**
 
 Obtains information about all online devices.
-
-<!--Device-GameController_ErrorCode OH_GameDevice_GetAllDeviceInfos(GameDevice_AllDeviceInfos** allDeviceInfos)--><!--Device-GameController_ErrorCode OH_GameDevice_GetAllDeviceInfos(GameDevice_AllDeviceInfos** allDeviceInfos)-End-->
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -76,10 +70,6 @@ GameController_ErrorCode OH_GameDevice_RegisterDeviceMonitor(GameDevice_DeviceMo
 
 Registers a callback for device status change events.
 
-<!--Device-GameController_ErrorCode OH_GameDevice_RegisterDeviceMonitor(GameDevice_DeviceMonitorCallback deviceMonitorCallback)--><!--Device-GameController_ErrorCode OH_GameDevice_RegisterDeviceMonitor(GameDevice_DeviceMonitorCallback deviceMonitorCallback)-End-->
-
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -109,10 +99,6 @@ GameController_ErrorCode OH_GameDevice_UnregisterDeviceMonitor(void)
 
 Unregisters the callback for device status change events.
 
-<!--Device-GameController_ErrorCode OH_GameDevice_UnregisterDeviceMonitor(void)--><!--Device-GameController_ErrorCode OH_GameDevice_UnregisterDeviceMonitor(void)-End-->
-
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Returns**:
@@ -130,10 +116,6 @@ GameController_ErrorCode OH_GameDevice_DestroyAllDeviceInfos(GameDevice_AllDevic
 **Description**
 
 Destroys all device information instances.
-
-<!--Device-GameController_ErrorCode OH_GameDevice_DestroyAllDeviceInfos(GameDevice_AllDeviceInfos** allDeviceInfos)--><!--Device-GameController_ErrorCode OH_GameDevice_DestroyAllDeviceInfos(GameDevice_AllDeviceInfos** allDeviceInfos)-End-->
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -159,10 +141,6 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetCount(const struct Game
 
 Obtains the number of devices.
 
-<!--Device-GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetCount(const struct GameDevice_AllDeviceInfos* allDeviceInfos, int32_t* count)--><!--Device-GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetCount(const struct GameDevice_AllDeviceInfos* allDeviceInfos, int32_t* count)-End-->
-
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -187,10 +165,6 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetDeviceInfo(const struct
 **Description**
 
 Obtains the device information at the specified index.
-
-<!--Device-GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetDeviceInfo(const struct GameDevice_AllDeviceInfos* allDeviceInfos, const int32_t index, GameDevice_DeviceInfo** deviceInfo)--><!--Device-GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetDeviceInfo(const struct GameDevice_AllDeviceInfos* allDeviceInfos, const int32_t index, GameDevice_DeviceInfo** deviceInfo)-End-->
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 

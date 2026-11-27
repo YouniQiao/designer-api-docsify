@@ -6,7 +6,7 @@ Enumerates the event types supported by the NativeNode component.
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **所在头文件：** [native_node.h](capi-native-node-h.md)
 
@@ -20,7 +20,6 @@ Enumerates the event types supported by the NativeNode component.
 
 - [交互事件](capi-arkui-nodeeventtype-interaction-event.md)
 - [拖拽事件](capi-arkui-nodeeventtype-drag-event.md)
-- [交互事件](capi-arkui-nodeeventtype-交互事件.md)
 - [文本显示](capi-arkui-nodeeventtype-text-display.md)
 - [切换按钮](capi-arkui-nodeeventtype-toggle.md)
 - [文本输入](capi-arkui-nodeeventtype-text-input.md)

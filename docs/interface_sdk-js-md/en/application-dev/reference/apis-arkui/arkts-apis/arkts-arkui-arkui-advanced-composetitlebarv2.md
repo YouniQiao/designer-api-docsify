@@ -30,7 +30,7 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 | Name | Description |
 | --- | --- |
-| [OnActionCallback](arkts-arkui-onactioncallback-t.md) | Declare the type of callback function when clicking on this menu item. |
+| [OnActionCallback](arkts-arkui-composetitlebarv2-onactioncallback-t.md) | Declare the type of callback function when clicking on this menu item. |
 
 ## Examples
 

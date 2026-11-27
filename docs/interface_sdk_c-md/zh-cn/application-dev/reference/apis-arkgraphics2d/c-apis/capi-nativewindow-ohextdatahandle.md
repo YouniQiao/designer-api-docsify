@@ -1,14 +1,12 @@
 # OHExtDataHandle
 
 ```c
-typedef struct OHExtDataHandle {...} OHExtDataHandle
+struct OHExtDataHandle {...}
 ```
 
 ## 概述
 
 扩展数据句柄结构体定义。
-
-<!--Device-struct OHExtDataHandle {...}--><!--Device-struct OHExtDataHandle {...}-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -16,7 +14,7 @@ typedef struct OHExtDataHandle {...} OHExtDataHandle
 
 **废弃版本：** 10
 
-**相关模块：** [NativeWindow](capi-arkgraphics2d-nativewindow.md)
+**相关模块：** [NativeWindow](capi-nativewindow.md)
 
 **所在头文件：** [external_window.h](capi-external-window-h.md)
 
@@ -26,8 +24,8 @@ typedef struct OHExtDataHandle {...} OHExtDataHandle
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t fd | < 句柄 Fd，-1代表不支持<br><!--Device-int32_t fd--><!--Device-int32_t fd-End--> |
-| uint32_t reserveInts | < Reserve数组的个数<br><!--Device-uint32_t reserveInts--><!--Device-uint32_t reserveInts-End--> |
-| int32_t reserve[0] | < Reserve数组<br><!--Device-int32_t reserve[0]--><!--Device-int32_t reserve[0]-End--> |
+| int32_t fd | < 句柄 Fd，-1代表不支持 |
+| uint32_t reserveInts | < Reserve数组的个数 |
+| int32_t reserve[0] | < Reserve数组 |
 
 

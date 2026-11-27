@@ -1,20 +1,18 @@
 # OH_Http_Interceptor_Headers
 
 ```c
-typedef struct OH_Http_Interceptor_Headers {...} OH_Http_Interceptor_Headers
+struct OH_Http_Interceptor_Headers {...}
 ```
 
 ## Overview
 
 Defines a struct for the request/response header information of the interceptor.
 
-<!--Device-struct OH_Http_Interceptor_Headers {...}--><!--Device-struct OH_Http_Interceptor_Headers {...}-End-->
-
 **System capability**: SystemCapability.Communication.NetStack
 
 **Since**: 24
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 **Header file**: [http_interceptor_type.h](capi-http-interceptor-type-h.md)
 
@@ -24,7 +22,7 @@ Defines a struct for the request/response header information of the interceptor.
 
 | Name | Description |
 | -- | -- |
-| char *data | Pointer to the request/response header information of the interceptor.<br>**Since**: 24<br><!--Device-char *data--><!--Device-char *data-End--> |
-| [struct OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *next | Pointer to the next header information.<br>**Since**: 24<br><!--Device-struct OH_Http_Interceptor_Headers *next--><!--Device-struct OH_Http_Interceptor_Headers *next-End--> |
+| char *data | Pointer to the request/response header information of the interceptor.<br>**Since**: 24 |
+| struct OH_Http_Interceptor_Headers *next | Pointer to the next header information.<br>**Since**: 24 |
 
 

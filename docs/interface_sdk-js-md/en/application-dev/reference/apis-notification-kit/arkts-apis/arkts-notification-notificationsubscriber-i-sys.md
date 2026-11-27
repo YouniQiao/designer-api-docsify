@@ -630,7 +630,7 @@ Callback that returns the change of the DND time settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Yes |  |
+| mode | [notification.DoNotDisturbDate](arkts-notification-notification-depr-donotdisturbdate-i-sys.md) | Yes |  |
 
 <!--Del-->
 **Examples**

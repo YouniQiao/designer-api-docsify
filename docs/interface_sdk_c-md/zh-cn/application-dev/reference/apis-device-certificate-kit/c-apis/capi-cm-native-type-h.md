@@ -6,11 +6,9 @@ Provides the enums, structs, macros, and error codes used by **CertManager** API
 
 **库：** libohcert_manager.z.so
 
-**系统能力：** SystemCapability.Security.CertificateManager
-
 **起始版本：** 22
 
-**相关模块：** [CertManagerType](capi-device-certificate-kit-certmanagertype.md)
+**相关模块：** [CertManagerType](capi-certmanagertype.md)
 
 ## 汇总
 
@@ -51,26 +49,22 @@ enum OH_CM_ErrorCode
 
 Enumerates error codes.
 
-<!--Device-enum OH_CM_ErrorCode--><!--Device-enum OH_CM_ErrorCode-End-->
-
-**系统能力：** SystemCapability.Security.CertificateManager
-
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CM_SUCCESS = 0 | Operation succeeded.<br><!--Device-OH_CM_SUCCESS = 0--><!--Device-OH_CM_SUCCESS = 0-End--> |
-| OH_CM_HAS_NO_PERMISSION = 201 | Permission verification failed.<br><!--Device-OH_CM_HAS_NO_PERMISSION = 201--><!--Device-OH_CM_HAS_NO_PERMISSION = 201-End--> |
-| OH_CM_CAPABILITY_NOT_SUPPORTED = 801 | Not supported by the device.<br><!--Device-OH_CM_CAPABILITY_NOT_SUPPORTED = 801--><!--Device-OH_CM_CAPABILITY_NOT_SUPPORTED = 801-End--> |
-| OH_CM_INNER_FAILURE = 17500001 | Internal error. Possible causes: 1. IPC failure. 2. Memory operation error. 3. File operation error.<br><!--Device-OH_CM_INNER_FAILURE = 17500001--><!--Device-OH_CM_INNER_FAILURE = 17500001-End--> |
-| OH_CM_NOT_FOUND = 17500002 | The certificate does not exist.<br><!--Device-OH_CM_NOT_FOUND = 17500002--><!--Device-OH_CM_NOT_FOUND = 17500002-End--> |
-| OH_CM_INVALID_CERT_FORMAT = 17500003 | The keystore format is invalid or the keystore password is incorrect.<br><!--Device-OH_CM_INVALID_CERT_FORMAT = 17500003--><!--Device-OH_CM_INVALID_CERT_FORMAT = 17500003-End--> |
-| OH_CM_MAX_CERT_COUNT_REACHED = 17500004 | The number of certificates or credentials reaches the upper limit.<br><!--Device-OH_CM_MAX_CERT_COUNT_REACHED = 17500004--><!--Device-OH_CM_MAX_CERT_COUNT_REACHED = 17500004-End--> |
-| OH_CM_NO_AUTHORIZATION = 17500005 | The application is not authorized.<br><!--Device-OH_CM_NO_AUTHORIZATION = 17500005--><!--Device-OH_CM_NO_AUTHORIZATION = 17500005-End--> |
-| OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007 | The device enters the advanced security mode.In this mode, CA certificate installation is restricted.<br><!--Device-OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007--><!--Device-OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007-End--> |
-| OH_CM_STORE_PATH_NOT_SUPPORTED = 17500009 | The device does not support the specified certificate storage path.<br><!--Device-OH_CM_STORE_PATH_NOT_SUPPORTED = 17500009--><!--Device-OH_CM_STORE_PATH_NOT_SUPPORTED = 17500009-End--> |
-| OH_CM_ACCESS_UKEY_SERVICE_FAILED = 17500010 | Failed to access the USB certificate credential.<br><!--Device-OH_CM_ACCESS_UKEY_SERVICE_FAILED = 17500010--><!--Device-OH_CM_ACCESS_UKEY_SERVICE_FAILED = 17500010-End--> |
-| OH_CM_PARAMETER_VALIDATION_FAILED = 17500011 | Parameter verification fails. For example, the parameter format or range is invalid.<br><!--Device-OH_CM_PARAMETER_VALIDATION_FAILED = 17500011--><!--Device-OH_CM_PARAMETER_VALIDATION_FAILED = 17500011-End--> |
+| OH_CM_SUCCESS = 0 | Operation succeeded. |
+| OH_CM_HAS_NO_PERMISSION = 201 | Permission verification failed. |
+| OH_CM_CAPABILITY_NOT_SUPPORTED = 801 | Not supported by the device. |
+| OH_CM_INNER_FAILURE = 17500001 | Internal error. Possible causes: 1. IPC failure. 2. Memory operation error. 3. File operation error. |
+| OH_CM_NOT_FOUND = 17500002 | The certificate does not exist. |
+| OH_CM_INVALID_CERT_FORMAT = 17500003 | The keystore format is invalid or the keystore password is incorrect. |
+| OH_CM_MAX_CERT_COUNT_REACHED = 17500004 | The number of certificates or credentials reaches the upper limit. |
+| OH_CM_NO_AUTHORIZATION = 17500005 | The application is not authorized. |
+| OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007 | The device enters the advanced security mode.In this mode, CA certificate installation is restricted. |
+| OH_CM_STORE_PATH_NOT_SUPPORTED = 17500009 | The device does not support the specified certificate storage path. |
+| OH_CM_ACCESS_UKEY_SERVICE_FAILED = 17500010 | Failed to access the USB certificate credential. |
+| OH_CM_PARAMETER_VALIDATION_FAILED = 17500011 | Parameter verification fails. For example, the parameter format or range is invalid. |
 
 ### OH_CM_CertificatePurpose
 
@@ -82,17 +76,13 @@ enum OH_CM_CertificatePurpose
 
 证书凭据用途类型。
 
-<!--Device-enum OH_CM_CertificatePurpose--><!--Device-enum OH_CM_CertificatePurpose-End-->
-
-**系统能力：** SystemCapability.Security.CertificateManager
-
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_CM_CERT_PURPOSE_DEFAULT = 0 | 默认用途，用于凭据签名用途。<br><!--Device-OH_CM_CERT_PURPOSE_DEFAULT = 0--><!--Device-OH_CM_CERT_PURPOSE_DEFAULT = 0-End--> |
-| OH_CM_CERT_PURPOSE_ALL = 1 | 所有用途，用于查询凭据功能。<br><!--Device-OH_CM_CERT_PURPOSE_ALL = 1--><!--Device-OH_CM_CERT_PURPOSE_ALL = 1-End--> |
-| OH_CM_CERT_PURPOSE_SIGN = 2 | 签名用途。<br><!--Device-OH_CM_CERT_PURPOSE_SIGN = 2--><!--Device-OH_CM_CERT_PURPOSE_SIGN = 2-End--> |
-| OH_CM_CERT_PURPOSE_ENCRYPT = 3 | 加密用途。<br><!--Device-OH_CM_CERT_PURPOSE_ENCRYPT = 3--><!--Device-OH_CM_CERT_PURPOSE_ENCRYPT = 3-End--> |
+| OH_CM_CERT_PURPOSE_DEFAULT = 0 | 默认用途，用于凭据签名用途。 |
+| OH_CM_CERT_PURPOSE_ALL = 1 | 所有用途，用于查询凭据功能。 |
+| OH_CM_CERT_PURPOSE_SIGN = 2 | 签名用途。 |
+| OH_CM_CERT_PURPOSE_ENCRYPT = 3 | 加密用途。 |
 
 

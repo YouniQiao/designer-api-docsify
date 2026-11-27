@@ -4,33 +4,31 @@
 
 Defines the structs, enums, and macros for external key management extensions.
 
-**File to Include**: <huks/native_huks_external_crypto_type.h>
+**Include**: <huks/native_huks_external_crypto_type.h>
 
 **Library**: libhuks_external_crypto.z.so
 
-**System capability**: SystemCapability.Security.Huks.CryptoExtension
-
 **Since**: 22
 
-**Related module**: [HuksExternalCryptoTypeApi](capi-universal-keystore-kit-huksexternalcryptotypeapi.md)
+**Related module**: [HuksExternalCryptoTypeApi](capi-huksexternalcryptotypeapi.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [OH_Huks_ExternalCryptoParam](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparam.md) | OH_Huks_ExternalCryptoParam | Defines a single parameter in a parameter set. |
-| [OH_Huks_ExternalCryptoParamSet](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparamset.md) | OH_Huks_ExternalCryptoParamSet | Defines an external cryptographic parameter set. |
+| Name | Description |
+| -- | -- |
+| [OH_Huks_ExternalCryptoParam](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparam.md) | Defines a single parameter in a parameter set. |
+| [OH_Huks_ExternalCryptoParamSet](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparamset.md) | Defines an external cryptographic parameter set. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Huks_ExternalCryptoTag](#oh_huks_externalcryptotag) | OH_Huks_ExternalCryptoTag | Enumerates the tag values used in a parameter set. |
 | [OH_Huks_ExternalPinAuthState](#oh_huks_externalpinauthstate) | OH_Huks_ExternalPinAuthState | Enumerates the UKey PIN authentication states. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
@@ -49,20 +47,16 @@ enum OH_Huks_ExternalCryptoTag
 
 Enumerates the tag values used in a parameter set.
 
-<!--Device-enum OH_Huks_ExternalCryptoTag--><!--Device-enum OH_Huks_ExternalCryptoTag-End-->
-
-**System capability**: SystemCapability.Security.Huks.CryptoExtension
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| OH_HUKS_EXT_CRYPTO_TAG_UKEY_PIN = OH_HUKS_TAG_TYPE_BYTES \| 200001 | PIN code.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_UKEY_PIN = OH_HUKS_TAG_TYPE_BYTES \| 200001--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_UKEY_PIN = OH_HUKS_TAG_TYPE_BYTES \| 200001-End--> |
-| OH_HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = OH_HUKS_TAG_TYPE_BYTES \| 200002 | Ability name.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = OH_HUKS_TAG_TYPE_BYTES \| 200002--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = OH_HUKS_TAG_TYPE_BYTES \| 200002-End--> |
-| OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = OH_HUKS_TAG_TYPE_BYTES \| 200003 | Extra data.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = OH_HUKS_TAG_TYPE_BYTES \| 200003--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = OH_HUKS_TAG_TYPE_BYTES \| 200003-End--> |
-| OH_HUKS_EXT_CRYPTO_TAG_UID = OH_HUKS_TAG_TYPE_INT \| 200004 | UID of the caller.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_UID = OH_HUKS_TAG_TYPE_INT \| 200004--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_UID = OH_HUKS_TAG_TYPE_INT \| 200004-End--> |
-| OH_HUKS_EXT_CRYPTO_TAG_PURPOSE = OH_HUKS_TAG_TYPE_INT \| 200005 | Purpose of the certificate chain.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_PURPOSE = OH_HUKS_TAG_TYPE_INT \| 200005--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_PURPOSE = OH_HUKS_TAG_TYPE_INT \| 200005-End--> |
-| OH_HUKS_EXT_CRYPTO_TAG_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 200006 | Timeout interval for obtaining properties, in seconds.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_TAG_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 200006--><!--Device-OH_HUKS_EXT_CRYPTO_TAG_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 200006-End--> |
+| OH_HUKS_EXT_CRYPTO_TAG_UKEY_PIN = OH_HUKS_TAG_TYPE_BYTES \| 200001 | PIN code.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = OH_HUKS_TAG_TYPE_BYTES \| 200002 | Ability name.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = OH_HUKS_TAG_TYPE_BYTES \| 200003 | Extra data.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_TAG_UID = OH_HUKS_TAG_TYPE_INT \| 200004 | UID of the caller.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_TAG_PURPOSE = OH_HUKS_TAG_TYPE_INT \| 200005 | Purpose of the certificate chain.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_TAG_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 200006 | Timeout interval for obtaining properties, in seconds.<br>**Since**: 22 |
 
 ### OH_Huks_ExternalPinAuthState
 
@@ -74,16 +68,12 @@ enum OH_Huks_ExternalPinAuthState
 
 Enumerates the UKey PIN authentication states.
 
-<!--Device-enum OH_Huks_ExternalPinAuthState--><!--Device-enum OH_Huks_ExternalPinAuthState-End-->
-
-**System capability**: SystemCapability.Security.Huks.CryptoExtension
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| OH_HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0 | PIN code not authenticated.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0--><!--Device-OH_HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0-End--> |
-| OH_HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1 | PIN code authentication succeeded.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1--><!--Device-OH_HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1-End--> |
-| OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2 | PIN code locked.<br>**Since**: 22<br><!--Device-OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2--><!--Device-OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2-End--> |
+| OH_HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0 | PIN code not authenticated.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1 | PIN code authentication succeeded.<br>**Since**: 22 |
+| OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2 | PIN code locked.<br>**Since**: 22 |
 
 

@@ -1,10 +1,10 @@
 # @ohos.resourceschedule.suspendManager(冻结管理)
 
-提供查询应用卡顿状态和注册监听器的API。挂起状态改变。
+本模块提供查询应用状态和注册监听的API，可监听应用冻结状态的改变，并通过进程pid列表查询应用当前的冻结状态。
 
 > **说明：** 
 > 
-> -该模块提供的API为系统API。
+> 本模块接口为系统接口。
 
 **起始版本：** 26.1.0
 
@@ -19,7 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总
@@ -29,9 +29,9 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getSuspendStateByPidList](arkts-backgroundtasks-suspendmanager-getsuspendstatebypidlist-f-sys.md#getsuspendstatebypidlist-1) | 根据进程的PID查询进程的冻结状态。 |
-| [registerSuspendStateObserver](arkts-backgroundtasks-suspendmanager-registersuspendstateobserver-f-sys.md#registersuspendstateobserver-1) | 注册一个挂起状态观察者来监听应用的挂起状态变化。 |
-| [unregisterSuspendStateObserver](arkts-backgroundtasks-suspendmanager-unregistersuspendstateobserver-f-sys.md#unregistersuspendstateobserver-1) | 注销先前注册的挂起状态观察者。 |
+| [getSuspendStateByPidList](arkts-backgroundtasks-suspendmanager-getsuspendstatebypidlist-f-sys.md#getsuspendstatebypidlist-1) | 根据进程的pid查询进程的冻结状态。 |
+| [registerSuspendStateObserver](arkts-backgroundtasks-suspendmanager-registersuspendstateobserver-f-sys.md#registersuspendstateobserver-1) | 注册一个冻结状态观察者来监听应用冻结状态的变化。 |
+| [unregisterSuspendStateObserver](arkts-backgroundtasks-suspendmanager-unregistersuspendstateobserver-f-sys.md#unregistersuspendstateobserver-1) | 注销先前注册的冻结状态观察者。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,7 +39,7 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 
 | 名称 | 说明 |
 | --- | --- |
-| [SuspendStateObserver](arkts-backgroundtasks-suspendmanager-suspendstateobserver-i-sys.md) | 定义挂起状态变化的观察者。 |
+| [SuspendStateObserver](arkts-backgroundtasks-suspendmanager-suspendstateobserver-i-sys.md) | 定义冻结状态变化的观察者。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -47,5 +47,5 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FreezeState](arkts-backgroundtasks-suspendmanager-freezestate-e-sys.md) | 枚举应用程序的冻结状态。 |
+| [FreezeState](arkts-backgroundtasks-suspendmanager-freezestate-e-sys.md) | 应用程序状态的枚举。 |
 <!--DelEnd-->

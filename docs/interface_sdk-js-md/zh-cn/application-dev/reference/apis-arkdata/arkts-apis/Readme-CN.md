@@ -11,23 +11,23 @@
     <!--Del-->
     - [sharing（系统接口）](arkts-arkdata-clouddata-sharing-n.md)<!--DelEnd-->
       <!--Del-->
-      - [allocResourceAndShare（系统接口）](arkts-arkdata-sharing-allocresourceandshare-f-sys.md)<!--DelEnd-->
+      - [allocResourceAndShare（系统接口）](arkts-arkdata-clouddata-sharing-allocresourceandshare-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [changeConfirmation（系统接口）](arkts-arkdata-sharing-changeconfirmation-f-sys.md)<!--DelEnd-->
+      - [changeConfirmation（系统接口）](arkts-arkdata-clouddata-sharing-changeconfirmation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [changePrivilege（系统接口）](arkts-arkdata-sharing-changeprivilege-f-sys.md)<!--DelEnd-->
+      - [changePrivilege（系统接口）](arkts-arkdata-clouddata-sharing-changeprivilege-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [confirmInvitation（系统接口）](arkts-arkdata-sharing-confirminvitation-f-sys.md)<!--DelEnd-->
+      - [confirmInvitation（系统接口）](arkts-arkdata-clouddata-sharing-confirminvitation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [exit（系统接口）](arkts-arkdata-sharing-exit-f-sys.md)<!--DelEnd-->
+      - [exit（系统接口）](arkts-arkdata-clouddata-sharing-exit-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [queryParticipants（系统接口）](arkts-arkdata-sharing-queryparticipants-f-sys.md)<!--DelEnd-->
+      - [queryParticipants（系统接口）](arkts-arkdata-clouddata-sharing-queryparticipants-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [queryParticipantsByInvitation（系统接口）](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md)<!--DelEnd-->
+      - [queryParticipantsByInvitation（系统接口）](arkts-arkdata-clouddata-sharing-queryparticipantsbyinvitation-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [share（系统接口）](arkts-arkdata-sharing-share-f-sys.md)<!--DelEnd-->
+      - [share（系统接口）](arkts-arkdata-clouddata-sharing-share-f-sys.md)<!--DelEnd-->
       <!--Del-->
-      - [unshare（系统接口）](arkts-arkdata-sharing-unshare-f-sys.md)<!--DelEnd-->
+      - [unshare（系统接口）](arkts-arkdata-clouddata-sharing-unshare-f-sys.md)<!--DelEnd-->
       <!--Del-->
       - [Participant（系统接口）](arkts-arkdata-sharing-participant-i-sys.md)<!--DelEnd-->
       <!--Del-->
@@ -517,4 +517,4 @@
   - [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md)
 - data<!--arkts-arkdata-data-->
   - [resultSet（The result set of database queries.）](arkts-arkdata-resultset.md)
-    - [ResultSet](arkts-arkdata-resultset-depr-i.md)
+    - [ResultSet](arkts-arkdata-resultset-depr-resultset-i.md)

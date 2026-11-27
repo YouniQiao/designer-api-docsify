@@ -6,27 +6,25 @@ This module allows you to create and release `NativeResourceManager` objects, an
 
 **Library**: librawfile.z.so
 
-**System capability**: SystemCapability.Global.ResourceManager
-
 **Since**: 8
 
-**Related module**: [rawfile](capi-localization-kit-rawfile.md)
+**Related module**: [rawfile](capi-rawfile.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [NativeResourceManager](capi-rawfile-nativeresourcemanager.md) | NativeResourceManager | Represents a `ResourceManager` object at the Native layer. `NativeResourceManager` encapsulates the Native implementation of JavaScript ResourceManager, and can be obtained through [OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
 | GLOBAL_NATIVE_RESOURCE_MANAGER_H | This module allows you to create and release `NativeResourceManager` objects, and open rawfiles and directories.<br>**Since**: 8<br>**System capability**: SystemCapability.Global.ResourceManager |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -48,10 +46,6 @@ NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env
 **Description**
 
 Initializes a `NativeResourceManager` object.
-
-<!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)--><!--Device-NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env, napi_value jsResMgr)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 8
 
@@ -78,10 +72,6 @@ void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resM
 
 Releases a `NativeResourceManager` object and its associated resources.
 
-<!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)--><!--Device-void OH_ResourceManager_ReleaseNativeResourceManager(NativeResourceManager *resMgr)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
-
 **Since**: 8
 
 **Parameters**:
@@ -99,10 +89,6 @@ RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const ch
 **Description**
 
 Opens the `rawfile` directory.
-
-<!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)--><!--Device-RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const char *dirName)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 8
 
@@ -135,10 +121,6 @@ RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const 
 
 Opens a rawfile and returns a `RawFile` object for reading the rawfile content.
 
-<!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const char *fileName)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
-
 **Since**: 8
 
 **Parameters**:
@@ -170,10 +152,6 @@ RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, co
 
 Opens a rawfile and returns a `RawFile` object for reading the rawfile content. Files larger than 2 GB are supported.
 
-<!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)--><!--Device-RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, const char *fileName)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
-
 **Since**: 11
 
 **Parameters**:
@@ -204,10 +182,6 @@ bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *p
 **Description**
 
 Checks whether the specified path is a subdirectory of `rawfile`. It is used to determine whether the specified path is a directory before traversing it, or whether the specified path is a file before opening it.
-
-<!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)--><!--Device-bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *path)-End-->
-
-**System capability**: SystemCapability.Global.ResourceManager
 
 **Since**: 12
 

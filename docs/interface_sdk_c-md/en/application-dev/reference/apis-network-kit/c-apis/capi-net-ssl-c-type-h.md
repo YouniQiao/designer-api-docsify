@@ -6,23 +6,21 @@ Defines the data structures for the C APIs of the SSL/TLS certificate chain veri
 
 **Library**: libnet_ssl.so
 
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
-**Related module**: [netstack](capi-network-kit-netstack.md)
+**Related module**: [netstack](capi-netstack.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [NetStack_CertBlob](capi-netstack-netstack-certblob.md) | - | Defines the certificate data structure. |
-| [NetStack_CertificatePinning](capi-netstack-netstack-certificatepinning.md) | NetStack_CertificatePinning | Defines certificate pinning information. |
-| [NetStack_Certificates](capi-netstack-netstack-certificates.md) | NetStack_Certificates | Define certificate information. |
+| Name | Description |
+| -- | -- |
+| [NetStack_CertBlob](capi-netstack-netstack-certblob.md) | Defines the certificate data structure. |
+| [NetStack_CertificatePinning](capi-netstack-netstack-certificatepinning.md) | Defines certificate pinning information. |
+| [NetStack_Certificates](capi-netstack-netstack-certificates.md) | Define certificate information. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -42,17 +40,13 @@ enum NetStack_CertType
 
 Certificate type enums.
 
-<!--Device-enum NetStack_CertType--><!--Device-enum NetStack_CertType-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| NETSTACK_CERT_TYPE_PEM = 0 | PEM certificate.<br><!--Device-NETSTACK_CERT_TYPE_PEM = 0--><!--Device-NETSTACK_CERT_TYPE_PEM = 0-End--> |
-| NETSTACK_CERT_TYPE_DER = 1 | DER certificate.<br><!--Device-NETSTACK_CERT_TYPE_DER = 1--><!--Device-NETSTACK_CERT_TYPE_DER = 1-End--> |
-| NETSTACK_CERT_TYPE_INVALID | Invalid certificate.<br><!--Device-NETSTACK_CERT_TYPE_INVALID--><!--Device-NETSTACK_CERT_TYPE_INVALID-End--> |
+| NETSTACK_CERT_TYPE_PEM = 0 | PEM certificate. |
+| NETSTACK_CERT_TYPE_DER = 1 | DER certificate. |
+| NETSTACK_CERT_TYPE_INVALID | Invalid certificate. |
 
 ### NetStack_CertificatePinningKind
 
@@ -64,15 +58,11 @@ enum NetStack_CertificatePinningKind
 
 Certificate pinning type enums.
 
-<!--Device-enum NetStack_CertificatePinningKind--><!--Device-enum NetStack_CertificatePinningKind-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| PUBLIC_KEY | Public key lock type.<br><!--Device-PUBLIC_KEY--><!--Device-PUBLIC_KEY-End--> |
+| PUBLIC_KEY | Public key lock type. |
 
 ### NetStack_HashAlgorithm
 
@@ -84,14 +74,10 @@ enum NetStack_HashAlgorithm
 
 Hash algorithm enums.
 
-<!--Device-enum NetStack_HashAlgorithm--><!--Device-enum NetStack_HashAlgorithm-End-->
-
-**System capability**: SystemCapability.Communication.NetStack
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| SHA_256 | Sha256<br><!--Device-SHA_256--><!--Device-SHA_256-End--> |
+| SHA_256 | Sha256 |
 
 

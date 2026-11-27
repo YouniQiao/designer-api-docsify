@@ -2,14 +2,3 @@
 
 ## Overview
 
-<!--Device-struct v_key_t {...}--><!--Device-struct v_key_t {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| DWORD tls_index | <!--Device-DWORD tls_index--><!--Device-DWORD tls_index-End--> |
-
-

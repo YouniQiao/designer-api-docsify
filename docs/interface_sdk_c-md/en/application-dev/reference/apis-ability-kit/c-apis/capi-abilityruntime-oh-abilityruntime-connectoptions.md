@@ -6,15 +6,13 @@ typedef struct OH_AbilityRuntime_ConnectOptions OH_AbilityRuntime_ConnectOptions
 
 ## Overview
 
-Defines the OH_AbilityRuntime_ConnectOptions struct, which is used to configure the callback options when connecting to an ExtensionAbility, including the callbacks for successful connection, disconnection, and connection failure.
-
-<!--Device-typedef struct OH_AbilityRuntime_ConnectOptions OH_AbilityRuntime_ConnectOptions--><!--Device-typedef struct OH_AbilityRuntime_ConnectOptions OH_AbilityRuntime_ConnectOptions-End-->
+Defines the OH_AbilityRuntime_ConnectOptions structure type.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since**: 26.0.0
 
-**Related module**: [AbilityRuntime](capi-ability-kit-abilityruntime.md)
+**Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
 **Header file**: [connect_options.h](capi-connect-options-h.md)
 

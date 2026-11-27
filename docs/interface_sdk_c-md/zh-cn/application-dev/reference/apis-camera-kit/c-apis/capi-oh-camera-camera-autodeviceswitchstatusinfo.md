@@ -1,20 +1,18 @@
 # Camera_AutoDeviceSwitchStatusInfo
 
 ```c
-typedef struct Camera_AutoDeviceSwitchStatusInfo {...} Camera_AutoDeviceSwitchStatusInfo
+struct Camera_AutoDeviceSwitchStatusInfo {...}
 ```
 
 ## 概述
 
 自动设备切换状态信息。
 
-<!--Device-struct Camera_AutoDeviceSwitchStatusInfo {...}--><!--Device-struct Camera_AutoDeviceSwitchStatusInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Camera_AutoDeviceSwitchStatusInfo {...} Camera_AutoDeviceSwitchSt
 
 | 名称 | 描述 |
 | -- | -- |
-| bool isDeviceSwitched | 设备是否已切换，true表示已切换，false表示未切换。<br><!--Device-bool isDeviceSwitched--><!--Device-bool isDeviceSwitched-End--> |
-| bool isDeviceCapabilityChanged | 设备功能是否改变，true表示已改变，false表示未改变。<br><!--Device-bool isDeviceCapabilityChanged--><!--Device-bool isDeviceCapabilityChanged-End--> |
+| bool isDeviceSwitched | 设备是否已切换，true表示已切换，false表示未切换。 |
+| bool isDeviceCapabilityChanged | 设备功能是否改变，true表示已改变，false表示未改变。 |
 
 

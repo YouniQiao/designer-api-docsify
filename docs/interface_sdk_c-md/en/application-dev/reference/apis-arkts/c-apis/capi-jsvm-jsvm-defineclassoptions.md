@@ -1,20 +1,18 @@
 # JSVM_DefineClassOptions
 
 ```c
-typedef struct JSVM_DefineClassOptions {...} JSVM_DefineClassOptions
+typedef union JSVM_DefineClassOptions {...} JSVM_DefineClassOptions
 ```
 
 ## Overview
 
 DefineClass options.
 
-<!--Device-typedef struct JSVM_DefineClassOptions {...} JSVM_DefineClassOptions--><!--Device-typedef struct JSVM_DefineClassOptions {...} JSVM_DefineClassOptions-End-->
-
 **System capability**: SystemCapability.ArkCompiler.JSVM
 
 **Since**: 18
 
-**Related module**: [JSVM](capi-arkts-jsvm.md)
+**Related module**: [JSVM](capi-jsvm.md)
 
 **Header file**: [jsvm_types.h](capi-jsvm-types-h.md)
 
@@ -24,9 +22,9 @@ DefineClass options.
 
 | Name | Description |
 | -- | -- |
-| [JSVM_DefineClassOptionsId](capi-jsvm-types-h.md#jsvm_defineclassoptionsid) id | DefineClass option id.<br><!--Device-JSVM_DefineClassOptionsId id--><!--Device-JSVM_DefineClassOptionsId id-End--> |
-| content.ptr | for option value with pointer type.<br><!--Device-content.ptr--><!--Device-content.ptr-End--> |
-| content.num | for option value with integer type<br><!--Device-content.num--><!--Device-content.num-End--> |
-| content.boolean | for option value with bool type<br><!--Device-content.boolean--><!--Device-content.boolean-End--> |
+| void* ptr | for option value with pointer type. |
+| int num | for option value with integer type |
+| bool boolean;
+ } content | for option value with bool type |
 
 

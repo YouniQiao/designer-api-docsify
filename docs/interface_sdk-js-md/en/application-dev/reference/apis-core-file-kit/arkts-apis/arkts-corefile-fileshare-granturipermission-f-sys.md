@@ -35,7 +35,7 @@ Provides grant uri permission for app
 | --- | --- | --- | --- |
 | uri | string | Yes | uri |
 | bundleName | string | Yes | bundleName |
-| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-depr-e.md) | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
+| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-depr-flags-e.md) | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
@@ -100,7 +100,7 @@ Provides grant uri permission for app
 | --- | --- | --- | --- |
 | uri | string | Yes | uri |
 | bundleName | string | Yes | bundleName |
-| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-depr-e.md) | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
+| flag | [wantConstant.Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-depr-flags-e.md) | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
 
 **Return value:**
 

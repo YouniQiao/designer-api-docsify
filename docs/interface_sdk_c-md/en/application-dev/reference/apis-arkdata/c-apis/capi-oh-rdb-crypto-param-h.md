@@ -6,21 +6,19 @@ Provides functions and enumerations related to cryptographic parameters of the r
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md) | OH_Rdb_CryptoParam | Specifies the cryptographic parameters used when opening an encrypted database. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -28,7 +26,7 @@ Provides functions and enumerations related to cryptographic parameters of the r
 | [Rdb_HmacAlgo](#rdb_hmacalgo) | Rdb_HmacAlgo | Enumerates the supported HMAC algorithm when opening a database. |
 | [Rdb_KdfAlgo](#rdb_kdfalgo) | Rdb_KdfAlgo | Enumerates the supported KDF algorithm when opening a database. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -53,17 +51,13 @@ enum Rdb_EncryptionAlgo
 
 Enumerates the database encryption algorithms.
 
-<!--Device-enum Rdb_EncryptionAlgo--><!--Device-enum Rdb_EncryptionAlgo-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| RDB_AES_256_GCM = 0 | Indicates the database is encrypted using RDB_AES_256_GCM.<br><!--Device-RDB_AES_256_GCM = 0--><!--Device-RDB_AES_256_GCM = 0-End--> |
-| RDB_AES_256_CBC | Indicates the database is encrypted using RDB_AES_256_CBC.<br><!--Device-RDB_AES_256_CBC--><!--Device-RDB_AES_256_CBC-End--> |
-| RDB_PLAIN_TEXT | Indicates the database is not encrypted.<br>**Since**: 22<br><!--Device-RDB_PLAIN_TEXT--><!--Device-RDB_PLAIN_TEXT-End--> |
+| RDB_AES_256_GCM = 0 | Indicates the database is encrypted using RDB_AES_256_GCM. |
+| RDB_AES_256_CBC | Indicates the database is encrypted using RDB_AES_256_CBC. |
+| RDB_PLAIN_TEXT | Indicates the database is not encrypted.<br>**Since**: 22 |
 
 ### Rdb_HmacAlgo
 
@@ -75,17 +69,13 @@ enum Rdb_HmacAlgo
 
 Enumerates the supported HMAC algorithm when opening a database.
 
-<!--Device-enum Rdb_HmacAlgo--><!--Device-enum Rdb_HmacAlgo-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| RDB_HMAC_SHA1 = 0 | RDB_HMAC_SHA1 algorithm.<br><!--Device-RDB_HMAC_SHA1 = 0--><!--Device-RDB_HMAC_SHA1 = 0-End--> |
-| RDB_HMAC_SHA256 | RDB_HMAC_SHA256 algorithm.<br><!--Device-RDB_HMAC_SHA256--><!--Device-RDB_HMAC_SHA256-End--> |
-| RDB_HMAC_SHA512 | RDB_HMAC_SHA512 algorithm.<br><!--Device-RDB_HMAC_SHA512--><!--Device-RDB_HMAC_SHA512-End--> |
+| RDB_HMAC_SHA1 = 0 | RDB_HMAC_SHA1 algorithm. |
+| RDB_HMAC_SHA256 | RDB_HMAC_SHA256 algorithm. |
+| RDB_HMAC_SHA512 | RDB_HMAC_SHA512 algorithm. |
 
 ### Rdb_KdfAlgo
 
@@ -97,17 +87,13 @@ enum Rdb_KdfAlgo
 
 Enumerates the supported KDF algorithm when opening a database.
 
-<!--Device-enum Rdb_KdfAlgo--><!--Device-enum Rdb_KdfAlgo-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 | Enum item | Description |
 | -- | -- |
-| RDB_KDF_SHA1 = 0 | RDB_KDF_SHA1 algorithm.<br><!--Device-RDB_KDF_SHA1 = 0--><!--Device-RDB_KDF_SHA1 = 0-End--> |
-| RDB_KDF_SHA256 | RDB_KDF_SHA256 algorithm.<br><!--Device-RDB_KDF_SHA256--><!--Device-RDB_KDF_SHA256-End--> |
-| RDB_KDF_SHA512 | RDB_KDF_SHA512 algorithm.<br><!--Device-RDB_KDF_SHA512--><!--Device-RDB_KDF_SHA512-End--> |
+| RDB_KDF_SHA1 = 0 | RDB_KDF_SHA1 algorithm. |
+| RDB_KDF_SHA256 | RDB_KDF_SHA256 algorithm. |
+| RDB_KDF_SHA512 | RDB_KDF_SHA512 algorithm. |
 
 
 ## Function description
@@ -121,10 +107,6 @@ OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)
 **Description**
 
 Creates an OH_Rdb_CryptoParam instance object.
-
-<!--Device-OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)--><!--Device-OH_Rdb_CryptoParam *OH_Rdb_CreateCryptoParam(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -149,10 +131,6 @@ int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)
 
 Destroys an OH_Rdb_CryptoParam instance object.
 
-<!--Device-int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)--><!--Device-int OH_Rdb_DestroyCryptoParam(OH_Rdb_CryptoParam *param)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -176,10 +154,6 @@ int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, in
 **Description**
 
 Sets key data to the OH_Rdb_CryptoParam object.
-
-<!--Device-int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, int32_t length)--><!--Device-int OH_Crypto_SetEncryptionKey(OH_Rdb_CryptoParam *param, const uint8_t *key, int32_t length)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -207,10 +181,6 @@ int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)
 
 Sets the number of KDF iterations used when opening an encrypted database.
 
-<!--Device-int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)--><!--Device-int OH_Crypto_SetIteration(OH_Rdb_CryptoParam *param, int64_t iteration)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -235,10 +205,6 @@ int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 **Description**
 
 Sets the encryption algorithm when opening an encrypted database.
-
-<!--Device-int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetEncryptionAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 
@@ -265,10 +231,6 @@ int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 
 Sets the HMAC algorithm when opening an encrypted database.
 
-<!--Device-int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetHmacAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -294,10 +256,6 @@ int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)
 
 Sets the KDF algorithm when opening an encrypted database.
 
-<!--Device-int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)--><!--Device-int OH_Crypto_SetKdfAlgo(OH_Rdb_CryptoParam *param, int32_t algo)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -322,10 +280,6 @@ int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)
 **Description**
 
 Sets the page size used when opening an encrypted database.
-
-<!--Device-int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)--><!--Device-int OH_Crypto_SetCryptoPageSize(OH_Rdb_CryptoParam *param, int64_t size)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 20
 

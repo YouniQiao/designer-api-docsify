@@ -1,20 +1,18 @@
 # DRM_PsshInfo
 
 ```c
-typedef struct DRM_PsshInfo {...} DRM_PsshInfo
+struct DRM_PsshInfo {...}
 ```
 
 ## Overview
 
 The struct describes the Protection System Specific Header (PSSH) data for a DRM system.
 
-<!--Device-struct DRM_PsshInfo {...}--><!--Device-struct DRM_PsshInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
-**Related module**: [Drm](capi-drm-kit-drm.md)
+**Related module**: [Drm](capi-drm.md)
 
 **Header file**: [native_drm_common.h](capi-native-drm-common-h.md)
 
@@ -24,8 +22,8 @@ The struct describes the Protection System Specific Header (PSSH) data for a DRM
 
 | Name | Description |
 | -- | -- |
-| uint8_t uuid[DRM_UUID_LEN] | Uuid.<br><!--Device-uint8_t uuid[DRM_UUID_LEN]--><!--Device-uint8_t uuid[DRM_UUID_LEN]-End--> |
-| int32_t dataLen | Length of the PSSH data payload.<br><!--Device-int32_t dataLen--><!--Device-int32_t dataLen-End--> |
-| uint8_t data[MAX_PSSH_DATA_LEN] | uint8_t PSSH data.<br><!--Device-uint8_t data[MAX_PSSH_DATA_LEN]--><!--Device-uint8_t data[MAX_PSSH_DATA_LEN]-End--> |
+| uint8_t uuid[DRM_UUID_LEN] | Uuid. |
+| int32_t dataLen | Length of the PSSH data payload. |
+| uint8_t data[MAX_PSSH_DATA_LEN] | uint8_t PSSH data. |
 
 

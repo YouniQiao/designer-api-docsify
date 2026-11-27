@@ -8,13 +8,11 @@ struct NetStack_CertBlob {...}
 
 Defines the certificate data structure.
 
-<!--Device-struct NetStack_CertBlob {...}--><!--Device-struct NetStack_CertBlob {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 11
 
-**相关模块：** [netstack](capi-network-kit-netstack.md)
+**相关模块：** [netstack](capi-netstack.md)
 
 **所在头文件：** [net_ssl_c_type.h](capi-net-ssl-c-type-h.md)
 
@@ -24,8 +22,8 @@ Defines the certificate data structure.
 
 | 名称 | 描述 |
 | -- | -- |
-| enum [NetStack_CertType](capi-net-ssl-c-type-h.md#netstack_certtype) type | Certificate type.<br><!--Device-enum NetStack_CertType type--><!--Device-enum NetStack_CertType type-End--> |
-| uint32_t size | Certificate content length.<br><!--Device-uint32_t size--><!--Device-uint32_t size-End--> |
-| uint8_t *data | Certificate data.<br><!--Device-uint8_t *data--><!--Device-uint8_t *data-End--> |
+| enum NetStack_CertType type | Certificate type. |
+| uint32_t size | Certificate content length. |
+| uint8_t *data | Certificate data. |
 
 

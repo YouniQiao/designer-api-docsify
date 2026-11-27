@@ -6,15 +6,13 @@ Provides the data structures and corresponding operation APIs related to the emb
 
 **Library**: libcontent_embed_ndk.so
 
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Related module**: [ContentEmbed](capi-content-embed-kit-contentembed.md)
+**Related module**: [ContentEmbed](capi-contentembed.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -24,13 +22,13 @@ Provides the data structures and corresponding operation APIs related to the emb
 | [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) | ContentEmbed_StorageElements | Declares the ContentEmbed_StorageElements structure. Use [OH_ContentEmbed_Storage_GetElements](capi-content-embed-document-h.md#oh_contentembed_storage_getelements) to retrieve the collection of all [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) and [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) objects under a specific [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object, with each object encapsulated as a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) struct. Use [OH_ContentEmbed_StorageElements_GetCount](capi-content-embed-document-h.md#oh_contentembed_storageelements_getcount) to get the number of elements in the current query, and [OH_ContentEmbed_StorageElements_GetElement](capi-content-embed-document-h.md#oh_contentembed_storageelements_getelement) to obtain the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance object at a specified index position. |
 | [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) | ContentEmbed_Stream | Declares the stream structure type of an OE document. Similar to a file in the file system, a stream can be read or written. A stream object can exist only in the storage object. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
 | MAX_PATH_LENGTH (4 * 1024) | Indicates the maximum length of a file path.<br>**Since**: 24 |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -83,19 +81,15 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, Co
 
 Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyDocument](#oh_contentembed_destroydocument)
+**Resource release**: OH_ContentEmbed_DestroyDocument {document}
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const char *oeid | Identifier of the OE document, which is used to uniquely identify the OE document. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#macros). |
+| const char *oeid | Identifier of the OE document, which is used to uniquely identify the OE document. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#宏定义). |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
@@ -114,13 +108,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFileP
 
 Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyDocument](#oh_contentembed_destroydocument)
+**Resource release**: OH_ContentEmbed_DestroyDocument {document}
 
 **Parameters**:
 
@@ -147,13 +137,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFileP
 
 Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyDocument](#oh_contentembed_destroydocument)
+**Resource release**: OH_ContentEmbed_DestroyDocument {document}
 
 **Parameters**:
 
@@ -178,10 +164,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t len
 **Description**
 
 Reads the original binary data from the specified offset position of the OE document object to the buffer.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t length, ContentEmbed_Document *document, size_t offset, size_t *readSize)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t length, ContentEmbed_Document *document, size_t offset, size_t *readSize)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -211,10 +193,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Docum
 
 Obtains the identifier OEID from the OE document object.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Document *document, char *oeid)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Document *document, char *oeid)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -222,7 +200,7 @@ Obtains the identifier OEID from the OE document object.
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
-| char *oeid | Output parameter. Character array for storing the OEID value. The recommended array length is [MAX_OEID_LENGTH](capi-content-embed-common-h.md#macros). |
+| char *oeid | Output parameter. Character array for storing the OEID value. The recommended array length is [MAX_OEID_LENGTH](capi-content-embed-common-h.md#宏定义). |
 
 **Returns**:
 
@@ -239,10 +217,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Doc
 **Description**
 
 Checks whether an OE document is created in link mode.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Document *document, bool *isLinking)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Document *document, bool *isLinking)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -269,10 +243,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentE
 
 Obtains the embedded source file path stored in the client sandbox directory from the OE document.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentEmbed_Document *document, char *nativeFilePath)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentEmbed_Document *document, char *nativeFilePath)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -280,7 +250,7 @@ Obtains the embedded source file path stored in the client sandbox directory fro
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
-| char *nativeFilePath | Output parameter. Character array for storing the source file path. It is recommended that the array length be [MAX_PATH_LENGTH](capi-content-embed-document-h.md#macros). |
+| char *nativeFilePath | Output parameter. Character array for storing the source file path. It is recommended that the array length be [MAX_PATH_LENGTH](capi-content-embed-document-h.md#宏定义). |
 
 **Returns**:
 
@@ -298,13 +268,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Docu
 
 Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyStorage](#oh_contentembed_destroystorage)
+**Resource release**: OH_ContentEmbed_DestroyStorage {storage}
 
 **Parameters**:
 
@@ -328,10 +294,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Documen
 **Description**
 
 Flushes data in an OE document to an OE format file.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Document *document)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Document *document)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -357,13 +319,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_
 
 Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyStorage](#oh_contentembed_destroystorage)
+**Resource release**: OH_ContentEmbed_DestroyStorage {childStorage}
 
 **Parameters**:
 
@@ -389,13 +347,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Sto
 
 Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OE document. <br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyStorage](#oh_contentembed_destroystorage)
+**Resource release**: OH_ContentEmbed_DestroyStorage {childStorage}
 
 **Parameters**:
 
@@ -421,13 +375,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage
 
 Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyStream](#oh_contentembed_destroystream)
+**Resource release**: OH_ContentEmbed_DestroyStream {childStream}
 
 **Parameters**:
 
@@ -453,13 +403,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *p
 
 Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_DestroyStream](#oh_contentembed_destroystream)
+**Resource release**: OH_ContentEmbed_DestroyStream {childStream}
 
 **Parameters**:
 
@@ -484,10 +430,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage 
 **Description**
 
 Deletes a child storage object or stream object with a specified name from the parent storage object of the OE document.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -514,10 +456,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Stora
 
 Deletes all entries from the storage object of an OE document, including the sub-storage objects and sub-stream objects.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -542,10 +480,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *stor
 
 Destroys the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object instance of an OE document and reclaims the memory.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *storage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *storage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -569,10 +503,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, 
 **Description**
 
 Reads data of a specified length from the current position of the stream object of an OE document to the buffer. After the data is successfully read, the offset of the stream object increases by the number of actually read bytes.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -601,10 +531,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream,
 
 Writes data of a specified length from the buffer to the current position of the stream object in the OE document. After the data is successfully written, the offset of the stream object increases by the number of actually written bytes.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -632,10 +558,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, 
 
 Sets the current read location of the stream object in an OE document to the specified offset.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, size_t position)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, size_t position)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -660,10 +582,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *s
 **Description**
 
 Obtains the current position offset of the stream object in an OE document.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *stream, size_t *position)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *stream, size_t *position)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -690,10 +608,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *strea
 
 Obtains the total size of the stream object of the OE document, in bytes.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *stream, size_t *size)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *stream, size_t *size)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -719,10 +633,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream
 
 Destroys the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object instance of an OE document and reclaims the memory.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -746,10 +656,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *do
 **Description**
 
 Destroys the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object instance and reclaims the memory.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *document)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *document)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -775,10 +681,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *sto
 
 Obtains the identifier (OEID) of the storage object of an OE document.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -786,7 +688,7 @@ Obtains the identifier (OEID) of the storage object of an OE document.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
-| char *oeid | Output parameter. Character array for storing the identifier OEID. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#macros). |
+| char *oeid | Output parameter. Character array for storing the identifier OEID. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#宏定义). |
 | size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
@@ -805,10 +707,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *sto
 
 Sets the identifier of the storage object in an OE document.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -816,7 +714,7 @@ Sets the identifier of the storage object in an OE document.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object in an OE document. |
-| char *oeid | Character array of the identifier OEID to be set. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#macros). |
+| char *oeid | Character array of the identifier OEID to be set. It is recommended that the array length be [MAX_OEID_LENGTH](capi-content-embed-common-h.md#宏定义). |
 | size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
@@ -835,13 +733,9 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_Stora
 
 Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. <br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
-**Resource release**: [OH_ContentEmbed_StorageElements_Destroy](#oh_contentembed_storageelements_destroy)
+**Resource release**: OH_ContentEmbed_StorageElements_Destroy {storageElements}
 
 **Parameters**:
 
@@ -864,10 +758,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_Stor
 **Description**
 
 Destroys a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_StorageElements *storageElements)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_StorageElements *storageElements)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -892,10 +782,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_St
 **Description**
 
 Obtains the element list in the storage object of an OE document.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_Storage *storage, ContentEmbed_StorageElements *storageElements)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_Storage *storage, ContentEmbed_StorageElements *storageElements)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -922,10 +808,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmb
 
 Obtains the number of elements in a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmbed_StorageElements *storageElements, size_t *count)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmbed_StorageElements *storageElements, size_t *count)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -950,10 +832,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentE
 **Description**
 
 Obtains the element at the specified index position of the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentEmbed_StorageElements *storageElements, size_t index, ContentEmbed_StorageElement **storageElement)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentEmbed_StorageElements *storageElements, size_t index, ContentEmbed_StorageElement **storageElement)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -981,10 +859,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed
 
 Obtains the name of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed_StorageElement *storageElement, char *name, size_t nameSize)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed_StorageElement *storageElement, char *name, size_t nameSize)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -1011,10 +885,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbe
 
 Obtains the creation timestamp of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbed_StorageElement *element, uint64_t *ctime)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbed_StorageElement *element, uint64_t *ctime)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -1039,10 +909,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbe
 **Description**
 
 Obtains the last modification timestamp of an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbed_StorageElement *element, uint64_t *mtime)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbed_StorageElement *element, uint64_t *mtime)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 
@@ -1069,10 +935,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmb
 
 Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is the storage object of an OE document.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmbed_StorageElement *storageElement, bool *isStorage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmbed_StorageElement *storageElement, bool *isStorage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -1098,10 +960,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbe
 
 Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is an OE document stream object.
 
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbed_StorageElement *element, bool *isStream)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbed_StorageElement *element, bool *isStream)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
-
 **Since**: 24
 
 **Parameters**:
@@ -1126,10 +984,6 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcS
 **Description**
 
 Copies all sub-storage objects and stream objects from the source OE document storage object to the target OE document storage object.
-
-<!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)--><!--Device-ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)-End-->
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
 
 **Since**: 24
 

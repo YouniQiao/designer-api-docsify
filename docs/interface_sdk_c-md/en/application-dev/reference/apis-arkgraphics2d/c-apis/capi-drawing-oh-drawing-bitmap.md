@@ -8,13 +8,11 @@ typedef struct OH_Drawing_Bitmap OH_Drawing_Bitmap
 
 Defines a struct for a bitmap, which is a memory area that contains the pixel data of a shape.
 
-<!--Device-typedef struct OH_Drawing_Bitmap OH_Drawing_Bitmap--><!--Device-typedef struct OH_Drawing_Bitmap OH_Drawing_Bitmap-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 8
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 **Header file**: [drawing_types.h](capi-drawing-types-h.md)
 

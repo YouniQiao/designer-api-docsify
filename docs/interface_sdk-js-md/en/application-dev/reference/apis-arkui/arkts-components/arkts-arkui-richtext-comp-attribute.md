@@ -24,7 +24,7 @@ Triggered when the RichText loading ends.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11 - 11.
+**Atomic service API:** This API can be used in atomic services only in API version 11.
 
 <!--Device-RichTextAttribute-onComplete(callback: () => void): RichTextAttribute--><!--Device-RichTextAttribute-onComplete(callback: () => void): RichTextAttribute-End-->
 
@@ -46,7 +46,7 @@ Triggered when the RichText loading starts.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11 - 11.
+**Atomic service API:** This API can be used in atomic services only in API version 11.
 
 <!--Device-RichTextAttribute-onStart(callback: () => void): RichTextAttribute--><!--Device-RichTextAttribute-onStart(callback: () => void): RichTextAttribute-End-->
 

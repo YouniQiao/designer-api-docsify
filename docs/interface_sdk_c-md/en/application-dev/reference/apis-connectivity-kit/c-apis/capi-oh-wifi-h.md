@@ -6,21 +6,19 @@ Define interfaces for querying wifi switch status.
 
 **Library**: libwifi_ndk.so
 
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 13
 
-**Related module**: [Wifi](capi-connectivity-kit-wifi.md)
+**Related module**: [Wifi](capi-wifi.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_WifiLinkedInfo](capi-wifi-oh-wifilinkedinfo.md) | OH_WifiLinkedInfo | Represents the Wi-Fi connection information.<br> This structure describes the hotspot information of the current station connection. The information can be obtained by calling [OH_Wifi_GetLinkedInfo](capi-oh-wifi-h.md#oh_wifi_getlinkedinfo). |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -31,14 +29,14 @@ Define interfaces for querying wifi switch status.
 | [OH_WifiCategory](#oh_wificategory) | OH_WifiCategory | Wi-Fi categories. |
 | [OH_WifiStandard](#oh_wifistandard) | OH_WifiStandard | Enumerates Wi-Fi standards. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
 | WIFI_MAX_SSID_LEN 33 // 32 +0 | Indicates the maximum length of a Wi-Fi SSID.<br>**Since**: 24 The maximum length is 32, and the last bit is reserved and set to <b>\0</b>. \n |
 | WIFI_MAC_LEN 18 | Indicates the maximum length of a Wi-Fi MAC address or a Wi-Fi BSSID.<br>**Since**: 24 |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -58,20 +56,16 @@ enum Wifi_ResultCode
 
 Enumerates the wifi result codes.
 
-<!--Device-enum Wifi_ResultCode--><!--Device-enum Wifi_ResultCode-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| WIFI_SUCCESS = 0 | &nbsp;The operation is successful.<br><!--Device-WIFI_SUCCESS = 0--><!--Device-WIFI_SUCCESS = 0-End--> |
-| WIFI_PERMISSION_DENIED = 201 | &nbsp;Permission verification failed. The application does not have the permission required to call the API.<br><!--Device-WIFI_PERMISSION_DENIED = 201--><!--Device-WIFI_PERMISSION_DENIED = 201-End--> |
-| WIFI_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range.<br><!--Device-WIFI_INVALID_PARAM = 401--><!--Device-WIFI_INVALID_PARAM = 401-End--> |
-| WIFI_NOT_SUPPORTED = 801 | &nbsp;Capability not supported. Failed to call function due to limited device capabilities.<br><!--Device-WIFI_NOT_SUPPORTED = 801--><!--Device-WIFI_NOT_SUPPORTED = 801-End--> |
-| WIFI_OPERATION_FAILED = 2501000 | &nbsp;Operation failed. Possible reasons: Internal execution failed.<br><!--Device-WIFI_OPERATION_FAILED = 2501000--><!--Device-WIFI_OPERATION_FAILED = 2501000-End--> |
-| WIFI_STA_DISABLED = 2501001 | &nbsp;Wi-Fi STA disabled.<br>**Since**: 21<br><!--Device-WIFI_STA_DISABLED = 2501001--><!--Device-WIFI_STA_DISABLED = 2501001-End--> |
+| WIFI_SUCCESS = 0 | &nbsp;The operation is successful. |
+| WIFI_PERMISSION_DENIED = 201 | &nbsp;Permission verification failed. The application does not have the permission required to call the API. |
+| WIFI_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range. |
+| WIFI_NOT_SUPPORTED = 801 | &nbsp;Capability not supported. Failed to call function due to limited device capabilities. |
+| WIFI_OPERATION_FAILED = 2501000 | &nbsp;Operation failed. Possible reasons: Internal execution failed. |
+| WIFI_STA_DISABLED = 2501001 | &nbsp;Wi-Fi STA disabled.<br>**Since**: 21 |
 
 ### OH_WifiLinkType
 
@@ -83,21 +77,17 @@ enum OH_WifiLinkType
 
 Enumerates Wi-Fi link types.
 
-<!--Device-enum OH_WifiLinkType--><!--Device-enum OH_WifiLinkType-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_WIFI_LINK_DISCONNECT = -1 | Not connected.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_DISCONNECT = -1--><!--Device-OH_WIFI_LINK_DISCONNECT = -1-End--> |
-| OH_WIFI_LINK_DEFAULT_LINK = 0 | Default link.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_DEFAULT_LINK = 0--><!--Device-OH_WIFI_LINK_DEFAULT_LINK = 0-End--> |
-| OH_WIFI_LINK_WIFI7_SINGLE_LINK = 1 | Wi-Fi 7 single link.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_WIFI7_SINGLE_LINK = 1--><!--Device-OH_WIFI_LINK_WIFI7_SINGLE_LINK = 1-End--> |
-| OH_WIFI_LINK_WIFI7_MLSR = 2 | Wi-Fi 7 MLSR.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_WIFI7_MLSR = 2--><!--Device-OH_WIFI_LINK_WIFI7_MLSR = 2-End--> |
-| OH_WIFI_LINK_WIFI7_EMLSR = 3 | Wi-Fi 7 EMLSR.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_WIFI7_EMLSR = 3--><!--Device-OH_WIFI_LINK_WIFI7_EMLSR = 3-End--> |
-| OH_WIFI_LINK_WIFI7_STR = 4 | Wi-Fi 7 STR.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_WIFI7_STR = 4--><!--Device-OH_WIFI_LINK_WIFI7_STR = 4-End--> |
-| OH_WIFI_LINK_WIFI7_LEGACY = 5 | Wi-Fi 7 legacy mode without MLO.<br>**Since**: 24<br><!--Device-OH_WIFI_LINK_WIFI7_LEGACY = 5--><!--Device-OH_WIFI_LINK_WIFI7_LEGACY = 5-End--> |
+| OH_WIFI_LINK_DISCONNECT = -1 | Not connected.<br>**Since**: 24 |
+| OH_WIFI_LINK_DEFAULT_LINK = 0 | Default link.<br>**Since**: 24 |
+| OH_WIFI_LINK_WIFI7_SINGLE_LINK = 1 | Wi-Fi 7 single link.<br>**Since**: 24 |
+| OH_WIFI_LINK_WIFI7_MLSR = 2 | Wi-Fi 7 MLSR.<br>**Since**: 24 |
+| OH_WIFI_LINK_WIFI7_EMLSR = 3 | Wi-Fi 7 EMLSR.<br>**Since**: 24 |
+| OH_WIFI_LINK_WIFI7_STR = 4 | Wi-Fi 7 STR.<br>**Since**: 24 |
+| OH_WIFI_LINK_WIFI7_LEGACY = 5 | Wi-Fi 7 legacy mode without MLO.<br>**Since**: 24 |
 
 ### OH_WifiConnState
 
@@ -109,23 +99,19 @@ enum OH_WifiConnState
 
 Enumerates Wi-Fi connection states.
 
-<!--Device-enum OH_WifiConnState--><!--Device-enum OH_WifiConnState-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_WIFI_CONN_SCANNING | The device is searching for an available AP.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_SCANNING--><!--Device-OH_WIFI_CONN_SCANNING-End--> |
-| OH_WIFI_CONN_CONNECTING | The Wi-Fi connection is being set up.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_CONNECTING--><!--Device-OH_WIFI_CONN_CONNECTING-End--> |
-| OH_WIFI_CONN_AUTHENTICATING | The Wi-Fi connection is being authenticated.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_AUTHENTICATING--><!--Device-OH_WIFI_CONN_AUTHENTICATING-End--> |
-| OH_WIFI_CONN_OBTAINING_IPADDR | The IP address of the Wi-Fi connection is being obtained.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_OBTAINING_IPADDR--><!--Device-OH_WIFI_CONN_OBTAINING_IPADDR-End--> |
-| OH_WIFI_CONN_CONNECTED | The Wi-Fi connection has been set up.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_CONNECTED--><!--Device-OH_WIFI_CONN_CONNECTED-End--> |
-| OH_WIFI_CONN_DISCONNECTING | The Wi-Fi connection is being torn down.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_DISCONNECTING--><!--Device-OH_WIFI_CONN_DISCONNECTING-End--> |
-| OH_WIFI_CONN_DISCONNECTED | The Wi-Fi connection has been torn down.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_DISCONNECTED--><!--Device-OH_WIFI_CONN_DISCONNECTED-End--> |
-| OH_WIFI_CONN_SPECIAL_CONNECT | The Wi-Fi connection is in a special state.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_SPECIAL_CONNECT--><!--Device-OH_WIFI_CONN_SPECIAL_CONNECT-End--> |
-| OH_WIFI_CONN_UNKNOWN | Failed to set up the Wi-Fi connection.<br>**Since**: 24<br><!--Device-OH_WIFI_CONN_UNKNOWN--><!--Device-OH_WIFI_CONN_UNKNOWN-End--> |
+| OH_WIFI_CONN_SCANNING | The device is searching for an available AP.<br>**Since**: 24 |
+| OH_WIFI_CONN_CONNECTING | The Wi-Fi connection is being set up.<br>**Since**: 24 |
+| OH_WIFI_CONN_AUTHENTICATING | The Wi-Fi connection is being authenticated.<br>**Since**: 24 |
+| OH_WIFI_CONN_OBTAINING_IPADDR | The IP address of the Wi-Fi connection is being obtained.<br>**Since**: 24 |
+| OH_WIFI_CONN_CONNECTED | The Wi-Fi connection has been set up.<br>**Since**: 24 |
+| OH_WIFI_CONN_DISCONNECTING | The Wi-Fi connection is being torn down.<br>**Since**: 24 |
+| OH_WIFI_CONN_DISCONNECTED | The Wi-Fi connection has been torn down.<br>**Since**: 24 |
+| OH_WIFI_CONN_SPECIAL_CONNECT | The Wi-Fi connection is in a special state.<br>**Since**: 24 |
+| OH_WIFI_CONN_UNKNOWN | Failed to set up the Wi-Fi connection.<br>**Since**: 24 |
 
 ### OH_WifiChannelWidth
 
@@ -137,20 +123,16 @@ enum OH_WifiChannelWidth
 
 Enumerates Wi-Fi channel widths.
 
-<!--Device-enum OH_WifiChannelWidth--><!--Device-enum OH_WifiChannelWidth-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_WIFI_WIDTH_20MHZ = 0 | 20 MHz channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_20MHZ = 0--><!--Device-OH_WIFI_WIDTH_20MHZ = 0-End--> |
-| OH_WIFI_WIDTH_40MHZ = 1 | 40 MHz channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_40MHZ = 1--><!--Device-OH_WIFI_WIDTH_40MHZ = 1-End--> |
-| OH_WIFI_WIDTH_80MHZ = 2 | 80 MHz channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_80MHZ = 2--><!--Device-OH_WIFI_WIDTH_80MHZ = 2-End--> |
-| OH_WIFI_WIDTH_160MHZ = 3 | 160 MHz channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_160MHZ = 3--><!--Device-OH_WIFI_WIDTH_160MHZ = 3-End--> |
-| OH_WIFI_WIDTH_80MHZ_PLUS = 4 | 80 + 80 MHz channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_80MHZ_PLUS = 4--><!--Device-OH_WIFI_WIDTH_80MHZ_PLUS = 4-End--> |
-| OH_WIFI_WIDTH_INVALID | Invalid channel width.<br>**Since**: 24<br><!--Device-OH_WIFI_WIDTH_INVALID--><!--Device-OH_WIFI_WIDTH_INVALID-End--> |
+| OH_WIFI_WIDTH_20MHZ = 0 | 20 MHz channel width.<br>**Since**: 24 |
+| OH_WIFI_WIDTH_40MHZ = 1 | 40 MHz channel width.<br>**Since**: 24 |
+| OH_WIFI_WIDTH_80MHZ = 2 | 80 MHz channel width.<br>**Since**: 24 |
+| OH_WIFI_WIDTH_160MHZ = 3 | 160 MHz channel width.<br>**Since**: 24 |
+| OH_WIFI_WIDTH_80MHZ_PLUS = 4 | 80 + 80 MHz channel width.<br>**Since**: 24 |
+| OH_WIFI_WIDTH_INVALID | Invalid channel width.<br>**Since**: 24 |
 
 ### OH_WifiCategory
 
@@ -162,19 +144,15 @@ enum OH_WifiCategory
 
 Wi-Fi categories.
 
-<!--Device-enum OH_WifiCategory--><!--Device-enum OH_WifiCategory-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_WIFI_CATEGORY_DEFAULT = 1 | Default category.<br>**Since**: 24<br><!--Device-OH_WIFI_CATEGORY_DEFAULT = 1--><!--Device-OH_WIFI_CATEGORY_DEFAULT = 1-End--> |
-| OH_WIFI_CATEGORY_WIFI6 = 2 | Wi-Fi 6 category.<br>**Since**: 24<br><!--Device-OH_WIFI_CATEGORY_WIFI6 = 2--><!--Device-OH_WIFI_CATEGORY_WIFI6 = 2-End--> |
-| OH_WIFI_CATEGORY_WIFI6_PLUS = 3 | Wi-Fi 6 plus category.<br>**Since**: 24<br><!--Device-OH_WIFI_CATEGORY_WIFI6_PLUS = 3--><!--Device-OH_WIFI_CATEGORY_WIFI6_PLUS = 3-End--> |
-| OH_WIFI_CATEGORY_WIFI7 = 4 | Wi-Fi 7 category.<br>**Since**: 24<br><!--Device-OH_WIFI_CATEGORY_WIFI7 = 4--><!--Device-OH_WIFI_CATEGORY_WIFI7 = 4-End--> |
-| OH_WIFI_CATEGORY_WIFI7_PLUS = 5 | Wi-Fi 7 plus category.<br>**Since**: 24<br><!--Device-OH_WIFI_CATEGORY_WIFI7_PLUS = 5--><!--Device-OH_WIFI_CATEGORY_WIFI7_PLUS = 5-End--> |
+| OH_WIFI_CATEGORY_DEFAULT = 1 | Default category.<br>**Since**: 24 |
+| OH_WIFI_CATEGORY_WIFI6 = 2 | Wi-Fi 6 category.<br>**Since**: 24 |
+| OH_WIFI_CATEGORY_WIFI6_PLUS = 3 | Wi-Fi 6 plus category.<br>**Since**: 24 |
+| OH_WIFI_CATEGORY_WIFI7 = 4 | Wi-Fi 7 category.<br>**Since**: 24 |
+| OH_WIFI_CATEGORY_WIFI7_PLUS = 5 | Wi-Fi 7 plus category.<br>**Since**: 24 |
 
 ### OH_WifiStandard
 
@@ -186,22 +164,18 @@ enum OH_WifiStandard
 
 Enumerates Wi-Fi standards.
 
-<!--Device-enum OH_WifiStandard--><!--Device-enum OH_WifiStandard-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
-
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_WIFI_STANDARD_UNDEFINED = 0 | Invalid Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_UNDEFINED = 0--><!--Device-OH_WIFI_STANDARD_UNDEFINED = 0-End--> |
-| OH_WIFI_STANDARD_11A = 1 | 802.11a Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11A = 1--><!--Device-OH_WIFI_STANDARD_11A = 1-End--> |
-| OH_WIFI_STANDARD_11B = 2 | 802.11b Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11B = 2--><!--Device-OH_WIFI_STANDARD_11B = 2-End--> |
-| OH_WIFI_STANDARD_11G = 3 | 802.11g Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11G = 3--><!--Device-OH_WIFI_STANDARD_11G = 3-End--> |
-| OH_WIFI_STANDARD_11N = 4 | 802.11n Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11N = 4--><!--Device-OH_WIFI_STANDARD_11N = 4-End--> |
-| OH_WIFI_STANDARD_11AC = 5 | 802.11ac Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11AC = 5--><!--Device-OH_WIFI_STANDARD_11AC = 5-End--> |
-| OH_WIFI_STANDARD_11AX = 6 | 802.11ax Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11AX = 6--><!--Device-OH_WIFI_STANDARD_11AX = 6-End--> |
-| OH_WIFI_STANDARD_11AD = 7 | 802.11ad Wi-Fi standard.<br>**Since**: 24<br><!--Device-OH_WIFI_STANDARD_11AD = 7--><!--Device-OH_WIFI_STANDARD_11AD = 7-End--> |
+| OH_WIFI_STANDARD_UNDEFINED = 0 | Invalid Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11A = 1 | 802.11a Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11B = 2 | 802.11b Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11G = 3 | 802.11g Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11N = 4 | 802.11n Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11AC = 5 | 802.11ac Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11AX = 6 | 802.11ax Wi-Fi standard.<br>**Since**: 24 |
+| OH_WIFI_STANDARD_11AD = 7 | 802.11ad Wi-Fi standard.<br>**Since**: 24 |
 
 
 ## Function description
@@ -215,10 +189,6 @@ Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)
 **Description**
 
 Check whether the wifi switch is enabled.
-
-<!--Device-Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)--><!--Device-Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Since**: 13
 
@@ -243,10 +213,6 @@ Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddr
 **Description**
 
 Get the device Mac address.
-
-<!--Device-Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddrLen)--><!--Device-Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddrLen)-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Required permission**: ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO.
 
@@ -274,10 +240,6 @@ Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)
 **Description**
 
 Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid in the returned result will be the real BSSID address; otherwise, it will be a randomized device address.
-
-<!--Device-Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)--><!--Device-Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)-End-->
-
-**System capability**: SystemCapability.Communication.WiFi.STA
 
 **Required permission**: ohos.permission.GET_WIFI_INFO.
 

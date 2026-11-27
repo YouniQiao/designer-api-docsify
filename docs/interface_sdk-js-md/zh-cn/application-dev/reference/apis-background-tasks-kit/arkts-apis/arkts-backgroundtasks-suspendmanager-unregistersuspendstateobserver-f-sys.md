@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## unregisterSuspendStateObserver
@@ -12,7 +12,7 @@ import { suspendManager } from '@ohos.resourceschedule.suspendManager';
 function unregisterSuspendStateObserver(observer: SuspendStateObserver): void
 ```
 
-注销先前注册的挂起状态观察者。
+注销先前注册的冻结状态观察者。
 
 **起始版本：** 26.1.0
 

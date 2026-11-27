@@ -6,15 +6,13 @@ This file declares the functions related to the color space in the drawing modul
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -34,10 +32,6 @@ OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgb(void)
 
 Creates an sRGB color space.
 
-<!--Device-OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgb(void)--><!--Device-OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgb(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 **Returns**:
@@ -56,10 +50,6 @@ OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgbLinear(void)
 
 Creates an sRGB linear (Gamma 1.0) color space.
 
-<!--Device-OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgbLinear(void)--><!--Device-OH_Drawing_ColorSpace* OH_Drawing_ColorSpaceCreateSrgbLinear(void)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 12
 
 **Returns**:
@@ -77,10 +67,6 @@ void OH_Drawing_ColorSpaceDestroy(OH_Drawing_ColorSpace* colorSpace)
 **Description**
 
 Destroys an **OH_Drawing_ColorSpace** object and reclaims the memory occupied by the object.
-
-<!--Device-void OH_Drawing_ColorSpaceDestroy(OH_Drawing_ColorSpace* colorSpace)--><!--Device-void OH_Drawing_ColorSpaceDestroy(OH_Drawing_ColorSpace* colorSpace)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 

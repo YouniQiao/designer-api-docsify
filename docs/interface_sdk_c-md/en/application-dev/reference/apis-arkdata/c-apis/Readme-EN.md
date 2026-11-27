@@ -1,9 +1,9 @@
 # C API<!--c-arkdata-->
 
 - Module<!--arkdata-module-->
-    - [UDMF](capi-arkdata-udmf.md)
-    - [Preferences](capi-arkdata-preferences.md)
-    - [RDB](capi-arkdata-rdb.md)
+    - [UDMF](capi-udmf.md)
+    - [Preferences](capi-preferences.md)
+    - [RDB](capi-rdb.md)
 - Header file<!--arkdata-headerfile-->
     - [udmf_meta.h](capi-udmf-meta-h.md)
     - [udmf_err_code.h](capi-udmf-err-code-h.md)
@@ -37,15 +37,11 @@
     - [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)
     - [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md)
     - [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md)
-    - [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
-    - [OH_UDMF_VirtualFileCallbacks](capi-udmf-oh-udmf-virtualfilecallbacks.md)
     - [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md)
     - [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md)
     - [OH_UdsHtml](capi-udmf-oh-udshtml.md)
     - [OH_UdsAppItem](capi-udmf-oh-udsappitem.md)
     - [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md)
-    - [OH_UDMF_VirtualItem](capi-udmf-oh-udmf-virtualitem.md)
-    - [OH_UDMF_VirtualFileInfo](capi-udmf-oh-udmf-virtualfileinfo.md)
     - [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md)
     - [OH_UdsContentForm](capi-udmf-oh-udscontentform.md)
     - [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md)

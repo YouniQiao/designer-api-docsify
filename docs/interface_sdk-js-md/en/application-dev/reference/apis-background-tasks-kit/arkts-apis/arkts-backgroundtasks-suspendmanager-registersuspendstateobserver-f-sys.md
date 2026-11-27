@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## registerSuspendStateObserver

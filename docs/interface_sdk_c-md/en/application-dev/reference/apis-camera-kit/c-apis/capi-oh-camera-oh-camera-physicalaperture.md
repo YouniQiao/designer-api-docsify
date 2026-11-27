@@ -1,20 +1,18 @@
 # OH_Camera_PhysicalAperture
 
 ```c
-typedef struct OH_Camera_PhysicalAperture {...} OH_Camera_PhysicalAperture
+struct OH_Camera_PhysicalAperture {...}
 ```
 
 ## Overview
 
 Describes the physical aperture configuration.
 
-<!--Device-struct OH_Camera_PhysicalAperture {...}--><!--Device-struct OH_Camera_PhysicalAperture {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -24,8 +22,8 @@ Describes the physical aperture configuration.
 
 | Name | Description |
 | -- | -- |
-| [OH_Camera_ZoomRange](capi-oh-camera-oh-camera-zoomrange.md) zoomRange | Zoom range specification.<br>**Since**: 24<br><!--Device-OH_Camera_ZoomRange zoomRange--><!--Device-OH_Camera_ZoomRange zoomRange-End--> |
-| float* apertures | Array of supported aperture values.<br>**Since**: 24<br><!--Device-float* apertures--><!--Device-float* apertures-End--> |
-| size_t apertureCount | Number of aperture values.<br>**Since**: 24<br><!--Device-size_t apertureCount--><!--Device-size_t apertureCount-End--> |
+| [OH_Camera_ZoomRange](capi-oh-camera-oh-camera-zoomrange.md) zoomRange |  |
+| float* apertures |  |
+| size_t apertureCount |  |
 
 

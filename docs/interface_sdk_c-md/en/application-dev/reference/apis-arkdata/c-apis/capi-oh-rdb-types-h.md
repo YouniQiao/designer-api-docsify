@@ -6,27 +6,25 @@ Provides type define related to the data value.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) | OH_RDB_ReturningContext | Define the OH_RDB_ReturningContext structure type. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Rdb_ConflictResolution](#rdb_conflictresolution) | Rdb_ConflictResolution | Describe the security area of the database. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -49,20 +47,16 @@ enum Rdb_ConflictResolution
 
 Describe the security area of the database.
 
-<!--Device-enum Rdb_ConflictResolution--><!--Device-enum Rdb_ConflictResolution-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 | Enum item | Description |
 | -- | -- |
-| RDB_CONFLICT_NONE = 1 | Implements no operation when conflict occurs.<br><!--Device-RDB_CONFLICT_NONE = 1--><!--Device-RDB_CONFLICT_NONE = 1-End--> |
-| RDB_CONFLICT_ROLLBACK | Implements rollback operation when conflict occurs.<br><!--Device-RDB_CONFLICT_ROLLBACK--><!--Device-RDB_CONFLICT_ROLLBACK-End--> |
-| RDB_CONFLICT_ABORT | Implements abort operation when conflict occurs.<br><!--Device-RDB_CONFLICT_ABORT--><!--Device-RDB_CONFLICT_ABORT-End--> |
-| RDB_CONFLICT_FAIL | Implements fail operation when conflict occurs.<br><!--Device-RDB_CONFLICT_FAIL--><!--Device-RDB_CONFLICT_FAIL-End--> |
-| RDB_CONFLICT_IGNORE | Implements ignore operation when conflict occurs.<br><!--Device-RDB_CONFLICT_IGNORE--><!--Device-RDB_CONFLICT_IGNORE-End--> |
-| RDB_CONFLICT_REPLACE | Implements replace operation when conflict occurs.<br><!--Device-RDB_CONFLICT_REPLACE--><!--Device-RDB_CONFLICT_REPLACE-End--> |
+| RDB_CONFLICT_NONE = 1 | Implements no operation when conflict occurs. |
+| RDB_CONFLICT_ROLLBACK | Implements rollback operation when conflict occurs. |
+| RDB_CONFLICT_ABORT | Implements abort operation when conflict occurs. |
+| RDB_CONFLICT_FAIL | Implements fail operation when conflict occurs. |
+| RDB_CONFLICT_IGNORE | Implements ignore operation when conflict occurs. |
+| RDB_CONFLICT_REPLACE | Implements replace operation when conflict occurs. |
 
 
 ## Function description
@@ -76,10 +70,6 @@ OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)
 **Description**
 
 Creates an OH_RDB_ReturningContext instance object.
-
-<!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)--><!--Device-OH_RDB_ReturningContext *OH_RDB_CreateReturningContext(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -104,10 +94,6 @@ void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)
 
 Destroys an OH_RDB_ReturningContext instance object.
 
-<!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)--><!--Device-void OH_RDB_DestroyReturningContext(OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -125,10 +111,6 @@ int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *cons
 **Description**
 
 Set the returning fields.
-
-<!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)--><!--Device-int OH_RDB_SetReturningFields(OH_RDB_ReturningContext *context, const char *const fields[], int32_t len)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 
@@ -156,10 +138,6 @@ int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)
 
 Set the maximum returning value.
 
-<!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)--><!--Device-int OH_RDB_SetMaxReturningCount(OH_RDB_ReturningContext *context, int32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -185,10 +163,6 @@ OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)
 
 Get the cursor of data changes, includes 1024 by default.
 
-<!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)--><!--Device-OH_Cursor *OH_RDB_GetReturningValues(OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -212,10 +186,6 @@ int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)
 **Description**
 
 Get the number of rows affected by this operation.
-
-<!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)--><!--Device-int64_t OH_RDB_GetChangedCount(OH_RDB_ReturningContext *context)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 23
 

@@ -1,20 +1,18 @@
 # OH_Camera_ZoomPointInfo
 
 ```c
-typedef struct OH_Camera_ZoomPointInfo {...} OH_Camera_ZoomPointInfo
+struct OH_Camera_ZoomPointInfo {...}
 ```
 
 ## 概述
 
 描述变焦点信息。
 
-<!--Device-struct OH_Camera_ZoomPointInfo {...}--><!--Device-struct OH_Camera_ZoomPointInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Camera_ZoomPointInfo {...} OH_Camera_ZoomPointInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| float zoomRatio | 变焦比例。<br>**起始版本：** 26.0.0<br><!--Device-float zoomRatio--><!--Device-float zoomRatio-End--> |
-| uint32_t equivalentFocalLength | 等效焦距。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t equivalentFocalLength--><!--Device-uint32_t equivalentFocalLength-End--> |
+| float zoomRatio |  |
+| uint32_t equivalentFocalLength |  |
 
 

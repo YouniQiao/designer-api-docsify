@@ -1,0 +1,40 @@
+# cancelSuspendDelay
+
+## Modules to Import
+
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+```
+
+## cancelSuspendDelay
+
+```TypeScript
+function cancelSuspendDelay(requestId: number): void
+```
+
+Cancels the suspension delay.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
+
+<!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-depr-requestsuspenddelay-f.md). |
+
+**Examples**
+
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+
+let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
+backgroundTaskManager.cancelSuspendDelay(delayInfo.requestId);
+```

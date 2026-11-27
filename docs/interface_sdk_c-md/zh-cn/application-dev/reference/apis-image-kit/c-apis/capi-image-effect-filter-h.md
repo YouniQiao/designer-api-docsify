@@ -6,11 +6,9 @@
 
 **库：** libimage_effect.so
 
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
-**相关模块：** [ImageEffect](capi-image-kit-imageeffect.md)
+**相关模块：** [ImageEffect](capi-imageeffect.md)
 
 ## 汇总
 
@@ -84,6 +82,16 @@
 | [ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info, int64_t timestamp)](#oh_effectbufferinfo_settimestamp) | - | 设置滤镜时间戳。 |
 | [ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info, int64_t *timestamp)](#oh_effectbufferinfo_gettimestamp) | - | 获取滤镜时间戳。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value) | 自定义滤镜设置参数的回调函数，用于开发者校验参数及参数值。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.ImageEffect.Core |
+| void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_EffectBufferInfo *info) | 自定义滤镜传递图像信息到下一级滤镜的函数指针。需要在[OH_EffectFilterDelegate_Render](capi-image-effect-filter-h.md#oh_effectfilterdelegate_render) 的回调中主动调用该函数指针。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.ImageEffect.Core |
+| bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_EffectBufferInfo *info, OH_EffectFilterDelegate_PushData pushData) | 自定义滤镜渲染图像的回调函数。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.ImageEffect.Core |
+| bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **info) | 自定义滤镜序列化的回调函数，按照JSON格式进行滤镜序列化处理。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.ImageEffect.Core |
+| OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info) | 自定义滤镜反序列化的回调函数。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.ImageEffect.Core |
+
 ## 枚举类型说明
 
 ### ImageEffect_DataType
@@ -96,22 +104,18 @@ enum ImageEffect_DataType
 
 数据类型枚举值。
 
-<!--Device-enum ImageEffect_DataType--><!--Device-enum ImageEffect_DataType-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| EFFECT_DATA_TYPE_UNKNOWN = 0 | 未定义类型。<br><!--Device-EFFECT_DATA_TYPE_UNKNOWN = 0--><!--Device-EFFECT_DATA_TYPE_UNKNOWN = 0-End--> |
-| EFFECT_DATA_TYPE_INT32 = 1 | 整形。<br><!--Device-EFFECT_DATA_TYPE_INT32 = 1--><!--Device-EFFECT_DATA_TYPE_INT32 = 1-End--> |
-| EFFECT_DATA_TYPE_FLOAT = 2 | 单精度浮点型。<br><!--Device-EFFECT_DATA_TYPE_FLOAT = 2--><!--Device-EFFECT_DATA_TYPE_FLOAT = 2-End--> |
-| EFFECT_DATA_TYPE_DOUBLE = 3 | 双精度浮点型。<br><!--Device-EFFECT_DATA_TYPE_DOUBLE = 3--><!--Device-EFFECT_DATA_TYPE_DOUBLE = 3-End--> |
-| EFFECT_DATA_TYPE_CHAR = 4 | 字节类型。<br><!--Device-EFFECT_DATA_TYPE_CHAR = 4--><!--Device-EFFECT_DATA_TYPE_CHAR = 4-End--> |
-| EFFECT_DATA_TYPE_LONG = 5 | 长整型。<br><!--Device-EFFECT_DATA_TYPE_LONG = 5--><!--Device-EFFECT_DATA_TYPE_LONG = 5-End--> |
-| EFFECT_DATA_TYPE_BOOL = 6 | 布尔类型。<br><!--Device-EFFECT_DATA_TYPE_BOOL = 6--><!--Device-EFFECT_DATA_TYPE_BOOL = 6-End--> |
-| EFFECT_DATA_TYPE_PTR = 7 | 指针类型。<br><!--Device-EFFECT_DATA_TYPE_PTR = 7--><!--Device-EFFECT_DATA_TYPE_PTR = 7-End--> |
+| EFFECT_DATA_TYPE_UNKNOWN = 0 | 未定义类型。 |
+| EFFECT_DATA_TYPE_INT32 = 1 | 整形。 |
+| EFFECT_DATA_TYPE_FLOAT = 2 | 单精度浮点型。 |
+| EFFECT_DATA_TYPE_DOUBLE = 3 | 双精度浮点型。 |
+| EFFECT_DATA_TYPE_CHAR = 4 | 字节类型。 |
+| EFFECT_DATA_TYPE_LONG = 5 | 长整型。 |
+| EFFECT_DATA_TYPE_BOOL = 6 | 布尔类型。 |
+| EFFECT_DATA_TYPE_PTR = 7 | 指针类型。 |
 
 ### ImageEffect_Format
 
@@ -123,21 +127,17 @@ enum ImageEffect_Format
 
 像素格式枚举值。
 
-<!--Device-enum ImageEffect_Format--><!--Device-enum ImageEffect_Format-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| EFFECT_PIXEL_FORMAT_UNKNOWN = 0 | 未定义类型。<br><!--Device-EFFECT_PIXEL_FORMAT_UNKNOWN = 0--><!--Device-EFFECT_PIXEL_FORMAT_UNKNOWN = 0-End--> |
-| EFFECT_PIXEL_FORMAT_RGBA8888 = 1 | RGBA8888类型。<br><!--Device-EFFECT_PIXEL_FORMAT_RGBA8888 = 1--><!--Device-EFFECT_PIXEL_FORMAT_RGBA8888 = 1-End--> |
-| EFFECT_PIXEL_FORMAT_NV21 = 2 | NV21类型。<br><!--Device-EFFECT_PIXEL_FORMAT_NV21 = 2--><!--Device-EFFECT_PIXEL_FORMAT_NV21 = 2-End--> |
-| EFFECT_PIXEL_FORMAT_NV12 = 3 | NV12类型。<br><!--Device-EFFECT_PIXEL_FORMAT_NV12 = 3--><!--Device-EFFECT_PIXEL_FORMAT_NV12 = 3-End--> |
-| EFFECT_PIXEL_FORMAT_RGBA1010102 = 4 | 10bit RGBA类型。<br><!--Device-EFFECT_PIXEL_FORMAT_RGBA1010102 = 4--><!--Device-EFFECT_PIXEL_FORMAT_RGBA1010102 = 4-End--> |
-| EFFECT_PIXEL_FORMAT_YCBCR_P010 = 5 | 10bit YCBCR420类型。<br><!--Device-EFFECT_PIXEL_FORMAT_YCBCR_P010 = 5--><!--Device-EFFECT_PIXEL_FORMAT_YCBCR_P010 = 5-End--> |
-| EFFECT_PIXEL_FORMAT_YCRCB_P010 = 6 | 10bit YCRCB420类型。<br><!--Device-EFFECT_PIXEL_FORMAT_YCRCB_P010 = 6--><!--Device-EFFECT_PIXEL_FORMAT_YCRCB_P010 = 6-End--> |
+| EFFECT_PIXEL_FORMAT_UNKNOWN = 0 | 未定义类型。 |
+| EFFECT_PIXEL_FORMAT_RGBA8888 = 1 | RGBA8888类型。 |
+| EFFECT_PIXEL_FORMAT_NV21 = 2 | NV21类型。 |
+| EFFECT_PIXEL_FORMAT_NV12 = 3 | NV12类型。 |
+| EFFECT_PIXEL_FORMAT_RGBA1010102 = 4 | 10bit RGBA类型。 |
+| EFFECT_PIXEL_FORMAT_YCBCR_P010 = 5 | 10bit YCBCR420类型。 |
+| EFFECT_PIXEL_FORMAT_YCRCB_P010 = 6 | 10bit YCRCB420类型。 |
 
 ### ImageEffect_BufferType
 
@@ -149,17 +149,13 @@ enum ImageEffect_BufferType
 
 内存类型枚举值。
 
-<!--Device-enum ImageEffect_BufferType--><!--Device-enum ImageEffect_BufferType-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| EFFECT_BUFFER_TYPE_UNKNOWN = 0 | 未定义类型。<br><!--Device-EFFECT_BUFFER_TYPE_UNKNOWN = 0--><!--Device-EFFECT_BUFFER_TYPE_UNKNOWN = 0-End--> |
-| EFFECT_BUFFER_TYPE_PIXEL = 1 | 像素图类型。<br><!--Device-EFFECT_BUFFER_TYPE_PIXEL = 1--><!--Device-EFFECT_BUFFER_TYPE_PIXEL = 1-End--> |
-| EFFECT_BUFFER_TYPE_TEXTURE = 2 | 纹理类型。<br><!--Device-EFFECT_BUFFER_TYPE_TEXTURE = 2--><!--Device-EFFECT_BUFFER_TYPE_TEXTURE = 2-End--> |
+| EFFECT_BUFFER_TYPE_UNKNOWN = 0 | 未定义类型。 |
+| EFFECT_BUFFER_TYPE_PIXEL = 1 | 像素图类型。 |
+| EFFECT_BUFFER_TYPE_TEXTURE = 2 | 纹理类型。 |
 
 
 ## 函数说明
@@ -173,10 +169,6 @@ OH_EffectFilterInfo *OH_EffectFilterInfo_Create()
 **描述：**
 
 创建OH_EffectFilterInfo实例，调用[OH_EffectFilterInfo_Release](capi-image-effect-filter-h.md#oh_effectfilterinfo_release)进行资源释放。
-
-<!--Device-OH_EffectFilterInfo *OH_EffectFilterInfo_Create()--><!--Device-OH_EffectFilterInfo *OH_EffectFilterInfo_Create()-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -195,10 +187,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetFilterName(OH_EffectFilterInfo *inf
 **描述：**
 
 设置滤镜名。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetFilterName(OH_EffectFilterInfo *info, const char *name)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetFilterName(OH_EffectFilterInfo *info, const char *name)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -225,10 +213,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetFilterName(OH_EffectFilterInfo *inf
 
 获取滤镜名。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetFilterName(OH_EffectFilterInfo *info, char **name)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetFilterName(OH_EffectFilterInfo *info, char **name)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -253,10 +237,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedBufferTypes(OH_EffectFilte
 **描述：**
 
 设置滤镜所支持的内存类型。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedBufferTypes(OH_EffectFilterInfo *info, uint32_t size, ImageEffect_BufferType *bufferTypeArray)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedBufferTypes(OH_EffectFilterInfo *info, uint32_t size, ImageEffect_BufferType *bufferTypeArray)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -284,10 +264,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedBufferTypes(OH_EffectFilte
 
 获取滤镜所支持的内存类型。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedBufferTypes(OH_EffectFilterInfo *info, uint32_t *size, ImageEffect_BufferType **bufferTypeArray)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedBufferTypes(OH_EffectFilterInfo *info, uint32_t *size, ImageEffect_BufferType **bufferTypeArray)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -313,10 +289,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedFormats(OH_EffectFilterInf
 **描述：**
 
 设置滤镜所支持的像素格式。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedFormats(OH_EffectFilterInfo *info, uint32_t size, ImageEffect_Format *formatArray)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_SetSupportedFormats(OH_EffectFilterInfo *info, uint32_t size, ImageEffect_Format *formatArray)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -344,10 +316,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedFormats(OH_EffectFilterInf
 
 获取滤镜所支持的像素格式。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedFormats(OH_EffectFilterInfo *info, uint32_t *size, ImageEffect_Format **formatArray)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_GetSupportedFormats(OH_EffectFilterInfo *info, uint32_t *size, ImageEffect_Format **formatArray)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -374,10 +342,6 @@ ImageEffect_ErrorCode OH_EffectFilterInfo_Release(OH_EffectFilterInfo *info)
 
 销毁OH_EffectFilterInfo实例。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_Release(OH_EffectFilterInfo *info)--><!--Device-ImageEffect_ErrorCode OH_EffectFilterInfo_Release(OH_EffectFilterInfo *info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -402,10 +366,6 @@ OH_EffectBufferInfo *OH_EffectBufferInfo_Create()
 
 创建OH_EffectBufferInfo实例，调用[OH_EffectBufferInfo_Release](capi-image-effect-filter-h.md#oh_effectbufferinfo_release)进行资源释放。
 
-<!--Device-OH_EffectBufferInfo *OH_EffectBufferInfo_Create()--><!--Device-OH_EffectBufferInfo *OH_EffectBufferInfo_Create()-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **返回值：**
@@ -423,10 +383,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetAddr(OH_EffectBufferInfo *info, voi
 **描述：**
 
 设置图像内存地址。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetAddr(OH_EffectBufferInfo *info, void *addr)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetAddr(OH_EffectBufferInfo *info, void *addr)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -453,10 +409,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetAddr(OH_EffectBufferInfo *info, voi
 
 获取图像内存地址。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetAddr(OH_EffectBufferInfo *info, void **addr)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetAddr(OH_EffectBufferInfo *info, void **addr)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -481,10 +433,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetWidth(OH_EffectBufferInfo *info, in
 **描述：**
 
 设置图像宽度。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetWidth(OH_EffectBufferInfo *info, int32_t width)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetWidth(OH_EffectBufferInfo *info, int32_t width)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -511,10 +459,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetWidth(OH_EffectBufferInfo *info, in
 
 获取图像宽度。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetWidth(OH_EffectBufferInfo *info, int32_t *width)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetWidth(OH_EffectBufferInfo *info, int32_t *width)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -539,10 +483,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetHeight(OH_EffectBufferInfo *info, i
 **描述：**
 
 设置图像高度。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetHeight(OH_EffectBufferInfo *info, int32_t height)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetHeight(OH_EffectBufferInfo *info, int32_t height)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -569,10 +509,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetHeight(OH_EffectBufferInfo *info, i
 
 获取图像高度。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetHeight(OH_EffectBufferInfo *info, int32_t *height)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetHeight(OH_EffectBufferInfo *info, int32_t *height)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -597,10 +533,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetRowSize(OH_EffectBufferInfo *info, 
 **描述：**
 
 设置图像每一行的字节数。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetRowSize(OH_EffectBufferInfo *info, int32_t rowSize)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetRowSize(OH_EffectBufferInfo *info, int32_t rowSize)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -627,10 +559,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetRowSize(OH_EffectBufferInfo *info, 
 
 获取图像每一行的字节数。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetRowSize(OH_EffectBufferInfo *info, int32_t *rowSize)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetRowSize(OH_EffectBufferInfo *info, int32_t *rowSize)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -655,10 +583,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetEffectFormat(OH_EffectBufferInfo *i
 **描述：**
 
 设置图像的像素格式。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetEffectFormat(OH_EffectBufferInfo *info, ImageEffect_Format format)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetEffectFormat(OH_EffectBufferInfo *info, ImageEffect_Format format)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -685,10 +609,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetEffectFormat(OH_EffectBufferInfo *i
 
 获取图像的像素格式。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetEffectFormat(OH_EffectBufferInfo *info, ImageEffect_Format *format)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetEffectFormat(OH_EffectBufferInfo *info, ImageEffect_Format *format)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -713,10 +633,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTextureId(OH_EffectBufferInfo *info
 **描述：**
 
 设置OH_EffectBufferInfo的图像的textureId。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetTextureId(OH_EffectBufferInfo *info, int32_t textureId)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetTextureId(OH_EffectBufferInfo *info, int32_t textureId)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 20
 
@@ -743,10 +659,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTextureId(OH_EffectBufferInfo *info
 
 从OH_EffectBufferInfo中获取图像的textureId。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetTextureId(OH_EffectBufferInfo *info, int32_t *textureId)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetTextureId(OH_EffectBufferInfo *info, int32_t *textureId)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 20
 
 **参数：**
@@ -772,10 +684,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_Release(OH_EffectBufferInfo *info)
 
 销毁OH_EffectBufferInfo实例。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_Release(OH_EffectBufferInfo *info)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_Release(OH_EffectBufferInfo *info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -799,10 +707,6 @@ typedef bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const 
 **描述：**
 
 自定义滤镜设置参数的回调函数，用于开发者校验参数及参数值。
-
-<!--Device-typedef bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value)--><!--Device-typedef bool (*OH_EffectFilterDelegate_SetValue)(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -830,10 +734,6 @@ typedef void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_Eff
 
 自定义滤镜传递图像信息到下一级滤镜的函数指针。需要在[OH_EffectFilterDelegate_Render](capi-image-effect-filter-h.md#oh_effectfilterdelegate_render) 的回调中主动调用该函数指针。
 
-<!--Device-typedef void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_EffectBufferInfo *info)--><!--Device-typedef void (*OH_EffectFilterDelegate_PushData)(OH_EffectFilter *filter, OH_EffectBufferInfo *info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -852,10 +752,6 @@ typedef bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_Effec
 **描述：**
 
 自定义滤镜渲染图像的回调函数。
-
-<!--Device-typedef bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_EffectBufferInfo *info, OH_EffectFilterDelegate_PushData pushData)--><!--Device-typedef bool (*OH_EffectFilterDelegate_Render)(OH_EffectFilter *filter, OH_EffectBufferInfo *info, OH_EffectFilterDelegate_PushData pushData)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -883,10 +779,6 @@ typedef bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **inf
 
 自定义滤镜序列化的回调函数，按照JSON格式进行滤镜序列化处理。
 
-<!--Device-typedef bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **info)--><!--Device-typedef bool (*OH_EffectFilterDelegate_Save)(OH_EffectFilter *filter, char **info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -912,10 +804,6 @@ typedef OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info)
 
 自定义滤镜反序列化的回调函数。
 
-<!--Device-typedef OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info)--><!--Device-typedef OH_EffectFilter *(*OH_EffectFilterDelegate_Restore)(const char *info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -940,10 +828,6 @@ OH_EffectFilter *OH_EffectFilter_Create(const char *name)
 
 创建OH_EffectFilter实例，调用[OH_EffectFilter_Release](capi-image-effect-filter-h.md#oh_effectfilter_release)进行资源释放。
 
-<!--Device-OH_EffectFilter *OH_EffectFilter_Create(const char *name)--><!--Device-OH_EffectFilter *OH_EffectFilter_Create(const char *name)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -967,10 +851,6 @@ ImageEffect_ErrorCode OH_EffectFilter_SetValue(OH_EffectFilter *filter, const ch
 **描述：**
 
 设置滤镜参数。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_SetValue(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_SetValue(OH_EffectFilter *filter, const char *key, const ImageEffect_Any *value)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -998,10 +878,6 @@ ImageEffect_ErrorCode OH_EffectFilter_GetValue(OH_EffectFilter *filter, const ch
 
 获取滤镜参数。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_GetValue(OH_EffectFilter *filter, const char *key, ImageEffect_Any *value)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_GetValue(OH_EffectFilter *filter, const char *key, ImageEffect_Any *value)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -1028,10 +904,6 @@ ImageEffect_ErrorCode OH_EffectFilter_Register(const OH_EffectFilterInfo *info, 
 
 注册自定义滤镜。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_Register(const OH_EffectFilterInfo *info, const ImageEffect_FilterDelegate *delegate)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_Register(const OH_EffectFilterInfo *info, const ImageEffect_FilterDelegate *delegate)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -1057,10 +929,6 @@ ImageEffect_FilterNames *OH_EffectFilter_LookupFilters(const char *key)
 
 查询满足条件的滤镜。
 
-<!--Device-ImageEffect_FilterNames *OH_EffectFilter_LookupFilters(const char *key)--><!--Device-ImageEffect_FilterNames *OH_EffectFilter_LookupFilters(const char *key)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -1085,10 +953,6 @@ void OH_EffectFilter_ReleaseFilterNames()
 
 释放滤镜名内存资源。
 
-<!--Device-void OH_EffectFilter_ReleaseFilterNames()--><!--Device-void OH_EffectFilter_ReleaseFilterNames()-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 ### OH_EffectFilter_LookupFilterInfo()
@@ -1100,10 +964,6 @@ ImageEffect_ErrorCode OH_EffectFilter_LookupFilterInfo(const char *name, OH_Effe
 **描述：**
 
 查询滤镜信息。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_LookupFilterInfo(const char *name, OH_EffectFilterInfo *info)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_LookupFilterInfo(const char *name, OH_EffectFilterInfo *info)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -1130,10 +990,6 @@ ImageEffect_ErrorCode OH_EffectFilter_Render(OH_EffectFilter *filter, OH_Pixelma
 
 执行图像渲染。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_Render(OH_EffectFilter *filter, OH_PixelmapNative *inputPixelmap, OH_PixelmapNative *outputPixelmap)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_Render(OH_EffectFilter *filter, OH_PixelmapNative *inputPixelmap, OH_PixelmapNative *outputPixelmap)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -1159,10 +1015,6 @@ ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filte
 **描述：**
 
 使用纹理标识渲染滤镜效果。该函数不支持相同的输入和输出图像。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filter, int32_t inputTextureId, int32_t outputTextureId, int32_t colorSpace)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_RenderWithTextureId(OH_EffectFilter *filter, int32_t inputTextureId, int32_t outputTextureId, int32_t colorSpace)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 20
 
@@ -1191,10 +1043,6 @@ ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)
 
 销毁OH_EffectFilter实例。
 
-<!--Device-ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)--><!--Device-ImageEffect_ErrorCode OH_EffectFilter_Release(OH_EffectFilter *filter)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -1218,10 +1066,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info
 **描述：**
 
 设置滤镜时间戳。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info, int64_t timestamp)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_SetTimestamp(OH_EffectBufferInfo *info, int64_t timestamp)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 
@@ -1247,10 +1091,6 @@ ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info
 **描述：**
 
 获取滤镜时间戳。
-
-<!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info, int64_t *timestamp)--><!--Device-ImageEffect_ErrorCode OH_EffectBufferInfo_GetTimestamp(OH_EffectBufferInfo *info, int64_t *timestamp)-End-->
-
-**系统能力：** SystemCapability.Multimedia.ImageEffect.Core
 
 **起始版本：** 12
 

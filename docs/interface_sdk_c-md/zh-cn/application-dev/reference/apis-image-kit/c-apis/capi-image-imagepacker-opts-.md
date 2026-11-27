@@ -1,20 +1,18 @@
 # ImagePacker_Opts_
 
 ```c
-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts
+struct ImagePacker_Opts_ {...}
 ```
 
 ## 概述
 
 定义图像编码选项信息。
 
-<!--Device-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts--><!--Device-typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **起始版本：** 11
 
-**相关模块：** [Image](capi-image-kit-image.md)
+**相关模块：** [Image](capi-image.md)
 
 **所在头文件：** [image_packer_mdk.h](capi-image-packer-mdk-h.md)
 
@@ -24,7 +22,7 @@ typedef struct ImagePacker_Opts_ {...} ImagePacker_Opts
 
 | 名称 | 描述 |
 | -- | -- |
-| const char* format | 编码格式。<br><!--Device-const char* format--><!--Device-const char* format-End--> |
-| int quality | 编码质量。<br><!--Device-int quality--><!--Device-int quality-End--> |
+| const char* format | 编码格式。 |
+| int quality | 编码质量。 |
 
 

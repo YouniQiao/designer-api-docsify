@@ -1,14 +1,12 @@
 # OH_AVCodecAsyncCallback
 
 ```c
-typedef struct OH_AVCodecAsyncCallback {...} OH_AVCodecAsyncCallback
+struct OH_AVCodecAsyncCallback {...}
 ```
 
 ## 概述
 
 OH_AVCodec中所有异步回调函数指针的集合。将该结构体的实例注册到OH_AVCodec实例中， 并处理回调上报的信息，以保证OH_AVCodec的正常运行。
-
-<!--Device-struct OH_AVCodecAsyncCallback {...}--><!--Device-struct OH_AVCodecAsyncCallback {...}-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
@@ -16,21 +14,9 @@ OH_AVCodec中所有异步回调函数指针的集合。将该结构体的实例�
 
 **废弃版本：** 11
 
-**替代接口：** OH_AVCodecCallback
+**替代接口：** [OH_AVCodecCallback](capi-codecbase-oh-avcodeccallback.md)
 
-**相关模块：** [CodecBase](capi-avcodec-kit-codecbase.md)
+**相关模块：** [CodecBase](capi-codecbase.md)
 
 **所在头文件：** [native_avcodec_base.h](capi-native-avcodec-base-h.md)
-
-## 汇总
-
-### 成员变量
-
-| 名称 | 描述 |
-| -- | -- |
-| [OH_AVCodecOnError](capi-native-avcodec-base-h.md#oh_avcodeconerror) onError | <!--Device-OH_AVCodecOnError onError--><!--Device-OH_AVCodecOnError onError-End--> |
-| [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) onStreamChanged | <!--Device-OH_AVCodecOnStreamChanged onStreamChanged--><!--Device-OH_AVCodecOnStreamChanged onStreamChanged-End--> |
-| [OH_AVCodecOnNeedInputData](capi-native-avcodec-base-h.md#oh_avcodeconneedinputdata) onNeedInputData | <!--Device-OH_AVCodecOnNeedInputData onNeedInputData--><!--Device-OH_AVCodecOnNeedInputData onNeedInputData-End--> |
-| [OH_AVCodecOnNewOutputData](capi-native-avcodec-base-h.md#oh_avcodeconnewoutputdata) onNeedOutputData | <!--Device-OH_AVCodecOnNewOutputData onNeedOutputData--><!--Device-OH_AVCodecOnNewOutputData onNeedOutputData-End--> |
-
 

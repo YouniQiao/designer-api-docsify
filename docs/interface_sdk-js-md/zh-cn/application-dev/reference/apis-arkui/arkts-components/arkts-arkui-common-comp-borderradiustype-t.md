@@ -19,5 +19,5 @@ type BorderRadiusType = Length | BorderRadiuses | LocalizedBorderRadiuses
 | 类型 | 说明 |
 | --- | --- |
 | [Length](../arkts-apis/arkts-arkui-length-t.md) | 长度类型，用于描述尺寸单位。 |
-| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | 圆角类型，用于描述组件边框圆角半径。 |
+| BorderRadiuses | 圆角类型，用于描述组件边框圆角半径。 |
 | [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 圆角类型，用于描述组件边框圆角半径 |

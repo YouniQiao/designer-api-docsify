@@ -1,20 +1,18 @@
 # Rdb_Statistic
 
 ```c
-typedef struct Rdb_Statistic {...} Rdb_Statistic
+struct Rdb_Statistic {...}
 ```
 
 ## Overview
 
 Describes the statistic of the cloud sync process.
 
-<!--Device-struct Rdb_Statistic {...}--><!--Device-struct Rdb_Statistic {...}-End-->
-
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 11
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 **Header file**: [relational_store.h](capi-relational-store-h.md)
 
@@ -24,9 +22,9 @@ Describes the statistic of the cloud sync process.
 
 | Name | Description |
 | -- | -- |
-| int total | Describes the total number of data to sync.<br><!--Device-int total--><!--Device-int total-End--> |
-| int successful | Describes the number of successfully synced data.<br><!--Device-int successful--><!--Device-int successful-End--> |
-| int failed | Describes the number of data failed to sync.<br><!--Device-int failed--><!--Device-int failed-End--> |
-| int remained | Describes the number of data remained to sync.<br><!--Device-int remained--><!--Device-int remained-End--> |
+| int total | Describes the total number of data to sync. |
+| int successful | Describes the number of successfully synced data. |
+| int failed | Describes the number of data failed to sync. |
+| int remained | Describes the number of data remained to sync. |
 
 

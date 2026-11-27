@@ -1,20 +1,18 @@
 # Camera_MetadataObject
 
 ```c
-typedef struct Camera_MetadataObject {...} Camera_MetadataObject
+struct Camera_MetadataObject {...}
 ```
 
 ## Overview
 
 The struct describes the camera metadata.
 
-<!--Device-struct Camera_MetadataObject {...}--><!--Device-struct Camera_MetadataObject {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [camera.h](capi-camera-h.md)
 
@@ -24,8 +22,8 @@ The struct describes the camera metadata.
 
 | Name | Description |
 | -- | -- |
-| [Camera_MetadataObjectType](capi-camera-h.md#camera_metadataobjecttype) type | Type of the metadata object.<br><!--Device-Camera_MetadataObjectType type--><!--Device-Camera_MetadataObjectType type-End--> |
-| int64_t timestamp | Timestamp of the metadata object, in nanoseconds (ns).<br><!--Device-int64_t timestamp--><!--Device-int64_t timestamp-End--> |
-| [Camera_Rect*](capi-oh-camera-camera-rect.md) boundingBox | Pointer to the axis aligned bounding box of the metadata object.<br><!--Device-Camera_Rect* boundingBox--><!--Device-Camera_Rect* boundingBox-End--> |
+| [Camera_MetadataObjectType](capi-camera-h.md#camera_metadataobjecttype) type | Type of the metadata object. |
+| int64_t timestamp | Timestamp of the metadata object, in nanoseconds (ns). |
+| [Camera_Rect*](capi-oh-camera-camera-rect.md) boundingBox | Pointer to the axis aligned bounding box of the metadata object. |
 
 

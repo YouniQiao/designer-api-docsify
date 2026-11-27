@@ -1,20 +1,18 @@
 # OH_TrafficFilter_IPRange
 
 ```c
-typedef struct OH_TrafficFilter_IPRange {...} OH_TrafficFilter_IPRange
+struct OH_TrafficFilter_IPRange {...}
 ```
 
 ## Overview
 
-Defines the IP match value for range matching.
-
-<!--Device-struct OH_TrafficFilter_IPRange {...}--><!--Device-struct OH_TrafficFilter_IPRange {...}-End-->
+IP match value for range match
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
 **Since**: 26.0.0
 
-**Related module**: [TrafficFilter](capi-network-kit-trafficfilter.md)
+**Related module**: [TrafficFilter](capi-trafficfilter.md)
 
 **Header file**: [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -24,7 +22,7 @@ Defines the IP match value for range matching.
 
 | Name | Description |
 | -- | -- |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) start | Start IP address of the range.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress start--><!--Device-OH_TrafficFilter_IPAddress start-End--> |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) end | End IP address of the range.<br>**Since**: 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress end--><!--Device-OH_TrafficFilter_IPAddress end-End--> |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) start | Start IP address of the range<br>**Since**: 26.0.0 |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) end | End IP address of the range<br>**Since**: 26.0.0 |
 
 

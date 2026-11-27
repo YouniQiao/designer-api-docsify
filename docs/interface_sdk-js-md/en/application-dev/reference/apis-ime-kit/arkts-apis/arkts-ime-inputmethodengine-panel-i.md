@@ -257,7 +257,7 @@ Obtain the immersive mode of the input method application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | Failed to obtain panel execution order. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
@@ -1029,7 +1029,7 @@ Set the color of the function keys on the current panel and the background color
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | Failed to obtain panel execution order. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **Examples**
@@ -1260,7 +1260,7 @@ Display the current input method panel. Use callback asynchronous callback. The 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to the proxy input method. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**
@@ -1302,7 +1302,7 @@ Display the current input method panel and use promise asynchronous callback. Th
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. The panel has been destroyed or is unavailable. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to the proxy input method. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 **Examples**

@@ -1,20 +1,18 @@
 # Camera_CaptureStartInfo
 
 ```c
-typedef struct Camera_CaptureStartInfo {...} Camera_CaptureStartInfo
+struct Camera_CaptureStartInfo {...}
 ```
 
 ## 概述
 
 拍照开始信息。
 
-<!--Device-struct Camera_CaptureStartInfo {...}--><!--Device-struct Camera_CaptureStartInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Camera_CaptureStartInfo {...} Camera_CaptureStartInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t captureId | 拍照id。<br><!--Device-int32_t captureId--><!--Device-int32_t captureId-End--> |
-| int64_t time | 预估的单次拍照底层出sensor采集帧时间，如果上报-1，代表没有预估时间。<br><!--Device-int64_t time--><!--Device-int64_t time-End--> |
+| int32_t captureId | 拍照id。 |
+| int64_t time | 预估的单次拍照底层出sensor采集帧时间，如果上报-1，代表没有预估时间。 |
 
 

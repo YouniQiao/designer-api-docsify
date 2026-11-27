@@ -1,20 +1,18 @@
 # HiCollie_DetectionParam
 
 ```c
-typedef struct HiCollie_DetectionParam {...} HiCollie_DetectionParam
+struct HiCollie_DetectionParam {...}
 ```
 
 ## Overview
 
 Defines the parameters of the jank event detection. Note that this struct is supported since API 12.
 
-<!--Device-struct HiCollie_DetectionParam {...}--><!--Device-struct HiCollie_DetectionParam {...}-End-->
-
 **System capability**: SystemCapability.HiviewDFX.HiCollie
 
 **Since**: 12
 
-**Related module**: [HiCollie](capi-performance-analysis-kit-hicollie.md)
+**Related module**: [HiCollie](capi-hicollie.md)
 
 **Header file**: [hicollie.h](capi-hicollie-h.md)
 
@@ -24,7 +22,7 @@ Defines the parameters of the jank event detection. Note that this struct is sup
 
 | Name | Description |
 | -- | -- |
-| int sampleStackTriggerTime | In jank scenario, it's the threshold exceed which sample stack will be collected.<br>**Since**: 12<br><!--Device-int sampleStackTriggerTime--><!--Device-int sampleStackTriggerTime-End--> |
-| int reserved | Extended parameter for future use.<br>**Since**: 12<br><!--Device-int reserved--><!--Device-int reserved-End--> |
+| int sampleStackTriggerTime |  |
+| int reserved |  |
 
 

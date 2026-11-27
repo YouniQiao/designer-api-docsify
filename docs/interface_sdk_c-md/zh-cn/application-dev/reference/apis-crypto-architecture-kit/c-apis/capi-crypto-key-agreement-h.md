@@ -8,11 +8,9 @@
 
 **库：** libohcrypto.so
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**相关模块：** [CryptoKeyAgreementApi](capi-crypto-architecture-kit-cryptokeyagreementapi.md)
+**相关模块：** [CryptoKeyAgreementApi](capi-cryptokeyagreementapi.md)
 
 ## 汇总
 
@@ -42,13 +40,9 @@ OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKe
 
 根据给定的算法名称创建密钥协商上下文。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKeyAgreement **ctx)--><!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_Create(const char *algoName, OH_CryptoKeyAgreement **ctx)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_CryptoKeyAgreement_Destroy](#oh_cryptokeyagreement_destroy)
+**资源释放：** crypto_key_agreement/OH_CryptoKeyAgreement_Destroy {ctx}
 
 **参数：**
 
@@ -78,13 +72,9 @@ OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ct
 
 生成共享秘密值。
 
-<!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ctx, OH_CryptoPrivKey *privkey, OH_CryptoPubKey *pubkey, Crypto_DataBlob *secret)--><!--Device-OH_Crypto_ErrCode OH_CryptoKeyAgreement_GenerateSecret(OH_CryptoKeyAgreement *ctx, OH_CryptoPrivKey *privkey, OH_CryptoPubKey *pubkey, Crypto_DataBlob *secret)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 20
 
-**资源释放：** [OH_Crypto_FreeDataBlob](capi-crypto-common-h.md#oh_crypto_freedatablob)
+**资源释放：** crypto_common/OH_Crypto_FreeDataBlob {secret}
 
 **参数：**
 
@@ -110,10 +100,6 @@ void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)
 **描述：**
 
 销毁密钥协商上下文。
-
-<!--Device-void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)--><!--Device-void OH_CryptoKeyAgreement_Destroy(OH_CryptoKeyAgreement *ctx)-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 20
 

@@ -17,7 +17,7 @@ Defines the observer for suspend state changes.
 ## Modules to Import
 
 ```TypeScript
-import { suspendManager } from '@ohos.resourceschedule.suspendManager';
+import { suspendManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## onActive

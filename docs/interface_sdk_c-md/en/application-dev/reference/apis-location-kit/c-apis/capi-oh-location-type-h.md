@@ -6,23 +6,21 @@ Declares the common location attributes.
 
 **Library**: liblocation_ndk.so
 
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
-**Related module**: [Location](capi-location-kit-location.md)
+**Related module**: [Location](capi-location.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Location_BasicInfo](capi-location-location-basicinfo.md) | Location_BasicInfo | Defines the location information. |
+| [Location_BasicInfo](capi-location-location-basicinfo.md) | - | Defines the location information. |
 | [Location_Info](capi-location-location-info.md) | Location_Info | Define the structure of location information. |
 | [Location_RequestConfig](capi-location-location-requestconfig.md) | Location_RequestConfig | Define the structure of location request parameters. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -31,7 +29,7 @@ Declares the common location attributes.
 | [Location_PowerConsumptionScene](#location_powerconsumptionscene) | Location_PowerConsumptionScene | Enumerates the power consumption scenario. |
 | [Location_SourceType](#location_sourcetype) | Location_SourceType | Enumerates the source type of location. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -46,6 +44,12 @@ Declares the common location attributes.
 | [void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)](#oh_locationrequestconfig_setinterval) | - | Set the location reporting interval in the location request parameter. |
 | [void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)](#oh_locationrequestconfig_setcallback) | - | Set up a callback function for receiving location information. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Location_InfoCallback)(Location_Info* location, void* userData) | Defines the callback function used to report location data.<br>**Since**: 13<br>**System capability**: SystemCapability.Location.Location.Core |
+
 ## Enum type description
 
 ### Location_ResultCode
@@ -58,20 +62,16 @@ enum Location_ResultCode
 
 Enumerates the location result codes.
 
-<!--Device-enum Location_ResultCode--><!--Device-enum Location_ResultCode-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| LOCATION_SUCCESS = 0 | &nbsp;The operation is successful.<br><!--Device-LOCATION_SUCCESS = 0--><!--Device-LOCATION_SUCCESS = 0-End--> |
-| LOCATION_PERMISSION_DENIED = 201 | &nbsp;Permission verification failed. The application does not have the permission required to call the API.<br><!--Device-LOCATION_PERMISSION_DENIED = 201--><!--Device-LOCATION_PERMISSION_DENIED = 201-End--> |
-| LOCATION_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range.<br><!--Device-LOCATION_INVALID_PARAM = 401--><!--Device-LOCATION_INVALID_PARAM = 401-End--> |
-| LOCATION_NOT_SUPPORTED = 801 | &nbsp;Capability not supported. Failed to call function due to limited device capabilities.<br><!--Device-LOCATION_NOT_SUPPORTED = 801--><!--Device-LOCATION_NOT_SUPPORTED = 801-End--> |
-| LOCATION_SERVICE_UNAVAILABLE = 3301000 | &nbsp;The location service is unavailable. Possible reasons: Abnormal startup of location services.<br><!--Device-LOCATION_SERVICE_UNAVAILABLE = 3301000--><!--Device-LOCATION_SERVICE_UNAVAILABLE = 3301000-End--> |
-| LOCATION_SWITCH_OFF = 3301100 | &nbsp;The location switch is off.<br><!--Device-LOCATION_SWITCH_OFF = 3301100--><!--Device-LOCATION_SWITCH_OFF = 3301100-End--> |
+| LOCATION_SUCCESS = 0 | &nbsp;The operation is successful. |
+| LOCATION_PERMISSION_DENIED = 201 | &nbsp;Permission verification failed. The application does not have the permission required to call the API. |
+| LOCATION_INVALID_PARAM = 401 | &nbsp;Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range. |
+| LOCATION_NOT_SUPPORTED = 801 | &nbsp;Capability not supported. Failed to call function due to limited device capabilities. |
+| LOCATION_SERVICE_UNAVAILABLE = 3301000 | &nbsp;The location service is unavailable. Possible reasons: Abnormal startup of location services. |
+| LOCATION_SWITCH_OFF = 3301100 | &nbsp;The location switch is off. |
 
 ### Location_UseScene
 
@@ -83,18 +83,14 @@ enum Location_UseScene
 
 Enumeration values of use scenarios.
 
-<!--Device-enum Location_UseScene--><!--Device-enum Location_UseScene-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| LOCATION_USE_SCENE_NAVIGATION = 0x0401 | Indicates the navigation scenario. This feature applies to outdoor scenarios where real-time device locations need to be obtained, such as vehicle-mounted and pedestrian navigation. The GNSS positioning technology is used to provide positioning services, and the power consumption is high.<br><!--Device-LOCATION_USE_SCENE_NAVIGATION = 0x0401--><!--Device-LOCATION_USE_SCENE_NAVIGATION = 0x0401-End--> |
-| LOCATION_USE_SCENE_SPORT = 0x0402 | Indicates the sport scenario. This feature applies to scenarios where user location tracks are recorded, for example, sports apps. The GNSS positioning technology is used to provide positioning services, and the power consumption is high.<br><!--Device-LOCATION_USE_SCENE_SPORT = 0x0402--><!--Device-LOCATION_USE_SCENE_SPORT = 0x0402-End--> |
-| LOCATION_USE_SCENE_TRANSPORT = 0x0403 | Indicates a travel scenario. This mode applies to travel scenarios, such as taxi and public transportation. The GNSS positioning technology is used to provide positioning services, and the power consumption is high.<br><!--Device-LOCATION_USE_SCENE_TRANSPORT = 0x0403--><!--Device-LOCATION_USE_SCENE_TRANSPORT = 0x0403-End--> |
-| LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404 | Indicates the daily service usage scenario. This mode applies to scenarios where precise user location is not required, such as news, online shopping, and ordering applications. In this scenario, only a network positioning technology is used to provide a positioning service, and power consumption is relatively low.<br><!--Device-LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404--><!--Device-LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404-End--> |
+| LOCATION_USE_SCENE_NAVIGATION = 0x0401 | Indicates the navigation scenario. This feature applies to outdoor scenarios where real-time device locations need to be obtained, such as vehicle-mounted and pedestrian navigation. The GNSS positioning technology is used to provide positioning services, and the power consumption is high. |
+| LOCATION_USE_SCENE_SPORT = 0x0402 | Indicates the sport scenario. This feature applies to scenarios where user location tracks are recorded, for example, sports apps. The GNSS positioning technology is used to provide positioning services, and the power consumption is high. |
+| LOCATION_USE_SCENE_TRANSPORT = 0x0403 | Indicates a travel scenario. This mode applies to travel scenarios, such as taxi and public transportation. The GNSS positioning technology is used to provide positioning services, and the power consumption is high. |
+| LOCATION_USE_SCENE_DAILY_LIFE_SERVICE = 0x0404 | Indicates the daily service usage scenario. This mode applies to scenarios where precise user location is not required, such as news, online shopping, and ordering applications. In this scenario, only a network positioning technology is used to provide a positioning service, and power consumption is relatively low. |
 
 ### Location_PowerConsumptionScene
 
@@ -106,17 +102,13 @@ enum Location_PowerConsumptionScene
 
 Enumerates the power consumption scenario.
 
-<!--Device-enum Location_PowerConsumptionScene--><!--Device-enum Location_PowerConsumptionScene-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| LOCATION_HIGH_POWER_CONSUMPTION = 0x0601 | High power consumption. GNSS positioning technology is mainly used. We will use network positioning technology to provide services before GNSS provides stable location results; During continuous positioning, if the GNSS positioning result cannot be obtained for more than 30 seconds, the network positioning technology is used to obtain the location. Consumes a large number of hardware resources and power.<br><!--Device-LOCATION_HIGH_POWER_CONSUMPTION = 0x0601--><!--Device-LOCATION_HIGH_POWER_CONSUMPTION = 0x0601-End--> |
-| LOCATION_LOW_POWER_CONSUMPTION = 0x0602 | Low power consumption. This mode applies to scenarios that do not require high user location precision, such as news, online shopping, and meal ordering. In this scenario, only a network positioning technology is used to provide a positioning service, and power consumption is relatively low.<br><!--Device-LOCATION_LOW_POWER_CONSUMPTION = 0x0602--><!--Device-LOCATION_LOW_POWER_CONSUMPTION = 0x0602-End--> |
-| LOCATION_NO_POWER_CONSUMPTION = 0x0603 | No power consumption. In this scenario, the location is not proactively triggered. The location is returned to the current app only when other apps are located.<br><!--Device-LOCATION_NO_POWER_CONSUMPTION = 0x0603--><!--Device-LOCATION_NO_POWER_CONSUMPTION = 0x0603-End--> |
+| LOCATION_HIGH_POWER_CONSUMPTION = 0x0601 | High power consumption. GNSS positioning technology is mainly used. We will use network positioning technology to provide services before GNSS provides stable location results; During continuous positioning, if the GNSS positioning result cannot be obtained for more than 30 seconds, the network positioning technology is used to obtain the location. Consumes a large number of hardware resources and power. |
+| LOCATION_LOW_POWER_CONSUMPTION = 0x0602 | Low power consumption. This mode applies to scenarios that do not require high user location precision, such as news, online shopping, and meal ordering. In this scenario, only a network positioning technology is used to provide a positioning service, and power consumption is relatively low. |
+| LOCATION_NO_POWER_CONSUMPTION = 0x0603 | No power consumption. In this scenario, the location is not proactively triggered. The location is returned to the current app only when other apps are located. |
 
 ### Location_SourceType
 
@@ -128,18 +120,14 @@ enum Location_SourceType
 
 Enumerates the source type of location.
 
-<!--Device-enum Location_SourceType--><!--Device-enum Location_SourceType-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| LOCATION_SOURCE_TYPE_GNSS = 1 | The positioning result is based on the GNSS positioning technology.<br><!--Device-LOCATION_SOURCE_TYPE_GNSS = 1--><!--Device-LOCATION_SOURCE_TYPE_GNSS = 1-End--> |
-| LOCATION_SOURCE_TYPE_NETWORK = 2 | The positioning result comes from the network positioning technology.<br><!--Device-LOCATION_SOURCE_TYPE_NETWORK = 2--><!--Device-LOCATION_SOURCE_TYPE_NETWORK = 2-End--> |
-| LOCATION_SOURCE_TYPE_INDOOR = 3 | The positioning result comes from the high-precision indoor positioning technology.<br><!--Device-LOCATION_SOURCE_TYPE_INDOOR = 3--><!--Device-LOCATION_SOURCE_TYPE_INDOOR = 3-End--> |
-| LOCATION_SOURCE_TYPE_RTK = 4 | The positioning result comes from the high-precision positioning technology.<br><!--Device-LOCATION_SOURCE_TYPE_RTK = 4--><!--Device-LOCATION_SOURCE_TYPE_RTK = 4-End--> |
+| LOCATION_SOURCE_TYPE_GNSS = 1 | The positioning result is based on the GNSS positioning technology. |
+| LOCATION_SOURCE_TYPE_NETWORK = 2 | The positioning result comes from the network positioning technology. |
+| LOCATION_SOURCE_TYPE_INDOOR = 3 | The positioning result comes from the high-precision indoor positioning technology. |
+| LOCATION_SOURCE_TYPE_RTK = 4 | The positioning result comes from the high-precision positioning technology. |
 
 
 ## Function description
@@ -153,10 +141,6 @@ bool OH_LocationInfo_IsFromMock(Location_Info* location)
 **Description**
 
 Indicates whether the location was obtained from the mock location function.
-
-<!--Device-bool OH_LocationInfo_IsFromMock(Location_Info* location)--><!--Device-bool OH_LocationInfo_IsFromMock(Location_Info* location)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Since**: 26.0.0
 
@@ -182,10 +166,6 @@ Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)
 
 Obtain basic location information.
 
-<!--Device-Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)--><!--Device-Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -209,10 +189,6 @@ Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, c
 **Description**
 
 Obtain additional information from the location information.
-
-<!--Device-Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)--><!--Device-Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Since**: 13
 
@@ -240,10 +216,6 @@ typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)
 
 Defines the callback function used to report location data.
 
-<!--Device-typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)--><!--Device-typedef void (*Location_InfoCallback)(Location_Info* location, void* userData)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -263,10 +235,6 @@ Location_RequestConfig* OH_Location_CreateRequestConfig(void)
 
 Create a location request parameter structure instance.
 
-<!--Device-Location_RequestConfig* OH_Location_CreateRequestConfig(void)--><!--Device-Location_RequestConfig* OH_Location_CreateRequestConfig(void)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Returns**:
@@ -285,10 +253,6 @@ void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)
 
 Destroy the location request parameter instance and reclaim memory.
 
-<!--Device-void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)--><!--Device-void OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -306,10 +270,6 @@ void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig,
 **Description**
 
 Set the use scenario in the location request parameter. Prioritize useScene in the location request parameter [Location_RequestConfig](capi-location-location-requestconfig.md). If useScene is set, powerConsumptionScene becomes invalid. If useScene is not set and powerConsumptionScene is set, this parameter takes effect. If both parameters are not set, the default useScene is [LOCATION_USE_SCENE_DAILY_LIFE_SERVICE](capi-oh-location-type-h.md#location_usescene), and the powerConsumptionCenario parameter is invalid.
-
-<!--Device-void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig, Location_UseScene useScene)--><!--Device-void OH_LocationRequestConfig_SetUseScene(Location_RequestConfig* requestConfig, Location_UseScene useScene)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Since**: 13
 
@@ -330,10 +290,6 @@ void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* r
 
 Set the power consumption scenario in the location request parameters.
 
-<!--Device-void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* requestConfig, Location_PowerConsumptionScene powerConsumptionScene)--><!--Device-void OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* requestConfig, Location_PowerConsumptionScene powerConsumptionScene)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -353,10 +309,6 @@ void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig,
 
 Set the location reporting interval in the location request parameter.
 
-<!--Device-void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)--><!--Device-void OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -375,10 +327,6 @@ void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig,
 **Description**
 
 Set up a callback function for receiving location information.
-
-<!--Device-void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)--><!--Device-void OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)-End-->
-
-**System capability**: SystemCapability.Location.Location.Core
 
 **Since**: 13
 

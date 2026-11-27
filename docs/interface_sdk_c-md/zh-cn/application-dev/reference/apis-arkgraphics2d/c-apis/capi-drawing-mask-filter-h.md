@@ -2,15 +2,13 @@
 
 ## 概述
 
-声明与绘图模块中的蒙版滤波器对象相关的函数。 <br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+声明与绘图模块中的对象相关的函数。 <br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 11
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 ## 汇总
 
@@ -25,7 +23,7 @@
 | 名称 | 描述 |
 | -- | -- |
 | [OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)](#oh_drawing_maskfiltercreateblur) | 创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后， 必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。 |
-| [void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)](#oh_drawing_maskfilterdestroy) | 销毁蒙版滤波器对象，并回收该对象占用的内存。 |
+| [void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)](#oh_drawing_maskfilterdestroy) | 销毁蒙版滤波器对象，并收回该对象占用的内存。 |
 
 ## 枚举类型说明
 
@@ -39,18 +37,14 @@ enum OH_Drawing_BlurType
 
 蒙版滤波器模糊操作类型的枚举。
 
-<!--Device-enum OH_Drawing_BlurType--><!--Device-enum OH_Drawing_BlurType-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| NORMAL | 内外模糊。<br><!--Device-NORMAL--><!--Device-NORMAL-End--> |
-| SOLID | 内部实心，外部模糊。<br><!--Device-SOLID--><!--Device-SOLID-End--> |
-| OUTER | 内部空白，外部模糊。<br><!--Device-OUTER--><!--Device-OUTER-End--> |
-| INNER | 内部模糊，外部空白。<br><!--Device-INNER--><!--Device-INNER-End--> |
+| NORMAL | 内外模糊。 |
+| SOLID | 内部实心，外部模糊。 |
+| OUTER | 内部空白，外部模糊。 |
+| INNER | 内部模糊，外部空白。 |
 
 
 ## 函数说明
@@ -64,10 +58,6 @@ OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurT
 **描述：**
 
 创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后， 必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。
-
-<!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)--><!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -93,11 +83,7 @@ void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)
 
 **描述：**
 
-销毁蒙版滤波器对象，并回收该对象占用的内存。
-
-<!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)--><!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
+销毁蒙版滤波器对象，并收回该对象占用的内存。
 
 **起始版本：** 11
 

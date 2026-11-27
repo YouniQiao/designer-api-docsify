@@ -1,0 +1,257 @@
+# removeAll (System API)
+
+## Modules to Import
+
+```TypeScript
+import { notification } from '@ohos.notification';
+```
+
+## removeAll
+
+```TypeScript
+function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
+```
+
+Removes all notifications for a specified application. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-1)(bundle: BundleOption, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notification-depr-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.removeAll(bundle, removeAllCallback);
+```
+
+<!--DelEnd-->
+
+
+## removeAll
+
+```TypeScript
+function removeAll(callback: AsyncCallback<void>): void
+```
+
+Removes all notifications. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-2)(callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+Notification.removeAll(removeAllCallback);
+```
+
+<!--DelEnd-->
+
+
+## removeAll
+
+```TypeScript
+function removeAll(userId: number, callback: AsyncCallback<void>): void
+```
+
+Removes all notifications for a specified user. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)(userId: number, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(userId: number, callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(userId: number, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+function removeAllCallback(err: Base.BusinessError) {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+let userId: number = 1;
+Notification.removeAll(userId, removeAllCallback);
+```
+
+<!--DelEnd-->
+
+
+## removeAll
+
+```TypeScript
+function removeAll(userId: number): Promise<void>
+```
+
+Removes all notifications for a specified user. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)(userId: number)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(userId: number): Promise<void>--><!--Device-notification-function removeAll(userId: number): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userId | number | Yes | User ID. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let userId: number = 1;
+Notification.removeAll(userId).then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->
+
+
+## removeAll
+
+```TypeScript
+function removeAll(bundle?: BundleOption): Promise<void>
+```
+
+Removes all notifications for a specified application. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-5)(bundle?: BundleOption)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(bundle?: BundleOption): Promise<void>--><!--Device-notification-function removeAll(bundle?: BundleOption): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notification-depr-bundleoption-i.md) | No | Bundle information of the application. By default, this parameter is left empty, indicating that all notifications will be removed. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// If no application is specified, notifications of all applications are deleted.
+Notification.removeAll().then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->

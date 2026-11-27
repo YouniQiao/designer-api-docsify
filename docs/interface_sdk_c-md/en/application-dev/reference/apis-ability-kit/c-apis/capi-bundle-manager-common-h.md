@@ -6,19 +6,17 @@ The file declares the error codes defined by BundleManager.
 
 **Library**: libbundle_ndk.z.so
 
-**System capability**: SystemCapability.BundleManager.BundleFramework.Core
-
 **Since**: 21
 
-**Related module**: [Native_Bundle](capi-ability-kit-native-bundle.md)
+**Related module**: [Native_Bundle](capi-native-bundle.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [BundleManager_ErrorCode](#bundlemanager_errorcode) | BundleManager_ErrorCode | Enumerates the error codes. For details, see Universal Error Codes. |
+| [BundleManager_ErrorCode](#bundlemanager_errorcode) | BundleManager_ErrorCode | Enumerates the error codes. |
 
 ## Enum type description
 
@@ -30,18 +28,14 @@ enum BundleManager_ErrorCode
 
 **Description**
 
-Enumerates the error codes. For details, see Universal Error Codes.
-
-<!--Device-enum BundleManager_ErrorCode--><!--Device-enum BundleManager_ErrorCode-End-->
-
-**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+Enumerates the error codes.
 
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0 | Operation success.<br>**Since**: 21<br><!--Device-BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0--><!--Device-BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0-End--> |
-| BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201 | No access permission.<br>**Since**: 21<br><!--Device-BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201--><!--Device-BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201-End--> |
-| BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401 | Invalid parameter.<br>**Since**: 21<br><!--Device-BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401--><!--Device-BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401-End--> |
+| BUNDLE_MANAGER_ERROR_CODE_NO_ERROR = 0 |  |
+| BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED = 201 |  |
+| BUNDLE_MANAGER_ERROR_CODE_PARAM_INVALID = 401 |  |
 
 

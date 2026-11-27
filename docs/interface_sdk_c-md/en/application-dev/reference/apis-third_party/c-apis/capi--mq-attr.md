@@ -2,14 +2,3 @@
 
 ## Overview
 
-<!--Device-struct mq_attr {...}--><!--Device-struct mq_attr {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| long mq_flags, mq_maxmsg, mq_msgsize, mq_curmsgs, \_\_unused1[4] | <!--Device-long mq_flags, mq_maxmsg, mq_msgsize, mq_curmsgs, \_\_unused1[4]--><!--Device-long mq_flags, mq_maxmsg, mq_msgsize, mq_curmsgs, \_\_unused1[4]-End--> |
-
-

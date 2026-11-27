@@ -68,7 +68,7 @@ slice?: EdgeWidths
 
 单位：vp
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-edgewidths-t.md)
 
 **起始版本：** 11
 

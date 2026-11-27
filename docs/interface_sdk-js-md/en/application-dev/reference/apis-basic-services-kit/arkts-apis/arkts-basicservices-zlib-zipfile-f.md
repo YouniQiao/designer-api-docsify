@@ -28,7 +28,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context.md). |
+| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr.md). |
 | outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the zip operation. |
 

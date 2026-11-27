@@ -6,15 +6,13 @@ Declares APIs for decoding an image source into a pixel map.
 
 **Library**: libimage_source_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
-**Related module**: [Image](capi-image-kit-image.md)
+**Related module**: [Image](capi-image.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -29,17 +27,18 @@ Declares APIs for decoding an image source into a pixel map.
 | [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md) | - | Defines the property string (in key-value format) of the image source. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). |
 | [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md) | - | Defines the update data of the image source. It is obtained by calling [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata). |
 | [ImageSourceNative_](capi-image-imagesourcenative-.md) | - | Defines a native image source object for the image source APIs. |
+| [ImageSourceNative](capi-image-imagesourcenative.md) | ImageSourceNative | Defines a native image source object for the image source APIs. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_create) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.(Deprecated) |
+| [int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_create) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.(Deprecated in API11) |
 | [int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createfromuri) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source URI and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. |
 | [int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createfromfd) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. |
 | [int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createfromdata) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. |
 | [int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createfromrawfile) | Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified raw file's file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. |
-| [int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createincremental) | Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).(Deprecated) |
+| [int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createincremental) | Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).(Deprecated in API11) |
 | [int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)](#oh_imagesource_createincrementalfromdata) | Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata). |
 | [int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormatList* res)](#oh_imagesource_getsupportedformats) | Obtains all supported decoding formats. |
 | [ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)](#oh_imagesource_initnative) | Converts an ImageSource object at the JavaScript native layer to an <b>ImageSourceNative</b> object at the C++ native layer. |
@@ -53,24 +52,24 @@ Declares APIs for decoding an image source into a pixel map.
 | [int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosImageSourceUpdateData* data)](#oh_imagesource_updatedata) | Updates the data of an <b>ImageSource</b> object. |
 | [int32_t OH_ImageSource_Release(ImageSourceNative* native)](#oh_imagesource_release) | Releases an <b>ImageSourceNative</b> object. |
 
-### Variables
+### Variable
 
 | Name | Description |
 | -- | -- |
-| static const char *OHOS_IMAGE_PROPERTY_BITS_PER_SAMPLE = "BitsPerSample" | Defines a pointer to bits per sample, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_BITS_PER_SAMPLE = "BitsPerSample"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_BITS_PER_SAMPLE = "BitsPerSample"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_ORIENTATION = "Orientation" | Defines a pointer to the orientation, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_ORIENTATION = "Orientation"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_ORIENTATION = "Orientation"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_IMAGE_LENGTH = "ImageLength" | Defines a pointer to the image length, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_IMAGE_LENGTH = "ImageLength"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_IMAGE_LENGTH = "ImageLength"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_IMAGE_WIDTH = "ImageWidth" | Defines a pointer to the image width, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_IMAGE_WIDTH = "ImageWidth"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_IMAGE_WIDTH = "ImageWidth"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE = "GPSLatitude" | Defines a pointer to the GPS latitude, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE = "GPSLatitude"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE = "GPSLatitude"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE = "GPSLongitude" | Defines a pointer to the GPS longitude, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE = "GPSLongitude"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE = "GPSLongitude"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE_REF = "GPSLatitudeRef" | Defines a pointer to the GPS latitude reference information, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE_REF = "GPSLatitudeRef"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE_REF = "GPSLatitudeRef"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE_REF = "GPSLongitudeRef" | Defines a pointer to the GPS longitude reference information, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE_REF = "GPSLongitudeRef"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE_REF = "GPSLongitudeRef"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_DATE_TIME_ORIGINAL = "DateTimeOriginal" | Defines a pointer to the created date and time, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_DATE_TIME_ORIGINAL = "DateTimeOriginal"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_DATE_TIME_ORIGINAL = "DateTimeOriginal"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_EXPOSURE_TIME = "ExposureTime" | Defines a pointer to the exposure time, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_EXPOSURE_TIME = "ExposureTime"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_EXPOSURE_TIME = "ExposureTime"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_SCENE_TYPE = "SceneType" | Defines a pointer to the scene type, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_SCENE_TYPE = "SceneType"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_SCENE_TYPE = "SceneType"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_ISO_SPEED_RATINGS = "ISOSpeedRatings" | Defines a pointer to the ISO speed ratings, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_ISO_SPEED_RATINGS = "ISOSpeedRatings"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_ISO_SPEED_RATINGS = "ISOSpeedRatings"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_F_NUMBER = "FNumber" | Defines a pointer to the f-number of the image, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_F_NUMBER = "FNumber"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_F_NUMBER = "FNumber"-End--> |
-| static const char *OHOS_IMAGE_PROPERTY_COMPRESSED_BITS_PER_PIXEL = "CompressedBitsPerPixel" | Defines a pointer to the compressed bits per pixel, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource<br><!--Device-static const char *OHOS_IMAGE_PROPERTY_COMPRESSED_BITS_PER_PIXEL = "CompressedBitsPerPixel"--><!--Device-static const char *OHOS_IMAGE_PROPERTY_COMPRESSED_BITS_PER_PIXEL = "CompressedBitsPerPixel"-End--> |
+| static const char *OHOS_IMAGE_PROPERTY_BITS_PER_SAMPLE = "BitsPerSample" | Defines a pointer to bits per sample, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_ORIENTATION = "Orientation" | Defines a pointer to the orientation, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_IMAGE_LENGTH = "ImageLength" | Defines a pointer to the image length, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_IMAGE_WIDTH = "ImageWidth" | Defines a pointer to the image width, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE = "GPSLatitude" | Defines a pointer to the GPS latitude, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE = "GPSLongitude" | Defines a pointer to the GPS longitude, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_GPS_LATITUDE_REF = "GPSLatitudeRef" | Defines a pointer to the GPS latitude reference information, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_GPS_LONGITUDE_REF = "GPSLongitudeRef" | Defines a pointer to the GPS longitude reference information, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_DATE_TIME_ORIGINAL = "DateTimeOriginal" | Defines a pointer to the created date and time, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_EXPOSURE_TIME = "ExposureTime" | Defines a pointer to the exposure time, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_SCENE_TYPE = "SceneType" | Defines a pointer to the scene type, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_ISO_SPEED_RATINGS = "ISOSpeedRatings" | Defines a pointer to the ISO speed ratings, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_F_NUMBER = "FNumber" | Defines a pointer to the f-number of the image, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
+| static const char *OHOS_IMAGE_PROPERTY_COMPRESSED_BITS_PER_PIXEL = "CompressedBitsPerPixel" | Defines a pointer to the compressed bits per pixel, one of the image properties. It is used in [OH_ImageSource_GetImageProperty](capi-image-source-mdk-h.md#oh_imagesource_getimageproperty) and [OH_ImageSource_ModifyImageProperty](capi-image-source-mdk-h.md#oh_imagesource_modifyimageproperty). Add static keyword since API 12, it is used to limit the scope of the constant to a single file.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageSource |
 
 ## Function description
 
@@ -83,10 +82,6 @@ int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct 
 **Description**
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
-
-<!--Device-int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_Create(napi_env env, struct OhosImageSource* src, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 10
 
@@ -124,10 +119,6 @@ int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struc
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source URI and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
-<!--Device-int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromUri(napi_env env, char* uri, size_t size, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 11
 
 **Parameters**:
@@ -161,10 +152,6 @@ int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSo
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
-<!--Device-int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromFd(napi_env env, int32_t fd, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 11
 
 **Parameters**:
@@ -196,10 +183,6 @@ int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSi
 **Description**
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
-
-<!--Device-int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 11
 
@@ -234,10 +217,6 @@ int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile
 
 Creates an <b>ImageSource</b> object at the JavaScript native layer based on the specified raw file's file descriptor and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs.
 
-<!--Device-int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateFromRawFile(napi_env env, RawFileDescriptor rawFile, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 11
 
 **Parameters**:
@@ -269,10 +248,6 @@ int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* s
 **Description**
 
 Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified [OhosImageSource](capi-image-ohosimagesource.md) and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).
-
-<!--Device-int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateIncremental(napi_env env, struct OhosImageSource* source, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
 
 **Since**: 10
 
@@ -310,10 +285,6 @@ int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, si
 
 Creates an incremental <b>ImageSource</b> object at the JavaScript native layer based on the specified image source data and [OhosImageSourceOps](capi-image-ohosimagesourceops.md) structs. The image source data will be updated through [OH_ImageSource_UpdateData](capi-image-source-mdk-h.md#oh_imagesource_updatedata).
 
-<!--Device-int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreateIncrementalFromData(napi_env env, uint8_t* data, size_t dataSize, struct OhosImageSourceOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 11
 
 **Parameters**:
@@ -347,10 +318,6 @@ int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormat
 
 Obtains all supported decoding formats.
 
-<!--Device-int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormatList* res)--><!--Device-int32_t OH_ImageSource_GetSupportedFormats(struct OhosImageSourceSupportedFormatList* res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
@@ -380,10 +347,6 @@ ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)
 
 Converts an ImageSource object at the JavaScript native layer to an <b>ImageSourceNative</b> object at the C++ native layer.
 
-<!--Device-ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)--><!--Device-ImageSourceNative* OH_ImageSource_InitNative(napi_env env, napi_value source)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
@@ -397,11 +360,11 @@ Converts an ImageSource object at the JavaScript native layer to an <b>ImageSour
 
 | Type | Description |
 | -- | -- |
-| [ImageSourceNative*](capi-image-imagesourcenative-.md) | Returns a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object if the operation is successful; returns a null pointer otherwise. |
+| [ImageSourceNative*](capi-image-imagesourcenative.md) | Returns a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object if the operation is successful; returns a null pointer otherwise. |
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OH_ImageSource_Release](capi-image-source-mdk-h.md#oh_imagesource_release)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OH_ImageSource_Release](capi-image-source-mdk-h.md#oh_imagesource_release)
 
 
 ### OH_ImageSource_CreatePixelMap()
@@ -414,17 +377,13 @@ int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct Oh
 
 Decodes an <b>ImageSource</b> object to obtain a <b>PixelMap</b> object at the JavaScript native layer based on the specified [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md) struct.
 
-<!--Device-int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreatePixelMap(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | Indicates a pointer to the options for decoding the image source. For details, see [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md). |
 | napi_value *res | Indicates a pointer to the <b>PixelMap</b> object obtained at the JavaScript native layer. |
 
@@ -432,11 +391,11 @@ Decodes an <b>ImageSource</b> object to obtain a <b>PixelMap</b> object at the J
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - if image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if the alpha type is incorrect. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if the memory allocator type is incorrect. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - if image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if hard decode failed. |
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
 
 
 ### OH_ImageSource_CreatePixelMapList()
@@ -449,17 +408,13 @@ int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struc
 
 Decodes an <b>ImageSource</b> to obtain all the <b>PixelMap</b> objects at the JavaScript native layer based on the specified [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md) struct.
 
-<!--Device-int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)--><!--Device-int32_t OH_ImageSource_CreatePixelMapList(const ImageSourceNative* native, struct OhosImageDecodingOps* ops, napi_value *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)* ops | Indicates a pointer to the options for decoding the image source. For details, see [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md). |
 | napi_value *res | Indicates a pointer to the <b>PixelMap</b> objects obtained at the JavaScript native layer. |
 
@@ -467,11 +422,11 @@ Decodes an <b>ImageSource</b> to obtain all the <b>PixelMap</b> objects at the J
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - if image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if the alpha type is incorrect. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if the memory allocator type is incorrect. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_EXIF_UNSUPPORT - if image decode exif unsupport. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PROPERTY_NOT_EXIST - if image property not exist. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - if image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_EXIF_UNSUPPORT - if image decode exif unsupport. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PROPERTY_NOT_EXIST - if image property not exist. |
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageDecodingOps](capi-image-ohosimagedecodingops.md)
 
 
 ### OH_ImageSource_GetDelayTime()
@@ -484,17 +439,13 @@ int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct Ohos
 
 Obtains the delay time list from some <b>ImageSource</b> objects (such as GIF image sources).
 
-<!--Device-int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct OhosImageSourceDelayTimeList* res)--><!--Device-int32_t OH_ImageSource_GetDelayTime(const ImageSourceNative* native, struct OhosImageSourceDelayTimeList* res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)* res | Indicates a pointer to the delay time list obtained. For details, see [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md). When the input <b>delayTimeList</b> is a null pointer and <b>size</b> is <b>0</b>, the size of the delay time list is returned through <b>size</b> in <b>res</b>. To obtain the complete delay time list, a space greater than <b>size</b> is required. |
 
 **Returns**:
@@ -505,7 +456,7 @@ Obtains the delay time list from some <b>ImageSource</b> objects (such as GIF im
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceDelayTimeList](capi-image-ohosimagesourcedelaytimelist.md)
 
 
 ### OH_ImageSource_GetFrameCount()
@@ -518,17 +469,13 @@ int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *
 
 Obtains the number of frames from an <b>ImageSource</b> object.
 
-<!--Device-int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *res)--><!--Device-int32_t OH_ImageSource_GetFrameCount(const ImageSourceNative* native, uint32_t *res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | uint32_t *res | Indicates a pointer to the number of frames obtained. |
 
 **Returns**:
@@ -539,7 +486,7 @@ Obtains the number of frames from an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md)
+[ImageSourceNative](capi-image-imagesourcenative.md)
 
 
 ### OH_ImageSource_GetImageInfo()
@@ -552,17 +499,13 @@ int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t ind
 
 Obtains image source information from an <b>ImageSource</b> object by index.
 
-<!--Device-int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t index, struct OhosImageSourceInfo* info)--><!--Device-int32_t OH_ImageSource_GetImageInfo(const ImageSourceNative* native, int32_t index, struct OhosImageSourceInfo* info)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | int32_t index | Indicates the index of the frame. |
 | [struct OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)* info | Indicates a pointer to the image source information obtained. For details, see [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md). |
 
@@ -574,7 +517,7 @@ Obtains image source information from an <b>ImageSource</b> object by index.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceInfo](capi-image-ohosimagesourceinfo.md)
 
 
 ### OH_ImageSource_GetImageProperty()
@@ -587,17 +530,13 @@ int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct 
 
 Obtains the value of an image property from an <b>ImageSource</b> object.
 
-<!--Device-int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)--><!--Device-int32_t OH_ImageSource_GetImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | Indicates a pointer to the property. For details, see [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md). |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | Indicates a pointer to the property value obtained. If the input <b>value</b> is a null pointer and <b>size</b> is <b>0</b>, the size of the property value is returned through <b>size</b> in <b>value</b>. To obtain the complete property value, a space greater than <b>size</b> is required. |
 
@@ -609,7 +548,7 @@ Obtains the value of an image property from an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
 
 
 ### OH_ImageSource_ModifyImageProperty()
@@ -622,17 +561,13 @@ int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, stru
 
 Modifies the value of an image property of an <b>ImageSource</b> object.
 
-<!--Device-int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)--><!--Device-int32_t OH_ImageSource_ModifyImageProperty(const ImageSourceNative* native, struct OhosImageSourceProperty* key, struct OhosImageSourceProperty* value)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* key | Indicates a pointer to the property. For details, see [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md). |
 | [struct OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)* value | Indicates a pointer to the new value of the property. |
 
@@ -644,7 +579,7 @@ Modifies the value of an image property of an <b>ImageSource</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceProperty](capi-image-ohosimagesourceproperty.md)
 
 
 ### OH_ImageSource_UpdateData()
@@ -657,28 +592,24 @@ int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosIm
 
 Updates the data of an <b>ImageSource</b> object.
 
-<!--Device-int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosImageSourceUpdateData* data)--><!--Device-int32_t OH_ImageSource_UpdateData(const ImageSourceNative* native, struct OhosImageSourceUpdateData* data)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [const ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 | [struct OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)* data | Indicates a pointer to the update data. For details, see [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if the alpha type is incorrect. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if the memory allocator type is incorrect. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_GET_DATA_ABNORMAL - if image get data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_FAILED - if decode fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_HEAD_ABNORMAL - if image decode head error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_DECODER_FAILED - if create decoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CREATE_ENCODER_FAILED - if create encoder failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CHECK_FORMAT_ERROR - if check format failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_THIRDPART_SKIA_ERROR - if skia error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST - if sharememory error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL - if sharememory data abnormal. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DECODE_ABNORMAL - if image decode error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_MALLOC_ABNORMAL - if image malloc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_DATA_UNSUPPORT - if image init error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INIT_ABNORMAL - if image input data error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_CROP - if crop error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_UNKNOWN_FORMAT - if image unknown format. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_REGISTER_FAILED - if register plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_PLUGIN_CREATE_FAILED - if create plugin fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ENCODE_FAILED - image add pixel map fail. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_UNSUPPORT - if image hardware decode unsupported. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_HW_DECODE_FAILED - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ERR_IPC - if ipc error. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INDEX_INVALID - if invalid index. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALPHA_TYPE_ERROR - if hard decode failed. returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_ALLOCATER_TYPE_ERROR - if hard decode failed. |
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OhosImageSourceUpdateData](capi-image-ohosimagesourceupdatedata.md)
 
 
 ### OH_ImageSource_Release()
@@ -691,17 +622,13 @@ int32_t OH_ImageSource_Release(ImageSourceNative* native)
 
 Releases an <b>ImageSourceNative</b> object.
 
-<!--Device-int32_t OH_ImageSource_Release(ImageSourceNative* native)--><!--Device-int32_t OH_ImageSource_Release(ImageSourceNative* native)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageSource
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ImageSourceNative](capi-image-imagesourcenative-.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative-.md) object at the C++ native layer. |
+| [ImageSourceNative](capi-image-imagesourcenative.md)* native | Indicates a pointer to the [ImageSourceNative](capi-image-imagesourcenative.md) object at the C++ native layer. |
 
 **Returns**:
 
@@ -711,7 +638,7 @@ Releases an <b>ImageSourceNative</b> object.
 
 **Reference**:
 
-[ImageSourceNative](capi-image-imagesourcenative-.md), [OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create), [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental)
+[ImageSourceNative](capi-image-imagesourcenative.md), [OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create), [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental)
 
 
 

@@ -6,36 +6,41 @@ Declares the APIs for obtaining image data from the native layer.
 
 **Library**: libimage_receiver_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
-**Related module**: [Image](capi-image-kit-image.md)
+**Related module**: [Image](capi-image.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OhosImageReceiverInfo](capi-image-ohosimagereceiverinfo.md) | - | Defines the information about an image receiver. |
 | [ImageReceiverNative_](capi-image-imagereceivernative-.md) | - | Defines an <b>ImageReceiver</b> object at the native layer. |
+| [ImageReceiverNative](capi-image-imagereceivernative.md) | ImageReceiverNative | Defines the data type name of a native image receiver. |
 
-### Functions
+### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef void (\*OH_Image_Receiver_On_Callback)(void)](#oh_image_receiver_on_callback) | OH_Image_Receiver_On_Callback | Defines the callbacks for images at the native layer. |
 | [int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageReceiverInfo info, napi_value* res)](#oh_image_receiver_createimagereceiver) | - | Creates an <b>ImageReceiver</b> object at the application layer. |
-| [ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)](#oh_image_receiver_initimagereceivernative) | - | Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer. |
-| [int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)](#oh_image_receiver_getreceivingsurfaceid) | - | Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readlatestimage) | - | Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readnextimage) | - | Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
+| [ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)](#oh_image_receiver_initimagereceivernative) | - | Initializes an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer. |
+| [int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)](#oh_image_receiver_getreceivingsurfaceid) | - | Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
+| [int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readlatestimage) | - | Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
+| [int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readnextimage) | - | Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
 | [int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)](#oh_image_receiver_on) | - | Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.<br> This callback event is triggered whenever a new image is received. |
-| [int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)](#oh_image_receiver_getsize) | - | Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)](#oh_image_receiver_getcapacity) | - | Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)](#oh_image_receiver_getformat) | - | Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer. |
+| [int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)](#oh_image_receiver_getsize) | - | Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
+| [int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)](#oh_image_receiver_getcapacity) | - | Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
+| [int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)](#oh_image_receiver_getformat) | - | Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object. |
+| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | Releases an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_Image_Receiver_On_Callback)(void) | Defines the callbacks for images at the native layer.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Image.ImageReceiver |
 
 ## Function description
 
@@ -49,10 +54,6 @@ typedef void (*OH_Image_Receiver_On_Callback)(void)
 
 Defines the callbacks for images at the native layer.
 
-<!--Device-typedef void (*OH_Image_Receiver_On_Callback)(void)--><!--Device-typedef void (*OH_Image_Receiver_On_Callback)(void)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 ### OH_Image_Receiver_CreateImageReceiver()
@@ -64,10 +65,6 @@ int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageRece
 **Description**
 
 Creates an <b>ImageReceiver</b> object at the application layer.
-
-<!--Device-int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageReceiverInfo info, napi_value* res)--><!--Device-int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageReceiverInfo info, napi_value* res)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -98,11 +95,7 @@ ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, nap
 
 **Description**
 
-Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer.
-
-<!--Device-ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)--><!--Device-ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Initializes an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer.
 
 **Since**: 10
 
@@ -117,7 +110,7 @@ Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object 
 
 | Type | Description |
 | -- | -- |
-| [ImageReceiverNative*](capi-image-imagereceivernative-.md) | Returns the pointer to the [ImageReceiverNative](capi-image-imagereceivernative-.md) object obtained if the operation is successful; returns a null pointer otherwise. |
+| [ImageReceiverNative*](capi-image-imagereceivernative.md) | Returns the pointer to the [ImageReceiverNative](capi-image-imagereceivernative.md) object obtained if the operation is successful; returns a null pointer otherwise. |
 
 **Reference**:
 
@@ -132,11 +125,7 @@ int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* nativ
 
 **Description**
 
-Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)--><!--Device-int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -144,7 +133,7 @@ Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceive
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | char* id | Indicates the pointer to the buffer that stores the ID string obtained. |
 | size_t len | Indicates the size of the buffer. |
 
@@ -156,7 +145,7 @@ Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceive
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 ### OH_Image_Receiver_ReadLatestImage()
@@ -167,11 +156,7 @@ int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, nap
 
 **Description**
 
-Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)--><!--Device-int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -179,7 +164,7 @@ Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceiv
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | napi_value* image | Indicates the pointer to an <b>Image</b> object at the application layer. |
 
 **Returns**:
@@ -190,7 +175,7 @@ Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceiv
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 ### OH_Image_Receiver_ReadNextImage()
@@ -201,11 +186,7 @@ int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_
 
 **Description**
 
-Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)--><!--Device-int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -213,7 +194,7 @@ Obtains the next image through an [ImageReceiverNative](capi-image-imagereceiver
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | napi_value* image | Indicates the pointer to an <b>Image</b> object at the application layer. |
 
 **Returns**:
@@ -224,7 +205,7 @@ Obtains the next image through an [ImageReceiverNative](capi-image-imagereceiver
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 ### OH_Image_Receiver_On()
@@ -237,17 +218,13 @@ int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receive
 
 Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.<br> This callback event is triggered whenever a new image is received.
 
-<!--Device-int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)--><!--Device-int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback | Indicates the [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event to register. |
 
 **Returns**:
@@ -258,7 +235,7 @@ Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_ima
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 ### OH_Image_Receiver_GetSize()
@@ -269,11 +246,7 @@ int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct Ohos
 
 **Description**
 
-Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)--><!--Device-int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -281,7 +254,7 @@ Obtains the size of the image receiver through an [ImageReceiverNative](capi-ima
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | [struct OhosImageSize](capi-image-ohosimagesize.md)* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
 
 **Returns**:
@@ -303,11 +276,7 @@ int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t
 
 **Description**
 
-Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)--><!--Device-int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -315,7 +284,7 @@ Obtains the capacity of the image receiver through an [ImageReceiverNative](capi
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | int32_t* capacity | Indicates the pointer to the capacity obtained. |
 
 **Returns**:
@@ -337,11 +306,7 @@ int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* 
 
 **Description**
 
-Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object.
-
-<!--Device-int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)--><!--Device-int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
 **Since**: 10
 
@@ -349,7 +314,7 @@ Obtains the format of the image receiver through an [ImageReceiverNative](capi-i
 
 | Parameter | Description |
 | -- | -- |
-| [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [const ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 | int32_t* format | Indicates the pointer to the format obtained. |
 
 **Returns**:
@@ -360,7 +325,7 @@ Obtains the format of the image receiver through an [ImageReceiverNative](capi-i
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 ### OH_Image_Receiver_Release()
@@ -371,11 +336,7 @@ int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)
 
 **Description**
 
-Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer.
-
-<!--Device-int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)--><!--Device-int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)-End-->
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
+Releases an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer.
 
 **Since**: 10
 
@@ -383,7 +344,7 @@ Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at 
 
 | Parameter | Description |
 | -- | -- |
-| [ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
+| [ImageReceiverNative](capi-image-imagereceivernative.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer. |
 
 **Returns**:
 
@@ -393,7 +354,7 @@ Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at 
 
 **Reference**:
 
-[ImageReceiverNative](capi-image-imagereceivernative-.md)
+[ImageReceiverNative](capi-image-imagereceivernative.md)
 
 
 

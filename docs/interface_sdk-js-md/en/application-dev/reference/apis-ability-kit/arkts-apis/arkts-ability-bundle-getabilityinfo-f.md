@@ -32,7 +32,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-abilityinfo-i.md)&gt; | Yes | Callback used to return the ability information. |
 
 **Examples**
 
@@ -83,7 +83,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-i.md)&gt; | Promise used to return the ability information. |
+| Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-abilityinfo-i.md)&gt; | Promise used to return the ability information. |
 
 **Examples**
 

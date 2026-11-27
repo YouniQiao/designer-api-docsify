@@ -1,20 +1,18 @@
 # OH_Huks_KeyAliasSet
 
 ```c
-typedef struct OH_Huks_KeyAliasSet {...} OH_Huks_KeyAliasSet
+struct OH_Huks_KeyAliasSet {...}
 ```
 
 ## 概述
 
 定义密钥别名集的结构体类型。
 
-<!--Device-struct OH_Huks_KeyAliasSet {...}--><!--Device-struct OH_Huks_KeyAliasSet {...}-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 20
 
-**相关模块：** [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
+**相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
 
 **所在头文件：** [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_Huks_KeyAliasSet {...} OH_Huks_KeyAliasSet
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t aliasesCnt | 密钥别名集个数。<br><!--Device-uint32_t aliasesCnt--><!--Device-uint32_t aliasesCnt-End--> |
-| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *aliases | 指向密钥别名集数据的指针。<br><!--Device-struct OH_Huks_Blob *aliases--><!--Device-struct OH_Huks_Blob *aliases-End--> |
+| uint32_t aliasesCnt | 密钥别名集个数。 |
+| struct OH_Huks_Blob *aliases | 指向密钥别名集数据的指针。 |
 
 

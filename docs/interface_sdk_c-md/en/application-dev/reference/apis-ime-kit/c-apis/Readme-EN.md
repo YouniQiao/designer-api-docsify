@@ -1,7 +1,7 @@
 # C API<!--c-imekit-->
 
 - Module<!--imekit-module-->
-    - [InputMethod](capi-ime-kit-inputmethod.md)
+    - [InputMethod](capi-inputmethod.md)
 - Header file<!--imekit-headerfile-->
     - [inputmethod_cursor_info_capi.h](capi-inputmethod-cursor-info-capi-h.md)
     - [inputmethod_attach_options_capi.h](capi-inputmethod-attach-options-capi-h.md)
@@ -11,7 +11,6 @@
     - [inputmethod_types_capi.h](capi-inputmethod-types-capi-h.md)
     - [inputmethod_private_command_capi.h](capi-inputmethod-private-command-capi-h.md)
     - [inputmethod_inputmethod_proxy_capi.h](capi-inputmethod-inputmethod-proxy-capi-h.md)
-    - [inputmethod_preview_text_style_capi.h](capi-inputmethod-preview-text-style-capi-h.md)
     - [inputmethod_text_avoid_info_capi.h](capi-inputmethod-text-avoid-info-capi-h.md)
 - Struct<!--imekit-struct-->
     - [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)
@@ -20,5 +19,4 @@
     - [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md)
     - [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md)
     - [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md)
-    - [OH_InputMethod_PreviewTextStyle](capi-inputmethod-oh-inputmethod-previewtextstyle.md)
     - [InputMethod_TextAvoidInfo](capi-inputmethod-inputmethod-textavoidinfo.md)

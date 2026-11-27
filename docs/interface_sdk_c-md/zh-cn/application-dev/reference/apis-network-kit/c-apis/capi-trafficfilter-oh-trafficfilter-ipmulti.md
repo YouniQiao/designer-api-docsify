@@ -1,20 +1,18 @@
 # OH_TrafficFilter_IPMulti
 
 ```c
-typedef struct OH_TrafficFilter_IPMulti {...} OH_TrafficFilter_IPMulti
+struct OH_TrafficFilter_IPMulti {...}
 ```
 
 ## 概述
 
 多IP匹配的IP匹配值。
 
-<!--Device-struct OH_TrafficFilter_IPMulti {...}--><!--Device-struct OH_TrafficFilter_IPMulti {...}-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
-**相关模块：** [TrafficFilter](capi-network-kit-trafficfilter.md)
+**相关模块：** [TrafficFilter](capi-trafficfilter.md)
 
 **所在头文件：** [net_trafficfilter_type.h](capi-net-trafficfilter-type-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_TrafficFilter_IPMulti {...} OH_TrafficFilter_IPMulti
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t ipCount | 数组中的IP地址数量。<br>**起始版本：** 26.0.0<br><!--Device-uint32_t ipCount--><!--Device-uint32_t ipCount-End--> |
-| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) ips[OH_TRAFFICFILTER_MAX_MULTI_IP_COUNT] | IP地址数组。<br>**起始版本：** 26.0.0<br><!--Device-OH_TrafficFilter_IPAddress ips[OH_TRAFFICFILTER_MAX_MULTI_IP_COUNT]--><!--Device-OH_TrafficFilter_IPAddress ips[OH_TRAFFICFILTER_MAX_MULTI_IP_COUNT]-End--> |
+| uint32_t ipCount | 数组中的IP地址数量。<br>**起始版本：** 26.0.0 |
+| [OH_TrafficFilter_IPAddress](capi-trafficfilter-oh-trafficfilter-ipaddress.md) ips[OH_TRAFFICFILTER_MAX_MULTI_IP_COUNT] | IP地址数组<br>**起始版本：** 26.0.0 |
 
 

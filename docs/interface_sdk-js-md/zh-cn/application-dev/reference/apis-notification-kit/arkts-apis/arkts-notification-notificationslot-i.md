@@ -227,7 +227,7 @@ level?: notification.SlotLevel
 
 通知级别。
 
-**类型：** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
+**类型：** [notification.SlotLevel](arkts-notification-notification-depr-slotlevel-e.md)
 
 **起始版本：** 7
 
@@ -247,7 +247,7 @@ type?: notification.SlotType
 
 渠道类型。
 
-**类型：** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
+**类型：** [notification.SlotType](arkts-notification-notification-depr-slottype-e.md)
 
 **起始版本：** 7
 

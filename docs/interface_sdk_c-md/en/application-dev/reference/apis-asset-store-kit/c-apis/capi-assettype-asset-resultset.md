@@ -8,13 +8,11 @@ typedef struct Asset_ResultSet {...} Asset_ResultSet
 
 Represents the query result of multiple assets.
 
-<!--Device-typedef struct Asset_ResultSet {...} Asset_ResultSet--><!--Device-typedef struct Asset_ResultSet {...} Asset_ResultSet-End-->
-
 **System capability**: SystemCapability.Security.Asset
 
 **Since**: 11
 
-**Related module**: [AssetType](capi-asset-store-kit-assettype.md)
+**Related module**: [AssetType](capi-assettype.md)
 
 **Header file**: [asset_type.h](capi-asset-type-h.md)
 
@@ -24,7 +22,7 @@ Represents the query result of multiple assets.
 
 | Name | Description |
 | -- | -- |
-| uint32_t count | Number of assets in the query result.<br><!--Device-uint32_t count--><!--Device-uint32_t count-End--> |
-| [Asset_Result](capi-assettype-asset-result.md) *results | Pointer to the array of the assets.<br><!--Device-Asset_Result *results--><!--Device-Asset_Result *results-End--> |
+| uint32_t count | Number of assets in the query result. |
+| Asset_Result *results | Pointer to the array of the assets. |
 
 

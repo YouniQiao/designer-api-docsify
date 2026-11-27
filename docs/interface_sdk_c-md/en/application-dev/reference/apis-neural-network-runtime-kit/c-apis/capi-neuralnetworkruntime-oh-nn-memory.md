@@ -1,14 +1,12 @@
 # OH_NN_Memory
 
 ```c
-typedef struct OH_NN_Memory {...} OH_NN_Memory
+struct OH_NN_Memory {...}
 ```
 
 ## Overview
 
 Defines the memory structure.
-
-<!--Device-struct OH_NN_Memory {...}--><!--Device-struct OH_NN_Memory {...}-End-->
 
 **System capability**: SystemCapability.AI.NeuralNetworkRuntime
 
@@ -18,7 +16,7 @@ Defines the memory structure.
 
 **Replaced by**: [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md)
 
-**Related module**: [NeuralNetworkRuntime](capi-neural-network-runtime-kit-neuralnetworkruntime.md)
+**Related module**: [NeuralNetworkRuntime](capi-neuralnetworkruntime.md)
 
 **Header file**: [neural_network_runtime_type.h](capi-neural-network-runtime-type-h.md)
 
@@ -28,7 +26,7 @@ Defines the memory structure.
 
 | Name | Description |
 | -- | -- |
-| void * const data | Pointer to the shared memory. The shared memory is usually allocated by the underlying hardware driver.<br><!--Device-void * const data--><!--Device-void * const data-End--> |
-| const size_t length | Records the length of the shared memory, in bytes.<br><!--Device-const size_t length--><!--Device-const size_t length-End--> |
+| void * const data | Pointer to the shared memory. The shared memory is usually allocated by the underlying hardware driver. |
+| const size_t length | Records the length of the shared memory, in bytes. |
 
 

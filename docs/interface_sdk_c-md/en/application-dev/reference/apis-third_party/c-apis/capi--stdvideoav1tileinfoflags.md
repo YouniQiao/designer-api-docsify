@@ -2,15 +2,3 @@
 
 ## Overview
 
-<!--Device-struct StdVideoAV1TileInfoFlags {...}--><!--Device-struct StdVideoAV1TileInfoFlags {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| uint32_t uniform_tile_spacing_flag : 1 | <!--Device-uint32_t uniform_tile_spacing_flag : 1--><!--Device-uint32_t uniform_tile_spacing_flag : 1-End--> |
-| uint32_t reserved : 31 | <!--Device-uint32_t reserved : 31--><!--Device-uint32_t reserved : 31-End--> |
-
-

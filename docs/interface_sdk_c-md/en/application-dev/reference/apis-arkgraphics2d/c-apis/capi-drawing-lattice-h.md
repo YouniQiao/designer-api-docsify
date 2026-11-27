@@ -6,21 +6,19 @@ This file declares the functions related to the rectangular lattice object.
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_LatticeRectType](#oh_drawing_latticerecttype) | OH_Drawing_LatticeRectType | Enumerates the types of rectangles used to fill the lattices. It is applicable only to rectangular lattice objects. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -39,17 +37,13 @@ enum OH_Drawing_LatticeRectType
 
 Enumerates the types of rectangles used to fill the lattices. It is applicable only to rectangular lattice objects.
 
-<!--Device-enum OH_Drawing_LatticeRectType--><!--Device-enum OH_Drawing_LatticeRectType-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 | Enum item | Description |
 | -- | -- |
-| DEFAULT | Draws an image into the rectangular lattice.<br>**Since**: 23<br><!--Device-DEFAULT--><!--Device-DEFAULT-End--> |
-| TRANSPARENT | Sets the rectangular lattice to be transparent.<br>**Since**: 23<br><!--Device-TRANSPARENT--><!--Device-TRANSPARENT-End--> |
-| FIXED_COLOR | Draws the colors from the colors array of the rectangular lattice object into the lattice.<br>**Since**: 23<br><!--Device-FIXED_COLOR--><!--Device-FIXED_COLOR-End--> |
+| DEFAULT |  |
+| TRANSPARENT |  |
+| FIXED_COLOR |  |
 
 
 ## Function description
@@ -63,10 +57,6 @@ OH_Drawing_ErrorCode OH_Drawing_LatticeDestroy(OH_Drawing_Lattice* lattice)
 **Description**
 
 Destroys an **OH_Drawing_Lattice** object and reclaims the memory occupied by the object.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_LatticeDestroy(OH_Drawing_Lattice* lattice)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_LatticeDestroy(OH_Drawing_Lattice* lattice)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -91,10 +81,6 @@ OH_Drawing_ErrorCode OH_Drawing_LatticeCreate(const int* xDivs, const int* yDivs
 **Description**
 
 Divides the image into lattices. The lattices on both even columns and even rows are fixed, and they are drawn at their original size if the target is large enough. If the target is too small to hold the fixed lattices, all the fixed lattices are scaled down to fit the target, and the lattices that are not on even columns and even rows are scaled to accommodate the remaining space.
-
-<!--Device-OH_Drawing_ErrorCode OH_Drawing_LatticeCreate(const int* xDivs, const int* yDivs, uint32_t xCount, uint32_t yCount, const OH_Drawing_Rect* bounds, const OH_Drawing_LatticeRectType* rectTypes, uint32_t rectTypeCount, const uint32_t* colors, uint32_t colorCount, OH_Drawing_Lattice** lattice)--><!--Device-OH_Drawing_ErrorCode OH_Drawing_LatticeCreate(const int* xDivs, const int* yDivs, uint32_t xCount, uint32_t yCount, const OH_Drawing_Rect* bounds, const OH_Drawing_LatticeRectType* rectTypes, uint32_t rectTypeCount, const uint32_t* colors, uint32_t colorCount, OH_Drawing_Lattice** lattice)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 

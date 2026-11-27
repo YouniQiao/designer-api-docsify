@@ -62,7 +62,7 @@ padding: Padding
 
 Padding of the parent component. Unit: vp.
 
-**Type:** Padding
+**Type:** [Padding](../arkts-apis/arkts-arkui-padding-t.md)
 
 **Since:** 10
 

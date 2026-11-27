@@ -1148,7 +1148,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
 | predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1192,7 +1192,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1234,7 +1234,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1277,7 +1277,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | predicates | [dataAbility.DataAbilityPredicates](../../apis-arkdata/arkts-apis/arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1327,7 +1327,7 @@ Queries data in the database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md)&gt; | Returns the query result [ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-i.md). |
+| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md)&gt; | Returns the query result [ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-depr-resultset-i.md). |
 
 **Examples**
 

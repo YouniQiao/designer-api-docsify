@@ -6,7 +6,7 @@ enum SyncType
 
 Enumerates the device-cloud sync types for Gallery.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 <!--Device-cloudSync-enum SyncType--><!--Device-cloudSync-enum SyncType-End-->
 
@@ -22,7 +22,7 @@ FORCE_THM = 0
 
 Forced thumbnail sync.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

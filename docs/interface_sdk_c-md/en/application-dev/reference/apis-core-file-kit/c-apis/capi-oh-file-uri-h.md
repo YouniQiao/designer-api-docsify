@@ -6,15 +6,13 @@ uri verification and conversion This class is mainly for URI format verification
 
 **Library**: libohfileuri.so
 
-**System capability**: SystemCapability.FileManagement.AppFileService
-
 **Since**: 12
 
-**Related module**: [fileUri](capi-core-file-kit-fileuri.md)
+**Related module**: [fileUri](capi-fileuri.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -35,10 +33,6 @@ FileManagement_ErrCode OH_FileUri_GetUriFromPath(const char *path, unsigned int 
 **Description**
 
 Get uri From path.
-
-<!--Device-FileManagement_ErrCode OH_FileUri_GetUriFromPath(const char *path, unsigned int length, char **result)--><!--Device-FileManagement_ErrCode OH_FileUri_GetUriFromPath(const char *path, unsigned int length, char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.AppFileService
 
 **Since**: 12
 
@@ -66,10 +60,6 @@ FileManagement_ErrCode OH_FileUri_GetPathFromUri(const char *uri, unsigned int l
 
 Get path From uri.
 
-<!--Device-FileManagement_ErrCode OH_FileUri_GetPathFromUri(const char *uri, unsigned int length, char **result)--><!--Device-FileManagement_ErrCode OH_FileUri_GetPathFromUri(const char *uri, unsigned int length, char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.AppFileService
-
 **Since**: 12
 
 **Parameters**:
@@ -95,10 +85,6 @@ FileManagement_ErrCode OH_FileUri_GetFullDirectoryUri(const char *uri, unsigned 
 **Description**
 
 Gets the uri of the path or directory where the uri is located.
-
-<!--Device-FileManagement_ErrCode OH_FileUri_GetFullDirectoryUri(const char *uri, unsigned int length, char **result)--><!--Device-FileManagement_ErrCode OH_FileUri_GetFullDirectoryUri(const char *uri, unsigned int length, char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.AppFileService
 
 **Since**: 12
 
@@ -126,10 +112,6 @@ bool OH_FileUri_IsValidUri(const char *uri, unsigned int length)
 
 Check that the incoming uri is valid
 
-<!--Device-bool OH_FileUri_IsValidUri(const char *uri, unsigned int length)--><!--Device-bool OH_FileUri_IsValidUri(const char *uri, unsigned int length)-End-->
-
-**System capability**: SystemCapability.FileManagement.AppFileService
-
 **Since**: 12
 
 **Parameters**:
@@ -154,10 +136,6 @@ FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int leng
 **Description**
 
 Gets the fileName From uri. This function obtains that the last segment of the URI string is the return value of the function, and the URI of the media type is not supported
-
-<!--Device-FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int length, char **result)--><!--Device-FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int length, char **result)-End-->
-
-**System capability**: SystemCapability.FileManagement.AppFileService
 
 **Since**: 13
 

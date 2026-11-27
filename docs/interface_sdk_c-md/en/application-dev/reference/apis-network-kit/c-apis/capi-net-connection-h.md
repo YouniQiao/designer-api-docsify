@@ -6,15 +6,13 @@ Provide C interface for the data network connection module of network management
 
 **Library**: libnet_connection.so
 
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 11
 
-**Related module**: [NetConnection](capi-network-kit-netconnection.md)
+**Related module**: [NetConnection](capi-netconnection.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -27,10 +25,10 @@ Provide C interface for the data network connection module of network management
 | [int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)](#oh_netconn_getaddrinfo) | Obtains the DNS result based on the specified **netId**. |
 | [int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)](#oh_netconn_freednsresult) | Releases the DNS query result. |
 | [int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)](#oh_netconn_getallnets) | Obtains all activated data networks. |
-| [int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#ohos_netconn_registerdnsresolver) | Registers a custom DNS resolver.(Deprecated) |
-| [int32_t OHOS_NetConn_UnregisterDnsResolver(void)](#ohos_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated) |
-| [int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registerdnsresolver) | Registers a custom DNS resolver.(Deprecated) |
-| [int32_t OH_NetConn_UnregisterDnsResolver(void)](#oh_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated) |
+| [int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#ohos_netconn_registerdnsresolver) | Registers a custom DNS resolver.(Deprecated in API13) |
+| [int32_t OHOS_NetConn_UnregisterDnsResolver(void)](#ohos_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated in API13) |
+| [int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registerdnsresolver) | Registers a custom DNS resolver.(Deprecated in API26.0.0) |
+| [int32_t OH_NetConn_UnregisterDnsResolver(void)](#oh_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated in API26.0.0) |
 | [int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registercustomdnsresolver) | Registers a custom DNS resolver to intercept and override DNS queries. Falls back to system DNS if no result is specified. Only a single resolver is allowed. You must unregister the existing one before registering a new one. |
 | [int32_t OH_NetConn_UnregisterCustomDnsResolver(void)](#oh_netconn_unregistercustomdnsresolver) | Unregisters the custom DNS resolver. |
 | [int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)](#oh_netconn_bindsocket) | Binds a socket to the specified network. |
@@ -58,10 +56,6 @@ int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)
 
 Checks whether a default activated data network is available.
 
-<!--Device-int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)--><!--Device-int32_t OH_NetConn_HasDefaultNet(int32_t *hasDefaultNet)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 11
@@ -87,10 +81,6 @@ int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)
 **Description**
 
 Obtains the default activated data network.
-
-<!--Device-int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)--><!--Device-int32_t OH_NetConn_GetDefaultNet(NetConn_NetHandle *netHandle)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
@@ -118,10 +108,6 @@ int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)
 
 Checks whether metering is enabled for the default data network.
 
-<!--Device-int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)--><!--Device-int32_t OH_NetConn_IsDefaultNetMetered(int32_t *isMetered)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 11
@@ -147,10 +133,6 @@ int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn
 **Description**
 
 Obtains the link information of a data network.
-
-<!--Device-int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *prop)--><!--Device-int32_t OH_NetConn_GetConnectionProperties(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *prop)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
@@ -179,10 +161,6 @@ int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetC
 
 Obtains the capabilities of a data network.
 
-<!--Device-int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)--><!--Device-int32_t OH_NetConn_GetNetCapabilities(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 11
@@ -210,10 +188,6 @@ int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)
 
 Obtains the default network proxy.
 
-<!--Device-int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)--><!--Device-int32_t OH_NetConn_GetDefaultHttpProxy(NetConn_HttpProxy *httpProxy)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -237,10 +211,6 @@ int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, st
 **Description**
 
 Obtains the DNS result based on the specified **netId**.
-
-<!--Device-int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)--><!--Device-int32_t OH_NetConn_GetAddrInfo(char *host, char *serv, struct addrinfo *hint, struct addrinfo **res, int32_t netId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -272,10 +242,6 @@ int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)
 
 Releases the DNS query result.
 
-<!--Device-int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)--><!--Device-int32_t OH_NetConn_FreeDnsResult(struct addrinfo *res)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.INTERNET
 
 **Since**: 11
@@ -302,10 +268,6 @@ int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)
 
 Obtains all activated data networks.
 
-<!--Device-int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)--><!--Device-int32_t OH_NetConn_GetAllNets(NetConn_NetHandleList *netHandleList)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 11
@@ -331,10 +293,6 @@ int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)
 **Description**
 
 Registers a custom DNS resolver.
-
-<!--Device-int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OHOS_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 11
 
@@ -364,10 +322,6 @@ int32_t OHOS_NetConn_UnregisterDnsResolver(void)
 
 Unregisters a custom DNS resolver.
 
-<!--Device-int32_t OHOS_NetConn_UnregisterDnsResolver(void)--><!--Device-int32_t OHOS_NetConn_UnregisterDnsResolver(void)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 11
 
 **Deprecated**: 13
@@ -389,10 +343,6 @@ int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)
 **Description**
 
 Registers a custom DNS resolver.
-
-<!--Device-int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 13
 
@@ -422,10 +372,6 @@ int32_t OH_NetConn_UnregisterDnsResolver(void)
 
 Unregisters a custom DNS resolver.
 
-<!--Device-int32_t OH_NetConn_UnregisterDnsResolver(void)--><!--Device-int32_t OH_NetConn_UnregisterDnsResolver(void)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 13
 
 **Deprecated**: 26.0.0
@@ -447,10 +393,6 @@ int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolv
 **Description**
 
 Registers a custom DNS resolver to intercept and override DNS queries. Falls back to system DNS if no result is specified. Only a single resolver is allowed. You must unregister the existing one before registering a new one.
-
-<!--Device-int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)--><!--Device-int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 26.0.0
 
@@ -476,10 +418,6 @@ int32_t OH_NetConn_UnregisterCustomDnsResolver(void)
 
 Unregisters the custom DNS resolver.
 
-<!--Device-int32_t OH_NetConn_UnregisterCustomDnsResolver(void)--><!--Device-int32_t OH_NetConn_UnregisterCustomDnsResolver(void)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 26.0.0
 
 **Returns**:
@@ -497,10 +435,6 @@ int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)
 **Description**
 
 Binds a socket to the specified network.
-
-<!--Device-int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)--><!--Device-int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 12
 
@@ -527,10 +461,6 @@ int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)
 
 Sets an HTTP proxy for the current application.
 
-<!--Device-int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)--><!--Device-int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -554,10 +484,6 @@ int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange ap
 **Description**
 
 Registers a callback for HTTP proxy changes of the application.
-
-<!--Device-int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange appHttpProxyChange, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange appHttpProxyChange, uint32_t *callbackId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Since**: 12
 
@@ -584,10 +510,6 @@ void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)
 
 Unregisters the callback for HTTP proxy changes of the application.
 
-<!--Device-void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)--><!--Device-void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -605,10 +527,6 @@ int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxy
 **Description**
 
 Requests global HTTP proxy re-authentication and reports the result through a one-shot callback.<br> This function submits an asynchronous re-authentication request. A return value of 0 indicates that the request has been accepted. It does not indicate that re-authentication has succeeded. The final result is reported through the callback.<br><br> If this function returns 0, the callback will be invoked at most once. After the callback is invoked, it is automatically released by the system.<br><br> If this function returns a non-zero value, the callback will not be invoked.<br><br> The callback may be invoked on a system worker thread. The caller must ensure that the callback implementation is thread-safe and returns quickly.<br><br> The caller must ensure that the callback function and userData remain valid until the callback is invoked.
-
-<!--Device-int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)--><!--Device-int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -636,10 +554,6 @@ int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetC
 **Description**
 
 Registers a callback for network status changes.
-
-<!--Device-int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetConn_NetConnCallback *netConnCallback, uint32_t timeout, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetConn_NetConnCallback *netConnCallback, uint32_t timeout, uint32_t *callbackId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
@@ -670,10 +584,6 @@ int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netCo
 
 Registers a callback for status changes of the default network.
 
-<!--Device-int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netConnCallback, uint32_t *callbackId)--><!--Device-int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netConnCallback, uint32_t *callbackId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 12
@@ -701,10 +611,6 @@ int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)
 
 Unregisters the callback for network status changes.
 
-<!--Device-int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)--><!--Device-int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 12
@@ -730,10 +636,6 @@ NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)
 **Description**
 
 Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **http://127.0.0.1:21998/ PacProxyScript.pac**. You can obtain the proxy information by parsing the URL.
-
-<!--Device-NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)--><!--Device-NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.SET_PAC_URL
 
@@ -761,10 +663,6 @@ NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)
 
 Obtains the URL of the system-level PAC script.
 
-<!--Device-NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)--><!--Device-NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
-
 **Since**: 15
 
 **Parameters**:
@@ -788,10 +686,6 @@ int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn
 **Description**
 
 Queries network probe results. If an exception (for example, network disconnection) occurs and the request fails to be sent, the API immediately returns the result without performing subsequent detection. This API involves network operations. Do not call it in the main process. Otherwise, the UI may freeze.
-
-<!--Device-int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)--><!--Device-int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -820,10 +714,6 @@ int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *
 **Description**
 
 Queries network trace route information.
-
-<!--Device-int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *option, NetConn_TraceRouteInfo *traceRouteInfo)--><!--Device-int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *option, NetConn_TraceRouteInfo *traceRouteInfo)-End-->
-
-**System capability**: SystemCapability.Communication.NetManager.Core
 
 **Required permission**: ohos.permission.INTERNET and ohos.permission.LOCATION and ohos.permission.ACCESS_NET_TRACE_INFO
 

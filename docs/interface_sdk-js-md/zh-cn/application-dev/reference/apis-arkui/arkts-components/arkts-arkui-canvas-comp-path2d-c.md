@@ -49,7 +49,7 @@ addPath(path: Path2D, transform?: Matrix2D): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-canvas-comp-path2d-c.md) | 是 | 需要添加到当前路径的路径对象。<br>异常值undefined和null按无效值处理。 |
-| transform | Matrix2D | 否 | 新增路径的变换矩阵对象，用于对添加的路径进行平移、旋转、缩放等变换。当需要对添加的路径进行图形变换时传入此参数，不需要变换时可不传。不传入时默认为null，表示不对路径进行变换。<br>异常值undefined和null按无效值处理。<br>默认值：null |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | 否 | 新增路径的变换矩阵对象，用于对添加的路径进行平移、旋转、缩放等变换。当需要对添加的路径进行图形变换时传入此参数，不需要变换时可不传。不传入时默认为null，表示不对路径进行变换。<br>异常值undefined和null按无效值处理。<br>默认值：null |
 
 ## constructor
 

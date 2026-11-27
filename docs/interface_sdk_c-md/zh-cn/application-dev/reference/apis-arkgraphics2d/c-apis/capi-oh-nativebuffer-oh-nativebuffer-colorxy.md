@@ -1,20 +1,18 @@
 # OH_NativeBuffer_ColorXY
 
 ```c
-typedef struct OH_NativeBuffer_ColorXY {...} OH_NativeBuffer_ColorXY
+struct OH_NativeBuffer_ColorXY {...}
 ```
 
 ## 概述
 
 表示基色的X和Y坐标。
 
-<!--Device-struct OH_NativeBuffer_ColorXY {...}--><!--Device-struct OH_NativeBuffer_ColorXY {...}-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **起始版本：** 12
 
-**相关模块：** [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
+**相关模块：** [OH_NativeBuffer](capi-oh-nativebuffer.md)
 
 **所在头文件：** [buffer_common.h](capi-buffer-common-h.md)
 
@@ -24,7 +22,7 @@ typedef struct OH_NativeBuffer_ColorXY {...} OH_NativeBuffer_ColorXY
 
 | 名称 | 描述 |
 | -- | -- |
-| float x | 基色X坐标<br><!--Device-float x--><!--Device-float x-End--> |
-| float y | 基色Y坐标<br><!--Device-float y--><!--Device-float y-End--> |
+| float x | 基色X坐标 |
+| float y | 基色Y坐标 |
 
 

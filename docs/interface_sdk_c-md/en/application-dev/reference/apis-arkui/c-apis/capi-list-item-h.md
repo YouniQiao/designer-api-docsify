@@ -6,22 +6,20 @@ Provides shared list item-related type and function definitions for <b>NativeNod
 
 **Library**: libace_ndk.z.so
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
-**Related module**: [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md) | ArkUI_ListItemSwipeActionItem | Defines the configuration information of an item in the **ListItemSwipeActionOption**. |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Defines a configuration of a swipe action on a list item. |
+| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Defines the configuration information of the **ListItemSwipeActionOption**. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
@@ -29,7 +27,7 @@ Provides shared list item-related type and function definitions for <b>NativeNod
 | [ArkUI_ListItemSwipeEdgeEffect](#arkui_listitemswipeedgeeffect) | ArkUI_ListItemSwipeEdgeEffect | Enumerates the edge effects of the swipe action for the ListItem component. The default value is **<br>ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING**. |
 | [ArkUI_ListItemSwipeActionDirection](#arkui_listitemswipeactiondirection) | ArkUI_ListItemSwipeActionDirection | Enumerates the directions to expand the swipe action of a ListItem. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -69,17 +67,13 @@ enum ArkUI_ListItemSwipeActionState
 
 Enumerates the swipe action states of a ListItem. The default value is **<br>ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED**.
 
-<!--Device-enum ArkUI_ListItemSwipeActionState--><!--Device-enum ArkUI_ListItemSwipeActionState-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED = 0 | Collapsed state. When the list item slides in the direction opposite to the main axis, the operation item is hidden.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED = 0--><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED = 0-End--> |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_EXPANDED | Expanded state. When the list item slides in the direction opposite to the main axis, the operation item is displayed.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_EXPANDED--><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_EXPANDED-End--> |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_ACTIONING | Actioning state. This state is triggered when the list item enters the long-distance deletion area and is deleted.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_ACTIONING--><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_ACTIONING-End--> |
+| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_COLLAPSED = 0 | Collapsed state. When the list item slides in the direction opposite to the main axis, the operation item is hidden. |
+| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_EXPANDED | Expanded state. When the list item slides in the direction opposite to the main axis, the operation item is displayed. |
+| ARKUI_LIST_ITEM_SWIPE_ACTION_STATE_ACTIONING | Actioning state. This state is triggered when the list item enters the long-distance deletion area and is deleted. |
 
 ### ArkUI_ListItemSwipeEdgeEffect
 
@@ -91,16 +85,12 @@ enum ArkUI_ListItemSwipeEdgeEffect
 
 Enumerates the edge effects of the swipe action for the ListItem component. The default value is **<br>ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING**.
 
-<!--Device-enum ArkUI_ListItemSwipeEdgeEffect--><!--Device-enum ArkUI_ListItemSwipeEdgeEffect-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING = 0 | The list item can continue to slide after the sliding distance exceeds the size of the operation item.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING = 0--><!--Device-ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING = 0-End--> |
-| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_NONE | The sliding distance of the list item cannot exceed the size of the operation item.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_NONE--><!--Device-ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_NONE-End--> |
+| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_SPRING = 0 | The list item can continue to slide after the sliding distance exceeds the size of the operation item. |
+| ARKUI_LIST_ITEM_SWIPE_EDGE_EFFECT_NONE | The sliding distance of the list item cannot exceed the size of the operation item. |
 
 ### ArkUI_ListItemSwipeActionDirection
 
@@ -112,16 +102,12 @@ enum ArkUI_ListItemSwipeActionDirection
 
 Enumerates the directions to expand the swipe action of a ListItem.
 
-<!--Device-enum ArkUI_ListItemSwipeActionDirection--><!--Device-enum ArkUI_ListItemSwipeActionDirection-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_START = 0 | When the list direction is vertical, it indicates the left in LTR mode and right in RTL mode. When the list direction is horizontal, it indicates the top.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_START = 0--><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_START = 0-End--> |
-| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_END = 1 | When the list direction is vertical, it indicates the right in LTR mode and left in RTL mode. When the list direction is horizontal, it indicates the bottom.<br><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_END = 1--><!--Device-ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_END = 1-End--> |
+| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_START = 0 | When the list direction is vertical, it indicates the left in LTR mode and right in RTL mode. When the list direction is horizontal, it indicates the top. |
+| ARKUI_LIST_ITEM_SWIPE_ACTION_DIRECTION_END = 1 | When the list direction is vertical, it indicates the right in LTR mode and left in RTL mode. When the list direction is horizontal, it indicates the bottom. |
 
 
 ## Function description
@@ -135,10 +121,6 @@ ArkUI_ListItemSwipeActionItem* OH_ArkUI_ListItemSwipeActionItem_Create()
 **Description**
 
 Creates a **ListItemSwipeActionItem** instance.
-
-<!--Device-ArkUI_ListItemSwipeActionItem* OH_ArkUI_ListItemSwipeActionItem_Create()--><!--Device-ArkUI_ListItemSwipeActionItem* OH_ArkUI_ListItemSwipeActionItem_Create()-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -158,10 +140,6 @@ void OH_ArkUI_ListItemSwipeActionItem_Dispose(ArkUI_ListItemSwipeActionItem* ite
 
 Disposes of a **ListItemSwipeActionItem** instance.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_Dispose(ArkUI_ListItemSwipeActionItem* item)--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_Dispose(ArkUI_ListItemSwipeActionItem* item)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -180,10 +158,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetContent(ArkUI_ListItemSwipeActionItem* 
 
 Sets the layout content of the **ListItemSwipeActionItem**.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetContent(ArkUI_ListItemSwipeActionItem* item, ArkUI_NodeHandle node)--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetContent(ArkUI_ListItemSwipeActionItem* item, ArkUI_NodeHandle node)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -191,7 +165,7 @@ Sets the layout content of the **ListItemSwipeActionItem**.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | Pointer to the **ListItemSwipeActionItem** instance. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Layout information. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | Layout information. |
 
 ### OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance()
 
@@ -202,10 +176,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance(ArkUI_ListItemSwipeA
 **Description**
 
 Sets the threshold for the long-distance sliding deletion distance of the component.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item, float distance)--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item, float distance)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -225,10 +195,6 @@ float OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance(ArkUI_ListItemSwipe
 **Description**
 
 Obtains the threshold for the long-distance sliding deletion distance of the component.
-
-<!--Device-float OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item)--><!--Device-float OH_ArkUI_ListItemSwipeActionItem_GetActionAreaDistance(ArkUI_ListItemSwipeActionItem* item)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -254,10 +220,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea(ArkUI_ListItemSwipeAc
 
 Sets the event to be called when a sliding entry enters the deletion area.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -276,10 +238,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData(ArkUI_Lis
 **Description**
 
 Sets the event triggered when a sliding entry enters the deletion area, with user data.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnEnterActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -301,10 +259,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnAction(ArkUI_ListItemSwipeActionItem*
 
 Sets the event to be called when a component enters the long-range deletion area and deletes a ListItem.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnAction(ArkUI_ListItemSwipeActionItem* item, void (*callback)())--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnAction(ArkUI_ListItemSwipeActionItem* item, void (*callback)())-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -323,10 +277,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData(ArkUI_ListItemSwip
 **Description**
 
 Sets the event triggered when a component enters the long-range deletion area and deletes a ListItem, with user data.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnActionWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -348,10 +298,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea(ArkUI_ListItemSwipeAct
 
 Sets the event to be called when a sliding entry exits the deletion area.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionArea(ArkUI_ListItemSwipeActionItem* item, void (*callback)())-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -370,10 +316,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData(ArkUI_List
 **Description**
 
 Sets the event triggered when a sliding entry exits the deletion area, with user data.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnExitActionAreaWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(void* userData))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -395,10 +337,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange(ArkUI_ListItemSwipeAction
 
 Sets the event triggered when the sliding state of a ListItem changes.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange(ArkUI_ListItemSwipeActionItem* item, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState))--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChange(ArkUI_ListItemSwipeActionItem* item, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -417,10 +355,6 @@ void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData(ArkUI_ListIte
 **Description**
 
 Sets the event triggered when the sliding state of a ListItem changes, with user data.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState, void* userData))--><!--Device-void OH_ArkUI_ListItemSwipeActionItem_SetOnStateChangeWithUserData(ArkUI_ListItemSwipeActionItem* item, void* userData, void (*callback)(ArkUI_ListItemSwipeActionState swipeActionState, void* userData))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -442,10 +376,6 @@ ArkUI_ListItemSwipeActionOption* OH_ArkUI_ListItemSwipeActionOption_Create()
 
 Creates a **ListItemSwipeActionOption** instance.
 
-<!--Device-ArkUI_ListItemSwipeActionOption* OH_ArkUI_ListItemSwipeActionOption_Create()--><!--Device-ArkUI_ListItemSwipeActionOption* OH_ArkUI_ListItemSwipeActionOption_Create()-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Returns**:
@@ -464,10 +394,6 @@ void OH_ArkUI_ListItemSwipeActionOption_Dispose(ArkUI_ListItemSwipeActionOption*
 
 Disposes of a **ListItemSwipeActionOption** instance.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_Dispose(ArkUI_ListItemSwipeActionOption* option)--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_Dispose(ArkUI_ListItemSwipeActionOption* option)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -485,10 +411,6 @@ void OH_ArkUI_ListItemSwipeActionOption_SetStart(ArkUI_ListItemSwipeActionOption
 **Description**
 
 Sets the layout content on the left (vertical layout) or top (horizontal layout) of the **ListItemSwipeActionItem**.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetStart(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetStart(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -509,10 +431,6 @@ void OH_ArkUI_ListItemSwipeActionOption_SetEnd(ArkUI_ListItemSwipeActionOption* 
 
 Sets the layout content on the right (vertical layout) or bottom (horizontal layout) of the **ListItemSwipeActionItem**.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetEnd(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetEnd(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeActionItem* item)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -532,10 +450,6 @@ void OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect(ArkUI_ListItemSwipeActionO
 
 Sets the sliding effect.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeEdgeEffect edgeEffect)--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetEdgeEffect(ArkUI_ListItemSwipeActionOption* option, ArkUI_ListItemSwipeEdgeEffect edgeEffect)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -554,10 +468,6 @@ int32_t OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect(ArkUI_ListItemSwipeActi
 **Description**
 
 Obtains the sliding effect.
-
-<!--Device-int32_t OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect(ArkUI_ListItemSwipeActionOption* option)--><!--Device-int32_t OH_ArkUI_ListItemSwipeActionOption_GetEdgeEffect(ArkUI_ListItemSwipeActionOption* option)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -583,10 +493,6 @@ void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange(ArkUI_ListItemSwipeAct
 
 Sets the event called when the sliding operation offset changes.
 
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange(ArkUI_ListItemSwipeActionOption* option, void (*callback)(float offset))--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChange(ArkUI_ListItemSwipeActionOption* option, void (*callback)(float offset))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -605,10 +511,6 @@ void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData(ArkUI_List
 **Description**
 
 Sets the event triggered when the sliding operation offset changes, with user data.
-
-<!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData(ArkUI_ListItemSwipeActionOption* option, void* userData, void (*callback)(float offset, void* userData))--><!--Device-void OH_ArkUI_ListItemSwipeActionOption_SetOnOffsetChangeWithUserData(ArkUI_ListItemSwipeActionOption* option, void* userData, void (*callback)(float offset, void* userData))-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -630,17 +532,13 @@ int32_t OH_ArkUI_ListItemSwipeAction_Expand(ArkUI_NodeHandle node, ArkUI_ListIte
 
 Expands the swipe action.
 
-<!--Device-int32_t OH_ArkUI_ListItemSwipeAction_Expand(ArkUI_NodeHandle node, ArkUI_ListItemSwipeActionDirection direction)--><!--Device-int32_t OH_ArkUI_ListItemSwipeAction_Expand(ArkUI_NodeHandle node, ArkUI_ListItemSwipeActionDirection direction)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | List item node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | List item node. |
 | [ArkUI_ListItemSwipeActionDirection](capi-list-item-h.md#arkui_listitemswipeactiondirection) direction | Direction to expand the swipe action. |
 
 **Returns**:
@@ -659,17 +557,13 @@ int32_t OH_ArkUI_ListItemSwipeAction_Collapse(ArkUI_NodeHandle node)
 
 Collapses the swipe action.
 
-<!--Device-int32_t OH_ArkUI_ListItemSwipeAction_Collapse(ArkUI_NodeHandle node)--><!--Device-int32_t OH_ArkUI_ListItemSwipeAction_Collapse(ArkUI_NodeHandle node)-End-->
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 21
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | List item node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | List item node. |
 
 **Returns**:
 

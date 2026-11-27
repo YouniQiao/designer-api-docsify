@@ -6,39 +6,37 @@ Provides the capability of obtaining time zone information.
 
 **Library**: libohi18n.so
 
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
-**Related module**: [i18n](capi-localization-kit-i18n.md)
+**Related module**: [i18n](capi-i18n.md)
 
 ## Summary
 
-### Structs
+### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [DateTimeRule](capi-i18n-datetimerule.md) | DateTimeRule | Defines the date and time rules to specify a date and time. |
-| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | InitialTimeZoneRule | Defines the initial rule of a timezone which has no clear start time. |
-| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | TimeArrayTimeZoneRule | Defines time zone rule defined by the start timestamp array. |
-| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | AnnualTimeZoneRule | Defines the time zone rule that takes effect annually. |
-| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamp array, and time zone rule that takes effect every year. It can comprehensively describe both the historical and future rules of a time zone. |
-| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | TimeZoneRuleQuery | Used to input the query information and receive the query result. |
+| Name | Description |
+| -- | -- |
+| [DateTimeRule](capi-i18n-datetimerule.md) | Defines the date and time rules to specify a date and time. |
+| [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | Defines the initial rule of a timezone which has no clear start time. |
+| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | Defines time zone rule defined by the start timestamp array. |
+| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | Defines the time zone rule that takes effect annually. |
+| [TimeZoneRules](capi-i18n-timezonerules.md) | A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamp array, and time zone rule that takes effect every year. It can comprehensively describe both the historical and future rules of a time zone. |
+| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | Used to input the query information and receive the query result. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [DateRuleType](#dateruletype) | DateRuleType | Enumerates the types of rules for defining dates. |
 | [TimeRuleType](#timeruletype) | TimeRuleType | Enumerates the types of rules for defining time. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
 | MAX_YEAR_IN_ANNUAL_TIMEZONE_RULE 0x7fffffff | Indicates the maximum year when the rule takes effective in AnnualTimeZoneRule.<br>**Since**: 22 |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -66,18 +64,14 @@ enum DateRuleType
 
 Enumerates the types of rules for defining dates.
 
-<!--Device-enum DateRuleType--><!--Device-enum DateRuleType-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| DOM = 0 | Indicates that day of the month. For example, October 16 in 2025 is the 16th day of October.<br><!--Device-DOM = 0--><!--Device-DOM = 0-End--> |
-| DOW = 1 | Indicates that weekday of the month. For example, October 16 in 2025 is the third Thursday of October.<br><!--Device-DOW = 1--><!--Device-DOW = 1-End--> |
-| DOW_GEQ_DOM = 2 | Indicates that first weekday after the specified day of the month. For example, October 16 in 2025 is the first Thursday after the 13th, 14th, or 15th day of October.<br><!--Device-DOW_GEQ_DOM = 2--><!--Device-DOW_GEQ_DOM = 2-End--> |
-| DOW_LEQ_DOM = 3 | Indicates that last weekday before the specified day of the month. For example, October 16 in 2025 is the last Thursday before the 20th day of October.<br><!--Device-DOW_LEQ_DOM = 3--><!--Device-DOW_LEQ_DOM = 3-End--> |
+| DOM = 0 | Indicates that day of the month. For example, October 16 in 2025 is the 16th day of October. |
+| DOW = 1 | Indicates that weekday of the month. For example, October 16 in 2025 is the third Thursday of October. |
+| DOW_GEQ_DOM = 2 | Indicates that first weekday after the specified day of the month. For example, October 16 in 2025 is the first Thursday after the 13th, 14th, or 15th day of October. |
+| DOW_LEQ_DOM = 3 | Indicates that last weekday before the specified day of the month. For example, October 16 in 2025 is the last Thursday before the 20th day of October. |
 
 ### TimeRuleType
 
@@ -89,17 +83,13 @@ enum TimeRuleType
 
 Enumerates the types of rules for defining time.
 
-<!--Device-enum TimeRuleType--><!--Device-enum TimeRuleType-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 | Enum item | Description |
 | -- | -- |
-| WALL_TIME = 0 | Indicates that local clock time (not subject to time zone offset).<br><!--Device-WALL_TIME = 0--><!--Device-WALL_TIME = 0-End--> |
-| STANDARD_TIME = 1 | Indicates that local standard time (not subject to DST offset).<br><!--Device-STANDARD_TIME = 1--><!--Device-STANDARD_TIME = 1-End--> |
-| UTC_TIME = 2 | Indicates that world standard time (UTC time).<br><!--Device-UTC_TIME = 2--><!--Device-UTC_TIME = 2-End--> |
+| WALL_TIME = 0 | Indicates that local clock time (not subject to time zone offset). |
+| STANDARD_TIME = 1 | Indicates that local standard time (not subject to DST offset). |
+| UTC_TIME = 2 | Indicates that world standard time (UTC time). |
 
 
 ## Function description
@@ -113,10 +103,6 @@ I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* r
 **Description**
 
 Obtains the timezone rules by timezone ID.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)--><!--Device-I18n_ErrorCode OH_i18n_GetTimeZoneRules(const char* timeZoneID, TimeZoneRules* rules)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -143,10 +129,6 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 Obtains the time when the TimeArrayTimeZoneRule first took effect.
 
-<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 **Parameters**:
@@ -171,10 +153,6 @@ I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule first took effect.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFirstStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -201,10 +179,6 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneR
 
 Obtains the time when the TimeArrayTimeZoneRule final took effect.
 
-<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 **Parameters**:
@@ -229,10 +203,6 @@ I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* r
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule final took effect.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetFinalStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -259,10 +229,6 @@ I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 Obtains the time when the TimeArrayTimeZoneRule next took effect.
 
-<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 **Parameters**:
@@ -287,10 +253,6 @@ I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule next took effect.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetNextStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -317,10 +279,6 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRu
 
 Obtains the time when the TimeArrayTimeZoneRule previous took effect.
 
-<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule(TimeArrayTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 **Parameters**:
@@ -345,10 +303,6 @@ I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* ru
 **Description**
 
 Obtains the time when the AnnualTimeZoneRule previous took effect.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetPrevStartFromAnnualTimeZoneRule(AnnualTimeZoneRule* rule, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 
@@ -375,10 +329,6 @@ I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index
 
 Obtain the effective start time of a specific rule in the TimeArrayTimeZoneRule.
 
-<!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)--><!--Device-I18n_ErrorCode OH_i18n_GetStartTimeAt(TimeArrayTimeZoneRule* rule, int32_t index, double* result)-End-->
-
-**System capability**: SystemCapability.Global.I18n
-
 **Since**: 22
 
 **Parameters**:
@@ -404,10 +354,6 @@ I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, Ti
 **Description**
 
 Obtain the effective start time of a specific rule for target year in the AnnualTimeZoneRule.
-
-<!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)--><!--Device-I18n_ErrorCode OH_i18n_GetStartInYear(AnnualTimeZoneRule* rule, int32_t year, TimeZoneRuleQuery* query)-End-->
-
-**System capability**: SystemCapability.Global.I18n
 
 **Since**: 22
 

@@ -366,81 +366,81 @@
   <!--Del-->
   - [RemoveReason(system api)](arkts-notification-notificationsubscribe-removereason-e-sys.md)<!--DelEnd-->
 - [@ohos.notification(Notification)](arkts-notification-notification.md)
-  - [addSlot](arkts-notification-notification-addslot-depr-f.md)
+  - [addSlot](arkts-notification-notification-depr-addslot-f.md)
   <!--Del-->
-  - [addSlot(system api)](arkts-notification-notification-addslot-depr-f-sys.md)<!--DelEnd-->
+  - [addSlot(system api)](arkts-notification-notification-depr-addslot-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [addSlots(system api)](arkts-notification-notification-addslots-depr-f-sys.md)<!--DelEnd-->
-  - [cancel](arkts-notification-notification-cancel-depr-f.md)
-  - [cancelAll](arkts-notification-notification-cancelall-depr-f.md)
-  - [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md)
+  - [addSlots(system api)](arkts-notification-notification-depr-addslots-f-sys.md)<!--DelEnd-->
+  - [cancel](arkts-notification-notification-depr-cancel-f.md)
+  - [cancelAll](arkts-notification-notification-depr-cancelall-f.md)
+  - [cancelGroup](arkts-notification-notification-depr-cancelgroup-f.md)
   <!--Del-->
-  - [displayBadge(system api)](arkts-notification-notification-displaybadge-depr-f-sys.md)<!--DelEnd-->
+  - [displayBadge(system api)](arkts-notification-notification-depr-displaybadge-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [enableDistributed(system api)](arkts-notification-notification-enabledistributed-depr-f-sys.md)<!--DelEnd-->
+  - [enableDistributed(system api)](arkts-notification-notification-depr-enabledistributed-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [enableDistributedByBundle(system api)](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [enableDistributedByBundle(system api)](arkts-notification-notification-depr-enabledistributedbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [enableNotification(system api)](arkts-notification-notification-enablenotification-depr-f-sys.md)<!--DelEnd-->
-  - [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md)
-  - [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md)
+  - [enableNotification(system api)](arkts-notification-notification-depr-enablenotification-f-sys.md)<!--DelEnd-->
+  - [getActiveNotificationCount](arkts-notification-notification-depr-getactivenotificationcount-f.md)
+  - [getActiveNotifications](arkts-notification-notification-depr-getactivenotifications-f.md)
   <!--Del-->
-  - [getAllActiveNotifications(system api)](arkts-notification-notification-getallactivenotifications-depr-f-sys.md)<!--DelEnd-->
+  - [getAllActiveNotifications(system api)](arkts-notification-notification-depr-getallactivenotifications-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getDeviceRemindType(system api)](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md)<!--DelEnd-->
+  - [getDeviceRemindType(system api)](arkts-notification-notification-depr-getdeviceremindtype-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getDoNotDisturbDate(system api)](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
-  - [getSlot](arkts-notification-notification-getslot-depr-f.md)
+  - [getDoNotDisturbDate(system api)](arkts-notification-notification-depr-getdonotdisturbdate-f-sys.md)<!--DelEnd-->
+  - [getSlot](arkts-notification-notification-depr-getslot-f.md)
   <!--Del-->
-  - [getSlotNumByBundle(system api)](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md)<!--DelEnd-->
-  - [getSlots](arkts-notification-notification-getslots-depr-f.md)
+  - [getSlotNumByBundle(system api)](arkts-notification-notification-depr-getslotnumbybundle-f-sys.md)<!--DelEnd-->
+  - [getSlots](arkts-notification-notification-depr-getslots-f.md)
   <!--Del-->
-  - [getSlotsByBundle(system api)](arkts-notification-notification-getslotsbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [getSlotsByBundle(system api)](arkts-notification-notification-depr-getslotsbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [isBadgeDisplayed(system api)](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md)<!--DelEnd-->
-  - [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md)
+  - [isBadgeDisplayed(system api)](arkts-notification-notification-depr-isbadgedisplayed-f-sys.md)<!--DelEnd-->
+  - [isDistributedEnabled](arkts-notification-notification-depr-isdistributedenabled-f.md)
   <!--Del-->
-  - [isDistributedEnabledByBundle(system api)](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [isDistributedEnabledByBundle(system api)](arkts-notification-notification-depr-isdistributedenabledbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [isNotificationEnabled(system api)](arkts-notification-notification-isnotificationenabled-depr-f-sys.md)<!--DelEnd-->
-  - [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md)
-  - [publish](arkts-notification-notification-publish-depr-f.md)
+  - [isNotificationEnabled(system api)](arkts-notification-notification-depr-isnotificationenabled-f-sys.md)<!--DelEnd-->
+  - [isSupportTemplate](arkts-notification-notification-depr-issupporttemplate-f.md)
+  - [publish](arkts-notification-notification-depr-publish-f.md)
   <!--Del-->
-  - [publish(system api)](arkts-notification-notification-publish-depr-f-sys.md)<!--DelEnd-->
+  - [publish(system api)](arkts-notification-notification-depr-publish-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [remove(system api)](arkts-notification-notification-remove-depr-f-sys.md)<!--DelEnd-->
+  - [remove(system api)](arkts-notification-notification-depr-remove-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [removeAll(system api)](arkts-notification-notification-removeall-depr-f-sys.md)<!--DelEnd-->
-  - [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md)
+  - [removeAll(system api)](arkts-notification-notification-depr-removeall-f-sys.md)<!--DelEnd-->
+  - [removeAllSlots](arkts-notification-notification-depr-removeallslots-f.md)
   <!--Del-->
-  - [removeGroupByBundle(system api)](arkts-notification-notification-removegroupbybundle-depr-f-sys.md)<!--DelEnd-->
-  - [removeSlot](arkts-notification-notification-removeslot-depr-f.md)
-  - [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md)
+  - [removeGroupByBundle(system api)](arkts-notification-notification-depr-removegroupbybundle-f-sys.md)<!--DelEnd-->
+  - [removeSlot](arkts-notification-notification-depr-removeslot-f.md)
+  - [requestEnableNotification](arkts-notification-notification-depr-requestenablenotification-f.md)
   <!--Del-->
-  - [setDoNotDisturbDate(system api)](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
+  - [setDoNotDisturbDate(system api)](arkts-notification-notification-depr-setdonotdisturbdate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [setSlotByBundle(system api)](arkts-notification-notification-setslotbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [setSlotByBundle(system api)](arkts-notification-notification-depr-setslotbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [subscribe(system api)](arkts-notification-notification-subscribe-depr-f-sys.md)<!--DelEnd-->
+  - [subscribe(system api)](arkts-notification-notification-depr-subscribe-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [supportDoNotDisturbMode(system api)](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md)<!--DelEnd-->
+  - [supportDoNotDisturbMode(system api)](arkts-notification-notification-depr-supportdonotdisturbmode-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [unsubscribe(system api)](arkts-notification-notification-unsubscribe-depr-f-sys.md)<!--DelEnd-->
-  - [BundleOption](arkts-notification-notification-bundleoption-depr-i.md)
+  - [unsubscribe(system api)](arkts-notification-notification-depr-unsubscribe-f-sys.md)<!--DelEnd-->
+  - [BundleOption](arkts-notification-notification-depr-bundleoption-i.md)
   <!--Del-->
-  - [DoNotDisturbDate(system api)](arkts-notification-notification-donotdisturbdate-depr-i-sys.md)<!--DelEnd-->
-  - [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md)
-  - [ContentType](arkts-notification-notification-contenttype-depr-e.md)
+  - [DoNotDisturbDate(system api)](arkts-notification-notification-depr-donotdisturbdate-i-sys.md)<!--DelEnd-->
+  - [NotificationKey](arkts-notification-notification-depr-notificationkey-i.md)
+  - [ContentType](arkts-notification-notification-depr-contenttype-e.md)
   <!--Del-->
-  - [DeviceRemindType(system api)](arkts-notification-notification-deviceremindtype-depr-e-sys.md)<!--DelEnd-->
+  - [DeviceRemindType(system api)](arkts-notification-notification-depr-deviceremindtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [DoNotDisturbType(system api)](arkts-notification-notification-donotdisturbtype-depr-e-sys.md)<!--DelEnd-->
+  - [DoNotDisturbType(system api)](arkts-notification-notification-depr-donotdisturbtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [RemoveReason(system api)](arkts-notification-notification-removereason-depr-e-sys.md)<!--DelEnd-->
-  - [SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
-  - [SlotType](arkts-notification-notification-slottype-depr-e.md)
+  - [RemoveReason(system api)](arkts-notification-notification-depr-removereason-e-sys.md)<!--DelEnd-->
+  - [SlotLevel](arkts-notification-notification-depr-slotlevel-e.md)
+  - [SlotType](arkts-notification-notification-depr-slottype-e.md)
   <!--Del-->
-  - [SourceType(system api)](arkts-notification-notification-sourcetype-depr-e-sys.md)<!--DelEnd-->
+  - [SourceType(system api)](arkts-notification-notification-depr-sourcetype-e-sys.md)<!--DelEnd-->
 - [@system.notification(Notification)](arkts-notification-system-notification.md)
   - [Notification](arkts-notification-system-notification-notification-c.md)
   - [ActionResult](arkts-notification-system-notification-actionresult-i.md)

@@ -661,7 +661,7 @@ getTransform(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix2D | 当前被应用到上下文的转换矩阵。 |
+| [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | 当前被应用到上下文的转换矩阵。 |
 
 ## measureText
 
@@ -1045,7 +1045,7 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | Matrix2D | 否 | 变换矩阵。<br>异常值undefined或null按无效值处理。<br>默认值：null |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | 否 | 变换矩阵。<br>异常值undefined或null按无效值处理。<br>默认值：null |
 
 ## stroke
 
@@ -1313,7 +1313,7 @@ fillStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为CanvasGradient时，表示渐变对象，使用createLinearGradient方法创建。
 
-- 类型为[CanvasPattern](../arkts-apis/arkts-arkui-canvaspattern.md)时，使用createPattern方法创建。
+- 类型为CanvasPattern时，使用createPattern方法创建。
 
 默认值：'#000000'（黑色）
 
@@ -1846,7 +1846,7 @@ strokeStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为CanvasGradient时，表示渐变对象，使用createLinearGradient方法创建。
 
-- 类型为[CanvasPattern](../arkts-apis/arkts-arkui-canvaspattern.md)时，使用createPattern方法创建。
+- 类型为CanvasPattern时，使用createPattern方法创建。
 
 默认值：'#000000'（黑色）
 

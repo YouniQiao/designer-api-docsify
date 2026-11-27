@@ -2,17 +2,3 @@
 
 ## Overview
 
-<!--Device-struct StdVideoH264ScalingLists {...}--><!--Device-struct StdVideoH264ScalingLists {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| uint16_t scaling_list_present_mask | <!--Device-uint16_t scaling_list_present_mask--><!--Device-uint16_t scaling_list_present_mask-End--> |
-| uint16_t use_default_scaling_matrix_mask | <!--Device-uint16_t use_default_scaling_matrix_mask--><!--Device-uint16_t use_default_scaling_matrix_mask-End--> |
-| uint8_t ScalingList4x4[STD_VIDEO_H264_SCALING_LIST_4X4_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS] | <!--Device-uint8_t ScalingList4x4[STD_VIDEO_H264_SCALING_LIST_4X4_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS]--><!--Device-uint8_t ScalingList4x4[STD_VIDEO_H264_SCALING_LIST_4X4_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_4X4_NUM_ELEMENTS]-End--> |
-| uint8_t ScalingList8x8[STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS] | <!--Device-uint8_t ScalingList8x8[STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS]--><!--Device-uint8_t ScalingList8x8[STD_VIDEO_H264_SCALING_LIST_8X8_NUM_LISTS][STD_VIDEO_H264_SCALING_LIST_8X8_NUM_ELEMENTS]-End--> |
-
-

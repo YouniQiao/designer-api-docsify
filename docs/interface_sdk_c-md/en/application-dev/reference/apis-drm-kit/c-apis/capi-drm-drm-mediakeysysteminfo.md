@@ -1,20 +1,18 @@
 # DRM_MediaKeySystemInfo
 
 ```c
-typedef struct DRM_MediaKeySystemInfo {...} DRM_MediaKeySystemInfo
+struct DRM_MediaKeySystemInfo {...}
 ```
 
 ## Overview
 
 The struct describes the DRM information for encrypted content.
 
-<!--Device-struct DRM_MediaKeySystemInfo {...}--><!--Device-struct DRM_MediaKeySystemInfo {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
-**Related module**: [Drm](capi-drm-kit-drm.md)
+**Related module**: [Drm](capi-drm.md)
 
 **Header file**: [native_drm_common.h](capi-native-drm-common-h.md)
 
@@ -24,7 +22,7 @@ The struct describes the DRM information for encrypted content.
 
 | Name | Description |
 | -- | -- |
-| uint32_t psshCount | PSSH count.<br><!--Device-uint32_t psshCount--><!--Device-uint32_t psshCount-End--> |
-| [DRM_PsshInfo](capi-drm-drm-psshinfo.md) psshInfo[MAX_PSSH_INFO_COUNT] | PSSH info.<br><!--Device-DRM_PsshInfo psshInfo[MAX_PSSH_INFO_COUNT]--><!--Device-DRM_PsshInfo psshInfo[MAX_PSSH_INFO_COUNT]-End--> |
+| uint32_t psshCount | PSSH count. |
+| [DRM_PsshInfo](capi-drm-drm-psshinfo.md) psshInfo[MAX_PSSH_INFO_COUNT] | PSSH info. |
 
 

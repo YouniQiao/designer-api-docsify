@@ -1,20 +1,18 @@
 # Camera_FoldStatusInfo
 
 ```c
-typedef struct Camera_FoldStatusInfo {...} Camera_FoldStatusInfo
+struct Camera_FoldStatusInfo {...}
 ```
 
 ## 概述
 
 折叠状态信息。
 
-<!--Device-struct Camera_FoldStatusInfo {...}--><!--Device-struct Camera_FoldStatusInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,8 +22,8 @@ typedef struct Camera_FoldStatusInfo {...} Camera_FoldStatusInfo
 
 | 名称 | 描述 |
 | -- | -- |
-| [Camera_Device*](capi-oh-camera-camera-device.md)* supportedCameras | 相机实例列表。<br><!--Device-Camera_Device** supportedCameras--><!--Device-Camera_Device** supportedCameras-End--> |
-| uint32_t cameraSize | 相机列表数量。<br><!--Device-uint32_t cameraSize--><!--Device-uint32_t cameraSize-End--> |
-| [Camera_FoldStatus](capi-camera-h.md#camera_foldstatus) foldStatus | 当前折叠状态。<br><!--Device-Camera_FoldStatus foldStatus--><!--Device-Camera_FoldStatus foldStatus-End--> |
+| [Camera_Device*](capi-oh-camera-camera-device.md)* supportedCameras | 相机实例列表。 |
+| uint32_t cameraSize | 相机列表数量。 |
+| [Camera_FoldStatus](capi-camera-h.md#camera_foldstatus) foldStatus | 当前折叠状态。 |
 
 

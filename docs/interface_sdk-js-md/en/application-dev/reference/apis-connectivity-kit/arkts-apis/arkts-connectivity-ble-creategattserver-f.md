@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## createGattServer
@@ -12,15 +12,15 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function createGattServer(): GattServer
 ```
 
-create a JavaScript Gatt server instance.
+create a Gatt server instance.
 
-**Since:** 9
+**Since:** 10
 
-**Deprecated since:** 10
+**Model restriction:** This API can be used only in the stage model.
 
-**Substitutes:** [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
+<!--Device-ble-function createGattServer(): GattServer--><!--Device-ble-function createGattServer(): GattServer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,10 +28,11 @@ create a JavaScript Gatt server instance.
 
 | Type | Description |
 | --- | --- |
-| [GattServer](arkts-connectivity-ble-gattserver-i.md) | Returns a JavaScript Gatt server instance `GattServer`. |
+| [GattServer](arkts-connectivity-ble-gattserver-i.md) | Returns a Gatt server instance `GattServer`. |
 
 **Examples**
 
 ```TypeScript
-let gattServer: bluetoothManager.GattServer  = bluetoothManager.BLE.createGattServer();
+let gattServer: ble.GattServer = ble.createGattServer();
+console.info('gatt success');
 ```

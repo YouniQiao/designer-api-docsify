@@ -2,15 +2,13 @@
 
 ## 概述
 
-定义窗口管理的相关接口，主要用于设置和获取指定窗口的属性，以及设置指定窗口的状态栏样式、导航栏样式。
+The file declares the window management APIs. You can use the APIs to set and obtain the properties of a window, and set its status bar style and navigation bar style.
 
 **库：** libnative_window_manager.so
 
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
-**相关模块：** [WindowManager](capi-arkui-windowmanager.md)
+**相关模块：** [WindowManager](capi-windowmanager.md)
 
 ## 汇总
 
@@ -18,9 +16,9 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [int32_t OH_WindowManager_SetWindowStatusBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)](#oh_windowmanager_setwindowstatusbarenabled) | - | 设置主窗口是否显示状态栏。 调用生效后返回并不表示状态栏的显示或隐藏已完成。主窗口在非全屏/最大化模式（智慧多窗悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。 |
+| [int32_t OH_WindowManager_SetWindowStatusBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)](#oh_windowmanager_setwindowstatusbarenabled) | - | 设置主窗口是否显示状态栏。 |
 | [int32_t OH_WindowManager_SetWindowStatusBarColor(int32_t windowId, int32_t color)](#oh_windowmanager_setwindowstatusbarcolor) | - | 设置主窗口的状态栏内容颜色。 |
-| [int32_t OH_WindowManager_SetWindowNavigationBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)](#oh_windowmanager_setwindownavigationbarenabled) | - | 设置主窗口是否显示导航栏或工具栏。当前工具栏仅Car设备支持。除Car设备以外，此接口仅在导航区域只能表现为三键导航的设备上生效。<!--RP2--><!--RP2End--> |
+| [int32_t OH_WindowManager_SetWindowNavigationBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)](#oh_windowmanager_setwindownavigationbarenabled) | - | 设置主窗口是否显示导航栏。<!--RP2--><!--RP2End--> |
 | [int32_t OH_WindowManager_GetWindowAvoidArea(int32_t windowId, WindowManager_AvoidAreaType type, WindowManager_AvoidArea* avoidArea)](#oh_windowmanager_getwindowavoidarea) | - | 获取指定窗口的避让区域。 |
 | [int32_t OH_WindowManager_IsWindowShown(int32_t windowId, bool* isShow)](#oh_windowmanager_iswindowshown) | - | 判断指定窗口是否显示。 |
 | [int32_t OH_WindowManager_ShowWindow(int32_t windowId)](#oh_windowmanager_showwindow) | - | 显示指定窗口。 |
@@ -46,9 +44,6 @@
 | [int32_t OH_WindowManager_FrameMetrics_GetInputHandlingDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)](#oh_windowmanager_framemetrics_getinputhandlingduration) | - | 获取当前帧中手势处理的耗时。 |
 | [int32_t OH_WindowManager_FrameMetrics_GetLayoutMeasureDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)](#oh_windowmanager_framemetrics_getlayoutmeasureduration) | - | 获取当前帧中布局测量的耗时。 |
 | [int32_t OH_WindowManager_FrameMetrics_GetVsyncTimestamp(const OH_WindowManager_FrameMetrics* metrics, uint64_t* timestamp)](#oh_windowmanager_framemetrics_getvsynctimestamp) | - | 获取当前帧开始的时间戳。 |
-| [int32_t OH_WindowManager_FrameMetrics_GetTotalDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)](#oh_windowmanager_framemetrics_gettotalduration) | - | 获取当前帧从开始渲染到最终提交显示子系统的总耗时。 |
-| [int32_t OH_WindowManager_FrameMetrics_GetAnimationDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)](#oh_windowmanager_framemetrics_getanimationduration) | - | 获取当前帧执行动画回调的耗时 |
-| [int32_t OH_WindowManager_FrameMetrics_GetIntendedVsyncTimestamp(const OH_WindowManager_FrameMetrics *metrics, uint64_t *timestamp)](#oh_windowmanager_framemetrics_getintendedvsynctimestamp) | - | 获取当前帧预期的垂直同步（VSync）起始时间戳。 |
 | [int32_t OH_WindowManager_RegisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)](#oh_windowmanager_registerframemetricsmeasuredcallback) | - | 订阅窗口帧率指标变更监听事件。 该接口依赖窗口页面内容加载，即需要在ArkTS侧loadContent()接口或setUIContent()接口生效后调用。 应用注册帧率指标变更监听后，仅当客户端UI内容发生重绘（例如页面切换、响应式组件交互、设置背景色和透明度等）时才会触发已注册回调。 如需取消订阅，请使用[OH_WindowManager_UnregisterFrameMetricsMeasuredCallback](capi-oh-window-h.md#oh_windowmanager_unregisterframemetricsmeasuredcallback)接口。 |
 | [int32_t OH_WindowManager_UnregisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)](#oh_windowmanager_unregisterframemetricsmeasuredcallback) | - | 取消订阅窗口帧率指标变更监听事件。 该接口依赖窗口页面内容加载，即需要在ArkTS侧loadContent()接口或setUIContent()接口生效后调用。 如需订阅，请使用[OH_WindowManager_RegisterFrameMetricsMeasuredCallback](capi-oh-window-h.md#oh_windowmanager_registerframemetricsmeasuredcallback)接口。 |
 | [int32_t OH_WindowManager_DensityInfo_GetDefaultDensity(const OH_WindowManager_DensityInfo* info, float* density)](#oh_windowmanager_densityinfo_getdefaultdensity) | - | 获取窗口所在屏幕的系统默认显示大小缩放因子。 |
@@ -58,6 +53,12 @@
 | [int32_t OH_WindowManager_RegisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)](#oh_windowmanager_registerdensityinfochangecallback) | - | Listen for changes in the display size scaling factor information of the window. The callback function is triggered when any of the system display size scaling factor, system default display size scaling factor, or custom display size scaling factor of the screen where the window resides changes. |
 | [int32_t OH_WindowManager_UnregisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)](#oh_windowmanager_unregisterdensityinfochangecallback) | - | Unlisten for changes in the display size scaling factor information of the window. The callback function is triggered when any of the system display size scaling factor, system default display size scaling factor, or custom display size scaling factor of the screen where the window resides changes. |
 | [int32_t OH_WindowManager_DensityInfo_Release(const OH_WindowManager_DensityInfo* info)](#oh_windowmanager_densityinfo_release) | - | 释放DensityInfo指针指向的内存空间 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_WindowManager_WindowSnapshotCallback)(const OH_PixelmapNative** snapshotPixelMapList, size_t snapshotListSize) | 接收主窗口截图列表的回调接口。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.Window.SessionManager |
 
 ## 函数说明
 
@@ -69,11 +70,7 @@ int32_t OH_WindowManager_SetWindowStatusBarEnabled(int32_t windowId, bool enable
 
 **描述：**
 
-设置主窗口是否显示状态栏。 调用生效后返回并不表示状态栏的显示或隐藏已完成。主窗口在非全屏/最大化模式（智慧多窗悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
-
-<!--Device-int32_t OH_WindowManager_SetWindowStatusBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)--><!--Device-int32_t OH_WindowManager_SetWindowStatusBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
+设置主窗口是否显示状态栏。
 
 **起始版本：** 15
 
@@ -101,10 +98,6 @@ int32_t OH_WindowManager_SetWindowStatusBarColor(int32_t windowId, int32_t color
 
 设置主窗口的状态栏内容颜色。
 
-<!--Device-int32_t OH_WindowManager_SetWindowStatusBarColor(int32_t windowId, int32_t color)--><!--Device-int32_t OH_WindowManager_SetWindowStatusBarColor(int32_t windowId, int32_t color)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -128,11 +121,7 @@ int32_t OH_WindowManager_SetWindowNavigationBarEnabled(int32_t windowId, bool en
 
 **描述：**
 
-设置主窗口是否显示导航栏或工具栏。当前工具栏仅Car设备支持。除Car设备以外，此接口仅在导航区域只能表现为三键导航的设备上生效。<!--RP2--><!--RP2End-->
-
-<!--Device-int32_t OH_WindowManager_SetWindowNavigationBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)--><!--Device-int32_t OH_WindowManager_SetWindowNavigationBarEnabled(int32_t windowId, bool enabled, bool enableAnimation)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
+设置主窗口是否显示导航栏。<!--RP2--><!--RP2End-->
 
 **起始版本：** 15
 
@@ -160,10 +149,6 @@ int32_t OH_WindowManager_GetWindowAvoidArea(int32_t windowId, WindowManager_Avoi
 
 获取指定窗口的避让区域。
 
-<!--Device-int32_t OH_WindowManager_GetWindowAvoidArea(int32_t windowId, WindowManager_AvoidAreaType type, WindowManager_AvoidArea* avoidArea)--><!--Device-int32_t OH_WindowManager_GetWindowAvoidArea(int32_t windowId, WindowManager_AvoidAreaType type, WindowManager_AvoidArea* avoidArea)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -190,10 +175,6 @@ int32_t OH_WindowManager_IsWindowShown(int32_t windowId, bool* isShow)
 
 判断指定窗口是否显示。
 
-<!--Device-int32_t OH_WindowManager_IsWindowShown(int32_t windowId, bool* isShow)--><!--Device-int32_t OH_WindowManager_IsWindowShown(int32_t windowId, bool* isShow)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -219,10 +200,6 @@ int32_t OH_WindowManager_ShowWindow(int32_t windowId)
 
 显示指定窗口。
 
-<!--Device-int32_t OH_WindowManager_ShowWindow(int32_t windowId)--><!--Device-int32_t OH_WindowManager_ShowWindow(int32_t windowId)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -246,10 +223,6 @@ int32_t OH_WindowManager_SetWindowTouchable(int32_t windowId, bool isTouchable)
 **描述：**
 
 设置指定窗口是否可触。
-
-<!--Device-int32_t OH_WindowManager_SetWindowTouchable(int32_t windowId, bool isTouchable)--><!--Device-int32_t OH_WindowManager_SetWindowTouchable(int32_t windowId, bool isTouchable)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 15
 
@@ -276,10 +249,6 @@ int32_t OH_WindowManager_SetWindowFocusable(int32_t windowId, bool isFocusable)
 
 设置指定窗口是否可获焦。
 
-<!--Device-int32_t OH_WindowManager_SetWindowFocusable(int32_t windowId, bool isFocusable)--><!--Device-int32_t OH_WindowManager_SetWindowFocusable(int32_t windowId, bool isFocusable)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -304,10 +273,6 @@ int32_t OH_WindowManager_SetWindowBackgroundColor(int32_t windowId, const char* 
 **描述：**
 
 设置指定窗口背景颜色。
-
-<!--Device-int32_t OH_WindowManager_SetWindowBackgroundColor(int32_t windowId, const char* color)--><!--Device-int32_t OH_WindowManager_SetWindowBackgroundColor(int32_t windowId, const char* color)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 15
 
@@ -334,10 +299,6 @@ int32_t OH_WindowManager_SetWindowBrightness(int32_t windowId, float brightness)
 
 指定主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。
 
-<!--Device-int32_t OH_WindowManager_SetWindowBrightness(int32_t windowId, float brightness)--><!--Device-int32_t OH_WindowManager_SetWindowBrightness(int32_t windowId, float brightness)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -363,10 +324,6 @@ int32_t OH_WindowManager_SetWindowKeepScreenOn(int32_t windowId, bool isKeepScre
 
 设置指定窗口是否开启屏幕常亮。
 
-<!--Device-int32_t OH_WindowManager_SetWindowKeepScreenOn(int32_t windowId, bool isKeepScreenOn)--><!--Device-int32_t OH_WindowManager_SetWindowKeepScreenOn(int32_t windowId, bool isKeepScreenOn)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -391,10 +348,6 @@ int32_t OH_WindowManager_SetWindowPrivacyMode(int32_t windowId, bool isPrivacy)
 **描述：**
 
 设置指定窗口是否开启隐私模式。
-
-<!--Device-int32_t OH_WindowManager_SetWindowPrivacyMode(int32_t windowId, bool isPrivacy)--><!--Device-int32_t OH_WindowManager_SetWindowPrivacyMode(int32_t windowId, bool isPrivacy)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
@@ -423,10 +376,6 @@ int32_t OH_WindowManager_GetWindowProperties(int32_t windowId, WindowManager_Win
 
 获取指定窗口属性。
 
-<!--Device-int32_t OH_WindowManager_GetWindowProperties(int32_t windowId, WindowManager_WindowProperties* windowProperties)--><!--Device-int32_t OH_WindowManager_GetWindowProperties(int32_t windowId, WindowManager_WindowProperties* windowProperties)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -452,10 +401,6 @@ int32_t OH_WindowManager_Snapshot(int32_t windowId, OH_PixelmapNative* pixelMap)
 
 获取指定窗口截图。
 
-<!--Device-int32_t OH_WindowManager_Snapshot(int32_t windowId, OH_PixelmapNative* pixelMap)--><!--Device-int32_t OH_WindowManager_Snapshot(int32_t windowId, OH_PixelmapNative* pixelMap)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 15
 
 **参数：**
@@ -480,10 +425,6 @@ int32_t OH_WindowManager_GetAllWindowLayoutInfoList(int64_t displayId, WindowMan
 **描述：**
 
 获取指定屏幕上可见的窗口布局信息数组，按当前窗口层级排列，层级最高的对应数组下标为0。
-
-<!--Device-int32_t OH_WindowManager_GetAllWindowLayoutInfoList(int64_t displayId, WindowManager_Rect** windowLayoutInfoList, size_t* windowLayoutInfoSize)--><!--Device-int32_t OH_WindowManager_GetAllWindowLayoutInfoList(int64_t displayId, WindowManager_Rect** windowLayoutInfoList, size_t* windowLayoutInfoSize)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 17
 
@@ -511,10 +452,6 @@ void OH_WindowManager_ReleaseAllWindowLayoutInfoList(WindowManager_Rect* windowL
 
 释放窗口布局信息数组占用的内存。
 
-<!--Device-void OH_WindowManager_ReleaseAllWindowLayoutInfoList(WindowManager_Rect* windowLayoutInfoList)--><!--Device-void OH_WindowManager_ReleaseAllWindowLayoutInfoList(WindowManager_Rect* windowLayoutInfoList)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 17
 
 **参数：**
@@ -532,10 +469,6 @@ int32_t OH_WindowManager_InjectTouchEvent(int32_t windowId, Input_TouchEvent* to
 **描述：**
 
 将多模触摸事件注入给目标窗口，仅支持注入同进程窗口，且该注入不会触发窗口焦点和层级变化，不会触发窗口拖拽，事件会直接发送给ArkUI。该接口需要在指定窗口加载UI之后调用。
-
-<!--Device-int32_t OH_WindowManager_InjectTouchEvent(int32_t windowId, Input_TouchEvent* touchEvent, int32_t windowX, int32_t windowY)--><!--Device-int32_t OH_WindowManager_InjectTouchEvent(int32_t windowId, Input_TouchEvent* touchEvent, int32_t windowX, int32_t windowY)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
@@ -564,10 +497,6 @@ int32_t OH_WindowManager_GetAllMainWindowInfo(WindowManager_MainWindowInfo** inf
 
 获取全部主窗信息。
 
-<!--Device-int32_t OH_WindowManager_GetAllMainWindowInfo(WindowManager_MainWindowInfo** infoList, size_t* mainWindowInfoSize)--><!--Device-int32_t OH_WindowManager_GetAllMainWindowInfo(WindowManager_MainWindowInfo** infoList, size_t* mainWindowInfoSize)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
 **起始版本：** 21
@@ -595,10 +524,6 @@ void OH_WindowManager_ReleaseAllMainWindowInfo(WindowManager_MainWindowInfo* inf
 
 释放主窗口信息列表的内存。
 
-<!--Device-void OH_WindowManager_ReleaseAllMainWindowInfo(WindowManager_MainWindowInfo* infoList)--><!--Device-void OH_WindowManager_ReleaseAllMainWindowInfo(WindowManager_MainWindowInfo* infoList)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 21
 
 **参数：**
@@ -616,10 +541,6 @@ typedef void (*OH_WindowManager_WindowSnapshotCallback)(const OH_PixelmapNative*
 **描述：**
 
 接收主窗口截图列表的回调接口。
-
-<!--Device-typedef void (*OH_WindowManager_WindowSnapshotCallback)(const OH_PixelmapNative** snapshotPixelMapList, size_t snapshotListSize)--><!--Device-typedef void (*OH_WindowManager_WindowSnapshotCallback)(const OH_PixelmapNative** snapshotPixelMapList, size_t snapshotListSize)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 21
 
@@ -639,10 +560,6 @@ int32_t OH_WindowManager_GetMainWindowSnapshot(int32_t* windowIdList, size_t win
 **描述：**
 
 获取一个或多个指定windowId的主窗口截图。
-
-<!--Device-int32_t OH_WindowManager_GetMainWindowSnapshot(int32_t* windowIdList, size_t windowIdListSize, WindowManager_WindowSnapshotConfig config, OH_WindowManager_WindowSnapshotCallback callback)--><!--Device-int32_t OH_WindowManager_GetMainWindowSnapshot(int32_t* windowIdList, size_t windowIdListSize, WindowManager_WindowSnapshotConfig config, OH_WindowManager_WindowSnapshotCallback callback)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
@@ -673,10 +590,6 @@ void OH_WindowManager_ReleaseMainWindowSnapshot(const OH_PixelmapNative* snapsho
 
 释放主窗口截图列表的内存。
 
-<!--Device-void OH_WindowManager_ReleaseMainWindowSnapshot(const OH_PixelmapNative* snapshotPixelMapList)--><!--Device-void OH_WindowManager_ReleaseMainWindowSnapshot(const OH_PixelmapNative* snapshotPixelMapList)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 21
 
 **参数：**
@@ -694,10 +607,6 @@ int32_t OH_WindowManager_LockCursor(int32_t windowId, bool isCursorFollowMovemen
 **描述：**
 
 锁定鼠标光标，控制鼠标光标不超过指定窗口区域，同时可控制光标是否跟随鼠标移动。仅支持获焦窗口调用，失焦之后会自动取消锁定。
-
-<!--Device-int32_t OH_WindowManager_LockCursor(int32_t windowId, bool isCursorFollowMovement)--><!--Device-int32_t OH_WindowManager_LockCursor(int32_t windowId, bool isCursorFollowMovement)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **需要权限：** ohos.permission.LOCK_WINDOW_CURSOR
 
@@ -726,10 +635,6 @@ int32_t OH_WindowManager_UnlockCursor(int32_t windowId)
 
 清除窗口设置的鼠标光标指定的模式。
 
-<!--Device-int32_t OH_WindowManager_UnlockCursor(int32_t windowId)--><!--Device-int32_t OH_WindowManager_UnlockCursor(int32_t windowId)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **需要权限：** ohos.permission.LOCK_WINDOW_CURSOR
 
 **起始版本：** 22
@@ -756,10 +661,6 @@ int32_t OH_WindowManager_FrameMetrics_IsFirstDrawFrame(const OH_WindowManager_Fr
 
 判断当前帧是否为首帧。
 
-<!--Device-int32_t OH_WindowManager_FrameMetrics_IsFirstDrawFrame(const OH_WindowManager_FrameMetrics* metrics, bool* isFirstDrawFrame)--><!--Device-int32_t OH_WindowManager_FrameMetrics_IsFirstDrawFrame(const OH_WindowManager_FrameMetrics* metrics, bool* isFirstDrawFrame)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -784,10 +685,6 @@ int32_t OH_WindowManager_FrameMetrics_GetInputHandlingDuration(const OH_WindowMa
 **描述：**
 
 获取当前帧中手势处理的耗时。
-
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetInputHandlingDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetInputHandlingDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 26.0.0
 
@@ -814,10 +711,6 @@ int32_t OH_WindowManager_FrameMetrics_GetLayoutMeasureDuration(const OH_WindowMa
 
 获取当前帧中布局测量的耗时。
 
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetLayoutMeasureDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetLayoutMeasureDuration(const OH_WindowManager_FrameMetrics* metrics, uint64_t* duration)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -843,10 +736,6 @@ int32_t OH_WindowManager_FrameMetrics_GetVsyncTimestamp(const OH_WindowManager_F
 
 获取当前帧开始的时间戳。
 
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetVsyncTimestamp(const OH_WindowManager_FrameMetrics* metrics, uint64_t* timestamp)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetVsyncTimestamp(const OH_WindowManager_FrameMetrics* metrics, uint64_t* timestamp)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -862,93 +751,6 @@ int32_t OH_WindowManager_FrameMetrics_GetVsyncTimestamp(const OH_WindowManager_F
 | -- | -- |
 | int32_t | 返回结果代码。返回OK，表示函数调用成功。返回WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM，表示参数错误，对应参数取值范围不合理。具体可见[WindowManager_ErrorCode](capi-oh-window-comm-h.md#windowmanager_errorcode)。 |
 
-### OH_WindowManager_FrameMetrics_GetTotalDuration()
-
-```c
-int32_t OH_WindowManager_FrameMetrics_GetTotalDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)
-```
-
-**描述：**
-
-获取当前帧从开始渲染到最终提交显示子系统的总耗时。
-
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetTotalDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetTotalDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_WindowManager_FrameMetrics](capi-windowmanager-oh-windowmanager-framemetrics.md) *metrics | 入参，帧率指标数据对象，不能为空。 |
-| uint64_t *duration | 作为出参使用，表示当前帧从开始渲染到最终提交显示子系统的总耗时，单位为纳秒，不能为空。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | 返回结果代码。<ul> <li>返回OK，表示函数调用成功。</li> <li>返回WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM，表示参数错误，对应参数取值范围不合理。</li> </ul>具体可见[WindowManager_ErrorCode](capi-oh-window-comm-h.md#windowmanager_errorcode)。 |
-
-### OH_WindowManager_FrameMetrics_GetAnimationDuration()
-
-```c
-int32_t OH_WindowManager_FrameMetrics_GetAnimationDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)
-```
-
-**描述：**
-
-获取当前帧执行动画回调的耗时
-
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetAnimationDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetAnimationDuration(const OH_WindowManager_FrameMetrics *metrics, uint64_t *duration)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_WindowManager_FrameMetrics](capi-windowmanager-oh-windowmanager-framemetrics.md) *metrics | 入参，帧率指标数据对象，不能为空。 |
-| uint64_t *duration | 作为出参使用，表示当前帧执行动画回调的耗时，单位为纳秒，不能为空。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | 返回结果代码。<ul> <li>返回OK，表示函数调用成功。</li> <li>返回WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM，表示参数错误，对应参数取值范围不合理。</li> </ul>具体可见[WindowManager_ErrorCode](capi-oh-window-comm-h.md#windowmanager_errorcode)。 |
-
-### OH_WindowManager_FrameMetrics_GetIntendedVsyncTimestamp()
-
-```c
-int32_t OH_WindowManager_FrameMetrics_GetIntendedVsyncTimestamp(const OH_WindowManager_FrameMetrics *metrics, uint64_t *timestamp)
-```
-
-**描述：**
-
-获取当前帧预期的垂直同步（VSync）起始时间戳。
-
-<!--Device-int32_t OH_WindowManager_FrameMetrics_GetIntendedVsyncTimestamp(const OH_WindowManager_FrameMetrics *metrics, uint64_t *timestamp)--><!--Device-int32_t OH_WindowManager_FrameMetrics_GetIntendedVsyncTimestamp(const OH_WindowManager_FrameMetrics *metrics, uint64_t *timestamp)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_WindowManager_FrameMetrics](capi-windowmanager-oh-windowmanager-framemetrics.md) *metrics | 入参，帧率指标数据对象，不能为空。 |
-| uint64_t *timestamp | 作为出参使用，表示当前帧预期的垂直同步（VSync）起始时间戳，单位为纳秒，不能为空。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int32_t | 返回结果代码。<ul> <li>返回OK，表示函数调用成功。</li> <li>返回WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM，表示参数错误，对应参数取值范围不合理。</li> </ul>具体可见[WindowManager_ErrorCode](capi-oh-window-comm-h.md#windowmanager_errorcode)。 |
-
 ### OH_WindowManager_RegisterFrameMetricsMeasuredCallback()
 
 ```c
@@ -958,10 +760,6 @@ int32_t OH_WindowManager_RegisterFrameMetricsMeasuredCallback(int32_t windowId, 
 **描述：**
 
 订阅窗口帧率指标变更监听事件。 该接口依赖窗口页面内容加载，即需要在ArkTS侧loadContent()接口或setUIContent()接口生效后调用。 应用注册帧率指标变更监听后，仅当客户端UI内容发生重绘（例如页面切换、响应式组件交互、设置背景色和透明度等）时才会触发已注册回调。 如需取消订阅，请使用[OH_WindowManager_UnregisterFrameMetricsMeasuredCallback](capi-oh-window-h.md#oh_windowmanager_unregisterframemetricsmeasuredcallback)接口。
-
-<!--Device-int32_t OH_WindowManager_RegisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)--><!--Device-int32_t OH_WindowManager_RegisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 26.0.0
 
@@ -988,10 +786,6 @@ int32_t OH_WindowManager_UnregisterFrameMetricsMeasuredCallback(int32_t windowId
 
 取消订阅窗口帧率指标变更监听事件。 该接口依赖窗口页面内容加载，即需要在ArkTS侧loadContent()接口或setUIContent()接口生效后调用。 如需订阅，请使用[OH_WindowManager_RegisterFrameMetricsMeasuredCallback](capi-oh-window-h.md#oh_windowmanager_registerframemetricsmeasuredcallback)接口。
 
-<!--Device-int32_t OH_WindowManager_UnregisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)--><!--Device-int32_t OH_WindowManager_UnregisterFrameMetricsMeasuredCallback(int32_t windowId, OH_WindowManager_FrameMetricsMeasuredCallback callback)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1016,10 +810,6 @@ int32_t OH_WindowManager_DensityInfo_GetDefaultDensity(const OH_WindowManager_De
 **描述：**
 
 获取窗口所在屏幕的系统默认显示大小缩放因子。
-
-<!--Device-int32_t OH_WindowManager_DensityInfo_GetDefaultDensity(const OH_WindowManager_DensityInfo* info, float* density)--><!--Device-int32_t OH_WindowManager_DensityInfo_GetDefaultDensity(const OH_WindowManager_DensityInfo* info, float* density)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 24
 
@@ -1046,10 +836,6 @@ int32_t OH_WindowManager_DensityInfo_GetSystemDensity(const OH_WindowManager_Den
 
 获取窗口所在屏幕的系统显示大小缩放因子。
 
-<!--Device-int32_t OH_WindowManager_DensityInfo_GetSystemDensity(const OH_WindowManager_DensityInfo* info, float* density)--><!--Device-int32_t OH_WindowManager_DensityInfo_GetSystemDensity(const OH_WindowManager_DensityInfo* info, float* density)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 24
 
 **参数：**
@@ -1074,10 +860,6 @@ int32_t OH_WindowManager_DensityInfo_GetCustomDensity(const OH_WindowManager_Den
 **描述：**
 
 获取窗口的自定义显示大小缩放因子。
-
-<!--Device-int32_t OH_WindowManager_DensityInfo_GetCustomDensity(const OH_WindowManager_DensityInfo* info, float* density)--><!--Device-int32_t OH_WindowManager_DensityInfo_GetCustomDensity(const OH_WindowManager_DensityInfo* info, float* density)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 24
 
@@ -1104,10 +886,6 @@ int32_t OH_WindowManager_GetDensityInfoCopy(int32_t windowId, const OH_WindowMan
 
 获取窗口所在屏幕的系统显示大小缩放系数，窗口所在屏幕的系统默认显示大小缩放系数， 以及当前窗口自定义设置的显示大小缩放系数。
 
-<!--Device-int32_t OH_WindowManager_GetDensityInfoCopy(int32_t windowId, const OH_WindowManager_DensityInfo** info)--><!--Device-int32_t OH_WindowManager_GetDensityInfoCopy(int32_t windowId, const OH_WindowManager_DensityInfo** info)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 24
 
 **参数：**
@@ -1132,10 +910,6 @@ int32_t OH_WindowManager_RegisterDensityInfoChangeCallback(int32_t windowId, OH_
 **描述：**
 
 Listen for changes in the display size scaling factor information of the window. The callback function is triggered when any of the system display size scaling factor, system default display size scaling factor, or custom display size scaling factor of the screen where the window resides changes.
-
-<!--Device-int32_t OH_WindowManager_RegisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)--><!--Device-int32_t OH_WindowManager_RegisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 24
 
@@ -1162,10 +936,6 @@ int32_t OH_WindowManager_UnregisterDensityInfoChangeCallback(int32_t windowId, O
 
 Unlisten for changes in the display size scaling factor information of the window. The callback function is triggered when any of the system display size scaling factor, system default display size scaling factor, or custom display size scaling factor of the screen where the window resides changes.
 
-<!--Device-int32_t OH_WindowManager_UnregisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)--><!--Device-int32_t OH_WindowManager_UnregisterDensityInfoChangeCallback(int32_t windowId, OH_WindowManager_DensityInfoCallback callback)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 **起始版本：** 24
 
 **参数：**
@@ -1190,10 +960,6 @@ int32_t OH_WindowManager_DensityInfo_Release(const OH_WindowManager_DensityInfo*
 **描述：**
 
 释放DensityInfo指针指向的内存空间
-
-<!--Device-int32_t OH_WindowManager_DensityInfo_Release(const OH_WindowManager_DensityInfo* info)--><!--Device-int32_t OH_WindowManager_DensityInfo_Release(const OH_WindowManager_DensityInfo* info)-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
 
 **起始版本：** 24
 

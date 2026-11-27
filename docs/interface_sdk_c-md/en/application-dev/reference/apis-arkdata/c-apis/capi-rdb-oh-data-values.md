@@ -8,13 +8,11 @@ typedef struct OH_Data_Values OH_Data_Values
 
 Define the OH_Data_Values structure type.
 
-<!--Device-typedef struct OH_Data_Values OH_Data_Values--><!--Device-typedef struct OH_Data_Values OH_Data_Values-End-->
-
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
-**Related module**: [RDB](capi-arkdata-rdb.md)
+**Related module**: [RDB](capi-rdb.md)
 
 **Header file**: [oh_data_values.h](capi-oh-data-values-h.md)
 

@@ -2,15 +2,3 @@
 
 ## Overview
 
-<!--Device-struct mld_hdr {...}--><!--Device-struct mld_hdr {...}-End-->
-
-## Summary
-
-### Member variables
-
-| Name | Description |
-| -- | -- |
-| struct icmp6_hdr    mld_icmp6_hdr | <!--Device-struct icmp6_hdr mld_icmp6_hdr--><!--Device-struct icmp6_hdr mld_icmp6_hdr-End--> |
-| struct in6_addr     mld_addr | <!--Device-struct in6_addr mld_addr--><!--Device-struct in6_addr mld_addr-End--> |
-
-

@@ -22,7 +22,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 默认值：Color.Black
 
-**类型：** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** [EdgeColors](arkts-arkui-edgecolors-t.md) &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 11
 
@@ -48,7 +48,7 @@ radius?: OutlineRadiuses | Dimension
 
 最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。
 
-**类型：** OutlineRadiuses &#124; [Dimension](arkts-arkui-dimension-t.md)
+**类型：** [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -72,7 +72,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 默认值：OutlineStyle.SOLID
 
-**类型：** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-common-comp-outlinestyle-e.md)
+**类型：** [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) &#124; [OutlineStyle](../arkts-components/arkts-arkui-common-comp-outlinestyle-e.md)
 
 **起始版本：** 11
 
@@ -96,7 +96,7 @@ width?: EdgeOutlineWidths | Dimension
 
 默认值：0，外描边效果中width为必设项，否则不显示外描边。
 
-**类型：** EdgeOutlineWidths &#124; [Dimension](arkts-arkui-dimension-t.md)
+**类型：** [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 

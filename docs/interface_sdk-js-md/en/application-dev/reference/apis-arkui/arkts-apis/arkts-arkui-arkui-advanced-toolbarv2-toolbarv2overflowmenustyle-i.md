@@ -106,7 +106,7 @@ radius?: Dimension | BorderRadiuses
 
 Overflow menu corner radius. Default value: undefined.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; BorderRadiuses
 
 **Since:** 26.1.0
 

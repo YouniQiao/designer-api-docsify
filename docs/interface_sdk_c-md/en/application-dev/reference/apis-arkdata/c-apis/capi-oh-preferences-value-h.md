@@ -6,28 +6,26 @@ Provides APIs, enums, and structs for accessing the **PreferencesValue** object.
 
 **Library**: libohpreferences.so
 
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 13
 
-**Related module**: [Preferences](capi-arkdata-preferences.md)
+**Related module**: [Preferences](capi-preferences.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_PreferencesPair](capi-preferences-oh-preferencespair.md) | OH_PreferencesPair | Defines a struct for the **Preferences** data in KV format. |
 | [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) | OH_PreferencesValue | Defines the struct for a **PreferencesValue** object. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Preference_ValueType](#preference_valuetype) | Preference_ValueType | Enumerates the data types of **PreferencesValue**. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -72,27 +70,23 @@ enum Preference_ValueType
 
 Enumerates the data types of **PreferencesValue**.
 
-<!--Device-enum Preference_ValueType--><!--Device-enum Preference_ValueType-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 13
 
 | Enum item | Description |
 | -- | -- |
-| PREFERENCE_TYPE_NULL = 0 | Null.<br><!--Device-PREFERENCE_TYPE_NULL = 0--><!--Device-PREFERENCE_TYPE_NULL = 0-End--> |
-| PREFERENCE_TYPE_INT | Integer.<br><!--Device-PREFERENCE_TYPE_INT--><!--Device-PREFERENCE_TYPE_INT-End--> |
-| PREFERENCE_TYPE_BOOL | Boolean.<br><!--Device-PREFERENCE_TYPE_BOOL--><!--Device-PREFERENCE_TYPE_BOOL-End--> |
-| PREFERENCE_TYPE_STRING | String.<br><!--Device-PREFERENCE_TYPE_STRING--><!--Device-PREFERENCE_TYPE_STRING-End--> |
-| PREFERENCE_TYPE_INT64 | 64-bit integer.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_INT64--><!--Device-PREFERENCE_TYPE_INT64-End--> |
-| PREFERENCE_TYPE_DOUBLE | Double.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_DOUBLE--><!--Device-PREFERENCE_TYPE_DOUBLE-End--> |
-| PREFERENCE_TYPE_INT_ARRAY | Integer array.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_INT_ARRAY--><!--Device-PREFERENCE_TYPE_INT_ARRAY-End--> |
-| PREFERENCE_TYPE_BOOL_ARRAY | Boolean array.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_BOOL_ARRAY--><!--Device-PREFERENCE_TYPE_BOOL_ARRAY-End--> |
-| PREFERENCE_TYPE_STRING_ARRAY | String array.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_STRING_ARRAY--><!--Device-PREFERENCE_TYPE_STRING_ARRAY-End--> |
-| PREFERENCE_TYPE_INT64_ARRAY | 64-bit integer array.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_INT64_ARRAY--><!--Device-PREFERENCE_TYPE_INT64_ARRAY-End--> |
-| PREFERENCE_TYPE_DOUBLE_ARRAY | Double array.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_DOUBLE_ARRAY--><!--Device-PREFERENCE_TYPE_DOUBLE_ARRAY-End--> |
-| PREFERENCE_TYPE_BLOB | Blob.<br>**Since**: 23<br><!--Device-PREFERENCE_TYPE_BLOB--><!--Device-PREFERENCE_TYPE_BLOB-End--> |
-| PREFERENCE_TYPE_BUTT | End type.<br><!--Device-PREFERENCE_TYPE_BUTT--><!--Device-PREFERENCE_TYPE_BUTT-End--> |
+| PREFERENCE_TYPE_NULL = 0 | Null. |
+| PREFERENCE_TYPE_INT | Integer. |
+| PREFERENCE_TYPE_BOOL | Boolean. |
+| PREFERENCE_TYPE_STRING | String. |
+| PREFERENCE_TYPE_INT64 | 64-bit integer.<br>**Since**: 23 |
+| PREFERENCE_TYPE_DOUBLE | Double.<br>**Since**: 23 |
+| PREFERENCE_TYPE_INT_ARRAY | Integer array.<br>**Since**: 23 |
+| PREFERENCE_TYPE_BOOL_ARRAY | Boolean array.<br>**Since**: 23 |
+| PREFERENCE_TYPE_STRING_ARRAY | String array.<br>**Since**: 23 |
+| PREFERENCE_TYPE_INT64_ARRAY | 64-bit integer array.<br>**Since**: 23 |
+| PREFERENCE_TYPE_DOUBLE_ARRAY | Double array.<br>**Since**: 23 |
+| PREFERENCE_TYPE_BLOB | Blob.<br>**Since**: 23 |
+| PREFERENCE_TYPE_BUTT | End type. |
 
 
 ## Function description
@@ -106,10 +100,6 @@ const char *OH_PreferencesPair_GetKey(const OH_PreferencesPair *pairs, uint32_t 
 **Description**
 
 Obtains the key based on the specified index from the KV data.
-
-<!--Device-const char *OH_PreferencesPair_GetKey(const OH_PreferencesPair *pairs, uint32_t index)--><!--Device-const char *OH_PreferencesPair_GetKey(const OH_PreferencesPair *pairs, uint32_t index)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -141,10 +131,6 @@ const OH_PreferencesValue *OH_PreferencesPair_GetPreferencesValue(const OH_Prefe
 
 Obtains the value based on the specified index from the KV pairs.
 
-<!--Device-const OH_PreferencesValue *OH_PreferencesPair_GetPreferencesValue(const OH_PreferencesPair *pairs, uint32_t index)--><!--Device-const OH_PreferencesValue *OH_PreferencesPair_GetPreferencesValue(const OH_PreferencesPair *pairs, uint32_t index)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -175,10 +161,6 @@ void OH_PreferencesPair_Destroy(OH_PreferencesPair *pairs, uint32_t count)
 
 Destroys an [OH_PreferencesPair](capi-preferences-oh-preferencespair.md) instance.
 
-<!--Device-void OH_PreferencesPair_Destroy(OH_PreferencesPair *pairs, uint32_t count)--><!--Device-void OH_PreferencesPair_Destroy(OH_PreferencesPair *pairs, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -202,10 +184,6 @@ Preference_ValueType OH_PreferencesValue_GetValueType(const OH_PreferencesValue 
 **Description**
 
 Obtains the data type of a **PreferencesValue** instance.
-
-<!--Device-Preference_ValueType OH_PreferencesValue_GetValueType(const OH_PreferencesValue *object)--><!--Device-Preference_ValueType OH_PreferencesValue_GetValueType(const OH_PreferencesValue *object)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -235,10 +213,6 @@ int OH_PreferencesValue_GetInt(const OH_PreferencesValue *object, int *value)
 **Description**
 
 Obtains an integer from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_GetInt(const OH_PreferencesValue *object, int *value)--><!--Device-int OH_PreferencesValue_GetInt(const OH_PreferencesValue *object, int *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 13
 
@@ -270,10 +244,6 @@ int OH_PreferencesValue_GetBool(const OH_PreferencesValue *object, bool *value)
 
 Obtains a Boolean value from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetBool(const OH_PreferencesValue *object, bool *value)--><!--Device-int OH_PreferencesValue_GetBool(const OH_PreferencesValue *object, bool *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -304,10 +274,6 @@ int OH_PreferencesValue_GetString(const OH_PreferencesValue *object, char **valu
 
 Obtains a string from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetString(const OH_PreferencesValue *object, char **value, uint32_t *valueLen)--><!--Device-int OH_PreferencesValue_GetString(const OH_PreferencesValue *object, char **value, uint32_t *valueLen)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -315,7 +281,7 @@ Obtains a string from an [OH_PreferencesValue](capi-preferences-oh-preferencesva
 | Parameter | Description |
 | -- | -- |
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | Pointer to the [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance. |
-| char **value | Double pointer to the string obtained. If the string is not required, you can use [OH_Preferences_FreeString](capi-oh-preferences-h.md#oh_preferences_freestring) to free the string (release the memory occupied by the string). |
+| char **value | Double pointer to the string obtained. If the string is not required, you can use OH_Preferences_FreeString to free the string (release the memory occupied by the string). |
 | uint32_t *valueLen | Pointer to the length of the string obtained. |
 
 **Returns**:
@@ -338,10 +304,6 @@ OH_PreferencesValue* OH_PreferencesValue_Create(void)
 **Description**
 
 Creates an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-OH_PreferencesValue* OH_PreferencesValue_Create(void)--><!--Device-OH_PreferencesValue* OH_PreferencesValue_Create(void)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -366,10 +328,6 @@ void OH_PreferencesValue_Destroy(OH_PreferencesValue *value)
 
 Destroys an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-void OH_PreferencesValue_Destroy(OH_PreferencesValue *value)--><!--Device-void OH_PreferencesValue_Destroy(OH_PreferencesValue *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -392,10 +350,6 @@ int OH_PreferencesValue_SetInt(const OH_PreferencesValue *object, int value)
 **Description**
 
 Sets an integer value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetInt(const OH_PreferencesValue *object, int value)--><!--Device-int OH_PreferencesValue_SetInt(const OH_PreferencesValue *object, int value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -427,10 +381,6 @@ int OH_PreferencesValue_SetBool(const OH_PreferencesValue *object, bool value)
 
 Sets a boolean value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_SetBool(const OH_PreferencesValue *object, bool value)--><!--Device-int OH_PreferencesValue_SetBool(const OH_PreferencesValue *object, bool value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -460,10 +410,6 @@ int OH_PreferencesValue_SetString(const OH_PreferencesValue *object, const char 
 **Description**
 
 Sets a string value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetString(const OH_PreferencesValue *object, const char *value)--><!--Device-int OH_PreferencesValue_SetString(const OH_PreferencesValue *object, const char *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -495,10 +441,6 @@ int OH_PreferencesValue_SetInt64(const OH_PreferencesValue *object, int64_t valu
 
 Sets an int64 value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_SetInt64(const OH_PreferencesValue *object, int64_t value)--><!--Device-int OH_PreferencesValue_SetInt64(const OH_PreferencesValue *object, int64_t value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -528,10 +470,6 @@ int OH_PreferencesValue_GetInt64(const OH_PreferencesValue *object, int64_t *val
 **Description**
 
 Obtains an int64 value from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_GetInt64(const OH_PreferencesValue *object, int64_t *value)--><!--Device-int OH_PreferencesValue_GetInt64(const OH_PreferencesValue *object, int64_t *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -563,10 +501,6 @@ int OH_PreferencesValue_SetDouble(const OH_PreferencesValue *object, double valu
 
 Sets a double value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_SetDouble(const OH_PreferencesValue *object, double value)--><!--Device-int OH_PreferencesValue_SetDouble(const OH_PreferencesValue *object, double value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -597,10 +531,6 @@ int OH_PreferencesValue_GetDouble(const OH_PreferencesValue *object, double *val
 
 Obtains a double value from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetDouble(const OH_PreferencesValue *object, double *value)--><!--Device-int OH_PreferencesValue_GetDouble(const OH_PreferencesValue *object, double *value)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -630,10 +560,6 @@ int OH_PreferencesValue_SetIntArray(const OH_PreferencesValue *object, const int
 **Description**
 
 Sets an integer array for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetIntArray(const OH_PreferencesValue *object, const int *value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetIntArray(const OH_PreferencesValue *object, const int *value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -666,10 +592,6 @@ int OH_PreferencesValue_GetIntArray(const OH_PreferencesValue *object, int **val
 
 Obtains an integer array from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetIntArray(const OH_PreferencesValue *object, int **value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetIntArray(const OH_PreferencesValue *object, int **value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -700,10 +622,6 @@ int OH_PreferencesValue_SetBoolArray(const OH_PreferencesValue *object, const bo
 **Description**
 
 Sets a boolean array for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetBoolArray(const OH_PreferencesValue *object, const bool *value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetBoolArray(const OH_PreferencesValue *object, const bool *value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -736,10 +654,6 @@ int OH_PreferencesValue_GetBoolArray(const OH_PreferencesValue *object, bool **v
 
 Obtains a boolean array from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetBoolArray(const OH_PreferencesValue *object, bool **value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetBoolArray(const OH_PreferencesValue *object, bool **value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -770,10 +684,6 @@ int OH_PreferencesValue_SetStringArray(const OH_PreferencesValue *object, const 
 **Description**
 
 Sets a string array for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetStringArray(const OH_PreferencesValue *object, const char **value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetStringArray(const OH_PreferencesValue *object, const char **value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -806,10 +716,6 @@ int OH_PreferencesValue_GetStringArray(const OH_PreferencesValue *object, char *
 
 Obtains a string array of an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetStringArray(const OH_PreferencesValue *object, char ***value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetStringArray(const OH_PreferencesValue *object, char ***value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -840,10 +746,6 @@ int OH_PreferencesValue_SetInt64Array(const OH_PreferencesValue *object, const i
 **Description**
 
 Sets an int64 array for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetInt64Array(const OH_PreferencesValue *object, const int64_t *value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetInt64Array(const OH_PreferencesValue *object, const int64_t *value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -876,10 +778,6 @@ int OH_PreferencesValue_GetInt64Array(const OH_PreferencesValue *object, int64_t
 
 Obtains an int64 array from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetInt64Array(const OH_PreferencesValue *object, int64_t **value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetInt64Array(const OH_PreferencesValue *object, int64_t **value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -910,10 +808,6 @@ int OH_PreferencesValue_SetDoubleArray(const OH_PreferencesValue *object, const 
 **Description**
 
 Sets a double array for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_SetDoubleArray(const OH_PreferencesValue *object, const double *value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetDoubleArray(const OH_PreferencesValue *object, const double *value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 
@@ -946,10 +840,6 @@ int OH_PreferencesValue_GetDoubleArray(const OH_PreferencesValue *object, double
 
 Obtains a double array of an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_GetDoubleArray(const OH_PreferencesValue *object, double **value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetDoubleArray(const OH_PreferencesValue *object, double **value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -981,10 +871,6 @@ int OH_PreferencesValue_SetBlob(const OH_PreferencesValue *object, const uint8_t
 
 Sets a blob value for an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
 
-<!--Device-int OH_PreferencesValue_SetBlob(const OH_PreferencesValue *object, const uint8_t *value, uint32_t count)--><!--Device-int OH_PreferencesValue_SetBlob(const OH_PreferencesValue *object, const uint8_t *value, uint32_t count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -1015,10 +901,6 @@ int OH_PreferencesValue_GetBlob(const OH_PreferencesValue *object, uint8_t **val
 **Description**
 
 Obtains a blob value from an [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance.
-
-<!--Device-int OH_PreferencesValue_GetBlob(const OH_PreferencesValue *object, uint8_t **value, uint32_t *count)--><!--Device-int OH_PreferencesValue_GetBlob(const OH_PreferencesValue *object, uint8_t **value, uint32_t *count)-End-->
-
-**System capability**: SystemCapability.DistributedDataManager.Preferences.Core
 
 **Since**: 23
 

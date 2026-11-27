@@ -1,20 +1,18 @@
 # OH_NativeXComponent_Callback
 
 ```c
-typedef struct OH_NativeXComponent_Callback {...} OH_NativeXComponent_Callback
+struct OH_NativeXComponent_Callback {...}
 ```
 
 ## 概述
 
 OH_NativeXComponent_Callback用于注册XComponent的Surface生命周期（创建、改变、销毁）和触摸事件回调。 适用于需要在Native侧感知Surface状态变化并处理用户触摸交互的场景。
 
-<!--Device-struct OH_NativeXComponent_Callback {...}--><!--Device-struct OH_NativeXComponent_Callback {...}-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 8
 
-**相关模块：** [OH_NativeXComponent Native XComponent](capi-arkui-oh-nativexcomponent-native-xcomponent.md)
+**相关模块：** [OH_NativeXComponent Native XComponent](capi-oh-nativexcomponent-native-xcomponent.md)
 
 **所在头文件：** [native_interface_xcomponent.h](capi-native-interface-xcomponent-h.md)
 
@@ -41,8 +39,6 @@ void (*OnSurfaceCreated)(OH_NativeXComponent* component, void* window)
 
 当Surface创建时调用。
 
-<!--Device-void (*OnSurfaceCreated)(OH_NativeXComponent* component, void* window)--><!--Device-void (*OnSurfaceCreated)(OH_NativeXComponent* component, void* window)-End-->
-
 **起始版本：** 8
 
 **参数：**
@@ -61,8 +57,6 @@ void (*OnSurfaceChanged)(OH_NativeXComponent* component, void* window)
 **描述：**
 
 当Surface尺寸发生改变时调用。
-
-<!--Device-void (*OnSurfaceChanged)(OH_NativeXComponent* component, void* window)--><!--Device-void (*OnSurfaceChanged)(OH_NativeXComponent* component, void* window)-End-->
 
 **起始版本：** 8
 
@@ -83,8 +77,6 @@ void (*OnSurfaceDestroyed)(OH_NativeXComponent* component, void* window)
 
 当Surface被销毁时调用。
 
-<!--Device-void (*OnSurfaceDestroyed)(OH_NativeXComponent* component, void* window)--><!--Device-void (*OnSurfaceDestroyed)(OH_NativeXComponent* component, void* window)-End-->
-
 **起始版本：** 8
 
 **参数：**
@@ -103,8 +95,6 @@ void (*DispatchTouchEvent)(OH_NativeXComponent* component, void* window)
 **描述：**
 
 当触摸事件被分发时调用，开发者可在此回调中获取触摸事件数据以实现自定义交互逻辑（如手势识别、自定义绘制等）。
-
-<!--Device-void (*DispatchTouchEvent)(OH_NativeXComponent* component, void* window)--><!--Device-void (*DispatchTouchEvent)(OH_NativeXComponent* component, void* window)-End-->
 
 **起始版本：** 8
 

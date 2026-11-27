@@ -1,20 +1,18 @@
 # OH_Drawing_FontFallbackGroup
 
 ```c
-typedef struct OH_Drawing_FontFallbackGroup {...} OH_Drawing_FontFallbackGroup
+struct OH_Drawing_FontFallbackGroup {...}
 ```
 
 ## Overview
 
 This struct describes the information about a font fallback group.
 
-<!--Device-struct OH_Drawing_FontFallbackGroup {...}--><!--Device-struct OH_Drawing_FontFallbackGroup {...}-End-->
-
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 **Header file**: [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,8 +22,8 @@ This struct describes the information about a font fallback group.
 
 | Name | Description |
 | -- | -- |
-| char* groupName | Name of the font set corresponding to the fallback font group. If the value is empty, all fonts in the fallback font set list can be used.<br><!--Device-char* groupName--><!--Device-char* groupName-End--> |
-| size_t fallbackInfoSize | Number of font fallbacks.<br><!--Device-size_t fallbackInfoSize--><!--Device-size_t fallbackInfoSize-End--> |
-| [OH_Drawing_FontFallbackInfo*](capi-drawing-oh-drawing-fontfallbackinfo.md) fallbackInfoSet | List of fallback font sets.<br><!--Device-OH_Drawing_FontFallbackInfo* fallbackInfoSet--><!--Device-OH_Drawing_FontFallbackInfo* fallbackInfoSet-End--> |
+| char* groupName | Name of the font set corresponding to the fallback font group. If the value is empty, all fonts in the fallback font set list can be used. |
+| size_t fallbackInfoSize | Number of font fallbacks. |
+| [OH_Drawing_FontFallbackInfo*](capi-drawing-oh-drawing-fontfallbackinfo.md) fallbackInfoSet | List of fallback font sets. |
 
 

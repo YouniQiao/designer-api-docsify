@@ -19,4 +19,4 @@ declare type DialogOptionsBorderWidth = Dimension | EdgeWidths
 | 类型 | 说明 |
 | --- | --- |
 | [Dimension](arkts-arkui-dimension-t.md) |  |
-| EdgeWidths |  |
+| [EdgeWidths](arkts-arkui-edgewidths-t.md) |  |

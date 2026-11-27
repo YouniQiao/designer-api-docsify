@@ -1,20 +1,18 @@
 # PhotoOutput_Callbacks
 
 ```c
-typedef struct PhotoOutput_Callbacks {...} PhotoOutput_Callbacks
+struct PhotoOutput_Callbacks {...}
 ```
 
 ## Overview
 
 The struct describes the callbacks related to photo output.
 
-<!--Device-struct PhotoOutput_Callbacks {...}--><!--Device-struct PhotoOutput_Callbacks {...}-End-->
-
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
-**Related module**: [OH_Camera](capi-camera-kit-oh-camera.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 **Header file**: [photo_output.h](capi-photo-output-h.md)
 
@@ -24,9 +22,9 @@ The struct describes the callbacks related to photo output.
 
 | Name | Description |
 | -- | -- |
-| [OH_PhotoOutput_OnFrameStart](capi-photo-output-h.md#oh_photooutput_onframestart) onFrameStart | Callback to report photo output frame start events.<br><!--Device-OH_PhotoOutput_OnFrameStart onFrameStart--><!--Device-OH_PhotoOutput_OnFrameStart onFrameStart-End--> |
-| [OH_PhotoOutput_OnFrameShutter](capi-photo-output-h.md#oh_photooutput_onframeshutter) onFrameShutter | Callback to report frame shutter events.<br><!--Device-OH_PhotoOutput_OnFrameShutter onFrameShutter--><!--Device-OH_PhotoOutput_OnFrameShutter onFrameShutter-End--> |
-| [OH_PhotoOutput_OnFrameEnd](capi-photo-output-h.md#oh_photooutput_onframeend) onFrameEnd | Callback to report photo output frame end events.<br><!--Device-OH_PhotoOutput_OnFrameEnd onFrameEnd--><!--Device-OH_PhotoOutput_OnFrameEnd onFrameEnd-End--> |
-| [OH_PhotoOutput_OnError](capi-photo-output-h.md#oh_photooutput_onerror) onError | Callback to report photo output errors.<br><!--Device-OH_PhotoOutput_OnError onError--><!--Device-OH_PhotoOutput_OnError onError-End--> |
+| [OH_PhotoOutput_OnFrameStart](capi-photo-output-h.md#oh_photooutput_onframestart) onFrameStart | Callback to report photo output frame start events. |
+| [OH_PhotoOutput_OnFrameShutter](capi-photo-output-h.md#oh_photooutput_onframeshutter) onFrameShutter | Callback to report frame shutter events. |
+| [OH_PhotoOutput_OnFrameEnd](capi-photo-output-h.md#oh_photooutput_onframeend) onFrameEnd | Callback to report photo output frame end events. |
+| [OH_PhotoOutput_OnError](capi-photo-output-h.md#oh_photooutput_onerror) onError | Callback to report photo output errors. |
 
 

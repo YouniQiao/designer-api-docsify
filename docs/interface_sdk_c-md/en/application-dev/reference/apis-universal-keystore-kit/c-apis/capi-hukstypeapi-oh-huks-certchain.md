@@ -1,20 +1,18 @@
 # OH_Huks_CertChain
 
 ```c
-typedef struct OH_Huks_CertChain {...} OH_Huks_CertChain
+struct OH_Huks_CertChain {...}
 ```
 
 ## Overview
 
 Defines the struct of a certificate chain.
 
-<!--Device-struct OH_Huks_CertChain {...}--><!--Device-struct OH_Huks_CertChain {...}-End-->
-
 **System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
-**Related module**: [HuksTypeApi](capi-universal-keystore-kit-hukstypeapi.md)
+**Related module**: [HuksTypeApi](capi-hukstypeapi.md)
 
 **Header file**: [native_huks_type.h](capi-native-huks-type-h.md)
 
@@ -24,7 +22,7 @@ Defines the struct of a certificate chain.
 
 | Name | Description |
 | -- | -- |
-| [struct OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) *certs | Pointer to the certificate data.<br><!--Device-struct OH_Huks_Blob *certs--><!--Device-struct OH_Huks_Blob *certs-End--> |
-| uint32_t certsCount | Number of certificates.<br><!--Device-uint32_t certsCount--><!--Device-uint32_t certsCount-End--> |
+| struct OH_Huks_Blob *certs | Pointer to the certificate data. |
+| uint32_t certsCount | Number of certificates. |
 
 

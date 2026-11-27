@@ -6,41 +6,39 @@ Defines the native APIs for swapfs.
 
 **Library**: libohswapfs.so
 
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
-**Related module**: [Swapfs](capi-core-file-kit-swapfs.md)
+**Related module**: [Swapfs](capi-swapfs.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_SwapfsConfig(System API)](capi-swapfs-oh-swapfsconfig-sys.md) | OH_SwapfsConfig | Configuration for creating a swapfs manager.<br>**System API:** This is a system API. |
-| [OH_SwapfsSwapOutRequest(System API)](capi-swapfs-oh-swapfsswapoutrequest-sys.md) | OH_SwapfsSwapOutRequest | Request parameters for swap-out operation.<br>**System API:** This is a system API. |
-| [OH_SwapfsSwapInRequest(System API)](capi-swapfs-oh-swapfsswapinrequest-sys.md) | OH_SwapfsSwapInRequest | Request parameters for swap-in operation.<br>**System API:** This is a system API. |
-| [OH_SwapfsDataInfo(System API)](capi-swapfs-oh-swapfsdatainfo-sys.md) | OH_SwapfsDataInfo | Information about a single swap key.<br>**System API:** This is a system API. |
-| [OH_SwapfsStats(System API)](capi-swapfs-oh-swapfsstats-sys.md) | OH_SwapfsStats | Statistics of the current swapfs manager.<br>**System API:** This is a system API. |
+| [OH_SwapfsConfig(System API)](capi-swapfs-oh-swapfsconfig-sys.md) | - | Configuration for creating a swapfs manager.<br>**System API:** This is a system API. |
+| [OH_SwapfsSwapOutRequest(System API)](capi-swapfs-oh-swapfsswapoutrequest-sys.md) | - | Request parameters for swap-out operation.<br>**System API:** This is a system API. |
+| [OH_SwapfsSwapInRequest(System API)](capi-swapfs-oh-swapfsswapinrequest-sys.md) | - | Request parameters for swap-in operation.<br>**System API:** This is a system API. |
+| [OH_SwapfsDataInfo(System API)](capi-swapfs-oh-swapfsdatainfo-sys.md) | - | Information about a single swap key.<br>**System API:** This is a system API. |
+| [OH_SwapfsStats(System API)](capi-swapfs-oh-swapfsstats-sys.md) | - | Statistics of the current swapfs manager.<br>**System API:** This is a system API. |
 | [OH_SwapfsManager(System API)](capi-swapfs-oh-swapfsmanager-sys.md) | OH_SwapfsManager | The struct is used to perform operations related to swapfs manager.<br>**System API:** This is a system API. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_SwapfsKeyStatus(System API)](#oh_swapfskeystatus) | OH_SwapfsKeyStatus | Defines the status of a swap key.<br>**System API:** This is a system API. |
 | [OH_SwapfsDisableReason(System API)](#oh_swapfsdisablereason) | OH_SwapfsDisableReason | Defines the reason why the swap-out feature is disabled.<br>**System API:** This is a system API. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
 | SWAPFS_DIO_ALIGNMENT 4096U(System API) | Minimum alignment requirement for Direct IO buffers.<br>**Since**: 26.0.0<br>**System API:** This is a system API. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -65,18 +63,14 @@ enum OH_SwapfsKeyStatus
 
 Defines the status of a swap key.
 
-<!--Device-enum OH_SwapfsKeyStatus--><!--Device-enum OH_SwapfsKeyStatus-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
 | Enum item | Description |
 | -- | -- |
-| OH_SWAPFS_KEY_STATUS_ACTIVE = 0 | The key is active and available for swap-in, query, or removal.<br>**Since**: 26.0.0<br><!--Device-OH_SWAPFS_KEY_STATUS_ACTIVE = 0--><!--Device-OH_SWAPFS_KEY_STATUS_ACTIVE = 0-End--> |
-| OH_SWAPFS_KEY_STATUS_REMOVING = 1 | The key is logically deleted. New swap-in or query operations will be rejected.<br>**Since**: 26.0.0<br><!--Device-OH_SWAPFS_KEY_STATUS_REMOVING = 1--><!--Device-OH_SWAPFS_KEY_STATUS_REMOVING = 1-End--> |
+| OH_SWAPFS_KEY_STATUS_ACTIVE = 0 | The key is active and available for swap-in, query, or removal.<br>**Since**: 26.0.0 |
+| OH_SWAPFS_KEY_STATUS_REMOVING = 1 | The key is logically deleted. New swap-in or query operations will be rejected.<br>**Since**: 26.0.0 |
 
 ### OH_SwapfsDisableReason
 
@@ -88,18 +82,14 @@ enum OH_SwapfsDisableReason
 
 Defines the reason why the swap-out feature is disabled.
 
-<!--Device-enum OH_SwapfsDisableReason--><!--Device-enum OH_SwapfsDisableReason-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
 
 | Enum item | Description |
 | -- | -- |
-| OH_SWAPFS_DISABLE_REASON_NONE = 0 | The feature is enabled (no disable reason).<br>**Since**: 26.0.0<br><!--Device-OH_SWAPFS_DISABLE_REASON_NONE = 0--><!--Device-OH_SWAPFS_DISABLE_REASON_NONE = 0-End--> |
-| OH_SWAPFS_DISABLE_REASON_NOSPC = 1 | Device storage space is insufficient.<br>**Since**: 26.0.0<br><!--Device-OH_SWAPFS_DISABLE_REASON_NOSPC = 1--><!--Device-OH_SWAPFS_DISABLE_REASON_NOSPC = 1-End--> |
+| OH_SWAPFS_DISABLE_REASON_NONE = 0 | The feature is enabled (no disable reason).<br>**Since**: 26.0.0 |
+| OH_SWAPFS_DISABLE_REASON_NOSPC = 1 | Device storage space is insufficient.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -114,13 +104,9 @@ OH_Swapfs_ErrCode OH_Swapfs_CreateManager(const OH_SwapfsConfig *config, OH_Swap
 
 Creates a swapfs manager.
 
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_CreateManager(const OH_SwapfsConfig *config, OH_SwapfsManager **manager)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_CreateManager(const OH_SwapfsConfig *config, OH_SwapfsManager **manager)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
-**Resource release**: [OH_Swapfs_DestroyManager](#oh_swapfs_destroymanager)
+**Resource release**: swapfs/OH_Swapfs_DestroyManager {manager}
 
 **System API:** This is a system API.
 
@@ -147,10 +133,6 @@ OH_Swapfs_ErrCode OH_Swapfs_DestroyManager(OH_SwapfsManager *manager)
 
 Destroys a swapfs manager and releases all resources.<br> This function enters the shutting-down state and rejects new swap-out, swap-in, remove, and remove-all operations. It waits up to 5 seconds for active operations to complete. If all operations complete within the timeout, all swap data owned by the manager is automatically removed and the manager is destroyed. If the wait times out, this function cancels the shutting-down state and returns SWAPFS_E_BUSY; the caller can retry later.
 
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_DestroyManager(OH_SwapfsManager *manager)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_DestroyManager(OH_SwapfsManager *manager)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
@@ -176,10 +158,6 @@ OH_Swapfs_ErrCode OH_Swapfs_SwapOut(OH_SwapfsManager *manager, const OH_SwapfsSw
 **Description**
 
 Swaps out data from memory to disk.<br> When config.useDirectIo is false, buffered IO is used. When true, Direct IO is required and misaligned buffers cause an error. In DIO mode, the swap file size is padded to SWAPFS_DIO_ALIGNMENT (occupiedSize is greater than or equal to dataSize).
-
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_SwapOut(OH_SwapfsManager *manager, const OH_SwapfsSwapOutRequest *request, uint64_t *keyId)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_SwapOut(OH_SwapfsManager *manager, const OH_SwapfsSwapOutRequest *request, uint64_t *keyId)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
 
 **Since**: 26.0.0
 
@@ -209,10 +187,6 @@ OH_Swapfs_ErrCode OH_Swapfs_SwapIn(OH_SwapfsManager *manager, const OH_SwapfsSwa
 
 Swaps in data from disk back to memory.<br> In DIO mode, the buffer address and size must be aligned to SWAPFS_DIO_ALIGNMENT, and bufferSize must be greater than or equal to occupiedSize. In buffered mode, bufferSize must be greater than or equal to dataSize. On success, readSize receives the original dataSize (not occupiedSize).
 
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_SwapIn(OH_SwapfsManager *manager, const OH_SwapfsSwapInRequest *request, uint64_t *readSize)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_SwapIn(OH_SwapfsManager *manager, const OH_SwapfsSwapInRequest *request, uint64_t *readSize)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
@@ -240,10 +214,6 @@ OH_Swapfs_ErrCode OH_Swapfs_QueryData(OH_SwapfsManager *manager, uint64_t keyId,
 **Description**
 
 Queries information about a specific swap key.
-
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_QueryData(OH_SwapfsManager *manager, uint64_t keyId, OH_SwapfsDataInfo *info)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_QueryData(OH_SwapfsManager *manager, uint64_t keyId, OH_SwapfsDataInfo *info)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
 
 **Since**: 26.0.0
 
@@ -273,10 +243,6 @@ OH_Swapfs_ErrCode OH_Swapfs_GetStats(OH_SwapfsManager *manager, OH_SwapfsStats *
 
 Obtains statistics of the current swapfs manager.
 
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_GetStats(OH_SwapfsManager *manager, OH_SwapfsStats *stats)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_GetStats(OH_SwapfsManager *manager, OH_SwapfsStats *stats)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
@@ -304,10 +270,6 @@ OH_Swapfs_ErrCode OH_Swapfs_RemoveData(OH_SwapfsManager *manager, uint64_t keyId
 
 Logically deletes a specific swap key.<br> The key is marked as REMOVING state immediately. Existing swap-in operations can still complete. New swap-in or query operations on this key will return SWAPFS_E_KEY_STATE_INVALID. This function does not return SWAPFS_E_BUSY for concurrent swap-in operations.
 
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_RemoveData(OH_SwapfsManager *manager, uint64_t keyId)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_RemoveData(OH_SwapfsManager *manager, uint64_t keyId)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
-
 **Since**: 26.0.0
 
 **System API:** This is a system API.
@@ -334,10 +296,6 @@ OH_Swapfs_ErrCode OH_Swapfs_RemoveAllData(OH_SwapfsManager *manager)
 **Description**
 
 Removes all swap keys in the manager.<br> If there are active operations in progress (swap-out or swap-in), or any key is in REMOVING state, this function returns SWAPFS_E_BUSY without starting any removal.
-
-<!--Device-OH_Swapfs_ErrCode OH_Swapfs_RemoveAllData(OH_SwapfsManager *manager)--><!--Device-OH_Swapfs_ErrCode OH_Swapfs_RemoveAllData(OH_SwapfsManager *manager)-End-->
-
-**System capability**: SystemCapability.FileManagement.File.Swapfs
 
 **Since**: 26.0.0
 

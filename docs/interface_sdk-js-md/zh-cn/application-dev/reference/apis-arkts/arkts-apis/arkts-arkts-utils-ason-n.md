@@ -26,8 +26,8 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [parse](arkts-arkts-ason-parse-f.md#parse-1) | 用于解析JSON字符串生成ISendable数据或null。 |
-| [stringify](arkts-arkts-ason-stringify-f.md#stringify-1) | 该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。 |
+| [parse](arkts-arkts-utils-ason-parse-f.md#parse-1) | 用于解析JSON字符串生成ISendable数据或null。 |
+| [stringify](arkts-arkts-utils-ason-stringify-f.md#stringify-1) | 该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。 |
 
 ### 接口
 
@@ -39,8 +39,8 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) | ISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必要的方法和属性。 |
-| [Transformer](arkts-arkts-ason-transformer-t.md) | 用于转换结果函数的类型。 |
+| [ISendable](arkts-arkts-utils-ason-isendable-t.md) | ISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必要的方法和属性。 |
+| [Transformer](arkts-arkts-utils-ason-transformer-t.md) | 用于转换结果函数的类型。 |
 
 ### 枚举
 

@@ -8,13 +8,11 @@ struct OhosImageReceiverInfo {...}
 
 定义ImageReceiver的相关信息。
 
-<!--Device-struct OhosImageReceiverInfo {...}--><!--Device-struct OhosImageReceiverInfo {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **起始版本：** 10
 
-**相关模块：** [Image](capi-image-kit-image.md)
+**相关模块：** [Image](capi-image.md)
 
 **所在头文件：** [image_receiver_mdk.h](capi-image-receiver-mdk-h.md)
 
@@ -24,9 +22,9 @@ struct OhosImageReceiverInfo {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t width | Default width of the image received by the consumer, in pixels.<br><!--Device-int32_t width--><!--Device-int32_t width-End--> |
-| int32_t height | Default height of the image received by the consumer, in pixels.<br><!--Device-int32_t height--><!--Device-int32_t height-End--> |
-| int32_t format | Image format [OHOS_IMAGE_FORMAT_JPEG](capi-image-mdk-h.md#anonymous0) created by using the receiver.<br><!--Device-int32_t format--><!--Device-int32_t format-End--> |
-| int32_t capicity | Maximum number of images that can be cached.<br><!--Device-int32_t capicity--><!--Device-int32_t capicity-End--> |
+| int32_t width | Default width of the image received by the consumer, in pixels. |
+| int32_t height | Default height of the image received by the consumer, in pixels. |
+| int32_t format | Image format [OHOS_IMAGE_FORMAT_JPEG](capi-image-mdk-h.md#anonymous0) created by using the receiver. |
+| int32_t capicity | Maximum number of images that can be cached. |
 
 

@@ -1,20 +1,18 @@
 # OH_Drawing_FontStyleStruct
 
 ```c
-typedef struct OH_Drawing_FontStyleStruct {...} OH_Drawing_FontStyleStruct
+struct OH_Drawing_FontStyleStruct {...}
 ```
 
 ## 概述
 
 定义字体样式信息的结构体。
 
-<!--Device-struct OH_Drawing_FontStyleStruct {...}--><!--Device-struct OH_Drawing_FontStyleStruct {...}-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 **所在头文件：** [drawing_text_typography.h](capi-drawing-text-typography-h.md)
 
@@ -24,8 +22,8 @@ typedef struct OH_Drawing_FontStyleStruct {...} OH_Drawing_FontStyleStruct
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight) weight | 字体字重。<br><!--Device-OH_Drawing_FontWeight weight--><!--Device-OH_Drawing_FontWeight weight-End--> |
-| [OH_Drawing_FontWidth](capi-drawing-text-typography-h.md#oh_drawing_fontwidth) width | 字宽。<br><!--Device-OH_Drawing_FontWidth width--><!--Device-OH_Drawing_FontWidth width-End--> |
-| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) slant | 字体斜体。<br><!--Device-OH_Drawing_FontStyle slant--><!--Device-OH_Drawing_FontStyle slant-End--> |
+| [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight) weight | 字体字重。 |
+| [OH_Drawing_FontWidth](capi-drawing-text-typography-h.md#oh_drawing_fontwidth) width | 字宽。 |
+| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) slant | 字体斜体。 |
 
 

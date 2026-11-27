@@ -33,7 +33,7 @@ Unzips a file. The execution result is returned after the decompression is compl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context.md). If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
+| inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr.md). If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the unzipped file. |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the unzip operation. |
 

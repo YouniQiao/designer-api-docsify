@@ -242,56 +242,56 @@
   <!--Del-->
   - [FormError（系统接口）](arkts-form-formerror-formerror-e-sys.md)<!--DelEnd-->
 - [@ohos.application.formBindingData（卡片数据绑定类）](arkts-form-application-formbindingdata.md)
-  - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md)
-  - [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
+  - [createFormBindingData](arkts-form-formbindingdata-depr-createformbindingdata-f.md)
+  - [FormBindingData](arkts-form-formbindingdata-depr-formbindingdata-i.md)
 <!--Del-->
 - [@ohos.application.formHost（formHost）](arkts-form-application-formhost.md)<!--DelEnd-->
   <!--Del-->
-  - [acquireFormState（系统接口）](arkts-form-formhost-acquireformstate-depr-f-sys.md)<!--DelEnd-->
+  - [acquireFormState（系统接口）](arkts-form-formhost-depr-acquireformstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [castTempForm（系统接口）](arkts-form-formhost-casttempform-depr-f-sys.md)<!--DelEnd-->
+  - [castTempForm（系统接口）](arkts-form-formhost-depr-casttempform-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [deleteForm（系统接口）](arkts-form-formhost-deleteform-depr-f-sys.md)<!--DelEnd-->
+  - [deleteForm（系统接口）](arkts-form-formhost-depr-deleteform-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [deleteInvalidForms（系统接口）](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md)<!--DelEnd-->
+  - [deleteInvalidForms（系统接口）](arkts-form-formhost-depr-deleteinvalidforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [disableFormsUpdate（系统接口）](arkts-form-formhost-disableformsupdate-depr-f-sys.md)<!--DelEnd-->
+  - [disableFormsUpdate（系统接口）](arkts-form-formhost-depr-disableformsupdate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [enableFormsUpdate（系统接口）](arkts-form-formhost-enableformsupdate-depr-f-sys.md)<!--DelEnd-->
+  - [enableFormsUpdate（系统接口）](arkts-form-formhost-depr-enableformsupdate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getAllFormsInfo（系统接口）](arkts-form-formhost-getallformsinfo-depr-f-sys.md)<!--DelEnd-->
+  - [getAllFormsInfo（系统接口）](arkts-form-formhost-depr-getallformsinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getFormsInfo（系统接口）](arkts-form-formhost-getformsinfo-depr-f-sys.md)<!--DelEnd-->
+  - [getFormsInfo（系统接口）](arkts-form-formhost-depr-getformsinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [isSystemReady（系统接口）](arkts-form-formhost-issystemready-depr-f-sys.md)<!--DelEnd-->
+  - [isSystemReady（系统接口）](arkts-form-formhost-depr-issystemready-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyFormsEnableUpdate（系统接口）](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md)<!--DelEnd-->
+  - [notifyFormsEnableUpdate（系统接口）](arkts-form-formhost-depr-notifyformsenableupdate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyFormsVisible（系统接口）](arkts-form-formhost-notifyformsvisible-depr-f-sys.md)<!--DelEnd-->
+  - [notifyFormsVisible（系统接口）](arkts-form-formhost-depr-notifyformsvisible-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyInvisibleForms（系统接口）](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md)<!--DelEnd-->
+  - [notifyInvisibleForms（系统接口）](arkts-form-formhost-depr-notifyinvisibleforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifyVisibleForms（系统接口）](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md)<!--DelEnd-->
+  - [notifyVisibleForms（系统接口）](arkts-form-formhost-depr-notifyvisibleforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off（系统接口）](arkts-form-formhost-off-depr-f-sys.md)<!--DelEnd-->
+  - [off（系统接口）](arkts-form-formhost-depr-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on（系统接口）](arkts-form-formhost-on-depr-f-sys.md)<!--DelEnd-->
+  - [on（系统接口）](arkts-form-formhost-depr-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [releaseForm（系统接口）](arkts-form-formhost-releaseform-depr-f-sys.md)<!--DelEnd-->
+  - [releaseForm（系统接口）](arkts-form-formhost-depr-releaseform-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [requestForm（系统接口）](arkts-form-formhost-requestform-depr-f-sys.md)<!--DelEnd-->
+  - [requestForm（系统接口）](arkts-form-formhost-depr-requestform-f-sys.md)<!--DelEnd-->
 - [@ohos.application.formInfo（formInfo）](arkts-form-application-forminfo.md)
-  - [FormInfo](arkts-form-forminfo-forminfo-depr-i.md)
-  - [FormStateInfo](arkts-form-forminfo-formstateinfo-depr-i.md)
-  - [ColorMode](arkts-form-forminfo-colormode-depr-e.md)
-  - [FormParam](arkts-form-forminfo-formparam-depr-e.md)
+  - [FormInfo](arkts-form-forminfo-depr-forminfo-i.md)
+  - [FormStateInfo](arkts-form-forminfo-depr-formstateinfo-i.md)
+  - [ColorMode](arkts-form-forminfo-depr-colormode-e.md)
+  - [FormParam](arkts-form-forminfo-depr-formparam-e.md)
   <!--Del-->
-  - [FormParam（系统接口）](arkts-form-forminfo-formparam-depr-e-sys.md)<!--DelEnd-->
-  - [FormState](arkts-form-forminfo-formstate-depr-e.md)
-  - [FormType](arkts-form-forminfo-formtype-depr-e.md)
+  - [FormParam（系统接口）](arkts-form-forminfo-depr-formparam-e-sys.md)<!--DelEnd-->
+  - [FormState](arkts-form-forminfo-depr-formstate-e.md)
+  - [FormType](arkts-form-forminfo-depr-formtype-e.md)
 - [@ohos.application.formProvider（formProvider）](arkts-form-application-formprovider.md)
-  - [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md)
-  - [updateForm](arkts-form-formprovider-updateform-depr-f.md)
+  - [setFormNextRefreshTime](arkts-form-formprovider-depr-setformnextrefreshtime-f.md)
+  - [updateForm](arkts-form-formprovider-depr-updateform-f.md)
 - application<!--arkts-formkit-application-->
   - [FormEditExtensionContext（FormEditExtensionAbility上下文-FormEditExtensionContext）](arkts-form-formeditextensioncontext.md)
     - [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)

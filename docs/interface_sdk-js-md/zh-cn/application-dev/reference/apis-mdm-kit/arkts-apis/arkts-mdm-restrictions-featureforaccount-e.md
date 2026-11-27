@@ -208,6 +208,38 @@ PRINT = 4
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## SCREEN_RECORD
+
+```TypeScript
+SCREEN_RECORD = 18
+```
+
+屏幕录制功能。禁用此功能后，将无法进行屏幕录制。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-SCREEN_RECORD = 18--><!--Device-FeatureForAccount-SCREEN_RECORD = 18-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SCREEN_SHOT
+
+```TypeScript
+SCREEN_SHOT = 17
+```
+
+屏幕截图功能。禁用此功能后，将无法进行屏幕截图。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-SCREEN_SHOT = 17--><!--Device-FeatureForAccount-SCREEN_SHOT = 17-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## SUDO
 
 ```TypeScript

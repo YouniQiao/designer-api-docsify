@@ -1,20 +1,18 @@
 # VideoOutput_Callbacks
 
 ```c
-typedef struct VideoOutput_Callbacks {...} VideoOutput_Callbacks
+struct VideoOutput_Callbacks {...}
 ```
 
 ## 概述
 
 用于录像输出的回调。
 
-<!--Device-struct VideoOutput_Callbacks {...}--><!--Device-struct VideoOutput_Callbacks {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [video_output.h](capi-video-output-h.md)
 
@@ -24,8 +22,8 @@ typedef struct VideoOutput_Callbacks {...} VideoOutput_Callbacks
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_VideoOutput_OnFrameStart](capi-video-output-h.md#oh_videooutput_onframestart) onFrameStart | 录像输出帧启动事件。<br><!--Device-OH_VideoOutput_OnFrameStart onFrameStart--><!--Device-OH_VideoOutput_OnFrameStart onFrameStart-End--> |
-| [OH_VideoOutput_OnFrameEnd](capi-video-output-h.md#oh_videooutput_onframeend) onFrameEnd | 录像输出帧结束事件。<br><!--Device-OH_VideoOutput_OnFrameEnd onFrameEnd--><!--Device-OH_VideoOutput_OnFrameEnd onFrameEnd-End--> |
-| [OH_VideoOutput_OnError](capi-video-output-h.md#oh_videooutput_onerror) onError | 录像输出错误事件。<br><!--Device-OH_VideoOutput_OnError onError--><!--Device-OH_VideoOutput_OnError onError-End--> |
+| [OH_VideoOutput_OnFrameStart](capi-video-output-h.md#oh_videooutput_onframestart) onFrameStart | 录像输出帧启动事件。 |
+| [OH_VideoOutput_OnFrameEnd](capi-video-output-h.md#oh_videooutput_onframeend) onFrameEnd | 录像输出帧结束事件。 |
+| [OH_VideoOutput_OnError](capi-video-output-h.md#oh_videooutput_onerror) onError | 录像输出错误事件。 |
 
 

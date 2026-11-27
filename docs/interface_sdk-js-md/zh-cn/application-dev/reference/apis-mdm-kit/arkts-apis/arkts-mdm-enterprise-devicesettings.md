@@ -25,12 +25,18 @@ import { deviceSettings } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md#addhiddensettingsmenu-1) | 添加设置项至当前用户下的隐藏设置项列表。添加至隐藏设置项列表的设置项在当前用户的设置菜单中会被隐藏，隐藏后不可以在设置的搜索中搜索到。如果通过某种方式搜索到该设置项，点击后也无法打开。调用接口后即刻生效，无需重启设置应用。 |
+| [getControlPanelQuickToggleListForAccount](arkts-mdm-devicesettings-getcontrolpanelquicktogglelistforaccount-f.md#getcontrolpanelquicktogglelistforaccount-1) | 查询指定用户控制中心1×1区域开关项白名单。未配置或配置为空数组时返回空数组。 |
+| [getControlPanelRestricted](arkts-mdm-devicesettings-getcontrolpanelrestricted-f.md#getcontrolpanelrestricted-1) | 查询是否启用控制中心图标裁剪管控模式。 |
+| [getControlPanelTopToggleListForAccount](arkts-mdm-devicesettings-getcontrolpaneltoptogglelistforaccount-f.md#getcontrolpaneltoptogglelistforaccount-1) | 查询指定用户控制中心1×2区域开关项白名单。未配置或配置为空数组时返回空数组。 |
 | [getEnterpriseDisplayInfo](arkts-mdm-devicesettings-getenterprisedisplayinfo-f.md#getenterprisedisplayinfo-1) | 获取企业展示信息。 |
 | [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md#gethiddensettingsmenu-1) | 获取配置在当前用户下被隐藏的设置项列表。 |
 | [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue-1) | 获取设备设置策略。 |
 | [getValueForAccount](arkts-mdm-devicesettings-getvalueforaccount-f.md#getvalueforaccount-1) | 获取指定用户的设备设置策略。该接口可以获取指定用户在设置应用中的某个参数，比如获取用户100的设备名称等。 |
 | [getValueForAccount](arkts-mdm-devicesettings-getvalueforaccount-f.md#getvalueforaccount-2) | 获取指定用户的设备设置策略。该接口可以获取指定用户在设置应用中的某个参数，比如获取用户100的设备名称等。 |
 | [removeHiddenSettingsMenu](arkts-mdm-devicesettings-removehiddensettingsmenu-f.md#removehiddensettingsmenu-1) | 将设置项从当前用户下的隐藏设置项列表中移除。隐藏设置项列表中的设置项在当前用户的设置菜单中会被隐藏，隐藏后不可以在设置的搜索中搜索到，如果通过某种方式搜索到该设置项，点击后也无法打开。若移除后剩余的隐藏设置项列表为空，则设置项会全部显示。调用接口后即刻生效，无需重启设置应用。 |
+| [setControlPanelQuickToggleListForAccount](arkts-mdm-devicesettings-setcontrolpanelquicktogglelistforaccount-f.md#setcontrolpanelquicktogglelistforaccount-1) | 设置指定用户控制中心1×1区域开关项白名单。白名单仅在管控模式启用时生效，未启用时仍会保存，但不会裁剪图标。新列表会覆盖原有列表，空数组表示该区域所有可裁剪图标均隐藏。 |
+| [setControlPanelRestricted](arkts-mdm-devicesettings-setcontrolpanelrestricted-f.md#setcontrolpanelrestricted-1) | 设置是否启用控制中心图标裁剪管控模式。启用后，控制中心仅显示白名单中的开关项，未配置白名单时，该区域所有可裁剪图标均隐藏。关闭后，白名单不生效。 |
+| [setControlPanelTopToggleListForAccount](arkts-mdm-devicesettings-setcontrolpaneltoptogglelistforaccount-f.md#setcontrolpaneltoptogglelistforaccount-1) | 设置指定用户控制中心1×2区域开关项白名单。白名单仅在管控模式启用时生效，未启用时仍会保存，但不会裁剪图标。新列表会覆盖原有列表，空数组表示该区域所有可裁剪图标均隐藏。 |
 | [setEnterpriseDisplayInfo](arkts-mdm-devicesettings-setenterprisedisplayinfo-f.md#setenterprisedisplayinfo-1) | 设置企业展示信息。 |
 | [setHomeWallpaper](arkts-mdm-devicesettings-sethomewallpaper-f.md#sethomewallpaper-1) | 设置桌面壁纸，使用Promise异步回调。 |
 | [setSwitchStatus](arkts-mdm-devicesettings-setswitchstatus-f.md#setswitchstatus-1) | 设置开关的状态。支持设置星闪、蓝牙、Wi-Fi、NFC的状态为开启或关闭，设置完毕后，用户可以手动开关。支持设置蓝牙、NFC的状态为强制开启，设置完毕后，用户不可以手动开关。若已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md) 接口禁用了某个开关，则通过本接口设置这个开关的状态会抛出错误码203，需通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md) 接口解除该开关禁用策略。当设备有多个MDM应用时，各MDM应用设置开关状态不存在冲突，最后设置的策略生效。开启(用户可手动开启、关闭)、关闭(用户可手动开启、关闭)、强制开启(用户不可手动关闭)三个状态可以随意切换，也不存在冲突。 |
@@ -74,6 +80,8 @@ import { deviceSettings } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [ControlPanelQuickToggleType](arkts-mdm-devicesettings-controlpanelquicktoggletype-e.md) | 控制中心1×1区域可裁剪开关项枚举。不同设备支持的开关项可能不同；不支持的开关项设置后不生效，控制中心不会显示对应图标。 |
+| [ControlPanelTopToggleType](arkts-mdm-devicesettings-controlpaneltoptoggletype-e.md) | 控制中心1×2区域可裁剪开关项枚举。不同设备支持的开关项可能不同；不支持的开关项设置后不生效，控制中心不会显示对应图标。 |
 | [SettingsItem](arkts-mdm-devicesettings-settingsitem-e.md) | 设置的策略类型。 |
 | [SettingsMenu](arkts-mdm-devicesettings-settingsmenu-e.md) | 设置项列表。 |
 | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | 开关名称的枚举。 |

@@ -62,7 +62,7 @@ padding: Padding
 
 父组件（自定义组件）padding信息。单位为： vp。
 
-**类型：** Padding
+**类型：** [Padding](../arkts-apis/arkts-arkui-padding-t.md)
 
 **起始版本：** 10
 

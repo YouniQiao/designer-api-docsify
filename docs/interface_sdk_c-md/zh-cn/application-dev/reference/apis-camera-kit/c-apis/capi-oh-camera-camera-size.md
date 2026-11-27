@@ -1,20 +1,18 @@
 # Camera_Size
 
 ```c
-typedef struct Camera_Size {...} Camera_Size
+struct Camera_Size {...}
 ```
 
 ## 概述
 
 大小参数。
 
-<!--Device-struct Camera_Size {...}--><!--Device-struct Camera_Size {...}-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
-**相关模块：** [OH_Camera](capi-camera-kit-oh-camera.md)
+**相关模块：** [OH_Camera](capi-oh-camera.md)
 
 **所在头文件：** [camera.h](capi-camera-h.md)
 
@@ -24,7 +22,7 @@ typedef struct Camera_Size {...} Camera_Size
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t width | 宽度，单位为像素。<br><!--Device-uint32_t width--><!--Device-uint32_t width-End--> |
-| uint32_t height | 高度，单位为像素。<br><!--Device-uint32_t height--><!--Device-uint32_t height-End--> |
+| uint32_t width | 宽度，单位为像素。 |
+| uint32_t height | 高度，单位为像素。 |
 
 

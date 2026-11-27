@@ -6,21 +6,19 @@ This file declares the functions related to the mask filter in the drawing modul
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 11
 
-**Related module**: [Drawing](capi-arkgraphics2d-drawing.md)
+**Related module**: [Drawing](capi-drawing.md)
 
 ## Summary
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_BlurType](#oh_drawing_blurtype) | OH_Drawing_BlurType | Defines an enum for the blur types. |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -39,18 +37,14 @@ enum OH_Drawing_BlurType
 
 Defines an enum for the blur types.
 
-<!--Device-enum OH_Drawing_BlurType--><!--Device-enum OH_Drawing_BlurType-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| NORMAL | Blurs both inside and outside the original border.<br><!--Device-NORMAL--><!--Device-NORMAL-End--> |
-| SOLID | Draws solid inside the border, and blurs outside.<br><!--Device-SOLID--><!--Device-SOLID-End--> |
-| OUTER | Draws nothing inside the border, and blurs outside.<br><!--Device-OUTER--><!--Device-OUTER-End--> |
-| INNER | Blurs inside the border, and draws nothing outside.<br><!--Device-INNER--><!--Device-INNER-End--> |
+| NORMAL | Blurs both inside and outside the original border. |
+| SOLID | Draws solid inside the border, and blurs outside. |
+| OUTER | Draws nothing inside the border, and blurs outside. |
+| INNER | Blurs inside the border, and draws nothing outside. |
 
 
 ## Function description
@@ -64,10 +58,6 @@ OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurT
 **Description**
 
 Creates an **OH_Drawing_MaskFilter** object with a blur type.
-
-<!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)--><!--Device-OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -94,10 +84,6 @@ void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)
 **Description**
 
 Destroys an **OH_Drawing_MaskFilter** object and reclaims the memory occupied by the object.
-
-<!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)--><!--Device-void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)-End-->
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 

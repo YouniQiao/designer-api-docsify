@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## createGattServer
@@ -12,17 +12,17 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function createGattServer(): GattServer
 ```
 
-创建一个可使用的GattServer实例。
+创建[GattServer](arkts-connectivity-ble-gattserver-i.md)实例，表示GATT连接中的server端。
 
-从API version 9开始支持，从API version 10开始废弃。
+通过该实例可以操作server端的行为，如添加服务[addService](arkts-connectivity-ble-gattserver-i.md#addservice)、通知特征值变化[notifyCharacteristicChanged](arkts-connectivity-ble-gattserver-i.md#notifycharacteristicchanged-1)等。
 
-**起始版本：** 9
+**起始版本：** 10
 
-**废弃版本：** 10
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-**替代接口：** [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
+<!--Device-ble-function createGattServer(): GattServer--><!--Device-ble-function createGattServer(): GattServer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,10 +30,11 @@ function createGattServer(): GattServer
 
 | 类型 | 说明 |
 | --- | --- |
-| [GattServer](arkts-connectivity-ble-gattserver-i.md) | server端类，使用server端方法之前需要创建该类的实例进行操作。 |
+| [GattServer](arkts-connectivity-ble-gattserver-i.md) | 返回一个Gatt服务的实例。 |
 
 **示例**
 
 ```TypeScript
-let gattServer: bluetoothManager.GattServer  = bluetoothManager.BLE.createGattServer();
+let gattServer: ble.GattServer = ble.createGattServer();
+console.info('gatt success');
 ```

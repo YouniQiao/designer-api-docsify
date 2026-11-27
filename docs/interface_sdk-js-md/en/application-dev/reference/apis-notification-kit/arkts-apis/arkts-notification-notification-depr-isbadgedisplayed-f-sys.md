@@ -1,0 +1,110 @@
+# isBadgeDisplayed (System API)
+
+## Modules to Import
+
+```TypeScript
+import { notification } from '@ohos.notification';
+```
+
+## isBadgeDisplayed
+
+```TypeScript
+function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void
+```
+
+Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-1)(bundle: BundleOption, callback: AsyncCallback&lt;boolean&gt;)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notification-depr-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isBadgeDisplayedCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isBadgeDisplayed failed " + JSON.stringify(err));
+  } else {
+    console.info("isBadgeDisplayed success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
+```
+
+<!--DelEnd-->
+
+
+## isBadgeDisplayed
+
+```TypeScript
+function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
+```
+
+Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-2)(bundle: BundleOption)
+
+**Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>--><!--Device-notification-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notification-depr-bundleoption-i.md) | Yes | Bundle information of the application. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isBadgeDisplayed(bundle).then((data) => {
+  console.info("isBadgeDisplayed success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isBadgeDisplayed failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->

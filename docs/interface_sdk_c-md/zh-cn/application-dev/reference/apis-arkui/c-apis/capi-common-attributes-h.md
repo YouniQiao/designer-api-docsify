@@ -6,11 +6,9 @@ Defines the common property and method types for the native module.
 
 **库：** libace_ndk.z.so
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 ## 汇总
 
@@ -64,20 +62,16 @@ enum ArkUI_HitTestMode
 
 触摸测试控制枚举值。
 
-<!--Device-enum ArkUI_HitTestMode--><!--Device-enum ArkUI_HitTestMode-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_HIT_TEST_MODE_DEFAULT = 0 | 默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。<br><!--Device-ARKUI_HIT_TEST_MODE_DEFAULT = 0--><!--Device-ARKUI_HIT_TEST_MODE_DEFAULT = 0-End--> |
-| ARKUI_HIT_TEST_MODE_BLOCK | 自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。<br><!--Device-ARKUI_HIT_TEST_MODE_BLOCK--><!--Device-ARKUI_HIT_TEST_MODE_BLOCK-End--> |
-| ARKUI_HIT_TEST_MODE_TRANSPARENT | 自身和子节点都响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。<br><!--Device-ARKUI_HIT_TEST_MODE_TRANSPARENT--><!--Device-ARKUI_HIT_TEST_MODE_TRANSPARENT-End--> |
-| ARKUI_HIT_TEST_MODE_NONE | 自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。<br><!--Device-ARKUI_HIT_TEST_MODE_NONE--><!--Device-ARKUI_HIT_TEST_MODE_NONE-End--> |
-| ARKUI_HIT_TEST_MODE_BLOCK_HIERARCHY | 自身和子节点响应触摸测试，阻止所有优先级较低的兄弟节点和父节点参与触摸测试。<br>**起始版本：** 20<br><!--Device-ARKUI_HIT_TEST_MODE_BLOCK_HIERARCHY--><!--Device-ARKUI_HIT_TEST_MODE_BLOCK_HIERARCHY-End--> |
-| ARKUI_HIT_TEST_MODE_BLOCK_DESCENDANTS | 自身不响应触摸测试，并且所有的后代（孩子，孙子等）也不响应触摸测试，不会影响祖先节点的触摸测试。<br>**起始版本：** 20<br><!--Device-ARKUI_HIT_TEST_MODE_BLOCK_DESCENDANTS--><!--Device-ARKUI_HIT_TEST_MODE_BLOCK_DESCENDANTS-End--> |
+| ARKUI_HIT_TEST_MODE_DEFAULT = 0 | 默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。 |
+| ARKUI_HIT_TEST_MODE_BLOCK | 自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。 |
+| ARKUI_HIT_TEST_MODE_TRANSPARENT | 自身和子节点都响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。 |
+| ARKUI_HIT_TEST_MODE_NONE | 自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。 |
+| ARKUI_HIT_TEST_MODE_BLOCK_HIERARCHY |  |
+| ARKUI_HIT_TEST_MODE_BLOCK_DESCENDANTS |  |
 
 ### ArkUI_Visibility
 
@@ -89,17 +83,13 @@ enum ArkUI_Visibility
 
 控制组件的显隐枚举值。
 
-<!--Device-enum ArkUI_Visibility--><!--Device-enum ArkUI_Visibility-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_VISIBILITY_VISIBLE = 0 | 显示。<br><!--Device-ARKUI_VISIBILITY_VISIBLE = 0--><!--Device-ARKUI_VISIBILITY_VISIBLE = 0-End--> |
-| ARKUI_VISIBILITY_HIDDEN | 隐藏，但参与布局进行占位。<br><!--Device-ARKUI_VISIBILITY_HIDDEN--><!--Device-ARKUI_VISIBILITY_HIDDEN-End--> |
-| ARKUI_VISIBILITY_NONE | 隐藏，但不参与布局，不进行占位。<br><!--Device-ARKUI_VISIBILITY_NONE--><!--Device-ARKUI_VISIBILITY_NONE-End--> |
+| ARKUI_VISIBILITY_VISIBLE = 0 | 显示。 |
+| ARKUI_VISIBILITY_HIDDEN | 隐藏，但参与布局进行占位。 |
+| ARKUI_VISIBILITY_NONE | 隐藏，但不参与布局，不进行占位。 |
 
 ### ArkUI_HoverEffect
 
@@ -111,18 +101,14 @@ enum ArkUI_HoverEffect
 
 组件被悬停时的效果。
 
-<!--Device-enum ArkUI_HoverEffect--><!--Device-enum ArkUI_HoverEffect-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_HOVER_EFFECT_AUTO = 0 | 默认效果。<br><!--Device-ARKUI_HOVER_EFFECT_AUTO = 0--><!--Device-ARKUI_HOVER_EFFECT_AUTO = 0-End--> |
-| ARKUI_HOVER_EFFECT_SCALE | 缩放效果。<br><!--Device-ARKUI_HOVER_EFFECT_SCALE--><!--Device-ARKUI_HOVER_EFFECT_SCALE-End--> |
-| ARKUI_HOVER_EFFECT_HIGHLIGHT | 高亮效果。<br><!--Device-ARKUI_HOVER_EFFECT_HIGHLIGHT--><!--Device-ARKUI_HOVER_EFFECT_HIGHLIGHT-End--> |
-| ARKUI_HOVER_EFFECT_NONE | 无效果。<br><!--Device-ARKUI_HOVER_EFFECT_NONE--><!--Device-ARKUI_HOVER_EFFECT_NONE-End--> |
+| ARKUI_HOVER_EFFECT_AUTO = 0 | 默认效果。 |
+| ARKUI_HOVER_EFFECT_SCALE | 缩放效果。 |
+| ARKUI_HOVER_EFFECT_HIGHLIGHT | 高亮效果。 |
+| ARKUI_HOVER_EFFECT_NONE | 无效果。 |
 
 ### ArkUI_FocusPriority
 
@@ -134,17 +120,13 @@ enum ArkUI_FocusPriority
 
 应用程序内焦点管理的优先级级别。确定UI组件在交互期间接收焦点的顺序。
 
-<!--Device-enum ArkUI_FocusPriority--><!--Device-enum ArkUI_FocusPriority-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FOCUS_PRIORITY_AUTO = 0 | 默认优先级。<br><!--Device-ARKUI_FOCUS_PRIORITY_AUTO = 0--><!--Device-ARKUI_FOCUS_PRIORITY_AUTO = 0-End--> |
-| ARKUI_FOCUS_PRIORITY_PRIOR = 2000 | 容器内优先获焦的优先级。<br><!--Device-ARKUI_FOCUS_PRIORITY_PRIOR = 2000--><!--Device-ARKUI_FOCUS_PRIORITY_PRIOR = 2000-End--> |
-| ARKUI_FOCUS_PRIORITY_PREVIOUS = 3000 | 上一次容器整体失焦时获焦节点的优先级。<br><!--Device-ARKUI_FOCUS_PRIORITY_PREVIOUS = 3000--><!--Device-ARKUI_FOCUS_PRIORITY_PREVIOUS = 3000-End--> |
+| ARKUI_FOCUS_PRIORITY_AUTO = 0 | 默认优先级。 |
+| ARKUI_FOCUS_PRIORITY_PRIOR = 2000 | 容器内优先获焦的优先级。 |
+| ARKUI_FOCUS_PRIORITY_PREVIOUS = 3000 | 上一次容器整体失焦时获焦节点的优先级。 |
 
 ### ArkUI_UIState
 
@@ -156,20 +138,16 @@ enum ArkUI_UIState
 
 组件的UI状态枚举，用于处理状态样式。
 
-<!--Device-enum ArkUI_UIState--><!--Device-enum ArkUI_UIState-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
 | -- | -- |
-| UI_STATE_NORMAL = 0 | 正常状态。<br><!--Device-UI_STATE_NORMAL = 0--><!--Device-UI_STATE_NORMAL = 0-End--> |
-| UI_STATE_PRESSED = 1 << 0 | 按压状态。<br><!--Device-UI_STATE_PRESSED = 1 << 0--><!--Device-UI_STATE_PRESSED = 1 << 0-End--> |
-| UI_STATE_FOCUSED = 1 << 1 | 获焦状态。<br><!--Device-UI_STATE_FOCUSED = 1 << 1--><!--Device-UI_STATE_FOCUSED = 1 << 1-End--> |
-| UI_STATE_DISABLED = 1 << 2 | 禁用状态。<br><!--Device-UI_STATE_DISABLED = 1 << 2--><!--Device-UI_STATE_DISABLED = 1 << 2-End--> |
-| UI_STATE_SELECTED = 1 << 3 | 选中状态，此状态仅由某些特定类型的组件支持，分别是Checkbox、Radio、Toggle、List、Grid和MenuItem。<br><!--Device-UI_STATE_SELECTED = 1 << 3--><!--Device-UI_STATE_SELECTED = 1 << 3-End--> |
-| UI_STATE_HOVERED = 1 << 4 | 悬浮状态。<br>**起始版本：** 26.0.0<br><!--Device-UI_STATE_HOVERED = 1 << 4--><!--Device-UI_STATE_HOVERED = 1 << 4-End--> |
+| UI_STATE_NORMAL = 0 | 正常状态。 |
+| UI_STATE_PRESSED = 1 << 0 | 按压状态。 |
+| UI_STATE_FOCUSED = 1 << 1 | 获焦状态。 |
+| UI_STATE_DISABLED = 1 << 2 | 禁用状态。 |
+| UI_STATE_SELECTED = 1 << 3 | 选中状态，此状态仅由某些特定类型的组件支持，分别是Checkbox、Radio、Toggle、List、Grid和MenuItem。 |
+| UI_STATE_HOVERED = 1 << 4 |  |
 
 ### ArkUI_FocusMove
 
@@ -181,20 +159,16 @@ enum ArkUI_FocusMove
 
 定义焦点移动方向的枚举值。
 
-<!--Device-enum ArkUI_FocusMove--><!--Device-enum ArkUI_FocusMove-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FOCUS_MOVE_FORWARD = 0 | 向前移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_FORWARD = 0--><!--Device-ARKUI_FOCUS_MOVE_FORWARD = 0-End--> |
-| ARKUI_FOCUS_MOVE_BACKWARD | 向后移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_BACKWARD--><!--Device-ARKUI_FOCUS_MOVE_BACKWARD-End--> |
-| ARKUI_FOCUS_MOVE_UP | 向上移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_UP--><!--Device-ARKUI_FOCUS_MOVE_UP-End--> |
-| ARKUI_FOCUS_MOVE_DOWN | 向下移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_DOWN--><!--Device-ARKUI_FOCUS_MOVE_DOWN-End--> |
-| ARKUI_FOCUS_MOVE_LEFT | 向左移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_LEFT--><!--Device-ARKUI_FOCUS_MOVE_LEFT-End--> |
-| ARKUI_FOCUS_MOVE_RIGHT | 向右移动焦点。<br><!--Device-ARKUI_FOCUS_MOVE_RIGHT--><!--Device-ARKUI_FOCUS_MOVE_RIGHT-End--> |
+| ARKUI_FOCUS_MOVE_FORWARD = 0 | 向前移动焦点。 |
+| ARKUI_FOCUS_MOVE_BACKWARD | 向后移动焦点。 |
+| ARKUI_FOCUS_MOVE_UP | 向上移动焦点。 |
+| ARKUI_FOCUS_MOVE_DOWN | 向下移动焦点。 |
+| ARKUI_FOCUS_MOVE_LEFT | 向左移动焦点。 |
+| ARKUI_FOCUS_MOVE_RIGHT | 向右移动焦点。 |
 
 ### ArkUI_ResponseRegionSupportedTool
 
@@ -206,18 +180,14 @@ enum ArkUI_ResponseRegionSupportedTool
 
 定义支持响应区域设置的事件工具类型。
 
-<!--Device-enum ArkUI_ResponseRegionSupportedTool--><!--Device-enum ArkUI_ResponseRegionSupportedTool-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_ALL = 0 | 所有输入工具类型。<br><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_ALL = 0--><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_ALL = 0-End--> |
-| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_FINGER = 1 | 手指类型。<br><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_FINGER = 1--><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_FINGER = 1-End--> |
-| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_PEN = 2 | 手写笔类型。<br><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_PEN = 2--><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_PEN = 2-End--> |
-| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_MOUSE = 3 | 鼠标类型。<br><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_MOUSE = 3--><!--Device-ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_MOUSE = 3-End--> |
+| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_ALL = 0 | 所有输入工具类型。 |
+| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_FINGER = 1 | 手指类型。 |
+| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_PEN = 2 | 手写笔类型。 |
+| ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_MOUSE = 3 | 鼠标类型。 |
 
 ### ArkUI_RawInputEventType
 
@@ -229,16 +199,12 @@ enum ArkUI_RawInputEventType
 
 原始输入事件类型枚举。
 
-<!--Device-enum ArkUI_RawInputEventType--><!--Device-enum ArkUI_RawInputEventType-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_RAW_INPUT_EVENT_TYPE_TOUCH = 0 | 触摸事件类型。<br>**起始版本：** 26.0.0<br><!--Device-ARKUI_RAW_INPUT_EVENT_TYPE_TOUCH = 0--><!--Device-ARKUI_RAW_INPUT_EVENT_TYPE_TOUCH = 0-End--> |
-| ARKUI_RAW_INPUT_EVENT_TYPE_MOUSE = 1 | 鼠标事件类型。<br>**起始版本：** 26.0.0<br><!--Device-ARKUI_RAW_INPUT_EVENT_TYPE_MOUSE = 1--><!--Device-ARKUI_RAW_INPUT_EVENT_TYPE_MOUSE = 1-End--> |
+| ARKUI_RAW_INPUT_EVENT_TYPE_TOUCH = 0 |  |
+| ARKUI_RAW_INPUT_EVENT_TYPE_MOUSE = 1 |  |
 
 
 ## 函数说明
@@ -252,10 +218,6 @@ ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()
 **描述：**
 
 创建一个截图选项，当返回值不再使用时必须通过[OH_ArkUI_DestroySnapshotOptions()](capi-common-attributes-h.md#oh_arkui_destroysnapshotoptions())释放。
-
-<!--Device-ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()--><!--Device-ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
@@ -275,10 +237,6 @@ void OH_ArkUI_DestroySnapshotOptions(ArkUI_SnapshotOptions* snapshotOptions)
 
 销毁截图选项指针。
 
-<!--Device-void OH_ArkUI_DestroySnapshotOptions(ArkUI_SnapshotOptions* snapshotOptions)--><!--Device-void OH_ArkUI_DestroySnapshotOptions(ArkUI_SnapshotOptions* snapshotOptions)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 15
 
 **参数：**
@@ -297,10 +255,6 @@ int32_t OH_ArkUI_SnapshotOptions_SetScale(ArkUI_SnapshotOptions* snapshotOptions
 
 配置截图选项中的缩放属性。
 
-<!--Device-int32_t OH_ArkUI_SnapshotOptions_SetScale(ArkUI_SnapshotOptions* snapshotOptions, float scale)--><!--Device-int32_t OH_ArkUI_SnapshotOptions_SetScale(ArkUI_SnapshotOptions* snapshotOptions, float scale)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 15
 
 **参数：**
@@ -314,7 +268,7 @@ int32_t OH_ArkUI_SnapshotOptions_SetScale(ArkUI_SnapshotOptions* snapshotOptions
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_SnapshotOptions_SetColorMode()
 
@@ -325,10 +279,6 @@ int32_t OH_ArkUI_SnapshotOptions_SetColorMode(ArkUI_SnapshotOptions* snapshotOpt
 **描述：**
 
 设置截图选项中的色彩空间。
-
-<!--Device-int32_t OH_ArkUI_SnapshotOptions_SetColorMode(ArkUI_SnapshotOptions* snapshotOptions, int32_t colorSpace, bool isAuto)--><!--Device-int32_t OH_ArkUI_SnapshotOptions_SetColorMode(ArkUI_SnapshotOptions* snapshotOptions, int32_t colorSpace, bool isAuto)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -344,7 +294,7 @@ int32_t OH_ArkUI_SnapshotOptions_SetColorMode(ArkUI_SnapshotOptions* snapshotOpt
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_SnapshotOptions_SetDynamicRangeMode()
 
@@ -355,10 +305,6 @@ int32_t OH_ArkUI_SnapshotOptions_SetDynamicRangeMode(ArkUI_SnapshotOptions* snap
 **描述：**
 
 设置截图选项中的动态范围模式。
-
-<!--Device-int32_t OH_ArkUI_SnapshotOptions_SetDynamicRangeMode(ArkUI_SnapshotOptions* snapshotOptions, int32_t dynamicRangeMode, bool isAuto)--><!--Device-int32_t OH_ArkUI_SnapshotOptions_SetDynamicRangeMode(ArkUI_SnapshotOptions* snapshotOptions, int32_t dynamicRangeMode, bool isAuto)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -374,7 +320,7 @@ int32_t OH_ArkUI_SnapshotOptions_SetDynamicRangeMode(ArkUI_SnapshotOptions* snap
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_VisibleAreaEventOptions_Create()
 
@@ -385,10 +331,6 @@ ArkUI_VisibleAreaEventOptions* OH_ArkUI_VisibleAreaEventOptions_Create()
 **描述：**
 
 创建可见区域变化监听的参数。
-
-<!--Device-ArkUI_VisibleAreaEventOptions* OH_ArkUI_VisibleAreaEventOptions_Create()--><!--Device-ArkUI_VisibleAreaEventOptions* OH_ArkUI_VisibleAreaEventOptions_Create()-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 17
 
@@ -408,10 +350,6 @@ void OH_ArkUI_VisibleAreaEventOptions_Dispose(ArkUI_VisibleAreaEventOptions* opt
 
 销毁可见区域变化监听的参数。
 
-<!--Device-void OH_ArkUI_VisibleAreaEventOptions_Dispose(ArkUI_VisibleAreaEventOptions* option)--><!--Device-void OH_ArkUI_VisibleAreaEventOptions_Dispose(ArkUI_VisibleAreaEventOptions* option)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 17
 
 **参数：**
@@ -430,10 +368,6 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetRatios(ArkUI_VisibleAreaEventOptions
 
 设置阈值数组。
 
-<!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetRatios(ArkUI_VisibleAreaEventOptions* option, float* value, int32_t size)--><!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetRatios(ArkUI_VisibleAreaEventOptions* option, float* value, int32_t size)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 17
 
 **参数：**
@@ -448,7 +382,7 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetRatios(ArkUI_VisibleAreaEventOptions
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval()
 
@@ -459,10 +393,6 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval(ArkUI_Visible
 **描述：**
 
 设置预期更新间隔，单位为ms。定义了开发者期望的更新间隔。
-
-<!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval(ArkUI_VisibleAreaEventOptions *option, int32_t value)--><!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval(ArkUI_VisibleAreaEventOptions *option, int32_t value)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 17
 
@@ -477,7 +407,7 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval(ArkUI_Visible
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport()
 
@@ -488,10 +418,6 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport(ArkUI_VisibleAre
 **描述：**
 
 设置可见区域计算模式。
-
-<!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport(ArkUI_VisibleAreaEventOptions* option, bool measureFromViewport)--><!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport(ArkUI_VisibleAreaEventOptions* option, bool measureFromViewport)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -506,7 +432,7 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport(ArkUI_VisibleAre
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_VisibleAreaEventOptions_GetRatios()
 
@@ -517,10 +443,6 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_GetRatios(ArkUI_VisibleAreaEventOptions
 **描述：**
 
 获取阈值数组。
-
-<!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_GetRatios(ArkUI_VisibleAreaEventOptions* option, float* value, int32_t* size)--><!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_GetRatios(ArkUI_VisibleAreaEventOptions* option, float* value, int32_t* size)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 17
 
@@ -536,7 +458,7 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_GetRatios(ArkUI_VisibleAreaEventOptions
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) 数组大小不够。<br>异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-native-type-h.md#arkui_errorcode) 数组大小不够。<br>异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_VisibleAreaEventOptions_GetExpectedUpdateInterval()
 
@@ -547,10 +469,6 @@ int32_t OH_ArkUI_VisibleAreaEventOptions_GetExpectedUpdateInterval(ArkUI_Visible
 **描述：**
 
 获取预期更新间隔。
-
-<!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_GetExpectedUpdateInterval(ArkUI_VisibleAreaEventOptions* option)--><!--Device-int32_t OH_ArkUI_VisibleAreaEventOptions_GetExpectedUpdateInterval(ArkUI_VisibleAreaEventOptions* option)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 17
 
@@ -575,10 +493,6 @@ bool OH_ArkUI_VisibleAreaEventOptions_GetMeasureFromViewport(ArkUI_VisibleAreaEv
 **描述：**
 
 获取可见区域计算模式。
-
-<!--Device-bool OH_ArkUI_VisibleAreaEventOptions_GetMeasureFromViewport(ArkUI_VisibleAreaEventOptions* option)--><!--Device-bool OH_ArkUI_VisibleAreaEventOptions_GetMeasureFromViewport(ArkUI_VisibleAreaEventOptions* option)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 

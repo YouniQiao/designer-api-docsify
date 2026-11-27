@@ -6,30 +6,28 @@ The file declares the native APIs used to set decryption parameters.
 
 **Library**: libnative_media_avcencinfo.so
 
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
-**Related module**: [Multimedia_Drm](capi-avcodec-kit-multimedia-drm.md)
+**Related module**: [Multimedia_Drm](capi-multimedia-drm.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [DrmSubsample](capi-multimedia-drm-drmsubsample.md) | DrmSubsample | The struct describes the subsample type. |
+| [DrmSubsample](capi-multimedia-drm-drmsubsample.md) | - | The struct describes the subsample type. |
 | [OH_AVBuffer](capi-multimedia-drm-oh-avbuffer.md) | OH_AVBuffer | The struct describes a native object for the media memory interface. |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) | OH_AVCencInfo | The struct describes the audio/video Common Encryption Scheme (CENC) information. |
 
-### Enums
+### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [DrmCencAlgorithm](#drmcencalgorithm) | DrmCencAlgorithm | Enumerates the DRM CENC algorithm types. |
 | [DrmCencInfoMode](#drmcencinfomode) | DrmCencInfoMode | Enumerates the modes for setting the key ID, IV, and subsample in the CENC information. |
 
-### Macros
+### Macro
 
 | Name | Description |
 | -- | -- |
@@ -37,7 +35,7 @@ The file declares the native APIs used to set decryption parameters.
 | DRM_KEY_IV_SIZE 16 | The length of the Initialization Vector (IV) is 16 bytes.<br>**Since**: 12 |
 | DRM_KEY_MAX_SUB_SAMPLE_NUM 64 | The maximum number of subsamples is 64.<br>**Since**: 12 |
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -61,20 +59,16 @@ enum DrmCencAlgorithm
 
 Enumerates the DRM CENC algorithm types.
 
-<!--Device-enum DrmCencAlgorithm--><!--Device-enum DrmCencAlgorithm-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| DRM_ALG_CENC_UNENCRYPTED = 0x0 | Unencrypted.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_UNENCRYPTED = 0x0--><!--Device-DRM_ALG_CENC_UNENCRYPTED = 0x0-End--> |
-| DRM_ALG_CENC_AES_CTR = 0x1 | AES CTR algorithm.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_AES_CTR = 0x1--><!--Device-DRM_ALG_CENC_AES_CTR = 0x1-End--> |
-| DRM_ALG_CENC_AES_WV = 0x2 | AES WV algorithm.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_AES_WV = 0x2--><!--Device-DRM_ALG_CENC_AES_WV = 0x2-End--> |
-| DRM_ALG_CENC_AES_CBC = 0x3 | AES CBC algorithm.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_AES_CBC = 0x3--><!--Device-DRM_ALG_CENC_AES_CBC = 0x3-End--> |
-| DRM_ALG_CENC_SM4_CBC = 0x4 | SM4 CBC algorithm.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_SM4_CBC = 0x4--><!--Device-DRM_ALG_CENC_SM4_CBC = 0x4-End--> |
-| DRM_ALG_CENC_SM4_CTR = 0x5 | SM4 CTR algorithm.<br>**Since**: 12<br><!--Device-DRM_ALG_CENC_SM4_CTR = 0x5--><!--Device-DRM_ALG_CENC_SM4_CTR = 0x5-End--> |
+| DRM_ALG_CENC_UNENCRYPTED = 0x0 | Unencrypted. |
+| DRM_ALG_CENC_AES_CTR = 0x1 | Aes ctr. |
+| DRM_ALG_CENC_AES_WV = 0x2 | Aes wv. |
+| DRM_ALG_CENC_AES_CBC = 0x3 | Aes cbc. |
+| DRM_ALG_CENC_SM4_CBC = 0x4 | Sm4 cbc. |
+| DRM_ALG_CENC_SM4_CTR = 0x5 | Sm4 ctr. |
 
 ### DrmCencInfoMode
 
@@ -86,16 +80,12 @@ enum DrmCencInfoMode
 
 Enumerates the modes for setting the key ID, IV, and subsample in the CENC information.
 
-<!--Device-enum DrmCencInfoMode--><!--Device-enum DrmCencInfoMode-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0 | The key ID, IV, and subsample are set.<br>**Since**: 12<br><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0--><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0-End--> |
-| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1 | The key ID, IV, and subsample are not set.<br>**Since**: 12<br><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1--><!--Device-DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1-End--> |
+| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_SET = 0x0 | key/iv/subsample set. |
+| DRM_CENC_INFO_KEY_IV_SUBSAMPLES_NOT_SET = 0x1 | key/iv/subsample not set. |
 
 
 ## Function description
@@ -109,10 +99,6 @@ OH_AVCencInfo *OH_AVCencInfo_Create()
 **Description**
 
 Creates an OH_AVCencInfo instance for setting the CENC information.
-
-<!--Device-OH_AVCencInfo *OH_AVCencInfo_Create()--><!--Device-OH_AVCencInfo *OH_AVCencInfo_Create()-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 
@@ -131,10 +117,6 @@ OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)
 **Description**
 
 Destroys an OH_AVCencInfo instance and clears internal resources.<br> An instance can be destroyed only once. Do not use the instance until it is created again. You are advised to set the instance pointer to nullptr once the instance is destroyed.
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)--><!--Device-OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 
@@ -160,10 +142,6 @@ OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlg
 
 Sets an encryption algorithm of the CENC information.
 
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
 **Parameters**:
@@ -171,7 +149,7 @@ Sets an encryption algorithm of the CENC information.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | Pointer to an OH_AVCencInfo instance. |
-| enum [DrmCencAlgorithm](capi-native-cencinfo-h.md#drmcencalgorithm) algo | Encryption algorithm. |
+| enum DrmCencAlgorithm algo | Encryption algorithm. |
 
 **Returns**:
 
@@ -188,10 +166,6 @@ OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId
 **Description**
 
 Sets the key ID and IV in the CENC information.
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 
@@ -220,10 +194,6 @@ OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t en
 **Description**
 
 Sets the subsample information in the CENC information.
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 
@@ -254,10 +224,6 @@ OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode
 
 Sets the CENC information mode.
 
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode mode)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode mode)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
-
 **Since**: 12
 
 **Parameters**:
@@ -265,7 +231,7 @@ Sets the CENC information mode.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | Pointer to an OH_AVCencInfo instance. |
-| enum [DrmCencInfoMode](capi-native-cencinfo-h.md#drmcencinfomode) mode | CENC information mode, indicating whether the key ID, IV, and subsample are set. |
+| enum DrmCencInfoMode mode | CENC information mode, indicating whether the key ID, IV, and subsample are set. |
 
 **Returns**:
 
@@ -282,10 +248,6 @@ OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buf
 **Description**
 
 Sets the CENC information to an AVBuffer.
-
-<!--Device-OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buffer)--><!--Device-OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buffer)-End-->
-
-**System capability**: SystemCapability.Multimedia.Media.Spliter
 
 **Since**: 12
 

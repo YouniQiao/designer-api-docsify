@@ -6,11 +6,9 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
-**相关模块：** [Drawing](capi-arkgraphics2d-drawing.md)
+**相关模块：** [Drawing](capi-drawing.md)
 
 ## 汇总
 
@@ -51,10 +49,6 @@ OH_Drawing_Array* OH_Drawing_GetRunStringIndices(OH_Drawing_Run* run, int64_t st
 
 获取渲染单元指定范围内字形的字符索引数组，该索引是相对于整个段落的偏移。
 
-<!--Device-OH_Drawing_Array* OH_Drawing_GetRunStringIndices(OH_Drawing_Run* run, int64_t start, int64_t length)--><!--Device-OH_Drawing_Array* OH_Drawing_GetRunStringIndices(OH_Drawing_Run* run, int64_t start, int64_t length)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -81,10 +75,6 @@ uint64_t OH_Drawing_GetRunStringIndicesByIndex(OH_Drawing_Array* stringIndices, 
 
 获取字符索引数组中指定下标的字符索引值。
 
-<!--Device-uint64_t OH_Drawing_GetRunStringIndicesByIndex(OH_Drawing_Array* stringIndices, size_t index)--><!--Device-uint64_t OH_Drawing_GetRunStringIndicesByIndex(OH_Drawing_Array* stringIndices, size_t index)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -110,10 +100,6 @@ void OH_Drawing_DestroyRunStringIndices(OH_Drawing_Array* stringIndices)
 
 释放字形的字符索引数组对象指针。
 
-<!--Device-void OH_Drawing_DestroyRunStringIndices(OH_Drawing_Array* stringIndices)--><!--Device-void OH_Drawing_DestroyRunStringIndices(OH_Drawing_Array* stringIndices)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -131,10 +117,6 @@ void OH_Drawing_GetRunStringRange(OH_Drawing_Run* run, uint64_t* location, uint6
 **描述：**
 
 获取渲染单元生成字形的字符范围。
-
-<!--Device-void OH_Drawing_GetRunStringRange(OH_Drawing_Run* run, uint64_t* location, uint64_t* length)--><!--Device-void OH_Drawing_GetRunStringRange(OH_Drawing_Run* run, uint64_t* location, uint64_t* length)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -155,10 +137,6 @@ float OH_Drawing_GetRunTypographicBounds(OH_Drawing_Run* run, float* ascent, flo
 **描述：**
 
 获取渲染单元的排版边界。文本排版边界与字符本身无关，与排版字号和字体有关。
-
-<!--Device-float OH_Drawing_GetRunTypographicBounds(OH_Drawing_Run* run, float* ascent, float* descent, float* leading)--><!--Device-float OH_Drawing_GetRunTypographicBounds(OH_Drawing_Run* run, float* ascent, float* descent, float* leading)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -187,10 +165,6 @@ void OH_Drawing_RunPaint(OH_Drawing_Canvas* canvas, OH_Drawing_Run* run, double 
 
 在画布上绘制渲染单元包含的文本。
 
-<!--Device-void OH_Drawing_RunPaint(OH_Drawing_Canvas* canvas, OH_Drawing_Run* run, double x, double y)--><!--Device-void OH_Drawing_RunPaint(OH_Drawing_Canvas* canvas, OH_Drawing_Run* run, double x, double y)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -211,10 +185,6 @@ OH_Drawing_Rect* OH_Drawing_GetRunImageBounds(OH_Drawing_Run* run)
 **描述：**
 
 获取渲染单元的图像边界，文本图像边界与字符本身有关，相当于视觉边界。
-
-<!--Device-OH_Drawing_Rect* OH_Drawing_GetRunImageBounds(OH_Drawing_Run* run)--><!--Device-OH_Drawing_Rect* OH_Drawing_GetRunImageBounds(OH_Drawing_Run* run)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -240,10 +210,6 @@ void OH_Drawing_DestroyRunImageBounds(OH_Drawing_Rect* rect)
 
 释放渲染单元图像边界对象指针。
 
-<!--Device-void OH_Drawing_DestroyRunImageBounds(OH_Drawing_Rect* rect)--><!--Device-void OH_Drawing_DestroyRunImageBounds(OH_Drawing_Rect* rect)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -261,10 +227,6 @@ OH_Drawing_Array* OH_Drawing_GetRunGlyphs(OH_Drawing_Run* run, int64_t start, in
 **描述：**
 
 获取渲染单元指定范围内的字形数组。
-
-<!--Device-OH_Drawing_Array* OH_Drawing_GetRunGlyphs(OH_Drawing_Run* run, int64_t start, int64_t length)--><!--Device-OH_Drawing_Array* OH_Drawing_GetRunGlyphs(OH_Drawing_Run* run, int64_t start, int64_t length)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -292,10 +254,6 @@ uint16_t OH_Drawing_GetRunGlyphsByIndex(OH_Drawing_Array* glyphs, size_t index)
 
 根据索引获取渲染单元单个字形。
 
-<!--Device-uint16_t OH_Drawing_GetRunGlyphsByIndex(OH_Drawing_Array* glyphs, size_t index)--><!--Device-uint16_t OH_Drawing_GetRunGlyphsByIndex(OH_Drawing_Array* glyphs, size_t index)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -321,10 +279,6 @@ void OH_Drawing_DestroyRunGlyphs(OH_Drawing_Array* glyphs)
 
 释放渲染单元字形数组对象指针。
 
-<!--Device-void OH_Drawing_DestroyRunGlyphs(OH_Drawing_Array* glyphs)--><!--Device-void OH_Drawing_DestroyRunGlyphs(OH_Drawing_Array* glyphs)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -342,10 +296,6 @@ OH_Drawing_Array* OH_Drawing_GetRunPositions(OH_Drawing_Run* run, int64_t start,
 **描述：**
 
 获取渲染单元指定范围内字形的位置。
-
-<!--Device-OH_Drawing_Array* OH_Drawing_GetRunPositions(OH_Drawing_Run* run, int64_t start, int64_t length)--><!--Device-OH_Drawing_Array* OH_Drawing_GetRunPositions(OH_Drawing_Run* run, int64_t start, int64_t length)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -373,10 +323,6 @@ OH_Drawing_Point* OH_Drawing_GetRunPositionsByIndex(OH_Drawing_Array* positions,
 
 根据索引获取渲染单元中单个字形位置。
 
-<!--Device-OH_Drawing_Point* OH_Drawing_GetRunPositionsByIndex(OH_Drawing_Array* positions, size_t index)--><!--Device-OH_Drawing_Point* OH_Drawing_GetRunPositionsByIndex(OH_Drawing_Array* positions, size_t index)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -402,10 +348,6 @@ void OH_Drawing_DestroyRunPositions(OH_Drawing_Array* positions)
 
 释放渲染单元字形位置数组对象指针。
 
-<!--Device-void OH_Drawing_DestroyRunPositions(OH_Drawing_Array* positions)--><!--Device-void OH_Drawing_DestroyRunPositions(OH_Drawing_Array* positions)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -423,10 +365,6 @@ uint32_t OH_Drawing_GetRunGlyphCount(OH_Drawing_Run* run)
 **描述：**
 
 获取渲染单元字形数量。
-
-<!--Device-uint32_t OH_Drawing_GetRunGlyphCount(OH_Drawing_Run* run)--><!--Device-uint32_t OH_Drawing_GetRunGlyphCount(OH_Drawing_Run* run)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -452,10 +390,6 @@ OH_Drawing_Font* OH_Drawing_GetRunFont(OH_Drawing_Run* run)
 
 获取渲染单元字体对象。
 
-<!--Device-OH_Drawing_Font* OH_Drawing_GetRunFont(OH_Drawing_Run* run)--><!--Device-OH_Drawing_Font* OH_Drawing_GetRunFont(OH_Drawing_Run* run)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 20
 
 **参数：**
@@ -480,10 +414,6 @@ OH_Drawing_TextDirection OH_Drawing_GetRunTextDirection(OH_Drawing_Run* run)
 
 获取渲染单元文本方向。
 
-<!--Device-OH_Drawing_TextDirection OH_Drawing_GetRunTextDirection(OH_Drawing_Run* run)--><!--Device-OH_Drawing_TextDirection OH_Drawing_GetRunTextDirection(OH_Drawing_Run* run)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 20
 
 **参数：**
@@ -507,10 +437,6 @@ OH_Drawing_Array* OH_Drawing_GetRunGlyphAdvances(OH_Drawing_Run* run, uint32_t s
 **描述：**
 
 获取渲染单元字形宽度数组。
-
-<!--Device-OH_Drawing_Array* OH_Drawing_GetRunGlyphAdvances(OH_Drawing_Run* run, uint32_t start, uint32_t length)--><!--Device-OH_Drawing_Array* OH_Drawing_GetRunGlyphAdvances(OH_Drawing_Run* run, uint32_t start, uint32_t length)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 
@@ -538,10 +464,6 @@ OH_Drawing_Point* OH_Drawing_GetRunGlyphAdvanceByIndex(OH_Drawing_Array* advance
 
 根据索引获取渲染单元中单个字形宽度。
 
-<!--Device-OH_Drawing_Point* OH_Drawing_GetRunGlyphAdvanceByIndex(OH_Drawing_Array* advances, size_t index)--><!--Device-OH_Drawing_Point* OH_Drawing_GetRunGlyphAdvanceByIndex(OH_Drawing_Array* advances, size_t index)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 20
 
 **参数：**
@@ -566,10 +488,6 @@ void OH_Drawing_DestroyRunGlyphAdvances(OH_Drawing_Array* advances)
 **描述：**
 
 释放渲染单元字形宽度数组对象的指针。
-
-<!--Device-void OH_Drawing_DestroyRunGlyphAdvances(OH_Drawing_Array* advances)--><!--Device-void OH_Drawing_DestroyRunGlyphAdvances(OH_Drawing_Array* advances)-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 20
 

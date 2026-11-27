@@ -26,7 +26,7 @@ itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 宫格圆角属性。
 
-**类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) &#124; BorderRadiuses &#124; [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 20
 

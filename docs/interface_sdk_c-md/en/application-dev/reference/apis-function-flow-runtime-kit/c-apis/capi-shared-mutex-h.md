@@ -6,15 +6,13 @@ Declares the shared mutex interfaces in C.
 
 **Library**: libffrt.z.so
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 18
 
-**Related module**: [FFRT](capi-function-flow-runtime-kit-ffrt.md)
+**Related module**: [FFRT](capi-ffrt.md)
 
 ## Summary
 
-### Functions
+### Function
 
 | Name | Description |
 | -- | -- |
@@ -37,10 +35,6 @@ FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* 
 **Description**
 
 Initializes a rwlock.<br> The rwlock must later be destroyed by [ffrt_rwlock_destroy](capi-shared-mutex-h.md#ffrt_rwlock_destroy).
-
-<!--Device-FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* attr)--><!--Device-FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* attr)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 
@@ -66,10 +60,6 @@ FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)
 **Description**
 
 Locks a write lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). The write lock is exclusive: no read locks can be held concurrently.
-
-<!--Device-FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 
@@ -101,10 +91,6 @@ FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)
 
 Attempts to lock a write lock.<br> Does not block the calling thread. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
 
-<!--Device-FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -133,10 +119,6 @@ FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)
 **Description**
 
 Locks a read lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). Multiple readers may hold the lock concurrently, but no writer may hold it.
-
-<!--Device-FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 
@@ -168,10 +150,6 @@ FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)
 
 Attempts to lock a read lock.<br> Does not block the calling thread. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
 
-<!--Device-FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -201,10 +179,6 @@ FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)
 
 Unlocks a rwlock.<br> The rwlock must be held by the calling thread, having been previously locked by [ffrt_rwlock_rdlock](capi-shared-mutex-h.md#ffrt_rwlock_rdlock), [ffrt_rwlock_tryrdlock](capi-shared-mutex-h.md#ffrt_rwlock_tryrdlock), [ffrt_rwlock_wrlock](capi-shared-mutex-h.md#ffrt_rwlock_wrlock), or [ffrt_rwlock_trywrlock](capi-shared-mutex-h.md#ffrt_rwlock_trywrlock).
 
-<!--Device-FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -228,10 +202,6 @@ FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)
 **Description**
 
 Destroys a rwlock.<br> The rwlock must have been initialized by [ffrt_rwlock_init](capi-shared-mutex-h.md#ffrt_rwlock_init) and no thread may hold a read or write lock on entry.
-
-<!--Device-FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)--><!--Device-FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)-End-->
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 18
 

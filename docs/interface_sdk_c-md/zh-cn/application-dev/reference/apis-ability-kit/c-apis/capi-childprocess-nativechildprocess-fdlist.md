@@ -1,20 +1,18 @@
 # NativeChildProcess_FdList
 
 ```c
-typedef struct NativeChildProcess_FdList {...} NativeChildProcess_FdList
+struct NativeChildProcess_FdList {...}
 ```
 
 ## 概述
 
 传递给子进程的文件描述符信息列表，文件描述符记录个数不能超过16个。
 
-<!--Device-struct NativeChildProcess_FdList {...}--><!--Device-struct NativeChildProcess_FdList {...}-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **起始版本：** 13
 
-**相关模块：** [ChildProcess](capi-ability-kit-childprocess.md)
+**相关模块：** [ChildProcess](capi-childprocess.md)
 
 **所在头文件：** [native_child_process.h](capi-native-child-process-h.md)
 
@@ -24,6 +22,6 @@ typedef struct NativeChildProcess_FdList {...} NativeChildProcess_FdList
 
 | 名称 | 描述 |
 | -- | -- |
-| [struct NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) head | 子进程文件描述符记录链表中的第一个记录。<br><!--Device-struct NativeChildProcess_Fd* head--><!--Device-struct NativeChildProcess_Fd* head-End--> |
+| [struct NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) head | 子进程文件描述符记录链表中的第一个记录。 |
 
 

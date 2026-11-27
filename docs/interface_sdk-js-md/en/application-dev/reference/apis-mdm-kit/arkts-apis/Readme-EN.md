@@ -278,11 +278,17 @@
   - [PatchInfo](arkts-mdm-deviceinfo-patchinfo-i.md)
 - [@ohos.enterprise.deviceSettings(Device Settings Management)](arkts-mdm-enterprise-devicesettings.md)
   - [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md)
+  - [getControlPanelQuickToggleListForAccount](arkts-mdm-devicesettings-getcontrolpanelquicktogglelistforaccount-f.md)
+  - [getControlPanelRestricted](arkts-mdm-devicesettings-getcontrolpanelrestricted-f.md)
+  - [getControlPanelTopToggleListForAccount](arkts-mdm-devicesettings-getcontrolpaneltoptogglelistforaccount-f.md)
   - [getEnterpriseDisplayInfo](arkts-mdm-devicesettings-getenterprisedisplayinfo-f.md)
   - [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md)
   - [getValue](arkts-mdm-devicesettings-getvalue-f.md)
   - [getValueForAccount](arkts-mdm-devicesettings-getvalueforaccount-f.md)
   - [removeHiddenSettingsMenu](arkts-mdm-devicesettings-removehiddensettingsmenu-f.md)
+  - [setControlPanelQuickToggleListForAccount](arkts-mdm-devicesettings-setcontrolpanelquicktogglelistforaccount-f.md)
+  - [setControlPanelRestricted](arkts-mdm-devicesettings-setcontrolpanelrestricted-f.md)
+  - [setControlPanelTopToggleListForAccount](arkts-mdm-devicesettings-setcontrolpaneltoptogglelistforaccount-f.md)
   - [setEnterpriseDisplayInfo](arkts-mdm-devicesettings-setenterprisedisplayinfo-f.md)
   - [setHomeWallpaper](arkts-mdm-devicesettings-sethomewallpaper-f.md)
   - [setSwitchStatus](arkts-mdm-devicesettings-setswitchstatus-f.md)
@@ -306,6 +312,8 @@
   - [PowerPolicy(system api)](arkts-mdm-devicesettings-powerpolicy-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CertBlob(system api)](arkts-mdm-devicesettings-certblob-i-sys.md)<!--DelEnd-->
+  - [ControlPanelQuickToggleType](arkts-mdm-devicesettings-controlpanelquicktoggletype-e.md)
+  - [ControlPanelTopToggleType](arkts-mdm-devicesettings-controlpaneltoptoggletype-e.md)
   <!--Del-->
   - [PowerPolicyAction(system api)](arkts-mdm-devicesettings-powerpolicyaction-e-sys.md)<!--DelEnd-->
   <!--Del-->

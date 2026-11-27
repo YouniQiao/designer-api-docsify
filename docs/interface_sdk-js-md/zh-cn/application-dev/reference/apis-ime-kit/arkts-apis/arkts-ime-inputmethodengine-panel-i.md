@@ -264,7 +264,7 @@ getImmersiveMode(): ImmersiveMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | Failed to obtain panel execution order. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **示例**
@@ -1037,7 +1037,7 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | Failed to obtain panel execution order. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. The panel has been destroyed or is unavailable. |
 
 **示例**
@@ -1273,7 +1273,7 @@ show(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. The panel has been destroyed or is unavailable. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to the proxy input method. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
 **示例**
@@ -1315,7 +1315,7 @@ show(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. The panel has been destroyed or is unavailable. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input client error. Bind the input method to an editor before showing the panel. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to the proxy input method. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
 **示例**

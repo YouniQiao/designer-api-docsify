@@ -8,13 +8,11 @@ typedef struct ArkUI_NodeComponentEvent {...} ArkUI_NodeComponentEvent
 
 Defines the parameter type of the component callback event.
 
-<!--Device-typedef struct ArkUI_NodeComponentEvent {...} ArkUI_NodeComponentEvent--><!--Device-typedef struct ArkUI_NodeComponentEvent {...} ArkUI_NodeComponentEvent-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
-**相关模块：** [ArkUI_NativeModule](capi-arkui-arkui-nativemodule.md)
+**相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
 **所在头文件：** [native_node.h](capi-native-node-h.md)
 
@@ -24,6 +22,6 @@ Defines the parameter type of the component callback event.
 
 | 名称 | 描述 |
 | -- | -- |
-| [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) data[MAX_COMPONENT_EVENT_ARG_NUM] | Data array object.<br><!--Device-ArkUI_NumberValue data[MAX_COMPONENT_EVENT_ARG_NUM]--><!--Device-ArkUI_NumberValue data[MAX_COMPONENT_EVENT_ARG_NUM]-End--> |
+| [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) data[MAX_COMPONENT_EVENT_ARG_NUM] | Data array object. |
 
 

@@ -116,7 +116,7 @@ contentType?: notification.ContentType
 
 通知内容类型。
 
-**类型：** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
+**类型：** [notification.ContentType](arkts-notification-notification-depr-contenttype-e.md)
 
 **起始版本：** 7
 

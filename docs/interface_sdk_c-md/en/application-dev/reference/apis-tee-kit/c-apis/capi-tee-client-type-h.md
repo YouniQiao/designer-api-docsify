@@ -6,15 +6,13 @@ Defines basic data types and data structures.
 
 **Library**: libteec.so
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
-**Related module**: [TeeClient](capi-tee-kit-teeclient.md)
+**Related module**: [TeeClient](capi-teeclient.md)
 
 ## Summary
 
-### Structs
+### Struct
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |

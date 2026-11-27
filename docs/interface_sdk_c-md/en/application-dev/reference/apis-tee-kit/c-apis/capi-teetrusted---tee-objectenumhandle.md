@@ -1,20 +1,18 @@
 # __TEE_ObjectEnumHandle
 
 ```c
-typedef struct __TEE_ObjectEnumHandle *TEE_ObjectEnumHandle
+struct __TEE_ObjectEnumHandle
 ```
 
 ## Overview
 
-Defines the pointer to <b>TEE_ObjectEnumHandle</b>.
-
-<!--Device-typedef struct __TEE_ObjectEnumHandle *TEE_ObjectEnumHandle--><!--Device-typedef struct __TEE_ObjectEnumHandle *TEE_ObjectEnumHandle-End-->
+Defines the handle for enumerating objects.
 
 **System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
-**Related module**: [TeeTrusted](capi-tee-kit-teetrusted.md)
+**Related module**: [TeeTrusted](capi-teetrusted.md)
 
-**Header file**: [tee_defines.h](capi-tee-defines-h.md)
+**Header file**: [tee_trusted_storage_api.h](capi-tee-trusted-storage-api-h.md)
 

@@ -8,13 +8,11 @@ typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config
 
 OH_NativeBuffer的属性配置，用于申请新的OH_NativeBuffer实例或查询现有实例的相关属性。
 
-<!--Device-typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config--><!--Device-typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config-End-->
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
 
 **起始版本：** 9
 
-**相关模块：** [OH_NativeBuffer](capi-arkgraphics2d-oh-nativebuffer.md)
+**相关模块：** [OH_NativeBuffer](capi-oh-nativebuffer.md)
 
 **所在头文件：** [native_buffer.h](capi-native-buffer-h.md)
 
@@ -24,10 +22,10 @@ OH_NativeBuffer的属性配置，用于申请新的OH_NativeBuffer实例或查�
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t width | 宽度（像素）<br><!--Device-int32_t width--><!--Device-int32_t width-End--> |
-| int32_t height | 高度（像素）<br><!--Device-int32_t height--><!--Device-int32_t height-End--> |
-| int32_t format | PixelFormat之一<br><!--Device-int32_t format--><!--Device-int32_t format-End--> |
-| int32_t usage | buffer usage的组合<br><!--Device-int32_t usage--><!--Device-int32_t usage-End--> |
-| int32_t stride | 本地窗口缓冲区步幅，单位是Byte<br>**起始版本：** 10<br><!--Device-int32_t stride--><!--Device-int32_t stride-End--> |
+| int32_t width | 宽度（像素） |
+| int32_t height | 高度（像素） |
+| int32_t format | PixelFormat之一 |
+| int32_t usage | buffer usage的组合 |
+| int32_t stride |  |
 
 
