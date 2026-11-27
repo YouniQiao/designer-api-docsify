@@ -1,4 +1,4 @@
-# ToolSummary (System API)
+# ToolSummary
 
 ```TypeScript
 export interface ToolSummary
@@ -6,13 +6,11 @@ export interface ToolSummary
 
 Describes the summary information of a CLI tool.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-export interface ToolSummary--><!--Device-unnamed-export interface ToolSummary-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## description
 
@@ -24,15 +22,13 @@ Functional description of the CLI tool. The description should clearly explain t
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolSummary-readonly description: string--><!--Device-ToolSummary-readonly description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## name
 
@@ -44,15 +40,13 @@ Name of the CLI tool, used to uniquely identify a CLI tool in the system. The ma
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolSummary-readonly name: string--><!--Device-ToolSummary-readonly name: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## version
 
@@ -64,12 +58,10 @@ Version number of the CLI tool. It follows semantic versioning (e.g., "1.0.0"), 
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolSummary-readonly version: string--><!--Device-ToolSummary-readonly version: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

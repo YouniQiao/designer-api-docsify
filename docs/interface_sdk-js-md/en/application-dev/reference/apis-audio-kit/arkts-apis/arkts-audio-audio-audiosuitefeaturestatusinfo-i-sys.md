@@ -4,7 +4,7 @@
 interface AudioSuiteFeatureStatusInfo
 ```
 
-Defines the status of the audio encoding feature.
+Defines the status information of audio suite features.
 
 **Since:** 26.0.1
 
@@ -26,7 +26,7 @@ import { audio } from '@kit.AudioKit';
 errorCode: AudioErrors
 ```
 
-Error code when the feature enters the error status. <br>If the error code is 6800301, the internal database or I/O of the system is abnormal, which is irrelevant to application invoking.
+Error code after the feature enters an abnormal state. If the error code is 6800301, it indicates an internal system database or I/O exception, which is unrelated to application calls.
 
 **Type:** [AudioErrors](arkts-audio-audio-audioerrors-e.md)
 
@@ -46,7 +46,7 @@ Error code when the feature enters the error status. <br>If the error code is 68
 featureType: AudioSuiteFeatureType
 ```
 
-Type of the feature module.
+Feature module type.
 
 **Type:** [AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)
 
@@ -86,7 +86,7 @@ Installation path.
 progress: number
 ```
 
-Download progress. The value ranges from 0 to 100. The value should be an integer.
+Download progress. The value ranges from 0 to 100. The value must be an integer.
 
 **Type:** number
 
@@ -106,7 +106,7 @@ Download progress. The value ranges from 0 to 100. The value should be an intege
 status: AudioSuiteFeatureStatus
 ```
 
-Status of the feature module.
+Feature module status.
 
 **Type:** [AudioSuiteFeatureStatus](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md)
 

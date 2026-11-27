@@ -48,6 +48,7 @@ import { systemManager } from '@kit.MDMKit';
 | [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md#getupdateauthdata-1) | 获取系统更新的鉴权数据，用于校验系统更新信息。使用Promise异步回调。适用于内网升级场景，企业管理员可以通过鉴权数据验证系统更新包的合法性和完整性，防止恶意更新包，提升系统安全性。 |
 | [getUpdateResult](arkts-mdm-systemmanager-getupdateresult-f.md#getupdateresult-1) | 获取系统更新结果。使用Promise异步回调。适用于需要检查系统更新是否成功的场景，帮助企业管理员了解设备升级状态，及时处理更新失败的情况，确保设备系统版本符合企业要求。 |
 | [getVolumeDegree](arkts-mdm-systemmanager-getvolumedegree-f.md#getvolumedegree-1) | 获取指定音量类型的音量值。 |
+| [installFont](arkts-mdm-systemmanager-installfont-f.md#installfont-1) | 从指定路径将字体文件安装到系统字体库中。 |
 | [isActivationLockDisabled](arkts-mdm-systemmanager-isactivationlockdisabled-f.md#isactivationlockdisabled-1) | 获取设备激活锁禁用状态。适用于需要验证设备激活锁功能状态的场景，帮助企业管理员确认设备的安全配置，特别是在设备转让或回收时需要了解激活锁状态。 |
 | [isOtaUpdateNonceEnable](arkts-mdm-systemmanager-isotaupdatenonceenable-f.md#isotaupdatenonceenable-1) | 查询OTA更新Nonce是否启用。适用于需要验证设备OTA更新安全配置的场景，帮助企业管理员确认Nonce校验功能状态，保障系统更新安全性。 |
 | [notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages-1) | 通知系统更新包信息。内网升级场景下，需要先调用该接口通知系统更新包，再调用[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md)设置升级策略。使用Promise异步回调。 |
@@ -67,6 +68,7 @@ import { systemManager } from '@kit.MDMKit';
 | [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog-1) | 开始收集设备上已生成并存储至硬盘的[FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md)类型的faultlog日志，不支持收集未存储至硬盘的faultlog日志、应用业务日志和系统运行日志。 |
 | [startExactTimer](arkts-mdm-systemmanager-startexacttimer-f.md#startexacttimer-1) | 启动精确的计时器。该接口使用promise返回结果。 |
 | [stopExactTimer](arkts-mdm-systemmanager-stopexacttimer-f.md#stopexacttimer-1) | 停止精确计时器。该接口使用promise返回结果。 |
+| [uninstallFont](arkts-mdm-systemmanager-uninstallfont-f.md#uninstallfont-1) | 按字体名称从系统字体库中卸载已安装的字体文件。 |
 
 ### 类
 

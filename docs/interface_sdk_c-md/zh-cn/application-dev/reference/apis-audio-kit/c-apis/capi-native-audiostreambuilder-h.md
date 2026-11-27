@@ -53,6 +53,8 @@
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetPlaybackCaptureMode(OH_AudioStreamBuilder* builder, uint32_t mode)](#oh_audiostreambuilder_setplaybackcapturemode) | 设置内录（录制系统内部音频）的模式，该模式将决定要录制的音频播放流范围。 <br>此功能仅适用于[AUDIOSTREAM_TYPE_CAPTURER](capi-native-audiostream-base-h.md#oh_audiostream_type)类型。 <br>设置内录模式后，录音流的使用场景会被强制设为内录，使用 [OH_AudioStreamBuilder_SetCapturerInfo](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_setcapturerinfo)设置的OH_AudioStream_SourceType会被忽略。<br>设置的内录模式，可以是单个 [OH_AudioStream_PlaybackCaptureMode](capi-native-audiostream-base-h.md#oh_audiostream_playbackcapturemode)，或多个枚举或运算的结果。 <br>该API最初仅对特定系统应用可用，从API版本26.0.0开始，支持任意应用使用。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetSensitiveRecordPermitCallback(OH_AudioStreamBuilder* builder, OH_AudioCapturer_SensitiveRecordPermitCallback callback, void* userData)](#oh_audiostreambuilder_setsensitiverecordpermitcallback) | 设置蜂窝通话下行录音风险提示语播放结束事件的回调函数。 <br>仅在使用[OH_AudioStream_SourceType](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype)为AUDIOSTREAM_SOURCE_TYPE_VOICE_DOWNLINK录制时需要设置此函数。 <br>此回调必须成功设置，否则录制流无法创建。 <br>音频录制流创建后，风险提示语将自动添加到发送给通话对方的语音数据中。 应用应等待回调结果后再启动录制流，否则[OH_AudioCapturer_Start](capi-native-audiocapturer-h.md#oh_audiocapturer_start)将返回错误。 <br>请确保音频录制流在蜂窝通话开始后创建，否则[OH_AudioStreamBuilder_GenerateCapturer](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_generatecapturer)将返回错误。 |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetCellularRecordSecurityParams(OH_AudioStreamBuilder* builder, const char* cellularRecordPhoneNum, const char* cellularRecordToken)](#oh_audiostreambuilder_setcellularrecordsecurityparams) | 设置蜂窝通话下行录音的电话号码和安全令牌。 <br>仅在使用[OH_AudioStream_SourceType](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype)为AUDIOSTREAM_SOURCE_TYPE_VOICE_DOWNLINK录制时需要设置此函数。 <br>电话号码和安全令牌将用于校验蜂窝通话下行录制流是否匹配对应的蜂窝通话，必须成功设置，否则录制流无法创建。 |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)](#oh_audiostreambuilder_setoffloadallowed) | 设置音频播放流是否允许使用低功耗模式。 此接口仅允许音频播放流构造器使用。 当音频播放使用场景为音乐或听书时，系统会默认使用低功耗模式播放音频，可在后台播放时降低功耗。 然而低功耗模式下，音频系统内缓存数据量很大，在实时生成音频数据的场景并不适用，此时开发者可设置不使用此模式。 |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)](#oh_audiostreambuilder_setkeepactiveonsilence) | 设置是否在静音播放时保持音频通路运行，默认值为false。 在默认情况下，播放静音数据，包括音量为0和输入静音数据，系统会在检测到后停止音频通路和硬件， 以达到节省功耗的效果。当恢复有声数据时，系统会立即恢复。 但恢复存在短暂耗时，如果应用需要在播放静音数据时保持通路运行，以确保数据输出时间固定，可通过此接口设置关闭。 关闭效果仅在音频播放流运行阶段有效。 |
 
 ## 函数说明
 
@@ -1093,5 +1095,63 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetCellularRecordSecurityParams(OH_A
 | 类型 | 说明 |
 | -- | -- |
 | [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>AUDIOSTREAM_SUCCESS：函数执行成功。</li> <li>AUDIOSTREAM_ERROR_INVALID_PARAM：参数builder、cellularRecordPhoneNum或cellularRecordToken为空指针。</li> </ul> |
+
+### OH_AudioStreamBuilder_SetOffloadAllowed()
+
+```c
+OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)
+```
+
+**描述：**
+
+设置音频播放流是否允许使用低功耗模式。 此接口仅允许音频播放流构造器使用。 当音频播放使用场景为音乐或听书时，系统会默认使用低功耗模式播放音频，可在后台播放时降低功耗。 然而低功耗模式下，音频系统内缓存数据量很大，在实时生成音频数据的场景并不适用，此时开发者可设置不使用此模式。
+
+<!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)--><!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_AudioStreamBuilder](capi-ohaudio-oh-audiostreambuilderstruct.md)* builder | [in] 指向由[OH_AudioStreamBuilder_Create](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_create)创建的构造器实例。 |
+| bool allowed | [in] 是否允许使用低功耗模式，默认值是true。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 接口调用成功</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1.builder参数为空指针。 2.builder不是播放流类型。</li> </ul> |
+
+### OH_AudioStreamBuilder_SetKeepActiveOnSilence()
+
+```c
+OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)
+```
+
+**描述：**
+
+设置是否在静音播放时保持音频通路运行，默认值为false。 在默认情况下，播放静音数据，包括音量为0和输入静音数据，系统会在检测到后停止音频通路和硬件， 以达到节省功耗的效果。当恢复有声数据时，系统会立即恢复。 但恢复存在短暂耗时，如果应用需要在播放静音数据时保持通路运行，以确保数据输出时间固定，可通过此接口设置关闭。 关闭效果仅在音频播放流运行阶段有效。
+
+<!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)--><!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_AudioStreamBuilder](capi-ohaudio-oh-audiostreambuilderstruct.md)* builder | [in] 指向由[OH_AudioStreamBuilder_Create](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_create)创建的构造器实例。 |
+| bool keepActive | [in] 表示是否在静音播放时保持音频通路运行，true表示保持，false表示不保持，默认值为false。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) 接口调用成功。</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1.builder参数为空指针。2.builder不是播放流类型。</li> </ul> |
 
 

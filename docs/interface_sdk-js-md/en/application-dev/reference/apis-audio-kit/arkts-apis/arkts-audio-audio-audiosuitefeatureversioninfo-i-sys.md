@@ -4,7 +4,7 @@
 interface AudioSuiteFeatureVersionInfo
 ```
 
-Defines the version information of the audio editing feature.
+Defines the version information of audio suite features.
 
 **Since:** 26.0.1
 
@@ -26,7 +26,7 @@ import { audio } from '@kit.AudioKit';
 errorCode: AudioErrors
 ```
 
-Error code after a feature enters the abnormal state. <br>If the error code is 6800301, it indicates that the internal database or I/O of the system is abnormal, which is irrelevant to application invoking.
+Error code after the feature enters an abnormal state. If the error code is 6800301, it indicates an internal system database or I/O exception, which is unrelated to application calls.
 
 **Type:** [AudioErrors](arkts-audio-audio-audioerrors-e.md)
 
@@ -46,7 +46,7 @@ Error code after a feature enters the abnormal state. <br>If the error code is 6
 featureType: AudioSuiteFeatureType
 ```
 
-Type of the feature module.
+Feature module type.
 
 **Type:** [AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)
 
@@ -66,7 +66,7 @@ Type of the feature module.
 size: number
 ```
 
-Storage size of feature module. Unit: Bytes.
+Space occupied by the feature module. The unit is bytes.
 
 **Type:** number
 
@@ -86,7 +86,7 @@ Storage size of feature module. Unit: Bytes.
 status: AudioSuiteFeatureStatus
 ```
 
-Status of the feature module.
+Feature module status.
 
 **Type:** [AudioSuiteFeatureStatus](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md)
 

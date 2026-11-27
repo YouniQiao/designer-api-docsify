@@ -401,6 +401,22 @@ MTP server capability, currently supported only on phone and tablets.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## MULTI_WINDOW_DOCK
+
+```TypeScript
+MULTI_WINDOW_DOCK = 62
+```
+
+Multi Window Dock.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-MULTI_WINDOW_DOCK = 62--><!--Device-FeatureForDevice-MULTI_WINDOW_DOCK = 62-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## NEAR_LINK
 
 ```TypeScript
@@ -574,6 +590,22 @@ Random MAC address capability for Wi-Fi connections. When this feature is disabl
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-RANDOM_MAC = 37--><!--Device-FeatureForDevice-RANDOM_MAC = 37-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## RECENT_TASKS
+
+```TypeScript
+RECENT_TASKS = 58
+```
+
+Recent Tasks.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-RECENT_TASKS = 58--><!--Device-FeatureForDevice-RECENT_TASKS = 58-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -768,6 +800,24 @@ Super privacy mode. Once disabled, the super privacy mode cannot be enabled.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-SUPER_PRIVACY = 53--><!--Device-FeatureForDevice-SUPER_PRIVACY = 53-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SWITCH_DATACARD
+
+```TypeScript
+SWITCH_DATACARD = 54
+```
+
+Switch data card.
+
+Once this feature is disabled, the default data card cannot be switched, and only the current default data card can be used to access the internet. Voice and SMS services are not affected.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SWITCH_DATACARD = 54--><!--Device-FeatureForDevice-SWITCH_DATACARD = 54-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

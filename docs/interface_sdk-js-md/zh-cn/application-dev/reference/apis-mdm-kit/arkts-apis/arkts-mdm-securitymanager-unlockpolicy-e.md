@@ -44,6 +44,22 @@ EXTENDED_AUTH_ONLY = 1
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## EXTENDED_AUTH_OPTIONAL
+
+```TypeScript
+EXTENDED_AUTH_OPTIONAL = 3
+```
+
+设备关联认证和其他认证方式可选认证
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnlockPolicy-EXTENDED_AUTH_OPTIONAL = 3--><!--Device-UnlockPolicy-EXTENDED_AUTH_OPTIONAL = 3-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## EXTENDED_AUTH_REQUIRED
 
 ```TypeScript

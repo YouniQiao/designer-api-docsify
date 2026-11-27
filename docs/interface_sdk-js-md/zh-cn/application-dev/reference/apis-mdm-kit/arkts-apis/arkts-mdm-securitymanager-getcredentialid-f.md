@@ -45,5 +45,5 @@ function getCredentialId(authToken: Uint8Array, allowableDuration: number): Prom
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
-| 9201057 | Invalid authentication token. |
-| 9201058 | The authentication token parsing duration is out of the allowed range. |
+| [9201057](../errorcode-enterpriseDeviceManager.md#9201057-认证令牌无效) | Invalid authentication token. |
+| [9201058](../errorcode-enterpriseDeviceManager.md#9201058-认证令牌解析时长超出允许范围) | The authentication token parsing duration is out of the allowed range. |

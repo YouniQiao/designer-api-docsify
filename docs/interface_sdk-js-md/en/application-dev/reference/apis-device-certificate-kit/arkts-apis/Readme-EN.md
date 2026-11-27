@@ -140,9 +140,13 @@
   - [CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)
   - [CertBlob](arkts-devicecertificate-certificatemanager-certblob-i.md)
   - [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
+  <!--Del-->
+  - [CertStoreInfo(system api)](arkts-devicecertificate-certificatemanager-certstoreinfo-i-sys.md)<!--DelEnd-->
   - [CertStoreProperty](arkts-devicecertificate-certificatemanager-certstoreproperty-i.md)
   - [CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md)
   - [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)
+  <!--Del-->
+  - [CMResult(system api)](arkts-devicecertificate-certificatemanager-cmresult-i-sys.md)<!--DelEnd-->
   - [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md)
   <!--Del-->
   - [ConfigItem(system api)](arkts-devicecertificate-certificatemanager-configitem-i-sys.md)<!--DelEnd-->

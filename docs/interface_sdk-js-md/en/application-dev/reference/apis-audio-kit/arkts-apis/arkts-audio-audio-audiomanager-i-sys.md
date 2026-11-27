@@ -192,7 +192,7 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 getSuiteDownloadManager(): AudioSuiteDownloadManager
 ```
 
-Obtain the AudioSuiteDownloadManager instance for downloading the audio editing feature.
+Obtains an **AudioSuiteDownloadManager** instance for downloading audio suite features.
 
 **Since:** 26.0.1
 
@@ -208,7 +208,7 @@ Obtain the AudioSuiteDownloadManager instance for downloading the audio editing 
 
 | Type | Description |
 | --- | --- |
-| [AudioSuiteDownloadManager](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md) | AudioSuiteDownloadManager instance. |
+| [AudioSuiteDownloadManager](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md) | **AudioSuiteDownloadManager** instance. |
 
 **Error codes:**
 

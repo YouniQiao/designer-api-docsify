@@ -4,7 +4,7 @@
 enum NetworkType
 ```
 
-Network type for downloading the audio encoding feature.
+Enumerates the network types for downloading audio suite features.
 
 **Since:** 26.0.1
 
@@ -20,7 +20,7 @@ Network type for downloading the audio encoding feature.
 CELLULAR_AND_WIFI = 7
 ```
 
-Cellular and Wi-Fi network.
+Cellular and Wi-Fi networks.
 
 **Since:** 26.0.1
 
@@ -38,7 +38,7 @@ Cellular and Wi-Fi network.
 WIFI = 6
 ```
 
-Wi-Fi network.
+Wi-Fi.
 
 **Since:** 26.0.1
 

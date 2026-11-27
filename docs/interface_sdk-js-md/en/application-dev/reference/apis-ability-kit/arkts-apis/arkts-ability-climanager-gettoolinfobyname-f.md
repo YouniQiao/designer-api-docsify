@@ -14,7 +14,7 @@ function getToolInfoByName(toolName: string): Promise<ToolInfo>
 
 Get detailed information of a single tool by its name
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** 
 - API version 26 and later: ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -35,7 +35,7 @@ Get detailed information of a single tool by its name
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ToolInfo](arkts-ability-toolinfo-i-sys.md)&gt; | detailed information of tool. |
+| Promise&lt;[ToolInfo](arkts-ability-toolinfo-i.md)&gt; | detailed information of tool. |
 
 **Error codes:**
 

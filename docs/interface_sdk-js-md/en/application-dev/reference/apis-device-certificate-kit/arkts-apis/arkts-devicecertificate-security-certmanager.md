@@ -67,6 +67,7 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 | [getSystemAppCertificate](arkts-devicecertificate-certificatemanager-getsystemappcertificate-f-sys.md#getsystemappcertificate-1) | Obtains the credential details of the system application. This API is called only by the certificate management application. This API uses a promise to return the result. |
 | [getSystemTrustedCertificate](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificate-f-sys.md#getsystemtrustedcertificate-1) | Obtains details about a CA certificate trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result. |
 | [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-1) | Obtains the list of CA certificates trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result. |
+| [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-2) | Obtains the list of CA certificates trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result. |
 | [grantPublicCertificate](arkts-devicecertificate-certificatemanager-grantpubliccertificate-f-sys.md#grantpubliccertificate-1) | Grants the permission for an application to use the public credentials of a user. This API is called only by the certificate management application. This API uses a promise to return the result. |
 | [installPublicCertificate](arkts-devicecertificate-certificatemanager-installpubliccertificate-f-sys.md#installpubliccertificate-1) | Installs the public credential of the user. This API is called only by the certificate management application. This API uses a promise to return the result. |
 | [installSystemAppCertificate](arkts-devicecertificate-certificatemanager-installsystemappcertificate-f-sys.md#installsystemappcertificate-1) | Installs the system application credential. This API is called only by the certificate management application. This API uses a promise to return the result. |
@@ -98,6 +99,8 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 
 | Name | Description |
 | --- | --- |
+| [CertStoreInfo](arkts-devicecertificate-certificatemanager-certstoreinfo-i-sys.md) | Represents the certificate store information. |
+| [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i-sys.md) | Represents the result returned. |
 | [ConfigItem](arkts-devicecertificate-certificatemanager-configitem-i-sys.md) | Represents a certificate management configuration item. |
 <!--DelEnd-->
 

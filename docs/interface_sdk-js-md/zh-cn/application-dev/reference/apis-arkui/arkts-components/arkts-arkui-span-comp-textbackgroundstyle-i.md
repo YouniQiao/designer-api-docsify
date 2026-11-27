@@ -18,7 +18,7 @@ declare interface TextBackgroundStyle
 borderColor?: ResourceColor
 ```
 
-文本背景边框颜色。默认值：**Color.Transparent**。
+文本背景边框颜色。默认跟随字体颜色。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

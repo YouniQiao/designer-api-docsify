@@ -67,3 +67,52 @@ try {
 ```
 
 <!--DelEnd-->
+
+
+## getSystemTrustedCertificateList
+
+```TypeScript
+function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>
+```
+
+Obtains the list of CA certificates trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>--><!--Device-certificateManager-function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| certAlg | [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md) | Yes | Indicates the certificate algorithm type of the system root certificate store. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **certList** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: <br>1. IPC communication failed; <br>2. Memory operation error; <br>3. File operation error. Please try again. |
+| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) | The input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
+
+<!--Del-->
+**Examples**
+
+See [getSystemTrustedCertificateList](#getsystemtrustedcertificatelist)
+
+<!--DelEnd-->

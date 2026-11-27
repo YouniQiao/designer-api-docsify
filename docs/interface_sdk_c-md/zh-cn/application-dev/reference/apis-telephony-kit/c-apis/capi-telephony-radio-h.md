@@ -4,7 +4,7 @@
 
 Provides C interface for the telephony radio.
 
-**引用文件：** <telephony/core_service/telephony_radio_type.h>
+**引用文件：** <telephony/core_service/telephony_radio.h>
 
 **库：** libtelephony_radio.so
 

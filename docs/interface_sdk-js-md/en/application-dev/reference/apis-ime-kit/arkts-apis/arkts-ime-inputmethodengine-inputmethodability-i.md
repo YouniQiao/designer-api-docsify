@@ -183,7 +183,7 @@ Destroy the input method panel. This interface must be invoked before creating a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. |
 
 **Examples**
 
@@ -250,7 +250,7 @@ Destroy the input method panel. Use the promise asynchronous callback. <br> <br>
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | Failed to initialize or submit the asynchronous operation. |
 
 **Examples**
 

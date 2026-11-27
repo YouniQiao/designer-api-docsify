@@ -195,7 +195,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | Failed to initialize or submit the asynchronous operation. |
 
 **示例**
 
@@ -263,7 +263,7 @@ destroyPanel(panel: Panel): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | Failed to initialize or submit the asynchronous operation. @dynamiconly |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | Failed to initialize or submit the asynchronous operation. |
 
 **示例**
 

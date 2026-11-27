@@ -14,7 +14,7 @@ function queryToolSummaries(): Promise<Array<ToolSummary>>
 
 Query all tool summary information. The summary information only contains the fields: name, description, version.
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** 
 - API version 26 and later: ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -29,7 +29,7 @@ Query all tool summary information. The summary information only contains the fi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ToolSummary](arkts-ability-toolinfo-toolsummary-i-sys.md)&gt;&gt; | List of full tool summaries. |
+| Promise&lt;Array&lt;[ToolSummary](arkts-ability-toolinfo-toolsummary-i.md)&gt;&gt; | List of full tool summaries. |
 
 **Error codes:**
 

@@ -38,7 +38,7 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. <br>The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: <br>1. IPC communication failed; <br>2. Memory operation error; <br>3. File operation error. Please try again. |
 
 <!--Del-->
 **示例**
@@ -65,5 +65,54 @@ try {
   console.error(`Failed to get system trusted certificates. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
+
+
+## getSystemTrustedCertificateList
+
+```TypeScript
+function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>
+```
+
+获取系统信任的CA证书列表。此接口仅供证书管理应用调用。该接口使用promise返回结果。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManager-function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>--><!--Device-certificateManager-function getSystemTrustedCertificateList(certAlg: CertAlgorithm): Promise<CMResult>-End-->
+
+**系统能力：** SystemCapability.Security.CertificateManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| certAlg | [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md) | 是 | 该参数表示系统根证书库的证书算法类型。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 用于返回操作结果的Promise，参考**certList** [CMResult。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: <br>1. IPC communication failed; <br>2. Memory operation error; <br>3. File operation error. Please try again. |
+| [17500011](../errorcode-certManager.md#17500011-入参校验失败) | The input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
+
+<!--Del-->
+**示例**
+
+参见 [getSystemTrustedCertificateList](#getsystemtrustedcertificatelist)
 
 <!--DelEnd-->

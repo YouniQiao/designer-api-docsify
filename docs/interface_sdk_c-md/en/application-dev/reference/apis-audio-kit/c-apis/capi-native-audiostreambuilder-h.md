@@ -53,6 +53,8 @@ Declare audio stream builder related interfaces.
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetPlaybackCaptureMode(OH_AudioStreamBuilder* builder, uint32_t mode)](#oh_audiostreambuilder_setplaybackcapturemode) | Sets target mode when using playback capture. Mode will decide what kind of streams to capture. This function is only available for [AUDIOSTREAM_TYPE_CAPTURER](capi-native-audiostream-base-h.md#oh_audiostream_type) type. After setting playback capture mode, the [OH_AudioStream_SourceType](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype) will be ignored, so caller do not need to use [OH_AudioStreamBuilder_SetCapturerInfo](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_setcapturerinfo) if you only want to capture playback streams. Note that playback capture is only available for specific system applications at first, others do not have authorization. But since API version 26.0.0, this function supports the use of any application. |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetSensitiveRecordPermitCallback(OH_AudioStreamBuilder* builder, OH_AudioCapturer_SensitiveRecordPermitCallback callback, void* userData)](#oh_audiostreambuilder_setsensitiverecordpermitcallback) | Sets the callback to receive when the sensitive warning message playback is finished for voice downlink capturer stream. This function is only needed when using [AUDIOSTREAM_SOURCE_TYPE_VOICE_DOWNLINK](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype) to record. This callback must be successfully set, otherwise the capturer can not be created. The sensitive warning message will be automatically added to the voice data sent to the other end of the call right after the audio capturer is created. The application should wait for the callback result before starting the capturer, otherwise an error will be returned by [OH_AudioCapturer_Start](capi-native-audiocapturer-h.md#oh_audiocapturer_start). Make sure the audio capturer is created after the voice call started, otherwise an error will be returned by [OH_AudioStreamBuilder_GenerateCapturer](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_generatecapturer). |
 | [OH_AudioStream_Result OH_AudioStreamBuilder_SetCellularRecordSecurityParams(OH_AudioStreamBuilder* builder, const char* cellularRecordPhoneNum, const char* cellularRecordToken)](#oh_audiostreambuilder_setcellularrecordsecurityparams) | Sets phone number and token for voice downlink capturer stream. This function is only needed when using [AUDIOSTREAM_SOURCE_TYPE_VOICE_DOWNLINK](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype) to record. The phone number and token must be successfully set, otherwise the capturer can not be created. They will be used to check whether the voice downlink capturer matches the cellular call. |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)](#oh_audiostreambuilder_setoffloadallowed) | Sets whether the low-power mode is allowed for the audio playback stream. This interface can only be used by the audio playback stream constructor. When the audio playback scenario is music or book listening, the system plays the audio in low-power mode by default, which reduces power consumption when the audio is played in the background. However, in low-power mode, a large amount of data is buffered in the audio system. Therefore, this mode is not applicable to scenarios where audio data is generated in real time. In this case, developers can set this mode not to be used. |
+| [OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)](#oh_audiostreambuilder_setkeepactiveonsilence) | Indicates whether to keep the audio channel running when the audio is muted. The default value is false. By default, mute data is played, including volume 0 and input mute data. After detecting the mute data, the system stops the audio channel and hardware to save power consumption. When the audio data is restored, the system is restored immediately. However, the recovery takes a short period of time. If the application needs to keep the channel running when playing mute data to ensure that the data output time is fixed, you can disable this function by calling this API. The close effect is valid only during the running phase of the audio playback stream. |
 
 ## Function description
 
@@ -1093,5 +1095,63 @@ Sets phone number and token for voice downlink capturer stream. This function is
 | Type | Description |
 | -- | -- |
 | [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder, cellularRecordPhoneNum or cellularRecordToken is nullptr.</li> </ul> |
+
+### OH_AudioStreamBuilder_SetOffloadAllowed()
+
+```c
+OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)
+```
+
+**Description**
+
+Sets whether the low-power mode is allowed for the audio playback stream. This interface can only be used by the audio playback stream constructor. When the audio playback scenario is music or book listening, the system plays the audio in low-power mode by default, which reduces power consumption when the audio is played in the background. However, in low-power mode, a large amount of data is buffered in the audio system. Therefore, this mode is not applicable to scenarios where audio data is generated in real time. In this case, developers can set this mode not to be used.
+
+<!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)--><!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetOffloadAllowed(OH_AudioStreamBuilder* builder, bool allowed)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioStreamBuilder](capi-ohaudio-oh-audiostreambuilderstruct.md)* builder | [in] Point to the constructor instance created by [OH_AudioStreamBuilder_Create](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_create). |
+| bool allowed | [in] Indicates whether to enable the low-power mode. The default value is true. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result)Interface invoking succeeded</li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. The builder parameter is a null pointer. 2. The builder is not a playback stream type. </li> </ul> |
+
+### OH_AudioStreamBuilder_SetKeepActiveOnSilence()
+
+```c
+OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)
+```
+
+**Description**
+
+Indicates whether to keep the audio channel running when the audio is muted. The default value is false. By default, mute data is played, including volume 0 and input mute data. After detecting the mute data, the system stops the audio channel and hardware to save power consumption. When the audio data is restored, the system is restored immediately. However, the recovery takes a short period of time. If the application needs to keep the channel running when playing mute data to ensure that the data output time is fixed, you can disable this function by calling this API. The close effect is valid only during the running phase of the audio playback stream.
+
+<!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)--><!--Device-OH_AudioStream_Result OH_AudioStreamBuilder_SetKeepActiveOnSilence(OH_AudioStreamBuilder* builder, bool keepActive)-End-->
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioStreamBuilder](capi-ohaudio-oh-audiostreambuilderstruct.md)* builder | [in] Point to the constructor instance created by [OH_AudioStreamBuilder_Create](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_create). |
+| bool keepActive | [in] Indicates whether to keep the audio channel running when the audio is muted. The value true indicates that the audio channel is kept. The value false indicates that the audio channel is not kept. The default value is false. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul> <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result)The interface is successfully invoked. </li> <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1. The builder parameter is a null pointer. 2. The builder is not a playback stream type. </li> </ul> |
 
 

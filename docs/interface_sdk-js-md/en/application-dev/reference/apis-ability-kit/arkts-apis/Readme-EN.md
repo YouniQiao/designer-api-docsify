@@ -2050,12 +2050,9 @@
     - [ToolEventCallback](arkts-ability-tooleventcallback-i.md)
     - [OnEventFn](arkts-ability-oneventfn-t.md)
   - [ToolInfo(CLI Tool Information)](arkts-ability-toolinfo.md)
-    <!--Del-->
-    - [SubCommandInfo(system api)](arkts-ability-toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ToolInfo(system api)](arkts-ability-toolinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ToolSummary(system api)](arkts-ability-toolinfo-toolsummary-i-sys.md)<!--DelEnd-->
+    - [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i.md)
+    - [ToolInfo](arkts-ability-toolinfo-i.md)
+    - [ToolSummary](arkts-ability-toolinfo-toolsummary-i.md)
   - [UIAbilityContext(UIAbility Context)](arkts-ability-uiabilitycontext.md)
     - [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
     <!--Del-->

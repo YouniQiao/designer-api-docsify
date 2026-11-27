@@ -44,6 +44,22 @@ Use only extended authentication.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## EXTENDED_AUTH_OPTIONAL
+
+```TypeScript
+EXTENDED_AUTH_OPTIONAL = 3
+```
+
+Device-associated authentication and other authentication modes are optional.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UnlockPolicy-EXTENDED_AUTH_OPTIONAL = 3--><!--Device-UnlockPolicy-EXTENDED_AUTH_OPTIONAL = 3-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## EXTENDED_AUTH_REQUIRED
 
 ```TypeScript

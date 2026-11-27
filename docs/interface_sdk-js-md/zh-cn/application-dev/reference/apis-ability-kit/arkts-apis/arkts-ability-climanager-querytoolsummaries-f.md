@@ -14,7 +14,7 @@ function queryToolSummaries(): Promise<Array<ToolSummary>>
 
 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **需要权限：** 
 - API版本26+：ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -29,7 +29,7 @@ function queryToolSummaries(): Promise<Array<ToolSummary>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ToolSummary](arkts-ability-toolinfo-toolsummary-i-sys.md)&gt;&gt; | Promise对象，返回工具摘要信息列表。 |
+| Promise&lt;Array&lt;[ToolSummary](arkts-ability-toolinfo-toolsummary-i.md)&gt;&gt; | Promise对象，返回工具摘要信息列表。 |
 
 **错误码：**
 

@@ -1963,7 +1963,7 @@ try {
 isInFreeWindowMode(): boolean
 ```
 
-查询当前窗口是否为[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)模式。
+查询当前窗口是否为[自由窗口](../../../windowmanager/window-terminology.md#freeform-window自由窗口)模式。
 
 **起始版本：** 22
 

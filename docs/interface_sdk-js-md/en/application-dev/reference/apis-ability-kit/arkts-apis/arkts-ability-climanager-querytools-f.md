@@ -14,7 +14,7 @@ function queryTools(): Promise<Array<ToolInfo>>
 
 Query all detailed information of tools
 
-**Since:** 26.0.1
+**Since:** 26.1.0
 
 **Required permissions:** 
 - API version 26 and later: ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -29,7 +29,7 @@ Query all detailed information of tools
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ToolInfo](arkts-ability-toolinfo-i-sys.md)&gt;&gt; | List of full tool detail info. |
+| Promise&lt;Array&lt;[ToolInfo](arkts-ability-toolinfo-i.md)&gt;&gt; | List of full tool detail info. |
 
 **Error codes:**
 

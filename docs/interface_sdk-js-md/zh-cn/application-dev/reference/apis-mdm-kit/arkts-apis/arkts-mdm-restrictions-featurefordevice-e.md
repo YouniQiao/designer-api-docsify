@@ -398,6 +398,22 @@ MTP服务端能力，当前仅支持手机、平板设备使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## MULTI_WINDOW_DOCK
+
+```TypeScript
+MULTI_WINDOW_DOCK = 62
+```
+
+智慧多窗应用栏。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-MULTI_WINDOW_DOCK = 62--><!--Device-FeatureForDevice-MULTI_WINDOW_DOCK = 62-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## NEAR_LINK
 
 ```TypeScript
@@ -555,6 +571,22 @@ Wi-Fi连接时使用随机MAC能力，设置禁用后，连接Wi-Fi仅能使用�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FeatureForDevice-RANDOM_MAC = 37--><!--Device-FeatureForDevice-RANDOM_MAC = 37-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## RECENT_TASKS
+
+```TypeScript
+RECENT_TASKS = 58
+```
+
+最近任务。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-RECENT_TASKS = 58--><!--Device-FeatureForDevice-RECENT_TASKS = 58-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -747,6 +779,24 @@ SUPER_PRIVACY = 53
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FeatureForDevice-SUPER_PRIVACY = 53--><!--Device-FeatureForDevice-SUPER_PRIVACY = 53-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SWITCH_DATACARD
+
+```TypeScript
+SWITCH_DATACARD = 54
+```
+
+切换上网卡。
+
+禁用后，默认上网卡不可切换，且仅允许当前默认上网卡承载上网业务。语音、短信业务不受影响。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-SWITCH_DATACARD = 54--><!--Device-FeatureForDevice-SWITCH_DATACARD = 54-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

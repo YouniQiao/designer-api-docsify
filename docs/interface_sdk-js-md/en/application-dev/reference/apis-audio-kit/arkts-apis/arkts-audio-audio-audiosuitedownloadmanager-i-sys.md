@@ -4,7 +4,7 @@
 interface AudioSuiteDownloadManager
 ```
 
-Provides the capability of downloading and managing the audio editing feature, including starting, pausing, Cancel the download, status query, and uninstallation functions.
+Provides the capabilities to manage the download of audio suite features, including starting, pausing, and canceling the download, querying the status, and uninstalling the features.
 
 **Since:** 26.0.1
 
@@ -26,9 +26,9 @@ import { audio } from '@kit.AudioKit';
 cancelDownload(featureTypes: Array<AudioSuiteFeatureType>): Promise<void>
 ```
 
-Cancel the download of a specified feature. Use Promise asynchronous callbacks. Should be in the characteristic state [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading) or This interface is invoked when DOWNLOAD_PAUTE is invoked, After this function is invoked, the status changes to [VERSION_CHECK_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#version_check_succeeded).
+Cancels the download of specified features. This API uses a promise to return the result. This API should be called when the feature status is [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading) or [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused). After this API is called, the status changes to [VERSION_CHECK_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#version_check_succeeded).
 
-When the feature status is not [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading) or DOWNLOAD_PAUTE This interface is invoked. A success response is returned and the original status remains unchanged.
+If this API is called when the feature status is not [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading) or [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused), the API returns a successful response and retains the original status.
 
 **Since:** 26.0.1
 
@@ -44,13 +44,13 @@ When the feature status is not [DOWNLOADING](arkts-audio-audio-audiosuitefeature
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | The type of property to cancel. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to cancel downloading. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object. No result is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -66,9 +66,9 @@ When the feature status is not [DOWNLOADING](arkts-audio-audio-audiosuitefeature
 getFeatureStatus(featureTypes: Array<AudioSuiteFeatureType>): Promise<AudioSuiteFeatureStatusInfoArray>
 ```
 
-Obtain the status of a specified feature. Use Promise asynchronous callback.
+Obtains the status of specified features. This API uses a promise to return the result.
 
-This interface is used to query the local installation status of a feature and does not depend on the network environment.
+This API queries the local installation status of features and does not depend on the network environment.
 
 **Since:** 26.0.1
 
@@ -84,13 +84,13 @@ This interface is used to query the local installation status of a feature and d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of the features to query. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to query. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | Promise object, which returns an array of attribute states. Each element corresponds to a feature at the same index in featureTypes. |
+| Promise&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | Promise used to return the feature status array. Each element corresponds to the feature at the matching index in **featureTypes**. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ This interface is used to query the local installation status of a feature and d
 getNewVersionInfo(featureTypes: Array<AudioSuiteFeatureType>): Promise<Array<AudioSuiteFeatureVersionInfo>>
 ```
 
-Obtain the latest version of a specified feature. Use Promise asynchronous callback.
+Obtains the latest version information about specified features. This API uses a promise to return the result.
 
 Before calling this API, ensure that the device is connected to an available network.
 
@@ -124,13 +124,13 @@ Before calling this API, ensure that the device is connected to an available net
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of the features to query. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to query. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AudioSuiteFeatureVersionInfo](arkts-audio-audio-audiosuitefeatureversioninfo-i-sys.md)&gt;&gt; | Promise used to return the version info array. Each element corresponds to the feature at the same index in featureTypes. |
+| Promise&lt;Array&lt;[AudioSuiteFeatureVersionInfo](arkts-audio-audio-audiosuitefeatureversioninfo-i-sys.md)&gt;&gt; | Promise used to return the version information array. Each element corresponds to the feature at the matching index in **featureTypes**. |
 
 **Error codes:**
 
@@ -147,9 +147,9 @@ Before calling this API, ensure that the device is connected to an available net
 isFeatureInstalled(featureTypes: Array<AudioSuiteFeatureType>): Promise<Array<boolean>>
 ```
 
-Obtains whether a specified feature has been installed. Use Promise asynchronous callback.
+Checks whether specified features have been installed. This API uses a promise to return the result.
 
-This interface is used to query the local installation status of a feature and does not depend on the network environment.
+This API queries the local installation status of features and does not depend on the network environment.
 
 **Since:** 26.0.1
 
@@ -165,13 +165,13 @@ This interface is used to query the local installation status of a feature and d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of the features to query. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to query. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Promise used to return the install status array. Each element corresponds to the feature at the same index in featureTypes. |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Promise used to return the installation status array. Each element corresponds to the feature at the matching index in **featureTypes**. |
 
 **Error codes:**
 
@@ -187,7 +187,7 @@ This interface is used to query the local installation status of a feature and d
 offDownloadStatusChange(callback?: Callback<AudioSuiteFeatureStatusInfoArray>): void
 ```
 
-Unsubscribe from the download status change event. After you cancel the callback, the system does not trigger the callback.
+Unsubscribes from the download status change event. Upon unsubscription, the system will no longer trigger the callback.
 
 **Since:** 26.0.1
 
@@ -203,7 +203,7 @@ Unsubscribe from the download status change event. After you cancel the callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | No | Callback function to be canceled, The default value is null. If this parameter is not set, all callbacks that have been subscribed to in the current process are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | No | Callback to unsubscribe. By default, this parameter is left empty. If this parameter is not set, all callbacks subscribed to in the current process are unsubscribed. |
 
 **Error codes:**
 
@@ -218,7 +218,7 @@ Unsubscribe from the download status change event. After you cancel the callback
 onDownloadStatusChange(callback: Callback<AudioSuiteFeatureStatusInfoArray>): void
 ```
 
-Subscribe to download status change events. When the download status or progress of any feature changes, the subscription callback is triggered.
+Subscribes to the download status change event. The callback is triggered when the download status or progress of any feature changes.
 
 **Since:** 26.0.1
 
@@ -234,7 +234,7 @@ Subscribe to download status change events. When the download status or progress
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | Yes | Callback function, which is used to return the array of changed download status information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSuiteFeatureStatusInfoArray](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)&gt; | Yes | Callback used to return the updated download status information array. |
 
 **Error codes:**
 
@@ -249,9 +249,9 @@ Subscribe to download status change events. When the download status or progress
 pauseDownload(featureTypes: Array<AudioSuiteFeatureType>): Promise<void>
 ```
 
-Pause the download of a specified feature. Use Promise asynchronous callback. Should be called after the property state is [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading), After this function is invoked, the status changes to [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused).
+Pauses the download of specified features. This API uses a promise to return the result. This API should be called after the feature status changes to [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading). After this API is called, the status changes to [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused).
 
-If this interface is invoked when the feature status is not [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading), a success message is returned and the original status remains unchanged.
+If this API is called when the feature is not in the [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading) status, the API returns a successful response and retains the original status.
 
 **Since:** 26.0.1
 
@@ -267,13 +267,13 @@ If this interface is invoked when the feature status is not [DOWNLOADING](arkts-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of the features to pause. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to pause downloading. The value can contain a maximum of 5 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object. No result is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -289,9 +289,9 @@ If this interface is invoked when the feature status is not [DOWNLOADING](arkts-
 startBackgroundDownload(featureTypes: Array<AudioSuiteFeatureType>): Promise<void>
 ```
 
-Start the background download feature. Use Promise asynchronous callbacks. If the current network condition is Wi-Fi, the system audio service will directly download the feature. If a non-Wi-Fi network, the system audio service automatically downloads after switching to a Wi-Fi network. It can be called in any [AudioSuiteFeatureStatus](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md) state. After the client process exits, the system audio service continuously listens to the network environment until the task is downloaded successfully.
+Starts downloading features in the background. This API uses a promise to return the result. If the current network is Wi-Fi, the system audio service directly downloads the features. If the current network is not Wi-Fi, the system audio service automatically downloads the features once the network switches to Wi-Fi. This API can be called in any feature status (specified by [AudioSuiteFeatureStatus](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md)). After the client process exits, the system audio service continuously monitors the network environment until the download task is completed.
 
-The interface returns a message after the command is sent. During the download, the download progress can be obtained through the download status change event subscribed by [onDownloadStatusChange](#ondownloadstatuschange).
+The API returns a result immediately after a request is sent. During the download, you can obtain the download progress by subscribing to the download status change event via [onDownloadStatusChange](#ondownloadstatuschange).
 
 **Since:** 26.0.1
 
@@ -307,13 +307,13 @@ The interface returns a message after the command is sent. During the download, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | The type of feature to download. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to download. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object. No result is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -329,9 +329,9 @@ The interface returns a message after the command is sent. During the download, 
 startDownload(featureTypes: Array<AudioSuiteFeatureType>, networkType: NetworkType): Promise<void>
 ```
 
-Start downloading features based on the specified network. Use Promise asynchronous callbacks. Invoke [getNewVersionInfo](#getnewversioninfo) to query the new version. The query is successful and the status changes to This interface is invoked after [VERSION_CHECK_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#version_check_succeeded), Alternatively, in the [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused) state, invoke this interface to continue the download, After this function is invoked, the status changes to [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading). After the download is successful, the system automatically enters the [INSTALLING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installing) state.
+Starts downloading features over the specified network. This API uses a promise to return the result. Call [getNewVersionInfo](#getnewversioninfo) to query the new version. If the query is successful and the status changes to [VERSION_CHECK_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#version_check_succeeded), call this API. Alternatively, you can call this API to resume the download when the status is [DOWNLOAD_PAUSED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#download_paused). After this API is called, the status changes to [DOWNLOADING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#downloading). After the download is successful, the status automatically changes to [INSTALLING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installing).
 
-The interface is returned after the download starts. During the download, you can use the [onDownloadStatusChange](#ondownloadstatuschange) Obtains the download progress of the subscribed download status change event.
+This API returns a result immediately after the download starts. During the download, you can obtain the download progress through the download status change event subscribed to by [onDownloadStatusChange](#ondownloadstatuschange).
 
 **Since:** 26.0.1
 
@@ -347,8 +347,8 @@ The interface is returned after the download starts. During the download, you ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of the features to download. <br>The maximum length is 5. |
-| networkType | [NetworkType](arkts-audio-audio-networktype-e-sys.md) | Yes | Network type for downloading. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to download. The value can contain a maximum of 5 characters. |
+| networkType | [NetworkType](arkts-audio-audio-networktype-e-sys.md) | Yes | Network type for the download. |
 
 **Return value:**
 
@@ -372,9 +372,9 @@ The interface is returned after the download starts. During the download, you ca
 uninstallFeature(featureTypes: Array<AudioSuiteFeatureType>): Promise<void>
 ```
 
-Uninstall downloaded features. Use Promise asynchronous callbacks. Should be called after the property state is [INSTALLATION_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installation_succeeded), If the status changes to [UNINSTALLING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#uninstalling), the uninstallation starts.
+Uninstalls downloaded features. This API uses a promise to return the result. This API should be called after the feature status changes to [INSTALLATION_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installation_succeeded). After this API is called, the status changes to [UNINSTALLING](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#uninstalling) and the uninstallation starts.
 
-This interface is invoked when the feature status is not [INSTALLATION_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installation_succeeded), The interface returns a success message and retains the original status.
+If this API is called when the feature status is not [INSTALLATION_SUCCEEDED](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md#installation_succeeded), the API returns a successful response and retains the original status.
 
 **Since:** 26.0.1
 
@@ -390,13 +390,13 @@ This interface is invoked when the feature status is not [INSTALLATION_SUCCEEDED
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | The property type to unload. <br>The maximum length is 5. |
+| featureTypes | Array&lt;[AudioSuiteFeatureType](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)&gt; | Yes | Types of features to uninstall. The array can contain at most 5 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object. No result is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

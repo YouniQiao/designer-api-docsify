@@ -1999,12 +1999,9 @@
     - [ToolEventCallback](arkts-ability-tooleventcallback-i.md)
     - [OnEventFn](arkts-ability-oneventfn-t.md)
   - [ToolInfo（CLI工具信息）](arkts-ability-toolinfo.md)
-    <!--Del-->
-    - [SubCommandInfo（系统接口）](arkts-ability-toolinfo-subcommandinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ToolInfo（系统接口）](arkts-ability-toolinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ToolSummary（系统接口）](arkts-ability-toolinfo-toolsummary-i-sys.md)<!--DelEnd-->
+    - [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i.md)
+    - [ToolInfo](arkts-ability-toolinfo-i.md)
+    - [ToolSummary](arkts-ability-toolinfo-toolsummary-i.md)
   - [UIAbilityContext（UIAbility上下文）](arkts-ability-uiabilitycontext.md)
     - [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
     <!--Del-->

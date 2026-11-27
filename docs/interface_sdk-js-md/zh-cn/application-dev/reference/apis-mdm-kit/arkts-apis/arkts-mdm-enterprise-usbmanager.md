@@ -28,10 +28,12 @@ import { usbManager } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [addAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-addallowedopticaldiscdriveburnusbdevices-f.md#addallowedopticaldiscdriveburnusbdevices-1) | 增加支持CD/DVD刻录的USB设备列表。 |
+| [addAllowedOpticalDiscDriveBurnUsbDevicesForAccount](arkts-mdm-usbmanager-addallowedopticaldiscdriveburnusbdevicesforaccount-f.md#addallowedopticaldiscdriveburnusbdevicesforaccount-1) | Adds USB devices to the burn whitelist for the specified account. |
 | [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices-1) | 添加USB设备可用名单。 |
 | [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices-1) | 添加禁止使用的USB设备类型。与[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)接口不同的是，本接口可以不按照[defined-class-codes](https://www.usb.org/defined-class-codes)标准进行匹配。对已连接的USB设备热生效，无需重新插拔，例如USB线控耳机正常使用时，调用本接口禁用该耳机，会导致耳机不可用。 |
 | [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices-1) | 添加禁止使用的USB设备类型。 |
 | [getAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-getallowedopticaldiscdriveburnusbdevices-f.md#getallowedopticaldiscdriveburnusbdevices-1) | 获取支持CD/DVD刻录的USB设备列表。 |
+| [getAllowedOpticalDiscDriveBurnUsbDevicesForAccount](arkts-mdm-usbmanager-getallowedopticaldiscdriveburnusbdevicesforaccount-f.md#getallowedopticaldiscdriveburnusbdevicesforaccount-1) | Obtains USB devices in the burn whitelist for the specified account. |
 | [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md#getallowedusbdevices-1) | 获取USB设备可用名单。一般使用场景：在修改策略前，需要先获取现有策略进行评估；管理界面需要展示当前的USB存储设备访问控制状态。 |
 | [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md#getallowedusbdevices-2) | 获取USB设备可用名单。一般使用场景：在修改策略前，需要先获取现有策略进行评估；管理界面需要展示当前的USB存储设备访问控制状态。 |
 | [getDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-getdisallowedpermissiveusbdevices-f.md#getdisallowedpermissiveusbdevices-1) | 获取通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口禁用的USB设备类型。 |
@@ -45,6 +47,7 @@ import { usbManager } from '@kit.MDMKit';
 | [isExternalStorageInterceptEnable](arkts-mdm-usbmanager-isexternalstorageinterceptenable-f.md#isexternalstorageinterceptenable-1) | 查询外置存储挂载使能状态。 |
 | [isUsbInterceptEnable](arkts-mdm-usbmanager-isusbinterceptenable-f.md#isusbinterceptenable-1) | 查询USB拦截使能状态。 |
 | [removeAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-removeallowedopticaldiscdriveburnusbdevices-f.md#removeallowedopticaldiscdriveburnusbdevices-1) | 将USB设备从支持CD/DVD刻录的USB设备列表中移除。 |
+| [removeAllowedOpticalDiscDriveBurnUsbDevicesForAccount](arkts-mdm-usbmanager-removeallowedopticaldiscdriveburnusbdevicesforaccount-f.md#removeallowedopticaldiscdriveburnusbdevicesforaccount-1) | Removes USB devices from the burn whitelist for the specified account. |
 | [removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md#removeallowedusbdevices-1) | 移除USB设备可用名单。 |
 | [removeDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-removedisallowedpermissiveusbdevices-f.md#removedisallowedpermissiveusbdevices-1) | 移除通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口禁用的USB设备类型。被移除的USB设备类型可恢复正常使用。 |
 | [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices-1) | 移除禁止使用的USB设备类型。 |

@@ -14,7 +14,7 @@ function getToolInfoByName(toolName: string): Promise<ToolInfo>
 
 根据工具名称获取单个工具的详细信息，使用Promise异步回调。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **需要权限：** 
 - API版本26+：ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -35,7 +35,7 @@ function getToolInfoByName(toolName: string): Promise<ToolInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ToolInfo](arkts-ability-toolinfo-i-sys.md)&gt; | Promise对象，返回工具的详细信息。 |
+| Promise&lt;[ToolInfo](arkts-ability-toolinfo-i.md)&gt; | Promise对象，返回工具的详细信息。 |
 
 **错误码：**
 

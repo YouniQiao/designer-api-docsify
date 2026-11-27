@@ -60,6 +60,26 @@ Name of the bundle to which the ability to be called belongs.
 
 **System API:** This is a system API.
 
+## context
+
+```TypeScript
+context?: Context
+```
+
+Context.
+
+**Type:** [Context](arkts-ability-context-c.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-context?: Context--><!--Device-ExecuteParam-context?: Context-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
 ## deviceId
 
 ```TypeScript

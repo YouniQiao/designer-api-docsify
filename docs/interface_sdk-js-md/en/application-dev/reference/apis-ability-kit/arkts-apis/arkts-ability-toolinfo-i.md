@@ -1,4 +1,4 @@
-# ToolInfo (System API)
+# ToolInfo
 
 ```TypeScript
 export interface ToolInfo
@@ -6,13 +6,11 @@ export interface ToolInfo
 
 ToolInfo describes the basic information of a CLI tool, including the tool name, version, description, executable path, and input/output schema.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-export interface ToolInfo--><!--Device-unnamed-export interface ToolInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## description
 
@@ -24,15 +22,13 @@ Functional description of the CLI tool. The description should clearly explain t
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly description: string--><!--Device-ToolInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## eventSchemas
 
@@ -44,15 +40,13 @@ Schema definitions for custom events. Stored as key-value pairs, where the key i
 
 **Type:** Record&lt;string, Record&lt;string, Object&gt;&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>--><!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## eventTypes
 
@@ -64,15 +58,13 @@ List of custom event types supported by the CLI tool. All event types must be un
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly eventTypes?: Array<string>--><!--Device-ToolInfo-readonly eventTypes?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## executablePath
 
@@ -84,15 +76,13 @@ Executable file path of the CLI tool. It must be an absolute path.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly executablePath: string--><!--Device-ToolInfo-readonly executablePath: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## hasSubCommand
 
@@ -104,15 +94,13 @@ Indicates whether the tool supports subcommands. **true** means the tool support
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly hasSubCommand?: boolean--><!--Device-ToolInfo-readonly hasSubCommand?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## inputSchema
 
@@ -124,15 +112,13 @@ Input schema definition of the CLI tool. It uses JSON Schema format to define th
 
 **Type:** Record&lt;string, Object&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly inputSchema: Record<string, Object>--><!--Device-ToolInfo-readonly inputSchema: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## isLockScreenExecutionAllowed
 
@@ -146,15 +132,13 @@ Indicates whether the tool supports execution in the lock screen state. **true**
 
 **Default:** false
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean--><!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## name
 
@@ -166,15 +150,13 @@ Name of the CLI tool, used to uniquely identify a CLI tool in the system. The ma
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly name: string--><!--Device-ToolInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## outputSchema
 
@@ -186,15 +168,13 @@ Output schema definition of the CLI tool. It uses JSON Schema format to define t
 
 **Type:** Record&lt;string, Object&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly outputSchema: Record<string, Object>--><!--Device-ToolInfo-readonly outputSchema: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## requirePermissions
 
@@ -206,15 +186,13 @@ List of permissions required by the CLI tool. All permission items must be uniqu
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly requirePermissions?: Array<string>--><!--Device-ToolInfo-readonly requirePermissions?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## subcommands
 
@@ -224,9 +202,9 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 List of subcommand information. Stored as key-value pairs, where the key is the subcommand name and the value is the detailed information of the subcommand. The default value is an empty object.
 
-**Type:** Record&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md)&gt;
+**Type:** Record&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,7 +212,23 @@ List of subcommand information. Stored as key-value pairs, where the key is the 
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
-**System API:** This is a system API.
+## supportedDevices
+
+```TypeScript
+readonly supportedDevices?: Array<string>
+```
+
+List of device types supported by the CLI tool. The values are subject to the device types defined by the system, such as **default**, **tablet**, **tv**, **watch**, and **car**. An empty array indicates that the tool is not limited to specific device types. The default value is an empty array.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolInfo-readonly supportedDevices?: Array<string>--><!--Device-ToolInfo-readonly supportedDevices?: Array<string>-End-->
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## version
 
@@ -246,12 +240,10 @@ Version number of the CLI tool. It follows semantic versioning (e.g., "1.0.0"), 
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly version: string--><!--Device-ToolInfo-readonly version: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

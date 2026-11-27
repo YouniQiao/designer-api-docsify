@@ -4,7 +4,7 @@
 enum AudioSuiteFeatureType
 ```
 
-Enumerated audio encoding feature type.
+Enumerates the audio suite feature types.
 
 **Since:** 26.0.1
 
@@ -20,7 +20,7 @@ Enumerated audio encoding feature type.
 AUDIO_CENTER_VOICE_ENHANCEMENT = 1
 ```
 
-Enhancement for the main voice part of the audio.
+Enhances the primary vocal in the audio.
 
 **Since:** 26.0.1
 
@@ -38,7 +38,7 @@ Enhancement for the main voice part of the audio.
 AUDIO_DIALOG_ENHANCEMENT = 0
 ```
 
-Enhancement for voice dialogue part of the audio.
+Enhances the dialogues in audio.
 
 **Since:** 26.0.1
 
@@ -56,7 +56,7 @@ Enhancement for voice dialogue part of the audio.
 AUDIO_MUSIC_ENHANCEMENT = 3
 ```
 
-Enhancement for the music portion of the audio.
+Enhances music in audio.
 
 **Since:** 26.0.1
 
@@ -74,7 +74,7 @@ Enhancement for the music portion of the audio.
 AUDIO_SOURCE_SEPARATION = 4
 ```
 
-Audio source separation.
+Separates audio sources.
 
 **Since:** 26.0.1
 
@@ -92,7 +92,7 @@ Audio source separation.
 AUDIO_VOICE_ENHANCEMENT = 2
 ```
 
-Enhancement for the human voice part of the audio.
+Enhances vocal in audio.
 
 **Since:** 26.0.1
 

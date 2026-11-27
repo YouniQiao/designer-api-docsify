@@ -14,7 +14,7 @@ function queryTools(): Promise<Array<ToolInfo>>
 
 查询所有CLI工具的详细信息，使用Promise异步回调。
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **需要权限：** 
 - API版本26+：ohos.permission.QUERY_CLI_TOOL or ohos.permission.QUERY_PUBLIC_CLI_TOOL
@@ -29,7 +29,7 @@ function queryTools(): Promise<Array<ToolInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ToolInfo](arkts-ability-toolinfo-i-sys.md)&gt;&gt; | Promise对象，返回工具详细信息列表。 |
+| Promise&lt;Array&lt;[ToolInfo](arkts-ability-toolinfo-i.md)&gt;&gt; | Promise对象，返回工具详细信息列表。 |
 
 **错误码：**
 

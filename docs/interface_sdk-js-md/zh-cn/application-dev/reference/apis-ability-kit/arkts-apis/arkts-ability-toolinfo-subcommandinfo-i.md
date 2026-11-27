@@ -1,4 +1,4 @@
-# SubCommandInfo（系统接口）
+# SubCommandInfo
 
 ```TypeScript
 export interface SubCommandInfo
@@ -6,13 +6,11 @@ export interface SubCommandInfo
 
 描述CLI工具子命令的信息。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 <!--Device-unnamed-export interface SubCommandInfo--><!--Device-unnamed-export interface SubCommandInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## description
 
@@ -24,15 +22,13 @@ readonly description: string
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly description: string--><!--Device-SubCommandInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## eventSchemas
 
@@ -44,15 +40,13 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 **类型：** Record&lt;string, Record&lt;string, Object&gt;&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly eventSchemas?: Record<string, Record<string, Object>>--><!--Device-SubCommandInfo-readonly eventSchemas?: Record<string, Record<string, Object>>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## eventTypes
 
@@ -64,15 +58,13 @@ CLI工具支持的自定义事件类型列表。所有事件类型必须为唯�
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly eventTypes?: Array<string>--><!--Device-SubCommandInfo-readonly eventTypes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## inputSchema
 
@@ -84,15 +76,13 @@ readonly inputSchema: Record<string, Object>
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly inputSchema: Record<string, Object>--><!--Device-SubCommandInfo-readonly inputSchema: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## outputSchema
 
@@ -104,15 +94,13 @@ readonly outputSchema: Record<string, Object>
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly outputSchema: Record<string, Object>--><!--Device-SubCommandInfo-readonly outputSchema: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## requirePermissions
 
@@ -124,12 +112,10 @@ readonly requirePermissions?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubCommandInfo-readonly requirePermissions?: Array<string>--><!--Device-SubCommandInfo-readonly requirePermissions?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。

@@ -41,13 +41,16 @@ import { wifiManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [addAllowedHotspotClientList](arkts-mdm-wifimanager-addallowedhotspotclientlist-f.md#addallowedhotspotclientlist-1) | 添加网络共享MAC地址。 |
 | [addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md#addallowedwifilist-1) | 添加Wi-Fi允许名单。添加允许名单后当前设备仅允许连接该名单下的Wi-Fi。适用于企业安全管理场景，例如限制员工设备只能连接公司授权的Wi-Fi网络，防止连接不安全的外部Wi-Fi，保障企业网络安全和数据安全。 |
 | [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist-1) | 添加Wi-Fi禁用名单。添加禁用名单后当前设备不允许连接该名单下的Wi-Fi。适用于企业安全管控场景，例如禁止设备连接不安全的公共Wi-Fi(如咖啡馆、机场Wi-Fi)、防止员工连接竞争对手或恶意网络，保障企业数据安全。 |
+| [getAllowedHotspotClientList](arkts-mdm-wifimanager-getallowedhotspotclientlist-f.md#getallowedhotspotclientlist-1) | 获取网络共享MAC地址可用名单。 |
 | [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist-1) | 获取Wi-Fi允许名单。 |
 | [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md#getallowedwifilist-2) | 获取Wi-Fi允许名单。 |
 | [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist-1) | 获取Wi-Fi禁用名单。 |
 | [getDisallowedWifiList](arkts-mdm-wifimanager-getdisallowedwifilist-f.md#getdisallowedwifilist-2) | 获取Wi-Fi禁用名单。 |
 | [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync-1) | 查询当前设备Wi-Fi开启状态。 |
+| [removeAllowedHotspotClientList](arkts-mdm-wifimanager-removeallowedhotspotclientlist-f.md#removeallowedhotspotclientlist-1) | 移除网络共享MAC地址。 |
 | [removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md#removeallowedwifilist-1) | 移除Wi-Fi允许名单。若移除允许名单中的部分Wi-Fi，则当前设备仅允许连接剩下未移除的Wi-Fi。若移除允许名单中的所有Wi-Fi，则当前设备可以连接任意Wi-Fi。适用于企业Wi-Fi策略调整场景，例如公司更换Wi-Fi网络时移除旧网络限制、或解除部分Wi-Fi限制以允许员工连接新的办公网络。 |
 | [removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist-1) | 移除Wi-Fi禁用名单。若移除禁用名单中的部分Wi-Fi，则当前设备不允许连接禁用名单内剩余的Wi-Fi。若移除禁用名单中的所有Wi-Fi，则当前设备可以连接任意的Wi-Fi。适用于企业Wi-Fi策略调整场景，例如解除对特定Wi- Fi的禁用限制、允许员工连接新批准的办公网络、或完全移除禁用策略。 |
 | [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync-1) | 为当前设备配置Wi-Fi，连接到指定网络。 |

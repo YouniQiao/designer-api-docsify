@@ -4,7 +4,7 @@
 enum AudioSuiteFeatureStatus
 ```
 
-Enumerated value, indicating the status of the audio encoding feature.
+Enumerates the audio suite feature states.
 
 **Since:** 26.0.1
 
@@ -38,7 +38,7 @@ Download failed status.
 DOWNLOAD_PAUSED = 21
 ```
 
-Paused during download status.
+Downloading paused.
 
 **Since:** 26.0.1
 
@@ -56,7 +56,7 @@ Paused during download status.
 DOWNLOAD_SUCCEEDED = 23
 ```
 
-Download succeeded status.
+Downloaded successfully.
 
 **Since:** 26.0.1
 
@@ -74,7 +74,7 @@ Download succeeded status.
 DOWNLOADING = 20
 ```
 
-Downloading status.
+Downloading.
 
 **Since:** 26.0.1
 
@@ -92,7 +92,7 @@ Downloading status.
 INITIALIZED = 0
 ```
 
-Initialized status.
+Initialization state.
 
 **Since:** 26.0.1
 
@@ -110,7 +110,7 @@ Initialized status.
 INSTALLATION_FAILED = 35
 ```
 
-Installation failed status.
+Installation failed.
 
 **Since:** 26.0.1
 
@@ -128,7 +128,7 @@ Installation failed status.
 INSTALLATION_SUCCEEDED = 36
 ```
 
-Installation succeeded status.
+Installation succeeded.
 
 **Since:** 26.0.1
 
@@ -146,7 +146,7 @@ Installation succeeded status.
 INSTALLING = 30
 ```
 
-Installing status.
+Installation state.
 
 **Since:** 26.0.1
 
@@ -164,7 +164,7 @@ Installing status.
 INVALID = -1
 ```
 
-Invalid status.
+Invalid state.
 
 **Since:** 26.0.1
 
@@ -182,7 +182,7 @@ Invalid status.
 UNINSTALLATION_FAILED = 42
 ```
 
-Uninstallation failed status.
+Uninstallation failed.
 
 **Since:** 26.0.1
 
@@ -200,7 +200,7 @@ Uninstallation failed status.
 UNINSTALLATION_SUCCEEDED = 43
 ```
 
-Uninstallation succeeded status.
+Uninstallation succeeded.
 
 **Since:** 26.0.1
 
@@ -218,7 +218,7 @@ Uninstallation succeeded status.
 UNINSTALLING = 40
 ```
 
-Uninstalling status.
+Uninstallation state.
 
 **Since:** 26.0.1
 
@@ -236,7 +236,7 @@ Uninstalling status.
 VERSION_CHECK_FAILED = 11
 ```
 
-Check the version failure status.
+Failed to check the version.
 
 **Since:** 26.0.1
 
@@ -254,7 +254,7 @@ Check the version failure status.
 VERSION_CHECK_SUCCEEDED = 12
 ```
 
-Check version success status.
+Version check succeeded.
 
 **Since:** 26.0.1
 
@@ -272,7 +272,7 @@ Check version success status.
 VERSION_CHECKING = 10
 ```
 
-Feature is checking version.
+The feature version is being checked.
 
 **Since:** 26.0.1
 
@@ -290,7 +290,7 @@ Feature is checking version.
 WAITING_FOR_INSTALLATION = 31
 ```
 
-Waiting for installation status.
+Waiting for installation.
 
 **Since:** 26.0.1
 
@@ -308,7 +308,7 @@ Waiting for installation status.
 WAITING_FOR_UNINSTALLATION = 41
 ```
 
-Waiting for uninstalling status.
+Waiting for uninstallation.
 
 **Since:** 26.0.1
 

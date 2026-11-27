@@ -1,4 +1,4 @@
-# ToolInfo（系统接口）
+# ToolInfo
 
 ```TypeScript
 export interface ToolInfo
@@ -6,13 +6,11 @@ export interface ToolInfo
 
 ToolInfo用于描述系统命令行工具（CLI）的基本信息，包括工具名称、版本、描述、可执行路径、输入输出模式等。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 <!--Device-unnamed-export interface ToolInfo--><!--Device-unnamed-export interface ToolInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## description
 
@@ -24,15 +22,13 @@ CLI工具的功能描述。该描述应清晰说明工具的核心功能和用�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly description: string--><!--Device-ToolInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## eventSchemas
 
@@ -44,15 +40,13 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 **类型：** Record&lt;string, Record&lt;string, Object&gt;&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>--><!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## eventTypes
 
@@ -64,15 +58,13 @@ CLI工具支持的自定义事件类型列表。所有事件类型必须为唯�
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly eventTypes?: Array<string>--><!--Device-ToolInfo-readonly eventTypes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## executablePath
 
@@ -84,15 +76,13 @@ CLI工具的可执行文件路径。必须是绝对路径。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly executablePath: string--><!--Device-ToolInfo-readonly executablePath: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## hasSubCommand
 
@@ -104,15 +94,13 @@ readonly hasSubCommand?: boolean
 
 **类型：** boolean
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly hasSubCommand?: boolean--><!--Device-ToolInfo-readonly hasSubCommand?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## inputSchema
 
@@ -124,15 +112,13 @@ CLI工具的输入模式定义。使用JSON Schema格式定义输入参数的结
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly inputSchema: Record<string, Object>--><!--Device-ToolInfo-readonly inputSchema: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## isLockScreenExecutionAllowed
 
@@ -146,15 +132,13 @@ readonly isLockScreenExecutionAllowed?: boolean
 
 **默认值：** false
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean--><!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## name
 
@@ -166,15 +150,13 @@ CLI工具的名称，用于在系统中唯一标识一个CLI工具。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly name: string--><!--Device-ToolInfo-readonly name: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## outputSchema
 
@@ -186,15 +168,13 @@ CLI工具的输出模式定义。使用JSON Schema格式定义输出数据的结
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly outputSchema: Record<string, Object>--><!--Device-ToolInfo-readonly outputSchema: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## requirePermissions
 
@@ -206,15 +186,13 @@ CLI工具所需的权限列表。所有权限项必须为唯一的字符串。�
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly requirePermissions?: Array<string>--><!--Device-ToolInfo-readonly requirePermissions?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## subcommands
 
@@ -224,9 +202,9 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 子命令信息列表。以键值对形式存储，键为子命令名称，值为子命令的详细信息。默认值为空对象。
 
-**类型：** Record&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md)&gt;
+**类型：** Record&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i.md)&gt;
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -234,7 +212,23 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
-**系统接口：** 此接口为系统接口。
+## supportedDevices
+
+```TypeScript
+readonly supportedDevices?: Array<string>
+```
+
+CLI工具支持的设备类型列表。取值以系统定义的设备类型为准（如default、tablet、tv、watch、car等）。空数组表示不限制设备类型。默认值为空数组。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ToolInfo-readonly supportedDevices?: Array<string>--><!--Device-ToolInfo-readonly supportedDevices?: Array<string>-End-->
+
+**系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## version
 
@@ -246,12 +240,10 @@ CLI工具的版本号。遵循语义化版本规范（如"1.0.0"），格式由�
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ToolInfo-readonly version: string--><!--Device-ToolInfo-readonly version: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
