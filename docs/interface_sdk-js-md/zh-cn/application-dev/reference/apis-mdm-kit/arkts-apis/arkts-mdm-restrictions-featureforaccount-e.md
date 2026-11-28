@@ -28,6 +28,22 @@ APP_LOCK = 16
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## CAMERA
+
+```TypeScript
+CAMERA = 19
+```
+
+相机能力。禁用后，该用户无法使用摄像头，包括系统相机、三方相机、内置摄像头、外置摄像头及其他业务的相机能力。当设备相机能力（[FeatureForDevice.CAMERA](arkts-mdm-restrictions-featurefordevice-e.md)）已禁用，或其他管理员已为该用户禁用该能力时，再启用该能力，会报策略冲突。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-CAMERA = 19--><!--Device-FeatureForAccount-CAMERA = 19-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## COLLABORATION_REMOTE_SHARE
 
 ```TypeScript

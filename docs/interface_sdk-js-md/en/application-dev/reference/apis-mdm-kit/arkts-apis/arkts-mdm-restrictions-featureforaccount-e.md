@@ -28,6 +28,22 @@ App lock.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## CAMERA
+
+```TypeScript
+CAMERA = 19
+```
+
+Camera capability. After this capability is disabled, the camera cannot be used by the specified user, including the system camera, third-party camera apps, built-in cameras, external cameras, and camera capabilities of other services. A policy conflict occurs when you enable this capability while the device camera capability ([FeatureForDevice.CAMERA](arkts-mdm-restrictions-featurefordevice-e.md)) is disabled, or while this capability has been disabled for the same user by another administrator.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-CAMERA = 19--><!--Device-FeatureForAccount-CAMERA = 19-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## COLLABORATION_REMOTE_SHARE
 
 ```TypeScript

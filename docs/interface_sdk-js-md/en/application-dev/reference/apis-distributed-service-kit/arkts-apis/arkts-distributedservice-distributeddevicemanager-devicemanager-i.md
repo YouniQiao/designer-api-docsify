@@ -24,7 +24,7 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void
 ```
 
-Binds a device. This API uses an asynchronous callback to return the result.
+Binds a device<!--RP3--><!--RP3End-->. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1127,7 +1127,7 @@ try {
 unbindTarget(deviceId: string): void
 ```
 
-Unbinds a device.
+Unbinds a device<!--RP4--><!--RP4End-->.
 
 **Since:** 10
 

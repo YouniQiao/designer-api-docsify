@@ -286,6 +286,7 @@ Constructor
 | [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | Defines the callback type for accessibility hover events, active in accessibility mode. |
 | [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | Defines the callback type used in **onAccessibilityFocus**. |
 | [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | Provides the callback type for touch events that are not responded to by the accessibility hover event after a screen-reading accessibility application is enabled. |
+| [AnimatableRectShape](arkts-arkui-common-comp-animatablerectshape-t.md) | Defines the AnimatableRectShape type. |
 | [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | Sets the relative scale ratio at the start and end of the animation compared to the original preview image. |
 | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | Callback type for the component area change event. |
 | [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | Enumerates the border corner radius types. |

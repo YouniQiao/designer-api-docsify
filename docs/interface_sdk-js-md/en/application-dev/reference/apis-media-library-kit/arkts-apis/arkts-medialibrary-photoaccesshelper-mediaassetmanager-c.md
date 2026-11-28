@@ -533,6 +533,7 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability;         2. The chip does not support the capability;         3. A dependent service feature is not supported.<br>**Applicable version:** 15 and later |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: A request with the same parameters is currently being processed.<br>**Applicable version:** 22 and later |
 | 14000011 | MediaLibrary inner fail. Possible causes: <br>1.Parameter parsing failed, please check the number and types of parameters; <br>2.The dataHandler parameter must be a valid object; <br>3.User file service initialization failed, possible causes: (1)Database exception; (2)IPC timeout. Please check if the context is valid and retry; <br>4.System internal error, possible causes: (1)Database exception; (2)File system exception; (3)IPC timeout. Please retry and check logs. |
 
 **Examples**

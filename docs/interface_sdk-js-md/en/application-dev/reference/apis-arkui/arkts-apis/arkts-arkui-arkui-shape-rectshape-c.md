@@ -19,7 +19,7 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor

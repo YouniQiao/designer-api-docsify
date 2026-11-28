@@ -13,7 +13,7 @@ The **Shape** module provides multiple shape definitions such as **CircleShape**
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -22,6 +22,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
+| [AnimatableRectShape](arkts-arkui-arkui-shape-animatablerectshape-c.md) | Represents an animatable rectangle shape used in the [clipShape](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#clipshape) API. Unlike [RectShape](arkts-arkui-arkui-shape-rectshape-c.md), the width and height of an **AnimatableRectShape** can be animated through [animateTo](arkts-arkui-arkui-uicontext-uicontext-c.md#animateto) or animation. |
 | [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md) | This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md). |
 | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) | Represents a circle shape used in the **clipShape** and **maskShape** APIs. |
 | [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md) | A base class that provides common methods such as offset, fill, and position settings for shapes. |

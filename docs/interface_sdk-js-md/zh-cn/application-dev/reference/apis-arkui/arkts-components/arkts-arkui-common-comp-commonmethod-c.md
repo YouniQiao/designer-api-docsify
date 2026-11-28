@@ -2938,6 +2938,46 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+## clipShape
+
+```TypeScript
+clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T
+```
+
+按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与[clipShape<sup>18+</sup>](#clipshape)相比，新增了对AnimatableRectShape类型的支持。
+
+> **说明：** 
+> 
+> - 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
+> 
+> - 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体[形状](../arkts-apis/arkts-arkui-arkui-shape.md)的文档。
+> 
+> - 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+**卡片能力：** 从API版本26.1.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CommonMethod-clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T--><!--Device-CommonMethod-clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shape | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CircleShape](arkts-arkui-common-comp-circleshape-t.md) &#124; [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) &#124; [PathShape](arkts-arkui-common-comp-pathshape-t.md) &#124; [RectShape](arkts-arkui-common-comp-rectshape-t.md) &#124; [AnimatableRectShape](arkts-arkui-common-comp-animatablerectshape-t.md)&gt; | 是 | 按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。<br>被裁剪仍可响应绑定的手势事件。<br>当shape的值为undefined时，恢复为不添加指定形状的裁剪。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件，用于链式调用。 |
+
 ## colorBlend
 
 ```TypeScript

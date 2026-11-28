@@ -4183,7 +4183,7 @@ backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string)
 
 **废弃版本：** 26.1.0
 
-**替代接口：** [backToCallerAppWithResult](#backtocallerappwithresult)(abilityResult: AbilityResult, requestCode: string)
+**替代接口：** [backToCallerAppWithResult](#backtocallerappwithresult)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

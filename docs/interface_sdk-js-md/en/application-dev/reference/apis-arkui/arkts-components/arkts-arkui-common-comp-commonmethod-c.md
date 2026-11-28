@@ -2945,6 +2945,44 @@ Clips this component according to the specified shape (which may include positio
 | --- | --- |
 | T | Current component. |
 
+## clipShape
+
+```TypeScript
+clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T
+```
+
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape<sup>18+</sup>](#clipshape), this API supports the **AnimatableRectShape** type.
+
+> **NOTE:** 
+> 
+> - Different shapes support different ranges of attributes. A path is one type of shape, along with others like ellipses and rectangles.
+> 
+> - Path shapes do not support setting width and height attributes. For details about the supported attributes, see the specific shape documentation.
+> 
+> - The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**API.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T--><!--Device-CommonMethod-clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape | AnimatableRectShape>): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shape | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CircleShape](arkts-arkui-common-comp-circleshape-t.md) &#124; [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) &#124; [PathShape](arkts-arkui-common-comp-pathshape-t.md) &#124; [RectShape](arkts-arkui-common-comp-rectshape-t.md) &#124; [AnimatableRectShape](arkts-arkui-common-comp-animatablerectshape-t.md)&gt; | Yes | Shape (which may include position information) to clip the current component. <br>The clipped area remains responsive to bound gesture events. <br>If the value of **shape** is **undefined**, the specified shape clip is removed. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## colorBlend
 
 ```TypeScript

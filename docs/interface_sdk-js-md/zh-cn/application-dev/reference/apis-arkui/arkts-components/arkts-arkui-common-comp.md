@@ -287,6 +287,7 @@ Common()
 | [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | 提供开启无障碍模式后的无障碍悬浮回调事件类型。 |
 | [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | 定义onAccessibilityFocus中使用的回调类型。 |
 | [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | 提供开启朗读类辅助应用后未能被无障碍悬浮响应的触摸事件回调类型。 |
+| [AnimatableRectShape](arkts-arkui-common-comp-animatablerectshape-t.md) | 导入AnimatableRectShape类型对象。 |
 | [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | 动画开始和结束时相对预览原图缩放比例。 |
 | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | 组件区域变化事件的回调类型。 |
 | [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | 圆角类型。 |

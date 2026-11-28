@@ -50,7 +50,7 @@ Filter size in bytes. Value range: [1,4294967295]. Default value: 1024.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-<!--Device-ProfilerConfig-filterSize?: int--><!--Device-ProfilerConfig-filterSize?: int-End-->
+<!--Device-ProfilerConfig-filterSize?: long--><!--Device-ProfilerConfig-filterSize?: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -140,7 +140,7 @@ Sample interval in bytes. Value range: [384,4294967295]. Default value: 384.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-<!--Device-ProfilerConfig-sampleIntervalBytes?: int--><!--Device-ProfilerConfig-sampleIntervalBytes?: int-End-->
+<!--Device-ProfilerConfig-sampleIntervalBytes?: long--><!--Device-ProfilerConfig-sampleIntervalBytes?: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

@@ -4140,7 +4140,7 @@ Returns the startup result to the caller of [startAbilityForResult](#startabilit
 
 **Deprecated since:** 26.1.0
 
-**Substitutes:** [backToCallerAppWithResult](#backtocallerappwithresult)(abilityResult: AbilityResult, requestCode: string)
+**Substitutes:** [backToCallerAppWithResult](#backtocallerappwithresult)
 
 **Model restriction:** This API can be used only in the stage model.
 

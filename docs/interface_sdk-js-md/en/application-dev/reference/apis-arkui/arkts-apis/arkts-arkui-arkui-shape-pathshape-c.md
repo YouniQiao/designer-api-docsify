@@ -17,7 +17,7 @@ Represents a path shape used for the **clipShape** and **maskShape** APIs. It in
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands

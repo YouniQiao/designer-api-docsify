@@ -630,6 +630,7 @@
   - [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)
   - [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
 - [@ohos.arkui.shape(Shape)](arkts-arkui-arkui-shape.md)
+  - [AnimatableRectShape](arkts-arkui-arkui-shape-animatablerectshape-c.md)
   - [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
   - [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md)
   - [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)

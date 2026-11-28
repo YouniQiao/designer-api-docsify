@@ -19,7 +19,7 @@ export declare class CircleShape extends BaseShape<CircleShape>
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor

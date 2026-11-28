@@ -15,7 +15,7 @@ A base class that provides common methods such as offset, fill, and position set
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## fill

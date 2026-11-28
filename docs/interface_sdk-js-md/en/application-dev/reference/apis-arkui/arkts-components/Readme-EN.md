@@ -442,6 +442,7 @@
   - [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md)
   - [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md)
   - [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md)
+  - [AnimatableRectShape](arkts-arkui-common-comp-animatablerectshape-t.md)
   - [AnimationRange](arkts-arkui-common-comp-animationrange-t.md)
   - [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md)
   <!--Del-->

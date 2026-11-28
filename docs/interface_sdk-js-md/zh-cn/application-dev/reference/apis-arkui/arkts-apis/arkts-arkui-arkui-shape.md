@@ -10,7 +10,7 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -19,6 +19,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
+| [AnimatableRectShape](arkts-arkui-arkui-shape-animatablerectshape-c.md) | 表示用于[clipShape](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#clipshape)接口的可动画矩形形状。与[RectShape](arkts-arkui-arkui-shape-rectshape-c.md)不同，AnimatableRectShape的宽高可以通过[animateTo](arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)或animation产生动画。 |
 | [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md) | 继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。 |
 | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) | 用于clipShape和maskShape接口的圆形形状。 |
 | [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md) | 提供形状的偏移、填充和位置设置等通用方法的基类。 |

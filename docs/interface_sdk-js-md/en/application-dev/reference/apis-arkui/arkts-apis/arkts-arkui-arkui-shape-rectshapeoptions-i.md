@@ -19,7 +19,7 @@ This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md).
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, AnimatableRectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## radius

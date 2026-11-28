@@ -50,7 +50,7 @@ filterSize?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-<!--Device-ProfilerConfig-filterSize?: int--><!--Device-ProfilerConfig-filterSize?: int-End-->
+<!--Device-ProfilerConfig-filterSize?: long--><!--Device-ProfilerConfig-filterSize?: long-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -140,7 +140,7 @@ sampleIntervalBytes?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-<!--Device-ProfilerConfig-sampleIntervalBytes?: int--><!--Device-ProfilerConfig-sampleIntervalBytes?: int-End-->
+<!--Device-ProfilerConfig-sampleIntervalBytes?: long--><!--Device-ProfilerConfig-sampleIntervalBytes?: long-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
